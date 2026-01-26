@@ -93,11 +93,7 @@ export const CONTACT_INFO = {
       },
       mapUrl: 'https://maps.google.com/maps?q=DC+Chowk+Rohini+Delhi',
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-rohini',
-      nearbyLandmarks: [
-        'Near Rohini West Metro Station (Red Line)',
-        'DC Chowk',
-        'Sector 9 Market',
-      ],
+      nearbyLandmarks: ['Near Rohini West Metro Station (Red Line)', 'DC Chowk', 'Sector 9 Market'],
       isPhysicalCenter: true,
     },
     greenPark: {
@@ -108,8 +104,8 @@ export const CONTACT_INFO = {
       postalCode: '110016',
       addressCountry: 'IN',
       geo: {
-        latitude: 28.5600,
-        longitude: 77.2090,
+        latitude: 28.56,
+        longitude: 77.209,
       },
       mapUrl: 'https://maps.google.com/maps?q=Green+Park+Delhi',
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-greenpark',
@@ -153,11 +149,7 @@ export const CONTACT_INFO = {
       },
       mapUrl: 'https://maps.google.com/maps?q=Sector+21+Faridabad',
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-faridabad',
-      nearbyLandmarks: [
-        'Sector 21 Market',
-        'Near Faridabad Railway Station',
-        'HUDA Complex',
-      ],
+      nearbyLandmarks: ['Sector 21 Market', 'Near Faridabad Railway Station', 'HUDA Complex'],
       isPhysicalCenter: true,
     },
     noida: {
@@ -168,7 +160,7 @@ export const CONTACT_INFO = {
       postalCode: '201301',
       addressCountry: 'IN',
       geo: {
-        latitude: 28.6280,
+        latitude: 28.628,
         longitude: 77.3649,
       },
       mapUrl: 'https://maps.google.com/maps?q=Sector+62+Noida',
@@ -196,11 +188,7 @@ export const CONTACT_INFO = {
         longitude: 77.1726,
       },
       mapUrl: 'https://maps.google.com/maps?q=Patel+Nagar+Delhi',
-      nearbyLandmarks: [
-        'Patel Nagar Metro Station',
-        'Karol Bagh',
-        'Rajendra Place',
-      ],
+      nearbyLandmarks: ['Patel Nagar Metro Station', 'Karol Bagh', 'Rajendra Place'],
       isPhysicalCenter: false,
       nearestCenter: 'rohini',
     },
@@ -216,11 +204,7 @@ export const CONTACT_INFO = {
         longitude: 77.2347,
       },
       mapUrl: 'https://maps.google.com/maps?q=Greater+Kailash+Delhi',
-      nearbyLandmarks: [
-        'Greater Kailash M Block Market',
-        'Kailash Colony Metro',
-        'Nehru Place',
-      ],
+      nearbyLandmarks: ['Greater Kailash M Block Market', 'Kailash Colony Metro', 'Nehru Place'],
       isPhysicalCenter: false,
       nearestCenter: 'southExtension',
     },
@@ -252,7 +236,7 @@ export const CONTACT_INFO = {
       postalCode: '201301',
       addressCountry: 'IN',
       geo: {
-        latitude: 28.6280,
+        latitude: 28.628,
         longitude: 77.3649,
       },
       mapUrl: 'https://maps.google.com/maps?q=Sector+62+Noida',
@@ -277,11 +261,7 @@ export const CONTACT_INFO = {
       },
       mapUrl: 'https://maps.google.com/maps?q=Sector+21+Faridabad',
       googleBusinessUrl: 'https://g.page/cerebrum-biology-academy-faridabad',
-      nearbyLandmarks: [
-        'Sector 21 Market',
-        'Near Faridabad Railway Station',
-        'HUDA Complex',
-      ],
+      nearbyLandmarks: ['Sector 21 Market', 'Near Faridabad Railway Station', 'HUDA Complex'],
       isPhysicalCenter: true,
     },
   },

@@ -33,10 +33,7 @@ interface SlugsByCategory {
   [category: string]: string[]
 }
 
-async function extractSlugsFromFile(
-  filePath: string,
-  categoryName: string
-): Promise<string[]> {
+async function extractSlugsFromFile(filePath: string, categoryName: string): Promise<string[]> {
   try {
     // Read file content
     const content = fs.readFileSync(filePath, 'utf-8')
@@ -123,10 +120,7 @@ async function generateSlugsFile(): Promise<void> {
   console.log(`\n✨ Done! Sitemap will now use ${totalSlugs} SEO slugs efficiently.\n`)
 }
 
-function generateTypeScriptContent(
-  slugsByCategory: SlugsByCategory,
-  totalSlugs: number
-): string {
+function generateTypeScriptContent(slugsByCategory: SlugsByCategory, totalSlugs: number): string {
   const today = new Date().toISOString().split('T')[0]
 
   let content = `/**
@@ -220,12 +214,7 @@ export const SEO_SLUGS_METADATA = {
   lastGenerated: '${today}',
   categories: [${categories.map((c) => `'${c}'`).join(', ')}],
   categoryCounts: {
-${categories
-  .map(
-    (category) =>
-      `    ${category}: ${slugsByCategory[category].length}`
-  )
-  .join(',\n')}
+${categories.map((category) => `    ${category}: ${slugsByCategory[category].length}`).join(',\n')}
   },
 } as const
 `

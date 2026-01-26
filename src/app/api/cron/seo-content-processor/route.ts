@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
       try {
         // Check remaining budget before each item
         const currentLimits = await getOrCreateMonthlyLimits()
-        if (currentLimits.remainingBudget < 0.10) {
+        if (currentLimits.remainingBudget < 0.1) {
           logger.warn('Insufficient budget for content generation', {
             service: 'seo-processor',
             remaining: currentLimits.remainingBudget,

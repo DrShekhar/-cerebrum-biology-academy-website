@@ -112,7 +112,8 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
   }
 
   // Get user initials for avatar
-  const userInitial = user?.fullName?.charAt(0).toUpperCase() || user?.email?.charAt(0).toUpperCase() || 'C'
+  const userInitial =
+    user?.fullName?.charAt(0).toUpperCase() || user?.email?.charAt(0).toUpperCase() || 'C'
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">

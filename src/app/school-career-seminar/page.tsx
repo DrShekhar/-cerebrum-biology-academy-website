@@ -508,18 +508,20 @@ Submitted via School Seminar Booking Form`
                     href={getWhatsAppLink(
                       'Hi, I want to book a free career guidance seminar for our school.'
                     )}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 min-w-0"
                   >
-                    <Button variant="primary" size="lg" className="w-full text-sm sm:text-base whitespace-normal min-h-[48px]">
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      className="w-full text-sm sm:text-base whitespace-normal min-h-[48px]"
+                    >
                       <Calendar className="w-5 h-5 mr-2 flex-shrink-0" />
                       <span>Book Free Seminar</span>
                     </Button>
                   </a>
-                  <a
-                    href={`tel:${CONTACT_INFO.phone.primary}`}
-                    className="flex-1 min-w-0"
-                  >
+                  <a href={`tel:${CONTACT_INFO.phone.primary}`} className="flex-1 min-w-0">
                     <Button
                       variant="outline"
                       size="lg"
@@ -1340,7 +1342,8 @@ Submitted via School Seminar Booking Form`
                   href={getWhatsAppLink(
                     'Hi, I want to book a free career guidance seminar for our school.'
                   )}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <Button variant="primary" size="lg" className="w-full md:w-auto">
                     <MessageCircle className="w-5 h-5 mr-2" />

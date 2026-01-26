@@ -33,63 +33,55 @@ let mockLeadData: LeadData = {
 let mockLeadStage: LeadStage = 'chat'
 let mockLanguage: Language = 'en'
 
-jest.mock(
-  '@/components/sales-agent/hooks/useConversationPersistence',
-  () => ({
-    useConversationPersistence: jest.fn((initialLanguage: Language = 'en') => {
-      // Update language if initial language provided
-      mockLanguage = initialLanguage
-      mockLeadData = { ...mockLeadData, language: initialLanguage }
+jest.mock('@/components/sales-agent/hooks/useConversationPersistence', () => ({
+  useConversationPersistence: jest.fn((initialLanguage: Language = 'en') => {
+    // Update language if initial language provided
+    mockLanguage = initialLanguage
+    mockLeadData = { ...mockLeadData, language: initialLanguage }
 
-      return {
-        messages: mockMessages,
-        leadData: mockLeadData,
-        leadStage: mockLeadStage,
-        language: mockLanguage,
-        sessionId: 'test_session_123',
-        visitCount: 1,
-        isNewVisitor: true,
-        isLoaded: true,
-        addMessage: mockAddMessage.mockImplementation((msg: AriaMessage) => {
-          mockMessages = [...mockMessages, msg]
-        }),
-        updateMessage: mockUpdateMessage.mockImplementation(
-          (id: string, updates: Partial<AriaMessage>) => {
-            mockMessages = mockMessages.map((m) =>
-              m.id === id ? { ...m, ...updates } : m
-            )
-          }
-        ),
-        updateLeadData: mockUpdateLeadData.mockImplementation(
-          (updates: Partial<LeadData>) => {
-            mockLeadData = { ...mockLeadData, ...updates }
-          }
-        ),
-        setLeadStage: mockSetLeadStage.mockImplementation((stage: LeadStage) => {
-          mockLeadStage = stage
-        }),
-        setLanguage: mockSetLanguage.mockImplementation((lang: Language) => {
-          mockLanguage = lang
-        }),
-        clearConversation: mockClearConversation.mockImplementation(() => {
-          mockMessages = []
-          mockLeadStage = 'chat'
-        }),
-        getConversationHistory: mockGetConversationHistory,
-        getContextSummary: mockGetContextSummary,
-        hasExistingContext: mockHasExistingContext,
-      }
-    }),
-  })
-)
+    return {
+      messages: mockMessages,
+      leadData: mockLeadData,
+      leadStage: mockLeadStage,
+      language: mockLanguage,
+      sessionId: 'test_session_123',
+      visitCount: 1,
+      isNewVisitor: true,
+      isLoaded: true,
+      addMessage: mockAddMessage.mockImplementation((msg: AriaMessage) => {
+        mockMessages = [...mockMessages, msg]
+      }),
+      updateMessage: mockUpdateMessage.mockImplementation(
+        (id: string, updates: Partial<AriaMessage>) => {
+          mockMessages = mockMessages.map((m) => (m.id === id ? { ...m, ...updates } : m))
+        }
+      ),
+      updateLeadData: mockUpdateLeadData.mockImplementation((updates: Partial<LeadData>) => {
+        mockLeadData = { ...mockLeadData, ...updates }
+      }),
+      setLeadStage: mockSetLeadStage.mockImplementation((stage: LeadStage) => {
+        mockLeadStage = stage
+      }),
+      setLanguage: mockSetLanguage.mockImplementation((lang: Language) => {
+        mockLanguage = lang
+      }),
+      clearConversation: mockClearConversation.mockImplementation(() => {
+        mockMessages = []
+        mockLeadStage = 'chat'
+      }),
+      getConversationHistory: mockGetConversationHistory,
+      getContextSummary: mockGetContextSummary,
+      hasExistingContext: mockHasExistingContext,
+    }
+  }),
+}))
 
 // Mock translations
 jest.mock('@/lib/aria/translations', () => ({
   getTranslation: jest.fn((key: string, lang: string = 'en') => {
     const translations: Record<string, Record<string, string>> = {
       en: {
-        greeting:
-          "Hi! I'm ARIA, your AI assistant at Cerebrum Biology Academy.",
+        greeting: "Hi! I'm ARIA, your AI assistant at Cerebrum Biology Academy.",
         errorMessage: 'Sorry, something went wrong. Please try again.',
         quickActionCourses: 'Tell me about courses',
         quickActionPricing: 'What are the fees?',
@@ -97,8 +89,7 @@ jest.mock('@/lib/aria/translations', () => ({
         quickActionWhy: 'Why Cerebrum?',
       },
       hi: {
-        greeting:
-          'नमस्ते! मैं ARIA हूं, Cerebrum Biology Academy में आपकी AI सहायक।',
+        greeting: 'नमस्ते! मैं ARIA हूं, Cerebrum Biology Academy में आपकी AI सहायक।',
         errorMessage: 'क्षमा करें, कुछ गलत हो गया। कृपया पुनः प्रयास करें।',
         quickActionCourses: 'कोर्स के बारे में बताएं',
         quickActionPricing: 'फीस क्या है?',
@@ -117,12 +108,8 @@ jest.mock('@/lib/aria/translations', () => ({
 // Mock WhatsApp integration
 const mockOpenWhatsApp = jest.fn()
 jest.mock('@/lib/aria/whatsappIntegration', () => ({
-  getAriaWhatsAppLink: jest.fn(
-    () => 'https://wa.me/919876543210?text=Hello'
-  ),
-  getDemoBookingWhatsAppLink: jest.fn(
-    () => 'https://wa.me/919876543210?text=Demo'
-  ),
+  getAriaWhatsAppLink: jest.fn(() => 'https://wa.me/919876543210?text=Hello'),
+  getDemoBookingWhatsAppLink: jest.fn(() => 'https://wa.me/919876543210?text=Demo'),
   openWhatsApp: (link: string) => mockOpenWhatsApp(link),
 }))
 
@@ -196,9 +183,7 @@ describe('useAriaChat', () => {
     })
 
     it('should accept initial language option', () => {
-      const { result } = renderHook(() =>
-        useAriaChat({ initialLanguage: 'hi' })
-      )
+      const { result } = renderHook(() => useAriaChat({ initialLanguage: 'hi' }))
 
       expect(result.current.language).toBe('hi')
     })
@@ -243,9 +228,7 @@ describe('useAriaChat', () => {
     })
 
     it('should handle streaming response', async () => {
-      mockFetch.mockResolvedValueOnce(
-        createMockStreamResponse(['Hi', ' there', '!'])
-      )
+      mockFetch.mockResolvedValueOnce(createMockStreamResponse(['Hi', ' there', '!']))
 
       const { result } = renderHook(() => useAriaChat())
 
@@ -296,12 +279,8 @@ describe('useAriaChat', () => {
     it('should not send while already streaming', async () => {
       // Test that sendMessage returns early when isStreaming is true
       // We do this by checking behavior after the first message starts streaming
-      mockFetch.mockResolvedValueOnce(
-        createMockStreamResponse(['Response 1'])
-      )
-      mockFetch.mockResolvedValueOnce(
-        createMockStreamResponse(['Response 2'])
-      )
+      mockFetch.mockResolvedValueOnce(createMockStreamResponse(['Response 1']))
+      mockFetch.mockResolvedValueOnce(createMockStreamResponse(['Response 2']))
 
       const { result } = renderHook(() => useAriaChat())
 
@@ -444,9 +423,7 @@ describe('useAriaChat', () => {
 
     it('should toggle language from Hindi to English', () => {
       mockLanguage = 'hi'
-      const { result } = renderHook(() =>
-        useAriaChat({ initialLanguage: 'hi' })
-      )
+      const { result } = renderHook(() => useAriaChat({ initialLanguage: 'hi' }))
 
       expect(result.current.language).toBe('hi')
 
@@ -461,9 +438,7 @@ describe('useAriaChat', () => {
       mockLanguage = 'hi'
       mockFetch.mockResolvedValueOnce(createMockStreamResponse(['नमस्ते!']))
 
-      const { result } = renderHook(() =>
-        useAriaChat({ initialLanguage: 'hi' })
-      )
+      const { result } = renderHook(() => useAriaChat({ initialLanguage: 'hi' }))
 
       await act(async () => {
         await result.current.sendMessage('नमस्ते')
@@ -566,16 +541,14 @@ describe('useAriaChat', () => {
     it('should cancel streaming', async () => {
       // Create a slow response that won't complete
       let aborted = false
-      mockFetch.mockImplementationOnce(
-        (_url: string, options: { signal?: AbortSignal }) => {
-          return new Promise((_, reject) => {
-            options?.signal?.addEventListener('abort', () => {
-              aborted = true
-              reject(new DOMException('Aborted', 'AbortError'))
-            })
+      mockFetch.mockImplementationOnce((_url: string, options: { signal?: AbortSignal }) => {
+        return new Promise((_, reject) => {
+          options?.signal?.addEventListener('abort', () => {
+            aborted = true
+            reject(new DOMException('Aborted', 'AbortError'))
           })
-        }
-      )
+        })
+      })
 
       const { result } = renderHook(() => useAriaChat())
 
@@ -631,27 +604,20 @@ describe('useAriaChat', () => {
       mockFetch.mockResolvedValueOnce(createMockStreamResponse(['Response']))
 
       const mockAnalytics = jest.fn()
-      const { result } = renderHook(() =>
-        useAriaChat({ onAnalyticsEvent: mockAnalytics })
-      )
+      const { result } = renderHook(() => useAriaChat({ onAnalyticsEvent: mockAnalytics }))
 
       await act(async () => {
         await result.current.sendMessage('Test')
       })
 
-      expect(mockAnalytics).toHaveBeenCalledWith(
-        'aria_message_sent',
-        expect.any(Object)
-      )
+      expect(mockAnalytics).toHaveBeenCalledWith('aria_message_sent', expect.any(Object))
     })
 
     it('should call onLeadCaptured when lead is complete', () => {
       const mockLeadCaptured = jest.fn()
       mockLeadStage = 'class'
 
-      const { result } = renderHook(() =>
-        useAriaChat({ onLeadCaptured: mockLeadCaptured })
-      )
+      const { result } = renderHook(() => useAriaChat({ onLeadCaptured: mockLeadCaptured }))
 
       act(() => {
         result.current.submitLeadField('class', '12')

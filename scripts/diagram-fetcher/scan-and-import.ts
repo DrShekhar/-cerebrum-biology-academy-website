@@ -11,81 +11,81 @@ const prisma = new PrismaClient()
 
 // Category detection patterns
 const CATEGORY_PATTERNS: Record<string, DiagramCategory> = {
-  'cell': 'CELL_BIOLOGY',
-  'nucleus': 'CELL_BIOLOGY',
-  'mitochondri': 'CELL_BIOLOGY',
-  'chloroplast': 'CELL_BIOLOGY',
-  'organelle': 'CELL_BIOLOGY',
-  'membrane': 'CELL_BIOLOGY',
-  'mitosis': 'CELL_BIOLOGY',
-  'meiosis': 'CELL_BIOLOGY',
+  cell: 'CELL_BIOLOGY',
+  nucleus: 'CELL_BIOLOGY',
+  mitochondri: 'CELL_BIOLOGY',
+  chloroplast: 'CELL_BIOLOGY',
+  organelle: 'CELL_BIOLOGY',
+  membrane: 'CELL_BIOLOGY',
+  mitosis: 'CELL_BIOLOGY',
+  meiosis: 'CELL_BIOLOGY',
 
-  'dna': 'MOLECULAR_BIOLOGY',
-  'rna': 'MOLECULAR_BIOLOGY',
-  'transcription': 'MOLECULAR_BIOLOGY',
-  'translation': 'MOLECULAR_BIOLOGY',
-  'replication': 'MOLECULAR_BIOLOGY',
-  'protein': 'MOLECULAR_BIOLOGY',
-  'gene': 'MOLECULAR_BIOLOGY',
-  'operon': 'MOLECULAR_BIOLOGY',
+  dna: 'MOLECULAR_BIOLOGY',
+  rna: 'MOLECULAR_BIOLOGY',
+  transcription: 'MOLECULAR_BIOLOGY',
+  translation: 'MOLECULAR_BIOLOGY',
+  replication: 'MOLECULAR_BIOLOGY',
+  protein: 'MOLECULAR_BIOLOGY',
+  gene: 'MOLECULAR_BIOLOGY',
+  operon: 'MOLECULAR_BIOLOGY',
 
-  'heart': 'HUMAN_PHYSIOLOGY',
-  'lung': 'HUMAN_PHYSIOLOGY',
-  'kidney': 'HUMAN_PHYSIOLOGY',
-  'nephron': 'HUMAN_PHYSIOLOGY',
-  'neuron': 'HUMAN_PHYSIOLOGY',
-  'brain': 'HUMAN_PHYSIOLOGY',
-  'eye': 'HUMAN_PHYSIOLOGY',
-  'ear': 'HUMAN_PHYSIOLOGY',
-  'digest': 'HUMAN_PHYSIOLOGY',
-  'respirat': 'HUMAN_PHYSIOLOGY',
-  'muscle': 'HUMAN_PHYSIOLOGY',
-  'sarcomere': 'HUMAN_PHYSIOLOGY',
-  'synapse': 'HUMAN_PHYSIOLOGY',
-  'blood': 'HUMAN_PHYSIOLOGY',
+  heart: 'HUMAN_PHYSIOLOGY',
+  lung: 'HUMAN_PHYSIOLOGY',
+  kidney: 'HUMAN_PHYSIOLOGY',
+  nephron: 'HUMAN_PHYSIOLOGY',
+  neuron: 'HUMAN_PHYSIOLOGY',
+  brain: 'HUMAN_PHYSIOLOGY',
+  eye: 'HUMAN_PHYSIOLOGY',
+  ear: 'HUMAN_PHYSIOLOGY',
+  digest: 'HUMAN_PHYSIOLOGY',
+  respirat: 'HUMAN_PHYSIOLOGY',
+  muscle: 'HUMAN_PHYSIOLOGY',
+  sarcomere: 'HUMAN_PHYSIOLOGY',
+  synapse: 'HUMAN_PHYSIOLOGY',
+  blood: 'HUMAN_PHYSIOLOGY',
 
-  'photosynthesis': 'PLANT_PHYSIOLOGY',
-  'calvin': 'PLANT_PHYSIOLOGY',
-  'krebs': 'PLANT_PHYSIOLOGY',
-  'respiration': 'PLANT_PHYSIOLOGY',
-  'stomata': 'PLANT_PHYSIOLOGY',
-  'xylem': 'PLANT_PHYSIOLOGY',
-  'phloem': 'PLANT_PHYSIOLOGY',
+  photosynthesis: 'PLANT_PHYSIOLOGY',
+  calvin: 'PLANT_PHYSIOLOGY',
+  krebs: 'PLANT_PHYSIOLOGY',
+  respiration: 'PLANT_PHYSIOLOGY',
+  stomata: 'PLANT_PHYSIOLOGY',
+  xylem: 'PLANT_PHYSIOLOGY',
+  phloem: 'PLANT_PHYSIOLOGY',
 
-  'flower': 'REPRODUCTION',
-  'pollen': 'REPRODUCTION',
-  'embryo': 'REPRODUCTION',
-  'sperm': 'REPRODUCTION',
-  'ovum': 'REPRODUCTION',
-  'menstrual': 'REPRODUCTION',
-  'fertiliz': 'REPRODUCTION',
-  'reproduct': 'REPRODUCTION',
+  flower: 'REPRODUCTION',
+  pollen: 'REPRODUCTION',
+  embryo: 'REPRODUCTION',
+  sperm: 'REPRODUCTION',
+  ovum: 'REPRODUCTION',
+  menstrual: 'REPRODUCTION',
+  fertiliz: 'REPRODUCTION',
+  reproduct: 'REPRODUCTION',
 
-  'ecosystem': 'ECOLOGY',
+  ecosystem: 'ECOLOGY',
   'food-web': 'ECOLOGY',
   'food-chain': 'ECOLOGY',
-  'nitrogen': 'ECOLOGY',
+  nitrogen: 'ECOLOGY',
   'carbon-cycle': 'ECOLOGY',
   'water-cycle': 'ECOLOGY',
-  'biogeochemical': 'ECOLOGY',
+  biogeochemical: 'ECOLOGY',
 
-  'evolution': 'EVOLUTION',
-  'darwin': 'EVOLUTION',
+  evolution: 'EVOLUTION',
+  darwin: 'EVOLUTION',
   'natural-selection': 'EVOLUTION',
-  'phylogen': 'EVOLUTION',
+  phylogen: 'EVOLUTION',
 
-  'pcr': 'BIOTECHNOLOGY',
+  pcr: 'BIOTECHNOLOGY',
   'gel-electrophoresis': 'BIOTECHNOLOGY',
-  'cloning': 'BIOTECHNOLOGY',
-  'plasmid': 'BIOTECHNOLOGY',
-  'restriction': 'BIOTECHNOLOGY',
-  'recombinant': 'BIOTECHNOLOGY',
+  cloning: 'BIOTECHNOLOGY',
+  plasmid: 'BIOTECHNOLOGY',
+  restriction: 'BIOTECHNOLOGY',
+  recombinant: 'BIOTECHNOLOGY',
 
-  'bacteria': 'MICROORGANISMS',
-  'virus': 'MICROORGANISMS',
-  'phage': 'MICROORGANISMS',
-  'prokaryot': 'MICROORGANISMS',
-  'fungi': 'MICROORGANISMS',
+  bacteria: 'MICROORGANISMS',
+  virus: 'MICROORGANISMS',
+  phage: 'MICROORGANISMS',
+  prokaryot: 'MICROORGANISMS',
+  fungi: 'MICROORGANISMS',
 }
 
 function detectCategory(filename: string): DiagramCategory {
@@ -102,14 +102,12 @@ function generateName(filename: string): string {
   // Remove extension
   const name = path.parse(filename).name
   // Convert kebab-case or snake_case to Title Case
-  return name
-    .replace(/[-_]/g, ' ')
-    .replace(/\b\w/g, c => c.toUpperCase())
+  return name.replace(/[-_]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
 function generateTags(filename: string): string[] {
   const lower = path.parse(filename).name.toLowerCase()
-  const tags = lower.split(/[-_\s]+/).filter(t => t.length > 2)
+  const tags = lower.split(/[-_\s]+/).filter((t) => t.length > 2)
   return [...new Set(tags)]
 }
 
@@ -137,13 +135,15 @@ async function scanAndImport(options: ScanOptions) {
   }
 
   const files = fs.readdirSync(directory)
-  const imageFiles = files.filter(f =>
-    f.endsWith('.svg') || f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg')
+  const imageFiles = files.filter(
+    (f) => f.endsWith('.svg') || f.endsWith('.png') || f.endsWith('.jpg') || f.endsWith('.jpeg')
   )
 
   console.log(`Found ${imageFiles.length} image files\n`)
 
-  let added = 0, skipped = 0, errors = 0
+  let added = 0,
+    skipped = 0,
+    errors = 0
 
   for (const file of imageFiles) {
     const name = generateName(file)
@@ -167,7 +167,7 @@ async function scanAndImport(options: ScanOptions) {
     try {
       // Check if exists
       const existing = await prisma.diagram_assets.findFirst({
-        where: { name }
+        where: { name },
       })
 
       if (existing) {
@@ -190,7 +190,7 @@ async function scanAndImport(options: ScanOptions) {
           qualityScore: 4.0,
           isActive: true,
           isVerified: false,
-        }
+        },
       })
 
       console.log('  [ADDED]\n')

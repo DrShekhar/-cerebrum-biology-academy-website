@@ -2,15 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Trophy,
-  Users,
-  Calendar,
-  MapPin,
-  TrendingUp,
-  BookOpen,
-  Clock,
-} from 'lucide-react'
+import { Trophy, Users, Calendar, MapPin, TrendingUp, BookOpen, Clock } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'
 
 interface NotificationItem {

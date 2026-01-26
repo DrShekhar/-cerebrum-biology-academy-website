@@ -59,13 +59,9 @@ export default function StudentDashboard() {
     debug: process.env.NODE_ENV === 'development',
   })
 
-  useWebSocketMessage<StudyMetricsPayload>(
-    socket as any,
-    'study_metrics_update',
-    (data) => {
-      setMetrics(data)
-    }
-  )
+  useWebSocketMessage<StudyMetricsPayload>(socket as any, 'study_metrics_update', (data) => {
+    setMetrics(data)
+  })
 
   return (
     <div>
@@ -140,13 +136,9 @@ export function NotificationBell() {
     enableMockMode: true,
   })
 
-  useWebSocketMessage<NotificationPayload>(
-    socket as any,
-    'notification',
-    (notification) => {
-      setNotifications((prev) => [notification, ...prev].slice(0, 10))
-    }
-  )
+  useWebSocketMessage<NotificationPayload>(socket as any, 'notification', (notification) => {
+    setNotifications((prev) => [notification, ...prev].slice(0, 10))
+  })
 
   return (
     <div className="relative">
@@ -186,9 +178,7 @@ export function Header() {
         ) : (
           <span className="text-gray-400">○ Offline</span>
         )}
-        {socket.latency > 0 && (
-          <span className="text-xs text-gray-500"> {socket.latency}ms</span>
-        )}
+        {socket.latency > 0 && <span className="text-xs text-gray-500"> {socket.latency}ms</span>}
       </div>
     </header>
   )
@@ -252,12 +242,14 @@ wss.on('connection', (ws) => {
     const message = JSON.parse(data.toString())
 
     if (message.type === 'ping') {
-      ws.send(JSON.stringify({
-        type: 'pong',
-        payload: message.payload,
-        timestamp: Date.now(),
-        messageId: generateId(),
-      }))
+      ws.send(
+        JSON.stringify({
+          type: 'pong',
+          payload: message.payload,
+          timestamp: Date.now(),
+          messageId: generateId(),
+        })
+      )
     }
   })
 
@@ -459,14 +451,13 @@ const socket = useWebSocket({
   enableMockMode: true,
 })
 
-useWebSocketMessage<StudyMetricsPayload>(
-  socket as any,
-  'study_metrics_update',
-  (metrics) => setMetrics(metrics)
+useWebSocketMessage<StudyMetricsPayload>(socket as any, 'study_metrics_update', (metrics) =>
+  setMetrics(metrics)
 )
 ```
 
 Benefits:
+
 - Real-time updates (no 5-second delay)
 - Lower server load
 - Better user experience

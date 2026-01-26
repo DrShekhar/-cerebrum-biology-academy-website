@@ -4,9 +4,7 @@ interface InternationalLayoutProps {
   children: React.ReactNode
 }
 
-export default function InternationalLayout({
-  children,
-}: InternationalLayoutProps) {
+export default function InternationalLayout({ children }: InternationalLayoutProps) {
   return (
     <>
       {/* Hreflang tags for international SEO */}

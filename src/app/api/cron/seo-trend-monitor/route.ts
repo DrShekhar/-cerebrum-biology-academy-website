@@ -9,7 +9,11 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { logger } from '@/lib/utils/logger'
-import { addToQueue, canGenerateContent, getOrCreateMonthlyLimits } from '@/lib/seo-marketing/queueService'
+import {
+  addToQueue,
+  canGenerateContent,
+  getOrCreateMonthlyLimits,
+} from '@/lib/seo-marketing/queueService'
 import { prisma } from '@/lib/prisma'
 
 // CRON secret for Vercel
@@ -163,7 +167,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Sort by trend score and deduplicate
-    const sortedTopics = [...new Map(trendingTopics.map((t) => [t.topic.toLowerCase(), t])).values()]
+    const sortedTopics = [
+      ...new Map(trendingTopics.map((t) => [t.topic.toLowerCase(), t])).values(),
+    ]
       .sort((a, b) => b.trendScore - a.trendScore)
       .slice(0, 10) // Top 10 topics
 

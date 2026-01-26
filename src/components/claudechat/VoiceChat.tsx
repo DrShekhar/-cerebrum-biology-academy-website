@@ -9,14 +9,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
-import {
-  Mic,
-  MicOff,
-  Volume2,
-  Play,
-  RotateCcw,
-  MessageCircle,
-} from 'lucide-react'
+import { Mic, MicOff, Volume2, Play, RotateCcw, MessageCircle } from 'lucide-react'
 
 interface VoiceMessage {
   id: string

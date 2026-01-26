@@ -208,10 +208,7 @@ export function InstantEnrollment({
             </motion.div>
 
             {/* Pricing Display */}
-            <PremiumCard
-              variant="luxury"
-              className="bg-green-50 border-green-200"
-            >
+            <PremiumCard variant="luxury" className="bg-green-50 border-green-200">
               <div className="p-4 space-y-3">
                 <div className="flex items-center justify-between">
                   <div>

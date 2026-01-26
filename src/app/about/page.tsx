@@ -26,9 +26,6 @@ import { facultyStats, facultyHighlights } from '@/data/faculty'
 import { EEATSignals } from '@/components/seo/EEATSignals'
 import { BreadcrumbSchema } from '@/components/seo'
 
-
-
-
 import { FAQDisplay } from '@/components/seo/FAQSchema'
 
 const aboutFAQs = [

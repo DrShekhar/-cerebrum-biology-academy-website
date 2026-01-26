@@ -108,7 +108,10 @@ export const gamification = {
       const { recordXpEvent } = await import('./xpEvents')
       return recordXpEvent(params)
     },
-    getHistory: async (userId: string, params?: Parameters<typeof import('./xpEvents').getXpHistory>[1]) => {
+    getHistory: async (
+      userId: string,
+      params?: Parameters<typeof import('./xpEvents').getXpHistory>[1]
+    ) => {
       const { getXpHistory } = await import('./xpEvents')
       return getXpHistory(userId, params)
     },
@@ -124,7 +127,10 @@ export const gamification = {
       const { getUserBadges } = await import('./badges')
       return getUserBadges(userId)
     },
-    checkAndAward: async (userId: string, context?: Parameters<typeof import('./badges').checkAndAwardBadges>[1]) => {
+    checkAndAward: async (
+      userId: string,
+      context?: Parameters<typeof import('./badges').checkAndAwardBadges>[1]
+    ) => {
       const { checkAndAwardBadges } = await import('./badges')
       return checkAndAwardBadges(userId, context)
     },
@@ -136,7 +142,10 @@ export const gamification = {
 
   // Notification operations
   notifications: {
-    get: async (userId: string, params?: Parameters<typeof import('./notifications').getNotifications>[1]) => {
+    get: async (
+      userId: string,
+      params?: Parameters<typeof import('./notifications').getNotifications>[1]
+    ) => {
       const { getNotifications } = await import('./notifications')
       return getNotifications(userId, params)
     },
@@ -160,11 +169,18 @@ export const gamification = {
       const { getUserGoals } = await import('./goals')
       return getUserGoals(userId)
     },
-    updateProgress: async (userId: string, metric: import('./goals').GoalMetric, incrementValue?: number) => {
+    updateProgress: async (
+      userId: string,
+      metric: import('./goals').GoalMetric,
+      incrementValue?: number
+    ) => {
       const { updateGoalProgress } = await import('./goals')
       return updateGoalProgress(userId, metric, incrementValue)
     },
-    setCustom: async (userId: string, params: Parameters<typeof import('./goals').setCustomGoal>[1]) => {
+    setCustom: async (
+      userId: string,
+      params: Parameters<typeof import('./goals').setCustomGoal>[1]
+    ) => {
       const { setCustomGoal } = await import('./goals')
       return setCustomGoal(userId, params)
     },

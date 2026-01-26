@@ -2,90 +2,90 @@
 # This file defines the specifications and standards for the project
 
 metadata:
-  name: "Cerebrum Biology Academy Website"
-  description: "Production-ready educational platform for NEET Biology preparation"
-  version: "1.0.0"
-  owner: "@DrShekhar"
-  repository: "cerebrum-biology-academy-website"
+  name: 'Cerebrum Biology Academy Website'
+  description: 'Production-ready educational platform for NEET Biology preparation'
+  version: '1.0.0'
+  owner: '@DrShekhar'
+  repository: 'cerebrum-biology-academy-website'
 
 # Project structure specifications
 structure:
   required_files:
-    - "README.md"
-    - "package.json"
-    - "next.config.js"
-    - "tailwind.config.js"
-    - "tsconfig.json"
-    - ".gitignore"
-    - ".env.example"
-    - "vercel.json"
+    - 'README.md'
+    - 'package.json'
+    - 'next.config.js'
+    - 'tailwind.config.js'
+    - 'tsconfig.json'
+    - '.gitignore'
+    - '.env.example'
+    - 'vercel.json'
 
   required_directories:
-    - "src/"
-    - "src/app/"
-    - "src/components/"
-    - "src/lib/"
-    - "public/"
-    - ".github/"
-    - ".github/workflows/"
-    - "scripts/"
+    - 'src/'
+    - 'src/app/'
+    - 'src/components/'
+    - 'src/lib/'
+    - 'public/'
+    - '.github/'
+    - '.github/workflows/'
+    - 'scripts/'
 
 # Code quality specifications
 quality:
   linting:
     enabled: true
-    config_file: "eslint.config.mjs"
+    config_file: 'eslint.config.mjs'
 
   typescript:
     enabled: true
     strict: true
-    config_file: "tsconfig.json"
+    config_file: 'tsconfig.json'
 
   testing:
     enabled: true
-    framework: "jest"
-    config_file: "jest.config.cjs"
+    framework: 'jest'
+    config_file: 'jest.config.cjs'
     coverage_threshold: 80
 
   formatting:
     enabled: true
-    tool: "prettier"
-    config_file: ".prettierrc"
+    tool: 'prettier'
+    config_file: '.prettierrc'
 
 # Build and deployment specifications
 deployment:
-  platform: "vercel"
-  node_version: "22.x"
-  build_command: "npm run build"
-  output_directory: ".next"
+  platform: 'vercel'
+  node_version: '22.x'
+  build_command: 'npm run build'
+  output_directory: '.next'
 
   environments:
-    - name: "production"
-      url: "https://www.cerebrumbiologyacademy.com"
-      branch: "main"
-    - name: "preview"
-      branch: "*"
+    - name: 'production'
+      url: 'https://www.cerebrumbiologyacademy.com'
+      branch: 'main'
+    - name: 'preview'
+      branch: '*'
 
 # Security specifications
 security:
   required_headers:
-    - "X-Content-Type-Options: nosniff"
-    - "X-Frame-Options: DENY"
-    - "X-XSS-Protection: 1; mode=block"
-    - "Strict-Transport-Security: max-age=63072000"
+    - 'X-Content-Type-Options: nosniff'
+    - 'X-Frame-Options: DENY'
+    - 'X-XSS-Protection: 1; mode=block'
+    - 'Strict-Transport-Security: max-age=63072000'
 
   environment_variables:
     required:
-      - "NEXT_PUBLIC_SITE_URL"
-      - "NEXT_PUBLIC_ENV"
-      - "AUTH_SECRET"
-      - "ADMIN_EMAIL"
+      - 'NEXT_PUBLIC_SITE_URL'
+      - 'NEXT_PUBLIC_ENV'
+      - 'AUTH_SECRET'
+      - 'ADMIN_EMAIL'
 
     sensitive:
-      - "RAZORPAY_KEY_SECRET"
-      - "WHATSAPP_ACCESS_TOKEN"
-      - "DATABASE_URL"
-      - "OPENAI_API_KEY"
+      - 'RAZORPAY_KEY_SECRET'
+      - 'WHATSAPP_ACCESS_TOKEN'
+      - 'DATABASE_URL'
+      - 'OPENAI_API_KEY'
 
 # Performance specifications
 performance:
@@ -96,36 +96,36 @@ performance:
     seo: 95
 
   core_web_vitals:
-    lcp_threshold: "2.5s"  # Largest Contentful Paint
-    fid_threshold: "100ms"  # First Input Delay
-    cls_threshold: "0.1"    # Cumulative Layout Shift
+    lcp_threshold: '2.5s' # Largest Contentful Paint
+    fid_threshold: '100ms' # First Input Delay
+    cls_threshold: '0.1' # Cumulative Layout Shift
 
 # Documentation specifications
 documentation:
   required:
-    - type: "README"
-      file: "README.md"
+    - type: 'README'
+      file: 'README.md'
       sections:
-        - "Installation"
-        - "Development"
-        - "Deployment"
-        - "Environment Variables"
+        - 'Installation'
+        - 'Development'
+        - 'Deployment'
+        - 'Environment Variables'
 
-    - type: "API"
-      directory: "docs/api/"
-      format: "markdown"
+    - type: 'API'
+      directory: 'docs/api/'
+      format: 'markdown'
 
-    - type: "Components"
-      tool: "storybook"
+    - type: 'Components'
+      tool: 'storybook'
       optional: true
 
 # Git workflow specifications
 git:
-  main_branch: "main"
+  main_branch: 'main'
 
   required_branches:
-    - "main"
-    - "develop"
+    - 'main'
+    - 'develop'
 
   branch_protection:
     main:
@@ -133,101 +133,101 @@ git:
       dismiss_stale_reviews: true
       require_code_owner_reviews: false
 
-  commit_message_format: "conventional"
+  commit_message_format: 'conventional'
 
   required_checks:
-    - "quality-gates"
-    - "build"
-    - "security-audit"
+    - 'quality-gates'
+    - 'build'
+    - 'security-audit'
 
 # Development Workflow Constitution
 workflow:
   mandatory_process:
-    - "TodoWrite task breakdown"
-    - "Quality gates validation"
-    - "CI/CD pipeline execution"
-    - "Post-deployment verification"
-    - "Documentation updates"
+    - 'TodoWrite task breakdown'
+    - 'Quality gates validation'
+    - 'CI/CD pipeline execution'
+    - 'Post-deployment verification'
+    - 'Documentation updates'
 
   task_lifecycle:
     phases:
-      - name: "planning"
+      - name: 'planning'
         requirements:
-          - "TodoWrite list created"
-          - "Requirements analyzed"
-          - "Implementation planned"
+          - 'TodoWrite list created'
+          - 'Requirements analyzed'
+          - 'Implementation planned'
 
-      - name: "development"
+      - name: 'development'
         requirements:
-          - "Code written following standards"
-          - "Tests added/updated"
-          - "Documentation updated"
+          - 'Code written following standards'
+          - 'Tests added/updated'
+          - 'Documentation updated'
 
-      - name: "quality_assurance"
+      - name: 'quality_assurance'
         requirements:
-          - "Lint checks passing"
-          - "TypeScript compilation clean"
-          - "Tests passing (80% coverage)"
-          - "Build successful"
+          - 'Lint checks passing'
+          - 'TypeScript compilation clean'
+          - 'Tests passing (80% coverage)'
+          - 'Build successful'
 
-      - name: "deployment"
+      - name: 'deployment'
         requirements:
-          - "CI/CD pipeline passing"
-          - "Environment variables configured"
-          - "Security audit clean"
+          - 'CI/CD pipeline passing'
+          - 'Environment variables configured'
+          - 'Security audit clean'
 
-      - name: "verification"
+      - name: 'verification'
         requirements:
-          - "Live site verified"
-          - "Functionality tested"
-          - "Performance checked"
-          - "TodoWrite status updated"
+          - 'Live site verified'
+          - 'Functionality tested'
+          - 'Performance checked'
+          - 'TodoWrite status updated'
 
   constitutional_rules:
-    - "Never start tasks without TodoWrite breakdown"
-    - "All commits must pass quality gates"
-    - "Environment variables must use automation scripts"
-    - "Documentation is mandatory for all changes"
-    - "Performance standards are non-negotiable"
+    - 'Never start tasks without TodoWrite breakdown'
+    - 'All commits must pass quality gates'
+    - 'Environment variables must use automation scripts'
+    - 'Documentation is mandatory for all changes'
+    - 'Performance standards are non-negotiable'
 
   emergency_procedures:
     hotfix:
-      allowed_for: "critical production issues only"
+      allowed_for: 'critical production issues only'
       process:
-        - "Create hotfix branch"
-        - "Make minimal fix"
-        - "Run quality gates"
-        - "Deploy with immediate verification"
+        - 'Create hotfix branch'
+        - 'Make minimal fix'
+        - 'Run quality gates'
+        - 'Deploy with immediate verification'
 
     rollback:
-      triggers: "deployment failure or critical bugs"
+      triggers: 'deployment failure or critical bugs'
       process:
-        - "Immediate rollback via Vercel"
-        - "Root cause analysis"
-        - "Fix and proper redeploy"
+        - 'Immediate rollback via Vercel'
+        - 'Root cause analysis'
+        - 'Fix and proper redeploy'
 
 # Dependencies specifications
 dependencies:
-  package_manager: "npm"
+  package_manager: 'npm'
 
   allowed_licenses:
-    - "MIT"
-    - "Apache-2.0"
-    - "BSD-3-Clause"
-    - "ISC"
+    - 'MIT'
+    - 'Apache-2.0'
+    - 'BSD-3-Clause'
+    - 'ISC'
 
   security_audit:
     enabled: true
     fail_on_high: true
 
   updates:
-    strategy: "patch"
+    strategy: 'patch'
     auto_merge: false
 
 # Educational platform specific specifications
 education:
   accessibility:
-    wcag_level: "AA"
+    wcag_level: 'AA'
     screen_reader_compatible: true
 
   performance:
@@ -236,45 +236,45 @@ education:
 
   analytics:
     required_events:
-      - "course_view"
-      - "enrollment_start"
-      - "payment_complete"
-      - "content_engagement"
+      - 'course_view'
+      - 'enrollment_start'
+      - 'payment_complete'
+      - 'content_engagement'
 
   integrations:
-    payment_gateway: "razorpay"
-    communication: "whatsapp_business"
-    analytics: "google_analytics_4"
+    payment_gateway: 'razorpay'
+    communication: 'whatsapp_business'
+    analytics: 'google_analytics_4'
 
 # Monitoring and alerts
 monitoring:
   uptime:
-    provider: "vercel"
-    threshold: "99.9%"
+    provider: 'vercel'
+    threshold: '99.9%'
 
   performance:
-    provider: "lighthouse_ci"
-    frequency: "on_deploy"
+    provider: 'lighthouse_ci'
+    frequency: 'on_deploy'
 
   errors:
-    provider: "vercel_analytics"
-    threshold: "1%"
+    provider: 'vercel_analytics'
+    threshold: '1%'
 
 # Release specifications
 releases:
-  strategy: "semantic"
+  strategy: 'semantic'
 
   stages:
-    - name: "development"
-      branch: "develop"
+    - name: 'development'
+      branch: 'develop'
       auto_deploy: true
 
-    - name: "staging"
-      branch: "staging"
+    - name: 'staging'
+      branch: 'staging'
       auto_deploy: true
       requires_approval: false
 
-    - name: "production"
-      branch: "main"
+    - name: 'production'
+      branch: 'main'
       auto_deploy: true
       requires_approval: false

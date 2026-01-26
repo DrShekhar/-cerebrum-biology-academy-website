@@ -557,7 +557,11 @@ export const NEETWhatsAppTemplates = {
         type: 'buttons' as const,
         buttons: [
           { type: 'url' as const, text: 'Join Demo', url: '{{4}}' },
-          { type: 'phone_number' as const, text: 'Call Support', phone_number: CONTACT_INFO.phone.primary },
+          {
+            type: 'phone_number' as const,
+            text: 'Call Support',
+            phone_number: CONTACT_INFO.phone.primary,
+          },
         ],
       },
     ],

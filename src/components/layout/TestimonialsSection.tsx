@@ -199,7 +199,11 @@ export function TestimonialsSection() {
               </div>
 
               {/* Dots Indicator */}
-              <div className="flex justify-center mt-4 space-x-2" role="tablist" aria-label="Testimonial navigation">
+              <div
+                className="flex justify-center mt-4 space-x-2"
+                role="tablist"
+                aria-label="Testimonial navigation"
+              >
                 {testimonials.map((testimonial, index) => (
                   <button
                     key={index}
@@ -211,7 +215,10 @@ export function TestimonialsSection() {
                     aria-selected={index === currentTestimonial}
                     aria-label={`View testimonial from ${testimonial.name}`}
                   >
-                    <span className={`w-3 h-3 rounded-full ${index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'}`} aria-hidden="true" />
+                    <span
+                      className={`w-3 h-3 rounded-full ${index === currentTestimonial ? 'bg-blue-600' : 'bg-gray-300'}`}
+                      aria-hidden="true"
+                    />
                   </button>
                 ))}
               </div>

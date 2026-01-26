@@ -10,12 +10,12 @@ Your site performance degrades over time because **every new feature adds weight
 
 ### Results from Gurgaon Page Optimization
 
-| Metric | Before | After | Improvement |
-|--------|--------|-------|-------------|
-| Performance Score | 77/100 | **96/100** | +19 points |
-| LCP | 5.7s (Poor) | **1.8s (Good)** | 68% faster! |
-| Best Practices | 75/100 | **93/100** | +18 points |
-| SEO | 100/100 | **100/100** | Perfect ✅ |
+| Metric            | Before      | After           | Improvement |
+| ----------------- | ----------- | --------------- | ----------- |
+| Performance Score | 77/100      | **96/100**      | +19 points  |
+| LCP               | 5.7s (Poor) | **1.8s (Good)** | 68% faster! |
+| Best Practices    | 75/100      | **93/100**      | +18 points  |
+| SEO               | 100/100     | **100/100**     | Perfect ✅  |
 
 ---
 
@@ -26,10 +26,10 @@ Your site performance degrades over time because **every new feature adds weight
 **Impact:** Removed ~50KB JavaScript from critical path, improved LCP by 3.9 seconds
 
 **Before (Heavy - 50KB in critical path):**
+
 ```tsx
 import { motion } from 'framer-motion'
-
-<motion.div
+;<motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
@@ -39,6 +39,7 @@ import { motion } from 'framer-motion'
 ```
 
 **After (Lightweight - CSS only):**
+
 ```tsx
 <div className="animate-fade-in-up">
   <h1>Hero Content</h1>
@@ -46,6 +47,7 @@ import { motion } from 'framer-motion'
 ```
 
 **Why This Works:**
+
 - CSS animations run on compositor thread (non-blocking)
 - No JavaScript parsing/execution required for first paint
 - Content appears immediately, animates smoothly
@@ -56,19 +58,23 @@ import { motion } from 'framer-motion'
 **Impact:** Eliminated render-blocking script from `<head>`
 
 **Before (Blocking):**
+
 ```html
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11121440988"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-11121440988');
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
+    gtag('config', 'AW-11121440988')
   </script>
 </head>
 ```
 
 **After (Non-blocking):**
+
 ```html
 <head>
   {/* Google Ads loaded by GoogleAnalytics component with lazyOnload strategy */}
@@ -84,18 +90,21 @@ The GoogleAnalytics component (src/components/analytics/GoogleAnalytics.tsx) alr
 Use this checklist for **every new page or feature** to prevent performance degradation:
 
 ### Hero Section (Above-the-Fold)
+
 - [ ] Use CSS animations instead of Framer Motion
 - [ ] Use `animate-fade-in-up` class (defined in layout.tsx critical CSS)
 - [ ] No large images without `priority` prop
 - [ ] No blocking JavaScript
 
 ### Below-the-Fold Content
+
 - [ ] Use `whileInView` for Framer Motion animations (lazy trigger)
 - [ ] Lazy load heavy components (Chatbot, Sales Agent, Exit Intent)
 - [ ] Use `loading="lazy"` on all images and iframes
 - [ ] Defer non-critical scripts
 
 ### Before Committing
+
 - [ ] Run `npm run build` to check bundle size
 - [ ] Run Lighthouse audit (target: 90+ performance)
 - [ ] Test on 3 screen sizes (375px, 768px, 1280px+)
@@ -107,12 +116,13 @@ Use this checklist for **every new page or feature** to prevent performance degr
 
 These classes are defined in `src/app/layout.tsx` critical CSS and can be used anywhere:
 
-| Class | Animation | Use Case |
-|-------|-----------|----------|
+| Class                | Animation          | Use Case                      |
+| -------------------- | ------------------ | ----------------------------- |
 | `animate-fade-in-up` | Fade in + slide up | Hero sections, card entrances |
-| `animate-pulse` | Pulsing opacity | Loading states, attention |
+| `animate-pulse`      | Pulsing opacity    | Loading states, attention     |
 
 **Example Usage:**
+
 ```tsx
 // Hero section
 <div className="animate-fade-in-up">
@@ -130,29 +140,26 @@ These classes are defined in `src/app/layout.tsx` critical CSS and can be used a
 ## 🚫 Common Performance Mistakes to Avoid
 
 ### ❌ DON'T: Use Framer Motion in Hero Sections
+
 ```tsx
 // Heavy - loads 50KB Framer Motion before first paint
 import { motion } from 'framer-motion'
-
-<motion.div
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
->
+;<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
   {/* Hero content */}
 </motion.div>
 ```
 
 ### ✅ DO: Use CSS Animations for Critical Content
+
 ```tsx
 // Lightweight - CSS only
-<div className="animate-fade-in-up">
-  {/* Hero content */}
-</div>
+<div className="animate-fade-in-up">{/* Hero content */}</div>
 ```
 
 ---
 
 ### ❌ DON'T: Load Heavy Scripts in `<head>`
+
 ```html
 <!-- Blocks page load -->
 <head>
@@ -161,32 +168,26 @@ import { motion } from 'framer-motion'
 ```
 
 ### ✅ DO: Use `lazyOnload` Strategy
+
 ```tsx
 // src/components/analytics/GoogleAnalytics.tsx
-<Script
-  src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-  strategy="lazyOnload"
-/>
+<Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
 ```
 
 ---
 
 ### ❌ DON'T: Use Framer Motion for Simple Hover Effects
+
 ```tsx
 // Overkill - loads entire Framer Motion library
-<motion.button
-  whileHover={{ scale: 1.05 }}
->
-  Click Me
-</motion.button>
+<motion.button whileHover={{ scale: 1.05 }}>Click Me</motion.button>
 ```
 
 ### ✅ DO: Use CSS Transitions
+
 ```tsx
 // Lightweight - CSS only
-<button className="transition-transform hover:scale-105">
-  Click Me
-</button>
+<button className="transition-transform hover:scale-105">Click Me</button>
 ```
 
 ---
@@ -194,6 +195,7 @@ import { motion } from 'framer-motion'
 ## 📊 How to Monitor Performance
 
 ### 1. Run Lighthouse Before Each Deploy
+
 ```bash
 # Test specific page
 npx lighthouse https://cerebrumbiologyacademy.com/your-page --view
@@ -206,6 +208,7 @@ npx lighthouse https://cerebrumbiologyacademy.com/your-page --view
 ```
 
 ### 2. Check Core Web Vitals
+
 ```bash
 # From Chrome DevTools:
 # 1. Open DevTools → Performance tab
@@ -217,6 +220,7 @@ npx lighthouse https://cerebrumbiologyacademy.com/your-page --view
 ```
 
 ### 3. Monitor Bundle Size
+
 ```bash
 # Check total bundle size
 npm run build
@@ -232,12 +236,14 @@ npx @next/bundle-analyzer
 Follow this exact pattern for Noida, Ghaziabad, and other location pages:
 
 ### Step 1: Read the Page
+
 ```bash
 # Identify all motion.div in hero section
 grep -n "motion.div" src/app/neet-coaching-noida/page.tsx
 ```
 
 ### Step 2: Replace Framer Motion in Hero
+
 ```tsx
 // Before:
 <motion.div
@@ -252,6 +258,7 @@ grep -n "motion.div" src/app/neet-coaching-noida/page.tsx
 ```
 
 ### Step 3: Keep Framer Motion Below-the-Fold
+
 ```tsx
 // Below-the-fold sections can keep whileInView animations
 <motion.div
@@ -265,6 +272,7 @@ grep -n "motion.div" src/app/neet-coaching-noida/page.tsx
 ```
 
 ### Step 4: Test and Deploy
+
 ```bash
 # Format
 npx prettier --write src/app/neet-coaching-noida/page.tsx
@@ -283,13 +291,16 @@ npx lighthouse https://cerebrumbiologyacademy.com/neet-coaching-noida --view
 ## 🔄 Why Performance Keeps Degrading
 
 ### Root Cause: Feature Accumulation
+
 Your site has accumulated features over time:
+
 - 8+ context providers (I18n, Auth, Tracking, Toast, Trust, Personalization, Motion)
 - 10+ dynamic components (Analytics, PWA, Trial Banner, Footer, Mobile Nav, FloatingCTA, Exit Intent, Chatbot, Sales Agent)
 
 **Every new feature adds weight, even with lazy loading.**
 
 ### Solution: Audit and Remove
+
 Periodically audit your site and remove unused features:
 
 ```bash
@@ -308,6 +319,7 @@ npm run build
 ## 📝 Quick Reference
 
 ### High-Traffic Pages to Optimize First
+
 1. ✅ `/neet-coaching-gurugram` - **96/100 performance** (DONE)
 2. 🔄 `/neet-coaching-noida` - Apply same pattern
 3. 🔄 `/neet-coaching-ghaziabad` - Apply same pattern
@@ -315,6 +327,7 @@ npm run build
 5. 🔄 Homepage `/` - Apply same pattern
 
 ### Expected Performance Targets
+
 - **Performance:** 90-96/100
 - **LCP:** < 2.5s (Good)
 - **FCP:** < 1.8s (Good)
@@ -336,6 +349,7 @@ npm run build
 ## 📞 Questions?
 
 If you need help applying this pattern to other pages, refer to:
+
 - This guide: `PERFORMANCE-GUIDE.md`
 - Optimized example: `src/app/neet-coaching-gurugram/page.tsx`
 - Critical CSS: `src/app/layout.tsx` (lines 206-306)

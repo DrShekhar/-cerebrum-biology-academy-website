@@ -87,10 +87,7 @@ export async function POST(
     const session = authResult.session
 
     if (!body.team || !['TEAM_A', 'TEAM_B'].includes(body.team)) {
-      return NextResponse.json(
-        { success: false, error: 'Valid team is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Valid team is required' }, { status: 400 })
     }
 
     if (
@@ -206,10 +203,7 @@ export async function POST(
     )
   } catch (error) {
     console.error('Error updating score:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to update score' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to update score' }, { status: 500 })
   }
 }
 
@@ -259,10 +253,7 @@ export async function DELETE(
     })
 
     if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz session not found' }, { status: 404 })
     }
 
     // Prevent undo on completed quizzes
@@ -274,10 +265,7 @@ export async function DELETE(
     }
 
     if (session.rounds.length === 0) {
-      return NextResponse.json(
-        { success: false, error: 'No rounds to undo' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'No rounds to undo' }, { status: 400 })
     }
 
     const lastRound = session.rounds[0]

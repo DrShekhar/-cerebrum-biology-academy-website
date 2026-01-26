@@ -14,14 +14,10 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      data: sessionAnalytics
+      data: sessionAnalytics,
     })
-
   } catch (error) {
     console.error('Error fetching test session analytics:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch test session analytics' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to fetch test session analytics' }, { status: 500 })
   }
 }

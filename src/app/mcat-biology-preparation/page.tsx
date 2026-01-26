@@ -333,9 +333,9 @@ export default function MCATBiologyPage() {
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Expert MCAT biology coaching using Campbell Biology as your foundation. Score
-              higher on the Biological and Biochemical Foundations sections with our
-              comprehensive preparation program.
+              Expert MCAT biology coaching using Campbell Biology as your foundation. Score higher
+              on the Biological and Biochemical Foundations sections with our comprehensive
+              preparation program.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -545,9 +545,7 @@ export default function MCATBiologyPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              MCAT Coaching Plans
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">MCAT Coaching Plans</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Flexible options for pre-med students preparing for medical school
             </p>
@@ -629,9 +627,7 @@ export default function MCATBiologyPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors"
                 >
-                  <span className="text-lg font-semibold text-slate-900 pr-4">
-                    {faq.question}
-                  </span>
+                  <span className="text-lg font-semibold text-slate-900 pr-4">{faq.question}</span>
                   <ChevronRight
                     className={`w-5 h-5 text-slate-400 transition-transform ${openFaq === index ? 'rotate-90' : ''}`}
                   />
@@ -719,8 +715,8 @@ export default function MCATBiologyPage() {
               Ready to Ace the MCAT Biology Sections?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join our MCAT preparation program and build a strong foundation in biology
-              using Campbell Biology. Our expert tutors will guide you to your target score.
+              Join our MCAT preparation program and build a strong foundation in biology using
+              Campbell Biology. Our expert tutors will guide you to your target score.
             </p>
             <motion.button
               whileHover={{ scale: 1.02 }}

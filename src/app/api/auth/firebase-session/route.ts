@@ -207,7 +207,9 @@ export async function POST(request: NextRequest) {
 
     // Action: Create session (login)
     if (action === 'login') {
-      console.log(`[Firebase Session][${requestId}] Processing login for phone: ***${normalizedPhone.slice(-4)}`)
+      console.log(
+        `[Firebase Session][${requestId}] Processing login for phone: ***${normalizedPhone.slice(-4)}`
+      )
 
       // Find user by phone or Firebase UID
       let user = await prisma.users.findFirst({
@@ -223,7 +225,9 @@ export async function POST(request: NextRequest) {
       })
 
       if (!user) {
-        console.warn(`[Firebase Session][${requestId}] User not found for phone: ***${normalizedPhone.slice(-4)}`)
+        console.warn(
+          `[Firebase Session][${requestId}] User not found for phone: ***${normalizedPhone.slice(-4)}`
+        )
         return addSecurityHeaders(
           NextResponse.json({ error: 'User not found. Please sign up first.' }, { status: 404 })
         )

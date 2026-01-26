@@ -54,7 +54,7 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
     }
   }
 
-  const earnedAchievements = achievements.filter(a => a.earnedAt)
+  const earnedAchievements = achievements.filter((a) => a.earnedAt)
   const totalPoints = earnedAchievements.reduce((sum, a) => sum + a.points, 0)
 
   if (achievements.length === 0) {
@@ -78,9 +78,7 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
           <div className="text-sm text-gray-600">Achievements Unlocked</div>
         </div>
         <div>
-          <div className="text-lg font-bold text-orange-600">
-            {totalPoints}
-          </div>
+          <div className="text-lg font-bold text-orange-600">{totalPoints}</div>
           <div className="text-sm text-gray-600">Total Points</div>
         </div>
       </div>
@@ -97,28 +95,28 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
             <div
               key={index}
               className={`relative p-3 rounded-lg border transition-all ${
-                isEarned
-                  ? 'bg-white border-yellow-300 shadow-md'
-                  : 'bg-gray-50 border-gray-200'
+                isEarned ? 'bg-white border-yellow-300 shadow-md' : 'bg-gray-50 border-gray-200'
               }`}
             >
               {/* Achievement Badge */}
               <div className="flex flex-col items-center space-y-2">
-                <div className={`w-12 h-12 rounded-full flex items-center justify-center text-white ${
-                  isEarned ? getAchievementColor(achievement.type) : 'bg-gray-400'
-                }`}>
+                <div
+                  className={`w-12 h-12 rounded-full flex items-center justify-center text-white ${
+                    isEarned ? getAchievementColor(achievement.type) : 'bg-gray-400'
+                  }`}
+                >
                   {getAchievementIcon(achievement.type)}
                 </div>
 
                 <div className="text-center">
-                  <h4 className={`font-medium text-sm ${
-                    isEarned ? 'text-gray-900' : 'text-gray-600'
-                  }`}>
+                  <h4
+                    className={`font-medium text-sm ${
+                      isEarned ? 'text-gray-900' : 'text-gray-600'
+                    }`}
+                  >
                     {achievement.title}
                   </h4>
-                  <p className={`text-xs ${
-                    isEarned ? 'text-gray-600' : 'text-gray-500'
-                  }`}>
+                  <p className={`text-xs ${isEarned ? 'text-gray-600' : 'text-gray-500'}`}>
                     {achievement.description}
                   </p>
                 </div>
@@ -139,9 +137,11 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
                 )}
 
                 {/* Points */}
-                <div className={`text-xs font-medium ${
-                  isEarned ? 'text-yellow-600' : 'text-gray-500'
-                }`}>
+                <div
+                  className={`text-xs font-medium ${
+                    isEarned ? 'text-yellow-600' : 'text-gray-500'
+                  }`}
+                >
                   {achievement.points} pts
                 </div>
 
@@ -173,7 +173,9 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
 
       {/* Next Achievement Goal */}
       {(() => {
-        const nextAchievement = achievements.find(a => !a.earnedAt && a.currentProgress !== undefined)
+        const nextAchievement = achievements.find(
+          (a) => !a.earnedAt && a.currentProgress !== undefined
+        )
         if (!nextAchievement) return null
 
         const progress = nextAchievement.currentProgress || 0
@@ -185,16 +187,14 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
             <h4 className="font-medium text-blue-900 mb-2">Next Achievement</h4>
             <div className="flex items-center justify-between">
               <div>
-                <span className="text-sm font-medium text-blue-800">
-                  {nextAchievement.title}
-                </span>
-                <p className="text-xs text-blue-600">
-                  {remaining} more to unlock
-                </p>
+                <span className="text-sm font-medium text-blue-800">{nextAchievement.title}</span>
+                <p className="text-xs text-blue-600">{remaining} more to unlock</p>
               </div>
-              <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${
-                getAchievementColor(nextAchievement.type)
-              }`}>
+              <div
+                className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${getAchievementColor(
+                  nextAchievement.type
+                )}`}
+              >
                 {getAchievementIcon(nextAchievement.type)}
               </div>
             </div>
@@ -208,9 +208,14 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
         <div className="p-3 bg-green-50 rounded-lg border border-green-200">
           <h5 className="font-medium text-green-800 text-sm mb-2">Learning</h5>
           <div className="text-xs text-green-700">
-            {achievements.filter(a =>
-              ['FIRST_TEST', 'TOPIC_MASTER', 'PERFECTIONIST', 'BOOKWORM'].includes(a.type) && a.earnedAt
-            ).length} earned
+            {
+              achievements.filter(
+                (a) =>
+                  ['FIRST_TEST', 'TOPIC_MASTER', 'PERFECTIONIST', 'BOOKWORM'].includes(a.type) &&
+                  a.earnedAt
+              ).length
+            }{' '}
+            earned
           </div>
         </div>
 
@@ -218,9 +223,13 @@ export function AchievementsBadge({ achievements }: AchievementsBadgeProps) {
         <div className="p-3 bg-orange-50 rounded-lg border border-orange-200">
           <h5 className="font-medium text-orange-800 text-sm mb-2">Consistency</h5>
           <div className="text-xs text-orange-700">
-            {achievements.filter(a =>
-              ['STREAK_7_DAYS', 'STREAK_30_DAYS', 'SPEED_DEMON'].includes(a.type) && a.earnedAt
-            ).length} earned
+            {
+              achievements.filter(
+                (a) =>
+                  ['STREAK_7_DAYS', 'STREAK_30_DAYS', 'SPEED_DEMON'].includes(a.type) && a.earnedAt
+              ).length
+            }{' '}
+            earned
           </div>
         </div>
       </div>

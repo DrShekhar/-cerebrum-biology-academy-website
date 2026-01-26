@@ -9,7 +9,10 @@ import type { LeadStage } from '@/generated/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 
 const assignLeadSchema = z.object({
-  leadIds: z.array(z.string()).min(1, 'At least one lead ID required').max(100, 'Maximum 100 leads per request'),
+  leadIds: z
+    .array(z.string())
+    .min(1, 'At least one lead ID required')
+    .max(100, 'Maximum 100 leads per request'),
   counselorId: z.string().min(1, 'Counselor ID is required'),
   notifyCounselor: z.boolean().optional().default(true),
   reason: z.string().optional(),
@@ -69,10 +72,7 @@ async function handlePOST(request: NextRequest, session: ValidatedSession) {
     })
 
     if (leads.length === 0) {
-      return NextResponse.json(
-        { success: false, error: 'No valid leads found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'No valid leads found' }, { status: 404 })
     }
 
     // Track reassignments for activity logging
@@ -162,10 +162,7 @@ async function handlePOST(request: NextRequest, session: ValidatedSession) {
     }
 
     console.error('Error assigning leads:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to assign leads' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to assign leads' }, { status: 500 })
   }
 }
 
@@ -199,10 +196,7 @@ async function handleGET(_request: NextRequest, _session: ValidatedSession) {
     // Get unassigned leads count
     const unassignedLeads = await prisma.leads.count({
       where: {
-        OR: [
-          { assignedToId: null },
-          { users: { isActive: false } },
-        ],
+        OR: [{ assignedToId: null }, { users: { isActive: false } }],
       },
     })
 
@@ -273,7 +267,16 @@ async function handlePUT(request: NextRequest, session: ValidatedSession) {
 
     let assignedCount = 0
     const assignedLeads: Array<{
-      lead: { id: string; studentName: string; email: string | null; phone: string; courseInterest: string; stage: string; priority: string; previousAssignedToId: string | null }
+      lead: {
+        id: string
+        studentName: string
+        email: string | null
+        phone: string
+        courseInterest: string
+        stage: string
+        priority: string
+        previousAssignedToId: string | null
+      }
       counselor: { id: string; name: string }
     }> = []
 

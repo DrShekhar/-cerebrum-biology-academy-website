@@ -4,7 +4,8 @@ import '@testing-library/jest-dom'
 // Mock environment variables for integration tests
 process.env.NODE_ENV = 'test'
 process.env.NEXT_PUBLIC_ENV = 'test'
-process.env.DATABASE_URL = process.env.TEST_DATABASE_URL || 'postgresql://test:test@localhost:5432/cerebrum_test'
+process.env.DATABASE_URL =
+  process.env.TEST_DATABASE_URL || 'postgresql://test:test@localhost:5432/cerebrum_test'
 
 // Mock external services for integration tests
 jest.mock('@/lib/payments/razorpay', () => ({
@@ -12,50 +13,50 @@ jest.mock('@/lib/payments/razorpay', () => ({
     id: 'test_order_123',
     amount: 42000,
     currency: 'INR',
-    status: 'created'
+    status: 'created',
   }),
   verifyPayment: jest.fn().mockResolvedValue({
     success: true,
-    paymentId: 'test_payment_123'
-  })
+    paymentId: 'test_payment_123',
+  }),
 }))
 
 jest.mock('@/lib/whatsapp/whatsappService', () => ({
   sendMessage: jest.fn().mockResolvedValue({
     success: true,
-    messageId: 'test_msg_123'
+    messageId: 'test_msg_123',
   }),
   sendTemplateMessage: jest.fn().mockResolvedValue({
     success: true,
-    messageId: 'test_template_123'
-  })
+    messageId: 'test_template_123',
+  }),
 }))
 
 jest.mock('@/lib/ai/anthropic', () => ({
   generateResponse: jest.fn().mockResolvedValue({
     content: 'This is a test AI response for biology education.',
     usage: { input_tokens: 50, output_tokens: 100 },
-    model: 'claude-3-haiku-20240307'
+    model: 'claude-3-haiku-20240307',
   }),
   generateQuestions: jest.fn().mockResolvedValue([
     {
       question: 'What is photosynthesis?',
       options: ['A process', 'A chemical', 'A reaction', 'All of the above'],
       correct: 3,
-      explanation: 'Photosynthesis is a process involving chemical reactions.'
-    }
-  ])
+      explanation: 'Photosynthesis is a process involving chemical reactions.',
+    },
+  ]),
 }))
 
 jest.mock('@/lib/email/emailService', () => ({
   sendEnrollmentConfirmation: jest.fn().mockResolvedValue({
     success: true,
-    messageId: 'test_email_123'
+    messageId: 'test_email_123',
   }),
   sendDemoConfirmation: jest.fn().mockResolvedValue({
     success: true,
-    messageId: 'test_demo_email_123'
-  })
+    messageId: 'test_demo_email_123',
+  }),
 }))
 
 // Global test utilities
@@ -65,7 +66,7 @@ global.createTestUser = () => ({
   email: 'test@cerebrumbiologyacademy.com',
   phone: '+918826444334',
   class: 'class-11',
-  enrolledCourses: []
+  enrolledCourses: [],
 })
 
 global.createTestCourse = () => ({
@@ -75,7 +76,7 @@ global.createTestCourse = () => ({
   series: 'pinnacle',
   plan: 'plan-a',
   price: 42000,
-  features: ['Live Classes', 'Recorded Videos', 'Test Series']
+  features: ['Live Classes', 'Recorded Videos', 'Test Series'],
 })
 
 global.createTestEnrollment = () => ({
@@ -84,7 +85,7 @@ global.createTestEnrollment = () => ({
   courseId: 'test_course_123',
   status: 'active',
   paymentStatus: 'completed',
-  enrolledAt: new Date()
+  enrolledAt: new Date(),
 })
 
 // Database setup utilities for integration tests
@@ -108,8 +109,8 @@ global.makeAPIRequest = async (endpoint, options = {}) => {
   const defaultOptions = {
     headers: {
       'Content-Type': 'application/json',
-      'X-Test-Request': 'true'
-    }
+      'X-Test-Request': 'true',
+    },
   }
 
   return fetch(url, { ...defaultOptions, ...options })
@@ -124,7 +125,7 @@ global.measurePerformance = async (fn) => {
   return {
     result,
     duration: end - start,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   }
 }
 
@@ -132,11 +133,12 @@ global.measurePerformance = async (fn) => {
 global.validateAIResponse = (response) => {
   return {
     hasContent: Boolean(response.content),
-    isEducational: response.content.toLowerCase().includes('biology') ||
-                  response.content.toLowerCase().includes('neet') ||
-                  response.content.toLowerCase().includes('medical'),
+    isEducational:
+      response.content.toLowerCase().includes('biology') ||
+      response.content.toLowerCase().includes('neet') ||
+      response.content.toLowerCase().includes('medical'),
     isAppropriate: !response.content.includes('inappropriate'),
-    hasValidUsage: Boolean(response.usage?.input_tokens && response.usage?.output_tokens)
+    hasValidUsage: Boolean(response.usage?.input_tokens && response.usage?.output_tokens),
   }
 }
 
@@ -145,7 +147,7 @@ global.testSecurityVectors = {
   xss: ['<script>alert("xss")</script>', '"><svg onload=alert(1)>'],
   sqlInjection: ["'; DROP TABLE users; --", "1' OR '1'='1"],
   pathTraversal: ['../../../etc/passwd', '..\\..\\..\\windows\\system32'],
-  commandInjection: ['$(whoami)', '`ls -la`', '| cat /etc/passwd']
+  commandInjection: ['$(whoami)', '`ls -la`', '| cat /etc/passwd'],
 }
 
 // Accessibility testing utilities
@@ -154,9 +156,10 @@ global.checkAccessibility = (element) => {
     hasAltText: element.querySelector('img')?.hasAttribute('alt'),
     hasAriaLabels: element.querySelectorAll('[aria-label]').length > 0,
     hasProperHeadings: element.querySelector('h1, h2, h3, h4, h5, h6') !== null,
-    hasTabIndex: element.hasAttribute('tabindex') ||
-                element.tagName.toLowerCase() === 'button' ||
-                element.tagName.toLowerCase() === 'a'
+    hasTabIndex:
+      element.hasAttribute('tabindex') ||
+      element.tagName.toLowerCase() === 'button' ||
+      element.tagName.toLowerCase() === 'a',
   }
 }
 
@@ -168,7 +171,7 @@ global.TestDataFactory = {
     email: 'test+' + Math.random().toString(36).substr(2, 5) + '@cerebrumbiologyacademy.com',
     phone: '+918826444334',
     class: 'class-11',
-    ...overrides
+    ...overrides,
   }),
 
   course: (overrides = {}) => ({
@@ -178,7 +181,7 @@ global.TestDataFactory = {
     series: 'pinnacle',
     plan: 'plan-a',
     price: 42000,
-    ...overrides
+    ...overrides,
   }),
 
   enrollment: (userId, courseId, overrides = {}) => ({
@@ -188,8 +191,8 @@ global.TestDataFactory = {
     status: 'active',
     paymentStatus: 'completed',
     enrolledAt: new Date(),
-    ...overrides
-  })
+    ...overrides,
+  }),
 }
 
 // Console override for cleaner test output
@@ -197,10 +200,11 @@ const originalConsoleError = console.error
 console.error = (...args) => {
   // Suppress known React warnings in tests
   const message = args[0]
-  if (typeof message === 'string' && (
-    message.includes('Warning: ReactDOM.render is deprecated') ||
-    message.includes('Warning: componentWillReceiveProps has been renamed')
-  )) {
+  if (
+    typeof message === 'string' &&
+    (message.includes('Warning: ReactDOM.render is deprecated') ||
+      message.includes('Warning: componentWillReceiveProps has been renamed'))
+  ) {
     return
   }
   originalConsoleError(...args)

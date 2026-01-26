@@ -48,9 +48,24 @@ const faridabadAreas = [
   { name: 'NIT Faridabad', distance: '15 km', metro: 'NIT Metro', landmark: 'Crown Interiorz' },
   { name: 'Sector 21', distance: '16 km', metro: 'Badkhal Mor', landmark: 'SRS Mall' },
   { name: 'Sector 37', distance: '20 km', metro: 'Mujesar Metro', landmark: 'Residential Hub' },
-  { name: 'Old Faridabad', distance: '14 km', metro: 'Old Faridabad Metro', landmark: 'Heritage Area' },
-  { name: 'Ballabhgarh', distance: '12 km', metro: 'Ballabhgarh Metro', landmark: 'Near Greater Noida' },
-  { name: 'Sector 81-89', distance: '10 km', metro: 'Near Aqua Line', landmark: 'Greater Faridabad' },
+  {
+    name: 'Old Faridabad',
+    distance: '14 km',
+    metro: 'Old Faridabad Metro',
+    landmark: 'Heritage Area',
+  },
+  {
+    name: 'Ballabhgarh',
+    distance: '12 km',
+    metro: 'Ballabhgarh Metro',
+    landmark: 'Near Greater Noida',
+  },
+  {
+    name: 'Sector 81-89',
+    distance: '10 km',
+    metro: 'Near Aqua Line',
+    landmark: 'Greater Faridabad',
+  },
 ]
 
 const whyChooseUs = [
@@ -130,7 +145,8 @@ export default function BiologyTutorFaridabadPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Faridabad',
-            description: 'Best Biology Tutor for Faridabad students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for Faridabad students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-faridabad',
             telephone: '+91-88264-44334',
             address: {
@@ -161,8 +177,7 @@ export default function BiologyTutorFaridabadPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Faridabad</span>
+              Biology Tutor in <span className="text-yellow-400">Faridabad</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -170,8 +185,8 @@ export default function BiologyTutorFaridabadPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for Faridabad students.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert Biology coaching for Faridabad students. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -333,9 +348,7 @@ export default function BiologyTutorFaridabadPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Faridabad Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Faridabad Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Quality NEET coaching with AIIMS faculty
             </p>

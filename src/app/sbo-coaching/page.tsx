@@ -66,7 +66,12 @@ const syllabus = [
   },
   {
     unit: 'Genetics & Evolution',
-    topics: ['Mendelian Genetics', 'Molecular Genetics', 'Population Genetics', 'Evolutionary Theory'],
+    topics: [
+      'Mendelian Genetics',
+      'Molecular Genetics',
+      'Population Genetics',
+      'Evolutionary Theory',
+    ],
     weightage: '20%',
     icon: Dna,
   },
@@ -100,22 +105,26 @@ const features = [
   {
     icon: BookOpen,
     title: 'Campbell Biology Coverage',
-    description: "Complete coverage of all 56 chapters from Campbell Biology, aligned with SBO requirements",
+    description:
+      'Complete coverage of all 56 chapters from Campbell Biology, aligned with SBO requirements',
   },
   {
     icon: Users,
     title: 'Expert Faculty',
-    description: 'Learn from IBO medalists and experienced Biology Olympiad coaches with proven track records',
+    description:
+      'Learn from IBO medalists and experienced Biology Olympiad coaches with proven track records',
   },
   {
     icon: Target,
     title: 'SBO-Focused Strategy',
-    description: 'Targeted preparation for Singapore Biology Olympiad exam format and question patterns',
+    description:
+      'Targeted preparation for Singapore Biology Olympiad exam format and question patterns',
   },
   {
     icon: ClipboardCheck,
     title: 'Weekly Assessments',
-    description: 'Regular practice tests modeled on SBO past papers with detailed performance analytics',
+    description:
+      'Regular practice tests modeled on SBO past papers with detailed performance analytics',
   },
   {
     icon: MessageCircle,
@@ -132,27 +141,33 @@ const features = [
 const faqs = [
   {
     question: 'What is the Singapore Biology Olympiad (SBO)?',
-    answer: 'The Singapore Biology Olympiad (SBO) is organized by the Singapore National Institute of Education. It selects the top 4 students to represent Singapore at the International Biology Olympiad (IBO). Singapore consistently achieves outstanding results at IBO.',
+    answer:
+      'The Singapore Biology Olympiad (SBO) is organized by the Singapore National Institute of Education. It selects the top 4 students to represent Singapore at the International Biology Olympiad (IBO). Singapore consistently achieves outstanding results at IBO.',
   },
   {
     question: 'Who is eligible for SBO?',
-    answer: 'SBO is open to secondary school and junior college students in Singapore. Students are typically nominated by their schools and must meet the age requirements for IBO participation (under 20 on July 1st of competition year).',
+    answer:
+      'SBO is open to secondary school and junior college students in Singapore. Students are typically nominated by their schools and must meet the age requirements for IBO participation (under 20 on July 1st of competition year).',
   },
   {
     question: 'What is the format of the SBO exam?',
-    answer: 'SBO consists of multiple rounds. Round 1 is a written theory examination. Top performers advance to Round 2 which includes both theory and practical examinations. The final 4 students are selected to represent Singapore at IBO.',
+    answer:
+      'SBO consists of multiple rounds. Round 1 is a written theory examination. Top performers advance to Round 2 which includes both theory and practical examinations. The final 4 students are selected to represent Singapore at IBO.',
   },
   {
     question: 'How do I prepare for SBO?',
-    answer: "SBO preparation requires mastery of Campbell Biology (12th edition), strong practical skills, and extensive practice with past papers. Our coaching program provides structured preparation aligned with Singapore's rigorous standards.",
+    answer:
+      "SBO preparation requires mastery of Campbell Biology (12th edition), strong practical skills, and extensive practice with past papers. Our coaching program provides structured preparation aligned with Singapore's rigorous standards.",
   },
   {
     question: 'Can international students join your SBO coaching?',
-    answer: 'Yes! Our online SBO coaching is available to students worldwide. While SBO participation requires Singapore eligibility, our program is excellent preparation for any biology olympiad.',
+    answer:
+      'Yes! Our online SBO coaching is available to students worldwide. While SBO participation requires Singapore eligibility, our program is excellent preparation for any biology olympiad.',
   },
   {
     question: 'What makes your SBO coaching different?',
-    answer: 'We offer personalized 1-on-1 coaching, complete Campbell Biology coverage, SBO past paper analysis, practical exam preparation, weekly assessments, and direct access to faculty via WhatsApp.',
+    answer:
+      'We offer personalized 1-on-1 coaching, complete Campbell Biology coverage, SBO past paper analysis, practical exam preparation, weekly assessments, and direct access to faculty via WhatsApp.',
   },
 ]
 
@@ -161,21 +176,24 @@ const testimonials = [
     name: 'Wei Lin T.',
     location: 'Singapore',
     achievement: 'SBO Gold Medalist 2024',
-    quote: 'The structured Campbell Biology coverage and practical preparation helped me excel in SBO. Made it to the national team!',
+    quote:
+      'The structured Campbell Biology coverage and practical preparation helped me excel in SBO. Made it to the national team!',
     avatar: 'WT',
   },
   {
     name: 'Sarah C.',
     location: 'Singapore',
     achievement: 'SBO Silver Medalist',
-    quote: 'The faculty really understand the SBO exam pattern. Their guidance on practical techniques was invaluable.',
+    quote:
+      'The faculty really understand the SBO exam pattern. Their guidance on practical techniques was invaluable.',
     avatar: 'SC',
   },
   {
     name: 'Kevin L.',
     location: 'Singapore',
     achievement: 'SBO Bronze Medalist',
-    quote: 'WhatsApp doubt clearing was a game-changer. I could get help whenever I was stuck on difficult concepts.',
+    quote:
+      'WhatsApp doubt clearing was a game-changer. I could get help whenever I was stuck on difficult concepts.',
     avatar: 'KL',
   },
 ]
@@ -258,8 +276,9 @@ export default function SBOCoachingPage() {
               <span className="block text-yellow-400 mt-2">Singapore Biology Olympiad</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Expert online coaching for the Singapore Biology Olympiad. Prepare with IBO-level curriculum,
-              experienced faculty, and personalized mentorship to represent Singapore at the International Biology Olympiad.
+              Expert online coaching for the Singapore Biology Olympiad. Prepare with IBO-level
+              curriculum, experienced faculty, and personalized mentorship to represent Singapore at
+              the International Biology Olympiad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -425,9 +444,7 @@ export default function SBOCoachingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Hear from our SBO medalists from Singapore
             </p>
@@ -453,7 +470,9 @@ export default function SBOCoachingPage() {
                 </div>
                 <div className="flex items-center mb-3">
                   <Trophy className="h-4 w-4 text-yellow-500 mr-2" />
-                  <span className="text-sm font-medium text-yellow-700">{testimonial.achievement}</span>
+                  <span className="text-sm font-medium text-yellow-700">
+                    {testimonial.achievement}
+                  </span>
                 </div>
                 <p className="text-gray-600 italic">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex mt-3">
@@ -471,9 +490,7 @@ export default function SBOCoachingPage() {
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              SBO Coaching Plans
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">SBO Coaching Plans</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Choose the plan that best fits your preparation timeline
             </p>
@@ -500,10 +517,14 @@ export default function SBOCoachingPage() {
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-gray-900' : 'text-white'}`}>
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-gray-900' : 'text-white'}`}
+                  >
                     {plan.name}
                   </h3>
-                  <div className={`text-4xl font-bold ${plan.popular ? 'text-gray-900' : 'text-white'}`}>
+                  <div
+                    className={`text-4xl font-bold ${plan.popular ? 'text-gray-900' : 'text-white'}`}
+                  >
                     {plan.price}
                   </div>
                   <div className={`text-sm ${plan.popular ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -513,13 +534,19 @@ export default function SBOCoachingPage() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircle className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-green-500' : 'text-green-400'}`} />
-                      <span className={plan.popular ? 'text-gray-600' : 'text-gray-300'}>{feature}</span>
+                      <CheckCircle
+                        className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-green-500' : 'text-green-400'}`}
+                      />
+                      <span className={plan.popular ? 'text-gray-600' : 'text-gray-300'}>
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
                 <button
-                  onClick={() => handleWhatsAppClick(`pricing-${plan.name.toLowerCase().replace(' ', '-')}`)}
+                  onClick={() =>
+                    handleWhatsAppClick(`pricing-${plan.name.toLowerCase().replace(' ', '-')}`)
+                  }
                   className={`w-full py-3 rounded-lg font-semibold transition-all ${
                     plan.popular
                       ? 'bg-green-500 hover:bg-green-600 text-white'
@@ -646,7 +673,8 @@ export default function SBOCoachingPage() {
             '@context': 'https://schema.org',
             '@type': 'Course',
             name: 'SBO Coaching Online - Singapore Biology Olympiad Preparation',
-            description: 'Expert online coaching for the Singapore Biology Olympiad (SBO). Complete Campbell Biology coverage, past paper practice, and personalized mentorship.',
+            description:
+              'Expert online coaching for the Singapore Biology Olympiad (SBO). Complete Campbell Biology coverage, past paper practice, and personalized mentorship.',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -655,7 +683,14 @@ export default function SBOCoachingPage() {
             courseCode: 'SBO-PREP',
             educationalLevel: 'High School',
             inLanguage: 'en',
-            teaches: ['Biology', 'Cell Biology', 'Genetics', 'Ecology', 'Plant Biology', 'Animal Physiology'],
+            teaches: [
+              'Biology',
+              'Cell Biology',
+              'Genetics',
+              'Ecology',
+              'Plant Biology',
+              'Animal Physiology',
+            ],
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'Online',

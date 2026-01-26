@@ -6,22 +6,23 @@ description: Generates country-specific landing pages for international biology 
 # International Page Generator Skill
 
 ## Purpose
+
 Generate high-converting, SEO-optimized landing pages for international students seeking biology tutoring. Each page is customized for the country's exam systems, pricing, and timezone.
 
 ## Target Countries
 
-| Code | Country | Exam Systems | Currency |
-|------|---------|--------------|----------|
-| us | United States | AP Biology, SAT Biology, MCAT | USD |
-| uk | United Kingdom | GCSE, A-Level, BMAT, UCAT | GBP |
-| ca | Canada | Provincial Bio, MCAT | CAD |
-| au | Australia | HSC, VCE, QCE, ATAR | AUD |
-| sg | Singapore | GCE O/A-Level, IP, SBO | SGD |
-| ae | UAE/Dubai | IGCSE, IB, American | AED |
-| ie | Ireland | Leaving Certificate | EUR |
-| hk | Hong Kong | HKDSE, IGCSE, A-Level | HKD |
-| nz | New Zealand | NCEA | NZD |
-| za | South Africa | NSC/Matric, IEB | ZAR |
+| Code | Country        | Exam Systems                  | Currency |
+| ---- | -------------- | ----------------------------- | -------- |
+| us   | United States  | AP Biology, SAT Biology, MCAT | USD      |
+| uk   | United Kingdom | GCSE, A-Level, BMAT, UCAT     | GBP      |
+| ca   | Canada         | Provincial Bio, MCAT          | CAD      |
+| au   | Australia      | HSC, VCE, QCE, ATAR           | AUD      |
+| sg   | Singapore      | GCE O/A-Level, IP, SBO        | SGD      |
+| ae   | UAE/Dubai      | IGCSE, IB, American           | AED      |
+| ie   | Ireland        | Leaving Certificate           | EUR      |
+| hk   | Hong Kong      | HKDSE, IGCSE, A-Level         | HKD      |
+| nz   | New Zealand    | NCEA                          | NZD      |
+| za   | South Africa   | NSC/Matric, IEB               | ZAR      |
 
 ## Page Structure (10 Sections)
 
@@ -62,10 +63,10 @@ Each country has customized messages. See `whatsapp-cta.md` for full templates.
 
 ## Pricing Structure
 
-| Type | USD | Conversion |
-|------|-----|------------|
-| Small Group (3-5 students) | $40/hr | Apply country rate |
-| One-on-One | $70-120/hr | Apply country rate |
+| Type                       | USD        | Conversion         |
+| -------------------------- | ---------- | ------------------ |
+| Small Group (3-5 students) | $40/hr     | Apply country rate |
+| One-on-One                 | $70-120/hr | Apply country rate |
 
 See `pricing-calculator.py` for currency conversions.
 
@@ -100,6 +101,7 @@ src/components/international/
 ## Design System Compliance
 
 Follow Cerebrum design system:
+
 - **Primary CTA**: Green (#22c55e) or Yellow (#facc15)
 - **WhatsApp**: Green (#25D366)
 - **Hero Background**: Slate gradient (slate-900 to slate-800)

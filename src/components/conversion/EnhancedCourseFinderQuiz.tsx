@@ -5,14 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import { ParentFlow } from '@/components/conversion/ParentFlow'
 import { QuizProgress } from '@/components/ui/ProgressIndicators'
-import {
-  ChevronRight,
-  Sparkles,
-  CheckCircle2,
-  Star,
-  Phone,
-  FileDown,
-} from 'lucide-react'
+import { ChevronRight, Sparkles, CheckCircle2, Star, Phone, FileDown } from 'lucide-react'
 
 interface QuizAnswer {
   userType: string // student or parent

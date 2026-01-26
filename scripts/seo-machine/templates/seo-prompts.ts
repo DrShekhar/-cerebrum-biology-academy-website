@@ -59,7 +59,7 @@ export const seoLandingTemplate: PromptTemplate = {
   userPromptTemplate: SEO_LANDING_USER_PROMPT_TEMPLATE,
   outputFormat: 'json',
   requiredVariables: ['keyword'],
-  optionalVariables: ['classLevel', 'location', 'focusArea']
+  optionalVariables: ['classLevel', 'location', 'focusArea'],
 }
 
 // Pre-defined keyword patterns for batch generation
@@ -70,37 +70,61 @@ export const keywordPatterns = {
     'neet coaching {{location}}',
     'biology tutor near {{location}}',
     'best biology teacher {{location}}',
-    'neet biology classes {{location}}'
+    'neet biology classes {{location}}',
   ],
   chapter: [
     '{{chapter}} notes for neet',
     '{{chapter}} mcq for neet',
     '{{chapter}} neet questions',
     '{{chapter}} class 11 neet',
-    '{{chapter}} class 12 neet'
+    '{{chapter}} class 12 neet',
   ],
   classLevel: [
     'class {{class}} biology tuition',
     'class {{class}} neet preparation',
-    'class {{class}} biology coaching online'
+    'class {{class}} biology coaching online',
   ],
   general: [
     'online biology coaching for neet',
     'best biology coaching for neet 2026',
     'neet biology crash course',
-    'biology doubt solving neet'
-  ]
+    'biology doubt solving neet',
+  ],
 }
 
 // Delhi NCR locations for batch generation
 export const delhiNCRLocations = [
-  'Rohini', 'Dwarka', 'Pitampura', 'Janakpuri', 'Laxmi Nagar',
-  'Preet Vihar', 'Vikaspuri', 'Rajouri Garden', 'Paschim Vihar',
-  'Vasant Kunj', 'Saket', 'Greater Kailash', 'Noida', 'Gurgaon',
-  'Ghaziabad', 'Faridabad', 'South Delhi', 'North Delhi', 'West Delhi',
-  'East Delhi', 'Central Delhi', 'Karol Bagh', 'Connaught Place',
-  'Model Town', 'Civil Lines', 'Ashok Vihar', 'Shalimar Bagh',
-  'Mayur Vihar', 'IP Extension', 'Kalkaji', 'Defence Colony'
+  'Rohini',
+  'Dwarka',
+  'Pitampura',
+  'Janakpuri',
+  'Laxmi Nagar',
+  'Preet Vihar',
+  'Vikaspuri',
+  'Rajouri Garden',
+  'Paschim Vihar',
+  'Vasant Kunj',
+  'Saket',
+  'Greater Kailash',
+  'Noida',
+  'Gurgaon',
+  'Ghaziabad',
+  'Faridabad',
+  'South Delhi',
+  'North Delhi',
+  'West Delhi',
+  'East Delhi',
+  'Central Delhi',
+  'Karol Bagh',
+  'Connaught Place',
+  'Model Town',
+  'Civil Lines',
+  'Ashok Vihar',
+  'Shalimar Bagh',
+  'Mayur Vihar',
+  'IP Extension',
+  'Kalkaji',
+  'Defence Colony',
 ]
 
 // NEET Biology chapters for batch generation
@@ -134,7 +158,7 @@ export const neetChapters = [
   'Organisms and Populations',
   'Ecosystem',
   'Biodiversity and Conservation',
-  'Environmental Issues'
+  'Environmental Issues',
 ]
 
 // Sample testimonials for landing pages
@@ -142,23 +166,23 @@ export const sampleTestimonials = [
   {
     name: 'Priya Sharma',
     achievement: 'NEET 2024 - AIR 342',
-    quote: 'Dr. Shekhar\'s teaching made complex biology concepts so easy to understand.'
+    quote: "Dr. Shekhar's teaching made complex biology concepts so easy to understand.",
   },
   {
     name: 'Rahul Verma',
     achievement: 'AIIMS Delhi - MBBS',
-    quote: 'The doubt-solving sessions were game-changers for my preparation.'
+    quote: 'The doubt-solving sessions were game-changers for my preparation.',
   },
   {
     name: 'Anjali Singh',
     achievement: '680/720 in NEET',
-    quote: 'Best biology coaching I could have asked for. Scored 360/360 in Biology!'
+    quote: 'Best biology coaching I could have asked for. Scored 360/360 in Biology!',
   },
   {
     name: 'Vikram Patel',
     achievement: 'NEET 2024 - Top 1000',
-    quote: 'The NCERT-focused approach and regular tests helped me score consistently.'
-  }
+    quote: 'The NCERT-focused approach and regular tests helped me score consistently.',
+  },
 ]
 
 // Trust statistics for landing pages
@@ -168,5 +192,5 @@ export const trustStats = [
   { value: '340+', label: 'Avg Biology Score' },
   { value: '15+', label: 'Years Experience' },
   { value: '50+', label: 'AIIMS Selections' },
-  { value: '4.9/5', label: 'Student Rating' }
+  { value: '4.9/5', label: 'Student Rating' },
 ]

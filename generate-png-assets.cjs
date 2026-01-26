@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 // Since we can't easily do SVG to PNG conversion in Node.js without heavy dependencies,
 // Let's create base64 encoded PNG data for the core assets
@@ -9,10 +9,11 @@ const path = require('path');
 // This is a simplified approach - creating PNG data directly
 // For a production environment, you'd typically use a proper SVG to PNG converter
 
-console.log('🎨 Creating Cerebrum Biology Academy Brand Assets...');
+console.log('🎨 Creating Cerebrum Biology Academy Brand Assets...')
 
 // Logo PNG Data (512x512) - We'll create a simple version
-const createLogoSVG = () => `<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+const createLogoSVG =
+  () => `<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="cerebrumGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
@@ -89,10 +90,11 @@ const createLogoSVG = () => `<svg width="512" height="512" viewBox="0 0 512 512"
         letter-spacing="0.02em">
     Harvard-Level NEET Preparation
   </text>
-</svg>`;
+</svg>`
 
 // Apple Touch Icon SVG (180x180)
-const createAppleTouchIconSVG = () => `<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
+const createAppleTouchIconSVG =
+  () => `<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
@@ -150,7 +152,7 @@ const createAppleTouchIconSVG = () => `<svg width="180" height="180" viewBox="0 
         opacity="0.9">
     C
   </text>
-</svg>`;
+</svg>`
 
 // Enhanced HTML generator with automatic PNG export
 const htmlGenerator = `<!DOCTYPE html>
@@ -429,32 +431,32 @@ const htmlGenerator = `<!DOCTYPE html>
         });
     </script>
 </body>
-</html>`;
+</html>`
 
-const publicDir = path.join(process.cwd(), 'public');
+const publicDir = path.join(process.cwd(), 'public')
 
 // Write all files
-fs.writeFileSync(path.join(publicDir, 'logo-primary.svg'), createLogoSVG());
-fs.writeFileSync(path.join(publicDir, 'logo-icon.svg'), createAppleTouchIconSVG());
-fs.writeFileSync(path.join(publicDir, 'brand-asset-generator.html'), htmlGenerator);
+fs.writeFileSync(path.join(publicDir, 'logo-primary.svg'), createLogoSVG())
+fs.writeFileSync(path.join(publicDir, 'logo-icon.svg'), createAppleTouchIconSVG())
+fs.writeFileSync(path.join(publicDir, 'brand-asset-generator.html'), htmlGenerator)
 
-console.log('✅ Brand assets generated successfully!');
-console.log('');
-console.log('📁 Files created:');
-console.log('   • public/logo-primary.svg (512x512)');
-console.log('   • public/logo-icon.svg (180x180)');
-console.log('   • public/brand-asset-generator.html');
-console.log('');
-console.log('🎯 Next steps:');
-console.log('1. 🌐 Open: http://localhost:3000/brand-asset-generator.html');
-console.log('2. 📥 Click "Auto-Generate All Assets" button');
-console.log('3. 📁 Move downloaded files to public/ folder');
-console.log('4. ✅ Assets will replace 404 errors');
-console.log('');
-console.log('🎨 Brand Guidelines Applied:');
-console.log('   • Harvard-level academic design');
-console.log('   • Academic navy (#1e3a8a) primary color');
-console.log('   • Gold accent (#f59e0b) for excellence');
-console.log('   • Biology-themed DNA helix symbol');
-console.log('   • Mobile-optimized touch icon');
-console.log('   • Production-ready PNG quality');
+console.log('✅ Brand assets generated successfully!')
+console.log('')
+console.log('📁 Files created:')
+console.log('   • public/logo-primary.svg (512x512)')
+console.log('   • public/logo-icon.svg (180x180)')
+console.log('   • public/brand-asset-generator.html')
+console.log('')
+console.log('🎯 Next steps:')
+console.log('1. 🌐 Open: http://localhost:3000/brand-asset-generator.html')
+console.log('2. 📥 Click "Auto-Generate All Assets" button')
+console.log('3. 📁 Move downloaded files to public/ folder')
+console.log('4. ✅ Assets will replace 404 errors')
+console.log('')
+console.log('🎨 Brand Guidelines Applied:')
+console.log('   • Harvard-level academic design')
+console.log('   • Academic navy (#1e3a8a) primary color')
+console.log('   • Gold accent (#f59e0b) for excellence')
+console.log('   • Biology-themed DNA helix symbol')
+console.log('   • Mobile-optimized touch icon')
+console.log('   • Production-ready PNG quality')

@@ -49,9 +49,7 @@ export default function CoursesPage() {
     <>
       {/* Breadcrumb Navigation + Schema */}
       <div className="mx-auto max-w-7xl px-4 pt-4">
-        <BreadcrumbSchema
-          items={[{ label: 'Courses', isCurrentPage: true }]}
-        />
+        <BreadcrumbSchema items={[{ label: 'Courses', isCurrentPage: true }]} />
       </div>
       <EnhancedCoursesListingPage />
     </>

@@ -3,7 +3,11 @@
  * Tests prompt generation, content accuracy, and language support
  */
 
-import { ARIA_SYSTEM_PROMPT, ARIA_SYSTEM_PROMPT_HINDI, getSystemPrompt } from '@/lib/aria/systemPrompt'
+import {
+  ARIA_SYSTEM_PROMPT,
+  ARIA_SYSTEM_PROMPT_HINDI,
+  getSystemPrompt,
+} from '@/lib/aria/systemPrompt'
 import {
   COURSE_TIERS,
   PRICING,
@@ -66,13 +70,13 @@ describe('ARIA_SYSTEM_PROMPT', () => {
   describe('pricing information', () => {
     it('should include pricing data', () => {
       // Check that pricing is embedded in prompt
-      Object.keys(PRICING).forEach(course => {
+      Object.keys(PRICING).forEach((course) => {
         expect(ARIA_SYSTEM_PROMPT).toContain(course)
       })
     })
 
     it('should include all tier names', () => {
-      Object.values(COURSE_TIERS).forEach(tier => {
+      Object.values(COURSE_TIERS).forEach((tier) => {
         expect(ARIA_SYSTEM_PROMPT).toContain(tier.name)
       })
     })
@@ -97,7 +101,7 @@ describe('ARIA_SYSTEM_PROMPT', () => {
     })
 
     it('should include center locations', () => {
-      CONTACT_POINTS.centers.forEach(center => {
+      CONTACT_POINTS.centers.forEach((center) => {
         expect(ARIA_SYSTEM_PROMPT).toContain(center)
       })
     })
@@ -120,7 +124,7 @@ describe('ARIA_SYSTEM_PROMPT', () => {
 
   describe('USP points', () => {
     it('should include all unique selling points', () => {
-      USP_POINTS.forEach(point => {
+      USP_POINTS.forEach((point) => {
         expect(ARIA_SYSTEM_PROMPT).toContain(point)
       })
     })
@@ -128,15 +132,9 @@ describe('ARIA_SYSTEM_PROMPT', () => {
 
   describe('objection handling', () => {
     it('should handle common concerns naturally', () => {
-      const concernKeywords = [
-        'expensive',
-        'already in',
-        'online',
-        'think about',
-        'parents',
-      ]
+      const concernKeywords = ['expensive', 'already in', 'online', 'think about', 'parents']
 
-      concernKeywords.forEach(keyword => {
+      concernKeywords.forEach((keyword) => {
         expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain(keyword)
       })
     })
@@ -170,7 +168,7 @@ describe('ARIA_SYSTEM_PROMPT', () => {
     })
 
     it('should prohibit competitor mentions', () => {
-      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain('don\'t recommend competitor coachings')
+      expect(ARIA_SYSTEM_PROMPT.toLowerCase()).toContain("don't recommend competitor coachings")
     })
 
     it('should prohibit aggressive tactics', () => {
@@ -209,7 +207,7 @@ describe('ARIA_SYSTEM_PROMPT_HINDI', () => {
 
   it('should include pricing information', () => {
     // Pricing should be in same format even in Hindi prompt
-    Object.values(PRICING).forEach(coursePricing => {
+    Object.values(PRICING).forEach((coursePricing) => {
       const hasAtLeastOneTierPrice =
         ARIA_SYSTEM_PROMPT_HINDI.includes(coursePricing.pinnacle) ||
         ARIA_SYSTEM_PROMPT_HINDI.includes(coursePricing.ascent) ||
@@ -226,7 +224,7 @@ describe('ARIA_SYSTEM_PROMPT_HINDI', () => {
 
   it('should include USP points', () => {
     // USPs should be present (they're in English even in Hindi prompt)
-    USP_POINTS.forEach(point => {
+    USP_POINTS.forEach((point) => {
       expect(ARIA_SYSTEM_PROMPT_HINDI).toContain(point)
     })
   })
@@ -265,7 +263,7 @@ describe('prompt quality', () => {
   it('should not have placeholder text', () => {
     const placeholders = ['TODO', 'FIXME', 'XXX', 'TBD', 'placeholder', '[INSERT']
 
-    placeholders.forEach(placeholder => {
+    placeholders.forEach((placeholder) => {
       expect(ARIA_SYSTEM_PROMPT.toUpperCase()).not.toContain(placeholder.toUpperCase())
       expect(ARIA_SYSTEM_PROMPT_HINDI.toUpperCase()).not.toContain(placeholder.toUpperCase())
     })

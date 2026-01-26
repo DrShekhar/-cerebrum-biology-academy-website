@@ -144,15 +144,17 @@ export function MobileChatInterface({
       }
     } catch (error) {
       console.error('Send message error:', error)
-      setMessages((prev) => [
-        ...prev,
-        {
-          id: (Date.now() + 1).toString(),
-          role: 'assistant' as const,
-          content: 'Sorry, I encountered an error. Please try again.',
-          timestamp: new Date(),
-        },
-      ].slice(-MAX_MESSAGES))
+      setMessages((prev) =>
+        [
+          ...prev,
+          {
+            id: (Date.now() + 1).toString(),
+            role: 'assistant' as const,
+            content: 'Sorry, I encountered an error. Please try again.',
+            timestamp: new Date(),
+          },
+        ].slice(-MAX_MESSAGES)
+      )
     } finally {
       setIsLoading(false)
     }

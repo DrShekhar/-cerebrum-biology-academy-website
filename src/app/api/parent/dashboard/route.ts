@@ -13,7 +13,10 @@ export async function GET(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     // Verify user is a parent

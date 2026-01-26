@@ -20,9 +20,7 @@ export function CurrencySelector({
   const [isOpen, setIsOpen] = useState(false)
 
   if (isLoading) {
-    return (
-      <div className={cn('animate-pulse bg-gray-200 rounded h-8 w-20', className)} />
-    )
+    return <div className={cn('animate-pulse bg-gray-200 rounded h-8 w-20', className)} />
   }
 
   if (variant === 'compact') {
@@ -39,10 +37,7 @@ export function CurrencySelector({
 
         {isOpen && (
           <>
-            <div
-              className="fixed inset-0 z-40"
-              onClick={() => setIsOpen(false)}
-            />
+            <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
             <div className="absolute right-0 mt-1 py-1 w-40 bg-white border rounded-lg shadow-lg z-50">
               {currencies.map((c) => (
                 <button
@@ -56,10 +51,10 @@ export function CurrencySelector({
                     currency === c.code && 'bg-green-50 text-green-700'
                   )}
                 >
-                  <span>{c.symbol} {c.code}</span>
-                  {currency === c.code && (
-                    <span className="text-green-600">✓</span>
-                  )}
+                  <span>
+                    {c.symbol} {c.code}
+                  </span>
+                  {currency === c.code && <span className="text-green-600">✓</span>}
                 </button>
               ))}
             </div>
@@ -73,9 +68,7 @@ export function CurrencySelector({
     return (
       <div className={cn('relative', className)}>
         {showLabel && (
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Currency
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Currency</label>
         )}
         <select
           value={currency}
@@ -106,10 +99,7 @@ export function CurrencySelector({
 
       {isOpen && (
         <>
-          <div
-            className="fixed inset-0 z-40"
-            onClick={() => setIsOpen(false)}
-          />
+          <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
           <div className="absolute right-0 mt-2 py-2 w-56 bg-white border rounded-xl shadow-xl z-50">
             <div className="px-3 py-2 border-b">
               <p className="text-xs text-gray-500 uppercase tracking-wide">Select Currency</p>
@@ -133,9 +123,7 @@ export function CurrencySelector({
                   <p className="font-medium text-gray-900">{c.code}</p>
                   <p className="text-xs text-gray-500">{c.name}</p>
                 </div>
-                {currency === c.code && (
-                  <span className="text-[#4a5d4a] font-bold">✓</span>
-                )}
+                {currency === c.code && <span className="text-[#4a5d4a] font-bold">✓</span>}
               </button>
             ))}
           </div>

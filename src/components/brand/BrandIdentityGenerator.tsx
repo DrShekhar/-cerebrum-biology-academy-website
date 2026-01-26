@@ -10,14 +10,7 @@ import {
   type IconCategory,
   type BadgeType,
 } from '@/lib/design/brandIdentityAgent'
-import {
-  Download,
-  Copy,
-  Layout,
-  Award,
-  Zap,
-  Eye,
-} from 'lucide-react'
+import { Download, Copy, Layout, Award, Zap, Eye } from 'lucide-react'
 
 interface BrandIdentityGeneratorProps {
   className?: string

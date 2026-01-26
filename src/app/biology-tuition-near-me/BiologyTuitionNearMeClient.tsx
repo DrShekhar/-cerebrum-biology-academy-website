@@ -169,7 +169,15 @@ export function BiologyTuitionNearMeClient() {
   useEffect(() => {
     const savedLocation = localStorage.getItem('userLocation')
     if (savedLocation) {
-      const delhiNCRLocations = ['Rohini', 'Gurugram', 'South Delhi', 'Faridabad', 'Noida', 'Ghaziabad', 'Delhi']
+      const delhiNCRLocations = [
+        'Rohini',
+        'Gurugram',
+        'South Delhi',
+        'Faridabad',
+        'Noida',
+        'Ghaziabad',
+        'Delhi',
+      ]
       setIsInDelhiNCR(delhiNCRLocations.some((loc) => savedLocation.includes(loc)))
     }
   }, [])

@@ -289,9 +289,7 @@ export async function getGalleryItems(
 /**
  * Get a single gallery item by ID
  */
-export async function getGalleryItem(
-  id: string
-): Promise<GalleryItemWithUrls | null> {
+export async function getGalleryItem(id: string): Promise<GalleryItemWithUrls | null> {
   const item = await prisma.gallery_items.findUnique({
     where: { id },
   })
@@ -304,9 +302,7 @@ export async function getGalleryItem(
 /**
  * Get featured gallery items
  */
-export async function getFeaturedGalleryItems(
-  limit: number = 6
-): Promise<GalleryItemWithUrls[]> {
+export async function getFeaturedGalleryItems(limit: number = 6): Promise<GalleryItemWithUrls[]> {
   const items = await prisma.gallery_items.findMany({
     where: { featured: true },
     orderBy: [{ displayOrder: 'asc' }, { createdAt: 'desc' }],
@@ -349,9 +345,7 @@ export async function updateGalleryItem(
 /**
  * Delete a gallery item
  */
-export async function deleteGalleryItem(
-  id: string
-): Promise<{ success: boolean; error?: string }> {
+export async function deleteGalleryItem(id: string): Promise<{ success: boolean; error?: string }> {
   try {
     const item = await prisma.gallery_items.findUnique({
       where: { id },
@@ -437,28 +431,26 @@ export async function getGalleryStats(): Promise<{
 /**
  * Transform database item to include computed URLs
  */
-function transformGalleryItem(
-  item: {
-    id: string
-    type: GalleryItemType
-    title: string
-    description: string | null
-    category: GalleryCategory
-    tags: string[]
-    featured: boolean
-    eventDate: Date | null
-    cloudflareId: string | null
-    url: string
-    thumbnailUrl: string | null
-    blurHash: string | null
-    aspectRatio: string
-    width: number | null
-    height: number | null
-    durationSeconds: number | null
-    displayOrder: number
-    createdAt: Date
-  }
-): GalleryItemWithUrls {
+function transformGalleryItem(item: {
+  id: string
+  type: GalleryItemType
+  title: string
+  description: string | null
+  category: GalleryCategory
+  tags: string[]
+  featured: boolean
+  eventDate: Date | null
+  cloudflareId: string | null
+  url: string
+  thumbnailUrl: string | null
+  blurHash: string | null
+  aspectRatio: string
+  width: number | null
+  height: number | null
+  durationSeconds: number | null
+  displayOrder: number
+  createdAt: Date
+}): GalleryItemWithUrls {
   const result: GalleryItemWithUrls = {
     ...item,
   }

@@ -121,10 +121,7 @@ export class WebhookService {
   // Generate HMAC signature for payload
   static generateSignature(payload: WebhookPayload, secret: string): string {
     const payloadString = JSON.stringify(payload)
-    return crypto
-      .createHmac('sha256', secret)
-      .update(payloadString)
-      .digest('hex')
+    return crypto.createHmac('sha256', secret).update(payloadString).digest('hex')
   }
 
   // Create or update delivery record in database
@@ -190,10 +187,7 @@ export class WebhookService {
   }
 
   // Dispatch event to all subscribed webhooks
-  static async dispatchEvent(
-    event: string,
-    data: Record<string, unknown>
-  ): Promise<void> {
+  static async dispatchEvent(event: string, data: Record<string, unknown>): Promise<void> {
     try {
       // Find all active webhooks subscribed to this event
       const webhooks = await prisma.webhooks.findMany({
@@ -280,7 +274,14 @@ export class WebhookService {
     // In production, this should use a proper job queue (e.g., BullMQ, Vercel Cron)
     // For now, use setTimeout as a simple implementation
     setTimeout(async () => {
-      const result = await this.sendWebhook(webhook, payload, false, attemptNumber, deliveryId, maxRetries)
+      const result = await this.sendWebhook(
+        webhook,
+        payload,
+        false,
+        attemptNumber,
+        deliveryId,
+        maxRetries
+      )
 
       if (!result.success && attemptNumber < maxRetries) {
         await this.scheduleRetry(webhook, payload, attemptNumber + 1, deliveryId)

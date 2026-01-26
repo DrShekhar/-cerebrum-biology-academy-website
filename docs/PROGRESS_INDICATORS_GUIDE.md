@@ -14,29 +14,30 @@ A versatile progress indicator component that supports multiple variants and mod
 
 ```typescript
 interface ProgressIndicatorProps {
-  current: number              // Current step number
-  total: number                // Total number of steps
-  percentage?: number          // Override calculated percentage
-  status?: string             // Status message to display
-  estimatedTime?: number      // Estimated time remaining in seconds
-  onCancel?: () => void       // Cancel callback
-  cancelable?: boolean        // Show cancel button (default: true)
-  mode?: 'determinate' | 'indeterminate'  // Progress mode
-  variant?: 'linear' | 'circular' | 'compact'  // Visual variant
-  size?: 'sm' | 'md' | 'lg'   // Component size
-  color?: 'blue' | 'emerald' | 'purple' | 'amber'  // Color theme
-  showPercentage?: boolean    // Show percentage (default: true)
-  showSteps?: boolean         // Show step counter (default: true)
+  current: number // Current step number
+  total: number // Total number of steps
+  percentage?: number // Override calculated percentage
+  status?: string // Status message to display
+  estimatedTime?: number // Estimated time remaining in seconds
+  onCancel?: () => void // Cancel callback
+  cancelable?: boolean // Show cancel button (default: true)
+  mode?: 'determinate' | 'indeterminate' // Progress mode
+  variant?: 'linear' | 'circular' | 'compact' // Visual variant
+  size?: 'sm' | 'md' | 'lg' // Component size
+  color?: 'blue' | 'emerald' | 'purple' | 'amber' // Color theme
+  showPercentage?: boolean // Show percentage (default: true)
+  showSteps?: boolean // Show step counter (default: true)
   showEstimatedTime?: boolean // Show time remaining (default: true)
-  className?: string          // Additional CSS classes
-  error?: string             // Error message
-  success?: boolean          // Success state
+  className?: string // Additional CSS classes
+  error?: string // Error message
+  success?: boolean // Success state
 }
 ```
 
 #### Variants
 
 **Linear (Default)**
+
 - Horizontal progress bar
 - Best for operations with known duration
 - Shows percentage, steps, and estimated time
@@ -54,6 +55,7 @@ interface ProgressIndicatorProps {
 ```
 
 **Circular**
+
 - Circular progress ring
 - Great for centered layouts and modal dialogs
 - Prominent percentage display
@@ -71,6 +73,7 @@ interface ProgressIndicatorProps {
 ```
 
 **Compact**
+
 - Inline progress indicator
 - Perfect for list items and notifications
 - Minimal space usage
@@ -90,31 +93,23 @@ interface ProgressIndicatorProps {
 #### Modes
 
 **Determinate**
+
 - Shows specific progress percentage
 - Use when you can calculate progress
 - Better user experience with known duration
 
 ```tsx
-<ProgressIndicator
-  current={50}
-  total={100}
-  mode="determinate"
-  status="Processing items..."
-/>
+<ProgressIndicator current={50} total={100} mode="determinate" status="Processing items..." />
 ```
 
 **Indeterminate**
+
 - Animated loading without specific percentage
 - Use when duration is unknown
 - Shows continuous animation
 
 ```tsx
-<ProgressIndicator
-  current={0}
-  total={1}
-  mode="indeterminate"
-  status="Loading..."
-/>
+<ProgressIndicator current={0} total={1} mode="indeterminate" status="Loading..." />
 ```
 
 ### 2. StepIndicator
@@ -217,11 +212,7 @@ function TestGeneration() {
 
   return (
     <div>
-      <StepIndicator
-        steps={steps}
-        currentStep={currentStep}
-        orientation="horizontal"
-      />
+      <StepIndicator steps={steps} currentStep={currentStep} orientation="horizontal" />
 
       {isGenerating && (
         <ProgressIndicator
@@ -275,11 +266,7 @@ function FileUpload() {
         current={uploadProgress}
         total={100}
         percentage={uploadProgress}
-        status={
-          uploadStatus === 'uploading'
-            ? 'Uploading file...'
-            : 'Upload complete!'
-        }
+        status={uploadStatus === 'uploading' ? 'Uploading file...' : 'Upload complete!'}
         variant="linear"
         color="emerald"
         success={uploadStatus === 'complete'}
@@ -299,7 +286,7 @@ function BulkOperations() {
   const processBatch = async (items: any[]) => {
     for (const item of items) {
       await processItem(item)
-      setProcessedCount(prev => prev + 1)
+      setProcessedCount((prev) => prev + 1)
     }
   }
 
@@ -345,7 +332,7 @@ function DataExport() {
     for (let i = 0; i < exportSteps.length; i++) {
       setExportStep(i)
       await performExportStep(i)
-      setExportProgress((i + 1) / exportSteps.length * 100)
+      setExportProgress(((i + 1) / exportSteps.length) * 100)
     }
   }
 
@@ -374,10 +361,10 @@ function DataExport() {
 
 ```tsx
 // Good - Specific and actionable
-status="Generating question 25 of 50..."
+status = 'Generating question 25 of 50...'
 
 // Bad - Generic
-status="Loading..."
+status = 'Loading...'
 ```
 
 ### 3. Show Estimated Time for Long Operations
@@ -386,7 +373,7 @@ status="Loading..."
 <ProgressIndicator
   current={2}
   total={5}
-  estimatedTime={45}  // Show time for operations > 10s
+  estimatedTime={45} // Show time for operations > 10s
   status="Generating test..."
 />
 ```
@@ -461,10 +448,10 @@ useEffect(() => {
   if (!isProcessing) return
 
   const interval = setInterval(() => {
-    setProgress(prev => prev + 1)
+    setProgress((prev) => prev + 1)
   }, 100)
 
-  return () => clearInterval(interval)  // Cleanup
+  return () => clearInterval(interval) // Cleanup
 }, [isProcessing])
 ```
 
@@ -484,8 +471,8 @@ Live examples available at:
 The component automatically formats estimated time:
 
 - < 60 seconds: "45s"
-- >= 60 seconds: "2m 30s"
-- >= 3600 seconds: "1h 15m"
+- > = 60 seconds: "2m 30s"
+- > = 3600 seconds: "1h 15m"
 
 ### Percentage Calculation
 
@@ -498,6 +485,7 @@ percentage = (current / total) * 100
 ### Status Updates
 
 Status messages should be:
+
 - Descriptive but concise
 - Present tense ("Generating..." not "Generated")
 - Specific when possible ("Processing item 10 of 50")
@@ -520,8 +508,8 @@ setProgress(50)
 
 ```tsx
 // Use larger update intervals
-setInterval(() => updateProgress(), 100)  // Good
-setInterval(() => updateProgress(), 10)   // Too frequent
+setInterval(() => updateProgress(), 100) // Good
+setInterval(() => updateProgress(), 10) // Too frequent
 ```
 
 ### Cancel Not Working
@@ -530,8 +518,8 @@ setInterval(() => updateProgress(), 10)   // Too frequent
 // Ensure proper cleanup
 const handleCancel = () => {
   setIsProcessing(false)
-  cancelOperation()     // Clean up operation
-  resetProgress()       // Reset state
+  cancelOperation() // Clean up operation
+  resetProgress() // Reset state
 }
 ```
 

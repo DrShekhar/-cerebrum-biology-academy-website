@@ -3,13 +3,7 @@
 import React from 'react'
 import { useABTestVariant } from './ABTestProvider'
 import { Button } from '@/components/ui/Button'
-import {
-  ArrowRight,
-  Users,
-  Trophy,
-  Play,
-  Star,
-} from 'lucide-react'
+import { ArrowRight, Users, Trophy, Play, Star } from 'lucide-react'
 
 interface ABTestCTAProps {
   context: 'primary' | 'secondary' | 'footer' | 'pricing'

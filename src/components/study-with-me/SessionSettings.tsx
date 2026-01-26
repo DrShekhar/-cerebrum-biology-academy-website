@@ -81,10 +81,7 @@ export function SessionSettings({
             Session Settings
           </h3>
         </div>
-        <motion.span
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          className="text-gray-400"
-        >
+        <motion.span animate={{ rotate: isExpanded ? 180 : 0 }} className="text-gray-400">
           ▼
         </motion.span>
       </button>
@@ -131,7 +128,9 @@ export function SessionSettings({
                 min={1}
                 max={120}
                 value={localStudy}
-                onChange={(e) => setLocalStudy(Math.max(1, Math.min(120, parseInt(e.target.value) || 1)))}
+                onChange={(e) =>
+                  setLocalStudy(Math.max(1, Math.min(120, parseInt(e.target.value) || 1)))
+                }
                 onBlur={handleDurationChange}
                 className="w-20 px-3 py-1.5 border border-gray-200 rounded-lg text-center text-gray-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
               />
@@ -149,7 +148,9 @@ export function SessionSettings({
                 min={1}
                 max={30}
                 value={localBreak}
-                onChange={(e) => setLocalBreak(Math.max(1, Math.min(30, parseInt(e.target.value) || 1)))}
+                onChange={(e) =>
+                  setLocalBreak(Math.max(1, Math.min(30, parseInt(e.target.value) || 1)))
+                }
                 onBlur={handleDurationChange}
                 className="w-20 px-3 py-1.5 border border-gray-200 rounded-lg text-center text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
@@ -167,7 +168,9 @@ export function SessionSettings({
                 min={1}
                 max={60}
                 value={localLongBreak}
-                onChange={(e) => setLocalLongBreak(Math.max(1, Math.min(60, parseInt(e.target.value) || 1)))}
+                onChange={(e) =>
+                  setLocalLongBreak(Math.max(1, Math.min(60, parseInt(e.target.value) || 1)))
+                }
                 onBlur={handleDurationChange}
                 className="w-20 px-3 py-1.5 border border-gray-200 rounded-lg text-center text-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />

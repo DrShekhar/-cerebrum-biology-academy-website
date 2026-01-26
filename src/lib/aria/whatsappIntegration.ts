@@ -38,7 +38,8 @@ export function generateWhatsAppMessage(context: WhatsAppContext): string {
 
   // Add last topic if available
   if (lastTopic) {
-    const topicLabel = language === 'hi' ? 'मैं इसके बारे में जानना चाहता/चाहती हूं' : "I'd like to know more about"
+    const topicLabel =
+      language === 'hi' ? 'मैं इसके बारे में जानना चाहता/चाहती हूं' : "I'd like to know more about"
     parts.push(`\n${topicLabel}: ${lastTopic}`)
   }
 
@@ -160,7 +161,5 @@ export const WHATSAPP_DISPLAY_NUMBER = CONTACT_INFO.phone.display.primary
  */
 export function isMobileDevice(): boolean {
   if (typeof window === 'undefined') return false
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  )
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 }

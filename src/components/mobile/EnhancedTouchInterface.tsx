@@ -3,13 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import { useIndianMobileOptimizations } from '@/lib/mobile/indianMobileOptimizations'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Phone,
-  BookOpen,
-  Play,
-  MessageCircle,
-  Clock,
-} from 'lucide-react'
+import { Phone, BookOpen, Play, MessageCircle, Clock } from 'lucide-react'
 
 interface TouchAction {
   id: string

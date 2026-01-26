@@ -153,9 +153,7 @@ export function BookingSuccess({
               <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-medium">
                 1
               </span>
-              <span>
-                Check WhatsApp for confirmation and Zoom details
-              </span>
+              <span>Check WhatsApp for confirmation and Zoom details</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-medium">
@@ -167,9 +165,7 @@ export function BookingSuccess({
               <span className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-medium">
                 3
               </span>
-              <span>
-                Prepare your doubts and questions for the session
-              </span>
+              <span>Prepare your doubts and questions for the session</span>
             </li>
           </ol>
         </div>

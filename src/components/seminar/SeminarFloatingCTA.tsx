@@ -52,9 +52,7 @@ export function SeminarFloatingCTA({ onRegisterClick }: SeminarFloatingCTAProps)
             <span className="text-3xl">🎯</span>
           </div>
           <div>
-            <p className="text-white font-semibold">
-              Limited Seats Available!
-            </p>
+            <p className="text-white font-semibold">Limited Seats Available!</p>
             <p className="text-slate-400 text-sm">
               Only {SEMINAR_CONFIG.maxSeatsPerSession} seats per session •{' '}
               {SEMINAR_CONFIG.pricing.currencySymbol}

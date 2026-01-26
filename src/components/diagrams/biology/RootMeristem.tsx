@@ -79,12 +79,7 @@ export function RootMeristem({
       subtitle="Longitudinal Section showing meristematic zones"
       className={className}
     >
-      <svg
-        width={width}
-        height={height}
-        viewBox={`0 0 ${width} ${height}`}
-        className="mx-auto"
-      >
+      <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="mx-auto">
         <defs>
           <linearGradient id="rootGradient" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor={biologyColors.cortex} />

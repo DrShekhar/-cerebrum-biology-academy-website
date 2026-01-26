@@ -43,7 +43,7 @@ export const SEMINAR_CONFIG: SeminarConfig = {
   title: 'NEET Guidance Seminar for Parents',
   subtitle: 'Does Your Child Have What It Takes to Crack NEET?',
   description:
-    'Learn the 3 critical mistakes 90% of NEET parents make and how to avoid them. Get expert guidance on supporting your child\'s NEET preparation journey.',
+    "Learn the 3 critical mistakes 90% of NEET parents make and how to avoid them. Get expert guidance on supporting your child's NEET preparation journey.",
   duration: 60,
   weekday: 5, // Friday (0 = Sunday, 5 = Friday)
   time: '20:00', // 8:00 PM
@@ -158,7 +158,10 @@ export function generateCalendarICS(seminarDate: Date, zoomLink?: string): strin
   const endDate = new Date(seminarDate.getTime() + SEMINAR_CONFIG.duration * 60 * 1000)
 
   const formatICSDate = (date: Date) =>
-    date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '')
+    date
+      .toISOString()
+      .replace(/[-:]/g, '')
+      .replace(/\.\d{3}/, '')
 
   return `BEGIN:VCALENDAR
 VERSION:2.0
@@ -226,7 +229,7 @@ export const SEMINAR_FAQS = [
   {
     question: 'Is this a sales pitch?',
     answer:
-      'No, this is a genuine guidance session. We share practical strategies that work, regardless of where your child studies. Of course, we\'ll briefly mention our courses, but the focus is on providing value.',
+      "No, this is a genuine guidance session. We share practical strategies that work, regardless of where your child studies. Of course, we'll briefly mention our courses, but the focus is on providing value.",
   },
   {
     question: 'Will there be a recording available?',
@@ -246,7 +249,7 @@ export const SEMINAR_FAQS = [
   {
     question: 'What if I miss the live session?',
     answer:
-      'You\'ll receive the recording and all resources via WhatsApp and email. However, we recommend attending live for the interactive Q&A.',
+      "You'll receive the recording and all resources via WhatsApp and email. However, we recommend attending live for the interactive Q&A.",
   },
   {
     question: 'Is this suitable for Class 11 or 12 parents?',
@@ -272,7 +275,7 @@ export const SEMINAR_TESTIMONIALS = [
     location: 'Mumbai',
     avatar: '👨',
     quote:
-      'Dr. Shekhar\'s insights about Biology strategy were eye-opening. My son improved from 50th percentile to 95th percentile in just 6 months.',
+      "Dr. Shekhar's insights about Biology strategy were eye-opening. My son improved from 50th percentile to 95th percentile in just 6 months.",
     childResult: 'Son improved by 45 percentile points',
   },
   {
@@ -280,7 +283,7 @@ export const SEMINAR_TESTIMONIALS = [
     location: 'Chennai',
     avatar: '👩',
     quote:
-      'As a working parent, I felt helpless about my daughter\'s preparation. This seminar gave me actionable steps I could actually follow.',
+      "As a working parent, I felt helpless about my daughter's preparation. This seminar gave me actionable steps I could actually follow.",
     childResult: 'Daughter got admission in top medical college',
   },
 ]

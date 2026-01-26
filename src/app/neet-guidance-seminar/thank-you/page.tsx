@@ -104,13 +104,9 @@ export default function SeminarThankYouPage() {
           <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Registration Successful!
           </h1>
-          <p className="text-lg text-green-100">
-            You're all set for the NEET Guidance Seminar
-          </p>
+          <p className="text-lg text-green-100">You're all set for the NEET Guidance Seminar</p>
           {registrationId && (
-            <p className="text-sm text-green-200 mt-2">
-              Registration ID: {registrationId}
-            </p>
+            <p className="text-sm text-green-200 mt-2">Registration ID: {registrationId}</p>
           )}
         </div>
       </section>
@@ -165,9 +161,7 @@ export default function SeminarThankYouPage() {
 
           {/* What's Next Card */}
           <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 mb-8">
-            <h2 className="text-xl font-bold text-slate-900 mb-6">
-              What Happens Next?
-            </h2>
+            <h2 className="text-xl font-bold text-slate-900 mb-6">What Happens Next?</h2>
 
             <div className="space-y-6">
               <div className="flex gap-4">
@@ -177,8 +171,8 @@ export default function SeminarThankYouPage() {
                 <div>
                   <p className="font-semibold text-slate-900">WhatsApp Confirmation</p>
                   <p className="text-slate-600 text-sm">
-                    You'll receive a welcome message on WhatsApp within a few minutes
-                    with all seminar details.
+                    You'll receive a welcome message on WhatsApp within a few minutes with all
+                    seminar details.
                   </p>
                 </div>
               </div>
@@ -190,8 +184,7 @@ export default function SeminarThankYouPage() {
                 <div>
                   <p className="font-semibold text-slate-900">Email Confirmation</p>
                   <p className="text-slate-600 text-sm">
-                    Check your email for the registration confirmation and calendar
-                    invite.
+                    Check your email for the registration confirmation and calendar invite.
                   </p>
                 </div>
               </div>
@@ -203,8 +196,7 @@ export default function SeminarThankYouPage() {
                 <div>
                   <p className="font-semibold text-slate-900">Reminder Notifications</p>
                   <p className="text-slate-600 text-sm">
-                    We'll send you reminders 24 hours and 1 hour before the seminar
-                    via WhatsApp.
+                    We'll send you reminders 24 hours and 1 hour before the seminar via WhatsApp.
                   </p>
                 </div>
               </div>
@@ -216,8 +208,7 @@ export default function SeminarThankYouPage() {
                 <div>
                   <p className="font-semibold text-slate-900">Join the Session</p>
                   <p className="text-slate-600 text-sm">
-                    On the seminar day, click the Zoom link in your WhatsApp message
-                    to join live!
+                    On the seminar day, click the Zoom link in your WhatsApp message to join live!
                   </p>
                 </div>
               </div>
@@ -226,12 +217,9 @@ export default function SeminarThankYouPage() {
 
           {/* Share Card */}
           <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-6 md:p-8 mb-8 border border-purple-100">
-            <h2 className="text-xl font-bold text-slate-900 mb-2">
-              Know Other NEET Parents?
-            </h2>
+            <h2 className="text-xl font-bold text-slate-900 mb-2">Know Other NEET Parents?</h2>
             <p className="text-slate-600 mb-4">
-              Share this seminar with other parents who could benefit from expert
-              NEET guidance.
+              Share this seminar with other parents who could benefit from expert NEET guidance.
             </p>
             <button
               onClick={handleShare}
@@ -244,9 +232,7 @@ export default function SeminarThankYouPage() {
 
           {/* Contact Support */}
           <div className="bg-slate-100 rounded-2xl p-6 text-center">
-            <p className="text-slate-600 mb-4">
-              Have questions? Reach out to us anytime.
-            </p>
+            <p className="text-slate-600 mb-4">Have questions? Reach out to us anytime.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={handleWhatsAppClick}

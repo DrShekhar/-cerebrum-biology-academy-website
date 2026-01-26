@@ -92,17 +92,20 @@ const features = [
   {
     icon: Users,
     title: 'Elite Small Batches (10-15)',
-    description: 'Exclusive batches for Adyar students with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Adyar students with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Adyar families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Adyar families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
@@ -127,7 +130,7 @@ const faqs = [
   {
     question: 'Why do Adyar students choose online NEET coaching?',
     answer:
-      'Adyar is Chennai\'s educational hub with IIT Madras, Anna University, and premium schools nearby. Our online classes offer AIIMS faculty without the traffic to T. Nagar or Anna Nagar coaching centers. Save 2+ hours daily on Chennai traffic.',
+      "Adyar is Chennai's educational hub with IIT Madras, Anna University, and premium schools nearby. Our online classes offer AIIMS faculty without the traffic to T. Nagar or Anna Nagar coaching centers. Save 2+ hours daily on Chennai traffic.",
   },
   {
     question: 'Which areas in Adyar do you serve?',
@@ -137,7 +140,7 @@ const faqs = [
   {
     question: 'What is the fee for premium NEET coaching in Adyar?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Adyar\'s premium education standards while offering superior flexibility. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Adyar's premium education standards while offering superior flexibility. EMI options available.",
   },
   {
     question: 'How does this compare to coaching centers in T. Nagar?',
@@ -162,7 +165,7 @@ const premiumSchools = [
   'Chettinad Vidyashram',
   'The School KFI',
   'Asan Memorial',
-  'St. Michael\'s Academy',
+  "St. Michael's Academy",
   'San Thome Higher Secondary',
   'Lady Andal School',
   'DAV Adyar',
@@ -178,9 +181,9 @@ const whyAdyar = [
   },
   {
     icon: Building,
-    title: 'South Chennai\'s Best',
+    title: "South Chennai's Best",
     description:
-      'Designed for Adyar\'s discerning families. Premium infrastructure, personalized mentorship.',
+      "Designed for Adyar's discerning families. Premium infrastructure, personalized mentorship.",
   },
   {
     icon: GraduationCap,
@@ -236,8 +239,9 @@ export default function NeetCoachingAdyarPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Adyar&apos;s elite schools. 94.2% success rate, AIIMS
-              faculty, zero traffic stress. Join 580+ students from PSBB, Bala Vidya Mandir, Chettinad.
+              Premium NEET Biology coaching for Adyar&apos;s elite schools. 94.2% success rate,
+              AIIMS faculty, zero traffic stress. Join 580+ students from PSBB, Bala Vidya Mandir,
+              Chettinad.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +302,8 @@ export default function NeetCoachingAdyarPage() {
               NEET Coaching Across Adyar & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Besant Nagar to Thiruvanmiyur, Kotturpuram to Indira Nagar - premium coaching for South Chennai.
+              From Besant Nagar to Thiruvanmiyur, Kotturpuram to Indira Nagar - premium coaching for
+              South Chennai.
             </p>
           </motion.div>
 
@@ -320,9 +325,7 @@ export default function NeetCoachingAdyarPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-rose-600" />
                   </div>
-                  <div className="text-2xl font-bold text-rose-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-rose-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-rose-100 text-rose-700 px-2 py-1 rounded-full">
@@ -351,7 +354,8 @@ export default function NeetCoachingAdyarPage() {
               Why Adyar&apos;s Elite Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Premium education meets convenience - designed for South Chennai&apos;s discerning families.
+              Premium education meets convenience - designed for South Chennai&apos;s discerning
+              families.
             </p>
           </motion.div>
 

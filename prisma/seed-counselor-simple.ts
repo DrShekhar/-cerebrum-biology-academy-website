@@ -41,14 +41,31 @@ async function main() {
   // 2. Create 10 Sample Leads
   console.log('📊 Creating sample leads...')
 
-  const leadStages = ['NEW_LEAD', 'CONTACTED', 'DEMO_SCHEDULED', 'DEMO_COMPLETED', 'OFFER_SENT', 'NEGOTIATING', 'PAYMENT_PENDING', 'ENROLLED']
+  const leadStages = [
+    'NEW_LEAD',
+    'CONTACTED',
+    'DEMO_SCHEDULED',
+    'DEMO_COMPLETED',
+    'OFFER_SENT',
+    'NEGOTIATING',
+    'PAYMENT_PENDING',
+    'ENROLLED',
+  ]
   const priorities = ['HOT', 'WARM', 'COLD']
   const sources = ['Website', 'WhatsApp', 'Referral', 'Social Media', 'Google Ads']
   const grades = ['CLASS_11', 'CLASS_12', 'DROPPER']
 
   const studentNames = [
-    'Rahul Sharma', 'Priya Patel', 'Amit Kumar', 'Neha Singh', 'Arjun Reddy',
-    'Sneha Gupta', 'Vikram Malhotra', 'Anjali Verma', 'Rohan Desai', 'Kavya Iyer'
+    'Rahul Sharma',
+    'Priya Patel',
+    'Amit Kumar',
+    'Neha Singh',
+    'Arjun Reddy',
+    'Sneha Gupta',
+    'Vikram Malhotra',
+    'Anjali Verma',
+    'Rohan Desai',
+    'Kavya Iyer',
   ]
 
   const createdLeads = []
@@ -88,8 +105,8 @@ async function main() {
   // 3. Create Fee Plans for PAYMENT_PENDING and ENROLLED leads
   console.log('💰 Creating fee plans and installments...')
 
-  const paymentLeads = createdLeads.filter(l =>
-    l.stage === 'PAYMENT_PENDING' || l.stage === 'ENROLLED'
+  const paymentLeads = createdLeads.filter(
+    (l) => l.stage === 'PAYMENT_PENDING' || l.stage === 'ENROLLED'
   )
 
   for (const lead of paymentLeads) {

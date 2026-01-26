@@ -60,7 +60,13 @@ export const blogPostTemplate: PromptTemplate = {
   userPromptTemplate: BLOG_USER_PROMPT_TEMPLATE,
   outputFormat: 'mdx',
   requiredVariables: ['topic'],
-  optionalVariables: ['difficulty', 'targetAudience', 'neetChapter', 'keywords', 'additionalContext']
+  optionalVariables: [
+    'difficulty',
+    'targetAudience',
+    'neetChapter',
+    'keywords',
+    'additionalContext',
+  ],
 }
 
 export const BLOG_OUTLINE_PROMPT = `Create a detailed outline for a NEET Biology blog post on: {{topic}}
@@ -82,7 +88,7 @@ export const blogOutlineTemplate: PromptTemplate = {
   userPromptTemplate: BLOG_OUTLINE_PROMPT,
   outputFormat: 'json',
   requiredVariables: ['topic'],
-  optionalVariables: []
+  optionalVariables: [],
 }
 
 // Default context for Cerebrum Biology Academy
@@ -91,28 +97,14 @@ export const cerebrumBrandContext: PromptContext = {
     name: 'Cerebrum Biology Academy',
     tagline: 'Expert NEET Biology Coaching by AIIMS Faculty',
     tone: 'professional, encouraging, authoritative',
-    targetAudience: ['NEET aspirants', 'Class 11-12 students', 'Droppers', 'Parents']
+    targetAudience: ['NEET aspirants', 'Class 11-12 students', 'Droppers', 'Parents'],
   },
   seo: {
-    primaryKeywords: [
-      'NEET Biology',
-      'NEET 2026',
-      'Biology coaching',
-      'NEET preparation'
-    ],
-    secondaryKeywords: [
-      'NCERT Biology',
-      'NEET notes',
-      'Biology MCQ',
-      'Medical entrance'
-    ],
-    competitorKeywords: [
-      'Allen Biology',
-      'Aakash Biology',
-      'PW Biology'
-    ]
+    primaryKeywords: ['NEET Biology', 'NEET 2026', 'Biology coaching', 'NEET preparation'],
+    secondaryKeywords: ['NCERT Biology', 'NEET notes', 'Biology MCQ', 'Medical entrance'],
+    competitorKeywords: ['Allen Biology', 'Aakash Biology', 'PW Biology'],
   },
-  content: {}
+  content: {},
 }
 
 // Helper function to fill template variables
@@ -138,34 +130,34 @@ export function fillPromptTemplate(
 export const blogCategoryPrompts: Record<string, { focus: string; keywords: string[] }> = {
   'neet-preparation': {
     focus: 'Overall NEET exam strategy and preparation tips',
-    keywords: ['NEET preparation', 'NEET strategy', 'NEET tips', 'NEET 2026']
+    keywords: ['NEET preparation', 'NEET strategy', 'NEET tips', 'NEET 2026'],
   },
   'chapter-guides': {
     focus: 'Detailed chapter-wise notes and study guides',
-    keywords: ['NEET notes', 'Biology chapter', 'NCERT', 'study guide']
+    keywords: ['NEET notes', 'Biology chapter', 'NCERT', 'study guide'],
   },
   'medical-colleges': {
     focus: 'Information about medical colleges and admission',
-    keywords: ['medical college', 'MBBS admission', 'college cutoff', 'campus life']
+    keywords: ['medical college', 'MBBS admission', 'college cutoff', 'campus life'],
   },
   'neet-news': {
     focus: 'Latest updates from NTA and exam announcements',
-    keywords: ['NEET news', 'NTA update', 'exam date', 'notification']
+    keywords: ['NEET news', 'NTA update', 'exam date', 'notification'],
   },
   'study-tips': {
     focus: 'Study techniques, time management, and productivity',
-    keywords: ['study tips', 'time management', 'memory techniques', 'revision']
+    keywords: ['study tips', 'time management', 'memory techniques', 'revision'],
   },
   'success-stories': {
     focus: 'Student testimonials and achievement stories',
-    keywords: ['NEET success', 'toppers', 'student review', 'AIIMS']
+    keywords: ['NEET success', 'toppers', 'student review', 'AIIMS'],
   },
   'biology-concepts': {
     focus: 'Deep dives into complex biology concepts',
-    keywords: ['biology concept', 'mechanism', 'process', 'diagram']
+    keywords: ['biology concept', 'mechanism', 'process', 'diagram'],
   },
   'exam-updates': {
     focus: 'Exam patterns, syllabus changes, and important dates',
-    keywords: ['NEET syllabus', 'exam pattern', 'important dates', 'changes']
-  }
+    keywords: ['NEET syllabus', 'exam pattern', 'important dates', 'changes'],
+  },
 }

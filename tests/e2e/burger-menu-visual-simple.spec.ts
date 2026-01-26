@@ -34,9 +34,7 @@ test.describe('Burger Menu Visual Test - Z-Index Fix', () => {
     await expect(menuPanel).toBeVisible()
 
     // Get z-index values
-    const buttonZIndex = await burgerButton.evaluate((el) =>
-      window.getComputedStyle(el).zIndex
-    )
+    const buttonZIndex = await burgerButton.evaluate((el) => window.getComputedStyle(el).zIndex)
     const overlay = page.locator('.fixed.inset-0.bg-black.bg-opacity-50').first()
     const overlayZIndex = await overlay.evaluate((el) => window.getComputedStyle(el).zIndex)
     const panelZIndex = await menuPanel.evaluate((el) => window.getComputedStyle(el).zIndex)

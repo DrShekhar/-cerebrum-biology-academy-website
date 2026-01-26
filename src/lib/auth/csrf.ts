@@ -60,7 +60,10 @@ export class CSRFProtection {
         storedInRedis = true
       } catch (error) {
         // Redis failed (quota exceeded, etc.) - will fall back to in-memory
-        console.warn('Redis CSRF token storage failed, using in-memory fallback:', error instanceof Error ? error.message : 'Unknown error')
+        console.warn(
+          'Redis CSRF token storage failed, using in-memory fallback:',
+          error instanceof Error ? error.message : 'Unknown error'
+        )
       }
     }
 
@@ -120,7 +123,10 @@ export class CSRFProtection {
         return true
       } catch (error) {
         // Redis failed - fall back to in-memory validation
-        console.warn('Redis CSRF token validation failed, using in-memory fallback:', error instanceof Error ? error.message : 'Unknown error')
+        console.warn(
+          'Redis CSRF token validation failed, using in-memory fallback:',
+          error instanceof Error ? error.message : 'Unknown error'
+        )
         const inMemoryData = this.inMemoryTokens.get(token)
         if (!inMemoryData) return false
         if (Date.now() > inMemoryData.expires) {
@@ -491,7 +497,10 @@ export async function rateLimitCSRFTokens(request: NextRequest): Promise<boolean
       return result.success
     } catch (error) {
       // Fallback to in-memory if Redis fails (quota exceeded, network issues, etc.)
-      console.warn('Redis rate limiter failed, falling back to in-memory:', error instanceof Error ? error.message : 'Unknown error')
+      console.warn(
+        'Redis rate limiter failed, falling back to in-memory:',
+        error instanceof Error ? error.message : 'Unknown error'
+      )
     }
   }
 

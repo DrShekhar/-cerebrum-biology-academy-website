@@ -11,8 +11,8 @@ const categoryIcons: Record<string, React.ComponentType<{ className?: string }>>
   'study-strategy': Brain,
   'chapter-notes': Dna,
   'human-physiology': Heart,
-  'botany': Microscope,
-  'zoology': Microscope,
+  botany: Microscope,
+  zoology: Microscope,
   default: BookOpen,
 }
 

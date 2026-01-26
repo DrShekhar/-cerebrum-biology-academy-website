@@ -34,10 +34,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BiologyTutorVasantKunjLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function BiologyTutorVasantKunjLayout({ children }: { children: React.ReactNode }) {
   return children
 }

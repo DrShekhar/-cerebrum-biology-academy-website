@@ -49,9 +49,7 @@ test.describe('Burger Menu Navigation', () => {
     expect(box!.height).toBeGreaterThan(0)
 
     // Check z-index is high enough
-    const zIndex = await burgerButton.evaluate((el) =>
-      window.getComputedStyle(el).zIndex
-    )
+    const zIndex = await burgerButton.evaluate((el) => window.getComputedStyle(el).zIndex)
     console.log('Burger button z-index:', zIndex)
 
     // Click should work
@@ -174,9 +172,7 @@ test.describe('Burger Menu Navigation', () => {
     const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
 
     // Check burger button z-index
-    const buttonZIndex = await burgerButton.evaluate((el) =>
-      window.getComputedStyle(el).zIndex
-    )
+    const buttonZIndex = await burgerButton.evaluate((el) => window.getComputedStyle(el).zIndex)
     console.log('Burger button z-index:', buttonZIndex)
 
     // Open menu
@@ -185,23 +181,17 @@ test.describe('Burger Menu Navigation', () => {
 
     // Check overlay z-index
     const overlay = page.locator('div.fixed.inset-0.bg-black')
-    const overlayZIndex = await overlay.first().evaluate((el) =>
-      window.getComputedStyle(el).zIndex
-    )
+    const overlayZIndex = await overlay.first().evaluate((el) => window.getComputedStyle(el).zIndex)
     console.log('Overlay z-index:', overlayZIndex)
 
     // Check menu panel z-index
     const menuPanel = page.locator('#burger-menu-panel')
-    const panelZIndex = await menuPanel.evaluate((el) =>
-      window.getComputedStyle(el).zIndex
-    )
+    const panelZIndex = await menuPanel.evaluate((el) => window.getComputedStyle(el).zIndex)
     console.log('Menu panel z-index:', panelZIndex)
 
     // Check header z-index
     const header = page.locator('header')
-    const headerZIndex = await header.evaluate((el) =>
-      window.getComputedStyle(el).zIndex
-    )
+    const headerZIndex = await header.evaluate((el) => window.getComputedStyle(el).zIndex)
     console.log('Header z-index:', headerZIndex)
 
     // Verify hierarchy: panel > overlay > header

@@ -57,17 +57,20 @@ const whyChooseUs = [
   {
     icon: Globe,
     title: 'IB/IGCSE Expert',
-    description: 'Specialized in IB Biology HL/SL, IGCSE Biology, and Cambridge curriculum alongside CBSE/NEET.',
+    description:
+      'Specialized in IB Biology HL/SL, IGCSE Biology, and Cambridge curriculum alongside CBSE/NEET.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from diplomatic families and international schools.',
+    description:
+      'Proven track record with students from diplomatic families and international schools.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience teaching diverse curricula.',
+    description:
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience teaching diverse curricula.',
   },
   {
     icon: Star,
@@ -120,7 +123,8 @@ export default function PageContent() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Cerebrum Biology Academy - Biology Coaching Vasant Vihar',
-    description: 'Best Biology Coaching for Vasant Vihar - IB Biology, IGCSE, CBSE, NEET Preparation',
+    description:
+      'Best Biology Coaching for Vasant Vihar - IB Biology, IGCSE, CBSE, NEET Preparation',
     url: 'https://cerebrumbiologyacademy.com/biology-coaching-vasant-vihar-delhi',
     telephone: '+91-88264-44334',
     address: {
@@ -129,7 +133,14 @@ export default function PageContent() {
       addressRegion: 'Uttar Pradesh',
       addressCountry: 'IN',
     },
-    areaServed: ['Vasant Vihar', 'Shantiniketan', 'Westend', 'Anand Niketan', 'Chanakyapuri', 'RK Puram'],
+    areaServed: [
+      'Vasant Vihar',
+      'Shantiniketan',
+      'Westend',
+      'Anand Niketan',
+      'Chanakyapuri',
+      'RK Puram',
+    ],
     priceRange: '$$',
   }
 
@@ -160,8 +171,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Coaching in{' '}
-              <span className="text-yellow-400">Vasant Vihar</span>
+              Biology Coaching in <span className="text-yellow-400">Vasant Vihar</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -170,7 +180,8 @@ export default function PageContent() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Premium Biology coaching for Vasant Vihar, Shantiniketan, Embassy area & South Delhi.
-              Expert in <strong>IB, IGCSE, CBSE & NEET</strong> - taught by <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert in <strong>IB, IGCSE, CBSE & NEET</strong> - taught by{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +209,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Vasant%20Vihar%20and%20interested%20in%20Biology%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +386,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Vasant%20Vihar%20and%20interested%20in%20Biology%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

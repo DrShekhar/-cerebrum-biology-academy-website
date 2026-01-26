@@ -56,10 +56,7 @@ export async function POST(req: NextRequest) {
     })
 
     if (!classSession) {
-      return NextResponse.json(
-        { success: false, error: 'Session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Session not found' }, { status: 404 })
     }
 
     const attendanceSettings = classSession.course?.attendance_settings
@@ -173,9 +170,7 @@ export async function POST(req: NextRequest) {
 
       return NextResponse.json({
         success: true,
-        message: isLate
-          ? `Checked in (${lateBy} minutes late)`
-          : 'Successfully checked in',
+        message: isLate ? `Checked in (${lateBy} minutes late)` : 'Successfully checked in',
         data: {
           id: attendance.id,
           checkInTime: attendance.checkInTime,
@@ -218,7 +213,7 @@ export async function POST(req: NextRequest) {
           checkOutTime: now,
           duration,
           metadata: {
-            ...(existingAttendance.metadata as object || {}),
+            ...((existingAttendance.metadata as object) || {}),
             checkOutMethod: 'manual',
             checkOutUserAgent: req.headers.get('user-agent') || null,
           },
@@ -249,10 +244,7 @@ export async function POST(req: NextRequest) {
       })
     }
 
-    return NextResponse.json(
-      { success: false, error: 'Invalid action' },
-      { status: 400 }
-    )
+    return NextResponse.json({ success: false, error: 'Invalid action' }, { status: 400 })
   } catch (error) {
     console.error('Self check-in error:', error)
     return NextResponse.json(

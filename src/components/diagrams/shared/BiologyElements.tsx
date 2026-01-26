@@ -102,7 +102,12 @@ export function Cell({
       )}
 
       {showNucleus && type !== 'sclerenchyma' && type !== 'xylem' && (
-        <circle cx={cx - width * 0.15} cy={cy - height * 0.1} r={width * 0.1} fill={biologyColors.nucleus} />
+        <circle
+          cx={cx - width * 0.15}
+          cy={cy - height * 0.1}
+          r={width * 0.1}
+          fill={biologyColors.nucleus}
+        />
       )}
     </motion.g>
   )
@@ -113,7 +118,15 @@ interface TissueLayerProps {
   y: number
   width: number
   height: number
-  type: 'epidermis' | 'cortex' | 'endodermis' | 'pericycle' | 'xylem' | 'phloem' | 'pith' | 'vascularBundle'
+  type:
+    | 'epidermis'
+    | 'cortex'
+    | 'endodermis'
+    | 'pericycle'
+    | 'xylem'
+    | 'phloem'
+    | 'pith'
+    | 'vascularBundle'
   label?: string
   isHighlighted?: boolean
   onClick?: () => void
@@ -217,8 +230,18 @@ export function VascularBundle({
       {showPhloem && (
         <>
           <circle cx={cx} cy={cy + radius * 0.4} r={radius * 0.2} fill={biologyColors.phloem} />
-          <circle cx={cx - radius * 0.3} cy={cy + radius * 0.3} r={radius * 0.1} fill={biologyColors.phloem} />
-          <circle cx={cx + radius * 0.3} cy={cy + radius * 0.3} r={radius * 0.1} fill={biologyColors.phloem} />
+          <circle
+            cx={cx - radius * 0.3}
+            cy={cy + radius * 0.3}
+            r={radius * 0.1}
+            fill={biologyColors.phloem}
+          />
+          <circle
+            cx={cx + radius * 0.3}
+            cy={cy + radius * 0.3}
+            r={radius * 0.1}
+            fill={biologyColors.phloem}
+          />
         </>
       )}
 

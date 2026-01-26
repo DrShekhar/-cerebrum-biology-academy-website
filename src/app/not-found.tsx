@@ -124,7 +124,9 @@ export default function NotFound() {
 
         {/* Contact Information */}
         <div className="mt-16 text-center animate-fadeIn animation-delay-600">
-          <div className="text-gray-500 mb-2">Still can&apos;t find what you&apos;re looking for?</div>
+          <div className="text-gray-500 mb-2">
+            Still can&apos;t find what you&apos;re looking for?
+          </div>
           <div className="flex items-center justify-center space-x-6 text-sm">
             <a
               href="tel:+918826444334"

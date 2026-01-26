@@ -17,7 +17,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { id } = await params
@@ -121,7 +124,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { id } = await params
@@ -159,8 +165,16 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     }
 
     const body = await request.json()
-    const { status, studentName, phone, email, courseInterest, notes, demoScheduledAt, lostReason } =
-      body
+    const {
+      status,
+      studentName,
+      phone,
+      email,
+      courseInterest,
+      notes,
+      demoScheduledAt,
+      lostReason,
+    } = body
 
     // Build update data
     const updateData: Record<string, unknown> = {}
@@ -273,7 +287,10 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { id } = await params

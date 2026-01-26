@@ -508,9 +508,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
           </button>
 
           {/* Header with solid indigo */}
-          <div
-            className="bg-indigo-500 p-4 sm:p-6 text-white relative overflow-hidden"
-          >
+          <div className="bg-indigo-500 p-4 sm:p-6 text-white relative overflow-hidden">
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-3 bg-white/20 rounded-full">{selectedOffer.visual.icon}</div>

@@ -54,12 +54,7 @@ export function PlantTissues({
       subtitle="Comparison of cell types providing mechanical support"
       className={className}
     >
-      <svg
-        width={width}
-        height={height}
-        viewBox={`0 0 ${width} ${height}`}
-        className="mx-auto"
-      >
+      <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="mx-auto">
         <defs>
           <pattern id="pits" width="8" height="8" patternUnits="userSpaceOnUse">
             <circle cx="4" cy="4" r="2" fill={biologyColors.pits} />
@@ -146,12 +141,7 @@ export function PlantTissues({
             animate={{ scale: 1 }}
             transition={{ delay: 0.6, type: 'spring' }}
           />
-          <circle
-            cx={startX + cellWidth / 2 - 35}
-            cy={startY + 55}
-            r={8}
-            fill="#2a4a8a"
-          />
+          <circle cx={startX + cellWidth / 2 - 35} cy={startY + 55} r={8} fill="#2a4a8a" />
 
           {/* Cytoplasm thin layer */}
           <path
@@ -395,8 +385,14 @@ export function PlantTissues({
               />
               <DiagramLabel
                 text="Small lumen"
-                position={{ x: startX + (cellWidth + gap) * 2 + cellWidth + 10, y: startY + 30 + cellWidth / 2 }}
-                anchor={{ x: startX + (cellWidth + gap) * 2 + cellWidth / 2 + 25, y: startY + 30 + cellWidth / 2 }}
+                position={{
+                  x: startX + (cellWidth + gap) * 2 + cellWidth + 10,
+                  y: startY + 30 + cellWidth / 2,
+                }}
+                anchor={{
+                  x: startX + (cellWidth + gap) * 2 + cellWidth / 2 + 25,
+                  y: startY + 30 + cellWidth / 2,
+                }}
                 side="right"
                 fontSize={10}
               />

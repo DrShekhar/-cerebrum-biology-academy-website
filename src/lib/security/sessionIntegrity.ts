@@ -57,11 +57,17 @@ export class SessionIntegrityManager {
   private session: TestSession | null = null
   private heartbeatInterval: NodeJS.Timeout | null = null
   private encryptionKey: CryptoKey | null = null
-  private onSessionViolation: (violation: string, severity: 'low' | 'medium' | 'high' | 'critical') => void
+  private onSessionViolation: (
+    violation: string,
+    severity: 'low' | 'medium' | 'high' | 'critical'
+  ) => void
   private onSessionTerminated: (reason: string) => void
 
   constructor(
-    onSessionViolation: (violation: string, severity: 'low' | 'medium' | 'high' | 'critical') => void,
+    onSessionViolation: (
+      violation: string,
+      severity: 'low' | 'medium' | 'high' | 'critical'
+    ) => void,
     onSessionTerminated: (reason: string) => void
   ) {
     this.onSessionViolation = onSessionViolation
@@ -71,7 +77,11 @@ export class SessionIntegrityManager {
   /**
    * Create a new secure test session
    */
-  async createSession(userId: string, testId: string, durationMinutes: number): Promise<TestSession> {
+  async createSession(
+    userId: string,
+    testId: string,
+    durationMinutes: number
+  ): Promise<TestSession> {
     const sessionId = await this.generateSecureSessionId()
     const encryptionKey = await this.generateEncryptionKey()
     const deviceFingerprint = await BrowserFingerprinting.generateFingerprint()
@@ -83,7 +93,7 @@ export class SessionIntegrityManager {
       userId,
       testId,
       startTime: Date.now(),
-      expiryTime: Date.now() + (durationMinutes * 60 * 1000),
+      expiryTime: Date.now() + durationMinutes * 60 * 1000,
       deviceFingerprint,
       ipAddress,
       geolocation,
@@ -93,13 +103,13 @@ export class SessionIntegrityManager {
         platform: navigator.platform,
         viewport: {
           width: window.innerWidth,
-          height: window.innerHeight
-        }
+          height: window.innerHeight,
+        },
       },
       encryptionKey: await this.exportKey(encryptionKey),
       isValid: true,
       violations: 0,
-      lastHeartbeat: Date.now()
+      lastHeartbeat: Date.now(),
     }
 
     this.session = session
@@ -118,7 +128,7 @@ export class SessionIntegrityManager {
       return {
         isValid: false,
         reason: 'No active session',
-        action: 'terminate'
+        action: 'terminate',
       }
     }
 
@@ -127,7 +137,7 @@ export class SessionIntegrityManager {
       return {
         isValid: false,
         reason: 'Session expired',
-        action: 'terminate'
+        action: 'terminate',
       }
     }
 
@@ -141,14 +151,14 @@ export class SessionIntegrityManager {
         return {
           isValid: false,
           reason: 'Multiple device validation failures',
-          action: 'terminate'
+          action: 'terminate',
         }
       }
 
       return {
         isValid: false,
         reason: 'Device fingerprint changed',
-        action: 'warn'
+        action: 'warn',
       }
     }
 
@@ -163,34 +173,36 @@ export class SessionIntegrityManager {
         return {
           isValid: false,
           reason: 'Multiple IP address changes detected',
-          action: 'terminate'
+          action: 'terminate',
         }
       }
 
       return {
         isValid: true,
         reason: 'IP address changed',
-        action: 'warn'
+        action: 'warn',
       }
     }
 
     // Check heartbeat freshness
     const timeSinceLastHeartbeat = Date.now() - this.session.lastHeartbeat
-    if (timeSinceLastHeartbeat > 60000) { // 1 minute
+    if (timeSinceLastHeartbeat > 60000) {
+      // 1 minute
       this.onSessionViolation('Session heartbeat missed', 'medium')
 
-      if (timeSinceLastHeartbeat > 300000) { // 5 minutes
+      if (timeSinceLastHeartbeat > 300000) {
+        // 5 minutes
         return {
           isValid: false,
           reason: 'Session heartbeat timeout',
-          action: 'terminate'
+          action: 'terminate',
         }
       }
     }
 
     return {
       isValid: true,
-      action: 'continue'
+      action: 'continue',
     }
   }
 
@@ -200,7 +212,7 @@ export class SessionIntegrityManager {
   private async generateSecureSessionId(): Promise<string> {
     const array = new Uint8Array(32)
     crypto.getRandomValues(array)
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, (byte) => byte.toString(16).padStart(2, '0')).join('')
   }
 
   /**
@@ -210,7 +222,7 @@ export class SessionIntegrityManager {
     return await crypto.subtle.generateKey(
       {
         name: 'AES-GCM',
-        length: 256
+        length: 256,
       },
       true,
       ['encrypt', 'decrypt']
@@ -223,7 +235,7 @@ export class SessionIntegrityManager {
   private async exportKey(key: CryptoKey): Promise<string> {
     const exported = await crypto.subtle.exportKey('raw', key)
     return Array.from(new Uint8Array(exported))
-      .map(byte => byte.toString(16).padStart(2, '0'))
+      .map((byte) => byte.toString(16).padStart(2, '0'))
       .join('')
   }
 
@@ -232,16 +244,13 @@ export class SessionIntegrityManager {
    */
   private async importKey(keyString: string): Promise<CryptoKey> {
     const keyBytes = new Uint8Array(
-      keyString.match(/.{2}/g)?.map(byte => parseInt(byte, 16)) || []
+      keyString.match(/.{2}/g)?.map((byte) => parseInt(byte, 16)) || []
     )
 
-    return await crypto.subtle.importKey(
-      'raw',
-      keyBytes,
-      { name: 'AES-GCM' },
-      false,
-      ['encrypt', 'decrypt']
-    )
+    return await crypto.subtle.importKey('raw', keyBytes, { name: 'AES-GCM' }, false, [
+      'encrypt',
+      'decrypt',
+    ])
   }
 
   /**
@@ -281,7 +290,7 @@ export class SessionIntegrityManager {
     const combined = new Uint8Array(
       atob(encryptedData)
         .split('')
-        .map(char => char.charCodeAt(0))
+        .map((char) => char.charCodeAt(0))
     )
 
     const iv = combined.slice(0, 12)
@@ -328,7 +337,7 @@ export class SessionIntegrityManager {
           resolve({
             latitude: position.coords.latitude,
             longitude: position.coords.longitude,
-            accuracy: position.coords.accuracy
+            accuracy: position.coords.accuracy,
           })
         },
         (error) => {
@@ -338,7 +347,7 @@ export class SessionIntegrityManager {
         {
           enableHighAccuracy: false,
           timeout: 10000,
-          maximumAge: 300000 // 5 minutes
+          maximumAge: 300000, // 5 minutes
         }
       )
     })
@@ -356,7 +365,7 @@ export class SessionIntegrityManager {
         sessionId: this.session.sessionId,
         isActive: !document.hidden,
         networkStatus: navigator.onLine ? 'online' : 'offline',
-        performanceMetrics: this.getPerformanceMetrics()
+        performanceMetrics: this.getPerformanceMetrics(),
       }
 
       // Add battery info if available
@@ -388,8 +397,8 @@ export class SessionIntegrityManager {
         },
         body: JSON.stringify({
           sessionId: this.session?.sessionId,
-          data: encryptedData
-        })
+          data: encryptedData,
+        }),
       })
     } catch (error) {
       console.warn('Failed to send heartbeat:', error)
@@ -406,7 +415,7 @@ export class SessionIntegrityManager {
     return {
       memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
       cpuUsage: 0, // Not directly available in browser
-      frameRate: this.estimateFrameRate()
+      frameRate: this.estimateFrameRate(),
     }
   }
 
@@ -468,9 +477,12 @@ export class SessionIntegrityManager {
     const dLat = this.toRadians(lat2 - lat1)
     const dLon = this.toRadians(lon2 - lon1)
 
-    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-              Math.cos(this.toRadians(lat1)) * Math.cos(this.toRadians(lat2)) *
-              Math.sin(dLon / 2) * Math.sin(dLon / 2)
+    const a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(this.toRadians(lat1)) *
+        Math.cos(this.toRadians(lat2)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2)
 
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
     return R * c
@@ -507,7 +519,7 @@ export class SessionIntegrityManager {
     if (!this.session) {
       return {
         isActive: false,
-        reason: 'No session'
+        reason: 'No session',
       }
     }
 
@@ -521,7 +533,7 @@ export class SessionIntegrityManager {
       violations: this.session.violations,
       lastHeartbeat: this.session.lastHeartbeat,
       deviceFingerprint: this.session.deviceFingerprint,
-      isExpired
+      isExpired,
     }
   }
 
@@ -563,12 +575,12 @@ export class SessionIntegrityManager {
         fingerprint: this.session.deviceFingerprint,
         browser: this.session.browserInfo,
         ipAddress: this.session.ipAddress,
-        geolocation: this.session.geolocation
+        geolocation: this.session.geolocation,
       },
       integrity: {
         sessionValid: this.session.isValid,
-        heartbeatStatus: Date.now() - this.session.lastHeartbeat < 60000 ? 'active' : 'stale'
-      }
+        heartbeatStatus: Date.now() - this.session.lastHeartbeat < 60000 ? 'active' : 'stale',
+      },
     }
   }
 }

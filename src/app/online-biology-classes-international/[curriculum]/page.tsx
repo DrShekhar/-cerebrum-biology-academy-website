@@ -296,7 +296,9 @@ export default function InternationalBiologyPage({
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               {curriculum.name}-Specific Features
             </h2>
-            <p className="text-lg text-gray-600">What makes our {curriculum.name} classes special</p>
+            <p className="text-lg text-gray-600">
+              What makes our {curriculum.name} classes special
+            </p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

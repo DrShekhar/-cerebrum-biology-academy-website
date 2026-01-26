@@ -25,12 +25,12 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
   onAnswerSelect,
   showExplanation = false,
   isReviewMode = false,
-  questionNumber = 1
+  questionNumber = 1,
 }) => {
   const [dragDropState, setDragDropState] = useState<DragDropState>({
     dragging: null,
     dragOver: null,
-    matches: {}
+    matches: {},
   })
 
   const [selectedOption, setSelectedOption] = useState<string>(selectedAnswer || '')
@@ -39,13 +39,13 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
   const generateAnswerFromMatches = (matches: { [key: string]: string }) => {
     const sortedMatches = Object.entries(matches)
       .sort(([a], [b]) => {
-        const aIndex = question.columnA.findIndex(item => item.id === a)
-        const bIndex = question.columnA.findIndex(item => item.id === b)
+        const aIndex = question.columnA.findIndex((item) => item.id === a)
+        const bIndex = question.columnA.findIndex((item) => item.id === b)
         return aIndex - bIndex
       })
       .map(([aId, bId]) => {
-        const aIndex = question.columnA.findIndex(item => item.id === aId)
-        const bIndex = question.columnB.findIndex(item => item.id === bId)
+        const aIndex = question.columnA.findIndex((item) => item.id === aId)
+        const bIndex = question.columnB.findIndex((item) => item.id === bId)
         return `${aIndex + 1}-${String.fromCharCode(65 + bIndex)}`
       })
     return sortedMatches.join(', ')
@@ -53,14 +53,14 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
 
   // Handle drag start
   const handleDragStart = (e: React.DragEvent, itemId: string) => {
-    setDragDropState(prev => ({ ...prev, dragging: itemId }))
+    setDragDropState((prev) => ({ ...prev, dragging: itemId }))
     e.dataTransfer.setData('text/plain', itemId)
   }
 
   // Handle drag over
   const handleDragOver = (e: React.DragEvent, targetId: string) => {
     e.preventDefault()
-    setDragDropState(prev => ({ ...prev, dragOver: targetId }))
+    setDragDropState((prev) => ({ ...prev, dragOver: targetId }))
   }
 
   // Handle drop
@@ -72,7 +72,7 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
       const newMatches = { ...dragDropState.matches }
 
       // Remove any existing match for this source
-      Object.keys(newMatches).forEach(key => {
+      Object.keys(newMatches).forEach((key) => {
         if (newMatches[key] === targetId) {
           delete newMatches[key]
         }
@@ -80,11 +80,11 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
 
       newMatches[sourceId] = targetId
 
-      setDragDropState(prev => ({
+      setDragDropState((prev) => ({
         ...prev,
         matches: newMatches,
         dragging: null,
-        dragOver: null
+        dragOver: null,
       }))
 
       const answerString = generateAnswerFromMatches(newMatches)
@@ -104,7 +104,7 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
   const getMatchStatus = (aId: string, bId: string) => {
     if (!showExplanation) return 'none'
 
-    const correctMatch = question.correctMatches.find(m => m.aId === aId && m.bId === bId)
+    const correctMatch = question.correctMatches.find((m) => m.aId === aId && m.bId === bId)
     const userMatch = dragDropState.matches[aId] === bId
 
     if (correctMatch && userMatch) return 'correct'
@@ -121,17 +121,19 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
           <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
             Match the Following
           </span>
-          <span className="text-gray-500 text-sm">
-            Question {questionNumber}
-          </span>
+          <span className="text-gray-500 text-sm">Question {questionNumber}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className={cn(
-            "px-2 py-1 rounded text-xs font-medium",
-            question.difficulty === 'easy' ? "bg-green-100 text-green-800" :
-            question.difficulty === 'medium' ? "bg-yellow-100 text-yellow-800" :
-            "bg-red-100 text-red-800"
-          )}>
+          <span
+            className={cn(
+              'px-2 py-1 rounded text-xs font-medium',
+              question.difficulty === 'easy'
+                ? 'bg-green-100 text-green-800'
+                : question.difficulty === 'medium'
+                  ? 'bg-yellow-100 text-yellow-800'
+                  : 'bg-red-100 text-red-800'
+            )}
+          >
             {question.difficulty.charAt(0).toUpperCase() + question.difficulty.slice(1)}
           </span>
           <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs">
@@ -164,13 +166,13 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
                   draggable={!showExplanation && !isReviewMode}
                   onDragStart={(e) => handleDragStart(e, item.id)}
                   className={cn(
-                    "flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200",
-                    "cursor-move select-none",
-                    dragDropState.dragging === item.id && "opacity-50 scale-95",
-                    isMatched && matchStatus === 'correct' && "border-green-600 bg-green-50",
-                    isMatched && matchStatus === 'incorrect' && "border-red-500 bg-red-50",
-                    !isMatched && "border-blue-300 bg-white hover:border-blue-400 hover:shadow-md",
-                    (showExplanation || isReviewMode) && "cursor-default"
+                    'flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200',
+                    'cursor-move select-none',
+                    dragDropState.dragging === item.id && 'opacity-50 scale-95',
+                    isMatched && matchStatus === 'correct' && 'border-green-600 bg-green-50',
+                    isMatched && matchStatus === 'incorrect' && 'border-red-500 bg-red-50',
+                    !isMatched && 'border-blue-300 bg-white hover:border-blue-400 hover:shadow-md',
+                    (showExplanation || isReviewMode) && 'cursor-default'
                   )}
                 >
                   <span className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
@@ -179,7 +181,10 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
                   <span className="flex-1 text-blue-900 font-medium">{item.text}</span>
                   {isMatched && (
                     <span className="text-sm text-gray-600">
-                      ↔ {String.fromCharCode(65 + question.columnB.findIndex(b => b.id === matchedBId))}
+                      ↔{' '}
+                      {String.fromCharCode(
+                        65 + question.columnB.findIndex((b) => b.id === matchedBId)
+                      )}
                     </span>
                   )}
                 </div>
@@ -201,13 +206,15 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
                   key={item.id}
                   onDragOver={(e) => handleDragOver(e, item.id)}
                   onDrop={(e) => handleDrop(e, item.id)}
-                  onDragLeave={() => setDragDropState(prev => ({ ...prev, dragOver: null }))}
+                  onDragLeave={() => setDragDropState((prev) => ({ ...prev, dragOver: null }))}
                   className={cn(
-                    "flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200",
-                    "min-h-[60px]",
-                    isDragOver && "border-purple-500 bg-purple-100 scale-105",
-                    isMatchTarget && "border-purple-500 bg-purple-100",
-                    !isMatchTarget && !isDragOver && "border-purple-300 bg-white hover:border-purple-400"
+                    'flex items-center gap-3 p-4 rounded-lg border-2 transition-all duration-200',
+                    'min-h-[60px]',
+                    isDragOver && 'border-purple-500 bg-purple-100 scale-105',
+                    isMatchTarget && 'border-purple-500 bg-purple-100',
+                    !isMatchTarget &&
+                      !isDragOver &&
+                      'border-purple-300 bg-white hover:border-purple-400'
                   )}
                 >
                   <span className="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
@@ -225,7 +232,8 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
       {!showExplanation && !isReviewMode && (
         <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-6">
           <p className="text-sm text-gray-600 mb-2">
-            <strong>Instructions:</strong> Drag items from Column A to match with corresponding items in Column B.
+            <strong>Instructions:</strong> Drag items from Column A to match with corresponding
+            items in Column B.
           </p>
           <p className="text-xs text-gray-500">
             Alternative: Select from the options below if drag-and-drop is not available.
@@ -248,37 +256,37 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
                 onClick={() => handleOptionSelect(option)}
                 disabled={showExplanation || isReviewMode}
                 className={cn(
-                  "w-full text-left p-4 rounded-lg border-2 transition-all duration-200",
+                  'w-full text-left p-4 rounded-lg border-2 transition-all duration-200',
                   isSelected
                     ? showExplanation
                       ? isCorrect
-                        ? "border-green-600 bg-green-50 text-green-900"
-                        : "border-red-500 bg-red-50 text-red-900"
-                      : "border-orange-500 bg-orange-50 text-orange-900"
+                        ? 'border-green-600 bg-green-50 text-green-900'
+                        : 'border-red-500 bg-red-50 text-red-900'
+                      : 'border-orange-500 bg-orange-50 text-orange-900'
                     : showExplanation && isCorrect
-                      ? "border-green-600 bg-green-50 text-green-900"
-                      : "border-gray-200 hover:border-orange-300 hover:bg-gray-50"
+                      ? 'border-green-600 bg-green-50 text-green-900'
+                      : 'border-gray-200 hover:border-orange-300 hover:bg-gray-50'
                 )}
               >
                 <div className="flex items-center gap-3">
-                  <span className={cn(
-                    "w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold",
-                    isSelected
-                      ? showExplanation
-                        ? isCorrect
-                          ? "bg-green-600 text-white"
-                          : "bg-red-500 text-white"
-                        : "bg-orange-500 text-white"
-                      : showExplanation && isCorrect
-                        ? "bg-green-600 text-white"
-                        : "bg-gray-200 text-gray-700"
-                  )}>
+                  <span
+                    className={cn(
+                      'w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold',
+                      isSelected
+                        ? showExplanation
+                          ? isCorrect
+                            ? 'bg-green-600 text-white'
+                            : 'bg-red-500 text-white'
+                          : 'bg-orange-500 text-white'
+                        : showExplanation && isCorrect
+                          ? 'bg-green-600 text-white'
+                          : 'bg-gray-200 text-gray-700'
+                    )}
+                  >
                     {optionLabel}
                   </span>
                   <span className="flex-1 font-mono text-sm">{option}</span>
-                  {showExplanation && isCorrect && (
-                    <span className="text-green-600">✓</span>
-                  )}
+                  {showExplanation && isCorrect && <span className="text-green-600">✓</span>}
                   {showExplanation && isSelected && !isCorrect && (
                     <span className="text-red-600">✗</span>
                   )}
@@ -305,10 +313,10 @@ const MatchTheFollowingQuestion: React.FC<MatchTheFollowingQuestionProps> = ({
             <h4 className="font-semibold text-gray-800 mb-2">Correct Matches:</h4>
             <div className="space-y-1">
               {question.correctMatches.map((match, index) => {
-                const aItem = question.columnA.find(item => item.id === match.aId)
-                const bItem = question.columnB.find(item => item.id === match.bId)
-                const aIndex = question.columnA.findIndex(item => item.id === match.aId)
-                const bIndex = question.columnB.findIndex(item => item.id === match.bId)
+                const aItem = question.columnA.find((item) => item.id === match.aId)
+                const bItem = question.columnB.find((item) => item.id === match.bId)
+                const aIndex = question.columnA.findIndex((item) => item.id === match.aId)
+                const bIndex = question.columnB.findIndex((item) => item.id === match.bId)
 
                 return (
                   <div key={index} className="text-sm text-gray-600">

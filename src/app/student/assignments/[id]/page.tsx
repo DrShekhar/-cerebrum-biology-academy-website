@@ -9,25 +9,13 @@ import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
-import {
-  FileText,
-  Calendar,
-  User,
-  BookOpen,
-  Download,
-  AlertCircle,
-  Trash2,
-} from 'lucide-react'
+import { FileText, Calendar, User, BookOpen, Download, AlertCircle, Trash2 } from 'lucide-react'
 import { format, isPast } from 'date-fns'
 import { cn } from '@/lib/utils'
 import { uploadFile, formatFileSize, getFileIcon } from '@/lib/fileUpload'
 import { Assignment, SubmissionStatus } from '@/types/assignment'
 
-export default function AssignmentDetailPage({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default function AssignmentDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = use(params)
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
   const router = useRouter()
@@ -277,7 +265,8 @@ export default function AssignmentDetailPage({
                       <a
                         key={index}
                         href={file}
-                        target="_blank" rel="noopener noreferrer"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                       >
                         <Download className="w-4 h-4 text-blue-600" />
@@ -321,7 +310,8 @@ export default function AssignmentDetailPage({
                         <a
                           key={index}
                           href={file}
-                          target="_blank" rel="noopener noreferrer"
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex items-center gap-2 p-3 bg-gray-50 rounded-lg hover:bg-gray-100"
                         >
                           <Download className="w-4 h-4 text-blue-600" />

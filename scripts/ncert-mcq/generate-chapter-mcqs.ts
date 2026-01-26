@@ -178,7 +178,11 @@ async function generatePageQuestions(
     if (count === 0) continue
 
     // Determine difficulty for this batch
-    const difficulty = getDifficultyForBatch(allQuestions.length, config.questionsPerPage, config.difficultyDistribution)
+    const difficulty = getDifficultyForBatch(
+      allQuestions.length,
+      config.questionsPerPage,
+      config.difficultyDistribution
+    )
 
     try {
       console.log(`    Calling Claude API for ${count} ${qType} questions (${difficulty})...`)
@@ -191,7 +195,8 @@ async function generatePageQuestions(
         difficulty,
         topics: chapter.topicsCovered, // Add chapter topics for context
         includePYQStyle: true,
-        includeNEETImportant: chapter.neetWeightage === 'VERY_HIGH' || chapter.neetWeightage === 'HIGH',
+        includeNEETImportant:
+          chapter.neetWeightage === 'VERY_HIGH' || chapter.neetWeightage === 'HIGH',
         questionTypes: [qType as 'MCQ' | 'MATCH_FOLLOWING' | 'TRUE_FALSE' | 'DIAGRAM'],
       })
 
@@ -334,7 +339,10 @@ function rotateOptionsForBalance(
 /**
  * Save questions to database
  */
-async function saveQuestionsToDatabase(questions: QuestionSeed[], chapter: NCERTChapter): Promise<number> {
+async function saveQuestionsToDatabase(
+  questions: QuestionSeed[],
+  chapter: NCERTChapter
+): Promise<number> {
   let savedCount = 0
 
   for (const q of questions) {
@@ -379,7 +387,8 @@ async function saveQuestionsToDatabase(questions: QuestionSeed[], chapter: NCERT
           ncertFigure: q.ncertFigure,
           isNcertBased: true,
           neetWeightage: q.neetWeightage || chapter.neetWeightage,
-          isNeetImportant: chapter.neetWeightage === 'VERY_HIGH' || chapter.neetWeightage === 'HIGH',
+          isNeetImportant:
+            chapter.neetWeightage === 'VERY_HIGH' || chapter.neetWeightage === 'HIGH',
           updatedAt: new Date(),
         },
       })
@@ -407,7 +416,9 @@ async function main() {
   const args = process.argv.slice(2)
 
   if (args.length < 2) {
-    console.log('Usage: npx ts-node scripts/ncert-mcq/generate-chapter-mcqs.ts <class> <chapter> [--dry-run]')
+    console.log(
+      'Usage: npx ts-node scripts/ncert-mcq/generate-chapter-mcqs.ts <class> <chapter> [--dry-run]'
+    )
     console.log('Example: npx ts-node scripts/ncert-mcq/generate-chapter-mcqs.ts 11 8')
     process.exit(1)
   }

@@ -31,6 +31,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BiologyOlympiadPreparationLayout({ children }: { children: React.ReactNode }) {
+export default function BiologyOlympiadPreparationLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

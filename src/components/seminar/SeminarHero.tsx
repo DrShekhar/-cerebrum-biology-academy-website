@@ -2,11 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { Calendar, Clock, Users, Star } from 'lucide-react'
-import {
-  SEMINAR_CONFIG,
-  getNextSeminarDate,
-  formatSeminarDate,
-} from '@/lib/seminar/config'
+import { SEMINAR_CONFIG, getNextSeminarDate, formatSeminarDate } from '@/lib/seminar/config'
 import { SeminarCountdown } from './SeminarCountdown'
 
 interface SeminarHeroProps {
@@ -95,9 +91,7 @@ export function SeminarHero({
             <p className="text-sm text-slate-400 mb-3">NEXT SESSION STARTS IN:</p>
             <SeminarCountdown targetDate={nextDate || undefined} size="lg" />
             {mounted && nextDate && (
-              <p className="text-sm text-slate-400 mt-3">
-                📅 {formatSeminarDate(nextDate)}
-              </p>
+              <p className="text-sm text-slate-400 mt-3">📅 {formatSeminarDate(nextDate)}</p>
             )}
           </div>
 

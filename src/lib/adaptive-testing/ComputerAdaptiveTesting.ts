@@ -11,7 +11,13 @@
  * - Adaptive time allocation
  */
 
-import { irtEngine, ItemParameters, StudentResponse, AbilityEstimate, AdaptiveTestState } from './ItemResponseTheory'
+import {
+  irtEngine,
+  ItemParameters,
+  StudentResponse,
+  AbilityEstimate,
+  AdaptiveTestState,
+} from './ItemResponseTheory'
 
 export interface CATConfiguration {
   algorithm: 'maximum_information' | 'bayesian_optimal' | 'hybrid'
@@ -24,9 +30,9 @@ export interface CATConfiguration {
     enabled: boolean
     topicWeights: Map<string, number>
     difficultyDistribution: {
-      easy: number    // percentage
-      medium: number  // percentage
-      hard: number    // percentage
+      easy: number // percentage
+      medium: number // percentage
+      hard: number // percentage
     }
     bloomsLevelBalance: boolean
   }
@@ -160,7 +166,7 @@ class ComputerAdaptiveTesting {
         informationGained: 0,
         estimationMethod: 'EAP',
         convergence: false,
-        iterations: 0
+        iterations: 0,
       },
       administeredItems: [],
       responses: [],
@@ -171,14 +177,14 @@ class ComputerAdaptiveTesting {
         targetSE: configuration.targetStandardError,
         targetInfo: configuration.targetInformation,
         contentBalancing: configuration.contentBalancing.enabled,
-        timeLimit: configuration.maximumItems * configuration.timeManagement.baseTimePerItem
+        timeLimit: configuration.maximumItems * configuration.timeManagement.baseTimePerItem,
       },
       performanceMetrics: {
         accuracy: 0,
         averageResponseTime: 0,
         difficultyProgression: [],
-        informationProgression: []
-      }
+        informationProgression: [],
+      },
     }
 
     const session: CATSession = {
@@ -194,27 +200,27 @@ class ComputerAdaptiveTesting {
         timeRemaining: initialState.testConfiguration.timeLimit,
         averageItemTime: configuration.timeManagement.baseTimePerItem,
         difficultyTrend: 'stable',
-        performanceTrend: 'stable'
+        performanceTrend: 'stable',
       },
       adaptiveAdjustments: {
         difficultyChanges: [],
         timeExtensions: [],
         contentAdjustments: [],
-        interventions: []
+        interventions: [],
       },
       learningGaps: {
         identifiedGaps: [],
         severity: new Map(),
         recommendations: [],
-        remediationSuggestions: []
+        remediationSuggestions: [],
       },
       metadata: {
         startTime: new Date(),
         lastUpdateTime: new Date(),
         totalPauseTime: 0,
         systemInterventions: 0,
-        adaptationEvents: []
-      }
+        adaptationEvents: [],
+      },
     }
 
     this.activeSessions.set(session.id, session)
@@ -252,13 +258,13 @@ class ComputerAdaptiveTesting {
           informationGain: 0,
           difficulty: 0,
           estimatedTime: 0,
-          contentBalance: 'N/A'
+          contentBalance: 'N/A',
         },
         testStatus: {
           progress: 100,
           shouldContinue: false,
-          terminationReason: terminationCheck.reason
-        }
+          terminationReason: terminationCheck.reason,
+        },
       }
     }
 
@@ -281,19 +287,23 @@ class ComputerAdaptiveTesting {
           informationGain: 0,
           difficulty: 0,
           estimatedTime: 0,
-          contentBalance: 'N/A'
+          contentBalance: 'N/A',
         },
         testStatus: {
           progress: 100,
           shouldContinue: false,
-          terminationReason: 'Item bank exhausted'
-        }
+          terminationReason: 'Item bank exhausted',
+        },
       }
     }
 
     // Calculate adaptation information
-    const informationGain = irtEngine.calculateInformation(session.state.currentAbility.theta, nextItem)
-    const progress = (session.state.administeredItems.length / session.state.testConfiguration.maxItems) * 100
+    const informationGain = irtEngine.calculateInformation(
+      session.state.currentAbility.theta,
+      nextItem
+    )
+    const progress =
+      (session.state.administeredItems.length / session.state.testConfiguration.maxItems) * 100
 
     // Update exposure tracking
     this.updateExposureRate(nextItem.id)
@@ -307,9 +317,9 @@ class ComputerAdaptiveTesting {
       parameters: {
         itemDifficulty: nextItem.difficulty,
         currentAbility: session.state.currentAbility.theta,
-        informationGain
+        informationGain,
       },
-      outcome: 'Item ready for administration'
+      outcome: 'Item ready for administration',
     })
 
     return {
@@ -319,12 +329,12 @@ class ComputerAdaptiveTesting {
         informationGain,
         difficulty: nextItem.difficulty,
         estimatedTime: this.calculateAdaptiveTime(nextItem, session),
-        contentBalance: this.assessContentBalance(session)
+        contentBalance: this.assessContentBalance(session),
       },
       testStatus: {
         progress,
-        shouldContinue: true
-      }
+        shouldContinue: true,
+      },
     }
   }
 
@@ -360,7 +370,7 @@ class ComputerAdaptiveTesting {
       response: isCorrect,
       responseTime,
       confidence,
-      timestamp: new Date()
+      timestamp: new Date(),
     }
 
     session.state.responses.push(response)
@@ -397,7 +407,7 @@ class ComputerAdaptiveTesting {
       updatedAbility,
       nextRecommendation,
       adaptiveChanges,
-      learningInsights
+      learningInsights,
     }
   }
 
@@ -439,7 +449,10 @@ class ComputerAdaptiveTesting {
       accuracy: session.state.performanceMetrics.accuracy,
       averageTime: session.state.performanceMetrics.averageResponseTime,
       itemsCompleted: session.state.administeredItems.length,
-      itemsRemaining: Math.max(0, session.state.testConfiguration.maxItems - session.state.administeredItems.length)
+      itemsRemaining: Math.max(
+        0,
+        session.state.testConfiguration.maxItems - session.state.administeredItems.length
+      ),
     }
 
     const predictions = this.generatePerformancePredictions(session)
@@ -452,9 +465,9 @@ class ComputerAdaptiveTesting {
         difficultyAdjustments: session.adaptiveAdjustments.difficultyChanges.length,
         timeExtensions: session.adaptiveAdjustments.timeExtensions.length,
         contentChanges: session.adaptiveAdjustments.contentAdjustments.length,
-        interventions: session.adaptiveAdjustments.interventions
+        interventions: session.adaptiveAdjustments.interventions,
       },
-      learningProfile
+      learningProfile,
     }
   }
 
@@ -472,7 +485,7 @@ class ComputerAdaptiveTesting {
 
     // Analyze topic-level performance
     for (const response of session.state.responses) {
-      const item = session.state.availableItems.find(i => i.id === response.itemId)
+      const item = session.state.availableItems.find((i) => i.id === response.itemId)
       if (!item) continue
 
       const topicData = topicPerformance.get(item.topic) || { correct: 0, total: 0, times: [] }
@@ -507,13 +520,13 @@ class ComputerAdaptiveTesting {
             consistentErrors: isConsistentGap,
             timeStruggle: isTimeGap,
             difficultySpecific: false, // Would need more analysis
-            prerequisiteGap: accuracy < 0.3 // Very low accuracy suggests fundamental gaps
+            prerequisiteGap: accuracy < 0.3, // Very low accuracy suggests fundamental gaps
           },
           recommendations: {
             remediation: [`Review ${topic} fundamentals`],
             practiceAreas: [`Focus on ${topic} practice problems`],
-            prerequisiteReview: accuracy < 0.3 ? [`Review prerequisites for ${topic}`] : []
-          }
+            prerequisiteReview: accuracy < 0.3 ? [`Review prerequisites for ${topic}`] : [],
+          },
         })
       }
     }
@@ -521,18 +534,20 @@ class ComputerAdaptiveTesting {
     // Sort gaps by severity
     gaps.sort((a, b) => b.severity - a.severity)
 
-    const identifiedGaps = gaps.map(gap => gap.topic)
-    const severity = new Map(gaps.map(gap => [gap.topic, gap.severity]))
-    const recommendations = gaps.slice(0, 3).map(gap =>
-      `Focus on ${gap.topic} (accuracy: ${Math.round((1-gap.severity)*100)}%)`
-    )
-    const remediationSuggestions = gaps.slice(0, 3).flatMap(gap => gap.recommendations.remediation)
+    const identifiedGaps = gaps.map((gap) => gap.topic)
+    const severity = new Map(gaps.map((gap) => [gap.topic, gap.severity]))
+    const recommendations = gaps
+      .slice(0, 3)
+      .map((gap) => `Focus on ${gap.topic} (accuracy: ${Math.round((1 - gap.severity) * 100)}%)`)
+    const remediationSuggestions = gaps
+      .slice(0, 3)
+      .flatMap((gap) => gap.recommendations.remediation)
 
     return {
       identifiedGaps,
       severity,
       recommendations,
-      remediationSuggestions
+      remediationSuggestions,
     }
   }
 
@@ -543,7 +558,7 @@ class ComputerAdaptiveTesting {
     const responses = session.state.responses
     if (responses.length === 0) return
 
-    const correctResponses = responses.filter(r => r.response).length
+    const correctResponses = responses.filter((r) => r.response).length
     const accuracy = correctResponses / responses.length
 
     const totalTime = responses.reduce((sum, r) => sum + r.responseTime, 0)
@@ -552,7 +567,9 @@ class ComputerAdaptiveTesting {
     session.state.performanceMetrics.accuracy = accuracy
     session.state.performanceMetrics.averageResponseTime = averageTime
     session.state.performanceMetrics.difficultyProgression.push(session.state.currentAbility.theta)
-    session.state.performanceMetrics.informationProgression.push(session.state.currentAbility.informationGained)
+    session.state.performanceMetrics.informationProgression.push(
+      session.state.currentAbility.informationGained
+    )
   }
 
   /**
@@ -566,10 +583,15 @@ class ComputerAdaptiveTesting {
     metrics.currentDifficulty = state.currentAbility.theta
 
     // Calculate completion percentage
-    metrics.estimatedCompletion = (state.administeredItems.length / state.testConfiguration.maxItems) * 100
+    metrics.estimatedCompletion =
+      (state.administeredItems.length / state.testConfiguration.maxItems) * 100
 
     // Predict final score
-    const scoreReport = irtEngine.generateScoreReport(state.currentAbility, state.responses, state.availableItems)
+    const scoreReport = irtEngine.generateScoreReport(
+      state.currentAbility,
+      state.responses,
+      state.availableItems
+    )
     metrics.predictedFinalScore = scoreReport.scaledScore
 
     // Update confidence interval
@@ -577,7 +599,7 @@ class ComputerAdaptiveTesting {
     const theta = state.currentAbility.theta
     metrics.confidenceInterval = [
       Math.max(0, Math.round(50 + 10 * (theta - 1.96 * se))),
-      Math.min(100, Math.round(50 + 10 * (theta + 1.96 * se)))
+      Math.min(100, Math.round(50 + 10 * (theta + 1.96 * se))),
     ]
 
     // Update trends
@@ -588,8 +610,13 @@ class ComputerAdaptiveTesting {
     }
 
     // Calculate time remaining
-    const itemsRemaining = Math.max(0, state.testConfiguration.maxItems - state.administeredItems.length)
-    const avgItemTime = state.performanceMetrics.averageResponseTime || session.configuration.timeManagement.baseTimePerItem
+    const itemsRemaining = Math.max(
+      0,
+      state.testConfiguration.maxItems - state.administeredItems.length
+    )
+    const avgItemTime =
+      state.performanceMetrics.averageResponseTime ||
+      session.configuration.timeManagement.baseTimePerItem
     metrics.timeRemaining = itemsRemaining * avgItemTime
     metrics.averageItemTime = avgItemTime
   }
@@ -597,7 +624,10 @@ class ComputerAdaptiveTesting {
   /**
    * Check for adaptive adjustments needed
    */
-  private checkAdaptiveAdjustments(session: CATSession, lastResponse: StudentResponse): {
+  private checkAdaptiveAdjustments(
+    session: CATSession,
+    lastResponse: StudentResponse
+  ): {
     difficultyAdjusted: boolean
     timeExtended: boolean
     contentRedirected: boolean
@@ -612,7 +642,8 @@ class ComputerAdaptiveTesting {
     // Check for difficulty adjustment
     if (responses.length >= 3) {
       const recentResponses = responses.slice(-3)
-      const recentAccuracy = recentResponses.filter(r => r.response).length / recentResponses.length
+      const recentAccuracy =
+        recentResponses.filter((r) => r.response).length / recentResponses.length
 
       if (recentAccuracy >= 0.8 && session.state.currentAbility.standardError < 0.7) {
         // Increase difficulty
@@ -626,8 +657,12 @@ class ComputerAdaptiveTesting {
     }
 
     // Check for time extension
-    if (config.timeManagement.adaptiveTime && lastResponse.responseTime > config.timeManagement.maximumTimePerItem * 0.8) {
-      if (session.state.currentAbility.confidence > 0.6) { // Only extend for capable students
+    if (
+      config.timeManagement.adaptiveTime &&
+      lastResponse.responseTime > config.timeManagement.maximumTimePerItem * 0.8
+    ) {
+      if (session.state.currentAbility.confidence > 0.6) {
+        // Only extend for capable students
         session.adaptiveAdjustments.timeExtensions.push(config.timeManagement.baseTimePerItem * 0.5)
         timeExtended = true
       }
@@ -640,7 +675,9 @@ class ComputerAdaptiveTesting {
         .map(([topic, _]) => topic)
 
       if (highSeverityGaps.length > 0) {
-        session.adaptiveAdjustments.contentAdjustments.push(`Redirect to ${highSeverityGaps[0]} remediation`)
+        session.adaptiveAdjustments.contentAdjustments.push(
+          `Redirect to ${highSeverityGaps[0]} remediation`
+        )
         contentRedirected = true
       }
     }
@@ -651,13 +688,16 @@ class ComputerAdaptiveTesting {
   /**
    * Generate next recommendation
    */
-  private generateNextRecommendation(session: CATSession, lastResponse: StudentResponse): 'continue' | 'take_break' | 'review_topic' | 'terminate' {
+  private generateNextRecommendation(
+    session: CATSession,
+    lastResponse: StudentResponse
+  ): 'continue' | 'take_break' | 'review_topic' | 'terminate' {
     const responses = session.state.responses
     const config = session.configuration
 
     // Check for fatigue indicators
     if (responses.length > 0) {
-      const recentTimes = responses.slice(-5).map(r => r.responseTime)
+      const recentTimes = responses.slice(-5).map((r) => r.responseTime)
       const avgRecentTime = recentTimes.reduce((sum, time) => sum + time, 0) / recentTimes.length
       const baseTime = config.timeManagement.baseTimePerItem
 
@@ -667,8 +707,9 @@ class ComputerAdaptiveTesting {
     }
 
     // Check for severe learning gaps
-    const highSeverityGaps = Array.from(session.learningGaps.severity.entries())
-      .filter(([_, severity]) => severity > 0.8)
+    const highSeverityGaps = Array.from(session.learningGaps.severity.entries()).filter(
+      ([_, severity]) => severity > 0.8
+    )
 
     if (highSeverityGaps.length > 2) {
       return 'review_topic'
@@ -696,7 +737,7 @@ class ComputerAdaptiveTesting {
     return {
       newGapsIdentified: session.learningGaps.identifiedGaps.slice(0, 2),
       improvementAreas: session.learningGaps.recommendations.slice(0, 3),
-      strengthsConfirmed: [] // Would need historical data
+      strengthsConfirmed: [], // Would need historical data
     }
   }
 
@@ -712,14 +753,17 @@ class ComputerAdaptiveTesting {
     const ability = session.state.currentAbility
     const finalScore = Math.round(50 + 10 * ability.theta)
 
-    const itemsRemaining = session.state.testConfiguration.maxItems - session.state.administeredItems.length
-    const avgTime = session.state.performanceMetrics.averageResponseTime || session.configuration.timeManagement.baseTimePerItem
+    const itemsRemaining =
+      session.state.testConfiguration.maxItems - session.state.administeredItems.length
+    const avgTime =
+      session.state.performanceMetrics.averageResponseTime ||
+      session.configuration.timeManagement.baseTimePerItem
     const timeToCompletion = itemsRemaining * avgTime
 
     const se = ability.standardError
     const confidenceInterval: [number, number] = [
       Math.max(0, Math.round(50 + 10 * (ability.theta - 1.96 * se))),
-      Math.min(100, Math.round(50 + 10 * (ability.theta + 1.96 * se)))
+      Math.min(100, Math.round(50 + 10 * (ability.theta + 1.96 * se))),
     ]
 
     // Simple success probability based on current ability
@@ -729,7 +773,7 @@ class ComputerAdaptiveTesting {
       finalScore,
       timeToCompletion,
       confidenceInterval,
-      successProbability
+      successProbability,
     }
   }
 
@@ -746,7 +790,7 @@ class ComputerAdaptiveTesting {
 
     // Calculate topic-level performance
     for (const response of session.state.responses) {
-      const item = session.state.availableItems.find(i => i.id === response.itemId)
+      const item = session.state.availableItems.find((i) => i.id === response.itemId)
       if (!item) continue
 
       const current = topicPerformance.get(item.topic) || 0
@@ -775,7 +819,7 @@ class ComputerAdaptiveTesting {
       strongTopics,
       weakTopics,
       recommendedFocus,
-      masteryLevel
+      masteryLevel,
     }
   }
 
@@ -787,7 +831,7 @@ class ComputerAdaptiveTesting {
 
   private filterItemBank(curriculum: string, grade: string, topics?: string[]): ItemParameters[] {
     // Filter item bank based on criteria
-    return this.itemBank.filter(item => {
+    return this.itemBank.filter((item) => {
       // Basic filtering logic
       return true // Simplified for this implementation
     })
@@ -797,14 +841,14 @@ class ComputerAdaptiveTesting {
     return {
       maxTimePerItem: session.configuration.timeManagement.maximumTimePerItem,
       topicDistribution: session.configuration.contentBalancing.topicWeights,
-      balanceBloomsLevels: session.configuration.contentBalancing.bloomsLevelBalance
+      balanceBloomsLevels: session.configuration.contentBalancing.bloomsLevelBalance,
     }
   }
 
   private calculateAdaptiveTime(item: ItemParameters, session: CATSession): number {
     const baseTime = session.configuration.timeManagement.baseTimePerItem
     const difficultyMultiplier = session.configuration.timeManagement.difficultyTimeMultiplier
-    const adjustedTime = baseTime * (1 + (item.difficulty * difficultyMultiplier))
+    const adjustedTime = baseTime * (1 + item.difficulty * difficultyMultiplier)
     return Math.min(adjustedTime, session.configuration.timeManagement.maximumTimePerItem)
   }
 

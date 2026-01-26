@@ -21,9 +21,9 @@ test.describe('Mobile Responsiveness Tests', () => {
 
     await burgerButton.click()
 
-    const menuPanel = page.locator('[id="burger-menu-panel"]').or(
-      page.locator('.fixed.left-0.top-0.h-full')
-    )
+    const menuPanel = page
+      .locator('[id="burger-menu-panel"]')
+      .or(page.locator('.fixed.left-0.top-0.h-full'))
     await expect(menuPanel.first()).toBeVisible({ timeout: 5000 })
 
     const menuBox = await menuPanel.first().boundingBox()

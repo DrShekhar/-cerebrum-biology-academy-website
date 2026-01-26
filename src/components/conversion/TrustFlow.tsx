@@ -325,9 +325,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                   <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-6 border border-green-600/30">
                     <div className="text-center mb-6">
                       <div className="text-3xl font-bold text-white mb-2">FREE Demo Class</div>
-                      <div className="text-green-500 text-lg">
-                        Worth ₹2,000 - Absolutely Free!
-                      </div>
+                      <div className="text-green-500 text-lg">Worth ₹2,000 - Absolutely Free!</div>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-4 mb-6">

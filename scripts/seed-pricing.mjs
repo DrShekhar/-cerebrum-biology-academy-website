@@ -16,7 +16,7 @@ const CURRENCY_PREMIUMS = {
   INR: 1.0,
   USD: 1.15,
   EUR: 1.12,
-  GBP: 1.10,
+  GBP: 1.1,
   AUD: 1.18,
   CAD: 1.15,
   AED: 1.12,
@@ -35,7 +35,7 @@ async function main() {
   const courses = await prisma.courses.findMany({
     where: { isActive: true },
     select: { id: true, name: true, totalFees: true, type: true },
-    orderBy: { sortOrder: 'asc' }
+    orderBy: { sortOrder: 'asc' },
   })
 
   console.log(`Found ${courses.length} active courses:\n`)
@@ -81,7 +81,7 @@ async function main() {
           courseId_currency: {
             courseId: pricing.courseId,
             currency: pricing.currency,
-          }
+          },
         },
         update: {
           amount: pricing.amount,
@@ -91,7 +91,10 @@ async function main() {
       })
       created++
     } catch (error) {
-      console.error(`Failed to seed ${pricing.currency} for course ${pricing.courseId}:`, error.message)
+      console.error(
+        `Failed to seed ${pricing.currency} for course ${pricing.courseId}:`,
+        error.message
+      )
       skipped++
     }
   }

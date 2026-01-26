@@ -3,13 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import {
-  HomeIcon,
-  BookOpen,
-  Trophy,
-  Phone,
-  Play,
-} from 'lucide-react'
+import { HomeIcon, BookOpen, Trophy, Phone, Play } from 'lucide-react'
 import { getPhoneLink, getFormattedPhone } from '@/lib/constants/contactInfo'
 
 interface MobileBottomNavProps {

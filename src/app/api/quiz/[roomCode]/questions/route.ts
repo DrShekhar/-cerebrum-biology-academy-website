@@ -1,10 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import {
-  getQuestionsByChapter,
-  class11Questions,
-  class12Questions,
-} from '@/data/questions'
+import { getQuestionsByChapter, class11Questions, class12Questions } from '@/data/questions'
 import { verifyHostToken, unauthorizedResponse } from '@/lib/quiz/auth'
 import { ipRateLimit, getRateLimitHeaders } from '@/lib/middleware/rateLimit'
 import { createHash } from 'crypto'
@@ -24,9 +20,7 @@ interface QuizSettings {
 // This creates deterministic but unpredictable random values for question shuffling
 function createSeededRandom(seed: string): (index: number) => number {
   return (index: number): number => {
-    const hash = createHash('sha256')
-      .update(`${seed}-${index}`)
-      .digest()
+    const hash = createHash('sha256').update(`${seed}-${index}`).digest()
     // Use first 4 bytes to create a number between 0 and 1
     const num = hash.readUInt32BE(0)
     return num / 0xffffffff
@@ -69,10 +63,7 @@ export async function GET(
     })
 
     if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz session not found' }, { status: 404 })
     }
 
     if (session.questionMode !== 'PRELOADED') {
@@ -120,10 +111,7 @@ export async function GET(
     const selectedQuestions = shuffledQuestions.slice(0, questionCount)
 
     if (questionIndex < 0 || questionIndex >= selectedQuestions.length) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid question index' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid question index' }, { status: 400 })
     }
 
     const question = selectedQuestions[questionIndex]
@@ -207,10 +195,7 @@ export async function POST(
     const question = selectedQuestions[questionIndex]
 
     if (!question) {
-      return NextResponse.json(
-        { success: false, error: 'Question not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Question not found' }, { status: 404 })
     }
 
     const responseData: {
@@ -242,9 +227,6 @@ export async function POST(
     })
   } catch (error) {
     console.error('Error fetching question details:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch question' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch question' }, { status: 500 })
   }
 }

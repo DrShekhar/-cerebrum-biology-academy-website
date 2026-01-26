@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function GachibowliHyderabadCoachingLayout({ children }: { children: React.ReactNode }) {
+export default function GachibowliHyderabadCoachingLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

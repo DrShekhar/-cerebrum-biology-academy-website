@@ -360,7 +360,9 @@ export function getCoachingUrgencyLevel(
   return 'info'
 }
 
-export async function checkCoachingTrialStatus(userId: string): Promise<CoachingTrialStatus | null> {
+export async function checkCoachingTrialStatus(
+  userId: string
+): Promise<CoachingTrialStatus | null> {
   const user = await prisma.users.findUnique({
     where: { id: userId },
     select: {
@@ -390,7 +392,10 @@ export async function checkCoachingTrialStatus(userId: string): Promise<Coaching
     trialStartDate: user.trialStartDate,
     trialEndDate: user.trialEndDate,
     daysRemaining,
-    urgencyLevel: getCoachingUrgencyLevel(daysRemaining, !isTrialActive && user.coachingTier === 'FREE'),
+    urgencyLevel: getCoachingUrgencyLevel(
+      daysRemaining,
+      !isTrialActive && user.coachingTier === 'FREE'
+    ),
     effectiveTier,
   }
 }
@@ -512,7 +517,10 @@ export async function startMasterTrial(userId: string): Promise<CoachingTrialSta
   return checkCoachingTrialStatus(userId)
 }
 
-export async function extendMasterTrial(userId: string, days: number = 3): Promise<CoachingTrialStatus | null> {
+export async function extendMasterTrial(
+  userId: string,
+  days: number = 3
+): Promise<CoachingTrialStatus | null> {
   const user = await prisma.users.findUnique({
     where: { id: userId },
   })

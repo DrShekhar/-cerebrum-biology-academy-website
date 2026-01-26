@@ -61,9 +61,9 @@ export async function GET(request: NextRequest) {
     // Always log session checks for debugging auth issues
     console.log(`[Session API][${requestId}] Checking session:`, {
       cookieCount: allCookies.length,
-      cookieNames: allCookies.map(c => c.name),
-      hasSecureCookie: allCookies.some(c => c.name === '__Secure-authjs.session-token'),
-      hasNonSecureCookie: allCookies.some(c => c.name === 'authjs.session-token'),
+      cookieNames: allCookies.map((c) => c.name),
+      hasSecureCookie: allCookies.some((c) => c.name === '__Secure-authjs.session-token'),
+      hasNonSecureCookie: allCookies.some((c) => c.name === 'authjs.session-token'),
     })
 
     // Check for our Firebase auth session token
@@ -86,8 +86,8 @@ export async function GET(request: NextRequest) {
         user: null,
         debug: {
           reason: 'no_token',
-          cookiesReceived: allCookies.map(c => c.name),
-        }
+          cookiesReceived: allCookies.map((c) => c.name),
+        },
       })
     }
 
@@ -100,7 +100,7 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         authenticated: false,
         user: null,
-        debug: { reason: 'invalid_payload' }
+        debug: { reason: 'invalid_payload' },
       })
     }
 
@@ -120,7 +120,7 @@ export async function GET(request: NextRequest) {
         name: decoded.name,
         role: decoded.role,
         phone: decoded.phone,
-      }
+      },
     })
   } catch (error) {
     const elapsed = Date.now() - startTime
@@ -140,7 +140,7 @@ export async function GET(request: NextRequest) {
       debug: {
         reason: errorMessage.includes('expired') ? 'token_expired' : 'verification_failed',
         error: process.env.NODE_ENV !== 'production' ? errorMessage : undefined,
-      }
+      },
     })
   }
 }

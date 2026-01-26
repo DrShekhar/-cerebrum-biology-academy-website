@@ -35,26 +35,26 @@ interface TestResultsProps {
   onBackToTests: () => void
 }
 
-export function TestResults({ 
-  test, 
-  responses, 
-  timeTaken, 
+export function TestResults({
+  test,
+  responses,
+  timeTaken,
   userClass,
-  onRetakeTest, 
-  onBackToTests 
+  onRetakeTest,
+  onBackToTests,
 }: TestResultsProps) {
   const [activeTab, setActiveTab] = useState<'overview' | 'detailed' | 'solutions'>('overview')
   const [showAnswer, setShowAnswer] = useState<Set<string>>(new Set())
 
   // Calculate scores and analytics
   const totalQuestions = responses.length
-  const correctAnswers = responses.filter(r => r.isCorrect).length
-  const incorrectAnswers = responses.filter(r => !r.isCorrect && r.selectedAnswer).length
+  const correctAnswers = responses.filter((r) => r.isCorrect).length
+  const incorrectAnswers = responses.filter((r) => !r.isCorrect && r.selectedAnswer).length
   const unattempted = test.questions.length - responses.length
   const totalMarks = correctAnswers * 4 - incorrectAnswers * 1 // NEET marking scheme
   const percentage = Math.round((correctAnswers / test.questions.length) * 100)
   const accuracy = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0
-  
+
   // Estimated rank (mock calculation)
   const estimatedRank = Math.max(1, Math.floor(100000 * (1 - percentage / 100)))
   const percentile = Math.round((1 - estimatedRank / 1600000) * 100)
@@ -158,10 +158,11 @@ export function TestResults({
   }
 
   const getPerformanceMessage = () => {
-    if (percentage >= 85) return { text: "Outstanding Performance!", color: "text-green-600", icon: Trophy }
-    if (percentage >= 70) return { text: "Great Job!", color: "text-blue-600", icon: Star }
-    if (percentage >= 50) return { text: "Good Effort!", color: "text-yellow-600", icon: Target }
-    return { text: "Keep Practicing!", color: "text-orange-600", icon: TrendingUp }
+    if (percentage >= 85)
+      return { text: 'Outstanding Performance!', color: 'text-green-600', icon: Trophy }
+    if (percentage >= 70) return { text: 'Great Job!', color: 'text-blue-600', icon: Star }
+    if (percentage >= 50) return { text: 'Good Effort!', color: 'text-yellow-600', icon: Target }
+    return { text: 'Keep Practicing!', color: 'text-orange-600', icon: TrendingUp }
   }
 
   const performanceMessage = getPerformanceMessage()
@@ -188,7 +189,7 @@ export function TestResults({
               <h1 className="text-4xl font-bold">{performanceMessage.text}</h1>
             </div>
             <p className="text-xl text-blue-100 mb-8">Test completed successfully</p>
-            
+
             {/* Score Card */}
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -196,7 +197,9 @@ export function TestResults({
                 <div className="text-blue-100">Score</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-3xl font-bold mb-2">{correctAnswers}/{test.questions.length}</div>
+                <div className="text-3xl font-bold mb-2">
+                  {correctAnswers}/{test.questions.length}
+                </div>
                 <div className="text-blue-100">Correct</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
@@ -276,7 +279,9 @@ export function TestResults({
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="flex items-center justify-between mb-4">
                   <Clock className="w-8 h-8 text-blue-500" />
-                  <span className="text-2xl font-bold text-blue-600">{averageTimePerQuestion}s</span>
+                  <span className="text-2xl font-bold text-blue-600">
+                    {averageTimePerQuestion}s
+                  </span>
                 </div>
                 <h3 className="font-semibold text-gray-900">Avg. Time/Question</h3>
                 <p className="text-gray-600 text-sm">Time efficiency: {timeEfficiency}%</p>
@@ -341,10 +346,15 @@ export function TestResults({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Personalized Recommendations</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Personalized Recommendations
+              </h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {recommendations.map((rec, index) => (
-                  <div key={index} className="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow">
+                  <div
+                    key={index}
+                    className="border border-gray-200 rounded-2xl p-6 hover:shadow-lg transition-shadow"
+                  >
                     <rec.icon className="w-8 h-8 text-blue-600 mb-4" />
                     <h3 className="font-semibold text-gray-900 mb-2">{rec.title}</h3>
                     <p className="text-gray-600 text-sm mb-4">{rec.description}</p>
@@ -368,8 +378,10 @@ export function TestResults({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Performance Analysis</h2>
-              
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Detailed Performance Analysis
+              </h2>
+
               {/* Time Distribution */}
               <div className="mb-8">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Time Distribution</h3>
@@ -381,7 +393,9 @@ export function TestResults({
                   </div>
                   <div className="bg-green-50 rounded-2xl p-6 text-center">
                     <Target className="w-8 h-8 text-green-600 mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-gray-900">{averageTimePerQuestion}s</div>
+                    <div className="text-2xl font-bold text-gray-900">
+                      {averageTimePerQuestion}s
+                    </div>
                     <div className="text-gray-600">Average per Question</div>
                   </div>
                   <div className="bg-purple-50 rounded-2xl p-6 text-center">
@@ -397,8 +411,8 @@ export function TestResults({
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Confidence vs Accuracy</h3>
                 <div className="bg-gray-50 rounded-2xl p-6">
                   <p className="text-gray-700">
-                    Your confidence levels generally match your accuracy, indicating good self-assessment skills.
-                    Continue building confidence through regular practice.
+                    Your confidence levels generally match your accuracy, indicating good
+                    self-assessment skills. Continue building confidence through regular practice.
                   </p>
                 </div>
               </div>
@@ -409,7 +423,9 @@ export function TestResults({
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-yellow-50 rounded-2xl p-6">
                     <Award className="w-8 h-8 text-yellow-600 mb-3" />
-                    <div className="text-2xl font-bold text-gray-900 mb-2">{estimatedRank.toLocaleString()}</div>
+                    <div className="text-2xl font-bold text-gray-900 mb-2">
+                      {estimatedRank.toLocaleString()}
+                    </div>
                     <div className="text-gray-600 mb-4">Estimated All India Rank</div>
                     <p className="text-sm text-gray-700">
                       Based on current performance and historical data
@@ -439,14 +455,17 @@ export function TestResults({
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Solutions</h2>
-              
+
               {test.questions.map((question, index) => {
-                const response = responses.find(r => r.questionId === question.id)
+                const response = responses.find((r) => r.questionId === question.id)
                 const isCorrect = response?.isCorrect ?? false
                 const userAnswer = response?.selectedAnswer
-                
+
                 return (
-                  <div key={question.id} className="border-b border-gray-200 pb-8 mb-8 last:border-b-0">
+                  <div
+                    key={question.id}
+                    className="border-b border-gray-200 pb-8 mb-8 last:border-b-0"
+                  >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center space-x-3">
                         <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full font-semibold">
@@ -459,26 +478,28 @@ export function TestResults({
                         ) : (
                           <AlertCircle className="w-6 h-6 text-yellow-500" />
                         )}
-                        <span className={`text-sm font-medium ${
-                          isCorrect ? 'text-green-600' : userAnswer ? 'text-red-600' : 'text-yellow-600'
-                        }`}>
+                        <span
+                          className={`text-sm font-medium ${
+                            isCorrect
+                              ? 'text-green-600'
+                              : userAnswer
+                                ? 'text-red-600'
+                                : 'text-yellow-600'
+                          }`}
+                        >
                           {isCorrect ? 'Correct' : userAnswer ? 'Incorrect' : 'Unattempted'}
                         </span>
                       </div>
-                      
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => toggleAnswer(question.id)}
-                      >
+
+                      <Button variant="outline" size="sm" onClick={() => toggleAnswer(question.id)}>
                         <Eye className="w-4 h-4 mr-2" />
                         {showAnswer.has(question.id) ? 'Hide' : 'Show'} Solution
                       </Button>
                     </div>
-                    
+
                     <div className="mb-4">
                       <p className="text-gray-900 mb-4">{question.questionText}</p>
-                      
+
                       <div className="grid grid-cols-1 gap-3">
                         {question.options.map((option) => (
                           <div
@@ -487,8 +508,8 @@ export function TestResults({
                               option.id === question.correctAnswer
                                 ? 'border-green-600 bg-green-50'
                                 : option.id === userAnswer && userAnswer !== question.correctAnswer
-                                ? 'border-red-500 bg-red-50'
-                                : 'border-gray-200'
+                                  ? 'border-red-500 bg-red-50'
+                                  : 'border-gray-200'
                             }`}
                           >
                             <div className="flex items-center">
@@ -497,15 +518,16 @@ export function TestResults({
                               {option.id === question.correctAnswer && (
                                 <CheckCircle className="w-5 h-5 text-green-600 ml-auto" />
                               )}
-                              {option.id === userAnswer && userAnswer !== question.correctAnswer && (
-                                <XCircle className="w-5 h-5 text-red-500 ml-auto" />
-                              )}
+                              {option.id === userAnswer &&
+                                userAnswer !== question.correctAnswer && (
+                                  <XCircle className="w-5 h-5 text-red-500 ml-auto" />
+                                )}
                             </div>
                           </div>
                         ))}
                       </div>
                     </div>
-                    
+
                     {showAnswer.has(question.id) && (
                       <motion.div
                         className="bg-blue-50 rounded-2xl p-6"

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Indiranagar Bangalore | 100 Feet Road, HAL | Cerebrum Academy',
+  title: 'Best NEET Coaching in Indiranagar Bangalore | 100 Feet Road, HAL | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Indiranagar, East Bangalore. 94.2% success rate, AIIMS faculty. 100 Feet Road, 12th Main, HAL Stage, CMH Road, Domlur. Fee ₹24,000+. Book free demo!',
   keywords:
@@ -27,6 +26,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function IndiranagarBangaloreCoachingLayout({ children }: { children: React.ReactNode }) {
+export default function IndiranagarBangaloreCoachingLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

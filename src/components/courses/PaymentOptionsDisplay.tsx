@@ -10,10 +10,14 @@ interface PaymentOptionsDisplayProps {
 export function PaymentOptionsDisplay({ paymentOptions, tier }: PaymentOptionsDisplayProps) {
   const getTierColor = (tier: string) => {
     switch (tier) {
-      case 'pinnacle': return 'from-purple-600 to-indigo-600'
-      case 'ascent': return 'bg-blue-600'
-      case 'pursuit': return 'bg-green-600'
-      default: return 'from-indigo-500 to-indigo-600'
+      case 'pinnacle':
+        return 'from-purple-600 to-indigo-600'
+      case 'ascent':
+        return 'bg-blue-600'
+      case 'pursuit':
+        return 'bg-green-600'
+      default:
+        return 'from-indigo-500 to-indigo-600'
     }
   }
 
@@ -33,7 +37,7 @@ export function PaymentOptionsDisplay({ paymentOptions, tier }: PaymentOptionsDi
         <div className="absolute top-2 right-2 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded-full">
           SAVE 5%
         </div>
-        
+
         <div className="flex items-center justify-between mb-4">
           <div>
             <h4 className="text-lg font-bold text-green-900">One-Time Payment</h4>
@@ -48,7 +52,7 @@ export function PaymentOptionsDisplay({ paymentOptions, tier }: PaymentOptionsDi
             </div>
           </div>
         </div>
-        
+
         <div className="flex items-center justify-between text-sm text-green-700">
           <span>You save: {formatCurrency(paymentOptions.oneTime.discount)}</span>
           <span className="font-medium">✨ Best Value</span>
@@ -72,14 +76,15 @@ export function PaymentOptionsDisplay({ paymentOptions, tier }: PaymentOptionsDi
 
         <div className="space-y-3">
           {paymentOptions.installment.installments.map((installment, index) => (
-            <div key={index} className="flex items-center justify-between py-2 px-4 bg-gray-50 rounded-xl">
+            <div
+              key={index}
+              className="flex items-center justify-between py-2 px-4 bg-gray-50 rounded-xl"
+            >
               <div>
                 <div className="font-medium text-gray-900">{installment.description}</div>
                 <div className="text-sm text-gray-600">{installment.dueDate}</div>
               </div>
-              <div className="font-bold text-gray-900">
-                {formatCurrency(installment.amount)}
-              </div>
+              <div className="font-bold text-gray-900">{formatCurrency(installment.amount)}</div>
             </div>
           ))}
         </div>

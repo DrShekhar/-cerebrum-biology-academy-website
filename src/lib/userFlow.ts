@@ -385,8 +385,7 @@ export function canAccessDashboard(
   if (dashboard === 'ANALYTICS') {
     // Check if user has access via coaching tier
     const hasPaidAccess =
-      effectiveTier !== CoachingSubscriptionTier.FREE ||
-      (coachingTier === 'FREE' && trialActive)
+      effectiveTier !== CoachingSubscriptionTier.FREE || (coachingTier === 'FREE' && trialActive)
 
     if (!hasPaidAccess) {
       return {
@@ -417,10 +416,7 @@ export interface NavigationItem {
  * Get navigation items with access control
  * Now includes tier badges and role-specific navigation
  */
-export function getNavigationItems(
-  user: User | null,
-  freeUserId: string | null
-): NavigationItem[] {
+export function getNavigationItems(user: User | null, freeUserId: string | null): NavigationItem[] {
   const isAuthenticated = !!user
   const effectiveTier = getEffectiveTier(user)
   const trialActive = isTrialActive(user)
@@ -474,10 +470,7 @@ export function getNavigationItems(
       route: '/student/ai-tutor',
       icon: '🤖',
       locked: effectiveTier === CoachingSubscriptionTier.FREE && !trialActive,
-      badge:
-        effectiveTier === CoachingSubscriptionTier.FREE && !trialActive
-          ? 'PRO'
-          : undefined,
+      badge: effectiveTier === CoachingSubscriptionTier.FREE && !trialActive ? 'PRO' : undefined,
       description: 'Get instant help from AI',
       tierRequired: CoachingSubscriptionTier.PURSUIT,
     },

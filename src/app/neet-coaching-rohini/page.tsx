@@ -19,6 +19,7 @@ import {
   MessageCircle,
   MapPinned,
 } from 'lucide-react'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -613,15 +614,15 @@ export default function NEETCoachingRohiniPage() {
                   Visit Our Center - South Extension, New Delhi
                 </h3>
                 <div className="aspect-video rounded-lg overflow-hidden mb-4 bg-gray-100">
-                  <iframe
-                    src="https://www.google.com/maps?q=Cerebrum+Biology+Academy+Panchsheel+Enclave+South+Extension+Delhi&output=embed"
-                    width="100%"
+                  <LazyGoogleMap
+                    embedUrl="https://www.google.com/maps?q=Cerebrum+Biology+Academy+Panchsheel+Enclave+South+Extension+Delhi&output=embed"
+                    title="NEET Coaching Center Location"
                     height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Cerebrum Biology Academy Location"
+                    placeholder={{
+                      lat: 28.5560,
+                      lng: 77.2200,
+                      address: "Cerebrum Biology Academy, Panchsheel Enclave, South Extension, Delhi"
+                    }}
                   />
                 </div>
                 <div className="grid md:grid-cols-2 gap-4">

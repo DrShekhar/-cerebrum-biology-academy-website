@@ -65,7 +65,7 @@ async function globalSetup(config: FullConfig) {
     pageLoad: 3000, // 3 seconds
     apiResponse: 500, // 500ms
     courseSearch: 300, // 300ms
-    paymentInit: 1000 // 1 second
+    paymentInit: 1000, // 1 second
   }
 
   // Store baselines for tests
@@ -81,7 +81,7 @@ async function globalSetup(config: FullConfig) {
   const securityVectors = {
     xss: ['<script>alert("xss")</script>', '"><svg onload=alert(1)>'],
     sqlInjection: ["'; DROP TABLE users; --", "1' OR '1'='1"],
-    csrf: ['fake-csrf-token', 'expired-token']
+    csrf: ['fake-csrf-token', 'expired-token'],
   }
 
   // Store for security tests

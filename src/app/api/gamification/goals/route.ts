@@ -193,7 +193,10 @@ export async function PUT(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: completedGoals.length > 0 ? `${completedGoals.length} goal(s) completed!` : 'Progress updated',
+      message:
+        completedGoals.length > 0
+          ? `${completedGoals.length} goal(s) completed!`
+          : 'Progress updated',
       data: {
         completedGoals,
         daily: goals.daily,

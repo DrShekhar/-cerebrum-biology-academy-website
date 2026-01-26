@@ -27,10 +27,7 @@ export async function GET(request: NextRequest) {
     // Find user in database by phone number or Firebase UID
     const user = await prisma.users.findFirst({
       where: {
-        OR: [
-          { phone: phoneNumber },
-          { firebaseUid: firebaseUid },
-        ],
+        OR: [{ phone: phoneNumber }, { firebaseUid: firebaseUid }],
       },
     })
 

@@ -1,7 +1,15 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { Book, Clock, Trophy, ChevronLeft, ChevronRight, CheckCircle, HelpCircle } from 'lucide-react'
+import {
+  Book,
+  Clock,
+  Trophy,
+  ChevronLeft,
+  ChevronRight,
+  CheckCircle,
+  HelpCircle,
+} from 'lucide-react'
 import { getChapterBySlug, allChapters, getAdjacentChapters } from '@/data/campbell-biology'
 import { getUnitById } from '@/data/campbell-biology'
 import { CampbellWhatsAppCTA } from '@/components/campbell/CampbellWhatsAppCTA'
@@ -97,9 +105,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
                 {chapter.title}
               </h1>
 
-              <p className="text-lg text-slate-300 mb-6">
-                {chapter.heroDescription}
-              </p>
+              <p className="text-lg text-slate-300 mb-6">{chapter.heroDescription}</p>
 
               {/* Stats */}
               <div className="flex flex-wrap gap-4 mb-8">
@@ -111,7 +117,9 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
                   <Trophy className="w-5 h-5 text-yellow-400" />
                   <span>Olympiad {chapter.olympiadRelevance.overall}/5</span>
                 </div>
-                <div className={`flex items-center gap-2 px-4 py-2 rounded-lg border ${difficultyColors[chapter.difficulty]}`}>
+                <div
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border ${difficultyColors[chapter.difficulty]}`}
+                >
                   {chapter.difficulty.charAt(0).toUpperCase() + chapter.difficulty.slice(1)}
                 </div>
               </div>
@@ -136,25 +144,33 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
               <div className="space-y-3">
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-slate-300">NEET</span>
-                  <span className={`px-2 py-1 rounded ${chapter.examRelevance.neet ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}>
+                  <span
+                    className={`px-2 py-1 rounded ${chapter.examRelevance.neet ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}
+                  >
                     {chapter.examRelevance.neet ? 'Required' : 'Optional'}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-slate-300">MCAT</span>
-                  <span className={`px-2 py-1 rounded ${chapter.examRelevance.mcat ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}>
+                  <span
+                    className={`px-2 py-1 rounded ${chapter.examRelevance.mcat ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}
+                  >
                     {chapter.examRelevance.mcat ? 'Required' : 'Optional'}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-slate-300">AP Biology</span>
-                  <span className={`px-2 py-1 rounded ${chapter.examRelevance.apBiology ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}>
+                  <span
+                    className={`px-2 py-1 rounded ${chapter.examRelevance.apBiology ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}
+                  >
                     {chapter.examRelevance.apBiology ? 'Required' : 'Optional'}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-slate-300">IB Biology</span>
-                  <span className={`px-2 py-1 rounded ${chapter.examRelevance.ibBiology ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}>
+                  <span
+                    className={`px-2 py-1 rounded ${chapter.examRelevance.ibBiology ? 'bg-green-500/20 text-green-400' : 'bg-slate-600 text-slate-400'}`}
+                  >
                     {chapter.examRelevance.ibBiology ? 'Required' : 'Optional'}
                   </span>
                 </div>
@@ -190,9 +206,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
       {/* Key Topics Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">
-            Key Topics Covered
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">Key Topics Covered</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {chapter.keyTopics.map((topic, index) => (
@@ -328,9 +342,7 @@ export default async function ChapterPage({ params }: ChapterPageProps) {
             Chat on WhatsApp
           </CampbellWhatsAppCTA>
 
-          <p className="mt-4 text-sm text-slate-400">
-            Free demo class • No commitment required
-          </p>
+          <p className="mt-4 text-sm text-slate-400">Free demo class • No commitment required</p>
         </div>
       </section>
 

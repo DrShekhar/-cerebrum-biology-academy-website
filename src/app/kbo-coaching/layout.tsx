@@ -43,10 +43,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function KBOCoachingLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function KBOCoachingLayout({ children }: { children: React.ReactNode }) {
   return children
 }

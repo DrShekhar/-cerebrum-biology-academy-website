@@ -79,10 +79,7 @@ export async function getNotifications(
     userId,
     ...(unreadOnly && { isRead: false }),
     ...(types && types.length > 0 && { type: { in: types } }),
-    OR: [
-      { expiresAt: null },
-      { expiresAt: { gt: new Date() } },
-    ],
+    OR: [{ expiresAt: null }, { expiresAt: { gt: new Date() } }],
   }
 
   const [notifications, unreadCount, total] = await Promise.all([
@@ -96,10 +93,7 @@ export async function getNotifications(
       where: {
         userId,
         isRead: false,
-        OR: [
-          { expiresAt: null },
-          { expiresAt: { gt: new Date() } },
-        ],
+        OR: [{ expiresAt: null }, { expiresAt: { gt: new Date() } }],
       },
     }),
     prisma.gamification_notifications.count({ where }),
@@ -155,10 +149,7 @@ export async function getUnreadCount(userId: string): Promise<number> {
     where: {
       userId,
       isRead: false,
-      OR: [
-        { expiresAt: null },
-        { expiresAt: { gt: new Date() } },
-      ],
+      OR: [{ expiresAt: null }, { expiresAt: { gt: new Date() } }],
     },
   })
 }

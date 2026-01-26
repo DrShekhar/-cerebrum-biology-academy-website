@@ -2,16 +2,7 @@
 
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
-import {
-  CheckCircle,
-  Clock,
-  Users,
-  MessageCircle,
-  Phone,
-  Video,
-  Zap,
-  Brain,
-} from 'lucide-react'
+import { CheckCircle, Clock, Users, MessageCircle, Phone, Video, Zap, Brain } from 'lucide-react'
 
 const NeomorphismClaudeChatBoard = dynamic(
   () => import('@/components/claudechat/NeomorphismClaudeChatBoard'),

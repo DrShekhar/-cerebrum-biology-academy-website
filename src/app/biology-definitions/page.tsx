@@ -91,11 +91,7 @@ export default function BiologyDefinitionsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Script
-        id="collection-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-      >
+      <Script id="collection-schema" type="application/ld+json" strategy="afterInteractive">
         {JSON.stringify(schemaData)}
       </Script>
 
@@ -110,8 +106,8 @@ export default function BiologyDefinitionsPage() {
               Biology Definitions for NEET
             </h1>
             <p className="text-lg sm:text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Master essential biology terms and concepts for NEET 2025-26. Comprehensive definitions
-              with examples, key points, and NEET relevance ratings.
+              Master essential biology terms and concepts for NEET 2025-26. Comprehensive
+              definitions with examples, key points, and NEET relevance ratings.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">

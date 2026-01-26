@@ -11,7 +11,11 @@ import {
   CheckCircle,
   Calendar,
 } from 'lucide-react'
-import { biologyDefinitions, getDefinitionBySlug, getDefinitionsByCategory } from '@/data/biology-definitions'
+import {
+  biologyDefinitions,
+  getDefinitionBySlug,
+  getDefinitionsByCategory,
+} from '@/data/biology-definitions'
 import { FloatingCTA } from '@/components/common/FloatingCTA'
 
 interface PageProps {
@@ -280,7 +284,8 @@ export default async function BiologyDefinitionPage({ params }: PageProps) {
             <div className="mb-6 md:mb-0 md:mr-8">
               <h3 className="text-2xl font-bold mb-2">Want to Master {definition.category}?</h3>
               <p className="text-slate-300 mb-4">
-                Join Cerebrum Biology Academy for comprehensive NEET preparation with expert faculty.
+                Join Cerebrum Biology Academy for comprehensive NEET preparation with expert
+                faculty.
               </p>
             </div>
             <Link

@@ -7,7 +7,8 @@ import type { Language } from './types'
 
 export const ariaTranslations: Record<Language, Record<string, string>> = {
   en: {
-    greeting: "Hi! I'm ARIA, your personal guide to Cerebrum Biology Academy. How can I help you today?",
+    greeting:
+      "Hi! I'm ARIA, your personal guide to Cerebrum Biology Academy. How can I help you today?",
     bookDemo: 'Book Demo',
     whatsApp: 'WhatsApp',
     callMe: 'Call Me',
@@ -31,7 +32,7 @@ export const ariaTranslations: Record<Language, Record<string, string>> = {
     quickActionWhy: 'Why Cerebrum?',
     closedMessage: 'Chat ended. Click to start a new conversation.',
     offlineNotice: 'Our counselors are available 9 AM - 9 PM. Leave a message!',
-    thankYouLead: "Thank you! Our counselor will call you within 30 minutes.",
+    thankYouLead: 'Thank you! Our counselor will call you within 30 minutes.',
     invalidPhone: 'Please enter a valid 10-digit Indian mobile number.',
     invalidName: 'Please enter a valid name (2-50 characters, letters only).',
     invalidClass: 'Please enter a valid class: 9, 10, 11, 12, or Dropper.',
@@ -42,15 +43,17 @@ export const ariaTranslations: Record<Language, Record<string, string>> = {
     confirmBooking: 'Confirm booking?',
     bookingConfirmed: 'Demo booked! Check your WhatsApp for details.',
     languageToggle: 'हिंदी',
-    proactiveExit: "Wait! Let me help you find the right NEET Biology program. Quick question?",
+    proactiveExit: 'Wait! Let me help you find the right NEET Biology program. Quick question?',
     proactiveTime: "👋 Hi! I noticed you're exploring our courses. Can I help with any questions?",
-    proactiveScroll: "Interested in our NEET Biology coaching? I can help you find the perfect fit!",
+    proactiveScroll:
+      'Interested in our NEET Biology coaching? I can help you find the perfect fit!',
     proactivePricing: 'Looking at pricing? Let me help you find the best value option!',
     proactiveReturn: 'Welcome back! Ready to take the next step toward NEET success?',
     dontShowAgain: "Don't show again",
   },
   hi: {
-    greeting: 'नमस्ते! मैं ARIA हूं, Cerebrum Biology Academy की आपकी personal guide। आज मैं आपकी कैसे मदद कर सकती हूं?',
+    greeting:
+      'नमस्ते! मैं ARIA हूं, Cerebrum Biology Academy की आपकी personal guide। आज मैं आपकी कैसे मदद कर सकती हूं?',
     bookDemo: 'डेमो बुक करें',
     whatsApp: 'WhatsApp',
     callMe: 'कॉल करें',

@@ -31,7 +31,7 @@ test.describe('Security Testing Suite', () => {
         'javascript:alert("XSS")',
         '<img src=x onerror=alert("XSS")>',
         '\"><script>document.cookie</script>',
-        '<iframe src="javascript:alert(\'XSS\')"></iframe>'
+        '<iframe src="javascript:alert(\'XSS\')"></iframe>',
       ]
 
       for (const vector of xssVectors) {
@@ -76,7 +76,7 @@ test.describe('Security Testing Suite', () => {
       const maliciousInputs = [
         '<script>fetch("/api/admin/users")</script>',
         '"><img src=x onerror=fetch("/api/sensitive")>',
-        'test@test.com<script>location.href="http://evil.com"</script>'
+        'test@test.com<script>location.href="http://evil.com"</script>',
       ]
 
       for (const input of maliciousInputs) {
@@ -85,10 +85,9 @@ test.describe('Security Testing Suite', () => {
         await page.fill('[data-testid="demo-phone"]', '9876543210')
 
         // Monitor network requests for malicious activity
-        const maliciousRequest = await page.waitForRequest(
-          request => request.url().includes('evil.com'),
-          { timeout: 2000 }
-        ).catch(() => null)
+        const maliciousRequest = await page
+          .waitForRequest((request) => request.url().includes('evil.com'), { timeout: 2000 })
+          .catch(() => null)
 
         expect(maliciousRequest).toBeNull()
       }
@@ -103,7 +102,7 @@ test.describe('Security Testing Suite', () => {
         "admin'--",
         "' UNION SELECT * FROM users --",
         "'; DELETE FROM enrollments WHERE '1'='1",
-        "' OR 1=1 LIMIT 1 OFFSET 1 --"
+        "' OR 1=1 LIMIT 1 OFFSET 1 --",
       ]
 
       for (const vector of sqlInjectionVectors) {
@@ -112,9 +111,11 @@ test.describe('Security Testing Suite', () => {
         await page.keyboard.press('Enter')
 
         // Wait for search response
-        await page.waitForResponse(response =>
-          response.url().includes('/api/courses/search'), { timeout: 5000 }
-        ).catch(() => null)
+        await page
+          .waitForResponse((response) => response.url().includes('/api/courses/search'), {
+            timeout: 5000,
+          })
+          .catch(() => null)
 
         // Check that no database error is exposed
         const errorMessage = await page.locator('[data-testid="error-message"]').textContent()
@@ -124,7 +125,7 @@ test.describe('Security Testing Suite', () => {
 
         // Check that normal search still works
         await page.fill('[data-testid="course-search"]', 'biology')
-        const response = await page.waitForResponse(response =>
+        const response = await page.waitForResponse((response) =>
           response.url().includes('/api/courses/search')
         )
         expect(response.status()).toBe(200)
@@ -143,7 +144,7 @@ test.describe('Security Testing Suite', () => {
         '12345678',
         'admin',
         'test',
-        'password123'
+        'password123',
       ]
 
       for (const password of weakPasswords) {
@@ -179,9 +180,7 @@ test.describe('Security Testing Suite', () => {
         await page.fill('[data-testid="password"]', `wrongpassword${i}`)
         await page.click('[data-testid="login-button"]')
 
-        await page.waitForResponse(response =>
-          response.url().includes('/api/auth/login')
-        )
+        await page.waitForResponse((response) => response.url().includes('/api/auth/login'))
 
         if (i >= maxAttempts) {
           // Should be rate limited
@@ -203,7 +202,8 @@ test.describe('Security Testing Suite', () => {
       expect(page.url()).toContain('/auth/login')
 
       // Test with expired JWT
-      const expiredJWT = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE1MTYyMzkwMjJ9.invalid'
+      const expiredJWT =
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyLCJleHAiOjE1MTYyMzkwMjJ9.invalid'
 
       await page.addInitScript((token) => {
         localStorage.setItem('auth-token', token)
@@ -253,7 +253,7 @@ test.describe('Security Testing Suite', () => {
       await page.evaluate(() => {
         // Try to modify hidden form fields
         const priceElements = document.querySelectorAll('[data-price]')
-        priceElements.forEach(el => {
+        priceElements.forEach((el) => {
           el.setAttribute('data-price', '1') // Try to set price to ₹1
         })
 
@@ -267,7 +267,7 @@ test.describe('Security Testing Suite', () => {
       await page.click('[data-testid="initiate-payment"]')
 
       // Verify server validates actual price
-      const paymentResponse = await page.waitForResponse(response =>
+      const paymentResponse = await page.waitForResponse((response) =>
         response.url().includes('/api/payment/create-order')
       )
 
@@ -290,17 +290,17 @@ test.describe('Security Testing Suite', () => {
             entity: {
               id: 'pay_test123',
               amount: 42000,
-              status: 'captured'
-            }
-          }
-        }
+              status: 'captured',
+            },
+          },
+        },
       }
 
       const response = await page.request.post(webhookEndpoint, {
         data: invalidWebhook,
         headers: {
-          'X-Razorpay-Signature': 'invalid_signature'
-        }
+          'X-Razorpay-Signature': 'invalid_signature',
+        },
       })
 
       expect(response.status()).toBe(400) // Should reject invalid signature
@@ -313,17 +313,17 @@ test.describe('Security Testing Suite', () => {
       const verificationData = {
         razorpay_payment_id: paymentId,
         razorpay_order_id: 'order_test123',
-        razorpay_signature: 'test_signature'
+        razorpay_signature: 'test_signature',
       }
 
       // First verification attempt
       const firstResponse = await page.request.post('/api/payment/verify', {
-        data: verificationData
+        data: verificationData,
       })
 
       // Second verification attempt with same data
       const secondResponse = await page.request.post('/api/payment/verify', {
-        data: verificationData
+        data: verificationData,
       })
 
       // Should reject duplicate verification
@@ -340,8 +340,8 @@ test.describe('Security Testing Suite', () => {
       // Test CORS with unauthorized origin
       const response = await page.request.get('/api/courses', {
         headers: {
-          'Origin': testOrigin
-        }
+          Origin: testOrigin,
+        },
       })
 
       const corsHeader = response.headers()['access-control-allow-origin']
@@ -358,14 +358,12 @@ test.describe('Security Testing Suite', () => {
 
       // Send requests rapidly
       for (let i = 0; i < maxRequests + 10; i++) {
-        requests.push(
-          page.request.get(`${apiEndpoint}?q=biology${i}`)
-        )
+        requests.push(page.request.get(`${apiEndpoint}?q=biology${i}`))
       }
 
       const responses = await Promise.all(requests)
-      const rateLimitedResponses = responses.filter(response =>
-        response.status() === 429 // Too Many Requests
+      const rateLimitedResponses = responses.filter(
+        (response) => response.status() === 429 // Too Many Requests
       )
 
       expect(rateLimitedResponses.length).toBeGreaterThan(0)
@@ -377,7 +375,7 @@ test.describe('Security Testing Suite', () => {
         '/api/admin/courses',
         '/api/admin/enrollments',
         '/api/admin/analytics',
-        '/api/admin/settings'
+        '/api/admin/settings',
       ]
 
       for (const endpoint of adminEndpoints) {
@@ -388,8 +386,8 @@ test.describe('Security Testing Suite', () => {
         // Test with regular user token
         const userResponse = await page.request.get(endpoint, {
           headers: {
-            'Authorization': 'Bearer user_token_123'
-          }
+            Authorization: 'Bearer user_token_123',
+          },
         })
         expect(userResponse.status()).toBe(403) // Forbidden
       }
@@ -444,7 +442,7 @@ test.describe('Security Testing Suite', () => {
       // Monitor network traffic for unencrypted sensitive data
       let sensitiveDataExposed = false
 
-      page.on('response', async response => {
+      page.on('response', async (response) => {
         const contentType = response.headers()['content-type']
         if (contentType && contentType.includes('application/json')) {
           try {
@@ -456,10 +454,10 @@ test.describe('Security Testing Suite', () => {
               /password.*[^*]/i,
               /credit.*card/i,
               /ssn.*\d{3}-\d{2}-\d{4}/,
-              /api.*key.*[a-zA-Z0-9]{20,}/
+              /api.*key.*[a-zA-Z0-9]{20,}/,
             ]
 
-            if (sensitivePatterns.some(pattern => pattern.test(dataString))) {
+            if (sensitivePatterns.some((pattern) => pattern.test(dataString))) {
               sensitiveDataExposed = true
             }
           } catch {
@@ -509,7 +507,7 @@ test.describe('Security Testing Suite', () => {
         { name: 'malware.exe', type: 'application/x-msdownload' },
         { name: 'script.php', type: 'application/x-php' },
         { name: 'shell.sh', type: 'application/x-sh' },
-        { name: 'large-file.jpg', size: 50 * 1024 * 1024 } // 50MB
+        { name: 'large-file.jpg', size: 50 * 1024 * 1024 }, // 50MB
       ]
 
       for (const file of maliciousFiles) {
@@ -521,7 +519,7 @@ test.describe('Security Testing Suite', () => {
         await page.setInputFiles('[data-testid="file-upload"]', {
           name: file.name,
           mimeType: file.type,
-          buffer: Buffer.from(fileContent)
+          buffer: Buffer.from(fileContent),
         })
 
         await page.click('[data-testid="upload-button"]')
@@ -536,12 +534,13 @@ test.describe('Security Testing Suite', () => {
       await page.goto('/profile/upload-document')
 
       // Simulate file with malware signature
-      const suspiciousContent = 'X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*'
+      const suspiciousContent =
+        'X5O!P%@AP[4\\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*'
 
       await page.setInputFiles('[data-testid="document-upload"]', {
         name: 'test.pdf',
         mimeType: 'application/pdf',
-        buffer: Buffer.from(suspiciousContent)
+        buffer: Buffer.from(suspiciousContent),
       })
 
       await page.click('[data-testid="upload-document-button"]')
@@ -573,9 +572,10 @@ test.describe('Security Testing Suite', () => {
       const cspHeader = response.headers()['content-security-policy']
 
       // Should have either X-Frame-Options or CSP frame-ancestors
-      const hasFrameProtection = frameOptions === 'DENY' ||
-                                frameOptions === 'SAMEORIGIN' ||
-                                (cspHeader && cspHeader.includes("frame-ancestors 'self'"))
+      const hasFrameProtection =
+        frameOptions === 'DENY' ||
+        frameOptions === 'SAMEORIGIN' ||
+        (cspHeader && cspHeader.includes("frame-ancestors 'self'"))
 
       expect(hasFrameProtection).toBe(true)
     })

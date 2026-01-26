@@ -24,6 +24,7 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 export default function FaridabadLocationPage() {
   useEffect(() => {
@@ -190,15 +191,15 @@ export default function FaridabadLocationPage() {
               transition={{ delay: 0.2 }}
               className="h-[400px] rounded-2xl overflow-hidden shadow-2xl"
             >
-              <iframe
-                src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.5!2d${CONTACT_INFO.location.faridabad.geo.longitude}!3d${CONTACT_INFO.location.faridabad.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIzJzQxLjMiTiA3N8KwMTgnNDIuMSJF!5e0!3m2!1sen!2sin!4v1234567890`}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Cerebrum Biology Academy Faridabad Location"
+              <LazyGoogleMap
+                embedUrl={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3510.5!2d${CONTACT_INFO.location.faridabad.geo.longitude}!3d${CONTACT_INFO.location.faridabad.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIzJzQxLjMiTiA3N8KwMTgnNDIuMSJF!5e0!3m2!1sen!2sin!4v1234567890`}
+                title="Faridabad NEET Coaching Center"
+                height={400}
+                placeholder={{
+                  lat: CONTACT_INFO.location.faridabad.geo.latitude,
+                  lng: CONTACT_INFO.location.faridabad.geo.longitude,
+                  address: `${CONTACT_INFO.location.faridabad.streetAddress}, ${CONTACT_INFO.location.faridabad.addressLocality}`
+                }}
               />
             </motion.div>
           </div>

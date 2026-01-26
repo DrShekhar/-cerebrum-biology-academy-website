@@ -25,10 +25,7 @@ async function seedAdmin() {
     // Check if admin exists by phone or email
     const existingAdmin = await prisma.users.findFirst({
       where: {
-        OR: [
-          { phone: ADMIN_CONFIG.phone },
-          { email: ADMIN_CONFIG.email },
-        ],
+        OR: [{ phone: ADMIN_CONFIG.phone }, { email: ADMIN_CONFIG.email }],
       },
     })
 

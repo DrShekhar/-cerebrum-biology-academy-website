@@ -23,7 +23,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { childId } = await params
@@ -48,7 +51,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     if (!parentChildRelation) {
       return NextResponse.json(
-        { success: false, error: 'You do not have access to this child\'s data' },
+        { success: false, error: "You do not have access to this child's data" },
         { status: 403 }
       )
     }

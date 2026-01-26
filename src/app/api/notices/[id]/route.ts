@@ -119,7 +119,10 @@ export async function PUT(request: NextRequest, context: RouteContext) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     // Check if user has permission to update notices
@@ -199,7 +202,10 @@ export async function DELETE(request: NextRequest, context: RouteContext) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     // Only admin can delete notices

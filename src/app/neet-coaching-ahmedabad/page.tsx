@@ -231,7 +231,7 @@ const whyAhmedabad = [
     icon: TrendingUp,
     title: 'Gujarat Growth Hub',
     description:
-      'Ahmedabad is growing rapidly. Get education that matches the city\'s aspirations for excellence.',
+      "Ahmedabad is growing rapidly. Get education that matches the city's aspirations for excellence.",
   },
   {
     icon: GraduationCap,
@@ -359,8 +359,8 @@ export default function NeetCoachingAhmedabadPage() {
               NEET Coaching Across All Ahmedabad Localities
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Satellite to Gandhinagar, Maninagar to Bopal - we serve students from every corner
-              of Ahmedabad and Gujarat.
+              From Satellite to Gandhinagar, Maninagar to Bopal - we serve students from every
+              corner of Ahmedabad and Gujarat.
             </p>
           </motion.div>
 
@@ -382,9 +382,7 @@ export default function NeetCoachingAhmedabadPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-blue-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">

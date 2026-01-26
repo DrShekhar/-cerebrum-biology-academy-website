@@ -57,22 +57,26 @@ const whyChooseUs = [
   {
     icon: BookOpen,
     title: 'Personalized Biology Tutoring',
-    description: 'One-on-one attention with customized learning plans for each student from Malviya Nagar area.',
+    description:
+      'One-on-one attention with customized learning plans for each student from Malviya Nagar area.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from schools across Malviya Nagar and nearby localities.',
+    description:
+      'Proven track record with students from schools across Malviya Nagar and nearby localities.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Expert Tutor',
-    description: 'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years of dedicated Biology teaching experience.',
+    description:
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years of dedicated Biology teaching experience.',
   },
   {
     icon: Star,
     title: 'Flexible Home Tutoring',
-    description: 'Convenient online sessions that fit your schedule. No travel hassles for Malviya Nagar families.',
+    description:
+      'Convenient online sessions that fit your schedule. No travel hassles for Malviya Nagar families.',
   },
 ]
 
@@ -113,7 +117,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - Biology Tutor Malviya Nagar',
-  description: 'Best Biology Tutor for Malviya Nagar students - Personalized NEET & Board Preparation',
+  description:
+    'Best Biology Tutor for Malviya Nagar students - Personalized NEET & Board Preparation',
   url: 'https://cerebrumbiologyacademy.com/biology-tutor-malviya-nagar',
   telephone: '+91-88264-44334',
   address: {
@@ -160,8 +165,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Malviya Nagar</span>
+              Biology Tutor in <span className="text-yellow-400">Malviya Nagar</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -170,7 +174,8 @@ export default function PageContent() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Personalized Biology tutoring for Malviya Nagar, Saket, Sheikh Sarai & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - expert tutor for serious students.
+              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - expert tutor for
+              serious students.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +203,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Malviya%20Nagar%20and%20interested%20in%20Biology%20tutoring"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +380,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Malviya%20Nagar%20and%20interested%20in%20Biology%20tutoring"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

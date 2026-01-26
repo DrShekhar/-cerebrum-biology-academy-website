@@ -9,7 +9,7 @@ const LOG_LEVELS: LogLevel = {
   DEBUG: 0,
   INFO: 1,
   WARN: 2,
-  ERROR: 3
+  ERROR: 3,
 }
 
 type LogLevelString = keyof LogLevel
@@ -32,7 +32,7 @@ class Logger {
     this.isProduction = process.env.NODE_ENV === 'production'
 
     // Set log level based on environment
-    const envLevel = process.env.LOG_LEVEL as LogLevelString || 'INFO'
+    const envLevel = (process.env.LOG_LEVEL as LogLevelString) || 'INFO'
     this.currentLevel = LOG_LEVELS[envLevel] || LOG_LEVELS.INFO
   }
 
@@ -48,8 +48,8 @@ class Logger {
       data,
       context: {
         env: process.env.NODE_ENV,
-        service: 'cerebrum-api'
-      }
+        service: 'cerebrum-api',
+      },
     }
   }
 
@@ -60,16 +60,13 @@ class Logger {
       // Pretty console output for development
       const colors = {
         DEBUG: '\x1b[36m', // Cyan
-        INFO: '\x1b[32m',  // Green
-        WARN: '\x1b[33m',  // Yellow
-        ERROR: '\x1b[31m'  // Red
+        INFO: '\x1b[32m', // Green
+        WARN: '\x1b[33m', // Yellow
+        ERROR: '\x1b[31m', // Red
       }
       const reset = '\x1b[0m'
 
-      console.log(
-        `${colors[level]}[${level}]${reset} ${timestamp} - ${message}`,
-        data ? data : ''
-      )
+      console.log(`${colors[level]}[${level}]${reset} ${timestamp} - ${message}`, data ? data : '')
     } else {
       // Structured JSON output for production
       console.log(JSON.stringify(logEntry))
@@ -104,7 +101,7 @@ class Logger {
           name: error.name,
           message: error.message,
           stack: error.stack,
-          ...(error as any).cause && { cause: (error as any).cause }
+          ...((error as any).cause && { cause: (error as any).cause }),
         }
       }
 
@@ -120,11 +117,17 @@ class Logger {
       method,
       path,
       userId,
-      duration
+      duration,
     })
   }
 
-  apiResponse(method: string, path: string, statusCode: number, duration: number, userId?: string): void {
+  apiResponse(
+    method: string,
+    path: string,
+    statusCode: number,
+    duration: number,
+    userId?: string
+  ): void {
     const level = statusCode >= 400 ? 'ERROR' : statusCode >= 300 ? 'WARN' : 'INFO'
 
     this[level.toLowerCase() as 'info' | 'warn' | 'error']('API Response', {
@@ -133,7 +136,7 @@ class Logger {
       path,
       statusCode,
       duration,
-      userId
+      userId,
     })
   }
 
@@ -143,13 +146,13 @@ class Logger {
         type: 'database_error',
         query: query.substring(0, 200), // Truncate long queries
         duration,
-        error
+        error,
       })
     } else {
       this.debug('Database Query', {
         type: 'database_query',
         query: query.substring(0, 200),
-        duration
+        duration,
       })
     }
   }
@@ -160,7 +163,7 @@ class Logger {
       userId,
       action,
       success,
-      details
+      details,
     })
   }
 
@@ -170,7 +173,7 @@ class Logger {
       userId,
       resource,
       action,
-      granted
+      granted,
     })
   }
 
@@ -179,7 +182,7 @@ class Logger {
       type: 'rate_limit',
       identifier,
       endpoint,
-      limit
+      limit,
     })
   }
 
@@ -188,7 +191,7 @@ class Logger {
       type: 'security',
       event,
       severity,
-      details
+      details,
     })
   }
 
@@ -198,7 +201,7 @@ class Logger {
       metric,
       value,
       unit,
-      context
+      context,
     })
   }
 
@@ -206,7 +209,7 @@ class Logger {
     this.info('Business Event', {
       type: 'business',
       event,
-      data
+      data,
     })
   }
 
@@ -216,7 +219,7 @@ class Logger {
       eventType,
       testSessionId,
       userId,
-      details
+      details,
     })
   }
 
@@ -226,7 +229,7 @@ class Logger {
       eventType,
       questionId,
       userId,
-      details
+      details,
     })
   }
 
@@ -237,7 +240,7 @@ class Logger {
       name: error.name,
       message: error.message,
       stack: error.stack,
-      context
+      context,
     })
   }
 
@@ -249,7 +252,7 @@ class Logger {
       action,
       resource,
       details,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     })
   }
 
@@ -260,19 +263,25 @@ class Logger {
       type: 'health_check',
       service,
       status,
-      details
+      details,
     })
   }
 
   // External service calls
-  externalService(service: string, operation: string, duration: number, success: boolean, error?: any): void {
+  externalService(
+    service: string,
+    operation: string,
+    duration: number,
+    success: boolean,
+    error?: any
+  ): void {
     if (success) {
       this.info('External Service Call', {
         type: 'external_service',
         service,
         operation,
         duration,
-        success
+        success,
       })
     } else {
       this.error('External Service Failed', {
@@ -281,7 +290,7 @@ class Logger {
         operation,
         duration,
         success,
-        error
+        error,
       })
     }
   }
@@ -293,7 +302,7 @@ class Logger {
       operation,
       key: key.substring(0, 50), // Truncate long keys
       hit,
-      duration
+      duration,
     })
   }
 
@@ -304,7 +313,7 @@ class Logger {
       queue,
       operation,
       jobId,
-      details
+      details,
     })
   }
 
@@ -315,19 +324,25 @@ class Logger {
       provider,
       event,
       success,
-      details
+      details,
     })
   }
 
   // Payment events
-  payment(transactionId: string, amount: number, currency: string, status: string, userId?: string): void {
+  payment(
+    transactionId: string,
+    amount: number,
+    currency: string,
+    status: string,
+    userId?: string
+  ): void {
     this.info('Payment Event', {
       type: 'payment',
       transactionId,
       amount,
       currency,
       status,
-      userId
+      userId,
     })
   }
 
@@ -339,7 +354,7 @@ class Logger {
         to: this.maskEmail(to),
         subject,
         success,
-        provider
+        provider,
       })
     } else {
       this.error('Email Failed', {
@@ -348,7 +363,7 @@ class Logger {
         subject,
         success,
         provider,
-        error
+        error,
       })
     }
   }
@@ -357,9 +372,8 @@ class Logger {
   private maskEmail(email: string): string {
     if (!email || !email.includes('@')) return email
     const [local, domain] = email.split('@')
-    const maskedLocal = local.length > 2 ?
-      local[0] + '*'.repeat(local.length - 2) + local[local.length - 1] :
-      local
+    const maskedLocal =
+      local.length > 2 ? local[0] + '*'.repeat(local.length - 2) + local[local.length - 1] : local
     return `${maskedLocal}@${domain}`
   }
 
@@ -385,7 +399,7 @@ class Logger {
         const duration = Date.now() - start
         this.debug(`Timer: ${label}`, { duration })
         return duration
-      }
+      },
     }
   }
 

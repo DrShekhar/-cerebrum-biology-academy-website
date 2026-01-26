@@ -5,7 +5,16 @@
 
 import { PaymentStatus, PaymentMethod, PaymentStatusEnum } from '@/generated/prisma'
 
-export const SUPPORTED_CURRENCIES = ['INR', 'USD', 'EUR', 'GBP', 'AUD', 'CAD', 'AED', 'SGD'] as const
+export const SUPPORTED_CURRENCIES = [
+  'INR',
+  'USD',
+  'EUR',
+  'GBP',
+  'AUD',
+  'CAD',
+  'AED',
+  'SGD',
+] as const
 export type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number]
 
 export interface CurrencyInfo {

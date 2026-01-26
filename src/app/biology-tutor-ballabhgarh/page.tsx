@@ -43,13 +43,33 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const ballabhgarhAreas = [
-  { name: 'Ballabhgarh City', distance: '12 km', metro: 'Ballabhgarh Metro', landmark: 'Main Town' },
-  { name: 'Sector 64', distance: '10 km', metro: 'Ballabhgarh Metro', landmark: 'Residential Area' },
+  {
+    name: 'Ballabhgarh City',
+    distance: '12 km',
+    metro: 'Ballabhgarh Metro',
+    landmark: 'Main Town',
+  },
+  {
+    name: 'Sector 64',
+    distance: '10 km',
+    metro: 'Ballabhgarh Metro',
+    landmark: 'Residential Area',
+  },
   { name: 'Sector 65', distance: '10 km', metro: 'Ballabhgarh Metro', landmark: 'Near Expressway' },
   { name: 'Sector 66', distance: '11 km', metro: 'Ballabhgarh Metro', landmark: 'Schools Area' },
-  { name: 'Old Faridabad', distance: '14 km', metro: 'Old Faridabad Metro', landmark: 'Heritage Area' },
+  {
+    name: 'Old Faridabad',
+    distance: '14 km',
+    metro: 'Old Faridabad Metro',
+    landmark: 'Heritage Area',
+  },
   { name: 'Sector 81-89', distance: '8 km', metro: 'Greater Faridabad', landmark: 'New Sectors' },
-  { name: 'Palwal Road', distance: '15 km', metro: 'Ballabhgarh Metro', landmark: 'Towards Palwal' },
+  {
+    name: 'Palwal Road',
+    distance: '15 km',
+    metro: 'Ballabhgarh Metro',
+    landmark: 'Towards Palwal',
+  },
   { name: 'Agra Road', distance: '13 km', metro: 'Ballabhgarh Metro', landmark: 'Industrial Area' },
 ]
 
@@ -130,7 +150,8 @@ export default function BiologyTutorBallabhgarhPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Ballabhgarh',
-            description: 'Best Biology Tutor for Ballabhgarh students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for Ballabhgarh students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-ballabhgarh',
             telephone: '+91-88264-44334',
             address: {
@@ -161,8 +182,7 @@ export default function BiologyTutorBallabhgarhPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Ballabhgarh</span>
+              Biology Tutor in <span className="text-yellow-400">Ballabhgarh</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -333,9 +353,7 @@ export default function BiologyTutorBallabhgarhPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Ballabhgarh Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ballabhgarh Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Quality NEET coaching just 12 km away
             </p>

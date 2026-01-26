@@ -27,12 +27,7 @@ export const SOUTH_DELHI_KEYWORD_MATRIX: KeywordConfig[] = [
       'NEET classes South Delhi',
       'medical entrance coaching South Delhi',
     ],
-    avoidKeywords: [
-      'Defence Colony',
-      'Greater Kailash',
-      'Hauz Khas',
-      'Lajpat Nagar',
-    ],
+    avoidKeywords: ['Defence Colony', 'Greater Kailash', 'Hauz Khas', 'Lajpat Nagar'],
     focusType: 'hub',
   },
   {
@@ -206,9 +201,7 @@ export function getPageKeywords(slug: string): string[] {
 export function wouldCannibalize(slug: string, keyword: string): boolean {
   const config = getKeywordConfig(slug)
   if (!config) return false
-  return config.avoidKeywords.some(
-    (avoid) => keyword.toLowerCase().includes(avoid.toLowerCase())
-  )
+  return config.avoidKeywords.some((avoid) => keyword.toLowerCase().includes(avoid.toLowerCase()))
 }
 
 /**

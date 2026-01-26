@@ -456,7 +456,9 @@ export function MyEnrollments() {
                     <Phone className="w-5 h-5 text-blue-600 mr-3" />
                     <div>
                       <div className="font-medium text-gray-900">Call Support</div>
-                      <div className="text-sm text-gray-600">{CONTACT_INFO.phone.display.primary}</div>
+                      <div className="text-sm text-gray-600">
+                        {CONTACT_INFO.phone.display.primary}
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center p-4 bg-gray-50 rounded-xl">

@@ -549,13 +549,7 @@ YES - Approve & Publish
 NO - Reject
 
 Ref: {{5}}`,
-    variables: [
-      'content_type',
-      'title',
-      'preview',
-      'stats',
-      'reference_id',
-    ],
+    variables: ['content_type', 'title', 'preview', 'stats', 'reference_id'],
   },
 
   SEO_CONTENT_PUBLISHED: {
@@ -570,11 +564,7 @@ Title: {{2}}
 View: {{3}}
 
 Content is now live on the website.`,
-    variables: [
-      'content_type',
-      'title',
-      'published_url',
-    ],
+    variables: ['content_type', 'title', 'published_url'],
   },
 
   SEO_DAILY_SUMMARY: {

@@ -883,7 +883,7 @@ export default function FoundationCoursePage() {
               onClick={async () => {
                 await trackAndOpenWhatsApp({
                   source: 'foundation-offline-enquiry',
-                  message: 'Hi! I\'m looking for offline Biology classes in Delhi NCR/Gurugram.',
+                  message: "Hi! I'm looking for offline Biology classes in Delhi NCR/Gurugram.",
                   campaign: 'foundation-offline',
                 })
               }}
@@ -960,8 +960,8 @@ export default function FoundationCoursePage() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   We understand your concerns about your child&apos;s early NEET preparation. Chat
-                  directly with our counselors to understand fee structure, batch timings, and how we
-                  nurture young minds for future medical success.
+                  directly with our counselors to understand fee structure, batch timings, and how
+                  we nurture young minds for future medical success.
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <button
@@ -1019,9 +1019,15 @@ export default function FoundationCoursePage() {
                     {faq.question}
                   </h3>
                   {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-[#4a5d4a] flex-shrink-0" aria-hidden="true" />
+                    <ChevronUp
+                      className="w-5 h-5 text-[#4a5d4a] flex-shrink-0"
+                      aria-hidden="true"
+                    />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-[#4a5d4a] flex-shrink-0" aria-hidden="true" />
+                    <ChevronDown
+                      className="w-5 h-5 text-[#4a5d4a] flex-shrink-0"
+                      aria-hidden="true"
+                    />
                   )}
                 </button>
                 {openFaq === index && (

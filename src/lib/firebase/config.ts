@@ -23,7 +23,9 @@ if (isFirebaseConfigured) {
   auth = getAuth(app)
 } else if (typeof window !== 'undefined') {
   // Only warn in browser, not during build
-  console.warn('Firebase is not configured. Set NEXT_PUBLIC_FIREBASE_API_KEY to enable Firebase features.')
+  console.warn(
+    'Firebase is not configured. Set NEXT_PUBLIC_FIREBASE_API_KEY to enable Firebase features.'
+  )
 }
 
 export { auth }

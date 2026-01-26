@@ -105,22 +105,26 @@ const features = [
   {
     icon: BookOpen,
     title: 'Campbell Biology Coverage',
-    description: "Complete coverage of all 56 chapters from Campbell Biology, the gold standard for CBO preparation",
+    description:
+      'Complete coverage of all 56 chapters from Campbell Biology, the gold standard for CBO preparation',
   },
   {
     icon: Users,
     title: 'Expert Faculty',
-    description: 'Learn from IBO medalists and experienced Biology Olympiad coaches with proven track records',
+    description:
+      'Learn from IBO medalists and experienced Biology Olympiad coaches with proven track records',
   },
   {
     icon: Target,
     title: 'CBO-Focused Strategy',
-    description: 'Targeted preparation for Canadian Biology Olympiad exam format and question patterns',
+    description:
+      'Targeted preparation for Canadian Biology Olympiad exam format and question patterns',
   },
   {
     icon: ClipboardCheck,
     title: 'Weekly Assessments',
-    description: 'Regular practice tests modeled on CBO past papers with detailed performance analytics',
+    description:
+      'Regular practice tests modeled on CBO past papers with detailed performance analytics',
   },
   {
     icon: MessageCircle,
@@ -137,27 +141,33 @@ const features = [
 const faqs = [
   {
     question: 'What is the Canadian Biology Olympiad (CBO)?',
-    answer: 'The Canadian Biology Olympiad (CBO) is an annual competition organized by the Canadian Biology Olympiad Committee under the University of Toronto. It selects the top 4 students to represent Canada at the International Biology Olympiad (IBO).',
+    answer:
+      'The Canadian Biology Olympiad (CBO) is an annual competition organized by the Canadian Biology Olympiad Committee under the University of Toronto. It selects the top 4 students to represent Canada at the International Biology Olympiad (IBO).',
   },
   {
     question: 'Who is eligible for CBO?',
-    answer: 'CBO is open to secondary school students in Canada who are Canadian citizens or permanent residents. Students must be enrolled in a Canadian high school and be under 20 years of age on July 1st of the competition year.',
+    answer:
+      'CBO is open to secondary school students in Canada who are Canadian citizens or permanent residents. Students must be enrolled in a Canadian high school and be under 20 years of age on July 1st of the competition year.',
   },
   {
     question: 'What is the format of the CBO exam?',
-    answer: 'The CBO National Exam consists of multiple choice questions covering cell biology, genetics, plant biology, animal physiology, ecology, and biosystematics. Top performers are invited to a training camp for further selection.',
+    answer:
+      'The CBO National Exam consists of multiple choice questions covering cell biology, genetics, plant biology, animal physiology, ecology, and biosystematics. Top performers are invited to a training camp for further selection.',
   },
   {
     question: 'How do I prepare for CBO?',
-    answer: "CBO preparation requires mastery of Campbell Biology (12th edition), understanding of IBO syllabus topics, and extensive practice with past papers. Our coaching program provides structured preparation with expert guidance.",
+    answer:
+      'CBO preparation requires mastery of Campbell Biology (12th edition), understanding of IBO syllabus topics, and extensive practice with past papers. Our coaching program provides structured preparation with expert guidance.',
   },
   {
     question: 'Can international students join your CBO coaching?',
-    answer: 'Yes! Our online CBO coaching is available to students worldwide. While CBO participation requires Canadian eligibility, our program is excellent preparation for any biology olympiad.',
+    answer:
+      'Yes! Our online CBO coaching is available to students worldwide. While CBO participation requires Canadian eligibility, our program is excellent preparation for any biology olympiad.',
   },
   {
     question: 'What makes your CBO coaching different?',
-    answer: 'We offer personalized 1-on-1 coaching, complete Campbell Biology coverage, CBO past paper analysis, weekly assessments, and direct access to faculty via WhatsApp for doubt clearing.',
+    answer:
+      'We offer personalized 1-on-1 coaching, complete Campbell Biology coverage, CBO past paper analysis, weekly assessments, and direct access to faculty via WhatsApp for doubt clearing.',
   },
 ]
 
@@ -166,21 +176,24 @@ const testimonials = [
     name: 'Ryan M.',
     location: 'Toronto, ON',
     achievement: 'CBO Gold Medalist 2024',
-    quote: 'The structured Campbell Biology coverage and weekly tests helped me systematically prepare for CBO. Made it to the training camp!',
+    quote:
+      'The structured Campbell Biology coverage and weekly tests helped me systematically prepare for CBO. Made it to the training camp!',
     avatar: 'RM',
   },
   {
     name: 'Sarah L.',
     location: 'Vancouver, BC',
     achievement: 'CBO Silver Medalist',
-    quote: 'The faculty really understand the CBO exam pattern. Their guidance on biosystematics and ecology was invaluable.',
+    quote:
+      'The faculty really understand the CBO exam pattern. Their guidance on biosystematics and ecology was invaluable.',
     avatar: 'SL',
   },
   {
     name: 'James C.',
     location: 'Calgary, AB',
     achievement: 'CBO Bronze Medalist',
-    quote: 'WhatsApp doubt clearing was a game-changer. I could get help whenever I was stuck on difficult concepts.',
+    quote:
+      'WhatsApp doubt clearing was a game-changer. I could get help whenever I was stuck on difficult concepts.',
     avatar: 'JC',
   },
 ]
@@ -263,8 +276,9 @@ export default function CBOCoachingPage() {
               <span className="block text-yellow-400 mt-2">Canadian Biology Olympiad</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Expert online coaching for the Canadian Biology Olympiad. Prepare with IBO-level curriculum,
-              experienced faculty, and personalized mentorship to represent Canada at the International Biology Olympiad.
+              Expert online coaching for the Canadian Biology Olympiad. Prepare with IBO-level
+              curriculum, experienced faculty, and personalized mentorship to represent Canada at
+              the International Biology Olympiad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -430,9 +444,7 @@ export default function CBOCoachingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Hear from our CBO medalists across Canada
             </p>
@@ -458,7 +470,9 @@ export default function CBOCoachingPage() {
                 </div>
                 <div className="flex items-center mb-3">
                   <Trophy className="h-4 w-4 text-yellow-500 mr-2" />
-                  <span className="text-sm font-medium text-yellow-700">{testimonial.achievement}</span>
+                  <span className="text-sm font-medium text-yellow-700">
+                    {testimonial.achievement}
+                  </span>
                 </div>
                 <p className="text-gray-600 italic">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex mt-3">
@@ -476,9 +490,7 @@ export default function CBOCoachingPage() {
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              CBO Coaching Plans
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">CBO Coaching Plans</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Choose the plan that best fits your preparation timeline
             </p>
@@ -505,10 +517,14 @@ export default function CBOCoachingPage() {
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-gray-900' : 'text-white'}`}>
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-gray-900' : 'text-white'}`}
+                  >
                     {plan.name}
                   </h3>
-                  <div className={`text-4xl font-bold ${plan.popular ? 'text-gray-900' : 'text-white'}`}>
+                  <div
+                    className={`text-4xl font-bold ${plan.popular ? 'text-gray-900' : 'text-white'}`}
+                  >
                     {plan.price}
                   </div>
                   <div className={`text-sm ${plan.popular ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -518,13 +534,19 @@ export default function CBOCoachingPage() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircle className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-green-500' : 'text-green-400'}`} />
-                      <span className={plan.popular ? 'text-gray-600' : 'text-gray-300'}>{feature}</span>
+                      <CheckCircle
+                        className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-green-500' : 'text-green-400'}`}
+                      />
+                      <span className={plan.popular ? 'text-gray-600' : 'text-gray-300'}>
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
                 <button
-                  onClick={() => handleWhatsAppClick(`pricing-${plan.name.toLowerCase().replace(' ', '-')}`)}
+                  onClick={() =>
+                    handleWhatsAppClick(`pricing-${plan.name.toLowerCase().replace(' ', '-')}`)
+                  }
                   className={`w-full py-3 rounded-lg font-semibold transition-all ${
                     plan.popular
                       ? 'bg-green-500 hover:bg-green-600 text-white'
@@ -651,7 +673,8 @@ export default function CBOCoachingPage() {
             '@context': 'https://schema.org',
             '@type': 'Course',
             name: 'CBO Coaching Online - Canadian Biology Olympiad Preparation',
-            description: 'Expert online coaching for the Canadian Biology Olympiad (CBO). Complete Campbell Biology coverage, past paper practice, and personalized mentorship.',
+            description:
+              'Expert online coaching for the Canadian Biology Olympiad (CBO). Complete Campbell Biology coverage, past paper practice, and personalized mentorship.',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -660,7 +683,14 @@ export default function CBOCoachingPage() {
             courseCode: 'CBO-PREP',
             educationalLevel: 'High School',
             inLanguage: 'en',
-            teaches: ['Biology', 'Cell Biology', 'Genetics', 'Ecology', 'Plant Biology', 'Animal Physiology'],
+            teaches: [
+              'Biology',
+              'Cell Biology',
+              'Genetics',
+              'Ecology',
+              'Plant Biology',
+              'Animal Physiology',
+            ],
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'Online',

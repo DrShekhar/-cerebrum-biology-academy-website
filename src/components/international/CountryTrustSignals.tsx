@@ -45,8 +45,8 @@ export function CountryTrustSignals({ country }: CountryTrustSignalsProps) {
             Trusted by Students Worldwide
           </h2>
           <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Join hundreds of {country.name} students who have achieved their
-            academic goals with our expert tutoring.
+            Join hundreds of {country.name} students who have achieved their academic goals with our
+            expert tutoring.
           </p>
         </div>
 
@@ -62,9 +62,7 @@ export function CountryTrustSignals({ country }: CountryTrustSignalsProps) {
               >
                 <stat.icon className={`w-6 h-6 ${stat.color}`} />
               </div>
-              <div className="text-3xl font-bold text-white mb-1">
-                {stat.value}
-              </div>
+              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
               <div className="text-slate-400 text-sm">{stat.label}</div>
             </div>
           ))}

@@ -127,7 +127,10 @@ export default function AddNewLead() {
       </div>
 
       {/* Form */}
-      <form onSubmit={handleSubmit} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+      <form
+        onSubmit={handleSubmit}
+        className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+      >
         <div className="space-y-5">
           {/* Student Name */}
           <div>
@@ -207,7 +210,10 @@ export default function AddNewLead() {
 
           {/* Course Interest */}
           <div>
-            <label htmlFor="courseInterest" className="block text-sm font-medium text-gray-700 mb-1">
+            <label
+              htmlFor="courseInterest"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
               Course Interest
             </label>
             <select
@@ -255,7 +261,10 @@ export default function AddNewLead() {
           {/* Referral Link */}
           {referralLinks.length > 0 && (
             <div>
-              <label htmlFor="referralLinkId" className="block text-sm font-medium text-gray-700 mb-1">
+              <label
+                htmlFor="referralLinkId"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
                 Associated Referral Link
               </label>
               <select

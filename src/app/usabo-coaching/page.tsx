@@ -883,8 +883,8 @@ export default function USABOCoachingPage() {
                 </h3>
                 <p className="text-gray-600 mb-4">
                   Grade-wise preparation roadmap from 9th grade to college. Learn about timelines,
-                  syllabus, college admission benefits, and how to support your child&apos;s olympiad
-                  journey.
+                  syllabus, college admission benefits, and how to support your child&apos;s
+                  olympiad journey.
                 </p>
                 <Link
                   href="/blog/usabo-ibo-complete-parent-guide-grade-wise-preparation"
@@ -902,7 +902,9 @@ export default function USABOCoachingPage() {
       {/* Related Pages */}
       <section className="py-12 bg-[#e8ede8]">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More Programs</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+            Explore More Programs
+          </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/campbell-biology/"

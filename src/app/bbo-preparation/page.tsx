@@ -65,7 +65,12 @@ const syllabus = [
   },
   {
     unit: 'Genetics & Evolution',
-    topics: ['Mendelian Genetics', 'Molecular Genetics', 'Population Genetics', 'Evolutionary Theory'],
+    topics: [
+      'Mendelian Genetics',
+      'Molecular Genetics',
+      'Population Genetics',
+      'Evolutionary Theory',
+    ],
     weightage: '20%',
     icon: Dna,
   },
@@ -109,7 +114,8 @@ const features = [
   {
     icon: Users,
     title: 'Flexible Learning Options',
-    description: '1:1 personalized tutoring or small batches (4-8 students) for intensive training.',
+    description:
+      '1:1 personalized tutoring or small batches (4-8 students) for intensive training.',
   },
   {
     icon: Clock,
@@ -201,14 +207,24 @@ const juniorFacultyPricing = [
     hours: 32,
     price: 1600,
     perHour: 50,
-    features: ['32 hours of 1:1 tutoring', 'Complete BBO prep', 'All mock tests', 'Priority scheduling'],
+    features: [
+      '32 hours of 1:1 tutoring',
+      'Complete BBO prep',
+      'All mock tests',
+      'Priority scheduling',
+    ],
   },
   {
     name: 'Comprehensive',
     hours: 40,
     price: 1800,
     perHour: 45,
-    features: ['40 hours of tutoring', 'Full program access', 'Round 1 + 2 prep', 'Regular assessments'],
+    features: [
+      '40 hours of tutoring',
+      'Full program access',
+      'Round 1 + 2 prep',
+      'Regular assessments',
+    ],
   },
 ]
 
@@ -229,7 +245,12 @@ const batchPricing = [
     price: 720,
     perHour: 30,
     students: '4-6',
-    features: ['24 hours (12 sessions)', 'Advanced topics', 'Mock Round 2 papers', 'Individual feedback'],
+    features: [
+      '24 hours (12 sessions)',
+      'Advanced topics',
+      'Mock Round 2 papers',
+      'Individual feedback',
+    ],
     popular: true,
   },
   {
@@ -239,7 +260,12 @@ const batchPricing = [
     price: 960,
     perHour: 30,
     students: '4-6',
-    features: ['32 hours (16 sessions)', 'Round 1 + 2 prep', 'Complete mock tests', 'Progress tracking'],
+    features: [
+      '32 hours (16 sessions)',
+      'Round 1 + 2 prep',
+      'Complete mock tests',
+      'Progress tracking',
+    ],
   },
   {
     name: 'Gold Medal Track',
@@ -248,7 +274,12 @@ const batchPricing = [
     price: 1200,
     perHour: 30,
     students: '4-6',
-    features: ['40 hours (20 sessions)', 'All stages covered', 'Practical training', 'IBO prep included'],
+    features: [
+      '40 hours (20 sessions)',
+      'All stages covered',
+      'Practical training',
+      'IBO prep included',
+    ],
   },
 ]
 
@@ -367,9 +398,9 @@ export default function BBOPreparationPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Prepare for the British Biology Olympiad with expert coaching. Our program covers the complete
-              BBO pathway with university-level curriculum, flexible UK timezone scheduling, and personalized
-              attention. Aim for Gold and Team UK!
+              Prepare for the British Biology Olympiad with expert coaching. Our program covers the
+              complete BBO pathway with university-level curriculum, flexible UK timezone
+              scheduling, and personalized attention. Aim for Gold and Team UK!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -556,7 +587,9 @@ export default function BBOPreparationPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Pricing & Programs</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Pricing & Programs
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the learning format that works best for you (Prices in GBP)
             </p>
@@ -569,8 +602,12 @@ export default function BBOPreparationPage() {
                 <Award className="w-5 h-5 text-purple-600 mr-2" />
                 <span className="text-purple-700 font-semibold">Premium Tier</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Senior Faculty (15+ Years Experience)</h3>
-              <p className="text-gray-600 mt-2">IBO-trained mentors • Former Olympiad coaches • £90-120/hr</p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Senior Faculty (15+ Years Experience)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                IBO-trained mentors • Former Olympiad coaches • £90-120/hr
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {seniorFacultyPricing.map((pkg, index) => (
@@ -593,9 +630,13 @@ export default function BBOPreparationPage() {
                   <div className="text-sm text-gray-500 mb-4">{pkg.hours} hours</div>
                   <div className="flex items-baseline mb-1">
                     <span className="text-lg text-purple-600 mr-1">£</span>
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price.toLocaleString()}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
-                  <div className="text-sm text-purple-600 font-medium mb-4">£{pkg.perHour}/hour</div>
+                  <div className="text-sm text-purple-600 font-medium mb-4">
+                    £{pkg.perHour}/hour
+                  </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature) => (
                       <li key={feature} className="text-sm text-gray-600 flex items-start">
@@ -622,7 +663,9 @@ export default function BBOPreparationPage() {
                 <Users className="w-5 h-5 text-green-600 mr-2" />
                 <span className="text-green-700 font-semibold">Value Tier</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Junior Faculty (Experienced Tutors)</h3>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Junior Faculty (Experienced Tutors)
+              </h3>
               <p className="text-gray-600 mt-2">Biology graduates • BBO medallists • £45-60/hr</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -646,7 +689,9 @@ export default function BBOPreparationPage() {
                   <div className="text-sm text-gray-500 mb-4">{pkg.hours} hours</div>
                   <div className="flex items-baseline mb-1">
                     <span className="text-lg text-green-600 mr-1">£</span>
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price.toLocaleString()}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-green-600 font-medium mb-4">£{pkg.perHour}/hour</div>
                   <ul className="space-y-2 mb-6">
@@ -675,8 +720,12 @@ export default function BBOPreparationPage() {
                 <Users className="w-5 h-5 text-teal-600 mr-2" />
                 <span className="text-teal-700 font-semibold">Group Learning</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Small Batch Programs (4-8 Students)</h3>
-              <p className="text-gray-600 mt-2">Collaborative learning • Peer discussions • £30/hr per student</p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Small Batch Programs (4-8 Students)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Collaborative learning • Peer discussions • £30/hr per student
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {batchPricing.map((pkg, index) => (
@@ -699,10 +748,14 @@ export default function BBOPreparationPage() {
                   <div className="text-sm text-gray-500 mb-1">
                     {pkg.duration} • {pkg.hours} hours
                   </div>
-                  <div className="text-sm text-gray-500 mb-4">{pkg.students} students per batch</div>
+                  <div className="text-sm text-gray-500 mb-4">
+                    {pkg.students} students per batch
+                  </div>
                   <div className="flex items-baseline mb-1">
                     <span className="text-lg text-teal-600 mr-1">£</span>
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price.toLocaleString()}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-teal-600 font-medium mb-4">£{pkg.perHour}/hour</div>
                   <ul className="space-y-2 mb-6">
@@ -736,7 +789,9 @@ export default function BBOPreparationPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
           </motion.div>
 
           <div className="space-y-6">
@@ -753,7 +808,9 @@ export default function BBOPreparationPage() {
                   <MessageCircle className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-[#3d4d3d] flex-shrink-0 mt-0.5" />
                   {faq.question}
                 </h3>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed ml-7 md:ml-9">{faq.answer}</p>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed ml-7 md:ml-9">
+                  {faq.answer}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -799,7 +856,9 @@ export default function BBOPreparationPage() {
       {/* Related Pages */}
       <section className="py-12 bg-[#e8ede8]">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More Programs</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+            Explore More Programs
+          </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/campbell-biology/"

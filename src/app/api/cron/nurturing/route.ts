@@ -10,7 +10,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { processScheduledNurturing, cleanupFollowupQueue } from '@/lib/automation/leadNurturing'
 import { whatsappDripService } from '@/lib/automation/whatsappDripService'
-import { verifyCronAuth, createCronUnauthorizedResponse, createCronConfigErrorResponse } from '@/lib/auth/cron-auth'
+import {
+  verifyCronAuth,
+  createCronUnauthorizedResponse,
+  createCronConfigErrorResponse,
+} from '@/lib/auth/cron-auth'
 
 export async function GET(request: NextRequest) {
   // SECURITY: Strict cron authentication (no dev bypass)

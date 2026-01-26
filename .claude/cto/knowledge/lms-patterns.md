@@ -36,15 +36,17 @@ Reference guide for Learning Management System development.
 ## 📚 Content Management
 
 ### Content Types
-| Type | Use Case | Storage |
-|------|----------|---------|
-| Video | Lectures, explanations | CDN (Cloudflare, Bunny) |
-| PDF | Notes, reference | Object storage (S3) |
-| Interactive | MCQs, simulations | Database |
-| Live | Real-time classes | WebRTC/Zoom/Meet |
-| Text | Articles, blogs | Database/MDX |
+
+| Type        | Use Case               | Storage                 |
+| ----------- | ---------------------- | ----------------------- |
+| Video       | Lectures, explanations | CDN (Cloudflare, Bunny) |
+| PDF         | Notes, reference       | Object storage (S3)     |
+| Interactive | MCQs, simulations      | Database                |
+| Live        | Real-time classes      | WebRTC/Zoom/Meet        |
+| Text        | Articles, blogs        | Database/MDX            |
 
 ### Content Organization
+
 ```
 Course
 ├── Module 1
@@ -59,6 +61,7 @@ Course
 ```
 
 ### Video Best Practices
+
 - **Resolution**: 1080p max (720p for mobile)
 - **Length**: 10-15 min ideal
 - **Format**: HLS/DASH for adaptive streaming
@@ -71,12 +74,14 @@ Course
 ## 🛤️ Learning Paths
 
 ### Path Types
+
 1. **Linear**: Fixed sequence, complete in order
 2. **Branching**: Different tracks based on goals
 3. **Adaptive**: AI-selected based on performance
 4. **Self-paced**: No deadlines, free exploration
 
 ### Progress Tracking Data Model
+
 ```typescript
 interface Progress {
   userId: string
@@ -92,6 +97,7 @@ interface Progress {
 ```
 
 ### Completion Rules
+
 - **Video**: Watched 90%+ (with no skipping detection)
 - **Quiz**: Passed with minimum score
 - **Assignment**: Submitted and reviewed
@@ -102,19 +108,21 @@ interface Progress {
 ## 📝 Assessment Engine
 
 ### Question Types
-| Type | Difficulty | Auto-Gradable |
-|------|------------|---------------|
-| MCQ (Single) | Easy | ✅ Yes |
-| MCQ (Multiple) | Medium | ✅ Yes |
-| True/False | Easy | ✅ Yes |
-| Fill in Blank | Medium | ✅ Partial |
-| Matching | Medium | ✅ Yes |
-| Assertion-Reason | Hard | ✅ Yes |
-| Numerical | Hard | ✅ Yes |
-| Short Answer | Medium | ❌ No |
-| Long Answer | Hard | ❌ No |
+
+| Type             | Difficulty | Auto-Gradable |
+| ---------------- | ---------- | ------------- |
+| MCQ (Single)     | Easy       | ✅ Yes        |
+| MCQ (Multiple)   | Medium     | ✅ Yes        |
+| True/False       | Easy       | ✅ Yes        |
+| Fill in Blank    | Medium     | ✅ Partial    |
+| Matching         | Medium     | ✅ Yes        |
+| Assertion-Reason | Hard       | ✅ Yes        |
+| Numerical        | Hard       | ✅ Yes        |
+| Short Answer     | Medium     | ❌ No         |
+| Long Answer      | Hard       | ❌ No         |
 
 ### Test Settings
+
 ```typescript
 interface TestConfig {
   duration: number // minutes
@@ -132,6 +140,7 @@ interface TestConfig {
 ```
 
 ### NEET-Specific Settings
+
 - Duration: 3 hours 20 minutes
 - Questions: 200 (180 to attempt)
 - Marking: +4 correct, -1 wrong
@@ -142,6 +151,7 @@ interface TestConfig {
 ## 🎮 Gamification
 
 ### XP System
+
 ```typescript
 const XP_REWARDS = {
   VIDEO_COMPLETE: 10,
@@ -156,24 +166,27 @@ const XP_REWARDS = {
 ```
 
 ### Level Thresholds
-| Level | XP Required | Title |
-|-------|-------------|-------|
-| 1 | 0 | Beginner |
-| 2 | 100 | Learner |
-| 3 | 300 | Student |
-| 4 | 600 | Scholar |
-| 5 | 1000 | Expert |
-| 6 | 1500 | Master |
-| 7 | 2500 | Champion |
-| 8 | 4000 | Legend |
+
+| Level | XP Required | Title    |
+| ----- | ----------- | -------- |
+| 1     | 0           | Beginner |
+| 2     | 100         | Learner  |
+| 3     | 300         | Student  |
+| 4     | 600         | Scholar  |
+| 5     | 1000        | Expert   |
+| 6     | 1500        | Master   |
+| 7     | 2500        | Champion |
+| 8     | 4000        | Legend   |
 
 ### Streak Mechanics
+
 - Reset at midnight (user's timezone)
 - Grace period: 1 day (with streak freeze)
 - Minimum activity: 1 quiz or 10 min video
 - Rewards compound (7-day, 30-day, 100-day)
 
 ### Badges
+
 ```typescript
 const BADGES = [
   { id: 'first_lesson', name: 'First Step', trigger: 'complete_first_lesson' },
@@ -189,6 +202,7 @@ const BADGES = [
 ## 📊 Analytics
 
 ### Student Metrics
+
 - Time spent (total, per module)
 - Completion rate
 - Quiz scores (average, trend)
@@ -196,6 +210,7 @@ const BADGES = [
 - Weak topics (based on quiz performance)
 
 ### Platform Metrics
+
 - Daily Active Users (DAU)
 - Course completion rate
 - Average session duration
@@ -203,6 +218,7 @@ const BADGES = [
 - Drop-off points
 
 ### Predictive Alerts
+
 ```typescript
 const AT_RISK_INDICATORS = [
   { metric: 'days_inactive', threshold: 7, severity: 'warning' },
@@ -217,17 +233,20 @@ const AT_RISK_INDICATORS = [
 ## 🔔 Notifications
 
 ### Notification Types
-| Type | Channel | Timing |
-|------|---------|--------|
+
+| Type            | Channel        | Timing                 |
+| --------------- | -------------- | ---------------------- |
 | Streak reminder | Push, WhatsApp | Evening if no activity |
-| New content | Email, Push | On publish |
-| Quiz deadline | All | 1 day, 1 hour before |
-| Streak broken | Push | Next morning |
-| Achievement | In-app, Push | Immediately |
-| Weekly progress | Email | Sunday evening |
+| New content     | Email, Push    | On publish             |
+| Quiz deadline   | All            | 1 day, 1 hour before   |
+| Streak broken   | Push           | Next morning           |
+| Achievement     | In-app, Push   | Immediately            |
+| Weekly progress | Email          | Sunday evening         |
 
 ### Notification Preferences
+
 Allow users to control:
+
 - Channel preferences (email, push, WhatsApp)
 - Frequency (real-time, daily digest, weekly)
 - Types (marketing vs. transactional)
@@ -238,6 +257,7 @@ Allow users to control:
 ## 💳 Payment Patterns
 
 ### Pricing Models
+
 1. **One-time Purchase**: Full course access forever
 2. **Subscription**: Monthly/yearly recurring
 3. **Pay-per-course**: Individual course purchases
@@ -245,6 +265,7 @@ Allow users to control:
 5. **Cohort-based**: Time-limited access with group
 
 ### Indian Payment Methods
+
 - UPI (PhonePe, GPay, Paytm)
 - Credit/Debit Cards
 - Net Banking
@@ -252,6 +273,7 @@ Allow users to control:
 - EMI (Bajaj, Cardless)
 
 ### Pricing Psychology
+
 - ₹999 vs ₹1000 (charm pricing)
 - Show original price with discount
 - Limited time offers (countdown)
@@ -263,6 +285,7 @@ Allow users to control:
 ## 🔒 Security & Privacy
 
 ### Student Data Protection
+
 - Encrypt PII at rest
 - HTTPS everywhere
 - Session management
@@ -270,6 +293,7 @@ Allow users to control:
 - Input validation
 
 ### Content Protection
+
 - Video DRM (Widevine, FairPlay)
 - Watermarking (user ID overlay)
 - Download restrictions
@@ -277,6 +301,7 @@ Allow users to control:
 - Device limits
 
 ### Compliance
+
 - Privacy policy
 - Terms of service
 - Cookie consent
@@ -288,6 +313,7 @@ Allow users to control:
 ## 📱 Mobile Considerations
 
 ### PWA Features
+
 - Offline content access
 - Push notifications
 - Add to home screen
@@ -295,6 +321,7 @@ Allow users to control:
 - Camera access (for assignments)
 
 ### Performance Targets
+
 - First Contentful Paint: <1.5s
 - Time to Interactive: <3s
 - Bundle size: <500KB initial
@@ -306,18 +333,20 @@ Allow users to control:
 ## 🔗 Integrations
 
 ### Common Integrations
-| Service | Purpose |
-|---------|---------|
-| Zoom/Meet | Live classes |
-| YouTube | Video hosting |
-| Razorpay/Stripe | Payments |
-| SendGrid/Mailgun | Email |
-| Twilio/Gupshup | SMS/WhatsApp |
-| Sentry | Error tracking |
-| Mixpanel/Amplitude | Analytics |
-| Intercom/Freshchat | Support |
+
+| Service            | Purpose        |
+| ------------------ | -------------- |
+| Zoom/Meet          | Live classes   |
+| YouTube            | Video hosting  |
+| Razorpay/Stripe    | Payments       |
+| SendGrid/Mailgun   | Email          |
+| Twilio/Gupshup     | SMS/WhatsApp   |
+| Sentry             | Error tracking |
+| Mixpanel/Amplitude | Analytics      |
+| Intercom/Freshchat | Support        |
 
 ### API Standards
+
 - REST for simple CRUD
 - GraphQL for complex queries
 - WebSocket for real-time

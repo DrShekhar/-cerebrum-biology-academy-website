@@ -19,7 +19,10 @@ export async function GET(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     // Get consultant profile
@@ -63,7 +66,8 @@ export async function GET(request: NextRequest) {
     // Calculate overall stats
     const totalClicks = links.reduce((sum, l) => sum + l.clickCount, 0)
     const totalConversions = links.reduce((sum, l) => sum + l.conversionCount, 0)
-    const overallConversionRate = totalClicks > 0 ? Math.round((totalConversions / totalClicks) * 100) : 0
+    const overallConversionRate =
+      totalClicks > 0 ? Math.round((totalConversions / totalClicks) * 100) : 0
 
     // Transform data
     const linkList = links.map((l) => ({
@@ -128,7 +132,10 @@ export async function POST(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     // Get consultant profile
@@ -159,7 +166,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Generate or validate code
-    let code = customCode?.trim().toLowerCase().replace(/[^a-z0-9-]/g, '') || ''
+    let code =
+      customCode
+        ?.trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9-]/g, '') || ''
 
     if (code) {
       // Validate custom code length

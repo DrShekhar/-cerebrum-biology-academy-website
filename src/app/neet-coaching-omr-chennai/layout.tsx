@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in OMR Chennai | Sholinganallur, Perungudi | Cerebrum Academy',
+  title: 'Best NEET Coaching in OMR Chennai | Sholinganallur, Perungudi | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in OMR IT Corridor, Chennai. 94.2% success rate, AIIMS faculty. Perungudi, Thoraipakkam, Sholinganallur, Navalur, Siruseri. Fee ₹24,000+. Book free demo!',
   keywords:

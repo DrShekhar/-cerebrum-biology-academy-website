@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Kolkata | Salt Lake, Park Street, New Town | Cerebrum Academy',
+  title: 'Best NEET Coaching in Kolkata | Salt Lake, Park Street, New Town | Cerebrum Academy',
   description:
     'Top NEET biology coaching in Kolkata for West Bengal students. 94.2% success rate, AIIMS faculty. Salt Lake, Park Street, New Town, Howrah, Jadavpur, Ballygunge. 4,000+ students. Book free demo!',
   keywords:

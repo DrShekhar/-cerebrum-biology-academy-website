@@ -150,7 +150,8 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
                   <a
                     href={`https://wa.me/${countryContent.contactInfo.whatsapp.replace(/[^\d]/g, '')}`}
                     onClick={() => handleContactClick('whatsapp')}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center space-x-3 hover:text-green-300 transition-colors"
                   >
                     <span className="text-green-400">📱</span>

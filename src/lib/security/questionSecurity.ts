@@ -68,7 +68,7 @@ export class QuestionSecurityManager {
     this.encryptionKey = await crypto.subtle.generateKey(
       {
         name: 'AES-GCM',
-        length: 256
+        length: 256,
       },
       false,
       ['encrypt', 'decrypt']
@@ -108,11 +108,11 @@ export class QuestionSecurityManager {
       questionsPerUser: config.questionsPerUser,
       difficulty: config.difficulty || 'mixed',
       subject: sourceQuestions[0]?.subject || 'biology',
-      topics: [...new Set(sourceQuestions.map(q => q.topic))],
+      topics: [...new Set(sourceQuestions.map((q) => q.topic))],
       questions: secureQuestions,
       shuffleOptions: config.shuffleOptions,
       timeBasedUnlock: config.timeBasedUnlock,
-      questionTimeLimit: config.questionTimeLimit
+      questionTimeLimit: config.questionTimeLimit,
     }
 
     this.questionPools.set(poolId, pool)
@@ -124,11 +124,7 @@ export class QuestionSecurityManager {
   /**
    * Generate unique question set for a user
    */
-  generateUserQuestionSet(
-    poolId: string,
-    userId: string,
-    randomSeed?: string
-  ): string[] {
+  generateUserQuestionSet(poolId: string, userId: string, randomSeed?: string): string[] {
     const pool = this.questionPools.get(poolId)
     if (!pool) {
       throw new Error('Question pool not found')
@@ -142,13 +138,13 @@ export class QuestionSecurityManager {
     const shuffledQuestions = [...pool.questions].sort(() => rng() - 0.5)
 
     // Select required number of questions
-    const selectedQuestions = shuffledQuestions
-      .slice(0, pool.questionsPerUser)
-      .map(q => q.id)
+    const selectedQuestions = shuffledQuestions.slice(0, pool.questionsPerUser).map((q) => q.id)
 
     this.userQuestionSets.set(userId, selectedQuestions)
 
-    console.log(`📋 Generated question set for user ${userId}: ${selectedQuestions.length} questions`)
+    console.log(
+      `📋 Generated question set for user ${userId}: ${selectedQuestions.length} questions`
+    )
     return selectedQuestions
   }
 
@@ -176,7 +172,7 @@ export class QuestionSecurityManager {
       throw new Error('Question not authorized for this user')
     }
 
-    const secureQuestion = pool.questions.find(q => q.id === questionId)
+    const secureQuestion = pool.questions.find((q) => q.id === questionId)
     if (!secureQuestion) {
       throw new Error('Question not found in pool')
     }
@@ -219,7 +215,7 @@ export class QuestionSecurityManager {
       deliveredAt: Date.now(),
       ipAddress,
       userAgent,
-      deliveryHash
+      deliveryHash,
     }
     this.deliveryLogs.push(deliveryLog)
 
@@ -230,7 +226,7 @@ export class QuestionSecurityManager {
     return {
       question,
       timeLimit: pool.questionTimeLimit,
-      hash: deliveryHash
+      hash: deliveryHash,
     }
   }
 
@@ -256,38 +252,40 @@ export class QuestionSecurityManager {
         isValid: false,
         reason: 'Question not delivered to this user',
         timeSpent: 0,
-        score: 0
+        score: 0,
       }
     }
 
     // Find delivery log
     const deliveryLog = this.deliveryLogs.find(
-      log => log.userId === userId && log.questionId === questionId
+      (log) => log.userId === userId && log.questionId === questionId
     )
     if (!deliveryLog) {
       return {
         isValid: false,
         reason: 'No delivery record found',
         timeSpent: 0,
-        score: 0
+        score: 0,
       }
     }
 
     const timeSpent = submissionTime - deliveryLog.deliveredAt
 
     // Validate submission timing
-    if (timeSpent < 1000) { // Less than 1 second
+    if (timeSpent < 1000) {
+      // Less than 1 second
       return {
         isValid: false,
         reason: 'Submission too fast',
         timeSpent,
-        score: 0
+        score: 0,
       }
     }
 
     // Get pool for time limit validation
-    const poolId = Object.values(this.questionPools.entries())
-      .find(([_, pool]) => pool.questions.some(q => q.id === questionId))?.[0]
+    const poolId = Object.values(this.questionPools.entries()).find(([_, pool]) =>
+      pool.questions.some((q) => q.id === questionId)
+    )?.[0]
 
     if (poolId) {
       const pool = this.questionPools.get(poolId)!
@@ -296,7 +294,7 @@ export class QuestionSecurityManager {
           isValid: false,
           reason: 'Time limit exceeded',
           timeSpent,
-          score: 0
+          score: 0,
         }
       }
     }
@@ -314,7 +312,7 @@ export class QuestionSecurityManager {
         isValid: false,
         reason: 'Hash validation failed',
         timeSpent,
-        score: 0
+        score: 0,
       }
     }
 
@@ -326,7 +324,7 @@ export class QuestionSecurityManager {
     return {
       isValid: true,
       timeSpent,
-      score
+      score,
     }
   }
 
@@ -345,12 +343,12 @@ export class QuestionSecurityManager {
       subject: question.subject,
       topic: question.topic,
       difficulty: question.difficulty,
-      marks: question.marks
+      marks: question.marks,
     })
 
     const encryptedContent = await this.encrypt(questionContent)
     const encryptedOptions = await Promise.all(
-      question.options.map(option => this.encrypt(option))
+      question.options.map((option) => this.encrypt(option))
     )
 
     const questionHash = await this.generateQuestionHash(question)
@@ -361,10 +359,10 @@ export class QuestionSecurityManager {
       encryptedOptions,
       questionHash,
       deliveryTime: Date.now(),
-      expiryTime: Date.now() + (24 * 60 * 60 * 1000), // 24 hours
+      expiryTime: Date.now() + 24 * 60 * 60 * 1000, // 24 hours
       allowedAttempts: 1,
       currentAttempts: 0,
-      isActive: true
+      isActive: true,
     }
   }
 
@@ -380,7 +378,7 @@ export class QuestionSecurityManager {
     const content = JSON.parse(contentJson)
 
     const options = await Promise.all(
-      secureQuestion.encryptedOptions.map(encOpt => this.decrypt(encOpt))
+      secureQuestion.encryptedOptions.map((encOpt) => this.decrypt(encOpt))
     )
 
     return {
@@ -392,7 +390,7 @@ export class QuestionSecurityManager {
       subject: content.subject,
       topic: content.topic,
       difficulty: content.difficulty,
-      marks: content.marks
+      marks: content.marks,
     }
   }
 
@@ -433,7 +431,7 @@ export class QuestionSecurityManager {
     const combined = new Uint8Array(
       atob(encryptedData)
         .split('')
-        .map(char => char.charCodeAt(0))
+        .map((char) => char.charCodeAt(0))
     )
 
     const iv = combined.slice(0, 12)
@@ -458,7 +456,10 @@ export class QuestionSecurityManager {
     const dataBytes = encoder.encode(data)
     const hashBuffer = await crypto.subtle.digest('SHA-256', dataBytes)
     const hashArray = Array.from(new Uint8Array(hashBuffer))
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('').slice(0, 16)
+    return hashArray
+      .map((b) => b.toString(16).padStart(2, '0'))
+      .join('')
+      .slice(0, 16)
   }
 
   /**
@@ -469,13 +470,13 @@ export class QuestionSecurityManager {
       id: question.id,
       question: question.question,
       options: question.options,
-      correctAnswer: question.correctAnswer
+      correctAnswer: question.correctAnswer,
     })
     const encoder = new TextEncoder()
     const dataBytes = encoder.encode(data)
     const hashBuffer = await crypto.subtle.digest('SHA-256', dataBytes)
     const hashArray = Array.from(new Uint8Array(hashBuffer))
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+    return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('')
   }
 
   /**
@@ -491,7 +492,7 @@ export class QuestionSecurityManager {
     const dataBytes = encoder.encode(data)
     const hashBuffer = await crypto.subtle.digest('SHA-256', dataBytes)
     const hashArray = Array.from(new Uint8Array(hashBuffer))
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+    return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('')
   }
 
   /**
@@ -508,7 +509,7 @@ export class QuestionSecurityManager {
     const dataBytes = encoder.encode(data)
     const hashBuffer = await crypto.subtle.digest('SHA-256', dataBytes)
     const hashArray = Array.from(new Uint8Array(hashBuffer))
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('')
+    return hashArray.map((b) => b.toString(16).padStart(2, '0')).join('')
   }
 
   /**
@@ -518,12 +519,12 @@ export class QuestionSecurityManager {
     let hash = 0
     for (let i = 0; i < seed.length; i++) {
       const char = seed.charCodeAt(i)
-      hash = ((hash << 5) - hash) + char
+      hash = (hash << 5) - hash + char
       hash = hash & hash // Convert to 32-bit integer
     }
 
-    return function() {
-      hash = ((hash * 9301) + 49297) % 233280
+    return function () {
+      hash = (hash * 9301 + 49297) % 233280
       return hash / 233280
     }
   }
@@ -553,17 +554,20 @@ export class QuestionSecurityManager {
     }
 
     const deliveryStats = this.deliveryLogs
-      .filter(log => pool.questions.some(q => q.id === log.questionId))
-      .reduce((stats, log) => {
-        stats.totalDeliveries++
-        if (!stats.uniqueUsers.has(log.userId)) {
-          stats.uniqueUsers.add(log.userId)
+      .filter((log) => pool.questions.some((q) => q.id === log.questionId))
+      .reduce(
+        (stats, log) => {
+          stats.totalDeliveries++
+          if (!stats.uniqueUsers.has(log.userId)) {
+            stats.uniqueUsers.add(log.userId)
+          }
+          return stats
+        },
+        {
+          totalDeliveries: 0,
+          uniqueUsers: new Set<string>(),
         }
-        return stats
-      }, {
-        totalDeliveries: 0,
-        uniqueUsers: new Set<string>()
-      })
+      )
 
     return {
       poolId,
@@ -571,14 +575,15 @@ export class QuestionSecurityManager {
       questionsPerUser: pool.questionsPerUser,
       totalDeliveries: deliveryStats.totalDeliveries,
       uniqueUsers: deliveryStats.uniqueUsers.size,
-      averageDeliveriesPerUser: deliveryStats.uniqueUsers.size > 0
-        ? deliveryStats.totalDeliveries / deliveryStats.uniqueUsers.size
-        : 0,
-      questionUtilization: pool.questions.map(q => ({
+      averageDeliveriesPerUser:
+        deliveryStats.uniqueUsers.size > 0
+          ? deliveryStats.totalDeliveries / deliveryStats.uniqueUsers.size
+          : 0,
+      questionUtilization: pool.questions.map((q) => ({
         questionId: q.id,
         deliveryCount: q.currentAttempts,
-        isActive: q.isActive
-      }))
+        isActive: q.isActive,
+      })),
     }
   }
 
@@ -589,7 +594,7 @@ export class QuestionSecurityManager {
     for (const [poolId, pool] of this.questionPools.entries()) {
       let invalidatedCount = 0
 
-      pool.questions.forEach(question => {
+      pool.questions.forEach((question) => {
         if (questionIds.includes(question.id)) {
           question.isActive = false
           invalidatedCount++
@@ -612,30 +617,34 @@ export class QuestionSecurityManager {
         poolId,
         testId: pool.testId,
         questionCount: pool.totalQuestions,
-        activeQuestions: pool.questions.filter(q => q.isActive).length,
+        activeQuestions: pool.questions.filter((q) => q.isActive).length,
         totalDeliveries: stats?.totalDeliveries || 0,
-        uniqueUsers: stats?.uniqueUsers || 0
+        uniqueUsers: stats?.uniqueUsers || 0,
       }
     })
 
-    const recentDeliveries = this.deliveryLogs
-      .filter(log => Date.now() - log.deliveredAt < 24 * 60 * 60 * 1000) // Last 24 hours
-      .length
+    const recentDeliveries = this.deliveryLogs.filter(
+      (log) => Date.now() - log.deliveredAt < 24 * 60 * 60 * 1000
+    ).length // Last 24 hours
 
     return {
       timestamp: new Date().toISOString(),
       pools: poolSummaries,
       deliveryLogs: {
         total: this.deliveryLogs.length,
-        recent24h: recentDeliveries
+        recent24h: recentDeliveries,
       },
       security: {
         encryptionActive: !!this.encryptionKey,
-        activeQuestions: Array.from(this.questionPools.values())
-          .reduce((sum, pool) => sum + pool.questions.filter(q => q.isActive).length, 0),
-        totalQuestions: Array.from(this.questionPools.values())
-          .reduce((sum, pool) => sum + pool.totalQuestions, 0)
-      }
+        activeQuestions: Array.from(this.questionPools.values()).reduce(
+          (sum, pool) => sum + pool.questions.filter((q) => q.isActive).length,
+          0
+        ),
+        totalQuestions: Array.from(this.questionPools.values()).reduce(
+          (sum, pool) => sum + pool.totalQuestions,
+          0
+        ),
+      },
     }
   }
 }

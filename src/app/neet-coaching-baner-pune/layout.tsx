@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Baner Pune | Hinjewadi, Aundh, Balewadi | Cerebrum Academy',
+  title: 'Best NEET Coaching in Baner Pune | Hinjewadi, Aundh, Balewadi | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Baner, Pune IT corridor. 94.2% success rate, AIIMS faculty. Baner, Balewadi, Aundh, Hinjewadi, Wakad, Pashan. IT families. Fee ₹24,000+. Book free demo!',
   keywords:

@@ -61,7 +61,10 @@ export async function POST(request: NextRequest) {
 
     const event = JSON.parse(body)
     const eventType = event.event
-    const eventId = event.payload?.payment?.entity?.id || event.payload?.order?.entity?.id || `${eventType}_${Date.now()}`
+    const eventId =
+      event.payload?.payment?.entity?.id ||
+      event.payload?.order?.entity?.id ||
+      `${eventType}_${Date.now()}`
 
     // SECURITY: Replay attack prevention - check if event was already processed
     if (processedEvents.has(eventId)) {

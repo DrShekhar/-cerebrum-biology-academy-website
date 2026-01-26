@@ -18,7 +18,10 @@ export async function GET(request: NextRequest, context: RouteContext) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const worksheet = await prisma.worksheets.findUnique({
@@ -65,7 +68,10 @@ export async function GET(request: NextRequest, context: RouteContext) {
     }
 
     if (worksheet.status !== 'PUBLISHED') {
-      return NextResponse.json({ success: false, error: 'Worksheet not available' }, { status: 404 })
+      return NextResponse.json(
+        { success: false, error: 'Worksheet not available' },
+        { status: 404 }
+      )
     }
 
     const submission = worksheet.submissions[0]
@@ -91,7 +97,10 @@ export async function GET(request: NextRequest, context: RouteContext) {
     })
   } catch (error) {
     console.error('Error fetching worksheet:', error)
-    return NextResponse.json({ success: false, error: 'Failed to fetch worksheet' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to fetch worksheet' },
+      { status: 500 }
+    )
   }
 }
 
@@ -105,7 +114,10 @@ export async function POST(request: NextRequest, context: RouteContext) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const body = await request.json()

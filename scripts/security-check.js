@@ -32,13 +32,9 @@ function log(message, color = 'reset') {
 function checkEnvVariables() {
   log('\n🔍 Checking environment variables...', 'blue')
 
-  const requiredEnvVars = [
-    'DATABASE_URL',
-    'NEXTAUTH_SECRET',
-    'NEXT_PUBLIC_SITE_URL',
-  ]
+  const requiredEnvVars = ['DATABASE_URL', 'NEXTAUTH_SECRET', 'NEXT_PUBLIC_SITE_URL']
 
-  const missing = requiredEnvVars.filter(varName => !process.env[varName])
+  const missing = requiredEnvVars.filter((varName) => !process.env[varName])
 
   if (missing.length > 0) {
     log(`❌ Missing required environment variables: ${missing.join(', ')}`, 'red')
@@ -93,7 +89,7 @@ function checkForSecrets() {
 
   if (dangerousFiles.length > 0) {
     log('⚠️  Warning: Potential secrets found in code:', 'yellow')
-    dangerousFiles.forEach(file => log(`  - ${file}`, 'yellow'))
+    dangerousFiles.forEach((file) => log(`  - ${file}`, 'yellow'))
     log('  Please review these files and move secrets to .env.local', 'yellow')
   } else {
     log('✅ No obvious secrets found in code', 'green')
@@ -171,11 +167,11 @@ function checkSecurityHeaders() {
     'Permissions-Policy',
   ]
 
-  const missing = securityHeaders.filter(header => !config.includes(header))
+  const missing = securityHeaders.filter((header) => !config.includes(header))
 
   if (missing.length > 0) {
     log('⚠️  Missing security headers:', 'yellow')
-    missing.forEach(header => log(`  - ${header}`, 'yellow'))
+    missing.forEach((header) => log(`  - ${header}`, 'yellow'))
   } else {
     log('✅ Security headers configured', 'green')
   }
@@ -188,15 +184,16 @@ function checkGitSecrets() {
 
   try {
     const gitFiles = execSync('git ls-files', { encoding: 'utf-8' })
-    const envFiles = gitFiles.split('\n').filter(file =>
-      file.endsWith('.env') ||
-      file.endsWith('.env.local') ||
-      file.endsWith('.env.production')
-    )
+    const envFiles = gitFiles
+      .split('\n')
+      .filter(
+        (file) =>
+          file.endsWith('.env') || file.endsWith('.env.local') || file.endsWith('.env.production')
+      )
 
     if (envFiles.length > 0) {
       log('❌ Environment files committed to git:', 'red')
-      envFiles.forEach(file => log(`  - ${file}`, 'red'))
+      envFiles.forEach((file) => log(`  - ${file}`, 'red'))
       return false
     }
 
@@ -239,10 +236,10 @@ async function main() {
   log('📊 SECURITY CHECK SUMMARY', 'blue')
   log('='.repeat(60), 'blue')
 
-  const passed = results.filter(r => r.passed).length
+  const passed = results.filter((r) => r.passed).length
   const total = results.length
 
-  results.forEach(result => {
+  results.forEach((result) => {
     const icon = result.passed ? '✅' : '❌'
     const color = result.passed ? 'green' : 'red'
     log(`${icon} ${result.name}`, color)
@@ -259,7 +256,7 @@ async function main() {
   }
 }
 
-main().catch(error => {
+main().catch((error) => {
   log(`\n❌ Security check failed with error: ${error.message}`, 'red')
   process.exit(1)
 })

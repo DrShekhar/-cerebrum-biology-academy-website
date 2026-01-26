@@ -665,7 +665,10 @@ export async function sendSEOContentApproval(params: {
 }): Promise<InteraktResponse> {
   // Sanitize text for Interakt (no tabs, newlines, or multiple spaces)
   const sanitize = (text: string) =>
-    text.replace(/[\t\n\r]/g, ' ').replace(/\s{2,}/g, ' ').trim()
+    text
+      .replace(/[\t\n\r]/g, ' ')
+      .replace(/\s{2,}/g, ' ')
+      .trim()
 
   // Build stats string
   let stats = ''
@@ -713,11 +716,7 @@ export async function sendSEOPublishedNotification(params: {
   return sendTemplateMessage({
     phone: params.phone,
     templateName: UTILITY_TEMPLATES.SEO_CONTENT_PUBLISHED.name,
-    bodyValues: [
-      params.contentType,
-      params.title.slice(0, 100),
-      params.publishedUrl,
-    ],
+    bodyValues: [params.contentType, params.title.slice(0, 100), params.publishedUrl],
   })
 }
 

@@ -21,8 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Biology Classes in Jor Bagh | NEET Coaching Central Delhi',
-    description:
-      'Premium biology classes in Jor Bagh for NEET & board exams. Near Jor Bagh metro.',
+    description: 'Premium biology classes in Jor Bagh for NEET & board exams. Near Jor Bagh metro.',
     url: 'https://cerebrumbiologyacademy.com/biology-classes-jor-bagh',
   },
   alternates: {

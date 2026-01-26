@@ -19,7 +19,9 @@ interface DistributionStats {
 /**
  * Get current answer distribution
  */
-async function getAnswerDistribution(filter?: { isNcertBased?: boolean }): Promise<DistributionStats> {
+async function getAnswerDistribution(filter?: {
+  isNcertBased?: boolean
+}): Promise<DistributionStats> {
   let results: { correctAnswer: string; count: bigint }[]
 
   if (filter?.isNcertBased) {
@@ -74,8 +76,8 @@ function areOptionsInterchangeable(question: string, options: string[]): boolean
   if (referencesOptions) return false
 
   // Don't rotate if options are "All of the above" / "None of the above"
-  const hasAllNone = options.some(
-    (opt) => /all\s+of\s+the\s+above|none\s+of\s+the\s+above|both\s+\([abcd]\)\s+and/i.test(opt)
+  const hasAllNone = options.some((opt) =>
+    /all\s+of\s+the\s+above|none\s+of\s+the\s+above|both\s+\([abcd]\)\s+and/i.test(opt)
   )
   if (hasAllNone) return false
 
@@ -307,7 +309,9 @@ async function generateDistributionReport(): Promise<void> {
 
   // By category
   console.log('\nBy Category:')
-  const categories = await prisma.$queryRaw<{ category: string; correctAnswer: string; count: bigint }[]>`
+  const categories = await prisma.$queryRaw<
+    { category: string; correctAnswer: string; count: bigint }[]
+  >`
     SELECT category, "correctAnswer", COUNT(*) as count
     FROM questions
     WHERE "correctAnswer" IN ('A', 'B', 'C', 'D')
@@ -337,7 +341,9 @@ async function generateDistributionReport(): Promise<void> {
 
   // By difficulty
   console.log('\nBy Difficulty:')
-  const difficulties = await prisma.$queryRaw<{ difficulty: string; correctAnswer: string; count: bigint }[]>`
+  const difficulties = await prisma.$queryRaw<
+    { difficulty: string; correctAnswer: string; count: bigint }[]
+  >`
     SELECT difficulty, "correctAnswer", COUNT(*) as count
     FROM questions
     WHERE "correctAnswer" IN ('A', 'B', 'C', 'D')
@@ -392,7 +398,9 @@ async function main() {
       default:
         console.log('Answer Distribution Balancer')
         console.log('\nUsage:')
-        console.log('  npx ts-node scripts/ncert-mcq/balance-answer-distribution.ts [command] [options]')
+        console.log(
+          '  npx ts-node scripts/ncert-mcq/balance-answer-distribution.ts [command] [options]'
+        )
         console.log('\nCommands:')
         console.log('  balance  - Balance the answer distribution')
         console.log('  report   - Generate distribution report (default)')

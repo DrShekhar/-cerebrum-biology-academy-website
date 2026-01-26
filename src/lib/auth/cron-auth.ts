@@ -58,20 +58,14 @@ export function verifyCronAuth(request: NextRequest): CronAuthResult {
  * Creates unauthorized response for cron endpoints
  */
 export function createCronUnauthorizedResponse(error: string): NextResponse {
-  return NextResponse.json(
-    { success: false, error },
-    { status: 401 }
-  )
+  return NextResponse.json({ success: false, error }, { status: 401 })
 }
 
 /**
  * Creates configuration error response for cron endpoints
  */
 export function createCronConfigErrorResponse(error: string): NextResponse {
-  return NextResponse.json(
-    { success: false, error },
-    { status: 500 }
-  )
+  return NextResponse.json({ success: false, error }, { status: 500 })
 }
 
 /**
@@ -84,9 +78,7 @@ export function createCronConfigErrorResponse(error: string): NextResponse {
  *   return NextResponse.json({ success: true })
  * })
  */
-export function requireCronAuth(
-  handler: (request: NextRequest) => Promise<NextResponse>
-) {
+export function requireCronAuth(handler: (request: NextRequest) => Promise<NextResponse>) {
   return async (request: NextRequest): Promise<NextResponse> => {
     const authResult = verifyCronAuth(request)
 

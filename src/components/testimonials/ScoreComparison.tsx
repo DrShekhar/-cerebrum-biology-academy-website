@@ -1,13 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import {
-  TrendingUp,
-  TrendingDown,
-  Award,
-  Target,
-  ArrowRight,
-} from 'lucide-react'
+import { TrendingUp, TrendingDown, Award, Target, ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 interface ScoreData {

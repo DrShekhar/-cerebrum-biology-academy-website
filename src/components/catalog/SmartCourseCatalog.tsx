@@ -2,21 +2,8 @@
 
 import React, { useState, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Search,
-  Calculator,
-  Star,
-  Users,
-  Clock,
-  Award,
-  CheckCircle,
-} from 'lucide-react'
-import {
-  courses,
-  getSeriesInfo,
-  getBadgeInfo,
-  type Course,
-} from '@/data/courseData'
+import { Search, Calculator, Star, Users, Clock, Award, CheckCircle } from 'lucide-react'
+import { courses, getSeriesInfo, getBadgeInfo, type Course } from '@/data/courseData'
 import { PaymentCalculator } from './PaymentCalculator'
 import { CourseComparison } from './CourseComparison'
 

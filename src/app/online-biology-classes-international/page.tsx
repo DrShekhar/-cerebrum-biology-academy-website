@@ -109,7 +109,9 @@ export default function InternationalBiologyClassesPage() {
             className="mb-12 text-center"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Choose Your Curriculum</h2>
-            <p className="text-lg text-gray-600">Expert biology tutoring for international boards</p>
+            <p className="text-lg text-gray-600">
+              Expert biology tutoring for international boards
+            </p>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2">
@@ -222,9 +224,7 @@ export default function InternationalBiologyClassesPage() {
       {/* Related Links */}
       <section className="py-12">
         <div className="container mx-auto px-4">
-          <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">
-            Also Available
-          </h3>
+          <h3 className="mb-6 text-center text-xl font-semibold text-gray-900">Also Available</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/online-biology-classes-cbse"
@@ -258,9 +258,7 @@ export default function InternationalBiologyClassesPage() {
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
-            <h2 className="mb-4 text-3xl font-bold">
-              Join 12,000+ International Students
-            </h2>
+            <h2 className="mb-4 text-3xl font-bold">Join 12,000+ International Students</h2>
             <p className="mb-8 text-xl text-indigo-100">
               Expert biology tutoring for A-Level, IB, AP, and IGCSE from anywhere in the world
             </p>

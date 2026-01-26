@@ -9,23 +9,26 @@ This document provides a comprehensive guide to the optimistic UI update system 
 ### Core Hooks
 
 #### 1. `useOptimisticUpdate<T>`
+
 **Location:** `/src/hooks/useOptimisticUpdate.ts`
 
 A generic hook for managing single-value optimistic updates.
 
 **Features:**
+
 - Instant UI updates before server confirmation
 - Automatic rollback on API failure
 - Loading and optimistic state tracking
 - Error handling with retry capability
 
 **Usage Example:**
+
 ```tsx
 const { data, update, isLoading, isOptimistic, error } = useOptimisticUpdate<ProgressData>(
   initialProgress,
   {
     onSuccess: (data) => showToast('success', 'Saved!'),
-    onError: (error) => showToast('error', error.message)
+    onError: (error) => showToast('error', error.message),
   }
 )
 
@@ -36,7 +39,7 @@ await update(
     // Server update function
     const response = await fetch('/api/update', {
       method: 'POST',
-      body: JSON.stringify(newValue)
+      body: JSON.stringify(newValue),
     })
     return response.json()
   }
@@ -44,11 +47,13 @@ await update(
 ```
 
 #### 2. `useOptimisticList<T>`
+
 **Location:** `/src/hooks/useOptimisticList.ts`
 
 A specialized hook for managing list operations with optimistic updates.
 
 **Features:**
+
 - Add items with instant feedback
 - Remove items optimistically
 - Update items in place
@@ -56,51 +61,51 @@ A specialized hook for managing list operations with optimistic updates.
 - Retry failed operations
 
 **Usage Example:**
+
 ```tsx
-const { items, addItem, removeItem, updateItem } = useOptimisticList<Activity>(
-  initialActivities,
-  {
-    onSuccess: () => showToast('success', 'Activity added'),
-    onError: (error) => showToast('error', error.message)
-  }
-)
+const { items, addItem, removeItem, updateItem } = useOptimisticList<Activity>(initialActivities, {
+  onSuccess: () => showToast('success', 'Activity added'),
+  onError: (error) => showToast('error', error.message),
+})
 
 // Add item optimistically
-await addItem(
-  newActivity,
-  async (item) => {
-    const response = await fetch('/api/activities/create', {
-      method: 'POST',
-      body: JSON.stringify(item)
-    })
-    return response.json()
-  }
-)
+await addItem(newActivity, async (item) => {
+  const response = await fetch('/api/activities/create', {
+    method: 'POST',
+    body: JSON.stringify(item),
+  })
+  return response.json()
+})
 ```
 
 ## Implemented Components
 
 ### 1. Progress Updates - `OptimisticProgressCard`
+
 **Location:** `/src/components/optimistic/OptimisticProgressCard.tsx`
 
 **Features:**
+
 - Instant progress score updates
 - Visual feedback during sync
 - Automatic rollback on failure
 - Session completion tracking
 
 **Visual Indicators:**
+
 - Blue border during optimistic state
 - Subtle scale animation
 - Loading spinner with "Syncing" label
 - Success/error toast notifications
 
 **Performance:**
+
 - Response time: <50ms for visual feedback
 - Rollback time: <100ms on error
 - Network request timeout: 5s
 
 **Usage:**
+
 ```tsx
 <OptimisticProgressCard
   userId={userId}
@@ -108,27 +113,31 @@ await addItem(
     score: 75,
     improvement: 5,
     sessionsCompleted: 12,
-    lastUpdated: new Date().toISOString()
+    lastUpdated: new Date().toISOString(),
   }}
 />
 ```
 
 ### 2. Activity Feed - `OptimisticActivityFeed`
+
 **Location:** `/src/components/optimistic/OptimisticActivityFeed.tsx`
 
 **Features:**
+
 - New activities appear instantly
 - Live status indicators
 - Failed items show error state with retry
 - Smooth animations for add/remove
 
 **Visual Indicators:**
+
 - Items pulse during optimistic state
 - Loading spinner replaces icon during sync
 - Failed items show error badge
 - Smooth enter/exit animations
 
 **Usage:**
+
 ```tsx
 <OptimisticActivityFeed
   initialActivities={[
@@ -137,28 +146,32 @@ await addItem(
       type: 'enrollment',
       message: 'Student enrolled',
       location: 'Online',
-      time: '2 min ago'
-    }
+      time: '2 min ago',
+    },
   ]}
 />
 ```
 
 ### 3. Settings - `OptimisticSettingsToggle`
+
 **Location:** `/src/components/optimistic/OptimisticSettingsToggle.tsx`
 
 **Features:**
+
 - Instant toggle state changes
 - Background sync indicator
 - Visual feedback for each setting
 - Theme/preference changes apply immediately
 
 **Visual Indicators:**
+
 - Settings card highlights during sync
 - Toggle switches animate smoothly
 - "Syncing" label appears during save
 - Success checkmark on completion
 
 **Usage:**
+
 ```tsx
 <OptimisticSettingsToggle
   userId={userId}
@@ -166,27 +179,31 @@ await addItem(
     notifications: true,
     darkMode: false,
     accessibility: false,
-    soundEffects: true
+    soundEffects: true,
   }}
 />
 ```
 
 ### 4. Test Submission - `OptimisticTestSubmission`
+
 **Location:** `/src/components/optimistic/OptimisticTestSubmission.tsx`
 
 **Features:**
+
 - Shows "submitted" state immediately
 - Processes results in background
 - Displays optimistic score
 - Retry on failure
 
 **Visual Indicators:**
+
 - Status badge changes color
 - Progress animations during submission
 - Celebration animation on success
 - Error state with retry button
 
 **Usage:**
+
 ```tsx
 <OptimisticTestSubmission
   testId="test_123"
@@ -195,33 +212,38 @@ await addItem(
     {
       questionId: 'q1',
       selectedOption: 2,
-      timeTaken: 45
-    }
+      timeTaken: 45,
+    },
   ]}
 />
 ```
 
 ### 5. Vote/Like Actions - `OptimisticVoteButton`
+
 **Location:** `/src/components/optimistic/OptimisticVoteButton.tsx`
 
 **Features:**
+
 - Instant button state changes
 - Count updates immediately
 - Multiple variants (thumbs, heart, star)
 - Toggle vote support
 
 **Visual Indicators:**
+
 - Button color changes instantly
 - Icon fills/unfills
 - Count animates up/down
 - Scale animation on interaction
 
 **Variants:**
+
 - `thumbs`: Upvote/downvote with counts
 - `heart`: Like button with count
 - `star`: Favorite with count
 
 **Usage:**
+
 ```tsx
 <OptimisticVoteButton
   contentId="post_123"
@@ -229,7 +251,7 @@ await addItem(
   initialVotes={{
     upvotes: 42,
     downvotes: 3,
-    userVote: null
+    userVote: null,
   }}
   variant="heart"
   size="md"
@@ -239,32 +261,37 @@ await addItem(
 ## Implementation Patterns
 
 ### 1. Standard Update Pattern
+
 ```tsx
 await update(
-  optimisticValue,    // What to show immediately
-  serverUpdateFn      // What to send to server
+  optimisticValue, // What to show immediately
+  serverUpdateFn // What to send to server
 )
 ```
 
 ### 2. Functional Update Pattern
+
 ```tsx
 await update(
-  (current) => ({     // Calculate optimistic value
+  (current) => ({
+    // Calculate optimistic value
     ...current,
-    field: newValue
+    field: newValue,
   }),
   serverUpdateFn
 )
 ```
 
 ### 3. List Add Pattern
+
 ```tsx
 await addItem(
-  newItem,            // Item to add
-  async (item) => {   // Server creation function
+  newItem, // Item to add
+  async (item) => {
+    // Server creation function
     const response = await fetch('/api/create', {
       method: 'POST',
-      body: JSON.stringify(item)
+      body: JSON.stringify(item),
     })
     return response.json()
   }
@@ -272,12 +299,14 @@ await addItem(
 ```
 
 ### 4. List Remove Pattern
+
 ```tsx
 await removeItem(
-  itemId,             // ID of item to remove
-  async (id) => {     // Server deletion function
+  itemId, // ID of item to remove
+  async (id) => {
+    // Server deletion function
     await fetch(`/api/delete/${id}`, {
-      method: 'DELETE'
+      method: 'DELETE',
     })
   }
 )
@@ -298,36 +327,40 @@ All optimistic updates implement automatic rollback on failure:
 ### Error Display
 
 ```tsx
-{error && (
-  <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
-    <p className="text-sm text-red-700">{error.message}</p>
-    <button onClick={handleRetry}>
-      Retry
-    </button>
-  </div>
-)}
+{
+  error && (
+    <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+      <p className="text-sm text-red-700">{error.message}</p>
+      <button onClick={handleRetry}>Retry</button>
+    </div>
+  )
+}
 ```
 
 ## Visual Feedback Guidelines
 
 ### 1. Instant Feedback (<50ms)
+
 - State changes apply immediately
 - No loading spinners on initial action
 - Smooth animations
 
 ### 2. Sync Indicators
+
 - Subtle "Syncing" label
 - Small loading spinner
 - Border or background color change
 - Position in non-intrusive area
 
 ### 3. Success States
+
 - Brief success animation
 - Toast notification (optional)
 - Visual confirmation (checkmark)
 - Auto-dismiss after 2-3s
 
 ### 4. Error States
+
 - Clear error message
 - Retry button
 - Explain what failed
@@ -336,12 +369,14 @@ All optimistic updates implement automatic rollback on failure:
 ## Performance Metrics
 
 ### Target Response Times
+
 - **Visual Feedback**: <50ms
 - **Rollback**: <100ms
 - **Network Timeout**: 5000ms
 - **Animation Duration**: 200-300ms
 
 ### Network Strategies
+
 - **Retry Logic**: 3 attempts with exponential backoff
 - **Timeout Handling**: Cancel after 5s
 - **Offline Detection**: Queue updates when offline
@@ -350,6 +385,7 @@ All optimistic updates implement automatic rollback on failure:
 ## Testing Recommendations
 
 ### Unit Tests
+
 ```typescript
 describe('useOptimisticUpdate', () => {
   it('applies optimistic update immediately', async () => {
@@ -368,10 +404,7 @@ describe('useOptimisticUpdate', () => {
 
     await act(async () => {
       try {
-        await result.current.update(
-          5,
-          async () => Promise.reject(new Error('Failed'))
-        )
+        await result.current.update(5, async () => Promise.reject(new Error('Failed')))
       } catch {}
     })
 
@@ -382,6 +415,7 @@ describe('useOptimisticUpdate', () => {
 ```
 
 ### Integration Tests
+
 ```typescript
 describe('OptimisticProgressCard', () => {
   it('shows optimistic state during update', async () => {
@@ -404,6 +438,7 @@ describe('OptimisticProgressCard', () => {
 ### Manual Testing Checklist
 
 #### Progress Updates
+
 - [ ] Score updates appear immediately
 - [ ] Loading spinner shows during sync
 - [ ] Success toast appears on completion
@@ -411,6 +446,7 @@ describe('OptimisticProgressCard', () => {
 - [ ] Retry button works after failure
 
 #### Activity Feed
+
 - [ ] New activities appear at top instantly
 - [ ] Pending indicator shows during sync
 - [ ] Failed items show error state
@@ -418,6 +454,7 @@ describe('OptimisticProgressCard', () => {
 - [ ] Animations are smooth
 
 #### Settings
+
 - [ ] Toggles respond instantly
 - [ ] Changes sync in background
 - [ ] Visual feedback is clear
@@ -425,6 +462,7 @@ describe('OptimisticProgressCard', () => {
 - [ ] Multiple rapid changes handled correctly
 
 #### Test Submission
+
 - [ ] Submit button changes state instantly
 - [ ] Progress indicator shows
 - [ ] Success state displays correctly
@@ -432,6 +470,7 @@ describe('OptimisticProgressCard', () => {
 - [ ] Score appears when ready
 
 #### Vote Buttons
+
 - [ ] Button state changes immediately
 - [ ] Count updates instantly
 - [ ] Toggle vote works correctly
@@ -445,6 +484,7 @@ describe('OptimisticProgressCard', () => {
 All optimistic update endpoints should:
 
 1. **Return Updated Data**
+
 ```json
 {
   "success": true,
@@ -455,21 +495,25 @@ All optimistic update endpoints should:
 ```
 
 2. **Handle Idempotency**
+
 - Accept duplicate requests gracefully
 - Return same result for same input
 
 3. **Validate Optimistically**
+
 - Quick validation on client
 - Full validation on server
 - Return detailed errors
 
 4. **Support Timestamps**
+
 - Include `updatedAt` in response
 - Handle concurrent updates
 
 ### Example API Responses
 
 **Success:**
+
 ```json
 {
   "success": true,
@@ -483,6 +527,7 @@ All optimistic update endpoints should:
 ```
 
 **Error:**
+
 ```json
 {
   "success": false,
@@ -497,30 +542,35 @@ All optimistic update endpoints should:
 ## Best Practices
 
 ### 1. Always Provide Visual Feedback
+
 - Show loading states
 - Indicate optimistic updates
 - Confirm success
 - Explain failures
 
 ### 2. Handle Errors Gracefully
+
 - Roll back automatically
 - Show clear error messages
 - Provide retry options
 - Don't lose user data
 
 ### 3. Maintain Data Consistency
+
 - Use server response as source of truth
 - Cache server data for rollback
 - Handle concurrent updates
 - Validate optimistically
 
 ### 4. Optimize Performance
+
 - Debounce rapid updates
 - Cancel pending requests
 - Use request deduplication
 - Implement request queuing
 
 ### 5. Test Thoroughly
+
 - Test success paths
 - Test error paths
 - Test network failures
@@ -530,23 +580,29 @@ All optimistic update endpoints should:
 ## Troubleshooting
 
 ### Issue: Updates Not Reverting on Error
+
 **Solution:** Ensure server data is cached before optimistic update
 
 ### Issue: Multiple Rapid Updates Cause Issues
+
 **Solution:** Implement debouncing or request queuing
 
 ### Issue: Stale Data After Rollback
+
 **Solution:** Always use server response as source of truth
 
 ### Issue: Animations Feel Slow
+
 **Solution:** Reduce animation duration to 200-300ms
 
 ### Issue: Network Errors Not Handled
+
 **Solution:** Implement proper try-catch and error callbacks
 
 ## Future Enhancements
 
 ### Planned Features
+
 1. Offline queue for failed updates
 2. Background sync when connection restored
 3. Conflict resolution for concurrent updates
@@ -555,6 +611,7 @@ All optimistic update endpoints should:
 6. Real-time sync with WebSocket
 
 ### Performance Improvements
+
 1. Virtual scrolling for large lists
 2. Request coalescing
 3. Smart cache invalidation

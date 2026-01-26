@@ -57,9 +57,9 @@ export default function GalleryPage() {
               Capturing Moments of Success & Achievement
             </p>
             <p className="mx-auto max-w-3xl text-base text-gray-600 sm:text-lg">
-              Explore our journey through images - from student toppers and faculty leadership
-              to educational seminars, campus events, and memorable celebrations.
-              Each photo tells a story of dedication and excellence.
+              Explore our journey through images - from student toppers and faculty leadership to
+              educational seminars, campus events, and memorable celebrations. Each photo tells a
+              story of dedication and excellence.
             </p>
           </div>
 
@@ -71,10 +71,7 @@ export default function GalleryPage() {
               { label: 'Seminars', icon: '🎓', value: '200+' },
               { label: 'Years of Excellence', icon: '📅', value: '10+' },
             ].map((stat) => (
-              <div
-                key={stat.label}
-                className="rounded-xl bg-white p-4 text-center shadow-md"
-              >
+              <div key={stat.label} className="rounded-xl bg-white p-4 text-center shadow-md">
                 <div className="mb-1 text-2xl">{stat.icon}</div>
                 <div className="text-xl font-bold text-[#3d4d3d]">{stat.value}</div>
                 <div className="text-xs text-gray-500">{stat.label}</div>
@@ -98,8 +95,8 @@ export default function GalleryPage() {
             Be Part of Our Success Story
           </h2>
           <p className="mx-auto mb-6 max-w-2xl text-base text-white/80 sm:mb-8 sm:text-lg md:text-xl">
-            Join Cerebrum Biology Academy and create your own success story.
-            Our toppers started just like you - with a dream and determination.
+            Join Cerebrum Biology Academy and create your own success story. Our toppers started
+            just like you - with a dream and determination.
           </p>
           <div className="flex flex-col flex-wrap justify-center gap-3 sm:flex-row sm:gap-4">
             <a

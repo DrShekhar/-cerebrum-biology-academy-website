@@ -1,14 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  CheckCircle,
-  Target,
-  Star,
-  ArrowRight,
-  Trophy,
-  Globe,
-  Beaker,
-} from 'lucide-react'
+import { CheckCircle, Target, Star, ArrowRight, Trophy, Globe, Beaker } from 'lucide-react'
 
 export const metadata: Metadata = {
   title:

@@ -2,15 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import {
-  Users,
-  BookOpen,
-  Brain,
-  Target,
-  ChevronRight,
-  Plus,
-  Filter,
-} from 'lucide-react'
+import { Users, BookOpen, Brain, Target, ChevronRight, Plus, Filter } from 'lucide-react'
 import { useStudyRooms, StudyRoom } from '@/hooks/useStudyRooms'
 
 interface StudyRoomsListProps {
@@ -76,10 +68,7 @@ export function StudyRoomsList({
     return (
       <div className="p-8 text-center text-red-500">
         <p>Failed to load study rooms</p>
-        <button
-          onClick={() => fetchRooms()}
-          className="mt-2 text-blue-500 hover:underline"
-        >
+        <button onClick={() => fetchRooms()} className="mt-2 text-blue-500 hover:underline">
           Try again
         </button>
       </div>
@@ -175,9 +164,7 @@ export function StudyRoomsList({
                         </span>
                       ))}
                       {room.tags.length > 3 && (
-                        <span className="text-xs text-gray-400">
-                          +{room.tags.length - 3} more
-                        </span>
+                        <span className="text-xs text-gray-400">+{room.tags.length - 3} more</span>
                       )}
                     </div>
                   </div>
@@ -192,11 +179,7 @@ export function StudyRoomsList({
                           {room.currentParticipants}/{room.maxParticipants}
                         </span>
                       </div>
-                      <span
-                        className={`text-xs ${
-                          isFull ? 'text-red-500' : 'text-green-500'
-                        }`}
-                      >
+                      <span className={`text-xs ${isFull ? 'text-red-500' : 'text-green-500'}`}>
                         {isFull ? 'Full' : `${availableSpots} spots`}
                       </span>
                     </div>

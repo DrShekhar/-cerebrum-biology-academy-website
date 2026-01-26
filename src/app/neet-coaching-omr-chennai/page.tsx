@@ -92,22 +92,26 @@ const features = [
   {
     icon: Users,
     title: 'Tech-Savvy Batches (10-15)',
-    description: 'Exclusive batches for OMR IT families with personalized attention and digital-first approach.',
+    description:
+      'Exclusive batches for OMR IT families with personalized attention and digital-first approach.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality IT families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality IT families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement parents\' IT shift schedules.',
+    description:
+      "Morning, afternoon, and evening batches to complement parents' IT shift schedules.",
   },
   {
     icon: Shield,
@@ -127,7 +131,7 @@ const faqs = [
   {
     question: 'Why do OMR students choose online NEET coaching?',
     answer:
-      'OMR is Chennai\'s IT corridor with tech-forward families who understand digital learning. Our online classes offer AIIMS faculty without OMR traffic. Save 2+ hours daily on commute to coaching centers in T. Nagar or Anna Nagar.',
+      "OMR is Chennai's IT corridor with tech-forward families who understand digital learning. Our online classes offer AIIMS faculty without OMR traffic. Save 2+ hours daily on commute to coaching centers in T. Nagar or Anna Nagar.",
   },
   {
     question: 'Which areas in OMR do you serve?',
@@ -137,7 +141,7 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching in OMR?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches OMR\'s premium education standards while offering superior flexibility. EMI options available for IT professionals.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches OMR's premium education standards while offering superior flexibility. EMI options available for IT professionals.",
   },
   {
     question: 'How does this compare to coaching centers in T. Nagar?',
@@ -298,7 +302,8 @@ export default function NeetCoachingOMRPage() {
               NEET Coaching Across OMR IT Corridor
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Perungudi to Siruseri, Thoraipakkam to Navalur - premium coaching for the entire IT corridor.
+              From Perungudi to Siruseri, Thoraipakkam to Navalur - premium coaching for the entire
+              IT corridor.
             </p>
           </motion.div>
 
@@ -320,9 +325,7 @@ export default function NeetCoachingOMRPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-blue-600" />
                   </div>
-                  <div className="text-2xl font-bold text-blue-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-blue-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded-full">

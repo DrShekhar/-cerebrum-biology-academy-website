@@ -57,17 +57,20 @@ const whyChooseUs = [
   {
     icon: BookOpen,
     title: 'Academic Excellence',
-    description: 'CR Park is known for academic culture - our rigorous coaching matches your high standards.',
+    description:
+      'CR Park is known for academic culture - our rigorous coaching matches your high standards.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with many students from CR Park and nearby Bengali community.',
+    description:
+      'Proven track record with many students from CR Park and nearby Bengali community.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience in NEET preparation.',
+    description:
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience in NEET preparation.',
   },
   {
     icon: Star,
@@ -120,7 +123,8 @@ export default function PageContent() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Cerebrum Biology Academy - NEET Coaching CR Park',
-    description: 'Best NEET Coaching for CR Park (Chittaranjan Park) students - South Delhi Biology Expert',
+    description:
+      'Best NEET Coaching for CR Park (Chittaranjan Park) students - South Delhi Biology Expert',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-cr-park-delhi',
     telephone: '+91-88264-44334',
     address: {
@@ -129,7 +133,14 @@ export default function PageContent() {
       addressRegion: 'Uttar Pradesh',
       addressCountry: 'IN',
     },
-    areaServed: ['CR Park', 'Chittaranjan Park', 'Kalkaji', 'Alaknanda', 'Greater Kailash', 'Nehru Place'],
+    areaServed: [
+      'CR Park',
+      'Chittaranjan Park',
+      'Kalkaji',
+      'Alaknanda',
+      'Greater Kailash',
+      'Nehru Place',
+    ],
     priceRange: '$$',
   }
 
@@ -160,8 +171,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Coaching in{' '}
-              <span className="text-yellow-400">CR Park</span>
+              NEET Coaching in <span className="text-yellow-400">CR Park</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -170,7 +180,8 @@ export default function PageContent() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Premium NEET coaching for CR Park, Kalkaji, Alaknanda & Greater Kailash students.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - matching CR Park&apos;s academic standards.
+              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - matching CR
+              Park&apos;s academic standards.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +209,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20CR%20Park%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +386,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20CR%20Park%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

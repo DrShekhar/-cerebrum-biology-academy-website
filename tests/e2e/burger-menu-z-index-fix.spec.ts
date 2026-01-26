@@ -134,13 +134,7 @@ test.describe('Burger Menu Z-Index Fix', () => {
     await expect(menuPanel).toBeVisible()
 
     // Get all section buttons
-    const sections = [
-      'Services',
-      'Courses',
-      'Resources',
-      'International Students',
-      'Support',
-    ]
+    const sections = ['Services', 'Courses', 'Resources', 'International Students', 'Support']
 
     for (const sectionName of sections) {
       const section = page.locator(`text=${sectionName}`).first()

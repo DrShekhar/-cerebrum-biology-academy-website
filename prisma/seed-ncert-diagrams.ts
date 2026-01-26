@@ -19,7 +19,7 @@ const ncertChapters = [
     chapterName: 'The Living World',
     topics: ['Biodiversity', 'Taxonomy', 'Species', 'Classification'],
     neetWeightage: 2,
-    keyFigures: []
+    keyFigures: [],
   },
   {
     class: 11,
@@ -32,8 +32,8 @@ const ncertChapters = [
     keyFigures: [
       { figNo: '2.1', title: 'Five Kingdom Classification', priority: 4 },
       { figNo: '2.2', title: 'Bacteria Structure', priority: 5 },
-      { figNo: '2.4', title: 'Virus Structure', priority: 5 }
-    ]
+      { figNo: '2.4', title: 'Virus Structure', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -49,8 +49,8 @@ const ncertChapters = [
       { figNo: '3.3', title: 'Spirogyra', priority: 4 },
       { figNo: '3.4', title: 'Funaria (Moss)', priority: 5 },
       { figNo: '3.5', title: 'Fern Life Cycle', priority: 5 },
-      { figNo: '3.6', title: 'Pinus (Male Cone)', priority: 4 }
-    ]
+      { figNo: '3.6', title: 'Pinus (Male Cone)', priority: 4 },
+    ],
   },
   {
     class: 11,
@@ -67,8 +67,8 @@ const ncertChapters = [
       { figNo: '4.4', title: 'Coelom Types', priority: 5 },
       { figNo: '4.8', title: 'Hydra', priority: 4 },
       { figNo: '4.12', title: 'Earthworm', priority: 4 },
-      { figNo: '4.18', title: 'Frog External Features', priority: 4 }
-    ]
+      { figNo: '4.18', title: 'Frog External Features', priority: 4 },
+    ],
   },
   // Unit 2: Structural Organisation
   {
@@ -89,8 +89,8 @@ const ncertChapters = [
       { figNo: '5.14', title: 'Parts of a Flower', priority: 5 },
       { figNo: '5.16', title: 'Types of Placentation', priority: 5 },
       { figNo: '5.17', title: 'Types of Fruits', priority: 4 },
-      { figNo: '5.18', title: 'Seed Structure', priority: 5 }
-    ]
+      { figNo: '5.18', title: 'Seed Structure', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -98,7 +98,14 @@ const ncertChapters = [
     unitName: 'Structural Organisation in Animals and Plants',
     chapterNo: 6,
     chapterName: 'Anatomy of Flowering Plants',
-    topics: ['Tissues', 'Tissue System', 'Anatomy of Root', 'Anatomy of Stem', 'Anatomy of Leaf', 'Secondary Growth'],
+    topics: [
+      'Tissues',
+      'Tissue System',
+      'Anatomy of Root',
+      'Anatomy of Stem',
+      'Anatomy of Leaf',
+      'Secondary Growth',
+    ],
     neetWeightage: 5,
     keyFigures: [
       { figNo: '6.1', title: 'Simple Tissues', priority: 4 },
@@ -110,8 +117,8 @@ const ncertChapters = [
       { figNo: '6.8', title: 'T.S. of Monocot Stem', priority: 5 },
       { figNo: '6.9', title: 'T.S. of Dorsiventral Leaf', priority: 5 },
       { figNo: '6.10', title: 'T.S. of Isobilateral Leaf', priority: 5 },
-      { figNo: '6.11', title: 'Secondary Growth', priority: 5 }
-    ]
+      { figNo: '6.11', title: 'Secondary Growth', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -127,8 +134,8 @@ const ncertChapters = [
       { figNo: '7.3', title: 'Muscle Tissue Types', priority: 5 },
       { figNo: '7.4', title: 'Neuron Structure', priority: 5 },
       { figNo: '7.5', title: 'Frog External Features', priority: 4 },
-      { figNo: '7.8', title: 'Frog Digestive System', priority: 4 }
-    ]
+      { figNo: '7.8', title: 'Frog Digestive System', priority: 4 },
+    ],
   },
   // Unit 3: Cell Structure and Function
   {
@@ -148,8 +155,8 @@ const ncertChapters = [
       { figNo: '8.6', title: 'Endoplasmic Reticulum', priority: 4 },
       { figNo: '8.7', title: 'Golgi Apparatus', priority: 4 },
       { figNo: '8.8', title: 'Nucleus Structure', priority: 5 },
-      { figNo: '8.9', title: 'Fluid Mosaic Model', priority: 5 }
-    ]
+      { figNo: '8.9', title: 'Fluid Mosaic Model', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -164,8 +171,8 @@ const ncertChapters = [
       { figNo: '9.2', title: 'Peptide Bond', priority: 5 },
       { figNo: '9.3', title: 'Protein Structure Levels', priority: 5 },
       { figNo: '9.4', title: 'Enzyme Action', priority: 5 },
-      { figNo: '9.5', title: 'DNA Structure', priority: 5 }
-    ]
+      { figNo: '9.5', title: 'DNA Structure', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -180,8 +187,8 @@ const ncertChapters = [
       { figNo: '10.2', title: 'Stages of Mitosis', priority: 5 },
       { figNo: '10.3', title: 'Stages of Meiosis I', priority: 5 },
       { figNo: '10.4', title: 'Stages of Meiosis II', priority: 5 },
-      { figNo: '10.5', title: 'Crossing Over', priority: 5 }
-    ]
+      { figNo: '10.5', title: 'Crossing Over', priority: 5 },
+    ],
   },
   // Unit 4: Plant Physiology
   {
@@ -190,7 +197,14 @@ const ncertChapters = [
     unitName: 'Plant Physiology',
     chapterNo: 11,
     chapterName: 'Transport in Plants',
-    topics: ['Diffusion', 'Osmosis', 'Plasmolysis', 'Water Potential', 'Transpiration', 'Translocation'],
+    topics: [
+      'Diffusion',
+      'Osmosis',
+      'Plasmolysis',
+      'Water Potential',
+      'Transpiration',
+      'Translocation',
+    ],
     neetWeightage: 4,
     keyFigures: [
       { figNo: '11.1', title: 'Osmosis Experiment', priority: 4 },
@@ -198,8 +212,8 @@ const ncertChapters = [
       { figNo: '11.3', title: 'Root Pressure', priority: 4 },
       { figNo: '11.4', title: 'Transpiration Pull', priority: 5 },
       { figNo: '11.5', title: 'Stomatal Opening Mechanism', priority: 5 },
-      { figNo: '11.6', title: 'Mass Flow Hypothesis', priority: 5 }
-    ]
+      { figNo: '11.6', title: 'Mass Flow Hypothesis', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -211,8 +225,8 @@ const ncertChapters = [
     neetWeightage: 3,
     keyFigures: [
       { figNo: '12.1', title: 'Nitrogen Cycle', priority: 5 },
-      { figNo: '12.2', title: 'Root Nodule', priority: 5 }
-    ]
+      { figNo: '12.2', title: 'Root Nodule', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -228,8 +242,8 @@ const ncertChapters = [
       { figNo: '13.3', title: 'Z-Scheme (Light Reaction)', priority: 5 },
       { figNo: '13.4', title: 'Calvin Cycle', priority: 5 },
       { figNo: '13.5', title: 'C4 Pathway (Hatch-Slack)', priority: 5 },
-      { figNo: '13.6', title: 'Kranz Anatomy', priority: 5 }
-    ]
+      { figNo: '13.6', title: 'Kranz Anatomy', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -243,8 +257,8 @@ const ncertChapters = [
       { figNo: '14.1', title: 'Glycolysis', priority: 5 },
       { figNo: '14.2', title: 'Krebs Cycle (TCA Cycle)', priority: 5 },
       { figNo: '14.3', title: 'Electron Transport Chain', priority: 5 },
-      { figNo: '14.4', title: 'ATP Synthesis', priority: 5 }
-    ]
+      { figNo: '14.4', title: 'ATP Synthesis', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -257,8 +271,8 @@ const ncertChapters = [
     keyFigures: [
       { figNo: '15.1', title: 'Growth Curve', priority: 4 },
       { figNo: '15.2', title: 'Auxin Distribution', priority: 4 },
-      { figNo: '15.3', title: 'Photoperiodism', priority: 5 }
-    ]
+      { figNo: '15.3', title: 'Photoperiodism', priority: 5 },
+    ],
   },
   // Unit 5: Human Physiology
   {
@@ -273,8 +287,8 @@ const ncertChapters = [
       { figNo: '16.1', title: 'Human Digestive System', priority: 5 },
       { figNo: '16.2', title: 'Tooth Structure', priority: 4 },
       { figNo: '16.3', title: 'Small Intestine Structure', priority: 5 },
-      { figNo: '16.4', title: 'Absorption in Intestine', priority: 5 }
-    ]
+      { figNo: '16.4', title: 'Absorption in Intestine', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -289,8 +303,8 @@ const ncertChapters = [
       { figNo: '17.2', title: 'Alveoli Structure', priority: 5 },
       { figNo: '17.3', title: 'Mechanism of Breathing', priority: 4 },
       { figNo: '17.4', title: 'Oxygen Dissociation Curve', priority: 5 },
-      { figNo: '17.5', title: 'CO2 Transport', priority: 5 }
-    ]
+      { figNo: '17.5', title: 'CO2 Transport', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -306,8 +320,8 @@ const ncertChapters = [
       { figNo: '18.3', title: 'Cardiac Cycle', priority: 5 },
       { figNo: '18.4', title: 'ECG', priority: 5 },
       { figNo: '18.5', title: 'Double Circulation', priority: 5 },
-      { figNo: '18.6', title: 'Blood Vessel Types', priority: 4 }
-    ]
+      { figNo: '18.6', title: 'Blood Vessel Types', priority: 4 },
+    ],
   },
   {
     class: 11,
@@ -321,8 +335,8 @@ const ncertChapters = [
       { figNo: '19.1', title: 'Human Excretory System', priority: 5 },
       { figNo: '19.2', title: 'Nephron Structure', priority: 5 },
       { figNo: '19.3', title: 'Urine Formation', priority: 5 },
-      { figNo: '19.4', title: 'Counter Current Mechanism', priority: 5 }
-    ]
+      { figNo: '19.4', title: 'Counter Current Mechanism', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -337,8 +351,8 @@ const ncertChapters = [
       { figNo: '20.2', title: 'Types of Joints', priority: 5 },
       { figNo: '20.3', title: 'Muscle Structure', priority: 5 },
       { figNo: '20.4', title: 'Sarcomere Structure', priority: 5 },
-      { figNo: '20.5', title: 'Sliding Filament Theory', priority: 5 }
-    ]
+      { figNo: '20.5', title: 'Sliding Filament Theory', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -355,8 +369,8 @@ const ncertChapters = [
       { figNo: '21.4', title: 'Human Brain (Sagittal Section)', priority: 5 },
       { figNo: '21.5', title: 'Reflex Arc', priority: 5 },
       { figNo: '21.6', title: 'Eye Structure', priority: 5 },
-      { figNo: '21.7', title: 'Ear Structure', priority: 5 }
-    ]
+      { figNo: '21.7', title: 'Ear Structure', priority: 5 },
+    ],
   },
   {
     class: 11,
@@ -369,8 +383,8 @@ const ncertChapters = [
     keyFigures: [
       { figNo: '22.1', title: 'Endocrine Glands Location', priority: 5 },
       { figNo: '22.2', title: 'Hypothalamus-Pituitary Axis', priority: 5 },
-      { figNo: '22.3', title: 'Feedback Mechanism', priority: 5 }
-    ]
+      { figNo: '22.3', title: 'Feedback Mechanism', priority: 5 },
+    ],
   },
 
   // ============= CLASS 12 =============
@@ -386,8 +400,8 @@ const ncertChapters = [
     keyFigures: [
       { figNo: '1.1', title: 'Binary Fission in Amoeba', priority: 4 },
       { figNo: '1.2', title: 'Budding in Yeast', priority: 4 },
-      { figNo: '1.3', title: 'Vegetative Propagation', priority: 4 }
-    ]
+      { figNo: '1.3', title: 'Vegetative Propagation', priority: 4 },
+    ],
   },
   {
     class: 12,
@@ -395,7 +409,14 @@ const ncertChapters = [
     unitName: 'Reproduction',
     chapterNo: 2,
     chapterName: 'Sexual Reproduction in Flowering Plants',
-    topics: ['Flower Structure', 'Microsporogenesis', 'Megasporogenesis', 'Pollination', 'Fertilization', 'Embryo Development'],
+    topics: [
+      'Flower Structure',
+      'Microsporogenesis',
+      'Megasporogenesis',
+      'Pollination',
+      'Fertilization',
+      'Embryo Development',
+    ],
     neetWeightage: 5,
     keyFigures: [
       { figNo: '2.1', title: 'Parts of a Flower', priority: 4 },
@@ -407,8 +428,8 @@ const ncertChapters = [
       { figNo: '2.7', title: 'Embryo Sac (7-celled 8-nucleate)', priority: 5 },
       { figNo: '2.8', title: 'Double Fertilization', priority: 5 },
       { figNo: '2.9', title: 'Embryo Development', priority: 5 },
-      { figNo: '2.10', title: 'Seed Structure', priority: 5 }
-    ]
+      { figNo: '2.10', title: 'Seed Structure', priority: 5 },
+    ],
   },
   {
     class: 12,
@@ -416,7 +437,14 @@ const ncertChapters = [
     unitName: 'Reproduction',
     chapterNo: 3,
     chapterName: 'Human Reproduction',
-    topics: ['Male Reproductive System', 'Female Reproductive System', 'Gametogenesis', 'Menstrual Cycle', 'Fertilization', 'Pregnancy'],
+    topics: [
+      'Male Reproductive System',
+      'Female Reproductive System',
+      'Gametogenesis',
+      'Menstrual Cycle',
+      'Fertilization',
+      'Pregnancy',
+    ],
     neetWeightage: 5,
     keyFigures: [
       { figNo: '3.1', title: 'Male Reproductive System', priority: 5 },
@@ -427,8 +455,8 @@ const ncertChapters = [
       { figNo: '3.6', title: 'Graafian Follicle', priority: 5 },
       { figNo: '3.7', title: 'Menstrual Cycle', priority: 5 },
       { figNo: '3.8', title: 'Fertilization and Implantation', priority: 5 },
-      { figNo: '3.9', title: 'Placenta Structure', priority: 5 }
-    ]
+      { figNo: '3.9', title: 'Placenta Structure', priority: 5 },
+    ],
   },
   {
     class: 12,
@@ -440,8 +468,8 @@ const ncertChapters = [
     neetWeightage: 3,
     keyFigures: [
       { figNo: '4.1', title: 'Contraceptive Methods', priority: 4 },
-      { figNo: '4.2', title: 'IVF Process', priority: 4 }
-    ]
+      { figNo: '4.2', title: 'IVF Process', priority: 4 },
+    ],
   },
   // Unit 7: Genetics and Evolution
   {
@@ -450,7 +478,14 @@ const ncertChapters = [
     unitName: 'Genetics and Evolution',
     chapterNo: 5,
     chapterName: 'Principles of Inheritance and Variation',
-    topics: ['Mendel\'s Laws', 'Dominance', 'Linkage', 'Sex Determination', 'Mutation', 'Chromosomal Disorders'],
+    topics: [
+      "Mendel's Laws",
+      'Dominance',
+      'Linkage',
+      'Sex Determination',
+      'Mutation',
+      'Chromosomal Disorders',
+    ],
     neetWeightage: 5,
     keyFigures: [
       { figNo: '5.1', title: 'Monohybrid Cross', priority: 5 },
@@ -459,8 +494,8 @@ const ncertChapters = [
       { figNo: '5.4', title: 'Linkage', priority: 5 },
       { figNo: '5.5', title: 'Sex Determination', priority: 5 },
       { figNo: '5.6', title: 'Pedigree Analysis', priority: 5 },
-      { figNo: '5.7', title: 'Down Syndrome Karyotype', priority: 4 }
-    ]
+      { figNo: '5.7', title: 'Down Syndrome Karyotype', priority: 4 },
+    ],
   },
   {
     class: 12,
@@ -468,7 +503,14 @@ const ncertChapters = [
     unitName: 'Genetics and Evolution',
     chapterNo: 6,
     chapterName: 'Molecular Basis of Inheritance',
-    topics: ['DNA Structure', 'DNA Replication', 'Transcription', 'Translation', 'Gene Regulation', 'Genetic Code'],
+    topics: [
+      'DNA Structure',
+      'DNA Replication',
+      'Transcription',
+      'Translation',
+      'Gene Regulation',
+      'Genetic Code',
+    ],
     neetWeightage: 5,
     keyFigures: [
       { figNo: '6.1', title: 'DNA Double Helix', priority: 5 },
@@ -478,8 +520,8 @@ const ncertChapters = [
       { figNo: '6.5', title: 'Transcription', priority: 5 },
       { figNo: '6.6', title: 'Translation', priority: 5 },
       { figNo: '6.7', title: 'Lac Operon', priority: 5 },
-      { figNo: '6.8', title: 'Genetic Code Table', priority: 5 }
-    ]
+      { figNo: '6.8', title: 'Genetic Code Table', priority: 5 },
+    ],
   },
   {
     class: 12,
@@ -487,15 +529,21 @@ const ncertChapters = [
     unitName: 'Genetics and Evolution',
     chapterNo: 7,
     chapterName: 'Evolution',
-    topics: ['Origin of Life', 'Evolution Evidence', 'Darwin\'s Theory', 'Hardy-Weinberg', 'Human Evolution'],
+    topics: [
+      'Origin of Life',
+      'Evolution Evidence',
+      "Darwin's Theory",
+      'Hardy-Weinberg',
+      'Human Evolution',
+    ],
     neetWeightage: 4,
     keyFigures: [
       { figNo: '7.1', title: 'Miller-Urey Experiment', priority: 4 },
       { figNo: '7.2', title: 'Homologous Organs', priority: 5 },
       { figNo: '7.3', title: 'Analogous Organs', priority: 5 },
-      { figNo: '7.4', title: 'Darwin\'s Finches', priority: 4 },
-      { figNo: '7.5', title: 'Human Evolution Timeline', priority: 5 }
-    ]
+      { figNo: '7.4', title: "Darwin's Finches", priority: 4 },
+      { figNo: '7.5', title: 'Human Evolution Timeline', priority: 5 },
+    ],
   },
   // Unit 8: Biology and Human Welfare
   {
@@ -511,8 +559,8 @@ const ncertChapters = [
       { figNo: '8.2', title: 'Antibody Structure', priority: 5 },
       { figNo: '8.3', title: 'Immune Response', priority: 5 },
       { figNo: '8.4', title: 'HIV Structure', priority: 5 },
-      { figNo: '8.5', title: 'Cancer Cell vs Normal Cell', priority: 4 }
-    ]
+      { figNo: '8.5', title: 'Cancer Cell vs Normal Cell', priority: 4 },
+    ],
   },
   {
     class: 12,
@@ -524,8 +572,8 @@ const ncertChapters = [
     neetWeightage: 3,
     keyFigures: [
       { figNo: '9.1', title: 'Plant Breeding Steps', priority: 4 },
-      { figNo: '9.2', title: 'Tissue Culture', priority: 4 }
-    ]
+      { figNo: '9.2', title: 'Tissue Culture', priority: 4 },
+    ],
   },
   {
     class: 12,
@@ -537,8 +585,8 @@ const ncertChapters = [
     neetWeightage: 3,
     keyFigures: [
       { figNo: '10.1', title: 'Biogas Plant', priority: 4 },
-      { figNo: '10.2', title: 'Sewage Treatment', priority: 4 }
-    ]
+      { figNo: '10.2', title: 'Sewage Treatment', priority: 4 },
+    ],
   },
   // Unit 9: Biotechnology
   {
@@ -555,8 +603,8 @@ const ncertChapters = [
       { figNo: '11.3', title: 'rDNA Technology Steps', priority: 5 },
       { figNo: '11.4', title: 'PCR', priority: 5 },
       { figNo: '11.5', title: 'Gel Electrophoresis', priority: 5 },
-      { figNo: '11.6', title: 'Gene Cloning', priority: 5 }
-    ]
+      { figNo: '11.6', title: 'Gene Cloning', priority: 5 },
+    ],
   },
   {
     class: 12,
@@ -569,8 +617,8 @@ const ncertChapters = [
     keyFigures: [
       { figNo: '12.1', title: 'Bt Cotton', priority: 4 },
       { figNo: '12.2', title: 'Gene Therapy', priority: 5 },
-      { figNo: '12.3', title: 'ELISA', priority: 4 }
-    ]
+      { figNo: '12.3', title: 'ELISA', priority: 4 },
+    ],
   },
   // Unit 10: Ecology
   {
@@ -584,8 +632,8 @@ const ncertChapters = [
     keyFigures: [
       { figNo: '13.1', title: 'Population Growth Curves', priority: 5 },
       { figNo: '13.2', title: 'Age Pyramids', priority: 5 },
-      { figNo: '13.3', title: 'Logistic Growth', priority: 5 }
-    ]
+      { figNo: '13.3', title: 'Logistic Growth', priority: 5 },
+    ],
   },
   {
     class: 12,
@@ -601,8 +649,8 @@ const ncertChapters = [
       { figNo: '14.3', title: 'Ecological Pyramids', priority: 5 },
       { figNo: '14.4', title: 'Carbon Cycle', priority: 5 },
       { figNo: '14.5', title: 'Phosphorus Cycle', priority: 4 },
-      { figNo: '14.6', title: 'Decomposition', priority: 4 }
-    ]
+      { figNo: '14.6', title: 'Decomposition', priority: 4 },
+    ],
   },
   {
     class: 12,
@@ -614,8 +662,8 @@ const ncertChapters = [
     neetWeightage: 3,
     keyFigures: [
       { figNo: '15.1', title: 'Species-Area Relationship', priority: 4 },
-      { figNo: '15.2', title: 'Rivet Popper Hypothesis', priority: 4 }
-    ]
+      { figNo: '15.2', title: 'Rivet Popper Hypothesis', priority: 4 },
+    ],
   },
   {
     class: 12,
@@ -628,9 +676,9 @@ const ncertChapters = [
     keyFigures: [
       { figNo: '16.1', title: 'Greenhouse Effect', priority: 4 },
       { figNo: '16.2', title: 'Ozone Hole', priority: 4 },
-      { figNo: '16.3', title: 'Biomagnification', priority: 5 }
-    ]
-  }
+      { figNo: '16.3', title: 'Biomagnification', priority: 5 },
+    ],
+  },
 ]
 
 // High-priority diagram assets to seed
@@ -658,8 +706,8 @@ const diagramAssets = [
       { label: 'E', name: 'Vacuole', function: 'Storage and turgor pressure' },
       { label: 'F', name: 'Mitochondria', function: 'ATP production' },
       { label: 'G', name: 'Endoplasmic Reticulum', function: 'Protein synthesis' },
-      { label: 'H', name: 'Golgi Apparatus', function: 'Packaging and secretion' }
-    ]
+      { label: 'H', name: 'Golgi Apparatus', function: 'Packaging and secretion' },
+    ],
   },
   {
     name: 'Animal Cell Structure',
@@ -681,8 +729,8 @@ const diagramAssets = [
       { label: 'C', name: 'Mitochondria', function: 'ATP production' },
       { label: 'D', name: 'Centriole', function: 'Cell division' },
       { label: 'E', name: 'Lysosome', function: 'Intracellular digestion' },
-      { label: 'F', name: 'Golgi Apparatus', function: 'Packaging and secretion' }
-    ]
+      { label: 'F', name: 'Golgi Apparatus', function: 'Packaging and secretion' },
+    ],
   },
   {
     name: 'Mitochondrion Structure',
@@ -703,8 +751,8 @@ const diagramAssets = [
       { label: 'B', name: 'Inner Membrane', function: 'Contains ETC' },
       { label: 'C', name: 'Cristae', function: 'Increases surface area for ETC' },
       { label: 'D', name: 'Matrix', function: 'Contains Krebs cycle enzymes' },
-      { label: 'E', name: 'F1 Particles', function: 'ATP synthase' }
-    ]
+      { label: 'E', name: 'F1 Particles', function: 'ATP synthase' },
+    ],
   },
   // Human Physiology
   {
@@ -731,8 +779,8 @@ const diagramAssets = [
       { label: 'G', name: 'Pulmonary Vein', function: 'Carries oxygenated blood from lungs' },
       { label: 'H', name: 'Vena Cava', function: 'Carries deoxygenated blood from body' },
       { label: 'I', name: 'Tricuspid Valve', function: 'Prevents backflow to right atrium' },
-      { label: 'J', name: 'Bicuspid Valve', function: 'Prevents backflow to left atrium' }
-    ]
+      { label: 'J', name: 'Bicuspid Valve', function: 'Prevents backflow to left atrium' },
+    ],
   },
   {
     name: 'Nephron Structure',
@@ -752,12 +800,16 @@ const diagramAssets = [
       { label: 'A', name: 'Afferent Arteriole', function: 'Brings blood to glomerulus' },
       { label: 'B', name: 'Efferent Arteriole', function: 'Takes blood away from glomerulus' },
       { label: 'C', name: 'Glomerulus', function: 'Filtration of blood' },
-      { label: 'D', name: 'Bowman\'s Capsule', function: 'Collects filtrate' },
+      { label: 'D', name: "Bowman's Capsule", function: 'Collects filtrate' },
       { label: 'E', name: 'Proximal Convoluted Tubule', function: 'Reabsorption of nutrients' },
       { label: 'F', name: 'Loop of Henle', function: 'Concentration of urine' },
-      { label: 'G', name: 'Distal Convoluted Tubule', function: 'Secretion and final reabsorption' },
-      { label: 'H', name: 'Collecting Duct', function: 'Final concentration of urine' }
-    ]
+      {
+        label: 'G',
+        name: 'Distal Convoluted Tubule',
+        function: 'Secretion and final reabsorption',
+      },
+      { label: 'H', name: 'Collecting Duct', function: 'Final concentration of urine' },
+    ],
   },
   {
     name: 'Neuron Structure',
@@ -779,8 +831,8 @@ const diagramAssets = [
       { label: 'C', name: 'Axon', function: 'Transmits signals' },
       { label: 'D', name: 'Myelin Sheath', function: 'Insulation, speeds transmission' },
       { label: 'E', name: 'Node of Ranvier', function: 'Gaps for saltatory conduction' },
-      { label: 'F', name: 'Axon Terminal', function: 'Releases neurotransmitters' }
-    ]
+      { label: 'F', name: 'Axon Terminal', function: 'Releases neurotransmitters' },
+    ],
   },
   // Reproduction
   {
@@ -802,8 +854,8 @@ const diagramAssets = [
       { label: 'B', name: 'Synergids', function: 'Guide pollen tube entry' },
       { label: 'C', name: 'Central Cell', function: 'Forms endosperm after fertilization' },
       { label: 'D', name: 'Polar Nuclei', function: 'Fuse with sperm to form endosperm' },
-      { label: 'E', name: 'Antipodal Cells', function: 'Nutritive function' }
-    ]
+      { label: 'E', name: 'Antipodal Cells', function: 'Nutritive function' },
+    ],
   },
   {
     name: 'Sperm Structure',
@@ -823,8 +875,8 @@ const diagramAssets = [
       { label: 'A', name: 'Acrosome', function: 'Contains enzymes to penetrate egg' },
       { label: 'B', name: 'Head', function: 'Contains nucleus with DNA' },
       { label: 'C', name: 'Middle Piece', function: 'Contains mitochondria for energy' },
-      { label: 'D', name: 'Tail (Flagellum)', function: 'Provides motility' }
-    ]
+      { label: 'D', name: 'Tail (Flagellum)', function: 'Provides motility' },
+    ],
   },
   // Genetics
   {
@@ -849,8 +901,8 @@ const diagramAssets = [
       { label: 'E', name: 'Cytosine', function: 'Pairs with Guanine' },
       { label: 'F', name: 'Hydrogen Bonds', function: 'Hold base pairs together' },
       { label: 'G', name: 'Major Groove', function: 'Protein binding site' },
-      { label: 'H', name: 'Minor Groove', function: 'Protein binding site' }
-    ]
+      { label: 'H', name: 'Minor Groove', function: 'Protein binding site' },
+    ],
   },
   {
     name: 'Lac Operon Model',
@@ -872,9 +924,9 @@ const diagramAssets = [
       { label: 'C', name: 'Structural Genes (lac Z, Y, A)', function: 'Code for enzymes' },
       { label: 'D', name: 'Regulator Gene', function: 'Codes for repressor protein' },
       { label: 'E', name: 'Repressor Protein', function: 'Blocks transcription' },
-      { label: 'F', name: 'Inducer (Lactose)', function: 'Inactivates repressor' }
-    ]
-  }
+      { label: 'F', name: 'Inducer (Lactose)', function: 'Inactivates repressor' },
+    ],
+  },
 ]
 
 async function seed() {
@@ -887,8 +939,8 @@ async function seed() {
       where: {
         class_chapterNo: {
           class: chapter.class,
-          chapterNo: chapter.chapterNo
-        }
+          chapterNo: chapter.chapterNo,
+        },
       },
       update: {
         unitNo: chapter.unitNo,
@@ -896,7 +948,7 @@ async function seed() {
         chapterName: chapter.chapterName,
         topics: chapter.topics,
         neetWeightage: chapter.neetWeightage,
-        keyFigures: chapter.keyFigures
+        keyFigures: chapter.keyFigures,
       },
       create: {
         class: chapter.class,
@@ -906,8 +958,8 @@ async function seed() {
         chapterName: chapter.chapterName,
         topics: chapter.topics,
         neetWeightage: chapter.neetWeightage,
-        keyFigures: chapter.keyFigures
-      }
+        keyFigures: chapter.keyFigures,
+      },
     })
     console.log(`  ✓ Class ${chapter.class} - Ch ${chapter.chapterNo}: ${chapter.chapterName}`)
   }
@@ -919,8 +971,8 @@ async function seed() {
     const existing = await prisma.diagram_assets.findFirst({
       where: {
         ncertClass: diagram.ncertClass,
-        ncertFigureNo: diagram.ncertFigureNo
-      }
+        ncertFigureNo: diagram.ncertFigureNo,
+      },
     })
 
     if (!existing) {
@@ -940,8 +992,8 @@ async function seed() {
           tags: diagram.tags,
           keywords: diagram.keywords,
           labeledParts: diagram.labeledParts,
-          isVerified: true
-        }
+          isVerified: true,
+        },
       })
       console.log(`  ✓ ${diagram.name} (Fig ${diagram.ncertFigureNo})`)
     } else {
@@ -953,7 +1005,7 @@ async function seed() {
   // Summary
   const totalChapters = await prisma.ncert_chapters.count()
   const totalDiagrams = await prisma.diagram_assets.count()
-  
+
   console.log('\n' + '='.repeat(50))
   console.log('📊 SEED SUMMARY')
   console.log('='.repeat(50))
@@ -964,9 +1016,8 @@ async function seed() {
   await prisma.$disconnect()
 }
 
-seed()
-  .catch((e) => {
-    console.error('❌ Seed failed:', e)
-    prisma.$disconnect()
-    process.exit(1)
-  })
+seed().catch((e) => {
+  console.error('❌ Seed failed:', e)
+  prisma.$disconnect()
+  process.exit(1)
+})

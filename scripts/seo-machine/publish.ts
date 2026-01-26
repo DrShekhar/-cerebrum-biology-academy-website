@@ -18,7 +18,7 @@ import {
   SEOLandingDraft,
   DraftStatus,
   SEOContentType,
-  DEFAULT_CONFIG
+  DEFAULT_CONFIG,
 } from '../../src/lib/seo-marketing/types'
 
 // ANSI color codes
@@ -30,7 +30,7 @@ const colors = {
   blue: '\x1b[34m',
   red: '\x1b[31m',
   cyan: '\x1b[36m',
-  gray: '\x1b[90m'
+  gray: '\x1b[90m',
 }
 
 function log(message: string, color: keyof typeof colors = 'reset') {
@@ -62,7 +62,7 @@ function getDrafts(): DraftFile[] {
     const dirPath = path.join(draftsDir, subDir)
     if (!fs.existsSync(dirPath)) continue
 
-    const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json'))
+    const files = fs.readdirSync(dirPath).filter((f) => f.endsWith('.json'))
     for (const file of files) {
       const filePath = path.join(dirPath, file)
       try {
@@ -70,7 +70,7 @@ function getDrafts(): DraftFile[] {
         drafts.push({
           path: filePath,
           type: subDir,
-          draft: content
+          draft: content,
         })
       } catch (e) {
         // Skip invalid files
@@ -78,8 +78,8 @@ function getDrafts(): DraftFile[] {
     }
   }
 
-  return drafts.sort((a, b) =>
-    new Date(b.draft.createdAt).getTime() - new Date(a.draft.createdAt).getTime()
+  return drafts.sort(
+    (a, b) => new Date(b.draft.createdAt).getTime() - new Date(a.draft.createdAt).getTime()
   )
 }
 
@@ -93,9 +93,7 @@ function listDrafts(statusFilter?: DraftStatus) {
     return
   }
 
-  const filtered = statusFilter
-    ? drafts.filter(d => d.draft.status === statusFilter)
-    : drafts
+  const filtered = statusFilter ? drafts.filter((d) => d.draft.status === statusFilter) : drafts
 
   logHeader(`Draft Queue (${filtered.length} items)`)
 
@@ -107,7 +105,14 @@ function listDrafts(statusFilter?: DraftStatus) {
     byStatus[status].push(d)
   }
 
-  const statusOrder: DraftStatus[] = ['draft', 'in_review', 'approved', 'rejected', 'published', 'archived']
+  const statusOrder: DraftStatus[] = [
+    'draft',
+    'in_review',
+    'approved',
+    'rejected',
+    'published',
+    'archived',
+  ]
 
   for (const status of statusOrder) {
     const items = byStatus[status]
@@ -119,7 +124,7 @@ function listDrafts(statusFilter?: DraftStatus) {
       approved: 'green',
       rejected: 'red',
       published: 'gray',
-      archived: 'gray'
+      archived: 'gray',
     }
 
     log(`\n  ${status.toUpperCase()} (${items.length})`, statusColor[status])
@@ -157,7 +162,7 @@ function getAge(dateStr: string): string {
 // Update draft status
 function updateDraftStatus(draftId: string, newStatus: DraftStatus): boolean {
   const drafts = getDrafts()
-  const draftFile = drafts.find(d => d.draft.id === draftId)
+  const draftFile = drafts.find((d) => d.draft.id === draftId)
 
   if (!draftFile) {
     log(`Draft not found: ${draftId}`, 'red')
@@ -210,7 +215,7 @@ neetChapter: "${frontmatter.neetChapter || ''}"
 neetWeightage: "${frontmatter.neetWeightage || 'Medium'}"
 targetAudience: "${frontmatter.targetAudience}"
 keyTakeaways:
-${frontmatter.keyTakeaways.map(t => `  - "${t}"`).join('\n')}
+${frontmatter.keyTakeaways.map((t) => `  - "${t}"`).join('\n')}
 ---
 
 ${draft.content}
@@ -263,7 +268,7 @@ seoDescription: "${fm.seoDescription}"
 difficulty: "Beginner"
 targetAudience: "Student"
 keyTakeaways:
-${draft.keyUpdates.map(u => `  - "${u}"`).join('\n')}
+${draft.keyUpdates.map((u) => `  - "${u}"`).join('\n')}
 ---
 
 ${draft.content}
@@ -337,7 +342,7 @@ function camelCase(str: string): string {
 // Main publish function
 function publishDraft(draftId: string): boolean {
   const drafts = getDrafts()
-  const draftFile = drafts.find(d => d.draft.id === draftId)
+  const draftFile = drafts.find((d) => d.draft.id === draftId)
 
   if (!draftFile) {
     log(`Draft not found: ${draftId}`, 'red')
@@ -370,7 +375,7 @@ function publishDraft(draftId: string): boolean {
 
 // Publish all approved drafts
 function publishAllApproved(): number {
-  const drafts = getDrafts().filter(d => d.draft.status === 'approved')
+  const drafts = getDrafts().filter((d) => d.draft.status === 'approved')
 
   if (drafts.length === 0) {
     log('No approved drafts to publish.', 'yellow')

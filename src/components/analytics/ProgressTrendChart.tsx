@@ -16,8 +16,8 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
     )
   }
 
-  const maxScore = Math.max(...data.map(point => point.score))
-  const minScore = Math.min(...data.map(point => point.score))
+  const maxScore = Math.max(...data.map((point) => point.score))
+  const minScore = Math.min(...data.map((point) => point.score))
   const scoreRange = maxScore - minScore
 
   return (
@@ -26,13 +26,13 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
       <div className="h-48 relative">
         <svg className="w-full h-full" viewBox="0 0 400 180">
           {/* Grid lines */}
-          {[0, 25, 50, 75, 100].map(y => (
+          {[0, 25, 50, 75, 100].map((y) => (
             <line
               key={y}
               x1="40"
-              y1={140 - (y * 1.0)}
+              y1={140 - y * 1.0}
               x2="360"
-              y2={140 - (y * 1.0)}
+              y2={140 - y * 1.0}
               stroke="#f3f4f6"
               strokeWidth="1"
             />
@@ -45,11 +45,11 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
           <line x1="40" y1="140" x2="360" y2="140" stroke="#e5e7eb" strokeWidth="2" />
 
           {/* Y-axis labels */}
-          {[0, 25, 50, 75, 100].map(y => (
+          {[0, 25, 50, 75, 100].map((y) => (
             <text
               key={y}
               x="35"
-              y={145 - (y * 1.0)}
+              y={145 - y * 1.0}
               textAnchor="end"
               className="text-xs fill-gray-500"
             >
@@ -65,11 +65,13 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
-              points={data.map((point, index) => {
-                const x = 40 + (index * (320 / (data.length - 1)))
-                const y = 140 - (point.score * 1.0)
-                return `${x},${y}`
-              }).join(' ')}
+              points={data
+                .map((point, index) => {
+                  const x = 40 + index * (320 / (data.length - 1))
+                  const y = 140 - point.score * 1.0
+                  return `${x},${y}`
+                })
+                .join(' ')}
             />
           )}
 
@@ -82,18 +84,20 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeDasharray="5,5"
-              points={data.map((point, index) => {
-                const x = 40 + (index * (320 / (data.length - 1)))
-                const y = 140 - (point.accuracy * 1.0)
-                return `${x},${y}`
-              }).join(' ')}
+              points={data
+                .map((point, index) => {
+                  const x = 40 + index * (320 / (data.length - 1))
+                  const y = 140 - point.accuracy * 1.0
+                  return `${x},${y}`
+                })
+                .join(' ')}
             />
           )}
 
           {/* Data points for scores */}
           {data.map((point, index) => {
-            const x = 40 + (index * (320 / Math.max(1, data.length - 1)))
-            const y = 140 - (point.score * 1.0)
+            const x = 40 + index * (320 / Math.max(1, data.length - 1))
+            const y = 140 - point.score * 1.0
             return (
               <circle
                 key={`score-${index}`}
@@ -112,8 +116,8 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
 
           {/* Data points for accuracy */}
           {data.map((point, index) => {
-            const x = 40 + (index * (320 / Math.max(1, data.length - 1)))
-            const y = 140 - (point.accuracy * 1.0)
+            const x = 40 + index * (320 / Math.max(1, data.length - 1))
+            const y = 140 - point.accuracy * 1.0
             return (
               <circle
                 key={`accuracy-${index}`}
@@ -131,21 +135,23 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
           })}
 
           {/* X-axis labels */}
-          {data.filter((_, index) => index % Math.ceil(data.length / 5) === 0).map((point, index) => {
-            const originalIndex = index * Math.ceil(data.length / 5)
-            const x = 40 + (originalIndex * (320 / Math.max(1, data.length - 1)))
-            return (
-              <text
-                key={index}
-                x={x}
-                y="155"
-                textAnchor="middle"
-                className="text-xs fill-gray-500"
-              >
-                {point.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-              </text>
-            )
-          })}
+          {data
+            .filter((_, index) => index % Math.ceil(data.length / 5) === 0)
+            .map((point, index) => {
+              const originalIndex = index * Math.ceil(data.length / 5)
+              const x = 40 + originalIndex * (320 / Math.max(1, data.length - 1))
+              return (
+                <text
+                  key={index}
+                  x={x}
+                  y="155"
+                  textAnchor="middle"
+                  className="text-xs fill-gray-500"
+                >
+                  {point.date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                </text>
+              )
+            })}
         </svg>
 
         {/* Legend */}
@@ -173,7 +179,10 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
         </div>
         <div className="text-center p-3 bg-green-50 rounded-lg">
           <div className="text-lg font-bold text-green-600">
-            {data.length > 0 ? (data.reduce((sum, point) => sum + point.score, 0) / data.length).toFixed(1) : 0}%
+            {data.length > 0
+              ? (data.reduce((sum, point) => sum + point.score, 0) / data.length).toFixed(1)
+              : 0}
+            %
           </div>
           <div className="text-xs text-gray-600">Average Score</div>
         </div>
@@ -203,22 +212,23 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
                 {(() => {
                   const firstHalf = data.slice(0, Math.floor(data.length / 2))
                   const secondHalf = data.slice(Math.floor(data.length / 2))
-                  const firstAvg = firstHalf.reduce((sum, point) => sum + point.score, 0) / firstHalf.length
-                  const secondAvg = secondHalf.reduce((sum, point) => sum + point.score, 0) / secondHalf.length
+                  const firstAvg =
+                    firstHalf.reduce((sum, point) => sum + point.score, 0) / firstHalf.length
+                  const secondAvg =
+                    secondHalf.reduce((sum, point) => sum + point.score, 0) / secondHalf.length
                   const trend = secondAvg - firstAvg
 
                   return (
-                    <div className={`flex items-center gap-2 ${
-                      trend > 0 ? 'text-green-600' : trend < 0 ? 'text-red-600' : 'text-gray-600'
-                    }`}>
-                      <span>
-                        {trend > 0 ? '↗' : trend < 0 ? '↘' : '→'}
-                      </span>
-                      <span>
-                        {trend > 0 ? 'Improving' : trend < 0 ? 'Declining' : 'Stable'}
-                      </span>
+                    <div
+                      className={`flex items-center gap-2 ${
+                        trend > 0 ? 'text-green-600' : trend < 0 ? 'text-red-600' : 'text-gray-600'
+                      }`}
+                    >
+                      <span>{trend > 0 ? '↗' : trend < 0 ? '↘' : '→'}</span>
+                      <span>{trend > 0 ? 'Improving' : trend < 0 ? 'Declining' : 'Stable'}</span>
                       <span className="font-medium">
-                        ({trend >= 0 ? '+' : ''}{trend.toFixed(1)}%)
+                        ({trend >= 0 ? '+' : ''}
+                        {trend.toFixed(1)}%)
                       </span>
                     </div>
                   )
@@ -233,27 +243,33 @@ export function ProgressTrendChart({ data }: ProgressTrendChartProps) {
             {data.length >= 2 && (
               <div className="text-sm">
                 {(() => {
-                  const scores = data.map(point => point.score)
+                  const scores = data.map((point) => point.score)
                   const mean = scores.reduce((sum, score) => sum + score, 0) / scores.length
-                  const variance = scores.reduce((sum, score) => sum + Math.pow(score - mean, 2), 0) / scores.length
+                  const variance =
+                    scores.reduce((sum, score) => sum + Math.pow(score - mean, 2), 0) /
+                    scores.length
                   const standardDeviation = Math.sqrt(variance)
                   const consistency = Math.max(0, 100 - standardDeviation)
 
                   return (
-                    <div className={`flex items-center gap-2 ${
-                      consistency >= 80 ? 'text-green-600' :
-                      consistency >= 60 ? 'text-yellow-600' : 'text-red-600'
-                    }`}>
+                    <div
+                      className={`flex items-center gap-2 ${
+                        consistency >= 80
+                          ? 'text-green-600'
+                          : consistency >= 60
+                            ? 'text-yellow-600'
+                            : 'text-red-600'
+                      }`}
+                    >
+                      <span>{consistency >= 80 ? '⭐' : consistency >= 60 ? '📊' : '📈'}</span>
                       <span>
-                        {consistency >= 80 ? '⭐' : consistency >= 60 ? '📊' : '📈'}
+                        {consistency >= 80
+                          ? 'Very Consistent'
+                          : consistency >= 60
+                            ? 'Moderately Consistent'
+                            : 'Variable'}
                       </span>
-                      <span>
-                        {consistency >= 80 ? 'Very Consistent' :
-                         consistency >= 60 ? 'Moderately Consistent' : 'Variable'}
-                      </span>
-                      <span className="font-medium">
-                        ({consistency.toFixed(0)}%)
-                      </span>
+                      <span className="font-medium">({consistency.toFixed(0)}%)</span>
                     </div>
                   )
                 })()}

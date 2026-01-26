@@ -159,14 +159,14 @@ const faqs = [
       'Most Kota coaching institutes focus heavily on Physics and Chemistry. Biology often gets less attention despite contributing 360 marks (50% of NEET). Many Kota students score 550+ in PC but struggle in Biology. Our specialized Biology coaching fills this gap, helping students score 340+ in Biology alone.',
   },
   {
-    question: 'How can online coaching compete with Kota\'s physical coaching institutes?',
+    question: "How can online coaching compete with Kota's physical coaching institutes?",
     answer:
-      'Our online classes offer what Kota\'s 200+ student batches cannot - personalized attention. With just 10-15 students per batch, every doubt gets addressed. Plus, save 2-3 hours daily on commuting between hostels and coaching centers. Our 94.2% success rate proves online is equally effective.',
+      "Our online classes offer what Kota's 200+ student batches cannot - personalized attention. With just 10-15 students per batch, every doubt gets addressed. Plus, save 2-3 hours daily on commuting between hostels and coaching centers. Our 94.2% success rate proves online is equally effective.",
   },
   {
     question: 'Which areas in Kota do you serve?',
     answer:
-      'We serve students from all Kota localities including Talwandi, Mahaveer Nagar, Rajeev Gandhi Nagar, Kunhari, Vigyan Nagar, Jawahar Nagar, Gumanpura, Borkhera, and all other areas. Whether you\'re near Allen, Resonance, or any other institute, you can join our online classes.',
+      "We serve students from all Kota localities including Talwandi, Mahaveer Nagar, Rajeev Gandhi Nagar, Kunhari, Vigyan Nagar, Jawahar Nagar, Gumanpura, Borkhera, and all other areas. Whether you're near Allen, Resonance, or any other institute, you can join our online classes.",
   },
   {
     question: 'What is the fee for Biology coaching in Kota?',
@@ -359,8 +359,8 @@ export default function NeetCoachingKotaPage() {
               The Hidden Problem in Kota Coaching
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Most Kota students score 550+ in Physics & Chemistry but struggle in Biology. Here&apos;s
-              why and how we solve it.
+              Most Kota students score 550+ in Physics & Chemistry but struggle in Biology.
+              Here&apos;s why and how we solve it.
             </p>
           </motion.div>
 
@@ -471,9 +471,7 @@ export default function NeetCoachingKotaPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-orange-600" />
                   </div>
-                  <div className="text-2xl font-bold text-orange-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-orange-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full">

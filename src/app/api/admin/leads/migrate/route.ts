@@ -34,10 +34,7 @@ interface MigrationResult {
   migratedLeadIds: string[]
 }
 
-async function handlePOST(
-  request: NextRequest,
-  session: ValidatedSession
-): Promise<NextResponse> {
+async function handlePOST(request: NextRequest, session: ValidatedSession): Promise<NextResponse> {
   try {
     const body = await request.json()
     const validatedData = migrateSchema.parse(body)
@@ -71,14 +68,14 @@ async function handlePOST(
 
       if (criteria.createdAfter) {
         whereClause.createdAt = {
-          ...(whereClause.createdAt as object || {}),
+          ...((whereClause.createdAt as object) || {}),
           gte: new Date(criteria.createdAfter),
         }
       }
 
       if (criteria.createdBefore) {
         whereClause.createdAt = {
-          ...(whereClause.createdAt as object || {}),
+          ...((whereClause.createdAt as object) || {}),
           lte: new Date(criteria.createdBefore),
         }
       }
@@ -209,7 +206,7 @@ async function handlePOST(
           where: { id: contentLead.id },
           data: {
             metadata: {
-              ...(contentLead.metadata as object || {}),
+              ...((contentLead.metadata as object) || {}),
               migratedToLeadId: newLead.id,
               migratedAt: new Date().toISOString(),
             },
@@ -240,18 +237,12 @@ async function handlePOST(
     }
 
     console.error('Error migrating leads:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to migrate leads' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to migrate leads' }, { status: 500 })
   }
 }
 
 // GET: Preview leads that would be migrated
-async function handleGET(
-  request: NextRequest,
-  _session: ValidatedSession
-): Promise<NextResponse> {
+async function handleGET(request: NextRequest, _session: ValidatedSession): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url)
     const minScore = parseInt(searchParams.get('minScore') || '0')
@@ -305,10 +296,7 @@ async function handleGET(
 
     const existingLeads = await prisma.leads.findMany({
       where: {
-        OR: [
-          { email: { in: emails } },
-          { phone: { in: phones } },
-        ],
+        OR: [{ email: { in: emails } }, { phone: { in: phones } }],
       },
       select: { email: true, phone: true },
     })
@@ -320,8 +308,7 @@ async function handleGET(
     const preview = contentLeads.map((lead) => ({
       ...lead,
       wouldBeDuplicate:
-        (lead.email && existingEmails.has(lead.email)) ||
-        existingPhones.has(lead.whatsappPhone),
+        (lead.email && existingEmails.has(lead.email)) || existingPhones.has(lead.whatsappPhone),
     }))
 
     const newLeads = preview.filter((l) => !l.wouldBeDuplicate)

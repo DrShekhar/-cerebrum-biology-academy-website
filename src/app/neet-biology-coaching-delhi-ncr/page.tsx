@@ -8,10 +8,7 @@ import {
   StickyCTA,
 } from '@/components/landing-pages'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
-import {
-  UrgencyBanner,
-  SocialProofNotifications,
-} from '@/components/landing-pages/UrgencyBanner'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 import type { USP, FAQ } from '@/components/landing-pages'
 
 export const metadata: Metadata = {

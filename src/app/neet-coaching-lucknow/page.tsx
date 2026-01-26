@@ -132,7 +132,7 @@ const features = [
   {
     icon: BookOpen,
     title: 'KGMU-Focused Prep',
-    description: 'Coaching designed to help you secure seats in UP\'s top medical colleges',
+    description: "Coaching designed to help you secure seats in UP's top medical colleges",
   },
   {
     icon: Clock,
@@ -208,7 +208,7 @@ const whyLucknow = [
   },
   {
     icon: TrendingUp,
-    title: 'UP\'s Rising Excellence',
+    title: "UP's Rising Excellence",
     description:
       'UP students are cracking NEET at record numbers. Be part of the success story from the state capital.',
   },
@@ -361,9 +361,7 @@ export default function NeetCoachingLucknowPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-teal-600" />
                   </div>
-                  <div className="text-2xl font-bold text-teal-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-teal-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded-full">

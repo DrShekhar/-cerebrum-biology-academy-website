@@ -12,9 +12,7 @@ interface BookingHeaderProps {
 export function BookingHeader({ currentStep, stepTitles, liveBookings }: BookingHeaderProps) {
   return (
     <div className="bg-indigo-500 p-4 md:p-6 text-white">
-      <h1 className="text-xl md:text-2xl font-bold mb-2">
-        Book Your Free NEET Biology Demo Class
-      </h1>
+      <h1 className="text-xl md:text-2xl font-bold mb-2">Book Your Free NEET Biology Demo Class</h1>
       <p className="text-blue-100">
         Experience our teaching methodology and get personalized guidance from AIIMS experts
       </p>

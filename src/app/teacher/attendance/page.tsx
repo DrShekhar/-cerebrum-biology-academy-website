@@ -11,15 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Input } from '@/components/ui/Input'
-import {
-  Calendar,
-  Clock,
-  Users,
-  CheckCircle,
-  AlertCircle,
-  Search,
-  UserCheck,
-} from 'lucide-react'
+import { Calendar, Clock, Users, CheckCircle, AlertCircle, Search, UserCheck } from 'lucide-react'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 import type { ClassSession } from '@/types/attendance'

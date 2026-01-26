@@ -122,10 +122,7 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('[Study Rooms API] Error:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch study rooms' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to fetch study rooms' }, { status: 500 })
   }
 }
 
@@ -135,10 +132,7 @@ export async function POST(request: NextRequest) {
 
     // Validate required fields
     if (!body.name || !body.topic) {
-      return NextResponse.json(
-        { error: 'Name and topic are required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Name and topic are required' }, { status: 400 })
     }
 
     const room: StudyRoomResponse = {
@@ -163,9 +157,6 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('[Study Rooms API] Error creating room:', error)
-    return NextResponse.json(
-      { error: 'Failed to create study room' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to create study room' }, { status: 500 })
   }
 }

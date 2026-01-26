@@ -11,7 +11,7 @@ export default defineConfig({
   workers: 1,
   timeout: 30 * 1000,
   expect: {
-    timeout: 10000
+    timeout: 10000,
   },
 
   reporter: [['list']],
@@ -34,6 +34,6 @@ export default defineConfig({
     command: 'npm run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: true,
-    timeout: 120 * 1000
-  }
+    timeout: 120 * 1000,
+  },
 })

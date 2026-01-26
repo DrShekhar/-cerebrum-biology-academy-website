@@ -545,7 +545,6 @@ const channel = supabase
 
 ```javascript
 import Plyr from 'plyr-react'
-
 ;<Plyr
   source={{
     type: 'video',

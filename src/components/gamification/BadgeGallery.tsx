@@ -2,14 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Trophy,
-  Star,
-  Lock,
-  X,
-  Sparkles,
-  Filter,
-} from 'lucide-react'
+import { Trophy, Star, Lock, X, Sparkles, Filter } from 'lucide-react'
 
 type BadgeRarity = 'COMMON' | 'UNCOMMON' | 'RARE' | 'EPIC' | 'LEGENDARY'
 type BadgeCategory = 'STREAKS' | 'MCQ_MASTERY' | 'TEST_PERFORMANCE' | 'CONSISTENCY' | 'SPECIAL'
@@ -36,13 +29,16 @@ interface BadgeGalleryProps {
   className?: string
 }
 
-const RARITY_CONFIG: Record<BadgeRarity, {
-  name: string
-  bgGradient: string
-  borderColor: string
-  textColor: string
-  glowColor: string
-}> = {
+const RARITY_CONFIG: Record<
+  BadgeRarity,
+  {
+    name: string
+    bgGradient: string
+    borderColor: string
+    textColor: string
+    glowColor: string
+  }
+> = {
   COMMON: {
     name: 'Common',
     bgGradient: 'from-gray-100 to-gray-200',
@@ -154,7 +150,9 @@ export function BadgeGallery({
           >
             <option value="ALL">All Rarities</option>
             {Object.entries(RARITY_CONFIG).map(([key, config]) => (
-              <option key={key} value={key}>{config.name}</option>
+              <option key={key} value={key}>
+                {config.name}
+              </option>
             ))}
           </select>
 
@@ -166,7 +164,9 @@ export function BadgeGallery({
           >
             <option value="ALL">All Categories</option>
             {Object.entries(CATEGORY_LABELS).map(([key, label]) => (
-              <option key={key} value={key}>{label}</option>
+              <option key={key} value={key}>
+                {label}
+              </option>
             ))}
           </select>
 
@@ -221,9 +221,11 @@ export function BadgeGallery({
                   </div>
 
                   {/* Badge Name (truncated) */}
-                  <div className={`text-xs font-medium text-center truncate ${
-                    badge.isEarned ? rarityConfig.textColor : 'text-gray-500'
-                  }`}>
+                  <div
+                    className={`text-xs font-medium text-center truncate ${
+                      badge.isEarned ? rarityConfig.textColor : 'text-gray-500'
+                    }`}
+                  >
                     {badge.name}
                   </div>
 
@@ -240,15 +242,21 @@ export function BadgeGallery({
                   )}
 
                   {/* Rarity indicator dot */}
-                  <div className={`absolute top-1 right-1 w-2 h-2 rounded-full ${
-                    badge.isEarned
-                      ? badge.rarity === 'LEGENDARY' ? 'bg-yellow-500'
-                      : badge.rarity === 'EPIC' ? 'bg-purple-500'
-                      : badge.rarity === 'RARE' ? 'bg-blue-500'
-                      : badge.rarity === 'UNCOMMON' ? 'bg-green-500'
-                      : 'bg-gray-400'
-                      : 'bg-gray-300'
-                  }`} />
+                  <div
+                    className={`absolute top-1 right-1 w-2 h-2 rounded-full ${
+                      badge.isEarned
+                        ? badge.rarity === 'LEGENDARY'
+                          ? 'bg-yellow-500'
+                          : badge.rarity === 'EPIC'
+                            ? 'bg-purple-500'
+                            : badge.rarity === 'RARE'
+                              ? 'bg-blue-500'
+                              : badge.rarity === 'UNCOMMON'
+                                ? 'bg-green-500'
+                                : 'bg-gray-400'
+                        : 'bg-gray-300'
+                    }`}
+                  />
                 </motion.button>
               )
             })}
@@ -283,25 +291,25 @@ export function BadgeGallery({
 
               {/* Badge Display */}
               <div className="text-center">
-                <div className={`w-24 h-24 mx-auto rounded-2xl flex items-center justify-center text-5xl mb-4 ${
-                  selectedBadge.isEarned
-                    ? `bg-gradient-to-br ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} border-2 ${RARITY_CONFIG[selectedBadge.rarity].borderColor} shadow-lg`
-                    : 'bg-gray-100 border-2 border-gray-200'
-                }`}>
+                <div
+                  className={`w-24 h-24 mx-auto rounded-2xl flex items-center justify-center text-5xl mb-4 ${
+                    selectedBadge.isEarned
+                      ? `bg-gradient-to-br ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} border-2 ${RARITY_CONFIG[selectedBadge.rarity].borderColor} shadow-lg`
+                      : 'bg-gray-100 border-2 border-gray-200'
+                  }`}
+                >
                   {selectedBadge.isEarned ? selectedBadge.icon : '🔒'}
                 </div>
 
                 {/* Rarity Badge */}
-                <div className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-bold mb-3 ${
-                  `bg-gradient-to-r ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} ${RARITY_CONFIG[selectedBadge.rarity].textColor}`
-                }`}>
+                <div
+                  className={`inline-flex items-center space-x-1 px-3 py-1 rounded-full text-xs font-bold mb-3 ${`bg-gradient-to-r ${RARITY_CONFIG[selectedBadge.rarity].bgGradient} ${RARITY_CONFIG[selectedBadge.rarity].textColor}`}`}
+                >
                   <Sparkles className="w-3 h-3" />
                   <span>{RARITY_CONFIG[selectedBadge.rarity].name}</span>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-2">
-                  {selectedBadge.name}
-                </h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{selectedBadge.name}</h3>
                 <p className="text-gray-600 mb-4">{selectedBadge.description}</p>
 
                 {/* Category */}
@@ -322,7 +330,10 @@ export function BadgeGallery({
                   <div className="flex items-center justify-center space-x-2 text-green-600">
                     <Trophy className="w-5 h-5" />
                     <span className="font-medium">
-                      Earned {selectedBadge.earnedAt ? new Date(selectedBadge.earnedAt).toLocaleDateString() : 'recently'}
+                      Earned{' '}
+                      {selectedBadge.earnedAt
+                        ? new Date(selectedBadge.earnedAt).toLocaleDateString()
+                        : 'recently'}
                     </span>
                   </div>
                 ) : (
@@ -334,7 +345,9 @@ export function BadgeGallery({
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
                         className="bg-gradient-to-r from-yellow-400 to-orange-500 h-2 rounded-full transition-all"
-                        style={{ width: `${(selectedBadge.progress / selectedBadge.maxProgress) * 100}%` }}
+                        style={{
+                          width: `${(selectedBadge.progress / selectedBadge.maxProgress) * 100}%`,
+                        }}
                       />
                     </div>
                     <div className="text-xs text-gray-500 mt-1">
@@ -351,8 +364,12 @@ export function BadgeGallery({
       {/* Add shimmer animation styles */}
       <style jsx>{`
         @keyframes shimmer {
-          0% { transform: translateX(-100%); }
-          100% { transform: translateX(100%); }
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
         }
         .animate-shimmer {
           animation: shimmer 2s infinite;

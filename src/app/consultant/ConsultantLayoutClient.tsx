@@ -5,16 +5,7 @@ import { useEffect, useState } from 'react'
 import { Toaster } from 'react-hot-toast'
 import Link from 'next/link'
 import { useSession } from 'next-auth/react'
-import {
-  LayoutDashboard,
-  Users,
-  DollarSign,
-  Link2,
-  Menu,
-  X,
-  LogOut,
-  Bell,
-} from 'lucide-react'
+import { LayoutDashboard, Users, DollarSign, Link2, Menu, X, LogOut, Bell } from 'lucide-react'
 
 const navItems = [
   { href: '/consultant/dashboard', label: 'Dashboard', icon: LayoutDashboard },
@@ -33,9 +24,7 @@ function ConsultantAuthWrapper({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (session?.user) {
       const userRole = session.user.role?.toLowerCase()
-      setIsConsultant(
-        userRole === 'consultant' || userRole === 'admin' || userRole === 'owner'
-      )
+      setIsConsultant(userRole === 'consultant' || userRole === 'admin' || userRole === 'owner')
     }
   }, [session])
 

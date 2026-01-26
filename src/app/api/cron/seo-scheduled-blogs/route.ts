@@ -9,7 +9,11 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { logger } from '@/lib/utils/logger'
-import { addToQueue, canGenerateContent, getOrCreateMonthlyLimits } from '@/lib/seo-marketing/queueService'
+import {
+  addToQueue,
+  canGenerateContent,
+  getOrCreateMonthlyLimits,
+} from '@/lib/seo-marketing/queueService'
 
 // CRON secret for Vercel
 const CRON_SECRET = process.env.CRON_SECRET

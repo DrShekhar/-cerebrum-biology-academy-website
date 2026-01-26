@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Koramangala Bangalore | BTM Layout | Cerebrum Academy',
+  title: 'Best NEET Coaching in Koramangala Bangalore | BTM Layout | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Koramangala, Bangalore startup hub. 94.2% success rate, AIIMS faculty. All Koramangala blocks, BTM Layout, Madiwala, Ejipura. Fee ₹24,000+. Book free demo!',
   keywords:
@@ -27,6 +26,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function KoramangalaBangaloreCoachingLayout({ children }: { children: React.ReactNode }) {
+export default function KoramangalaBangaloreCoachingLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

@@ -1,11 +1,6 @@
 import { prisma, DatabaseUtils } from './connection'
 import { QuestionCacheService } from '../cache/redis'
-import type {
-  questions,
-  question_banks,
-  question_bank_questions,
-  Prisma,
-} from '@/generated/prisma'
+import type { questions, question_banks, question_bank_questions, Prisma } from '@/generated/prisma'
 
 export interface CreateQuestionInput {
   topic: string

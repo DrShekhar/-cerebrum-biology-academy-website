@@ -101,6 +101,7 @@ This document outlines the automated testing strategy for critical user journeys
    - Use for: Realistic user interactions (typing, clicking)
 
 6. **Supertest** - API Testing
+
    ```bash
    npm install --save-dev supertest @types/supertest
    ```

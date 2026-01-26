@@ -1,14 +1,17 @@
 # 🚨 URGENT: Fix Authentication in 2 Minutes
 
 ## Problem
+
 Authentication is not working because `AUTH_SECRET` is missing in Vercel.
 
 ## Solution
 
 ### Step 1: Copy This Secret (Generated for you)
+
 ```
 b4MDi0VylWlVEiT80ImT7h4YLwIDRTcbPojTKARcRYA=
 ```
+
 **IMPORTANT:** Save this secret securely! You'll need it.
 
 ---
@@ -16,6 +19,7 @@ b4MDi0VylWlVEiT80ImT7h4YLwIDRTcbPojTKARcRYA=
 ### Step 2: Add to Vercel (2 clicks)
 
 1. **Open Vercel Dashboard:**
+
    ```
    https://vercel.com/drshekhar/cerebrum-biology-academy-website/settings/environment-variables
    ```
@@ -36,6 +40,7 @@ b4MDi0VylWlVEiT80ImT7h4YLwIDRTcbPojTKARcRYA=
 Vercel will automatically redeploy after adding the environment variable.
 
 **OR manually trigger:**
+
 ```bash
 git commit --allow-empty -m "Trigger redeploy after adding AUTH_SECRET"
 git push origin main
@@ -46,6 +51,7 @@ git push origin main
 ## Verify It's Working
 
 ### Test 1: Visit Sign In Page
+
 ```
 https://cerebrumbiologyacademy.com/sign-in
 ```
@@ -56,11 +62,13 @@ https://cerebrumbiologyacademy.com/sign-in
 4. ✅ Should redirect to dashboard (no errors)
 
 ### Test 2: Check Browser Console
+
 - Open DevTools (F12) → Console tab
 - ✅ Should see: `[Firebase] User authenticated successfully`
 - ❌ Should NOT see: `AUTH_SECRET not configured`
 
 ### Test 3: Check Session Cookie
+
 - DevTools (F12) → Application tab → Cookies
 - ✅ Should see cookie: `cerebrum_session`
 
@@ -79,12 +87,14 @@ https://cerebrumbiologyacademy.com/sign-in
 ## Technical Details
 
 **Why was auth broken?**
+
 - Code was deployed to Vercel (✅ latest commits pushed)
 - Firebase OTP was working (✅ configured)
 - BUT session creation failed (❌ AUTH_SECRET missing)
 - Error thrown: `[SECURITY CRITICAL] AUTH_SECRET not configured`
 
 **What AUTH_SECRET does:**
+
 - Signs JWT tokens for session management
 - Required by: `/api/auth/firebase-session`, `/api/auth/session`, `/api/ceri-ai/stream`
 - Format: 256-bit random base64 string (cryptographically secure)
@@ -94,11 +104,13 @@ https://cerebrumbiologyacademy.com/sign-in
 ## Status
 
 🔴 **BEFORE FIX:**
+
 - Authentication: ❌ BROKEN
 - Deployment: ✅ Latest code deployed
 - Issue: Missing AUTH_SECRET
 
 🟢 **AFTER FIX:**
+
 - Authentication: ✅ WORKING
 - Deployment: ✅ Latest code deployed
 - Issue: ✅ RESOLVED
@@ -110,6 +122,7 @@ https://cerebrumbiologyacademy.com/sign-in
 If authentication still doesn't work after adding AUTH_SECRET:
 
 1. Check Vercel deployment logs:
+
    ```
    https://vercel.com/drshekhar/cerebrum-biology-academy-website/deployments
    ```
@@ -119,6 +132,7 @@ If authentication still doesn't work after adding AUTH_SECRET:
    - If you don't see this: Check other errors in logs
 
 3. Test locally:
+
    ```bash
    # Add to .env.local
    echo "AUTH_SECRET=b4MDi0VylWlVEiT80ImT7h4YLwIDRTcbPojTKARcRYA=" >> .env.local

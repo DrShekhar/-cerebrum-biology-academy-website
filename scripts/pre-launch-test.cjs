@@ -15,7 +15,7 @@ class PreLaunchTester {
       passed: 0,
       failed: 0,
       warnings: 0,
-      details: []
+      details: [],
     }
   }
 
@@ -25,7 +25,7 @@ class PreLaunchTester {
       type,
       message,
       details,
-      timestamp
+      timestamp,
     }
 
     this.results.details.push(logEntry)
@@ -34,7 +34,7 @@ class PreLaunchTester {
       PASS: '\x1b[32m✅',
       FAIL: '\x1b[31m❌',
       WARN: '\x1b[33m⚠️',
-      INFO: '\x1b[36mℹ️'
+      INFO: '\x1b[36mℹ️',
     }
 
     console.log(`${colors[type]} ${message}\x1b[0m`)
@@ -69,7 +69,7 @@ class PreLaunchTester {
       'src/lib/payments/razorpayService.ts',
       'PRE_LAUNCH_CHECKLIST.md',
       'TECHNICAL_ARCHITECTURE.md',
-      'WHATSAPP_INTEGRATION_GUIDE.md'
+      'WHATSAPP_INTEGRATION_GUIDE.md',
     ]
 
     for (const file of requiredFiles) {
@@ -113,7 +113,7 @@ class PreLaunchTester {
       'RAZORPAY_KEY_ID',
       'RAZORPAY_KEY_SECRET',
       'NEXT_PUBLIC_GTM_ID',
-      'NEXT_PUBLIC_FB_PIXEL_ID'
+      'NEXT_PUBLIC_FB_PIXEL_ID',
     ]
 
     const envPath = '.env.local'
@@ -139,7 +139,7 @@ class PreLaunchTester {
       'src/app/api/contact/inquiry/route.ts',
       'src/app/api/whatsapp/webhook/route.ts',
       'src/app/api/whatsapp/automation/route.ts',
-      'src/app/sitemap.xml/route.ts'
+      'src/app/sitemap.xml/route.ts',
     ]
 
     for (const route of apiRoutes) {
@@ -168,7 +168,7 @@ class PreLaunchTester {
       'src/components/compliance/GDPRBanner.tsx',
       'src/lib/analytics/gtmService.ts',
       'src/lib/analytics/facebookPixelService.ts',
-      'src/lib/integrations/whatsappAutomationService.ts'
+      'src/lib/integrations/whatsappAutomationService.ts',
     ]
 
     for (const component of criticalComponents) {
@@ -199,7 +199,7 @@ class PreLaunchTester {
         'framer-motion',
         '@heroicons/react',
         'openai',
-        '@anthropic-ai/sdk'
+        '@anthropic-ai/sdk',
       ]
 
       const allDeps = { ...packageJson.dependencies, ...packageJson.devDependencies }
@@ -233,12 +233,7 @@ class PreLaunchTester {
     if (fs.existsSync(nextConfigPath)) {
       const content = fs.readFileSync(nextConfigPath, 'utf8')
 
-      const perfFeatures = [
-        'images:',
-        'compress:',
-        'experimental:',
-        'headers:'
-      ]
+      const perfFeatures = ['images:', 'compress:', 'experimental:', 'headers:']
 
       let configuredFeatures = 0
       for (const feature of perfFeatures) {
@@ -248,7 +243,10 @@ class PreLaunchTester {
       }
 
       if (configuredFeatures >= 2) {
-        this.log('PASS', `Next.js performance configuration detected (${configuredFeatures}/4 features)`)
+        this.log(
+          'PASS',
+          `Next.js performance configuration detected (${configuredFeatures}/4 features)`
+        )
       } else {
         this.log('WARN', 'Next.js performance configuration could be enhanced')
       }
@@ -263,7 +261,7 @@ class PreLaunchTester {
       'X-Content-Type-Options',
       'X-Frame-Options',
       'X-XSS-Protection',
-      'Content-Security-Policy'
+      'Content-Security-Policy',
     ]
 
     // Check for security configurations in next.config.js or middleware
@@ -320,16 +318,16 @@ class PreLaunchTester {
     if (this.results.failed > 0) {
       console.log('\n❌ CRITICAL ISSUES TO FIX:')
       this.results.details
-        .filter(d => d.type === 'FAIL')
-        .forEach(d => console.log(`   • ${d.message}`))
+        .filter((d) => d.type === 'FAIL')
+        .forEach((d) => console.log(`   • ${d.message}`))
     }
 
     if (this.results.warnings > 0) {
       console.log('\n⚠️  RECOMMENDATIONS:')
       this.results.details
-        .filter(d => d.type === 'WARN')
+        .filter((d) => d.type === 'WARN')
         .slice(0, 5) // Show top 5 warnings
-        .forEach(d => console.log(`   • ${d.message}`))
+        .forEach((d) => console.log(`   • ${d.message}`))
     }
 
     console.log('\n📋 For complete checklist, see: PRE_LAUNCH_CHECKLIST.md')

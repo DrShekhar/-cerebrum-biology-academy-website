@@ -766,15 +766,15 @@ The human digestive system is a complex coordinated system involving mechanical 
 **For**: NEET Biology Class 11 Preparation`,
   },
   {
-    title: 'Mendel\'s Laws of Inheritance and Genetic Principles',
+    title: "Mendel's Laws of Inheritance and Genetic Principles",
     slug: 'mendels-laws-inheritance-genetics',
     curriculum: 'NEET',
     grade: 'CLASS_12',
     chapter: 'Principles of Inheritance and Variation',
     difficulty: 'Medium',
-    metaTitle: 'Mendel\'s Laws of Inheritance | Complete Genetics Guide for NEET',
+    metaTitle: "Mendel's Laws of Inheritance | Complete Genetics Guide for NEET",
     metaDescription:
-      'Master Mendel\'s laws, monohybrid and dihybrid crosses, test cross, back cross, and inheritance patterns for NEET Biology.',
+      "Master Mendel's laws, monohybrid and dihybrid crosses, test cross, back cross, and inheritance patterns for NEET Biology.",
     keywords: [
       'Mendel laws',
       'genetics',

@@ -20,7 +20,7 @@ import {
   Target,
   BookOpen,
   Brain,
-  Users
+  Users,
 } from 'lucide-react'
 
 interface DeviceSpecs {
@@ -84,7 +84,9 @@ const MobileMultimodalInterface: React.FC = () => {
   const [deviceSpecs, setDeviceSpecs] = useState<DeviceSpecs | null>(null)
   const [currentContent, setCurrentContent] = useState<MultimodalContent | null>(null)
   const [isFullscreen, setIsFullscreen] = useState(false)
-  const [gestureMode, setGestureMode] = useState<'navigation' | 'interaction' | 'accessibility'>('navigation')
+  const [gestureMode, setGestureMode] = useState<'navigation' | 'interaction' | 'accessibility'>(
+    'navigation'
+  )
   const [activeGestures, setActiveGestures] = useState<TouchGesture[]>([])
   const [adaptiveQuality, setAdaptiveQuality] = useState<'low' | 'medium' | 'high'>('medium')
   const [offlineMode, setOfflineMode] = useState(false)
@@ -106,20 +108,20 @@ const MobileMultimodalInterface: React.FC = () => {
         layout: 'stack',
         gestures: ['tap', 'swipe', 'pinch'],
         offlineCapable: true,
-        adaptiveQuality: true
+        adaptiveQuality: true,
       },
       content: {
         text: 'Explore the fascinating world of cellular biology through interactive mobile experience',
         audio: '/mobile-audio/cell-intro.mp3',
         images: ['/mobile-images/cell-1.webp', '/mobile-images/cell-2.webp'],
-        interactive: { type: 'swipeable-cards', count: 8 }
+        interactive: { type: 'swipeable-cards', count: 8 },
       },
       accessibility: {
         voiceOver: 'Interactive cell biology lesson with swipeable cards and zoom functionality',
         hapticFeedback: true,
         highContrast: true,
-        largeTouch: true
-      }
+        largeTouch: true,
+      },
     },
     {
       id: 'dna-mobile-quiz',
@@ -129,18 +131,18 @@ const MobileMultimodalInterface: React.FC = () => {
         layout: 'tabs',
         gestures: ['tap', 'double-tap', 'long-press'],
         offlineCapable: true,
-        adaptiveQuality: false
+        adaptiveQuality: false,
       },
       content: {
         text: 'Test your DNA knowledge with touch-optimized questions',
-        interactive: { type: 'touch-quiz', questions: 10 }
+        interactive: { type: 'touch-quiz', questions: 10 },
       },
       accessibility: {
         voiceOver: 'DNA knowledge quiz with large touch targets and audio feedback',
         hapticFeedback: true,
         highContrast: true,
-        largeTouch: true
-      }
+        largeTouch: true,
+      },
     },
     {
       id: 'heart-mobile-diagram',
@@ -150,19 +152,19 @@ const MobileMultimodalInterface: React.FC = () => {
         layout: 'carousel',
         gestures: ['tap', 'pinch', 'rotate', 'swipe'],
         offlineCapable: false,
-        adaptiveQuality: true
+        adaptiveQuality: true,
       },
       content: {
         video: '/mobile-video/heart-ar.mp4',
-        interactive: { type: 'ar-diagram', complexity: 'high' }
+        interactive: { type: 'ar-diagram', complexity: 'high' },
       },
       accessibility: {
         voiceOver: 'Interactive 3D heart anatomy with AR capabilities and gesture controls',
         hapticFeedback: true,
         highContrast: false,
-        largeTouch: true
-      }
-    }
+        largeTouch: true,
+      },
+    },
   ]
 
   useEffect(() => {
@@ -186,7 +188,7 @@ const MobileMultimodalInterface: React.FC = () => {
       touchSupport: 'ontouchstart' in window,
       connectionSpeed: getConnectionSpeed(),
       batteryLevel: getBatteryLevel(),
-      isOnline: navigator.onLine
+      isOnline: navigator.onLine,
     }
 
     setDeviceSpecs(specs)
@@ -234,8 +236,8 @@ const MobileMultimodalInterface: React.FC = () => {
       performance: {
         loadTimes: [],
         gestureAccuracy: 0,
-        completionRate: 0
-      }
+        completionRate: 0,
+      },
     }
     setMobileSession(session)
   }
@@ -275,7 +277,7 @@ const MobileMultimodalInterface: React.FC = () => {
     touchStartRef.current = {
       x: touch.clientX,
       y: touch.clientY,
-      time: Date.now()
+      time: Date.now(),
     }
   }
 
@@ -305,7 +307,11 @@ const MobileMultimodalInterface: React.FC = () => {
     touchStartRef.current = null
   }
 
-  const detectGesture = (deltaX: number, deltaY: number, deltaTime: number): TouchGesture | null => {
+  const detectGesture = (
+    deltaX: number,
+    deltaY: number,
+    deltaTime: number
+  ): TouchGesture | null => {
     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
     const velocity = distance / deltaTime
 
@@ -314,7 +320,7 @@ const MobileMultimodalInterface: React.FC = () => {
       triggerHaptic('light')
       return {
         type: 'tap',
-        coordinates: { x: touchStartRef.current!.x, y: touchStartRef.current!.y }
+        coordinates: { x: touchStartRef.current!.x, y: touchStartRef.current!.y },
       }
     }
 
@@ -323,22 +329,27 @@ const MobileMultimodalInterface: React.FC = () => {
       triggerHaptic('medium')
       return {
         type: 'long-press',
-        coordinates: { x: touchStartRef.current!.x, y: touchStartRef.current!.y }
+        coordinates: { x: touchStartRef.current!.x, y: touchStartRef.current!.y },
       }
     }
 
     // Swipe
     if (distance > 50 && velocity > 0.5) {
-      const direction = Math.abs(deltaX) > Math.abs(deltaY)
-        ? (deltaX > 0 ? 'right' : 'left')
-        : (deltaY > 0 ? 'down' : 'up')
+      const direction =
+        Math.abs(deltaX) > Math.abs(deltaY)
+          ? deltaX > 0
+            ? 'right'
+            : 'left'
+          : deltaY > 0
+            ? 'down'
+            : 'up'
 
       triggerHaptic('light')
       return {
         type: 'swipe',
         coordinates: { x: touchStartRef.current!.x, y: touchStartRef.current!.y },
         direction,
-        velocity
+        velocity,
       }
     }
 
@@ -355,7 +366,7 @@ const MobileMultimodalInterface: React.FC = () => {
       type: 'pinch',
       coordinates: { x: event.pageX, y: event.pageY },
       scale: event.scale,
-      rotation: event.rotation
+      rotation: event.rotation,
     }
     handleGesture(gesture)
   }
@@ -372,14 +383,18 @@ const MobileMultimodalInterface: React.FC = () => {
   }
 
   const handleGesture = (gesture: TouchGesture) => {
-    setActiveGestures(prev => [...prev.slice(-4), gesture])
+    setActiveGestures((prev) => [...prev.slice(-4), gesture])
 
     // Update session data
     if (mobileSession) {
-      setMobileSession(prev => prev ? {
-        ...prev,
-        interactions: [...prev.interactions, gesture]
-      } : null)
+      setMobileSession((prev) =>
+        prev
+          ? {
+              ...prev,
+              interactions: [...prev.interactions, gesture],
+            }
+          : null
+      )
     }
 
     // Process gesture based on current mode and content
@@ -434,14 +449,14 @@ const MobileMultimodalInterface: React.FC = () => {
     const patterns = {
       light: [10],
       medium: [30],
-      heavy: [50, 50, 50]
+      heavy: [50, 50, 50],
     }
 
     navigator.vibrate(patterns[intensity])
   }
 
   const navigateContent = (direction: 'next' | 'previous') => {
-    const currentIndex = mobileContent.findIndex(content => content.id === currentContent?.id)
+    const currentIndex = mobileContent.findIndex((content) => content.id === currentContent?.id)
     let newIndex = direction === 'next' ? currentIndex + 1 : currentIndex - 1
 
     if (newIndex < 0) newIndex = mobileContent.length - 1
@@ -465,7 +480,7 @@ const MobileMultimodalInterface: React.FC = () => {
     const qualitySuffixes = {
       low: '_low.webp',
       medium: '_med.webp',
-      high: '_high.webp'
+      high: '_high.webp',
     }
     return baseSrc.replace('.webp', qualitySuffixes[adaptiveQuality])
   }
@@ -493,10 +508,7 @@ const MobileMultimodalInterface: React.FC = () => {
   }
 
   return (
-    <div
-      ref={containerRef}
-      className={`${getLayoutClasses()} min-h-screen bg-gray-50`}
-    >
+    <div ref={containerRef} className={`${getLayoutClasses()} min-h-screen bg-gray-50`}>
       {/* Mobile Header */}
       <motion.header
         initial={{ y: -100 }}
@@ -510,21 +522,31 @@ const MobileMultimodalInterface: React.FC = () => {
             </div>
             <div>
               <h1 className="text-lg font-bold text-gray-800">Biology Mobile</h1>
-              <p className="text-xs text-gray-600">{deviceSpecs.screenSize} • {adaptiveQuality} quality</p>
+              <p className="text-xs text-gray-600">
+                {deviceSpecs.screenSize} • {adaptiveQuality} quality
+              </p>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
             {/* Connection Indicator */}
             <div className="flex items-center gap-1">
-              {deviceSpecs.connectionSpeed === 'fast' && <Wifi className="w-4 h-4 text-green-600" />}
-              {deviceSpecs.connectionSpeed === 'medium' && <Signal className="w-4 h-4 text-yellow-600" />}
-              {deviceSpecs.connectionSpeed === 'slow' && <Signal className="w-4 h-4 text-red-600" />}
+              {deviceSpecs.connectionSpeed === 'fast' && (
+                <Wifi className="w-4 h-4 text-green-600" />
+              )}
+              {deviceSpecs.connectionSpeed === 'medium' && (
+                <Signal className="w-4 h-4 text-yellow-600" />
+              )}
+              {deviceSpecs.connectionSpeed === 'slow' && (
+                <Signal className="w-4 h-4 text-red-600" />
+              )}
             </div>
 
             {/* Battery Indicator */}
             <div className="flex items-center gap-1">
-              <Battery className={`w-4 h-4 ${deviceSpecs.batteryLevel > 20 ? 'text-green-600' : 'text-red-600'}`} />
+              <Battery
+                className={`w-4 h-4 ${deviceSpecs.batteryLevel > 20 ? 'text-green-600' : 'text-red-600'}`}
+              />
               <span className="text-xs text-gray-600">{deviceSpecs.batteryLevel}%</span>
             </div>
 
@@ -577,15 +599,13 @@ const MobileMultimodalInterface: React.FC = () => {
             {[
               { id: 'navigation', label: 'Navigate', icon: Navigation },
               { id: 'interaction', label: 'Interact', icon: Touch },
-              { id: 'accessibility', label: 'Accessible', icon: Eye }
+              { id: 'accessibility', label: 'Accessible', icon: Eye },
             ].map(({ id, label, icon: Icon }) => (
               <button
                 key={id}
                 onClick={() => setGestureMode(id as any)}
                 className={`flex-1 flex items-center justify-center gap-2 p-3 rounded-lg transition-colors ${
-                  gestureMode === id
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-100 text-gray-700'
+                  gestureMode === id ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700'
                 }`}
               >
                 <Icon className="w-4 h-4" />
@@ -647,9 +667,7 @@ const MobileMultimodalInterface: React.FC = () => {
                       key={idx}
                       className="aspect-square bg-gray-100 rounded-lg flex items-center justify-center"
                     >
-                      <span className="text-xs text-gray-500">
-                        {adaptiveQuality}
-                      </span>
+                      <span className="text-xs text-gray-500">{adaptiveQuality}</span>
                     </div>
                   ))}
                 </div>
@@ -767,7 +785,7 @@ const MobileMultimodalInterface: React.FC = () => {
             { icon: BookOpen, label: 'Learn', active: true },
             { icon: Target, label: 'Practice', active: false },
             { icon: Users, label: 'Community', active: false },
-            { icon: Settings, label: 'Settings', active: false }
+            { icon: Settings, label: 'Settings', active: false },
           ].map(({ icon: Icon, label, active }, index) => (
             <button
               key={index}

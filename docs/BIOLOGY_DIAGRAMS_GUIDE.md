@@ -82,14 +82,13 @@ import { RootMeristem, PlantTissues, StemCrossSection } from '@/components/diagr
   - Plants (numerous icons)
 
 **Integration**:
+
 ```tsx
 // Download SVGs and use directly
 import CellIcon from '@/assets/icons/cell.svg'
 
 // Or embed inline
-<svg>
-  {/* Paste bioicons SVG content */}
-</svg>
+;<svg>{/* Paste bioicons SVG content */}</svg>
 ```
 
 #### 2. SwissBioPics (Interactive Cell Images)
@@ -103,13 +102,11 @@ import CellIcon from '@/assets/icons/cell.svg'
 - Free for academic and commercial use
 
 **Integration**:
+
 ```tsx
 // SwissBioPics provides embeddable SVG files
 // Each organelle has metadata for interactivity
-<SwissBioPicsViewer
-  cellType="eukaryotic"
-  highlightedOrganelle="mitochondria"
-/>
+<SwissBioPicsViewer cellType="eukaryotic" highlightedOrganelle="mitochondria" />
 ```
 
 #### 3. SciDraw (Open Repository)
@@ -219,6 +216,7 @@ export const biologyColors = {
 ### AI-Assisted Diagram Generation
 
 Consider using:
+
 - **Claude** for SVG path generation from descriptions
 - **Stable Diffusion** for reference sketches (then trace to SVG)
 - **ChatGPT** for generating coordinate calculations
@@ -235,4 +233,4 @@ Consider using:
 
 ---
 
-*Last updated: January 2025*
+_Last updated: January 2025_

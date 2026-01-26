@@ -17,7 +17,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { id } = await params
@@ -60,7 +63,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     })
 
     if (!link) {
-      return NextResponse.json({ success: false, error: 'Referral link not found' }, { status: 404 })
+      return NextResponse.json(
+        { success: false, error: 'Referral link not found' },
+        { status: 404 }
+      )
     }
 
     // Get referral status breakdown
@@ -88,7 +94,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         isActive: link.isActive,
         clickCount: link.clickCount,
         conversionCount: link.conversionCount,
-        conversionRate: link.clickCount > 0 ? Math.round((link.conversionCount / link.clickCount) * 100) : 0,
+        conversionRate:
+          link.clickCount > 0 ? Math.round((link.conversionCount / link.clickCount) * 100) : 0,
         referralCount: link._count.referrals,
         targetCourse: link.targetCourse,
         targetCampaign: link.targetCampaign,
@@ -133,7 +140,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { id } = await params
@@ -159,7 +169,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     })
 
     if (!link) {
-      return NextResponse.json({ success: false, error: 'Referral link not found' }, { status: 404 })
+      return NextResponse.json(
+        { success: false, error: 'Referral link not found' },
+        { status: 404 }
+      )
     }
 
     const body = await request.json()
@@ -170,7 +183,10 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
 
     if (name !== undefined) {
       if (!name || name.trim().length === 0) {
-        return NextResponse.json({ success: false, error: 'Link name cannot be empty' }, { status: 400 })
+        return NextResponse.json(
+          { success: false, error: 'Link name cannot be empty' },
+          { status: 400 }
+        )
       }
       updateData.name = name.trim()
     }
@@ -237,7 +253,10 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { id } = await params
@@ -268,7 +287,10 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     })
 
     if (!link) {
-      return NextResponse.json({ success: false, error: 'Referral link not found' }, { status: 404 })
+      return NextResponse.json(
+        { success: false, error: 'Referral link not found' },
+        { status: 404 }
+      )
     }
 
     // Check if there are associated referrals

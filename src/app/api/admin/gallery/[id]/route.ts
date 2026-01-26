@@ -15,7 +15,9 @@ import { GalleryCategory } from '@/generated/prisma'
 const updateGalleryItemSchema = z.object({
   title: z.string().min(1).max(200).optional(),
   description: z.string().max(1000).optional().nullable(),
-  category: z.enum(['TOPPERS', 'EVENTS', 'SEMINARS', 'FACULTY', 'CAMPUS', 'MEDIA', 'VIDEOS']).optional(),
+  category: z
+    .enum(['TOPPERS', 'EVENTS', 'SEMINARS', 'FACULTY', 'CAMPUS', 'MEDIA', 'VIDEOS'])
+    .optional(),
   tags: z.array(z.string()).optional(),
   featured: z.boolean().optional(),
   eventDate: z.string().optional().nullable(),
@@ -34,10 +36,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const item = await getGalleryItem(id)
 
     if (!item) {
-      return NextResponse.json(
-        { success: false, error: 'Gallery item not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Gallery item not found' }, { status: 404 })
     }
 
     return NextResponse.json({ success: true, item })
@@ -66,7 +65,9 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
 
     const result = await updateGalleryItem(id, {
       ...(validatedData.title && { title: validatedData.title }),
-      ...(validatedData.description !== undefined && { description: validatedData.description || undefined }),
+      ...(validatedData.description !== undefined && {
+        description: validatedData.description || undefined,
+      }),
       ...(validatedData.category && { category: validatedData.category as GalleryCategory }),
       ...(validatedData.tags && { tags: validatedData.tags }),
       ...(validatedData.featured !== undefined && { featured: validatedData.featured }),
@@ -76,10 +77,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     })
 
     if (!result.success) {
-      return NextResponse.json(
-        { success: false, error: result.error },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: result.error }, { status: 400 })
     }
 
     return NextResponse.json({
@@ -117,10 +115,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     const result = await deleteGalleryItem(id)
 
     if (!result.success) {
-      return NextResponse.json(
-        { success: false, error: result.error },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: result.error }, { status: 400 })
     }
 
     return NextResponse.json({

@@ -34,10 +34,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BiologyTutorDwarkaLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function BiologyTutorDwarkaLayout({ children }: { children: React.ReactNode }) {
   return children
 }

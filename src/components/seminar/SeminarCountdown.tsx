@@ -50,9 +50,7 @@ export function SeminarCountdown({
               <div
                 className={`${sizeClasses[size].box} bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center`}
               >
-                <span className={`${sizeClasses[size].number} font-bold text-white`}>
-                  --
-                </span>
+                <span className={`${sizeClasses[size].number} font-bold text-white`}>--</span>
               </div>
               <span className={`${sizeClasses[size].label} text-slate-300 mt-1 block`}>
                 {label}
@@ -107,19 +105,13 @@ function TimeBox({ value, label, size }: TimeBoxProps) {
           {String(value).padStart(2, '0')}
         </span>
       </div>
-      <span className={`${sizeClasses[size].label} text-slate-300 mt-1 block`}>
-        {label}
-      </span>
+      <span className={`${sizeClasses[size].label} text-slate-300 mt-1 block`}>{label}</span>
     </div>
   )
 }
 
 function Separator({ size }: { size: 'sm' | 'md' | 'lg' }) {
-  return (
-    <span className={`${sizeClasses[size].separator} font-bold text-yellow-400`}>
-      :
-    </span>
-  )
+  return <span className={`${sizeClasses[size].separator} font-bold text-yellow-400`}>:</span>
 }
 
 const sizeClasses = {

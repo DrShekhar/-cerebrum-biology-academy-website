@@ -3,26 +3,32 @@
 ## Required Metadata (Every Page)
 
 ### 1. Title Tag
+
 ```
 Online Biology Tutoring for {Country} Students | Cerebrum Academy
 ```
+
 - Max 60 characters
 - Include country name
 - Brand at end
 
 ### 2. Meta Description
+
 ```
 Expert biology tutoring for {Exam1}, {Exam2}, {Exam3}. Small group from {Symbol}{Price}/hr.
 Online classes in your timezone. Book a free demo class today!
 ```
+
 - Max 160 characters
 - Include pricing
 - Include CTA
 
 ### 3. Canonical URL
+
 ```html
 <link rel="canonical" href="https://cerebrumacademy.com/international/{code}/" />
 ```
+
 - Trailing slash
 - HTTPS
 - No query params
@@ -30,6 +36,7 @@ Online classes in your timezone. Book a free demo class today!
 ## Hreflang Implementation
 
 ### Layout.tsx Hreflang Tags
+
 ```tsx
 // src/app/international/layout.tsx
 
@@ -39,26 +46,66 @@ export const metadata: Metadata = {
   // ... other metadata
 }
 
-export default function InternationalLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function InternationalLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <head>
         {/* Hreflang tags for all countries */}
-        <link rel="alternate" hreflang="en-US" href="https://cerebrumacademy.com/international/us/" />
-        <link rel="alternate" hreflang="en-GB" href="https://cerebrumacademy.com/international/uk/" />
-        <link rel="alternate" hreflang="en-CA" href="https://cerebrumacademy.com/international/ca/" />
-        <link rel="alternate" hreflang="en-AU" href="https://cerebrumacademy.com/international/au/" />
-        <link rel="alternate" hreflang="en-SG" href="https://cerebrumacademy.com/international/sg/" />
-        <link rel="alternate" hreflang="en-AE" href="https://cerebrumacademy.com/international/ae/" />
-        <link rel="alternate" hreflang="en-IE" href="https://cerebrumacademy.com/international/ie/" />
-        <link rel="alternate" hreflang="en-HK" href="https://cerebrumacademy.com/international/hk/" />
-        <link rel="alternate" hreflang="en-NZ" href="https://cerebrumacademy.com/international/nz/" />
-        <link rel="alternate" hreflang="en-ZA" href="https://cerebrumacademy.com/international/za/" />
-        <link rel="alternate" hreflang="x-default" href="https://cerebrumacademy.com/international/" />
+        <link
+          rel="alternate"
+          hreflang="en-US"
+          href="https://cerebrumacademy.com/international/us/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-GB"
+          href="https://cerebrumacademy.com/international/uk/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-CA"
+          href="https://cerebrumacademy.com/international/ca/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-AU"
+          href="https://cerebrumacademy.com/international/au/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-SG"
+          href="https://cerebrumacademy.com/international/sg/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-AE"
+          href="https://cerebrumacademy.com/international/ae/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-IE"
+          href="https://cerebrumacademy.com/international/ie/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-HK"
+          href="https://cerebrumacademy.com/international/hk/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-NZ"
+          href="https://cerebrumacademy.com/international/nz/"
+        />
+        <link
+          rel="alternate"
+          hreflang="en-ZA"
+          href="https://cerebrumacademy.com/international/za/"
+        />
+        <link
+          rel="alternate"
+          hreflang="x-default"
+          href="https://cerebrumacademy.com/international/"
+        />
       </head>
       {children}
     </>
@@ -69,48 +116,50 @@ export default function InternationalLayout({
 ## Structured Data (JSON-LD)
 
 ### EducationalOrganization Schema
+
 ```tsx
 // Add to each country page
 
 const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Cerebrum Biology Academy",
-  "description": `Expert biology tutoring for ${country.name} students`,
-  "url": `https://cerebrumacademy.com/international/${country.code}/`,
-  "logo": "https://cerebrumacademy.com/logo.png",
-  "areaServed": {
-    "@type": "Country",
-    "name": country.name
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'Cerebrum Biology Academy',
+  description: `Expert biology tutoring for ${country.name} students`,
+  url: `https://cerebrumacademy.com/international/${country.code}/`,
+  logo: 'https://cerebrumacademy.com/logo.png',
+  areaServed: {
+    '@type': 'Country',
+    name: country.name,
   },
-  "availableLanguage": "English",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Biology Tutoring Services",
-    "itemListElement": [
+  availableLanguage: 'English',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Biology Tutoring Services',
+    itemListElement: [
       {
-        "@type": "Offer",
-        "name": "Small Group Tutoring",
-        "price": country.pricing.smallGroup,
-        "priceCurrency": country.currency.code
+        '@type': 'Offer',
+        name: 'Small Group Tutoring',
+        price: country.pricing.smallGroup,
+        priceCurrency: country.currency.code,
       },
       {
-        "@type": "Offer",
-        "name": "One-on-One Tutoring",
-        "price": country.pricing.oneOnOneMin,
-        "priceCurrency": country.currency.code
-      }
-    ]
+        '@type': 'Offer',
+        name: 'One-on-One Tutoring',
+        price: country.pricing.oneOnOneMin,
+        priceCurrency: country.currency.code,
+      },
+    ],
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "500"
-  }
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.9',
+    reviewCount: '500',
+  },
 }
 ```
 
 ### Course Schema (Per Course Page)
+
 ```json
 {
   "@context": "https://schema.org",
@@ -167,18 +216,19 @@ twitter: {
 ## Keywords Strategy
 
 ### Primary Keywords (Per Country)
-| Country | Primary Keywords |
-|---------|-----------------|
-| US | "AP Biology tutor online", "MCAT biology prep", "biology tutor USA" |
-| UK | "GCSE Biology tutor", "A-Level Biology tutoring", "biology tutor UK" |
-| CA | "biology tutor Canada", "MCAT prep Canada", "online biology tutoring Canada" |
-| AU | "HSC Biology tutor", "VCE Biology tutoring", "biology tutor Australia" |
-| SG | "biology tutor Singapore", "O-Level Biology tutoring", "A-Level Biology Singapore" |
-| AE | "biology tutor Dubai", "IGCSE Biology UAE", "IB Biology tutor Dubai" |
-| IE | "Leaving Cert Biology tutor", "biology grinds Ireland", "online biology tutor Ireland" |
-| HK | "HKDSE Biology tutor", "biology tutor Hong Kong", "A-Level Biology HK" |
-| NZ | "NCEA Biology tutor", "biology tutor New Zealand", "online biology tutoring NZ" |
-| ZA | "NSC Biology tutor", "IEB Biology tutoring", "biology tutor South Africa" |
+
+| Country | Primary Keywords                                                                       |
+| ------- | -------------------------------------------------------------------------------------- |
+| US      | "AP Biology tutor online", "MCAT biology prep", "biology tutor USA"                    |
+| UK      | "GCSE Biology tutor", "A-Level Biology tutoring", "biology tutor UK"                   |
+| CA      | "biology tutor Canada", "MCAT prep Canada", "online biology tutoring Canada"           |
+| AU      | "HSC Biology tutor", "VCE Biology tutoring", "biology tutor Australia"                 |
+| SG      | "biology tutor Singapore", "O-Level Biology tutoring", "A-Level Biology Singapore"     |
+| AE      | "biology tutor Dubai", "IGCSE Biology UAE", "IB Biology tutor Dubai"                   |
+| IE      | "Leaving Cert Biology tutor", "biology grinds Ireland", "online biology tutor Ireland" |
+| HK      | "HKDSE Biology tutor", "biology tutor Hong Kong", "A-Level Biology HK"                 |
+| NZ      | "NCEA Biology tutor", "biology tutor New Zealand", "online biology tutoring NZ"        |
+| ZA      | "NSC Biology tutor", "IEB Biology tutoring", "biology tutor South Africa"              |
 
 ## XML Sitemap Entry
 
@@ -213,6 +263,7 @@ Sitemap: https://cerebrumacademy.com/sitemap-international.xml
 ## Content Uniqueness
 
 Each page must have 60%+ unique content:
+
 - [ ] Country-specific headline
 - [ ] Country-specific exam systems
 - [ ] Local currency pricing

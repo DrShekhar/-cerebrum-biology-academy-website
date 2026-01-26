@@ -33,7 +33,10 @@ export async function GET(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { searchParams } = new URL(request.url)
@@ -134,10 +137,7 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('Error fetching parent alerts:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch alerts' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch alerts' }, { status: 500 })
   }
 }
 
@@ -202,7 +202,9 @@ async function generateChildAlerts(
 
     // Check for recent absences
     const recentAbsences = attendanceRecords.filter(
-      (r) => r.status === 'ABSENT' && new Date(r.createdAt).getTime() > now.getTime() - 7 * 24 * 60 * 60 * 1000
+      (r) =>
+        r.status === 'ABSENT' &&
+        new Date(r.createdAt).getTime() > now.getTime() - 7 * 24 * 60 * 60 * 1000
     )
 
     if (recentAbsences.length >= 3) {
@@ -237,9 +239,7 @@ async function generateChildAlerts(
     })
 
     // Overdue homework
-    const overdueHomework = pendingSubmissions.filter(
-      (s) => new Date(s.assignment.dueDate) < now
-    )
+    const overdueHomework = pendingSubmissions.filter((s) => new Date(s.assignment.dueDate) < now)
 
     if (overdueHomework.length > 0) {
       alerts.push({
@@ -384,7 +384,8 @@ async function generateChildAlerts(
       const recentTestsSlice = monthlyTests.slice(midpoint)
 
       const olderAvg = olderTests.reduce((a, t) => a + t.percentage, 0) / olderTests.length
-      const recentAvg = recentTestsSlice.reduce((a, t) => a + t.percentage, 0) / recentTestsSlice.length
+      const recentAvg =
+        recentTestsSlice.reduce((a, t) => a + t.percentage, 0) / recentTestsSlice.length
 
       if (recentAvg < olderAvg - 15) {
         alerts.push({
@@ -433,9 +434,7 @@ async function generatePaymentAlerts(childIds: string[], now: Date): Promise<Ale
   )
 
   // Overdue payments
-  const overduePayments = pendingPayments.filter(
-    (p) => p.dueDate && new Date(p.dueDate) < now
-  )
+  const overduePayments = pendingPayments.filter((p) => p.dueDate && new Date(p.dueDate) < now)
 
   if (overduePayments.length > 0) {
     const totalOverdue = overduePayments.reduce((acc, p) => acc + p.amount, 0)

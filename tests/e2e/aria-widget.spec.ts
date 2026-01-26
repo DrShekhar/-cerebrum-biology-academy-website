@@ -7,7 +7,10 @@ import { test, expect } from '@playwright/test'
 
 test.describe('ARIA Widget - Basic Functionality', () => {
   // Skip in CI - ARIA widget visibility depends on auth state which varies in CI
-  test.skip(({ }, testInfo) => !!process.env.CI, 'ARIA widget tests skipped in CI - depends on auth state')
+  test.skip(
+    ({}, testInfo) => !!process.env.CI,
+    'ARIA widget tests skipped in CI - depends on auth state'
+  )
 
   test.beforeEach(async ({ page }) => {
     await page.goto('/', { waitUntil: 'load', timeout: 30000 })
@@ -18,13 +21,17 @@ test.describe('ARIA Widget - Basic Functionality', () => {
 
   test('should display ARIA widget button after page load', async ({ page }) => {
     // Look for the chat widget button
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+    const widgetButton = page.locator(
+      'button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")'
+    )
     await expect(widgetButton.first()).toBeVisible({ timeout: 10000 })
   })
 
   test('should open ARIA chat panel when widget button is clicked', async ({ page }) => {
     // Click the widget button
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await expect(widgetButton).toBeVisible({ timeout: 10000 })
     await widgetButton.click()
 
@@ -35,7 +42,9 @@ test.describe('ARIA Widget - Basic Functionality', () => {
 
   test('should display greeting message when chat opens', async ({ page }) => {
     // Open widget
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
 
     // Should see greeting mentioning ARIA
@@ -45,14 +54,18 @@ test.describe('ARIA Widget - Basic Functionality', () => {
 
   test('should have working close button', async ({ page }) => {
     // Open widget
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
 
     // Wait for panel to open
     await page.waitForTimeout(500)
 
     // Find and click close button
-    const closeButton = page.locator('button[aria-label="Close"], button:has(svg.lucide-x), button:has(svg[class*="x"])').first()
+    const closeButton = page
+      .locator('button[aria-label="Close"], button:has(svg.lucide-x), button:has(svg[class*="x"])')
+      .first()
     await expect(closeButton).toBeVisible({ timeout: 5000 })
     await closeButton.click()
 
@@ -69,13 +82,19 @@ test.describe('ARIA Widget - Chat Interaction', () => {
     await page.waitForTimeout(6000)
 
     // Open the widget
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
     await page.waitForTimeout(500)
   })
 
   test('should have an input field for typing messages', async ({ page }) => {
-    const chatInput = page.locator('input[placeholder*="Type"], textarea[placeholder*="Type"], input[placeholder*="message"], textarea[placeholder*="message"]').first()
+    const chatInput = page
+      .locator(
+        'input[placeholder*="Type"], textarea[placeholder*="Type"], input[placeholder*="message"], textarea[placeholder*="message"]'
+      )
+      .first()
     await expect(chatInput).toBeVisible({ timeout: 5000 })
   })
 
@@ -83,11 +102,17 @@ test.describe('ARIA Widget - Chat Interaction', () => {
     // Skip in CI - API calls may fail without proper environment
     test.skip(!!process.env.CI, 'Skipping API-dependent test in CI')
 
-    const chatInput = page.locator('input[placeholder*="Type"], textarea[placeholder*="Type"], input[placeholder*="message"], textarea[placeholder*="message"]').first()
+    const chatInput = page
+      .locator(
+        'input[placeholder*="Type"], textarea[placeholder*="Type"], input[placeholder*="message"], textarea[placeholder*="message"]'
+      )
+      .first()
     await chatInput.fill('Hello')
 
     // Press Enter or click send button
-    const sendButton = page.locator('button[type="submit"], button[aria-label="Send"], button:has(svg.lucide-send)').first()
+    const sendButton = page
+      .locator('button[type="submit"], button[aria-label="Send"], button:has(svg.lucide-send)')
+      .first()
     if (await sendButton.isVisible()) {
       await sendButton.click()
     } else {
@@ -102,7 +127,9 @@ test.describe('ARIA Widget - Chat Interaction', () => {
     // Skip in CI - requires API interaction
     test.skip(!!process.env.CI, 'Skipping API-dependent test in CI')
 
-    const chatInput = page.locator('input[placeholder*="Type"], textarea[placeholder*="Type"]').first()
+    const chatInput = page
+      .locator('input[placeholder*="Type"], textarea[placeholder*="Type"]')
+      .first()
     await chatInput.fill('Tell me about courses')
 
     const sendButton = page.locator('button[type="submit"], button[aria-label="Send"]').first()
@@ -123,14 +150,18 @@ test.describe('ARIA Widget - Quick Actions', () => {
     await page.goto('/', { waitUntil: 'load' })
     await page.waitForTimeout(6000)
 
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
     await page.waitForTimeout(500)
   })
 
   test('should display quick action buttons', async ({ page }) => {
     // Look for quick action buttons (courses, pricing, demo, etc.)
-    const quickActions = page.locator('button:has-text("Courses"), button:has-text("Pricing"), button:has-text("Demo"), button:has-text("Book")')
+    const quickActions = page.locator(
+      'button:has-text("Courses"), button:has-text("Pricing"), button:has-text("Demo"), button:has-text("Book")'
+    )
     const count = await quickActions.count()
 
     // Should have at least some quick actions
@@ -142,7 +173,9 @@ test.describe('ARIA Widget - Quick Actions', () => {
     test.skip(!!process.env.CI, 'Skipping API-dependent test in CI')
 
     // Find and click a quick action
-    const quickAction = page.locator('button:has-text("Courses"), button:has-text("Pricing")').first()
+    const quickAction = page
+      .locator('button:has-text("Courses"), button:has-text("Pricing")')
+      .first()
     if (await quickAction.isVisible()) {
       await quickAction.click()
 
@@ -161,7 +194,9 @@ test.describe('ARIA Widget - Lead Capture Flow', () => {
     await page.goto('/', { waitUntil: 'load' })
     await page.waitForTimeout(6000)
 
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
     await page.waitForTimeout(500)
   })
@@ -176,7 +211,9 @@ test.describe('ARIA Widget - Lead Capture Flow', () => {
 
       // Should show name input or form
       const nameInput = page.locator('input[placeholder*="name"], input[name*="name"]')
-      const phoneInput = page.locator('input[placeholder*="phone"], input[type="tel"], input[name*="phone"]')
+      const phoneInput = page.locator(
+        'input[placeholder*="phone"], input[type="tel"], input[name*="phone"]'
+      )
 
       // At least one of these should eventually be visible as part of lead capture
       const hasLeadForm = (await nameInput.isVisible()) || (await phoneInput.isVisible())
@@ -195,7 +232,9 @@ test.describe('ARIA Widget - Lead Capture Flow', () => {
     test.skip(!!process.env.CI, 'Skipping form validation test in CI')
 
     // Trigger lead capture flow
-    const bookDemoButton = page.locator('button:has-text("Book Demo"), button:has-text("Call Me")').first()
+    const bookDemoButton = page
+      .locator('button:has-text("Book Demo"), button:has-text("Call Me")')
+      .first()
     if (await bookDemoButton.isVisible()) {
       await bookDemoButton.click()
       await page.waitForTimeout(1000)
@@ -206,12 +245,16 @@ test.describe('ARIA Widget - Lead Capture Flow', () => {
         await phoneInput.fill('123') // Too short
 
         // Try to submit
-        const submitButton = page.locator('button[type="submit"], button:has-text("Submit"), button:has-text("Continue")').first()
+        const submitButton = page
+          .locator('button[type="submit"], button:has-text("Submit"), button:has-text("Continue")')
+          .first()
         if (await submitButton.isVisible()) {
           await submitButton.click()
 
           // Should show validation error
-          const errorMessage = page.locator('text=valid, text=invalid, text=10 digit, [class*="error"]')
+          const errorMessage = page.locator(
+            'text=valid, text=invalid, text=10 digit, [class*="error"]'
+          )
           await expect(errorMessage.first()).toBeVisible({ timeout: 3000 })
         }
       }
@@ -224,14 +267,18 @@ test.describe('ARIA Widget - Language Support', () => {
     await page.goto('/', { waitUntil: 'load' })
     await page.waitForTimeout(6000)
 
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
     await page.waitForTimeout(500)
   })
 
   test('should have language toggle option', async ({ page }) => {
     // Look for language toggle (हिंदी or English button)
-    const languageToggle = page.locator('button:has-text("हिंदी"), button:has-text("English"), button[aria-label*="language"]')
+    const languageToggle = page.locator(
+      'button:has-text("हिंदी"), button:has-text("English"), button[aria-label*="language"]'
+    )
     await expect(languageToggle.first()).toBeVisible({ timeout: 5000 })
   })
 
@@ -243,7 +290,9 @@ test.describe('ARIA Widget - Language Support', () => {
       await page.waitForTimeout(1000)
 
       // UI should now show Hindi text (Devanagari characters)
-      const hindiText = page.locator(':has-text("नमस्ते"), :has-text("मैं"), :has-text("हूं"), :has-text("बुक")')
+      const hindiText = page.locator(
+        ':has-text("नमस्ते"), :has-text("मैं"), :has-text("हूं"), :has-text("बुक")'
+      )
       expect(await hindiText.count()).toBeGreaterThan(0)
     }
   })
@@ -254,13 +303,17 @@ test.describe('ARIA Widget - WhatsApp Integration', () => {
     await page.goto('/', { waitUntil: 'load' })
     await page.waitForTimeout(6000)
 
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
     await page.waitForTimeout(500)
   })
 
   test('should have WhatsApp button visible', async ({ page }) => {
-    const whatsappButton = page.locator('button:has-text("WhatsApp"), a[href*="wa.me"], button[aria-label*="WhatsApp"]')
+    const whatsappButton = page.locator(
+      'button:has-text("WhatsApp"), a[href*="wa.me"], button[aria-label*="WhatsApp"]'
+    )
     await expect(whatsappButton.first()).toBeVisible({ timeout: 5000 })
   })
 
@@ -283,12 +336,16 @@ test.describe('ARIA Widget - Mobile Experience', () => {
   })
 
   test('should be visible and accessible on mobile', async ({ page }) => {
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await expect(widgetButton).toBeVisible({ timeout: 10000 })
   })
 
   test('should open full-screen or modal on mobile', async ({ page }) => {
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
     await page.waitForTimeout(500)
 
@@ -304,11 +361,15 @@ test.describe('ARIA Widget - Mobile Experience', () => {
   })
 
   test('should have touch-friendly buttons', async ({ page }) => {
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
 
     // Quick action buttons should be large enough for touch
-    const actionButtons = page.locator('button').filter({ hasText: /Courses|Pricing|Demo|WhatsApp/i })
+    const actionButtons = page
+      .locator('button')
+      .filter({ hasText: /Courses|Pricing|Demo|WhatsApp/i })
     const count = await actionButtons.count()
 
     for (let i = 0; i < Math.min(count, 3); i++) {
@@ -333,12 +394,16 @@ test.describe('ARIA Widget - Persistence', () => {
     await page.waitForTimeout(6000)
 
     // Open widget
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
     await page.waitForTimeout(500)
 
     // Send a message
-    const chatInput = page.locator('input[placeholder*="Type"], textarea[placeholder*="Type"]').first()
+    const chatInput = page
+      .locator('input[placeholder*="Type"], textarea[placeholder*="Type"]')
+      .first()
     await chatInput.fill('Test message for persistence')
     await chatInput.press('Enter')
     await page.waitForTimeout(2000)
@@ -361,7 +426,9 @@ test.describe('ARIA Widget - Persistence', () => {
     await page.waitForTimeout(6000)
 
     // Open widget
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
 
     // Switch to Hindi
@@ -375,7 +442,9 @@ test.describe('ARIA Widget - Persistence', () => {
       await page.waitForTimeout(6000)
 
       // Reopen widget
-      const reopenButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+      const reopenButton = page
+        .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+        .first()
       await reopenButton.click()
       await page.waitForTimeout(500)
 
@@ -393,7 +462,9 @@ test.describe('ARIA Widget - Accessibility', () => {
   })
 
   test('should have proper ARIA labels', async ({ page }) => {
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"]').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"]')
+      .first()
     const ariaLabel = await widgetButton.getAttribute('aria-label')
     expect(ariaLabel).toBeTruthy()
   })
@@ -421,11 +492,15 @@ test.describe('ARIA Widget - Accessibility', () => {
   })
 
   test('should have sufficient color contrast', async ({ page }) => {
-    const widgetButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")').first()
+    const widgetButton = page
+      .locator('button[aria-label*="ARIA"], button[aria-label*="chat"], button:has-text("ARIA")')
+      .first()
     await widgetButton.click()
 
     // Check that text is visible (basic contrast check)
-    const chatText = page.locator('[class*="chat"] span, [class*="chat"] p, [class*="message"] span')
+    const chatText = page.locator(
+      '[class*="chat"] span, [class*="chat"] p, [class*="message"] span'
+    )
     const count = await chatText.count()
 
     if (count > 0) {

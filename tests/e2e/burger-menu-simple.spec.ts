@@ -7,13 +7,7 @@ test.use({
 
 test.describe('Burger Menu - Simple Test', () => {
   test('try different pages to find working page', async ({ page }) => {
-    const pagesToTry = [
-      '/courses',
-      '/faculty',
-      '/results',
-      '/about',
-      '/contact',
-    ]
+    const pagesToTry = ['/courses', '/faculty', '/results', '/about', '/contact']
 
     for (const pagePath of pagesToTry) {
       console.log(`\n\nTrying page: ${pagePath}`)

@@ -35,10 +35,7 @@ export async function GET(request: NextRequest) {
     // Featured filter: only those currently in featured period
     if (featured) {
       whereClause.featuredFrom = { lte: now }
-      whereClause.OR = [
-        { featuredUntil: null },
-        { featuredUntil: { gte: now } },
-      ]
+      whereClause.OR = [{ featuredUntil: null }, { featuredUntil: { gte: now } }]
     }
 
     const [achievers, total] = await Promise.all([
@@ -96,7 +93,8 @@ export async function GET(request: NextRequest) {
       ...a,
       score: a.score ? Number(a.score) : null,
       nominationCount: a._count.nominations,
-      isFeatured: a.featuredFrom && a.featuredFrom <= now && (!a.featuredUntil || a.featuredUntil >= now),
+      isFeatured:
+        a.featuredFrom && a.featuredFrom <= now && (!a.featuredUntil || a.featuredUntil >= now),
       _count: undefined,
     }))
 
@@ -118,6 +116,9 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('Error fetching wall of achievers:', error)
-    return NextResponse.json({ success: false, error: 'Failed to fetch achievers' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to fetch achievers' },
+      { status: 500 }
+    )
   }
 }

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Powai Mumbai | Hiranandani, JVLR | Cerebrum Academy',
+  title: 'Best NEET Coaching in Powai Mumbai | Hiranandani, JVLR | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Powai, Mumbai for tech families. 94.2% success rate, AIIMS faculty. Hiranandani Gardens, Powai Lake, JVLR, Chandivali. IIT Bombay area. Fee ₹24,000+. Book free demo!',
   keywords:

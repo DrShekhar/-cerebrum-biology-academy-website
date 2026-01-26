@@ -60,8 +60,7 @@ function FAQSection({ areaName }: { areaName: string }) {
     },
     {
       question: 'How can I book a free demo class?',
-      answer:
-        `You can book a free demo class by clicking the "Book FREE Demo Class" button on this page, calling us at ${CONTACT_INFO.phone.display.primary}, or sending a WhatsApp message. Our counselors will schedule a convenient time for you to experience our teaching methodology firsthand.`,
+      answer: `You can book a free demo class by clicking the "Book FREE Demo Class" button on this page, calling us at ${CONTACT_INFO.phone.display.primary}, or sending a WhatsApp message. Our counselors will schedule a convenient time for you to experience our teaching methodology firsthand.`,
     },
     {
       question: 'What is the batch size and timing for classes?',

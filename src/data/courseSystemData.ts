@@ -1080,7 +1080,13 @@ export const coursePrograms: CourseProgram[] = [
           title: 'Year 1 - Class 11 Biology Foundation',
           description: 'Complete Class 11 NCERT coverage with NEET focus',
           duration: 480,
-          topics: ['Diversity in Living World', 'Structural Organisation', 'Cell Structure', 'Plant Physiology', 'Human Physiology'],
+          topics: [
+            'Diversity in Living World',
+            'Structural Organisation',
+            'Cell Structure',
+            'Plant Physiology',
+            'Human Physiology',
+          ],
           learningObjectives: ['Master Class 11 biology', 'Build NEET foundation'],
           practicalWork: ['Lab experiments', 'Specimen studies'],
         },
@@ -1127,7 +1133,8 @@ export const coursePrograms: CourseProgram[] = [
       {
         id: 'faq-2y-1',
         question: 'What is the advantage of 2-year program?',
-        answer: 'The 2-year program provides more time for thorough conceptual understanding, less stress, and better retention compared to crash courses.',
+        answer:
+          'The 2-year program provides more time for thorough conceptual understanding, less stress, and better retention compared to crash courses.',
         category: 'program',
         order: 1,
       },
@@ -1247,7 +1254,8 @@ export const coursePrograms: CourseProgram[] = [
       {
         id: 'faq-flag-1',
         question: 'Who should join the Flagship Pinnacle ZA Program?',
-        answer: 'This program is ideal for serious NEET aspirants (Class 12 or Droppers) who want comprehensive 11th+12th coverage in 1 year with premium mentorship.',
+        answer:
+          'This program is ideal for serious NEET aspirants (Class 12 or Droppers) who want comprehensive 11th+12th coverage in 1 year with premium mentorship.',
         category: 'eligibility',
         order: 1,
       },

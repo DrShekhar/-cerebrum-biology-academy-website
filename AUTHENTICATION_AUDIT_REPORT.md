@@ -1,4 +1,5 @@
 # Authentication Audit Report
+
 **Date:** January 20, 2026
 **Auditor:** Claude Code
 **Issue:** Authentication not working in production
@@ -16,6 +17,7 @@ The application uses **Firebase Authentication** with phone OTP, but critical se
 ## Authentication Architecture
 
 ### Current Setup:
+
 ```
 User Flow:
 1. User enters phone number (/sign-in)
@@ -31,6 +33,7 @@ User Flow:
 ```
 
 ### Technologies:
+
 - **Primary Auth:** Firebase Authentication (Phone OTP)
 - **Session Management:** JWT tokens + HTTP-only cookies
 - **Database:** Supabase PostgreSQL (via Prisma)
@@ -45,6 +48,7 @@ User Flow:
 **File:** `src/app/api/auth/firebase-session/route.ts` (Line 20)
 
 **Code:**
+
 ```typescript
 const getAuthSecret = (): string => {
   const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
@@ -61,6 +65,7 @@ const getAuthSecret = (): string => {
 ```
 
 **Problem:**
+
 - `AUTH_SECRET` or `NEXTAUTH_SECRET` is **NOT SET** in Vercel environment variables
 - This causes authentication to **THROW AN ERROR** in production
 - Users cannot complete sign-in flow
@@ -75,6 +80,7 @@ const getAuthSecret = (): string => {
 **File:** `src/lib/auth/config.ts` (Lines 50, 77)
 
 **Missing Variables:**
+
 - `JWT_SECRET` - Used for general JWT token signing
 - `JWT_REFRESH_SECRET` - Used for refresh token signing
 
@@ -85,6 +91,7 @@ const getAuthSecret = (): string => {
 ## Current Environment Variables
 
 ### ✅ **PRESENT in .env.local:**
+
 ```env
 NEXT_PUBLIC_FIREBASE_API_KEY="AIzaSyDERF5RgaHtJZuWd0sR0EsiAgrPNF0yTEQ"
 NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="cerebrum-biology-academy-c7099.firebaseapp.com"
@@ -97,6 +104,7 @@ CRON_SECRET="fa1b20ea7de3ef3f00ea3f0253308d74e1283d6435fbfba1fbdaac727803c6c7"
 ```
 
 ### ❌ **MISSING (Required for Authentication):**
+
 ```env
 AUTH_SECRET="<GENERATE_STRONG_SECRET>"
 # OR
@@ -110,6 +118,7 @@ NEXTAUTH_SECRET="<GENERATE_STRONG_SECRET>"
 ### **IMMEDIATE ACTION:** Add AUTH_SECRET to Vercel
 
 **Step 1: Generate Strong Secret**
+
 ```bash
 # Option 1: Using OpenSSL
 openssl rand -base64 32
@@ -121,6 +130,7 @@ node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 **Step 2: Add to Vercel Environment Variables**
 
 Go to Vercel Dashboard:
+
 1. Navigate to: `Project Settings` → `Environment Variables`
 2. Add new variable:
    - **Key:** `AUTH_SECRET`
@@ -129,6 +139,7 @@ Go to Vercel Dashboard:
 3. Click **Save**
 
 **Step 3: Redeploy**
+
 ```bash
 # Trigger redeploy to apply new environment variable
 vercel --prod
@@ -141,6 +152,7 @@ vercel --prod
 After adding `AUTH_SECRET` and redeploying:
 
 ### Test 1: Sign In Flow
+
 1. Go to https://cerebrumbiologyacademy.com/sign-in
 2. Enter phone: `+91 98765 43210` (test number)
 3. Click "Send OTP"
@@ -150,12 +162,14 @@ After adding `AUTH_SECRET` and redeploying:
 7. **CHECK:** Session cookie `cerebrum_session` is present in DevTools
 
 ### Test 2: Session Persistence
+
 1. After successful sign-in, refresh the page
 2. **EXPECTED:** User remains logged in
 3. Navigate to `/dashboard`
 4. **EXPECTED:** Dashboard loads without redirect to sign-in
 
 ### Test 3: API Session Validation
+
 ```bash
 # Test API endpoint with session
 curl -X POST https://cerebrumbiologyacademy.com/api/auth/firebase-session \
@@ -178,6 +192,7 @@ curl -X POST https://cerebrumbiologyacademy.com/api/auth/firebase-session \
 ### 1. Add JWT Secrets (Optional but Recommended)
 
 If the app uses separate JWT utilities:
+
 ```env
 JWT_SECRET="<generate-another-strong-secret>"
 JWT_REFRESH_SECRET="<generate-another-strong-secret>"
@@ -186,9 +201,14 @@ JWT_REFRESH_SECRET="<generate-another-strong-secret>"
 ### 2. Environment Variable Validation
 
 Add startup check in `src/lib/auth/config.ts`:
+
 ```typescript
 // At module load
-if (process.env.NODE_ENV === 'production' && !process.env.AUTH_SECRET && !process.env.NEXTAUTH_SECRET) {
+if (
+  process.env.NODE_ENV === 'production' &&
+  !process.env.AUTH_SECRET &&
+  !process.env.NEXTAUTH_SECRET
+) {
   console.error('[FATAL] AUTH_SECRET not configured in production!')
   // Don't throw here to allow build, but log prominently
 }
@@ -197,6 +217,7 @@ if (process.env.NODE_ENV === 'production' && !process.env.AUTH_SECRET && !proces
 ### 3. Health Check Endpoint
 
 Create `/api/health/auth` endpoint:
+
 ```typescript
 export async function GET() {
   const hasAuthSecret = !!(process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET)
@@ -207,7 +228,7 @@ export async function GET() {
       firebase: hasFirebase ? 'configured' : 'missing',
       session: hasAuthSecret ? 'configured' : 'missing',
     },
-    status: (hasAuthSecret && hasFirebase) ? 'healthy' : 'unhealthy'
+    status: hasAuthSecret && hasFirebase ? 'healthy' : 'unhealthy',
   })
 }
 ```
@@ -215,6 +236,7 @@ export async function GET() {
 ### 4. Vercel Deployment Hook
 
 Add to `vercel.json`:
+
 ```json
 {
   "buildCommand": "npm run build",
@@ -229,6 +251,7 @@ Add to `vercel.json`:
 ## Security Considerations
 
 ### ✅ **GOOD:**
+
 - JWT secrets are loaded lazily (not at build time)
 - Fallback secrets only in development
 - Production fails hard without secrets (prevents weak auth)
@@ -236,6 +259,7 @@ Add to `vercel.json`:
 - HTTP-only cookies (prevents XSS attacks)
 
 ### 🔒 **TO VERIFY:**
+
 - [ ] `AUTH_SECRET` is at least 32 characters (256 bits)
 - [ ] Secret is stored in Vercel securely (not in git)
 - [ ] Secret is different for each environment (prod, preview, dev)
@@ -246,6 +270,7 @@ Add to `vercel.json`:
 ## Deployment Status
 
 ### ✅ **Latest Code Pushed to Vercel:**
+
 ```bash
 Commits pushed:
 - aa21b9f4: P1 conversion enhancements (9 landing pages)
@@ -256,6 +281,7 @@ Status: ✅ Code deployed, waiting for AUTH_SECRET to be added
 ```
 
 ### 🔄 **Next Steps:**
+
 1. Add `AUTH_SECRET` to Vercel (user action required)
 2. Redeploy automatically triggers once environment variable is added
 3. Test authentication flow (see Verification Steps above)
@@ -266,12 +292,14 @@ Status: ✅ Code deployed, waiting for AUTH_SECRET to be added
 ## Root Cause Analysis
 
 **Why did this happen?**
+
 1. `AUTH_SECRET` was never added to Vercel environment variables during initial setup
 2. Local development used fallback secrets (`.env.local` didn't have it either)
 3. Firebase auth was working (sending OTP), but **session creation** was failing silently
 4. Error: `[SECURITY CRITICAL] AUTH_SECRET not configured` was thrown on server, not visible to client
 
 **Why was it not caught earlier?**
+
 - Development environment uses fallback secrets (no error thrown)
 - Build succeeds (lazy loading prevents build-time checks)
 - Error only occurs at **runtime in production** when user tries to sign in

@@ -87,7 +87,6 @@ export function BlogPostHeader({ meta, category }: BlogPostHeaderProps) {
             </div>
           </div>
         </div>
-
       </div>
     </>
   )

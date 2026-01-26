@@ -65,7 +65,14 @@ export function StemCrossSection({
         transition={{ duration: 0.6 }}
       >
         {/* Title */}
-        <text x={cx} y={30} textAnchor="middle" fontSize={18} fontWeight="bold" fill={biologyColors.labelText}>
+        <text
+          x={cx}
+          y={30}
+          textAnchor="middle"
+          fontSize={18}
+          fontWeight="bold"
+          fill={biologyColors.labelText}
+        >
           Dicot Stem (T.S.)
         </text>
 
@@ -143,7 +150,7 @@ export function StemCrossSection({
 
         {/* Vascular bundles in a ring */}
         {Array.from({ length: vascularBundleCount }).map((_, i) => {
-          const angle = (i * 360 / vascularBundleCount - 90) * (Math.PI / 180)
+          const angle = ((i * 360) / vascularBundleCount - 90) * (Math.PI / 180)
           const vbX = cx + Math.cos(angle) * vbRadius
           const vbY = cy + Math.sin(angle) * vbRadius
 
@@ -176,7 +183,9 @@ export function StemCrossSection({
                 opacity={highlightedPart === 'dicot-vascular' ? 1 : 0.9}
                 onMouseEnter={() => interactive && setHighlightedPart('dicot-vascular')}
                 onMouseLeave={() => interactive && setHighlightedPart(null)}
-                onClick={() => interactive && setSelectedPart({ type: 'dicot', part: 'vascularBundle' })}
+                onClick={() =>
+                  interactive && setSelectedPart({ type: 'dicot', part: 'vascularBundle' })
+                }
                 style={{ cursor: interactive ? 'pointer' : 'default' }}
               />
 
@@ -300,7 +309,14 @@ export function StemCrossSection({
         transition={{ duration: 0.6, delay: stemType === 'both' ? 0.3 : 0 }}
       >
         {/* Title */}
-        <text x={cx} y={30} textAnchor="middle" fontSize={18} fontWeight="bold" fill={biologyColors.labelText}>
+        <text
+          x={cx}
+          y={30}
+          textAnchor="middle"
+          fontSize={18}
+          fontWeight="bold"
+          fill={biologyColors.labelText}
+        >
           Monocot Stem (T.S.)
         </text>
 
@@ -381,17 +397,39 @@ export function StemCrossSection({
                 opacity={highlightedPart === 'monocot-vascular' ? 1 : 0.9}
                 onMouseEnter={() => interactive && setHighlightedPart('monocot-vascular')}
                 onMouseLeave={() => interactive && setHighlightedPart(null)}
-                onClick={() => interactive && setSelectedPart({ type: 'monocot', part: 'vascularBundle' })}
+                onClick={() =>
+                  interactive && setSelectedPart({ type: 'monocot', part: 'vascularBundle' })
+                }
                 style={{ cursor: interactive ? 'pointer' : 'default' }}
               />
 
               {/* Xylem vessels (Y-shaped pattern) */}
-              <circle cx={vbX} cy={vbY + pos.size * 0.3} r={pos.size * 0.25} fill={biologyColors.xylem} />
-              <circle cx={vbX - pos.size * 0.25} cy={vbY - pos.size * 0.1} r={pos.size * 0.18} fill={biologyColors.xylem} />
-              <circle cx={vbX + pos.size * 0.25} cy={vbY - pos.size * 0.1} r={pos.size * 0.15} fill={biologyColors.xylem} />
+              <circle
+                cx={vbX}
+                cy={vbY + pos.size * 0.3}
+                r={pos.size * 0.25}
+                fill={biologyColors.xylem}
+              />
+              <circle
+                cx={vbX - pos.size * 0.25}
+                cy={vbY - pos.size * 0.1}
+                r={pos.size * 0.18}
+                fill={biologyColors.xylem}
+              />
+              <circle
+                cx={vbX + pos.size * 0.25}
+                cy={vbY - pos.size * 0.1}
+                r={pos.size * 0.15}
+                fill={biologyColors.xylem}
+              />
 
               {/* Phloem */}
-              <circle cx={vbX} cy={vbY - pos.size * 0.4} r={pos.size * 0.2} fill={biologyColors.phloem} />
+              <circle
+                cx={vbX}
+                cy={vbY - pos.size * 0.4}
+                r={pos.size * 0.2}
+                fill={biologyColors.phloem}
+              />
             </motion.g>
           )
         })}
@@ -464,14 +502,11 @@ export function StemCrossSection({
       subtitle="Transverse section showing internal anatomy"
       className={className}
     >
-      <svg
-        width={width}
-        height={height}
-        viewBox={`0 0 ${width} ${height}`}
-        className="mx-auto"
-      >
-        {(stemType === 'both' || stemType === 'dicot') && renderDicotStem(dicotX + diagramWidth / 2, centerY, radius)}
-        {(stemType === 'both' || stemType === 'monocot') && renderMonocotStem(monocotX + diagramWidth / 2, centerY, radius)}
+      <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} className="mx-auto">
+        {(stemType === 'both' || stemType === 'dicot') &&
+          renderDicotStem(dicotX + diagramWidth / 2, centerY, radius)}
+        {(stemType === 'both' || stemType === 'monocot') &&
+          renderMonocotStem(monocotX + diagramWidth / 2, centerY, radius)}
       </svg>
 
       {/* Info Panel */}
@@ -485,7 +520,11 @@ export function StemCrossSection({
             {selectedPart.part.replace(/([A-Z])/g, ' $1').trim()} ({selectedPart.type})
           </h4>
           <p className="text-sm text-green-700">
-            {STEM_INFO[selectedPart.type as keyof typeof STEM_INFO]?.[selectedPart.part as keyof typeof STEM_INFO.dicot]}
+            {
+              STEM_INFO[selectedPart.type as keyof typeof STEM_INFO]?.[
+                selectedPart.part as keyof typeof STEM_INFO.dicot
+              ]
+            }
           </p>
         </motion.div>
       )}

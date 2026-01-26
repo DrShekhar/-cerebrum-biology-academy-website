@@ -18,12 +18,7 @@ export const chapter8Questions: ChapterQuestionSet = {
     {
       question: 'Who proposed the cell theory?',
       type: 'MCQ',
-      options: [
-        'Schleiden and Schwann',
-        'Robert Hooke',
-        'Rudolf Virchow',
-        'Leeuwenhoek',
-      ],
+      options: ['Schleiden and Schwann', 'Robert Hooke', 'Rudolf Virchow', 'Leeuwenhoek'],
       correctAnswer: 'Schleiden and Schwann',
       explanation:
         'Matthias Schleiden (1838) and Theodor Schwann (1839) together formulated the Cell Theory, stating that all living organisms are composed of cells and that the cell is the basic unit of life.',
@@ -81,15 +76,9 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== PROKARYOTIC VS EUKARYOTIC ====================
     {
-      question:
-        'Which of the following is NOT a characteristic of prokaryotic cells?',
+      question: 'Which of the following is NOT a characteristic of prokaryotic cells?',
       type: 'MCQ',
-      options: [
-        'Membrane-bound nucleus',
-        '70S ribosomes',
-        'Circular DNA',
-        'Cell wall present',
-      ],
+      options: ['Membrane-bound nucleus', '70S ribosomes', 'Circular DNA', 'Cell wall present'],
       correctAnswer: 'Membrane-bound nucleus',
       explanation:
         'Prokaryotic cells lack a membrane-bound nucleus. Their genetic material (nucleoid) is not enclosed by a nuclear membrane. They have 70S ribosomes, circular DNA, and most have cell walls.',
@@ -107,8 +96,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'Mesosome is a characteristic feature of:',
+      question: 'Mesosome is a characteristic feature of:',
       type: 'MCQ',
       options: ['Prokaryotes', 'Eukaryotes', 'Viruses', 'Fungi'],
       correctAnswer: 'Prokaryotes',
@@ -129,8 +117,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetYear: 2020,
     },
     {
-      question:
-        'The size of a typical prokaryotic cell ranges from:',
+      question: 'The size of a typical prokaryotic cell ranges from:',
       type: 'MCQ',
       options: ['0.1-0.5 µm', '1-10 µm', '10-100 µm', '100-1000 µm'],
       correctAnswer: '1-10 µm',
@@ -151,15 +138,9 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== PLASMA MEMBRANE ====================
     {
-      question:
-        'The fluid mosaic model of plasma membrane was proposed by:',
+      question: 'The fluid mosaic model of plasma membrane was proposed by:',
       type: 'MCQ',
-      options: [
-        'Singer and Nicolson',
-        'Danielli and Davson',
-        'Robertson',
-        'Overton',
-      ],
+      options: ['Singer and Nicolson', 'Danielli and Davson', 'Robertson', 'Overton'],
       correctAnswer: 'Singer and Nicolson',
       explanation:
         'Singer and Nicolson (1972) proposed the fluid mosaic model, describing the plasma membrane as a phospholipid bilayer with proteins embedded in it like a mosaic, and having fluid properties.',
@@ -178,8 +159,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetYear: 2018,
     },
     {
-      question:
-        'Which of the following is the main lipid component of the plasma membrane?',
+      question: 'Which of the following is the main lipid component of the plasma membrane?',
       type: 'MCQ',
       options: ['Phospholipids', 'Cholesterol', 'Glycolipids', 'Triglycerides'],
       correctAnswer: 'Phospholipids',
@@ -199,8 +179,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'MEDIUM',
     },
     {
-      question:
-        'Integral proteins in plasma membrane are also called:',
+      question: 'Integral proteins in plasma membrane are also called:',
       type: 'MCQ',
       options: [
         'Intrinsic proteins',
@@ -225,15 +204,9 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'MEDIUM',
     },
     {
-      question:
-        'Active transport across the membrane requires:',
+      question: 'Active transport across the membrane requires:',
       type: 'MCQ',
-      options: [
-        'ATP',
-        'No energy',
-        'Concentration gradient only',
-        'Water only',
-      ],
+      options: ['ATP', 'No energy', 'Concentration gradient only', 'Water only'],
       correctAnswer: 'ATP',
       explanation:
         'Active transport moves molecules against their concentration gradient, from lower to higher concentration. This requires energy in the form of ATP. Examples include sodium-potassium pump and calcium pump.',
@@ -252,8 +225,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== CELL WALL ====================
     {
-      question:
-        'The main component of plant cell wall is:',
+      question: 'The main component of plant cell wall is:',
       type: 'MCQ',
       options: ['Cellulose', 'Chitin', 'Peptidoglycan', 'Murein'],
       correctAnswer: 'Cellulose',
@@ -273,15 +245,9 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'MEDIUM',
     },
     {
-      question:
-        'Middle lamella is mainly composed of:',
+      question: 'Middle lamella is mainly composed of:',
       type: 'MCQ',
-      options: [
-        'Calcium pectate',
-        'Cellulose',
-        'Hemicellulose',
-        'Lignin',
-      ],
+      options: ['Calcium pectate', 'Cellulose', 'Hemicellulose', 'Lignin'],
       correctAnswer: 'Calcium pectate',
       explanation:
         'Middle lamella is the first layer formed during cell division and is mainly composed of calcium pectate and magnesium pectate. It acts as a cementing material between adjacent cells.',
@@ -300,8 +266,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetYear: 2021,
     },
     {
-      question:
-        'Plasmodesmata are:',
+      question: 'Plasmodesmata are:',
       type: 'MCQ',
       options: [
         'Cytoplasmic connections between adjacent cells',
@@ -327,15 +292,9 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== NUCLEUS ====================
     {
-      question:
-        'The outer membrane of nuclear envelope is continuous with:',
+      question: 'The outer membrane of nuclear envelope is continuous with:',
       type: 'MCQ',
-      options: [
-        'Endoplasmic reticulum',
-        'Golgi apparatus',
-        'Plasma membrane',
-        'Mitochondria',
-      ],
+      options: ['Endoplasmic reticulum', 'Golgi apparatus', 'Plasma membrane', 'Mitochondria'],
       correctAnswer: 'Endoplasmic reticulum',
       explanation:
         'The outer membrane of the nuclear envelope is continuous with the rough endoplasmic reticulum (RER) and often has ribosomes attached to it.',
@@ -353,15 +312,9 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'Nucleolus is the site of:',
+      question: 'Nucleolus is the site of:',
       type: 'MCQ',
-      options: [
-        'rRNA synthesis',
-        'mRNA synthesis',
-        'tRNA synthesis',
-        'DNA replication',
-      ],
+      options: ['rRNA synthesis', 'mRNA synthesis', 'tRNA synthesis', 'DNA replication'],
       correctAnswer: 'rRNA synthesis',
       explanation:
         'Nucleolus is a dense, non-membrane bound structure within the nucleus. It is the site of rRNA (ribosomal RNA) synthesis and ribosome assembly. It contains rRNA genes.',
@@ -380,15 +333,9 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetYear: 2017,
     },
     {
-      question:
-        'Chromatin is made up of:',
+      question: 'Chromatin is made up of:',
       type: 'MCQ',
-      options: [
-        'DNA, RNA, and proteins',
-        'DNA only',
-        'RNA only',
-        'Proteins only',
-      ],
+      options: ['DNA, RNA, and proteins', 'DNA only', 'RNA only', 'Proteins only'],
       correctAnswer: 'DNA, RNA, and proteins',
       explanation:
         'Chromatin is a complex of DNA, RNA, and proteins (mainly histones). During cell division, chromatin condenses to form chromosomes. The protein component includes histone (basic) and non-histone (acidic) proteins.',
@@ -405,15 +352,9 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'MEDIUM',
     },
     {
-      question:
-        'Nuclear pores allow the transport of:',
+      question: 'Nuclear pores allow the transport of:',
       type: 'MCQ',
-      options: [
-        'RNA and proteins',
-        'Only proteins',
-        'Only RNA',
-        'Only ions',
-      ],
+      options: ['RNA and proteins', 'Only proteins', 'Only RNA', 'Only ions'],
       correctAnswer: 'RNA and proteins',
       explanation:
         'Nuclear pores are openings in the nuclear envelope that regulate the transport of molecules between nucleus and cytoplasm. mRNA exits through these pores, while ribosomal proteins and enzymes enter.',
@@ -433,15 +374,9 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== ENDOPLASMIC RETICULUM ====================
     {
-      question:
-        'Rough endoplasmic reticulum is associated with:',
+      question: 'Rough endoplasmic reticulum is associated with:',
       type: 'MCQ',
-      options: [
-        'Protein synthesis',
-        'Lipid synthesis',
-        'Carbohydrate synthesis',
-        'Detoxification',
-      ],
+      options: ['Protein synthesis', 'Lipid synthesis', 'Carbohydrate synthesis', 'Detoxification'],
       correctAnswer: 'Protein synthesis',
       explanation:
         'Rough ER has ribosomes attached to its surface, hence the name "rough". These ribosomes synthesize proteins that are secreted or membrane-bound. The RER is involved in protein synthesis, folding, and modification.',
@@ -459,8 +394,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'Smooth endoplasmic reticulum is involved in:',
+      question: 'Smooth endoplasmic reticulum is involved in:',
       type: 'MCQ',
       options: [
         'Lipid and steroid synthesis',
@@ -488,15 +422,9 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== GOLGI APPARATUS ====================
     {
-      question:
-        'The Golgi apparatus was first discovered by:',
+      question: 'The Golgi apparatus was first discovered by:',
       type: 'MCQ',
-      options: [
-        'Camillo Golgi',
-        'Robert Brown',
-        'Robert Hooke',
-        'Leeuwenhoek',
-      ],
+      options: ['Camillo Golgi', 'Robert Brown', 'Robert Hooke', 'Leeuwenhoek'],
       correctAnswer: 'Camillo Golgi',
       explanation:
         'Camillo Golgi, an Italian scientist, discovered this organelle in 1898 in nerve cells using silver staining technique. He was awarded the Nobel Prize in 1906 for this discovery.',
@@ -514,8 +442,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'LOW',
     },
     {
-      question:
-        'Which of the following is NOT a function of Golgi apparatus?',
+      question: 'Which of the following is NOT a function of Golgi apparatus?',
       type: 'MCQ',
       options: [
         'Protein synthesis',
@@ -540,15 +467,9 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'The cis face of Golgi apparatus is also called:',
+      question: 'The cis face of Golgi apparatus is also called:',
       type: 'MCQ',
-      options: [
-        'Forming face',
-        'Maturing face',
-        'Trans face',
-        'Secretory face',
-      ],
+      options: ['Forming face', 'Maturing face', 'Trans face', 'Secretory face'],
       correctAnswer: 'Forming face',
       explanation:
         'The cis face (forming face) of Golgi receives vesicles from ER. The trans face (maturing face) is the exit point where modified proteins are packaged into vesicles for secretion or transport.',
@@ -568,8 +489,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== LYSOSOMES ====================
     {
-      question:
-        'Lysosomes are called "suicidal bags" because:',
+      question: 'Lysosomes are called "suicidal bags" because:',
       type: 'MCQ',
       options: [
         'They can digest the cell itself when damaged',
@@ -595,8 +515,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetYear: 2016,
     },
     {
-      question:
-        'The pH inside lysosomes is:',
+      question: 'The pH inside lysosomes is:',
       type: 'MCQ',
       options: ['Acidic (around 5)', 'Neutral (7)', 'Alkaline (9)', 'Highly acidic (1-2)'],
       correctAnswer: 'Acidic (around 5)',
@@ -618,8 +537,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== MITOCHONDRIA ====================
     {
-      question:
-        'Mitochondria are called the "powerhouse of the cell" because they:',
+      question: 'Mitochondria are called the "powerhouse of the cell" because they:',
       type: 'MCQ',
       options: [
         'Produce ATP through oxidative phosphorylation',
@@ -644,8 +562,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'The inner membrane of mitochondria is folded into:',
+      question: 'The inner membrane of mitochondria is folded into:',
       type: 'MCQ',
       options: ['Cristae', 'Thylakoids', 'Cisternae', 'Tubules'],
       correctAnswer: 'Cristae',
@@ -666,8 +583,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetYear: 2020,
     },
     {
-      question:
-        'Mitochondrial DNA is:',
+      question: 'Mitochondrial DNA is:',
       type: 'MCQ',
       options: [
         'Circular and double-stranded',
@@ -691,8 +607,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'F0-F1 particles are found in:',
+      question: 'F0-F1 particles are found in:',
       type: 'MCQ',
       options: [
         'Inner mitochondrial membrane',
@@ -720,8 +635,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== CHLOROPLAST ====================
     {
-      question:
-        'The site of light reaction in photosynthesis is:',
+      question: 'The site of light reaction in photosynthesis is:',
       type: 'MCQ',
       options: ['Thylakoid membrane', 'Stroma', 'Outer membrane', 'Inner membrane'],
       correctAnswer: 'Thylakoid membrane',
@@ -741,8 +655,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'Stacked thylakoids are called:',
+      question: 'Stacked thylakoids are called:',
       type: 'MCQ',
       options: ['Grana', 'Stroma', 'Cristae', 'Cisternae'],
       correctAnswer: 'Grana',
@@ -764,8 +677,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== RIBOSOMES ====================
     {
-      question:
-        'Ribosomes are composed of:',
+      question: 'Ribosomes are composed of:',
       type: 'MCQ',
       options: ['RNA and proteins', 'DNA and proteins', 'Only RNA', 'Only proteins'],
       correctAnswer: 'RNA and proteins',
@@ -785,8 +697,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'MEDIUM',
     },
     {
-      question:
-        'The sedimentation coefficient of eukaryotic ribosomes is:',
+      question: 'The sedimentation coefficient of eukaryotic ribosomes is:',
       type: 'MCQ',
       options: ['80S', '70S', '60S', '40S'],
       correctAnswer: '80S',
@@ -809,8 +720,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== CILIA AND FLAGELLA ====================
     {
-      question:
-        'The internal structure of cilia and flagella is called:',
+      question: 'The internal structure of cilia and flagella is called:',
       type: 'MCQ',
       options: ['Axoneme', 'Basal body', 'Kinetosome', 'Centriole'],
       correctAnswer: 'Axoneme',
@@ -830,8 +740,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'The 9+2 arrangement in cilia consists of:',
+      question: 'The 9+2 arrangement in cilia consists of:',
       type: 'MCQ',
       options: [
         '9 peripheral doublets and 2 central singlets',
@@ -857,8 +766,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetYear: 2019,
     },
     {
-      question:
-        'Cilia and flagella arise from:',
+      question: 'Cilia and flagella arise from:',
       type: 'MCQ',
       options: ['Basal body', 'Centriole', 'Mitochondria', 'Golgi apparatus'],
       correctAnswer: 'Basal body',
@@ -880,8 +788,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== CENTROSOME ====================
     {
-      question:
-        'Centrioles are made up of:',
+      question: 'Centrioles are made up of:',
       type: 'MCQ',
       options: [
         'Microtubules arranged in 9+0 pattern',
@@ -906,8 +813,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question:
-        'Centrosome is involved in:',
+      question: 'Centrosome is involved in:',
       type: 'MCQ',
       options: [
         'Spindle formation during cell division',
@@ -934,8 +840,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== VACUOLE ====================
     {
-      question:
-        'The membrane surrounding the vacuole is called:',
+      question: 'The membrane surrounding the vacuole is called:',
       type: 'MCQ',
       options: ['Tonoplast', 'Plasmalemma', 'Nuclear membrane', 'Thylakoid'],
       correctAnswer: 'Tonoplast',
@@ -954,8 +859,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'MEDIUM',
     },
     {
-      question:
-        'Contractile vacuoles are found in:',
+      question: 'Contractile vacuoles are found in:',
       type: 'MCQ',
       options: [
         'Freshwater protists like Amoeba',
@@ -981,8 +885,7 @@ export const chapter8Questions: ChapterQuestionSet = {
 
     // ==================== CYTOSKELETON ====================
     {
-      question:
-        'The cytoskeleton is made up of:',
+      question: 'The cytoskeleton is made up of:',
       type: 'MCQ',
       options: [
         'Microtubules, microfilaments, and intermediate filaments',
@@ -1006,8 +909,7 @@ export const chapter8Questions: ChapterQuestionSet = {
       neetWeightage: 'MEDIUM',
     },
     {
-      question:
-        'Microfilaments are made up of:',
+      question: 'Microfilaments are made up of:',
       type: 'MCQ',
       options: ['Actin', 'Tubulin', 'Keratin', 'Myosin'],
       correctAnswer: 'Actin',

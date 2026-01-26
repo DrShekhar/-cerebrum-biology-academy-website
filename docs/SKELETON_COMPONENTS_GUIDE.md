@@ -292,7 +292,6 @@ import { SkeletonForm } from '@/components/ui/Skeleton'
 
 ```tsx
 import { DashboardStatsSkeleton } from '@/components/ui/skeletons'
-
 ;<DashboardStatsSkeleton />
 ```
 
@@ -322,7 +321,6 @@ Activity feed with avatars and descriptions.
 
 ```tsx
 import { CourseCardSkeleton } from '@/components/ui/skeletons'
-
 ;<CourseCardSkeleton />
 ```
 
@@ -351,7 +349,6 @@ Full course detail page structure with hero, video, and sidebar.
 
 ```tsx
 import { QuestionCardSkeleton } from '@/components/ui/skeletons'
-
 ;<QuestionCardSkeleton />
 ```
 
@@ -401,7 +398,6 @@ Complete chat UI with header, messages, and input box.
 
 ```tsx
 import { ProfileHeaderSkeleton } from '@/components/ui/skeletons'
-
 ;<ProfileHeaderSkeleton />
 ```
 
@@ -421,7 +417,6 @@ Compact user card with avatar and basic info.
 
 ```tsx
 import { MetricCardSkeleton } from '@/components/ui/skeletons'
-
 ;<MetricCardSkeleton />
 ```
 
@@ -441,7 +436,6 @@ Complete analytics dashboard with stats, charts, and table.
 
 ```tsx
 import { ListItemSkeleton } from '@/components/ui/skeletons'
-
 ;<ListItemSkeleton />
 ```
 

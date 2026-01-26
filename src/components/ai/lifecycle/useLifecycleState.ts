@@ -165,7 +165,8 @@ export function useLifecycleState(): LifecycleState & LifecycleActions {
 
   const [draftSettings, setDraftSettings] = useState<DraftSettings>(initialDraftSettings)
   const [publishSettings, setPublishSettings] = useState<PublishSettings>(initialPublishSettings)
-  const [scheduleSettings, setScheduleSettings] = useState<ScheduleSettings>(initialScheduleSettings)
+  const [scheduleSettings, setScheduleSettings] =
+    useState<ScheduleSettings>(initialScheduleSettings)
   const [cloneSettings, setCloneSettings] = useState<CloneSettings>(initialCloneSettings)
   const [practiceSettings, setPracticeSettings] =
     useState<PracticeModeSettings>(initialPracticeSettings)

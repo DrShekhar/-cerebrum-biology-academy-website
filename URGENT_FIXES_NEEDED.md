@@ -3,6 +3,7 @@
 ## Issue 1: Aria Showing Raw JSON Output ❌
 
 **Screenshot Evidence:** Aria is displaying:
+
 ```
 BOOKING_COMPLETE__:{"date":"2026-01-21","time":"Wed, Jan 21","timeSlot":"afternoon","phone":"882644334","name":""}
 ```
@@ -12,12 +13,14 @@ BOOKING_COMPLETE__:{"date":"2026-01-21","time":"Wed, Jan 21","timeSlot":"afterno
 The current `SalesAgentWidget.tsx` component is **NOT using the AI API** at all! It's a hardcoded rule-based chatbot using pattern matching and KNOWLEDGE_BASE dictionary.
 
 **Evidence:**
+
 - File: `src/components/sales-agent/SalesAgentWidget.tsx`
 - Lines 273-364: `sendMessage()` function uses hardcoded responses
 - Line 298: `const knowledgeResponse = findResponse(content)` - pattern matching only
 - No fetch calls to `/api/aria/chat` anywhere in the component
 
 **However, the API exists:**
+
 - File: `src/app/api/aria/chat/route.ts`
 - Uses Claude 3.5 Haiku
 - Streaming responses
@@ -26,17 +29,20 @@ The current `SalesAgentWidget.tsx` component is **NOT using the AI API** at all!
 ### Why the Raw JSON is Appearing:
 
 One of two scenarios:
+
 1. Someone manually tried calling the API endpoint directly, and the AI response is being displayed without parsing
 2. There's a separate Aria implementation somewhere that's using the API but not parsing responses
 
 ### Fix Required:
 
 **Option A: Connect SalesAgentWidget to AI API**
+
 - Replace hardcoded `findResponse()` with actual API call to `/api/aria/chat`
 - Add streaming response parser
 - Handle function calls like `BOOKING_COMPLETE__` properly
 
 **Option B: Fix Response Parser**
+
 - If already connected somewhere, add parser for `BOOKING_COMPLETE__:` format
 - Convert JSON to user-friendly message like: "Great! Your demo is booked for Wed, Jan 21 afternoon"
 
@@ -96,12 +102,14 @@ The widget should use the actual AI for better conversations, not hardcoded resp
 ## Action Items:
 
 ### Priority 1: Aria Raw JSON Fix
+
 - [ ] Replace SalesAgentWidget hardcoded responses with AI API calls
 - [ ] Add response parser for function calls like `BOOKING_COMPLETE__`
 - [ ] Test booking flow end-to-end
 - [ ] Ensure graceful fallback if API fails
 
 ### Priority 2: Ceri Loop Fix
+
 - [ ] Locate Ceri button on homepage (provide screenshot if possible)
 - [ ] Check session/cache key implementation
 - [ ] Add unique session IDs per conversation
@@ -113,6 +121,7 @@ The widget should use the actual AI for better conversations, not hardcoded resp
 ## Testing Checklist:
 
 ### Aria Testing:
+
 - [ ] User asks "What are your courses?"
 - [ ] User says "Book a demo"
 - [ ] User enters name, phone, class
@@ -120,6 +129,7 @@ The widget should use the actual AI for better conversations, not hardcoded resp
 - [ ] Check that data is saved to database
 
 ### Ceri Testing:
+
 - [ ] Open homepage, click Ceri button
 - [ ] Ask Question 1: "What is photosynthesis?"
 - [ ] Ask Question 2: "Explain Krebs cycle"
@@ -132,12 +142,14 @@ The widget should use the actual AI for better conversations, not hardcoded resp
 ## Deployment Status:
 
 ✅ **Completed:**
+
 - Conditional display for Aria (public pages only)
 - Conditional display for Ceri (authenticated pages only)
 - WhatsApp FloatingCTA on all pages
 - All 9 SEO landing pages live
 
 ❌ **Pending:**
+
 - Aria AI integration
 - Ceri loop fix
 

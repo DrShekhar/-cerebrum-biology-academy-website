@@ -16,11 +16,7 @@
   },
   "knowledge": {
     "path": ".claude/cto/knowledge",
-    "sources": [
-      "CLAUDE.md",
-      "docs/",
-      "prisma/schema.prisma"
-    ]
+    "sources": ["CLAUDE.md", "docs/", "prisma/schema.prisma"]
   },
   "playbooks": {
     "path": ".claude/cto/playbooks"

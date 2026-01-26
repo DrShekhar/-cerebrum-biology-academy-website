@@ -45,7 +45,8 @@ export const offlineLocations: Location[] = [
     city: 'Gurugram',
     pincode: '122018',
     phone: ['+918826444334', '+919311946297'],
-    googleMapsUrl: 'https://maps.google.com/?q=M2K+Corporate+Park+Sector+51+Mayfield+Garden+Gurugram+122018',
+    googleMapsUrl:
+      'https://maps.google.com/?q=M2K+Corporate+Park+Sector+51+Mayfield+Garden+Gurugram+122018',
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.123!2d77.123!3d28.456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDE3JzIzLjAiTiA3N8KwMDcnMjMuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Modern Infrastructure', 'Digital Classrooms', 'Student Lounge'],

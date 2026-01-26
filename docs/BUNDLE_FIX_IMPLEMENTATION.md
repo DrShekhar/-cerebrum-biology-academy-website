@@ -7,6 +7,7 @@ This guide provides **copy-paste ready** code for fixing the bundle size issues 
 ## 1. Install Bundle Analyzer (5 minutes)
 
 ### Step 1: Install Package
+
 ```bash
 npm install --save-dev @next/bundle-analyzer
 ```
@@ -16,6 +17,7 @@ npm install --save-dev @next/bundle-analyzer
 **File: `/Users/drshekhar/cerebrum-biology-academy-website/next.config.mjs`**
 
 Add this at the top (after existing imports):
+
 ```javascript
 import bundleAnalyzer from '@next/bundle-analyzer'
 
@@ -25,11 +27,13 @@ const withBundleAnalyzer = bundleAnalyzer({
 ```
 
 Then change the export at the bottom from:
+
 ```javascript
 export default withSentryConfig(withMDX(nextConfig), { ... })
 ```
 
 To:
+
 ```javascript
 export default withBundleAnalyzer(
   withSentryConfig(withMDX(nextConfig), {
@@ -39,6 +43,7 @@ export default withBundleAnalyzer(
 ```
 
 ### Step 3: Run Analysis
+
 ```bash
 ANALYZE=true npm run build
 ```
@@ -197,11 +202,13 @@ console.log('\n✅ Done! Run `npm run type-check` to verify.')
 ```
 
 **Make it executable:**
+
 ```bash
 chmod +x scripts/fix-barrel-imports.js
 ```
 
 **Run it:**
+
 ```bash
 node scripts/fix-barrel-imports.js
 ```
@@ -211,12 +218,14 @@ node scripts/fix-barrel-imports.js
 If you prefer manual fixes, here's the pattern:
 
 **Before:**
+
 ```typescript
 // src/app/some-page/page.tsx
 import { KotaVsOnlineIllustration } from '@/components/illustrations/blog'
 ```
 
 **After:**
+
 ```typescript
 // src/app/some-page/page.tsx
 import { KotaVsOnlineIllustration } from '@/components/illustrations/blog/KotaVsOnlineIllustration'
@@ -280,6 +289,7 @@ export function useScrollAnimation(ref: React.RefObject<HTMLElement>) {
 **File: `/Users/drshekhar/cerebrum-biology-academy-website/tailwind.config.ts`**
 
 Add to theme.extend:
+
 ```typescript
 module.exports = {
   theme: {
@@ -457,6 +467,7 @@ console.log('Run: npm run type-check && npm run lint')
 ```
 
 **Run it:**
+
 ```bash
 npm install -g glob
 node scripts/remove-framer-motion.js
@@ -465,6 +476,7 @@ node scripts/remove-framer-motion.js
 ### Step 3: Manual Migration Example
 
 **Before (with framer-motion):**
+
 ```typescript
 'use client'
 
@@ -485,6 +497,7 @@ export default function Page() {
 ```
 
 **After (with CSS animations):**
+
 ```typescript
 export default function Page() {
   return (
@@ -496,6 +509,7 @@ export default function Page() {
 ```
 
 **For interactive elements that need framer-motion:**
+
 ```typescript
 import dynamic from 'next/dynamic'
 
@@ -529,6 +543,7 @@ export default function InteractivePage() {
 ### Identify Heavy Components
 
 Run this after bundle analyzer is installed:
+
 ```bash
 # Find largest page chunks
 ls -lhS .next/static/chunks/app/**/*.js | head -20
@@ -662,12 +677,12 @@ npm run dev
 
 After completing these fixes:
 
-| Metric | Before | After | Improvement |
-|--------|--------|-------|-------------|
-| Largest chunk | 2.8MB | <500KB | 82% reduction |
-| Total bundle | 3.6GB | <500MB | 86% reduction |
-| framer-motion pages | 538 | <50 | 91% reduction |
-| Deployment size | 189MB | <100MB | 47% reduction |
+| Metric              | Before | After  | Improvement   |
+| ------------------- | ------ | ------ | ------------- |
+| Largest chunk       | 2.8MB  | <500KB | 82% reduction |
+| Total bundle        | 3.6GB  | <500MB | 86% reduction |
+| framer-motion pages | 538    | <50    | 91% reduction |
+| Deployment size     | 189MB  | <100MB | 47% reduction |
 
 ---
 

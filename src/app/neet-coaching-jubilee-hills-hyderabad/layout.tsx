@@ -27,6 +27,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function JubileeHillsHyderabadCoachingLayout({ children }: { children: React.ReactNode }) {
+export default function JubileeHillsHyderabadCoachingLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

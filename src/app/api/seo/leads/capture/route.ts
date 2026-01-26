@@ -102,10 +102,7 @@ export async function POST(request: NextRequest) {
         // Check if lead already exists
         let lead = await prisma.leads.findFirst({
           where: {
-            OR: [
-              { phone: { contains: cleanPhone } },
-              { email: validatedData.email || undefined },
-            ],
+            OR: [{ phone: { contains: cleanPhone } }, { email: validatedData.email || undefined }],
           },
         })
 

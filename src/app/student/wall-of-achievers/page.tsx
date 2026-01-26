@@ -121,12 +121,8 @@ function NominationModal({ achiever, onClose, onNominate }: NominationModalProps
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-xl max-w-md w-full p-6 shadow-xl">
-        <h3 className="text-lg font-bold text-gray-900 mb-2">
-          Nominate {achiever.studentName}
-        </h3>
-        <p className="text-sm text-gray-600 mb-4">
-          for &quot;{achiever.achievement}&quot;
-        </p>
+        <h3 className="text-lg font-bold text-gray-900 mb-2">Nominate {achiever.studentName}</h3>
+        <p className="text-sm text-gray-600 mb-4">for &quot;{achiever.achievement}&quot;</p>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -354,9 +350,7 @@ export default function StudentWallOfAchieversPage() {
         // Update nomination count locally
         setAchievers((prev) =>
           prev.map((a) =>
-            a.id === nominatingAchiever.id
-              ? { ...a, nominationCount: a.nominationCount + 1 }
-              : a
+            a.id === nominatingAchiever.id ? { ...a, nominationCount: a.nominationCount + 1 } : a
           )
         )
       } else {
@@ -463,9 +457,7 @@ export default function StudentWallOfAchieversPage() {
         <div className="text-center py-12 bg-gray-50 rounded-lg">
           <span className="text-5xl mb-4 block">🏆</span>
           <p className="text-gray-500 text-lg">No achievers found</p>
-          <p className="text-gray-400 text-sm mt-1">
-            Achievers will appear here once recognized
-          </p>
+          <p className="text-gray-400 text-sm mt-1">Achievers will appear here once recognized</p>
         </div>
       ) : (
         <>

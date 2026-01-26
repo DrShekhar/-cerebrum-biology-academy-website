@@ -16,5 +16,5 @@
  * - edtech_news: Fetch latest EdTech news
  * - competitor_updates: Track competitor changes
  */
-export {};
+export {}
 //# sourceMappingURL=index.d.ts.map

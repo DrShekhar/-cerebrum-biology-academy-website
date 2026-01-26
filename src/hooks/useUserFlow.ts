@@ -22,17 +22,19 @@ export function useUserFlow() {
   const { user: firebaseUser, isAuthenticated, isLoading } = useFirebaseSession()
 
   // Map Firebase user to the expected user format
-  const user = firebaseUser ? {
-    id: firebaseUser.id,
-    email: firebaseUser.email,
-    name: firebaseUser.name || firebaseUser.email?.split('@')[0] || 'User',
-    phone: firebaseUser.phone,
-    role: firebaseUser.role,
-    createdAt: Date.now(),
-    grade: undefined,
-    profile: undefined,
-    enrollments: undefined,
-  } : null
+  const user = firebaseUser
+    ? {
+        id: firebaseUser.id,
+        email: firebaseUser.email,
+        name: firebaseUser.name || firebaseUser.email?.split('@')[0] || 'User',
+        phone: firebaseUser.phone,
+        role: firebaseUser.role,
+        createdAt: Date.now(),
+        grade: undefined,
+        profile: undefined,
+        enrollments: undefined,
+      }
+    : null
   const router = useRouter()
   const pathname = usePathname()
   const [freeUserId, setFreeUserId] = useState<string | null>(null)

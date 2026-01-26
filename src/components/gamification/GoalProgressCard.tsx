@@ -2,16 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import {
-  Target,
-  CheckCircle2,
-  Clock,
-  Flame,
-  Zap,
-  Calendar,
-  BookOpen,
-  Trophy,
-} from 'lucide-react'
+import { Target, CheckCircle2, Clock, Flame, Zap, Calendar, BookOpen, Trophy } from 'lucide-react'
 
 type GoalType = 'DAILY' | 'WEEKLY'
 type GoalMetric =
@@ -43,11 +34,14 @@ interface GoalProgressCardProps {
   onClaimReward?: (goalId: string) => Promise<void>
 }
 
-const METRIC_CONFIG: Record<GoalMetric, {
-  label: string
-  icon: React.ComponentType<{ className?: string }>
-  unit: string
-}> = {
+const METRIC_CONFIG: Record<
+  GoalMetric,
+  {
+    label: string
+    icon: React.ComponentType<{ className?: string }>
+    unit: string
+  }
+> = {
   MCQ_QUESTIONS_ANSWERED: {
     label: 'Answer Questions',
     icon: BookOpen,
@@ -120,23 +114,19 @@ function GoalItem({
     >
       <div className="flex items-start space-x-3">
         {/* Icon */}
-        <div className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center ${
-          goal.isCompleted
-            ? 'bg-green-500 text-white'
-            : 'bg-gray-100 text-gray-500'
-        }`}>
+        <div
+          className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center ${
+            goal.isCompleted ? 'bg-green-500 text-white' : 'bg-gray-100 text-gray-500'
+          }`}
+        >
           <Icon className="w-5 h-5" />
         </div>
 
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-1">
-            <h4 className="font-semibold text-gray-900 truncate">
-              {config.label}
-            </h4>
-            {goal.isCompleted && (
-              <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-            )}
+            <h4 className="font-semibold text-gray-900 truncate">{config.label}</h4>
+            {goal.isCompleted && <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />}
           </div>
 
           {/* Progress text */}
@@ -159,11 +149,7 @@ function GoalItem({
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.8, ease: 'easeOut' }}
               className={`h-2 rounded-full ${
-                goal.isCompleted
-                  ? 'bg-green-500'
-                  : progress >= 75
-                  ? 'bg-yellow-500'
-                  : 'bg-blue-500'
+                goal.isCompleted ? 'bg-green-500' : progress >= 75 ? 'bg-yellow-500' : 'bg-blue-500'
               }`}
             />
           </div>
@@ -176,14 +162,16 @@ function GoalItem({
               </span>
               {goal.streakBonus > 0 && (
                 <span className="text-xs font-medium text-orange-700 bg-orange-100 px-2 py-0.5 rounded-full flex items-center">
-                  <Flame className="w-3 h-3 mr-1" />
-                  +{goal.streakBonus} bonus
+                  <Flame className="w-3 h-3 mr-1" />+{goal.streakBonus} bonus
                 </span>
               )}
             </div>
             {goal.isCompleted && goal.completedAt && (
               <span className="text-xs text-gray-500">
-                {new Date(goal.completedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                {new Date(goal.completedAt).toLocaleTimeString([], {
+                  hour: '2-digit',
+                  minute: '2-digit',
+                })}
               </span>
             )}
           </div>
@@ -222,9 +210,7 @@ export function GoalProgressCard({
               <Target className="w-6 h-6 mr-2" />
               Goals Progress
             </h3>
-            <p className="text-white/90 text-sm mt-1">
-              Complete goals to earn XP bonuses
-            </p>
+            <p className="text-white/90 text-sm mt-1">Complete goals to earn XP bonuses</p>
           </div>
           <div className="text-right">
             <div className="text-3xl font-bold">{totalXpEarned}</div>

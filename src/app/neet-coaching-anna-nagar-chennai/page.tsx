@@ -92,17 +92,20 @@ const features = [
   {
     icon: Users,
     title: 'Elite Small Batches (10-15)',
-    description: 'Exclusive batches for Anna Nagar students with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Anna Nagar students with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Anna Nagar families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Anna Nagar families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
@@ -127,7 +130,7 @@ const faqs = [
   {
     question: 'Why do Anna Nagar students choose online NEET coaching?',
     answer:
-      'Anna Nagar is Chennai\'s premium residential hub with busy professional families. Our online classes offer AIIMS faculty without the traffic to T. Nagar or Vadapalani coaching centers. Save 2+ hours daily - time better spent on revision.',
+      "Anna Nagar is Chennai's premium residential hub with busy professional families. Our online classes offer AIIMS faculty without the traffic to T. Nagar or Vadapalani coaching centers. Save 2+ hours daily - time better spent on revision.",
   },
   {
     question: 'Which areas in Anna Nagar do you serve?',
@@ -137,7 +140,7 @@ const faqs = [
   {
     question: 'What is the fee for premium NEET coaching in Anna Nagar?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Anna Nagar\'s premium education standards while offering superior flexibility. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Anna Nagar's premium education standards while offering superior flexibility. EMI options available.",
   },
   {
     question: 'How does this compare to coaching centers in Aminjikarai?',
@@ -172,7 +175,7 @@ const premiumSchools = [
 const whyAnnaNagar = [
   {
     icon: Sparkles,
-    title: 'Chennai\'s Premium Hub',
+    title: "Chennai's Premium Hub",
     description:
       'Get world-class NEET coaching without leaving Anna Nagar. No traffic to Aminjikarai or T. Nagar.',
   },
@@ -180,7 +183,7 @@ const whyAnnaNagar = [
     icon: Building,
     title: 'Near Kilpauk Medical',
     description:
-      'Anna Nagar is adjacent to Kilpauk Medical College. We specialize in preparing students for Chennai\'s top medical colleges.',
+      "Anna Nagar is adjacent to Kilpauk Medical College. We specialize in preparing students for Chennai's top medical colleges.",
   },
   {
     icon: GraduationCap,
@@ -236,8 +239,8 @@ export default function NeetCoachingAnnaNagarPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Anna Nagar&apos;s elite schools. 94.2% success rate, AIIMS
-              faculty, zero traffic stress. Join 720+ students from DAV, Velammal, Chinmaya.
+              Premium NEET Biology coaching for Anna Nagar&apos;s elite schools. 94.2% success rate,
+              AIIMS faculty, zero traffic stress. Join 720+ students from DAV, Velammal, Chinmaya.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +301,8 @@ export default function NeetCoachingAnnaNagarPage() {
               NEET Coaching Across Anna Nagar & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Anna Nagar East to Mogappair, Thirumangalam to Shenoy Nagar - premium coaching for North Chennai.
+              From Anna Nagar East to Mogappair, Thirumangalam to Shenoy Nagar - premium coaching
+              for North Chennai.
             </p>
           </motion.div>
 
@@ -351,7 +355,8 @@ export default function NeetCoachingAnnaNagarPage() {
               Why Anna Nagar&apos;s Elite Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Premium education meets convenience - designed for North Chennai&apos;s discerning families.
+              Premium education meets convenience - designed for North Chennai&apos;s discerning
+              families.
             </p>
           </motion.div>
 

@@ -55,11 +55,7 @@ const onlineFeatures = [
   },
 ]
 
-export default function CityOnlineBiologyPage({
-  params,
-}: {
-  params: Promise<{ city: string }>
-}) {
+export default function CityOnlineBiologyPage({ params }: { params: Promise<{ city: string }> }) {
   const resolvedParams = use(params)
   const city = getCityBySlug(resolvedParams.city)
 
@@ -271,9 +267,7 @@ export default function CityOnlineBiologyPage({
             whileInView={{ opacity: 1, y: 0 }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">
-              {city.name} Schools We Serve
-            </h2>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">{city.name} Schools We Serve</h2>
             <p className="text-lg text-gray-600">
               Students from these top {city.name} schools trust us
             </p>
@@ -304,9 +298,7 @@ export default function CityOnlineBiologyPage({
             whileInView={{ opacity: 1, y: 0 }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">
-              What {city.name} Students Get
-            </h2>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">What {city.name} Students Get</h2>
             <p className="text-lg text-gray-600">
               Complete online learning ecosystem for NEET success
             </p>
@@ -338,9 +330,7 @@ export default function CityOnlineBiologyPage({
             whileInView={{ opacity: 1, y: 0 }}
             className="mb-12 text-center"
           >
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">
-              FAQs for {city.name} Students
-            </h2>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">FAQs for {city.name} Students</h2>
           </motion.div>
 
           <div className="mx-auto max-w-3xl space-y-4">

@@ -2,12 +2,7 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import {
-  AlertTriangle,
-  RefreshCw,
-  MessageCircle,
-  Phone,
-} from 'lucide-react'
+import { AlertTriangle, RefreshCw, MessageCircle, Phone } from 'lucide-react'
 import { clientAIDebugger } from '@/lib/ai/clientDebugger'
 import { AIDebugger } from '@/lib/ai/aiDebugger'
 

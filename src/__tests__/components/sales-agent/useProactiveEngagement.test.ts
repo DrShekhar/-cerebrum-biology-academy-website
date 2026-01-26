@@ -33,7 +33,11 @@ describe('useProactiveEngagement', () => {
     jest.useFakeTimers()
 
     // Reset scroll position
-    Object.defineProperty(document.documentElement, 'scrollHeight', { value: 2000, writable: true, configurable: true })
+    Object.defineProperty(document.documentElement, 'scrollHeight', {
+      value: 2000,
+      writable: true,
+      configurable: true,
+    })
     Object.defineProperty(window, 'innerHeight', { value: 800, writable: true, configurable: true })
     Object.defineProperty(window, 'scrollY', { value: 0, writable: true, configurable: true })
 
@@ -108,9 +112,7 @@ describe('useProactiveEngagement', () => {
     })
 
     it('should respect custom delay', () => {
-      const { result } = renderHook(() =>
-        useProactiveEngagement('en', { timeOnPageDelay: 30000 })
-      )
+      const { result } = renderHook(() => useProactiveEngagement('en', { timeOnPageDelay: 30000 }))
 
       act(() => {
         jest.advanceTimersByTime(29000)
@@ -174,8 +176,8 @@ describe('useProactiveEngagement', () => {
     })
 
     it('should respect custom scroll depth threshold', () => {
-      const { result } = renderHook(() =>
-        useProactiveEngagement('en', { scrollDepthThreshold: 0.8 }) // 80%
+      const { result } = renderHook(
+        () => useProactiveEngagement('en', { scrollDepthThreshold: 0.8 }) // 80%
       )
 
       // Scroll to 70% (should NOT trigger with 80% threshold)
@@ -188,7 +190,11 @@ describe('useProactiveEngagement', () => {
 
       // Scroll to 85% (should trigger)
       act(() => {
-        Object.defineProperty(window, 'scrollY', { value: 1020, writable: true, configurable: true })
+        Object.defineProperty(window, 'scrollY', {
+          value: 1020,
+          writable: true,
+          configurable: true,
+        })
         window.dispatchEvent(new Event('scroll'))
       })
 

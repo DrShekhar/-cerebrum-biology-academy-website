@@ -116,13 +116,12 @@ const features = [
   {
     icon: Video,
     title: 'Live Interactive Classes',
-    description:
-      'Real-time teaching with instant doubt resolution - same as Kota coaching quality',
+    description: 'Real-time teaching with instant doubt resolution - same as Kota coaching quality',
   },
   {
     icon: Users,
     title: 'Small Batches (10-15)',
-    description: 'Unlike Kota\'s 200+ batches, get personal attention for every student',
+    description: "Unlike Kota's 200+ batches, get personal attention for every student",
   },
   {
     icon: Award,
@@ -142,7 +141,7 @@ const features = [
   {
     icon: Shield,
     title: 'Stay in Jaipur',
-    description: 'No Kota migration needed - get top coaching from Rajasthan\'s capital',
+    description: "No Kota migration needed - get top coaching from Rajasthan's capital",
   },
 ]
 
@@ -157,7 +156,7 @@ const faqs = [
   {
     question: 'Why should Jaipur students choose online coaching over Kota migration?',
     answer:
-      'Jaipur is just 200 km from Kota, but migration still costs Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the Pink City with family, save money, and get personalized attention that Kota\'s crowded classrooms cannot provide. Our 94.2% success rate equals Kota\'s top institutes.',
+      "Jaipur is just 200 km from Kota, but migration still costs Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the Pink City with family, save money, and get personalized attention that Kota's crowded classrooms cannot provide. Our 94.2% success rate equals Kota's top institutes.",
   },
   {
     question: 'Which areas in Jaipur do you serve?',
@@ -172,7 +171,7 @@ const faqs = [
   {
     question: 'How is this different from Kota coaching?',
     answer:
-      'While Kota institutes have 200-500 students per batch, we limit batches to 10-15 students. This means every doubt gets addressed, every student gets personal attention. Plus, our 100% Biology focus fills the gap that Kota\'s PCM-heavy approach creates. Students score 340+ in Biology with us.',
+      "While Kota institutes have 200-500 students per batch, we limit batches to 10-15 students. This means every doubt gets addressed, every student gets personal attention. Plus, our 100% Biology focus fills the gap that Kota's PCM-heavy approach creates. Students score 340+ in Biology with us.",
   },
   {
     question: 'Do you understand Rajasthan board patterns?',
@@ -188,7 +187,7 @@ const faqs = [
 
 const premiumSchools = [
   'Maharaja Sawai Man Singh Vidyalaya',
-  'St. Xavier\'s School',
+  "St. Xavier's School",
   'Neerja Modi School',
   'Jayshree Periwal',
   'MGD Girls School',
@@ -275,9 +274,9 @@ export default function NeetCoachingJaipurPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Why migrate to Kota when you can get same results from Jaipur? AIIMS trained faculties,
-              94.2% success rate, live interactive classes. Join 3,500+ Rajasthan students achieving
-              NEET success from home.
+              Why migrate to Kota when you can get same results from Jaipur? AIIMS trained
+              faculties, 94.2% success rate, live interactive classes. Join 3,500+ Rajasthan
+              students achieving NEET success from home.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -449,9 +448,7 @@ export default function NeetCoachingJaipurPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-pink-600" />
                   </div>
-                  <div className="text-2xl font-bold text-pink-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-pink-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded-full">

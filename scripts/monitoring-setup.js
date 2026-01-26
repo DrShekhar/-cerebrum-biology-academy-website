@@ -2,16 +2,16 @@
 /**
  * Continuous Monitoring Setup Script
  * Cerebrum Biology Academy - Phase 1.1 NextAuth.js Implementation
- * 
+ *
  * Sets up monitoring, alerting, and analytics for authentication system
  */
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 class MonitoringSetup {
   constructor() {
-    this.projectRoot = process.cwd();
+    this.projectRoot = process.cwd()
     this.monitoringConfig = {
       metrics: {
         authenticationSuccessRate: { threshold: 99.9, unit: 'percentage' },
@@ -19,26 +19,26 @@ class MonitoringSetup {
         magicLinkGenerationTime: { threshold: 200, unit: 'milliseconds' },
         sessionValidationTime: { threshold: 100, unit: 'milliseconds' },
         concurrentUsers: { threshold: 100, unit: 'count' },
-        errorRate: { threshold: 0.1, unit: 'percentage' }
+        errorRate: { threshold: 0.1, unit: 'percentage' },
       },
       alerts: {
         highAuthFailureRate: {
           condition: 'auth_failure_rate > 5%',
           window: '5 minutes',
-          severity: 'critical'
+          severity: 'critical',
         },
         slowAuthentication: {
           condition: 'auth_response_time > 1000ms',
           window: '1 minute',
-          severity: 'warning'
+          severity: 'warning',
         },
         securityBreach: {
           condition: 'failed_login_attempts > 10',
           window: '1 minute',
-          severity: 'critical'
-        }
-      }
-    };
+          severity: 'critical',
+        },
+      },
+    }
   }
 
   log(message, type = 'info') {
@@ -47,14 +47,14 @@ class MonitoringSetup {
       success: '\x1b[32m',
       warning: '\x1b[33m',
       error: '\x1b[31m',
-      reset: '\x1b[0m'
-    };
-    console.log(`${colors[type]}${message}${colors.reset}`);
+      reset: '\x1b[0m',
+    }
+    console.log(`${colors[type]}${message}${colors.reset}`)
   }
 
   async setupWebVitalsMonitoring() {
-    this.log('Setting up Web Vitals monitoring...', 'info');
-    
+    this.log('Setting up Web Vitals monitoring...', 'info')
+
     const webVitalsConfig = `
 // Web Vitals Configuration for Authentication Performance
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
@@ -127,23 +127,20 @@ export class AuthenticationMonitoring {
 }
 
 export const authMonitoring = new AuthenticationMonitoring();
-`;
+`
 
-    const monitoringDir = path.join(this.projectRoot, 'src/lib/monitoring');
+    const monitoringDir = path.join(this.projectRoot, 'src/lib/monitoring')
     if (!fs.existsSync(monitoringDir)) {
-      fs.mkdirSync(monitoringDir, { recursive: true });
+      fs.mkdirSync(monitoringDir, { recursive: true })
     }
 
-    fs.writeFileSync(
-      path.join(monitoringDir, 'auth-monitoring.ts'),
-      webVitalsConfig
-    );
+    fs.writeFileSync(path.join(monitoringDir, 'auth-monitoring.ts'), webVitalsConfig)
 
-    this.log('✅ Web Vitals monitoring configuration created', 'success');
+    this.log('✅ Web Vitals monitoring configuration created', 'success')
   }
 
   async setupErrorTracking() {
-    this.log('Setting up error tracking...', 'info');
+    this.log('Setting up error tracking...', 'info')
 
     const errorBoundaryComponent = `
 'use client';
@@ -270,16 +267,16 @@ function DefaultErrorFallback({
     </div>
   );
 }
-`;
+`
 
-    const errorBoundaryPath = path.join(this.projectRoot, 'src/components/ErrorBoundary.tsx');
-    fs.writeFileSync(errorBoundaryPath, errorBoundaryComponent);
+    const errorBoundaryPath = path.join(this.projectRoot, 'src/components/ErrorBoundary.tsx')
+    fs.writeFileSync(errorBoundaryPath, errorBoundaryComponent)
 
-    this.log('✅ Error boundary component created', 'success');
+    this.log('✅ Error boundary component created', 'success')
   }
 
   async setupPerformanceMonitoring() {
-    this.log('Setting up performance monitoring...', 'info');
+    this.log('Setting up performance monitoring...', 'info')
 
     const performanceConfig = `
 // Performance monitoring configuration
@@ -408,16 +405,16 @@ export class PerformanceTracker {
 }
 
 export const performanceTracker = new PerformanceTracker();
-`;
+`
 
-    const performancePath = path.join(this.projectRoot, 'src/lib/monitoring/performance.ts');
-    fs.writeFileSync(performancePath, performanceConfig);
+    const performancePath = path.join(this.projectRoot, 'src/lib/monitoring/performance.ts')
+    fs.writeFileSync(performancePath, performanceConfig)
 
-    this.log('✅ Performance monitoring configuration created', 'success');
+    this.log('✅ Performance monitoring configuration created', 'success')
   }
 
   async setupSecurityMonitoring() {
-    this.log('Setting up security monitoring...', 'info');
+    this.log('Setting up security monitoring...', 'info')
 
     const securityConfig = `
 // Security monitoring and threat detection
@@ -574,16 +571,16 @@ export class SecurityMonitor {
 }
 
 export const securityMonitor = new SecurityMonitor();
-`;
+`
 
-    const securityPath = path.join(this.projectRoot, 'src/lib/monitoring/security.ts');
-    fs.writeFileSync(securityPath, securityConfig);
+    const securityPath = path.join(this.projectRoot, 'src/lib/monitoring/security.ts')
+    fs.writeFileSync(securityPath, securityConfig)
 
-    this.log('✅ Security monitoring configuration created', 'success');
+    this.log('✅ Security monitoring configuration created', 'success')
   }
 
   async setupDashboard() {
-    this.log('Setting up monitoring dashboard...', 'info');
+    this.log('Setting up monitoring dashboard...', 'info')
 
     const dashboardComponent = `
 'use client';
@@ -760,57 +757,65 @@ function MetricCard({ title, value, status }: MetricCardProps) {
     </div>
   );
 }
-`;
+`
 
-    const dashboardPath = path.join(this.projectRoot, 'src/components/monitoring/MonitoringDashboard.tsx');
-    const componentsMonitoringDir = path.join(this.projectRoot, 'src/components/monitoring');
-    
+    const dashboardPath = path.join(
+      this.projectRoot,
+      'src/components/monitoring/MonitoringDashboard.tsx'
+    )
+    const componentsMonitoringDir = path.join(this.projectRoot, 'src/components/monitoring')
+
     if (!fs.existsSync(componentsMonitoringDir)) {
-      fs.mkdirSync(componentsMonitoringDir, { recursive: true });
+      fs.mkdirSync(componentsMonitoringDir, { recursive: true })
     }
-    
-    fs.writeFileSync(dashboardPath, dashboardComponent);
 
-    this.log('✅ Monitoring dashboard component created', 'success');
+    fs.writeFileSync(dashboardPath, dashboardComponent)
+
+    this.log('✅ Monitoring dashboard component created', 'success')
   }
 
   async run() {
-    this.log('🔧 Setting up continuous monitoring system...', 'info');
-    this.log('', 'info');
+    this.log('🔧 Setting up continuous monitoring system...', 'info')
+    this.log('', 'info')
 
     try {
-      await this.setupWebVitalsMonitoring();
-      await this.setupErrorTracking();
-      await this.setupPerformanceMonitoring();
-      await this.setupSecurityMonitoring();
-      await this.setupDashboard();
+      await this.setupWebVitalsMonitoring()
+      await this.setupErrorTracking()
+      await this.setupPerformanceMonitoring()
+      await this.setupSecurityMonitoring()
+      await this.setupDashboard()
 
-      this.log('', 'info');
-      this.log('✅ Monitoring setup completed successfully!', 'success');
-      this.log('', 'info');
-      this.log('📊 Monitoring Components Created:', 'info');
-      this.log('  • src/lib/monitoring/auth-monitoring.ts - Authentication performance tracking', 'info');
-      this.log('  • src/lib/monitoring/performance.ts - Performance metrics and alerts', 'info');
-      this.log('  • src/lib/monitoring/security.ts - Security event tracking', 'info');
-      this.log('  • src/components/ErrorBoundary.tsx - Error boundary for authentication', 'info');
-      this.log('  • src/components/monitoring/MonitoringDashboard.tsx - Real-time dashboard', 'info');
-      this.log('', 'info');
-      this.log('🎯 Next Steps:', 'info');
-      this.log('  1. Integrate monitoring components into your authentication flows', 'info');
-      this.log('  2. Configure alerts for your preferred monitoring service', 'info');
-      this.log('  3. Set up the monitoring dashboard in admin area', 'info');
-      this.log('  4. Test all monitoring functionality', 'info');
-
+      this.log('', 'info')
+      this.log('✅ Monitoring setup completed successfully!', 'success')
+      this.log('', 'info')
+      this.log('📊 Monitoring Components Created:', 'info')
+      this.log(
+        '  • src/lib/monitoring/auth-monitoring.ts - Authentication performance tracking',
+        'info'
+      )
+      this.log('  • src/lib/monitoring/performance.ts - Performance metrics and alerts', 'info')
+      this.log('  • src/lib/monitoring/security.ts - Security event tracking', 'info')
+      this.log('  • src/components/ErrorBoundary.tsx - Error boundary for authentication', 'info')
+      this.log(
+        '  • src/components/monitoring/MonitoringDashboard.tsx - Real-time dashboard',
+        'info'
+      )
+      this.log('', 'info')
+      this.log('🎯 Next Steps:', 'info')
+      this.log('  1. Integrate monitoring components into your authentication flows', 'info')
+      this.log('  2. Configure alerts for your preferred monitoring service', 'info')
+      this.log('  3. Set up the monitoring dashboard in admin area', 'info')
+      this.log('  4. Test all monitoring functionality', 'info')
     } catch (error) {
-      this.log(`❌ Error setting up monitoring: ${error.message}`, 'error');
-      process.exit(1);
+      this.log(`❌ Error setting up monitoring: ${error.message}`, 'error')
+      process.exit(1)
     }
   }
 }
 
 // Run the monitoring setup
-const monitoringSetup = new MonitoringSetup();
-monitoringSetup.run().catch(error => {
-  console.error('Monitoring setup failed:', error);
-  process.exit(1);
-});
+const monitoringSetup = new MonitoringSetup()
+monitoringSetup.run().catch((error) => {
+  console.error('Monitoring setup failed:', error)
+  process.exit(1)
+})

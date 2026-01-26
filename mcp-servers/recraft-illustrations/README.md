@@ -52,10 +52,10 @@ Add to your Claude Code MCP settings (`~/.claude/settings.json` or project `.cla
 
 ### Environment Variables
 
-| Variable | Required | Default | Description |
-|----------|----------|---------|-------------|
-| `RECRAFT_API_KEY` | Yes | - | Your Recraft.ai API key |
-| `RECRAFT_OUTPUT_DIR` | No | `./generated-illustrations` | Directory to save generated SVGs |
+| Variable             | Required | Default                     | Description                      |
+| -------------------- | -------- | --------------------------- | -------------------------------- |
+| `RECRAFT_API_KEY`    | Yes      | -                           | Your Recraft.ai API key          |
+| `RECRAFT_OUTPUT_DIR` | No       | `./generated-illustrations` | Directory to save generated SVGs |
 
 ## Usage Examples
 
@@ -87,26 +87,27 @@ Use generate_scene to create an education-themed scene showing an online classro
 
 ### Illustration Styles
 
-| Style | Description | Best For |
-|-------|-------------|----------|
+| Style         | Description                              | Best For                       |
+| ------------- | ---------------------------------------- | ------------------------------ |
 | `flat_vector` | Clean, minimal flat design (like Google) | Modern websites, hero sections |
-| `line_art` | Simple line-based illustrations | Technical, minimalist designs |
-| `hand_drawn` | Sketchy, organic feel | Friendly, approachable brands |
-| `geometric` | Abstract geometric shapes | Tech, modern brands |
-| `corporate` | Professional business style | B2B, enterprise |
+| `line_art`    | Simple line-based illustrations          | Technical, minimalist designs  |
+| `hand_drawn`  | Sketchy, organic feel                    | Friendly, approachable brands  |
+| `geometric`   | Abstract geometric shapes                | Tech, modern brands            |
+| `corporate`   | Professional business style              | B2B, enterprise                |
 
 ### Icon Styles
 
-| Style | Description | Best For |
-|-------|-------------|----------|
-| `outline` | Single-line outline icons | Navigation, UI elements |
-| `filled` | Solid filled icons | Bold CTAs, prominent features |
-| `duo_tone` | Two-tone with fill and accent | Balanced visibility |
-| `gradient` | Icons with gradient fills | Modern, vibrant designs |
+| Style      | Description                   | Best For                      |
+| ---------- | ----------------------------- | ----------------------------- |
+| `outline`  | Single-line outline icons     | Navigation, UI elements       |
+| `filled`   | Solid filled icons            | Bold CTAs, prominent features |
+| `duo_tone` | Two-tone with fill and accent | Balanced visibility           |
+| `gradient` | Icons with gradient fills     | Modern, vibrant designs       |
 
 ## Output
 
 All illustrations are generated as **native SVG files**, which means:
+
 - Infinitely scalable without quality loss
 - Small file size (typically 10-50KB)
 - Editable in vector editors (Figma, Illustrator)
@@ -120,14 +121,17 @@ Recraft.ai charges approximately **$0.04 per image**. Check [recraft.ai/pricing]
 ## Troubleshooting
 
 ### "Authentication Failed"
+
 - Verify your API key is correct
 - Ensure you have positive API units balance in Recraft
 
 ### "Style not supported"
+
 - Use `list_styles` tool to see available styles
 - Some styles may only work with specific models
 
 ### Empty SVG
+
 - Try a more detailed prompt
 - Ensure the size parameter is valid
 

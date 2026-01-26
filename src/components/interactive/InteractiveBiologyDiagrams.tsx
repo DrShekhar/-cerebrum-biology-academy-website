@@ -21,7 +21,7 @@ import {
   Leaf,
   Heart,
   Dna,
-  CircuitBoard
+  CircuitBoard,
 } from 'lucide-react'
 
 interface DiagramComponent {
@@ -101,7 +101,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
       learningObjectives: [
         'Identify major cell organelles',
         'Understand organelle functions',
-        'Learn cell structure relationships'
+        'Learn cell structure relationships',
       ],
       components: [
         {
@@ -115,7 +115,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Controls cell activities and contains DNA',
           relatedComponents: ['nucleolus', 'nuclear-membrane'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'mitochondria',
@@ -128,7 +128,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Produces ATP through cellular respiration',
           relatedComponents: ['cytoplasm'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'chloroplast',
@@ -141,7 +141,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Converts light energy into chemical energy',
           relatedComponents: ['thylakoid', 'stroma'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'cell-wall',
@@ -154,7 +154,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Provides protection and maintains cell shape',
           relatedComponents: ['cell-membrane'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'vacuole',
@@ -167,8 +167,8 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Stores water and maintains turgor pressure',
           relatedComponents: ['tonoplast'],
           isVisible: true,
-          isInteractive: true
-        }
+          isInteractive: true,
+        },
       ],
       processes: [
         {
@@ -186,9 +186,9 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'chloroplast',
                   action: 'highlight',
-                  properties: { color: '#FCD34D', intensity: 'high' }
-                }
-              ]
+                  properties: { color: '#FCD34D', intensity: 'high' },
+                },
+              ],
             },
             {
               id: 'water-splitting',
@@ -198,9 +198,9 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'chloroplast',
                   action: 'scale',
-                  properties: { scale: 1.2 }
-                }
-              ]
+                  properties: { scale: 1.2 },
+                },
+              ],
             },
             {
               id: 'glucose-formation',
@@ -210,13 +210,13 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'chloroplast',
                   action: 'rotate',
-                  properties: { rotation: 360 }
-                }
-              ]
-            }
-          ]
-        }
-      ]
+                  properties: { rotation: 360 },
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'heart-circulation',
@@ -228,7 +228,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
       learningObjectives: [
         'Understand heart chambers',
         'Track blood flow pathway',
-        'Learn cardiac cycle phases'
+        'Learn cardiac cycle phases',
       ],
       components: [
         {
@@ -242,7 +242,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Receives deoxygenated blood from body',
           relatedComponents: ['right-ventricle', 'tricuspid-valve'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'right-ventricle',
@@ -255,7 +255,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Pumps blood to lungs for oxygenation',
           relatedComponents: ['pulmonary-artery'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'left-atrium',
@@ -268,7 +268,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Receives oxygenated blood from lungs',
           relatedComponents: ['left-ventricle', 'mitral-valve'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'left-ventricle',
@@ -281,8 +281,8 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Pumps oxygenated blood to body',
           relatedComponents: ['aorta'],
           isVisible: true,
-          isInteractive: true
-        }
+          isInteractive: true,
+        },
       ],
       processes: [
         {
@@ -300,14 +300,14 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'right-atrium',
                   action: 'scale',
-                  properties: { scale: 0.8 }
+                  properties: { scale: 0.8 },
                 },
                 {
                   componentId: 'left-atrium',
                   action: 'scale',
-                  properties: { scale: 0.8 }
-                }
-              ]
+                  properties: { scale: 0.8 },
+                },
+              ],
             },
             {
               id: 'ventricular-systole',
@@ -317,14 +317,14 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'right-ventricle',
                   action: 'scale',
-                  properties: { scale: 0.7 }
+                  properties: { scale: 0.7 },
                 },
                 {
                   componentId: 'left-ventricle',
                   action: 'scale',
-                  properties: { scale: 0.7 }
-                }
-              ]
+                  properties: { scale: 0.7 },
+                },
+              ],
             },
             {
               id: 'diastole',
@@ -334,28 +334,28 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'right-atrium',
                   action: 'scale',
-                  properties: { scale: 1.0 }
+                  properties: { scale: 1.0 },
                 },
                 {
                   componentId: 'left-atrium',
                   action: 'scale',
-                  properties: { scale: 1.0 }
+                  properties: { scale: 1.0 },
                 },
                 {
                   componentId: 'right-ventricle',
                   action: 'scale',
-                  properties: { scale: 1.0 }
+                  properties: { scale: 1.0 },
                 },
                 {
                   componentId: 'left-ventricle',
                   action: 'scale',
-                  properties: { scale: 1.0 }
-                }
-              ]
-            }
-          ]
-        }
-      ]
+                  properties: { scale: 1.0 },
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
     {
       id: 'dna-replication',
@@ -367,7 +367,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
       learningObjectives: [
         'Understand DNA structure',
         'Learn replication mechanism',
-        'Identify key enzymes involved'
+        'Identify key enzymes involved',
       ],
       components: [
         {
@@ -381,7 +381,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Stores genetic information in base pairs',
           relatedComponents: ['leading-strand', 'lagging-strand'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'helicase',
@@ -394,7 +394,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Breaks hydrogen bonds between base pairs',
           relatedComponents: ['dna-helix'],
           isVisible: true,
-          isInteractive: true
+          isInteractive: true,
         },
         {
           id: 'dna-polymerase',
@@ -407,8 +407,8 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           function: 'Adds nucleotides to growing DNA strand',
           relatedComponents: ['leading-strand', 'lagging-strand'],
           isVisible: true,
-          isInteractive: true
-        }
+          isInteractive: true,
+        },
       ],
       processes: [
         {
@@ -426,14 +426,14 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'helicase',
                   action: 'move',
-                  properties: { path: [{ x: 200, y: 150 }] }
+                  properties: { path: [{ x: 200, y: 150 }] },
                 },
                 {
                   componentId: 'dna-helix',
                   action: 'rotate',
-                  properties: { rotation: 180 }
-                }
-              ]
+                  properties: { rotation: 180 },
+                },
+              ],
             },
             {
               id: 'priming',
@@ -443,9 +443,9 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'dna-helix',
                   action: 'highlight',
-                  properties: { color: '#10B981' }
-                }
-              ]
+                  properties: { color: '#10B981' },
+                },
+              ],
             },
             {
               id: 'elongation',
@@ -455,14 +455,19 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 {
                   componentId: 'dna-polymerase',
                   action: 'move',
-                  properties: { path: [{ x: 180, y: 150 }, { x: 220, y: 150 }] }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
+                  properties: {
+                    path: [
+                      { x: 180, y: 150 },
+                      { x: 220, y: 150 },
+                    ],
+                  },
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ]
 
   useEffect(() => {
@@ -481,11 +486,11 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           const step = activeProcess.steps[currentStep]
 
           // Mark step as completed
-          setCompletedSteps(prev => new Set([...prev, step.id]))
-          setScore(prev => prev + 10)
+          setCompletedSteps((prev) => new Set([...prev, step.id]))
+          setScore((prev) => prev + 10)
 
           stepTimeout = setTimeout(() => {
-            setCurrentStep(prev => prev + 1)
+            setCurrentStep((prev) => prev + 1)
           }, step.duration)
         } else {
           // Animation complete
@@ -528,37 +533,45 @@ const InteractiveBiologyDiagrams: React.FC = () => {
   const handleComponentDrag = (componentId: string, newPosition: { x: number; y: number }) => {
     if (!selectedDiagram) return
 
-    setSelectedDiagram(prev => {
+    setSelectedDiagram((prev) => {
       if (!prev) return prev
 
       return {
         ...prev,
-        components: prev.components.map(comp =>
-          comp.id === componentId
-            ? { ...comp, position: newPosition }
-            : comp
-        )
+        components: prev.components.map((comp) =>
+          comp.id === componentId ? { ...comp, position: newPosition } : comp
+        ),
       }
     })
   }
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'beginner': return 'text-green-600 bg-green-100'
-      case 'intermediate': return 'text-yellow-600 bg-yellow-100'
-      case 'advanced': return 'text-red-600 bg-red-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'beginner':
+        return 'text-green-600 bg-green-100'
+      case 'intermediate':
+        return 'text-yellow-600 bg-yellow-100'
+      case 'advanced':
+        return 'text-red-600 bg-red-100'
+      default:
+        return 'text-gray-600 bg-gray-100'
     }
   }
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'cell': return <Microscope className="w-5 h-5" />
-      case 'human-body': return <Heart className="w-5 h-5" />
-      case 'plant': return <Leaf className="w-5 h-5" />
-      case 'molecular': return <Dna className="w-5 h-5" />
-      case 'ecosystem': return <CircuitBoard className="w-5 h-5" />
-      default: return <Brain className="w-5 h-5" />
+      case 'cell':
+        return <Microscope className="w-5 h-5" />
+      case 'human-body':
+        return <Heart className="w-5 h-5" />
+      case 'plant':
+        return <Leaf className="w-5 h-5" />
+      case 'molecular':
+        return <Dna className="w-5 h-5" />
+      case 'ecosystem':
+        return <CircuitBoard className="w-5 h-5" />
+      default:
+        return <Brain className="w-5 h-5" />
     }
   }
 
@@ -616,7 +629,9 @@ const InteractiveBiologyDiagrams: React.FC = () => {
               </div>
               <p className="text-sm text-gray-600 mb-3">{diagram.description}</p>
               <div className="flex items-center justify-between text-xs">
-                <span className={`px-2 py-1 rounded-full ${getDifficultyColor(diagram.difficulty)}`}>
+                <span
+                  className={`px-2 py-1 rounded-full ${getDifficultyColor(diagram.difficulty)}`}
+                >
                   {diagram.difficulty}
                 </span>
                 <span className="text-gray-500">{diagram.estimatedTime} min</span>
@@ -635,7 +650,9 @@ const InteractiveBiologyDiagrams: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <h3 className="font-semibold text-gray-800">{selectedDiagram.title}</h3>
-                  <span className={`px-2 py-1 text-xs rounded-full ${getDifficultyColor(selectedDiagram.difficulty)}`}>
+                  <span
+                    className={`px-2 py-1 text-xs rounded-full ${getDifficultyColor(selectedDiagram.difficulty)}`}
+                  >
                     {selectedDiagram.difficulty}
                   </span>
                 </div>
@@ -650,7 +667,11 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                     onClick={() => setIsFullscreen(!isFullscreen)}
                     className="p-2 text-gray-600 hover:text-gray-800 rounded-lg hover:bg-gray-200 transition-colors"
                   >
-                    {isFullscreen ? <Minimize2 className="w-4 h-4" /> : <Maximize2 className="w-4 h-4" />}
+                    {isFullscreen ? (
+                      <Minimize2 className="w-4 h-4" />
+                    ) : (
+                      <Maximize2 className="w-4 h-4" />
+                    )}
                   </button>
                   <div className="flex items-center gap-1">
                     <button
@@ -678,21 +699,23 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                   <select
                     value={activeProcess?.id || ''}
                     onChange={(e) => {
-                      const process = selectedDiagram.processes.find(p => p.id === e.target.value)
+                      const process = selectedDiagram.processes.find((p) => p.id === e.target.value)
                       if (process) setActiveProcess(process)
                     }}
                     className="px-3 py-1 text-sm border rounded focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select Process</option>
-                    {selectedDiagram.processes.map(process => (
-                      <option key={process.id} value={process.id}>{process.name}</option>
+                    {selectedDiagram.processes.map((process) => (
+                      <option key={process.id} value={process.id}>
+                        {process.name}
+                      </option>
                     ))}
                   </select>
 
                   {activeProcess && (
                     <div className="flex items-center gap-2">
                       <button
-                        onClick={() => isPlaying ? pauseProcess() : startProcess(activeProcess)}
+                        onClick={() => (isPlaying ? pauseProcess() : startProcess(activeProcess))}
                         className="flex items-center gap-1 px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors"
                       >
                         {isPlaying ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
@@ -721,13 +744,13 @@ const InteractiveBiologyDiagrams: React.FC = () => {
               style={{
                 height: isFullscreen ? '80vh' : '500px',
                 transform: `scale(${zoom})`,
-                transformOrigin: 'top left'
+                transformOrigin: 'top left',
               }}
             >
               {/* Components */}
               <AnimatePresence>
                 {selectedDiagram.components
-                  .filter(comp => comp.isVisible)
+                  .filter((comp) => comp.isVisible)
                   .map((component) => (
                     <motion.div
                       key={component.id}
@@ -737,7 +760,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                       onDragEnd={(_, info) => {
                         const newPosition = {
                           x: component.position.x + info.offset.x,
-                          y: component.position.y + info.offset.y
+                          y: component.position.y + info.offset.y,
                         }
                         handleComponentDrag(component.id, newPosition)
                       }}
@@ -746,14 +769,14 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                         opacity: 1,
                         scale: 1,
                         x: component.position.x,
-                        y: component.position.y
+                        y: component.position.y,
                       }}
                       whileHover={{ scale: 1.1 }}
                       onClick={() => handleComponentClick(component)}
                       className="absolute cursor-pointer"
                       style={{
                         width: component.size.width,
-                        height: component.size.height
+                        height: component.size.height,
                       }}
                     >
                       <div
@@ -776,8 +799,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                         {component.description}
                       </motion.div>
                     </motion.div>
-                  ))
-                }
+                  ))}
               </AnimatePresence>
 
               {/* Process Animation Overlay */}
@@ -796,7 +818,9 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                       <motion.div
                         className="bg-blue-600 h-2 rounded-full"
                         initial={{ width: 0 }}
-                        animate={{ width: `${((currentStep + 1) / activeProcess.steps.length) * 100}%` }}
+                        animate={{
+                          width: `${((currentStep + 1) / activeProcess.steps.length) * 100}%`,
+                        }}
                         transition={{ duration: 0.5 }}
                       />
                     </div>
@@ -831,7 +855,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                     <h5 className="font-medium text-gray-700">Related Components:</h5>
                     <div className="flex flex-wrap gap-1 mt-1">
                       {selectedComponent.relatedComponents.map((relatedId) => {
-                        const related = selectedDiagram.components.find(c => c.id === relatedId)
+                        const related = selectedDiagram.components.find((c) => c.id === relatedId)
                         return related ? (
                           <span
                             key={relatedId}
@@ -897,8 +921,8 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                           completedSteps.has(step.id)
                             ? 'text-green-600'
                             : index === currentStep
-                            ? 'text-blue-600'
-                            : 'text-gray-400'
+                              ? 'text-blue-600'
+                              : 'text-gray-400'
                         }`}
                       >
                         {completedSteps.has(step.id) ? (

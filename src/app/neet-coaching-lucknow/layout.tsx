@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Lucknow | Gomti Nagar, Hazratganj | Cerebrum Academy',
+  title: 'Best NEET Coaching in Lucknow | Gomti Nagar, Hazratganj | Cerebrum Academy',
   description:
     'Top NEET biology coaching in Lucknow for UP students. KGMU-focused preparation! 94.2% success rate, AIIMS faculty. Gomti Nagar, Hazratganj, Aliganj, Indira Nagar. 4,500+ students. Book free demo!',
   keywords:

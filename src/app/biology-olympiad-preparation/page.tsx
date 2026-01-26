@@ -100,8 +100,8 @@ export default function BiologyOlympiadHubPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Expert preparation for IBO, USABO, BBO, INBO, and 10+ national Biology Olympiads.
-            Master Campbell Biology with personalized coaching.
+            Expert preparation for IBO, USABO, BBO, INBO, and 10+ national Biology Olympiads. Master
+            Campbell Biology with personalized coaching.
           </p>
 
           {/* Quick Stats */}

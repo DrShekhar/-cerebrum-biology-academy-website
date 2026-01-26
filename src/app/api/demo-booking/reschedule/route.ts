@@ -85,7 +85,8 @@ export async function POST(request: NextRequest) {
   try {
     // Rate limit to prevent token brute-force attacks
     const forwardedFor = request.headers.get('x-forwarded-for')
-    const clientIp = forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
+    const clientIp =
+      forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
 
     const rateLimitResult = await withRateLimit(request, {
       identifier: `reschedule-post:${clientIp}`,
@@ -128,7 +129,10 @@ export async function POST(request: NextRequest) {
     const today = new Date()
     today.setHours(0, 0, 0, 0)
     if (selectedDate < today) {
-      return NextResponse.json({ error: 'New date must be today or in the future' }, { status: 400 })
+      return NextResponse.json(
+        { error: 'New date must be today or in the future' },
+        { status: 400 }
+      )
     }
 
     // Atomically verify AND consume token in single transaction to prevent race conditions
@@ -149,7 +153,10 @@ export async function POST(request: NextRequest) {
 
     if (!booking) {
       // Token was consumed but booking not found - log for investigation
-      console.error('Reschedule token consumed but booking not found', { bookingId, tokenId: tokenResult.tokenId })
+      console.error('Reschedule token consumed but booking not found', {
+        bookingId,
+        tokenId: tokenResult.tokenId,
+      })
       return NextResponse.json({ error: 'Booking not found' }, { status: 404 })
     }
 
@@ -193,10 +200,7 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('Reschedule error:', error)
-    return NextResponse.json(
-      { error: 'Failed to reschedule booking' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to reschedule booking' }, { status: 500 })
   }
 }
 
@@ -204,7 +208,8 @@ export async function GET(request: NextRequest) {
   try {
     // Rate limit to prevent token/booking enumeration
     const forwardedFor = request.headers.get('x-forwarded-for')
-    const clientIp = forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
+    const clientIp =
+      forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
 
     const rateLimitResult = await withRateLimit(request, {
       identifier: `reschedule-get:${clientIp}`,
@@ -260,10 +265,7 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('Fetch booking error:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch booking details' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to fetch booking details' }, { status: 500 })
   }
 }
 
@@ -365,7 +367,9 @@ async function handleGenerateRescheduleLink(request: NextRequest, session: UserS
     })
 
     // Log admin action
-    console.log(`[Reschedule] Admin ${session.userId} generated reschedule link for booking ${bookingId}`)
+    console.log(
+      `[Reschedule] Admin ${session.userId} generated reschedule link for booking ${bookingId}`
+    )
 
     const rescheduleUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/demo-booking/reschedule?id=${bookingId}&token=${token}`
 
@@ -376,10 +380,7 @@ async function handleGenerateRescheduleLink(request: NextRequest, session: UserS
     })
   } catch (error) {
     console.error('Generate reschedule link error:', error)
-    return NextResponse.json(
-      { error: 'Failed to generate reschedule link' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to generate reschedule link' }, { status: 500 })
   }
 }
 

@@ -28,7 +28,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           success: false,
-          error: 'Cloudflare Images is not configured. Please set CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_IMAGES_API_TOKEN.',
+          error:
+            'Cloudflare Images is not configured. Please set CLOUDFLARE_ACCOUNT_ID and CLOUDFLARE_IMAGES_API_TOKEN.',
         },
         { status: 503 }
       )
@@ -53,10 +54,7 @@ export async function POST(request: NextRequest) {
     const result = await createDirectUpload(metadata)
 
     if (!result.success) {
-      return NextResponse.json(
-        { success: false, error: result.error },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: result.error }, { status: 400 })
     }
 
     // Return the upload URL and image ID

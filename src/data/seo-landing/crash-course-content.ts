@@ -1019,12 +1019,14 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '⏰',
           question: 'Only a few months left for NEET?',
-          solution: 'Our crash course covers complete syllabus in 45-90 days with strategic prioritization',
+          solution:
+            'Our crash course covers complete syllabus in 45-90 days with strategic prioritization',
         },
         {
           icon: '📊',
           question: 'Mock test scores not improving?',
-          solution: 'Intensive practice with daily tests and personalized feedback to identify weak areas',
+          solution:
+            'Intensive practice with daily tests and personalized feedback to identify weak areas',
         },
         {
           icon: '🎯',
@@ -1034,7 +1036,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '📚',
           question: 'Overwhelmed by the syllabus?',
-          solution: 'Chapter-wise prioritization based on NEET weightage and your current preparation level',
+          solution:
+            'Chapter-wise prioritization based on NEET weightage and your current preparation level',
         },
       ],
     },
@@ -1099,7 +1102,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         name: 'Harsh Gupta',
         achievement: 'NEET 2024 - 612/720',
         quote:
-          'Last 60 days before NEET, I was panicking. Dr. Shekhar\'s crash course calmed me down and gave me a clear roadmap. Got into my dream college!',
+          "Last 60 days before NEET, I was panicking. Dr. Shekhar's crash course calmed me down and gave me a clear roadmap. Got into my dream college!",
         score: '612/720',
       },
     ],
@@ -1179,7 +1182,8 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       '@type': 'Course',
       courseName: 'NEET Crash Course 2026',
       provider: 'Cerebrum Biology Academy',
-      description: 'Intensive NEET crash course for last-minute preparation with complete syllabus coverage',
+      description:
+        'Intensive NEET crash course for last-minute preparation with complete syllabus coverage',
       duration: '45-90 days',
       price: 34999,
       priceCurrency: 'INR',

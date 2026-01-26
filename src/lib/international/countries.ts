@@ -186,12 +186,7 @@ export const COUNTRIES: Record<CountryCode, CountryConfig> = {
       'CBSE Biology',
       'MCAT Biology',
     ],
-    courseCategories: [
-      'IGCSE/A-Level',
-      'IB Programme',
-      'American System',
-      'Pre-Med',
-    ],
+    courseCategories: ['IGCSE/A-Level', 'IB Programme', 'American System', 'Pre-Med'],
     hreflang: 'en-AE',
     phoneFormat: '+971 XX XXX XXXX',
     trustBadges: ['Cambridge/Edexcel Aligned', 'KHDA Approved'],
@@ -212,12 +207,7 @@ export const COUNTRIES: Record<CountryCode, CountryConfig> = {
       'HPAT Preparation',
       'IB Biology',
     ],
-    courseCategories: [
-      'Junior Cycle',
-      'Leaving Cert',
-      'Medical Entry (HPAT)',
-      'IB',
-    ],
+    courseCategories: ['Junior Cycle', 'Leaving Cert', 'Medical Entry (HPAT)', 'IB'],
     hreflang: 'en-IE',
     phoneFormat: '+353 XX XXX XXXX',
     trustBadges: ['SEC Syllabus Aligned', 'CAO Points Prep'],
@@ -323,11 +313,7 @@ export function formatPrice(amount: number, currency: CountryCurrency): string {
 /**
  * Format price range (for 1-on-1 pricing)
  */
-export function formatPriceRange(
-  min: number,
-  max: number,
-  currency: CountryCurrency
-): string {
+export function formatPriceRange(min: number, max: number, currency: CountryCurrency): string {
   return `${currency.symbol}${min} - ${currency.symbol}${max}`
 }
 

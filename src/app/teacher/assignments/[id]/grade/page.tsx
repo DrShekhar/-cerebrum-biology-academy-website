@@ -547,7 +547,8 @@ export default function AssignmentGradingPage({ params }: GradingPageProps) {
                             <a
                               key={index}
                               href={file}
-                              target="_blank" rel="noopener noreferrer"
+                              target="_blank"
+                              rel="noopener noreferrer"
                               className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800"
                             >
                               <Download className="w-4 h-4" />

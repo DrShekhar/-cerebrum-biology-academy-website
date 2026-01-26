@@ -98,7 +98,15 @@ export default function BiologyClassesNearMePage() {
     const savedLocation = localStorage.getItem('userLocation')
     if (savedLocation) {
       setUserLocation(savedLocation)
-      const delhiNCRLocations = ['Rohini', 'Gurugram', 'South Delhi', 'Faridabad', 'Noida', 'Ghaziabad', 'Delhi']
+      const delhiNCRLocations = [
+        'Rohini',
+        'Gurugram',
+        'South Delhi',
+        'Faridabad',
+        'Noida',
+        'Ghaziabad',
+        'Delhi',
+      ]
       setIsInDelhiNCR(delhiNCRLocations.some((loc) => savedLocation.includes(loc)))
     }
   }, [])
@@ -106,7 +114,15 @@ export default function BiologyClassesNearMePage() {
   const handleLocationSelect = (location: string) => {
     setUserLocation(location)
     localStorage.setItem('userLocation', location)
-    const delhiNCRLocations = ['Rohini', 'Gurugram', 'South Delhi', 'Faridabad', 'Noida', 'Ghaziabad', 'Delhi']
+    const delhiNCRLocations = [
+      'Rohini',
+      'Gurugram',
+      'South Delhi',
+      'Faridabad',
+      'Noida',
+      'Ghaziabad',
+      'Delhi',
+    ]
     setIsInDelhiNCR(delhiNCRLocations.some((loc) => location.includes(loc)))
     setShowLocationModal(false)
   }
@@ -336,7 +352,8 @@ export default function BiologyClassesNearMePage() {
                     </Link>
                     <a
                       href={center.mapUrl}
-                      target="_blank" rel="noopener noreferrer"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center text-sm text-blue-600 hover:underline"
                     >
                       <Navigation className="w-4 h-4 mr-1" />

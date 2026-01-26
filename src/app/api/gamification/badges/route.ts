@@ -40,17 +40,12 @@ export async function GET(req: NextRequest) {
         ...badges,
         totalBadges: BADGE_DEFINITIONS.length,
         earnedCount: badges.earned.length,
-        completionPercentage: Math.round(
-          (badges.earned.length / BADGE_DEFINITIONS.length) * 100
-        ),
+        completionPercentage: Math.round((badges.earned.length / BADGE_DEFINITIONS.length) * 100),
       },
     })
   } catch (error) {
     console.error('Error fetching badges:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch badges' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch badges' }, { status: 500 })
   }
 }
 

@@ -14,19 +14,19 @@ interface TestResultsProps {
   onBackToTests: () => void
 }
 
-export function TestResults({ 
-  test, 
-  responses, 
-  timeTaken, 
-  userClass, 
-  onRetakeTest, 
-  onBackToTests 
+export function TestResults({
+  test,
+  responses,
+  timeTaken,
+  userClass,
+  onRetakeTest,
+  onBackToTests,
 }: TestResultsProps) {
   // Calculate results
-  const correctAnswers = responses.filter((response, index) => 
-    response.selectedAnswer === test.questions[index].correctAnswer
+  const correctAnswers = responses.filter(
+    (response, index) => response.selectedAnswer === test.questions[index].correctAnswer
   ).length
-  
+
   const totalQuestions = test.questions.length
   const score = correctAnswers * 4 // 4 marks per question
   const maxScore = totalQuestions * 4
@@ -35,11 +35,15 @@ export function TestResults({
   const timeInSeconds = timeTaken % 60
 
   const getPerformanceMessage = () => {
-    if (percentage >= 90) return { message: "Outstanding! Excellent performance!", color: "text-green-600" }
-    if (percentage >= 80) return { message: "Great job! Very good performance!", color: "text-green-600" }
-    if (percentage >= 70) return { message: "Good work! Above average performance!", color: "text-blue-600" }
-    if (percentage >= 60) return { message: "Fair performance. Keep practicing!", color: "text-yellow-600" }
-    return { message: "Needs improvement. More practice required!", color: "text-red-600" }
+    if (percentage >= 90)
+      return { message: 'Outstanding! Excellent performance!', color: 'text-green-600' }
+    if (percentage >= 80)
+      return { message: 'Great job! Very good performance!', color: 'text-green-600' }
+    if (percentage >= 70)
+      return { message: 'Good work! Above average performance!', color: 'text-blue-600' }
+    if (percentage >= 60)
+      return { message: 'Fair performance. Keep practicing!', color: 'text-yellow-600' }
+    return { message: 'Needs improvement. More practice required!', color: 'text-red-600' }
   }
 
   const performance = getPerformanceMessage()
@@ -54,7 +58,7 @@ export function TestResults({
       totalScore: score,
       percentage,
       timeTaken,
-      completedAt: new Date().toISOString()
+      completedAt: new Date().toISOString(),
     }
     saveTestResult(testResult)
   }, [test.id, responses, score, percentage, timeTaken])
@@ -82,7 +86,7 @@ export function TestResults({
                 <div className="text-sm">Score</div>
               </div>
             </div>
-            
+
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Test Completed!</h2>
             <p className={`text-lg font-medium ${performance.color}`}>{performance.message}</p>
           </div>
@@ -94,7 +98,9 @@ export function TestResults({
               <div className="text-gray-600">Correct</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900">{totalQuestions - correctAnswers}</div>
+              <div className="text-3xl font-bold text-gray-900">
+                {totalQuestions - correctAnswers}
+              </div>
               <div className="text-gray-600">Incorrect</div>
             </div>
             <div className="text-center">
@@ -102,7 +108,9 @@ export function TestResults({
               <div className="text-gray-600">Score / {maxScore}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900">{timeInMinutes}:{timeInSeconds.toString().padStart(2, '0')}</div>
+              <div className="text-3xl font-bold text-gray-900">
+                {timeInMinutes}:{timeInSeconds.toString().padStart(2, '0')}
+              </div>
               <div className="text-gray-600">Time Taken</div>
             </div>
           </div>
@@ -114,12 +122,15 @@ export function TestResults({
               <span>{percentage}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3">
-              <div 
+              <div
                 className={`h-3 rounded-full transition-all ${
-                  percentage >= 80 ? 'bg-green-600' :
-                  percentage >= 60 ? 'bg-blue-500' :
-                  percentage >= 40 ? 'bg-yellow-500' :
-                  'bg-red-500'
+                  percentage >= 80
+                    ? 'bg-green-600'
+                    : percentage >= 60
+                      ? 'bg-blue-500'
+                      : percentage >= 40
+                        ? 'bg-yellow-500'
+                        : 'bg-red-500'
                 }`}
                 style={{ width: `${percentage}%` }}
               ></div>
@@ -152,12 +163,15 @@ export function TestResults({
         {/* Question-wise Results */}
         <div className="bg-white rounded-3xl shadow-lg p-8">
           <h3 className="text-xl font-bold text-gray-900 mb-6">Question-wise Results</h3>
-          
+
           <div className="space-y-4">
             {test.questions.map((question, index) => {
               const response = responses[index]
               const isCorrect = response.selectedAnswer === question.correctAnswer
-              const userAnswer = response.selectedAnswer !== null ? question.options[response.selectedAnswer] : 'Not Answered'
+              const userAnswer =
+                response.selectedAnswer !== null
+                  ? question.options[response.selectedAnswer]
+                  : 'Not Answered'
               const correctAnswer = question.options[question.correctAnswer]
 
               return (
@@ -166,9 +180,11 @@ export function TestResults({
                     <div className="flex-1">
                       <div className="flex items-center space-x-3 mb-2">
                         <span className="text-sm font-semibold text-gray-600">Q{index + 1}</span>
-                        <span className={`w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold ${
-                          isCorrect ? 'bg-green-600 text-white' : 'bg-red-500 text-white'
-                        }`}>
+                        <span
+                          className={`w-6 h-6 rounded-full flex items-center justify-center text-sm font-semibold ${
+                            isCorrect ? 'bg-green-600 text-white' : 'bg-red-500 text-white'
+                          }`}
+                        >
                           {isCorrect ? '✓' : '✗'}
                         </span>
                       </div>
@@ -179,7 +195,15 @@ export function TestResults({
                   <div className="grid md:grid-cols-2 gap-4 text-sm">
                     <div>
                       <span className="font-medium text-gray-600">Your Answer: </span>
-                      <span className={response.selectedAnswer !== null ? (isCorrect ? 'text-green-600' : 'text-red-600') : 'text-gray-500'}>
+                      <span
+                        className={
+                          response.selectedAnswer !== null
+                            ? isCorrect
+                              ? 'text-green-600'
+                              : 'text-red-600'
+                            : 'text-gray-500'
+                        }
+                      >
                         {userAnswer}
                       </span>
                     </div>

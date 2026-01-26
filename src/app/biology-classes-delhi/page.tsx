@@ -368,8 +368,8 @@ export default function BiologyClassesDelhiPage() {
               </h1>
 
               <p className="mb-8 text-xl text-blue-100 md:text-2xl">
-                Join Delhi&apos;s top-rated biology coaching with AIIMS-trained faculty. NEET & Board
-                preparation with 98% success rate. 1,50,000+ students trust us!
+                Join Delhi&apos;s top-rated biology coaching with AIIMS-trained faculty. NEET &
+                Board preparation with 98% success rate. 1,50,000+ students trust us!
               </p>
 
               <div className="flex flex-col justify-center gap-4 sm:flex-row">
@@ -588,8 +588,7 @@ export default function BiologyClassesDelhiPage() {
                   <p className="mb-6 text-gray-600">
                     With over 10 years of teaching experience and an AIIMS Delhi background, Dr.
                     Shekhar Singh has helped 1,50,000+ students achieve their medical dreams. His
-                    unique teaching methodology makes complex biology concepts simple and
-                    memorable.
+                    unique teaching methodology makes complex biology concepts simple and memorable.
                   </p>
                   <ul className="space-y-3">
                     <li className="flex items-center gap-3">

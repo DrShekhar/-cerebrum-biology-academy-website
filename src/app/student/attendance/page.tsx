@@ -12,14 +12,7 @@ import { AttendanceStatusBadge } from '@/components/student/AttendanceStatusBadg
 import { AttendanceStatisticsWidget } from '@/components/student/AttendanceStatisticsWidget'
 import { UpcomingSessionsWidget } from '@/components/student/UpcomingSessionsWidget'
 import { SelfCheckIn } from '@/components/student/SelfCheckIn'
-import {
-  Calendar,
-  Clock,
-  Filter,
-  X,
-  BookOpen,
-  MapPin,
-} from 'lucide-react'
+import { Calendar, Clock, Filter, X, BookOpen, MapPin } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import type { StudentAttendance, AttendanceFilter } from '@/types/attendance'

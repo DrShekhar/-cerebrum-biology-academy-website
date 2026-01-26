@@ -143,7 +143,7 @@ export function CountryFloatingCTA({
 
       {/* Floating button */}
       <button
-        onClick={() => isExpanded ? handleClick() : setIsExpanded(true)}
+        onClick={() => (isExpanded ? handleClick() : setIsExpanded(true))}
         className={cn(
           'w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl',
           'flex items-center justify-center text-white',
@@ -179,62 +179,72 @@ export const countryWhatsAppMessages: Record<string, CountryMessages> = {
   us: {
     default: "Hi! I'm a student in the US interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (US timezone - EST/PST).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for US students. Can you share details?",
-    exam: "Hi! I need help with AP Biology / MCAT preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for US students. Can you share details?",
+    exam: 'Hi! I need help with AP Biology / MCAT preparation.',
   },
   uk: {
     default: "Hi! I'm a student in the UK interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (UK timezone - GMT/BST).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for UK students. Can you share details?",
-    exam: "Hi! I need help with GCSE / A-Level / BMAT preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for UK students. Can you share details?",
+    exam: 'Hi! I need help with GCSE / A-Level / BMAT preparation.',
   },
   ca: {
     default: "Hi! I'm a student in Canada interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (Canadian timezone).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for Canadian students. Can you share details?",
-    exam: "Hi! I need help with provincial biology exams / MCAT preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for Canadian students. Can you share details?",
+    exam: 'Hi! I need help with provincial biology exams / MCAT preparation.',
   },
   au: {
     default: "Hi! I'm a student in Australia interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (Australian timezone - AEST).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for Australian students. Can you share details?",
-    exam: "Hi! I need help with HSC / VCE / QCE Biology preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for Australian students. Can you share details?",
+    exam: 'Hi! I need help with HSC / VCE / QCE Biology preparation.',
   },
   sg: {
     default: "Hi! I'm a student in Singapore interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (Singapore timezone - SGT).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for Singapore students. Can you share details?",
-    exam: "Hi! I need help with GCE O-Level / A-Level / Singapore Biology Olympiad preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for Singapore students. Can you share details?",
+    exam: 'Hi! I need help with GCE O-Level / A-Level / Singapore Biology Olympiad preparation.',
   },
   ae: {
     default: "Hi! I'm a student in UAE interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (UAE timezone - GST).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for UAE students. Can you share details?",
-    exam: "Hi! I need help with IGCSE / IB / American curriculum biology.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for UAE students. Can you share details?",
+    exam: 'Hi! I need help with IGCSE / IB / American curriculum biology.',
   },
   ie: {
     default: "Hi! I'm a student in Ireland interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (Irish timezone - IST).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for Irish students. Can you share details?",
-    exam: "Hi! I need help with Leaving Certificate Biology preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for Irish students. Can you share details?",
+    exam: 'Hi! I need help with Leaving Certificate Biology preparation.',
   },
   hk: {
     default: "Hi! I'm a student in Hong Kong interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (Hong Kong timezone - HKT).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for Hong Kong students. Can you share details?",
-    exam: "Hi! I need help with HKDSE / IGCSE / A-Level Biology preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for Hong Kong students. Can you share details?",
+    exam: 'Hi! I need help with HKDSE / IGCSE / A-Level Biology preparation.',
   },
   nz: {
     default: "Hi! I'm a student in New Zealand interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (New Zealand timezone - NZST).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for NZ students. Can you share details?",
-    exam: "Hi! I need help with NCEA Biology preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for NZ students. Can you share details?",
+    exam: 'Hi! I need help with NCEA Biology preparation.',
   },
   za: {
     default: "Hi! I'm a student in South Africa interested in biology tutoring.",
     booking: "Hi! I'd like to book a free demo class (South African timezone - SAST).",
-    courseEnquiry: "Hi! I'm interested in your biology courses for South African students. Can you share details?",
-    exam: "Hi! I need help with NSC / IEB Biology preparation.",
+    courseEnquiry:
+      "Hi! I'm interested in your biology courses for South African students. Can you share details?",
+    exam: 'Hi! I need help with NSC / IEB Biology preparation.',
   },
 }
 
@@ -253,6 +263,7 @@ export function getCountryWhatsAppMessage(
 ## CTA Placement Guidelines
 
 ### Above the Fold (CRITICAL)
+
 - Minimum 48px height
 - Green background (#25D366 or #22c55e)
 - White text
@@ -260,6 +271,7 @@ export function getCountryWhatsAppMessage(
 - Response time indicator below
 
 ### Floating Button
+
 - Fixed position: bottom-right
 - 56px diameter
 - Show after 200px scroll
@@ -267,12 +279,14 @@ export function getCountryWhatsAppMessage(
 - Notification badge
 
 ### Section CTAs
+
 - After pricing section
 - After testimonials
 - Inline with content
 - Can be secondary variant
 
 ### Exit Intent
+
 - Modal overlay
 - Discount offer
 - WhatsApp as primary action
@@ -281,6 +295,7 @@ export function getCountryWhatsAppMessage(
 ## Tracking Parameters
 
 Every WhatsApp click tracks:
+
 - `source`: Page identifier (e.g., `international-us`)
 - `message`: Message type used
 - `campaign`: Marketing campaign

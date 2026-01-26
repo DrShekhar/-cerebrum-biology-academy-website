@@ -28,7 +28,7 @@ export default defineConfig({
   // Shorter timeout for faster failure detection
   timeout: isCI ? 20 * 1000 : 30 * 1000,
   expect: {
-    timeout: isCI ? 3000 : 5000
+    timeout: isCI ? 3000 : 5000,
   },
 
   // Global setup and teardown
@@ -53,109 +53,110 @@ export default defineConfig({
     // AI testing context
     extraHTTPHeaders: {
       'X-Test-Environment': 'playwright',
-      'X-Test-Suite': 'e2e'
-    }
+      'X-Test-Suite': 'e2e',
+    },
   },
 
   // CI: Skip tests with "Mobile" or "Tablet" in the name
   grepInvert: isCI && !isFullBrowserTest ? /Mobile|Tablet|mobile viewport/i : undefined,
 
-  projects: isCI && !isFullBrowserTest
-    ? [
-        // CI: Only Chromium for speed (covers 95% of issues)
-        // Exclude device-specific and debug test files
-        {
-          name: 'chromium',
-          use: { ...devices['Desktop Chrome'] },
-          testMatch: '**/*.spec.ts',
-          testIgnore: [
-            // Device-specific test files
-            '**/*.mobile.spec.ts',
-            '**/*.tablet.spec.ts',
-            '**/*.accessibility.spec.ts',
-            '**/*.performance.spec.ts',
-            '**/*.ai.spec.ts',
-            // Mobile-related test files (different naming pattern)
-            '**/*-mobile-*.spec.ts',
-            '**/*mobile*.spec.ts',
-            // Debug/duplicate burger menu tests (keep only burger-menu.spec.ts for local)
-            '**/burger-menu-*.spec.ts',
-            '**/burger-visual-check.spec.ts',
-            // Dashboard auth tests (require mock auth setup)
-            '**/student-dashboard/**'
-          ]
-        }
-      ]
-    : [
-        // Full browser testing (local or CI_FULL_BROWSER_TEST=true)
-        // Desktop browsers
-        {
-          name: 'chromium',
-          use: { ...devices['Desktop Chrome'] },
-          testMatch: '**/*.spec.ts'
-        },
-        {
-          name: 'firefox',
-          use: { ...devices['Desktop Firefox'] },
-          testMatch: '**/*.spec.ts'
-        },
-        {
-          name: 'webkit',
-          use: { ...devices['Desktop Safari'] },
-          testMatch: '**/*.spec.ts'
-        },
-
-        // Mobile devices (critical for education platform)
-        {
-          name: 'Mobile Chrome',
-          use: { ...devices['Pixel 5'] },
-          testMatch: '**/*.mobile.spec.ts'
-        },
-        {
-          name: 'Mobile Safari',
-          use: { ...devices['iPhone 12'] },
-          testMatch: '**/*.mobile.spec.ts'
-        },
-
-        // Tablet testing
-        {
-          name: 'Tablet',
-          use: { ...devices['iPad Pro'] },
-          testMatch: '**/*.tablet.spec.ts'
-        },
-
-        // Accessibility testing
-        {
-          name: 'accessibility',
-          use: { ...devices['Desktop Chrome'] },
-          testMatch: '**/*.accessibility.spec.ts'
-        },
-
-        // Performance testing
-        {
-          name: 'performance',
-          use: {
-            ...devices['Desktop Chrome'],
-            launchOptions: {
-              args: ['--disable-web-security', '--disable-features=TranslateUI']
-            }
+  projects:
+    isCI && !isFullBrowserTest
+      ? [
+          // CI: Only Chromium for speed (covers 95% of issues)
+          // Exclude device-specific and debug test files
+          {
+            name: 'chromium',
+            use: { ...devices['Desktop Chrome'] },
+            testMatch: '**/*.spec.ts',
+            testIgnore: [
+              // Device-specific test files
+              '**/*.mobile.spec.ts',
+              '**/*.tablet.spec.ts',
+              '**/*.accessibility.spec.ts',
+              '**/*.performance.spec.ts',
+              '**/*.ai.spec.ts',
+              // Mobile-related test files (different naming pattern)
+              '**/*-mobile-*.spec.ts',
+              '**/*mobile*.spec.ts',
+              // Debug/duplicate burger menu tests (keep only burger-menu.spec.ts for local)
+              '**/burger-menu-*.spec.ts',
+              '**/burger-visual-check.spec.ts',
+              // Dashboard auth tests (require mock auth setup)
+              '**/student-dashboard/**',
+            ],
           },
-          testMatch: '**/*.performance.spec.ts'
-        },
-
-        // AI functionality testing
-        {
-          name: 'ai-testing',
-          use: {
-            ...devices['Desktop Chrome'],
-            extraHTTPHeaders: {
-              'X-AI-Test-Mode': 'enabled',
-              'X-Test-Provider': 'mock'
-            }
+        ]
+      : [
+          // Full browser testing (local or CI_FULL_BROWSER_TEST=true)
+          // Desktop browsers
+          {
+            name: 'chromium',
+            use: { ...devices['Desktop Chrome'] },
+            testMatch: '**/*.spec.ts',
           },
-          testMatch: '**/*.ai.spec.ts'
-        }
-      ],
+          {
+            name: 'firefox',
+            use: { ...devices['Desktop Firefox'] },
+            testMatch: '**/*.spec.ts',
+          },
+          {
+            name: 'webkit',
+            use: { ...devices['Desktop Safari'] },
+            testMatch: '**/*.spec.ts',
+          },
+
+          // Mobile devices (critical for education platform)
+          {
+            name: 'Mobile Chrome',
+            use: { ...devices['Pixel 5'] },
+            testMatch: '**/*.mobile.spec.ts',
+          },
+          {
+            name: 'Mobile Safari',
+            use: { ...devices['iPhone 12'] },
+            testMatch: '**/*.mobile.spec.ts',
+          },
+
+          // Tablet testing
+          {
+            name: 'Tablet',
+            use: { ...devices['iPad Pro'] },
+            testMatch: '**/*.tablet.spec.ts',
+          },
+
+          // Accessibility testing
+          {
+            name: 'accessibility',
+            use: { ...devices['Desktop Chrome'] },
+            testMatch: '**/*.accessibility.spec.ts',
+          },
+
+          // Performance testing
+          {
+            name: 'performance',
+            use: {
+              ...devices['Desktop Chrome'],
+              launchOptions: {
+                args: ['--disable-web-security', '--disable-features=TranslateUI'],
+              },
+            },
+            testMatch: '**/*.performance.spec.ts',
+          },
+
+          // AI functionality testing
+          {
+            name: 'ai-testing',
+            use: {
+              ...devices['Desktop Chrome'],
+              extraHTTPHeaders: {
+                'X-AI-Test-Mode': 'enabled',
+                'X-Test-Provider': 'mock',
+              },
+            },
+            testMatch: '**/*.ai.spec.ts',
+          },
+        ],
 
   // Web server configuration
   webServer: {
@@ -166,6 +167,6 @@ export default defineConfig({
     reuseExistingServer: !isCI,
     // CI: 60 seconds for server startup (build already done)
     // Local: 2 minutes for dev server startup
-    timeout: isCI ? 60 * 1000 : 120 * 1000
-  }
+    timeout: isCI ? 60 * 1000 : 120 * 1000,
+  },
 })

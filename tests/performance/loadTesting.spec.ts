@@ -11,7 +11,7 @@ const PERFORMANCE_BASELINES = {
   pageLoad: parseInt(process.env.PERF_BASELINE_PAGE_LOAD || '3000'),
   apiResponse: parseInt(process.env.PERF_BASELINE_API || '500'),
   courseSearch: parseInt(process.env.PERF_BASELINE_SEARCH || '300'),
-  paymentInit: parseInt(process.env.PERF_BASELINE_PAYMENT || '1000')
+  paymentInit: parseInt(process.env.PERF_BASELINE_PAYMENT || '1000'),
 }
 
 test.describe('Performance & Load Testing', () => {
@@ -36,15 +36,15 @@ test.describe('Performance & Load Testing', () => {
       // Measure Core Web Vitals
       const metrics = await performanceMonitor.getCoreWebVitals(page)
       expect(metrics.LCP).toBeLessThan(2500) // Largest Contentful Paint
-      expect(metrics.FID).toBeLessThan(100)  // First Input Delay
-      expect(metrics.CLS).toBeLessThan(0.1)  // Cumulative Layout Shift
+      expect(metrics.FID).toBeLessThan(100) // First Input Delay
+      expect(metrics.CLS).toBeLessThan(0.1) // Cumulative Layout Shift
     })
 
     test('Course pages should load efficiently', async ({ page }) => {
       const coursePages = [
         '/courses/neet-biology-pinnacle',
         '/courses/class-11-biology',
-        '/courses/class-12-biology'
+        '/courses/class-12-biology',
       ]
 
       for (const coursePage of coursePages) {
@@ -96,7 +96,7 @@ test.describe('Performance & Load Testing', () => {
       // Monitor API calls
       const apiResponses: number[] = []
 
-      page.on('response', response => {
+      page.on('response', (response) => {
         if (response.url().includes('/api/courses/search')) {
           const responseTime = Date.now() - response.request().timing().requestStart
           apiResponses.push(responseTime)
@@ -108,13 +108,11 @@ test.describe('Performance & Load Testing', () => {
 
       for (const term of searchTerms) {
         await page.fill('[data-testid="course-search"]', term)
-        await page.waitForResponse(response =>
-          response.url().includes('/api/courses/search')
-        )
+        await page.waitForResponse((response) => response.url().includes('/api/courses/search'))
       }
 
       // Verify all API responses were within baseline
-      apiResponses.forEach(responseTime => {
+      apiResponses.forEach((responseTime) => {
         expect(responseTime).toBeLessThan(PERFORMANCE_BASELINES.apiResponse)
       })
 
@@ -125,7 +123,9 @@ test.describe('Performance & Load Testing', () => {
 
     test('Payment API should handle multiple concurrent requests', async ({ browser }) => {
       const contexts = await Promise.all(
-        Array(5).fill(null).map(() => browser.newContext())
+        Array(5)
+          .fill(null)
+          .map(() => browser.newContext())
       )
 
       const paymentPromises = contexts.map(async (context, index) => {
@@ -150,12 +150,12 @@ test.describe('Performance & Load Testing', () => {
       const results = await Promise.all(paymentPromises)
 
       // All payment initializations should complete within baseline
-      results.forEach(result => {
+      results.forEach((result) => {
         expect(result.responseTime).toBeLessThan(PERFORMANCE_BASELINES.paymentInit)
       })
 
       // Clean up
-      await Promise.all(contexts.map(context => context.close()))
+      await Promise.all(contexts.map((context) => context.close()))
     })
 
     test('Demo booking API should handle form submissions efficiently', async ({ page }) => {
@@ -164,7 +164,7 @@ test.describe('Performance & Load Testing', () => {
       // Monitor demo booking API
       let demoBookingTime = 0
 
-      page.on('response', response => {
+      page.on('response', (response) => {
         if (response.url().includes('/api/demo-booking')) {
           demoBookingTime = Date.now() - response.request().timing().requestStart
         }
@@ -182,9 +182,7 @@ test.describe('Performance & Load Testing', () => {
 
       // Submit form
       await page.click('[data-testid="submit-demo-booking"]')
-      await page.waitForResponse(response =>
-        response.url().includes('/api/demo-booking')
-      )
+      await page.waitForResponse((response) => response.url().includes('/api/demo-booking'))
 
       expect(demoBookingTime).toBeLessThan(PERFORMANCE_BASELINES.apiResponse)
     })
@@ -215,9 +213,7 @@ test.describe('Performance & Load Testing', () => {
 
           // Search functionality
           await page.fill('[data-testid="course-search"]', 'biology')
-          await page.waitForResponse(response =>
-            response.url().includes('/api/courses/search')
-          )
+          await page.waitForResponse((response) => response.url().includes('/api/courses/search'))
         }
       )
 
@@ -232,11 +228,7 @@ test.describe('Performance & Load Testing', () => {
       const peakUsers = 20
       const testDuration = 60000 // 1 minute
 
-      const results = await loadScenarios.simulateEnrollmentRush(
-        browser,
-        peakUsers,
-        testDuration
-      )
+      const results = await loadScenarios.simulateEnrollmentRush(browser, peakUsers, testDuration)
 
       // System should handle peak load gracefully
       expect(results.successfulEnrollmentAttempts).toBeGreaterThan(peakUsers * 0.8)
@@ -258,7 +250,7 @@ test.describe('Performance & Load Testing', () => {
         () => page.goto('/about'),
         () => page.click('[data-testid="book-demo-button"]'),
         () => page.keyboard.press('Escape'), // Close modal
-        () => page.goto('/enrollment')
+        () => page.goto('/enrollment'),
       ]
 
       // Repeat actions for 5 minutes (simulation of longer session)
@@ -307,7 +299,7 @@ test.describe('Performance & Load Testing', () => {
       const touchElements = [
         '[data-testid="course-card-pinnacle"]',
         '[data-testid="filter-class-11"]',
-        '[data-testid="sort-by-price"]'
+        '[data-testid="sort-by-price"]',
       ]
 
       for (const selector of touchElements) {
@@ -334,15 +326,12 @@ test.describe('Performance & Load Testing', () => {
     })
 
     test('Search queries should use proper indexing', async ({ page }) => {
-      const searchQueries = [
-        'biology',
-        'class 11',
-        'neet preparation',
-        'pinnacle series'
-      ]
+      const searchQueries = ['biology', 'class 11', 'neet preparation', 'pinnacle series']
 
       for (const query of searchQueries) {
-        const response = await page.request.get(`/api/courses/search?q=${encodeURIComponent(query)}`)
+        const response = await page.request.get(
+          `/api/courses/search?q=${encodeURIComponent(query)}`
+        )
         expect(response.status()).toBe(200)
 
         const responseTime = await response.headerValue('x-response-time')
@@ -361,7 +350,7 @@ test.describe('Performance & Load Testing', () => {
         const href = await stylesheet.getAttribute('href')
         if (href && href.includes('.css')) {
           const response = await page.request.get(href)
-          const contentLength = parseInt(await response.headerValue('content-length') || '0')
+          const contentLength = parseInt((await response.headerValue('content-length')) || '0')
           expect(contentLength).toBeLessThan(100 * 1024) // CSS files under 100KB
         }
       }
@@ -372,7 +361,7 @@ test.describe('Performance & Load Testing', () => {
         const src = await script.getAttribute('src')
         if (src && src.includes('.js') && !src.includes('node_modules')) {
           const response = await page.request.get(src)
-          const contentLength = parseInt(await response.headerValue('content-length') || '0')
+          const contentLength = parseInt((await response.headerValue('content-length')) || '0')
           expect(contentLength).toBeLessThan(500 * 1024) // JS files under 500KB
         }
       }
@@ -386,7 +375,7 @@ test.describe('Performance & Load Testing', () => {
         const src = await img.getAttribute('src')
         if (src && !src.startsWith('data:')) {
           const response = await page.request.get(src)
-          const contentLength = parseInt(await response.headerValue('content-length') || '0')
+          const contentLength = parseInt((await response.headerValue('content-length')) || '0')
 
           // Images should be reasonably sized
           expect(contentLength).toBeLessThan(500 * 1024) // Images under 500KB

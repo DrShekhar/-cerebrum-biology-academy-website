@@ -45,13 +45,14 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
       id: 'class-11',
       title: 'Class 11 Foundation',
       subtitle: 'Building Strong Basics',
-      description: 'Perfect for Class 11 students starting their NEET journey. Focus on foundation building with conceptual clarity.',
+      description:
+        'Perfect for Class 11 students starting their NEET journey. Focus on foundation building with conceptual clarity.',
       features: [
         'NCERT-based questions',
         'Concept building approach',
         'Gradual difficulty progression',
         'Visual learning aids',
-        'Extra time allocation'
+        'Extra time allocation',
       ],
       recommendedTests: 12,
       averageDuration: '30 min',
@@ -60,19 +61,20 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
       color: 'text-green-600',
       bgGradient: 'from-green-50 to-green-50',
       icon: BookOpen,
-      popular: false
+      popular: false,
     },
     {
       id: 'class-12',
       title: 'Class 12 Intensive',
       subtitle: 'Exam Preparation Mode',
-      description: 'Comprehensive preparation for Class 12 students appearing for NEET 2024. Advanced concepts with exam strategies.',
+      description:
+        'Comprehensive preparation for Class 12 students appearing for NEET 2024. Advanced concepts with exam strategies.',
       features: [
         'NEET-pattern questions',
         'Advanced problem solving',
         'Time management skills',
         'Previous year analysis',
-        'Rank prediction'
+        'Rank prediction',
       ],
       recommendedTests: 20,
       averageDuration: '45 min',
@@ -81,19 +83,20 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
       color: 'text-blue-600',
       bgGradient: 'bg-gray-50',
       icon: Target,
-      popular: true
+      popular: true,
     },
     {
       id: 'dropper',
       title: 'Dropper Batch',
       subtitle: 'Second Attempt Success',
-      description: 'Specialized for students taking a gap year. Intensive revision with focus on weak areas and exam temperament.',
+      description:
+        'Specialized for students taking a gap year. Intensive revision with focus on weak areas and exam temperament.',
       features: [
         'Complete syllabus revision',
         'Weak area identification',
         'Intensive practice sessions',
         'Motivation & counseling',
-        'Success guarantee'
+        'Success guarantee',
       ],
       recommendedTests: 25,
       averageDuration: '60 min',
@@ -102,38 +105,38 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
       color: 'text-purple-600',
       bgGradient: 'from-purple-50 to-violet-50',
       icon: Award,
-      popular: false
-    }
+      popular: false,
+    },
   ]
 
   const benefits = [
     {
       icon: BarChart3,
       title: 'Personalized Analytics',
-      description: 'Get class-specific performance insights and improvement suggestions'
+      description: 'Get class-specific performance insights and improvement suggestions',
     },
     {
       icon: Clock,
       title: 'Adaptive Timing',
-      description: 'Test duration adjusts based on your class and preparation level'
+      description: 'Test duration adjusts based on your class and preparation level',
     },
     {
       icon: TrendingUp,
       title: 'Progressive Difficulty',
-      description: 'Questions become harder as you improve, ensuring optimal challenge'
+      description: 'Questions become harder as you improve, ensuring optimal challenge',
     },
     {
       icon: Users,
       title: 'Peer Comparison',
-      description: 'Compare your performance with students from the same class nationwide'
-    }
+      description: 'Compare your performance with students from the same class nationwide',
+    },
   ]
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Header */}
       <div className="text-center mb-16">
-        <motion.h2 
+        <motion.h2
           className="text-4xl font-bold text-gray-900 mb-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -141,14 +144,14 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
         >
           Choose Your Learning Path
         </motion.h2>
-        <motion.p 
+        <motion.p
           className="text-xl text-gray-600 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          We customize test difficulty, question selection, and analytics based on your current class. 
-          This ensures optimal learning experience and better results.
+          We customize test difficulty, question selection, and analytics based on your current
+          class. This ensures optimal learning experience and better results.
         </motion.p>
       </div>
 
@@ -158,11 +161,11 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
           <motion.div
             key={option.id}
             className={`relative cursor-pointer transition-all duration-300 ${
-              selectedClass === option.id 
-                ? 'ring-4 ring-blue-500 scale-105' 
-                : hoveredClass === option.id 
-                ? 'scale-105 shadow-xl' 
-                : 'hover:shadow-lg'
+              selectedClass === option.id
+                ? 'ring-4 ring-blue-500 scale-105'
+                : hoveredClass === option.id
+                  ? 'scale-105 shadow-xl'
+                  : 'hover:shadow-lg'
             }`}
             onMouseEnter={() => setHoveredClass(option.id)}
             onMouseLeave={() => setHoveredClass(null)}
@@ -181,12 +184,16 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
               </div>
             )}
 
-            <div className={`bg-gradient-to-br ${option.bgGradient} rounded-3xl p-8 h-full border-2 ${
-              selectedClass === option.id ? 'border-blue-500' : 'border-transparent'
-            }`}>
+            <div
+              className={`bg-gradient-to-br ${option.bgGradient} rounded-3xl p-8 h-full border-2 ${
+                selectedClass === option.id ? 'border-blue-500' : 'border-transparent'
+              }`}
+            >
               {/* Header */}
               <div className="text-center mb-6">
-                <div className={`w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
+                <div
+                  className={`w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}
+                >
                   <option.icon className={`w-8 h-8 ${option.color}`} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{option.title}</h3>
@@ -227,8 +234,8 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
               </div>
 
               {/* Select Button */}
-              <Button 
-                variant={selectedClass === option.id ? "primary" : "outline"}
+              <Button
+                variant={selectedClass === option.id ? 'primary' : 'outline'}
                 className="w-full"
               >
                 {selectedClass === option.id ? (
@@ -258,7 +265,7 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
         <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
           Why Class-Based Learning Works Better
         </h3>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
             <motion.div
@@ -286,15 +293,15 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Button 
-            variant="primary" 
+          <Button
+            variant="primary"
             size="xl"
             onClick={() => {
               // This would typically navigate to the test selection page
               console.log('Continuing with class:', selectedClass)
             }}
           >
-            Continue with {classOptions.find(opt => opt.id === selectedClass)?.title}
+            Continue with {classOptions.find((opt) => opt.id === selectedClass)?.title}
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
           <p className="text-gray-600 mt-4">

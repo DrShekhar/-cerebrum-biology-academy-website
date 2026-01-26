@@ -244,7 +244,7 @@ export const neetBiologyQuestions = [
     ],
     correctAnswer: 'DNA to RNA to Protein',
     explanation:
-      "The central dogma of molecular biology states that genetic information flows from DNA to RNA (transcription) to Protein (translation). This is the fundamental principle of molecular biology.",
+      'The central dogma of molecular biology states that genetic information flows from DNA to RNA (transcription) to Protein (translation). This is the fundamental principle of molecular biology.',
     solutionSteps: [
       'DNA contains genetic information',
       'DNA is transcribed to RNA',
@@ -733,7 +733,8 @@ export const neetBiologyQuestions = [
     subject: 'biology',
     type: 'MCQ',
     difficulty: 'MEDIUM',
-    question: 'The maximum number of individuals of a population that can be supported in a given habitat is called',
+    question:
+      'The maximum number of individuals of a population that can be supported in a given habitat is called',
     options: ['Birth rate', 'Death rate', 'Carrying capacity', 'Population density'],
     correctAnswer: 'Carrying capacity',
     explanation:

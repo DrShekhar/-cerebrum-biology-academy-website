@@ -212,7 +212,9 @@ function verifyPayPalSignature(body: string, signature: string): boolean {
   }
 
   // Log warning that full PayPal verification should be implemented
-  console.warn('PayPal webhook: Using basic signature validation. Implement full API verification for production.')
+  console.warn(
+    'PayPal webhook: Using basic signature validation. Implement full API verification for production.'
+  )
 
   return true // TODO: Implement full PayPal webhook verification API call
 }
@@ -496,7 +498,10 @@ async function updatePaymentStatus(paymentId: string | undefined, status: string
   console.log(`💾 Updated payment ${paymentId} status to ${status}`)
 }
 
-async function updateSubscriptionStatus(subscriptionId: string | undefined, status: string): Promise<void> {
+async function updateSubscriptionStatus(
+  subscriptionId: string | undefined,
+  status: string
+): Promise<void> {
   console.log(`💾 Updated subscription ${subscriptionId} status to ${status}`)
 }
 
@@ -508,7 +513,10 @@ async function resetUsageLimits(customerId: string | undefined): Promise<void> {
   console.log(`🔄 Reset usage limits for customer ${customerId}`)
 }
 
-async function updateUserAccess(customerId: string | undefined, accessLevel: string): Promise<void> {
+async function updateUserAccess(
+  customerId: string | undefined,
+  accessLevel: string
+): Promise<void> {
   console.log(`🔑 Updated user access for ${customerId} to ${accessLevel}`)
 }
 

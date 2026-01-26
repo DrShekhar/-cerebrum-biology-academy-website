@@ -57,7 +57,8 @@ const whyChooseUs = [
   {
     icon: Stethoscope,
     title: 'AIIMS Faculty',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS Alumnus - perfect for students near AIIMS campus.',
+    description:
+      'Learn from Dr. Shekhar C Singh, AIIMS Alumnus - perfect for students near AIIMS campus.',
   },
   {
     icon: Target,
@@ -67,7 +68,8 @@ const whyChooseUs = [
   {
     icon: GraduationCap,
     title: 'Medical Focus',
-    description: 'Specialized coaching for students aspiring to join AIIMS, Safdarjung Hospital, and other medical colleges.',
+    description:
+      'Specialized coaching for students aspiring to join AIIMS, Safdarjung Hospital, and other medical colleges.',
   },
   {
     icon: Star,
@@ -120,7 +122,8 @@ export default function PageContent() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Cerebrum Biology Academy - NEET Coaching Safdarjung Enclave',
-    description: 'Best NEET Coaching for Safdarjung Enclave students - Near AIIMS Delhi, AIIMS Faculty',
+    description:
+      'Best NEET Coaching for Safdarjung Enclave students - Near AIIMS Delhi, AIIMS Faculty',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-safdarjung-enclave-delhi',
     telephone: '+91-88264-44334',
     address: {
@@ -129,7 +132,14 @@ export default function PageContent() {
       addressRegion: 'Uttar Pradesh',
       addressCountry: 'IN',
     },
-    areaServed: ['Safdarjung Enclave', 'Green Park', 'Hauz Khas', 'SDA', 'Kidwai Nagar', 'Jor Bagh'],
+    areaServed: [
+      'Safdarjung Enclave',
+      'Green Park',
+      'Hauz Khas',
+      'SDA',
+      'Kidwai Nagar',
+      'Jor Bagh',
+    ],
     priceRange: '$$',
   }
 
@@ -160,8 +170,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Coaching in{' '}
-              <span className="text-yellow-400">Safdarjung Enclave</span>
+              NEET Coaching in <span className="text-yellow-400">Safdarjung Enclave</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +178,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for students in Safdarjung Enclave, Green Park, Hauz Khas & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - the perfect mentor for future doctors.
+              Premium NEET coaching for students in Safdarjung Enclave, Green Park, Hauz Khas &
+              nearby areas. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - the
+              perfect mentor for future doctors.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +208,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Safdarjung%20Enclave%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +385,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Safdarjung%20Enclave%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

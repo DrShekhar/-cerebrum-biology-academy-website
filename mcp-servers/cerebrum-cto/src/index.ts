@@ -15,7 +15,7 @@ export const cerebrumCTOServer = {
 
   resources: {
     // Resource definitions will be added here
-  }
+  },
 }
 
 console.log('CERI CTO MCP Server initialized')

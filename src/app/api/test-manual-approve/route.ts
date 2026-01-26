@@ -71,9 +71,7 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ success: false, error: 'No failed items to reset' })
       }
 
-      const targetItem = itemId
-        ? failedItems.find((item) => item.id === itemId)
-        : failedItems[0]
+      const targetItem = itemId ? failedItems.find((item) => item.id === itemId) : failedItems[0]
 
       if (!targetItem) {
         return NextResponse.json({
@@ -111,9 +109,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Use specified item or first in review
-    const targetItem = itemId
-      ? reviewItems.find((item) => item.id === itemId)
-      : reviewItems[0]
+    const targetItem = itemId ? reviewItems.find((item) => item.id === itemId) : reviewItems[0]
 
     if (!targetItem) {
       return NextResponse.json({

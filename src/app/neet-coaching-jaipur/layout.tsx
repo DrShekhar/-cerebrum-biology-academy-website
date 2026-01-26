@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Jaipur | Vaishali Nagar, Mansarovar | Cerebrum Academy',
+  title: 'Best NEET Coaching in Jaipur | Vaishali Nagar, Mansarovar | Cerebrum Academy',
   description:
     'Top NEET biology coaching in Jaipur - Kota alternative! 94.2% success rate, AIIMS faculty. Vaishali Nagar, Mansarovar, Malviya Nagar, C-Scheme. 3,500+ Rajasthan students. Book free demo!',
   keywords:

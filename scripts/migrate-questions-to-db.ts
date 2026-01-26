@@ -194,7 +194,9 @@ async function migrateQuestions() {
   const { anatomyQuestions } = await import('../src/data/chapter6-anatomy')
 
   // Import Chapter 7 (Structural Organisation in Animals) question bank
-  const { structuralOrgAnimalsQuestions } = await import('../src/data/chapter7-structuralOrgAnimals')
+  const { structuralOrgAnimalsQuestions } = await import(
+    '../src/data/chapter7-structuralOrgAnimals'
+  )
 
   // Import Chapter 12 (Mineral Nutrition) question bank
   const { mineralNutritionQuestions } = await import('../src/data/chapter12-mineralNutrition')
@@ -206,7 +208,9 @@ async function migrateQuestions() {
   const { neuralControlQuestions } = await import('../src/data/chapter21-neuralControl')
 
   // Import Chapter 22 (Chemical Coordination and Integration) question bank
-  const { chemicalCoordinationQuestions } = await import('../src/data/chapter22-chemicalCoordination')
+  const { chemicalCoordinationQuestions } = await import(
+    '../src/data/chapter22-chemicalCoordination'
+  )
 
   // Import Class 12 Chapter 1 (Reproduction in Organisms) question bank
   const { reproductionInOrganismsQuestions } = await import('../src/data/chapter12-1-reproduction')
@@ -244,10 +248,14 @@ async function migrateQuestions() {
   const { biotechPrinciplesQuestions } = await import('../src/data/chapter12-11-biotechPrinciples')
 
   // Import Class 12 Chapter 12 (Biotechnology and its Applications) question bank
-  const { biotechApplicationsQuestions } = await import('../src/data/chapter12-12-biotechApplications')
+  const { biotechApplicationsQuestions } = await import(
+    '../src/data/chapter12-12-biotechApplications'
+  )
 
   // Import Class 12 Chapter 13 (Organisms and Populations) question bank
-  const { organismsPopulationsQuestions } = await import('../src/data/chapter12-13-organismsPopulations')
+  const { organismsPopulationsQuestions } = await import(
+    '../src/data/chapter12-13-organismsPopulations'
+  )
 
   // Import Class 12 Chapter 14 (Ecosystem) question bank
   const { ecosystemQuestions } = await import('../src/data/chapter12-14-ecosystem')
@@ -256,7 +264,9 @@ async function migrateQuestions() {
   const { biodiversityQuestions } = await import('../src/data/chapter12-15-biodiversity')
 
   // Import Class 12 Chapter 16 (Environmental Issues) question bank
-  const { environmentalIssuesQuestions } = await import('../src/data/chapter12-16-environmentalIssues')
+  const { environmentalIssuesQuestions } = await import(
+    '../src/data/chapter12-16-environmentalIssues'
+  )
 
   // Combine all existing questions
   const allExistingQuestions = [

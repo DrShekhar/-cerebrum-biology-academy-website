@@ -21,14 +21,14 @@ export function CountryHero({ country }: CountryHeroProps) {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Expert Biology Tutoring for{' '}
-            <span className="text-green-400">{country.name}</span> Students
+            Expert Biology Tutoring for <span className="text-green-400">{country.name}</span>{' '}
+            Students
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Master {country.examSystems.slice(0, 3).join(', ')} with personalized
-            online tutoring. Available in your timezone ({country.timezoneAbbr}).
+            Master {country.examSystems.slice(0, 3).join(', ')} with personalized online tutoring.
+            Available in your timezone ({country.timezoneAbbr}).
           </p>
 
           {/* Pricing Badge */}
@@ -46,12 +46,7 @@ export function CountryHero({ country }: CountryHeroProps) {
 
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <CountryWhatsAppCTA
-              variant="hero"
-              country={country.code}
-              message="booking"
-              size="xl"
-            >
+            <CountryWhatsAppCTA variant="hero" country={country.code} message="booking" size="xl">
               Book Free Demo Class
             </CountryWhatsAppCTA>
             <a

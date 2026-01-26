@@ -30,7 +30,17 @@ const ibBiologyTopics = [
     title: 'Molecular Biology',
     level: 'Core',
     hours: 21,
-    subtopics: ['Molecules to metabolism', 'Water', 'Carbohydrates & lipids', 'Proteins', 'Enzymes', 'DNA structure & replication', 'Transcription & translation', 'Cell respiration', 'Photosynthesis'],
+    subtopics: [
+      'Molecules to metabolism',
+      'Water',
+      'Carbohydrates & lipids',
+      'Proteins',
+      'Enzymes',
+      'DNA structure & replication',
+      'Transcription & translation',
+      'Cell respiration',
+      'Photosynthesis',
+    ],
     campbellChapters: '2-5, 8-10, 16-17',
   },
   {
@@ -62,7 +72,14 @@ const ibBiologyTopics = [
     title: 'Human Physiology',
     level: 'Core',
     hours: 20,
-    subtopics: ['Digestion', 'Blood system', 'Defense against disease', 'Gas exchange', 'Neurons & synapses', 'Hormones'],
+    subtopics: [
+      'Digestion',
+      'Blood system',
+      'Defense against disease',
+      'Gas exchange',
+      'Neurons & synapses',
+      'Hormones',
+    ],
     campbellChapters: '40-49',
   },
 ]
@@ -259,7 +276,12 @@ const batchPricing = [
     hours: 8,
     price: 320,
     perHour: 40,
-    features: ['8 hours group classes', '4-6 students per batch', 'Weekly sessions', 'Study materials'],
+    features: [
+      '8 hours group classes',
+      '4-6 students per batch',
+      'Weekly sessions',
+      'Study materials',
+    ],
   },
   {
     name: 'Quarterly',
@@ -362,7 +384,9 @@ function PricingCard({ tier, currency }: { tier: PricingTier; currency: string }
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       className={`relative rounded-2xl bg-white p-6 shadow-lg ${
-        tier.popular ? 'border-2 border-purple-500 ring-2 ring-purple-200' : 'border border-gray-200'
+        tier.popular
+          ? 'border-2 border-purple-500 ring-2 ring-purple-200'
+          : 'border border-gray-200'
       }`}
     >
       {tier.popular && (
@@ -423,7 +447,7 @@ export default function IBBiologyPage() {
       source: 'IB Biology - IA Support',
       page: 'ib-biology-online-classes',
       message:
-        "Hi! I need help with my IB Biology Internal Assessment. Can you tell me about your IA support services?",
+        'Hi! I need help with my IB Biology Internal Assessment. Can you tell me about your IA support services?',
     })
   }
 
@@ -567,10 +591,7 @@ export default function IBBiologyPage() {
                 <h3 className="mb-2 text-lg font-bold text-gray-900">{topic.title}</h3>
                 <div className="mb-3 flex flex-wrap gap-1">
                   {topic.subtopics.slice(0, 4).map((subtopic, i) => (
-                    <span
-                      key={i}
-                      className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600"
-                    >
+                    <span key={i} className="rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600">
                       {subtopic}
                     </span>
                   ))}
@@ -580,9 +601,7 @@ export default function IBBiologyPage() {
                     </span>
                   )}
                 </div>
-                <p className="text-sm text-gray-500">
-                  Campbell Ch: {topic.campbellChapters}
-                </p>
+                <p className="text-sm text-gray-500">Campbell Ch: {topic.campbellChapters}</p>
               </motion.div>
             ))}
           </div>
@@ -625,17 +644,12 @@ export default function IBBiologyPage() {
                 <h3 className="mb-2 text-lg font-bold text-gray-900">{topic.title}</h3>
                 <div className="mb-3 flex flex-wrap gap-1">
                   {topic.subtopics.map((subtopic, i) => (
-                    <span
-                      key={i}
-                      className="rounded bg-white px-2 py-0.5 text-xs text-gray-600"
-                    >
+                    <span key={i} className="rounded bg-white px-2 py-0.5 text-xs text-gray-600">
                       {subtopic}
                     </span>
                   ))}
                 </div>
-                <p className="text-sm text-gray-500">
-                  Campbell Ch: {topic.campbellChapters}
-                </p>
+                <p className="text-sm text-gray-500">Campbell Ch: {topic.campbellChapters}</p>
               </motion.div>
             ))}
           </div>
@@ -720,9 +734,7 @@ export default function IBBiologyPage() {
           <div className="mb-12">
             <div className="mb-6 text-center">
               <h3 className="text-2xl font-bold text-gray-900">Senior Faculty</h3>
-              <p className="text-gray-600">
-                PhD holders & IB examiners with 8+ years experience
-              </p>
+              <p className="text-gray-600">PhD holders & IB examiners with 8+ years experience</p>
               <p className="mt-1 text-sm text-green-600">$120-150/hour</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -736,7 +748,9 @@ export default function IBBiologyPage() {
           <div className="mb-12">
             <div className="mb-6 text-center">
               <h3 className="text-2xl font-bold text-gray-900">Junior Faculty</h3>
-              <p className="text-gray-600">Master&apos;s degree holders with IB teaching experience</p>
+              <p className="text-gray-600">
+                Master&apos;s degree holders with IB teaching experience
+              </p>
               <p className="mt-1 text-sm text-green-600">$60-75/hour</p>
             </div>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">

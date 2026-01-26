@@ -63,7 +63,7 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
     averageRiskLevel: 0,
     violationsLast24h: 0,
     terminatedSessions: 0,
-    behavioralAnomalies: 0
+    behavioralAnomalies: 0,
   })
   const [selectedSession, setSelectedSession] = useState<string | null>(null)
   const [autoRefresh, setAutoRefresh] = useState(true)
@@ -91,7 +91,7 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
       const [alertsData, sessionsData, metricsData] = await Promise.all([
         fetchAlerts(),
         fetchActiveSessions(),
-        fetchMetrics()
+        fetchMetrics(),
       ])
 
       setAlerts(alertsData)
@@ -117,7 +117,7 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
         timestamp: Date.now() - 300000,
         isRead: false,
         isResolved: false,
-        metadata: { tabSwitches: 5, timeWindow: 120 }
+        metadata: { tabSwitches: 5, timeWindow: 120 },
       },
       {
         id: '2',
@@ -131,8 +131,8 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
         timestamp: Date.now() - 600000,
         isRead: false,
         isResolved: false,
-        metadata: { averageTime: 3.2, expectedTime: 45 }
-      }
+        metadata: { averageTime: 3.2, expectedTime: 45 },
+      },
     ]
   }
 
@@ -154,8 +154,8 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
         deviceInfo: {
           browser: 'Chrome 121',
           os: 'Windows 11',
-          location: 'Mumbai, India'
-        }
+          location: 'Mumbai, India',
+        },
       },
       {
         sessionId: 'session456',
@@ -172,9 +172,9 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
         deviceInfo: {
           browser: 'Safari 17',
           os: 'macOS 14',
-          location: 'Delhi, India'
-        }
-      }
+          location: 'Delhi, India',
+        },
+      },
     ]
   }
 
@@ -188,18 +188,18 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
       averageRiskLevel: 2.3,
       violationsLast24h: 156,
       terminatedSessions: 12,
-      behavioralAnomalies: 34
+      behavioralAnomalies: 34,
     }
   }
 
   const handleAlertAction = (alertId: string, action: 'read' | 'resolve' | 'escalate') => {
-    setAlerts(prevAlerts =>
-      prevAlerts.map(alert =>
+    setAlerts((prevAlerts) =>
+      prevAlerts.map((alert) =>
         alert.id === alertId
           ? {
               ...alert,
               isRead: action === 'read' ? true : alert.isRead,
-              isResolved: action === 'resolve' ? true : alert.isResolved
+              isResolved: action === 'resolve' ? true : alert.isResolved,
             }
           : alert
       )
@@ -207,13 +207,13 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
   }
 
   const handleSessionTerminate = (sessionId: string) => {
-    const session = activeSessions.find(s => s.sessionId === sessionId)
+    const session = activeSessions.find((s) => s.sessionId === sessionId)
     if (session) {
       const reason = 'Terminated by admin due to security violations'
       onSessionTerminate(sessionId, reason)
 
       // Remove from active sessions
-      setActiveSessions(prev => prev.filter(s => s.sessionId !== sessionId))
+      setActiveSessions((prev) => prev.filter((s) => s.sessionId !== sessionId))
 
       // Create alert for termination
       const terminationAlert: SecurityAlert = {
@@ -228,30 +228,40 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
         timestamp: Date.now(),
         isRead: false,
         isResolved: true,
-        metadata: { reason, violations: session.violations }
+        metadata: { reason, violations: session.violations },
       }
 
-      setAlerts(prev => [terminationAlert, ...prev])
+      setAlerts((prev) => [terminationAlert, ...prev])
     }
   }
 
   const getRiskLevelColor = (level: string) => {
     switch (level) {
-      case 'critical': return 'text-red-600 bg-red-100'
-      case 'high': return 'text-orange-600 bg-orange-100'
-      case 'medium': return 'text-yellow-600 bg-yellow-100'
-      case 'low': return 'text-green-600 bg-green-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'critical':
+        return 'text-red-600 bg-red-100'
+      case 'high':
+        return 'text-orange-600 bg-orange-100'
+      case 'medium':
+        return 'text-yellow-600 bg-yellow-100'
+      case 'low':
+        return 'text-green-600 bg-green-100'
+      default:
+        return 'text-gray-600 bg-gray-100'
     }
   }
 
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100 border-red-200'
-      case 'high': return 'text-orange-600 bg-orange-100 border-orange-200'
-      case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200'
-      case 'low': return 'text-green-600 bg-green-100 border-green-200'
-      default: return 'text-gray-600 bg-gray-100 border-gray-200'
+      case 'critical':
+        return 'text-red-600 bg-red-100 border-red-200'
+      case 'high':
+        return 'text-orange-600 bg-orange-100 border-orange-200'
+      case 'medium':
+        return 'text-yellow-600 bg-yellow-100 border-yellow-200'
+      case 'low':
+        return 'text-green-600 bg-green-100 border-green-200'
+      default:
+        return 'text-gray-600 bg-gray-100 border-gray-200'
     }
   }
 
@@ -279,7 +289,9 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
         <div className="flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Security Monitoring Dashboard</h1>
-            <p className="text-gray-600 mt-2">Real-time test integrity monitoring and threat detection</p>
+            <p className="text-gray-600 mt-2">
+              Real-time test integrity monitoring and threat detection
+            </p>
           </div>
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-2">
@@ -381,7 +393,9 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex items-center space-x-2">
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(alert.severity)}`}>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getSeverityColor(alert.severity)}`}
+                      >
                         {alert.severity.toUpperCase()}
                       </span>
                       <span className="text-xs text-gray-500">{alert.type}</span>
@@ -431,13 +445,17 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
                 <div
                   key={session.sessionId}
                   className="border border-gray-200 rounded-lg p-4 hover:border-gray-300 cursor-pointer"
-                  onClick={() => setSelectedSession(
-                    selectedSession === session.sessionId ? null : session.sessionId
-                  )}
+                  onClick={() =>
+                    setSelectedSession(
+                      selectedSession === session.sessionId ? null : session.sessionId
+                    )
+                  }
                 >
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex items-center space-x-2">
-                      <span className={`px-2 py-1 rounded text-xs font-medium ${getRiskLevelColor(session.riskLevel)}`}>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium ${getRiskLevelColor(session.riskLevel)}`}
+                      >
                         {session.riskLevel.toUpperCase()}
                       </span>
                       <span className="text-sm font-medium text-gray-900">{session.userName}</span>
@@ -448,14 +466,18 @@ export function SecurityMonitoringDashboard({ onAlert, onSessionTerminate }: Mon
                   <div className="text-sm text-gray-600 mb-2">{session.testTitle}</div>
 
                   <div className="flex justify-between items-center text-xs text-gray-500 mb-2">
-                    <span>Q {session.currentQuestion}/{session.totalQuestions}</span>
+                    <span>
+                      Q {session.currentQuestion}/{session.totalQuestions}
+                    </span>
                     <span>{session.violations} violations</span>
                   </div>
 
                   <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
                     <div
                       className="bg-blue-600 h-2 rounded-full"
-                      style={{ width: `${(session.currentQuestion / session.totalQuestions) * 100}%` }}
+                      style={{
+                        width: `${(session.currentQuestion / session.totalQuestions) * 100}%`,
+                      }}
                     ></div>
                   </div>
 

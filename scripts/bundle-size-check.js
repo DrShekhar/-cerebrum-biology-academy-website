@@ -75,8 +75,14 @@ function analyzeBundleSize() {
   const totalStaticSize = getDirectorySize(staticDir)
 
   log('\n📊 Bundle Sizes:', 'blue')
-  log(`  Total JavaScript: ${formatSize(totalJSSize)}`, totalJSSize / 1024 > LIMITS.totalJS ? 'red' : 'green')
-  log(`  Total CSS: ${formatSize(totalCSSSize)}`, totalCSSSize / 1024 > LIMITS.totalCSS ? 'red' : 'green')
+  log(
+    `  Total JavaScript: ${formatSize(totalJSSize)}`,
+    totalJSSize / 1024 > LIMITS.totalJS ? 'red' : 'green'
+  )
+  log(
+    `  Total CSS: ${formatSize(totalCSSSize)}`,
+    totalCSSSize / 1024 > LIMITS.totalCSS ? 'red' : 'green'
+  )
   log(`  Total Static Assets: ${formatSize(totalStaticSize)}`)
 
   // Check limits
@@ -117,7 +123,7 @@ function analyzeBundleSize() {
   }
 
   chunks.sort((a, b) => b.size - a.size)
-  chunks.slice(0, 10).forEach(chunk => {
+  chunks.slice(0, 10).forEach((chunk) => {
     const color = chunk.size / 1024 > LIMITS.page ? 'yellow' : 'reset'
     log(`  ${chunk.name}: ${formatSize(chunk.size)}`, color)
   })
@@ -125,7 +131,7 @@ function analyzeBundleSize() {
   // Report issues
   if (issues.length > 0) {
     log('\n⚠️  Bundle Size Issues:', 'yellow')
-    issues.forEach(issue => {
+    issues.forEach((issue) => {
       log(`\n  ❌ ${issue.type}`, 'red')
       log(`     Actual: ${issue.actual}`, 'red')
       log(`     Limit: ${issue.limit}`, 'yellow')

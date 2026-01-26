@@ -350,11 +350,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <PremiumCard
-            variant="premium"
-            size="xl"
-            className="bg-gray-50"
-          >
+          <PremiumCard variant="premium" size="xl" className="bg-gray-50">
             <div className="space-y-8">
               <div>
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">Learn from Elite Faculty</h3>

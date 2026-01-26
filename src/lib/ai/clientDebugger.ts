@@ -384,9 +384,7 @@ class ClientAIDebugger {
 
   // Setup console shortcuts
   private setupConsoleShortcuts() {
-    if (typeof window === 'undefined') return
-
-    // Global debugging functions
+    if (typeof window === 'undefined') return // Global debugging functions
     ;(window as any).aiDebug = {
       enable: (level?: ClientDebugConfig['logLevel']) => this.enable(level),
       disable: () => this.disable(),
@@ -453,7 +451,11 @@ class ClientAIDebugger {
 export const clientAIDebugger = typeof window !== 'undefined' ? new ClientAIDebugger() : null
 
 // Auto-enable debugging if localStorage flag is set
-if (typeof window !== 'undefined' && clientAIDebugger && localStorage.getItem('DEBUG_AI') === 'true') {
+if (
+  typeof window !== 'undefined' &&
+  clientAIDebugger &&
+  localStorage.getItem('DEBUG_AI') === 'true'
+) {
   clientAIDebugger.enable()
 }
 

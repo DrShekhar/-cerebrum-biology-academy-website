@@ -352,7 +352,10 @@ function UPIAppSelection({
   )
 }
 
-function PaymentProcessing({ onShowQR, onRetry }: {
+function PaymentProcessing({
+  onShowQR,
+  onRetry,
+}: {
   onShowQR: () => void
   onRetry: () => void
   instructions: PaymentInstructions
@@ -384,7 +387,11 @@ function PaymentProcessing({ onShowQR, onRetry }: {
   )
 }
 
-function PaymentStatus({ transactionId, onRetry, onManualCheck }: {
+function PaymentStatus({
+  transactionId,
+  onRetry,
+  onManualCheck,
+}: {
   transactionId: string
   onRetry: () => void
   onManualCheck: () => void
@@ -418,7 +425,11 @@ function PaymentStatus({ transactionId, onRetry, onManualCheck }: {
   )
 }
 
-function PaymentSuccess({ transactionId, amount, courseName }: {
+function PaymentSuccess({
+  transactionId,
+  amount,
+  courseName,
+}: {
   transactionId: string
   amount: number
   courseName: string
@@ -444,7 +455,11 @@ function PaymentSuccess({ transactionId, amount, courseName }: {
   )
 }
 
-function PaymentError({ error, onRetry, instructions }: {
+function PaymentError({
+  error,
+  onRetry,
+  instructions,
+}: {
   error: string
   onRetry: () => void
   instructions: PaymentInstructions
@@ -474,7 +489,11 @@ function PaymentError({ error, onRetry, instructions }: {
   )
 }
 
-function QRCodeFallback({ qrCode, paymentUrl, onClose }: {
+function QRCodeFallback({
+  qrCode,
+  paymentUrl,
+  onClose,
+}: {
   qrCode: string
   paymentUrl: string
   onClose: () => void

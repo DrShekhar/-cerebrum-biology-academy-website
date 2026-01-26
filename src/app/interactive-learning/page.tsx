@@ -18,9 +18,7 @@ import {
   AcademicEmphasis,
   ResearchCitation,
 } from '@/components/ui/AcademicTypography'
-import {
-  BiologyConceptExplorer,
-} from '@/components/interactive/BiologyAnimations'
+import { BiologyConceptExplorer } from '@/components/interactive/BiologyAnimations'
 import { InteractiveQuiz, sampleNEETQuestions } from '@/components/interactive/InteractiveQuiz'
 import { Button } from '@/components/ui/Button'
 import {
@@ -135,9 +133,9 @@ export default function InteractiveLearningPage() {
 
         <AcademicParagraph size="large" className="text-blue-100 max-w-5xl mx-auto mb-12">
           Experience <strong>interactive learning technology</strong> that transforms abstract
-          biological concepts into engaging 3D visualizations, simulations, and adaptive assessments.
-          Our research-backed platform accelerates understanding and retention through immersive
-          educational experiences.
+          biological concepts into engaging 3D visualizations, simulations, and adaptive
+          assessments. Our research-backed platform accelerates understanding and retention through
+          immersive educational experiences.
           <ResearchCitation
             source="Interactive Learning Effectiveness Study"
             year="2024"

@@ -50,7 +50,6 @@ function courseSelectorReducer(
       }
 
     case 'CLEAR_SELECTION': {
-       
       const { [action.payload]: _removed, ...remainingPlans } = state.selectedPlans
       const typedRemainingPlans = remainingPlans as Record<SeriesType, PlanSelection>
       return {

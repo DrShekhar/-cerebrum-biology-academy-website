@@ -124,12 +124,12 @@ export const biologyOlympiads: BiologyOlympiadCountry[] = [
       schoolLevel: 'Sixth form students (Year 12-13)',
       otherRequirements: ['Must be studying in UK'],
     },
-    preparationResources: [
+    preparationResources: ['Campbell Biology', 'A-Level Biology specifications', 'BBO past papers'],
+    recommendedBooks: [
       'Campbell Biology',
-      'A-Level Biology specifications',
-      'BBO past papers',
+      'A-Level Biology textbooks',
+      'Molecular Biology of the Cell',
     ],
-    recommendedBooks: ['Campbell Biology', 'A-Level Biology textbooks', 'Molecular Biology of the Cell'],
     campbellChapterFocus: [6, 9, 10, 14, 17, 22, 23, 42, 43, 48, 53, 54],
     metaTitle: 'BBO Preparation Online | British Biology Olympiad Coaching',
     metaDescription:
@@ -517,8 +517,7 @@ export const biologyOlympiads: BiologyOlympiadCountry[] = [
       },
       {
         question: 'Is SBO open to international students?',
-        answer:
-          'Yes, students studying in Singapore can participate regardless of citizenship.',
+        answer: 'Yes, students studying in Singapore can participate regardless of citizenship.',
       },
     ],
     whatsappMessage:
@@ -640,11 +639,7 @@ export const biologyOlympiads: BiologyOlympiadCountry[] = [
       citizenshipRequired: true,
       schoolLevel: 'High school students',
     },
-    preparationResources: [
-      'Campbell Biology',
-      'Korean high school curriculum',
-      'KBO past papers',
-    ],
+    preparationResources: ['Campbell Biology', 'Korean high school curriculum', 'KBO past papers'],
     recommendedBooks: ['Campbell Biology', 'Korean biology textbooks'],
     campbellChapterFocus: [6, 9, 10, 14, 17, 22, 23, 42, 43, 48, 53],
     metaTitle: 'KBO Preparation Online | Korean Biology Olympiad Coaching',
@@ -710,11 +705,7 @@ export const biologyOlympiads: BiologyOlympiadCountry[] = [
       schoolLevel: 'High school students',
       otherRequirements: ['Must be studying in Japan'],
     },
-    preparationResources: [
-      'Campbell Biology',
-      'Japanese high school biology',
-      'JBO past papers',
-    ],
+    preparationResources: ['Campbell Biology', 'Japanese high school biology', 'JBO past papers'],
     recommendedBooks: ['Campbell Biology', 'Japanese biology textbooks'],
     campbellChapterFocus: [6, 9, 10, 14, 17, 22, 23, 42, 43, 48, 53],
     metaTitle: 'JBO Preparation Online | Japan Biology Olympiad Coaching',
@@ -767,7 +758,9 @@ export const IBO_WHATSAPP_MESSAGE =
   "Hi! I'm preparing for the International Biology Olympiad (IBO). I need coaching with Campbell Biology. What programs do you offer?"
 
 // Get olympiads by region
-export function getOlympiadsByRegion(region: 'asia' | 'europe' | 'americas' | 'oceania'): BiologyOlympiadCountry[] {
+export function getOlympiadsByRegion(
+  region: 'asia' | 'europe' | 'americas' | 'oceania'
+): BiologyOlympiadCountry[] {
   const regionMap: Record<string, string[]> = {
     asia: ['IN', 'CN', 'SG', 'KR', 'JP'],
     europe: ['GB', 'DE'],

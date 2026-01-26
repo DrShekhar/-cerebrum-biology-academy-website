@@ -18,23 +18,15 @@ const { execSync } = require('child_process')
 const PUBLIC_DIR = path.join(__dirname, '../public')
 
 // Image directories to scan
-const IMAGE_DIRS = [
-  'faculty',
-  'testimonials',
-  'avatars',
-  'images',
-  'assets',
-  'students',
-  'team'
-]
+const IMAGE_DIRS = ['faculty', 'testimonials', 'avatars', 'images', 'assets', 'students', 'team']
 
 // File signatures for common image formats
 const FILE_SIGNATURES = {
-  jpeg: [0xFF, 0xD8, 0xFF],
-  png: [0x89, 0x50, 0x4E, 0x47],
+  jpeg: [0xff, 0xd8, 0xff],
+  png: [0x89, 0x50, 0x4e, 0x47],
   gif: [0x47, 0x49, 0x46],
   webp: [0x52, 0x49, 0x46, 0x46], // RIFF header
-  svg: [0x3C, 0x3F, 0x78, 0x6D] // <?xm or <svg
+  svg: [0x3c, 0x3f, 0x78, 0x6d], // <?xm or <svg
 }
 
 function getFileSignature(filePath, bytes = 12) {
@@ -55,15 +47,24 @@ function detectActualType(filePath) {
 
   // Check for SVG (text-based)
   const headerText = signature.toString('utf8', 0, 12).toLowerCase()
-  if (headerText.includes('<?xml') || headerText.includes('<svg') || headerText.includes('<!doctype')) {
+  if (
+    headerText.includes('<?xml') ||
+    headerText.includes('<svg') ||
+    headerText.includes('<!doctype')
+  ) {
     return 'svg'
   }
 
   // Check binary signatures
-  if (signature[0] === 0xFF && signature[1] === 0xD8 && signature[2] === 0xFF) {
+  if (signature[0] === 0xff && signature[1] === 0xd8 && signature[2] === 0xff) {
     return 'jpeg'
   }
-  if (signature[0] === 0x89 && signature[1] === 0x50 && signature[2] === 0x4E && signature[3] === 0x47) {
+  if (
+    signature[0] === 0x89 &&
+    signature[1] === 0x50 &&
+    signature[2] === 0x4e &&
+    signature[3] === 0x47
+  ) {
     return 'png'
   }
   if (signature[0] === 0x47 && signature[1] === 0x49 && signature[2] === 0x46) {
@@ -84,7 +85,7 @@ function getExpectedType(filename) {
     '.png': 'png',
     '.gif': 'gif',
     '.webp': 'webp',
-    '.svg': 'svg'
+    '.svg': 'svg',
   }
   return extMap[ext] || 'unknown'
 }
@@ -112,7 +113,7 @@ function scanDirectory(dir, results = { fake: [], real: [], suspicious: [] }) {
           size: stats.size,
           expectedType,
           actualType,
-          sizeKB: (stats.size / 1024).toFixed(2)
+          sizeKB: (stats.size / 1024).toFixed(2),
         }
 
         // Check for mismatched types (fake images)
@@ -150,7 +151,7 @@ function printReport(results) {
     console.log('\n' + '-'.repeat(70))
     console.log('❌ FAKE IMAGES (SVG placeholders disguised as other formats):')
     console.log('-'.repeat(70))
-    results.fake.forEach(file => {
+    results.fake.forEach((file) => {
       console.log(`\n   📁 ${file.path}`)
       console.log(`      Size: ${file.sizeKB} KB`)
       console.log(`      Issue: ${file.issue}`)
@@ -162,7 +163,7 @@ function printReport(results) {
     console.log('\n' + '-'.repeat(70))
     console.log('⚠️  SUSPICIOUS IMAGES (unusually small):')
     console.log('-'.repeat(70))
-    results.suspicious.forEach(file => {
+    results.suspicious.forEach((file) => {
       console.log(`\n   📁 ${file.path}`)
       console.log(`      Size: ${file.sizeKB} KB`)
       console.log(`      Issue: ${file.issue}`)
@@ -173,7 +174,7 @@ function printReport(results) {
     console.log('\n' + '-'.repeat(70))
     console.log('✅ REAL IMAGES:')
     console.log('-'.repeat(70))
-    results.real.forEach(file => {
+    results.real.forEach((file) => {
       console.log(`   ✓ ${file.path} (${file.sizeKB} KB)`)
     })
   }
@@ -185,15 +186,15 @@ function printReport(results) {
     console.log('='.repeat(70))
 
     const byDir = {}
-    results.fake.forEach(file => {
+    results.fake.forEach((file) => {
       const dir = path.dirname(file.path)
       if (!byDir[dir]) byDir[dir] = []
       byDir[dir].push(file)
     })
 
-    Object.keys(byDir).forEach(dir => {
+    Object.keys(byDir).forEach((dir) => {
       console.log(`\n📂 ${dir}/`)
-      byDir[dir].forEach(file => {
+      byDir[dir].forEach((file) => {
         const filename = path.basename(file.path)
         console.log(`   → Replace ${filename} with real photo`)
       })

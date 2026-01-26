@@ -138,9 +138,7 @@ export default function AdminGalleryPage() {
 
       if (!response.ok) throw new Error('Failed to update')
 
-      setItems((prev) =>
-        prev.map((i) => (i.id === item.id ? { ...i, featured: !i.featured } : i))
-      )
+      setItems((prev) => prev.map((i) => (i.id === item.id ? { ...i, featured: !i.featured } : i)))
     } catch {
       setError('Failed to update featured status')
     }
@@ -331,7 +329,11 @@ export default function AdminGalleryPage() {
             Upload
           </Button>
 
-          <Button onClick={() => setShowAddModal(true)} variant="outline" className="flex items-center gap-2">
+          <Button
+            onClick={() => setShowAddModal(true)}
+            variant="outline"
+            className="flex items-center gap-2"
+          >
             <Plus className="h-4 w-4" />
             Add from URL
           </Button>
@@ -477,10 +479,16 @@ export default function AdminGalleryPage() {
                   <tr>
                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Image</th>
                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Title</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Category</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
+                      Category
+                    </th>
                     <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Type</th>
-                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">Featured</th>
-                    <th className="px-4 py-3 text-right text-sm font-medium text-gray-500">Actions</th>
+                    <th className="px-4 py-3 text-left text-sm font-medium text-gray-500">
+                      Featured
+                    </th>
+                    <th className="px-4 py-3 text-right text-sm font-medium text-gray-500">
+                      Actions
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y">
@@ -510,9 +518,13 @@ export default function AdminGalleryPage() {
                         </span>
                       </td>
                       <td className="px-4 py-3">
-                        <span className={`rounded-full px-2 py-1 text-xs ${
-                          item.type === 'VIDEO' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'
-                        }`}>
+                        <span
+                          className={`rounded-full px-2 py-1 text-xs ${
+                            item.type === 'VIDEO'
+                              ? 'bg-purple-100 text-purple-700'
+                              : 'bg-blue-100 text-blue-700'
+                          }`}
+                        >
                           {item.type}
                         </span>
                       </td>
@@ -578,10 +590,15 @@ export default function AdminGalleryPage() {
       )}
 
       {/* Delete Confirmation Modal */}
-      <Modal open={!!deletingItem} onOpenChange={(open) => !open && setDeletingItem(null)} title="Delete Gallery Item">
+      <Modal
+        open={!!deletingItem}
+        onOpenChange={(open) => !open && setDeletingItem(null)}
+        title="Delete Gallery Item"
+      >
         <div className="p-4">
           <p className="mb-4 text-gray-600">
-            Are you sure you want to delete &quot;{deletingItem?.title}&quot;? This action cannot be undone.
+            Are you sure you want to delete &quot;{deletingItem?.title}&quot;? This action cannot be
+            undone.
           </p>
           <div className="flex justify-end gap-2">
             <Button variant="outline" onClick={() => setDeletingItem(null)}>
@@ -595,7 +612,12 @@ export default function AdminGalleryPage() {
       </Modal>
 
       {/* Upload Modal */}
-      <Modal open={showUploadModal} onOpenChange={setShowUploadModal} title="Upload Image" size="lg">
+      <Modal
+        open={showUploadModal}
+        onOpenChange={setShowUploadModal}
+        title="Upload Image"
+        size="lg"
+      >
         <GalleryUploadForm
           onSuccess={() => {
             setShowUploadModal(false)
@@ -777,12 +799,7 @@ function GalleryUploadForm({
               <Upload className="h-12 w-12 mx-auto text-gray-400 mb-2" />
               <p className="text-gray-500">Click to upload or drag and drop</p>
               <p className="text-xs text-gray-400">PNG, JPG, GIF up to 10MB</p>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleFileChange}
-                className="hidden"
-              />
+              <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
             </label>
           )}
         </div>
@@ -830,7 +847,9 @@ function GalleryUploadForm({
 
       {/* Tags */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Tags (comma-separated)</label>
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Tags (comma-separated)
+        </label>
         <input
           type="text"
           value={formData.tags}
@@ -866,9 +885,7 @@ function GalleryUploadForm({
       </div>
 
       {/* Error */}
-      {error && (
-        <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</div>
-      )}
+      {error && <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</div>}
 
       {/* Actions */}
       <div className="flex justify-end gap-2 pt-4">
@@ -884,13 +901,7 @@ function GalleryUploadForm({
 }
 
 // Gallery URL Form Component
-function GalleryUrlForm({
-  onSuccess,
-  onCancel,
-}: {
-  onSuccess: () => void
-  onCancel: () => void
-}) {
+function GalleryUrlForm({ onSuccess, onCancel }: { onSuccess: () => void; onCancel: () => void }) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -995,7 +1006,9 @@ function GalleryUrlForm({
 
       {/* Tags */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Tags (comma-separated)</label>
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Tags (comma-separated)
+        </label>
         <input
           type="text"
           value={formData.tags}
@@ -1031,9 +1044,7 @@ function GalleryUrlForm({
       </div>
 
       {/* Error */}
-      {error && (
-        <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</div>
-      )}
+      {error && <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</div>}
 
       {/* Actions */}
       <div className="flex justify-end gap-2 pt-4">
@@ -1153,7 +1164,9 @@ function GalleryEditForm({
 
       {/* Tags */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Tags (comma-separated)</label>
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Tags (comma-separated)
+        </label>
         <input
           type="text"
           value={formData.tags}
@@ -1188,9 +1201,7 @@ function GalleryEditForm({
       </div>
 
       {/* Error */}
-      {error && (
-        <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</div>
-      )}
+      {error && <div className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</div>}
 
       {/* Actions */}
       <div className="flex justify-end gap-2 pt-4">

@@ -1,6 +1,7 @@
 # 5-Month NEET Timetable Visual Infographic - Production Plan
 
 ## Executive Summary
+
 Create a shareable social media infographic showcasing a structured January-May 2026 NEET preparation timetable, optimized for Instagram, LinkedIn, and Twitter/X. Features Sadhna's success story (695/720) as social proof and Cerebrum's proven methodology.
 
 ---
@@ -8,16 +9,19 @@ Create a shareable social media infographic showcasing a structured January-May 
 ## 1. SPECIFICATIONS
 
 ### Dimensions (3 Formats)
+
 1. **Instagram Post (Primary)**: 1080 x 1350px (4:5 ratio)
 2. **Instagram Story/Reels**: 1080 x 1920px (9:16 ratio)
 3. **LinkedIn/Twitter**: 1200 x 628px (1.91:1 ratio)
 
 ### File Formats
+
 - PNG (high quality, transparent background capability)
 - JPG (compressed for faster loading)
 - PDF (print-ready backup)
 
 ### Brand Colors (from CLAUDE.md)
+
 - **Primary CTA**: Yellow-800 `#854d0e`
 - **Success Green**: Green-500 `#22c55e`
 - **Medical Teal**: Teal-600 `#0d9488`
@@ -28,6 +32,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 - **Cerebrum Brand Green**: `#4a5d4a`
 
 ### Typography
+
 - **Font**: Geist Sans (primary), Inter (fallback)
 - **Headline**: Bold 48-56px
 - **Subheadline**: Semibold 24-32px
@@ -39,6 +44,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ## 2. CONTENT STRUCTURE
 
 ### Header Section (Top 20%)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │  CEREBRUM BIOLOGY ACADEMY LOGO                      │
@@ -53,6 +59,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 **Design Notes:**
+
 - Cerebrum logo: Top-left, 200px width
 - Gradient background: `from-slate-900 to-slate-800`
 - Headline color: Yellow-800 or White
@@ -61,6 +68,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ### Month-by-Month Breakdown (60% - Main Content)
 
 #### **JANUARY 2026** (Foundation Building)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │ 🟢 JANUARY - Foundation Building                    │
@@ -78,6 +86,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 #### **FEBRUARY 2026** (Concept Strengthening)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │ 🔵 FEBRUARY - Concept Deepening                     │
@@ -95,6 +104,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 #### **MARCH 2026** (Speed & Accuracy)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │ 🟣 MARCH - Speed Building                           │
@@ -112,6 +122,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 #### **APRIL 2026** (Intensive Revision)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │ 🟡 APRIL - Revision Marathon                        │
@@ -129,6 +140,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 #### **MAY 2026** (Final Polish)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │ 🔴 MAY - Final Sprint (Till Exam Day)               │
@@ -146,12 +158,14 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 **Visual Design for Monthly Boxes:**
+
 - Color-coded by month (emoji + border color)
 - Icon sets: 📚 (study), ⏰ (time), ✅ (target)
 - Progress bar at bottom of each month (visual completion indicator)
 - Gradient backgrounds: `from-[month-color]-50 to-white`
 
 ### Key Stats Section (Middle Insert - Between Mar & Apr)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │           💡 CEREBRUM SUCCESS FORMULA               │
@@ -165,12 +179,14 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 **Design Notes:**
+
 - Background: Purple-700 gradient with 20% opacity
 - White text with shadow for readability
 - Stats in large bold numbers (36px)
 - Labels in smaller text (14px)
 
 ### Footer Section (Bottom 20%)
+
 ```
 ┌─────────────────────────────────────────────────────┐
 │  📍 6 Centers: South Extension, Gurugram, Rohini,   │
@@ -187,6 +203,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 **Design Notes:**
+
 - Background: White with subtle shadow
 - CTA button: Yellow-800 `#854d0e`, rounded-lg, shadow-lg
 - Phone number: Click-to-call blue color
@@ -197,6 +214,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ## 3. VISUAL ELEMENTS
 
 ### Icons & Graphics
+
 1. **Month Icons**: Calendar emoji (📅), clock (⏰), books (📚), target (🎯)
 2. **Progress Indicators**: Circular progress bars for each month (0% → 100%)
 3. **Connector Lines**: Dotted lines connecting months (timeline visualization)
@@ -206,11 +224,13 @@ Create a shareable social media infographic showcasing a structured January-May 
    - 📈 "+285 Marks Average"
 
 ### Background Patterns
+
 - Subtle DNA helix pattern (faded, 5% opacity) in background
 - Biology cell illustrations (very light, decorative only)
 - Gradient overlays for section separation
 
 ### Photo Elements
+
 1. **Sadhna's Photo**:
    - Circular crop, 80px diameter
    - Green-500 border (3px)
@@ -227,11 +247,13 @@ Create a shareable social media infographic showcasing a structured January-May 
 ## 4. CONTENT COPY
 
 ### Main Headline Options (A/B Test)
+
 1. "5-Month NEET 2026 Study Timetable - Proven by 695/720 Scorer"
 2. "How to Score 340+ in Biology: 5-Month Action Plan"
 3. "NEET 2026 Biology Roadmap (January to May)"
 
 ### Supporting Copy
+
 ```
 🎯 Follow this exact timetable used by our 247 AIIMS selections
 
@@ -244,6 +266,7 @@ Create a shareable social media infographic showcasing a structured January-May 
 ```
 
 ### Call-to-Action Options
+
 1. "Book Your Free Demo Class → cerebrumbiologyacademy.com"
 2. "Get Personalized Study Plan → Call +91 88264 44334"
 3. "Download Full PDF Timetable → [QR Code]"
@@ -253,7 +276,9 @@ Create a shareable social media infographic showcasing a structured January-May 
 ## 5. SOCIAL MEDIA OPTIMIZATION
 
 ### Instagram Strategy
+
 **Caption Template:**
+
 ```
 🎯 5-MONTH NEET 2026 BIOLOGY ROADMAP 📚
 
@@ -281,13 +306,16 @@ SAVE this for your NEET prep! ♻️
 ```
 
 **Hashtag Strategy:**
+
 - Primary: #NEET2026 #NEETPreparation #BiologyForNEET
 - Secondary: #NEETBiology #MedicalAspirant #NEETMotivation
 - Branded: #CerebrumAcademy #DrShekhar
 - Long-tail: #NEET2026Preparation #5MonthStudyPlan
 
 ### LinkedIn Strategy
+
 **Post Template:**
+
 ```
 📊 DATA-DRIVEN APPROACH TO NEET 2026 SUCCESS
 
@@ -311,7 +339,9 @@ Free demo classes available: cerebrumbiologyacademy.com
 ```
 
 ### Twitter/X Strategy
+
 **Tweet Template (Thread):**
+
 ```
 1/🧵 How to score 340+ in NEET Biology in 5 months
 
@@ -377,11 +407,13 @@ Free demo: cerebrumbiologyacademy.com
 ## 6. TECHNICAL IMPLEMENTATION
 
 ### Design Tools
+
 **Primary:** Figma (preferred for collaboration and web export)
 **Alternative:** Canva Pro (faster, template-based)
 **Backup:** Adobe Illustrator (highest quality, print-ready)
 
 ### Asset Requirements
+
 1. **Cerebrum Logo**:
    - High-res PNG with transparent background
    - Location: `/public/images/logo/cerebrum-logo.png`
@@ -402,22 +434,27 @@ Free demo: cerebrumbiologyacademy.com
    - Fallback: Inter (Google Fonts)
 
 ### Export Settings
+
 **Instagram Post (1080x1350px):**
+
 - Format: PNG-24 (for quality)
 - Color Space: sRGB
 - DPI: 72 (screen optimized)
 
 **Instagram Story (1080x1920px):**
+
 - Format: PNG-24
 - Safe zones: 250px top/bottom padding
 - Text size: 20% larger than post version
 
 **LinkedIn (1200x628px):**
+
 - Format: JPG (quality 90%)
 - File size: <5MB
 - Optimized for desktop preview
 
 **Print Version (Optional):**
+
 - Format: PDF
 - DPI: 300
 - CMYK color space
@@ -428,6 +465,7 @@ Free demo: cerebrumbiologyacademy.com
 ## 7. CONTENT VARIATIONS
 
 ### Variation A: "Motivational Focus"
+
 - Headline: "From Zero to NEET Hero in 5 Months 🚀"
 - Emphasis on Sadhna's journey
 - More emotional copy
@@ -435,6 +473,7 @@ Free demo: cerebrumbiologyacademy.com
 - Success stories in each month
 
 ### Variation B: "Data-Driven Focus"
+
 - Headline: "The Science of NEET Success: 5-Month Formula"
 - Emphasis on statistics (247 AIIMS, +285 marks)
 - Charts and graphs
@@ -442,6 +481,7 @@ Free demo: cerebrumbiologyacademy.com
 - Metrics in each month
 
 ### Variation C: "Actionable Focus" (RECOMMENDED)
+
 - Headline: "Your 5-Month NEET Action Plan (Step-by-Step)"
 - Emphasis on daily tasks
 - Checklist format
@@ -453,12 +493,14 @@ Free demo: cerebrumbiologyacademy.com
 ## 8. ACCESSIBILITY & LOCALIZATION
 
 ### Accessibility
+
 - **Color Contrast**: Minimum 4.5:1 ratio (WCAG AA)
 - **Alt Text**: Provide descriptive alt text for social posts
 - **Font Size**: Minimum 16px for body text (readable on mobile)
 - **Icons**: Pair with text labels (not icons alone)
 
 ### Language Versions
+
 1. **English (Primary)**: Full infographic as described
 2. **Hindi/Hinglish (Optional)**:
    - Translate month labels: "JANUARY - नींव बनाना"
@@ -470,6 +512,7 @@ Free demo: cerebrumbiologyacademy.com
 ## 9. DISTRIBUTION CHECKLIST
 
 ### Pre-Launch (1 Week Before)
+
 - [ ] Design all 3 formats (Instagram, Story, LinkedIn)
 - [ ] Get approval from Dr. Shekhar / Marketing team
 - [ ] Write captions for all platforms
@@ -478,6 +521,7 @@ Free demo: cerebrumbiologyacademy.com
 - [ ] Test all CTAs (phone number, website link)
 
 ### Launch Day
+
 - [ ] Post on Instagram Feed (9 AM IST - peak engagement)
 - [ ] Post Instagram Story with poll: "Are you following this plan?"
 - [ ] Post on LinkedIn (11 AM IST - professional audience)
@@ -486,6 +530,7 @@ Free demo: cerebrumbiologyacademy.com
 - [ ] Email to existing student database
 
 ### Post-Launch (Week 1)
+
 - [ ] Monitor engagement (likes, shares, saves)
 - [ ] Respond to comments within 1 hour
 - [ ] Track demo booking conversions
@@ -497,6 +542,7 @@ Free demo: cerebrumbiologyacademy.com
 ## 10. SUCCESS METRICS
 
 ### Engagement KPIs
+
 - **Instagram Saves**: Target 500+ (indicates high value)
 - **Shares**: Target 200+ (virality indicator)
 - **Comments**: Target 50+ (engagement)
@@ -504,6 +550,7 @@ Free demo: cerebrumbiologyacademy.com
 - **Website Clicks**: Track CTR to cerebrumbiologyacademy.com
 
 ### Conversion KPIs
+
 - **Demo Bookings**: Track phone calls (+91 88264 44334)
 - **WhatsApp Chats**: Track conversations initiated
 - **Form Submissions**: Track "Get Study Plan" form fills
@@ -514,42 +561,49 @@ Free demo: cerebrumbiologyacademy.com
 ## 11. NEXT SESSION EXECUTION PLAN
 
 ### Step 1: Asset Collection (15 minutes)
+
 1. Locate Cerebrum logo (high-res)
 2. Get Sadhna's photo (from YouTube video or archives)
 3. Download Geist Sans font
 4. Prepare brand color swatches in Figma
 
 ### Step 2: Design Setup (30 minutes)
+
 1. Create Figma file with 3 artboards (Instagram, Story, LinkedIn)
 2. Set up brand color palette
 3. Import logo and fonts
 4. Create reusable components (month boxes, stat cards, CTA buttons)
 
 ### Step 3: Content Layout (60 minutes)
+
 1. Build header section with logo + headline + Sadhna photo
 2. Design 5 month boxes with copy from this plan
 3. Add stats section between March-April
 4. Design footer with CTAs and contact info
 
 ### Step 4: Visual Polish (45 minutes)
+
 1. Add background patterns (DNA helix, subtle gradients)
 2. Insert icons (calendar, clock, books, target)
 3. Add progress bars for each month
 4. Apply shadows and depth effects
 
 ### Step 5: Export & Test (30 minutes)
+
 1. Export all 3 formats (PNG + JPG)
 2. Test on mobile devices (iPhone and Android)
 3. Verify text readability
 4. Check file sizes (<5MB)
 
 ### Step 6: Content Creation (30 minutes)
+
 1. Write Instagram caption (use template from Section 5)
 2. Write LinkedIn post
 3. Write Twitter thread
 4. Create QR code for landing page
 
 ### Step 7: Review & Finalize (15 minutes)
+
 1. Spell check all text
 2. Verify phone number accuracy (+91 88264 44334)
 3. Test website link (cerebrumbiologyacademy.com)
@@ -563,17 +617,20 @@ Free demo: cerebrumbiologyacademy.com
 ## 12. FILES TO CREATE (Next Session)
 
 ### Design Files
+
 1. `5-month-neet-timetable-instagram.png` (1080x1350px)
 2. `5-month-neet-timetable-story.png` (1080x1920px)
 3. `5-month-neet-timetable-linkedin.jpg` (1200x628px)
 4. `5-month-neet-timetable-print.pdf` (A4, 300 DPI)
 
 ### Supporting Files
+
 5. `social-media-captions.txt` (Instagram, LinkedIn, Twitter copy)
 6. `infographic-analytics-tracker.md` (KPI tracking template)
 7. `qr-code-study-plan.png` (QR code linking to landing page)
 
 ### Design Source
+
 8. `5-month-timetable.fig` (Figma source file - editable)
 
 ---
@@ -583,18 +640,23 @@ Free demo: cerebrumbiologyacademy.com
 ### Potential Issues & Solutions
 
 **Issue 1: Sadhna's Photo/Video Not Available**
+
 - **Solution**: Use generic success illustration OR use "247 AIIMS Toppers" as hero instead of individual student
 
 **Issue 2: Content Too Dense (Readability on Mobile)**
+
 - **Solution**: Create carousel version (split into 5-6 slides, one per month)
 
 **Issue 3: Low Engagement**
+
 - **Solution**: Run Instagram Reels version (15-30 sec video with voiceover)
 
 **Issue 4: Competitor Copying**
+
 - **Solution**: Watermark with Cerebrum logo, embed unique branding elements
 
 **Issue 5: Outdated Information (NEET Exam Date Changes)**
+
 - **Solution**: Use generic "5-Month Plan" without specific dates, update monthly
 
 ---
@@ -602,6 +664,7 @@ Free demo: cerebrumbiologyacademy.com
 ## 14. BUDGET & RESOURCES
 
 ### Free Tools
+
 - Figma (free tier - 3 files)
 - Canva Pro (if subscription exists)
 - Unsplash/Pexels (free stock images)
@@ -609,11 +672,13 @@ Free demo: cerebrumbiologyacademy.com
 - Google Fonts (free)
 
 ### Paid Tools (Optional)
+
 - Canva Pro: ₹500/month (templates, premium elements)
 - Adobe Creative Cloud: ₹1,700/month (Illustrator + Photoshop)
 - Stock Photos: ₹0 (use in-house student photos with permission)
 
 ### Human Resources
+
 - Designer: 3-4 hours (freelance or in-house)
 - Content Writer: 1 hour (captions)
 - Reviewer/Approver: 30 min (Dr. Shekhar or marketing head)
@@ -625,16 +690,19 @@ Free demo: cerebrumbiologyacademy.com
 ## 15. POST-LAUNCH OPTIMIZATION
 
 ### Week 1 Analysis
+
 - Track which format performed best (Instagram vs LinkedIn)
 - Identify top-performing caption hooks
 - Monitor demo booking spike (if any)
 
 ### Week 2 Iteration
+
 - Create carousel version if single image is too dense
 - Test video/Reel version with voiceover
 - A/B test different CTAs ("Book Demo" vs "Download PDF")
 
 ### Month 1 Expansion
+
 - Create separate infographics for each month (detailed breakdown)
 - Publish blog post: "5-Month NEET Study Plan (Full Guide)"
 - Embed infographic on website landing page
@@ -647,12 +715,14 @@ Free demo: cerebrumbiologyacademy.com
 **Status**: Not found via public search
 
 **Next Steps**:
+
 1. Check Cerebrum Biology Academy YouTube channel directly
 2. Search academy's official website testimonials page
 3. Contact academy admin for internal video link
 4. **Fallback Plan**: Use text testimonial + photo instead of video link
 
 **Placeholder Copy (If Video Not Available)**:
+
 ```
 💬 "Dr. Shekhar Sir's teaching method helped me score 695/720 in NEET.
 The structured approach and regular tests were game-changers!"
@@ -683,6 +753,7 @@ The structured approach and regular tests were game-changers!"
 ## REFERENCES
 
 ### Sources Used
+
 - [Cerebrum Biology Academy Official Website](https://cerebrumbiologyacademy.com/)
 - [Biology For NEET UG](https://www.biologyforneetug.com/)
 - CLAUDE.md - Brand Guidelines
@@ -690,6 +761,7 @@ The structured approach and regular tests were game-changers!"
 - Knowledge Base (knowledgeBase.ts) - Academy statistics
 
 ### Additional Reading
+
 - Instagram Image Size Guide 2026
 - LinkedIn Best Practices for Educational Content
 - Canva Design School: Infographic Best Practices

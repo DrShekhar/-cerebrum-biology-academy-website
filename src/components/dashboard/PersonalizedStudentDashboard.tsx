@@ -2,14 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { AnimatePresence } from 'framer-motion'
-import {
-  BookOpen,
-  TrendingUp,
-  Target,
-  AlertTriangle,
-  Calendar,
-  BarChart3,
-} from 'lucide-react'
+import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3 } from 'lucide-react'
 import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
@@ -367,10 +360,16 @@ export function PersonalizedStudentDashboard() {
 
   // Calculate derived stats
   const totalStudyTime = recentSessions.reduce((acc, session) => acc + session.duration, 0)
-  const averageScore = recentSessions.length > 0
-    ? Math.round(recentSessions.reduce((acc, session) => acc + (session.score || 0), 0) / recentSessions.length)
-    : 0
-  const testsCompleted = recentSessions.filter(s => s.type === 'test' || s.type === 'practice').length
+  const averageScore =
+    recentSessions.length > 0
+      ? Math.round(
+          recentSessions.reduce((acc, session) => acc + (session.score || 0), 0) /
+            recentSessions.length
+        )
+      : 0
+  const testsCompleted = recentSessions.filter(
+    (s) => s.type === 'test' || s.type === 'practice'
+  ).length
 
   // Loading state
   if (isLoading) {

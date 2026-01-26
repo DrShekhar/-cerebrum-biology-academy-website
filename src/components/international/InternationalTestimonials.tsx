@@ -6,13 +6,7 @@ import {
   CountryTestimonial,
 } from '@/lib/international/countryContentService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
-import {
-  Star,
-  GraduationCap,
-  MapPin,
-  Calendar,
-  Trophy,
-} from 'lucide-react'
+import { Star, GraduationCap, MapPin, Calendar, Trophy } from 'lucide-react'
 
 interface InternationalTestimonialsProps {
   countryCode?: string

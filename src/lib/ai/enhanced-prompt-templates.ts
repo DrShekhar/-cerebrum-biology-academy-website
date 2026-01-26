@@ -26,49 +26,49 @@ export interface NEETPatternData {
 export class EnhancedPromptEngine {
   private readonly neetPatterns: NEETPatternData = {
     previousYearFrequency: {
-      'genetics': 0.18,
+      genetics: 0.18,
       'human-physiology': 0.16,
       'plant-physiology': 0.14,
       'cell-biology': 0.12,
-      'ecology': 0.10,
-      'reproduction': 0.08,
-      'evolution': 0.07,
-      'biotechnology': 0.06,
-      'diversity': 0.05,
-      'molecular-biology': 0.04
+      ecology: 0.1,
+      reproduction: 0.08,
+      evolution: 0.07,
+      biotechnology: 0.06,
+      diversity: 0.05,
+      'molecular-biology': 0.04,
     },
     topicWeightage: {
-      'genetics': 36,
+      genetics: 36,
       'human-physiology': 32,
       'plant-physiology': 28,
       'cell-biology': 24,
-      'ecology': 20,
-      'reproduction': 16,
-      'evolution': 14,
-      'biotechnology': 12,
-      'diversity': 10,
-      'molecular-biology': 8
+      ecology: 20,
+      reproduction: 16,
+      evolution: 14,
+      biotechnology: 12,
+      diversity: 10,
+      'molecular-biology': 8,
     },
     questionDistribution: {
-      'conceptual': 0.45,
-      'application': 0.30,
-      'analytical': 0.15,
-      'factual': 0.10
+      conceptual: 0.45,
+      application: 0.3,
+      analytical: 0.15,
+      factual: 0.1,
     },
     commonMistakes: [
       'Confusing similar biological processes',
       'Incorrect application of genetic laws',
       'Misunderstanding enzyme kinetics',
       'Wrong interpretation of physiological mechanisms',
-      'Confusion between plant and animal processes'
+      'Confusion between plant and animal processes',
     ],
     examTricks: [
       'Cross-reference multiple topics in single question',
       'Include recent biological discoveries',
       'Test application in real-world scenarios',
       'Focus on exceptions to general rules',
-      'Combine multiple concepts for analysis'
-    ]
+      'Combine multiple concepts for analysis',
+    ],
   }
 
   private readonly promptTemplates: Record<string, PromptTemplate> = {
@@ -148,11 +148,11 @@ Generate questions that help students achieve 330+/360 in NEET Biology through s
       examples: [
         'Which enzyme is responsible for the unwinding of DNA during replication?',
         'In C4 plants, the primary CO2 acceptor in mesophyll cells is:',
-        'The phenomenon of heterosis is best explained by which genetic principle?'
+        'The phenomenon of heterosis is best explained by which genetic principle?',
       ],
       cognitiveLevel: 'apply',
       neetRelevance: 0.95,
-      difficultyOptimization: true
+      difficultyOptimization: true,
     },
 
     conceptual_deep_dive: {
@@ -189,11 +189,11 @@ Generate questions that distinguish between superficial and deep understanding.`
       examples: [
         'Why does the oxygen-hemoglobin dissociation curve shift right during exercise?',
         'How would photosynthesis be affected if the Calvin cycle occurred in darkness?',
-        'Explain why genetic drift has stronger effects in small populations.'
+        'Explain why genetic drift has stronger effects in small populations.',
       ],
       cognitiveLevel: 'analyze',
       neetRelevance: 0.85,
-      difficultyOptimization: true
+      difficultyOptimization: true,
     },
 
     application_synthesis: {
@@ -229,11 +229,11 @@ Create questions that prepare students for scientific thinking and professional 
       examples: [
         'Design an experiment to test the effectiveness of a new plant growth hormone',
         'Analyze the molecular mechanisms behind cancer cell resistance to chemotherapy',
-        'Predict the ecological impact of introducing a new species to an ecosystem'
+        'Predict the ecological impact of introducing a new species to an ecosystem',
       ],
       cognitiveLevel: 'create',
       neetRelevance: 0.75,
-      difficultyOptimization: true
+      difficultyOptimization: true,
     },
 
     assertion_reasoning_advanced: {
@@ -269,12 +269,12 @@ Generate questions that develop critical thinking and logical reasoning skills e
       examples: [
         'Assertion: Plant cells have larger vacuoles than animal cells. Reason: Plants need structural support.',
         'Assertion: Enzymes increase reaction rates. Reason: They lower activation energy.',
-        'Assertion: All mutations are harmful. Reason: They change protein structure.'
+        'Assertion: All mutations are harmful. Reason: They change protein structure.',
       ],
       cognitiveLevel: 'evaluate',
-      neetRelevance: 0.90,
-      difficultyOptimization: true
-    }
+      neetRelevance: 0.9,
+      difficultyOptimization: true,
+    },
   }
 
   /**
@@ -305,7 +305,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
       timePerQuestion: context.timePerQuestion || this.calculateOptimalTime(context.difficulty),
       topicDetails: this.getTopicDetails(context.topic),
       commonMistakes: this.neetPatterns.commonMistakes.slice(0, 3).join(', '),
-      examTricks: this.neetPatterns.examTricks.slice(0, 2).join(', ')
+      examTricks: this.neetPatterns.examTricks.slice(0, 2).join(', '),
     }
 
     // Replace template variables
@@ -317,7 +317,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
 
     return {
       systemPrompt: template.systemPrompt,
-      userPrompt
+      userPrompt,
     }
   }
 
@@ -326,11 +326,11 @@ Generate questions that develop critical thinking and logical reasoning skills e
    */
   private calculateOptimalTime(difficulty: string): number {
     const timeMap = {
-      'easy': 45,
-      'medium': 60,
-      'moderate': 60,
-      'hard': 90,
-      'difficult': 90
+      easy: 45,
+      medium: 60,
+      moderate: 60,
+      hard: 90,
+      difficult: 90,
     }
     return timeMap[difficulty.toLowerCase()] || 60
   }
@@ -340,7 +340,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
    */
   private getTopicDetails(topic: string): string {
     const topicDetails: Record<string, string> = {
-      'genetics': `
+      genetics: `
 - Mendelian inheritance patterns and deviations
 - Linkage, crossing over, and chromosome mapping
 - Population genetics and Hardy-Weinberg principle
@@ -372,7 +372,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
 - Cell transport: diffusion, osmosis, active transport
 - Enzyme kinetics: factors affecting activity, inhibition`,
 
-      'ecology': `
+      ecology: `
 - Ecosystem structure: biotic and abiotic components
 - Energy flow: food chains, food webs, energy pyramids
 - Biogeochemical cycles: carbon, nitrogen, phosphorus
@@ -380,7 +380,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
 - Community interactions: competition, predation, symbiosis
 - Biodiversity: conservation strategies, extinction causes`,
 
-      'reproduction': `
+      reproduction: `
 - Asexual vs sexual reproduction: advantages and mechanisms
 - Human reproductive system: male and female anatomy
 - Gametogenesis: spermatogenesis and oogenesis
@@ -388,7 +388,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
 - Embryonic development: cleavage, gastrulation, organogenesis
 - Reproductive health: contraception, STDs, infertility`,
 
-      'evolution': `
+      evolution: `
 - Darwin's theory: natural selection and evidence
 - Modern synthesis: population genetics and evolution
 - Speciation: allopatric, sympatric, adaptive radiation
@@ -396,7 +396,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
 - Molecular evolution: comparative genomics, molecular clocks
 - Evolutionary relationships: phylogeny and classification`,
 
-      'biotechnology': `
+      biotechnology: `
 - Recombinant DNA technology: tools and techniques
 - PCR: principles, process, applications
 - Gene cloning: vectors, hosts, selection markers
@@ -404,7 +404,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
 - Bioprocessing: fermentation, downstream processing
 - Medical biotechnology: gene therapy, vaccines, diagnostics`,
 
-      'diversity': `
+      diversity: `
 - Classification principles: taxonomic hierarchy, nomenclature
 - Kingdom characteristics: Monera, Protista, Fungi, Plantae, Animalia
 - Plant diversity: algae, bryophytes, pteridophytes, gymnosperms, angiosperms
@@ -418,7 +418,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
 - Transcription: RNA polymerase, promoters, processing
 - Translation: ribosomes, tRNA, genetic code
 - Gene regulation: operons, transcription factors
-- Mutations: types, causes, consequences, repair mechanisms`
+- Mutations: types, causes, consequences, repair mechanisms`,
     }
 
     return topicDetails[topic] || `Core concepts and principles related to ${topic}`
@@ -436,7 +436,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
    */
   getTemplatesByCognitiveLevel(level: string): PromptTemplate[] {
     return Object.values(this.promptTemplates).filter(
-      template => template.cognitiveLevel === level
+      (template) => template.cognitiveLevel === level
     )
   }
 
@@ -445,7 +445,7 @@ Generate questions that develop critical thinking and logical reasoning skills e
    */
   getTemplatesByNEETRelevance(minRelevance: number): PromptTemplate[] {
     return Object.values(this.promptTemplates).filter(
-      template => template.neetRelevance >= minRelevance
+      (template) => template.neetRelevance >= minRelevance
     )
   }
 }
@@ -458,5 +458,5 @@ export const TEMPLATE_IDS = {
   NEET_OPTIMIZED_MCQ: 'neet_optimized_mcq',
   CONCEPTUAL_DEEP_DIVE: 'conceptual_deep_dive',
   APPLICATION_SYNTHESIS: 'application_synthesis',
-  ASSERTION_REASONING_ADVANCED: 'assertion_reasoning_advanced'
+  ASSERTION_REASONING_ADVANCED: 'assertion_reasoning_advanced',
 } as const

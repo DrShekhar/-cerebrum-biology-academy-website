@@ -50,7 +50,7 @@ const DEFAULT_SETTINGS: AccessibilitySettings = {
 
 export function MobileAccessibilityFeatures({
   onSettingsChange,
-  className = ''
+  className = '',
 }: MobileAccessibilityFeaturesProps) {
   const [settings, setSettings] = useState<AccessibilitySettings>(DEFAULT_SETTINGS)
   const [showPanel, setShowPanel] = useState(false)
@@ -90,17 +90,17 @@ export function MobileAccessibilityFeatures({
   const checkUserPreferences = () => {
     // Check for reduced motion preference
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setSettings(prev => ({ ...prev, reducedMotion: true }))
+      setSettings((prev) => ({ ...prev, reducedMotion: true }))
     }
 
     // Check for high contrast preference
     if (window.matchMedia('(prefers-contrast: high)').matches) {
-      setSettings(prev => ({ ...prev, highContrast: true }))
+      setSettings((prev) => ({ ...prev, highContrast: true }))
     }
 
     // Check for color scheme preference
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setSettings(prev => ({ ...prev, highContrast: true }))
+      setSettings((prev) => ({ ...prev, highContrast: true }))
     }
   }
 
@@ -150,7 +150,7 @@ export function MobileAccessibilityFeatures({
     key: K,
     value: AccessibilitySettings[K]
   ) => {
-    setSettings(prev => ({ ...prev, [key]: value }))
+    setSettings((prev) => ({ ...prev, [key]: value }))
   }
 
   const readPageContent = () => {
@@ -187,9 +187,9 @@ export function MobileAccessibilityFeatures({
     const clonedElement = element.cloneNode(true) as Element
 
     // Remove skipped elements
-    skipSelectors.forEach(selector => {
+    skipSelectors.forEach((selector) => {
       const elements = clonedElement.querySelectorAll(selector)
-      elements.forEach(el => el.remove())
+      elements.forEach((el) => el.remove())
     })
 
     return clonedElement.textContent?.trim() || ''
@@ -198,7 +198,8 @@ export function MobileAccessibilityFeatures({
   const readElement = (element: HTMLElement) => {
     if (!speechSynthesisRef.current || !settings.screenReader) return
 
-    const text = element.textContent || element.getAttribute('aria-label') || element.getAttribute('title')
+    const text =
+      element.textContent || element.getAttribute('aria-label') || element.getAttribute('title')
     if (!text) return
 
     const utterance = new SpeechSynthesisUtterance(text)
@@ -224,7 +225,7 @@ export function MobileAccessibilityFeatures({
     // Scroll into view
     element.scrollIntoView({
       behavior: settings.reducedMotion ? 'auto' : 'smooth',
-      block: 'center'
+      block: 'center',
     })
   }
 
@@ -294,7 +295,7 @@ export function MobileAccessibilityFeatures({
               initial={{ y: 400 }}
               animate={{ y: 0 }}
               exit={{ y: 400 }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             >
               <div className="p-6">
                 {/* Header */}
@@ -313,11 +314,7 @@ export function MobileAccessibilityFeatures({
                       <RotateCcw className="w-4 h-4 mr-1" />
                       Reset
                     </Button>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setShowPanel(false)}
-                    >
+                    <Button variant="ghost" size="sm" onClick={() => setShowPanel(false)}>
                       <EyeOff className="w-5 h-5" />
                     </Button>
                   </div>
@@ -326,19 +323,27 @@ export function MobileAccessibilityFeatures({
                 {/* Quick Actions */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   <Button
-                    variant={isReading ? "primary" : "outline"}
+                    variant={isReading ? 'primary' : 'outline'}
                     onClick={readPageContent}
                     className="flex items-center justify-center h-12"
                   >
-                    {isReading ? <Pause className="w-5 h-5 mr-2" /> : <Play className="w-5 h-5 mr-2" />}
+                    {isReading ? (
+                      <Pause className="w-5 h-5 mr-2" />
+                    ) : (
+                      <Play className="w-5 h-5 mr-2" />
+                    )}
                     {isReading ? 'Stop Reading' : 'Read Page'}
                   </Button>
                   <Button
-                    variant={settings.screenReader ? "primary" : "outline"}
+                    variant={settings.screenReader ? 'primary' : 'outline'}
                     onClick={() => updateSetting('screenReader', !settings.screenReader)}
                     className="flex items-center justify-center h-12"
                   >
-                    {settings.screenReader ? <Volume2 className="w-5 h-5 mr-2" /> : <VolumeX className="w-5 h-5 mr-2" />}
+                    {settings.screenReader ? (
+                      <Volume2 className="w-5 h-5 mr-2" />
+                    ) : (
+                      <VolumeX className="w-5 h-5 mr-2" />
+                    )}
                     Screen Reader
                   </Button>
                 </div>
@@ -361,7 +366,7 @@ export function MobileAccessibilityFeatures({
                       <div
                         className="bg-blue-600 h-2 rounded-full transition-all"
                         style={{
-                          width: `${((settings.fontSize - 12) / (24 - 12)) * 100}%`
+                          width: `${((settings.fontSize - 12) / (24 - 12)) * 100}%`,
                         }}
                       />
                     </div>

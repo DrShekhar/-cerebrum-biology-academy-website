@@ -7,11 +7,7 @@
 
 import { prisma } from '@/lib/prisma'
 import { LeadStage } from '@/generated/prisma'
-import {
-  logError,
-  logWarning,
-  logInfo,
-} from './followupErrorHandler'
+import { logError, logWarning, logInfo } from './followupErrorHandler'
 
 interface TriggerConditions {
   targetStage?: LeadStage

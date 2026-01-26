@@ -76,9 +76,7 @@ console.log(`Found ${exports.length} exports`)
 
 // Skip utility functions (first 3)
 const illustrationExports = exports.filter(
-  (e) =>
-    e.name !== 'ResponsiveIllustrationWrapper' &&
-    e.name !== 'getResponsiveClasses'
+  (e) => e.name !== 'ResponsiveIllustrationWrapper' && e.name !== 'getResponsiveClasses'
 )
 
 console.log(`Processing ${illustrationExports.length} illustration components`)

@@ -77,7 +77,7 @@ const southMumbaiLocalities = [
     name: 'Marine Drive',
     slug: 'marine-drive',
     students: '60+',
-    highlight: 'Queen\'s Necklace',
+    highlight: "Queen's Necklace",
     priority: 'medium',
   },
 ]
@@ -92,27 +92,32 @@ const features = [
   {
     icon: Users,
     title: 'Ultra-Elite Batches (8-12)',
-    description: 'Exclusive micro-batches for South Mumbai students with white-glove personalized attention.',
+    description:
+      'Exclusive micro-batches for South Mumbai students with white-glove personalized attention.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality befitting South Mumbai.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality befitting South Mumbai.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement your international school schedule.',
+    description:
+      'Morning, afternoon, and evening batches to complement your international school schedule.',
   },
   {
     icon: Shield,
     title: 'Stress-Free Learning',
-    description: 'No traveling to Dadar or Andheri. Study in comfort from Malabar Hill or Cuffe Parade.',
+    description:
+      'No traveling to Dadar or Andheri. Study in comfort from Malabar Hill or Cuffe Parade.',
   },
 ]
 
@@ -127,7 +132,7 @@ const faqs = [
   {
     question: 'Why do South Mumbai students choose online NEET coaching?',
     answer:
-      'South Mumbai\'s elite schools like Cathedral, Campion, and JBCN have demanding schedules and high standards. Our online classes offer the same premium experience - top faculty, small batches - without the need to travel to suburban coaching hubs. Why sit in traffic when you can get AIIMS faculty on your screen?',
+      "South Mumbai's elite schools like Cathedral, Campion, and JBCN have demanding schedules and high standards. Our online classes offer the same premium experience - top faculty, small batches - without the need to travel to suburban coaching hubs. Why sit in traffic when you can get AIIMS faculty on your screen?",
   },
   {
     question: 'Which areas in South Mumbai do you serve?',
@@ -186,7 +191,7 @@ const whySouthMumbai = [
     icon: GraduationCap,
     title: 'Elite Student Network',
     description:
-      'Study with peers from South Mumbai\'s top schools. Network with motivated students from elite institutions.',
+      "Study with peers from South Mumbai's top schools. Network with motivated students from elite institutions.",
   },
 ]
 
@@ -236,8 +241,9 @@ export default function NeetCoachingSouthMumbaiPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Ultra-premium NEET Biology coaching for South Mumbai&apos;s elite schools. 94.2% success rate, AIIMS
-              faculty, concierge service. Join 480+ students from Cathedral, Campion, JBCN.
+              Ultra-premium NEET Biology coaching for South Mumbai&apos;s elite schools. 94.2%
+              success rate, AIIMS faculty, concierge service. Join 480+ students from Cathedral,
+              Campion, JBCN.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +304,8 @@ export default function NeetCoachingSouthMumbaiPage() {
               NEET Coaching Across South Mumbai&apos;s Elite Addresses
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Colaba to Worli, Malabar Hill to Marine Drive - premium coaching for every SoBo locality.
+              From Colaba to Worli, Malabar Hill to Marine Drive - premium coaching for every SoBo
+              locality.
             </p>
           </motion.div>
 
@@ -320,9 +327,7 @@ export default function NeetCoachingSouthMumbaiPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-slate-600" />
                   </div>
-                  <div className="text-2xl font-bold text-slate-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-slate-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded-full">
@@ -351,7 +356,8 @@ export default function NeetCoachingSouthMumbaiPage() {
               Why South Mumbai&apos;s Elite Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ultra-premium education meets convenience - designed for South Mumbai&apos;s discerning families.
+              Ultra-premium education meets convenience - designed for South Mumbai&apos;s
+              discerning families.
             </p>
           </motion.div>
 
@@ -477,7 +483,8 @@ export default function NeetCoachingSouthMumbaiPage() {
               Join South Mumbai&apos;s Elite NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, concierge service. International school specialists!
+              94.2% success rate, AIIMS faculty, concierge service. International school
+              specialists!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

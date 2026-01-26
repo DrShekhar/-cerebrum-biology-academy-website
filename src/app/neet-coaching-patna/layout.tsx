@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Patna | Boring Road, Kankarbagh | Cerebrum Academy',
+  title: 'Best NEET Coaching in Patna | Boring Road, Kankarbagh | Cerebrum Academy',
   description:
     'Top NEET biology coaching in Patna for Bihar students. No Kota migration needed! 94.2% success rate, AIIMS faculty. Boring Road, Kankarbagh, Patliputra Colony. 3,000+ students. Book free demo!',
   keywords:

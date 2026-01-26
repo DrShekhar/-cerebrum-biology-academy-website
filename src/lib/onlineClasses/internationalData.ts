@@ -227,9 +227,7 @@ export const internationalCurricula: InternationalCurriculumData[] = [
   },
 ]
 
-export function getInternationalBySlug(
-  slug: string
-): InternationalCurriculumData | undefined {
+export function getInternationalBySlug(slug: string): InternationalCurriculumData | undefined {
   return internationalCurricula.find((curriculum) => curriculum.slug === slug)
 }
 

@@ -19,10 +19,7 @@ import {
   MapPin,
 } from 'lucide-react'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
-import {
-  UrgencyBanner,
-  SocialProofNotifications,
-} from '@/components/landing-pages/UrgencyBanner'
+import { UrgencyBanner, SocialProofNotifications } from '@/components/landing-pages/UrgencyBanner'
 
 const classOptions = [
   {

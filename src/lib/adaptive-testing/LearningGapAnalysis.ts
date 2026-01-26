@@ -179,26 +179,30 @@ class LearningGapAnalysis {
     consistency: 0.7, // Below this consistency suggests unstable understanding
     timeDeviation: 2.0, // Standard deviations from expected time
     confidenceAlignment: 0.3, // Minimum alignment between confidence and performance
-    prerequisiteThreshold: 0.7 // Minimum mastery for prerequisites
+    prerequisiteThreshold: 0.7, // Minimum mastery for prerequisites
   }
 
   // Biology domain knowledge for gap analysis
   private readonly BIOLOGY_CONCEPTS = {
-    fundamentals: [
-      'Cell Structure', 'Cell Function', 'Biomolecules', 'Energy Flow'
-    ],
+    fundamentals: ['Cell Structure', 'Cell Function', 'Biomolecules', 'Energy Flow'],
     intermediate: [
-      'Cellular Processes', 'Genetics Basics', 'Evolution Principles', 'Ecosystem Dynamics'
+      'Cellular Processes',
+      'Genetics Basics',
+      'Evolution Principles',
+      'Ecosystem Dynamics',
     ],
     advanced: [
-      'Molecular Biology', 'Population Genetics', 'Phylogenetics', 'Biogeochemical Cycles'
+      'Molecular Biology',
+      'Population Genetics',
+      'Phylogenetics',
+      'Biogeochemical Cycles',
     ],
     prerequisites: new Map([
       ['Cellular Processes', ['Cell Structure', 'Biomolecules']],
       ['Genetics Basics', ['Cell Structure', 'Cell Function']],
       ['Molecular Biology', ['Genetics Basics', 'Biomolecules']],
-      ['Population Genetics', ['Genetics Basics', 'Evolution Principles']]
-    ])
+      ['Population Genetics', ['Genetics Basics', 'Evolution Principles']],
+    ]),
   }
 
   constructor() {
@@ -224,16 +228,25 @@ class LearningGapAnalysis {
     knowledgeGraph: Map<string, KnowledgeNode>
   ): GapAnalysisReport {
     // Create item lookup for efficient access
-    const itemLookup = new Map(items.map(item => [item.id, item]))
+    const itemLookup = new Map(items.map((item) => [item.id, item]))
 
     // Detect gaps using multiple algorithms
-    const detectedGaps = this.detectGapsMultiModal(responses, itemLookup, performanceProfile, knowledgeGraph)
+    const detectedGaps = this.detectGapsMultiModal(
+      responses,
+      itemLookup,
+      performanceProfile,
+      knowledgeGraph
+    )
 
     // Analyze gap patterns
     const patterns = this.analyzeGapPatterns(detectedGaps, responses, itemLookup)
 
     // Generate remediation plan
-    const remediationPlan = this.generateRemediationPlan(studentId, detectedGaps, performanceProfile)
+    const remediationPlan = this.generateRemediationPlan(
+      studentId,
+      detectedGaps,
+      performanceProfile
+    )
 
     // Create comprehensive report
     const report = this.generateGapAnalysisReport(
@@ -278,7 +291,7 @@ class LearningGapAnalysis {
     }
   } {
     const existingGaps = this.detectedGaps.get(studentId) || []
-    const itemLookup = new Map(items.map(item => [item.id, item]))
+    const itemLookup = new Map(items.map((item) => [item.id, item]))
 
     // Re-analyze gaps with new data
     const currentGaps = this.detectGapsFromResponses(newResponses, itemLookup)
@@ -298,7 +311,7 @@ class LearningGapAnalysis {
     return {
       progressSummary,
       gapUpdates: gapComparison,
-      recommendations
+      recommendations,
     }
   }
 
@@ -326,7 +339,7 @@ class LearningGapAnalysis {
     }[]
     preventiveRecommendations: string[]
   } {
-    const itemLookup = new Map(items.map(item => [item.id, item]))
+    const itemLookup = new Map(items.map((item) => [item.id, item]))
     const riskGaps: any[] = []
     const earlyWarnings: any[] = []
 
@@ -339,7 +352,7 @@ class LearningGapAnalysis {
         type: 'performance_decline',
         severity: 'medium',
         message: 'Accuracy is declining over recent responses',
-        action: 'Review recent topics and consider reinforcement'
+        action: 'Review recent topics and consider reinforcement',
       })
     }
 
@@ -352,7 +365,7 @@ class LearningGapAnalysis {
           riskLevel: 1 - prereqStrength,
           timeToEmergence: Math.round((1 - prereqStrength) * 14), // days
           riskFactors: [`Weak ${prerequisites.join(', ')} foundation`],
-          preventiveActions: [`Strengthen ${prerequisites[0]} understanding`]
+          preventiveActions: [`Strengthen ${prerequisites[0]} understanding`],
         })
       }
     }
@@ -363,17 +376,20 @@ class LearningGapAnalysis {
         type: 'cognitive_overload',
         severity: 'high',
         message: 'High cognitive load detected',
-        action: 'Reduce complexity and provide more scaffolding'
+        action: 'Reduce complexity and provide more scaffolding',
       })
     }
 
     // Generate preventive recommendations
-    const preventiveRecommendations = this.generatePreventiveRecommendations(riskGaps, earlyWarnings)
+    const preventiveRecommendations = this.generatePreventiveRecommendations(
+      riskGaps,
+      earlyWarnings
+    )
 
     return {
       riskGaps,
       earlyWarnings,
-      preventiveRecommendations
+      preventiveRecommendations,
     }
   }
 
@@ -404,7 +420,7 @@ class LearningGapAnalysis {
   } {
     // Find the specific gap
     const allGaps = Array.from(this.detectedGaps.values()).flat()
-    const gap = allGaps.find(g => g.id === gapId)
+    const gap = allGaps.find((g) => g.id === gapId)
 
     if (!gap) {
       throw new Error('Gap not found')
@@ -422,7 +438,7 @@ class LearningGapAnalysis {
     return {
       intervention,
       alternatives,
-      monitoring
+      monitoring,
     }
   }
 
@@ -438,21 +454,25 @@ class LearningGapAnalysis {
         performance: {
           accuracyThreshold: 0.4,
           consistencyRequired: true,
-          timePatternSignificance: 0.5
+          timePatternSignificance: 0.5,
         },
         content: {
           topicSpecific: true,
           difficultyLevel: 'any',
-          bloomsLevel: ['understand', 'apply']
+          bloomsLevel: ['understand', 'apply'],
         },
         behavioral: {
           confidenceAlignment: 0.3,
           guessPattern: false,
-          timeAllocation: 'normal'
-        }
+          timeAllocation: 'normal',
+        },
       },
       prevalence: 0.25,
-      interventions: ['conceptual_restructuring', 'misconception_addressing', 'multiple_representations']
+      interventions: [
+        'conceptual_restructuring',
+        'misconception_addressing',
+        'multiple_representations',
+      ],
     })
 
     // Prerequisite gap pattern
@@ -464,21 +484,21 @@ class LearningGapAnalysis {
         performance: {
           accuracyThreshold: 0.5,
           consistencyRequired: false,
-          timePatternSignificance: 1.0
+          timePatternSignificance: 1.0,
         },
         content: {
           topicSpecific: false,
           difficultyLevel: 'building_up',
-          bloomsLevel: ['remember', 'understand']
+          bloomsLevel: ['remember', 'understand'],
         },
         behavioral: {
           confidenceAlignment: 0.4,
           guessPattern: true,
-          timeAllocation: 'too_fast'
-        }
+          timeAllocation: 'too_fast',
+        },
       },
       prevalence: 0.35,
-      interventions: ['prerequisite_review', 'scaffolded_instruction', 'foundational_practice']
+      interventions: ['prerequisite_review', 'scaffolded_instruction', 'foundational_practice'],
     })
 
     // Procedural gap pattern
@@ -490,21 +510,21 @@ class LearningGapAnalysis {
         performance: {
           accuracyThreshold: 0.6,
           consistencyRequired: false,
-          timePatternSignificance: 0.8
+          timePatternSignificance: 0.8,
         },
         content: {
           topicSpecific: true,
           difficultyLevel: 'any',
-          bloomsLevel: ['apply', 'analyze']
+          bloomsLevel: ['apply', 'analyze'],
         },
         behavioral: {
           confidenceAlignment: 0.5,
           guessPattern: false,
-          timeAllocation: 'too_slow'
-        }
+          timeAllocation: 'too_slow',
+        },
       },
-      prevalence: 0.20,
-      interventions: ['step_by_step_practice', 'worked_examples', 'metacognitive_strategies']
+      prevalence: 0.2,
+      interventions: ['step_by_step_practice', 'worked_examples', 'metacognitive_strategies'],
     })
 
     // Application gap pattern
@@ -516,21 +536,21 @@ class LearningGapAnalysis {
         performance: {
           accuracyThreshold: 0.7,
           consistencyRequired: true,
-          timePatternSignificance: 0.6
+          timePatternSignificance: 0.6,
         },
         content: {
           topicSpecific: false,
           difficultyLevel: 'advanced',
-          bloomsLevel: ['apply', 'analyze', 'evaluate']
+          bloomsLevel: ['apply', 'analyze', 'evaluate'],
         },
         behavioral: {
           confidenceAlignment: 0.6,
           guessPattern: false,
-          timeAllocation: 'too_slow'
-        }
+          timeAllocation: 'too_slow',
+        },
       },
       prevalence: 0.15,
-      interventions: ['transfer_practice', 'problem_solving_strategies', 'authentic_tasks']
+      interventions: ['transfer_practice', 'problem_solving_strategies', 'authentic_tasks'],
     })
   }
 
@@ -566,7 +586,10 @@ class LearningGapAnalysis {
     itemLookup: Map<string, ItemParameters>
   ): LearningGap[] {
     const gaps: LearningGap[] = []
-    const topicPerformance = new Map<string, { correct: number; total: number; responses: StudentResponse[] }>()
+    const topicPerformance = new Map<
+      string,
+      { correct: number; total: number; responses: StudentResponse[] }
+    >()
 
     // Group responses by topic
     for (const response of responses) {
@@ -605,7 +628,8 @@ class LearningGapAnalysis {
     for (const [patternId, pattern] of this.gapPatterns) {
       const matchingResponses = this.findPatternMatches(responses, itemLookup, pattern)
 
-      if (matchingResponses.length >= 3) { // Minimum evidence threshold
+      if (matchingResponses.length >= 3) {
+        // Minimum evidence threshold
         const gap = this.createPatternGap(patternId, pattern, matchingResponses, itemLookup)
         gaps.push(gap)
       }
@@ -624,11 +648,23 @@ class LearningGapAnalysis {
     // Check for prerequisite violations
     for (const [concept, prerequisites] of this.BIOLOGY_CONCEPTS.prerequisites) {
       const conceptPerformance = this.calculateConceptPerformance(concept, responses, itemLookup)
-      const prerequisiteStrength = this.assessPrerequisiteStrength(prerequisites, responses, itemLookup)
+      const prerequisiteStrength = this.assessPrerequisiteStrength(
+        prerequisites,
+        responses,
+        itemLookup
+      )
 
       // If struggling with concept but prerequisites are weak
-      if (conceptPerformance < 0.6 && prerequisiteStrength < this.DETECTION_THRESHOLDS.prerequisiteThreshold) {
-        const gap = this.createPrerequisiteGap(concept, prerequisites, prerequisiteStrength, conceptPerformance)
+      if (
+        conceptPerformance < 0.6 &&
+        prerequisiteStrength < this.DETECTION_THRESHOLDS.prerequisiteThreshold
+      ) {
+        const gap = this.createPrerequisiteGap(
+          concept,
+          prerequisites,
+          prerequisiteStrength,
+          conceptPerformance
+        )
         gaps.push(gap)
       }
     }
@@ -679,11 +715,14 @@ class LearningGapAnalysis {
     const gaps: LearningGap[] = []
 
     // Analyze confidence-performance alignment
-    const confidenceResponses = responses.filter(r => r.confidence !== undefined)
+    const confidenceResponses = responses.filter((r) => r.confidence !== undefined)
 
     if (confidenceResponses.length < 5) return gaps // Need sufficient confidence data
 
-    const topicConfidenceData = new Map<string, { alignments: number[]; responses: StudentResponse[] }>()
+    const topicConfidenceData = new Map<
+      string,
+      { alignments: number[]; responses: StudentResponse[] }
+    >()
 
     for (const response of confidenceResponses) {
       const item = itemLookup.get(response.itemId)
@@ -703,7 +742,8 @@ class LearningGapAnalysis {
     for (const [topic, data] of topicConfidenceData.entries()) {
       if (data.alignments.length < 3) continue
 
-      const avgAlignment = data.alignments.reduce((sum, alignment) => sum + alignment, 0) / data.alignments.length
+      const avgAlignment =
+        data.alignments.reduce((sum, alignment) => sum + alignment, 0) / data.alignments.length
 
       if (avgAlignment < this.DETECTION_THRESHOLDS.confidenceAlignment) {
         const gap = this.createConfidenceGap(topic, data, avgAlignment)
@@ -733,8 +773,9 @@ class LearningGapAnalysis {
     }
 
     // Sort by severity and confidence
-    return Array.from(consolidatedGaps.values())
-      .sort((a, b) => (b.severity * b.confidence) - (a.severity * a.confidence))
+    return Array.from(consolidatedGaps.values()).sort(
+      (a, b) => b.severity * b.confidence - a.severity * a.confidence
+    )
   }
 
   // Helper methods for gap creation
@@ -759,32 +800,32 @@ class LearningGapAnalysis {
         consistentFailures: data.correct === 0,
         timePatterns: 'normal',
         errorPatterns: ['low_accuracy'],
-        responseConfidenceAlignment: 0.5
+        responseConfidenceAlignment: 0.5,
       },
       rootCauses: {
         primary: 'insufficient_understanding',
         contributing: ['lack_of_practice', 'conceptual_confusion'],
-        hypotheses: ['needs_different_explanation', 'prerequisite_gaps']
+        hypotheses: ['needs_different_explanation', 'prerequisite_gaps'],
       },
       impact: {
         currentPerformance: severity,
         futureRisk: severity * 0.8,
         prerequisiteBlocking: [],
-        dependentConcepts: this.findDependentConcepts(topic)
+        dependentConcepts: this.findDependentConcepts(topic),
       },
       detection: {
         method: 'performance_analysis',
         timestamp: new Date(),
-        triggerItems: data.responses.map(r => r.itemId),
-        algorithmConfidence: confidence
+        triggerItems: data.responses.map((r) => r.itemId),
+        algorithmConfidence: confidence,
       },
       remediation: {
         priority: severity > 0.7 ? 'immediate' : severity > 0.5 ? 'high' : 'medium',
         estimatedEffort: Math.round(severity * 10), // hours
         suggestedApproach: ['review_fundamentals', 'guided_practice', 'concept_mapping'],
         prerequisiteWork: this.BIOLOGY_CONCEPTS.prerequisites.get(topic) || [],
-        scaffoldingNeeded: severity > 0.6
-      }
+        scaffoldingNeeded: severity > 0.6,
+      },
     }
   }
 
@@ -795,7 +836,7 @@ class LearningGapAnalysis {
     itemLookup: Map<string, ItemParameters>
   ): LearningGap {
     const topics = matchingResponses
-      .map(r => itemLookup.get(r.itemId)?.topic)
+      .map((r) => itemLookup.get(r.itemId)?.topic)
       .filter(Boolean) as string[]
     const primaryTopic = topics[0] || 'Unknown'
 
@@ -808,36 +849,36 @@ class LearningGapAnalysis {
       confidence: 0.8,
       evidence: {
         itemsAttempted: matchingResponses.length,
-        successRate: matchingResponses.filter(r => r.response).length / matchingResponses.length,
+        successRate: matchingResponses.filter((r) => r.response).length / matchingResponses.length,
         consistentFailures: true,
         timePatterns: 'normal',
         errorPatterns: [pattern.name],
-        responseConfidenceAlignment: 0.4
+        responseConfidenceAlignment: 0.4,
       },
       rootCauses: {
         primary: pattern.description,
         contributing: pattern.interventions,
-        hypotheses: [`Matches ${pattern.name} pattern`]
+        hypotheses: [`Matches ${pattern.name} pattern`],
       },
       impact: {
         currentPerformance: 0.7,
         futureRisk: 0.8,
         prerequisiteBlocking: [],
-        dependentConcepts: []
+        dependentConcepts: [],
       },
       detection: {
         method: 'pattern_analysis',
         timestamp: new Date(),
-        triggerItems: matchingResponses.map(r => r.itemId),
-        algorithmConfidence: 0.8
+        triggerItems: matchingResponses.map((r) => r.itemId),
+        algorithmConfidence: 0.8,
       },
       remediation: {
         priority: 'high',
         estimatedEffort: 8,
         suggestedApproach: pattern.interventions,
         prerequisiteWork: [],
-        scaffoldingNeeded: true
-      }
+        scaffoldingNeeded: true,
+      },
     }
   }
 
@@ -862,32 +903,32 @@ class LearningGapAnalysis {
         consistentFailures: true,
         timePatterns: 'normal',
         errorPatterns: ['prerequisite_weakness'],
-        responseConfidenceAlignment: 0.5
+        responseConfidenceAlignment: 0.5,
       },
       rootCauses: {
         primary: 'prerequisite_knowledge_gap',
-        contributing: prerequisites.map(p => `weak_${p}`),
-        hypotheses: ['needs_prerequisite_review']
+        contributing: prerequisites.map((p) => `weak_${p}`),
+        hypotheses: ['needs_prerequisite_review'],
       },
       impact: {
         currentPerformance: severity,
         futureRisk: 0.9, // High future risk if prerequisites not addressed
         prerequisiteBlocking: [concept],
-        dependentConcepts: this.findDependentConcepts(concept)
+        dependentConcepts: this.findDependentConcepts(concept),
       },
       detection: {
         method: 'prerequisite_analysis',
         timestamp: new Date(),
         triggerItems: [],
-        algorithmConfidence: 0.9
+        algorithmConfidence: 0.9,
       },
       remediation: {
         priority: 'immediate',
         estimatedEffort: Math.round(severity * 15),
         suggestedApproach: ['prerequisite_review', 'scaffolded_progression'],
         prerequisiteWork: prerequisites,
-        scaffoldingNeeded: true
-      }
+        scaffoldingNeeded: true,
+      },
     }
   }
 
@@ -913,32 +954,32 @@ class LearningGapAnalysis {
         consistentFailures: false,
         timePatterns: isSlowResponse ? 'too_slow' : 'too_fast',
         errorPatterns: [isSlowResponse ? 'slow_processing' : 'hasty_responses'],
-        responseConfidenceAlignment: 0.5
+        responseConfidenceAlignment: 0.5,
       },
       rootCauses: {
         primary: isSlowResponse ? 'processing_difficulty' : 'insufficient_reflection',
         contributing: isSlowResponse ? ['lack_of_automaticity'] : ['impulsive_responding'],
-        hypotheses: [isSlowResponse ? 'needs_more_practice' : 'needs_metacognitive_training']
+        hypotheses: [isSlowResponse ? 'needs_more_practice' : 'needs_metacognitive_training'],
       },
       impact: {
         currentPerformance: 0.4,
         futureRisk: 0.6,
         prerequisiteBlocking: [],
-        dependentConcepts: []
+        dependentConcepts: [],
       },
       detection: {
         method: 'timing_analysis',
         timestamp: new Date(),
         triggerItems: [],
-        algorithmConfidence: 0.6
+        algorithmConfidence: 0.6,
       },
       remediation: {
         priority: 'medium',
         estimatedEffort: 5,
         suggestedApproach: isSlowResponse ? ['fluency_practice'] : ['metacognitive_strategies'],
         prerequisiteWork: [],
-        scaffoldingNeeded: false
-      }
+        scaffoldingNeeded: false,
+      },
     }
   }
 
@@ -956,36 +997,36 @@ class LearningGapAnalysis {
       confidence: 0.7,
       evidence: {
         itemsAttempted: data.responses.length,
-        successRate: data.responses.filter(r => r.response).length / data.responses.length,
+        successRate: data.responses.filter((r) => r.response).length / data.responses.length,
         consistentFailures: false,
         timePatterns: 'normal',
         errorPatterns: ['confidence_miscalibration'],
-        responseConfidenceAlignment: avgAlignment
+        responseConfidenceAlignment: avgAlignment,
       },
       rootCauses: {
         primary: 'metacognitive_awareness_gap',
         contributing: ['overconfidence', 'underconfidence'],
-        hypotheses: ['needs_calibration_training']
+        hypotheses: ['needs_calibration_training'],
       },
       impact: {
         currentPerformance: 0.3,
         futureRisk: 0.5,
         prerequisiteBlocking: [],
-        dependentConcepts: []
+        dependentConcepts: [],
       },
       detection: {
         method: 'confidence_analysis',
         timestamp: new Date(),
-        triggerItems: data.responses.map(r => r.itemId),
-        algorithmConfidence: 0.7
+        triggerItems: data.responses.map((r) => r.itemId),
+        algorithmConfidence: 0.7,
       },
       remediation: {
         priority: 'medium',
         estimatedEffort: 4,
         suggestedApproach: ['metacognitive_training', 'confidence_calibration'],
         prerequisiteWork: [],
-        scaffoldingNeeded: false
-      }
+        scaffoldingNeeded: false,
+      },
     }
   }
 
@@ -999,81 +1040,104 @@ class LearningGapAnalysis {
   }
 
   private compareGapStates(existingGaps: LearningGap[], currentGaps: LearningGap[]): any {
-    const existingTopics = new Set(existingGaps.map(g => g.topic))
-    const currentTopics = new Set(currentGaps.map(g => g.topic))
+    const existingTopics = new Set(existingGaps.map((g) => g.topic))
+    const currentTopics = new Set(currentGaps.map((g) => g.topic))
 
     return {
-      resolved: Array.from(existingTopics).filter(topic => !currentTopics.has(topic)),
+      resolved: Array.from(existingTopics).filter((topic) => !currentTopics.has(topic)),
       improved: [], // Would need more sophisticated comparison
-      persistent: Array.from(existingTopics).filter(topic => currentTopics.has(topic)),
-      newGaps: Array.from(currentTopics).filter(topic => !existingTopics.has(topic))
+      persistent: Array.from(existingTopics).filter((topic) => currentTopics.has(topic)),
+      newGaps: Array.from(currentTopics).filter((topic) => !existingTopics.has(topic)),
     }
   }
 
-  private calculateRemediationProgress(existingGaps: LearningGap[], currentGaps: LearningGap[]): any {
+  private calculateRemediationProgress(
+    existingGaps: LearningGap[],
+    currentGaps: LearningGap[]
+  ): any {
     return {
       gapsAddressed: Math.max(0, existingGaps.length - currentGaps.length),
       gapsRemaining: currentGaps.length,
-      improvementRate: existingGaps.length > 0 ? (existingGaps.length - currentGaps.length) / existingGaps.length : 1,
-      timeOnTrack: true // Simplified
+      improvementRate:
+        existingGaps.length > 0
+          ? (existingGaps.length - currentGaps.length) / existingGaps.length
+          : 1,
+      timeOnTrack: true, // Simplified
     }
   }
 
   private generateProgressRecommendations(gapComparison: any, progressSummary: any): any {
     return {
       continueCurrentPlan: progressSummary.improvementRate > 0.5,
-      adjustments: gapComparison.persistent.length > 0 ? ['Intensify efforts on persistent gaps'] : [],
-      newInterventions: gapComparison.newGaps.length > 0 ? ['Address newly identified gaps'] : []
+      adjustments:
+        gapComparison.persistent.length > 0 ? ['Intensify efforts on persistent gaps'] : [],
+      newInterventions: gapComparison.newGaps.length > 0 ? ['Address newly identified gaps'] : [],
     }
   }
 
-  private analyzeGapPatterns(detectedGaps: LearningGap[], responses: StudentResponse[], itemLookup: Map<string, ItemParameters>): any {
+  private analyzeGapPatterns(
+    detectedGaps: LearningGap[],
+    responses: StudentResponse[],
+    itemLookup: Map<string, ItemParameters>
+  ): any {
     return {
-      identifiedPatterns: Array.from(new Set(detectedGaps.map(g => g.type))),
+      identifiedPatterns: Array.from(new Set(detectedGaps.map((g) => g.type))),
       riskFactors: ['low_prior_knowledge', 'insufficient_practice'],
-      protectiveFactors: ['high_engagement', 'good_study_habits']
+      protectiveFactors: ['high_engagement', 'good_study_habits'],
     }
   }
 
-  private generateRemediationPlan(studentId: string, gaps: LearningGap[], performanceProfile: PerformanceProfile): RemediationPlan {
-    const criticalGaps = gaps.filter(g => g.severity > 0.7)
+  private generateRemediationPlan(
+    studentId: string,
+    gaps: LearningGap[],
+    performanceProfile: PerformanceProfile
+  ): RemediationPlan {
+    const criticalGaps = gaps.filter((g) => g.severity > 0.7)
     const estimatedDuration = gaps.reduce((sum, gap) => sum + gap.remediation.estimatedEffort, 0)
 
     return {
       id: `remediation_${studentId}_${Date.now()}`,
       studentId,
-      gaps: gaps.map(g => g.id),
+      gaps: gaps.map((g) => g.id),
       strategy: 'sequential',
-      phases: [{
-        name: 'Foundation Building',
-        duration: estimatedDuration * 0.6,
-        objectives: ['Address critical gaps', 'Build prerequisites'],
-        activities: this.generateRemediationActivities(criticalGaps),
-        assessments: ['prerequisite_check', 'concept_understanding'],
-        successCriteria: ['70% accuracy on practice items', 'Consistent performance']
-      }],
+      phases: [
+        {
+          name: 'Foundation Building',
+          duration: estimatedDuration * 0.6,
+          objectives: ['Address critical gaps', 'Build prerequisites'],
+          activities: this.generateRemediationActivities(criticalGaps),
+          assessments: ['prerequisite_check', 'concept_understanding'],
+          successCriteria: ['70% accuracy on practice items', 'Consistent performance'],
+        },
+      ],
       timeline: {
         startDate: new Date(),
         estimatedCompletion: new Date(Date.now() + estimatedDuration * 24 * 60 * 60 * 1000),
         milestones: [
-          { date: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), description: 'Week 1 checkpoint' },
-          { date: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000), description: 'Week 2 assessment' }
-        ]
+          {
+            date: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
+            description: 'Week 1 checkpoint',
+          },
+          {
+            date: new Date(Date.now() + 14 * 24 * 60 * 60 * 1000),
+            description: 'Week 2 assessment',
+          },
+        ],
       },
       personalization: {
         learningStyle: 'visual', // Would be determined from profile
         preferredModalities: ['visual', 'kinesthetic'],
         paceAdjustments: 0,
-        scaffoldingLevel: 2
+        scaffoldingLevel: 2,
       },
       monitoring: {
         checkpoints: [
           new Date(Date.now() + 3 * 24 * 60 * 60 * 1000),
-          new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+          new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
         ],
         progressMetrics: ['accuracy_improvement', 'time_efficiency', 'confidence_growth'],
-        adaptationTriggers: ['no_improvement_after_3_days', 'accuracy_below_60%']
-      }
+        adaptationTriggers: ['no_improvement_after_3_days', 'accuracy_below_60%'],
+      },
     }
   }
 
@@ -1084,7 +1148,7 @@ class LearningGapAnalysis {
     patterns: any,
     remediationPlan: RemediationPlan
   ): GapAnalysisReport {
-    const criticalGaps = gaps.filter(g => g.severity > 0.7).length
+    const criticalGaps = gaps.filter((g) => g.severity > 0.7).length
     const gapsByType = new Map<string, number>()
     const gapsByTopic = new Map<string, number>()
 
@@ -1093,8 +1157,8 @@ class LearningGapAnalysis {
       gapsByTopic.set(gap.topic, (gapsByTopic.get(gap.topic) || 0) + 1)
     }
 
-    const overallSeverity = gaps.length > 0 ?
-      gaps.reduce((sum, gap) => sum + gap.severity, 0) / gaps.length : 0
+    const overallSeverity =
+      gaps.length > 0 ? gaps.reduce((sum, gap) => sum + gap.severity, 0) / gaps.length : 0
 
     return {
       studentId,
@@ -1106,22 +1170,24 @@ class LearningGapAnalysis {
         gapsByType,
         gapsByTopic,
         overallSeverity,
-        urgencyLevel: criticalGaps > 2 ? 'immediate' : criticalGaps > 0 ? 'high' : 'medium'
+        urgencyLevel: criticalGaps > 2 ? 'immediate' : criticalGaps > 0 ? 'high' : 'medium',
       },
       detailedGaps: gaps,
       patterns,
       recommendations: {
-        immediate: gaps.filter(g => g.remediation.priority === 'immediate').map(g => g.remediation.suggestedApproach[0]),
+        immediate: gaps
+          .filter((g) => g.remediation.priority === 'immediate')
+          .map((g) => g.remediation.suggestedApproach[0]),
         shortTerm: ['Implement remediation plan', 'Monitor progress weekly'],
         longTerm: ['Build strong foundations', 'Develop metacognitive skills'],
-        preventive: ['Regular practice', 'Concept mapping', 'Peer discussion']
+        preventive: ['Regular practice', 'Concept mapping', 'Peer discussion'],
       },
       remediationPlan,
       monitoring: {
         keyIndicators: ['accuracy_trend', 'time_efficiency', 'confidence_alignment'],
         checkpointSchedule: remediationPlan.monitoring.checkpoints,
-        successMetrics: ['Gap reduction', 'Performance improvement', 'Sustained progress']
-      }
+        successMetrics: ['Gap reduction', 'Performance improvement', 'Sustained progress'],
+      },
     }
   }
 
@@ -1136,9 +1202,13 @@ class LearningGapAnalysis {
     return dependent
   }
 
-  private findPatternMatches(responses: StudentResponse[], itemLookup: Map<string, ItemParameters>, pattern: GapPattern): StudentResponse[] {
+  private findPatternMatches(
+    responses: StudentResponse[],
+    itemLookup: Map<string, ItemParameters>,
+    pattern: GapPattern
+  ): StudentResponse[] {
     // Simplified pattern matching
-    return responses.filter(response => {
+    return responses.filter((response) => {
       const item = itemLookup.get(response.itemId)
       if (!item) return false
 
@@ -1147,36 +1217,54 @@ class LearningGapAnalysis {
     })
   }
 
-  private calculateConceptPerformance(concept: string, responses: StudentResponse[], itemLookup: Map<string, ItemParameters>): number {
-    const conceptResponses = responses.filter(response => {
+  private calculateConceptPerformance(
+    concept: string,
+    responses: StudentResponse[],
+    itemLookup: Map<string, ItemParameters>
+  ): number {
+    const conceptResponses = responses.filter((response) => {
       const item = itemLookup.get(response.itemId)
       return item && (item.topic === concept || item.subtopic === concept)
     })
 
     if (conceptResponses.length === 0) return 0
 
-    const correct = conceptResponses.filter(r => r.response).length
+    const correct = conceptResponses.filter((r) => r.response).length
     return correct / conceptResponses.length
   }
 
-  private assessPrerequisiteStrength(prerequisites: string[], responses: StudentResponse[], itemLookup: Map<string, ItemParameters>): number {
+  private assessPrerequisiteStrength(
+    prerequisites: string[],
+    responses: StudentResponse[],
+    itemLookup: Map<string, ItemParameters>
+  ): number {
     if (prerequisites.length === 0) return 1
 
-    const strengths = prerequisites.map(prereq =>
+    const strengths = prerequisites.map((prereq) =>
       this.calculateConceptPerformance(prereq, responses, itemLookup)
     )
 
     return strengths.reduce((sum, strength) => sum + strength, 0) / strengths.length
   }
 
-  private analyzeResponsePatterns(responses: StudentResponse[], itemLookup: Map<string, ItemParameters>): any {
+  private analyzeResponsePatterns(
+    responses: StudentResponse[],
+    itemLookup: Map<string, ItemParameters>
+  ): any {
     const recentResponses = responses.slice(-10)
-    const recentAccuracy = recentResponses.filter(r => r.response).length / Math.max(1, recentResponses.length)
-    const earlyAccuracy = responses.slice(0, 10).filter(r => r.response).length / Math.max(1, responses.slice(0, 10).length)
+    const recentAccuracy =
+      recentResponses.filter((r) => r.response).length / Math.max(1, recentResponses.length)
+    const earlyAccuracy =
+      responses.slice(0, 10).filter((r) => r.response).length /
+      Math.max(1, responses.slice(0, 10).length)
 
     return {
-      accuracyTrend: recentAccuracy > earlyAccuracy + 0.1 ? 'improving' :
-                    recentAccuracy < earlyAccuracy - 0.1 ? 'declining' : 'stable'
+      accuracyTrend:
+        recentAccuracy > earlyAccuracy + 0.1
+          ? 'improving'
+          : recentAccuracy < earlyAccuracy - 0.1
+            ? 'declining'
+            : 'stable',
     }
   }
 
@@ -1188,7 +1276,7 @@ class LearningGapAnalysis {
       recommendations.push('Increase practice frequency')
     }
 
-    if (earlyWarnings.some(w => w.type === 'cognitive_overload')) {
+    if (earlyWarnings.some((w) => w.type === 'cognitive_overload')) {
       recommendations.push('Reduce cognitive load with scaffolding')
       recommendations.push('Break complex tasks into smaller steps')
     }
@@ -1203,7 +1291,7 @@ class LearningGapAnalysis {
       type: gap.type,
       activities,
       estimatedTime: gap.remediation.estimatedEffort,
-      successProbability: 0.8
+      successProbability: 0.8,
     }
   }
 
@@ -1213,7 +1301,7 @@ class LearningGapAnalysis {
     return {
       quick: baseActivities.slice(0, 1),
       comprehensive: baseActivities,
-      maintenance: baseActivities.slice(-1)
+      maintenance: baseActivities.slice(-1),
     }
   }
 
@@ -1221,12 +1309,12 @@ class LearningGapAnalysis {
     return {
       indicators: ['accuracy_improvement', 'response_time', 'confidence'],
       checkpoints: [3, 7, 14], // days
-      adaptationTriggers: ['no_improvement', 'performance_decline']
+      adaptationTriggers: ['no_improvement', 'performance_decline'],
     }
   }
 
   private generateRemediationActivities(gaps: LearningGap[]): RemediationActivity[] {
-    return gaps.map(gap => ({
+    return gaps.map((gap) => ({
       id: `activity_${gap.id}`,
       type: 'review' as const,
       name: `Review ${gap.topic}`,
@@ -1237,14 +1325,14 @@ class LearningGapAnalysis {
       resources: {
         content: [`${gap.topic} explanations`],
         tools: ['concept_mapper', 'practice_quiz'],
-        references: [`${gap.topic} textbook chapter`]
+        references: [`${gap.topic} textbook chapter`],
       },
       adaptations: {
         visualSupport: true,
         auditorySupport: false,
         kinestheticSupport: false,
-        scaffolding: ['step_by_step_guide', 'worked_examples']
-      }
+        scaffolding: ['step_by_step_guide', 'worked_examples'],
+      },
     }))
   }
 }

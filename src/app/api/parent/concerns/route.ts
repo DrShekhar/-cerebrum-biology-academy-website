@@ -54,7 +54,10 @@ export async function GET(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { searchParams } = new URL(request.url)
@@ -161,7 +164,8 @@ export async function GET(request: NextRequest) {
             ].filter(Boolean),
             status: 'active',
             trend: 'declining',
-            actionRecommended: 'Please contact the school immediately to discuss attendance improvement plan',
+            actionRecommended:
+              'Please contact the school immediately to discuss attendance improvement plan',
             reportedBy: 'System',
             reportedAt: now.toISOString(),
             lastUpdated: now.toISOString(),
@@ -226,7 +230,8 @@ export async function GET(request: NextRequest) {
           testAttempts.slice(3).reduce((sum, t) => sum + (t.percentage || 0), 0) /
           Math.max(testAttempts.length - 3, 1)
 
-        const trend = recentAvg > olderAvg + 5 ? 'improving' : recentAvg < olderAvg - 5 ? 'declining' : 'stable'
+        const trend =
+          recentAvg > olderAvg + 5 ? 'improving' : recentAvg < olderAvg - 5 ? 'declining' : 'stable'
 
         if (avgScore < 35) {
           concerns.push({
@@ -325,7 +330,8 @@ export async function GET(request: NextRequest) {
           .map((a) => a.homework_submissions[0])
         const avgGrade =
           gradedSubmissions.length > 0
-            ? gradedSubmissions.reduce((sum, s) => sum + (s?.grade || 0), 0) / gradedSubmissions.length
+            ? gradedSubmissions.reduce((sum, s) => sum + (s?.grade || 0), 0) /
+              gradedSubmissions.length
             : null
 
         if (notSubmitted >= 5 || completionRate < 50) {
@@ -452,7 +458,12 @@ export async function GET(request: NextRequest) {
     }
 
     // Sort by severity (critical first) then by date
-    const severityOrder: Record<ConcernSeverity, number> = { critical: 0, high: 1, medium: 2, low: 3 }
+    const severityOrder: Record<ConcernSeverity, number> = {
+      critical: 0,
+      high: 1,
+      medium: 2,
+      low: 3,
+    }
     filteredConcerns.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity])
 
     // Calculate summary

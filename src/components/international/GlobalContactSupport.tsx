@@ -7,15 +7,7 @@ import {
 } from '@/lib/international/countryContentService'
 import { TimezoneService } from '@/lib/international/timezoneService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
-import {
-  Phone,
-  Mail,
-  Clock,
-  Globe,
-  MapPin,
-  MessageSquare,
-  Smartphone,
-} from 'lucide-react'
+import { Phone, Mail, Clock, Globe, MapPin, MessageSquare, Smartphone } from 'lucide-react'
 
 interface GlobalContactSupportProps {
   countryCode?: string

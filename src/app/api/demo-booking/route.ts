@@ -40,8 +40,14 @@ const DemoBookingSchema = z.object({
     .min(2, 'Name must be at least 2 characters')
     .max(50, 'Name must be less than 50 characters')
     // Support Unicode letters (Hindi, Tamil, etc.) and spaces
-    .regex(/^[\p{L}\p{M}\s'-]+$/u, 'Name can only contain letters, spaces, hyphens, and apostrophes'),
-  email: z.string().email('Invalid email format').transform((email) => email.toLowerCase().trim()),
+    .regex(
+      /^[\p{L}\p{M}\s'-]+$/u,
+      'Name can only contain letters, spaces, hyphens, and apostrophes'
+    ),
+  email: z
+    .string()
+    .email('Invalid email format')
+    .transform((email) => email.toLowerCase().trim()),
   phone: z.string().refine(validatePhoneNumber, 'Phone must have 10-15 digits'),
   whatsappNumber: z
     .string()
@@ -64,43 +70,47 @@ const DemoBookingSchema = z.object({
 })
 
 // Date validation helper - must be valid ISO date string
-const dateStringSchema = z.string().refine(
-  (val) => !isNaN(Date.parse(val)),
-  { message: 'Invalid date format' }
-)
+const dateStringSchema = z
+  .string()
+  .refine((val) => !isNaN(Date.parse(val)), { message: 'Invalid date format' })
 
 // Time validation helper - must be valid time format like "10:00 AM - 11:00 AM"
-const timeStringSchema = z.string().regex(
-  /^\d{1,2}:\d{2}\s*(?:AM|PM)(?:\s*-\s*\d{1,2}:\d{2}\s*(?:AM|PM))?$/i,
-  { message: 'Invalid time format (expected: "HH:MM AM/PM" or "HH:MM AM - HH:MM PM")' }
-)
+const timeStringSchema = z
+  .string()
+  .regex(/^\d{1,2}:\d{2}\s*(?:AM|PM)(?:\s*-\s*\d{1,2}:\d{2}\s*(?:AM|PM))?$/i, {
+    message: 'Invalid time format (expected: "HH:MM AM/PM" or "HH:MM AM - HH:MM PM")',
+  })
 
 // Admin update schema - WHITELIST of allowed fields only
-const AdminUpdateSchema = z.object({
-  // Status fields
-  status: z.enum(['PENDING', 'CONFIRMED', 'COMPLETED', 'CANCELLED', 'NO_SHOW', 'RESCHEDULED']).optional(),
-  demoCompleted: z.boolean().optional(),
-  convertedToEnrollment: z.boolean().optional(),
+const AdminUpdateSchema = z
+  .object({
+    // Status fields
+    status: z
+      .enum(['PENDING', 'CONFIRMED', 'COMPLETED', 'CANCELLED', 'NO_SHOW', 'RESCHEDULED'])
+      .optional(),
+    demoCompleted: z.boolean().optional(),
+    convertedToEnrollment: z.boolean().optional(),
 
-  // Scheduling fields - with proper date/time validation
-  preferredDate: dateStringSchema.optional(),
-  preferredTime: timeStringSchema.optional(),
-  rescheduledDate: dateStringSchema.optional(),
-  rescheduledTime: timeStringSchema.optional(),
+    // Scheduling fields - with proper date/time validation
+    preferredDate: dateStringSchema.optional(),
+    preferredTime: timeStringSchema.optional(),
+    rescheduledDate: dateStringSchema.optional(),
+    rescheduledTime: timeStringSchema.optional(),
 
-  // Feedback fields
-  demoRating: z.number().min(1).max(5).optional(),
-  feedback: z.string().max(1000).optional(),
-  adminNotes: z.string().max(2000).optional(),
+    // Feedback fields
+    demoRating: z.number().min(1).max(5).optional(),
+    feedback: z.string().max(1000).optional(),
+    adminNotes: z.string().max(2000).optional(),
 
-  // Assignment - validated as non-empty string
-  assignedCounselorId: z.string().min(1, 'Counselor ID cannot be empty').optional(),
+    // Assignment - validated as non-empty string
+    assignedCounselorId: z.string().min(1, 'Counselor ID cannot be empty').optional(),
 
-  // Zoom details (can be updated if meeting needs recreation)
-  zoomMeetingId: z.string().optional(),
-  zoomJoinUrl: z.string().url().optional(),
-  zoomStartUrl: z.string().url().optional(),
-}).strict() // Reject any additional fields
+    // Zoom details (can be updated if meeting needs recreation)
+    zoomMeetingId: z.string().optional(),
+    zoomJoinUrl: z.string().url().optional(),
+    zoomStartUrl: z.string().url().optional(),
+  })
+  .strict() // Reject any additional fields
 
 // Maximum allowed referral discount (10% = 1000 basis points)
 const MAX_REFERRAL_DISCOUNT_PERCENT = 10
@@ -208,7 +218,7 @@ export async function POST(request: NextRequest) {
 
     // Time-based spam check: submission must take at least 3 seconds (bots are fast)
     const formStartTime = rawData._formStartTime
-    if (formStartTime && (now - formStartTime) < 3000) {
+    if (formStartTime && now - formStartTime < 3000) {
       console.warn(`[Demo Booking] Suspiciously fast submission from ${clientIp}`)
       // Don't reject, but flag for review
       rawData._flaggedForReview = true
@@ -255,13 +265,20 @@ export async function POST(request: NextRequest) {
 
           if (!isExpired && hasUsesLeft) {
             // Use discount from database, capped at max allowed
-            validatedReferralDiscount = Math.min(referralCodeRecord.discount, MAX_REFERRAL_DISCOUNT_PERCENT)
+            validatedReferralDiscount = Math.min(
+              referralCodeRecord.discount,
+              MAX_REFERRAL_DISCOUNT_PERCENT
+            )
             validatedReferralCode = referralCodeRecord.code
             validatedReferralCodeId = referralCodeRecord.id
 
-            console.log(`[Demo Booking] Valid referral code: ${referralCodeRecord.code}, discount: ${validatedReferralDiscount}%`)
+            console.log(
+              `[Demo Booking] Valid referral code: ${referralCodeRecord.code}, discount: ${validatedReferralDiscount}%`
+            )
           } else {
-            console.log(`[Demo Booking] Referral code ${referralCodeUsed} is ${isExpired ? 'expired' : 'maxed out'}`)
+            console.log(
+              `[Demo Booking] Referral code ${referralCodeUsed} is ${isExpired ? 'expired' : 'maxed out'}`
+            )
           }
         } else {
           console.log(`[Demo Booking] Invalid referral code attempted: ${referralCodeUsed}`)
@@ -273,7 +290,15 @@ export async function POST(request: NextRequest) {
     }
 
     // Extract tracking/attribution data from request body
-    const { utmSource, utmMedium, utmCampaign, utmContent: _utmContent, utmTerm: _utmTerm, gclid, source } = rawData
+    const {
+      utmSource,
+      utmMedium,
+      utmCampaign,
+      utmContent: _utmContent,
+      utmTerm: _utmTerm,
+      gclid,
+      source,
+    } = rawData
 
     // Save demo booking and link to lead in a transaction for data integrity
     // Use serializable isolation to prevent duplicate lead race conditions
@@ -283,124 +308,125 @@ export async function POST(request: NextRequest) {
     try {
       const result = await prisma.$transaction(
         async (tx) => {
-        // 1. Create the demo booking
-        const booking = await tx.demoBooking.create({
-          data: {
-            // Identity (no userId for guest bookings)
-            userId: null, // Guest booking
-            courseId: null, // Will be assigned later by admin
-
-            // Student Information
-            studentName: data.name,
-            email: data.email,
-            phone: data.phone,
-            studentClass: null, // Optional, can be added to form later
-
-            // Demo Details
-            preferredDate: data.preferredDate, // Store as string
-            preferredTime: data.preferredTime, // Single field: "10:00 AM - 11:00 AM"
-            message: data.message || null,
-            status: 'PENDING', // Use enum value
-
-            // Level 3: Premium Demo & Referral Fields
-            demoType: demoType || 'FREE',
-            paymentStatus: demoType === 'PREMIUM' ? 'PENDING' : 'NOT_REQUIRED',
-            // Only store validated referral code from database lookup
-            referralCodeUsed: validatedReferralCode,
-            referralDiscount: validatedReferralDiscount,
-
-            // Marketing Attribution - capture tracking data for attribution
-            source: source || (gclid ? 'Google Ads' : 'website'),
-            utmSource: utmSource || null,
-            utmMedium: utmMedium || null,
-            utmCampaign: utmCampaign || null,
-            gclid: gclid || null,
-
-            // Follow-up Fields (defaults from schema)
-            assignedTo: null,
-            followUpDate: null,
-            remindersSent: 0,
-
-            // Demo Feedback (defaults)
-            demoCompleted: false,
-            demoRating: null,
-            demoFeedback: null,
-            convertedToEnrollment: false,
-          },
-        })
-
-        // 2. Find existing lead by email (case-insensitive) or phone
-        const normalizedPhoneValue = normalizePhone(data.phone)
-        const normalizedEmail = data.email.toLowerCase().trim()
-        const existingLead = await tx.leads.findFirst({
-          where: {
-            OR: [
-              // Case-insensitive email comparison
-              { email: { equals: normalizedEmail, mode: 'insensitive' } },
-              { phone: normalizedPhoneValue },
-            ],
-          },
-        })
-
-        // 3. If lead exists, update it. Otherwise CREATE a new lead.
-        let updatedLead
-        if (existingLead) {
-          // Update existing lead with demo booking reference
-          updatedLead = await tx.leads.update({
-            where: { id: existingLead.id },
+          // 1. Create the demo booking
+          const booking = await tx.demoBooking.create({
             data: {
-              demoBookingId: booking.id,
-              stage: 'DEMO_SCHEDULED',
-              // Update name if provided and different
-              ...(data.name && data.name !== existingLead.studentName && { studentName: data.name }),
-              // Update course interest if provided
-              ...(data.courseInterest?.length > 0 && {
-                courseInterest: data.courseInterest.join(', '),
-              }),
-            },
-          })
-        } else {
-          // CREATE NEW LEAD - This was missing before!
-          updatedLead = await tx.leads.create({
-            data: {
-              id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+              // Identity (no userId for guest bookings)
+              userId: null, // Guest booking
+              courseId: null, // Will be assigned later by admin
+
+              // Student Information
               studentName: data.name,
-              email: data.email || null,
-              phone: normalizedPhoneValue,
-              courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
-              stage: 'DEMO_SCHEDULED',
-              priority: 'WARM',
-              source: utmSource ? 'PAID_ADS' : (source as any) || 'WEBSITE_FORM',
-              demoBookingId: booking.id,
-              // Auto-assign to first available counselor or leave unassigned
-              assignedToId: await getDefaultCounselorId(tx),
-              updatedAt: new Date(),
+              email: data.email,
+              phone: data.phone,
+              studentClass: null, // Optional, can be added to form later
+
+              // Demo Details
+              preferredDate: data.preferredDate, // Store as string
+              preferredTime: data.preferredTime, // Single field: "10:00 AM - 11:00 AM"
+              message: data.message || null,
+              status: 'PENDING', // Use enum value
+
+              // Level 3: Premium Demo & Referral Fields
+              demoType: demoType || 'FREE',
+              paymentStatus: demoType === 'PREMIUM' ? 'PENDING' : 'NOT_REQUIRED',
+              // Only store validated referral code from database lookup
+              referralCodeUsed: validatedReferralCode,
+              referralDiscount: validatedReferralDiscount,
+
+              // Marketing Attribution - capture tracking data for attribution
+              source: source || (gclid ? 'Google Ads' : 'website'),
+              utmSource: utmSource || null,
+              utmMedium: utmMedium || null,
+              utmCampaign: utmCampaign || null,
+              gclid: gclid || null,
+
+              // Follow-up Fields (defaults from schema)
+              assignedTo: null,
+              followUpDate: null,
+              remindersSent: 0,
+
+              // Demo Feedback (defaults)
+              demoCompleted: false,
+              demoRating: null,
+              demoFeedback: null,
+              convertedToEnrollment: false,
             },
           })
-        }
 
-        // If referral code was used successfully, increment usage count and create redemption record
-        if (validatedReferralCode && validatedReferralCodeId) {
-          // Increment usage count
-          await tx.referral_codes.update({
-            where: { code: validatedReferralCode },
-            data: { uses: { increment: 1 } },
-          })
-
-          // Create redemption record for tracking
-          await tx.referral_redemptions.create({
-            data: {
-              id: `redemption_${Date.now()}_${Math.random().toString(36).substring(7)}`,
-              referralCodeId: validatedReferralCodeId,
-              redeemedBy: updatedLead?.id || 'guest',
-              redeemedByEmail: data.email,
-              discountGiven: validatedReferralDiscount,
-              bookingId: booking.id,
+          // 2. Find existing lead by email (case-insensitive) or phone
+          const normalizedPhoneValue = normalizePhone(data.phone)
+          const normalizedEmail = data.email.toLowerCase().trim()
+          const existingLead = await tx.leads.findFirst({
+            where: {
+              OR: [
+                // Case-insensitive email comparison
+                { email: { equals: normalizedEmail, mode: 'insensitive' } },
+                { phone: normalizedPhoneValue },
+              ],
             },
           })
-        }
 
-        return { booking, lead: updatedLead }
+          // 3. If lead exists, update it. Otherwise CREATE a new lead.
+          let updatedLead
+          if (existingLead) {
+            // Update existing lead with demo booking reference
+            updatedLead = await tx.leads.update({
+              where: { id: existingLead.id },
+              data: {
+                demoBookingId: booking.id,
+                stage: 'DEMO_SCHEDULED',
+                // Update name if provided and different
+                ...(data.name &&
+                  data.name !== existingLead.studentName && { studentName: data.name }),
+                // Update course interest if provided
+                ...(data.courseInterest?.length > 0 && {
+                  courseInterest: data.courseInterest.join(', '),
+                }),
+              },
+            })
+          } else {
+            // CREATE NEW LEAD - This was missing before!
+            updatedLead = await tx.leads.create({
+              data: {
+                id: `lead_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+                studentName: data.name,
+                email: data.email || null,
+                phone: normalizedPhoneValue,
+                courseInterest: data.courseInterest?.join(', ') || 'NEET Biology',
+                stage: 'DEMO_SCHEDULED',
+                priority: 'WARM',
+                source: utmSource ? 'PAID_ADS' : (source as any) || 'WEBSITE_FORM',
+                demoBookingId: booking.id,
+                // Auto-assign to first available counselor or leave unassigned
+                assignedToId: await getDefaultCounselorId(tx),
+                updatedAt: new Date(),
+              },
+            })
+          }
+
+          // If referral code was used successfully, increment usage count and create redemption record
+          if (validatedReferralCode && validatedReferralCodeId) {
+            // Increment usage count
+            await tx.referral_codes.update({
+              where: { code: validatedReferralCode },
+              data: { uses: { increment: 1 } },
+            })
+
+            // Create redemption record for tracking
+            await tx.referral_redemptions.create({
+              data: {
+                id: `redemption_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+                referralCodeId: validatedReferralCodeId,
+                redeemedBy: updatedLead?.id || 'guest',
+                redeemedByEmail: data.email,
+                discountGiven: validatedReferralDiscount,
+                bookingId: booking.id,
+              },
+            })
+          }
+
+          return { booking, lead: updatedLead }
         },
         {
           // Use serializable isolation to prevent duplicate lead creation race conditions
@@ -501,20 +527,22 @@ export async function POST(request: NextRequest) {
 
     // Dispatch webhook event for external CRM integrations
     try {
-      const leadData = lead ? {
-        id: lead.id,
-        studentName: lead.studentName,
-        email: lead.email,
-        phone: lead.phone,
-        courseInterest: lead.courseInterest,
-        stage: lead.stage,
-        priority: lead.priority,
-      } : {
-        studentName: data.name,
-        email: data.email,
-        phone: data.phone,
-        courseInterest: data.courseInterest.join(', '),
-      }
+      const leadData = lead
+        ? {
+            id: lead.id,
+            studentName: lead.studentName,
+            email: lead.email,
+            phone: lead.phone,
+            courseInterest: lead.courseInterest,
+            stage: lead.stage,
+            priority: lead.priority,
+          }
+        : {
+            studentName: data.name,
+            email: data.email,
+            phone: data.phone,
+            courseInterest: data.courseInterest.join(', '),
+          }
 
       const demoData = {
         id: demoBooking.id,
@@ -943,10 +971,7 @@ async function handleGet(request: NextRequest, _session: UserSession) {
     // Log full error server-side for debugging
     console.error('Fetch demo bookings error:', error)
     // Return generic error to client - never expose internal details
-    return NextResponse.json(
-      { error: 'Failed to fetch bookings' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to fetch bookings' }, { status: 500 })
   }
 }
 
@@ -1003,7 +1028,10 @@ async function handlePut(request: NextRequest, session: UserSession) {
     console.log(`[Demo Booking] Admin ${session.userId} updated booking ${bookingId}`, {
       changes: Object.keys(validatedUpdates),
       before: Object.fromEntries(
-        Object.keys(validatedUpdates).map((k) => [k, existingBooking[k as keyof typeof existingBooking]])
+        Object.keys(validatedUpdates).map((k) => [
+          k,
+          existingBooking[k as keyof typeof existingBooking],
+        ])
       ),
       after: validatedUpdates,
     })
@@ -1015,10 +1043,7 @@ async function handlePut(request: NextRequest, session: UserSession) {
     })
   } catch (error) {
     console.error('Update demo booking error:', error)
-    return NextResponse.json(
-      { error: 'Failed to update booking' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to update booking' }, { status: 500 })
   }
 }
 

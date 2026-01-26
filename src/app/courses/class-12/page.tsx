@@ -648,9 +648,9 @@ export default function Class12BiologyPage() {
                   👨‍👩‍👧 Are You a Parent?
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  We understand your concerns about your child&apos;s NEET preparation. Chat directly
-                  with our counselors to understand fee structure, batch timings, and how we track
-                  student progress.
+                  We understand your concerns about your child&apos;s NEET preparation. Chat
+                  directly with our counselors to understand fee structure, batch timings, and how
+                  we track student progress.
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <button

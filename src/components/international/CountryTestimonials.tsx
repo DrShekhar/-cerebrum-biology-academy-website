@@ -150,8 +150,7 @@ export function CountryTestimonials({ country }: CountryTestimonialsProps) {
           Student Success Stories
         </h2>
         <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-          Hear from students who have achieved their biology goals with our
-          expert tutoring.
+          Hear from students who have achieved their biology goals with our expert tutoring.
         </p>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -166,30 +165,21 @@ export function CountryTestimonials({ country }: CountryTestimonialsProps) {
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 text-yellow-400 fill-yellow-400"
-                  />
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-slate-600 mb-6 italic">
-                &ldquo;{testimonial.quote}&rdquo;
-              </p>
+              <p className="text-slate-600 mb-6 italic">&ldquo;{testimonial.quote}&rdquo;</p>
 
               {/* Author */}
               <div className="flex items-center gap-4">
                 <span className="text-4xl">{testimonial.avatar}</span>
                 <div>
-                  <p className="font-semibold text-slate-900">
-                    {testimonial.name}
-                  </p>
+                  <p className="font-semibold text-slate-900">{testimonial.name}</p>
                   <p className="text-sm text-slate-500">
                     {testimonial.exam} -{' '}
-                    <span className="text-green-600 font-medium">
-                      {testimonial.score}
-                    </span>
+                    <span className="text-green-600 font-medium">{testimonial.score}</span>
                   </p>
                 </div>
               </div>

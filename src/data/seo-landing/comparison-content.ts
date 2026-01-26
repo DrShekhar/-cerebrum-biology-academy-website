@@ -1260,19 +1260,22 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Neha Sharma',
         achievement: 'NEET 2024 - 680/720',
-        quote: 'Compared 5 online coaching institutes. Cerebrum had the best faculty-to-student ratio and results.',
+        quote:
+          'Compared 5 online coaching institutes. Cerebrum had the best faculty-to-student ratio and results.',
         score: '680/720',
       },
       {
         name: 'Rohit Verma',
         achievement: 'NEET 2024 - 655/720',
-        quote: 'Small batch meant Dr. Shekhar knew my weak areas. That personal attention made all the difference.',
+        quote:
+          'Small batch meant Dr. Shekhar knew my weak areas. That personal attention made all the difference.',
         score: '655/720',
       },
       {
         name: 'Kavya Patel',
         achievement: 'Government Medical College',
-        quote: 'Was skeptical of online coaching initially. Now I recommend Cerebrum to everyone preparing for NEET.',
+        quote:
+          'Was skeptical of online coaching initially. Now I recommend Cerebrum to everyone preparing for NEET.',
       },
     ],
     faqs: [
@@ -1289,7 +1292,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'Is online coaching enough for NEET preparation?',
         answer:
-          "Yes, online coaching can be sufficient if you choose the right institute. Benefits include access to better faculty nationwide, cost savings, flexible timing, and recorded sessions for revision. The key is discipline and choosing a coaching with live classes, not just video content. Many NEET toppers have succeeded with online coaching.",
+          'Yes, online coaching can be sufficient if you choose the right institute. Benefits include access to better faculty nationwide, cost savings, flexible timing, and recorded sessions for revision. The key is discipline and choosing a coaching with live classes, not just video content. Many NEET toppers have succeeded with online coaching.',
       },
       {
         question: 'What should I look for in online biology tuition for NEET?',
@@ -1463,19 +1466,22 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Ankit Kumar',
         achievement: 'NEET 2024 - 665/720 (Purely Online)',
-        quote: 'Was told online coaching wont work. Proved everyone wrong with 665 score. Quality teaching matters, not mode.',
+        quote:
+          'Was told online coaching wont work. Proved everyone wrong with 665 score. Quality teaching matters, not mode.',
         score: '665/720',
       },
       {
         name: 'Swati Sharma',
         achievement: 'Dropper - NEET 2024 - 640/720',
-        quote: 'Tried offline as fresher, failed. Online coaching second year worked better - recorded classes were game-changer.',
+        quote:
+          'Tried offline as fresher, failed. Online coaching second year worked better - recorded classes were game-changer.',
         score: '640/720',
       },
       {
         name: 'Arjun Reddy',
         achievement: 'NEET 2024 - 625/720, Government College',
-        quote: 'Small town, no good coaching. Online gave me AIIMS-level faculty. Now in government medical college.',
+        quote:
+          'Small town, no good coaching. Online gave me AIIMS-level faculty. Now in government medical college.',
         score: '625/720',
       },
     ],

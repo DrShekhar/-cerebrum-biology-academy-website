@@ -33,10 +33,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function InternationalLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function InternationalLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }

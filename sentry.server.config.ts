@@ -14,11 +14,7 @@ Sentry.init({
   environment: process.env.NEXT_PUBLIC_ENV || process.env.NODE_ENV,
 
   // Ignore common errors
-  ignoreErrors: [
-    'ECONNREFUSED',
-    'ENOTFOUND',
-    'ETIMEDOUT',
-  ],
+  ignoreErrors: ['ECONNREFUSED', 'ENOTFOUND', 'ETIMEDOUT'],
 
   // Set sample rate for capturing errors
   beforeSend(event, hint) {

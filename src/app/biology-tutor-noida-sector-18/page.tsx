@@ -50,7 +50,12 @@ const sector18Areas = [
   { name: 'Sector 25', distance: '10 km', metro: 'Sector 25 Metro', landmark: 'Golf Course Road' },
   { name: 'Sector 26', distance: '11 km', metro: 'Sector 25A Metro', landmark: 'City Center' },
   { name: 'Sector 27', distance: '12 km', metro: 'Sector 25A Metro', landmark: 'Wave City Center' },
-  { name: 'Botanical Garden', distance: '15 km', metro: 'Botanical Garden Metro', landmark: 'Blue-Aqua Interchange' },
+  {
+    name: 'Botanical Garden',
+    distance: '15 km',
+    metro: 'Botanical Garden Metro',
+    landmark: 'Blue-Aqua Interchange',
+  },
 ]
 
 const whyChooseUs = [
@@ -130,7 +135,8 @@ export default function BiologyTutorNoidaSector18Page() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Noida Sector 18',
-            description: 'Best Biology Tutor for Noida Sector 18 students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for Noida Sector 18 students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida-sector-18',
             telephone: '+91-88264-44334',
             address: {
@@ -161,8 +167,7 @@ export default function BiologyTutorNoidaSector18Page() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Sector 18 Noida</span>
+              Biology Tutor in <span className="text-yellow-400">Sector 18 Noida</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -170,8 +175,8 @@ export default function BiologyTutorNoidaSector18Page() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for Sector 18 and central Noida sectors.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert Biology coaching for Sector 18 and central Noida sectors. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -333,9 +338,7 @@ export default function BiologyTutorNoidaSector18Page() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Sector 18 Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Sector 18 Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Quality NEET coaching for central Noida students
             </p>

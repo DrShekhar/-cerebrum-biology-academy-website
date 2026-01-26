@@ -39,9 +39,7 @@ export function SeminarSpeaker() {
               <h3 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">
                 {SEMINAR_CONFIG.speakerName}
               </h3>
-              <p className="text-green-600 font-semibold mb-4">
-                {SEMINAR_CONFIG.speakerTitle}
-              </p>
+              <p className="text-green-600 font-semibold mb-4">{SEMINAR_CONFIG.speakerTitle}</p>
               <p className="text-slate-600 mb-6">{SEMINAR_CONFIG.speakerBio}</p>
 
               {/* Stats */}
@@ -87,9 +85,8 @@ export function SeminarSpeaker() {
               {/* Quote */}
               <div className="mt-6 p-4 bg-slate-50 rounded-xl border-l-4 border-green-500">
                 <p className="text-slate-700 italic">
-                  "NEET success isn't just about the student - it's a family
-                  journey. When parents understand their role, students perform
-                  better."
+                  "NEET success isn't just about the student - it's a family journey. When parents
+                  understand their role, students perform better."
                 </p>
               </div>
             </div>

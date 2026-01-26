@@ -11,10 +11,7 @@ import {
   DiagramSpec,
   MnemonicDevice,
 } from './ContentIntelligence'
-import {
-  performancePredictionAI,
-  PredictionResult,
-} from './PerformancePredictionAI'
+import { performancePredictionAI, PredictionResult } from './PerformancePredictionAI'
 import { AdaptiveLearningEngine } from './AdaptiveLearningEngine'
 import { AIGateway } from './gateway/AIGateway'
 import { DistributedCacheManager } from '../cache/DistributedCacheManager'

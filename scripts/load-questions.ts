@@ -26,7 +26,7 @@ interface QuestionData {
 
 async function loadFromJSON(filename: string) {
   const filePath = path.join(__dirname, filename)
-  
+
   if (!fs.existsSync(filePath)) {
     console.log(`File not found: ${filename}`)
     return { inserted: 0, duplicates: 0 }
@@ -41,7 +41,7 @@ async function loadFromJSON(filename: string) {
   for (const q of data) {
     try {
       const existing = await prisma.questions.findFirst({
-        where: { question: q.question, isActive: true }
+        where: { question: q.question, isActive: true },
       })
 
       if (existing) {
@@ -68,8 +68,8 @@ async function loadFromJSON(filename: string) {
           subject: 'Biology',
           isActive: true,
           isVerified: true,
-          updatedAt: new Date()
-        }
+          updatedAt: new Date(),
+        },
       })
       inserted++
     } catch (error) {
@@ -84,8 +84,10 @@ async function main() {
   console.log('=== NEET Biology Question Loader ===\n')
 
   // Get all JSON files in scripts directory
-  const files = fs.readdirSync(__dirname).filter(f => f.startsWith('questions-') && f.endsWith('.json'))
-  
+  const files = fs
+    .readdirSync(__dirname)
+    .filter((f) => f.startsWith('questions-') && f.endsWith('.json'))
+
   let totalInserted = 0
   let totalDuplicates = 0
 
@@ -107,11 +109,11 @@ async function main() {
   const byDifficulty = await prisma.questions.groupBy({
     by: ['difficulty'],
     where: { isActive: true },
-    _count: { difficulty: true }
+    _count: { difficulty: true },
   })
-  
+
   console.log('\nBy Difficulty:')
-  byDifficulty.forEach(d => {
+  byDifficulty.forEach((d) => {
     const pct = ((d._count.difficulty / totalCount) * 100).toFixed(1)
     console.log(`  ${d.difficulty}: ${d._count.difficulty} (${pct}%)`)
   })

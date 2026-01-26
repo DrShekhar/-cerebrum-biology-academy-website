@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords: [
       `biology tutor ${config.name}`,
       `online biology classes ${config.name}`,
-      ...config.examSystems.map(exam => `${exam} tutoring`),
+      ...config.examSystems.map((exam) => `${exam} tutoring`),
     ],
     alternates: {
       canonical: `https://cerebrumacademy.com/international/${country}/`,
@@ -77,9 +77,7 @@ export default async function CountryPage({ params }: Props) {
             size="xl"
             className="w-full md:w-auto"
           />
-          <p className="mt-3 text-sm text-slate-600">
-            Average response time: &lt; 2 minutes
-          </p>
+          <p className="mt-3 text-sm text-slate-600">Average response time: &lt; 2 minutes</p>
         </div>
       </section>
 
@@ -152,37 +150,34 @@ export function CountryHero({ country }: CountryHeroProps) {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-            Expert Biology Tutoring for{' '}
-            <span className="text-green-400">{country.name}</span> Students
+            Expert Biology Tutoring for <span className="text-green-400">{country.name}</span>{' '}
+            Students
           </h1>
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Master {country.examSystems.slice(0, 3).join(', ')} with personalized
-            online tutoring. Available in your timezone ({country.timezone}).
+            Master {country.examSystems.slice(0, 3).join(', ')} with personalized online tutoring.
+            Available in your timezone ({country.timezone}).
           </p>
 
           {/* Pricing Badge */}
           <div className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 mb-8">
             <span className="text-slate-300">Small Group</span>
             <span className="text-2xl font-bold text-green-400">
-              {country.currency.symbol}{country.pricing.smallGroup}/hr
+              {country.currency.symbol}
+              {country.pricing.smallGroup}/hr
             </span>
             <span className="text-slate-500">|</span>
             <span className="text-slate-300">1-on-1</span>
             <span className="text-2xl font-bold text-yellow-400">
-              from {country.currency.symbol}{country.pricing.oneOnOneMin}/hr
+              from {country.currency.symbol}
+              {country.pricing.oneOnOneMin}/hr
             </span>
           </div>
 
           {/* Primary CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <CountryWhatsAppCTA
-              variant="hero"
-              country={country.code}
-              message="booking"
-              size="xl"
-            />
+            <CountryWhatsAppCTA variant="hero" country={country.code} message="booking" size="xl" />
             <a
               href="#pricing"
               className="px-8 py-4 text-lg font-semibold text-white border-2 border-white/30 rounded-lg hover:bg-white/10 transition-colors"
@@ -298,11 +293,13 @@ export function CountryPricing({ country }: { country: CountryConfig }) {
 
               <div className="mb-6">
                 <span className="text-4xl font-bold text-slate-900">
-                  {country.currency.symbol}{plan.price}
+                  {country.currency.symbol}
+                  {plan.price}
                 </span>
                 {plan.priceMax && (
                   <span className="text-slate-600">
-                    - {country.currency.symbol}{plan.priceMax}
+                    - {country.currency.symbol}
+                    {plan.priceMax}
                   </span>
                 )}
                 <span className="text-slate-600">/hour</span>

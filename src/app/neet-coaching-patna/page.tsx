@@ -157,7 +157,7 @@ const faqs = [
   {
     question: 'Why should Bihar students choose online coaching over migrating to Kota?',
     answer:
-      'Every year, thousands of Bihar students migrate to Kota spending Rs 3-5 lakhs annually on coaching + hostel + food. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay with family, save money, and get personalized attention that Kota\'s crowded classrooms cannot provide. Our 94.2% success rate proves online is equally effective.',
+      "Every year, thousands of Bihar students migrate to Kota spending Rs 3-5 lakhs annually on coaching + hostel + food. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay with family, save money, and get personalized attention that Kota's crowded classrooms cannot provide. Our 94.2% success rate proves online is equally effective.",
   },
   {
     question: 'Which areas in Patna do you serve?',
@@ -193,7 +193,7 @@ const premiumSchools = [
   'Don Bosco Academy',
   'Kendriya Vidyalaya',
   'DAV Public School',
-  'St. Karen\'s Secondary School',
+  "St. Karen's Secondary School",
   'Loyola High School',
   'Mount Carmel High School',
   'Gyan Niketan',
@@ -338,8 +338,8 @@ export default function NeetCoachingPatnaPage() {
               Stay in Patna, Crack NEET - Save Rs 2-3 Lakhs
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Every year Bihar students spend lakhs migrating to Kota. Here&apos;s why that&apos;s not needed
-              anymore.
+              Every year Bihar students spend lakhs migrating to Kota. Here&apos;s why that&apos;s
+              not needed anymore.
             </p>
           </motion.div>
 
@@ -450,9 +450,7 @@ export default function NeetCoachingPatnaPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-amber-600" />
                   </div>
-                  <div className="text-2xl font-bold text-amber-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-amber-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded-full">

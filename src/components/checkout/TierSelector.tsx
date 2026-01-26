@@ -132,9 +132,7 @@ export function TierSelector({ tiers, selectedTier, onSelect }: TierSelectorProp
                 <Sparkles className="h-4 w-4 text-[#3d4d3d]" />
                 <span className="text-sm font-semibold text-[#3d4d3d]">Upgrade Available</span>
               </div>
-              <h4 className="text-base font-bold text-gray-900 mb-1">
-                Intensive Biology Program
-              </h4>
+              <h4 className="text-base font-bold text-gray-900 mb-1">Intensive Biology Program</h4>
               <p className="text-sm text-gray-600">
                 Get 1-on-1 mentorship, ultra-exclusive cohort & top rank focus with Pinnacle
               </p>

@@ -139,7 +139,11 @@ export function FacultySection() {
                 ) : (
                   <div className="w-full h-full bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-600 flex items-center justify-center">
                     <span className="text-white font-bold text-xl xs:text-2xl sm:text-3xl">
-                      {faculty.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                      {faculty.name
+                        .split(' ')
+                        .map((n) => n[0])
+                        .slice(0, 2)
+                        .join('')}
                     </span>
                   </div>
                 )}
@@ -207,7 +211,10 @@ export function FacultySection() {
             Our Teaching <span className="text-blue-600">Methodology</span>
           </h3>
           <p className="text-base xs:text-lg text-gray-600 max-w-3xl mx-auto">
-            At Cerebrum Biology Academy, we combine traditional teaching excellence with modern pedagogical approaches. Our AIIMS Trained faculty employs proven methods that ensure deep conceptual understanding, exam readiness, and long-term retention of biological concepts for NEET success.
+            At Cerebrum Biology Academy, we combine traditional teaching excellence with modern
+            pedagogical approaches. Our AIIMS Trained faculty employs proven methods that ensure
+            deep conceptual understanding, exam readiness, and long-term retention of biological
+            concepts for NEET success.
           </p>
         </div>
 
@@ -225,7 +232,11 @@ export function FacultySection() {
               Conceptual Teaching
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              We emphasize deep understanding through concept-based learning, real-world examples, and clinical case studies rather than rote memorization. Our faculty connects biological concepts to practical applications, making complex topics like Genetics, Physiology, and Ecology easy to understand and remember. Interactive discussions and doubt-clearing sessions ensure every student grasps fundamental principles thoroughly.
+              We emphasize deep understanding through concept-based learning, real-world examples,
+              and clinical case studies rather than rote memorization. Our faculty connects
+              biological concepts to practical applications, making complex topics like Genetics,
+              Physiology, and Ecology easy to understand and remember. Interactive discussions and
+              doubt-clearing sessions ensure every student grasps fundamental principles thoroughly.
             </p>
           </div>
 
@@ -237,7 +248,12 @@ export function FacultySection() {
               NEET Focused Strategy
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              Our strategic approach aligns perfectly with NEET exam patterns, focusing on high-yield topics and frequently asked concepts. Weekly assessments mirror the actual NEET paper structure with detailed performance analysis and improvement strategies. We provide extensive practice with previous year questions, topic-wise tests, and full-length mock exams to build speed, accuracy, and exam temperament for NEET success.
+              Our strategic approach aligns perfectly with NEET exam patterns, focusing on
+              high-yield topics and frequently asked concepts. Weekly assessments mirror the actual
+              NEET paper structure with detailed performance analysis and improvement strategies. We
+              provide extensive practice with previous year questions, topic-wise tests, and
+              full-length mock exams to build speed, accuracy, and exam temperament for NEET
+              success.
             </p>
           </div>
 
@@ -249,7 +265,12 @@ export function FacultySection() {
               Personal Mentoring
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              With small batch sizes of maximum 15 students, we ensure individual attention and personalized guidance for every student. Our faculty tracks each student's progress through regular assessments, identifies weak areas, and provides customized improvement plans. One-on-one doubt sessions, parent-teacher meetings, and motivational counseling create a supportive environment where every student can achieve their full potential and realize their NEET dreams.
+              With small batch sizes of maximum 15 students, we ensure individual attention and
+              personalized guidance for every student. Our faculty tracks each student's progress
+              through regular assessments, identifies weak areas, and provides customized
+              improvement plans. One-on-one doubt sessions, parent-teacher meetings, and
+              motivational counseling create a supportive environment where every student can
+              achieve their full potential and realize their NEET dreams.
             </p>
           </div>
         </div>

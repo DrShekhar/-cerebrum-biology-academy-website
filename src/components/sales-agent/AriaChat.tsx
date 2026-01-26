@@ -132,12 +132,7 @@ function TypingIndicator({ language }: { language: Language }) {
   )
 }
 
-export function AriaChat({
-  messages,
-  isStreaming,
-  language,
-  onQuickActionClick,
-}: AriaChatProps) {
+export function AriaChat({ messages, isStreaming, language, onQuickActionClick }: AriaChatProps) {
   const containerRef = useRef<HTMLDivElement>(null)
   const shouldAutoScroll = useRef(true)
 
@@ -181,9 +176,7 @@ export function AriaChat({
         {isStreaming &&
           messages.length > 0 &&
           messages[messages.length - 1].sender === 'bot' &&
-          !messages[messages.length - 1].text && (
-            <TypingIndicator language={language} />
-          )}
+          !messages[messages.length - 1].text && <TypingIndicator language={language} />}
       </AnimatePresence>
 
       {/* Empty state */}

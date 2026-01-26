@@ -48,9 +48,7 @@ export function CountrySelector({
 }: CountrySelectorProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCountry, setSelectedCountry] = useState<string | null>(
-    currentCountry || null
-  )
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(currentCountry || null)
   const dropdownRef = useRef<HTMLDivElement>(null)
   const searchInputRef = useRef<HTMLInputElement>(null)
 
@@ -70,10 +68,7 @@ export function CountrySelector({
   // Handle click outside to close dropdown
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target as Node)
-      ) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }
@@ -104,9 +99,7 @@ export function CountrySelector({
         (c) =>
           c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
           c.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          c.examSystems.some((e) =>
-            e.toLowerCase().includes(searchQuery.toLowerCase())
-          )
+          c.examSystems.some((e) => e.toLowerCase().includes(searchQuery.toLowerCase()))
       )
     : countries
 
@@ -135,12 +128,8 @@ export function CountrySelector({
           {selectedConfig ? (
             <>
               <span className="text-lg">{selectedConfig.flag}</span>
-              <span className="hidden sm:inline text-slate-700">
-                {selectedConfig.name}
-              </span>
-              <span className="sm:hidden text-slate-700">
-                {selectedConfig.code.toUpperCase()}
-              </span>
+              <span className="hidden sm:inline text-slate-700">{selectedConfig.name}</span>
+              <span className="sm:hidden text-slate-700">{selectedConfig.code.toUpperCase()}</span>
             </>
           ) : (
             <>
@@ -149,10 +138,7 @@ export function CountrySelector({
             </>
           )}
           <ChevronDown
-            className={cn(
-              'w-4 h-4 text-slate-400 transition-transform',
-              isOpen && 'rotate-180'
-            )}
+            className={cn('w-4 h-4 text-slate-400 transition-transform', isOpen && 'rotate-180')}
           />
         </button>
 
@@ -261,10 +247,7 @@ export function CountrySelector({
             >
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-slate-200">
-                <h2
-                  id="country-modal-title"
-                  className="text-lg font-semibold text-slate-900"
-                >
+                <h2 id="country-modal-title" className="text-lg font-semibold text-slate-900">
                   Select Your Country
                 </h2>
                 <button
@@ -310,12 +293,8 @@ export function CountrySelector({
                       >
                         <span className="text-2xl">{country.flag}</span>
                         <div className="flex-1 min-w-0">
-                          <p className="font-medium text-slate-900 truncate">
-                            {country.name}
-                          </p>
-                          <p className="text-xs text-slate-500">
-                            {country.currency.code}
-                          </p>
+                          <p className="font-medium text-slate-900 truncate">{country.name}</p>
+                          <p className="text-xs text-slate-500">{country.currency.code}</p>
                         </div>
                       </Link>
                     ))}
@@ -323,40 +302,36 @@ export function CountrySelector({
                 ) : (
                   // Grouped by region
                   <div className="space-y-6">
-                    {Object.entries(countriesByRegion).map(
-                      ([region, regionCountries]) => (
-                        <div key={region}>
-                          <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">
-                            {region}
-                          </h3>
-                          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                            {regionCountries.map((country) => (
-                              <Link
-                                key={country.code}
-                                href={`/international/${country.code}/`}
-                                onClick={() => handleCountryClick(country)}
-                                className={cn(
-                                  'flex items-center gap-3 p-3 rounded-xl border transition-all hover:shadow-md',
-                                  selectedCountry === country.code
-                                    ? 'border-green-500 bg-green-50'
-                                    : 'border-slate-200 hover:border-slate-300'
-                                )}
-                              >
-                                <span className="text-2xl">{country.flag}</span>
-                                <div className="flex-1 min-w-0">
-                                  <p className="font-medium text-slate-900 truncate">
-                                    {country.name}
-                                  </p>
-                                  <p className="text-xs text-slate-500">
-                                    {country.currency.code}
-                                  </p>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
+                    {Object.entries(countriesByRegion).map(([region, regionCountries]) => (
+                      <div key={region}>
+                        <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-3">
+                          {region}
+                        </h3>
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                          {regionCountries.map((country) => (
+                            <Link
+                              key={country.code}
+                              href={`/international/${country.code}/`}
+                              onClick={() => handleCountryClick(country)}
+                              className={cn(
+                                'flex items-center gap-3 p-3 rounded-xl border transition-all hover:shadow-md',
+                                selectedCountry === country.code
+                                  ? 'border-green-500 bg-green-50'
+                                  : 'border-slate-200 hover:border-slate-300'
+                              )}
+                            >
+                              <span className="text-2xl">{country.flag}</span>
+                              <div className="flex-1 min-w-0">
+                                <p className="font-medium text-slate-900 truncate">
+                                  {country.name}
+                                </p>
+                                <p className="text-xs text-slate-500">{country.currency.code}</p>
+                              </div>
+                            </Link>
+                          ))}
                         </div>
-                      )
-                    )}
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>

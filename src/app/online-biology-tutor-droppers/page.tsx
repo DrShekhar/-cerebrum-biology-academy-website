@@ -175,8 +175,7 @@ export default function OnlineBiologyTutorDroppersPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Online Biology Tutor for{' '}
-              <span className="text-yellow-400">NEET Droppers</span>
+              Online Biology Tutor for <span className="text-yellow-400">NEET Droppers</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -407,9 +406,7 @@ export default function OnlineBiologyTutorDroppersPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Make Your Drop Year Count!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Make Your Drop Year Count!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join 200+ successful droppers. Book your free demo today!
             </p>

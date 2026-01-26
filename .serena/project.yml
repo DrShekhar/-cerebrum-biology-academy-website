@@ -14,11 +14,11 @@
 # The first language is the default language and the respective language server will be used as a fallback.
 # Note that when using the JetBrains backend, language servers are not used and this list is correspondingly ignored.
 languages:
-- typescript
+  - typescript
 
 # the encoding used by text files in the project
 # For a list of possible encodings, see https://docs.python.org/3.11/library/codecs.html#standard-encodings
-encoding: "utf-8"
+encoding: 'utf-8'
 
 # whether to use the project's gitignore file to ignore files
 # Added on 2025-04-07
@@ -29,17 +29,17 @@ ignore_all_files_in_gitignore: true
 # Was previously called `ignored_dirs`, please update your config if you are using that.
 # Added (renamed) on 2025-04-07
 ignored_paths:
-  - "node_modules/**"
-  - ".next/**"
-  - "coverage/**"
-  - "*.log"
-  - "*.png"
-  - "*.jpg"
-  - "*.jpeg"
-  - "test-results/**"
-  - "playwright-report/**"
-  - ".vercel/**"
-  - "*.tsbuildinfo"
+  - 'node_modules/**'
+  - '.next/**'
+  - 'coverage/**'
+  - '*.log'
+  - '*.png'
+  - '*.jpg'
+  - '*.jpeg'
+  - 'test-results/**'
+  - 'playwright-report/**'
+  - '.vercel/**'
+  - '*.tsbuildinfo'
 
 # whether the project is in read-only mode
 # If set to true, all editing tools will be disabled and attempts to use them will result in an error
@@ -48,7 +48,7 @@ read_only: false
 
 # list of tool names to exclude. We recommend not excluding any tools, see the readme for more details.
 # Below is the complete list of tools for convenience.
-# To make sure you have the latest list of tools, and to view their descriptions, 
+# To make sure you have the latest list of tools, and to view their descriptions,
 # execute `uv run scripts/print_tool_overview.py`.
 #
 #  * `activate_project`: Activates a project by name.
@@ -104,5 +104,5 @@ initial_prompt: |
   Always run `npx tsc --noEmit` after TypeScript changes.
   Check CLAUDE.md for detailed project conventions.
 
-project_name: "cerebrum-biology-academy-website"
+project_name: 'cerebrum-biology-academy-website'
 included_optional_tools: []

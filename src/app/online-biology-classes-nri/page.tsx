@@ -210,9 +210,7 @@ export default function OnlineBiologyClassesNRIPage() {
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               NRI Students From Around the World
             </h2>
-            <p className="text-lg text-gray-600">
-              We serve Indian families in every major region
-            </p>
+            <p className="text-lg text-gray-600">We serve Indian families in every major region</p>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -291,12 +289,10 @@ export default function OnlineBiologyClassesNRIPage() {
                 <Target className="h-5 w-5" />
                 <span className="font-semibold">Curriculum Bridge Programs</span>
               </div>
-              <h2 className="mb-4 text-3xl font-bold text-gray-900">
-                From Any Curriculum to NEET
-              </h2>
+              <h2 className="mb-4 text-3xl font-bold text-gray-900">From Any Curriculum to NEET</h2>
               <p className="text-lg text-gray-700">
-                Whether your child studies A-Level, IB, AP, or local curricula abroad, we bridge
-                the gap to NCERT and NEET.
+                Whether your child studies A-Level, IB, AP, or local curricula abroad, we bridge the
+                gap to NCERT and NEET.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
@@ -444,9 +440,7 @@ export default function OnlineBiologyClassesNRIPage() {
       <section className="bg-gradient-to-r from-orange-500 to-red-500 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
-            <h2 className="mb-4 text-3xl font-bold">
-              Join 11,500+ NRI Families Worldwide
-            </h2>
+            <h2 className="mb-4 text-3xl font-bold">Join 11,500+ NRI Families Worldwide</h2>
             <p className="mb-8 text-xl text-orange-100">
               Your child&apos;s NEET dreams don&apos;t have to wait until you return to India
             </p>
@@ -460,7 +454,8 @@ export default function OnlineBiologyClassesNRIPage() {
               </Link>
               <a
                 href="https://wa.me/918826444334"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center gap-2 rounded-lg border-2 border-white px-8 py-3 font-semibold transition hover:bg-white/10"
               >
                 <MessageCircle className="h-5 w-5" />

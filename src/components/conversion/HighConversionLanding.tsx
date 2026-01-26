@@ -77,7 +77,8 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
   const handleWhatsAppChat = async () => {
     await trackAndOpenWhatsApp({
       source: 'high-conversion-landing-hero',
-      message: "Hi! I'm interested in your NEET Biology courses. Can you help me choose the right program?",
+      message:
+        "Hi! I'm interested in your NEET Biology courses. Can you help me choose the right program?",
       campaign: 'high-conversion-landing',
     })
   }

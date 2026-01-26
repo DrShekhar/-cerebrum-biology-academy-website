@@ -177,10 +177,7 @@ export default function TestSeriesSchedulePage() {
                 <h2 className="font-semibold text-gray-900">All Tests</h2>
                 <p className="text-sm text-gray-500">Click to view details</p>
               </div>
-              <div
-                ref={testListRef}
-                className="max-h-[60vh] overflow-y-auto p-2 lg:max-h-[70vh]"
-              >
+              <div ref={testListRef} className="max-h-[60vh] overflow-y-auto p-2 lg:max-h-[70vh]">
                 {testSeriesSchedule.map((test, index) => {
                   const testStatus = getTestStatus(test)
                   const isSelected = index === selectedTestIndex
@@ -191,9 +188,7 @@ export default function TestSeriesSchedulePage() {
                       ref={isSelected ? selectedTestRef : null}
                       onClick={() => setSelectedTestIndex(index)}
                       className={`mb-1 flex w-full items-center gap-3 rounded-lg p-3 text-left transition-all ${
-                        isSelected
-                          ? 'bg-indigo-50 ring-2 ring-indigo-500'
-                          : 'hover:bg-gray-50'
+                        isSelected ? 'bg-indigo-50 ring-2 ring-indigo-500' : 'hover:bg-gray-50'
                       } ${testStatus === 'next' && !isSelected ? 'bg-green-50' : ''}`}
                     >
                       {/* Status Icon */}
@@ -217,9 +212,7 @@ export default function TestSeriesSchedulePage() {
                             {test.type}
                           </span>
                         </div>
-                        <p className="truncate text-xs text-gray-500">
-                          {formatDate(test.date)}
-                        </p>
+                        <p className="truncate text-xs text-gray-500">{formatDate(test.date)}</p>
                       </div>
 
                       {/* Phase Indicator */}
@@ -333,10 +326,7 @@ export default function TestSeriesSchedulePage() {
                     </div>
                     <ul className="space-y-2">
                       {selectedTest.classXITopics.map((topic, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-sm text-blue-800"
-                        >
+                        <li key={idx} className="flex items-start gap-2 text-sm text-blue-800">
                           <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500" />
                           {topic}
                         </li>
@@ -354,10 +344,7 @@ export default function TestSeriesSchedulePage() {
                     </div>
                     <ul className="space-y-2">
                       {selectedTest.classXIITopics.map((topic, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-sm text-purple-800"
-                        >
+                        <li key={idx} className="flex items-start gap-2 text-sm text-purple-800">
                           <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-purple-500" />
                           {topic}
                         </li>

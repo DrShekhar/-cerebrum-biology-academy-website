@@ -92,22 +92,26 @@ const features = [
   {
     icon: Users,
     title: 'Elite Small Batches (10-15)',
-    description: 'Exclusive batches for Bandra students with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Bandra students with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Bandra deserves.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Bandra deserves.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement your premium school schedule.',
+    description:
+      'Morning, afternoon, and evening batches to complement your premium school schedule.',
   },
   {
     icon: Shield,
@@ -127,7 +131,7 @@ const faqs = [
   {
     question: 'Why do Bandra students choose online NEET coaching?',
     answer:
-      'Bandra\'s premium schools like American School of Bombay, Ecole Mondiale, and Cathedral School have demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on traffic to coaching centers in Dadar or Andheri. Our 94.2% success rate proves online is equally effective.',
+      "Bandra's premium schools like American School of Bombay, Ecole Mondiale, and Cathedral School have demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on traffic to coaching centers in Dadar or Andheri. Our 94.2% success rate proves online is equally effective.",
   },
   {
     question: 'Which areas in Bandra do you serve?',
@@ -137,7 +141,7 @@ const faqs = [
   {
     question: 'What is the fee for premium NEET coaching in Bandra?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This is competitive with Bandra\'s premium coaching centers while offering superior flexibility and personalized attention. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This is competitive with Bandra's premium coaching centers while offering superior flexibility and personalized attention. EMI options available.",
   },
   {
     question: 'How does this compare to coaching centers in BKC or Dadar?',
@@ -186,7 +190,7 @@ const whyBandra = [
     icon: GraduationCap,
     title: 'Elite Student Network',
     description:
-      'Study with peers from Bandra\'s top schools. Network with motivated students from premium institutions.',
+      "Study with peers from Bandra's top schools. Network with motivated students from premium institutions.",
   },
 ]
 
@@ -236,8 +240,9 @@ export default function NeetCoachingBandraPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Bandra&apos;s elite schools. 94.2% success rate, AIIMS
-              faculty, zero traffic commute. Join 650+ students from ASB, Cathedral, Ecole Mondiale.
+              Premium NEET Biology coaching for Bandra&apos;s elite schools. 94.2% success rate,
+              AIIMS faculty, zero traffic commute. Join 650+ students from ASB, Cathedral, Ecole
+              Mondiale.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,8 +303,8 @@ export default function NeetCoachingBandraPage() {
               NEET Coaching Across Bandra & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Pali Hill to BKC, Carter Road to Linking Road - premium coaching for every
-              Bandra locality.
+              From Pali Hill to BKC, Carter Road to Linking Road - premium coaching for every Bandra
+              locality.
             </p>
           </motion.div>
 
@@ -321,9 +326,7 @@ export default function NeetCoachingBandraPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-indigo-600" />
                   </div>
-                  <div className="text-2xl font-bold text-indigo-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-indigo-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">

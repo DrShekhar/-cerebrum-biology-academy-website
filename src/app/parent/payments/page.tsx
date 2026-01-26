@@ -235,7 +235,9 @@ export default function ParentPaymentsPage() {
                   <CheckCircle2 className="h-5 w-5 text-green-600" />
                 </div>
                 <div>
-                  <p className="text-lg font-bold text-green-600">{formatCurrency(summary.totalPaid)}</p>
+                  <p className="text-lg font-bold text-green-600">
+                    {formatCurrency(summary.totalPaid)}
+                  </p>
                   <p className="text-xs text-gray-500">Total Paid</p>
                 </div>
               </div>
@@ -247,7 +249,9 @@ export default function ParentPaymentsPage() {
                   <Clock className="h-5 w-5 text-orange-600" />
                 </div>
                 <div>
-                  <p className="text-lg font-bold text-orange-600">{formatCurrency(summary.totalPending)}</p>
+                  <p className="text-lg font-bold text-orange-600">
+                    {formatCurrency(summary.totalPending)}
+                  </p>
                   <p className="text-xs text-gray-500">Pending</p>
                 </div>
               </div>
@@ -259,7 +263,9 @@ export default function ParentPaymentsPage() {
                   <AlertCircle className="h-5 w-5 text-red-600" />
                 </div>
                 <div>
-                  <p className="text-lg font-bold text-red-600">{formatCurrency(summary.totalOverdue)}</p>
+                  <p className="text-lg font-bold text-red-600">
+                    {formatCurrency(summary.totalOverdue)}
+                  </p>
                   <p className="text-xs text-gray-500">Overdue</p>
                 </div>
               </div>
@@ -273,7 +279,9 @@ export default function ParentPaymentsPage() {
                 <div>
                   {summary.nextDueDate ? (
                     <>
-                      <p className="text-lg font-bold text-blue-600">{formatCurrency(summary.nextDueAmount || 0)}</p>
+                      <p className="text-lg font-bold text-blue-600">
+                        {formatCurrency(summary.nextDueAmount || 0)}
+                      </p>
                       <p className="text-xs text-gray-500">Due {formatDate(summary.nextDueDate)}</p>
                     </>
                   ) : (
@@ -422,7 +430,9 @@ export default function ParentPaymentsPage() {
                                     Due in {daysUntilDue} day{daysUntilDue !== 1 ? 's' : ''}
                                   </span>
                                 ) : (
-                                  <span className="text-gray-500">Due {formatDate(due.dueDate)}</span>
+                                  <span className="text-gray-500">
+                                    Due {formatDate(due.dueDate)}
+                                  </span>
                                 )}
                               </p>
                             </div>
@@ -465,7 +475,9 @@ export default function ParentPaymentsPage() {
                                   <StatusIcon className={`h-5 w-5 ${statusConfig.text}`} />
                                 </div>
                                 <div>
-                                  <h3 className="font-semibold text-gray-900">{payment.courseName}</h3>
+                                  <h3 className="font-semibold text-gray-900">
+                                    {payment.courseName}
+                                  </h3>
                                   <div className="flex items-center gap-2 text-sm text-gray-500">
                                     <User className="h-3.5 w-3.5" />
                                     <span>{payment.childName}</span>
@@ -504,7 +516,9 @@ export default function ParentPaymentsPage() {
                                 {payment.transactionId && (
                                   <div>
                                     <p className="text-gray-500">Transaction ID</p>
-                                    <p className="font-mono text-gray-900">{payment.transactionId}</p>
+                                    <p className="font-mono text-gray-900">
+                                      {payment.transactionId}
+                                    </p>
                                   </div>
                                 )}
                                 {payment.paymentMethod && (
@@ -518,7 +532,8 @@ export default function ParentPaymentsPage() {
                                     <p className="text-gray-500">Installment</p>
                                     <p className="text-gray-900">
                                       #{payment.installmentNumber}
-                                      {payment.totalInstallments && ` of ${payment.totalInstallments}`}
+                                      {payment.totalInstallments &&
+                                        ` of ${payment.totalInstallments}`}
                                     </p>
                                   </div>
                                 )}
@@ -527,7 +542,9 @@ export default function ParentPaymentsPage() {
                                     {payment.status === 'paid' ? 'Paid On' : 'Due Date'}
                                   </p>
                                   <p className="text-gray-900">
-                                    {formatDate(payment.status === 'paid' ? payment.paidAt : payment.dueDate)}
+                                    {formatDate(
+                                      payment.status === 'paid' ? payment.paidAt : payment.dueDate
+                                    )}
                                   </p>
                                 </div>
                               </div>
@@ -549,7 +566,10 @@ export default function ParentPaymentsPage() {
             <h3 className="text-sm font-medium text-gray-700 mb-4">Payment Summary by Child</h3>
             <div className="space-y-3">
               {summary.byChild.map((child) => (
-                <div key={child.childId} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
+                <div
+                  key={child.childId}
+                  className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0"
+                >
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center">
                       <User className="h-4 w-4 text-teal-600" />

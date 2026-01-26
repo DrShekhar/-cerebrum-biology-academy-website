@@ -26,6 +26,7 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import { AICitationTracking } from '@/components/seo/AICitationTracking'
 
 export default function NEETCoachingComparisonPage() {
   useEffect(() => {
@@ -338,6 +339,17 @@ export default function NEETCoachingComparisonPage() {
         </section>
       </div>
       <MobilePhoneStickyBar source="comparison-page" />
+      <AICitationTracking
+        pageName="NEET Coaching Comparison - Cerebrum vs Other Institutes"
+        pageType="comparison"
+        primaryKeywords={[
+          'best NEET coaching Delhi',
+          'NEET coaching comparison',
+          'Cerebrum vs Allen vs Aakash',
+          'NEET Biology coaching South Delhi',
+          'top NEET institutes Delhi',
+        ]}
+      />
     </>
   )
 }

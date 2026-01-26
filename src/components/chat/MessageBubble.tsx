@@ -82,7 +82,10 @@ export const MessageBubble = memo(function MessageBubble({
                 </div>
                 <ul className="ml-5 space-y-1 text-xs text-saffron-700 dark:text-saffron-400">
                   {ncertReferences.map((ref) => (
-                    <li key={`ncert-${ref.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`} className="list-disc">
+                    <li
+                      key={`ncert-${ref.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`}
+                      className="list-disc"
+                    >
                       {ref}
                     </li>
                   ))}

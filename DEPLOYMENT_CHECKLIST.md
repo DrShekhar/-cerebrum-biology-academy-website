@@ -421,9 +421,9 @@ Once all checks pass:
 - [ ] Team trained
 - [ ] Documentation complete
 
-**Deployment Date:** ******\_\_\_******
-**Deployed By:** ******\_\_\_******
-**Verified By:** ******\_\_\_******
+**Deployment Date:** **\*\***\_\_\_**\*\***
+**Deployed By:** **\*\***\_\_\_**\*\***
+**Verified By:** **\*\***\_\_\_**\*\***
 
 ---
 

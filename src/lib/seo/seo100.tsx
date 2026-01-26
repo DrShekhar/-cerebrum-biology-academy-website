@@ -1,41 +1,68 @@
 // src/lib/seo/seo100.tsx
 // Master SEO Schema Generator - Combines all schemas for 100/100 scores
 
-import React from 'react';
-import { generateAllVideoSchemas } from './videoSchema';
-import { generateAggregateRatingSchema, generateCourseRatingSchema, featuredReviews, courseRatings } from './ratingSchema';
-import { generateBreadcrumbSchema, breadcrumbPaths, generateBlogBreadcrumb, generateCityBreadcrumb } from './breadcrumbSchema';
-import { generateEventSchema, generateAllEventSchemas, upcomingEvents } from './eventSchema';
-import { generateAllFacultySchemas, generateAuthorSchema } from './personSchema';
-import { generateSpeakableWebPageSchema, generateSpeakableFAQSchema, generateSpeakableArticleSchema, speakablePages, voiceOptimizedFAQs } from './speakableSchema';
+import React from 'react'
+import { generateAllVideoSchemas } from './videoSchema'
+import {
+  generateAggregateRatingSchema,
+  generateCourseRatingSchema,
+  featuredReviews,
+  courseRatings,
+} from './ratingSchema'
+import {
+  generateBreadcrumbSchema,
+  breadcrumbPaths,
+  generateBlogBreadcrumb,
+  generateCityBreadcrumb,
+} from './breadcrumbSchema'
+import { generateEventSchema, generateAllEventSchemas, upcomingEvents } from './eventSchema'
+import { generateAllFacultySchemas, generateAuthorSchema } from './personSchema'
+import {
+  generateSpeakableWebPageSchema,
+  generateSpeakableFAQSchema,
+  generateSpeakableArticleSchema,
+  speakablePages,
+  voiceOptimizedFAQs,
+} from './speakableSchema'
 
 // Export everything for individual use
-export * from './videoSchema';
-export * from './ratingSchema';
-export * from './breadcrumbSchema';
-export * from './eventSchema';
-export * from './personSchema';
-export * from './speakableSchema';
+export * from './videoSchema'
+export * from './ratingSchema'
+export * from './breadcrumbSchema'
+export * from './eventSchema'
+export * from './personSchema'
+export * from './speakableSchema'
 
 // Page-specific schema configurations
-type PageType = 'home' | 'courses' | 'course-detail' | 'faculty' | 'results' | 'blog' | 'blog-post' | 'contact' | 'demo' | 'testimonials' | 'about';
+type PageType =
+  | 'home'
+  | 'courses'
+  | 'course-detail'
+  | 'faculty'
+  | 'results'
+  | 'blog'
+  | 'blog-post'
+  | 'contact'
+  | 'demo'
+  | 'testimonials'
+  | 'about'
 
 interface SchemaConfig {
-  page: PageType;
-  courseSlug?: string;
+  page: PageType
+  courseSlug?: string
   blogPost?: {
-    title: string;
-    description: string;
-    url: string;
-    slug: string;
-    datePublished: string;
-    author: string;
-    image?: string;
-  };
+    title: string
+    description: string
+    url: string
+    slug: string
+    datePublished: string
+    author: string
+    image?: string
+  }
   cityPage?: {
-    name: string;
-    slug: string;
-  };
+    name: string
+    slug: string
+  }
 }
 
 /**
@@ -43,98 +70,110 @@ interface SchemaConfig {
  * This ensures comprehensive schema coverage for 100/100 SEO score
  */
 export function generatePageSchemas(config: SchemaConfig): object[] {
-  const schemas: object[] = [];
+  const schemas: object[] = []
 
   // Always include organization rating (appears on all pages)
-  schemas.push(generateAggregateRatingSchema(featuredReviews));
+  schemas.push(generateAggregateRatingSchema(featuredReviews))
 
   // Add breadcrumbs for all pages except home
   if (config.page !== 'home' && breadcrumbPaths[config.page as keyof typeof breadcrumbPaths]) {
-    schemas.push(generateBreadcrumbSchema(breadcrumbPaths[config.page as keyof typeof breadcrumbPaths]));
+    schemas.push(
+      generateBreadcrumbSchema(breadcrumbPaths[config.page as keyof typeof breadcrumbPaths])
+    )
   }
 
   // Page-specific schemas
   switch (config.page) {
     case 'home':
       // Speakable for voice search
-      schemas.push(generateSpeakableWebPageSchema(speakablePages.home));
+      schemas.push(generateSpeakableWebPageSchema(speakablePages.home))
       // FAQs with speakable
-      schemas.push(generateSpeakableFAQSchema(voiceOptimizedFAQs));
+      schemas.push(generateSpeakableFAQSchema(voiceOptimizedFAQs))
       // Upcoming events
-      schemas.push(...generateAllEventSchemas().slice(0, 3)); // Top 3 events
-      break;
+      schemas.push(...generateAllEventSchemas().slice(0, 3)) // Top 3 events
+      break
 
     case 'courses':
-      schemas.push(generateSpeakableWebPageSchema(speakablePages.courses));
+      schemas.push(generateSpeakableWebPageSchema(speakablePages.courses))
       // Add course ratings
-      Object.values(courseRatings).forEach(course => {
-        schemas.push(generateCourseRatingSchema(course));
-      });
-      break;
+      Object.values(courseRatings).forEach((course) => {
+        schemas.push(generateCourseRatingSchema(course))
+      })
+      break
 
     case 'course-detail':
       if (config.courseSlug && courseRatings[config.courseSlug as keyof typeof courseRatings]) {
-        schemas.push(generateCourseRatingSchema(courseRatings[config.courseSlug as keyof typeof courseRatings]));
+        schemas.push(
+          generateCourseRatingSchema(courseRatings[config.courseSlug as keyof typeof courseRatings])
+        )
       }
-      break;
+      break
 
     case 'faculty':
-      schemas.push(generateSpeakableWebPageSchema(speakablePages.faculty));
-      schemas.push(...generateAllFacultySchemas());
-      break;
+      schemas.push(generateSpeakableWebPageSchema(speakablePages.faculty))
+      schemas.push(...generateAllFacultySchemas())
+      break
 
     case 'results':
-      schemas.push(generateSpeakableWebPageSchema(speakablePages.results));
-      break;
+      schemas.push(generateSpeakableWebPageSchema(speakablePages.results))
+      break
 
     case 'testimonials':
-      schemas.push(...generateAllVideoSchemas());
-      break;
+      schemas.push(...generateAllVideoSchemas())
+      break
 
     case 'demo':
       // Show upcoming demo events (free ones)
-      const demoEvents = upcomingEvents.filter(e => e.price === 0);
-      schemas.push(...demoEvents.map(e => generateEventSchema(e)));
-      break;
+      const demoEvents = upcomingEvents.filter((e) => e.price === 0)
+      schemas.push(...demoEvents.map((e) => generateEventSchema(e)))
+      break
 
     case 'blog':
-      schemas.push(generateBreadcrumbSchema(breadcrumbPaths.blog));
-      break;
+      schemas.push(generateBreadcrumbSchema(breadcrumbPaths.blog))
+      break
 
     case 'blog-post':
       if (config.blogPost) {
         // Blog breadcrumb
-        schemas.push(generateBreadcrumbSchema(generateBlogBreadcrumb(config.blogPost.title, config.blogPost.slug)));
+        schemas.push(
+          generateBreadcrumbSchema(
+            generateBlogBreadcrumb(config.blogPost.title, config.blogPost.slug)
+          )
+        )
         // Article schema with speakable
-        schemas.push(generateSpeakableArticleSchema({
-          headline: config.blogPost.title,
-          description: config.blogPost.description,
-          url: config.blogPost.url,
-          datePublished: config.blogPost.datePublished,
-          author: config.blogPost.author,
-          image: config.blogPost.image
-        }));
+        schemas.push(
+          generateSpeakableArticleSchema({
+            headline: config.blogPost.title,
+            description: config.blogPost.description,
+            url: config.blogPost.url,
+            datePublished: config.blogPost.datePublished,
+            author: config.blogPost.author,
+            image: config.blogPost.image,
+          })
+        )
         // Author schema
-        schemas.push(generateAuthorSchema(config.blogPost.author));
+        schemas.push(generateAuthorSchema(config.blogPost.author))
       }
-      break;
+      break
 
     case 'contact':
-      schemas.push(generateBreadcrumbSchema(breadcrumbPaths.contact));
-      break;
+      schemas.push(generateBreadcrumbSchema(breadcrumbPaths.contact))
+      break
 
     case 'about':
-      schemas.push(generateBreadcrumbSchema(breadcrumbPaths.about));
-      schemas.push(...generateAllFacultySchemas());
-      break;
+      schemas.push(generateBreadcrumbSchema(breadcrumbPaths.about))
+      schemas.push(...generateAllFacultySchemas())
+      break
   }
 
   // Add city-specific breadcrumbs if applicable
   if (config.cityPage) {
-    schemas.push(generateBreadcrumbSchema(generateCityBreadcrumb(config.cityPage.name, config.cityPage.slug)));
+    schemas.push(
+      generateBreadcrumbSchema(generateCityBreadcrumb(config.cityPage.name, config.cityPage.slug))
+    )
   }
 
-  return schemas;
+  return schemas
 }
 
 /**
@@ -152,16 +191,16 @@ export function SchemaScript({ schemas }: { schemas: object[] }) {
         />
       ))}
     </>
-  );
+  )
 }
 
 /**
  * Generate complete schema string for server-side rendering
  */
 export function generateSchemaString(schemas: object[]): string {
-  return schemas.map(schema =>
-    `<script type="application/ld+json">${JSON.stringify(schema)}</script>`
-  ).join('\n');
+  return schemas
+    .map((schema) => `<script type="application/ld+json">${JSON.stringify(schema)}</script>`)
+    .join('\n')
 }
 
 /**
@@ -177,8 +216,8 @@ export function getAllSiteSchemas(): Record<string, object[]> {
     demo: generatePageSchemas({ page: 'demo' }),
     blog: generatePageSchemas({ page: 'blog' }),
     contact: generatePageSchemas({ page: 'contact' }),
-    about: generatePageSchemas({ page: 'about' })
-  };
+    about: generatePageSchemas({ page: 'about' }),
+  }
 }
 
 // Example usage in app/page.tsx (homepage):

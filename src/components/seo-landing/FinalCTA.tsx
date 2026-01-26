@@ -90,13 +90,17 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
               className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20"
             >
               <Phone className="h-4 w-4" />
-              Call: {contactButtons?.phone ? phoneNumber.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3') : getDisplayPhone()}
+              Call:{' '}
+              {contactButtons?.phone
+                ? phoneNumber.replace(/(\d{2})(\d{5})(\d{5})/, '+$1 $2 $3')
+                : getDisplayPhone()}
             </a>
 
             {whatsappLink && (
               <a
                 href={whatsappLink}
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full bg-green-600/20 px-5 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-all hover:bg-green-600/30"
               >
                 <MessageCircle className="h-4 w-4" />

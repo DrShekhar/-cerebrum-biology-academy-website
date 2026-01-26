@@ -100,7 +100,15 @@ export interface RecordXpEventParams {
  * Record an XP event and update user's total points
  */
 export async function recordXpEvent(params: RecordXpEventParams): Promise<XpEvent> {
-  const { userId, eventType, xpAmount, description, metadata = {}, relatedEntityId, relatedEntityType } = params
+  const {
+    userId,
+    eventType,
+    xpAmount,
+    description,
+    metadata = {},
+    relatedEntityId,
+    relatedEntityType,
+  } = params
 
   const [event] = await prisma.$transaction([
     prisma.gamification_xp_events.create({

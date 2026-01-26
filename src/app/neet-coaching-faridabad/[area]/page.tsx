@@ -809,9 +809,24 @@ export default function FaridabadAreaPage() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'Faridabad', item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad' },
-              { '@type': 'ListItem', position: 3, name: area.name, item: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}` },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Faridabad',
+                item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: area.name,
+                item: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
+              },
             ],
           }),
         }}

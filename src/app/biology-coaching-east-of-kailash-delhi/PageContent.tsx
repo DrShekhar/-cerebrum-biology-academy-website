@@ -57,17 +57,20 @@ const whyChooseUs = [
   {
     icon: School,
     title: 'DPS EOK Expertise',
-    description: 'Deep understanding of DPS curriculum and NEET sync - ideal for DPS East of Kailash students.',
+    description:
+      'Deep understanding of DPS curriculum and NEET sync - ideal for DPS East of Kailash students.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from DPS EOK, GK, and other South Delhi schools.',
+    description:
+      'Proven track record with students from DPS EOK, GK, and other South Delhi schools.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience teaching DPS students.',
+    description:
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience teaching DPS students.',
   },
   {
     icon: Star,
@@ -120,7 +123,8 @@ export default function PageContent() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Cerebrum Biology Academy - Biology Coaching East of Kailash',
-    description: 'Best Biology Coaching for East of Kailash students - DPS EOK Expert, NEET & Board Preparation',
+    description:
+      'Best Biology Coaching for East of Kailash students - DPS EOK Expert, NEET & Board Preparation',
     url: 'https://cerebrumbiologyacademy.com/biology-coaching-east-of-kailash-delhi',
     telephone: '+91-88264-44334',
     address: {
@@ -129,7 +133,13 @@ export default function PageContent() {
       addressRegion: 'Uttar Pradesh',
       addressCountry: 'IN',
     },
-    areaServed: ['East of Kailash', 'Greater Kailash', 'Nehru Place', 'Kailash Colony', 'Defence Colony'],
+    areaServed: [
+      'East of Kailash',
+      'Greater Kailash',
+      'Nehru Place',
+      'Kailash Colony',
+      'Defence Colony',
+    ],
     priceRange: '$$',
   }
 
@@ -160,8 +170,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Coaching in{' '}
-              <span className="text-yellow-400">East of Kailash</span>
+              Biology Coaching in <span className="text-yellow-400">East of Kailash</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +178,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium Biology coaching for DPS EOK, Greater Kailash, Nehru Place & South Delhi students.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - expert in DPS curriculum sync.
+              Premium Biology coaching for DPS EOK, Greater Kailash, Nehru Place & South Delhi
+              students. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - expert in
+              DPS curriculum sync.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +208,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20East%20of%20Kailash%20and%20interested%20in%20Biology%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +385,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20East%20of%20Kailash%20and%20interested%20in%20Biology%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

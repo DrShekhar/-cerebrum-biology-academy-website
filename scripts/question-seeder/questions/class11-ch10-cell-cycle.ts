@@ -211,12 +211,7 @@ export const chapter10Questions: ChapterQuestionSet = {
     {
       question: 'Cytokinesis in plant cells occurs by:',
       type: 'MCQ',
-      options: [
-        'Cell plate formation',
-        'Cleavage furrow',
-        'Budding',
-        'Binary fission',
-      ],
+      options: ['Cell plate formation', 'Cleavage furrow', 'Budding', 'Binary fission'],
       correctAnswer: 'Cell plate formation',
       explanation:
         'In plant cells, cytokinesis occurs by formation of a cell plate from the center outward. Vesicles from Golgi apparatus fuse to form the cell plate, which develops into the new cell wall.',
@@ -236,12 +231,7 @@ export const chapter10Questions: ChapterQuestionSet = {
     {
       question: 'Cytokinesis in animal cells occurs by:',
       type: 'MCQ',
-      options: [
-        'Cleavage furrow',
-        'Cell plate formation',
-        'Budding',
-        'Fragmentation',
-      ],
+      options: ['Cleavage furrow', 'Cell plate formation', 'Budding', 'Fragmentation'],
       correctAnswer: 'Cleavage furrow',
       explanation:
         'In animal cells, cytokinesis occurs by formation of a cleavage furrow (constriction) from outside inward. Actin and myosin filaments contract to pinch the cell into two daughter cells.',
@@ -424,7 +414,8 @@ export const chapter10Questions: ChapterQuestionSet = {
 
     // ==================== CHROMOSOME STRUCTURE ====================
     {
-      question: 'Based on centromere position, a chromosome with centromere in the middle is called:',
+      question:
+        'Based on centromere position, a chromosome with centromere in the middle is called:',
       type: 'MCQ',
       options: ['Metacentric', 'Submetacentric', 'Acrocentric', 'Telocentric'],
       correctAnswer: 'Metacentric',
@@ -517,12 +508,7 @@ export const chapter10Questions: ChapterQuestionSet = {
     {
       question: 'Cell cycle is regulated by:',
       type: 'MCQ',
-      options: [
-        'Cyclins and CDKs',
-        'Only cyclins',
-        'Only CDKs',
-        'Histones',
-      ],
+      options: ['Cyclins and CDKs', 'Only cyclins', 'Only CDKs', 'Histones'],
       correctAnswer: 'Cyclins and CDKs',
       explanation:
         'Cell cycle is regulated by cyclins (regulatory proteins) and CDKs (cyclin-dependent kinases). Different cyclin-CDK complexes control progression through different phases of the cell cycle.',
@@ -678,7 +664,12 @@ export const chapter10Questions: ChapterQuestionSet = {
     {
       question: 'A cell with 20 chromosomes undergoes mitosis. The daughter cells will have:',
       type: 'MCQ',
-      options: ['20 chromosomes each', '10 chromosomes each', '40 chromosomes each', '5 chromosomes each'],
+      options: [
+        '20 chromosomes each',
+        '10 chromosomes each',
+        '40 chromosomes each',
+        '5 chromosomes each',
+      ],
       correctAnswer: '20 chromosomes each',
       explanation:
         'Mitosis maintains chromosome number. If a parent cell has 20 chromosomes, each daughter cell will also have 20 chromosomes (equational division).',
@@ -697,7 +688,12 @@ export const chapter10Questions: ChapterQuestionSet = {
     {
       question: 'A cell with 20 chromosomes undergoes meiosis. The gametes will have:',
       type: 'MCQ',
-      options: ['10 chromosomes each', '20 chromosomes each', '40 chromosomes each', '5 chromosomes each'],
+      options: [
+        '10 chromosomes each',
+        '20 chromosomes each',
+        '40 chromosomes each',
+        '5 chromosomes each',
+      ],
       correctAnswer: '10 chromosomes each',
       explanation:
         'Meiosis reduces chromosome number by half. If a diploid cell has 20 chromosomes (2n=20), the resulting haploid gametes will have 10 chromosomes each (n=10).',

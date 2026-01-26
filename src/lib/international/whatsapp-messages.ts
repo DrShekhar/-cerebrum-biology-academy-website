@@ -22,11 +22,10 @@ export interface CountryMessages {
 export const countryWhatsAppMessages: Record<CountryCode, CountryMessages> = {
   us: {
     default: "Hi! I'm a student in the US interested in biology tutoring.",
-    booking:
-      "Hi! I'd like to book a free demo class (US timezone - EST/PST).",
+    booking: "Hi! I'd like to book a free demo class (US timezone - EST/PST).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for US students. Can you share details about pricing and schedules?",
-    exam: "Hi! I need help with AP Biology / MCAT preparation. What courses do you offer?",
+    exam: 'Hi! I need help with AP Biology / MCAT preparation. What courses do you offer?',
   },
 
   uk: {
@@ -34,7 +33,7 @@ export const countryWhatsAppMessages: Record<CountryCode, CountryMessages> = {
     booking: "Hi! I'd like to book a free demo class (UK timezone - GMT/BST).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for UK students. Can you share details about GCSE and A-Level prep?",
-    exam: "Hi! I need help with GCSE / A-Level / BMAT preparation. What support do you offer?",
+    exam: 'Hi! I need help with GCSE / A-Level / BMAT preparation. What support do you offer?',
   },
 
   ca: {
@@ -42,25 +41,23 @@ export const countryWhatsAppMessages: Record<CountryCode, CountryMessages> = {
     booking: "Hi! I'd like to book a free demo class (Canadian timezone).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for Canadian students. Can you share details?",
-    exam: "Hi! I need help with provincial biology exams / MCAT preparation. Do you have courses for this?",
+    exam: 'Hi! I need help with provincial biology exams / MCAT preparation. Do you have courses for this?',
   },
 
   au: {
     default: "Hi! I'm a student in Australia interested in biology tutoring.",
-    booking:
-      "Hi! I'd like to book a free demo class (Australian timezone - AEST).",
+    booking: "Hi! I'd like to book a free demo class (Australian timezone - AEST).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for Australian students. Can you share details about HSC/VCE prep?",
-    exam: "Hi! I need help with HSC / VCE / QCE Biology preparation. What courses do you offer?",
+    exam: 'Hi! I need help with HSC / VCE / QCE Biology preparation. What courses do you offer?',
   },
 
   sg: {
     default: "Hi! I'm a student in Singapore interested in biology tutoring.",
-    booking:
-      "Hi! I'd like to book a free demo class (Singapore timezone - SGT).",
+    booking: "Hi! I'd like to book a free demo class (Singapore timezone - SGT).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for Singapore students. Can you share details about O-Level and A-Level prep?",
-    exam: "Hi! I need help with GCE O-Level / A-Level / Singapore Biology Olympiad preparation.",
+    exam: 'Hi! I need help with GCE O-Level / A-Level / Singapore Biology Olympiad preparation.',
   },
 
   ae: {
@@ -68,7 +65,7 @@ export const countryWhatsAppMessages: Record<CountryCode, CountryMessages> = {
     booking: "Hi! I'd like to book a free demo class (UAE timezone - GST).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for UAE students. Can you share details about IGCSE/IB prep?",
-    exam: "Hi! I need help with IGCSE / IB / American curriculum biology. What do you offer?",
+    exam: 'Hi! I need help with IGCSE / IB / American curriculum biology. What do you offer?',
   },
 
   ie: {
@@ -76,35 +73,31 @@ export const countryWhatsAppMessages: Record<CountryCode, CountryMessages> = {
     booking: "Hi! I'd like to book a free demo class (Irish timezone - IST).",
     courseEnquiry:
       "Hi! I'm interested in your biology grinds for Irish students. Can you share details about Leaving Cert prep?",
-    exam: "Hi! I need help with Leaving Certificate Biology preparation. Do you offer grinds for this?",
+    exam: 'Hi! I need help with Leaving Certificate Biology preparation. Do you offer grinds for this?',
   },
 
   hk: {
     default: "Hi! I'm a student in Hong Kong interested in biology tutoring.",
-    booking:
-      "Hi! I'd like to book a free demo class (Hong Kong timezone - HKT).",
+    booking: "Hi! I'd like to book a free demo class (Hong Kong timezone - HKT).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for Hong Kong students. Can you share details about HKDSE prep?",
-    exam: "Hi! I need help with HKDSE / IGCSE / A-Level Biology preparation. What courses are available?",
+    exam: 'Hi! I need help with HKDSE / IGCSE / A-Level Biology preparation. What courses are available?',
   },
 
   nz: {
     default: "Hi! I'm a student in New Zealand interested in biology tutoring.",
-    booking:
-      "Hi! I'd like to book a free demo class (New Zealand timezone - NZST).",
+    booking: "Hi! I'd like to book a free demo class (New Zealand timezone - NZST).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for NZ students. Can you share details about NCEA prep?",
-    exam: "Hi! I need help with NCEA Biology preparation (Level 1/2/3). What do you offer?",
+    exam: 'Hi! I need help with NCEA Biology preparation (Level 1/2/3). What do you offer?',
   },
 
   za: {
-    default:
-      "Hi! I'm a student in South Africa interested in biology tutoring.",
-    booking:
-      "Hi! I'd like to book a free demo class (South African timezone - SAST).",
+    default: "Hi! I'm a student in South Africa interested in biology tutoring.",
+    booking: "Hi! I'd like to book a free demo class (South African timezone - SAST).",
     courseEnquiry:
       "Hi! I'm interested in your biology courses for South African students. Can you share details?",
-    exam: "Hi! I need help with NSC / IEB Life Sciences preparation. Do you have courses for Matric?",
+    exam: 'Hi! I need help with NSC / IEB Life Sciences preparation. Do you have courses for Matric?',
   },
 }
 
@@ -185,7 +178,7 @@ export function getExamSpecificMessage(countryCode: string): string {
   const country = COUNTRIES[normalizedCode]
 
   if (!country) {
-    return "Hi! I need help with biology exam preparation."
+    return 'Hi! I need help with biology exam preparation.'
   }
 
   const primaryExam = country.examSystems[0]

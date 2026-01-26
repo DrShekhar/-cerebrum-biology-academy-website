@@ -91,8 +91,13 @@ const parsers: Record<LeadSource, (payload: SourcePayload) => ParsedLead> = {
     return {
       studentName: getString(payload.name) || getString(payload.customer_name) || 'Unknown',
       email: getString(payload.email),
-      phone: getString(payload.phone) || getString(payload.mobile) || getString(payload.contact_number) || '',
-      courseInterest: getString(payload.requirement) || getString(payload.course) || 'Biology Coaching',
+      phone:
+        getString(payload.phone) ||
+        getString(payload.mobile) ||
+        getString(payload.contact_number) ||
+        '',
+      courseInterest:
+        getString(payload.requirement) || getString(payload.course) || 'Biology Coaching',
       city: getString(payload.city) || getString(payload.location),
       grade: getString(payload.class) || getString(payload.student_class),
       message: getString(payload.message) || getString(payload.description),
@@ -113,7 +118,8 @@ const parsers: Record<LeadSource, (payload: SourcePayload) => ParsedLead> = {
       studentName: getString(payload.name) || getString(payload.customer_name) || 'Unknown',
       email: getString(payload.email),
       phone: getString(payload.phone) || getString(payload.mobile) || '',
-      courseInterest: getString(payload.requirement) || getString(payload.service_required) || 'Biology Coaching',
+      courseInterest:
+        getString(payload.requirement) || getString(payload.service_required) || 'Biology Coaching',
       city: getString(payload.city) || getString(payload.area),
       grade: getString(payload.class),
       message: getString(payload.query) || getString(payload.message),
@@ -137,7 +143,8 @@ const parsers: Record<LeadSource, (payload: SourcePayload) => ParsedLead> = {
       studentName: getString(formData.full_name) || getString(formData.name) || 'Unknown',
       email: getString(formData.email),
       phone: getString(formData.phone_number) || getString(formData.phone) || '',
-      courseInterest: getString(formData.course) || getString(formData.interested_in) || 'Biology Coaching',
+      courseInterest:
+        getString(formData.course) || getString(formData.interested_in) || 'Biology Coaching',
       city: getString(formData.city),
       grade: getString(formData.class) || getString(formData.grade),
       message: getString(formData.message) || getString(formData.comments),
@@ -234,7 +241,8 @@ const parsers: Record<LeadSource, (payload: SourcePayload) => ParsedLead> = {
       studentName: getString(payload.name) || getString(payload.studentName) || 'Unknown',
       email: getString(payload.email),
       phone: getString(payload.phone) || getString(payload.mobile) || '',
-      courseInterest: getString(payload.course) || getString(payload.interest) || 'Biology Coaching',
+      courseInterest:
+        getString(payload.course) || getString(payload.interest) || 'Biology Coaching',
       city: getString(payload.city),
       grade: getString(payload.grade) || getString(payload.class),
       message: getString(payload.message) || getString(payload.notes),

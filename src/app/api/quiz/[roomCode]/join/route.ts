@@ -43,10 +43,7 @@ export async function POST(
     }
 
     if (!body.name || body.name.trim().length === 0) {
-      return NextResponse.json(
-        { success: false, error: 'Name is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Name is required' }, { status: 400 })
     }
 
     const trimmedName = body.name.trim()
@@ -72,10 +69,7 @@ export async function POST(
     })
 
     if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz session not found' }, { status: 404 })
     }
 
     if (session.status === 'COMPLETED') {
@@ -178,7 +172,10 @@ export async function POST(
     if (error instanceof Error) {
       if (error.message.includes('QUIZ_PARTICIPANT_SECRET')) {
         return NextResponse.json(
-          { success: false, error: 'Server configuration error. Please contact the administrator.' },
+          {
+            success: false,
+            error: 'Server configuration error. Please contact the administrator.',
+          },
           { status: 500 }
         )
       }

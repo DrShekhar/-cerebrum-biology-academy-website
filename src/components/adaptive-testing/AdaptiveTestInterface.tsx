@@ -25,7 +25,7 @@ import {
   Zap,
   Eye,
   BookOpen,
-  Gauge
+  Gauge,
 } from 'lucide-react'
 
 // Types
@@ -107,7 +107,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
   testConfiguration,
   onTestComplete,
   onTestPause,
-  onTestResume
+  onTestResume,
 }) => {
   // State management
   const [session, setSession] = useState<AdaptiveTestSession | null>(null)
@@ -138,7 +138,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
   useEffect(() => {
     if (testStarted && timeRemaining > 0) {
       timerRef.current = setInterval(() => {
-        setTimeRemaining(prev => {
+        setTimeRemaining((prev) => {
           if (prev <= 1) {
             handleTimeUp()
             return 0
@@ -172,7 +172,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
       const createResponse = await fetch('/api/adaptive-testing/create-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(testConfiguration)
+        body: JSON.stringify(testConfiguration),
       })
 
       if (!createResponse.ok) {
@@ -187,7 +187,6 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
 
       setSession(createData.session)
       setTimeRemaining(testConfiguration.timeLimit * 60) // Convert to seconds
-
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to initialize test')
     } finally {
@@ -203,7 +202,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
 
     try {
       const response = await fetch(`/api/adaptive-testing/${session.id}/start`, {
-        method: 'POST'
+        method: 'POST',
       })
 
       if (!response.ok) {
@@ -224,7 +223,6 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
 
       // Initial analytics fetch
       await fetchAnalytics()
-
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to start test')
     } finally {
@@ -249,8 +247,8 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
           itemId: currentItem.id,
           response: isCorrect,
           responseTime,
-          confidence
-        })
+          confidence,
+        }),
       })
 
       if (!response.ok) {
@@ -283,7 +281,6 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
 
       // Update analytics
       await fetchAnalytics()
-
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to submit response')
     } finally {
@@ -315,7 +312,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
 
     try {
       const response = await fetch(`/api/adaptive-testing/${session.id}/complete`, {
-        method: 'POST'
+        method: 'POST',
       })
 
       if (!response.ok) {
@@ -329,7 +326,6 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
       } else {
         throw new Error(data.error || 'Failed to complete test')
       }
-
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to complete test')
     } finally {
@@ -446,7 +442,9 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
             </div>
             <div className="text-center p-4 bg-orange-50 rounded-lg">
               <Activity className="w-6 h-6 mx-auto mb-2 text-orange-600" />
-              <div className="font-medium">{testConfiguration.minItems}-{testConfiguration.maxItems}</div>
+              <div className="font-medium">
+                {testConfiguration.minItems}-{testConfiguration.maxItems}
+              </div>
               <div className="text-sm text-gray-600">Questions</div>
             </div>
           </div>
@@ -516,7 +514,9 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
 
             {/* Time */}
             <div className="flex items-center gap-2">
-              <Timer className={`w-5 h-5 ${timeRemaining < 300 ? 'text-red-600' : 'text-green-600'}`} />
+              <Timer
+                className={`w-5 h-5 ${timeRemaining < 300 ? 'text-red-600' : 'text-green-600'}`}
+              />
               <div>
                 <div className="font-medium">{formatTime(timeRemaining)}</div>
                 <div className="text-sm text-gray-600">Remaining</div>
@@ -528,7 +528,9 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
               <div className="flex items-center gap-2">
                 <Gauge className="w-5 h-5 text-purple-600" />
                 <div>
-                  <div className="font-medium">{getAbilityLevel(analytics.performance.currentAbility)}</div>
+                  <div className="font-medium">
+                    {getAbilityLevel(analytics.performance.currentAbility)}
+                  </div>
                   <div className="text-sm text-gray-600">Current Level</div>
                 </div>
               </div>
@@ -586,21 +588,26 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
                 {/* Question Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center gap-3">
-                    <div className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      currentItem.difficulty > 0.5 ? 'bg-red-100 text-red-700' :
-                      currentItem.difficulty > 0 ? 'bg-yellow-100 text-yellow-700' :
-                      'bg-green-100 text-green-700'
-                    }`}>
-                      {currentItem.difficulty > 0.5 ? 'Hard' :
-                       currentItem.difficulty > 0 ? 'Medium' : 'Easy'}
+                    <div
+                      className={`px-3 py-1 rounded-full text-sm font-medium ${
+                        currentItem.difficulty > 0.5
+                          ? 'bg-red-100 text-red-700'
+                          : currentItem.difficulty > 0
+                            ? 'bg-yellow-100 text-yellow-700'
+                            : 'bg-green-100 text-green-700'
+                      }`}
+                    >
+                      {currentItem.difficulty > 0.5
+                        ? 'Hard'
+                        : currentItem.difficulty > 0
+                          ? 'Medium'
+                          : 'Easy'}
                     </div>
                     <div className="text-sm text-gray-600">
                       {currentItem.topic} • {currentItem.subtopic}
                     </div>
                   </div>
-                  <div className="text-sm text-gray-600">
-                    ~{currentItem.estimatedTime} min
-                  </div>
+                  <div className="text-sm text-gray-600">~{currentItem.estimatedTime} min</div>
                 </div>
 
                 {/* Question */}
@@ -627,9 +634,7 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
                             onChange={(e) => setSelectedAnswer(e.target.value)}
                             className="w-4 h-4 text-blue-600"
                           />
-                          <span className="font-medium">
-                            {String.fromCharCode(65 + index)}.
-                          </span>
+                          <span className="font-medium">{String.fromCharCode(65 + index)}.</span>
                           <span>{option}</span>
                         </label>
                       ))}
@@ -750,7 +755,10 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
                     <div className="text-sm text-gray-600 mb-1">Strong Areas</div>
                     <div className="flex flex-wrap gap-1">
                       {analytics.progress.masteryAreas.slice(0, 3).map((area, index) => (
-                        <span key={index} className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded"
+                        >
                           {area}
                         </span>
                       ))}
@@ -762,7 +770,10 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
                     <div className="text-sm text-gray-600 mb-1">Focus Areas</div>
                     <div className="flex flex-wrap gap-1">
                       {analytics.progress.strugglingAreas.slice(0, 3).map((area, index) => (
-                        <span key={index} className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded">
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded"
+                        >
                           {area}
                         </span>
                       ))}
@@ -813,11 +824,15 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600">Time Remaining</span>
-                  <span className="font-medium">{Math.round(analytics.predictions.timeRemaining)} min</span>
+                  <span className="font-medium">
+                    {Math.round(analytics.predictions.timeRemaining)} min
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-gray-600">Success Rate</span>
-                  <span className="font-medium">{Math.round(analytics.predictions.successProbability * 100)}%</span>
+                  <span className="font-medium">
+                    {Math.round(analytics.predictions.successProbability * 100)}%
+                  </span>
                 </div>
               </div>
             </div>

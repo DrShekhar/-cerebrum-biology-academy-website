@@ -204,13 +204,17 @@ export default function ReportsPage() {
                 label="Pending Tasks"
                 value={data.summary.pending.total.toString()}
                 subtext={`${data.summary.pending.assignments}A / ${data.summary.pending.tests}T / ${data.summary.pending.worksheets}W`}
-                color={data.summary.pending.total > 0 ? 'bg-gradient-to-br from-red-500 to-orange-600' : 'bg-gradient-to-br from-green-500 to-teal-600'}
+                color={
+                  data.summary.pending.total > 0
+                    ? 'bg-gradient-to-br from-red-500 to-orange-600'
+                    : 'bg-gradient-to-br from-green-500 to-teal-600'
+                }
               />
               <SummaryCard
                 icon={<Clock className="w-6 h-6" />}
                 label="Study Hours"
                 value={`${data.summary.studyHours}h`}
-                subtext={`${Math.round(data.summary.studyHours / data.summary.period.days * 10) / 10}h/day avg`}
+                subtext={`${Math.round((data.summary.studyHours / data.summary.period.days) * 10) / 10}h/day avg`}
                 color="bg-gradient-to-br from-teal-500 to-cyan-600"
               />
               <SummaryCard
@@ -369,7 +373,7 @@ export default function ReportsPage() {
                               />
                             </td>
                             <td className="py-3 px-4 text-center text-gray-600">
-                              {Math.round(record.studyMinutes / 60 * 10) / 10}h
+                              {Math.round((record.studyMinutes / 60) * 10) / 10}h
                             </td>
                           </motion.tr>
                         ))}
@@ -426,9 +430,7 @@ function SummaryCard({
           <div className="text-sm opacity-90">{label}</div>
         </div>
       </div>
-      {subtext && (
-        <div className="px-4 py-2 bg-gray-50 text-xs text-gray-600">{subtext}</div>
-      )}
+      {subtext && <div className="px-4 py-2 bg-gray-50 text-xs text-gray-600">{subtext}</div>}
     </motion.div>
   )
 }
@@ -463,10 +465,12 @@ function CategoryProgress({
           {icon}
           <span>{label}</span>
         </div>
-        <span className={cn(
-          'text-sm font-semibold',
-          rate >= 80 ? 'text-green-600' : rate >= 60 ? 'text-yellow-600' : 'text-red-600'
-        )}>
+        <span
+          className={cn(
+            'text-sm font-semibold',
+            rate >= 80 ? 'text-green-600' : rate >= 60 ? 'text-yellow-600' : 'text-red-600'
+          )}
+        >
           {rate}%
         </span>
       </div>
@@ -480,7 +484,9 @@ function CategoryProgress({
       </div>
       <div className="flex justify-between text-xs text-gray-500">
         <span>Assigned: {assigned}</span>
-        <span>{submittedLabel}: {submitted}</span>
+        <span>
+          {submittedLabel}: {submitted}
+        </span>
         <span>Checked: {checked}</span>
       </div>
     </div>

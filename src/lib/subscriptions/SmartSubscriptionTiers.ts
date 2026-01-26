@@ -398,7 +398,10 @@ export function hasCoachingFeature(
 }
 
 // Helper function to compare tiers
-export function compareTiers(tier1: CoachingSubscriptionTier, tier2: CoachingSubscriptionTier): number {
+export function compareTiers(
+  tier1: CoachingSubscriptionTier,
+  tier2: CoachingSubscriptionTier
+): number {
   const order = [
     CoachingSubscriptionTier.FREE,
     CoachingSubscriptionTier.PURSUIT,

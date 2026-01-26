@@ -6,14 +6,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import {
-  Calendar,
-  Clock,
-  Video,
-  MapPin,
-  ChevronRight,
-  BookOpen,
-} from 'lucide-react'
+import { Calendar, Clock, Video, MapPin, ChevronRight, BookOpen } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'

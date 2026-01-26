@@ -2,15 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Lock,
-  FileText,
-  ArrowRight,
-  ArrowLeft,
-  Loader2,
-  AlertCircle,
-  Clock,
-} from 'lucide-react'
+import { Lock, FileText, ArrowRight, ArrowLeft, Loader2, AlertCircle, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 const OMR_PASSWORD = '156265'

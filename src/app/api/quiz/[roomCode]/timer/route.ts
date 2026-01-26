@@ -40,10 +40,7 @@ export async function POST(
     const { roomCode } = await params
 
     if (!roomCode || roomCode.length !== 6) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid room code' }, { status: 400 })
     }
 
     const authResult = await verifyHostToken(request, roomCode)
@@ -102,10 +99,7 @@ export async function POST(
     if ('teamDiscussing' in body) {
       const { teamDiscussing } = body as DiscussionUpdate
       if (teamDiscussing !== null && !['TEAM_A', 'TEAM_B'].includes(teamDiscussing)) {
-        return NextResponse.json(
-          { success: false, error: 'Invalid team' },
-          { status: 400 }
-        )
+        return NextResponse.json({ success: false, error: 'Invalid team' }, { status: 400 })
       }
 
       const updated = await prisma.quiz_sessions.update({
@@ -125,17 +119,11 @@ export async function POST(
     const { action, timerType } = body as TimerAction
 
     if (!action || !['start', 'stop', 'reset'].includes(action)) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid action' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid action' }, { status: 400 })
     }
 
     if (!timerType || !['question', 'answer'].includes(timerType)) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid timer type' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid timer type' }, { status: 400 })
     }
 
     let updateData: {
@@ -189,9 +177,6 @@ export async function POST(
     })
   } catch (error) {
     console.error('Error handling timer:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to update timer' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to update timer' }, { status: 500 })
   }
 }

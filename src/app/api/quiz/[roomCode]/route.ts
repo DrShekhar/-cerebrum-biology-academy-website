@@ -27,10 +27,7 @@ export async function GET(
     const { roomCode } = await params
 
     if (!roomCode || roomCode.length !== 6) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid room code' }, { status: 400 })
     }
 
     const session = await prisma.quiz_sessions.findUnique({
@@ -47,10 +44,7 @@ export async function GET(
     })
 
     if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz session not found' }, { status: 404 })
     }
 
     return NextResponse.json(
@@ -136,10 +130,7 @@ export async function PATCH(
     const body = await request.json()
 
     if (!roomCode || roomCode.length !== 6) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid room code' }, { status: 400 })
     }
 
     const authResult = await verifyHostToken(request, roomCode)

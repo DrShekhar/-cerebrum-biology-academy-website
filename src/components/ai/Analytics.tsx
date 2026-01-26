@@ -21,7 +21,7 @@ import {
   Info,
   Layers,
   Trophy,
-  Gauge
+  Gauge,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -124,7 +124,9 @@ interface AnalyticsData {
 }
 
 const Analytics: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'scores' | 'difficulty' | 'time' | 'topics' | 'outcomes' | 'history'>('scores')
+  const [activeTab, setActiveTab] = useState<
+    'scores' | 'difficulty' | 'time' | 'topics' | 'outcomes' | 'history'
+  >('scores')
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData | null>(null)
   const [loading, setLoading] = useState(false)
   const [selectedTest, setSelectedTest] = useState('current')
@@ -150,7 +152,7 @@ const Analytics: React.FC = () => {
           { range: '61-70%', count: 6, percentage: 9.7, expectedCount: 8, actualCount: 6 },
           { range: '71-80%', count: 3, percentage: 4.8, expectedCount: 4, actualCount: 3 },
           { range: '81-90%', count: 1, percentage: 1.6, expectedCount: 2, actualCount: 1 },
-          { range: '91-100%', count: 0, percentage: 0, expectedCount: 1, actualCount: 0 }
+          { range: '91-100%', count: 0, percentage: 0, expectedCount: 1, actualCount: 0 },
         ],
         difficultyAnalysis: [
           {
@@ -161,7 +163,7 @@ const Analytics: React.FC = () => {
             averageTime: 45,
             discriminationIndex: 0.65,
             recommendedPercentage: 30,
-            status: 'optimal'
+            status: 'optimal',
           },
           {
             level: 'medium',
@@ -171,7 +173,7 @@ const Analytics: React.FC = () => {
             averageTime: 75,
             discriminationIndex: 0.72,
             recommendedPercentage: 50,
-            status: 'optimal'
+            status: 'optimal',
           },
           {
             level: 'hard',
@@ -181,8 +183,8 @@ const Analytics: React.FC = () => {
             averageTime: 120,
             discriminationIndex: 0.58,
             recommendedPercentage: 20,
-            status: 'optimal'
-          }
+            status: 'optimal',
+          },
         ],
         timeEstimation: {
           totalEstimatedTime: 180,
@@ -194,13 +196,31 @@ const Analytics: React.FC = () => {
             { range: '111-130 min', count: 15, percentage: 24.2 },
             { range: '131-150 min', count: 20, percentage: 32.3 },
             { range: '151-170 min', count: 12, percentage: 19.4 },
-            { range: '171-180 min', count: 7, percentage: 11.3 }
+            { range: '171-180 min', count: 7, percentage: 11.3 },
           ],
           questionTimeBreakdown: [
-            { questionId: 'q1', estimatedTime: 2, actualAverageTime: 2.3, difficulty: 'easy', topic: 'Cell Biology' },
-            { questionId: 'q2', estimatedTime: 3, actualAverageTime: 3.8, difficulty: 'medium', topic: 'Genetics' },
-            { questionId: 'q3', estimatedTime: 5, actualAverageTime: 4.2, difficulty: 'hard', topic: 'Evolution' }
-          ]
+            {
+              questionId: 'q1',
+              estimatedTime: 2,
+              actualAverageTime: 2.3,
+              difficulty: 'easy',
+              topic: 'Cell Biology',
+            },
+            {
+              questionId: 'q2',
+              estimatedTime: 3,
+              actualAverageTime: 3.8,
+              difficulty: 'medium',
+              topic: 'Genetics',
+            },
+            {
+              questionId: 'q3',
+              estimatedTime: 5,
+              actualAverageTime: 4.2,
+              difficulty: 'hard',
+              topic: 'Evolution',
+            },
+          ],
         },
         topicBalance: [
           {
@@ -212,7 +232,7 @@ const Analytics: React.FC = () => {
             recommendedPercentage: 25,
             status: 'balanced',
             averageScore: 72.4,
-            difficultyDistribution: { easy: 4, medium: 6, hard: 2 }
+            difficultyDistribution: { easy: 4, medium: 6, hard: 2 },
           },
           {
             topic: 'Genetics',
@@ -223,7 +243,7 @@ const Analytics: React.FC = () => {
             recommendedPercentage: 20,
             status: 'balanced',
             averageScore: 68.7,
-            difficultyDistribution: { easy: 3, medium: 5, hard: 2 }
+            difficultyDistribution: { easy: 3, medium: 5, hard: 2 },
           },
           {
             topic: 'Human Physiology',
@@ -234,7 +254,7 @@ const Analytics: React.FC = () => {
             recommendedPercentage: 25,
             status: 'overrepresented',
             averageScore: 65.2,
-            difficultyDistribution: { easy: 5, medium: 8, hard: 2 }
+            difficultyDistribution: { easy: 5, medium: 8, hard: 2 },
           },
           {
             topic: 'Ecology',
@@ -245,7 +265,7 @@ const Analytics: React.FC = () => {
             recommendedPercentage: 20,
             status: 'underrepresented',
             averageScore: 58.9,
-            difficultyDistribution: { easy: 2, medium: 4, hard: 2 }
+            difficultyDistribution: { easy: 2, medium: 4, hard: 2 },
           },
           {
             topic: 'Evolution',
@@ -256,8 +276,8 @@ const Analytics: React.FC = () => {
             recommendedPercentage: 10,
             status: 'balanced',
             averageScore: 54.3,
-            difficultyDistribution: { easy: 1, medium: 2, hard: 2 }
-          }
+            difficultyDistribution: { easy: 1, medium: 2, hard: 2 },
+          },
         ],
         learningOutcomes: [
           {
@@ -270,7 +290,7 @@ const Analytics: React.FC = () => {
             coverage: 67,
             averageScore: 74.2,
             status: 'good',
-            relatedTopics: ['Cell Biology', 'Molecular Biology']
+            relatedTopics: ['Cell Biology', 'Molecular Biology'],
           },
           {
             id: 'lo2',
@@ -282,7 +302,7 @@ const Analytics: React.FC = () => {
             coverage: 60,
             averageScore: 65.8,
             status: 'needs_improvement',
-            relatedTopics: ['Genetics', 'Molecular Biology']
+            relatedTopics: ['Genetics', 'Molecular Biology'],
           },
           {
             id: 'lo3',
@@ -294,8 +314,8 @@ const Analytics: React.FC = () => {
             coverage: 67,
             averageScore: 58.4,
             status: 'needs_improvement',
-            relatedTopics: ['Human Physiology']
-          }
+            relatedTopics: ['Human Physiology'],
+          },
         ],
         historicalComparison: [
           {
@@ -308,10 +328,10 @@ const Analytics: React.FC = () => {
             timeSpent: 155,
             topicScores: {
               'Cell Biology': 72.4,
-              'Genetics': 68.7,
-              'Human Physiology': 65.2
+              Genetics: 68.7,
+              'Human Physiology': 65.2,
             },
-            trend: 'stable'
+            trend: 'stable',
           },
           {
             testId: 'test_2',
@@ -323,10 +343,10 @@ const Analytics: React.FC = () => {
             timeSpent: 162,
             topicScores: {
               'Cell Biology': 69.1,
-              'Genetics': 65.3,
-              'Human Physiology': 62.8
+              Genetics: 65.3,
+              'Human Physiology': 62.8,
             },
-            trend: 'improving'
+            trend: 'improving',
           },
           {
             testId: 'test_3',
@@ -338,11 +358,11 @@ const Analytics: React.FC = () => {
             timeSpent: 148,
             topicScores: {
               'Cell Biology': 75.6,
-              'Genetics': 72.1,
-              'Human Physiology': 68.9
+              Genetics: 72.1,
+              'Human Physiology': 68.9,
             },
-            trend: 'declining'
-          }
+            trend: 'declining',
+          },
         ],
         overallMetrics: {
           totalQuestions: 50,
@@ -350,8 +370,8 @@ const Analytics: React.FC = () => {
           estimatedDuration: 180,
           difficultyScore: 2.3,
           balanceScore: 85,
-          outcomesCoverage: 64
-        }
+          outcomesCoverage: 64,
+        },
       }
 
       setAnalyticsData(mockData)
@@ -390,22 +410,33 @@ const Analytics: React.FC = () => {
 
   const getTrendIcon = (trend: string) => {
     switch (trend) {
-      case 'improving': return <ArrowUp className="w-4 h-4 text-green-600" />
-      case 'declining': return <ArrowDown className="w-4 h-4 text-red-600" />
-      case 'stable': return <Minus className="w-4 h-4 text-gray-600" />
-      default: return null
+      case 'improving':
+        return <ArrowUp className="w-4 h-4 text-green-600" />
+      case 'declining':
+        return <ArrowDown className="w-4 h-4 text-red-600" />
+      case 'stable':
+        return <Minus className="w-4 h-4 text-gray-600" />
+      default:
+        return null
     }
   }
 
   const getBloomsLevelColor = (level: string) => {
     switch (level.toLowerCase()) {
-      case 'remembering': return 'bg-red-100 text-red-700'
-      case 'understanding': return 'bg-orange-100 text-orange-700'
-      case 'applying': return 'bg-yellow-100 text-yellow-700'
-      case 'analyzing': return 'bg-green-100 text-green-700'
-      case 'evaluating': return 'bg-blue-100 text-blue-700'
-      case 'creating': return 'bg-purple-100 text-purple-700'
-      default: return 'bg-gray-100 text-gray-700'
+      case 'remembering':
+        return 'bg-red-100 text-red-700'
+      case 'understanding':
+        return 'bg-orange-100 text-orange-700'
+      case 'applying':
+        return 'bg-yellow-100 text-yellow-700'
+      case 'analyzing':
+        return 'bg-green-100 text-green-700'
+      case 'evaluating':
+        return 'bg-blue-100 text-blue-700'
+      case 'creating':
+        return 'bg-purple-100 text-purple-700'
+      default:
+        return 'bg-gray-100 text-gray-700'
     }
   }
 
@@ -439,7 +470,8 @@ const Analytics: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Comprehensive analytics dashboard with score predictions, difficulty analysis, time estimations, and learning outcome insights
+          Comprehensive analytics dashboard with score predictions, difficulty analysis, time
+          estimations, and learning outcome insights
         </p>
       </div>
 
@@ -448,9 +480,7 @@ const Analytics: React.FC = () => {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Test Selection
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Test Selection</label>
               <select
                 value={selectedTest}
                 onChange={(e) => setSelectedTest(e.target.value)}
@@ -463,9 +493,7 @@ const Analytics: React.FC = () => {
               </select>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Date Range
-              </label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Date Range</label>
               <select
                 value={dateRange}
                 onChange={(e) => setDateRange(e.target.value)}
@@ -499,27 +527,39 @@ const Analytics: React.FC = () => {
       {analyticsData && (
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
           <div className="bg-white p-4 rounded-xl border text-center">
-            <div className="text-2xl font-bold text-blue-600">{analyticsData.overallMetrics.totalQuestions}</div>
+            <div className="text-2xl font-bold text-blue-600">
+              {analyticsData.overallMetrics.totalQuestions}
+            </div>
             <div className="text-sm text-gray-600">Questions</div>
           </div>
           <div className="bg-white p-4 rounded-xl border text-center">
-            <div className="text-2xl font-bold text-green-600">{analyticsData.overallMetrics.totalMarks}</div>
+            <div className="text-2xl font-bold text-green-600">
+              {analyticsData.overallMetrics.totalMarks}
+            </div>
             <div className="text-sm text-gray-600">Total Marks</div>
           </div>
           <div className="bg-white p-4 rounded-xl border text-center">
-            <div className="text-2xl font-bold text-purple-600">{analyticsData.overallMetrics.estimatedDuration}m</div>
+            <div className="text-2xl font-bold text-purple-600">
+              {analyticsData.overallMetrics.estimatedDuration}m
+            </div>
             <div className="text-sm text-gray-600">Duration</div>
           </div>
           <div className="bg-white p-4 rounded-xl border text-center">
-            <div className="text-2xl font-bold text-orange-600">{analyticsData.overallMetrics.difficultyScore.toFixed(1)}</div>
+            <div className="text-2xl font-bold text-orange-600">
+              {analyticsData.overallMetrics.difficultyScore.toFixed(1)}
+            </div>
             <div className="text-sm text-gray-600">Difficulty</div>
           </div>
           <div className="bg-white p-4 rounded-xl border text-center">
-            <div className="text-2xl font-bold text-indigo-600">{analyticsData.overallMetrics.balanceScore}%</div>
+            <div className="text-2xl font-bold text-indigo-600">
+              {analyticsData.overallMetrics.balanceScore}%
+            </div>
             <div className="text-sm text-gray-600">Balance</div>
           </div>
           <div className="bg-white p-4 rounded-xl border text-center">
-            <div className="text-2xl font-bold text-green-600">{analyticsData.overallMetrics.outcomesCoverage}%</div>
+            <div className="text-2xl font-bold text-green-600">
+              {analyticsData.overallMetrics.outcomesCoverage}%
+            </div>
             <div className="text-sm text-gray-600">Coverage</div>
           </div>
         </div>
@@ -534,7 +574,7 @@ const Analytics: React.FC = () => {
             { id: 'time', label: 'Time Analysis', icon: Clock },
             { id: 'topics', label: 'Topic Balance', icon: PieChart },
             { id: 'outcomes', label: 'Learning Outcomes', icon: Target },
-            { id: 'history', label: 'Historical', icon: TrendingUp }
+            { id: 'history', label: 'Historical', icon: TrendingUp },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -587,7 +627,9 @@ const Analytics: React.FC = () => {
                             <div className="w-full bg-gray-200 rounded-full h-3">
                               <div
                                 className="bg-blue-400 h-3 rounded-full"
-                                style={{ width: `${(item.expectedCount / Math.max(...analyticsData.scoreDistribution.map(s => s.expectedCount))) * 100}%` }}
+                                style={{
+                                  width: `${(item.expectedCount / Math.max(...analyticsData.scoreDistribution.map((s) => s.expectedCount))) * 100}%`,
+                                }}
                               />
                             </div>
                           </div>
@@ -596,7 +638,9 @@ const Analytics: React.FC = () => {
                             <div className="w-full bg-gray-200 rounded-full h-3">
                               <div
                                 className="bg-blue-600 h-3 rounded-full"
-                                style={{ width: `${(item.actualCount / Math.max(...analyticsData.scoreDistribution.map(s => s.actualCount))) * 100}%` }}
+                                style={{
+                                  width: `${(item.actualCount / Math.max(...analyticsData.scoreDistribution.map((s) => s.actualCount))) * 100}%`,
+                                }}
                               />
                             </div>
                           </div>
@@ -673,21 +717,29 @@ const Analytics: React.FC = () => {
                     <div key={item.level} className="bg-white rounded-xl p-6 border">
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="text-lg font-semibold capitalize">{item.level}</h3>
-                        <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(item.status)}`}>
+                        <span
+                          className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(item.status)}`}
+                        >
                           {item.status}
                         </span>
                       </div>
 
                       <div className="space-y-4">
                         <div className="text-center">
-                          <div className="text-3xl font-bold text-gray-800">{item.questionCount}</div>
-                          <div className="text-sm text-gray-600">Questions ({item.percentage}%)</div>
+                          <div className="text-3xl font-bold text-gray-800">
+                            {item.questionCount}
+                          </div>
+                          <div className="text-sm text-gray-600">
+                            Questions ({item.percentage}%)
+                          </div>
                         </div>
 
                         <div className="space-y-3">
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-600">Average Score</span>
-                            <span className="text-sm font-medium">{item.averageScore.toFixed(1)}%</span>
+                            <span className="text-sm font-medium">
+                              {item.averageScore.toFixed(1)}%
+                            </span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-600">Average Time</span>
@@ -695,7 +747,9 @@ const Analytics: React.FC = () => {
                           </div>
                           <div className="flex justify-between">
                             <span className="text-sm text-gray-600">Discrimination</span>
-                            <span className="text-sm font-medium">{item.discriminationIndex.toFixed(2)}</span>
+                            <span className="text-sm font-medium">
+                              {item.discriminationIndex.toFixed(2)}
+                            </span>
                           </div>
                         </div>
 
@@ -706,8 +760,11 @@ const Analytics: React.FC = () => {
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${
-                                item.status === 'optimal' ? 'bg-green-600' :
-                                item.status === 'high' ? 'bg-red-500' : 'bg-yellow-500'
+                                item.status === 'optimal'
+                                  ? 'bg-green-600'
+                                  : item.status === 'high'
+                                    ? 'bg-red-500'
+                                    : 'bg-yellow-500'
                               }`}
                               style={{ width: `${item.percentage}%` }}
                             />
@@ -730,18 +787,31 @@ const Analytics: React.FC = () => {
                       <h4 className="font-medium mb-3">Current Distribution</h4>
                       <div className="space-y-3">
                         {analyticsData.difficultyAnalysis.map((item) => (
-                          <div key={item.level} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                          <div
+                            key={item.level}
+                            className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
+                          >
                             <div className="flex items-center gap-3">
-                              <div className={`w-4 h-4 rounded-full ${
-                                item.level === 'easy' ? 'bg-green-600' :
-                                item.level === 'medium' ? 'bg-yellow-500' : 'bg-red-500'
-                              }`} />
+                              <div
+                                className={`w-4 h-4 rounded-full ${
+                                  item.level === 'easy'
+                                    ? 'bg-green-600'
+                                    : item.level === 'medium'
+                                      ? 'bg-yellow-500'
+                                      : 'bg-red-500'
+                                }`}
+                              />
                               <span className="font-medium capitalize">{item.level}</span>
                             </div>
                             <div className="text-right">
                               <div className="font-medium">{item.percentage}%</div>
                               <div className="text-xs text-gray-500">
-                                {item.status === 'optimal' ? '✓' : item.status === 'high' ? '↑' : '↓'} {item.status}
+                                {item.status === 'optimal'
+                                  ? '✓'
+                                  : item.status === 'high'
+                                    ? '↑'
+                                    : '↓'}{' '}
+                                {item.status}
                               </div>
                             </div>
                           </div>
@@ -758,7 +828,8 @@ const Analytics: React.FC = () => {
                             <div>
                               <div className="font-medium text-green-800">Optimal Balance</div>
                               <div className="text-sm text-green-700">
-                                Current difficulty distribution is well-balanced and follows recommended guidelines.
+                                Current difficulty distribution is well-balanced and follows
+                                recommended guidelines.
                               </div>
                             </div>
                           </div>
@@ -770,7 +841,8 @@ const Analytics: React.FC = () => {
                             <div>
                               <div className="font-medium text-blue-800">Discrimination Index</div>
                               <div className="text-sm text-blue-700">
-                                Hard questions have slightly lower discrimination. Consider reviewing for clarity.
+                                Hard questions have slightly lower discrimination. Consider
+                                reviewing for clarity.
                               </div>
                             </div>
                           </div>
@@ -782,7 +854,8 @@ const Analytics: React.FC = () => {
                             <div>
                               <div className="font-medium text-yellow-800">Time Management</div>
                               <div className="text-sm text-yellow-700">
-                                Hard questions taking longer than expected. Ensure adequate time allocation.
+                                Hard questions taking longer than expected. Ensure adequate time
+                                allocation.
                               </div>
                             </div>
                           </div>
@@ -813,11 +886,15 @@ const Analytics: React.FC = () => {
                   <div className="space-y-4">
                     <div className="grid grid-cols-2 gap-4 mb-4">
                       <div className="bg-blue-50 p-4 rounded-lg text-center">
-                        <div className="text-2xl font-bold text-blue-600">{analyticsData.timeEstimation.totalEstimatedTime}m</div>
+                        <div className="text-2xl font-bold text-blue-600">
+                          {analyticsData.timeEstimation.totalEstimatedTime}m
+                        </div>
                         <div className="text-sm text-blue-600">Estimated Time</div>
                       </div>
                       <div className="bg-green-50 p-4 rounded-lg text-center">
-                        <div className="text-2xl font-bold text-green-600">{analyticsData.timeEstimation.averageTimePerQuestion.toFixed(1)}m</div>
+                        <div className="text-2xl font-bold text-green-600">
+                          {analyticsData.timeEstimation.averageTimePerQuestion.toFixed(1)}m
+                        </div>
                         <div className="text-sm text-green-600">Avg per Question</div>
                       </div>
                     </div>
@@ -827,7 +904,9 @@ const Analytics: React.FC = () => {
                         <div key={index} className="space-y-2">
                           <div className="flex justify-between items-center">
                             <span className="text-sm font-medium">{item.range}</span>
-                            <span className="text-sm text-gray-500">{item.count} students ({item.percentage}%)</span>
+                            <span className="text-sm text-gray-500">
+                              {item.count} students ({item.percentage}%)
+                            </span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-3">
                             <div
@@ -842,11 +921,15 @@ const Analytics: React.FC = () => {
                     <div className="pt-4 border-t space-y-2">
                       <div className="flex justify-between">
                         <span className="text-sm text-gray-600">Fastest Completion</span>
-                        <span className="text-sm font-medium">{analyticsData.timeEstimation.fastestCompletion}m</span>
+                        <span className="text-sm font-medium">
+                          {analyticsData.timeEstimation.fastestCompletion}m
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-sm text-gray-600">Slowest Completion</span>
-                        <span className="text-sm font-medium">{analyticsData.timeEstimation.slowestCompletion}m</span>
+                        <span className="text-sm font-medium">
+                          {analyticsData.timeEstimation.slowestCompletion}m
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -871,29 +954,40 @@ const Analytics: React.FC = () => {
                           </tr>
                         </thead>
                         <tbody className="space-y-2">
-                          {analyticsData.timeEstimation.questionTimeBreakdown.slice(0, 10).map((item, index) => {
-                            const variance = item.actualAverageTime - item.estimatedTime
-                            const variancePercentage = (variance / item.estimatedTime) * 100
-                            return (
-                              <tr key={index} className="border-b border-gray-100">
-                                <td className="py-2">
-                                  <div>
-                                    <div className="font-medium">{item.questionId}</div>
-                                    <div className="text-xs text-gray-500">{item.topic}</div>
-                                  </div>
-                                </td>
-                                <td className="text-right py-2">{item.estimatedTime}m</td>
-                                <td className="text-right py-2">{item.actualAverageTime.toFixed(1)}m</td>
-                                <td className="text-right py-2">
-                                  <span className={`font-medium ${
-                                    variance > 0 ? 'text-red-600' : variance < 0 ? 'text-green-600' : 'text-gray-600'
-                                  }`}>
-                                    {variance > 0 ? '+' : ''}{variancePercentage.toFixed(0)}%
-                                  </span>
-                                </td>
-                              </tr>
-                            )
-                          })}
+                          {analyticsData.timeEstimation.questionTimeBreakdown
+                            .slice(0, 10)
+                            .map((item, index) => {
+                              const variance = item.actualAverageTime - item.estimatedTime
+                              const variancePercentage = (variance / item.estimatedTime) * 100
+                              return (
+                                <tr key={index} className="border-b border-gray-100">
+                                  <td className="py-2">
+                                    <div>
+                                      <div className="font-medium">{item.questionId}</div>
+                                      <div className="text-xs text-gray-500">{item.topic}</div>
+                                    </div>
+                                  </td>
+                                  <td className="text-right py-2">{item.estimatedTime}m</td>
+                                  <td className="text-right py-2">
+                                    {item.actualAverageTime.toFixed(1)}m
+                                  </td>
+                                  <td className="text-right py-2">
+                                    <span
+                                      className={`font-medium ${
+                                        variance > 0
+                                          ? 'text-red-600'
+                                          : variance < 0
+                                            ? 'text-green-600'
+                                            : 'text-gray-600'
+                                      }`}
+                                    >
+                                      {variance > 0 ? '+' : ''}
+                                      {variancePercentage.toFixed(0)}%
+                                    </span>
+                                  </td>
+                                </tr>
+                              )
+                            })}
                         </tbody>
                       </table>
                     </div>
@@ -934,7 +1028,9 @@ const Analytics: React.FC = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-3">
                             <h4 className="font-medium">{topic.topic}</h4>
-                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(topic.status)}`}>
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(topic.status)}`}
+                            >
                               {topic.status}
                             </span>
                           </div>
@@ -949,15 +1045,22 @@ const Analytics: React.FC = () => {
                           <div>
                             <div className="flex justify-between items-center mb-2 text-sm">
                               <span>Questions: {topic.percentage}%</span>
-                              <span className="text-gray-500">Recommended: {topic.recommendedPercentage}%</span>
+                              <span className="text-gray-500">
+                                Recommended: {topic.recommendedPercentage}%
+                              </span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-3">
                               <div
                                 className={`h-3 rounded-full ${
-                                  topic.status === 'balanced' ? 'bg-green-600' :
-                                  topic.status === 'overrepresented' ? 'bg-red-500' : 'bg-yellow-500'
+                                  topic.status === 'balanced'
+                                    ? 'bg-green-600'
+                                    : topic.status === 'overrepresented'
+                                      ? 'bg-red-500'
+                                      : 'bg-yellow-500'
                                 }`}
-                                style={{ width: `${(topic.percentage / topic.recommendedPercentage) * 100}%` }}
+                                style={{
+                                  width: `${(topic.percentage / topic.recommendedPercentage) * 100}%`,
+                                }}
                               />
                             </div>
                           </div>
@@ -966,7 +1069,9 @@ const Analytics: React.FC = () => {
                           <div>
                             <div className="flex justify-between items-center mb-2 text-sm">
                               <span>Marks: {topic.marksPercentage}%</span>
-                              <span className="text-gray-500">Avg Score: {topic.averageScore.toFixed(1)}%</span>
+                              <span className="text-gray-500">
+                                Avg Score: {topic.averageScore.toFixed(1)}%
+                              </span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-3">
                               <div
@@ -1014,7 +1119,9 @@ const Analytics: React.FC = () => {
                           <AlertTriangle className="w-4 h-4 text-red-600 mt-0.5" />
                           <div>
                             <div className="font-medium text-red-800">Overrepresented Topics</div>
-                            <div className="text-sm text-red-700">Human Physiology (30% vs 25% recommended)</div>
+                            <div className="text-sm text-red-700">
+                              Human Physiology (30% vs 25% recommended)
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1023,8 +1130,12 @@ const Analytics: React.FC = () => {
                         <div className="flex items-start gap-2">
                           <AlertTriangle className="w-4 h-4 text-yellow-600 mt-0.5" />
                           <div>
-                            <div className="font-medium text-yellow-800">Underrepresented Topics</div>
-                            <div className="text-sm text-yellow-700">Ecology (16% vs 20% recommended)</div>
+                            <div className="font-medium text-yellow-800">
+                              Underrepresented Topics
+                            </div>
+                            <div className="text-sm text-yellow-700">
+                              Ecology (16% vs 20% recommended)
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1034,7 +1145,9 @@ const Analytics: React.FC = () => {
                           <CheckCircle className="w-4 h-4 text-green-600 mt-0.5" />
                           <div>
                             <div className="font-medium text-green-800">Well Balanced</div>
-                            <div className="text-sm text-green-700">Cell Biology, Genetics, Evolution</div>
+                            <div className="text-sm text-green-700">
+                              Cell Biology, Genetics, Evolution
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1055,9 +1168,14 @@ const Analytics: React.FC = () => {
                             .sort((a, b) => b.averageScore - a.averageScore)
                             .slice(0, 3)
                             .map((topic, index) => (
-                              <div key={index} className="flex justify-between items-center p-2 bg-green-50 rounded">
+                              <div
+                                key={index}
+                                className="flex justify-between items-center p-2 bg-green-50 rounded"
+                              >
                                 <span className="text-sm font-medium">{topic.topic}</span>
-                                <span className="text-sm text-green-600">{topic.averageScore.toFixed(1)}%</span>
+                                <span className="text-sm text-green-600">
+                                  {topic.averageScore.toFixed(1)}%
+                                </span>
                               </div>
                             ))}
                         </div>
@@ -1070,9 +1188,14 @@ const Analytics: React.FC = () => {
                             .sort((a, b) => a.averageScore - b.averageScore)
                             .slice(0, 2)
                             .map((topic, index) => (
-                              <div key={index} className="flex justify-between items-center p-2 bg-red-50 rounded">
+                              <div
+                                key={index}
+                                className="flex justify-between items-center p-2 bg-red-50 rounded"
+                              >
                                 <span className="text-sm font-medium">{topic.topic}</span>
-                                <span className="text-sm text-red-600">{topic.averageScore.toFixed(1)}%</span>
+                                <span className="text-sm text-red-600">
+                                  {topic.averageScore.toFixed(1)}%
+                                </span>
                               </div>
                             ))}
                         </div>
@@ -1106,10 +1229,14 @@ const Analytics: React.FC = () => {
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
                               <h4 className="font-medium">{outcome.title}</h4>
-                              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getBloomsLevelColor(outcome.bloomsLevel)}`}>
+                              <span
+                                className={`px-2 py-1 rounded-full text-xs font-medium ${getBloomsLevelColor(outcome.bloomsLevel)}`}
+                              >
                                 {outcome.bloomsLevel}
                               </span>
-                              <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(outcome.status)}`}>
+                              <span
+                                className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(outcome.status)}`}
+                              >
                                 {outcome.status.replace('_', ' ')}
                               </span>
                             </div>
@@ -1119,21 +1246,28 @@ const Analytics: React.FC = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                           <div className="text-center">
-                            <div className="text-2xl font-bold text-blue-600">{outcome.coverage}%</div>
+                            <div className="text-2xl font-bold text-blue-600">
+                              {outcome.coverage}%
+                            </div>
                             <div className="text-sm text-gray-600">Coverage</div>
                             <div className="text-xs text-gray-500">
                               {outcome.questionsMapping}/{outcome.totalQuestions} questions
                             </div>
                           </div>
                           <div className="text-center">
-                            <div className="text-2xl font-bold text-green-600">{outcome.averageScore.toFixed(1)}%</div>
+                            <div className="text-2xl font-bold text-green-600">
+                              {outcome.averageScore.toFixed(1)}%
+                            </div>
                             <div className="text-sm text-gray-600">Avg Score</div>
                           </div>
                           <div className="text-center">
                             <div className="text-sm text-gray-600 mb-1">Related Topics</div>
                             <div className="flex flex-wrap gap-1 justify-center">
                               {outcome.relatedTopics.map((topic, topicIndex) => (
-                                <span key={topicIndex} className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">
+                                <span
+                                  key={topicIndex}
+                                  className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded"
+                                >
                                   {topic}
                                 </span>
                               ))}
@@ -1149,8 +1283,11 @@ const Analytics: React.FC = () => {
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full ${
-                                outcome.coverage >= 80 ? 'bg-green-600' :
-                                outcome.coverage >= 60 ? 'bg-yellow-500' : 'bg-red-500'
+                                outcome.coverage >= 80
+                                  ? 'bg-green-600'
+                                  : outcome.coverage >= 60
+                                    ? 'bg-yellow-500'
+                                    : 'bg-red-500'
                               }`}
                               style={{ width: `${outcome.coverage}%` }}
                             />
@@ -1170,14 +1307,25 @@ const Analytics: React.FC = () => {
                     </h3>
 
                     <div className="space-y-3">
-                      {['Remembering', 'Understanding', 'Applying', 'Analyzing', 'Evaluating', 'Creating'].map((level, index) => {
-                        const count = analyticsData.learningOutcomes.filter(o => o.bloomsLevel === level).length
+                      {[
+                        'Remembering',
+                        'Understanding',
+                        'Applying',
+                        'Analyzing',
+                        'Evaluating',
+                        'Creating',
+                      ].map((level, index) => {
+                        const count = analyticsData.learningOutcomes.filter(
+                          (o) => o.bloomsLevel === level
+                        ).length
                         const percentage = (count / analyticsData.learningOutcomes.length) * 100
                         return (
                           <div key={index} className="space-y-2">
                             <div className="flex justify-between items-center">
                               <span className="text-sm font-medium">{level}</span>
-                              <span className="text-sm text-gray-500">{count} outcomes ({percentage.toFixed(0)}%)</span>
+                              <span className="text-sm text-gray-500">
+                                {count} outcomes ({percentage.toFixed(0)}%)
+                              </span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-2">
                               <div
@@ -1201,13 +1349,21 @@ const Analytics: React.FC = () => {
                       <div className="grid grid-cols-2 gap-4">
                         <div className="bg-green-50 p-3 rounded-lg text-center">
                           <div className="text-xl font-bold text-green-600">
-                            {analyticsData.learningOutcomes.filter(o => o.status === 'excellent' || o.status === 'good').length}
+                            {
+                              analyticsData.learningOutcomes.filter(
+                                (o) => o.status === 'excellent' || o.status === 'good'
+                              ).length
+                            }
                           </div>
                           <div className="text-sm text-green-600">Well Covered</div>
                         </div>
                         <div className="bg-yellow-50 p-3 rounded-lg text-center">
                           <div className="text-xl font-bold text-yellow-600">
-                            {analyticsData.learningOutcomes.filter(o => o.status === 'needs_improvement').length}
+                            {
+                              analyticsData.learningOutcomes.filter(
+                                (o) => o.status === 'needs_improvement'
+                              ).length
+                            }
                           </div>
                           <div className="text-sm text-yellow-600">Need Attention</div>
                         </div>
@@ -1217,13 +1373,25 @@ const Analytics: React.FC = () => {
                         <div className="flex justify-between">
                           <span className="text-sm text-gray-600">Average Coverage</span>
                           <span className="text-sm font-medium">
-                            {(analyticsData.learningOutcomes.reduce((sum, o) => sum + o.coverage, 0) / analyticsData.learningOutcomes.length).toFixed(1)}%
+                            {(
+                              analyticsData.learningOutcomes.reduce(
+                                (sum, o) => sum + o.coverage,
+                                0
+                              ) / analyticsData.learningOutcomes.length
+                            ).toFixed(1)}
+                            %
                           </span>
                         </div>
                         <div className="flex justify-between">
                           <span className="text-sm text-gray-600">Average Performance</span>
                           <span className="text-sm font-medium">
-                            {(analyticsData.learningOutcomes.reduce((sum, o) => sum + o.averageScore, 0) / analyticsData.learningOutcomes.length).toFixed(1)}%
+                            {(
+                              analyticsData.learningOutcomes.reduce(
+                                (sum, o) => sum + o.averageScore,
+                                0
+                              ) / analyticsData.learningOutcomes.length
+                            ).toFixed(1)}
+                            %
                           </span>
                         </div>
                       </div>
@@ -1268,30 +1436,42 @@ const Analytics: React.FC = () => {
                             {getTrendIcon(test.trend)}
                           </div>
                           <div className="text-right">
-                            <div className="text-lg font-bold text-gray-800">{test.averageScore.toFixed(1)}%</div>
+                            <div className="text-lg font-bold text-gray-800">
+                              {test.averageScore.toFixed(1)}%
+                            </div>
                             <div className="text-sm text-gray-500">Average Score</div>
                           </div>
                         </div>
 
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-3">
                           <div className="text-center">
-                            <div className="text-sm font-medium text-gray-800">{test.completionRate.toFixed(1)}%</div>
+                            <div className="text-sm font-medium text-gray-800">
+                              {test.completionRate.toFixed(1)}%
+                            </div>
                             <div className="text-xs text-gray-500">Completion Rate</div>
                           </div>
                           <div className="text-center">
-                            <div className="text-sm font-medium text-gray-800">{test.difficulty.toFixed(1)}</div>
+                            <div className="text-sm font-medium text-gray-800">
+                              {test.difficulty.toFixed(1)}
+                            </div>
                             <div className="text-xs text-gray-500">Difficulty</div>
                           </div>
                           <div className="text-center">
-                            <div className="text-sm font-medium text-gray-800">{test.timeSpent}m</div>
+                            <div className="text-sm font-medium text-gray-800">
+                              {test.timeSpent}m
+                            </div>
                             <div className="text-xs text-gray-500">Avg Time</div>
                           </div>
                           <div className="text-center">
-                            <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                              test.trend === 'improving' ? 'bg-green-100 text-green-600' :
-                              test.trend === 'declining' ? 'bg-red-100 text-red-600' :
-                              'bg-gray-100 text-gray-600'
-                            }`}>
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                test.trend === 'improving'
+                                  ? 'bg-green-100 text-green-600'
+                                  : test.trend === 'declining'
+                                    ? 'bg-red-100 text-red-600'
+                                    : 'bg-gray-100 text-gray-600'
+                              }`}
+                            >
                               {test.trend}
                             </span>
                           </div>
@@ -1339,7 +1519,10 @@ const Analytics: React.FC = () => {
                             <span className="text-sm font-medium text-green-600">+3.3%</span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div className="bg-green-600 h-2 rounded-full" style={{ width: '65%' }} />
+                            <div
+                              className="bg-green-600 h-2 rounded-full"
+                              style={{ width: '65%' }}
+                            />
                           </div>
                         </div>
 
@@ -1349,7 +1532,10 @@ const Analytics: React.FC = () => {
                             <span className="text-sm font-medium text-blue-600">94.2%</span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
-                            <div className="bg-blue-500 h-2 rounded-full" style={{ width: '94%' }} />
+                            <div
+                              className="bg-blue-500 h-2 rounded-full"
+                              style={{ width: '94%' }}
+                            />
                           </div>
                         </div>
                       </div>

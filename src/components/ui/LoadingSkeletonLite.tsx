@@ -18,8 +18,12 @@ const shimmerStyle = {
 const ShimmerStyles = () => (
   <style jsx global>{`
     @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
+      0% {
+        background-position: 200% 0;
+      }
+      100% {
+        background-position: -200% 0;
+      }
     }
   `}</style>
 )
@@ -40,7 +44,13 @@ export function LoadingSkeleton({ className = '' }: { className?: string }) {
   )
 }
 
-export function TextSkeleton({ lines = 3, className = '' }: { lines?: number; className?: string }) {
+export function TextSkeleton({
+  lines = 3,
+  className = '',
+}: {
+  lines?: number
+  className?: string
+}) {
   return (
     <>
       <ShimmerStyles />
@@ -118,8 +128,14 @@ export function HeroSkeletonLite() {
         aria-label="Loading hero"
       >
         <div className="text-center px-4 w-full max-w-4xl">
-          <div className="h-12 rounded w-3/4 mx-auto mb-6" style={{ ...shimmerStyle, opacity: 0.3 }} />
-          <div className="h-6 rounded w-1/2 mx-auto mb-8" style={{ ...shimmerStyle, opacity: 0.3 }} />
+          <div
+            className="h-12 rounded w-3/4 mx-auto mb-6"
+            style={{ ...shimmerStyle, opacity: 0.3 }}
+          />
+          <div
+            className="h-6 rounded w-1/2 mx-auto mb-8"
+            style={{ ...shimmerStyle, opacity: 0.3 }}
+          />
           <div className="flex justify-center gap-4">
             <div className="h-12 rounded-lg w-32" style={{ ...shimmerStyle, opacity: 0.3 }} />
             <div className="h-12 rounded-lg w-32" style={{ ...shimmerStyle, opacity: 0.3 }} />
@@ -132,7 +148,13 @@ export function HeroSkeletonLite() {
 }
 
 // Simple inline skeleton for minimal bundle impact
-export function InlineSkeleton({ width = '100%', height = '1rem' }: { width?: string; height?: string }) {
+export function InlineSkeleton({
+  width = '100%',
+  height = '1rem',
+}: {
+  width?: string
+  height?: string
+}) {
   return (
     <>
       <ShimmerStyles />

@@ -6,23 +6,23 @@ An MCP (Model Context Protocol) server that provides tools for the CERI (Cerebru
 
 ### Tools
 
-| Tool | Description |
-|------|-------------|
-| `codebase_search` | Semantic search across the codebase |
-| `tech_debt_list` | List and filter technical debt items |
-| `tech_debt_add` | Add new technical debt to tracker |
-| `dependency_audit` | Check for outdated/vulnerable packages |
-| `performance_check` | Run Lighthouse and bundle analysis |
-| `memory_read` | Read CTO memory files |
-| `memory_update` | Update CTO memory files |
+| Tool                | Description                            |
+| ------------------- | -------------------------------------- |
+| `codebase_search`   | Semantic search across the codebase    |
+| `tech_debt_list`    | List and filter technical debt items   |
+| `tech_debt_add`     | Add new technical debt to tracker      |
+| `dependency_audit`  | Check for outdated/vulnerable packages |
+| `performance_check` | Run Lighthouse and bundle analysis     |
+| `memory_read`       | Read CTO memory files                  |
+| `memory_update`     | Update CTO memory files                |
 
 ### Resources
 
-| Resource | Description |
-|----------|-------------|
-| `cerebrum://edtech-news` | Latest EdTech news and trends |
+| Resource                        | Description                    |
+| ------------------------------- | ------------------------------ |
+| `cerebrum://edtech-news`        | Latest EdTech news and trends  |
 | `cerebrum://competitor-updates` | Competitor intelligence report |
-| `cerebrum://neet-updates` | NTA exam announcements |
+| `cerebrum://neet-updates`       | NTA exam announcements         |
 
 ## Installation
 
@@ -67,11 +67,11 @@ npm run build
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `CEREBRUM_PROJECT_ROOT` | Path to the Cerebrum project | `process.cwd()` |
-| `NEWS_API_KEY` | API key for news fetching | - |
-| `GOOGLE_API_KEY` | Google API for various services | - |
+| Variable                | Description                     | Default         |
+| ----------------------- | ------------------------------- | --------------- |
+| `CEREBRUM_PROJECT_ROOT` | Path to the Cerebrum project    | `process.cwd()` |
+| `NEWS_API_KEY`          | API key for news fetching       | -               |
+| `GOOGLE_API_KEY`        | Google API for various services | -               |
 
 ## Tool Examples
 

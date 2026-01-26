@@ -279,8 +279,6 @@ export default async function BiologyNotesIndexPage() {
           }),
         }}
       />
-
-      
     </div>
   )
 }

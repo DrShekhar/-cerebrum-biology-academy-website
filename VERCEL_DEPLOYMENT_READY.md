@@ -72,6 +72,7 @@ NEXT_PUBLIC_DEBUG_MODE=false
   - Environment: **Production** and **Preview**
 
 - [ ] `DIRECT_URL`
+
   ```
   postgresql://[user]:[password]@[host]:5432/cerebrum_academy_prod?sslmode=require
   ```
@@ -134,6 +135,7 @@ curl https://cerebrumbiologyacademy.com/api/health/database
   - ⚠️ For Preview, use `https://YOUR_PREVIEW_URL.vercel.app`
 
 - [ ] `NEXT_PUBLIC_APP_URL`
+
   ```
   https://cerebrumbiologyacademy.com
   ```
@@ -183,6 +185,7 @@ curl https://cerebrumbiologyacademy.com/api/auth/session
   - ℹ️ Same as RAZORPAY_KEY_ID (public key)
 
 - [ ] `RAZORPAY_WEBHOOK_SECRET`
+
   ```
   YOUR_WEBHOOK_SECRET
   ```
@@ -232,6 +235,7 @@ curl -X POST https://cerebrumbiologyacademy.com/api/payments/create \
   - Environment: **Production**, **Preview**
 
 - [ ] `RESEND_FROM_EMAIL`
+
   ```
   noreply@cerebrumbiologyacademy.com
   ```
@@ -316,6 +320,7 @@ curl -X POST https://cerebrumbiologyacademy.com/api/email/test \
   - Environment: **Production**, **Preview**
 
 - [ ] `WHATSAPP_ADMIN_NUMBER`
+
   ```
   +91YOUR_PHONE_NUMBER
   ```
@@ -352,6 +357,7 @@ curl https://cerebrumbiologyacademy.com/api/whatsapp/test
   - ⚠️ Use `sk_test_` for Preview/Development
 
 - [ ] `UPLOADTHING_APP_ID`
+
   ```
   YOUR_APP_ID
   ```
@@ -388,6 +394,7 @@ curl https://cerebrumbiologyacademy.com/api/uploadthing
   - Environment: **Production**, **Preview**
 
 - [ ] `GOOGLE_CLIENT_SECRET`
+
   ```
   YOUR_CLIENT_SECRET
   ```
@@ -410,6 +417,7 @@ open https://cerebrumbiologyacademy.com/auth/signin
 **Where to get:** [Google Analytics](https://analytics.google.com/)
 
 - [ ] `NEXT_PUBLIC_GA_MEASUREMENT_ID`
+
   ```
   G-YOUR_GA4_ID
   ```
@@ -425,6 +433,7 @@ open https://cerebrumbiologyacademy.com/auth/signin
 #### Vercel Analytics (Auto-configured)
 
 - [ ] `NEXT_PUBLIC_VERCEL_ANALYTICS_ID`
+
   ```
   auto
   ```
@@ -445,6 +454,7 @@ open https://cerebrumbiologyacademy.com/auth/signin
   - Environment: **Production**, **Preview**
 
 - [ ] `NEXT_PUBLIC_SENTRY_DSN`
+
   ```
   https://YOUR_KEY@YOUR_ORG.ingest.sentry.io/YOUR_PROJECT_ID
   ```
@@ -462,6 +472,7 @@ open https://cerebrumbiologyacademy.com/auth/signin
 **Where to get:** [OpenAI API Keys](https://platform.openai.com/api-keys)
 
 - [ ] `OPENAI_API_KEY`
+
   ```
   sk-proj-YOUR_API_KEY
   ```
@@ -472,6 +483,7 @@ open https://cerebrumbiologyacademy.com/auth/signin
 **Feature Flags:**
 
 - [ ] `NEXT_PUBLIC_ENABLE_AI_TUTOR`
+
   ```
   true
   ```
@@ -514,6 +526,7 @@ curl -X POST https://cerebrumbiologyacademy.com/api/ai/chat \
   - Environment: **Production**, **Preview**
 
 - [ ] `ZOOM_CLIENT_SECRET`
+
   ```
   YOUR_CLIENT_SECRET
   ```
@@ -550,6 +563,7 @@ curl -X POST https://cerebrumbiologyacademy.com/api/zoom/create-meeting \
   - Environment: **Production**, **Preview**
 
 - [ ] `REDIS_TOKEN`
+
   ```
   YOUR_REDIS_TOKEN
   ```
@@ -586,6 +600,7 @@ curl https://cerebrumbiologyacademy.com/api/cache/test
   - Environment: **Production**, **Preview**
 
 - [ ] `TWILIO_PHONE_NUMBER`
+
   ```
   +1YOUR_NUMBER
   ```

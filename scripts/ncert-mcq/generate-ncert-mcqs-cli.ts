@@ -32,41 +32,131 @@ const NCERT_CHAPTERS = {
     { chapter: 2, name: 'Biological Classification', neetWeightage: 'MEDIUM', targetQuestions: 60 },
     { chapter: 3, name: 'Plant Kingdom', neetWeightage: 'HIGH', targetQuestions: 80 },
     { chapter: 4, name: 'Animal Kingdom', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 5, name: 'Morphology of Flowering Plants', neetWeightage: 'HIGH', targetQuestions: 80 },
+    {
+      chapter: 5,
+      name: 'Morphology of Flowering Plants',
+      neetWeightage: 'HIGH',
+      targetQuestions: 80,
+    },
     { chapter: 6, name: 'Anatomy of Flowering Plants', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 7, name: 'Structural Organisation in Animals', neetWeightage: 'HIGH', targetQuestions: 70 },
+    {
+      chapter: 7,
+      name: 'Structural Organisation in Animals',
+      neetWeightage: 'HIGH',
+      targetQuestions: 70,
+    },
     { chapter: 8, name: 'Cell: The Unit of Life', neetWeightage: 'HIGH', targetQuestions: 100 },
     { chapter: 9, name: 'Biomolecules', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 10, name: 'Cell Cycle and Cell Division', neetWeightage: 'HIGH', targetQuestions: 70 },
+    {
+      chapter: 10,
+      name: 'Cell Cycle and Cell Division',
+      neetWeightage: 'HIGH',
+      targetQuestions: 70,
+    },
     { chapter: 11, name: 'Transport in Plants', neetWeightage: 'HIGH', targetQuestions: 70 },
     { chapter: 12, name: 'Mineral Nutrition', neetWeightage: 'MEDIUM', targetQuestions: 50 },
-    { chapter: 13, name: 'Photosynthesis in Higher Plants', neetWeightage: 'HIGH', targetQuestions: 90 },
+    {
+      chapter: 13,
+      name: 'Photosynthesis in Higher Plants',
+      neetWeightage: 'HIGH',
+      targetQuestions: 90,
+    },
     { chapter: 14, name: 'Respiration in Plants', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 15, name: 'Plant Growth and Development', neetWeightage: 'MEDIUM', targetQuestions: 60 },
+    {
+      chapter: 15,
+      name: 'Plant Growth and Development',
+      neetWeightage: 'MEDIUM',
+      targetQuestions: 60,
+    },
     { chapter: 16, name: 'Digestion and Absorption', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 17, name: 'Breathing and Exchange of Gases', neetWeightage: 'HIGH', targetQuestions: 70 },
-    { chapter: 18, name: 'Body Fluids and Circulation', neetWeightage: 'HIGH', targetQuestions: 90 },
-    { chapter: 19, name: 'Excretory Products and their Elimination', neetWeightage: 'HIGH', targetQuestions: 80 },
+    {
+      chapter: 17,
+      name: 'Breathing and Exchange of Gases',
+      neetWeightage: 'HIGH',
+      targetQuestions: 70,
+    },
+    {
+      chapter: 18,
+      name: 'Body Fluids and Circulation',
+      neetWeightage: 'HIGH',
+      targetQuestions: 90,
+    },
+    {
+      chapter: 19,
+      name: 'Excretory Products and their Elimination',
+      neetWeightage: 'HIGH',
+      targetQuestions: 80,
+    },
     { chapter: 20, name: 'Locomotion and Movement', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 21, name: 'Neural Control and Coordination', neetWeightage: 'HIGH', targetQuestions: 90 },
-    { chapter: 22, name: 'Chemical Coordination and Integration', neetWeightage: 'HIGH', targetQuestions: 80 },
+    {
+      chapter: 21,
+      name: 'Neural Control and Coordination',
+      neetWeightage: 'HIGH',
+      targetQuestions: 90,
+    },
+    {
+      chapter: 22,
+      name: 'Chemical Coordination and Integration',
+      neetWeightage: 'HIGH',
+      targetQuestions: 80,
+    },
   ],
   class12: [
     { chapter: 1, name: 'Reproduction in Organisms', neetWeightage: 'LOW', targetQuestions: 40 },
-    { chapter: 2, name: 'Sexual Reproduction in Flowering Plants', neetWeightage: 'HIGH', targetQuestions: 90 },
+    {
+      chapter: 2,
+      name: 'Sexual Reproduction in Flowering Plants',
+      neetWeightage: 'HIGH',
+      targetQuestions: 90,
+    },
     { chapter: 3, name: 'Human Reproduction', neetWeightage: 'HIGH', targetQuestions: 90 },
     { chapter: 4, name: 'Reproductive Health', neetWeightage: 'MEDIUM', targetQuestions: 50 },
-    { chapter: 5, name: 'Principles of Inheritance and Variation', neetWeightage: 'HIGH', targetQuestions: 100 },
-    { chapter: 6, name: 'Molecular Basis of Inheritance', neetWeightage: 'HIGH', targetQuestions: 100 },
+    {
+      chapter: 5,
+      name: 'Principles of Inheritance and Variation',
+      neetWeightage: 'HIGH',
+      targetQuestions: 100,
+    },
+    {
+      chapter: 6,
+      name: 'Molecular Basis of Inheritance',
+      neetWeightage: 'HIGH',
+      targetQuestions: 100,
+    },
     { chapter: 7, name: 'Evolution', neetWeightage: 'HIGH', targetQuestions: 80 },
     { chapter: 8, name: 'Human Health and Disease', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 9, name: 'Strategies for Enhancement in Food Production', neetWeightage: 'MEDIUM', targetQuestions: 50 },
-    { chapter: 10, name: 'Microbes in Human Welfare', neetWeightage: 'MEDIUM', targetQuestions: 50 },
-    { chapter: 11, name: 'Biotechnology: Principles and Processes', neetWeightage: 'HIGH', targetQuestions: 90 },
-    { chapter: 12, name: 'Biotechnology and its Applications', neetWeightage: 'HIGH', targetQuestions: 80 },
+    {
+      chapter: 9,
+      name: 'Strategies for Enhancement in Food Production',
+      neetWeightage: 'MEDIUM',
+      targetQuestions: 50,
+    },
+    {
+      chapter: 10,
+      name: 'Microbes in Human Welfare',
+      neetWeightage: 'MEDIUM',
+      targetQuestions: 50,
+    },
+    {
+      chapter: 11,
+      name: 'Biotechnology: Principles and Processes',
+      neetWeightage: 'HIGH',
+      targetQuestions: 90,
+    },
+    {
+      chapter: 12,
+      name: 'Biotechnology and its Applications',
+      neetWeightage: 'HIGH',
+      targetQuestions: 80,
+    },
     { chapter: 13, name: 'Organisms and Populations', neetWeightage: 'HIGH', targetQuestions: 80 },
     { chapter: 14, name: 'Ecosystem', neetWeightage: 'HIGH', targetQuestions: 80 },
-    { chapter: 15, name: 'Biodiversity and Conservation', neetWeightage: 'MEDIUM', targetQuestions: 60 },
+    {
+      chapter: 15,
+      name: 'Biodiversity and Conservation',
+      neetWeightage: 'MEDIUM',
+      targetQuestions: 60,
+    },
     { chapter: 16, name: 'Environmental Issues', neetWeightage: 'MEDIUM', targetQuestions: 50 },
   ],
 }
@@ -101,7 +191,9 @@ function saveProgress(progress: Progress) {
 }
 
 function isChapterCompleted(progress: Progress, ncertClass: number, chapter: number): boolean {
-  return progress.completedChapters.some((c) => c.ncertClass === ncertClass && c.chapter === chapter)
+  return progress.completedChapters.some(
+    (c) => c.ncertClass === ncertClass && c.chapter === chapter
+  )
 }
 
 async function generateChapterQuestions(
@@ -139,7 +231,9 @@ async function generateChapterQuestions(
       difficulty = 'HARD'
     }
 
-    console.log(`  Batch ${batch + 1}/${batches}: Generating ${batchCount} ${difficulty} questions...`)
+    console.log(
+      `  Batch ${batch + 1}/${batches}: Generating ${batchCount} ${difficulty} questions...`
+    )
 
     try {
       const result = await shekharSir.generateQuestions({
@@ -156,7 +250,13 @@ async function generateChapterQuestions(
 
       // Balance and save questions
       const balancedQuestions = balanceAnswerDistribution(result.questions)
-      const savedCount = await saveQuestionsToDatabase(balancedQuestions, ncertClass, chapterNo, chapterName, neetWeightage)
+      const savedCount = await saveQuestionsToDatabase(
+        balancedQuestions,
+        ncertClass,
+        chapterNo,
+        chapterName,
+        neetWeightage
+      )
       console.log(`    Saved ${savedCount} questions to database`)
 
       totalGenerated += savedCount
@@ -196,7 +296,9 @@ function balanceAnswerDistribution(questions: QuestionSeed[]): QuestionSeed[] {
     } else {
       // Rotate options for balance
       const options = ['A', 'B', 'C', 'D']
-      const needsMore = options.find((opt) => distribution[opt as keyof typeof distribution] < targetPerOption)
+      const needsMore = options.find(
+        (opt) => distribution[opt as keyof typeof distribution] < targetPerOption
+      )
       if (needsMore) {
         const targetIndex = options.indexOf(needsMore)
         const newOptions = [...(q.options || [])]
@@ -434,7 +536,9 @@ async function main() {
       console.log('  npx tsx scripts/ncert-mcq/generate-ncert-mcqs-cli.ts --resume')
       console.log('')
       console.log('Examples:')
-      console.log('  npx tsx scripts/ncert-mcq/generate-ncert-mcqs-cli.ts 11 3  # Class 11, Chapter 3')
+      console.log(
+        '  npx tsx scripts/ncert-mcq/generate-ncert-mcqs-cli.ts 11 3  # Class 11, Chapter 3'
+      )
       console.log('  npx tsx scripts/ncert-mcq/generate-ncert-mcqs-cli.ts --all  # All chapters')
     }
   } finally {

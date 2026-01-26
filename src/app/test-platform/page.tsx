@@ -147,15 +147,17 @@ export default function TestPlatformPage() {
           <div className="mt-8 p-4 bg-blue-50 rounded-lg">
             <h4 className="font-semibold text-blue-900 mb-2">🚨 Known Issues</h4>
             <p className="text-blue-800 text-sm">
-              Some advanced features may show mock data in development mode.
-              Database-dependent features require proper configuration for full functionality.
+              Some advanced features may show mock data in development mode. Database-dependent
+              features require proper configuration for full functionality.
             </p>
           </div>
         </div>
 
         {/* Agent Army Summary */}
         <div className="mt-12 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg shadow-lg p-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">🎖️ Agent Army Deployment Summary</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            🎖️ Agent Army Deployment Summary
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <AgentCard
@@ -206,19 +208,20 @@ function TestLink({ href, title, description, status }: TestLinkProps) {
   const statusColors = {
     available: 'bg-green-100 text-green-800',
     testing: 'bg-yellow-100 text-yellow-800',
-    unavailable: 'bg-red-100 text-red-800'
+    unavailable: 'bg-red-100 text-red-800',
   }
 
   const statusIcons = {
     available: '✅',
     testing: '🧪',
-    unavailable: '❌'
+    unavailable: '❌',
   }
 
   return (
     <a
       href={href}
-      target="_blank" rel="noopener noreferrer"
+      target="_blank"
+      rel="noopener noreferrer"
       className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
     >
       <div className="flex items-start justify-between">

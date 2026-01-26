@@ -26,7 +26,7 @@ import {
   Search,
   Pin,
   PinOff,
-  History
+  History,
 } from 'lucide-react'
 
 interface NavigationTab {
@@ -81,7 +81,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
   showBreadcrumbs = true,
   showProgress = true,
   allowPinning = true,
-  showQuickActions = true
+  showQuickActions = true,
 }) => {
   const [pinnedTabs, setPinnedTabs] = useState<string[]>(['configure', 'templates', 'generate'])
   const [recentTabs, setRecentTabs] = useState<string[]>(['configure', 'templates', 'sections'])
@@ -92,7 +92,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
     essential: true,
     content: false,
     advanced: false,
-    review: false
+    review: false,
   })
 
   const searchInputRef = useRef<HTMLInputElement>(null)
@@ -120,7 +120,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: true,
           estimatedTime: '2 min',
-          completionPercentage: 100
+          completionPercentage: 100,
         },
         {
           id: 'templates',
@@ -132,7 +132,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: false,
           estimatedTime: '2 min',
-          completionPercentage: 100
+          completionPercentage: 100,
         },
         {
           id: 'generate',
@@ -144,9 +144,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: true,
           estimatedTime: '1 min',
-          completionPercentage: 0
-        }
-      ]
+          completionPercentage: 0,
+        },
+      ],
     },
     {
       id: 'content',
@@ -169,7 +169,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: true,
           isRequired: false,
           estimatedTime: '3 min',
-          completionPercentage: 60
+          completionPercentage: 60,
         },
         {
           id: 'bank',
@@ -182,9 +182,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: false,
           estimatedTime: '5 min',
-          completionPercentage: 20
-        }
-      ]
+          completionPercentage: 20,
+        },
+      ],
     },
     {
       id: 'advanced',
@@ -207,7 +207,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: false,
           estimatedTime: '4 min',
-          completionPercentage: 0
+          completionPercentage: 0,
         },
         {
           id: 'security',
@@ -219,7 +219,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: false,
           estimatedTime: '3 min',
-          completionPercentage: 0
+          completionPercentage: 0,
         },
         {
           id: 'collaborate',
@@ -232,7 +232,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: false,
           estimatedTime: '2 min',
-          completionPercentage: 0
+          completionPercentage: 0,
         },
         {
           id: 'ui',
@@ -245,9 +245,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: false,
           estimatedTime: '3 min',
-          completionPercentage: 0
-        }
-      ]
+          completionPercentage: 0,
+        },
+      ],
     },
     {
       id: 'review',
@@ -270,7 +270,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: true,
           estimatedTime: '3 min',
-          completionPercentage: 0
+          completionPercentage: 0,
         },
         {
           id: 'distribute',
@@ -283,7 +283,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: true,
           estimatedTime: '2 min',
-          completionPercentage: 0
+          completionPercentage: 0,
         },
         {
           id: 'analytics',
@@ -295,22 +295,20 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
           hasWarnings: false,
           isRequired: false,
           estimatedTime: '1 min',
-          completionPercentage: 0
-        }
-      ]
-    }
+          completionPercentage: 0,
+        },
+      ],
+    },
   ]
 
   // Get current active group and tab info
   const getCurrentGroup = () => {
-    return navigationGroups.find(group =>
-      group.tabs.some(tab => tab.id === activeTab)
-    )
+    return navigationGroups.find((group) => group.tabs.some((tab) => tab.id === activeTab))
   }
 
   const getCurrentTab = () => {
     for (const group of navigationGroups) {
-      const tab = group.tabs.find(t => t.id === activeTab)
+      const tab = group.tabs.find((t) => t.id === activeTab)
       if (tab) return { group, tab }
     }
     return null
@@ -324,7 +322,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
     return [
       { id: 'home', name: 'Test Creator' },
       { id: current.group.id, name: current.group.name },
-      { id: current.tab.id, name: current.tab.name }
+      { id: current.tab.id, name: current.tab.name },
     ]
   }
 
@@ -332,36 +330,38 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
   const getFilteredGroups = () => {
     if (!searchQuery) return navigationGroups
 
-    return navigationGroups.map(group => ({
-      ...group,
-      tabs: group.tabs.filter(tab =>
-        tab.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tab.description?.toLowerCase().includes(searchQuery.toLowerCase())
-      )
-    })).filter(group => group.tabs.length > 0)
+    return navigationGroups
+      .map((group) => ({
+        ...group,
+        tabs: group.tabs.filter(
+          (tab) =>
+            tab.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            tab.description?.toLowerCase().includes(searchQuery.toLowerCase())
+        ),
+      }))
+      .filter((group) => group.tabs.length > 0)
   }
 
   // Toggle group expansion
   const toggleGroup = (groupId: string) => {
-    setGroupStates(prev => ({
+    setGroupStates((prev) => ({
       ...prev,
-      [groupId]: !prev[groupId]
+      [groupId]: !prev[groupId],
     }))
   }
 
   // Pin/unpin tab
   const togglePinTab = (tabId: string) => {
-    setPinnedTabs(prev =>
-      prev.includes(tabId)
-        ? prev.filter(id => id !== tabId)
-        : [...prev, tabId].slice(0, 5) // Limit to 5 pinned tabs
+    setPinnedTabs(
+      (prev) =>
+        prev.includes(tabId) ? prev.filter((id) => id !== tabId) : [...prev, tabId].slice(0, 5) // Limit to 5 pinned tabs
     )
   }
 
   // Add to recent tabs
   const addToRecent = (tabId: string) => {
-    setRecentTabs(prev => {
-      const filtered = prev.filter(id => id !== tabId)
+    setRecentTabs((prev) => {
+      const filtered = prev.filter((id) => id !== tabId)
       return [tabId, ...filtered].slice(0, 8)
     })
   }
@@ -376,8 +376,8 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
 
   // Get next/previous tab for navigation
   const getAdjacentTab = (direction: 'next' | 'prev') => {
-    const allTabs = navigationGroups.flatMap(group => group.tabs)
-    const currentIndex = allTabs.findIndex(tab => tab.id === activeTab)
+    const allTabs = navigationGroups.flatMap((group) => group.tabs)
+    const currentIndex = allTabs.findIndex((tab) => tab.id === activeTab)
 
     if (direction === 'next') {
       return currentIndex < allTabs.length - 1 ? allTabs[currentIndex + 1] : null
@@ -435,9 +435,11 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
   }
 
   return (
-    <div className={`flex flex-col h-full bg-white border-r transition-all duration-300 ${
-      isCollapsed ? 'w-16' : 'w-80'
-    }`}>
+    <div
+      className={`flex flex-col h-full bg-white border-r transition-all duration-300 ${
+        isCollapsed ? 'w-16' : 'w-80'
+      }`}
+    >
       {/* Header */}
       <div className="p-4 border-b">
         <div className="flex items-center justify-between mb-4">
@@ -453,7 +455,11 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
             className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
             title={isCollapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
-            {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronLeft className="w-4 h-4" />}
+            {isCollapsed ? (
+              <ChevronRight className="w-4 h-4" />
+            ) : (
+              <ChevronLeft className="w-4 h-4" />
+            )}
           </button>
         </div>
 
@@ -496,9 +502,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
 
                     {searchQuery && (
                       <div className="border-t max-h-64 overflow-y-auto">
-                        {getFilteredGroups().map(group => (
+                        {getFilteredGroups().map((group) => (
                           <div key={group.id}>
-                            {group.tabs.map(tab => (
+                            {group.tabs.map((tab) => (
                               <button
                                 key={tab.id}
                                 onClick={() => handleTabChange(tab.id)}
@@ -529,7 +535,11 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                 {getBreadcrumbs().map((item, index) => (
                   <React.Fragment key={item.id}>
                     {index > 0 && <ChevronRight className="w-3 h-3" />}
-                    <span className={index === getBreadcrumbs().length - 1 ? 'font-medium text-gray-800' : ''}>
+                    <span
+                      className={
+                        index === getBreadcrumbs().length - 1 ? 'font-medium text-gray-800' : ''
+                      }
+                    >
                       {item.name}
                     </span>
                   </React.Fragment>
@@ -553,9 +563,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                 </span>
               </div>
               <div className="space-y-1">
-                {pinnedTabs.map(tabId => {
+                {pinnedTabs.map((tabId) => {
                   const tabInfo = getCurrentTab()
-                  const tab = navigationGroups.flatMap(g => g.tabs).find(t => t.id === tabId)
+                  const tab = navigationGroups.flatMap((g) => g.tabs).find((t) => t.id === tabId)
                   if (!tab) return null
 
                   return (
@@ -588,8 +598,8 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                 </span>
               </div>
               <div className="space-y-1">
-                {recentTabs.slice(0, 3).map(tabId => {
-                  const tab = navigationGroups.flatMap(g => g.tabs).find(t => t.id === tabId)
+                {recentTabs.slice(0, 3).map((tabId) => {
+                  const tab = navigationGroups.flatMap((g) => g.tabs).find((t) => t.id === tabId)
                   if (!tab) return null
 
                   return (
@@ -617,7 +627,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
       {/* Navigation Groups */}
       <div className="flex-1 overflow-y-auto">
         <div className="p-2 space-y-2">
-          {navigationGroups.map(group => (
+          {navigationGroups.map((group) => (
             <div key={group.id} className="space-y-1">
               {/* Group Header */}
               <button
@@ -657,9 +667,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
 
                 {!isCollapsed && (
                   <div className="flex items-center gap-1">
-                    <span className="text-xs text-gray-500">
-                      {group.tabs.length}
-                    </span>
+                    <span className="text-xs text-gray-500">{group.tabs.length}</span>
                     {groupStates[group.id] ? (
                       <ChevronDown className="w-4 h-4 text-gray-400" />
                     ) : (
@@ -679,7 +687,7 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                     className="overflow-hidden"
                   >
                     <div className={isCollapsed ? 'space-y-1' : 'ml-4 space-y-1'}>
-                      {group.tabs.map(tab => (
+                      {group.tabs.map((tab) => (
                         <button
                           key={tab.id}
                           onClick={() => handleTabChange(tab.id)}
@@ -717,7 +725,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                                         style={{ width: `${tab.completionPercentage}%` }}
                                       />
                                     </div>
-                                    <span className="text-xs text-gray-500">{tab.estimatedTime}</span>
+                                    <span className="text-xs text-gray-500">
+                                      {tab.estimatedTime}
+                                    </span>
                                   </div>
                                 )}
                               </div>

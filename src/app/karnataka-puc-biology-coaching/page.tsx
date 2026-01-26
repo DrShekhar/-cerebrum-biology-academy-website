@@ -168,7 +168,8 @@ export default function KarnatakaPUCBiologyCoachingPage() {
             '@context': 'https://schema.org',
             '@type': 'EducationalOrganization',
             name: 'Cerebrum Biology Academy - Karnataka PUC Biology Coaching',
-            description: 'Best online biology coaching for Karnataka PUC students preparing for NEET',
+            description:
+              'Best online biology coaching for Karnataka PUC students preparing for NEET',
             url: 'https://cerebrumbiologyacademy.com/karnataka-puc-biology-coaching',
             areaServed: {
               '@type': 'State',
@@ -203,8 +204,8 @@ export default function KarnatakaPUCBiologyCoachingPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert PUC Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty. Bridge the
-              gap between KSEEB and NCERT syllabus. Join 1,400+ Karnataka students!
+              Expert PUC Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty. Bridge
+              the gap between KSEEB and NCERT syllabus. Join 1,400+ Karnataka students!
             </p>
 
             {/* Primary CTAs */}
@@ -235,7 +236,10 @@ export default function KarnatakaPUCBiologyCoachingPage() {
             <div className="flex items-center justify-center gap-2 text-white/90 mb-12">
               <Phone className="w-5 h-5" />
               <span>Or call us: </span>
-              <a href="tel:+918826444334" className="font-bold hover:text-[#4ade80] transition-colors">
+              <a
+                href="tel:+918826444334"
+                className="font-bold hover:text-[#4ade80] transition-colors"
+              >
                 +91-88264-44334
               </a>
             </div>
@@ -280,7 +284,10 @@ export default function KarnatakaPUCBiologyCoachingPage() {
           </div>
           <div className="text-center mt-6">
             <Link href="/neet-tools">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#1e3a5f]">
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-[#1e3a5f]"
+              >
                 View All NEET Tools <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -302,7 +309,8 @@ export default function KarnatakaPUCBiologyCoachingPage() {
               PUC Biology Coaching Across Karnataka
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Bangalore to Mangalore, Mysore to Hubli - premium online coaching for every Karnataka student.
+              From Bangalore to Mangalore, Mysore to Hubli - premium online coaching for every
+              Karnataka student.
             </p>
           </motion.div>
 
@@ -492,12 +500,17 @@ export default function KarnatakaPUCBiologyCoachingPage() {
                 itemScope
                 itemType="https://schema.org/Question"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start" itemProp="name">
+                <h3
+                  className="text-xl font-bold text-gray-900 mb-4 flex items-start"
+                  itemProp="name"
+                >
                   <MessageCircle className="w-6 h-6 mr-3 text-[#1e3a5f] flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <div itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                  <p className="text-gray-700 leading-relaxed ml-9" itemProp="text">{faq.answer}</p>
+                  <p className="text-gray-700 leading-relaxed ml-9" itemProp="text">
+                    {faq.answer}
+                  </p>
                 </div>
               </motion.div>
             ))}
@@ -548,18 +561,23 @@ export default function KarnatakaPUCBiologyCoachingPage() {
             <div className="flex items-center justify-center gap-2 text-white/90">
               <Phone className="w-5 h-5" />
               <span>Call: </span>
-              <a href="tel:+918826444334" className="font-bold hover:text-[#4ade80] transition-colors">
+              <a
+                href="tel:+918826444334"
+                className="font-bold hover:text-[#4ade80] transition-colors"
+              >
                 +91-88264-44334
               </a>
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm mt-12">
-              {['All Karnataka Cities', 'Live Classes', 'PUC + NEET', 'NCERT Aligned'].map((item) => (
-                <div key={item} className="flex items-center justify-center">
-                  <CheckCircle className="w-4 h-4 mr-2" />
-                  <span>{item}</span>
-                </div>
-              ))}
+              {['All Karnataka Cities', 'Live Classes', 'PUC + NEET', 'NCERT Aligned'].map(
+                (item) => (
+                  <div key={item} className="flex items-center justify-center">
+                    <CheckCircle className="w-4 h-4 mr-2" />
+                    <span>{item}</span>
+                  </div>
+                )
+              )}
             </div>
           </motion.div>
         </div>

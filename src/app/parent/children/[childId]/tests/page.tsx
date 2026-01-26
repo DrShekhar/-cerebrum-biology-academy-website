@@ -615,13 +615,17 @@ export default function ParentTestsPage() {
               <div className="space-y-6">
                 {/* Performance Trend Chart */}
                 <div>
-                  <h3 className="text-sm font-medium text-gray-700 mb-4">6-Month Performance Trend</h3>
+                  <h3 className="text-sm font-medium text-gray-700 mb-4">
+                    6-Month Performance Trend
+                  </h3>
                   <div className="h-48 flex items-end gap-2">
                     {performanceTrend.map((month, idx) => (
                       <div key={idx} className="flex-1 flex flex-col items-center">
                         <div
                           className={`w-full rounded-t-lg transition-all ${
-                            month.avgPercentage > 0 ? getPercentageBg(month.avgPercentage) : 'bg-gray-200'
+                            month.avgPercentage > 0
+                              ? getPercentageBg(month.avgPercentage)
+                              : 'bg-gray-200'
                           }`}
                           style={{
                             height: `${Math.max(month.avgPercentage, 5)}%`,

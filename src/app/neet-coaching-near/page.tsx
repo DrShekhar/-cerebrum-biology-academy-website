@@ -110,7 +110,16 @@ export default function NEETCoachingNearPage() {
     if (savedLocation) {
       try {
         const location = JSON.parse(savedLocation)
-        const delhiNCRCities = ['Delhi', 'New Delhi', 'Gurugram', 'Gurgaon', 'Faridabad', 'Noida', 'Greater Noida', 'Ghaziabad']
+        const delhiNCRCities = [
+          'Delhi',
+          'New Delhi',
+          'Gurugram',
+          'Gurgaon',
+          'Faridabad',
+          'Noida',
+          'Greater Noida',
+          'Ghaziabad',
+        ]
         setIsInDelhiNCR(delhiNCRCities.includes(location.city))
       } catch {
         setIsInDelhiNCR(null)
@@ -297,7 +306,8 @@ export default function NEETCoachingNearPage() {
                 Not in Delhi NCR? Join Us Online!
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Get the same expert NEET coaching from anywhere in India through our interactive online platform.
+                Get the same expert NEET coaching from anywhere in India through our interactive
+                online platform.
               </p>
             </motion.div>
 
@@ -317,12 +327,17 @@ export default function NEETCoachingNearPage() {
                     </div>
                     <div className="ml-4">
                       <h3 className="font-bold text-gray-900">{region.name}</h3>
-                      <p className="text-sm text-gray-500">{region.studentCount}+ students enrolled</p>
+                      <p className="text-sm text-gray-500">
+                        {region.studentCount}+ students enrolled
+                      </p>
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {(region.states || region.countries || []).slice(0, 4).map((area) => (
-                      <span key={area} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                      <span
+                        key={area}
+                        className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded"
+                      >
                         {area}
                       </span>
                     ))}

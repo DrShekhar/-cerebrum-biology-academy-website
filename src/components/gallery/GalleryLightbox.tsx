@@ -160,11 +160,7 @@ export function GalleryLightbox({
               className="rounded-full bg-white/10 p-2 text-white backdrop-blur-sm transition-colors hover:bg-white/20"
               aria-label={isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}
             >
-              {isFullscreen ? (
-                <Minimize className="h-5 w-5" />
-              ) : (
-                <Expand className="h-5 w-5" />
-              )}
+              {isFullscreen ? <Minimize className="h-5 w-5" /> : <Expand className="h-5 w-5" />}
             </button>
           </div>
         </div>

@@ -52,7 +52,9 @@ function checkRateLimit(ip: string): { allowed: boolean; remaining: number } {
 
 function getClientIP(request: NextRequest): string {
   const forwarded = request.headers.get('x-forwarded-for')
-  const ip = forwarded ? forwarded.split(',')[0].trim() : request.headers.get('x-real-ip') || 'unknown'
+  const ip = forwarded
+    ? forwarded.split(',')[0].trim()
+    : request.headers.get('x-real-ip') || 'unknown'
   return ip
 }
 
@@ -88,7 +90,9 @@ async function createStreamWithRetry(
       }
 
       const delayMs = initialDelay * Math.pow(2, attempt)
-      console.log(`[ARIA] Stream creation failed (attempt ${attempt + 1}/${maxRetries}), retrying in ${delayMs}ms...`)
+      console.log(
+        `[ARIA] Stream creation failed (attempt ${attempt + 1}/${maxRetries}), retrying in ${delayMs}ms...`
+      )
       await delay(delayMs)
     }
   }
@@ -101,17 +105,14 @@ export async function POST(request: NextRequest) {
   const { allowed, remaining } = checkRateLimit(clientIP)
 
   if (!allowed) {
-    return new Response(
-      JSON.stringify({ error: 'Rate limit exceeded. Please try again later.' }),
-      {
-        status: 429,
-        headers: {
-          'Content-Type': 'application/json',
-          'X-RateLimit-Remaining': '0',
-          'X-RateLimit-Reset': String(Math.floor(Date.now() / 1000) + 3600),
-        },
-      }
-    )
+    return new Response(JSON.stringify({ error: 'Rate limit exceeded. Please try again later.' }), {
+      status: 429,
+      headers: {
+        'Content-Type': 'application/json',
+        'X-RateLimit-Remaining': '0',
+        'X-RateLimit-Reset': String(Math.floor(Date.now() / 1000) + 3600),
+      },
+    })
   }
 
   try {
@@ -154,12 +155,10 @@ export async function POST(request: NextRequest) {
     }
 
     const messages: Anthropic.MessageParam[] = [
-      ...conversationHistory
-        .slice(-10)
-        .map((msg) => ({
-          role: msg.role as 'user' | 'assistant',
-          content: msg.content,
-        })),
+      ...conversationHistory.slice(-10).map((msg) => ({
+        role: msg.role as 'user' | 'assistant',
+        content: msg.content,
+      })),
       { role: 'user' as const, content: message },
     ]
 
@@ -167,10 +166,10 @@ export async function POST(request: NextRequest) {
 
     if (!apiKey) {
       console.error('[ARIA] ANTHROPIC_API_KEY is not configured')
-      return new Response(
-        JSON.stringify({ error: 'AI service not configured' }),
-        { status: 500, headers: { 'Content-Type': 'application/json' } }
-      )
+      return new Response(JSON.stringify({ error: 'AI service not configured' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      })
     }
 
     const anthropic = new Anthropic({ apiKey })

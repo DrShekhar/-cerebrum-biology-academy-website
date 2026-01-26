@@ -155,15 +155,16 @@ function NoticeCard({ notice, compact, onClick }: NoticeCardProps) {
 
       {/* Title */}
       <h3
-        className={cn('font-semibold text-gray-900 mb-1', compact ? 'text-sm line-clamp-1' : 'text-base')}
+        className={cn(
+          'font-semibold text-gray-900 mb-1',
+          compact ? 'text-sm line-clamp-1' : 'text-base'
+        )}
       >
         {notice.title}
       </h3>
 
       {/* Content Preview */}
-      {!compact && (
-        <p className="text-sm text-gray-600 line-clamp-2 mb-2">{notice.content}</p>
-      )}
+      {!compact && <p className="text-sm text-gray-600 line-clamp-2 mb-2">{notice.content}</p>}
 
       {/* Footer */}
       <div className="flex items-center justify-between text-xs text-gray-400">
@@ -252,7 +253,8 @@ function NoticeDetailModal({ notice, isOpen, onClose }: NoticeDetailModalProps) 
                   <a
                     key={index}
                     href={attachment.url}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors"
                   >
                     <span className="text-lg">📎</span>
@@ -283,7 +285,12 @@ function NoticeDetailModal({ notice, isOpen, onClose }: NoticeDetailModalProps) 
 // MAIN NOTICE BOARD COMPONENT
 // ============================================
 
-export function NoticeBoard({ className, limit = 10, showFilters = true, compact = false }: NoticeBoardProps) {
+export function NoticeBoard({
+  className,
+  limit = 10,
+  showFilters = true,
+  compact = false,
+}: NoticeBoardProps) {
   const [notices, setNotices] = useState<Notice[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -330,9 +337,7 @@ export function NoticeBoard({ className, limit = 10, showFilters = true, compact
     fetch(`/api/notices/${notice.id}`)
       .then(() => {
         // Update local state to mark as read
-        setNotices((prev) =>
-          prev.map((n) => (n.id === notice.id ? { ...n, isRead: true } : n))
-        )
+        setNotices((prev) => prev.map((n) => (n.id === notice.id ? { ...n, isRead: true } : n)))
       })
       .catch(console.error)
   }
@@ -395,10 +400,7 @@ export function NoticeBoard({ className, limit = 10, showFilters = true, compact
       ) : error ? (
         <div className="text-center py-8">
           <p className="text-red-500">{error}</p>
-          <button
-            onClick={fetchNotices}
-            className="mt-2 text-sm text-blue-600 hover:underline"
-          >
+          <button onClick={fetchNotices} className="mt-2 text-sm text-blue-600 hover:underline">
             Try again
           </button>
         </div>

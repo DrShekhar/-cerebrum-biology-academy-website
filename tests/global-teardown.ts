@@ -67,10 +67,10 @@ async function generateTestReport() {
       integration: await getIntegrationResults(),
       performance: await getPerformanceResults(),
       security: await getSecurityResults(),
-      accessibility: await getAccessibilityResults()
+      accessibility: await getAccessibilityResults(),
     },
     coverage: await getCoverageMetrics(),
-    aiTesting: await getAITestingResults()
+    aiTesting: await getAITestingResults(),
   }
 
   return report
@@ -86,7 +86,7 @@ async function getE2EResults() {
       total: data.stats?.total || 0,
       passed: data.stats?.passed || 0,
       failed: data.stats?.failed || 0,
-      duration: data.stats?.duration || 0
+      duration: data.stats?.duration || 0,
     }
   } catch {
     return { total: 0, passed: 0, failed: 0, duration: 0 }
@@ -102,7 +102,7 @@ async function getUnitTestResults() {
       total: results.numTotalTests || 0,
       passed: results.numPassedTests || 0,
       failed: results.numFailedTests || 0,
-      coverage: results.coverageMap ? Object.keys(results.coverageMap).length : 0
+      coverage: results.coverageMap ? Object.keys(results.coverageMap).length : 0,
     }
   } catch {
     return { total: 0, passed: 0, failed: 0, coverage: 0 }
@@ -117,7 +117,7 @@ async function getIntegrationResults() {
     return {
       total: results.numTotalTests || 0,
       passed: results.numPassedTests || 0,
-      failed: results.numFailedTests || 0
+      failed: results.numFailedTests || 0,
     }
   } catch {
     return { total: 0, passed: 0, failed: 0 }
@@ -133,7 +133,7 @@ async function getPerformanceResults() {
       avgPageLoad: metrics.avgPageLoad || 0,
       avgApiResponse: metrics.avgApiResponse || 0,
       passedBenchmarks: metrics.passedBenchmarks || 0,
-      totalBenchmarks: metrics.totalBenchmarks || 0
+      totalBenchmarks: metrics.totalBenchmarks || 0,
     }
   } catch {
     return { avgPageLoad: 0, avgApiResponse: 0, passedBenchmarks: 0, totalBenchmarks: 0 }
@@ -149,7 +149,7 @@ async function getSecurityResults() {
       vulnerabilities: results.vulnerabilities || 0,
       criticalIssues: results.critical || 0,
       warningIssues: results.warnings || 0,
-      passed: results.passed || 0
+      passed: results.passed || 0,
     }
   } catch {
     return { vulnerabilities: 0, criticalIssues: 0, warningIssues: 0, passed: 0 }
@@ -165,7 +165,7 @@ async function getAccessibilityResults() {
       violations: results.violations || 0,
       warnings: results.warnings || 0,
       passed: results.passed || 0,
-      wcagLevel: results.wcagLevel || 'AA'
+      wcagLevel: results.wcagLevel || 'AA',
     }
   } catch {
     return { violations: 0, warnings: 0, passed: 0, wcagLevel: 'AA' }
@@ -182,7 +182,7 @@ async function getCoverageMetrics() {
       lines: data.total?.lines?.pct || 0,
       functions: data.total?.functions?.pct || 0,
       branches: data.total?.branches?.pct || 0,
-      statements: data.total?.statements?.pct || 0
+      statements: data.total?.statements?.pct || 0,
     }
   } catch {
     return { lines: 0, functions: 0, branches: 0, statements: 0 }
@@ -198,7 +198,7 @@ async function getAITestingResults() {
       contentQualityTests: results.contentQuality || 0,
       aiResponseTests: results.aiResponses || 0,
       performanceTests: results.aiPerformance || 0,
-      accuracyScore: results.accuracyScore || 0
+      accuracyScore: results.accuracyScore || 0,
     }
   } catch {
     return { contentQualityTests: 0, aiResponseTests: 0, performanceTests: 0, accuracyScore: 0 }
@@ -283,7 +283,7 @@ async function summarizePerformanceMetrics() {
     // Add current run to trends
     trends.runs.push({
       timestamp: new Date().toISOString(),
-      metrics: await getPerformanceResults()
+      metrics: await getPerformanceResults(),
     })
 
     // Keep only last 10 runs
@@ -295,10 +295,12 @@ async function summarizePerformanceMetrics() {
   } catch {
     // Create new trends file
     const trends = {
-      runs: [{
-        timestamp: new Date().toISOString(),
-        metrics: await getPerformanceResults()
-      }]
+      runs: [
+        {
+          timestamp: new Date().toISOString(),
+          metrics: await getPerformanceResults(),
+        },
+      ],
     }
     await fs.writeFile(metricsFile, JSON.stringify(trends, null, 2))
   }

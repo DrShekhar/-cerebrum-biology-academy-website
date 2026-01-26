@@ -52,7 +52,8 @@ const features = [
   {
     icon: Users,
     title: 'Small Batches (10-15)',
-    description: 'Personalized attention for every HSC student. Doubt clearing until you understand.',
+    description:
+      'Personalized attention for every HSC student. Doubt clearing until you understand.',
   },
   {
     icon: Award,
@@ -62,7 +63,8 @@ const features = [
   {
     icon: BookOpen,
     title: 'HSC + NEET Dual Focus',
-    description: 'Comprehensive preparation covering both Maharashtra board and NEET biology syllabus.',
+    description:
+      'Comprehensive preparation covering both Maharashtra board and NEET biology syllabus.',
   },
   {
     icon: Clock,
@@ -168,7 +170,8 @@ export default function MaharashtraHSCBiologyTuitionPage() {
             '@context': 'https://schema.org',
             '@type': 'EducationalOrganization',
             name: 'Cerebrum Biology Academy - Maharashtra HSC Biology Tuition',
-            description: 'Best online biology tuition for Maharashtra HSC board students preparing for NEET',
+            description:
+              'Best online biology tuition for Maharashtra HSC board students preparing for NEET',
             url: 'https://cerebrumbiologyacademy.com/maharashtra-hsc-biology-tuition',
             areaServed: {
               '@type': 'State',
@@ -217,8 +220,9 @@ export default function MaharashtraHSCBiologyTuitionPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert HSC Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty. Bridge the
-              gap between Maharashtra board and NCERT syllabus. Join 1,200+ Maharashtra students!
+              Expert HSC Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty. Bridge
+              the gap between Maharashtra board and NCERT syllabus. Join 1,200+ Maharashtra
+              students!
             </p>
 
             {/* Primary CTA - WhatsApp */}
@@ -250,7 +254,10 @@ export default function MaharashtraHSCBiologyTuitionPage() {
             <div className="flex items-center justify-center gap-2 text-white/90 mb-12">
               <Phone className="w-5 h-5" />
               <span>Or call us: </span>
-              <a href="tel:+918826444334" className="font-bold hover:text-yellow-300 transition-colors">
+              <a
+                href="tel:+918826444334"
+                className="font-bold hover:text-yellow-300 transition-colors"
+              >
                 +91-88264-44334
               </a>
             </div>
@@ -278,9 +285,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
       <section className="py-12 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold mb-2">
-              Free NEET Preparation Tools
-            </h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-2">Free NEET Preparation Tools</h2>
             <p className="opacity-90">Use our AI-powered tools to plan your NEET journey</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -297,7 +302,10 @@ export default function MaharashtraHSCBiologyTuitionPage() {
           </div>
           <div className="text-center mt-6">
             <Link href="/neet-tools">
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-blue-600"
+              >
                 View All NEET Tools <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -319,7 +327,8 @@ export default function MaharashtraHSCBiologyTuitionPage() {
               HSC Biology Coaching Across Maharashtra
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Mumbai to Nagpur, Pune to Nashik - premium online coaching for every Maharashtra student.
+              From Mumbai to Nagpur, Pune to Nashik - premium online coaching for every Maharashtra
+              student.
             </p>
           </motion.div>
 
@@ -559,7 +568,8 @@ export default function MaharashtraHSCBiologyTuitionPage() {
               Ready to Excel in HSC Biology & NEET?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,200+ Maharashtra students. 94.2% success rate. AIIMS faculty. Start your journey today!
+              Join 1,200+ Maharashtra students. 94.2% success rate. AIIMS faculty. Start your
+              journey today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -589,7 +599,10 @@ export default function MaharashtraHSCBiologyTuitionPage() {
             <div className="flex items-center justify-center gap-2 text-white/90">
               <Phone className="w-5 h-5" />
               <span>Call: </span>
-              <a href="tel:+918826444334" className="font-bold hover:text-yellow-300 transition-colors">
+              <a
+                href="tel:+918826444334"
+                className="font-bold hover:text-yellow-300 transition-colors"
+              >
                 +91-88264-44334
               </a>
             </div>

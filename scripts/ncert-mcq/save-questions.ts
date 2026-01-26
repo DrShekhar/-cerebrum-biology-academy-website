@@ -57,7 +57,7 @@ async function saveQuestions(batch: QuestionBatch): Promise<number> {
       let correctLetter = q.correctAnswer
       if (q.correctAnswer.length > 1) {
         // If correctAnswer is the full text, find its index
-        const idx = q.options.findIndex(o => o === q.correctAnswer)
+        const idx = q.options.findIndex((o) => o === q.correctAnswer)
         if (idx >= 0) {
           correctLetter = ['A', 'B', 'C', 'D'][idx]
         }
@@ -125,7 +125,9 @@ async function main() {
 
   const batch: QuestionBatch = JSON.parse(fs.readFileSync(jsonFile, 'utf-8'))
 
-  console.log(`\nSaving questions for Class ${batch.ncertClass}, Chapter ${batch.ncertChapter}: ${batch.ncertChapterName}`)
+  console.log(
+    `\nSaving questions for Class ${batch.ncertClass}, Chapter ${batch.ncertChapter}: ${batch.ncertChapterName}`
+  )
   console.log(`Total questions: ${batch.questions.length}\n`)
 
   const saved = await saveQuestions(batch)

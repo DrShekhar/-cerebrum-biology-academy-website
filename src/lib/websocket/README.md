@@ -16,6 +16,7 @@ Complete WebSocket implementation for real-time features in Cerebrum Biology Aca
 ## Installation
 
 All required dependencies are already included:
+
 - `ws` - WebSocket implementation
 - `@types/ws` - TypeScript definitions
 
@@ -57,6 +58,7 @@ const socket = useWebSocket({
 ```
 
 In mock mode, the client will:
+
 - Simulate connection status
 - Generate realistic mock data every 5 seconds
 - Fire all event handlers as if real data was received
@@ -73,15 +75,11 @@ function StudyMetrics() {
     enableMockMode: true,
   })
 
-  useWebSocketMessage<StudyMetricsPayload>(
-    socket,
-    'study_metrics_update',
-    (metrics) => {
-      console.log('Study hours:', metrics.studyHours)
-      console.log('Progress:', metrics.progress)
-      console.log('Streak:', metrics.streak)
-    }
-  )
+  useWebSocketMessage<StudyMetricsPayload>(socket, 'study_metrics_update', (metrics) => {
+    console.log('Study hours:', metrics.studyHours)
+    console.log('Progress:', metrics.progress)
+    console.log('Streak:', metrics.streak)
+  })
 
   return <div>Study metrics component</div>
 }
@@ -140,18 +138,18 @@ client.disconnect()
 
 ```typescript
 interface WebSocketConfig {
-  url: string                              // WebSocket server URL
-  reconnect?: boolean                      // Auto-reconnect on disconnect (default: true)
-  reconnectAttempts?: number              // Max reconnect attempts (default: 5)
-  reconnectInterval?: number              // Initial reconnect delay in ms (default: 3000)
-  heartbeatInterval?: number              // Ping interval in ms (default: 30000)
-  connectionTimeout?: number              // Connection timeout in ms (default: 10000)
-  enableQueue?: boolean                   // Queue messages when offline (default: true)
-  enableMockMode?: boolean                // Enable demo mode (default: false)
-  debug?: boolean                         // Enable console logging (default: false)
-  onConnect?: () => void                  // Connection callback
+  url: string // WebSocket server URL
+  reconnect?: boolean // Auto-reconnect on disconnect (default: true)
+  reconnectAttempts?: number // Max reconnect attempts (default: 5)
+  reconnectInterval?: number // Initial reconnect delay in ms (default: 3000)
+  heartbeatInterval?: number // Ping interval in ms (default: 30000)
+  connectionTimeout?: number // Connection timeout in ms (default: 10000)
+  enableQueue?: boolean // Queue messages when offline (default: true)
+  enableMockMode?: boolean // Enable demo mode (default: false)
+  debug?: boolean // Enable console logging (default: false)
+  onConnect?: () => void // Connection callback
   onDisconnect?: (reason?: string) => void // Disconnection callback
-  onError?: (error: Error) => void        // Error callback
+  onError?: (error: Error) => void // Error callback
   onMessage?: (message: WebSocketMessage) => void // Message callback
 }
 ```
@@ -159,6 +157,7 @@ interface WebSocketConfig {
 ## Message Types
 
 ### Study Metrics Update
+
 ```typescript
 {
   type: 'study_metrics_update',
@@ -174,6 +173,7 @@ interface WebSocketConfig {
 ```
 
 ### Collaborative Session Update
+
 ```typescript
 {
   type: 'collaborative_session_update',
@@ -192,6 +192,7 @@ interface WebSocketConfig {
 ```
 
 ### Notification
+
 ```typescript
 {
   type: 'notification',
@@ -208,6 +209,7 @@ interface WebSocketConfig {
 ```
 
 ### System Status
+
 ```typescript
 {
   type: 'system_status',
@@ -228,6 +230,7 @@ interface WebSocketConfig {
 ## Connection Management
 
 ### Status Types
+
 - `connecting` - Initial connection attempt
 - `connected` - Successfully connected
 - `disconnected` - Not connected
@@ -235,7 +238,9 @@ interface WebSocketConfig {
 - `error` - Connection error occurred
 
 ### Automatic Reconnection
+
 The client automatically attempts to reconnect with exponential backoff:
+
 - Attempt 1: 3 seconds
 - Attempt 2: 4.5 seconds
 - Attempt 3: 6.75 seconds
@@ -243,6 +248,7 @@ The client automatically attempts to reconnect with exponential backoff:
 - Attempt 5: 15.1875 seconds
 
 ### Manual Control
+
 ```tsx
 const socket = useWebSocket({ url: 'wss://...' })
 
@@ -263,6 +269,7 @@ socket.clearQueue()
 ## Examples
 
 See `/src/lib/websocket/examples.tsx` for complete working examples:
+
 - Live Study Metrics Dashboard
 - Collaborative Study Sessions
 - Real-time Notifications
@@ -297,23 +304,29 @@ wss.on('connection', (ws) => {
 
     // Handle ping/pong
     if (message.type === 'ping') {
-      ws.send(JSON.stringify({
-        type: 'pong',
-        payload: message.payload,
-        timestamp: Date.now(),
-        messageId: generateId()
-      }))
+      ws.send(
+        JSON.stringify({
+          type: 'pong',
+          payload: message.payload,
+          timestamp: Date.now(),
+          messageId: generateId(),
+        })
+      )
     }
 
     // Broadcast to all clients
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-        client.send(JSON.stringify({
-          type: 'study_metrics_update',
-          payload: { /* ... */ },
-          timestamp: Date.now(),
-          messageId: generateId()
-        }))
+        client.send(
+          JSON.stringify({
+            type: 'study_metrics_update',
+            payload: {
+              /* ... */
+            },
+            timestamp: Date.now(),
+            messageId: generateId(),
+          })
+        )
       }
     })
   })
@@ -323,6 +336,7 @@ wss.on('connection', (ws) => {
 ## Testing
 
 ### Mock Mode
+
 Use mock mode for development and testing:
 
 ```tsx
@@ -334,12 +348,14 @@ const socket = useWebSocket({
 ```
 
 Mock mode will generate realistic data every 5 seconds including:
+
 - Random study metrics
 - Collaborative session updates
 - Various notifications
 - System status updates
 
 ### Integration Testing
+
 ```tsx
 import { WebSocketClient } from '@/lib/websocket/client'
 
@@ -394,17 +410,20 @@ src/
 ## Troubleshooting
 
 ### Connection Issues
+
 - Check that WebSocket server is running
 - Verify URL is correct (ws:// or wss://)
 - Check firewall/proxy settings
 - Enable debug mode to see detailed logs
 
 ### Mock Mode Not Working
+
 - Ensure `enableMockMode: true` is set
 - Check console for mock data logs
 - Verify message handlers are properly registered
 
 ### High Latency
+
 - Check network connection
 - Reduce heartbeat interval
 - Verify server is not overloaded

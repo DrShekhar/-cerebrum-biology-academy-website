@@ -2,16 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Check,
-  X,
-  Crown,
-  Target,
-  Gem,
-  Award,
-  ChevronDown,
-  ChevronUp,
-} from 'lucide-react'
+import { Check, X, Crown, Target, Gem, Award, ChevronDown, ChevronUp } from 'lucide-react'
 
 interface ComparisonFeature {
   category: string

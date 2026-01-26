@@ -19,7 +19,7 @@ const customJestConfig = {
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
     '<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}',
-    '<rootDir>/__tests__/**/*.{js,jsx,ts,tsx}'
+    '<rootDir>/__tests__/**/*.{js,jsx,ts,tsx}',
   ],
 
   // Module name mapping
@@ -91,9 +91,7 @@ const customJestConfig = {
     '<rootDir>/src/__tests__/lib/whatsapp/aiMessageHandler.test.ts',
   ],
 
-  transformIgnorePatterns: [
-    'node_modules/(?!(next-auth|@auth|nanoid)/)',
-  ],
+  transformIgnorePatterns: ['node_modules/(?!(next-auth|@auth|nanoid)/)'],
 
   // Module directories
   moduleDirectories: ['node_modules', '<rootDir>/'],

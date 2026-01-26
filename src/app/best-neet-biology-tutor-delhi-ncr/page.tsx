@@ -99,12 +99,12 @@ const faqs = [
   {
     question: 'Do you offer home tuition in Delhi NCR?',
     answer:
-      'We don\'t offer home tuition as our structured classroom/online environment is more effective. However, our online classes are equivalent to having a personal tutor at home. For students in Greater Noida, we have convenient center-based classes.',
+      "We don't offer home tuition as our structured classroom/online environment is more effective. However, our online classes are equivalent to having a personal tutor at home. For students in Greater Noida, we have convenient center-based classes.",
   },
   {
     question: 'How does your coaching compare to Kota coaching?',
     answer:
-      'We offer Kota-level quality without the need to relocate. Dr. Shekhar Singh\'s teaching methodology, developed through years at premier institutes, is comparable to top Kota faculties. Many of our students have outperformed students from expensive Kota coaching.',
+      "We offer Kota-level quality without the need to relocate. Dr. Shekhar Singh's teaching methodology, developed through years at premier institutes, is comparable to top Kota faculties. Many of our students have outperformed students from expensive Kota coaching.",
   },
   {
     question: 'What areas of Delhi NCR do you cover?',
@@ -179,8 +179,7 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Best NEET Biology Tutor in{' '}
-              <span className="text-yellow-400">Delhi NCR</span>
+              Best NEET Biology Tutor in <span className="text-yellow-400">Delhi NCR</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -249,7 +248,9 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
           <div
             ref={locationsHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              locationsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              locationsHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">

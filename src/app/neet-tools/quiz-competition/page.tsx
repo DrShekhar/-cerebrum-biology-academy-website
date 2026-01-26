@@ -109,12 +109,10 @@ export default function QuizCompetitionPage() {
               <span className="font-semibold">Classroom Quiz Tool</span>
             </div>
 
-            <h1 className="mb-4 text-3xl font-bold md:text-5xl">
-              Quiz Competition
-            </h1>
+            <h1 className="mb-4 text-3xl font-bold md:text-5xl">Quiz Competition</h1>
             <p className="mb-8 text-lg text-indigo-100 md:text-xl">
-              Conduct engaging team-based quizzes in your classroom. Two teams compete,
-              live score updates on all devices.
+              Conduct engaging team-based quizzes in your classroom. Two teams compete, live score
+              updates on all devices.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4">
@@ -126,7 +124,9 @@ export default function QuizCompetitionPage() {
                 Create Quiz
               </Link>
               <button
-                onClick={() => document.getElementById('join-section')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document.getElementById('join-section')?.scrollIntoView({ behavior: 'smooth' })
+                }
                 className="inline-flex items-center gap-2 rounded-lg border-2 border-white px-6 py-3 font-semibold text-white transition-colors hover:bg-white/10"
               >
                 <Play className="h-5 w-5" />
@@ -160,16 +160,11 @@ export default function QuizCompetitionPage() {
           </Link>
 
           {/* Join Quiz Card */}
-          <div
-            id="join-section"
-            className="rounded-2xl bg-white p-6 shadow-xl"
-          >
+          <div id="join-section" className="rounded-2xl bg-white p-6 shadow-xl">
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-green-100">
               <Play className="h-7 w-7 text-green-600" />
             </div>
-            <h2 className="mb-2 text-xl font-bold text-gray-900">
-              Join a Quiz
-            </h2>
+            <h2 className="mb-2 text-xl font-bold text-gray-900">Join a Quiz</h2>
             <p className="mb-4 text-gray-600">
               Enter the 6-character room code to join as a participant.
             </p>
@@ -201,20 +196,24 @@ export default function QuizCompetitionPage() {
             <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-purple-100">
               <Trophy className="h-7 w-7 text-purple-600" />
             </div>
-            <h2 className="mb-2 text-xl font-bold text-gray-900">
-              How It Works
-            </h2>
+            <h2 className="mb-2 text-xl font-bold text-gray-900">How It Works</h2>
             <ul className="space-y-2 text-gray-600">
               <li className="flex items-start gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">1</span>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">
+                  1
+                </span>
                 <span>Teacher creates a quiz & gets room code</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">2</span>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">
+                  2
+                </span>
                 <span>Students join via code on their phones</span>
               </li>
               <li className="flex items-start gap-2">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">3</span>
+                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-indigo-100 text-xs font-bold text-indigo-600">
+                  3
+                </span>
                 <span>Scores update live across all devices</span>
               </li>
             </ul>
@@ -231,8 +230,8 @@ export default function QuizCompetitionPage() {
                 Moderator Mode
               </h3>
               <p className="mb-4 text-gray-600">
-                Teacher asks questions verbally. Teams can pass to the other team
-                (with a penalty). Best for traditional quiz bowl format.
+                Teacher asks questions verbally. Teams can pass to the other team (with a penalty).
+                Best for traditional quiz bowl format.
               </p>
               <ul className="space-y-1 text-sm text-gray-500">
                 <li>+20 for correct answers</li>
@@ -247,8 +246,8 @@ export default function QuizCompetitionPage() {
                 Teams Ask Each Other
               </h3>
               <p className="mb-4 text-gray-600">
-                Teams prepare questions and ask each other. No passing allowed.
-                Direct scoring based on answers.
+                Teams prepare questions and ask each other. No passing allowed. Direct scoring based
+                on answers.
               </p>
               <ul className="space-y-1 text-sm text-gray-500">
                 <li>+20 for correct answers</li>
@@ -287,7 +286,9 @@ export default function QuizCompetitionPage() {
                       <div>
                         <h3 className="font-semibold text-gray-900">{session.title}</h3>
                         <p className="text-xs text-gray-500">
-                          {session.format === 'MODERATOR' ? 'Moderator Mode' : 'Teams Ask Each Other'}
+                          {session.format === 'MODERATOR'
+                            ? 'Moderator Mode'
+                            : 'Teams Ask Each Other'}
                         </p>
                       </div>
                       <span className="text-xs text-gray-500">
@@ -296,14 +297,18 @@ export default function QuizCompetitionPage() {
                     </div>
 
                     <div className="mb-3 grid grid-cols-2 gap-2 rounded-lg bg-gray-50 p-3">
-                      <div className={`text-center ${session.teamAScore > session.teamBScore ? 'text-green-600' : 'text-gray-600'}`}>
+                      <div
+                        className={`text-center ${session.teamAScore > session.teamBScore ? 'text-green-600' : 'text-gray-600'}`}
+                      >
                         <p className="text-xs text-gray-500">{session.teamAName}</p>
                         <p className="text-2xl font-bold">{session.teamAScore}</p>
                         {session.teamAScore > session.teamBScore && (
                           <Trophy className="mx-auto h-4 w-4 text-yellow-500" />
                         )}
                       </div>
-                      <div className={`text-center ${session.teamBScore > session.teamAScore ? 'text-green-600' : 'text-gray-600'}`}>
+                      <div
+                        className={`text-center ${session.teamBScore > session.teamAScore ? 'text-green-600' : 'text-gray-600'}`}
+                      >
                         <p className="text-xs text-gray-500">{session.teamBName}</p>
                         <p className="text-2xl font-bold">{session.teamBScore}</p>
                         {session.teamBScore > session.teamAScore && (
@@ -357,16 +362,22 @@ export default function QuizCompetitionPage() {
                         <td className="px-6 py-4">
                           <div className="font-medium text-gray-900">{session.title}</div>
                           <div className="text-sm text-gray-500">
-                            {session.format === 'MODERATOR' ? 'Moderator Mode' : 'Teams Ask Each Other'}
+                            {session.format === 'MODERATOR'
+                              ? 'Moderator Mode'
+                              : 'Teams Ask Each Other'}
                           </div>
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex items-center gap-2">
-                            <span className={`font-semibold ${session.teamAScore > session.teamBScore ? 'text-green-600' : 'text-gray-600'}`}>
+                            <span
+                              className={`font-semibold ${session.teamAScore > session.teamBScore ? 'text-green-600' : 'text-gray-600'}`}
+                            >
                               {session.teamAName}: {session.teamAScore}
                             </span>
                             <span className="text-gray-400">vs</span>
-                            <span className={`font-semibold ${session.teamBScore > session.teamAScore ? 'text-green-600' : 'text-gray-600'}`}>
+                            <span
+                              className={`font-semibold ${session.teamBScore > session.teamAScore ? 'text-green-600' : 'text-gray-600'}`}
+                            >
                               {session.teamBName}: {session.teamBScore}
                             </span>
                           </div>
@@ -407,9 +418,7 @@ export default function QuizCompetitionPage() {
             <div className="rounded-xl border-2 border-dashed border-gray-300 bg-gray-50 py-12 text-center">
               <History className="mx-auto mb-4 h-12 w-12 text-gray-400" />
               <h3 className="mb-2 text-lg font-medium text-gray-900">No quizzes yet</h3>
-              <p className="mb-4 text-gray-500">
-                Create your first quiz to get started!
-              </p>
+              <p className="mb-4 text-gray-500">Create your first quiz to get started!</p>
               <Link
                 href="/neet-tools/quiz-competition/create"
                 className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-4 py-2 text-white transition-colors hover:bg-indigo-700"

@@ -197,7 +197,10 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
             <User className="w-4 h-4 inline mr-2" aria-hidden="true" />
-            Full Name <span className="text-red-500" aria-hidden="true">*</span>
+            Full Name{' '}
+            <span className="text-red-500" aria-hidden="true">
+              *
+            </span>
           </label>
           <Input
             id="name"
@@ -217,7 +220,10 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
               <Mail className="w-4 h-4 inline mr-2" aria-hidden="true" />
-              Email Address <span className="text-red-500" aria-hidden="true">*</span>
+              Email Address{' '}
+              <span className="text-red-500" aria-hidden="true">
+                *
+              </span>
             </label>
             <Input
               id="email"
@@ -235,7 +241,10 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
               <Phone className="w-4 h-4 inline mr-2" aria-hidden="true" />
-              Phone Number <span className="text-red-500" aria-hidden="true">*</span>
+              Phone Number{' '}
+              <span className="text-red-500" aria-hidden="true">
+                *
+              </span>
             </label>
             <Input
               id="phone"

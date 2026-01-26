@@ -13,9 +13,7 @@ export function generateParticipantToken(participantId: string, sessionId: strin
   if (!secret || secret.length < 32) {
     throw new Error('QUIZ_PARTICIPANT_SECRET must be set and at least 32 characters')
   }
-  return createHash('sha256')
-    .update(`${participantId}:${sessionId}:${secret}`)
-    .digest('hex')
+  return createHash('sha256').update(`${participantId}:${sessionId}:${secret}`).digest('hex')
 }
 
 // Verify a participant token
@@ -38,7 +36,11 @@ export function verifyParticipantToken(
 export async function verifyHostToken(
   request: NextRequest,
   roomCode: string
-): Promise<{ valid: boolean; session?: Awaited<ReturnType<typeof prisma.quiz_sessions.findUnique>>; error?: string }> {
+): Promise<{
+  valid: boolean
+  session?: Awaited<ReturnType<typeof prisma.quiz_sessions.findUnique>>
+  error?: string
+}> {
   const authHeader = request.headers.get('x-host-token')
 
   if (!authHeader) {
@@ -64,7 +66,10 @@ export async function verifyHostToken(
   try {
     const hostTokenBuffer = Buffer.from(session.hostToken)
     const authBuffer = Buffer.from(authHeader)
-    if (hostTokenBuffer.length !== authBuffer.length || !timingSafeEqual(hostTokenBuffer, authBuffer)) {
+    if (
+      hostTokenBuffer.length !== authBuffer.length ||
+      !timingSafeEqual(hostTokenBuffer, authBuffer)
+    ) {
       return { valid: false, error: 'Invalid host token' }
     }
   } catch {
@@ -75,8 +80,5 @@ export async function verifyHostToken(
 }
 
 export function unauthorizedResponse(error: string = 'Unauthorized') {
-  return NextResponse.json(
-    { success: false, error },
-    { status: 401 }
-  )
+  return NextResponse.json({ success: false, error }, { status: 401 })
 }

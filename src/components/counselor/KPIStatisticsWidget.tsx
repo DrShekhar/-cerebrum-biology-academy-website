@@ -7,14 +7,7 @@
 
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import {
-  TrendingUp,
-  Users,
-  CheckCircle,
-  Phone,
-  Calendar,
-  DollarSign,
-} from 'lucide-react'
+import { TrendingUp, Users, CheckCircle, Phone, Calendar, DollarSign } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 interface KPIMetrics {

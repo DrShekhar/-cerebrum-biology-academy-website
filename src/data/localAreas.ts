@@ -1453,7 +1453,8 @@ export const southDelhiAreas: LocalArea[] = [
     state: 'Delhi',
     description:
       'Premier biology coaching at Ring Road, South Extension 2, Delhi. Expert classes for Class 9, 10, 11, 12, NEET, Board exams & Olympiads. Online, offline & hybrid batches. Metro-connected - 5 min from South Extension Metro.',
-    metaTitle: 'Biology Coaching Near Me South Extension | NEET 2025-26, Class 9-12 | Cerebrum Academy',
+    metaTitle:
+      'Biology Coaching Near Me South Extension | NEET 2025-26, Class 9-12 | Cerebrum Academy',
     metaDescription:
       'Best biology coaching near me in South Extension 2, Ring Road Delhi. Expert NEET biology coaching near me for Class 9-12, Droppers & Olympiad. 5 min from metro. Book free demo!',
     keywords: [
@@ -1551,7 +1552,8 @@ export const southDelhiAreas: LocalArea[] = [
       'AC classrooms with modern facilities',
     ],
     localTestimonials: ['2', '5'],
-    centerAddress: 'Ring Road, South Extension Part 2, Near South Extension Metro, New Delhi - 110049',
+    centerAddress:
+      'Ring Road, South Extension Part 2, Near South Extension Metro, New Delhi - 110049',
     coordinates: { lat: 28.5732, lng: 77.2189 },
   },
   {
@@ -1626,7 +1628,15 @@ export const bangaloreAreas: LocalArea[] = [
       'biology classes hoodi bangalore',
       'neet preparation kadugodi',
     ],
-    nearbyAreas: ['ITPL', 'Brookefield', 'Hoodi', 'Kadugodi', 'Varthur', 'Kundalahalli', 'Prestige Tech Park'],
+    nearbyAreas: [
+      'ITPL',
+      'Brookefield',
+      'Hoodi',
+      'Kadugodi',
+      'Varthur',
+      'Kundalahalli',
+      'Prestige Tech Park',
+    ],
     transportLinks: ['Whitefield Metro', 'Kadugodi Metro', 'Hoodi Junction', 'ITPL Bus Stop'],
     demographics: {
       schools: ['Inventure Academy', 'Greenwood High', 'Vidyashilp Academy', 'TISB Whitefield'],
@@ -1642,7 +1652,7 @@ export const bangaloreAreas: LocalArea[] = [
       'CBSE & State Board integrated coaching',
     ],
     localTestimonials: ['1', '2'],
-    coordinates: { lat: 12.9698, lng: 77.7500 },
+    coordinates: { lat: 12.9698, lng: 77.75 },
   },
   {
     id: 'electronic-city',
@@ -1673,7 +1683,11 @@ export const bangaloreAreas: LocalArea[] = [
     nearbyAreas: ['Phase 1', 'Phase 2', 'Bommasandra', 'Hebbagodi', 'Hosur Road', 'Neeladri Nagar'],
     transportLinks: ['Electronic City Metro', 'NICE Road', 'Hosur Road', 'BMTC Bus Depot'],
     demographics: {
-      schools: ['Indus International School', 'DPS Electronic City', 'Ebenezer International School'],
+      schools: [
+        'Indus International School',
+        'DPS Electronic City',
+        'Ebenezer International School',
+      ],
       colleges: ['CMR Institute', 'Dayananda Sagar College'],
       populationDensity: 'high',
       studentPopulation: 'high',
@@ -1714,10 +1728,22 @@ export const bangaloreAreas: LocalArea[] = [
       'neet coaching kadubeesanahalli',
       'biology teacher domlur',
     ],
-    nearbyAreas: ['Kundalahalli', 'Bellandur', 'Kadubeesanahalli', 'Domlur', 'HAL', 'Outer Ring Road'],
+    nearbyAreas: [
+      'Kundalahalli',
+      'Bellandur',
+      'Kadubeesanahalli',
+      'Domlur',
+      'HAL',
+      'Outer Ring Road',
+    ],
     transportLinks: ['Marathahalli Metro', 'ORR Bus Stops', 'Marathahalli Bridge', 'HAL Junction'],
     demographics: {
-      schools: ['NPS Koramangala', 'DPS East', 'Inventure Academy', 'Canadian International School'],
+      schools: [
+        'NPS Koramangala',
+        'DPS East',
+        'Inventure Academy',
+        'Canadian International School',
+      ],
       colleges: ['CMR University', 'Jain University', 'Christ University'],
       populationDensity: 'high',
       studentPopulation: 'high',
@@ -1758,7 +1784,14 @@ export const bangaloreAreas: LocalArea[] = [
       'neet tutor yelahanka new town',
       'biology classes kogilu',
     ],
-    nearbyAreas: ['Yelahanka New Town', 'Jakkur', 'Sahakara Nagar', 'Kogilu', 'Thanisandra', 'Hebbal'],
+    nearbyAreas: [
+      'Yelahanka New Town',
+      'Jakkur',
+      'Sahakara Nagar',
+      'Kogilu',
+      'Thanisandra',
+      'Hebbal',
+    ],
     transportLinks: ['Yelahanka Railway Station', 'NH44', 'KIAL Road', 'Jakkur Aerodrome'],
     demographics: {
       schools: ['DPS North', 'Ryan International Yelahanka', 'Oakridge International'],
@@ -1802,7 +1835,14 @@ export const bangaloreAreas: LocalArea[] = [
       'neet tutor kempapura',
       'biology classes esteem mall hebbal',
     ],
-    nearbyAreas: ['Manyata Tech Park', 'Nagawara', 'RT Nagar', 'Kempapura', 'Sadashivanagar', 'Sanjaynagar'],
+    nearbyAreas: [
+      'Manyata Tech Park',
+      'Nagawara',
+      'RT Nagar',
+      'Kempapura',
+      'Sadashivanagar',
+      'Sanjaynagar',
+    ],
     transportLinks: ['Hebbal Flyover', 'NH44', 'Nagawara Metro', 'BMTC Depot Hebbal'],
     demographics: {
       schools: ['Delhi Public School North', 'Poorna Prajna School', 'Vidyashilp Academy'],
@@ -1818,7 +1858,7 @@ export const bangaloreAreas: LocalArea[] = [
       'Integrated CBSE + NEET coaching',
     ],
     localTestimonials: ['2', '4'],
-    coordinates: { lat: 13.0358, lng: 77.5970 },
+    coordinates: { lat: 13.0358, lng: 77.597 },
   },
 ]
 
@@ -1851,11 +1891,34 @@ export const westDelhiAreas: LocalArea[] = [
       'biology teacher sector 22 dwarka',
       'neet classes dwarka mor',
     ],
-    nearbyAreas: ['Sector 6', 'Sector 7', 'Sector 10', 'Sector 12', 'Sector 19', 'Sector 22', 'Janakpuri', 'Uttam Nagar'],
-    transportLinks: ['Dwarka Metro', 'Dwarka Sector 21 Metro', 'Dwarka Mor Metro', 'Janakpuri West Metro'],
+    nearbyAreas: [
+      'Sector 6',
+      'Sector 7',
+      'Sector 10',
+      'Sector 12',
+      'Sector 19',
+      'Sector 22',
+      'Janakpuri',
+      'Uttam Nagar',
+    ],
+    transportLinks: [
+      'Dwarka Metro',
+      'Dwarka Sector 21 Metro',
+      'Dwarka Mor Metro',
+      'Janakpuri West Metro',
+    ],
     demographics: {
-      schools: ['DPS Dwarka', 'Venkateshwar International School', 'Mount Carmel School', 'Delhi International School'],
-      colleges: ['NSIT Dwarka', 'Guru Gobind Singh IP University', 'Netaji Subhas University of Technology'],
+      schools: [
+        'DPS Dwarka',
+        'Venkateshwar International School',
+        'Mount Carmel School',
+        'Delhi International School',
+      ],
+      colleges: [
+        'NSIT Dwarka',
+        'Guru Gobind Singh IP University',
+        'Netaji Subhas University of Technology',
+      ],
       populationDensity: 'high',
       studentPopulation: 'high',
     },
@@ -1868,7 +1931,7 @@ export const westDelhiAreas: LocalArea[] = [
     ],
     localTestimonials: ['1', '2', '3'],
     centerAddress: 'Plot No. 15, Sector 6, Near Dwarka Metro Station, Dwarka, Delhi - 110075',
-    coordinates: { lat: 28.5921, lng: 77.0460 },
+    coordinates: { lat: 28.5921, lng: 77.046 },
   },
   {
     id: 'dwarka-sector-6',
@@ -1908,7 +1971,7 @@ export const westDelhiAreas: LocalArea[] = [
       'Free study material included',
     ],
     localTestimonials: ['1', '2'],
-    coordinates: { lat: 28.5850, lng: 77.0420 },
+    coordinates: { lat: 28.585, lng: 77.042 },
   },
   {
     id: 'dwarka-sector-7',
@@ -1946,7 +2009,7 @@ export const westDelhiAreas: LocalArea[] = [
       'Weekend batches available',
     ],
     localTestimonials: ['2', '3'],
-    coordinates: { lat: 28.5800, lng: 77.0380 },
+    coordinates: { lat: 28.58, lng: 77.038 },
   },
   {
     id: 'dwarka-sector-10',
@@ -1984,7 +2047,7 @@ export const westDelhiAreas: LocalArea[] = [
       'Regular mock tests with NEET pattern',
     ],
     localTestimonials: ['1', '3'],
-    coordinates: { lat: 28.5750, lng: 77.0350 },
+    coordinates: { lat: 28.575, lng: 77.035 },
   },
   {
     id: 'dwarka-sector-12',
@@ -2022,7 +2085,7 @@ export const westDelhiAreas: LocalArea[] = [
       'Evening batches for school students',
     ],
     localTestimonials: ['2', '4'],
-    coordinates: { lat: 28.5700, lng: 77.0300 },
+    coordinates: { lat: 28.57, lng: 77.03 },
   },
   {
     id: 'dwarka-sector-19',
@@ -2060,7 +2123,7 @@ export const westDelhiAreas: LocalArea[] = [
       'Weekend intensive batches',
     ],
     localTestimonials: ['1', '5'],
-    coordinates: { lat: 28.5650, lng: 77.0250 },
+    coordinates: { lat: 28.565, lng: 77.025 },
   },
   {
     id: 'dwarka-sector-22',
@@ -2098,7 +2161,7 @@ export const westDelhiAreas: LocalArea[] = [
       'Personalized mentorship program',
     ],
     localTestimonials: ['3', '4'],
-    coordinates: { lat: 28.5600, lng: 77.0200 },
+    coordinates: { lat: 28.56, lng: 77.02 },
   },
   {
     id: 'uttam-nagar',
@@ -2248,7 +2311,13 @@ export const westDelhiAreas: LocalArea[] = [
       'biology coaching vikaspuri',
       'neet tutor janakpuri east',
     ],
-    nearbyAreas: ['Subhash Nagar', 'Vikaspuri', 'Janakpuri East', 'Rajouri Garden', 'Tagore Garden'],
+    nearbyAreas: [
+      'Subhash Nagar',
+      'Vikaspuri',
+      'Janakpuri East',
+      'Rajouri Garden',
+      'Tagore Garden',
+    ],
     transportLinks: ['Tilak Nagar Metro', 'Subhash Nagar Metro', 'Janakpuri West Metro'],
     demographics: {
       schools: ['Laxman Public School', 'Sadhu Vaswani School'],
@@ -2307,7 +2376,7 @@ export const ghaziabadExpansionAreas: LocalArea[] = [
       'Free transport from nearby societies',
     ],
     localTestimonials: ['1', '3'],
-    coordinates: { lat: 28.6800, lng: 77.4700 },
+    coordinates: { lat: 28.68, lng: 77.47 },
   },
   {
     id: 'crossings-republik',
@@ -2345,7 +2414,7 @@ export const ghaziabadExpansionAreas: LocalArea[] = [
       'Weekend intensive batches',
     ],
     localTestimonials: ['2', '4'],
-    coordinates: { lat: 28.6450, lng: 77.4200 },
+    coordinates: { lat: 28.645, lng: 77.42 },
   },
   {
     id: 'kaushambi',
@@ -2423,7 +2492,7 @@ export const ghaziabadExpansionAreas: LocalArea[] = [
       'Regular mock tests',
     ],
     localTestimonials: ['3', '4'],
-    coordinates: { lat: 28.6723, lng: 77.4500 },
+    coordinates: { lat: 28.6723, lng: 77.45 },
   },
   {
     id: 'wave-city',
@@ -2442,10 +2511,7 @@ export const ghaziabadExpansionAreas: LocalArea[] = [
       'neet classes wave city',
       'biology teacher wave city',
     ],
-    localKeywords: [
-      'biology tuition wave city nh24',
-      'neet classes wave city township',
-    ],
+    localKeywords: ['biology tuition wave city nh24', 'neet classes wave city township'],
     nearbyAreas: ['NH 24', 'Raj Nagar Extension', 'Crossings Republik', 'Dasna'],
     transportLinks: ['NH 24', 'Hindon Airport Road'],
     demographics: {
@@ -2460,7 +2526,7 @@ export const ghaziabadExpansionAreas: LocalArea[] = [
       'Free transport from Wave City sectors',
     ],
     localTestimonials: ['1', '2'],
-    coordinates: { lat: 28.7000, lng: 77.5000 },
+    coordinates: { lat: 28.7, lng: 77.5 },
   },
   {
     id: 'indirapuram',
@@ -2485,7 +2551,14 @@ export const ghaziabadExpansionAreas: LocalArea[] = [
       'biology coaching gyan khand',
       'neet tutor nyay khand',
     ],
-    nearbyAreas: ['Ahinsa Khand', 'Niti Khand', 'Gyan Khand', 'Nyay Khand', 'Vaishali', 'Vasundhara'],
+    nearbyAreas: [
+      'Ahinsa Khand',
+      'Niti Khand',
+      'Gyan Khand',
+      'Nyay Khand',
+      'Vaishali',
+      'Vasundhara',
+    ],
     transportLinks: ['Vaishali Metro', 'Indirapuram Bus Depot', 'NH 24'],
     demographics: {
       schools: ['DPS Indirapuram', 'Cambridge School', 'Seth Anandram Jaipuria'],
@@ -2528,7 +2601,14 @@ export const noidaExpansionAreas: LocalArea[] = [
       'neet classes sector 16 noida',
       'biology coaching sector 17 noida',
     ],
-    nearbyAreas: ['Sector 14', 'Sector 16', 'Sector 17', 'Sector 18', 'Sector 19', 'Botanical Garden'],
+    nearbyAreas: [
+      'Sector 14',
+      'Sector 16',
+      'Sector 17',
+      'Sector 18',
+      'Sector 19',
+      'Botanical Garden',
+    ],
     transportLinks: ['Botanical Garden Metro', 'Noida Sector 15 Metro', 'Golf Course Metro'],
     demographics: {
       schools: ['DPS Noida', 'Amity International School'],
@@ -2542,7 +2622,7 @@ export const noidaExpansionAreas: LocalArea[] = [
       'Small batch sizes',
     ],
     localTestimonials: ['1', '3'],
-    coordinates: { lat: 28.5700, lng: 77.3500 },
+    coordinates: { lat: 28.57, lng: 77.35 },
   },
   {
     id: 'noida-sector-50',
@@ -2580,7 +2660,7 @@ export const noidaExpansionAreas: LocalArea[] = [
       'Evening and weekend batches',
     ],
     localTestimonials: ['2', '4'],
-    coordinates: { lat: 28.5600, lng: 77.3700 },
+    coordinates: { lat: 28.56, lng: 77.37 },
   },
   {
     id: 'noida-sector-76',
@@ -2618,7 +2698,7 @@ export const noidaExpansionAreas: LocalArea[] = [
       'Affordable fee structure',
     ],
     localTestimonials: ['1', '5'],
-    coordinates: { lat: 28.5400, lng: 77.3900 },
+    coordinates: { lat: 28.54, lng: 77.39 },
   },
   {
     id: 'gaur-city',
@@ -2642,7 +2722,13 @@ export const noidaExpansionAreas: LocalArea[] = [
       'neet classes gaur city 2',
       'biology coaching gaursons',
     ],
-    nearbyAreas: ['Gaur City 1', 'Gaur City 2', 'Greater Noida West', 'Noida Extension', 'Crossing Republik'],
+    nearbyAreas: [
+      'Gaur City 1',
+      'Gaur City 2',
+      'Greater Noida West',
+      'Noida Extension',
+      'Crossing Republik',
+    ],
     transportLinks: ['Gaur City Metro (proposed)', 'Noida-Greater Noida Expressway'],
     demographics: {
       schools: ['DPS Greater Noida', 'Ryan International'],
@@ -2657,7 +2743,7 @@ export const noidaExpansionAreas: LocalArea[] = [
       'Affordable fees for families',
     ],
     localTestimonials: ['2', '3'],
-    coordinates: { lat: 28.5200, lng: 77.4200 },
+    coordinates: { lat: 28.52, lng: 77.42 },
   },
 ]
 
@@ -2688,7 +2774,11 @@ export const eastDelhiAreas: LocalArea[] = [
       'neet tutor trilokpuri',
     ],
     nearbyAreas: ['Phase 1', 'Phase 2', 'Phase 3', 'Trilokpuri', 'Patparganj', 'IP Extension'],
-    transportLinks: ['Mayur Vihar Phase 1 Metro', 'Mayur Vihar Extension Metro', 'Mayur Vihar Pocket 1 Metro'],
+    transportLinks: [
+      'Mayur Vihar Phase 1 Metro',
+      'Mayur Vihar Extension Metro',
+      'Mayur Vihar Pocket 1 Metro',
+    ],
     demographics: {
       schools: ['DAV Public School', 'Kendriya Vidyalaya', 'Ryan International'],
       colleges: ['Vivekananda College', 'Maharaja Agrasen College'],
@@ -2742,7 +2832,7 @@ export const eastDelhiAreas: LocalArea[] = [
       'Evening batches available',
     ],
     localTestimonials: ['2', '3'],
-    coordinates: { lat: 28.6400, lng: 77.2900 },
+    coordinates: { lat: 28.64, lng: 77.29 },
   },
   {
     id: 'laxmi-nagar',

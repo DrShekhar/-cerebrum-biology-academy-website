@@ -66,7 +66,8 @@ export default function DemoCompletePage() {
               onClick={async () => {
                 await trackAndOpenWhatsApp({
                   source: 'demo-complete-page',
-                  message: 'Hi! I just attended a demo class and want to know more about enrollment.',
+                  message:
+                    'Hi! I just attended a demo class and want to know more about enrollment.',
                   campaign: 'demo-complete',
                 })
               }}

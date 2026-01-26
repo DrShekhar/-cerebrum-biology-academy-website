@@ -952,9 +952,7 @@ function DemoBubble({ message, isAI, delay }: { message: string; isAI: boolean; 
     >
       <div
         className={`max-w-[80%] rounded-2xl px-5 py-3 ${
-          isAI
-            ? 'bg-indigo-500 text-white'
-            : 'bg-gray-100 text-gray-800'
+          isAI ? 'bg-indigo-500 text-white' : 'bg-gray-100 text-gray-800'
         }`}
       >
         <p className="text-sm">{message}</p>
@@ -1113,10 +1111,7 @@ export default function CeriAIShowcase() {
             transition={{ delay: 0.3 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight"
           >
-            Meet{' '}
-            <span className="text-blue-400">
-              Ceri AI
-            </span>
+            Meet <span className="text-blue-400">Ceri AI</span>
           </motion.h1>
 
           <motion.p

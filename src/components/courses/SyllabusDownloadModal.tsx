@@ -19,16 +19,16 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: ''
+    phone: '',
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     // Simulate API call and file generation
-    await new Promise(resolve => setTimeout(resolve, 2000))
-    
+    await new Promise((resolve) => setTimeout(resolve, 2000))
+
     // Simulate file download
     const link = document.createElement('a')
     link.href = '/pdfs/sample-syllabus.pdf' // This would be dynamically generated
@@ -36,13 +36,13 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-    
+
     setIsSubmitting(false)
     setIsSuccess(true)
   }
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }))
+    setFormData((prev) => ({ ...prev, [field]: value }))
   }
 
   if (isSuccess) {
@@ -57,7 +57,8 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
             </p>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
               <p className="text-sm text-blue-700">
-                Our counselor will contact you soon with additional course materials and enrollment details.
+                Our counselor will contact you soon with additional course materials and enrollment
+                details.
               </p>
             </div>
           </div>
@@ -103,7 +104,8 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
               <div>
                 <h3 className="font-semibold text-green-900">{course.name}</h3>
                 <p className="text-sm text-green-700">
-                  {course.curriculum.totalModules} modules • {course.curriculum.totalHours} hours total
+                  {course.curriculum.totalModules} modules • {course.curriculum.totalHours} hours
+                  total
                 </p>
               </div>
             </div>
@@ -137,7 +139,7 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
                 required
               />
             </div>
-            
+
             <div>
               <Label htmlFor="email" className="flex items-center gap-2">
                 <Mail className="h-4 w-4" />
@@ -155,7 +157,7 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
                 Syllabus will be sent to this email address
               </p>
             </div>
-            
+
             <div>
               <Label htmlFor="phone" className="flex items-center gap-2">
                 <Phone className="h-4 w-4" />
@@ -189,12 +191,7 @@ export function SyllabusDownloadModal({ course, onClose }: SyllabusDownloadModal
                   </>
                 )}
               </Button>
-              <Button
-                type="button"
-                variant="outline"
-                onClick={onClose}
-                disabled={isSubmitting}
-              >
+              <Button type="button" variant="outline" onClick={onClose} disabled={isSubmitting}>
                 Cancel
               </Button>
             </div>

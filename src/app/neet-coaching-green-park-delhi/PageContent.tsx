@@ -57,12 +57,14 @@ const whyChooseUs = [
   {
     icon: Leaf,
     title: 'Near IIT Hub',
-    description: 'Green Park is next to IIT Delhi - the coaching hub of Delhi. Our quality matches the area\'s academic standards.',
+    description:
+      "Green Park is next to IIT Delhi - the coaching hub of Delhi. Our quality matches the area's academic standards.",
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from premier schools around Green Park and Hauz Khas.',
+    description:
+      'Proven track record with students from premier schools around Green Park and Hauz Khas.',
   },
   {
     icon: GraduationCap,
@@ -72,7 +74,8 @@ const whyChooseUs = [
   {
     icon: Star,
     title: 'Academic Excellence',
-    description: 'Green Park students scored 670+ in NEET, matching the area\'s high academic standards.',
+    description:
+      "Green Park students scored 670+ in NEET, matching the area's high academic standards.",
   },
 ]
 
@@ -160,8 +163,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Coaching in{' '}
-              <span className="text-yellow-400">Green Park</span>
+              NEET Coaching in <span className="text-yellow-400">Green Park</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +171,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Green Park, Hauz Khas, SDA & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - quality matching IIT area standards.
+              Premium NEET coaching for Green Park, Hauz Khas, SDA & nearby areas. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - quality matching IIT area
+              standards.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +201,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Green%20Park%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +378,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Green%20Park%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

@@ -24,7 +24,7 @@ test('debug burger menu visibility', async ({ page }) => {
   const menuPanel = page.locator('#burger-menu-panel')
 
   // Check if element exists
-  const exists = await menuPanel.count() > 0
+  const exists = (await menuPanel.count()) > 0
   console.log('Menu panel exists:', exists)
 
   // Check computed styles

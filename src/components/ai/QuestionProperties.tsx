@@ -18,7 +18,7 @@ import {
   Plus,
   Minus,
   X,
-  Save
+  Save,
 } from 'lucide-react'
 
 // Comprehensive question metadata interface
@@ -83,7 +83,7 @@ export function QuestionProperties({
   initialProperties,
   onPropertiesChange,
   onSave,
-  isEditing = false
+  isEditing = false,
 }: QuestionPropertiesProps) {
   const [properties, setProperties] = useState<QuestionProperties>({
     difficulty: 'medium',
@@ -91,7 +91,7 @@ export function QuestionProperties({
     subtopic: '',
     bloomsTaxonomy: {
       level: 'understand',
-      description: ''
+      description: '',
     },
     learningObjectives: [],
     estimatedTime: 2,
@@ -99,23 +99,23 @@ export function QuestionProperties({
     solution: {
       explanation: '',
       steps: [],
-      keyPoints: []
+      keyPoints: [],
     },
     hints: {
       progressive: [],
-      conceptualClues: []
+      conceptualClues: [],
     },
     commonMistakes: [],
     tags: [],
     neetAlignment: {
       chapter: '',
       syllabus: [],
-      examFrequency: 'medium'
+      examFrequency: 'medium',
     },
     difficulty_score: 5,
     discrimination_index: 0.5,
     reliability_coefficient: 0.8,
-    ...initialProperties
+    ...initialProperties,
   })
 
   const [activeTab, setActiveTab] = useState<'basic' | 'taxonomy' | 'content' | 'metadata'>('basic')
@@ -123,23 +123,83 @@ export function QuestionProperties({
 
   // Biology topics and subtopics
   const biologyTopics = {
-    'Cell Biology': ['Cell Structure', 'Cell Division', 'Cell Organelles', 'Membrane Transport', 'Cell Cycle'],
-    'Genetics': ['Mendelian Genetics', 'Molecular Genetics', 'Population Genetics', 'Gene Expression', 'Genetic Disorders'],
-    'Evolution': ['Natural Selection', 'Speciation', 'Phylogeny', 'Evidence of Evolution', 'Human Evolution'],
-    'Ecology': ['Ecosystems', 'Food Chains', 'Biodiversity', 'Environmental Issues', 'Conservation'],
-    'Human Physiology': ['Circulatory System', 'Respiratory System', 'Nervous System', 'Digestive System', 'Reproductive System'],
-    'Plant Biology': ['Photosynthesis', 'Plant Structure', 'Plant Reproduction', 'Plant Hormones', 'Plant Classification'],
-    'Biotechnology': ['DNA Technology', 'Genetic Engineering', 'Bioprocesses', 'Medical Applications', 'Agricultural Applications'],
-    'Biomolecules': ['Carbohydrates', 'Proteins', 'Lipids', 'Nucleic Acids', 'Enzymes']
+    'Cell Biology': [
+      'Cell Structure',
+      'Cell Division',
+      'Cell Organelles',
+      'Membrane Transport',
+      'Cell Cycle',
+    ],
+    Genetics: [
+      'Mendelian Genetics',
+      'Molecular Genetics',
+      'Population Genetics',
+      'Gene Expression',
+      'Genetic Disorders',
+    ],
+    Evolution: [
+      'Natural Selection',
+      'Speciation',
+      'Phylogeny',
+      'Evidence of Evolution',
+      'Human Evolution',
+    ],
+    Ecology: ['Ecosystems', 'Food Chains', 'Biodiversity', 'Environmental Issues', 'Conservation'],
+    'Human Physiology': [
+      'Circulatory System',
+      'Respiratory System',
+      'Nervous System',
+      'Digestive System',
+      'Reproductive System',
+    ],
+    'Plant Biology': [
+      'Photosynthesis',
+      'Plant Structure',
+      'Plant Reproduction',
+      'Plant Hormones',
+      'Plant Classification',
+    ],
+    Biotechnology: [
+      'DNA Technology',
+      'Genetic Engineering',
+      'Bioprocesses',
+      'Medical Applications',
+      'Agricultural Applications',
+    ],
+    Biomolecules: ['Carbohydrates', 'Proteins', 'Lipids', 'Nucleic Acids', 'Enzymes'],
   }
 
   const bloomsLevels = {
-    remember: { description: 'Recall facts and basic concepts', color: 'blue', examples: ['Define', 'List', 'Name', 'State'] },
-    understand: { description: 'Explain ideas or concepts', color: 'green', examples: ['Explain', 'Describe', 'Summarize', 'Interpret'] },
-    apply: { description: 'Use information in new situations', color: 'purple', examples: ['Apply', 'Solve', 'Use', 'Demonstrate'] },
-    analyze: { description: 'Draw connections among ideas', color: 'orange', examples: ['Analyze', 'Compare', 'Contrast', 'Examine'] },
-    evaluate: { description: 'Justify a decision or course of action', color: 'red', examples: ['Evaluate', 'Judge', 'Critique', 'Assess'] },
-    create: { description: 'Produce new or original work', color: 'indigo', examples: ['Create', 'Design', 'Develop', 'Construct'] }
+    remember: {
+      description: 'Recall facts and basic concepts',
+      color: 'blue',
+      examples: ['Define', 'List', 'Name', 'State'],
+    },
+    understand: {
+      description: 'Explain ideas or concepts',
+      color: 'green',
+      examples: ['Explain', 'Describe', 'Summarize', 'Interpret'],
+    },
+    apply: {
+      description: 'Use information in new situations',
+      color: 'purple',
+      examples: ['Apply', 'Solve', 'Use', 'Demonstrate'],
+    },
+    analyze: {
+      description: 'Draw connections among ideas',
+      color: 'orange',
+      examples: ['Analyze', 'Compare', 'Contrast', 'Examine'],
+    },
+    evaluate: {
+      description: 'Justify a decision or course of action',
+      color: 'red',
+      examples: ['Evaluate', 'Judge', 'Critique', 'Assess'],
+    },
+    create: {
+      description: 'Produce new or original work',
+      color: 'indigo',
+      examples: ['Create', 'Design', 'Develop', 'Construct'],
+    },
   }
 
   useEffect(() => {
@@ -148,7 +208,7 @@ export function QuestionProperties({
   }, [properties, onPropertiesChange])
 
   const updateProperty = (path: string, value: any) => {
-    setProperties(prev => {
+    setProperties((prev) => {
       const newProps = { ...prev }
       const keys = path.split('.')
       let current = newProps as any
@@ -163,7 +223,7 @@ export function QuestionProperties({
   }
 
   const addArrayItem = (path: string, item: any) => {
-    setProperties(prev => {
+    setProperties((prev) => {
       const newProps = { ...prev }
       const keys = path.split('.')
       let current = newProps as any
@@ -178,7 +238,7 @@ export function QuestionProperties({
   }
 
   const removeArrayItem = (path: string, index: number) => {
-    setProperties(prev => {
+    setProperties((prev) => {
       const newProps = { ...prev }
       const keys = path.split('.')
       let current = newProps as any
@@ -187,7 +247,9 @@ export function QuestionProperties({
         current = current[keys[i]]
       }
 
-      current[keys[keys.length - 1]] = current[keys[keys.length - 1]].filter((_: any, i: number) => i !== index)
+      current[keys[keys.length - 1]] = current[keys[keys.length - 1]].filter(
+        (_: any, i: number) => i !== index
+      )
       return newProps
     })
   }
@@ -199,10 +261,14 @@ export function QuestionProperties({
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'easy': return 'green'
-      case 'medium': return 'yellow'
-      case 'hard': return 'red'
-      default: return 'gray'
+      case 'easy':
+        return 'green'
+      case 'medium':
+        return 'yellow'
+      case 'hard':
+        return 'red'
+      default:
+        return 'gray'
     }
   }
 
@@ -216,7 +282,9 @@ export function QuestionProperties({
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-900">Question Properties</h3>
-            <p className="text-sm text-gray-500">Configure educational metadata and learning parameters</p>
+            <p className="text-sm text-gray-500">
+              Configure educational metadata and learning parameters
+            </p>
           </div>
         </div>
 
@@ -248,8 +316,8 @@ export function QuestionProperties({
           { id: 'basic', label: 'Basic Properties', icon: Tag },
           { id: 'taxonomy', label: 'Learning Taxonomy', icon: Brain },
           { id: 'content', label: 'Educational Content', icon: BookOpen },
-          { id: 'metadata', label: 'Quality Metrics', icon: Target }
-        ].map(tab => (
+          { id: 'metadata', label: 'Quality Metrics', icon: Target },
+        ].map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id as any)}
@@ -278,17 +346,29 @@ export function QuestionProperties({
             >
               {/* Difficulty Level */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">Difficulty Level</label>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Difficulty Level
+                </label>
                 <div className="flex space-x-3">
-                  {['easy', 'medium', 'hard'].map(level => {
+                  {['easy', 'medium', 'hard'].map((level) => {
                     const color = getDifficultyColor(level)
-                    const activeClasses = color === 'green' ? 'border-green-600 bg-green-50 text-green-700' :
-                      color === 'yellow' ? 'border-yellow-500 bg-yellow-50 text-yellow-700' :
-                      color === 'red' ? 'border-red-500 bg-red-50 text-red-700' : 'border-gray-500 bg-gray-50 text-gray-700'
+                    const activeClasses =
+                      color === 'green'
+                        ? 'border-green-600 bg-green-50 text-green-700'
+                        : color === 'yellow'
+                          ? 'border-yellow-500 bg-yellow-50 text-yellow-700'
+                          : color === 'red'
+                            ? 'border-red-500 bg-red-50 text-red-700'
+                            : 'border-gray-500 bg-gray-50 text-gray-700'
 
-                    const dotClasses = color === 'green' ? 'bg-green-600' :
-                      color === 'yellow' ? 'bg-yellow-500' :
-                      color === 'red' ? 'bg-red-500' : 'bg-gray-500'
+                    const dotClasses =
+                      color === 'green'
+                        ? 'bg-green-600'
+                        : color === 'yellow'
+                          ? 'bg-yellow-500'
+                          : color === 'red'
+                            ? 'bg-red-500'
+                            : 'bg-gray-500'
 
                     return (
                       <button
@@ -321,8 +401,10 @@ export function QuestionProperties({
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">Select Topic</option>
-                    {Object.keys(biologyTopics).map(topic => (
-                      <option key={topic} value={topic}>{topic}</option>
+                    {Object.keys(biologyTopics).map((topic) => (
+                      <option key={topic} value={topic}>
+                        {topic}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -336,9 +418,14 @@ export function QuestionProperties({
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                   >
                     <option value="">Select Subtopic</option>
-                    {properties.topic && biologyTopics[properties.topic as keyof typeof biologyTopics]?.map(subtopic => (
-                      <option key={subtopic} value={subtopic}>{subtopic}</option>
-                    ))}
+                    {properties.topic &&
+                      biologyTopics[properties.topic as keyof typeof biologyTopics]?.map(
+                        (subtopic) => (
+                          <option key={subtopic} value={subtopic}>
+                            {subtopic}
+                          </option>
+                        )
+                      )}
                   </select>
                 </div>
               </div>
@@ -346,7 +433,9 @@ export function QuestionProperties({
               {/* Time and Marks */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Estimated Time (minutes)</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Estimated Time (minutes)
+                  </label>
                   <div className="flex items-center space-x-3">
                     <Clock className="w-5 h-5 text-gray-400" />
                     <input
@@ -363,7 +452,9 @@ export function QuestionProperties({
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Mark Allocation</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Mark Allocation
+                  </label>
                   <div className="flex items-center space-x-3">
                     <Award className="w-5 h-5 text-gray-400" />
                     <input
@@ -437,29 +528,55 @@ export function QuestionProperties({
             >
               {/* Bloom's Taxonomy Level */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">Bloom's Taxonomy Level</label>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  Bloom's Taxonomy Level
+                </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
                   {Object.entries(bloomsLevels).map(([level, details]) => {
-                    const borderClass = details.color === 'blue' ? 'border-blue-500' :
-                      details.color === 'green' ? 'border-green-600' :
-                      details.color === 'purple' ? 'border-purple-500' :
-                      details.color === 'orange' ? 'border-orange-500' :
-                      details.color === 'red' ? 'border-red-500' :
-                      details.color === 'indigo' ? 'border-indigo-500' : 'border-gray-500'
+                    const borderClass =
+                      details.color === 'blue'
+                        ? 'border-blue-500'
+                        : details.color === 'green'
+                          ? 'border-green-600'
+                          : details.color === 'purple'
+                            ? 'border-purple-500'
+                            : details.color === 'orange'
+                              ? 'border-orange-500'
+                              : details.color === 'red'
+                                ? 'border-red-500'
+                                : details.color === 'indigo'
+                                  ? 'border-indigo-500'
+                                  : 'border-gray-500'
 
-                    const bgClass = details.color === 'blue' ? 'bg-blue-50' :
-                      details.color === 'green' ? 'bg-green-50' :
-                      details.color === 'purple' ? 'bg-purple-50' :
-                      details.color === 'orange' ? 'bg-orange-50' :
-                      details.color === 'red' ? 'bg-red-50' :
-                      details.color === 'indigo' ? 'bg-indigo-50' : 'bg-gray-50'
+                    const bgClass =
+                      details.color === 'blue'
+                        ? 'bg-blue-50'
+                        : details.color === 'green'
+                          ? 'bg-green-50'
+                          : details.color === 'purple'
+                            ? 'bg-purple-50'
+                            : details.color === 'orange'
+                              ? 'bg-orange-50'
+                              : details.color === 'red'
+                                ? 'bg-red-50'
+                                : details.color === 'indigo'
+                                  ? 'bg-indigo-50'
+                                  : 'bg-gray-50'
 
-                    const dotClass = details.color === 'blue' ? 'bg-blue-500' :
-                      details.color === 'green' ? 'bg-green-600' :
-                      details.color === 'purple' ? 'bg-purple-500' :
-                      details.color === 'orange' ? 'bg-orange-500' :
-                      details.color === 'red' ? 'bg-red-500' :
-                      details.color === 'indigo' ? 'bg-indigo-500' : 'bg-gray-500'
+                    const dotClass =
+                      details.color === 'blue'
+                        ? 'bg-blue-500'
+                        : details.color === 'green'
+                          ? 'bg-green-600'
+                          : details.color === 'purple'
+                            ? 'bg-purple-500'
+                            : details.color === 'orange'
+                              ? 'bg-orange-500'
+                              : details.color === 'red'
+                                ? 'bg-red-500'
+                                : details.color === 'indigo'
+                                  ? 'bg-indigo-500'
+                                  : 'bg-gray-500'
 
                     return (
                       <button
@@ -491,7 +608,9 @@ export function QuestionProperties({
 
               {/* Learning Objectives */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Learning Objectives</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Learning Objectives
+                </label>
                 <div className="space-y-3">
                   {properties.learningObjectives.map((objective, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -528,7 +647,9 @@ export function QuestionProperties({
 
               {/* NEET Alignment */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-3">NEET Syllabus Alignment</label>
+                <label className="block text-sm font-medium text-gray-700 mb-3">
+                  NEET Syllabus Alignment
+                </label>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs text-gray-500 mb-1">Chapter Reference</label>
@@ -545,7 +666,9 @@ export function QuestionProperties({
                     <label className="block text-xs text-gray-500 mb-1">Exam Frequency</label>
                     <select
                       value={properties.neetAlignment.examFrequency}
-                      onChange={(e) => updateProperty('neetAlignment.examFrequency', e.target.value)}
+                      onChange={(e) =>
+                        updateProperty('neetAlignment.examFrequency', e.target.value)
+                      }
                       className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                     >
                       <option value="high">High (Every year)</option>
@@ -568,7 +691,9 @@ export function QuestionProperties({
             >
               {/* Solution */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Solution Explanation</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Solution Explanation
+                </label>
                 <textarea
                   value={properties.solution.explanation}
                   onChange={(e) => updateProperty('solution.explanation', e.target.value)}
@@ -580,7 +705,9 @@ export function QuestionProperties({
 
               {/* Solution Steps */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Solution Steps</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Solution Steps
+                </label>
                 <div className="space-y-2">
                   {properties.solution.steps.map((step, index) => (
                     <div key={index} className="flex items-start space-x-2">
@@ -617,7 +744,9 @@ export function QuestionProperties({
 
               {/* Progressive Hints */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Progressive Hints</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Progressive Hints
+                </label>
                 <div className="space-y-2">
                   {properties.hints.progressive.map((hint, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -655,7 +784,9 @@ export function QuestionProperties({
 
               {/* Common Mistakes */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Common Mistakes & Misconceptions</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Common Mistakes & Misconceptions
+                </label>
                 <div className="space-y-4">
                   {properties.commonMistakes.map((mistake, index) => (
                     <div key={index} className="p-4 border border-gray-200 rounded-lg bg-red-50">
@@ -680,7 +811,10 @@ export function QuestionProperties({
                             value={mistake.mistake}
                             onChange={(e) => {
                               const newMistakes = [...properties.commonMistakes]
-                              newMistakes[index] = { ...newMistakes[index], mistake: e.target.value }
+                              newMistakes[index] = {
+                                ...newMistakes[index],
+                                mistake: e.target.value,
+                              }
                               updateProperty('commonMistakes', newMistakes)
                             }}
                             placeholder="Describe the common mistake students make..."
@@ -689,7 +823,9 @@ export function QuestionProperties({
                         </div>
 
                         <div>
-                          <label className="block text-xs text-red-700 mb-1">Reason for Mistake</label>
+                          <label className="block text-xs text-red-700 mb-1">
+                            Reason for Mistake
+                          </label>
                           <input
                             type="text"
                             value={mistake.reason}
@@ -710,7 +846,10 @@ export function QuestionProperties({
                             value={mistake.correction}
                             onChange={(e) => {
                               const newMistakes = [...properties.commonMistakes]
-                              newMistakes[index] = { ...newMistakes[index], correction: e.target.value }
+                              newMistakes[index] = {
+                                ...newMistakes[index],
+                                correction: e.target.value,
+                              }
                               updateProperty('commonMistakes', newMistakes)
                             }}
                             placeholder="How to correct this misconception?"
@@ -722,7 +861,9 @@ export function QuestionProperties({
                   ))}
 
                   <button
-                    onClick={() => addArrayItem('commonMistakes', { mistake: '', reason: '', correction: '' })}
+                    onClick={() =>
+                      addArrayItem('commonMistakes', { mistake: '', reason: '', correction: '' })
+                    }
                     className="flex items-center space-x-2 px-4 py-2 border-2 border-dashed border-gray-300 rounded-lg text-gray-600 hover:border-red-300 hover:text-red-600 transition-colors"
                   >
                     <Plus className="w-4 h-4" />
@@ -744,7 +885,9 @@ export function QuestionProperties({
               {/* Quality Metrics */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty Score</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Difficulty Score
+                  </label>
                   <div className="space-y-2">
                     <input
                       type="range"
@@ -752,7 +895,9 @@ export function QuestionProperties({
                       max="10"
                       step="0.1"
                       value={properties.difficulty_score}
-                      onChange={(e) => updateProperty('difficulty_score', parseFloat(e.target.value))}
+                      onChange={(e) =>
+                        updateProperty('difficulty_score', parseFloat(e.target.value))
+                      }
                       className="w-full"
                     />
                     <div className="flex justify-between text-xs text-gray-500">
@@ -764,7 +909,9 @@ export function QuestionProperties({
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Discrimination Index</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Discrimination Index
+                  </label>
                   <div className="space-y-2">
                     <input
                       type="range"
@@ -772,19 +919,25 @@ export function QuestionProperties({
                       max="1"
                       step="0.01"
                       value={properties.discrimination_index}
-                      onChange={(e) => updateProperty('discrimination_index', parseFloat(e.target.value))}
+                      onChange={(e) =>
+                        updateProperty('discrimination_index', parseFloat(e.target.value))
+                      }
                       className="w-full"
                     />
                     <div className="flex justify-between text-xs text-gray-500">
                       <span>-1 (Poor)</span>
-                      <span className="font-medium">{properties.discrimination_index.toFixed(2)}</span>
+                      <span className="font-medium">
+                        {properties.discrimination_index.toFixed(2)}
+                      </span>
                       <span>1 (Excellent)</span>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Reliability Coefficient</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Reliability Coefficient
+                  </label>
                   <div className="space-y-2">
                     <input
                       type="range"
@@ -792,12 +945,16 @@ export function QuestionProperties({
                       max="1"
                       step="0.01"
                       value={properties.reliability_coefficient}
-                      onChange={(e) => updateProperty('reliability_coefficient', parseFloat(e.target.value))}
+                      onChange={(e) =>
+                        updateProperty('reliability_coefficient', parseFloat(e.target.value))
+                      }
                       className="w-full"
                     />
                     <div className="flex justify-between text-xs text-gray-500">
                       <span>0 (Unreliable)</span>
-                      <span className="font-medium">{properties.reliability_coefficient.toFixed(2)}</span>
+                      <span className="font-medium">
+                        {properties.reliability_coefficient.toFixed(2)}
+                      </span>
                       <span>1 (Perfect)</span>
                     </div>
                   </div>
@@ -812,10 +969,15 @@ export function QuestionProperties({
                     <span className="font-medium text-blue-800">Difficulty</span>
                   </div>
                   <div className="text-lg font-bold text-blue-900">
-                    {properties.difficulty_score <= 3 ? 'Easy' :
-                     properties.difficulty_score <= 7 ? 'Medium' : 'Hard'}
+                    {properties.difficulty_score <= 3
+                      ? 'Easy'
+                      : properties.difficulty_score <= 7
+                        ? 'Medium'
+                        : 'Hard'}
                   </div>
-                  <div className="text-sm text-blue-600">Score: {properties.difficulty_score.toFixed(1)}/10</div>
+                  <div className="text-sm text-blue-600">
+                    Score: {properties.difficulty_score.toFixed(1)}/10
+                  </div>
                 </div>
 
                 <div className="p-4 bg-green-50 rounded-lg border border-green-200">
@@ -824,10 +986,15 @@ export function QuestionProperties({
                     <span className="font-medium text-green-800">Discrimination</span>
                   </div>
                   <div className="text-lg font-bold text-green-900">
-                    {properties.discrimination_index >= 0.3 ? 'Good' :
-                     properties.discrimination_index >= 0.1 ? 'Fair' : 'Poor'}
+                    {properties.discrimination_index >= 0.3
+                      ? 'Good'
+                      : properties.discrimination_index >= 0.1
+                        ? 'Fair'
+                        : 'Poor'}
                   </div>
-                  <div className="text-sm text-green-600">Index: {properties.discrimination_index.toFixed(2)}</div>
+                  <div className="text-sm text-green-600">
+                    Index: {properties.discrimination_index.toFixed(2)}
+                  </div>
                 </div>
 
                 <div className="p-4 bg-purple-50 rounded-lg border border-purple-200">
@@ -836,10 +1003,15 @@ export function QuestionProperties({
                     <span className="font-medium text-purple-800">Reliability</span>
                   </div>
                   <div className="text-lg font-bold text-purple-900">
-                    {properties.reliability_coefficient >= 0.8 ? 'Excellent' :
-                     properties.reliability_coefficient >= 0.6 ? 'Good' : 'Fair'}
+                    {properties.reliability_coefficient >= 0.8
+                      ? 'Excellent'
+                      : properties.reliability_coefficient >= 0.6
+                        ? 'Good'
+                        : 'Fair'}
                   </div>
-                  <div className="text-sm text-purple-600">Coefficient: {properties.reliability_coefficient.toFixed(2)}</div>
+                  <div className="text-sm text-purple-600">
+                    Coefficient: {properties.reliability_coefficient.toFixed(2)}
+                  </div>
                 </div>
 
                 <div className="p-4 bg-orange-50 rounded-lg border border-orange-200">
@@ -848,8 +1020,13 @@ export function QuestionProperties({
                     <span className="font-medium text-orange-800">Overall Quality</span>
                   </div>
                   <div className="text-lg font-bold text-orange-900">
-                    {(properties.discrimination_index >= 0.3 && properties.reliability_coefficient >= 0.8) ? 'Excellent' :
-                     (properties.discrimination_index >= 0.1 && properties.reliability_coefficient >= 0.6) ? 'Good' : 'Needs Improvement'}
+                    {properties.discrimination_index >= 0.3 &&
+                    properties.reliability_coefficient >= 0.8
+                      ? 'Excellent'
+                      : properties.discrimination_index >= 0.1 &&
+                          properties.reliability_coefficient >= 0.6
+                        ? 'Good'
+                        : 'Needs Improvement'}
                   </div>
                   <div className="text-sm text-orange-600">Assessment Score</div>
                 </div>
@@ -859,44 +1036,61 @@ export function QuestionProperties({
               <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
                 <div className="flex items-center space-x-2 mb-3">
                   <Info className="w-5 h-5 text-gray-600" />
-                  <span className="font-medium text-gray-800">Quality Improvement Recommendations</span>
+                  <span className="font-medium text-gray-800">
+                    Quality Improvement Recommendations
+                  </span>
                 </div>
 
                 <div className="space-y-2 text-sm text-gray-600">
                   {properties.discrimination_index < 0.3 && (
                     <div className="flex items-start space-x-2">
                       <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Consider revising the question to better distinguish between high and low-performing students.</span>
+                      <span>
+                        Consider revising the question to better distinguish between high and
+                        low-performing students.
+                      </span>
                     </div>
                   )}
 
                   {properties.reliability_coefficient < 0.8 && (
                     <div className="flex items-start space-x-2">
                       <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Add more specific details or clarify the question stem to improve consistency.</span>
+                      <span>
+                        Add more specific details or clarify the question stem to improve
+                        consistency.
+                      </span>
                     </div>
                   )}
 
                   {properties.difficulty_score > 8 && (
                     <div className="flex items-start space-x-2">
                       <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>This question may be too difficult. Consider providing additional context or hints.</span>
+                      <span>
+                        This question may be too difficult. Consider providing additional context or
+                        hints.
+                      </span>
                     </div>
                   )}
 
                   {properties.difficulty_score < 3 && (
                     <div className="flex items-start space-x-2">
                       <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>This question may be too easy. Consider adding complexity or depth.</span>
+                      <span>
+                        This question may be too easy. Consider adding complexity or depth.
+                      </span>
                     </div>
                   )}
 
-                  {properties.discrimination_index >= 0.3 && properties.reliability_coefficient >= 0.8 && (
-                    <div className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Excellent question quality! This question effectively distinguishes student ability levels.</span>
-                    </div>
-                  )}
+                  {properties.discrimination_index >= 0.3 &&
+                    properties.reliability_coefficient >= 0.8 && (
+                      <div className="flex items-start space-x-2">
+                        <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <span>
+                          Excellent question quality! This question effectively distinguishes
+                          student ability levels.
+                        </span>
+                      </div>
+                    )}
                 </div>
               </div>
             </motion.div>

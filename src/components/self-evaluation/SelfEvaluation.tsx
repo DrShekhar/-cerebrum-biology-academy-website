@@ -197,17 +197,32 @@ function EvaluationForm({
         body: JSON.stringify({
           date: selectedDate,
           slot: selectedSlot,
-          topicsCovered: formData.topicsCovered.split(',').map((t) => t.trim()).filter(Boolean),
-          conceptsLearned: formData.conceptsLearned.split(',').map((c) => c.trim()).filter(Boolean),
+          topicsCovered: formData.topicsCovered
+            .split(',')
+            .map((t) => t.trim())
+            .filter(Boolean),
+          conceptsLearned: formData.conceptsLearned
+            .split(',')
+            .map((c) => c.trim())
+            .filter(Boolean),
           questionsAttempted: formData.questionsAttempted,
           questionsCorrect: formData.questionsCorrect,
           difficultyRating: formData.difficultyRating,
           confidenceLevel: formData.confidenceLevel,
           studyHours: formData.studyHours,
           notes: formData.notes,
-          goals: formData.goals.split(',').map((g) => g.trim()).filter(Boolean),
-          achievements: formData.achievements.split(',').map((a) => a.trim()).filter(Boolean),
-          struggles: formData.struggles.split(',').map((s) => s.trim()).filter(Boolean),
+          goals: formData.goals
+            .split(',')
+            .map((g) => g.trim())
+            .filter(Boolean),
+          achievements: formData.achievements
+            .split(',')
+            .map((a) => a.trim())
+            .filter(Boolean),
+          struggles: formData.struggles
+            .split(',')
+            .map((s) => s.trim())
+            .filter(Boolean),
           nextDayPlan: formData.nextDayPlan,
         }),
       })
@@ -293,12 +308,16 @@ function EvaluationForm({
       {/* Practice Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">Questions Attempted</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            Questions Attempted
+          </label>
           <input
             type="number"
             min="0"
             value={formData.questionsAttempted}
-            onChange={(e) => setFormData({ ...formData, questionsAttempted: parseInt(e.target.value) || 0 })}
+            onChange={(e) =>
+              setFormData({ ...formData, questionsAttempted: parseInt(e.target.value) || 0 })
+            }
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
@@ -309,7 +328,9 @@ function EvaluationForm({
             min="0"
             max={formData.questionsAttempted}
             value={formData.questionsCorrect}
-            onChange={(e) => setFormData({ ...formData, questionsCorrect: parseInt(e.target.value) || 0 })}
+            onChange={(e) =>
+              setFormData({ ...formData, questionsCorrect: parseInt(e.target.value) || 0 })
+            }
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
@@ -320,18 +341,19 @@ function EvaluationForm({
             min="0"
             step="0.5"
             value={formData.studyHours}
-            onChange={(e) => setFormData({ ...formData, studyHours: parseFloat(e.target.value) || 0 })}
+            onChange={(e) =>
+              setFormData({ ...formData, studyHours: parseFloat(e.target.value) || 0 })
+            }
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            Accuracy
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Accuracy</label>
           <div className="px-3 py-2 bg-gray-50 rounded-lg text-lg font-semibold text-center">
             {formData.questionsAttempted > 0
               ? Math.round((formData.questionsCorrect / formData.questionsAttempted) * 100)
-              : 0}%
+              : 0}
+            %
           </div>
         </div>
       </div>
@@ -347,7 +369,9 @@ function EvaluationForm({
             min="1"
             max="5"
             value={formData.difficultyRating}
-            onChange={(e) => setFormData({ ...formData, difficultyRating: parseInt(e.target.value) })}
+            onChange={(e) =>
+              setFormData({ ...formData, difficultyRating: parseInt(e.target.value) })
+            }
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
           />
           <div className="flex justify-between text-xs text-gray-400 mt-1">
@@ -364,7 +388,9 @@ function EvaluationForm({
             min="1"
             max="5"
             value={formData.confidenceLevel}
-            onChange={(e) => setFormData({ ...formData, confidenceLevel: parseInt(e.target.value) })}
+            onChange={(e) =>
+              setFormData({ ...formData, confidenceLevel: parseInt(e.target.value) })
+            }
             className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
           />
           <div className="flex justify-between text-xs text-gray-400 mt-1">
@@ -415,7 +441,9 @@ function EvaluationForm({
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-1">Plan for Next Session</label>
+        <label className="block text-sm font-medium text-gray-700 mb-1">
+          Plan for Next Session
+        </label>
         <textarea
           value={formData.nextDayPlan}
           onChange={(e) => setFormData({ ...formData, nextDayPlan: e.target.value })}
@@ -426,18 +454,14 @@ function EvaluationForm({
       </div>
 
       {/* Error & Submit */}
-      {error && (
-        <div className="text-red-500 text-sm bg-red-50 p-3 rounded-lg">{error}</div>
-      )}
+      {error && <div className="text-red-500 text-sm bg-red-50 p-3 rounded-lg">{error}</div>}
 
       <button
         type="submit"
         disabled={isSaving}
         className={cn(
           'w-full py-3 rounded-lg font-semibold text-white transition-all',
-          isSaving
-            ? 'bg-gray-400 cursor-not-allowed'
-            : 'bg-blue-600 hover:bg-blue-700'
+          isSaving ? 'bg-gray-400 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'
         )}
       >
         {isSaving ? 'Saving...' : existingData ? 'Update Evaluation' : 'Save Evaluation'}
@@ -488,7 +512,8 @@ function HistoryList({ evaluations, onSelect }: HistoryListProps) {
                 </div>
                 <div className="text-sm text-gray-500">
                   {evaluation.topicsCovered.slice(0, 2).join(', ')}
-                  {evaluation.topicsCovered.length > 2 && ` +${evaluation.topicsCovered.length - 2} more`}
+                  {evaluation.topicsCovered.length > 2 &&
+                    ` +${evaluation.topicsCovered.length - 2} more`}
                 </div>
               </div>
             </div>
@@ -500,7 +525,11 @@ function HistoryList({ evaluations, onSelect }: HistoryListProps) {
                 <span
                   className={cn(
                     'font-semibold',
-                    accuracy >= 80 ? 'text-green-600' : accuracy >= 60 ? 'text-yellow-600' : 'text-red-600'
+                    accuracy >= 80
+                      ? 'text-green-600'
+                      : accuracy >= 60
+                        ? 'text-yellow-600'
+                        : 'text-red-600'
                   )}
                 >
                   {accuracy}%

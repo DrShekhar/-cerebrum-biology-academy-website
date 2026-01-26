@@ -92,22 +92,26 @@ const features = [
   {
     icon: Users,
     title: 'Elite Small Batches (10-15)',
-    description: 'Exclusive batches for Koregaon Park students with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Koregaon Park students with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality KP families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality KP families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement your international school schedule.',
+    description:
+      'Morning, afternoon, and evening batches to complement your international school schedule.',
   },
   {
     icon: Shield,
@@ -127,7 +131,7 @@ const faqs = [
   {
     question: 'Why do Koregaon Park students choose online NEET coaching?',
     answer:
-      'Koregaon Park is Pune\'s most premium address with international schools and busy professional families. Our online classes offer AIIMS faculty without traffic to FC Road or Camp coaching centers. Save 2+ hours daily on Pune traffic.',
+      "Koregaon Park is Pune's most premium address with international schools and busy professional families. Our online classes offer AIIMS faculty without traffic to FC Road or Camp coaching centers. Save 2+ hours daily on Pune traffic.",
   },
   {
     question: 'Which areas in Koregaon Park do you serve?',
@@ -137,7 +141,7 @@ const faqs = [
   {
     question: 'What is the fee for premium NEET coaching in Koregaon Park?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Koregaon Park\'s premium education standards while offering superior flexibility. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Koregaon Park's premium education standards while offering superior flexibility. EMI options available.",
   },
   {
     question: 'How does this compare to coaching centers in FC Road?',
@@ -147,12 +151,12 @@ const faqs = [
   {
     question: 'Do you support IB and IGCSE students?',
     answer:
-      'Absolutely! We specialize in international curriculum students. Many of our Koregaon Park students are from Symbiosis, Mercedes Benz International, The Orchid School, and Bishop\'s School. Our faculty bridges IB/IGCSE with NEET Biology.',
+      "Absolutely! We specialize in international curriculum students. Many of our Koregaon Park students are from Symbiosis, Mercedes Benz International, The Orchid School, and Bishop's School. Our faculty bridges IB/IGCSE with NEET Biology.",
   },
   {
     question: 'What medical colleges can Koregaon Park students target?',
     answer:
-      'With proper NEET preparation, Koregaon Park students can target top colleges like B.J. Medical College (Pune\'s premier), Sassoon Hospital, Armed Forces Medical College, and all-India institutes like AIIMS and JIPMER.',
+      "With proper NEET preparation, Koregaon Park students can target top colleges like B.J. Medical College (Pune's premier), Sassoon Hospital, Armed Forces Medical College, and all-India institutes like AIIMS and JIPMER.",
   },
 ]
 
@@ -160,13 +164,13 @@ const premiumSchools = [
   'Symbiosis International School',
   'Mercedes Benz International School',
   'The Orchid School',
-  'Bishop\'s School',
+  "Bishop's School",
   'The Lexicon International School',
   'Crimson Cliffs International',
   'Delhi Public School Pune',
   'Sanskriti School',
   'Victorious Kidss Educares',
-  'The Bishop\'s Co-Ed School',
+  "The Bishop's Co-Ed School",
 ]
 
 const whyKoregaonPark = [
@@ -186,7 +190,7 @@ const whyKoregaonPark = [
     icon: GraduationCap,
     title: 'BJMC Specialist',
     description:
-      'B.J. Medical College is Pune\'s dream. We have a proven track record of BJMC admissions from East Pune.',
+      "B.J. Medical College is Pune's dream. We have a proven track record of BJMC admissions from East Pune.",
   },
 ]
 
@@ -236,8 +240,9 @@ export default function NeetCoachingKoregaonParkPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Koregaon Park&apos;s elite schools. 94.2% success rate, AIIMS
-              faculty, zero traffic stress. Join 550+ students from Symbiosis, MBIS, Orchid School.
+              Premium NEET Biology coaching for Koregaon Park&apos;s elite schools. 94.2% success
+              rate, AIIMS faculty, zero traffic stress. Join 550+ students from Symbiosis, MBIS,
+              Orchid School.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +303,8 @@ export default function NeetCoachingKoregaonParkPage() {
               NEET Coaching Across Koregaon Park & East Pune
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Boat Club Road to Kharadi, Kalyani Nagar to Viman Nagar - premium coaching for East Pune.
+              From Boat Club Road to Kharadi, Kalyani Nagar to Viman Nagar - premium coaching for
+              East Pune.
             </p>
           </motion.div>
 
@@ -320,9 +326,7 @@ export default function NeetCoachingKoregaonParkPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-pink-600" />
                   </div>
-                  <div className="text-2xl font-bold text-pink-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-pink-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-pink-100 text-pink-700 px-2 py-1 rounded-full">
@@ -351,7 +355,8 @@ export default function NeetCoachingKoregaonParkPage() {
               Why Koregaon Park&apos;s Elite Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Premium education meets convenience - designed for East Pune&apos;s discerning families.
+              Premium education meets convenience - designed for East Pune&apos;s discerning
+              families.
             </p>
           </motion.div>
 

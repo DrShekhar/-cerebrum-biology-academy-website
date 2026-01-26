@@ -394,19 +394,20 @@ export default function ParentChildHomeworkPage() {
                           <BookOpen className="w-3.5 h-3.5" />
                           {hw.course.name}
                         </span>
-                        {hw.chapter && (
-                          <span className="hidden sm:block">• {hw.chapter.name}</span>
-                        )}
+                        {hw.chapter && <span className="hidden sm:block">• {hw.chapter.name}</span>}
                       </div>
                     </div>
                     <div className="text-right flex-shrink-0">
                       <div className="flex items-center gap-1 text-sm text-gray-600">
                         <Calendar className="w-3.5 h-3.5" />
-                        <span>Due: {new Date(hw.dueDate).toLocaleDateString('en-IN', {
-                          day: 'numeric',
-                          month: 'short',
-                          year: 'numeric',
-                        })}</span>
+                        <span>
+                          Due:{' '}
+                          {new Date(hw.dueDate).toLocaleDateString('en-IN', {
+                            day: 'numeric',
+                            month: 'short',
+                            year: 'numeric',
+                          })}
+                        </span>
                       </div>
                       {hw.submission.grade !== null && (
                         <p className="mt-1 text-lg font-semibold text-green-600">

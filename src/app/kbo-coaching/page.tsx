@@ -76,62 +76,32 @@ export default function KBOCoachingPage() {
     {
       unit: 'Unit 1',
       title: 'Cell Biology & Biochemistry',
-      topics: [
-        'Cell Structure',
-        'Metabolism',
-        'Enzymes',
-        'Molecular Biology',
-      ],
+      topics: ['Cell Structure', 'Metabolism', 'Enzymes', 'Molecular Biology'],
     },
     {
       unit: 'Unit 2',
       title: 'Genetics & Evolution',
-      topics: [
-        'Mendelian Genetics',
-        'Molecular Genetics',
-        'Population Genetics',
-        'Evolution',
-      ],
+      topics: ['Mendelian Genetics', 'Molecular Genetics', 'Population Genetics', 'Evolution'],
     },
     {
       unit: 'Unit 3',
       title: 'Plant Biology',
-      topics: [
-        'Plant Anatomy',
-        'Photosynthesis',
-        'Plant Hormones',
-        'Transport Systems',
-      ],
+      topics: ['Plant Anatomy', 'Photosynthesis', 'Plant Hormones', 'Transport Systems'],
     },
     {
       unit: 'Unit 4',
       title: 'Animal Physiology',
-      topics: [
-        'Nervous System',
-        'Endocrine System',
-        'Circulatory System',
-        'Excretion',
-      ],
+      topics: ['Nervous System', 'Endocrine System', 'Circulatory System', 'Excretion'],
     },
     {
       unit: 'Unit 5',
       title: 'Ecology & Environment',
-      topics: [
-        'Ecosystems',
-        'Population Dynamics',
-        'Biodiversity',
-        'Conservation',
-      ],
+      topics: ['Ecosystems', 'Population Dynamics', 'Biodiversity', 'Conservation'],
     },
     {
       unit: 'Unit 6',
       title: 'Biosystematics',
-      topics: [
-        'Classification',
-        'Taxonomy',
-        'Phylogenetics',
-        'Diversity of Life',
-      ],
+      topics: ['Classification', 'Taxonomy', 'Phylogenetics', 'Diversity of Life'],
     },
   ]
 
@@ -139,38 +109,32 @@ export default function KBOCoachingPage() {
     {
       icon: BookOpen,
       title: 'Campbell Biology Mastery',
-      description:
-        'Complete coverage of all 56 chapters aligned with KBO syllabus',
+      description: 'Complete coverage of all 56 chapters aligned with KBO syllabus',
     },
     {
       icon: Target,
       title: 'KBO Past Papers',
-      description:
-        'Extensive practice with previous years Korean Biology Olympiad papers',
+      description: 'Extensive practice with previous years Korean Biology Olympiad papers',
     },
     {
       icon: Users,
       title: '1-on-1 Mentorship',
-      description:
-        'Personal guidance from experienced Olympiad coaches and IBO medalists',
+      description: 'Personal guidance from experienced Olympiad coaches and IBO medalists',
     },
     {
       icon: Microscope,
       title: 'Practical Training',
-      description:
-        'Virtual lab sessions and practical problem-solving techniques',
+      description: 'Virtual lab sessions and practical problem-solving techniques',
     },
     {
       icon: Clock,
       title: 'Flexible Scheduling',
-      description:
-        'Classes scheduled to accommodate Korean timezone (KST)',
+      description: 'Classes scheduled to accommodate Korean timezone (KST)',
     },
     {
       icon: Trophy,
       title: 'Competition Strategy',
-      description:
-        'Specialized tips for Korean Biology Olympiad exam patterns',
+      description: 'Specialized tips for Korean Biology Olympiad exam patterns',
     },
   ]
 
@@ -379,18 +343,15 @@ export default function KBOCoachingPage() {
                 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"
               >
                 KBO Coaching Online
-                <span className="block text-yellow-400 mt-2">
-                  Korean Biology Olympiad
-                </span>
+                <span className="block text-yellow-400 mt-2">Korean Biology Olympiad</span>
               </motion.h1>
 
               <motion.p
                 variants={fadeInUp}
                 className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"
               >
-                Expert coaching to help you excel in the Korean Biology Olympiad
-                and qualify for the International Biology Olympiad (IBO). Join
-                South Korea&apos;s top biology students!
+                Expert coaching to help you excel in the Korean Biology Olympiad and qualify for the
+                International Biology Olympiad (IBO). Join South Korea&apos;s top biology students!
               </motion.p>
 
               <motion.div
@@ -423,10 +384,7 @@ export default function KBOCoachingPage() {
                   { value: '10+', label: 'IBO Participants' },
                   { value: '4.9/5', label: 'Student Rating' },
                 ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="bg-white/5 rounded-lg p-4 backdrop-blur-sm"
-                  >
+                  <div key={stat.label} className="bg-white/5 rounded-lg p-4 backdrop-blur-sm">
                     <div className="text-2xl md:text-3xl font-bold text-yellow-400">
                       {stat.value}
                     </div>
@@ -446,8 +404,8 @@ export default function KBOCoachingPage() {
                 KBO to IBO Pathway
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Your journey from Korean Biology Olympiad to representing South
-                Korea at the International Biology Olympiad
+                Your journey from Korean Biology Olympiad to representing South Korea at the
+                International Biology Olympiad
               </p>
             </div>
 
@@ -469,9 +427,7 @@ export default function KBOCoachingPage() {
                       <div className="text-sm font-semibold text-yellow-600 mb-2">
                         Stage {stage.stage}
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">
-                        {stage.title}
-                      </h3>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2">{stage.title}</h3>
                       <p className="text-gray-600 text-sm">{stage.description}</p>
                     </div>
                     {index < pathwayStages.length - 1 && (
@@ -494,8 +450,8 @@ export default function KBOCoachingPage() {
                 KBO Syllabus Coverage
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Complete preparation based on Campbell Biology aligned with
-                Korean Biology Olympiad requirements
+                Complete preparation based on Campbell Biology aligned with Korean Biology Olympiad
+                requirements
               </p>
             </div>
 
@@ -509,18 +465,11 @@ export default function KBOCoachingPage() {
                   viewport={{ once: true }}
                   className="bg-white rounded-xl p-6 shadow-lg border border-gray-100"
                 >
-                  <div className="text-sm font-semibold text-yellow-600 mb-2">
-                    {unit.unit}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
-                    {unit.title}
-                  </h3>
+                  <div className="text-sm font-semibold text-yellow-600 mb-2">{unit.unit}</div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">{unit.title}</h3>
                   <ul className="space-y-2">
                     {unit.topics.map((topic) => (
-                      <li
-                        key={topic}
-                        className="flex items-center gap-2 text-gray-600"
-                      >
+                      <li key={topic} className="flex items-center gap-2 text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                         <span>{topic}</span>
                       </li>
@@ -567,9 +516,7 @@ export default function KBOCoachingPage() {
                   <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-yellow-600" />
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
-                    {feature.title}
-                  </h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
@@ -585,8 +532,7 @@ export default function KBOCoachingPage() {
                 Success Stories from Korea
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Hear from Korean students who achieved KBO success with our
-                coaching
+                Hear from Korean students who achieved KBO success with our coaching
               </p>
             </div>
 
@@ -602,22 +548,13 @@ export default function KBOCoachingPage() {
                 >
                   <div className="flex items-center gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                      />
+                      <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                     ))}
                   </div>
-                  <p className="text-gray-600 mb-4 italic">
-                    &quot;{testimonial.quote}&quot;
-                  </p>
+                  <p className="text-gray-600 mb-4 italic">&quot;{testimonial.quote}&quot;</p>
                   <div className="border-t pt-4">
-                    <div className="font-semibold text-gray-900">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-gray-500">
-                      {testimonial.location}
-                    </div>
+                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                    <div className="text-sm text-gray-500">{testimonial.location}</div>
                     <div className="text-sm font-medium text-yellow-600">
                       {testimonial.achievement}
                     </div>
@@ -636,8 +573,7 @@ export default function KBOCoachingPage() {
                 KBO Coaching Plans
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Flexible pricing for Korean students. All prices shown in KRW and
-                USD.
+                Flexible pricing for Korean students. All prices shown in KRW and USD.
               </p>
             </div>
 
@@ -660,34 +596,23 @@ export default function KBOCoachingPage() {
                       </span>
                     </div>
                   )}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    {plan.name}
-                  </h3>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <div className="mb-2">
-                    <span className="text-3xl font-bold text-gray-900">
-                      {plan.priceKRW}
-                    </span>
+                    <span className="text-3xl font-bold text-gray-900">{plan.priceKRW}</span>
                     <span className="text-gray-500">{plan.period}</span>
                   </div>
-                  <div className="text-sm text-gray-500 mb-4">
-                    ({plan.priceUSD} USD)
-                  </div>
+                  <div className="text-sm text-gray-500 mb-4">({plan.priceUSD} USD)</div>
                   <p className="text-gray-600 mb-6">{plan.description}</p>
                   <ul className="space-y-3 mb-6">
                     {plan.features.map((feature) => (
-                      <li
-                        key={feature}
-                        className="flex items-start gap-2 text-gray-600"
-                      >
+                      <li key={feature} className="flex items-start gap-2 text-gray-600">
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <button
-                    onClick={() =>
-                      handleWhatsAppClick(`pricing-${plan.name.toLowerCase()}`)
-                    }
+                    onClick={() => handleWhatsAppClick(`pricing-${plan.name.toLowerCase()}`)}
                     className={`w-full py-3 rounded-lg font-semibold transition-all ${
                       plan.popular
                         ? 'bg-yellow-400 hover:bg-yellow-500 text-slate-900'
@@ -725,14 +650,10 @@ export default function KBOCoachingPage() {
                   className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden"
                 >
                   <button
-                    onClick={() =>
-                      setExpandedFaq(expandedFaq === index ? null : index)
-                    }
+                    onClick={() => setExpandedFaq(expandedFaq === index ? null : index)}
                     className="w-full px-6 py-4 text-left flex items-center justify-between"
                   >
-                    <span className="font-semibold text-gray-900">
-                      {faq.question}
-                    </span>
+                    <span className="font-semibold text-gray-900">{faq.question}</span>
                     <ArrowRight
                       className={`w-5 h-5 text-gray-400 transition-transform ${
                         expandedFaq === index ? 'rotate-90' : ''
@@ -757,8 +678,8 @@ export default function KBOCoachingPage() {
               Ready to Excel in KBO?
             </h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of Korean students who have achieved Biology Olympiad
-              success with Cerebrum. Start your journey to IBO today!
+              Join hundreds of Korean students who have achieved Biology Olympiad success with
+              Cerebrum. Start your journey to IBO today!
             </p>
             <button
               onClick={() => handleWhatsAppClick('bottom-cta')}

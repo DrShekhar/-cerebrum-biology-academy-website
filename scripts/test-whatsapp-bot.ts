@@ -38,7 +38,7 @@ class WhatsAppBotTester {
    */
   async runAllTests(): Promise<void> {
     console.log('🧪 Starting WhatsApp Bot Tests...\n')
-    console.log('=' .repeat(60))
+    console.log('='.repeat(60))
 
     await this.testWebhookVerification()
     await this.testMessageProcessing()
@@ -72,7 +72,12 @@ class WhatsAppBotTester {
         this.addResult(testName, true, 'Webhook verified successfully', Date.now() - startTime)
         console.log('   ✅ PASS: Webhook verification successful')
       } else {
-        this.addResult(testName, false, `Unexpected response: ${response.status}`, Date.now() - startTime)
+        this.addResult(
+          testName,
+          false,
+          `Unexpected response: ${response.status}`,
+          Date.now() - startTime
+        )
         console.log(`   ❌ FAIL: Status ${response.status}, Body: ${body}`)
       }
 
@@ -102,38 +107,46 @@ class WhatsAppBotTester {
       console.log(`\n📝 Testing: ${testName}`)
 
       const testMessage = {
-        entry: [{
-          changes: [{
-            value: {
-              messaging_product: 'whatsapp',
-              metadata: {
-                phone_number_id: '123456789'
+        entry: [
+          {
+            changes: [
+              {
+                value: {
+                  messaging_product: 'whatsapp',
+                  metadata: {
+                    phone_number_id: '123456789',
+                  },
+                  contacts: [
+                    {
+                      profile: {
+                        name: 'Test Student',
+                      },
+                    },
+                  ],
+                  messages: [
+                    {
+                      from: '918826444334',
+                      id: 'test_msg_' + Date.now(),
+                      timestamp: Date.now().toString(),
+                      type: 'text',
+                      text: {
+                        body: 'What is photosynthesis?',
+                      },
+                    },
+                  ],
+                },
               },
-              contacts: [{
-                profile: {
-                  name: 'Test Student'
-                }
-              }],
-              messages: [{
-                from: '918826444334',
-                id: 'test_msg_' + Date.now(),
-                timestamp: Date.now().toString(),
-                type: 'text',
-                text: {
-                  body: 'What is photosynthesis?'
-                }
-              }]
-            }
-          }]
-        }]
+            ],
+          },
+        ],
       }
 
       const response = await fetch(this.webhookUrl, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        body: JSON.stringify(testMessage)
+        body: JSON.stringify(testMessage),
       })
 
       const responseData = await response.json()
@@ -142,7 +155,12 @@ class WhatsAppBotTester {
         this.addResult(testName, true, 'Message processed successfully', Date.now() - startTime)
         console.log('   ✅ PASS: Message accepted for processing')
       } else {
-        this.addResult(testName, false, `Unexpected response: ${JSON.stringify(responseData)}`, Date.now() - startTime)
+        this.addResult(
+          testName,
+          false,
+          `Unexpected response: ${JSON.stringify(responseData)}`,
+          Date.now() - startTime
+        )
         console.log(`   ❌ FAIL: ${JSON.stringify(responseData)}`)
       }
     } catch (error) {
@@ -171,35 +189,46 @@ class WhatsAppBotTester {
 
     try {
       const testMessage = {
-        entry: [{
-          changes: [{
-            value: {
-              messaging_product: 'whatsapp',
-              metadata: { phone_number_id: '123456789' },
-              contacts: [{ profile: { name: 'Test Student' } }],
-              messages: [{
-                from: '918826444334',
-                id: 'test_cmd_' + Date.now() + '_' + command,
-                timestamp: Date.now().toString(),
-                type: 'text',
-                text: { body: command }
-              }]
-            }
-          }]
-        }]
+        entry: [
+          {
+            changes: [
+              {
+                value: {
+                  messaging_product: 'whatsapp',
+                  metadata: { phone_number_id: '123456789' },
+                  contacts: [{ profile: { name: 'Test Student' } }],
+                  messages: [
+                    {
+                      from: '918826444334',
+                      id: 'test_cmd_' + Date.now() + '_' + command,
+                      timestamp: Date.now().toString(),
+                      type: 'text',
+                      text: { body: command },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
       }
 
       const response = await fetch(this.webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(testMessage)
+        body: JSON.stringify(testMessage),
       })
 
       if (response.status === 200) {
         this.addResult(testName, true, `${command} command processed`, Date.now() - startTime)
         console.log(`   ✅ PASS: ${command} command`)
       } else {
-        this.addResult(testName, false, `Failed with status ${response.status}`, Date.now() - startTime)
+        this.addResult(
+          testName,
+          false,
+          `Failed with status ${response.status}`,
+          Date.now() - startTime
+        )
         console.log(`   ❌ FAIL: ${command} command`)
       }
     } catch (error) {
@@ -219,35 +248,46 @@ class WhatsAppBotTester {
       console.log(`\n📝 Testing: ${testName}`)
 
       const testMessage = {
-        entry: [{
-          changes: [{
-            value: {
-              messaging_product: 'whatsapp',
-              metadata: { phone_number_id: '123456789' },
-              contacts: [{ profile: { name: 'Test Student' } }],
-              messages: [{
-                from: '918826444335', // Different number to avoid rate limit
-                id: 'test_ai_' + Date.now(),
-                timestamp: Date.now().toString(),
-                type: 'text',
-                text: { body: 'Explain DNA replication in simple terms' }
-              }]
-            }
-          }]
-        }]
+        entry: [
+          {
+            changes: [
+              {
+                value: {
+                  messaging_product: 'whatsapp',
+                  metadata: { phone_number_id: '123456789' },
+                  contacts: [{ profile: { name: 'Test Student' } }],
+                  messages: [
+                    {
+                      from: '918826444335', // Different number to avoid rate limit
+                      id: 'test_ai_' + Date.now(),
+                      timestamp: Date.now().toString(),
+                      type: 'text',
+                      text: { body: 'Explain DNA replication in simple terms' },
+                    },
+                  ],
+                },
+              },
+            ],
+          },
+        ],
       }
 
       const response = await fetch(this.webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(testMessage)
+        body: JSON.stringify(testMessage),
       })
 
       if (response.status === 200) {
         this.addResult(testName, true, 'AI question processed', Date.now() - startTime)
         console.log('   ✅ PASS: AI response generation initiated')
       } else {
-        this.addResult(testName, false, `Failed with status ${response.status}`, Date.now() - startTime)
+        this.addResult(
+          testName,
+          false,
+          `Failed with status ${response.status}`,
+          Date.now() - startTime
+        )
         console.log(`   ❌ FAIL: AI response generation`)
       }
     } catch (error) {
@@ -273,28 +313,34 @@ class WhatsAppBotTester {
       // Send 15 messages rapidly
       for (let i = 0; i < 15; i++) {
         const testMessage = {
-          entry: [{
-            changes: [{
-              value: {
-                messaging_product: 'whatsapp',
-                metadata: { phone_number_id: '123456789' },
-                contacts: [{ profile: { name: 'Test Student' } }],
-                messages: [{
-                  from: phoneNumber,
-                  id: `test_rate_${Date.now()}_${i}`,
-                  timestamp: Date.now().toString(),
-                  type: 'text',
-                  text: { body: `Test message ${i + 1}` }
-                }]
-              }
-            }]
-          }]
+          entry: [
+            {
+              changes: [
+                {
+                  value: {
+                    messaging_product: 'whatsapp',
+                    metadata: { phone_number_id: '123456789' },
+                    contacts: [{ profile: { name: 'Test Student' } }],
+                    messages: [
+                      {
+                        from: phoneNumber,
+                        id: `test_rate_${Date.now()}_${i}`,
+                        timestamp: Date.now().toString(),
+                        type: 'text',
+                        text: { body: `Test message ${i + 1}` },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          ],
         }
 
         const response = await fetch(this.webhookUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(testMessage)
+          body: JSON.stringify(testMessage),
         })
 
         const data = await response.json()
@@ -309,10 +355,22 @@ class WhatsAppBotTester {
       }
 
       if (successCount <= 10 && rateLimitedCount >= 5) {
-        this.addResult(testName, true, `${successCount} allowed, ${rateLimitedCount} blocked`, Date.now() - startTime)
-        console.log(`   ✅ PASS: Rate limiting working (${successCount} allowed, ${rateLimitedCount} blocked)`)
+        this.addResult(
+          testName,
+          true,
+          `${successCount} allowed, ${rateLimitedCount} blocked`,
+          Date.now() - startTime
+        )
+        console.log(
+          `   ✅ PASS: Rate limiting working (${successCount} allowed, ${rateLimitedCount} blocked)`
+        )
       } else {
-        this.addResult(testName, false, `Rate limiting may not be working correctly`, Date.now() - startTime)
+        this.addResult(
+          testName,
+          false,
+          `Rate limiting may not be working correctly`,
+          Date.now() - startTime
+        )
         console.log(`   ⚠️  WARNING: ${successCount} allowed, ${rateLimitedCount} blocked`)
       }
     } catch (error) {
@@ -367,15 +425,25 @@ class WhatsAppBotTester {
       const response = await fetch(this.webhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: 'invalid json'
+        body: 'invalid json',
       })
 
       // Should still return 200 to avoid webhook disabling
       if (response.status === 200) {
-        this.addResult(testName, true, 'Handles malformed requests gracefully', Date.now() - startTime)
+        this.addResult(
+          testName,
+          true,
+          'Handles malformed requests gracefully',
+          Date.now() - startTime
+        )
         console.log('   ✅ PASS: Error handling working')
       } else {
-        this.addResult(testName, false, `Unexpected status: ${response.status}`, Date.now() - startTime)
+        this.addResult(
+          testName,
+          false,
+          `Unexpected status: ${response.status}`,
+          Date.now() - startTime
+        )
         console.log(`   ❌ FAIL: Should return 200 for errors`)
       }
     } catch (error) {
@@ -389,28 +457,34 @@ class WhatsAppBotTester {
    */
   private async sendMessage(phoneNumber: string, text: string): Promise<void> {
     const testMessage = {
-      entry: [{
-        changes: [{
-          value: {
-            messaging_product: 'whatsapp',
-            metadata: { phone_number_id: '123456789' },
-            contacts: [{ profile: { name: 'Test Student' } }],
-            messages: [{
-              from: phoneNumber,
-              id: `test_${Date.now()}_${Math.random()}`,
-              timestamp: Date.now().toString(),
-              type: 'text',
-              text: { body: text }
-            }]
-          }
-        }]
-      }]
+      entry: [
+        {
+          changes: [
+            {
+              value: {
+                messaging_product: 'whatsapp',
+                metadata: { phone_number_id: '123456789' },
+                contacts: [{ profile: { name: 'Test Student' } }],
+                messages: [
+                  {
+                    from: phoneNumber,
+                    id: `test_${Date.now()}_${Math.random()}`,
+                    timestamp: Date.now().toString(),
+                    type: 'text',
+                    text: { body: text },
+                  },
+                ],
+              },
+            },
+          ],
+        },
+      ],
     }
 
     await fetch(this.webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(testMessage)
+      body: JSON.stringify(testMessage),
     })
   }
 
@@ -418,7 +492,7 @@ class WhatsAppBotTester {
    * Helper: Sleep
    */
   private sleep(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms))
+    return new Promise((resolve) => setTimeout(resolve, ms))
   }
 
   /**
@@ -434,8 +508,8 @@ class WhatsAppBotTester {
   private printResults(): void {
     console.log('\n📊 TEST RESULTS SUMMARY\n')
 
-    const passed = this.results.filter(r => r.passed).length
-    const failed = this.results.filter(r => !r.passed).length
+    const passed = this.results.filter((r) => r.passed).length
+    const failed = this.results.filter((r) => !r.passed).length
     const total = this.results.length
 
     console.log(`Total Tests: ${total}`)
@@ -445,9 +519,11 @@ class WhatsAppBotTester {
 
     if (failed > 0) {
       console.log('❌ FAILED TESTS:')
-      this.results.filter(r => !r.passed).forEach(result => {
-        console.log(`   • ${result.name}: ${result.message} (${result.duration}ms)`)
-      })
+      this.results
+        .filter((r) => !r.passed)
+        .forEach((result) => {
+          console.log(`   • ${result.name}: ${result.message} (${result.duration}ms)`)
+        })
       console.log('')
     }
 

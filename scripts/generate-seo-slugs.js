@@ -105,9 +105,7 @@ async function generateSlugsFile() {
   // Write to file
   fs.writeFileSync(OUTPUT_FILE, fileContent, 'utf-8')
   console.log(`📝 Generated: ${path.relative(process.cwd(), OUTPUT_FILE)}`)
-  console.log(
-    `\n✨ Done! Sitemap will now use ${totalSlugs} SEO slugs efficiently.\n`
-  )
+  console.log(`\n✨ Done! Sitemap will now use ${totalSlugs} SEO slugs efficiently.\n`)
 }
 
 function generateTypeScriptContent(slugsByCategory, totalSlugs) {
@@ -204,9 +202,7 @@ export const SEO_SLUGS_METADATA = {
   lastGenerated: '${today}',
   categories: [${categories.map((c) => `'${c}'`).join(', ')}],
   categoryCounts: {
-${categories
-  .map((category) => `    ${category}: ${slugsByCategory[category].length}`)
-  .join(',\n')}
+${categories.map((category) => `    ${category}: ${slugsByCategory[category].length}`).join(',\n')}
   },
 } as const
 `

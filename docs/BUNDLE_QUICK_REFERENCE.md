@@ -46,6 +46,7 @@ npm install --save-dev @next/bundle-analyzer
 ```
 
 Add to `next.config.mjs`:
+
 ```javascript
 import bundleAnalyzer from '@next/bundle-analyzer'
 const withBundleAnalyzer = bundleAnalyzer({
@@ -61,18 +62,21 @@ export default withBundleAnalyzer(withSentryConfig(withMDX(nextConfig), {...}))
 ### 2. Fix Barrel Exports (2-4 hours) 🔴
 
 **Problem:**
+
 ```typescript
 // ❌ BAD - imports entire barrel
 import { Icon } from '@/components/illustrations/blog'
 ```
 
 **Solution:**
+
 ```typescript
 // ✅ GOOD - direct import
 import { Icon } from '@/components/illustrations/blog/Icon'
 ```
 
 **Files to fix:**
+
 - `src/components/illustrations/blog/index.ts`
 - `src/lib/validation/index.ts`
 - `src/lib/images/index.ts`
@@ -85,6 +89,7 @@ import { Icon } from '@/components/illustrations/blog/Icon'
 ### 3. Remove framer-motion from SEO Pages (1-2 days) 🟡
 
 **Before:**
+
 ```typescript
 import { motion } from 'framer-motion' // 90KB
 
@@ -97,6 +102,7 @@ import { motion } from 'framer-motion' // 90KB
 ```
 
 **After:**
+
 ```typescript
 <div className="animate-fadeInUp">
   Content
@@ -165,12 +171,12 @@ Documentation:
 
 ## Metrics to Track
 
-| Metric | Current | Target | Command |
-|--------|---------|--------|---------|
-| Largest chunk | 2.8MB | <250KB | `ls -lhS .next/static/chunks/*.js \| head -1` |
-| .next size | 3.6GB | <500MB | `du -sh .next` |
-| Deployment | 189MB | <100MB | `du -sh .vercel/output` |
-| framer-motion | 538+ | <50 | `grep -r "from 'framer-motion'" src \| wc -l` |
+| Metric        | Current | Target | Command                                       |
+| ------------- | ------- | ------ | --------------------------------------------- |
+| Largest chunk | 2.8MB   | <250KB | `ls -lhS .next/static/chunks/*.js \| head -1` |
+| .next size    | 3.6GB   | <500MB | `du -sh .next`                                |
+| Deployment    | 189MB   | <100MB | `du -sh .vercel/output`                       |
+| framer-motion | 538+    | <50    | `grep -r "from 'framer-motion'" src \| wc -l` |
 
 ---
 
@@ -185,15 +191,15 @@ import * as Clerk from '@clerk/nextjs'
 import { Component } from '@/components/illustrations/blog'
 
 // ❌ Prisma in client components
-'use client'
-import { prisma } from '@/lib/prisma'  // WILL BREAK
+;('use client')
+import { prisma } from '@/lib/prisma' // WILL BREAK
 
 // ❌ framer-motion on static SEO pages
 // app/neet-coaching-*/page.tsx
 import { motion } from 'framer-motion'
 
 // ❌ Heavy components without dynamic import
-import PDFViewer from '@/components/pdf/Viewer'  // Should be lazy
+import PDFViewer from '@/components/pdf/Viewer' // Should be lazy
 ```
 
 ---

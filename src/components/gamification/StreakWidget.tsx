@@ -21,9 +21,7 @@ export function StreakWidget({
   const daysUntilMilestone = Math.max(0, streakMilestone.days - studyStreak)
 
   return (
-    <div
-      className={`bg-orange-600 rounded-xl shadow-lg p-6 text-white ${className}`}
-    >
+    <div className={`bg-orange-600 rounded-xl shadow-lg p-6 text-white ${className}`}>
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>

@@ -288,7 +288,10 @@ export default function ReferralLinksPage() {
       {loading && !data && (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[...Array(4)].map((_, i) => (
-            <div key={i} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 animate-pulse">
+            <div
+              key={i}
+              className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 animate-pulse"
+            >
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <div className="h-5 bg-gray-200 rounded w-32 mb-2"></div>
@@ -363,10 +366,7 @@ export default function ReferralLinksPage() {
 
                   {openMenu === link.id && (
                     <>
-                      <div
-                        className="fixed inset-0 z-10"
-                        onClick={() => setOpenMenu(null)}
-                      ></div>
+                      <div className="fixed inset-0 z-10" onClick={() => setOpenMenu(null)}></div>
                       <div className="absolute right-0 mt-1 w-48 bg-white rounded-lg shadow-lg border border-gray-200 z-20">
                         <button
                           onClick={() => {
@@ -426,7 +426,8 @@ export default function ReferralLinksPage() {
                 </button>
                 <a
                   href={link.fullUrl}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="p-1.5 hover:bg-gray-200 rounded transition-colors flex-shrink-0"
                   title="Open link"
                 >
@@ -437,7 +438,9 @@ export default function ReferralLinksPage() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-3">
                 <div className="text-center p-2 bg-blue-50 rounded-lg">
-                  <p className="text-lg font-bold text-blue-700">{link.clickCount.toLocaleString()}</p>
+                  <p className="text-lg font-bold text-blue-700">
+                    {link.clickCount.toLocaleString()}
+                  </p>
                   <p className="text-xs text-blue-600">Clicks</p>
                 </div>
                 <div className="text-center p-2 bg-green-50 rounded-lg">
@@ -625,13 +628,17 @@ function CreateLinkModal({ onClose, onSuccess }: { onClose: () => void; onSucces
               type="text"
               value={formData.customCode}
               onChange={(e) =>
-                setFormData({ ...formData, customCode: e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, '') })
+                setFormData({
+                  ...formData,
+                  customCode: e.target.value.toLowerCase().replace(/[^a-z0-9-]/g, ''),
+                })
               }
               placeholder="e.g., my-special-link"
               className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
             <p className="text-xs text-gray-500 mt-1">
-              Leave empty for auto-generated code. 4-20 characters, lowercase letters, numbers, and hyphens only.
+              Leave empty for auto-generated code. 4-20 characters, lowercase letters, numbers, and
+              hyphens only.
             </p>
           </div>
 

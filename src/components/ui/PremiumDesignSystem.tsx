@@ -84,8 +84,7 @@ export function PremiumButton({
       'bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800 text-white shadow-lg shadow-blue-500/25',
     secondary:
       'bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 text-white shadow-lg shadow-gray-500/25',
-    luxury:
-      'bg-indigo-700 text-white shadow-lg shadow-purple-500/25',
+    luxury: 'bg-indigo-700 text-white shadow-lg shadow-purple-500/25',
     medical:
       'bg-gradient-to-r from-green-600 via-green-700 to-blue-800 text-white shadow-lg shadow-green-500/25',
   }

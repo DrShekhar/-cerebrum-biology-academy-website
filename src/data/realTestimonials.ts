@@ -61,7 +61,8 @@ export const realTestimonials: RealTestimonial[] = [
     thumbnail: 'https://i.ytimg.com/vi/NfhkGqOQXzk/hqdefault.jpg',
     year: 2023,
     college: 'AFMC Pune',
-    quote: 'The rigorous preparation and personal mentoring at Cerebrum helped me crack AFMC, one of the toughest medical entrance exams. The faculty understood AFMC exam patterns thoroughly and provided targeted preparation strategies. Regular mock tests simulating actual exam conditions helped me manage time pressure. The intensive revision modules in the final months were particularly helpful in consolidating my Biology knowledge and boosting my confidence for the exam day.',
+    quote:
+      'The rigorous preparation and personal mentoring at Cerebrum helped me crack AFMC, one of the toughest medical entrance exams. The faculty understood AFMC exam patterns thoroughly and provided targeted preparation strategies. Regular mock tests simulating actual exam conditions helped me manage time pressure. The intensive revision modules in the final months were particularly helpful in consolidating my Biology knowledge and boosting my confidence for the exam day.',
     isFeatured: true,
   },
   {
@@ -72,7 +73,8 @@ export const realTestimonials: RealTestimonial[] = [
     youtubeId: 't5F8RBuHITM',
     thumbnail: 'https://i.ytimg.com/vi/t5F8RBuHITM/hqdefault.jpg',
     year: 2023,
-    quote: 'The intensive 6-month program transformed my Biology preparation completely. Coming from a non-medical background, I found Biology challenging initially. The faculty broke down complex concepts into simple, digestible parts with real-life examples and clinical case studies. Daily practice sessions, chapter-wise tests, and personalized doubt resolution helped me build a strong foundation quickly. Within 6 months, I went from basics to NEET-ready preparation.',
+    quote:
+      'The intensive 6-month program transformed my Biology preparation completely. Coming from a non-medical background, I found Biology challenging initially. The faculty broke down complex concepts into simple, digestible parts with real-life examples and clinical case studies. Daily practice sessions, chapter-wise tests, and personalized doubt resolution helped me build a strong foundation quickly. Within 6 months, I went from basics to NEET-ready preparation.',
   },
   {
     id: 'rahul-sharma',

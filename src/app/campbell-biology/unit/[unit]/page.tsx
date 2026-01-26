@@ -11,11 +11,7 @@ import {
   GraduationCap,
   Target,
 } from 'lucide-react'
-import {
-  campbellUnits,
-  getUnitBySlug,
-  getAdjacentUnits,
-} from '@/data/campbell-biology/units'
+import { campbellUnits, getUnitBySlug, getAdjacentUnits } from '@/data/campbell-biology/units'
 import { getChaptersByUnitId } from '@/data/campbell-biology'
 import { CampbellWhatsAppCTA } from '@/components/campbell/CampbellWhatsAppCTA'
 import { CampbellFloatingWhatsApp } from '@/components/campbell/CampbellFloatingWhatsApp'
@@ -106,13 +102,9 @@ export default async function UnitPage({ params }: UnitPageProps) {
                 {unit.title}
               </h1>
 
-              <p className="text-xl text-green-400 font-medium mb-4">
-                {unit.subtitle}
-              </p>
+              <p className="text-xl text-green-400 font-medium mb-4">{unit.subtitle}</p>
 
-              <p className="text-lg text-slate-300 mb-6">
-                {unit.description}
-              </p>
+              <p className="text-lg text-slate-300 mb-6">{unit.description}</p>
 
               {/* Stats */}
               <div className="flex flex-wrap gap-4 mb-8">
@@ -170,8 +162,14 @@ export default async function UnitPage({ params }: UnitPageProps) {
                 </div>
                 <div className="flex items-center justify-between text-sm">
                   <span className="text-slate-300">Olympiad Relevance</span>
-                  <span className={`px-2 py-1 rounded border ${olympiadColors[unit.olympiadRelevance]}`}>
-                    {unit.olympiadRelevance === 5 ? 'Essential' : unit.olympiadRelevance === 4 ? 'High' : 'Moderate'}
+                  <span
+                    className={`px-2 py-1 rounded border ${olympiadColors[unit.olympiadRelevance]}`}
+                  >
+                    {unit.olympiadRelevance === 5
+                      ? 'Essential'
+                      : unit.olympiadRelevance === 4
+                        ? 'High'
+                        : 'Moderate'}
                   </span>
                 </div>
               </div>
@@ -221,7 +219,9 @@ export default async function UnitPage({ params }: UnitPageProps) {
                           <Trophy className="w-3 h-3" />
                           {chapter.olympiadRelevance.overall}/5
                         </span>
-                        <span className={`px-2 py-0.5 rounded-full ${difficultyColors[chapter.difficulty]}`}>
+                        <span
+                          className={`px-2 py-0.5 rounded-full ${difficultyColors[chapter.difficulty]}`}
+                        >
                           {chapter.difficulty}
                         </span>
                       </div>
@@ -320,8 +320,8 @@ export default async function UnitPage({ params }: UnitPageProps) {
             Need Help with Unit {unit.unitNumber}?
           </h2>
           <p className="text-lg text-slate-300 mb-8">
-            Get personalized tutoring on {unit.title} from expert faculty.
-            Master all {unit.chapterCount} chapters with guided instruction.
+            Get personalized tutoring on {unit.title} from expert faculty. Master all{' '}
+            {unit.chapterCount} chapters with guided instruction.
           </p>
 
           <CampbellWhatsAppCTA
@@ -337,9 +337,7 @@ export default async function UnitPage({ params }: UnitPageProps) {
             Chat on WhatsApp
           </CampbellWhatsAppCTA>
 
-          <p className="mt-4 text-sm text-slate-400">
-            Free demo class • No commitment required
-          </p>
+          <p className="mt-4 text-sm text-slate-400">Free demo class • No commitment required</p>
         </div>
       </section>
 

@@ -155,7 +155,15 @@ export async function canGenerateContent(
  * Add item to the content generation queue
  */
 export async function addToQueue(input: QueueAddInput): Promise<QueueItem | null> {
-  const { type, triggerSource, topic, keywords = [], sourceUrl, additionalContext, priority } = input
+  const {
+    type,
+    triggerSource,
+    topic,
+    keywords = [],
+    sourceUrl,
+    additionalContext,
+    priority,
+  } = input
 
   // Check if we can generate this content type
   const check = await canGenerateContent(type)

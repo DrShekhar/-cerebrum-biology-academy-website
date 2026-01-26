@@ -47,7 +47,10 @@ export async function GET(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { searchParams } = new URL(request.url)
@@ -172,9 +175,7 @@ export async function GET(request: NextRequest) {
       })
 
       feePayments.forEach((fp) => {
-        const childRel = childRelationships.find(
-          (r) => r.child.email === fp.fee_plans.leads?.email
-        )
+        const childRel = childRelationships.find((r) => r.child.email === fp.fee_plans.leads?.email)
         if (!childRel) return
 
         const dueDate = fp.dueDate ? new Date(fp.dueDate) : null
@@ -275,9 +276,15 @@ export async function GET(request: NextRequest) {
     }
 
     // Calculate summary
-    const totalPaid = payments.filter((p) => p.status === 'paid').reduce((sum, p) => sum + p.amount, 0)
-    const totalPending = payments.filter((p) => p.status === 'pending').reduce((sum, p) => sum + p.amount, 0)
-    const totalOverdue = payments.filter((p) => p.status === 'overdue').reduce((sum, p) => sum + p.amount, 0)
+    const totalPaid = payments
+      .filter((p) => p.status === 'paid')
+      .reduce((sum, p) => sum + p.amount, 0)
+    const totalPending = payments
+      .filter((p) => p.status === 'pending')
+      .reduce((sum, p) => sum + p.amount, 0)
+    const totalOverdue = payments
+      .filter((p) => p.status === 'overdue')
+      .reduce((sum, p) => sum + p.amount, 0)
 
     const nextDue = upcomingDues.find((d) => d.status === 'pending')
 
@@ -286,9 +293,15 @@ export async function GET(request: NextRequest) {
       return {
         childId: rel.childId,
         childName: rel.child.name,
-        totalPaid: childPayments.filter((p) => p.status === 'paid').reduce((sum, p) => sum + p.amount, 0),
-        totalPending: childPayments.filter((p) => p.status === 'pending').reduce((sum, p) => sum + p.amount, 0),
-        totalOverdue: childPayments.filter((p) => p.status === 'overdue').reduce((sum, p) => sum + p.amount, 0),
+        totalPaid: childPayments
+          .filter((p) => p.status === 'paid')
+          .reduce((sum, p) => sum + p.amount, 0),
+        totalPending: childPayments
+          .filter((p) => p.status === 'pending')
+          .reduce((sum, p) => sum + p.amount, 0),
+        totalOverdue: childPayments
+          .filter((p) => p.status === 'overdue')
+          .reduce((sum, p) => sum + p.amount, 0),
       }
     })
 

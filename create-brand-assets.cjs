@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+const fs = require('fs')
+const path = require('path')
 
 // Cerebrum Brand Identity - Primary Logo SVG (based on brandIdentityAgent.ts)
 const primaryLogoSVG = `<svg width="512" height="128" viewBox="0 0 512 128" xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@ const primaryLogoSVG = `<svg width="512" height="128" viewBox="0 0 512 128" xmln
         letter-spacing="0.02em">
     Harvard-Level NEET Preparation
   </text>
-</svg>`;
+</svg>`
 
 // Icon-Only Logo for Apple Touch Icon (square format)
 const iconOnlyLogoSVG = `<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg">
@@ -134,20 +134,20 @@ const iconOnlyLogoSVG = `<svg width="180" height="180" viewBox="0 0 180 180" xml
         opacity="0.9">
     C
   </text>
-</svg>`;
+</svg>`
 
 // Create the public directory path
-const publicDir = path.join(process.cwd(), 'public');
+const publicDir = path.join(process.cwd(), 'public')
 
 // Write the SVG files first
-console.log('Creating SVG logo files...');
+console.log('Creating SVG logo files...')
 
-fs.writeFileSync(path.join(publicDir, 'logo-primary.svg'), primaryLogoSVG);
-fs.writeFileSync(path.join(publicDir, 'logo-icon.svg'), iconOnlyLogoSVG);
+fs.writeFileSync(path.join(publicDir, 'logo-primary.svg'), primaryLogoSVG)
+fs.writeFileSync(path.join(publicDir, 'logo-icon.svg'), iconOnlyLogoSVG)
 
-console.log('SVG files created successfully:');
-console.log('- logo-primary.svg (512x128)');
-console.log('- logo-icon.svg (180x180)');
+console.log('SVG files created successfully:')
+console.log('- logo-primary.svg (512x128)')
+console.log('- logo-icon.svg (180x180)')
 
 // Since we can't easily convert SVG to PNG in Node.js without additional dependencies,
 // let's create a simple HTML file that can be used to generate PNGs
@@ -333,20 +333,20 @@ const htmlConverter = `<!DOCTYPE html>
         });
     </script>
 </body>
-</html>`;
+</html>`
 
 // Write the HTML converter
-fs.writeFileSync(path.join(publicDir, 'brand-asset-generator.html'), htmlConverter);
+fs.writeFileSync(path.join(publicDir, 'brand-asset-generator.html'), htmlConverter)
 
-console.log('');
-console.log('🎨 Cerebrum Brand Asset Generator Created!');
-console.log('');
-console.log('Next steps:');
-console.log('1. Open: http://localhost:3000/brand-asset-generator.html');
-console.log('2. Generate and download the PNG assets');
-console.log('3. Replace the existing logo.png and apple-touch-icon.png files');
-console.log('');
-console.log('Files created:');
-console.log('- public/logo-primary.svg');
-console.log('- public/logo-icon.svg');
-console.log('- public/brand-asset-generator.html');
+console.log('')
+console.log('🎨 Cerebrum Brand Asset Generator Created!')
+console.log('')
+console.log('Next steps:')
+console.log('1. Open: http://localhost:3000/brand-asset-generator.html')
+console.log('2. Generate and download the PNG assets')
+console.log('3. Replace the existing logo.png and apple-touch-icon.png files')
+console.log('')
+console.log('Files created:')
+console.log('- public/logo-primary.svg')
+console.log('- public/logo-icon.svg')
+console.log('- public/brand-asset-generator.html')

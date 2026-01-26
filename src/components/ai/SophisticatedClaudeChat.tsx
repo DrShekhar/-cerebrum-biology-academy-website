@@ -342,11 +342,7 @@ export function SophisticatedClaudeChat({
               )}
               whileTap={{ scale: 0.95 }}
             >
-              {isRecording ? (
-                <Square className="h-5 w-5" />
-              ) : (
-                <Mic className="h-5 w-5" />
-              )}
+              {isRecording ? <Square className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
             </motion.button>
 
             {/* Image Upload */}

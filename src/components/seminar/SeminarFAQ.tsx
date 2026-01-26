@@ -20,9 +20,7 @@ export function SeminarFAQ() {
     <section className="py-16 bg-white">
       <div className="max-w-3xl mx-auto px-4">
         <div className="text-center mb-10">
-          <p className="text-green-600 font-semibold mb-2">
-            FREQUENTLY ASKED QUESTIONS
-          </p>
+          <p className="text-green-600 font-semibold mb-2">FREQUENTLY ASKED QUESTIONS</p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
             Got Questions? We've Got Answers
           </h2>
@@ -30,17 +28,12 @@ export function SeminarFAQ() {
 
         <div className="space-y-4">
           {SEMINAR_FAQS.map((faq, index) => (
-            <div
-              key={index}
-              className="bg-slate-50 rounded-xl overflow-hidden transition-all"
-            >
+            <div key={index} className="bg-slate-50 rounded-xl overflow-hidden transition-all">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-5 text-left hover:bg-slate-100 transition-colors"
               >
-                <span className="font-semibold text-slate-900 pr-4">
-                  {faq.question}
-                </span>
+                <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
                 <ChevronDown
                   className={`w-5 h-5 text-slate-500 flex-shrink-0 transition-transform ${
                     openIndex === index ? 'rotate-180' : ''
@@ -58,9 +51,7 @@ export function SeminarFAQ() {
 
         {/* Still Have Questions */}
         <div className="mt-10 text-center p-6 bg-gradient-to-br from-green-50 to-teal-50 rounded-xl">
-          <p className="text-slate-900 font-semibold mb-2">
-            Still have questions?
-          </p>
+          <p className="text-slate-900 font-semibold mb-2">Still have questions?</p>
           <p className="text-slate-600 mb-4">
             Send us a message on WhatsApp and we'll respond within 2 minutes.
           </p>

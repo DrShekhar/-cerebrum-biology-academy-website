@@ -236,7 +236,9 @@ export default function OnlineBiologyClassesICSEPage() {
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               ICSE + NCERT Gap Topics We Cover
             </h2>
-            <p className="text-lg text-gray-600">Extra NCERT content that ICSE/ISC doesn&apos;t teach</p>
+            <p className="text-lg text-gray-600">
+              Extra NCERT content that ICSE/ISC doesn&apos;t teach
+            </p>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2">

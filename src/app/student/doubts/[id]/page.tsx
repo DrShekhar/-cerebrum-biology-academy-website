@@ -9,15 +9,7 @@ import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { DoubtStatusBadge, DoubtPriorityBadge } from '@/components/student/DoubtStatusBadge'
 import { DoubtMessagesView } from '@/components/student/DoubtMessagesView'
-import {
-  ArrowLeft,
-  CheckCircle,
-  Eye,
-  Calendar,
-  User,
-  Star,
-  AlertCircle,
-} from 'lucide-react'
+import { ArrowLeft, CheckCircle, Eye, Calendar, User, Star, AlertCircle } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Modal } from '@/components/ui/Modal'
 import { Textarea } from '@/components/ui/Textarea'

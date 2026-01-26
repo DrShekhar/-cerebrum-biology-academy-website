@@ -228,10 +228,7 @@ export default async function FacultyProfilePage({ params }: Props) {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Subject Expertise</h2>
                 <div className="grid md:grid-cols-2 gap-6">
                   {faculty.specialization.map((subject, index) => (
-                    <div
-                      key={index}
-                      className="bg-blue-500 text-white rounded-2xl p-6"
-                    >
+                    <div key={index} className="bg-blue-500 text-white rounded-2xl p-6">
                       <BookOpen className="w-8 h-8 mb-3" />
                       <h3 className="text-xl font-bold mb-2">{subject}</h3>
                       <p className="text-blue-100">Expert level teaching and conceptual clarity</p>

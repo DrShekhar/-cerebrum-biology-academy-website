@@ -385,7 +385,15 @@ export const logSuspiciousActivity = (
 
 // Admin action logging - comprehensive audit trail for all admin operations
 export const logAdminAction = (
-  action: 'admin_user_created' | 'admin_user_updated' | 'admin_user_deleted' | 'admin_role_changed' | 'admin_permission_changed' | 'admin_settings_changed' | 'admin_data_export' | 'admin_data_delete',
+  action:
+    | 'admin_user_created'
+    | 'admin_user_updated'
+    | 'admin_user_deleted'
+    | 'admin_role_changed'
+    | 'admin_permission_changed'
+    | 'admin_settings_changed'
+    | 'admin_data_export'
+    | 'admin_data_delete',
   adminEmail: string,
   adminId: string,
   ipAddress: string,

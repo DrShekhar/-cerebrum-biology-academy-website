@@ -116,7 +116,16 @@ export function AriaInput({
 
     // Keep focus on input
     inputRef.current?.focus()
-  }, [inputValue, disabled, isStreaming, isLeadCapture, leadStage, onSendMessage, onSubmitLeadField, validateInput])
+  }, [
+    inputValue,
+    disabled,
+    isStreaming,
+    isLeadCapture,
+    leadStage,
+    onSendMessage,
+    onSubmitLeadField,
+    validateInput,
+  ])
 
   const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
@@ -148,9 +157,9 @@ export function AriaInput({
                   stage === leadStage
                     ? 'bg-green-500'
                     : ['name', 'phone', 'class'].indexOf(leadStage) >
-                      ['name', 'phone', 'class'].indexOf(stage)
-                    ? 'bg-green-200'
-                    : 'bg-slate-200'
+                        ['name', 'phone', 'class'].indexOf(stage)
+                      ? 'bg-green-200'
+                      : 'bg-slate-200'
                 }`}
               />
             ))}
@@ -160,9 +169,7 @@ export function AriaInput({
 
       {/* Error message */}
       {error && (
-        <div className="mb-2 rounded-md bg-red-50 px-2 py-1 text-xs text-red-600">
-          {error}
-        </div>
+        <div className="mb-2 rounded-md bg-red-50 px-2 py-1 text-xs text-red-600">{error}</div>
       )}
 
       {/* Input row */}

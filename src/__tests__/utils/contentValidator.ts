@@ -93,34 +93,80 @@ export class EducationalContentValidator {
 
   private initializeTermSets() {
     this.biologyTerms = new Set([
-      'photosynthesis', 'respiration', 'mitosis', 'meiosis', 'dna', 'rna',
-      'protein', 'enzyme', 'cell', 'nucleus', 'chloroplast', 'mitochondria',
-      'glucose', 'atp', 'chlorophyll', 'hemoglobin', 'antibody', 'antigen',
-      'chromosome', 'gene', 'allele', 'phenotype', 'genotype', 'heredity',
-      'evolution', 'natural selection', 'adaptation', 'ecosystem', 'biodiversity'
+      'photosynthesis',
+      'respiration',
+      'mitosis',
+      'meiosis',
+      'dna',
+      'rna',
+      'protein',
+      'enzyme',
+      'cell',
+      'nucleus',
+      'chloroplast',
+      'mitochondria',
+      'glucose',
+      'atp',
+      'chlorophyll',
+      'hemoglobin',
+      'antibody',
+      'antigen',
+      'chromosome',
+      'gene',
+      'allele',
+      'phenotype',
+      'genotype',
+      'heredity',
+      'evolution',
+      'natural selection',
+      'adaptation',
+      'ecosystem',
+      'biodiversity',
     ])
 
     this.neetKeywords = new Set([
-      'neet', 'medical entrance', 'ncert', 'aiims', 'jipmer',
-      'biology syllabus', 'exam pattern', 'previous year',
-      'important topics', 'weightage', 'scoring'
+      'neet',
+      'medical entrance',
+      'ncert',
+      'aiims',
+      'jipmer',
+      'biology syllabus',
+      'exam pattern',
+      'previous year',
+      'important topics',
+      'weightage',
+      'scoring',
     ])
 
     this.inappropriateTerms = new Set([
-      'inappropriate', 'offensive', 'vulgar', 'hate',
-      'discrimination', 'violence', 'explicit'
+      'inappropriate',
+      'offensive',
+      'vulgar',
+      'hate',
+      'discrimination',
+      'violence',
+      'explicit',
     ])
 
     this.medicalTerms = new Set([
-      'anatomy', 'physiology', 'pathology', 'diagnosis',
-      'treatment', 'therapy', 'medical', 'clinical',
-      'patient', 'disease', 'syndrome', 'disorder'
+      'anatomy',
+      'physiology',
+      'pathology',
+      'diagnosis',
+      'treatment',
+      'therapy',
+      'medical',
+      'clinical',
+      'patient',
+      'disease',
+      'syndrome',
+      'disorder',
     ])
   }
 
   async validateBiologyContent(content: string, topic: string): Promise<ValidationResult> {
     const words = content.toLowerCase().split(/\s+/)
-    const scientificTermsUsed = words.filter(word => this.biologyTerms.has(word))
+    const scientificTermsUsed = words.filter((word) => this.biologyTerms.has(word))
 
     // Calculate accuracy based on topic relevance and scientific term usage
     const topicMentions = content.toLowerCase().includes(topic.toLowerCase()) ? 1 : 0
@@ -132,20 +178,25 @@ export class EducationalContentValidator {
     const relevance = Math.min(relevantTerms / 5, 1) // Normalize to max 1
 
     // Check for formulas (basic pattern matching)
-    const hasFormulas = /[A-Z]+[0-9]*\s*[+\-=]\s*[A-Z]+[0-9]*/.test(content) ||
-                       content.includes('→') || content.includes('C6H12O6')
+    const hasFormulas =
+      /[A-Z]+[0-9]*\s*[+\-=]\s*[A-Z]+[0-9]*/.test(content) ||
+      content.includes('→') ||
+      content.includes('C6H12O6')
 
     // Check for examples
-    const hasExamples = content.includes('example') || content.includes('for instance') ||
-                       content.includes('such as') || content.includes('like')
+    const hasExamples =
+      content.includes('example') ||
+      content.includes('for instance') ||
+      content.includes('such as') ||
+      content.includes('like')
 
     // Calculate complexity score
-    const complexWords = words.filter(word => word.length > 8).length
-    const complexityScore = Math.min(complexWords / words.length * 10, 1)
+    const complexWords = words.filter((word) => word.length > 8).length
+    const complexityScore = Math.min((complexWords / words.length) * 10, 1)
 
     // Count advanced terms
-    const advancedTermsCount = scientificTermsUsed.filter(term =>
-      term.length > 10 || this.medicalTerms.has(term)
+    const advancedTermsCount = scientificTermsUsed.filter(
+      (term) => term.length > 10 || this.medicalTerms.has(term)
     ).length
 
     return {
@@ -159,13 +210,13 @@ export class EducationalContentValidator {
       complexityScore,
       advancedTermsCount,
       hasDetailedExplanations: content.length > 500 && content.includes('.'),
-      hasApplications: content.includes('application') || content.includes('used in')
+      hasApplications: content.includes('application') || content.includes('used in'),
     }
   }
 
   async checkFactualConsistency(responses: string[], topic: string): Promise<ConsistencyCheck> {
     // Extract key facts from each response
-    const factSets = responses.map(response => this.extractKeyFacts(response, topic))
+    const factSets = responses.map((response) => this.extractKeyFacts(response, topic))
 
     // Check for contradictions
     const contradictions: string[] = []
@@ -174,43 +225,44 @@ export class EducationalContentValidator {
     const allFacts = factSets.flat()
     const factCounts = new Map<string, number>()
 
-    allFacts.forEach(fact => {
+    allFacts.forEach((fact) => {
       factCounts.set(fact, (factCounts.get(fact) || 0) + 1)
     })
 
-    const consistentFacts = Array.from(factCounts.entries())
-      .filter(([_, count]) => count >= responses.length * 0.8) // 80% agreement
+    const consistentFacts = Array.from(factCounts.entries()).filter(
+      ([_, count]) => count >= responses.length * 0.8
+    ) // 80% agreement
 
     const consistencyScore = consistentFacts.length / Math.max(factCounts.size, 1)
 
     return {
       consistencyScore,
       contradictions,
-      coreFactsPresent: consistentFacts.length > 0
+      coreFactsPresent: consistentFacts.length > 0,
     }
   }
 
   async checkContentSafety(content: string): Promise<SafetyCheck> {
     const words = content.toLowerCase().split(/\s+/)
-    const hasInappropriateTerm = words.some(word => this.inappropriateTerms.has(word))
+    const hasInappropriateTerm = words.some((word) => this.inappropriateTerms.has(word))
 
     return {
       isAppropriate: !hasInappropriateTerm && content.length > 50,
       isEducational: this.isEducationalContent(content),
       hasInappropriateContent: hasInappropriateTerm,
-      ageAppropriate: !hasInappropriateTerm && this.isAgeAppropriate(content)
+      ageAppropriate: !hasInappropriateTerm && this.isAgeAppropriate(content),
     }
   }
 
   async validateSensitiveContent(content: string): Promise<SensitiveContentValidation> {
     const words = content.toLowerCase().split(/\s+/)
-    const medicalTermCount = words.filter(word => this.medicalTerms.has(word)).length
+    const medicalTermCount = words.filter((word) => this.medicalTerms.has(word)).length
 
     return {
       isProfessional: !content.includes('casual') && content.includes('scientific'),
       isScientific: medicalTermCount > 0 || this.hasScientificLanguage(content),
       usesMedicalTerminology: medicalTermCount > 0,
-      avoidsCasualLanguage: !this.hasCasualLanguage(content)
+      avoidsCasualLanguage: !this.hasCasualLanguage(content),
     }
   }
 
@@ -219,21 +271,19 @@ export class EducationalContentValidator {
       isEducational: this.isEducationalContent(content),
       hasLearningObjectives: content.includes('learn') || content.includes('understand'),
       isFactual: this.isFactualContent(content),
-      hasEntertainmentOnly: this.isEntertainmentOnly(content)
+      hasEntertainmentOnly: this.isEntertainmentOnly(content),
     }
   }
 
   async validateNEETAlignment(content: string, topic: string): Promise<NEETValidation> {
     const words = content.toLowerCase()
-    const hasNEETKeywords = Array.from(this.neetKeywords).some(keyword =>
-      words.includes(keyword)
-    )
+    const hasNEETKeywords = Array.from(this.neetKeywords).some((keyword) => words.includes(keyword))
 
     return {
       syllabusAligned: this.checkNEETSyllabusAlignment(content, topic),
       hasExamContext: hasNEETKeywords || content.includes('exam'),
       difficulty: this.assessNEETDifficulty(content),
-      hasKeywords: hasNEETKeywords
+      hasKeywords: hasNEETKeywords,
     }
   }
 
@@ -244,18 +294,21 @@ export class EducationalContentValidator {
     return {
       isNEETLevel: this.isNEETLevelQuestion(question),
       hasValidDistractors: optionsQuality > 0.7,
-      explanationQuality
+      explanationQuality,
     }
   }
 
   async validateRegionalContext(content: string): Promise<RegionalValidation> {
-    const indianContext = content.includes('India') || content.includes('Indian') ||
-                         content.includes('NCERT') || content.includes('CBSE')
+    const indianContext =
+      content.includes('India') ||
+      content.includes('Indian') ||
+      content.includes('NCERT') ||
+      content.includes('CBSE')
 
     return {
       hasIndianContext: indianContext,
       isRegionallyAppropriate: indianContext && !this.hasInappropriateRegionalContent(content),
-      hasLocalExamples: this.hasLocalExamples(content)
+      hasLocalExamples: this.hasLocalExamples(content),
     }
   }
 
@@ -265,7 +318,7 @@ export class EducationalContentValidator {
     return {
       isAdaptedToUser: this.isAdaptedToUserLevel(content, userProfile),
       complexity: complexity < 0.5 ? 'simplified' : complexity > 0.8 ? 'advanced' : 'standard',
-      hasMoreExamples: content.split('example').length > 2
+      hasMoreExamples: content.split('example').length > 2,
     }
   }
 
@@ -273,7 +326,7 @@ export class EducationalContentValidator {
     return {
       hasMaliciousContent: this.hasMaliciousContent(content),
       isProperlyFormatted: this.isProperlyFormatted(content),
-      hasValidEncoding: this.hasValidEncoding(content)
+      hasValidEncoding: this.hasValidEncoding(content),
     }
   }
 
@@ -281,7 +334,7 @@ export class EducationalContentValidator {
     return {
       isCorrupted: this.isCorrupted(content),
       isComplete: this.isComplete(content),
-      hasValidStructure: this.hasValidStructure(content)
+      hasValidStructure: this.hasValidStructure(content),
     }
   }
 
@@ -290,63 +343,76 @@ export class EducationalContentValidator {
     // Simple fact extraction based on sentences containing topic
     const sentences = content.split('.')
     return sentences
-      .filter(sentence => sentence.toLowerCase().includes(topic.toLowerCase()))
-      .map(sentence => sentence.trim())
-      .filter(sentence => sentence.length > 10)
+      .filter((sentence) => sentence.toLowerCase().includes(topic.toLowerCase()))
+      .map((sentence) => sentence.trim())
+      .filter((sentence) => sentence.length > 10)
   }
 
   private checkNEETCompliance(content: string): boolean {
     const words = content.toLowerCase()
-    return Array.from(this.neetKeywords).some(keyword => words.includes(keyword)) ||
-           this.biologyTerms.size > 0
+    return (
+      Array.from(this.neetKeywords).some((keyword) => words.includes(keyword)) ||
+      this.biologyTerms.size > 0
+    )
   }
 
   private isEducationalContent(content: string): boolean {
     const educationalWords = ['learn', 'study', 'understand', 'concept', 'theory', 'principle']
-    return educationalWords.some(word => content.toLowerCase().includes(word))
+    return educationalWords.some((word) => content.toLowerCase().includes(word))
   }
 
   private isAgeAppropriate(content: string): boolean {
     // Check for age-inappropriate content
     const inappropriateWords = ['violence', 'explicit', 'adult']
-    return !inappropriateWords.some(word => content.toLowerCase().includes(word))
+    return !inappropriateWords.some((word) => content.toLowerCase().includes(word))
   }
 
   private hasScientificLanguage(content: string): boolean {
     const scientificWords = ['research', 'study', 'analysis', 'hypothesis', 'theory']
-    return scientificWords.some(word => content.toLowerCase().includes(word))
+    return scientificWords.some((word) => content.toLowerCase().includes(word))
   }
 
   private hasCasualLanguage(content: string): boolean {
     const casualWords = ['awesome', 'cool', 'dude', 'hey', 'wow']
-    return casualWords.some(word => content.toLowerCase().includes(word))
+    return casualWords.some((word) => content.toLowerCase().includes(word))
   }
 
   private isFactualContent(content: string): boolean {
     // Check for factual indicators
-    return content.includes('research shows') || content.includes('studies indicate') ||
-           content.includes('evidence suggests') || !content.includes('opinion')
+    return (
+      content.includes('research shows') ||
+      content.includes('studies indicate') ||
+      content.includes('evidence suggests') ||
+      !content.includes('opinion')
+    )
   }
 
   private isEntertainmentOnly(content: string): boolean {
     const entertainmentWords = ['funny', 'joke', 'entertainment', 'amusing']
-    return entertainmentWords.some(word => content.toLowerCase().includes(word))
+    return entertainmentWords.some((word) => content.toLowerCase().includes(word))
   }
 
   private checkNEETSyllabusAlignment(content: string, topic: string): boolean {
     // Check if content aligns with NEET syllabus
     const neetTopics = [
-      'biomolecules', 'cell structure', 'plant physiology', 'human physiology',
-      'genetics', 'ecology', 'evolution', 'biotechnology'
+      'biomolecules',
+      'cell structure',
+      'plant physiology',
+      'human physiology',
+      'genetics',
+      'ecology',
+      'evolution',
+      'biotechnology',
     ]
-    return neetTopics.some(neetTopic =>
-      content.toLowerCase().includes(neetTopic) || topic.toLowerCase().includes(neetTopic)
+    return neetTopics.some(
+      (neetTopic) =>
+        content.toLowerCase().includes(neetTopic) || topic.toLowerCase().includes(neetTopic)
     )
   }
 
   private assessNEETDifficulty(content: string): string {
     const words = content.split(/\s+/)
-    const complexWords = words.filter(word => word.length > 8).length
+    const complexWords = words.filter((word) => word.length > 8).length
     const ratio = complexWords / words.length
 
     if (ratio < 0.1) return 'basic'
@@ -355,9 +421,12 @@ export class EducationalContentValidator {
   }
 
   private isNEETLevelQuestion(question: any): boolean {
-    return question.question.length > 20 &&
-           question.options.length === 4 &&
-           question.explanation && question.explanation.length > 50
+    return (
+      question.question.length > 20 &&
+      question.options.length === 4 &&
+      question.explanation &&
+      question.explanation.length > 50
+    )
   }
 
   private assessOptionQuality(options: string[]): number {
@@ -379,12 +448,12 @@ export class EducationalContentValidator {
 
   private hasLocalExamples(content: string): boolean {
     const localTerms = ['India', 'Indian', 'subcontinent', 'tropical', 'monsoon']
-    return localTerms.some(term => content.includes(term))
+    return localTerms.some((term) => content.includes(term))
   }
 
   private assessComplexity(content: string): number {
     const words = content.split(/\s+/)
-    const complexWords = words.filter(word => word.length > 8).length
+    const complexWords = words.filter((word) => word.length > 8).length
     return complexWords / words.length
   }
 
@@ -401,7 +470,7 @@ export class EducationalContentValidator {
 
   private hasMaliciousContent(content: string): boolean {
     const maliciousPatterns = ['<script', 'javascript:', 'onclick=', 'onerror=']
-    return maliciousPatterns.some(pattern => content.toLowerCase().includes(pattern))
+    return maliciousPatterns.some((pattern) => content.toLowerCase().includes(pattern))
   }
 
   private isProperlyFormatted(content: string): boolean {
@@ -420,7 +489,7 @@ export class EducationalContentValidator {
   private isCorrupted(content: string): boolean {
     // Check for signs of corruption
     const corruptionSigns = ['�', 'undefined', 'null', '[object Object]']
-    return corruptionSigns.some(sign => content.includes(sign))
+    return corruptionSigns.some((sign) => content.includes(sign))
   }
 
   private isComplete(content: string): boolean {

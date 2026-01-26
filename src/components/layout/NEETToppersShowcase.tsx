@@ -375,7 +375,11 @@ export function NEETToppersShowcase({
             </div>
 
             {/* Topper Indicators */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2" role="tablist" aria-label="NEET topper navigation">
+            <div
+              className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2"
+              role="tablist"
+              aria-label="NEET topper navigation"
+            >
               {displayedToppers.map((topper, index) => (
                 <button
                   key={index}
@@ -385,7 +389,10 @@ export function NEETToppersShowcase({
                   aria-selected={index === currentTopper}
                   aria-label={`View ${topper.name}'s success story`}
                 >
-                  <span className={`w-3 h-3 rounded-full ${index === currentTopper ? 'bg-yellow-500' : 'bg-white/50'}`} aria-hidden="true" />
+                  <span
+                    className={`w-3 h-3 rounded-full ${index === currentTopper ? 'bg-yellow-500' : 'bg-white/50'}`}
+                    aria-hidden="true"
+                  />
                 </button>
               ))}
             </div>
@@ -434,9 +441,7 @@ export function NEETToppersShowcase({
                     Rank {topper.rank}
                   </span>
                   {topper.improvement && (
-                    <span className="text-green-600 font-medium">
-                      +{topper.improvement} marks
-                    </span>
+                    <span className="text-green-600 font-medium">+{topper.improvement} marks</span>
                   )}
                 </div>
               </motion.div>

@@ -29,10 +29,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function CampbellBiologyLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function CampbellBiologyLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }

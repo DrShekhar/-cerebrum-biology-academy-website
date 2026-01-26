@@ -42,10 +42,7 @@ export async function GET(request: NextRequest) {
       const chapterNum = parseInt(chapterParam)
 
       if (ncertClass !== 11 && ncertClass !== 12) {
-        return NextResponse.json(
-          { error: 'Invalid class. Must be 11 or 12.' },
-          { status: 400 }
-        )
+        return NextResponse.json({ error: 'Invalid class. Must be 11 or 12.' }, { status: 400 })
       }
 
       const chapter = await ncertReader.getChapter(ncertClass, chapterNum)
@@ -67,10 +64,7 @@ export async function GET(request: NextRequest) {
       const ncertClass = parseInt(classParam) as 11 | 12
 
       if (ncertClass !== 11 && ncertClass !== 12) {
-        return NextResponse.json(
-          { error: 'Invalid class. Must be 11 or 12.' },
-          { status: 400 }
-        )
+        return NextResponse.json({ error: 'Invalid class. Must be 11 or 12.' }, { status: 400 })
       }
 
       const chapters = await ncertReader.getChaptersForClass(ncertClass)

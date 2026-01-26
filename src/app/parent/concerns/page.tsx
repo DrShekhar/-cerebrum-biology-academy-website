@@ -431,7 +431,7 @@ export default function ParentConcernsPage() {
             <p className="text-gray-500">
               {childFilter !== 'all' || categoryFilter !== 'all' || severityFilter !== 'all'
                 ? 'No concerns match your current filters'
-                : "Great news! There are no active concerns for your children"}
+                : 'Great news! There are no active concerns for your children'}
             </p>
           </div>
         ) : (
@@ -502,7 +502,10 @@ export default function ParentConcernsPage() {
                             </h4>
                             <ul className="space-y-1">
                               {concern.details.map((detail, idx) => (
-                                <li key={idx} className="text-sm text-gray-700 flex items-center gap-2">
+                                <li
+                                  key={idx}
+                                  className="text-sm text-gray-700 flex items-center gap-2"
+                                >
                                   <span className="w-1.5 h-1.5 rounded-full bg-gray-400"></span>
                                   {detail}
                                 </li>
@@ -584,8 +587,8 @@ export default function ParentConcernsPage() {
               <p className="text-sm text-blue-700">
                 These concerns are automatically generated based on your child&apos;s attendance,
                 test scores, homework completion, and payment status. They help identify areas that
-                may need attention. For specific teacher-reported concerns or to discuss any
-                issues, please contact the school directly.
+                may need attention. For specific teacher-reported concerns or to discuss any issues,
+                please contact the school directly.
               </p>
             </div>
           </div>

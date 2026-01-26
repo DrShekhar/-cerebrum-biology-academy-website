@@ -22,7 +22,7 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   MapPin,
-  GraduationCap
+  GraduationCap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
@@ -41,9 +41,9 @@ interface DashboardMetrics {
   averageOrderValue: number
   demoBookings: number
   demoConversionRate: number
-  popularCourses: Array<{courseId: string, enrollmentCount: number}>
+  popularCourses: Array<{ courseId: string; enrollmentCount: number }>
   classDistribution: Record<string, number>
-  topCities: Array<{city: string, userCount: number}>
+  topCities: Array<{ city: string; userCount: number }>
 }
 
 interface Trend {
@@ -94,7 +94,7 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
       setIsLoading(true)
       const response = await fetch(`/api/admin/analytics?timeframe=${timeframe}`)
       const data = await response.json()
-      
+
       if (data.success) {
         setMetrics(data.data.metrics)
         setTrends(data.data.trends)
@@ -192,7 +192,7 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
               { id: 'demos', label: 'Demo Bookings', icon: Calendar },
               { id: 'marketing', label: 'Marketing', icon: Target },
               { id: 'faculty', label: 'Faculty', icon: GraduationCap },
-              { id: 'payments', label: 'Payments', icon: DollarSign }
+              { id: 'payments', label: 'Payments', icon: DollarSign },
             ].map((tab) => {
               const Icon = tab.icon
               return (
@@ -271,14 +271,14 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
 }
 
 // Overview Tab Component
-function OverviewTab({ 
-  metrics, 
-  trends, 
-  isLoading 
-}: { 
+function OverviewTab({
+  metrics,
+  trends,
+  isLoading,
+}: {
   metrics: DashboardMetrics | null
   trends: Record<string, Trend>
-  isLoading: boolean 
+  isLoading: boolean
 }) {
   if (isLoading) {
     return (
@@ -303,7 +303,7 @@ function OverviewTab({
       change: trends.totalUsers?.change || 0,
       direction: trends.totalUsers?.direction || 'up',
       icon: Users,
-      color: 'blue'
+      color: 'blue',
     },
     {
       title: 'New Registrations',
@@ -311,7 +311,7 @@ function OverviewTab({
       change: trends.newRegistrations?.change || 0,
       direction: trends.newRegistrations?.direction || 'up',
       icon: UserPlus,
-      color: 'green'
+      color: 'green',
     },
     {
       title: 'Total Revenue',
@@ -319,7 +319,7 @@ function OverviewTab({
       change: trends.revenue?.change || 0,
       direction: trends.revenue?.direction || 'up',
       icon: DollarSign,
-      color: 'emerald'
+      color: 'emerald',
     },
     {
       title: 'Demo Bookings',
@@ -327,7 +327,7 @@ function OverviewTab({
       change: trends.demoConversionRate?.change || 0,
       direction: trends.demoConversionRate?.direction || 'up',
       icon: Calendar,
-      color: 'purple'
+      color: 'purple',
     },
     {
       title: 'Conversion Rate',
@@ -335,7 +335,7 @@ function OverviewTab({
       change: trends.enrollmentConversionRate?.change || 0,
       direction: trends.enrollmentConversionRate?.direction || 'up',
       icon: TrendingUp,
-      color: 'orange'
+      color: 'orange',
     },
     {
       title: 'Average Order Value',
@@ -343,7 +343,7 @@ function OverviewTab({
       change: 5.2,
       direction: 'up' as const,
       icon: Target,
-      color: 'pink'
+      color: 'pink',
     },
     {
       title: 'Active Users',
@@ -351,7 +351,7 @@ function OverviewTab({
       change: trends.totalUsers?.change || 0,
       direction: trends.totalUsers?.direction || 'up',
       icon: Zap,
-      color: 'indigo'
+      color: 'indigo',
     },
     {
       title: 'User Retention',
@@ -359,8 +359,8 @@ function OverviewTab({
       change: -1.2,
       direction: 'down' as const,
       icon: RefreshCw,
-      color: 'red'
-    }
+      color: 'red',
+    },
   ]
 
   return (
@@ -387,14 +387,18 @@ function OverviewTab({
                     ) : (
                       <ArrowDownRight className="w-4 h-4 text-red-500 mr-1" />
                     )}
-                    <span className={`text-sm font-medium ${
-                      metric.direction === 'up' ? 'text-green-600' : 'text-red-600'
-                    }`}>
+                    <span
+                      className={`text-sm font-medium ${
+                        metric.direction === 'up' ? 'text-green-600' : 'text-red-600'
+                      }`}
+                    >
                       {Math.abs(metric.change)}%
                     </span>
                   </div>
                 </div>
-                <div className={`w-12 h-12 rounded-xl bg-${metric.color}-100 flex items-center justify-center`}>
+                <div
+                  className={`w-12 h-12 rounded-xl bg-${metric.color}-100 flex items-center justify-center`}
+                >
                   <Icon className={`w-6 h-6 text-${metric.color}-600`} />
                 </div>
               </div>
@@ -472,12 +476,17 @@ function OverviewTab({
             {metrics.popularCourses.slice(0, 4).map((course, index) => (
               <div key={course.courseId} className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${
-                    index === 0 ? 'from-yellow-400 to-orange-500' :
-                    index === 1 ? 'from-gray-400 to-gray-600' :
-                    index === 2 ? 'from-yellow-600 to-yellow-800' :
-                    'from-blue-400 to-blue-600'
-                  } flex items-center justify-center text-white text-sm font-bold`}>
+                  <div
+                    className={`w-8 h-8 rounded-lg bg-gradient-to-r ${
+                      index === 0
+                        ? 'from-yellow-400 to-orange-500'
+                        : index === 1
+                          ? 'from-gray-400 to-gray-600'
+                          : index === 2
+                            ? 'from-yellow-600 to-yellow-800'
+                            : 'from-blue-400 to-blue-600'
+                    } flex items-center justify-center text-white text-sm font-bold`}
+                  >
                     {index + 1}
                   </div>
                   <div>

@@ -79,7 +79,7 @@ const PRISMA_ERROR_CODES = {
   P2030: 'FULLTEXT_INDEX_NOT_FOUND',
   P2031: 'MONGODB_REPLICA_SET_REQUIRED',
   P2033: 'NUMBER_OUT_OF_RANGE',
-  P2034: 'TRANSACTION_CONFLICT'
+  P2034: 'TRANSACTION_CONFLICT',
 }
 
 // User-friendly error messages
@@ -91,7 +91,7 @@ const USER_FRIENDLY_MESSAGES = {
   CONNECTION_TIMEOUT: 'Database connection timeout',
   TRANSACTION_CONFLICT: 'Operation failed due to concurrent modifications',
   VALIDATION_ERROR: 'Invalid input data',
-  RATE_LIMIT_EXCEEDED: 'Too many requests, please try again later'
+  RATE_LIMIT_EXCEEDED: 'Too many requests, please try again later',
 }
 
 export class DatabaseErrorHandler {
@@ -126,20 +126,24 @@ export class DatabaseErrorHandler {
     return this.handleGenericError(error)
   }
 
-  private static handlePrismaKnownError(error: Prisma.PrismaClientKnownRequestError): DatabaseError {
-    const code = PRISMA_ERROR_CODES[error.code as keyof typeof PRISMA_ERROR_CODES] || 'UNKNOWN_ERROR'
-    const userMessage = USER_FRIENDLY_MESSAGES[code as keyof typeof USER_FRIENDLY_MESSAGES] || error.message
+  private static handlePrismaKnownError(
+    error: Prisma.PrismaClientKnownRequestError
+  ): DatabaseError {
+    const code =
+      PRISMA_ERROR_CODES[error.code as keyof typeof PRISMA_ERROR_CODES] || 'UNKNOWN_ERROR'
+    const userMessage =
+      USER_FRIENDLY_MESSAGES[code as keyof typeof USER_FRIENDLY_MESSAGES] || error.message
 
     console.error('Prisma Known Error:', {
       code: error.code,
       message: error.message,
-      meta: error.meta
+      meta: error.meta,
     })
 
     switch (error.code) {
       case 'P2002':
         // Unique constraint violation
-        const target = error.meta?.target as string[] || []
+        const target = (error.meta?.target as string[]) || []
         const field = target.length > 0 ? target[0] : 'field'
         return new ConflictError(`${field.charAt(0).toUpperCase() + field.slice(1)} already exists`)
 
@@ -163,29 +167,41 @@ export class DatabaseErrorHandler {
 
       case 'P2034':
         // Transaction conflict
-        return new DatabaseError('Operation failed due to concurrent modifications', 'TRANSACTION_CONFLICT', 409)
+        return new DatabaseError(
+          'Operation failed due to concurrent modifications',
+          'TRANSACTION_CONFLICT',
+          409
+        )
 
       default:
         return new DatabaseError(userMessage, code, 500)
     }
   }
 
-  private static handlePrismaUnknownError(error: Prisma.PrismaClientUnknownRequestError): DatabaseError {
+  private static handlePrismaUnknownError(
+    error: Prisma.PrismaClientUnknownRequestError
+  ): DatabaseError {
     console.error('Prisma Unknown Error:', error.message)
     return new DatabaseError('An unexpected database error occurred', 'UNKNOWN_DATABASE_ERROR', 500)
   }
 
-  private static handlePrismaRustPanicError(error: Prisma.PrismaClientRustPanicError): DatabaseError {
+  private static handlePrismaRustPanicError(
+    error: Prisma.PrismaClientRustPanicError
+  ): DatabaseError {
     console.error('Prisma Rust Panic Error:', error.message)
     return new DatabaseError('Database engine error', 'DATABASE_ENGINE_ERROR', 500)
   }
 
-  private static handlePrismaInitializationError(error: Prisma.PrismaClientInitializationError): DatabaseError {
+  private static handlePrismaInitializationError(
+    error: Prisma.PrismaClientInitializationError
+  ): DatabaseError {
     console.error('Prisma Initialization Error:', error.message)
     return new DatabaseError('Database connection failed', 'DATABASE_CONNECTION_FAILED', 503)
   }
 
-  private static handlePrismaValidationError(error: Prisma.PrismaClientValidationError): DatabaseError {
+  private static handlePrismaValidationError(
+    error: Prisma.PrismaClientValidationError
+  ): DatabaseError {
     console.error('Prisma Validation Error:', error.message)
     return new ValidationError('Invalid query parameters')
   }
@@ -206,11 +222,7 @@ export class DatabaseErrorHandler {
       return new DatabaseError('Database host not found', 'HOST_NOT_FOUND', 503)
     }
 
-    return new DatabaseError(
-      error.message || 'An unexpected error occurred',
-      'UNKNOWN_ERROR',
-      500
-    )
+    return new DatabaseError(error.message || 'An unexpected error occurred', 'UNKNOWN_ERROR', 500)
   }
 
   // Retry logic for transient errors
@@ -220,7 +232,7 @@ export class DatabaseErrorHandler {
       'CONNECTION_REFUSED',
       'OPERATION_TIMEOUT',
       'TRANSACTION_CONFLICT',
-      'DATABASE_ENGINE_ERROR'
+      'DATABASE_ENGINE_ERROR',
     ]
 
     return retryableCodes.includes(error.code)
@@ -239,10 +251,10 @@ export class DatabaseErrorHandler {
         message: error.message,
         code: error.code,
         statusCode: error.statusCode,
-        stack: error.stack
+        stack: error.stack,
       },
       context: context || {},
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     }
 
     // In production, you might want to send this to a logging service
@@ -275,7 +287,7 @@ export async function withRetry<T>(
       DatabaseErrorHandler.logError(lastError, {
         ...context,
         attempt,
-        maxRetries
+        maxRetries,
       })
 
       // Don't retry if it's not a retryable error or if we've exhausted retries
@@ -285,7 +297,7 @@ export async function withRetry<T>(
 
       // Wait before retrying
       const delay = DatabaseErrorHandler.getRetryDelay(attempt)
-      await new Promise(resolve => setTimeout(resolve, delay))
+      await new Promise((resolve) => setTimeout(resolve, delay))
 
       attempt++
     }
@@ -368,13 +380,13 @@ export class RateLimitHelpers {
       // New window or expired window
       this.windows.set(key, {
         count: 1,
-        resetTime: now + windowMs
+        resetTime: now + windowMs,
       })
 
       return {
         allowed: true,
         remaining: maxRequests - 1,
-        resetTime: now + windowMs
+        resetTime: now + windowMs,
       }
     }
 
@@ -384,14 +396,14 @@ export class RateLimitHelpers {
       return {
         allowed: false,
         remaining: 0,
-        resetTime: window.resetTime
+        resetTime: window.resetTime,
       }
     }
 
     return {
       allowed: true,
       remaining: maxRequests - window.count,
-      resetTime: window.resetTime
+      resetTime: window.resetTime,
     }
   }
 
@@ -407,12 +419,15 @@ export class RateLimitHelpers {
 
 // Performance monitoring
 export class PerformanceMonitor {
-  private static readonly operations = new Map<string, {
-    count: number
-    totalTime: number
-    errors: number
-    lastReset: number
-  }>()
+  private static readonly operations = new Map<
+    string,
+    {
+      count: number
+      totalTime: number
+      errors: number
+      lastReset: number
+    }
+  >()
 
   static startTimer(operationName: string): () => void {
     const startTime = Date.now()
@@ -428,7 +443,7 @@ export class PerformanceMonitor {
       count: 0,
       totalTime: 0,
       errors: 0,
-      lastReset: Date.now()
+      lastReset: Date.now(),
     }
 
     stats.count++
@@ -454,7 +469,7 @@ export class PerformanceMonitor {
         count: stats.count,
         averageTime: stats.count > 0 ? stats.totalTime / stats.count : 0,
         errorRate: stats.count > 0 ? (stats.errors / stats.count) * 100 : 0,
-        totalTime: stats.totalTime
+        totalTime: stats.totalTime,
       }
     }
 
@@ -464,7 +479,7 @@ export class PerformanceMonitor {
         count: stats.count,
         averageTime: stats.count > 0 ? stats.totalTime / stats.count : 0,
         errorRate: stats.count > 0 ? (stats.errors / stats.count) * 100 : 0,
-        totalTime: stats.totalTime
+        totalTime: stats.totalTime,
       }
     }
 

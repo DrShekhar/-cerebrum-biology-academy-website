@@ -66,7 +66,12 @@ const syllabus = [
   },
   {
     unit: 'Genetics & Evolution',
-    topics: ['Mendelian Genetics', 'Molecular Genetics', 'Population Genetics', 'Evolutionary Theory'],
+    topics: [
+      'Mendelian Genetics',
+      'Molecular Genetics',
+      'Population Genetics',
+      'Evolutionary Theory',
+    ],
     weightage: '20%',
     icon: Dna,
   },
@@ -100,22 +105,26 @@ const features = [
   {
     icon: BookOpen,
     title: 'Campbell Biology Coverage',
-    description: "Complete coverage of all 56 chapters from Campbell Biology, aligned with CNBO requirements",
+    description:
+      'Complete coverage of all 56 chapters from Campbell Biology, aligned with CNBO requirements',
   },
   {
     icon: Users,
     title: 'Expert Faculty',
-    description: 'Learn from IBO medalists and experienced Biology Olympiad coaches with proven track records',
+    description:
+      'Learn from IBO medalists and experienced Biology Olympiad coaches with proven track records',
   },
   {
     icon: Target,
     title: 'CNBO-Focused Strategy',
-    description: 'Targeted preparation for Chinese National Biology Olympiad exam format and high-level problem solving',
+    description:
+      'Targeted preparation for Chinese National Biology Olympiad exam format and high-level problem solving',
   },
   {
     icon: ClipboardCheck,
     title: 'Weekly Assessments',
-    description: 'Regular practice tests modeled on CNBO past papers with detailed performance analytics',
+    description:
+      'Regular practice tests modeled on CNBO past papers with detailed performance analytics',
   },
   {
     icon: MessageCircle,
@@ -132,27 +141,33 @@ const features = [
 const faqs = [
   {
     question: 'What is the Chinese National Biology Olympiad (CNBO)?',
-    answer: 'The Chinese National Biology Olympiad is organized by the Chinese Association for Science and Technology. It is one of the most competitive biology olympiads in the world, selecting the top 4 students to represent China at the International Biology Olympiad (IBO), where China consistently wins gold medals.',
+    answer:
+      'The Chinese National Biology Olympiad is organized by the Chinese Association for Science and Technology. It is one of the most competitive biology olympiads in the world, selecting the top 4 students to represent China at the International Biology Olympiad (IBO), where China consistently wins gold medals.',
   },
   {
     question: 'Who is eligible for CNBO?',
-    answer: 'CNBO is open to high school students in China. Students typically progress through provincial rounds before qualifying for the national competition. The competition is known for its extremely high standards and rigorous selection process.',
+    answer:
+      'CNBO is open to high school students in China. Students typically progress through provincial rounds before qualifying for the national competition. The competition is known for its extremely high standards and rigorous selection process.',
   },
   {
     question: 'What is the format of the CNBO exam?',
-    answer: 'CNBO consists of provincial rounds followed by the national competition which includes both theory and practical examinations. The difficulty level is among the highest globally, requiring deep conceptual understanding and practical laboratory skills.',
+    answer:
+      'CNBO consists of provincial rounds followed by the national competition which includes both theory and practical examinations. The difficulty level is among the highest globally, requiring deep conceptual understanding and practical laboratory skills.',
   },
   {
     question: 'How do I prepare for CNBO?',
-    answer: "CNBO preparation requires mastery of Campbell Biology (12th edition), advanced problem-solving skills, and extensive practical training. Our coaching program provides international-standard preparation with expert guidance.",
+    answer:
+      'CNBO preparation requires mastery of Campbell Biology (12th edition), advanced problem-solving skills, and extensive practical training. Our coaching program provides international-standard preparation with expert guidance.',
   },
   {
     question: 'Can international students join your CNBO coaching?',
-    answer: 'Yes! Our online CNBO coaching is available to students worldwide. Our CNBO-level curriculum is excellent preparation for any biology olympiad due to its rigorous standards.',
+    answer:
+      'Yes! Our online CNBO coaching is available to students worldwide. Our CNBO-level curriculum is excellent preparation for any biology olympiad due to its rigorous standards.',
   },
   {
     question: 'What makes your CNBO coaching different?',
-    answer: 'We offer personalized 1-on-1 coaching, complete Campbell Biology coverage, CNBO past paper analysis, practical exam preparation, weekly assessments, and direct access to faculty via WhatsApp.',
+    answer:
+      'We offer personalized 1-on-1 coaching, complete Campbell Biology coverage, CNBO past paper analysis, practical exam preparation, weekly assessments, and direct access to faculty via WhatsApp.',
   },
 ]
 
@@ -161,21 +176,24 @@ const testimonials = [
     name: 'Chen W.',
     location: 'Beijing, China',
     achievement: 'CNBO Gold Medalist',
-    quote: 'The rigorous Campbell Biology coverage and problem-solving training helped me excel in CNBO. Made it to the national team!',
+    quote:
+      'The rigorous Campbell Biology coverage and problem-solving training helped me excel in CNBO. Made it to the national team!',
     avatar: 'CW',
   },
   {
     name: 'Liu M.',
     location: 'Shanghai, China',
     achievement: 'CNBO Silver Medalist',
-    quote: 'The faculty understand the CNBO exam at a deep level. Their guidance on advanced topics was exceptional.',
+    quote:
+      'The faculty understand the CNBO exam at a deep level. Their guidance on advanced topics was exceptional.',
     avatar: 'LM',
   },
   {
     name: 'Zhang Y.',
     location: 'Guangzhou, China',
     achievement: 'Provincial Gold Medalist',
-    quote: 'The international-standard curriculum helped me perform well in both provincial and national rounds.',
+    quote:
+      'The international-standard curriculum helped me perform well in both provincial and national rounds.',
     avatar: 'ZY',
   },
 ]
@@ -258,8 +276,9 @@ export default function CNBOCoachingPage() {
               <span className="block text-yellow-400 mt-2">Chinese National Biology Olympiad</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Expert online coaching for the Chinese National Biology Olympiad. Prepare with world-class curriculum,
-              experienced faculty, and personalized mentorship to represent China at the International Biology Olympiad.
+              Expert online coaching for the Chinese National Biology Olympiad. Prepare with
+              world-class curriculum, experienced faculty, and personalized mentorship to represent
+              China at the International Biology Olympiad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
@@ -425,9 +444,7 @@ export default function CNBOCoachingPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Success Stories
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Hear from our CNBO medalists from China
             </p>
@@ -453,7 +470,9 @@ export default function CNBOCoachingPage() {
                 </div>
                 <div className="flex items-center mb-3">
                   <Trophy className="h-4 w-4 text-yellow-500 mr-2" />
-                  <span className="text-sm font-medium text-yellow-700">{testimonial.achievement}</span>
+                  <span className="text-sm font-medium text-yellow-700">
+                    {testimonial.achievement}
+                  </span>
                 </div>
                 <p className="text-gray-600 italic">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex mt-3">
@@ -471,9 +490,7 @@ export default function CNBOCoachingPage() {
       <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              CNBO Coaching Plans
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">CNBO Coaching Plans</h2>
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
               Choose the plan that best fits your preparation timeline
             </p>
@@ -500,10 +517,14 @@ export default function CNBOCoachingPage() {
                   </div>
                 )}
                 <div className="text-center mb-6">
-                  <h3 className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-gray-900' : 'text-white'}`}>
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${plan.popular ? 'text-gray-900' : 'text-white'}`}
+                  >
                     {plan.name}
                   </h3>
-                  <div className={`text-4xl font-bold ${plan.popular ? 'text-gray-900' : 'text-white'}`}>
+                  <div
+                    className={`text-4xl font-bold ${plan.popular ? 'text-gray-900' : 'text-white'}`}
+                  >
                     {plan.price}
                   </div>
                   <div className={`text-sm ${plan.popular ? 'text-gray-500' : 'text-gray-400'}`}>
@@ -513,13 +534,19 @@ export default function CNBOCoachingPage() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start">
-                      <CheckCircle className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-green-500' : 'text-green-400'}`} />
-                      <span className={plan.popular ? 'text-gray-600' : 'text-gray-300'}>{feature}</span>
+                      <CheckCircle
+                        className={`h-5 w-5 mr-2 flex-shrink-0 ${plan.popular ? 'text-green-500' : 'text-green-400'}`}
+                      />
+                      <span className={plan.popular ? 'text-gray-600' : 'text-gray-300'}>
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
                 <button
-                  onClick={() => handleWhatsAppClick(`pricing-${plan.name.toLowerCase().replace(' ', '-')}`)}
+                  onClick={() =>
+                    handleWhatsAppClick(`pricing-${plan.name.toLowerCase().replace(' ', '-')}`)
+                  }
                   className={`w-full py-3 rounded-lg font-semibold transition-all ${
                     plan.popular
                       ? 'bg-green-500 hover:bg-green-600 text-white'
@@ -646,7 +673,8 @@ export default function CNBOCoachingPage() {
             '@context': 'https://schema.org',
             '@type': 'Course',
             name: 'CNBO Coaching Online - Chinese National Biology Olympiad Preparation',
-            description: 'Expert online coaching for the Chinese National Biology Olympiad (CNBO). Complete Campbell Biology coverage, past paper practice, and personalized mentorship.',
+            description:
+              'Expert online coaching for the Chinese National Biology Olympiad (CNBO). Complete Campbell Biology coverage, past paper practice, and personalized mentorship.',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -655,7 +683,14 @@ export default function CNBOCoachingPage() {
             courseCode: 'CNBO-PREP',
             educationalLevel: 'High School',
             inLanguage: 'en',
-            teaches: ['Biology', 'Cell Biology', 'Genetics', 'Ecology', 'Plant Biology', 'Animal Physiology'],
+            teaches: [
+              'Biology',
+              'Cell Biology',
+              'Genetics',
+              'Ecology',
+              'Plant Biology',
+              'Animal Physiology',
+            ],
             hasCourseInstance: {
               '@type': 'CourseInstance',
               courseMode: 'Online',

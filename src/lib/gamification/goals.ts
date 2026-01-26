@@ -135,7 +135,8 @@ export async function updateGoalProgress(
 
   for (const goal of goals) {
     // Calculate new value
-    const newValue = absoluteValue !== undefined ? absoluteValue : goal.currentValue + incrementValue
+    const newValue =
+      absoluteValue !== undefined ? absoluteValue : goal.currentValue + incrementValue
 
     const isNowCompleted = newValue >= goal.targetValue
 
@@ -146,7 +147,9 @@ export async function updateGoalProgress(
         currentValue: newValue,
         isCompleted: isNowCompleted,
         completedAt: isNowCompleted ? now : null,
-        consecutiveCompletions: isNowCompleted ? goal.consecutiveCompletions + 1 : goal.consecutiveCompletions,
+        consecutiveCompletions: isNowCompleted
+          ? goal.consecutiveCompletions + 1
+          : goal.consecutiveCompletions,
       },
     })
 

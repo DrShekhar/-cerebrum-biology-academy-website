@@ -20,7 +20,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Watson and Crick', 'Wilkins and Franklin', 'Chargaff', 'Meselson and Stahl'],
       correctAnswer: 'Watson and Crick',
-      explanation: 'James Watson and Francis Crick proposed the double helix model of DNA in 1953, based on X-ray crystallography data from Rosalind Franklin and Maurice Wilkins.',
+      explanation:
+        'James Watson and Francis Crick proposed the double helix model of DNA in 1953, based on X-ray crystallography data from Rosalind Franklin and Maurice Wilkins.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -35,11 +36,12 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       neetWeightage: 'HIGH',
     },
     {
-      question: 'According to Chargaff\'s rule:',
+      question: "According to Chargaff's rule:",
       type: 'MCQ',
       options: ['A = T and G = C', 'A = G and T = C', 'A = C and G = T', 'A + T = G + C'],
       correctAnswer: 'A = T and G = C',
-      explanation: 'Chargaff\'s rule states that in DNA, the amount of adenine equals thymine (A=T) and guanine equals cytosine (G=C) due to complementary base pairing.',
+      explanation:
+        "Chargaff's rule states that in DNA, the amount of adenine equals thymine (A=T) and guanine equals cytosine (G=C) due to complementary base pairing.",
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -58,7 +60,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['0.34 nm', '3.4 nm', '2.0 nm', '20 nm'],
       correctAnswer: '0.34 nm',
-      explanation: 'In B-DNA, the distance between consecutive base pairs is 0.34 nm (3.4 Å). One complete turn of the helix is 3.4 nm and contains 10 base pairs.',
+      explanation:
+        'In B-DNA, the distance between consecutive base pairs is 0.34 nm (3.4 Å). One complete turn of the helix is 3.4 nm and contains 10 base pairs.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -78,7 +81,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['3.4 nm', '0.34 nm', '2.0 nm', '34 nm'],
       correctAnswer: '3.4 nm',
-      explanation: 'The pitch (distance of one complete turn) of B-DNA helix is 3.4 nm. Since there are 10 bp per turn, each base pair is 0.34 nm apart.',
+      explanation:
+        'The pitch (distance of one complete turn) of B-DNA helix is 3.4 nm. Since there are 10 bp per turn, each base pair is 0.34 nm apart.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -97,7 +101,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['2', '3', '1', '4'],
       correctAnswer: '2',
-      explanation: 'Adenine and thymine are connected by 2 hydrogen bonds, while guanine and cytosine are connected by 3 hydrogen bonds. This makes G-C pairs stronger.',
+      explanation:
+        'Adenine and thymine are connected by 2 hydrogen bonds, while guanine and cytosine are connected by 3 hydrogen bonds. This makes G-C pairs stronger.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -115,7 +120,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Antiparallel', 'Parallel', 'Perpendicular', 'Random'],
       correctAnswer: 'Antiparallel',
-      explanation: 'The two strands of DNA run in opposite directions (antiparallel). One strand runs 5\' to 3\' while the complementary strand runs 3\' to 5\'.',
+      explanation:
+        "The two strands of DNA run in opposite directions (antiparallel). One strand runs 5' to 3' while the complementary strand runs 3' to 5'.",
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -134,9 +140,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Histones are rich in:',
       type: 'MCQ',
-      options: ['Lysine and arginine', 'Leucine and valine', 'Glycine and alanine', 'Proline and hydroxyproline'],
+      options: [
+        'Lysine and arginine',
+        'Leucine and valine',
+        'Glycine and alanine',
+        'Proline and hydroxyproline',
+      ],
       correctAnswer: 'Lysine and arginine',
-      explanation: 'Histones are basic proteins rich in positively charged amino acids lysine and arginine. This allows them to bind tightly to negatively charged DNA phosphate groups.',
+      explanation:
+        'Histones are basic proteins rich in positively charged amino acids lysine and arginine. This allows them to bind tightly to negatively charged DNA phosphate groups.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -156,7 +168,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['8', '4', '6', '10'],
       correctAnswer: '8',
-      explanation: 'A nucleosome core contains an octamer of 8 histone molecules - 2 each of H2A, H2B, H3, and H4. DNA wraps around this core approximately 1.65 times.',
+      explanation:
+        'A nucleosome core contains an octamer of 8 histone molecules - 2 each of H2A, H2B, H3, and H4. DNA wraps around this core approximately 1.65 times.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -176,7 +189,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Linker DNA', 'Core DNA', 'Nucleosome core', 'Nuclear matrix'],
       correctAnswer: 'Linker DNA',
-      explanation: 'H1 histone is not part of the nucleosome core but binds to the linker DNA connecting adjacent nucleosomes. It helps in further compaction of chromatin.',
+      explanation:
+        'H1 histone is not part of the nucleosome core but binds to the linker DNA connecting adjacent nucleosomes. It helps in further compaction of chromatin.',
       difficulty: 'HARD',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -193,9 +207,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Euchromatin is:',
       type: 'MCQ',
-      options: ['Loosely packed and transcriptionally active', 'Tightly packed and inactive', 'Found only in prokaryotes', 'Rich in repetitive DNA'],
+      options: [
+        'Loosely packed and transcriptionally active',
+        'Tightly packed and inactive',
+        'Found only in prokaryotes',
+        'Rich in repetitive DNA',
+      ],
       correctAnswer: 'Loosely packed and transcriptionally active',
-      explanation: 'Euchromatin is loosely packed chromatin that is transcriptionally active. Heterochromatin is tightly packed and generally transcriptionally inactive.',
+      explanation:
+        'Euchromatin is loosely packed chromatin that is transcriptionally active. Heterochromatin is tightly packed and generally transcriptionally inactive.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -215,7 +235,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Semi-conservative', 'Conservative', 'Dispersive', 'Non-conservative'],
       correctAnswer: 'Semi-conservative',
-      explanation: 'DNA replication is semi-conservative, meaning each daughter DNA molecule contains one original (parental) strand and one newly synthesized strand.',
+      explanation:
+        'DNA replication is semi-conservative, meaning each daughter DNA molecule contains one original (parental) strand and one newly synthesized strand.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -234,7 +255,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Meselson and Stahl', 'Watson and Crick', 'Hershey and Chase', 'Griffith'],
       correctAnswer: 'Meselson and Stahl',
-      explanation: 'Meselson and Stahl (1958) proved semi-conservative replication using E. coli and heavy nitrogen (N-15) isotope labeling followed by density gradient centrifugation.',
+      explanation:
+        'Meselson and Stahl (1958) proved semi-conservative replication using E. coli and heavy nitrogen (N-15) isotope labeling followed by density gradient centrifugation.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -253,7 +275,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Helicase', 'DNA polymerase', 'Ligase', 'Primase'],
       correctAnswer: 'Helicase',
-      explanation: 'Helicase unwinds the DNA double helix at the replication fork by breaking hydrogen bonds between base pairs. It uses ATP hydrolysis for this process.',
+      explanation:
+        'Helicase unwinds the DNA double helix at the replication fork by breaking hydrogen bonds between base pairs. It uses ATP hydrolysis for this process.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -270,9 +293,10 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'DNA polymerase synthesizes DNA in which direction?',
       type: 'MCQ',
-      options: ['5\' to 3\'', '3\' to 5\'', 'Both directions', 'Random'],
-      correctAnswer: '5\' to 3\'',
-      explanation: 'DNA polymerase can only add nucleotides to the 3\' end of a growing strand, so synthesis always proceeds in the 5\' to 3\' direction.',
+      options: ["5' to 3'", "3' to 5'", 'Both directions', 'Random'],
+      correctAnswer: "5' to 3'",
+      explanation:
+        "DNA polymerase can only add nucleotides to the 3' end of a growing strand, so synthesis always proceeds in the 5' to 3' direction.",
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -292,7 +316,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Lagging strand', 'Leading strand', 'Both strands', 'Template strand'],
       correctAnswer: 'Lagging strand',
-      explanation: 'Okazaki fragments are short DNA segments synthesized discontinuously on the lagging strand. They are later joined by DNA ligase.',
+      explanation:
+        'Okazaki fragments are short DNA segments synthesized discontinuously on the lagging strand. They are later joined by DNA ligase.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -311,7 +336,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['DNA ligase', 'DNA polymerase', 'Helicase', 'Primase'],
       correctAnswer: 'DNA ligase',
-      explanation: 'DNA ligase joins adjacent Okazaki fragments by forming phosphodiester bonds between the 3\' OH of one fragment and 5\' phosphate of the next.',
+      explanation:
+        "DNA ligase joins adjacent Okazaki fragments by forming phosphodiester bonds between the 3' OH of one fragment and 5' phosphate of the next.",
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -329,7 +355,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['RNA primer', 'DNA primer', 'Okazaki fragments', 'Leading strand'],
       correctAnswer: 'RNA primer',
-      explanation: 'Primase is an RNA polymerase that synthesizes short RNA primers required for DNA polymerase to begin synthesis. DNA polymerase cannot initiate synthesis de novo.',
+      explanation:
+        'Primase is an RNA polymerase that synthesizes short RNA primers required for DNA polymerase to begin synthesis. DNA polymerase cannot initiate synthesis de novo.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -347,7 +374,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Ori', 'Ter', 'Promoter', 'Operator'],
       correctAnswer: 'Ori',
-      explanation: 'The origin of replication (Ori) is the specific sequence where DNA replication begins. E. coli has a single Ori, while eukaryotes have multiple origins.',
+      explanation:
+        'The origin of replication (Ori) is the specific sequence where DNA replication begins. E. coli has a single Ori, while eukaryotes have multiple origins.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -367,7 +395,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Antisense strand', 'Sense strand', 'Coding strand', 'Plus strand'],
       correctAnswer: 'Antisense strand',
-      explanation: 'The template strand (antisense/non-coding/minus strand) is read 3\' to 5\' by RNA polymerase. The other strand is the coding/sense/plus strand.',
+      explanation:
+        "The template strand (antisense/non-coding/minus strand) is read 3' to 5' by RNA polymerase. The other strand is the coding/sense/plus strand.",
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -386,7 +415,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Promoter', 'Operator', 'Terminator', 'Enhancer'],
       correctAnswer: 'Promoter',
-      explanation: 'RNA polymerase binds to the promoter region (upstream of the gene) to initiate transcription. In prokaryotes, sigma factor helps recognize the promoter.',
+      explanation:
+        'RNA polymerase binds to the promoter region (upstream of the gene) to initiate transcription. In prokaryotes, sigma factor helps recognize the promoter.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -403,9 +433,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'In prokaryotes, the sigma factor:',
       type: 'MCQ',
-      options: ['Helps in promoter recognition', 'Terminates transcription', 'Splices RNA', 'Synthesizes primer'],
+      options: [
+        'Helps in promoter recognition',
+        'Terminates transcription',
+        'Splices RNA',
+        'Synthesizes primer',
+      ],
       correctAnswer: 'Helps in promoter recognition',
-      explanation: 'Sigma (σ) factor is a subunit of prokaryotic RNA polymerase holoenzyme that recognizes and binds to the promoter. It dissociates after initiation.',
+      explanation:
+        'Sigma (σ) factor is a subunit of prokaryotic RNA polymerase holoenzyme that recognizes and binds to the promoter. It dissociates after initiation.',
       difficulty: 'HARD',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -421,9 +457,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Rho factor is involved in:',
       type: 'MCQ',
-      options: ['Termination of transcription', 'Initiation of transcription', 'Elongation', 'Splicing'],
+      options: [
+        'Termination of transcription',
+        'Initiation of transcription',
+        'Elongation',
+        'Splicing',
+      ],
       correctAnswer: 'Termination of transcription',
-      explanation: 'Rho (ρ) factor is a helicase protein involved in rho-dependent termination of transcription in prokaryotes. It moves along mRNA and causes RNA polymerase to dissociate.',
+      explanation:
+        'Rho (ρ) factor is a helicase protein involved in rho-dependent termination of transcription in prokaryotes. It moves along mRNA and causes RNA polymerase to dissociate.',
       difficulty: 'HARD',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -439,9 +481,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Eukaryotic mRNA is monocistronic, which means:',
       type: 'MCQ',
-      options: ['It codes for one protein', 'It codes for many proteins', 'It has one intron', 'It lacks cap'],
+      options: [
+        'It codes for one protein',
+        'It codes for many proteins',
+        'It has one intron',
+        'It lacks cap',
+      ],
       correctAnswer: 'It codes for one protein',
-      explanation: 'Eukaryotic mRNA is monocistronic (codes for one protein), while prokaryotic mRNA is often polycistronic (codes for multiple proteins from one mRNA).',
+      explanation:
+        'Eukaryotic mRNA is monocistronic (codes for one protein), while prokaryotic mRNA is often polycistronic (codes for multiple proteins from one mRNA).',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -461,7 +509,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Introns', 'Exons', 'Promoter', 'Terminator'],
       correctAnswer: 'Introns',
-      explanation: 'Splicing removes introns (non-coding intervening sequences) from pre-mRNA and joins exons (expressed sequences) to form mature mRNA.',
+      explanation:
+        'Splicing removes introns (non-coding intervening sequences) from pre-mRNA and joins exons (expressed sequences) to form mature mRNA.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -477,11 +526,12 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       neetYear: 2019,
     },
     {
-      question: 'The 5\' cap of eukaryotic mRNA is:',
+      question: "The 5' cap of eukaryotic mRNA is:",
       type: 'MCQ',
       options: ['7-methylguanosine', 'Adenine', 'Poly-A tail', 'Uracil'],
       correctAnswer: '7-methylguanosine',
-      explanation: 'The 5\' cap is a modified guanosine (7-methylguanosine) added to the 5\' end of eukaryotic mRNA. It protects mRNA and aids in ribosome binding.',
+      explanation:
+        "The 5' cap is a modified guanosine (7-methylguanosine) added to the 5' end of eukaryotic mRNA. It protects mRNA and aids in ribosome binding.",
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -497,9 +547,10 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Poly-A tail is added at the:',
       type: 'MCQ',
-      options: ['3\' end of mRNA', '5\' end of mRNA', 'Both ends', 'Middle of mRNA'],
-      correctAnswer: '3\' end of mRNA',
-      explanation: 'A poly-A tail (100-200 adenine nucleotides) is added to the 3\' end of eukaryotic mRNA. It increases stability and aids in export from nucleus.',
+      options: ["3' end of mRNA", "5' end of mRNA", 'Both ends', 'Middle of mRNA'],
+      correctAnswer: "3' end of mRNA",
+      explanation:
+        "A poly-A tail (100-200 adenine nucleotides) is added to the 3' end of eukaryotic mRNA. It increases stability and aids in export from nucleus.",
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -517,7 +568,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Sharp and Roberts', 'Watson and Crick', 'Jacob and Monod', 'Meselson and Stahl'],
       correctAnswer: 'Sharp and Roberts',
-      explanation: 'Phillip Sharp and Richard Roberts discovered split genes (interrupted genes with introns) in 1977 and were awarded the Nobel Prize in 1993.',
+      explanation:
+        'Phillip Sharp and Richard Roberts discovered split genes (interrupted genes with introns) in 1977 and were awarded the Nobel Prize in 1993.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -537,7 +589,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Triplet', 'Doublet', 'Singlet', 'Quadruplet'],
       correctAnswer: 'Triplet',
-      explanation: 'The genetic code is triplet - three nucleotides (codon) code for one amino acid. This was established by Nirenberg, Khorana, and others.',
+      explanation:
+        'The genetic code is triplet - three nucleotides (codon) code for one amino acid. This was established by Nirenberg, Khorana, and others.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -555,7 +608,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Methionine and acts as start codon', 'Stop codon', 'Tryptophan', 'Leucine'],
       correctAnswer: 'Methionine and acts as start codon',
-      explanation: 'AUG is the universal start codon that codes for methionine (Met). In prokaryotes, it codes for N-formyl methionine (fMet). It initiates translation.',
+      explanation:
+        'AUG is the universal start codon that codes for methionine (Met). In prokaryotes, it codes for N-formyl methionine (fMet). It initiates translation.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -574,7 +628,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['UAA, UAG, UGA', 'AUG, GUG, UUG', 'UAA, AUG, UGA', 'UGA, UAG, AUG'],
       correctAnswer: 'UAA, UAG, UGA',
-      explanation: 'UAA (ochre), UAG (amber), and UGA (opal) are the three stop codons. They do not code for any amino acid and signal termination of translation.',
+      explanation:
+        'UAA (ochre), UAG (amber), and UGA (opal) are the three stop codons. They do not code for any amino acid and signal termination of translation.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -590,9 +645,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'The genetic code is degenerate because:',
       type: 'MCQ',
-      options: ['Multiple codons code for the same amino acid', 'One codon codes for multiple amino acids', 'It has many stop codons', 'It is universal'],
+      options: [
+        'Multiple codons code for the same amino acid',
+        'One codon codes for multiple amino acids',
+        'It has many stop codons',
+        'It is universal',
+      ],
       correctAnswer: 'Multiple codons code for the same amino acid',
-      explanation: 'Degeneracy means multiple codons can code for the same amino acid (e.g., 6 codons for leucine). This provides protection against mutations.',
+      explanation:
+        'Degeneracy means multiple codons can code for the same amino acid (e.g., 6 codons for leucine). This provides protection against mutations.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -608,9 +669,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'The genetic code is universal means:',
       type: 'MCQ',
-      options: ['Same codons code for same amino acids in all organisms', 'It is different in plants and animals', 'Only prokaryotes use it', 'It has no exceptions'],
+      options: [
+        'Same codons code for same amino acids in all organisms',
+        'It is different in plants and animals',
+        'Only prokaryotes use it',
+        'It has no exceptions',
+      ],
       correctAnswer: 'Same codons code for same amino acids in all organisms',
-      explanation: 'Universality of genetic code means the same codon codes for the same amino acid in almost all organisms from bacteria to humans, with very few exceptions.',
+      explanation:
+        'Universality of genetic code means the same codon codes for the same amino acid in almost all organisms from bacteria to humans, with very few exceptions.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -630,7 +697,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Cloverleaf structure', 'Double helix', 'Linear structure', 'Circular structure'],
       correctAnswer: 'Cloverleaf structure',
-      explanation: 'tRNA has a characteristic cloverleaf secondary structure with an anticodon loop, D loop, TψC loop, and acceptor stem. In 3D, it appears L-shaped.',
+      explanation:
+        'tRNA has a characteristic cloverleaf secondary structure with an anticodon loop, D loop, TψC loop, and acceptor stem. In 3D, it appears L-shaped.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -649,7 +717,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['tRNA', 'mRNA', 'rRNA', 'DNA'],
       correctAnswer: 'tRNA',
-      explanation: 'The anticodon is a sequence of three nucleotides on tRNA that is complementary to the codon on mRNA. It ensures correct amino acid placement.',
+      explanation:
+        'The anticodon is a sequence of three nucleotides on tRNA that is complementary to the codon on mRNA. It ensures correct amino acid placement.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -666,9 +735,10 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Amino acid attaches to tRNA at:',
       type: 'MCQ',
-      options: ['3\' end (CCA)', 'Anticodon loop', 'D loop', '5\' end'],
-      correctAnswer: '3\' end (CCA)',
-      explanation: 'Amino acid attaches to the 3\' end of tRNA at the CCA sequence (acceptor stem). The enzyme aminoacyl-tRNA synthetase catalyzes this attachment.',
+      options: ["3' end (CCA)", 'Anticodon loop', 'D loop', "5' end"],
+      correctAnswer: "3' end (CCA)",
+      explanation:
+        "Amino acid attaches to the 3' end of tRNA at the CCA sequence (acceptor stem). The enzyme aminoacyl-tRNA synthetase catalyzes this attachment.",
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -690,7 +760,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Ribosomes', 'Nucleus', 'Golgi apparatus', 'Mitochondria only'],
       correctAnswer: 'Ribosomes',
-      explanation: 'Translation (protein synthesis) occurs on ribosomes. In prokaryotes, it can occur simultaneously with transcription (coupled). In eukaryotes, it occurs in cytoplasm.',
+      explanation:
+        'Translation (protein synthesis) occurs on ribosomes. In prokaryotes, it can occur simultaneously with transcription (coupled). In eukaryotes, it occurs in cytoplasm.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -709,7 +780,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['30S and 50S', '40S and 60S', '30S and 60S', '40S and 50S'],
       correctAnswer: '30S and 50S',
-      explanation: 'Prokaryotic ribosomes (70S) consist of 30S (small) and 50S (large) subunits. Eukaryotic ribosomes (80S) have 40S and 60S subunits.',
+      explanation:
+        'Prokaryotic ribosomes (70S) consist of 30S (small) and 50S (large) subunits. Eukaryotic ribosomes (80S) have 40S and 60S subunits.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -727,7 +799,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Peptidyl transferase (23S rRNA)', 'DNA polymerase', 'RNA polymerase', 'Helicase'],
       correctAnswer: 'Peptidyl transferase (23S rRNA)',
-      explanation: 'Peptidyl transferase activity is in the 23S rRNA of the large ribosomal subunit. This makes it a ribozyme (RNA with catalytic activity).',
+      explanation:
+        'Peptidyl transferase activity is in the 23S rRNA of the large ribosomal subunit. This makes it a ribozyme (RNA with catalytic activity).',
       difficulty: 'HARD',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -743,9 +816,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'During translation, the A site of ribosome:',
       type: 'MCQ',
-      options: ['Receives incoming aminoacyl-tRNA', 'Holds peptidyl-tRNA', 'Releases empty tRNA', 'Binds mRNA only'],
+      options: [
+        'Receives incoming aminoacyl-tRNA',
+        'Holds peptidyl-tRNA',
+        'Releases empty tRNA',
+        'Binds mRNA only',
+      ],
       correctAnswer: 'Receives incoming aminoacyl-tRNA',
-      explanation: 'Ribosome has three sites: A (aminoacyl) receives incoming charged tRNA, P (peptidyl) holds tRNA with growing peptide, E (exit) releases empty tRNA.',
+      explanation:
+        'Ribosome has three sites: A (aminoacyl) receives incoming charged tRNA, P (peptidyl) holds tRNA with growing peptide, E (exit) releases empty tRNA.',
       difficulty: 'HARD',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -762,9 +841,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Polysome is:',
       type: 'MCQ',
-      options: ['Multiple ribosomes on single mRNA', 'Multiple mRNAs on one ribosome', 'Cluster of polypeptides', 'Group of tRNAs'],
+      options: [
+        'Multiple ribosomes on single mRNA',
+        'Multiple mRNAs on one ribosome',
+        'Cluster of polypeptides',
+        'Group of tRNAs',
+      ],
       correctAnswer: 'Multiple ribosomes on single mRNA',
-      explanation: 'A polysome (polyribosome) is multiple ribosomes simultaneously translating a single mRNA. This increases efficiency of protein synthesis.',
+      explanation:
+        'A polysome (polyribosome) is multiple ribosomes simultaneously translating a single mRNA. This increases efficiency of protein synthesis.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -782,9 +867,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'The lac operon is an example of:',
       type: 'MCQ',
-      options: ['Inducible operon', 'Repressible operon', 'Constitutive expression', 'Positive regulation only'],
+      options: [
+        'Inducible operon',
+        'Repressible operon',
+        'Constitutive expression',
+        'Positive regulation only',
+      ],
       correctAnswer: 'Inducible operon',
-      explanation: 'The lac operon is an inducible system - it is normally "off" (repressed) and is induced (turned on) in the presence of lactose.',
+      explanation:
+        'The lac operon is an inducible system - it is normally "off" (repressed) and is induced (turned on) in the presence of lactose.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -803,7 +894,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Jacob and Monod', 'Watson and Crick', 'Beadle and Tatum', 'Nirenberg and Khorana'],
       correctAnswer: 'Jacob and Monod',
-      explanation: 'François Jacob and Jacques Monod proposed the operon concept in 1961 based on studies of lac operon in E. coli. They won the Nobel Prize in 1965.',
+      explanation:
+        'François Jacob and Jacques Monod proposed the operon concept in 1961 based on studies of lac operon in E. coli. They won the Nobel Prize in 1965.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -822,7 +914,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Operator', 'Promoter', 'Structural genes', 'Regulator gene'],
       correctAnswer: 'Operator',
-      explanation: 'The lac repressor protein binds to the operator region, blocking RNA polymerase from transcribing the structural genes (lacZ, lacY, lacA).',
+      explanation:
+        'The lac repressor protein binds to the operator region, blocking RNA polymerase from transcribing the structural genes (lacZ, lacY, lacA).',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -841,7 +934,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Lactose (allolactose)', 'Glucose', 'Galactose', 'Tryptophan'],
       correctAnswer: 'Lactose (allolactose)',
-      explanation: 'Lactose (specifically allolactose, an isomer) is the inducer. It binds to the repressor, causing a conformational change that releases repressor from operator.',
+      explanation:
+        'Lactose (specifically allolactose, an isomer) is the inducer. It binds to the repressor, causing a conformational change that releases repressor from operator.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -860,7 +954,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['lacZ, lacY, lacA', 'lacI, lacO, lacP', 'lacZ, lacI, lacP', 'lacY, lacI, lacA'],
       correctAnswer: 'lacZ, lacY, lacA',
-      explanation: 'lacZ codes for β-galactosidase, lacY for permease (transporter), and lacA for transacetylase. lacI is the regulatory gene coding for repressor.',
+      explanation:
+        'lacZ codes for β-galactosidase, lacY for permease (transporter), and lacA for transacetylase. lacI is the regulatory gene coding for repressor.',
       difficulty: 'HARD',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -877,9 +972,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'β-galactosidase enzyme:',
       type: 'MCQ',
-      options: ['Breaks lactose into glucose and galactose', 'Transports lactose into cell', 'Acetylates lactose', 'Synthesizes lactose'],
+      options: [
+        'Breaks lactose into glucose and galactose',
+        'Transports lactose into cell',
+        'Acetylates lactose',
+        'Synthesizes lactose',
+      ],
       correctAnswer: 'Breaks lactose into glucose and galactose',
-      explanation: 'β-galactosidase (coded by lacZ) hydrolyzes lactose into glucose and galactose. Permease (lacY) transports lactose into the cell.',
+      explanation:
+        'β-galactosidase (coded by lacZ) hydrolyzes lactose into glucose and galactose. Permease (lacY) transports lactose into the cell.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -899,7 +1000,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['2003', '1990', '2000', '2010'],
       correctAnswer: '2003',
-      explanation: 'The Human Genome Project (HGP) was launched in 1990 and completed in 2003. It sequenced the entire human genome of approximately 3 billion base pairs.',
+      explanation:
+        'The Human Genome Project (HGP) was launched in 1990 and completed in 2003. It sequenced the entire human genome of approximately 3 billion base pairs.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -918,7 +1020,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['20,000-25,000', '100,000', '50,000', '5,000'],
       correctAnswer: '20,000-25,000',
-      explanation: 'The human genome contains approximately 20,000-25,000 genes, much fewer than initially expected. Only about 2% of genome codes for proteins.',
+      explanation:
+        'The human genome contains approximately 20,000-25,000 genes, much fewer than initially expected. Only about 2% of genome codes for proteins.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -938,7 +1041,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Alec Jeffreys', 'Kary Mullis', 'Frederick Sanger', 'Watson and Crick'],
       correctAnswer: 'Alec Jeffreys',
-      explanation: 'Sir Alec Jeffreys developed DNA fingerprinting (DNA profiling) in 1984 at the University of Leicester. It\'s used in forensics, paternity testing, etc.',
+      explanation:
+        "Sir Alec Jeffreys developed DNA fingerprinting (DNA profiling) in 1984 at the University of Leicester. It's used in forensics, paternity testing, etc.",
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -955,9 +1059,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'VNTRs stands for:',
       type: 'MCQ',
-      options: ['Variable Number Tandem Repeats', 'Very Numerous Tandem Repeats', 'Variable Nucleotide Terminal Regions', 'Viral Number Tandem Repeats'],
+      options: [
+        'Variable Number Tandem Repeats',
+        'Very Numerous Tandem Repeats',
+        'Variable Nucleotide Terminal Regions',
+        'Viral Number Tandem Repeats',
+      ],
       correctAnswer: 'Variable Number Tandem Repeats',
-      explanation: 'VNTRs (Variable Number Tandem Repeats) are short sequences repeated in tandem. The number of repeats varies between individuals, making them useful for DNA fingerprinting.',
+      explanation:
+        'VNTRs (Variable Number Tandem Repeats) are short sequences repeated in tandem. The number of repeats varies between individuals, making them useful for DNA fingerprinting.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -977,7 +1087,8 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['All of these', 'Restriction digestion', 'Southern blotting', 'Autoradiography'],
       correctAnswer: 'All of these',
-      explanation: 'DNA fingerprinting involves: DNA extraction → Restriction digestion → Gel electrophoresis → Southern blotting → Hybridization with probe → Autoradiography.',
+      explanation:
+        'DNA fingerprinting involves: DNA extraction → Restriction digestion → Gel electrophoresis → Southern blotting → Hybridization with probe → Autoradiography.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Molecular Biology',
@@ -994,9 +1105,15 @@ export const chapter6Class12Questions: ChapterQuestionSet = {
     {
       question: 'Satellite DNA is useful in DNA fingerprinting because it shows:',
       type: 'MCQ',
-      options: ['High degree of polymorphism', 'No variation between individuals', 'Codes for important proteins', 'Found only in satellites'],
+      options: [
+        'High degree of polymorphism',
+        'No variation between individuals',
+        'Codes for important proteins',
+        'Found only in satellites',
+      ],
       correctAnswer: 'High degree of polymorphism',
-      explanation: 'Satellite DNA (repetitive DNA) shows high polymorphism - the number of repeats varies greatly between individuals, making it useful for identification.',
+      explanation:
+        'Satellite DNA (repetitive DNA) shows high polymorphism - the number of repeats varies greatly between individuals, making it useful for identification.',
       difficulty: 'HARD',
       category: 'PRACTICE',
       topic: 'Molecular Biology',

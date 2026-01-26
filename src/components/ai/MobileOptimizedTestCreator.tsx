@@ -24,7 +24,7 @@ import {
   AlertCircle,
   Brain,
   Download,
-  Upload
+  Upload,
 } from 'lucide-react'
 
 interface MobileTabGroup {
@@ -73,7 +73,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
   onPreview,
   onSave,
   onGenerate,
-  isGenerating
+  isGenerating,
 }) => {
   const [activeTabGroup, setActiveTabGroup] = useState<string>('basic')
   const [activeTab, setActiveTab] = useState<string>('configure')
@@ -88,7 +88,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
     duration: 60,
     difficulty: 'medium',
     topics: [],
-    questionTypes: { mcq: 70, assertion: 20, numerical: 10, matching: 0 }
+    questionTypes: { mcq: 70, assertion: 20, numerical: 10, matching: 0 },
   })
 
   // Detect mobile device
@@ -129,20 +129,30 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
           name: 'Configuration',
           shortName: 'Config',
           icon: <Settings className="w-4 h-4" />,
-          content: <BasicConfigurationComponent configuration={configuration} setConfiguration={setConfiguration} />,
+          content: (
+            <BasicConfigurationComponent
+              configuration={configuration}
+              setConfiguration={setConfiguration}
+            />
+          ),
           isCompleted: true,
-          hasErrors: false
+          hasErrors: false,
         },
         {
           id: 'topics',
           name: 'Topics & Chapters',
           shortName: 'Topics',
           icon: <BookOpen className="w-4 h-4" />,
-          content: <TopicSelectionComponent configuration={configuration} setConfiguration={setConfiguration} />,
+          content: (
+            <TopicSelectionComponent
+              configuration={configuration}
+              setConfiguration={setConfiguration}
+            />
+          ),
           isCompleted: false,
-          hasErrors: false
-        }
-      ]
+          hasErrors: false,
+        },
+      ],
     },
     {
       id: 'advanced',
@@ -156,20 +166,30 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
           name: 'Difficulty & Distribution',
           shortName: 'Difficulty',
           icon: <BarChart3 className="w-4 h-4" />,
-          content: <DifficultyDistributionComponent configuration={configuration} setConfiguration={setConfiguration} />,
+          content: (
+            <DifficultyDistributionComponent
+              configuration={configuration}
+              setConfiguration={setConfiguration}
+            />
+          ),
           isCompleted: false,
-          hasErrors: false
+          hasErrors: false,
         },
         {
           id: 'timing',
           name: 'Time Management',
           shortName: 'Timing',
           icon: <Clock className="w-4 h-4" />,
-          content: <TimeManagementComponent configuration={configuration} setConfiguration={setConfiguration} />,
+          content: (
+            <TimeManagementComponent
+              configuration={configuration}
+              setConfiguration={setConfiguration}
+            />
+          ),
           isCompleted: false,
-          hasErrors: false
-        }
-      ]
+          hasErrors: false,
+        },
+      ],
     },
     {
       id: 'preview',
@@ -185,7 +205,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
           icon: <Eye className="w-4 h-4" />,
           content: <ReviewComponent configuration={configuration} />,
           isCompleted: false,
-          hasErrors: false
+          hasErrors: false,
         },
         {
           id: 'generate',
@@ -194,29 +214,29 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
           icon: <Play className="w-4 h-4" />,
           content: <GenerateComponent onGenerate={onGenerate} isGenerating={isGenerating} />,
           isCompleted: false,
-          hasErrors: false
-        }
-      ]
-    }
+          hasErrors: false,
+        },
+      ],
+    },
   ]
 
   const getCurrentTab = () => {
     for (const group of tabGroups) {
-      const tab = group.tabs.find(t => t.id === activeTab)
+      const tab = group.tabs.find((t) => t.id === activeTab)
       if (tab) return tab
     }
     return tabGroups[0].tabs[0]
   }
 
   const getNextTab = () => {
-    const allTabs = tabGroups.flatMap(group => group.tabs)
-    const currentIndex = allTabs.findIndex(tab => tab.id === activeTab)
+    const allTabs = tabGroups.flatMap((group) => group.tabs)
+    const currentIndex = allTabs.findIndex((tab) => tab.id === activeTab)
     return currentIndex < allTabs.length - 1 ? allTabs[currentIndex + 1] : null
   }
 
   const getPrevTab = () => {
-    const allTabs = tabGroups.flatMap(group => group.tabs)
-    const currentIndex = allTabs.findIndex(tab => tab.id === activeTab)
+    const allTabs = tabGroups.flatMap((group) => group.tabs)
+    const currentIndex = allTabs.findIndex((tab) => tab.id === activeTab)
     return currentIndex > 0 ? allTabs[currentIndex - 1] : null
   }
 
@@ -225,7 +245,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
     setShowMobileMenu(false)
 
     // Find the group containing this tab
-    const group = tabGroups.find(g => g.tabs.some(t => t.id === tabId))
+    const group = tabGroups.find((g) => g.tabs.some((t) => t.id === tabId))
     if (group) {
       setActiveTabGroup(group.id)
     }
@@ -245,7 +265,9 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
   return (
     <div className="flex flex-col h-screen bg-gray-100">
       {/* Mobile Header */}
-      <div className={`bg-white border-b transition-all duration-300 ${isSticky ? 'shadow-lg' : ''} ${isMobile ? 'sticky top-0 z-40' : ''}`}>
+      <div
+        className={`bg-white border-b transition-all duration-300 ${isSticky ? 'shadow-lg' : ''} ${isMobile ? 'sticky top-0 z-40' : ''}`}
+      >
         <div className="px-4 py-3">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -306,7 +328,10 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
               <span>3 of 6 complete</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div className="bg-blue-600 h-2 rounded-full transition-all duration-300" style={{ width: '50%' }} />
+              <div
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: '50%' }}
+              />
             </div>
           </div>
         </div>
@@ -361,19 +386,25 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
               className={`${isMobile ? 'fixed inset-y-0 left-0 z-30' : 'relative'} w-70 bg-white border-r overflow-y-auto`}
             >
               <div className="p-4 space-y-4">
-                {tabGroups.map(group => (
+                {tabGroups.map((group) => (
                   <div key={group.id} className="space-y-2">
                     <button
                       onClick={() => toggleTabGroup(group.id)}
                       className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
                     >
                       <div className="flex items-center gap-3">
-                        <div className={`p-2 bg-gradient-to-r ${group.color} rounded-lg text-white`}>
+                        <div
+                          className={`p-2 bg-gradient-to-r ${group.color} rounded-lg text-white`}
+                        >
                           {group.icon}
                         </div>
                         <span className="font-medium text-gray-800">{group.name}</span>
                       </div>
-                      {group.isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      {group.isExpanded ? (
+                        <ChevronUp className="w-4 h-4" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
                     </button>
 
                     <AnimatePresence>
@@ -384,7 +415,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                           exit={{ height: 0, opacity: 0 }}
                           className="overflow-hidden ml-4 space-y-1"
                         >
-                          {group.tabs.map(tab => (
+                          {group.tabs.map((tab) => (
                             <button
                               key={tab.id}
                               onClick={() => handleTabChange(tab.id)}
@@ -421,7 +452,9 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Tab Content */}
           <div className="flex-1 overflow-y-auto">
-            <div className={`p-4 ${viewMode === 'mobile' ? 'max-w-sm mx-auto' : viewMode === 'tablet' ? 'max-w-3xl mx-auto' : ''}`}>
+            <div
+              className={`p-4 ${viewMode === 'mobile' ? 'max-w-sm mx-auto' : viewMode === 'tablet' ? 'max-w-3xl mx-auto' : ''}`}
+            >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
@@ -448,7 +481,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                 className="flex items-center gap-2 px-4 py-2 text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:text-gray-800 transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" />
-                {!isMobile && "Previous"}
+                {!isMobile && 'Previous'}
               </button>
 
               <div className="flex items-center gap-2">
@@ -457,7 +490,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                   className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors flex items-center gap-2"
                 >
                   <Save className="w-4 h-4" />
-                  {!isMobile && "Save"}
+                  {!isMobile && 'Save'}
                 </button>
 
                 {activeTab === 'generate' ? (
@@ -469,12 +502,12 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                     {isGenerating ? (
                       <>
                         <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                        {!isMobile && "Generating..."}
+                        {!isMobile && 'Generating...'}
                       </>
                     ) : (
                       <>
                         <Play className="w-4 h-4" />
-                        {!isMobile && "Generate"}
+                        {!isMobile && 'Generate'}
                       </>
                     )}
                   </button>
@@ -487,7 +520,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                     disabled={!getNextTab()}
                     className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                   >
-                    {!isMobile && "Next"}
+                    {!isMobile && 'Next'}
                     <ChevronRight className="w-4 h-4" />
                   </button>
                 )}
@@ -499,10 +532,7 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
 
       {/* Mobile Menu Overlay */}
       {isMobile && showMobileMenu && (
-        <div
-          className="fixed inset-0 bg-black/50 z-20"
-          onClick={() => setShowMobileMenu(false)}
-        />
+        <div className="fixed inset-0 bg-black/50 z-20" onClick={() => setShowMobileMenu(false)} />
       )}
     </div>
   )
@@ -519,60 +549,60 @@ const BasicConfigurationComponent: React.FC<{
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Total Questions
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Total Questions</label>
           <input
             type="number"
             value={configuration.totalQuestions}
-            onChange={(e) => setConfiguration({
-              ...configuration,
-              totalQuestions: parseInt(e.target.value) || 0
-            })}
+            onChange={(e) =>
+              setConfiguration({
+                ...configuration,
+                totalQuestions: parseInt(e.target.value) || 0,
+              })
+            }
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Total Marks
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Total Marks</label>
           <input
             type="number"
             value={configuration.totalMarks}
-            onChange={(e) => setConfiguration({
-              ...configuration,
-              totalMarks: parseInt(e.target.value) || 0
-            })}
+            onChange={(e) =>
+              setConfiguration({
+                ...configuration,
+                totalMarks: parseInt(e.target.value) || 0,
+              })
+            }
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Duration (minutes)
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Duration (minutes)</label>
           <input
             type="number"
             value={configuration.duration}
-            onChange={(e) => setConfiguration({
-              ...configuration,
-              duration: parseInt(e.target.value) || 0
-            })}
+            onChange={(e) =>
+              setConfiguration({
+                ...configuration,
+                duration: parseInt(e.target.value) || 0,
+              })
+            }
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Difficulty Level
-          </label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty Level</label>
           <select
             value={configuration.difficulty}
-            onChange={(e) => setConfiguration({
-              ...configuration,
-              difficulty: e.target.value as any
-            })}
+            onChange={(e) =>
+              setConfiguration({
+                ...configuration,
+                difficulty: e.target.value as any,
+              })
+            }
             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           >
             <option value="easy">Easy</option>
@@ -597,11 +627,21 @@ const TopicSelectionComponent: React.FC<{
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {[
-          'Cell Biology', 'Genetics', 'Evolution', 'Ecology',
-          'Human Physiology', 'Plant Physiology', 'Reproduction',
-          'Biotechnology', 'Molecular Biology', 'Taxonomy'
-        ].map(topic => (
-          <label key={topic} className="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer">
+          'Cell Biology',
+          'Genetics',
+          'Evolution',
+          'Ecology',
+          'Human Physiology',
+          'Plant Physiology',
+          'Reproduction',
+          'Biotechnology',
+          'Molecular Biology',
+          'Taxonomy',
+        ].map((topic) => (
+          <label
+            key={topic}
+            className="flex items-center gap-3 p-3 border rounded-lg hover:bg-gray-50 cursor-pointer"
+          >
             <input
               type="checkbox"
               checked={configuration.topics.includes(topic)}
@@ -609,12 +649,12 @@ const TopicSelectionComponent: React.FC<{
                 if (e.target.checked) {
                   setConfiguration({
                     ...configuration,
-                    topics: [...configuration.topics, topic]
+                    topics: [...configuration.topics, topic],
                   })
                 } else {
                   setConfiguration({
                     ...configuration,
-                    topics: configuration.topics.filter(t => t !== topic)
+                    topics: configuration.topics.filter((t) => t !== topic),
                   })
                 }
               }}
@@ -650,13 +690,15 @@ const DifficultyDistributionComponent: React.FC<{
               min="0"
               max="100"
               value={percentage}
-              onChange={(e) => setConfiguration({
-                ...configuration,
-                questionTypes: {
-                  ...configuration.questionTypes,
-                  [type]: parseInt(e.target.value)
-                }
-              })}
+              onChange={(e) =>
+                setConfiguration({
+                  ...configuration,
+                  questionTypes: {
+                    ...configuration.questionTypes,
+                    [type]: parseInt(e.target.value),
+                  },
+                })
+              }
               className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
             />
           </div>
@@ -683,7 +725,10 @@ const TimeManagementComponent: React.FC<{
           <div className="text-sm text-blue-700 space-y-1">
             <div>Total Duration: {configuration.duration} minutes</div>
             <div>Questions: {configuration.totalQuestions}</div>
-            <div>Time per Question: {(configuration.duration / configuration.totalQuestions).toFixed(1)} minutes</div>
+            <div>
+              Time per Question:{' '}
+              {(configuration.duration / configuration.totalQuestions).toFixed(1)} minutes
+            </div>
           </div>
         </div>
 
@@ -749,8 +794,10 @@ const ReviewComponent: React.FC<{
           <h4 className="font-medium text-gray-800 mb-3">Selected Topics</h4>
           <div className="space-y-1">
             {configuration.topics.length > 0 ? (
-              configuration.topics.map(topic => (
-                <div key={topic} className="text-sm text-gray-600">• {topic}</div>
+              configuration.topics.map((topic) => (
+                <div key={topic} className="text-sm text-gray-600">
+                  • {topic}
+                </div>
               ))
             ) : (
               <div className="text-sm text-gray-500">No topics selected</div>

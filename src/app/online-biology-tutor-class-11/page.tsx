@@ -184,8 +184,7 @@ export default function OnlineBiologyTutorClass11Page() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Online Biology Tutor for{' '}
-              <span className="text-yellow-400">Class 11</span>
+              Online Biology Tutor for <span className="text-yellow-400">Class 11</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">

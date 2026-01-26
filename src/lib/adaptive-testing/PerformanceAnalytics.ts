@@ -146,14 +146,14 @@ class PerformanceAnalytics {
     responseTime: 0.3,
     accuracy: 0.25,
     consistency: 0.2,
-    progression: 0.25
+    progression: 0.25,
   }
 
   private readonly COGNITIVE_LOAD_FACTORS = {
     itemDifficulty: 0.4,
     responseTime: 0.3,
     accuracy: 0.2,
-    itemComplexity: 0.1
+    itemComplexity: 0.1,
   }
 
   constructor() {
@@ -182,7 +182,7 @@ class PerformanceAnalytics {
       baseline: {
         initialAbility,
         expectedPerformance: this.calculateExpectedPerformance(initialAbility),
-        priorKnowledge: priorKnowledge || new Map()
+        priorKnowledge: priorKnowledge || new Map(),
       },
       currentState: {
         currentAbility: initialAbility,
@@ -197,21 +197,30 @@ class PerformanceAnalytics {
         masteryIndicators: {
           topicMastery: new Map(),
           skillMastery: new Map(),
-          overallMastery: 0
-        }
+          overallMastery: 0,
+        },
       },
       progression: {
         abilityHistory: [{ timestamp: new Date(), ability: initialAbility }],
         accuracyHistory: [],
         speedHistory: [],
-        engagementHistory: [{ timestamp: new Date(), engagement: 0.8 }]
+        engagementHistory: [{ timestamp: new Date(), engagement: 0.8 }],
       },
       predictions: this.initializePredictions(initialAbility),
       learningCurve: this.initializeLearningCurve(),
       cognitiveAssessment: this.initializeCognitiveAssessment(),
       engagement: this.initializeEngagementAnalysis(),
-      insights: { alerts: [], adaptations: { difficultyAdjustment: 0, paceAdjustment: 0, contentFocus: [], interventions: [] }, opportunities: { accelerationPossible: false, depthExploration: [], strengthBuilding: [] } },
-      lastUpdated: new Date()
+      insights: {
+        alerts: [],
+        adaptations: {
+          difficultyAdjustment: 0,
+          paceAdjustment: 0,
+          contentFocus: [],
+          interventions: [],
+        },
+        opportunities: { accelerationPossible: false, depthExploration: [], strengthBuilding: [] },
+      },
+      lastUpdated: new Date(),
     }
 
     this.performanceProfiles.set(sessionId, profile)
@@ -291,7 +300,8 @@ class PerformanceAnalytics {
     // Calculate summary
     const currentLevel = this.getAbilityLevel(profile.currentState.currentAbility)
     const progress = this.calculateProgress(profile)
-    const timeElapsed = (Date.now() - profile.progression.abilityHistory[0].timestamp.getTime()) / (1000 * 60)
+    const timeElapsed =
+      (Date.now() - profile.progression.abilityHistory[0].timestamp.getTime()) / (1000 * 60)
     const itemsCompleted = profile.progression.accuracyHistory.length
 
     // Calculate trends
@@ -301,7 +311,7 @@ class PerformanceAnalytics {
     const predictions = {
       finalScore: profile.predictions.finalScorePrediction.estimate,
       timeRemaining: profile.predictions.timeToCompletion.estimate,
-      successProbability: profile.predictions.successProbability.passProbability
+      successProbability: profile.predictions.successProbability.passProbability,
     }
 
     // Generate recommendations
@@ -312,18 +322,18 @@ class PerformanceAnalytics {
         currentLevel,
         progress,
         timeElapsed,
-        itemsCompleted
+        itemsCompleted,
       },
       performance: {
         abilityScore: Math.round(50 + 10 * profile.currentState.currentAbility),
         accuracy: Math.round(profile.currentState.accuracy * 100),
         speed: Math.round(profile.currentState.speed * 60), // items per hour
-        engagement: Math.round(profile.currentState.engagement * 100)
+        engagement: Math.round(profile.currentState.engagement * 100),
       },
       trends,
       predictions,
       recommendations,
-      alerts: profile.insights.alerts
+      alerts: profile.insights.alerts,
     }
   }
 
@@ -382,7 +392,7 @@ class PerformanceAnalytics {
       learningVelocity,
       stabilityIndex,
       adaptationNeeded,
-      nextLearningTargets
+      nextLearningTargets,
     }
   }
 
@@ -438,8 +448,8 @@ class PerformanceAnalytics {
       alternatives: {
         conservative: Math.max(0, recommendedStoppingPoint + 3),
         aggressive: Math.max(0, recommendedStoppingPoint - 2),
-        balanced: recommendedStoppingPoint
-      }
+        balanced: recommendedStoppingPoint,
+      },
     }
   }
 
@@ -459,7 +469,7 @@ class PerformanceAnalytics {
     profile.currentState.confidenceLevel = currentAbility.confidence
 
     // Update accuracy
-    const correctResponses = allResponses.filter(r => r.response).length
+    const correctResponses = allResponses.filter((r) => r.response).length
     profile.currentState.accuracy = correctResponses / allResponses.length
 
     // Update speed (items per minute)
@@ -472,24 +482,25 @@ class PerformanceAnalytics {
     // Update consistency (inverse of standard deviation of recent performance)
     if (allResponses.length >= 5) {
       const recentResponses = allResponses.slice(-5)
-      const accuracies = recentResponses.map(r => r.response ? 1 : 0)
+      const accuracies = recentResponses.map((r) => (r.response ? 1 : 0))
       const mean = accuracies.reduce((sum, acc) => sum + acc, 0) / accuracies.length
-      const variance = accuracies.reduce((sum, acc) => sum + Math.pow(acc - mean, 2), 0) / accuracies.length
+      const variance =
+        accuracies.reduce((sum, acc) => sum + Math.pow(acc - mean, 2), 0) / accuracies.length
       profile.currentState.consistency = Math.max(0, 1 - variance)
     }
 
     // Update progression history
     profile.progression.abilityHistory.push({
       timestamp: new Date(),
-      ability: currentAbility.theta
+      ability: currentAbility.theta,
     })
     profile.progression.accuracyHistory.push({
       timestamp: new Date(),
-      accuracy: profile.currentState.accuracy
+      accuracy: profile.currentState.accuracy,
     })
     profile.progression.speedHistory.push({
       timestamp: new Date(),
-      speed: profile.currentState.speed
+      speed: profile.currentState.speed,
     })
   }
 
@@ -527,18 +538,18 @@ class PerformanceAnalytics {
     const processingSpeed = Math.min(2, expectedTime / response.responseTime)
 
     profile.cognitiveAssessment.workingMemoryLoad =
-      (profile.cognitiveAssessment.workingMemoryLoad * 0.8) + (workingMemoryLoad * 0.2)
+      profile.cognitiveAssessment.workingMemoryLoad * 0.8 + workingMemoryLoad * 0.2
     profile.cognitiveAssessment.processingSpeed =
-      (profile.cognitiveAssessment.processingSpeed * 0.8) + (processingSpeed * 0.2)
+      profile.cognitiveAssessment.processingSpeed * 0.8 + processingSpeed * 0.2
 
     // Update attention level based on consistency
     profile.cognitiveAssessment.attentionLevel = profile.currentState.consistency
 
     // Simple metacognition estimate based on confidence alignment with accuracy
     if (response.confidence) {
-      const confidenceAccuracy = Math.abs((response.confidence / 5) - (response.response ? 1 : 0))
+      const confidenceAccuracy = Math.abs(response.confidence / 5 - (response.response ? 1 : 0))
       profile.cognitiveAssessment.metacognition =
-        (profile.cognitiveAssessment.metacognition * 0.9) + ((1 - confidenceAccuracy) * 0.1)
+        profile.cognitiveAssessment.metacognition * 0.9 + (1 - confidenceAccuracy) * 0.1
     }
   }
 
@@ -562,13 +573,14 @@ class PerformanceAnalytics {
 
     profile.progression.engagementHistory.push({
       timestamp: new Date(),
-      engagement: profile.currentState.engagement
+      engagement: profile.currentState.engagement,
     })
 
     // Update engagement trends
     const recentEngagement = profile.progression.engagementHistory.slice(-5)
     if (recentEngagement.length >= 3) {
-      const trend = recentEngagement[recentEngagement.length - 1].engagement - recentEngagement[0].engagement
+      const trend =
+        recentEngagement[recentEngagement.length - 1].engagement - recentEngagement[0].engagement
       profile.engagement.trends.increasing = trend > 0.1
       profile.engagement.trends.decreasing = trend < -0.1
       profile.engagement.trends.stable = Math.abs(trend) <= 0.1
@@ -580,7 +592,7 @@ class PerformanceAnalytics {
       profile.engagement.recommendedActions = [
         'Consider a short break',
         'Adjust difficulty level',
-        'Provide encouraging feedback'
+        'Provide encouraging feedback',
       ]
     }
   }
@@ -589,7 +601,7 @@ class PerformanceAnalytics {
     // Update final score prediction
     const currentScore = 50 + 10 * profile.currentState.currentAbility
     const growthRate = profile.currentState.abilityGrowth
-    const projectedFinalScore = currentScore + (growthRate * 10) // simplified projection
+    const projectedFinalScore = currentScore + growthRate * 10 // simplified projection
 
     profile.predictions.finalScorePrediction.estimate = Math.round(
       Math.max(0, Math.min(100, projectedFinalScore))
@@ -597,12 +609,22 @@ class PerformanceAnalytics {
 
     // Update success probabilities
     const abilityScore = profile.currentState.currentAbility
-    profile.predictions.successProbability.passProbability = Math.max(0, Math.min(1, (abilityScore + 2) / 4))
-    profile.predictions.successProbability.excellenceProbability = Math.max(0, Math.min(1, (abilityScore - 1) / 3))
-    profile.predictions.successProbability.strugglingProbability = Math.max(0, Math.min(1, (1 - abilityScore) / 3))
+    profile.predictions.successProbability.passProbability = Math.max(
+      0,
+      Math.min(1, (abilityScore + 2) / 4)
+    )
+    profile.predictions.successProbability.excellenceProbability = Math.max(
+      0,
+      Math.min(1, (abilityScore - 1) / 3)
+    )
+    profile.predictions.successProbability.strugglingProbability = Math.max(
+      0,
+      Math.min(1, (1 - abilityScore) / 3)
+    )
 
     // Update time to completion
-    const averageTime = allResponses.reduce((sum, r) => sum + r.responseTime, 0) / Math.max(1, allResponses.length)
+    const averageTime =
+      allResponses.reduce((sum, r) => sum + r.responseTime, 0) / Math.max(1, allResponses.length)
     const estimatedRemainingItems = Math.max(0, 20 - allResponses.length) // assume max 20 items
     profile.predictions.timeToCompletion.estimate = (estimatedRemainingItems * averageTime) / 60 // minutes
   }
@@ -614,13 +636,13 @@ class PerformanceAnalytics {
         difficultyAdjustment: 0,
         paceAdjustment: 0,
         contentFocus: [],
-        interventions: []
+        interventions: [],
       },
       opportunities: {
         accelerationPossible: false,
         depthExploration: [],
-        strengthBuilding: []
-      }
+        strengthBuilding: [],
+      },
     }
 
     // Generate alerts
@@ -629,7 +651,7 @@ class PerformanceAnalytics {
         type: 'critical',
         message: 'Low engagement detected',
         action: 'Consider intervention',
-        priority: 1
+        priority: 1,
       })
     }
 
@@ -638,7 +660,7 @@ class PerformanceAnalytics {
         type: 'warning',
         message: 'High cognitive load',
         action: 'Reduce difficulty temporarily',
-        priority: 2
+        priority: 2,
       })
     }
 
@@ -647,7 +669,7 @@ class PerformanceAnalytics {
         type: 'positive',
         message: 'Excellent performance',
         action: 'Consider acceleration',
-        priority: 3
+        priority: 3,
       })
     }
 
@@ -684,23 +706,23 @@ class PerformanceAnalytics {
       finalScorePrediction: {
         estimate: baseScore,
         confidenceInterval: [Math.max(0, baseScore - 20), Math.min(100, baseScore + 20)],
-        probabilityDistribution: []
+        probabilityDistribution: [],
       },
       timeToCompletion: {
         estimate: 30, // 30 minutes default
         range: [20, 45],
-        factors: ['item_difficulty', 'student_speed', 'fatigue']
+        factors: ['item_difficulty', 'student_speed', 'fatigue'],
       },
       successProbability: {
         passProbability: Math.max(0, Math.min(1, (initialAbility + 2) / 4)),
         excellenceProbability: Math.max(0, Math.min(1, (initialAbility - 1) / 3)),
-        strugglingProbability: Math.max(0, Math.min(1, (1 - initialAbility) / 3))
+        strugglingProbability: Math.max(0, Math.min(1, (1 - initialAbility) / 3)),
       },
       learningTrajectory: {
         expectedGrowth: 0.2,
         plateauRisk: 0.3,
-        accelerationPotential: 0.5
-      }
+        accelerationPotential: 0.5,
+      },
     }
   }
 
@@ -710,12 +732,12 @@ class PerformanceAnalytics {
         exploration: true,
         acquisition: false,
         fluency: false,
-        mastery: false
+        mastery: false,
       },
       currentPhase: 'exploration',
       timeInPhase: 0,
       phaseProgression: 0,
-      nextPhaseRequirements: ['Complete 5 items', 'Achieve 60% accuracy']
+      nextPhaseRequirements: ['Complete 5 items', 'Achieve 60% accuracy'],
     }
   }
 
@@ -726,7 +748,7 @@ class PerformanceAnalytics {
       attentionLevel: 0.8,
       metacognition: 0.6,
       strategicThinking: 0.6,
-      adaptability: 0.7
+      adaptability: 0.7,
     }
   }
 
@@ -737,16 +759,16 @@ class PerformanceAnalytics {
         increasing: false,
         decreasing: false,
         stable: true,
-        fluctuating: false
+        fluctuating: false,
       },
       factors: {
         difficultyAlignment: 0.8,
         pacing: 0.8,
         feedback: 0.8,
-        progress: 0.8
+        progress: 0.8,
       },
       interventionNeeded: false,
-      recommendedActions: []
+      recommendedActions: [],
     }
   }
 
@@ -775,10 +797,13 @@ class PerformanceAnalytics {
     }
 
     return {
-      abilityTrend: calculateTrend(profile.progression.abilityHistory, item => item.ability),
-      accuracyTrend: calculateTrend(profile.progression.accuracyHistory, item => item.accuracy),
-      speedTrend: calculateTrend(profile.progression.speedHistory, item => item.speed),
-      engagementTrend: calculateTrend(profile.progression.engagementHistory, item => item.engagement)
+      abilityTrend: calculateTrend(profile.progression.abilityHistory, (item) => item.ability),
+      accuracyTrend: calculateTrend(profile.progression.accuracyHistory, (item) => item.accuracy),
+      speedTrend: calculateTrend(profile.progression.speedHistory, (item) => item.speed),
+      engagementTrend: calculateTrend(
+        profile.progression.engagementHistory,
+        (item) => item.engagement
+      ),
     }
   }
 
@@ -811,12 +836,13 @@ class PerformanceAnalytics {
 
   private calculateInformationGainRate(profile: PerformanceProfile): number {
     // Simplified calculation of how much information is being gained per item
-    return Math.max(0.05, 0.3 - (profile.currentState.confidenceLevel * 0.2))
+    return Math.max(0.05, 0.3 - profile.currentState.confidenceLevel * 0.2)
   }
 
   private estimateFatigueLevel(profile: PerformanceProfile): number {
     // Simple fatigue estimation based on time and performance decline
-    const timeElapsed = (Date.now() - profile.progression.abilityHistory[0].timestamp.getTime()) / (1000 * 60)
+    const timeElapsed =
+      (Date.now() - profile.progression.abilityHistory[0].timestamp.getTime()) / (1000 * 60)
     const timeFatigue = Math.min(1, timeElapsed / 60) // 1 hour = max time fatigue
 
     const performanceDecline = profile.currentState.engagement < 0.6 ? 0.3 : 0
@@ -827,7 +853,7 @@ class PerformanceAnalytics {
   private calculateTimeConsistency(responses: StudentResponse[]): number {
     if (responses.length < 3) return 1
 
-    const times = responses.slice(-5).map(r => r.responseTime)
+    const times = responses.slice(-5).map((r) => r.responseTime)
     const mean = times.reduce((sum, time) => sum + time, 0) / times.length
     const variance = times.reduce((sum, time) => sum + Math.pow(time - mean, 2), 0) / times.length
     const cv = Math.sqrt(variance) / mean // coefficient of variation
@@ -841,8 +867,8 @@ class PerformanceAnalytics {
     const recent = responses.slice(-5)
     const early = responses.slice(0, 5)
 
-    const recentAccuracy = recent.filter(r => r.response).length / recent.length
-    const earlyAccuracy = early.filter(r => r.response).length / early.length
+    const recentAccuracy = recent.filter((r) => r.response).length / recent.length
+    const earlyAccuracy = early.filter((r) => r.response).length / early.length
 
     return Math.max(0, Math.min(1, 0.5 + (recentAccuracy - earlyAccuracy)))
   }
@@ -851,8 +877,8 @@ class PerformanceAnalytics {
     // Simple pattern analysis - consistent engagement vs random guessing
     if (responses.length < 3) return 0.8
 
-    const recentTimes = responses.slice(-3).map(r => r.responseTime)
-    const hasPattern = recentTimes.every(time => time > 10) // Minimum thinking time
+    const recentTimes = responses.slice(-3).map((r) => r.responseTime)
+    const hasPattern = recentTimes.every((time) => time > 10) // Minimum thinking time
 
     return hasPattern ? 0.8 : 0.4
   }

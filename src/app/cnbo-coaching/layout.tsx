@@ -43,10 +43,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function CNBOCoachingLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function CNBOCoachingLayout({ children }: { children: React.ReactNode }) {
   return children
 }

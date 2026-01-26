@@ -268,9 +268,7 @@ export default function OnlineBiologyTutorPage() {
           <div
             ref={featuresHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              featuresHeaderAnim.isVisible
-                ? 'opacity-100 translate-y-0'
-                : 'opacity-0 translate-y-5'
+              featuresHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">

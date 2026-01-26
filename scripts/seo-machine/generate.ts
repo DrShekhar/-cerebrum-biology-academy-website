@@ -23,7 +23,7 @@ import {
   NewsGenerationInput,
   SEOLandingGenerationInput,
   DEFAULT_CONFIG,
-  ContentPriority
+  ContentPriority,
 } from '../../src/lib/seo-marketing/types'
 
 // ANSI color codes for CLI output
@@ -34,7 +34,7 @@ const colors = {
   yellow: '\x1b[33m',
   blue: '\x1b[34m',
   red: '\x1b[31m',
-  cyan: '\x1b[36m'
+  cyan: '\x1b[36m',
 }
 
 function log(message: string, color: keyof typeof colors = 'reset') {
@@ -140,11 +140,11 @@ async function generateBlogPost(input: BlogGenerationInput): Promise<BlogDraft> 
       keyTakeaways: [
         '[KEY TAKEAWAY 1 - To be filled]',
         '[KEY TAKEAWAY 2 - To be filled]',
-        '[KEY TAKEAWAY 3 - To be filled]'
-      ]
+        '[KEY TAKEAWAY 3 - To be filled]',
+      ],
     },
     content: generateBlogPromptForClaude(input),
-    wordCount: 0
+    wordCount: 0,
   }
 
   return draft
@@ -215,12 +215,12 @@ async function generateNewsArticle(input: NewsGenerationInput): Promise<NewsDraf
       seoDescription: `${input.headline}. Latest NEET news and updates for aspirants.`,
       isBreakingNews: input.isUrgent || false,
       sources: input.sourceUrl ? [{ name: 'Official Source', url: input.sourceUrl }] : [],
-      relatedLinks: []
+      relatedLinks: [],
     },
     content: generateNewsPromptForClaude(input),
     keyUpdates: ['[KEY UPDATE 1]', '[KEY UPDATE 2]'],
     studentImpact: '[STUDENT IMPACT TO BE FILLED]',
-    nextSteps: ['[NEXT STEP 1]', '[NEXT STEP 2]']
+    nextSteps: ['[NEXT STEP 1]', '[NEXT STEP 2]'],
   }
 
   return draft
@@ -281,14 +281,14 @@ async function generateSEOLanding(input: SEOLandingGenerationInput): Promise<SEO
         headline: `[HEADLINE FOR: ${input.keyword}]`,
         subheadline: '[SUBHEADLINE TO BE FILLED]',
         ctaText: 'Start Free Trial',
-        ctaLink: `https://wa.me/${DEFAULT_CONFIG.whatsappNumber.replace('+', '')}`
+        ctaLink: `https://wa.me/${DEFAULT_CONFIG.whatsappNumber.replace('+', '')}`,
       },
       painPoints: [],
       benefits: [],
       stats: [],
       faqs: [],
-      testimonials: []
-    }
+      testimonials: [],
+    },
   }
 
   return draft
@@ -365,7 +365,7 @@ async function main() {
           difficulty: args.difficulty as any,
           targetAudience: args.audience as any,
           neetChapter: args.chapter as string,
-          keywords: args.keywords ? (args.keywords as string).split(',') : undefined
+          keywords: args.keywords ? (args.keywords as string).split(',') : undefined,
         }
 
         draft = await generateBlogPost(input)
@@ -391,7 +391,7 @@ async function main() {
           sourceUrl: args.url as string,
           summary: args.summary as string,
           isUrgent: Boolean(args.urgent),
-          announcementType: args.type as any
+          announcementType: args.type as any,
         }
 
         draft = await generateNewsArticle(input)
@@ -413,7 +413,7 @@ async function main() {
           keyword,
           classLevel: args.class as string,
           location: args.location as string,
-          focusArea: args.focus as any
+          focusArea: args.focus as any,
         }
 
         draft = await generateSEOLanding(input)
@@ -429,9 +429,7 @@ async function main() {
     // Save draft
     const draftType = contentType.toLowerCase().replace('_', '-')
     const filePath = saveDraft(
-      draftType === 'blog-post' ? 'blog' :
-      draftType === 'news-article' ? 'news' :
-      'landing',
+      draftType === 'blog-post' ? 'blog' : draftType === 'news-article' ? 'news' : 'landing',
       draft.id,
       draft
     )
@@ -461,7 +459,6 @@ async function main() {
     console.log('')
     console.log(promptForClaude)
     console.log('')
-
   } catch (error) {
     log(`Error: ${error}`, 'red')
     process.exit(1)

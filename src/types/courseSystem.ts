@@ -11,20 +11,20 @@ export interface CourseFeatures {
   recordedVideos: boolean
   personalMentoring: boolean
   doubtSessions: boolean
-  
+
   // Study Materials
   printedMaterials: boolean
   digitalNotes: boolean
   worksheets: boolean
   previousYearPapers: boolean
-  
+
   // Assessment & Testing
   weeklyTests: boolean
   testSeries: boolean
   mockTests: boolean
   performanceTracking: boolean
   allIndiaRanking: boolean
-  
+
   // Additional Support
   parentCounseling: boolean
   careerGuidance: boolean
@@ -81,25 +81,25 @@ export interface CourseProgram {
   duration: string // e.g., "6 months", "1 year", "2 years"
   teachingHours: number // hours per week
   learningMode: LearningMode[]
-  
+
   // Tier-based offerings
   tiers: {
     pinnacle: CourseTierDetails
     ascent: CourseTierDetails
     pursuit: CourseTierDetails
   }
-  
+
   // Course Content
   curriculum: CourseCurriculum
   schedule: CourseSchedule
   faculty: FacultyInfo[]
-  
+
   // Additional Information
   prerequisites: string[]
   learningOutcomes: string[]
   testimonials: CourseTestimonial[]
   faq: FAQ[]
-  
+
   // SEO & Marketing
   isPopular?: boolean
   isFeatured?: boolean
@@ -161,7 +161,15 @@ export interface FAQ {
   id: string
   question: string
   answer: string
-  category: 'general' | 'admission' | 'payment' | 'curriculum' | 'support' | 'performance' | 'program' | 'eligibility'
+  category:
+    | 'general'
+    | 'admission'
+    | 'payment'
+    | 'curriculum'
+    | 'support'
+    | 'performance'
+    | 'program'
+    | 'eligibility'
   order: number
 }
 

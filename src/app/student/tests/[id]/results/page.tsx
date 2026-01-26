@@ -234,14 +234,7 @@ export default function TestResultsPage() {
         {/* Header Card */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           <Card className="mb-6 overflow-hidden">
-            <div
-              className={cn(
-                'p-6 text-white',
-                isPassed
-                  ? 'bg-green-600'
-                  : 'bg-red-600'
-              )}
-            >
+            <div className={cn('p-6 text-white', isPassed ? 'bg-green-600' : 'bg-red-600')}>
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
                   <h1 className="text-2xl font-bold mb-1">{testData.title}</h1>

@@ -130,7 +130,8 @@ export default function BiologyTutorNoidaExtensionPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Noida Extension',
-            description: 'Best Biology Tutor for Noida Extension students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for Noida Extension students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-noida-extension',
             telephone: '+91-88264-44334',
             address: {
@@ -161,8 +162,7 @@ export default function BiologyTutorNoidaExtensionPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Noida Extension</span>
+              Biology Tutor in <span className="text-yellow-400">Noida Extension</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -170,8 +170,8 @@ export default function BiologyTutorNoidaExtensionPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for Noida Extension (Greater Noida West).
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert Biology coaching for Noida Extension (Greater Noida West). Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

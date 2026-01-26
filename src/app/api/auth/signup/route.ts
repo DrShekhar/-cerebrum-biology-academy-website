@@ -112,7 +112,8 @@ export async function POST(request: NextRequest) {
         NextResponse.json(
           {
             error: 'Registration failed',
-            message: 'Unable to create account. If you already have an account, please sign in instead.',
+            message:
+              'Unable to create account. If you already have an account, please sign in instead.',
           },
           { status: 409 }
         )

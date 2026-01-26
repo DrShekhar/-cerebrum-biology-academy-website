@@ -15,7 +15,7 @@ const integrationConfig = {
   testMatch: [
     '<rootDir>/src/__tests__/integration/**/*.test.{js,ts}',
     '<rootDir>/src/__tests__/**/*.integration.test.{js,ts}',
-    '<rootDir>/tests/integration/**/*.test.{js,ts}'
+    '<rootDir>/tests/integration/**/*.test.{js,ts}',
   ],
 
   // Module name mapping
@@ -50,11 +50,7 @@ const integrationConfig = {
   restoreMocks: true,
 
   // Ignore patterns
-  testPathIgnorePatterns: [
-    '<rootDir>/.next/',
-    '<rootDir>/node_modules/',
-    '<rootDir>/coverage/',
-  ],
+  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/', '<rootDir>/coverage/'],
 
   // Enable verbose output
   verbose: true,

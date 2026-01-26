@@ -15,21 +15,30 @@ export async function POST(request: NextRequest) {
     switch (type) {
       case 'user_performance':
         if (!userId) {
-          return NextResponse.json({ error: 'User ID is required for user performance export' }, { status: 400 })
+          return NextResponse.json(
+            { error: 'User ID is required for user performance export' },
+            { status: 400 }
+          )
         }
         exportData = await exportService.exportUserPerformance(userId, options)
         break
 
       case 'test_session':
         if (!testAttemptId) {
-          return NextResponse.json({ error: 'Test attempt ID is required for test session export' }, { status: 400 })
+          return NextResponse.json(
+            { error: 'Test attempt ID is required for test session export' },
+            { status: 400 }
+          )
         }
         exportData = await exportService.exportTestSession(testAttemptId, options)
         break
 
       case 'class_analytics':
         if (!grade) {
-          return NextResponse.json({ error: 'Grade is required for class analytics export' }, { status: 400 })
+          return NextResponse.json(
+            { error: 'Grade is required for class analytics export' },
+            { status: 400 }
+          )
         }
         exportData = await exportService.exportClassAnalytics(grade, options)
         break
@@ -66,7 +75,7 @@ export async function POST(request: NextRequest) {
         // Return JSON data for preview
         return NextResponse.json({
           success: true,
-          data: exportData
+          data: exportData,
         })
     }
 
@@ -74,15 +83,11 @@ export async function POST(request: NextRequest) {
     return new NextResponse(responseData, {
       headers: {
         'Content-Type': contentType,
-        'Content-Disposition': `attachment; filename="${filename}"`
-      }
+        'Content-Disposition': `attachment; filename="${filename}"`,
+      },
     })
-
   } catch (error) {
     console.error('Error exporting data:', error)
-    return NextResponse.json(
-      { error: 'Failed to export data' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to export data' }, { status: 500 })
   }
 }

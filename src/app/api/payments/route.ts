@@ -130,10 +130,7 @@ export async function POST(request: NextRequest) {
     const rawBody = await request.json()
     const validationResult = paymentActionSchema.safeParse(rawBody)
     if (!validationResult.success) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid request format' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid request format' }, { status: 400 })
     }
 
     const { action, data } = validationResult.data

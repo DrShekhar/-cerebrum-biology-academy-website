@@ -104,8 +104,7 @@ export const en = {
   takeFirstStep: 'Take the first step towards your medical career',
   whyChooseCerebrum: 'Why Choose Cerebrum Biology Academy?',
   freeDemoClass: 'Free Demo Class',
-  experienceMethodology:
-    'Experience our teaching methodology with a complimentary biology session',
+  experienceMethodology: 'Experience our teaching methodology with a complimentary biology session',
   noHiddenFees: 'No Hidden Fees',
   transparentPricing: 'Transparent pricing with no surprise charges',
   otherWaysToReach: 'Other Ways to Reach Us',

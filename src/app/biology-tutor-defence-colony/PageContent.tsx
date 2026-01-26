@@ -57,12 +57,14 @@ const whyChooseUs = [
   {
     icon: Shield,
     title: 'Disciplined Approach',
-    description: 'Defence families value discipline. Our structured Biology coaching matches your expectations.',
+    description:
+      'Defence families value discipline. Our structured Biology coaching matches your expectations.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from DPS schools, Air Force Bal Bharati, and Army Schools.',
+    description:
+      'Proven track record with students from DPS schools, Air Force Bal Bharati, and Army Schools.',
   },
   {
     icon: GraduationCap,
@@ -72,7 +74,8 @@ const whyChooseUs = [
   {
     icon: Star,
     title: 'Transfer-Friendly',
-    description: 'Online format perfect for defence families with frequent transfers. Continue learning anywhere.',
+    description:
+      'Online format perfect for defence families with frequent transfers. Continue learning anywhere.',
   },
 ]
 
@@ -113,7 +116,8 @@ const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'Cerebrum Biology Academy - Biology Tutor Defence Colony',
-  description: 'Best Biology Tutor for Defence Colony students - Disciplined NEET & Board Preparation',
+  description:
+    'Best Biology Tutor for Defence Colony students - Disciplined NEET & Board Preparation',
   url: 'https://cerebrumbiologyacademy.com/biology-tutor-defence-colony',
   telephone: '+91-88264-44334',
   address: {
@@ -160,8 +164,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Defence Colony</span>
+              Biology Tutor in <span className="text-yellow-400">Defence Colony</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +172,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Personalized Biology tutoring for Defence Colony, Lajpat Nagar, Jangpura & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - disciplined coaching for focused students.
+              Personalized Biology tutoring for Defence Colony, Lajpat Nagar, Jangpura & nearby
+              areas. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - disciplined
+              coaching for focused students.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +202,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Defence%20Colony%20and%20interested%20in%20Biology%20tutoring"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +379,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Defence%20Colony%20and%20interested%20in%20Biology%20tutoring"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

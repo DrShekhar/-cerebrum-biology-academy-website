@@ -14,7 +14,10 @@ export async function GET(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { searchParams } = new URL(request.url)
@@ -155,6 +158,9 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('Error fetching worksheets:', error)
-    return NextResponse.json({ success: false, error: 'Failed to fetch worksheets' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to fetch worksheets' },
+      { status: 500 }
+    )
   }
 }

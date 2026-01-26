@@ -8,27 +8,18 @@ import { adaptiveTestingEngine } from '@/lib/adaptive-testing/AdaptiveTestingEng
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth/config'
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { sessionId: string } }
-) {
+export async function POST(request: NextRequest, { params }: { params: { sessionId: string } }) {
   try {
     // Get user session
     const session = await getServerSession(authOptions)
     if (!session?.user?.id) {
-      return NextResponse.json(
-        { error: 'Authentication required' },
-        { status: 401 }
-      )
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
     }
 
     const { sessionId } = params
 
     if (!sessionId) {
-      return NextResponse.json(
-        { error: 'Session ID is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Session ID is required' }, { status: 400 })
     }
 
     // Parse request body
@@ -44,10 +35,7 @@ export async function POST(
     }
 
     if (responseTime <= 0) {
-      return NextResponse.json(
-        { error: 'Response time must be positive' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Response time must be positive' }, { status: 400 })
     }
 
     // Process the response
@@ -63,30 +51,31 @@ export async function POST(
     return NextResponse.json({
       success: true,
       processed: result.processed,
-      nextItem: result.nextItem ? {
-        id: result.nextItem.id,
-        type: result.nextItem.type,
-        question: result.nextItem.question,
-        options: result.nextItem.options,
-        difficulty: result.nextItem.difficulty,
-        estimatedTime: result.nextItem.estimatedTime,
-        topic: result.nextItem.topic,
-        subtopic: result.nextItem.subtopic,
-        hints: result.nextItem.hints
-      } : null,
+      nextItem: result.nextItem
+        ? {
+            id: result.nextItem.id,
+            type: result.nextItem.type,
+            question: result.nextItem.question,
+            options: result.nextItem.options,
+            difficulty: result.nextItem.difficulty,
+            estimatedTime: result.nextItem.estimatedTime,
+            topic: result.nextItem.topic,
+            subtopic: result.nextItem.subtopic,
+            hints: result.nextItem.hints,
+          }
+        : null,
       sessionComplete: result.sessionComplete,
       adaptations: result.adaptations,
       insights: result.insights,
-      recommendations: result.recommendations
+      recommendations: result.recommendations,
     })
-
   } catch (error) {
     console.error('Error processing adaptive test response:', error)
 
     return NextResponse.json(
       {
         error: 'Failed to process response',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        details: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     )
@@ -97,8 +86,5 @@ export async function GET(
   _request: NextRequest,
   { params: _params }: { params: { sessionId: string } }
 ) {
-  return NextResponse.json(
-    { error: 'Method not allowed' },
-    { status: 405 }
-  )
+  return NextResponse.json({ error: 'Method not allowed' }, { status: 405 })
 }

@@ -13,8 +13,7 @@ export function CountryExamSystems({ country }: CountryExamSystemsProps) {
           We Cover All {country.name} Exam Systems
         </h2>
         <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-          Our expert tutors specialize in the curricula and exam formats specific
-          to {country.name}.
+          Our expert tutors specialize in the curricula and exam formats specific to {country.name}.
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

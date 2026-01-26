@@ -45,8 +45,7 @@ export function CampbellFloatingWhatsApp({
     return () => window.removeEventListener('scroll', handleScroll)
   }, [showAfterScroll])
 
-  const whatsappMessage =
-    customMessage || getCampbellWhatsAppMessage(messageType, messageParams)
+  const whatsappMessage = customMessage || getCampbellWhatsAppMessage(messageType, messageParams)
 
   const handleClick = async () => {
     await trackAndOpenWhatsApp({

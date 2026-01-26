@@ -92,22 +92,26 @@ const features = [
   {
     icon: Users,
     title: 'Tech-Savvy Batches (10-15)',
-    description: 'Exclusive batches for IT families with personalized attention and digital-first approach.',
+    description:
+      'Exclusive batches for IT families with personalized attention and digital-first approach.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality IT families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality IT families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement parents\' IT shift schedules.',
+    description:
+      "Morning, afternoon, and evening batches to complement parents' IT shift schedules.",
   },
   {
     icon: Shield,
@@ -127,7 +131,7 @@ const faqs = [
   {
     question: 'Why do Baner students choose online NEET coaching?',
     answer:
-      'Baner-Hinjewadi is Pune\'s IT corridor with tech-forward families who understand digital learning. Our online classes offer AIIMS faculty without the traffic to FC Road coaching centers. Save 2+ hours daily on Pune traffic.',
+      "Baner-Hinjewadi is Pune's IT corridor with tech-forward families who understand digital learning. Our online classes offer AIIMS faculty without the traffic to FC Road coaching centers. Save 2+ hours daily on Pune traffic.",
   },
   {
     question: 'Which areas in Baner do you serve?',
@@ -137,7 +141,7 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching in Baner?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Baner\'s premium education standards while offering superior flexibility. EMI options available for IT professionals.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Baner's premium education standards while offering superior flexibility. EMI options available for IT professionals.",
   },
   {
     question: 'How does this compare to coaching centers in FC Road?',
@@ -163,7 +167,7 @@ const premiumSchools = [
   'Akshara International School',
   'Sanskriti School',
   'The Orchid School',
-  'SSPM\'s Sri Sri Ravishankar Vidya Mandir',
+  "SSPM's Sri Sri Ravishankar Vidya Mandir",
   'Blue Ridge Public School',
   'Podar International School',
   'Symbiosis School',
@@ -186,7 +190,7 @@ const whyBaner = [
     icon: GraduationCap,
     title: 'BJMC Specialist',
     description:
-      'B.J. Medical College is Pune\'s dream. We have a proven track record of BJMC admissions from West Pune.',
+      "B.J. Medical College is Pune's dream. We have a proven track record of BJMC admissions from West Pune.",
   },
 ]
 
@@ -320,9 +324,7 @@ export default function NeetCoachingBanerPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-green-600" />
                   </div>
-                  <div className="text-2xl font-bold text-green-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-green-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">

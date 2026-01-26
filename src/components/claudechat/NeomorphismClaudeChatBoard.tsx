@@ -5,15 +5,7 @@ import React, { useState, useRef, useEffect } from 'react'
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Send,
-  Mic,
-  MicOff,
-  Image as ImageIcon,
-  Brain,
-  Volume2,
-  VolumeX,
-} from 'lucide-react'
+import { Send, Mic, MicOff, Image as ImageIcon, Brain, Volume2, VolumeX } from 'lucide-react'
 import { useShekharVoice } from '@/hooks/useShekharVoice'
 
 interface Message {

@@ -15,14 +15,10 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      data: comparativeAnalytics
+      data: comparativeAnalytics,
     })
-
   } catch (error) {
     console.error('Error fetching comparative analytics:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch comparative analytics' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to fetch comparative analytics' }, { status: 500 })
   }
 }

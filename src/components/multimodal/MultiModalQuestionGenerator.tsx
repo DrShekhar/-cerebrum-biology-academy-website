@@ -20,7 +20,7 @@ import {
   Clock,
   Share2,
   Settings,
-  Layers
+  Layers,
 } from 'lucide-react'
 
 interface MultiModalQuestion {
@@ -79,7 +79,9 @@ interface GenerationSettings {
 }
 
 const MultiModalQuestionGenerator: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'generate' | 'library' | 'preview' | 'settings'>('generate')
+  const [activeTab, setActiveTab] = useState<'generate' | 'library' | 'preview' | 'settings'>(
+    'generate'
+  )
   const [questions, setQuestions] = useState<MultiModalQuestion[]>([])
   const [currentQuestion, setCurrentQuestion] = useState<MultiModalQuestion | null>(null)
   const [isGenerating, setIsGenerating] = useState(false)
@@ -99,9 +101,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
       highContrast: false,
       largeText: false,
       audioDescriptions: true,
-      screenReader: true
+      screenReader: true,
     },
-    language: 'english'
+    language: 'english',
   })
 
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -121,7 +123,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
     'Molecular Biology',
     'Anatomy',
     'Taxonomy',
-    'Environmental Biology'
+    'Environmental Biology',
   ]
 
   useEffect(() => {
@@ -134,19 +136,25 @@ const MultiModalQuestionGenerator: React.FC = () => {
         id: 'mmq_1',
         type: 'image-based',
         content: {
-          primary: 'Identify the cellular organelle shown in the diagram and explain its function in cellular respiration.',
+          primary:
+            'Identify the cellular organelle shown in the diagram and explain its function in cellular respiration.',
           media: {
             type: 'image',
             url: '/biology-images/mitochondria-diagram.jpg',
-            alt: 'Cross-sectional diagram of mitochondria showing inner and outer membranes'
+            alt: 'Cross-sectional diagram of mitochondria showing inner and outer membranes',
           },
           instructions: 'Observe the structural features and identify the organelle.',
-          hints: ['Look at the double membrane structure', 'Notice the cristae formations', 'This is the powerhouse of the cell']
+          hints: [
+            'Look at the double membrane structure',
+            'Notice the cristae formations',
+            'This is the powerhouse of the cell',
+          ],
         },
         answers: {
           correct: ['Mitochondria', 'Mitochondrion'],
-          explanation: 'This is a mitochondrion, the cellular organelle responsible for ATP production through cellular respiration. The inner membrane contains cristae that increase surface area for oxidative phosphorylation.',
-          audioExplanation: 'mitochondria-explanation.mp3'
+          explanation:
+            'This is a mitochondrion, the cellular organelle responsible for ATP production through cellular respiration. The inner membrane contains cristae that increase surface area for oxidative phosphorylation.',
+          audioExplanation: 'mitochondria-explanation.mp3',
         },
         difficulty: 'medium',
         topic: 'Cell Biology',
@@ -154,35 +162,42 @@ const MultiModalQuestionGenerator: React.FC = () => {
         marks: 3,
         estimatedTime: 4,
         accessibility: {
-          audioDescription: 'A cross-sectional diagram showing the double-membrane structure of mitochondria with folded inner membrane called cristae',
+          audioDescription:
+            'A cross-sectional diagram showing the double-membrane structure of mitochondria with folded inner membrane called cristae',
           textAlternatives: ['Mitochondria diagram', 'Cellular organelle cross-section'],
-          screenReaderFriendly: true
+          screenReaderFriendly: true,
         },
         metadata: {
           createdAt: new Date().toISOString(),
           source: 'ai-generated',
           biologyTerms: ['mitochondria', 'cristae', 'ATP', 'cellular respiration'],
-          learningObjectives: ['Identify cellular organelles', 'Understand mitochondrial function']
-        }
+          learningObjectives: ['Identify cellular organelles', 'Understand mitochondrial function'],
+        },
       },
       {
         id: 'mmq_2',
         type: 'audio-based',
         content: {
-          primary: 'Listen to the heartbeat recording and identify the heart rate and any abnormalities.',
+          primary:
+            'Listen to the heartbeat recording and identify the heart rate and any abnormalities.',
           media: {
             type: 'audio',
             url: '/biology-audio/heartbeat-sample.mp3',
             transcript: 'lub-dub, lub-dub, lub-dub (normal heart rhythm at 72 BPM)',
-            duration: 15
+            duration: 15,
           },
           instructions: 'Count the heartbeats and analyze the rhythm.',
-          hints: ['Normal resting heart rate is 60-100 BPM', 'Listen for regularity', 'Count lub-dub as one beat']
+          hints: [
+            'Normal resting heart rate is 60-100 BPM',
+            'Listen for regularity',
+            'Count lub-dub as one beat',
+          ],
         },
         answers: {
           correct: ['72 BPM', 'Normal rhythm'],
-          explanation: 'The recording shows a normal heart rhythm at approximately 72 beats per minute. The lub-dub sounds represent the closing of heart valves during the cardiac cycle.',
-          audioExplanation: 'heartbeat-explanation.mp3'
+          explanation:
+            'The recording shows a normal heart rhythm at approximately 72 beats per minute. The lub-dub sounds represent the closing of heart valves during the cardiac cycle.',
+          audioExplanation: 'heartbeat-explanation.mp3',
         },
         difficulty: 'easy',
         topic: 'Human Physiology',
@@ -192,14 +207,14 @@ const MultiModalQuestionGenerator: React.FC = () => {
         accessibility: {
           audioDescription: 'Clear heartbeat recording with regular rhythm',
           textAlternatives: ['Heartbeat audio clip', 'Cardiac rhythm recording'],
-          screenReaderFriendly: true
+          screenReaderFriendly: true,
         },
         metadata: {
           createdAt: new Date().toISOString(),
           source: 'ai-generated',
           biologyTerms: ['heart rate', 'cardiac cycle', 'lub-dub'],
-          learningObjectives: ['Analyze cardiac rhythms', 'Calculate heart rate']
-        }
+          learningObjectives: ['Analyze cardiac rhythms', 'Calculate heart rate'],
+        },
       },
       {
         id: 'mmq_3',
@@ -209,15 +224,20 @@ const MultiModalQuestionGenerator: React.FC = () => {
           media: {
             type: 'video',
             url: '/biology-videos/plant-tropism.mp4',
-            duration: 30
+            duration: 30,
           },
           instructions: 'Observe the direction of plant growth in response to stimuli.',
-          hints: ['Notice the light source', 'Observe growth direction', 'This is a response to environmental stimulus']
+          hints: [
+            'Notice the light source',
+            'Observe growth direction',
+            'This is a response to environmental stimulus',
+          ],
         },
         answers: {
           correct: ['Phototropism', 'Positive phototropism'],
-          explanation: 'The video demonstrates positive phototropism, where the plant grows toward the light source. This is mediated by auxin hormone distribution.',
-          audioExplanation: 'phototropism-explanation.mp3'
+          explanation:
+            'The video demonstrates positive phototropism, where the plant grows toward the light source. This is mediated by auxin hormone distribution.',
+          audioExplanation: 'phototropism-explanation.mp3',
         },
         difficulty: 'medium',
         topic: 'Plant Physiology',
@@ -225,17 +245,18 @@ const MultiModalQuestionGenerator: React.FC = () => {
         marks: 3,
         estimatedTime: 5,
         accessibility: {
-          audioDescription: 'Time-lapse video showing plant stem bending toward light source over 24 hours',
+          audioDescription:
+            'Time-lapse video showing plant stem bending toward light source over 24 hours',
           textAlternatives: ['Plant movement video', 'Tropism demonstration'],
-          screenReaderFriendly: true
+          screenReaderFriendly: true,
         },
         metadata: {
           createdAt: new Date().toISOString(),
           source: 'ai-generated',
           biologyTerms: ['phototropism', 'auxin', 'plant movement'],
-          learningObjectives: ['Understand plant responses', 'Identify types of tropism']
-        }
-      }
+          learningObjectives: ['Understand plant responses', 'Identify types of tropism'],
+        },
+      },
     ]
 
     setQuestions(sampleQuestions)
@@ -263,7 +284,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
       mediaRecorder.onstop = () => {
         const audioBlob = new Blob(audioChunks, { type: 'audio/wav' })
         setRecordedAudio(audioBlob)
-        stream.getTracks().forEach(track => track.stop())
+        stream.getTracks().forEach((track) => track.stop())
       }
 
       mediaRecorder.start()
@@ -286,7 +307,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
 
     // Simulate AI generation process
     const progressInterval = setInterval(() => {
-      setGenerationProgress(prev => {
+      setGenerationProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressInterval)
           setIsGenerating(false)
@@ -299,7 +320,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
     // Simulate API call to generate questions
     setTimeout(() => {
       const newQuestions = generateQuestionsBasedOnSettings()
-      setQuestions(prev => [...prev, ...newQuestions])
+      setQuestions((prev) => [...prev, ...newQuestions])
       setGenerationProgress(100)
       setIsGenerating(false)
     }, 5000)
@@ -314,12 +335,16 @@ const MultiModalQuestionGenerator: React.FC = () => {
         content: {
           primary: 'Drag and drop the organelles to their correct locations in the cell.',
           instructions: 'Use the interactive cell diagram to place organelles correctly.',
-          hints: ['Nucleus goes in the center', 'Mitochondria are scattered throughout', 'ER connects to nucleus']
+          hints: [
+            'Nucleus goes in the center',
+            'Mitochondria are scattered throughout',
+            'ER connects to nucleus',
+          ],
         },
         answers: {
           correct: ['All organelles placed correctly'],
           explanation: 'Cell organelles have specific locations that relate to their functions.',
-          audioExplanation: 'cell-organelles-explanation.mp3'
+          audioExplanation: 'cell-organelles-explanation.mp3',
         },
         difficulty: settings.difficulty === 'adaptive' ? 'medium' : settings.difficulty,
         topic: settings.topic,
@@ -329,15 +354,15 @@ const MultiModalQuestionGenerator: React.FC = () => {
         accessibility: {
           audioDescription: 'Interactive cell diagram with draggable organelles',
           textAlternatives: ['Cell diagram exercise', 'Organelle placement activity'],
-          screenReaderFriendly: true
+          screenReaderFriendly: true,
         },
         metadata: {
           createdAt: new Date().toISOString(),
           source: 'ai-generated',
           biologyTerms: ['cell', 'organelles', 'nucleus', 'mitochondria'],
-          learningObjectives: ['Identify cell organelles', 'Understand cellular organization']
-        }
-      }
+          learningObjectives: ['Identify cell organelles', 'Understand cellular organization'],
+        },
+      },
     ]
   }
 
@@ -385,7 +410,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
             { id: 'generate', label: 'Generate', icon: Zap },
             { id: 'library', label: 'Library', icon: BookOpen },
             { id: 'preview', label: 'Preview', icon: Eye },
-            { id: 'settings', label: 'Settings', icon: Settings }
+            { id: 'settings', label: 'Settings', icon: Settings },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -429,7 +454,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
                     </label>
                     <select
                       value={settings.modality}
-                      onChange={(e) => setSettings(prev => ({ ...prev, modality: e.target.value as any }))}
+                      onChange={(e) =>
+                        setSettings((prev) => ({ ...prev, modality: e.target.value as any }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="image">Image-Based</option>
@@ -445,11 +472,13 @@ const MultiModalQuestionGenerator: React.FC = () => {
                     </label>
                     <select
                       value={settings.topic}
-                      onChange={(e) => setSettings(prev => ({ ...prev, topic: e.target.value }))}
+                      onChange={(e) => setSettings((prev) => ({ ...prev, topic: e.target.value }))}
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
-                      {biologyTopics.map(topic => (
-                        <option key={topic} value={topic}>{topic}</option>
+                      {biologyTopics.map((topic) => (
+                        <option key={topic} value={topic}>
+                          {topic}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -460,7 +489,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
                     </label>
                     <select
                       value={settings.difficulty}
-                      onChange={(e) => setSettings(prev => ({ ...prev, difficulty: e.target.value as any }))}
+                      onChange={(e) =>
+                        setSettings((prev) => ({ ...prev, difficulty: e.target.value as any }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="easy">Easy</option>
@@ -479,7 +510,12 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       min="1"
                       max="20"
                       value={settings.questionCount}
-                      onChange={(e) => setSettings(prev => ({ ...prev, questionCount: parseInt(e.target.value) }))}
+                      onChange={(e) =>
+                        setSettings((prev) => ({
+                          ...prev,
+                          questionCount: parseInt(e.target.value),
+                        }))
+                      }
                       className="w-full"
                     />
                   </div>
@@ -489,7 +525,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       <input
                         type="checkbox"
                         checked={settings.includeHints}
-                        onChange={(e) => setSettings(prev => ({ ...prev, includeHints: e.target.checked }))}
+                        onChange={(e) =>
+                          setSettings((prev) => ({ ...prev, includeHints: e.target.checked }))
+                        }
                         className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                       />
                       <span className="ml-2 text-sm">Include hints</span>
@@ -498,7 +536,12 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       <input
                         type="checkbox"
                         checked={settings.includeAudioExplanations}
-                        onChange={(e) => setSettings(prev => ({ ...prev, includeAudioExplanations: e.target.checked }))}
+                        onChange={(e) =>
+                          setSettings((prev) => ({
+                            ...prev,
+                            includeAudioExplanations: e.target.checked,
+                          }))
+                        }
                         className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                       />
                       <span className="ml-2 text-sm">Include audio explanations</span>
@@ -565,7 +608,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
                     >
                       <Upload className="w-8 h-8 text-gray-400" />
                       <span className="text-gray-600">Upload Images, Videos, or Audio</span>
-                      <span className="text-xs text-gray-400">Drag & drop files here or click to browse</span>
+                      <span className="text-xs text-gray-400">
+                        Drag & drop files here or click to browse
+                      </span>
                     </button>
                   </div>
 
@@ -574,9 +619,15 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       <h4 className="text-sm font-medium text-gray-700">Uploaded Files:</h4>
                       {selectedFiles.map((file, index) => (
                         <div key={index} className="flex items-center gap-3 p-2 bg-gray-50 rounded">
-                          {file.type.startsWith('image/') && <ImageIcon className="w-4 h-4 text-green-600" />}
-                          {file.type.startsWith('video/') && <Video className="w-4 h-4 text-blue-600" />}
-                          {file.type.startsWith('audio/') && <Volume2 className="w-4 h-4 text-purple-600" />}
+                          {file.type.startsWith('image/') && (
+                            <ImageIcon className="w-4 h-4 text-green-600" />
+                          )}
+                          {file.type.startsWith('video/') && (
+                            <Video className="w-4 h-4 text-blue-600" />
+                          )}
+                          {file.type.startsWith('audio/') && (
+                            <Volume2 className="w-4 h-4 text-purple-600" />
+                          )}
                           <span className="text-sm text-gray-700">{file.name}</span>
                         </div>
                       ))}
@@ -650,15 +701,22 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       {currentQuestion.content.media.type === 'image' && (
                         <div className="text-center">
                           <ImageIcon className="w-24 h-24 mx-auto text-gray-400 mb-2" />
-                          <p className="text-sm text-gray-600">{currentQuestion.content.media.alt}</p>
+                          <p className="text-sm text-gray-600">
+                            {currentQuestion.content.media.alt}
+                          </p>
                         </div>
                       )}
                       {currentQuestion.content.media.type === 'audio' && (
                         <div className="text-center">
                           <Volume2 className="w-24 h-24 mx-auto text-gray-400 mb-2" />
-                          <p className="text-sm text-gray-600">Audio Duration: {currentQuestion.content.media.duration}s</p>
+                          <p className="text-sm text-gray-600">
+                            Audio Duration: {currentQuestion.content.media.duration}s
+                          </p>
                           <button
-                            onClick={() => currentQuestion.content.media?.url && playAudio(currentQuestion.content.media.url)}
+                            onClick={() =>
+                              currentQuestion.content.media?.url &&
+                              playAudio(currentQuestion.content.media.url)
+                            }
                             className="mt-2 flex items-center gap-2 mx-auto px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                           >
                             <Play className="w-4 h-4" />
@@ -669,7 +727,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       {currentQuestion.content.media.type === 'video' && (
                         <div className="text-center">
                           <Video className="w-24 h-24 mx-auto text-gray-400 mb-2" />
-                          <p className="text-sm text-gray-600">Video Duration: {currentQuestion.content.media.duration}s</p>
+                          <p className="text-sm text-gray-600">
+                            Video Duration: {currentQuestion.content.media.duration}s
+                          </p>
                         </div>
                       )}
                     </div>
@@ -680,21 +740,28 @@ const MultiModalQuestionGenerator: React.FC = () => {
                       <h4 className="text-sm font-medium text-yellow-800 mb-2">Hints:</h4>
                       <ul className="space-y-1">
                         {currentQuestion.content.hints.map((hint, index) => (
-                          <li key={index} className="text-sm text-yellow-700">• {hint}</li>
+                          <li key={index} className="text-sm text-yellow-700">
+                            • {hint}
+                          </li>
                         ))}
                       </ul>
                     </div>
                   )}
 
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                    <h4 className="text-sm font-medium text-green-800 mb-2">Answer & Explanation:</h4>
+                    <h4 className="text-sm font-medium text-green-800 mb-2">
+                      Answer & Explanation:
+                    </h4>
                     <p className="text-sm text-green-700 mb-2">
                       <strong>Correct Answer:</strong> {currentQuestion.answers.correct.join(', ')}
                     </p>
                     <p className="text-sm text-green-700">{currentQuestion.answers.explanation}</p>
                     {currentQuestion.answers.audioExplanation && (
                       <button
-                        onClick={() => currentQuestion.answers.audioExplanation && playAudio(`/audio/${currentQuestion.answers.audioExplanation}`)}
+                        onClick={() =>
+                          currentQuestion.answers.audioExplanation &&
+                          playAudio(`/audio/${currentQuestion.answers.audioExplanation}`)
+                        }
                         className="mt-2 flex items-center gap-2 px-3 py-1 bg-green-600 text-white text-xs rounded hover:bg-green-700 transition-colors"
                       >
                         <Volume2 className="w-3 h-3" />
@@ -762,9 +829,15 @@ const MultiModalQuestionGenerator: React.FC = () => {
                           </span>
                           {question.content.media && (
                             <span className="flex items-center gap-1">
-                              {question.content.media.type === 'image' && <ImageIcon className="w-4 h-4" />}
-                              {question.content.media.type === 'audio' && <Volume2 className="w-4 h-4" />}
-                              {question.content.media.type === 'video' && <Video className="w-4 h-4" />}
+                              {question.content.media.type === 'image' && (
+                                <ImageIcon className="w-4 h-4" />
+                              )}
+                              {question.content.media.type === 'audio' && (
+                                <Volume2 className="w-4 h-4" />
+                              )}
+                              {question.content.media.type === 'video' && (
+                                <Video className="w-4 h-4" />
+                              )}
                               {question.content.media.type}
                             </span>
                           )}
@@ -809,10 +882,12 @@ const MultiModalQuestionGenerator: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.accessibility.highContrast}
-                    onChange={(e) => setSettings(prev => ({
-                      ...prev,
-                      accessibility: { ...prev.accessibility, highContrast: e.target.checked }
-                    }))}
+                    onChange={(e) =>
+                      setSettings((prev) => ({
+                        ...prev,
+                        accessibility: { ...prev.accessibility, highContrast: e.target.checked },
+                      }))
+                    }
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
                   <span className="ml-2">High contrast mode</span>
@@ -822,10 +897,12 @@ const MultiModalQuestionGenerator: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.accessibility.largeText}
-                    onChange={(e) => setSettings(prev => ({
-                      ...prev,
-                      accessibility: { ...prev.accessibility, largeText: e.target.checked }
-                    }))}
+                    onChange={(e) =>
+                      setSettings((prev) => ({
+                        ...prev,
+                        accessibility: { ...prev.accessibility, largeText: e.target.checked },
+                      }))
+                    }
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
                   <span className="ml-2">Large text</span>
@@ -835,10 +912,15 @@ const MultiModalQuestionGenerator: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.accessibility.audioDescriptions}
-                    onChange={(e) => setSettings(prev => ({
-                      ...prev,
-                      accessibility: { ...prev.accessibility, audioDescriptions: e.target.checked }
-                    }))}
+                    onChange={(e) =>
+                      setSettings((prev) => ({
+                        ...prev,
+                        accessibility: {
+                          ...prev.accessibility,
+                          audioDescriptions: e.target.checked,
+                        },
+                      }))
+                    }
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
                   <span className="ml-2">Audio descriptions</span>
@@ -848,10 +930,12 @@ const MultiModalQuestionGenerator: React.FC = () => {
                   <input
                     type="checkbox"
                     checked={settings.accessibility.screenReader}
-                    onChange={(e) => setSettings(prev => ({
-                      ...prev,
-                      accessibility: { ...prev.accessibility, screenReader: e.target.checked }
-                    }))}
+                    onChange={(e) =>
+                      setSettings((prev) => ({
+                        ...prev,
+                        accessibility: { ...prev.accessibility, screenReader: e.target.checked },
+                      }))
+                    }
                     className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                   />
                   <span className="ml-2">Screen reader optimization</span>
@@ -863,7 +947,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
                   </label>
                   <select
                     value={settings.language}
-                    onChange={(e) => setSettings(prev => ({ ...prev, language: e.target.value as any }))}
+                    onChange={(e) =>
+                      setSettings((prev) => ({ ...prev, language: e.target.value as any }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   >
                     <option value="english">English</option>
@@ -892,13 +978,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Question Creativity Level
                   </label>
-                  <input
-                    type="range"
-                    min="1"
-                    max="10"
-                    defaultValue="7"
-                    className="w-full"
-                  />
+                  <input type="range" min="1" max="10" defaultValue="7" className="w-full" />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
                     <span>Conservative</span>
                     <span>Creative</span>

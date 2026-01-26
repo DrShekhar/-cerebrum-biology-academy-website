@@ -51,16 +51,22 @@ const SCOPE_LABELS: Record<LeaderboardScope, string> = {
   ALL_TIME: 'All Time',
 }
 
-const TYPE_CONFIG: Record<LeaderboardType, {
-  label: string
-  icon: React.ComponentType<{ className?: string }>
-}> = {
+const TYPE_CONFIG: Record<
+  LeaderboardType,
+  {
+    label: string
+    icon: React.ComponentType<{ className?: string }>
+  }
+> = {
   CLASS: { label: 'Class', icon: Users },
   BATCH: { label: 'Batch', icon: Users },
   GLOBAL: { label: 'Global', icon: Globe },
 }
 
-function getRankChange(current: number, previous: number | null): {
+function getRankChange(
+  current: number,
+  previous: number | null
+): {
   direction: 'up' | 'down' | 'same'
   amount: number
 } {
@@ -112,8 +118,8 @@ function LeaderboardRow({ entry, index }: { entry: LeaderboardEntry; index: numb
         entry.isCurrentUser
           ? 'bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500'
           : index % 2 === 0
-          ? 'bg-white'
-          : 'bg-gray-50'
+            ? 'bg-white'
+            : 'bg-gray-50'
       }`}
     >
       {/* Rank */}
@@ -164,7 +170,9 @@ function LeaderboardRow({ entry, index }: { entry: LeaderboardEntry; index: numb
         {/* Name and Level */}
         <div className="min-w-0">
           <div className="flex items-center space-x-2">
-            <span className={`font-semibold truncate ${entry.isCurrentUser ? 'text-purple-700' : 'text-gray-900'}`}>
+            <span
+              className={`font-semibold truncate ${entry.isCurrentUser ? 'text-purple-700' : 'text-gray-900'}`}
+            >
               {entry.userName}
               {entry.isCurrentUser && <span className="text-purple-500 ml-1">(You)</span>}
             </span>

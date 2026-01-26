@@ -17,7 +17,7 @@ import {
   Zap,
   RefreshCw,
   Edit3,
-  X
+  X,
 } from 'lucide-react'
 
 interface Question {
@@ -62,7 +62,7 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
   currentIndex,
   onIndexChange,
   onQuestionEdit,
-  isGenerating
+  isGenerating,
 }) => {
   const [config, setConfig] = useState<PreviewConfiguration>({
     showAnswers: false,
@@ -72,7 +72,7 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
     viewMode: 'student',
     layout: 'detailed',
     autoAdvance: false,
-    previewSpeed: 3000
+    previewSpeed: 3000,
   })
 
   const [isPlaying, setIsPlaying] = useState(false)
@@ -95,7 +95,14 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
       }, config.previewSpeed)
     }
     return () => clearInterval(interval)
-  }, [isPlaying, currentIndex, questions.length, config.autoAdvance, config.previewSpeed, onIndexChange])
+  }, [
+    isPlaying,
+    currentIndex,
+    questions.length,
+    config.autoAdvance,
+    config.previewSpeed,
+    onIndexChange,
+  ])
 
   // Timer functionality
   useEffect(() => {
@@ -104,7 +111,7 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
       let interval: NodeJS.Timeout
       if (isPlaying) {
         interval = setInterval(() => {
-          setTimeRemaining(prev => Math.max(0, prev - 1))
+          setTimeRemaining((prev) => Math.max(0, prev - 1))
         }, 1000)
       }
       return () => clearInterval(interval)
@@ -135,10 +142,14 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'easy': return 'text-green-600 bg-green-50 border-green-200'
-      case 'medium': return 'text-yellow-600 bg-yellow-50 border-yellow-200'
-      case 'hard': return 'text-red-600 bg-red-50 border-red-200'
-      default: return 'text-gray-600 bg-gray-50 border-gray-200'
+      case 'easy':
+        return 'text-green-600 bg-green-50 border-green-200'
+      case 'medium':
+        return 'text-yellow-600 bg-yellow-50 border-yellow-200'
+      case 'hard':
+        return 'text-red-600 bg-red-50 border-red-200'
+      default:
+        return 'text-gray-600 bg-gray-50 border-gray-200'
     }
   }
 
@@ -148,7 +159,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
         <div className="text-center space-y-4">
           <RefreshCw className="w-12 h-12 mx-auto text-blue-600 animate-spin" />
           <h3 className="text-xl font-semibold text-gray-800">Generating Questions...</h3>
-          <p className="text-gray-600">AI is creating your test questions. Preview will appear here.</p>
+          <p className="text-gray-600">
+            AI is creating your test questions. Preview will appear here.
+          </p>
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div className="bg-blue-600 h-2 rounded-full animate-pulse" style={{ width: '60%' }} />
           </div>
@@ -170,7 +183,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
   }
 
   return (
-    <div className={`space-y-4 ${isFullscreen ? 'fixed inset-4 z-50 bg-white p-6 rounded-xl shadow-2xl overflow-y-auto' : ''}`}>
+    <div
+      className={`space-y-4 ${isFullscreen ? 'fixed inset-4 z-50 bg-white p-6 rounded-xl shadow-2xl overflow-y-auto' : ''}`}
+    >
       {/* Preview Header */}
       <div className="bg-white rounded-xl p-4 border">
         <div className="flex justify-between items-center mb-4">
@@ -263,7 +278,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                   <label className="text-sm font-medium text-gray-700">View Mode</label>
                   <select
                     value={config.viewMode}
-                    onChange={(e) => setConfig(prev => ({ ...prev, viewMode: e.target.value as any }))}
+                    onChange={(e) =>
+                      setConfig((prev) => ({ ...prev, viewMode: e.target.value as any }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="student">Student View</option>
@@ -276,7 +293,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                   <label className="text-sm font-medium text-gray-700">Layout</label>
                   <select
                     value={config.layout}
-                    onChange={(e) => setConfig(prev => ({ ...prev, layout: e.target.value as any }))}
+                    onChange={(e) =>
+                      setConfig((prev) => ({ ...prev, layout: e.target.value as any }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="compact">Compact</option>
@@ -291,10 +310,14 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                     <input
                       type="checkbox"
                       checked={config.autoAdvance}
-                      onChange={(e) => setConfig(prev => ({ ...prev, autoAdvance: e.target.checked }))}
+                      onChange={(e) =>
+                        setConfig((prev) => ({ ...prev, autoAdvance: e.target.checked }))
+                      }
                       className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                     />
-                    <span className="text-sm text-gray-600">Every {config.previewSpeed / 1000}s</span>
+                    <span className="text-sm text-gray-600">
+                      Every {config.previewSpeed / 1000}s
+                    </span>
                   </div>
                 </div>
 
@@ -305,7 +328,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                       <input
                         type="checkbox"
                         checked={config.showAnswers}
-                        onChange={(e) => setConfig(prev => ({ ...prev, showAnswers: e.target.checked }))}
+                        onChange={(e) =>
+                          setConfig((prev) => ({ ...prev, showAnswers: e.target.checked }))
+                        }
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />
                       Answers
@@ -314,7 +339,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                       <input
                         type="checkbox"
                         checked={config.showExplanations}
-                        onChange={(e) => setConfig(prev => ({ ...prev, showExplanations: e.target.checked }))}
+                        onChange={(e) =>
+                          setConfig((prev) => ({ ...prev, showExplanations: e.target.checked }))
+                        }
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />
                       Explanations
@@ -323,7 +350,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                       <input
                         type="checkbox"
                         checked={config.showHints}
-                        onChange={(e) => setConfig(prev => ({ ...prev, showHints: e.target.checked }))}
+                        onChange={(e) =>
+                          setConfig((prev) => ({ ...prev, showHints: e.target.checked }))
+                        }
                         className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                       />
                       Hints
@@ -352,7 +381,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
                 Q{currentIndex + 1}
               </span>
-              <span className={`px-2 py-1 rounded border text-xs font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}>
+              <span
+                className={`px-2 py-1 rounded border text-xs font-medium ${getDifficultyColor(currentQuestion.difficulty)}`}
+              >
                 {currentQuestion.difficulty.toUpperCase()}
               </span>
               <span className="text-sm text-gray-500">
@@ -529,9 +560,11 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                   ? 'border-blue-500 bg-blue-50'
                   : 'border-gray-200 hover:border-gray-300'
               } ${
-                question.difficulty === 'easy' ? 'bg-green-50' :
-                question.difficulty === 'medium' ? 'bg-yellow-50' :
-                'bg-red-50'
+                question.difficulty === 'easy'
+                  ? 'bg-green-50'
+                  : question.difficulty === 'medium'
+                    ? 'bg-yellow-50'
+                    : 'bg-red-50'
               }`}
             >
               <span className="text-sm font-medium text-gray-700">{index + 1}</span>

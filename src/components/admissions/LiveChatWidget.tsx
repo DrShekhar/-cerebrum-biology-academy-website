@@ -28,7 +28,9 @@ interface LiveChatWidgetProps {
   whatsappNumber?: string
 }
 
-export function LiveChatWidget({ whatsappNumber = CONTACT_INFO.phone.primary }: LiveChatWidgetProps) {
+export function LiveChatWidget({
+  whatsappNumber = CONTACT_INFO.phone.primary,
+}: LiveChatWidgetProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedFAQ, setSelectedFAQ] = useState<FAQ | null>(null)
 

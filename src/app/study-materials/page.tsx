@@ -2,17 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import {
-  BookOpen,
-  Download,
-  FileText,
-  Video,
-  Search,
-  Star,
-  Users,
-  Zap,
-  Eye,
-} from 'lucide-react'
+import { BookOpen, Download, FileText, Video, Search, Star, Users, Zap, Eye } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 const studyMaterials = [

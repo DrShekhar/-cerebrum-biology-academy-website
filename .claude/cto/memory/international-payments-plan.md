@@ -20,6 +20,7 @@
 ### Option A: Razorpay International (Recommended)
 
 **Pros:**
+
 - Same integration, minimal code changes
 - Supports 100+ currencies
 - Auto currency conversion to INR for settlement
@@ -27,11 +28,13 @@
 - Lower integration effort
 
 **Cons:**
+
 - Settlement in INR only
 - 2% international card fees
 - Limited to Razorpay supported countries
 
 **Implementation:**
+
 1. Enable International Payments in Razorpay Dashboard
 2. Update `create-order` to accept currency parameter
 3. Add currency detection based on user location
@@ -40,6 +43,7 @@
 ### Option B: Stripe (Secondary International)
 
 **Pros:**
+
 - Best for US/EU markets
 - Native multi-currency settlement
 - Superior fraud detection
@@ -47,6 +51,7 @@
 - PaymentIntents API is modern
 
 **Cons:**
+
 - Separate integration effort
 - Two dashboards to manage
 - Need Stripe Atlas for Indian business
@@ -56,11 +61,13 @@
 ### Option C: PayPal (Optional)
 
 **Pros:**
+
 - Trusted by international users
 - PayPal balance payments
 - Popular in US market
 
 **Cons:**
+
 - Higher fees (4.4% + fixed fee)
 - Holds/disputes more common
 - Dated integration pattern
@@ -102,6 +109,7 @@
 ### Phase 1: Razorpay International (Week 1-2)
 
 **Tasks:**
+
 1. [ ] Enable International on Razorpay Dashboard
 2. [ ] Update `create-order/route.ts` to support multiple currencies
 3. [ ] Add geo-location detection (via IP or user profile)
@@ -127,7 +135,7 @@ export async function POST(request: NextRequest) {
   const order = await razorpay.orders.create({
     amount: Math.round(amount * 100), // Smallest currency unit
     currency,
-    ...rest
+    ...rest,
   })
 }
 ```
@@ -137,6 +145,7 @@ export async function POST(request: NextRequest) {
 **For NRI students in US/UK/Australia**
 
 **Tasks:**
+
 1. [ ] Set up Stripe account (via Stripe Atlas if needed)
 2. [ ] Install Stripe SDK: `npm install stripe @stripe/stripe-js`
 3. [ ] Create Stripe API routes
@@ -145,6 +154,7 @@ export async function POST(request: NextRequest) {
 6. [ ] Update database schema for Stripe IDs
 
 **New Files:**
+
 ```
 src/lib/payments/stripeService.ts
 src/app/api/payments/stripe/create-intent/route.ts
@@ -155,6 +165,7 @@ src/components/payments/PaymentMethodSelector.tsx
 ### Phase 3: Unified Payment Service (Week 5)
 
 **Tasks:**
+
 1. [ ] Create abstract PaymentProvider interface
 2. [ ] Implement Razorpay adapter
 3. [ ] Implement Stripe adapter
@@ -177,18 +188,19 @@ export async function detectUserCurrency(request: NextRequest): Promise<string> 
   }
 
   // 2. Geo-IP detection
-  const country = request.headers.get('cf-ipcountry') // Cloudflare
-    || request.headers.get('x-vercel-ip-country') // Vercel
+  const country =
+    request.headers.get('cf-ipcountry') || // Cloudflare
+    request.headers.get('x-vercel-ip-country') // Vercel
 
   const currencyMap: Record<string, string> = {
-    'IN': 'INR',
-    'US': 'USD',
-    'GB': 'GBP',
-    'EU': 'EUR',
-    'AU': 'AUD',
-    'CA': 'CAD',
-    'AE': 'AED',
-    'SG': 'SGD',
+    IN: 'INR',
+    US: 'USD',
+    GB: 'GBP',
+    EU: 'EUR',
+    AU: 'AUD',
+    CA: 'CAD',
+    AE: 'AED',
+    SG: 'SGD',
   }
 
   return currencyMap[country] || 'USD' // Default to USD for international
@@ -199,13 +211,14 @@ export async function detectUserCurrency(request: NextRequest): Promise<string> 
 
 ## Pricing Strategy
 
-| Course | INR | USD | EUR | GBP |
-|--------|-----|-----|-----|-----|
+| Course                 | INR     | USD    | EUR    | GBP  |
+| ---------------------- | ------- | ------ | ------ | ---- |
 | Intensive NEET Biology | ₹99,000 | $1,199 | €1,099 | £949 |
-| Foundation Course | ₹49,000 | $599 | €549 | £479 |
-| Crash Course | ₹29,000 | $349 | €329 | £289 |
+| Foundation Course      | ₹49,000 | $599   | €549   | £479 |
+| Crash Course           | ₹29,000 | $349   | €329   | £289 |
 
 **Pricing Logic:**
+
 - INR: Base price
 - USD: ~1.2% premium (covers forex + fees)
 - EUR: ~10% premium
@@ -259,11 +272,13 @@ model Payment {
 ## Tax & Compliance
 
 ### India (GST)
+
 - 18% GST on educational services
 - Already included in INR pricing
 - GSTIN displayed on invoices
 
 ### International
+
 - No GST for exports of services
 - Check local tax requirements for:
   - US: No federal sales tax on digital services
@@ -294,12 +309,12 @@ model Payment {
 
 ## Estimated Timeline
 
-| Phase | Duration | Outcome |
-|-------|----------|---------|
-| Phase 1 (Razorpay Int'l) | 2 weeks | Multi-currency via Razorpay |
-| Phase 2 (Stripe) | 2 weeks | USD/EUR via Stripe |
-| Phase 3 (Unified) | 1 week | Single payment service |
-| Testing & QA | 1 week | Production ready |
+| Phase                    | Duration | Outcome                     |
+| ------------------------ | -------- | --------------------------- |
+| Phase 1 (Razorpay Int'l) | 2 weeks  | Multi-currency via Razorpay |
+| Phase 2 (Stripe)         | 2 weeks  | USD/EUR via Stripe          |
+| Phase 3 (Unified)        | 1 week   | Single payment service      |
+| Testing & QA             | 1 week   | Production ready            |
 
 **Total: 6 weeks to full international payments**
 

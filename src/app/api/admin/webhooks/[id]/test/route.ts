@@ -7,20 +7,14 @@ import { prisma } from '@/lib/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 
 // POST: Send test webhook
-async function handlePOST(
-  request: NextRequest,
-  session: ValidatedSession
-): Promise<NextResponse> {
+async function handlePOST(request: NextRequest, session: ValidatedSession): Promise<NextResponse> {
   try {
     const url = new URL(request.url)
     const pathParts = url.pathname.split('/')
     const id = pathParts[pathParts.length - 2] // Get ID before /test
 
     if (!id) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook ID required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook ID required' }, { status: 400 })
     }
 
     const webhook = await prisma.webhooks.findUnique({
@@ -28,10 +22,7 @@ async function handlePOST(
     })
 
     if (!webhook) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook not found' }, { status: 404 })
     }
 
     // Send test payload
@@ -71,16 +62,11 @@ async function handlePOST(
         response: result.response,
         error: result.error,
       },
-      message: result.success
-        ? 'Test webhook sent successfully'
-        : 'Test webhook failed',
+      message: result.success ? 'Test webhook sent successfully' : 'Test webhook failed',
     })
   } catch (error) {
     console.error('Error testing webhook:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to test webhook' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to test webhook' }, { status: 500 })
   }
 }
 

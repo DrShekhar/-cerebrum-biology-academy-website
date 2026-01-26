@@ -50,10 +50,7 @@ interface AriaEventData {
 /**
  * Track Ceri AI events (Educational Tutor)
  */
-export function trackCeriEvent(
-  eventType: CeriEventType,
-  eventData: CeriEventData = {}
-): void {
+export function trackCeriEvent(eventType: CeriEventType, eventData: CeriEventData = {}): void {
   try {
     // Google Analytics 4
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -96,10 +93,7 @@ export function trackCeriEvent(
 /**
  * Track Aria events (Sales Agent)
  */
-export function trackAriaEvent(
-  eventType: AriaEventType,
-  eventData: AriaEventData = {}
-): void {
+export function trackAriaEvent(eventType: AriaEventType, eventData: AriaEventData = {}): void {
   try {
     // Google Analytics 4
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -226,10 +220,7 @@ export function trackQualifiedLead(
 /**
  * Aria Analytics - Track lead captured
  */
-export function trackLeadCaptured(
-  source: string,
-  leadData: AriaEventData['leadData']
-): void {
+export function trackLeadCaptured(source: string, leadData: AriaEventData['leadData']): void {
   trackAriaEvent('aria_lead_captured', {
     source,
     leadStage: 'inquiry',

@@ -28,7 +28,9 @@ interface MigrationStats {
 
 async function migrateExistingFreeUsers() {
   console.log('🚀 Starting FreeUser Trial Migration...\n')
-  console.log(`Mode: ${isDryRun ? '🔍 DRY RUN (no changes will be made)' : '✍️  LIVE (changes will be applied)'}\n`)
+  console.log(
+    `Mode: ${isDryRun ? '🔍 DRY RUN (no changes will be made)' : '✍️  LIVE (changes will be applied)'}\n`
+  )
 
   const stats: MigrationStats = {
     totalUsers: 0,

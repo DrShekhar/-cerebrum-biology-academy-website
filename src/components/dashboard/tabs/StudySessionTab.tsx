@@ -90,10 +90,7 @@ export function StudySessionTab({
       {/* Quick Study Options - Mobile Optimized */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {weakAreas.map((area, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg"
-          >
+          <div key={index} className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 shadow-lg">
             <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 sm:mb-2 truncate">
               {area.chapter}
             </h3>

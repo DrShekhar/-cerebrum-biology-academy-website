@@ -31,7 +31,7 @@ const tests: TestConfig[] = [
     name: 'Health Check',
     endpoint: '/api/ai/generate-test',
     method: 'GET',
-    expectedStatus: 200
+    expectedStatus: 200,
   },
   {
     name: 'Generate Weak Areas Test',
@@ -43,10 +43,10 @@ const tests: TestConfig[] = [
       config: {
         totalQuestions: 20,
         duration: 30,
-        includeWeakAreas: true
-      }
+        includeWeakAreas: true,
+      },
     },
-    expectedStatus: 200
+    expectedStatus: 200,
   },
   {
     name: 'Generate Practice Test',
@@ -59,14 +59,10 @@ const tests: TestConfig[] = [
         totalQuestions: 50,
         duration: 60,
         difficulty: 'mixed',
-        topics: [
-          'Cell Biology',
-          'Genetics',
-          'Plant Physiology'
-        ]
-      }
+        topics: ['Cell Biology', 'Genetics', 'Plant Physiology'],
+      },
     },
-    expectedStatus: 200
+    expectedStatus: 200,
   },
   {
     name: 'Generate Mock Test (NEET Pattern)',
@@ -79,11 +75,11 @@ const tests: TestConfig[] = [
         totalQuestions: 90,
         duration: 180,
         examPattern: 'neet',
-        difficulty: 'mixed'
-      }
+        difficulty: 'mixed',
+      },
     },
-    expectedStatus: 200
-  }
+    expectedStatus: 200,
+  },
 ]
 
 async function runTest(test: TestConfig): Promise<{
@@ -99,8 +95,8 @@ async function runTest(test: TestConfig): Promise<{
     const options: RequestInit = {
       method: test.method,
       headers: {
-        'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json',
+      },
     }
 
     if (test.body) {
@@ -130,7 +126,9 @@ async function runTest(test: TestConfig): Promise<{
       if (data.metadata) {
         console.log(`   📊 Questions: ${data.metadata.totalQuestions}`)
         console.log(`   ⏱️  Duration: ${data.metadata.duration} minutes`)
-        console.log(`   🎯 Topics: ${data.metadata.topics?.slice(0, 3).join(', ')}${data.metadata.topics?.length > 3 ? '...' : ''}`)
+        console.log(
+          `   🎯 Topics: ${data.metadata.topics?.slice(0, 3).join(', ')}${data.metadata.topics?.length > 3 ? '...' : ''}`
+        )
       }
       if (data.capabilities) {
         console.log(`   🚀 Capabilities: ${data.capabilities.length}`)
@@ -143,9 +141,8 @@ async function runTest(test: TestConfig): Promise<{
     return {
       success,
       duration,
-      response: data
+      response: data,
     }
-
   } catch (error) {
     const duration = Date.now() - startTime
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
@@ -155,20 +152,20 @@ async function runTest(test: TestConfig): Promise<{
     return {
       success: false,
       duration,
-      error: errorMessage
+      error: errorMessage,
     }
   }
 }
 
 async function main() {
   console.log('🚀 AI Test Generator API Test Suite\n')
-  console.log('=' .repeat(60))
+  console.log('='.repeat(60))
 
   const results = {
     total: tests.length,
     passed: 0,
     failed: 0,
-    totalDuration: 0
+    totalDuration: 0,
   }
 
   for (const test of tests) {
@@ -183,7 +180,7 @@ async function main() {
     results.totalDuration += result.duration
 
     // Wait a bit between tests
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
   }
 
   console.log('\n' + '='.repeat(60))
@@ -204,7 +201,7 @@ async function main() {
 }
 
 // Run tests
-main().catch(error => {
+main().catch((error) => {
   console.error('Fatal error:', error)
   process.exit(1)
 })

@@ -236,9 +236,7 @@ export default function ParentDashboard() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-8">
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
-            Welcome, {parent.name}
-          </h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Welcome, {parent.name}</h1>
           <p className="text-gray-600 mt-1">Monitor your children&apos;s academic progress</p>
         </div>
         <div className="mt-4 sm:mt-0 flex items-center gap-3">

@@ -1902,8 +1902,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       },
       {
         title: 'Affordable Fees',
-        description:
-          'Same fees as Indian students. Extremely affordable for Sri Lankan residents.',
+        description: 'Same fees as Indian students. Extremely affordable for Sri Lankan residents.',
       },
       {
         title: 'Growing Medical Aspirations',
@@ -2004,8 +2003,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
     whyChoose: [
       {
         title: 'Mauritius-Friendly Timings',
-        description:
-          'Classes at 2:30 PM - 6:30 PM MUT, perfect for after-school NEET preparation.',
+        description: 'Classes at 2:30 PM - 6:30 PM MUT, perfect for after-school NEET preparation.',
       },
       {
         title: 'NEET Center in Mauritius',
@@ -2220,14 +2218,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
     timezone: 'HKT (GMT+8)',
     istConversion: '5:00 PM - 9:00 PM IST',
     classTimings: '7:30 PM - 11:30 PM',
-    cities: [
-      'Hong Kong Island',
-      'Kowloon',
-      'New Territories',
-      'Sha Tin',
-      'Tsuen Wan',
-      'Tuen Mun',
-    ],
+    cities: ['Hong Kong Island', 'Kowloon', 'New Territories', 'Sha Tin', 'Tsuen Wan', 'Tuen Mun'],
     studentCount: '35+',
     features: commonFeatures,
     courses: commonCourses,
@@ -2734,8 +2725,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
       },
       {
         title: 'Weekend Intensive',
-        description:
-          'Weekend-only batches for students with heavy weekday academic schedules.',
+        description: 'Weekend-only batches for students with heavy weekday academic schedules.',
       },
     ],
     faqs: [
@@ -2832,8 +2822,7 @@ export const nriCountriesData: Record<string, NRICountryData> = {
     whyChoose: [
       {
         title: 'Late Evening Classes',
-        description:
-          'Classes at 9:30 PM - 1:30 AM AEST. Weekend daytime batches also available.',
+        description: 'Classes at 9:30 PM - 1:30 AM AEST. Weekend daytime batches also available.',
       },
       {
         title: 'Growing Indian Community',

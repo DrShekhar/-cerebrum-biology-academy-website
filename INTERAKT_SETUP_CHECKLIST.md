@@ -282,6 +282,6 @@ Track your progress:
 - [ ] Test SMS sent successfully
 - [ ] Deployed to production
 
-**Current Step:** ********\_********
-**Stuck on:** ********\_********
-**Need help with:** ********\_********
+**Current Step:** **\*\*\*\***\_**\*\*\*\***
+**Stuck on:** **\*\*\*\***\_**\*\*\*\***
+**Need help with:** **\*\*\*\***\_**\*\*\*\***

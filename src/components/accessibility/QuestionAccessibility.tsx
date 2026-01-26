@@ -26,7 +26,7 @@ const QuestionAccessibility: React.FC<QuestionAccessibilityProps> = ({
   onSkip,
   onPrevious,
   onNext,
-  className
+  className,
 }) => {
   const questionRef = useRef<HTMLDivElement>(null)
   const announceRef = useRef<HTMLDivElement>(null)
@@ -92,21 +92,18 @@ const QuestionAccessibility: React.FC<QuestionAccessibilityProps> = ({
   }, [questionNumber, showExplanation])
 
   return (
-    <div className={cn("relative", className)}>
+    <div className={cn('relative', className)}>
       {/* Screen Reader Announcements */}
-      <div
-        ref={announceRef}
-        className="sr-only"
-        aria-live="polite"
-        aria-atomic="true"
-      />
+      <div ref={announceRef} className="sr-only" aria-live="polite" aria-atomic="true" />
 
       {/* Skip Links */}
       <div className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 z-50">
         <div className="flex gap-2 p-2 bg-white border border-gray-300 rounded">
           <button
             onClick={() => {
-              const firstOption = document.querySelector('[role="radio"], [role="checkbox"], input[type="text"], input[type="number"]') as HTMLElement
+              const firstOption = document.querySelector(
+                '[role="radio"], [role="checkbox"], input[type="text"], input[type="number"]'
+              ) as HTMLElement
               firstOption?.focus()
             }}
             className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700"
@@ -116,7 +113,9 @@ const QuestionAccessibility: React.FC<QuestionAccessibilityProps> = ({
           {showExplanation && (
             <button
               onClick={() => {
-                const explanation = document.querySelector('[aria-label*="Explanation"]') as HTMLElement
+                const explanation = document.querySelector(
+                  '[aria-label*="Explanation"]'
+                ) as HTMLElement
                 explanation?.focus()
               }}
               className="px-3 py-1 bg-green-600 text-white rounded text-sm hover:bg-green-700"
@@ -183,12 +182,26 @@ const QuestionAccessibility: React.FC<QuestionAccessibilityProps> = ({
         </summary>
         <div className="mt-2 p-3 bg-gray-50 rounded-lg text-sm text-gray-700">
           <div className="grid md:grid-cols-2 gap-2">
-            <div><kbd className="px-1 py-0.5 bg-gray-200 rounded">→</kbd> or <kbd className="px-1 py-0.5 bg-gray-200 rounded">N</kbd> - Next question</div>
-            <div><kbd className="px-1 py-0.5 bg-gray-200 rounded">←</kbd> or <kbd className="px-1 py-0.5 bg-gray-200 rounded">P</kbd> - Previous question</div>
-            <div><kbd className="px-1 py-0.5 bg-gray-200 rounded">S</kbd> - Skip question</div>
-            <div><kbd className="px-1 py-0.5 bg-gray-200 rounded">Esc</kbd> - Focus question area</div>
-            <div><kbd className="px-1 py-0.5 bg-gray-200 rounded">Tab</kbd> - Navigate through options</div>
-            <div><kbd className="px-1 py-0.5 bg-gray-200 rounded">Space</kbd> - Select option</div>
+            <div>
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">→</kbd> or{' '}
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">N</kbd> - Next question
+            </div>
+            <div>
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">←</kbd> or{' '}
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">P</kbd> - Previous question
+            </div>
+            <div>
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">S</kbd> - Skip question
+            </div>
+            <div>
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">Esc</kbd> - Focus question area
+            </div>
+            <div>
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">Tab</kbd> - Navigate through options
+            </div>
+            <div>
+              <kbd className="px-1 py-0.5 bg-gray-200 rounded">Space</kbd> - Select option
+            </div>
           </div>
         </div>
       </details>
@@ -235,7 +248,12 @@ export const useQuestionAccessibility = (questionType: string) => {
     }, 3000)
   }
 
-  const getAriaLabel = (optionText: string, index: number, isSelected: boolean, isCorrect?: boolean) => {
+  const getAriaLabel = (
+    optionText: string,
+    index: number,
+    isSelected: boolean,
+    isCorrect?: boolean
+  ) => {
     const optionLabel = String.fromCharCode(65 + index)
     let label = `Option ${optionLabel}: ${optionText}`
 
@@ -253,7 +271,7 @@ export const useQuestionAccessibility = (questionType: string) => {
   return {
     announceSelection,
     announceCorrection,
-    getAriaLabel
+    getAriaLabel,
   }
 }
 
@@ -294,7 +312,7 @@ export const useHighContrastMode = () => {
       // High contrast overrides
       'border-2 border-black': true,
       'bg-white text-black': true,
-      'focus:ring-4 focus:ring-yellow-400': true
+      'focus:ring-4 focus:ring-yellow-400': true,
     })
   }
 

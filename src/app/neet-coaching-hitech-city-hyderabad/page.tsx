@@ -92,22 +92,26 @@ const features = [
   {
     icon: Users,
     title: 'Tech-Savvy Batches (10-15)',
-    description: 'Exclusive batches for IT families with personalized attention and digital-first approach.',
+    description:
+      'Exclusive batches for IT families with personalized attention and digital-first approach.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality IT professionals expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality IT professionals expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement parents\' IT shift schedules.',
+    description:
+      "Morning, afternoon, and evening batches to complement parents' IT shift schedules.",
   },
   {
     icon: Shield,
@@ -236,8 +240,8 @@ export default function NeetCoachingHitechCityPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Tech-forward NEET Biology coaching for Hitech City IT families. 94.2% success rate, AIIMS
-              faculty, zero traffic stress. Join 780+ students from DPS, Oakridge, Chirec.
+              Tech-forward NEET Biology coaching for Hitech City IT families. 94.2% success rate,
+              AIIMS faculty, zero traffic stress. Join 780+ students from DPS, Oakridge, Chirec.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +302,8 @@ export default function NeetCoachingHitechCityPage() {
               NEET Coaching Across Hitech City IT Corridor
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Madhapur to Miyapur, Kukatpally to Raidurgam - premium coaching for the entire IT corridor.
+              From Madhapur to Miyapur, Kukatpally to Raidurgam - premium coaching for the entire IT
+              corridor.
             </p>
           </motion.div>
 
@@ -320,9 +325,7 @@ export default function NeetCoachingHitechCityPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-purple-600" />
                   </div>
-                  <div className="text-2xl font-bold text-purple-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-purple-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">

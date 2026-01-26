@@ -676,6 +676,7 @@ curl -X POST 'https://api.resend.com/emails' \
    ```
 
 4. **Check Database:**
+
    ```bash
    npx prisma studio
    ```

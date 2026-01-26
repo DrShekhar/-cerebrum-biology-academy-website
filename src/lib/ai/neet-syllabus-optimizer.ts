@@ -103,15 +103,18 @@ export class NEETSyllabusOptimizer {
               id: 'characteristics_living',
               name: 'Characteristics of Living Organisms',
               subtopics: ['growth', 'reproduction', 'metabolism', 'cellular organization'],
-              learningObjectives: ['Define life characteristics', 'Distinguish living from non-living'],
+              learningObjectives: [
+                'Define life characteristics',
+                'Distinguish living from non-living',
+              ],
               cognitiveLevel: ['remember', 'understand'],
               marks: 2,
               timeAllocation: 30,
               frequency: 0.8,
               keywords: ['life', 'growth', 'reproduction', 'metabolism'],
-              commonMisconceptions: ['Viruses are living', 'Fire shows all life characteristics']
-            }
-          ]
+              commonMisconceptions: ['Viruses are living', 'Fire shows all life characteristics'],
+            },
+          ],
         },
         {
           id: 'biological_classification',
@@ -132,11 +135,11 @@ export class NEETSyllabusOptimizer {
               timeAllocation: 45,
               frequency: 0.9,
               keywords: ['kingdom', 'classification', 'taxonomy', 'hierarchy'],
-              commonMisconceptions: ['Fungi are plants', 'All bacteria are harmful']
-            }
-          ]
-        }
-      ]
+              commonMisconceptions: ['Fungi are plants', 'All bacteria are harmful'],
+            },
+          ],
+        },
+      ],
     },
 
     structural_organization: {
@@ -168,11 +171,11 @@ export class NEETSyllabusOptimizer {
               timeAllocation: 40,
               frequency: 0.7,
               keywords: ['root', 'taproot', 'fibrous', 'modifications'],
-              commonMisconceptions: ['All monocots have fibrous roots only']
-            }
-          ]
-        }
-      ]
+              commonMisconceptions: ['All monocots have fibrous roots only'],
+            },
+          ],
+        },
+      ],
     },
 
     cell_biology: {
@@ -204,7 +207,7 @@ export class NEETSyllabusOptimizer {
               timeAllocation: 20,
               frequency: 0.6,
               keywords: ['cell theory', 'Schleiden', 'Schwann', 'Virchow'],
-              commonMisconceptions: ['Cell theory applies to viruses']
+              commonMisconceptions: ['Cell theory applies to viruses'],
             },
             {
               id: 'prokaryotic_eukaryotic',
@@ -216,11 +219,11 @@ export class NEETSyllabusOptimizer {
               timeAllocation: 50,
               frequency: 0.9,
               keywords: ['prokaryotic', 'eukaryotic', 'nucleus', 'membrane'],
-              commonMisconceptions: ['Prokaryotes lack genetic material']
-            }
-          ]
-        }
-      ]
+              commonMisconceptions: ['Prokaryotes lack genetic material'],
+            },
+          ],
+        },
+      ],
     },
 
     plant_physiology: {
@@ -252,11 +255,11 @@ export class NEETSyllabusOptimizer {
               timeAllocation: 60,
               frequency: 0.95,
               keywords: ['photosystem', 'ATP', 'NADPH', 'chlorophyll'],
-              commonMisconceptions: ['Oxygen comes from CO2', 'Dark reactions need darkness']
-            }
-          ]
-        }
-      ]
+              commonMisconceptions: ['Oxygen comes from CO2', 'Dark reactions need darkness'],
+            },
+          ],
+        },
+      ],
     },
 
     human_physiology: {
@@ -288,12 +291,12 @@ export class NEETSyllabusOptimizer {
               timeAllocation: 45,
               frequency: 0.85,
               keywords: ['enzyme', 'amylase', 'pepsin', 'digestion'],
-              commonMisconceptions: ['Enzymes work at any pH', 'All enzymes work everywhere']
-            }
-          ]
-        }
-      ]
-    }
+              commonMisconceptions: ['Enzymes work at any pH', 'All enzymes work everywhere'],
+            },
+          ],
+        },
+      ],
+    },
   }
 
   private readonly optimizationStrategies: Record<string, OptimizationStrategy> = {
@@ -305,17 +308,17 @@ export class NEETSyllabusOptimizer {
           condition: 'topic.frequency > 0.8',
           action: 'increase_question_count',
           priority: 1,
-          parameters: { multiplier: 1.5 }
+          parameters: { multiplier: 1.5 },
         },
         {
           condition: 'topic.marks > 3',
           action: 'add_difficult_questions',
           priority: 2,
-          parameters: { difficulty_boost: 0.2 }
-        }
+          parameters: { difficulty_boost: 0.2 },
+        },
       ],
       expectedOutcome: 'Improved performance on high-frequency topics',
-      applicableScenarios: ['time_constrained', 'revision_phase', 'mock_tests']
+      applicableScenarios: ['time_constrained', 'revision_phase', 'mock_tests'],
     },
 
     conceptual_mastery: {
@@ -326,17 +329,17 @@ export class NEETSyllabusOptimizer {
           condition: 'topic.cognitiveLevel.includes("analyze")',
           action: 'add_application_questions',
           priority: 1,
-          parameters: { cognitive_emphasis: 'analyze' }
+          parameters: { cognitive_emphasis: 'analyze' },
         },
         {
           condition: 'topic.conceptualConnections.length > 2',
           action: 'add_integration_questions',
           priority: 2,
-          parameters: { integration_level: 'high' }
-        }
+          parameters: { integration_level: 'high' },
+        },
       ],
       expectedOutcome: 'Enhanced conceptual understanding and application ability',
-      applicableScenarios: ['initial_learning', 'foundation_building', 'advanced_preparation']
+      applicableScenarios: ['initial_learning', 'foundation_building', 'advanced_preparation'],
     },
 
     gap_filling: {
@@ -347,17 +350,21 @@ export class NEETSyllabusOptimizer {
           condition: 'coverage < 0.6',
           action: 'add_foundational_questions',
           priority: 1,
-          parameters: { foundation_focus: true }
+          parameters: { foundation_focus: true },
         },
         {
           condition: 'difficulty_distribution.easy < 0.3',
           action: 'add_easy_questions',
           priority: 2,
-          parameters: { easy_percentage: 0.3 }
-        }
+          parameters: { easy_percentage: 0.3 },
+        },
       ],
       expectedOutcome: 'Comprehensive syllabus coverage with minimal gaps',
-      applicableScenarios: ['comprehensive_preparation', 'weakness_identification', 'systematic_study']
+      applicableScenarios: [
+        'comprehensive_preparation',
+        'weakness_identification',
+        'systematic_study',
+      ],
     },
 
     exam_simulation: {
@@ -371,36 +378,37 @@ export class NEETSyllabusOptimizer {
           parameters: {
             biology_questions: 90,
             class11_percentage: 0.44,
-            class12_percentage: 0.56
-          }
+            class12_percentage: 0.56,
+          },
         },
         {
           condition: 'question_count > 50',
           action: 'ensure_unit_representation',
           priority: 2,
-          parameters: { min_questions_per_unit: 2 }
-        }
+          parameters: { min_questions_per_unit: 2 },
+        },
       ],
       expectedOutcome: 'Realistic exam simulation with authentic difficulty patterns',
-      applicableScenarios: ['mock_tests', 'final_preparation', 'assessment']
-    }
+      applicableScenarios: ['mock_tests', 'final_preparation', 'assessment'],
+    },
   }
 
   /**
    * Analyze current topic coverage and identify gaps
    */
-  analyzeCoverage(currentTopics: string[], targetStrategy: string = 'high_yield_focus'): CoverageAnalysis {
+  analyzeCoverage(
+    currentTopics: string[],
+    targetStrategy: string = 'high_yield_focus'
+  ): CoverageAnalysis {
     const allTopics = this.getAllTopics()
-    const coveredTopics = currentTopics.filter(topic =>
-      allTopics.some(t => t.id === topic)
-    )
+    const coveredTopics = currentTopics.filter((topic) => allTopics.some((t) => t.id === topic))
 
     const coveragePercentage = (coveredTopics.length / allTopics.length) * 100
 
     // Calculate high-yield coverage
-    const highYieldTopics = allTopics.filter(topic => topic.frequency > 0.7)
-    const coveredHighYield = coveredTopics.filter(topic =>
-      highYieldTopics.some(t => t.id === topic)
+    const highYieldTopics = allTopics.filter((topic) => topic.frequency > 0.7)
+    const coveredHighYield = coveredTopics.filter((topic) =>
+      highYieldTopics.some((t) => t.id === topic)
     )
     const highYieldCoverage = (coveredHighYield.length / highYieldTopics.length) * 100
 
@@ -408,17 +416,13 @@ export class NEETSyllabusOptimizer {
     const unitWiseCoverage: Record<string, number> = {}
     const chapterWiseCoverage: Record<string, number> = {}
 
-    Object.values(this.syllabusData).forEach(unit => {
-      const unitTopics = unit.chapters.flatMap(ch => ch.topics)
-      const unitCovered = unitTopics.filter(topic =>
-        currentTopics.includes(topic.id)
-      )
+    Object.values(this.syllabusData).forEach((unit) => {
+      const unitTopics = unit.chapters.flatMap((ch) => ch.topics)
+      const unitCovered = unitTopics.filter((topic) => currentTopics.includes(topic.id))
       unitWiseCoverage[unit.id] = (unitCovered.length / unitTopics.length) * 100
 
-      unit.chapters.forEach(chapter => {
-        const chapterCovered = chapter.topics.filter(topic =>
-          currentTopics.includes(topic.id)
-        )
+      unit.chapters.forEach((chapter) => {
+        const chapterCovered = chapter.topics.filter((topic) => currentTopics.includes(topic.id))
         chapterWiseCoverage[chapter.id] = (chapterCovered.length / chapter.topics.length) * 100
       })
     })
@@ -441,7 +445,7 @@ export class NEETSyllabusOptimizer {
       unitWiseCoverage,
       chapterWiseCoverage,
       gapsIdentified,
-      recommendations
+      recommendations,
     }
   }
 
@@ -459,22 +463,16 @@ export class NEETSyllabusOptimizer {
     }
 
     const currentDistribution = this.analyzeCurrentDistribution(currentQuestions)
-    const optimalDistribution = this.calculateOptimalDistribution(
-      targetCount,
-      optimizationStrategy
-    )
+    const optimalDistribution = this.calculateOptimalDistribution(targetCount, optimizationStrategy)
 
-    const adjustments = this.calculateAdjustments(
-      currentDistribution,
-      optimalDistribution
-    )
+    const adjustments = this.calculateAdjustments(currentDistribution, optimalDistribution)
 
     return {
       strategy: optimizationStrategy,
       currentDistribution,
       optimalDistribution,
       adjustments,
-      expectedImprovement: this.calculateExpectedImprovement(adjustments)
+      expectedImprovement: this.calculateExpectedImprovement(adjustments),
     }
   }
 
@@ -486,46 +484,32 @@ export class NEETSyllabusOptimizer {
     targetExamDate: Date,
     availableStudyTime: number
   ): PersonalizedRecommendations {
-    const timeRemaining = Math.ceil(
-      (targetExamDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24)
-    )
+    const timeRemaining = Math.ceil((targetExamDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24))
 
     const weakAreas = this.identifyWeakAreas(studentPerformance)
     const priorityTopics = this.calculatePriorityTopics(weakAreas, timeRemaining)
-    const studyPlan = this.generateStudyPlan(
-      priorityTopics,
-      availableStudyTime,
-      timeRemaining
-    )
+    const studyPlan = this.generateStudyPlan(priorityTopics, availableStudyTime, timeRemaining)
 
     return {
       weakAreas,
       priorityTopics,
       studyPlan,
       timeAllocation: this.optimizeTimeAllocation(studyPlan, availableStudyTime),
-      milestones: this.createStudyMilestones(studyPlan, targetExamDate)
+      milestones: this.createStudyMilestones(studyPlan, targetExamDate),
     }
   }
 
   /**
    * Generate NEET-optimized question set
    */
-  generateOptimizedQuestionSet(
-    requirements: QuestionSetRequirements
-  ): OptimizedQuestionSet {
+  generateOptimizedQuestionSet(requirements: QuestionSetRequirements): OptimizedQuestionSet {
     const strategy = this.optimizationStrategies[requirements.strategy || 'high_yield_focus']
 
     // Apply optimization rules
-    const topicDistribution = this.applyOptimizationRules(
-      requirements,
-      strategy.rules
-    )
+    const topicDistribution = this.applyOptimizationRules(requirements, strategy.rules)
 
     // Generate question specifications
-    const questionSpecs = this.generateQuestionSpecifications(
-      topicDistribution,
-      requirements
-    )
+    const questionSpecs = this.generateQuestionSpecifications(topicDistribution, requirements)
 
     // Validate against NEET patterns
     const validation = this.validateAgainstNEETPatterns(questionSpecs)
@@ -538,8 +522,8 @@ export class NEETSyllabusOptimizer {
         strategy: strategy.name,
         expectedScore: this.predictScore(questionSpecs),
         difficulty: this.calculateOverallDifficulty(questionSpecs),
-        timeEstimate: this.estimateCompletionTime(questionSpecs)
-      }
+        timeEstimate: this.estimateCompletionTime(questionSpecs),
+      },
     }
   }
 
@@ -548,15 +532,13 @@ export class NEETSyllabusOptimizer {
    */
   private getAllTopics(): NEETTopic[] {
     return Object.values(this.syllabusData)
-      .flatMap(unit => unit.chapters)
-      .flatMap(chapter => chapter.topics)
+      .flatMap((unit) => unit.chapters)
+      .flatMap((chapter) => chapter.topics)
   }
 
   private identifyGaps(currentTopics: string[], strategy: string): string[] {
     const allTopics = this.getAllTopics()
-    const missingTopics = allTopics.filter(topic =>
-      !currentTopics.includes(topic.id)
-    )
+    const missingTopics = allTopics.filter((topic) => !currentTopics.includes(topic.id))
 
     // Prioritize gaps based on strategy
     return missingTopics
@@ -567,7 +549,7 @@ export class NEETSyllabusOptimizer {
         return b.marks - a.marks
       })
       .slice(0, 10)
-      .map(topic => topic.id)
+      .map((topic) => topic.id)
   }
 
   private generateRecommendations(
@@ -578,7 +560,7 @@ export class NEETSyllabusOptimizer {
     const recommendations: CoverageRecommendation[] = []
 
     // Add missing high-priority topics
-    gaps.slice(0, 5).forEach(topicId => {
+    gaps.slice(0, 5).forEach((topicId) => {
       const topic = this.findTopicById(topicId)
       if (topic) {
         recommendations.push({
@@ -586,7 +568,7 @@ export class NEETSyllabusOptimizer {
           priority: topic.frequency > 0.8 ? 'high' : 'medium',
           topic: topic.name,
           rationale: `High-frequency topic (${(topic.frequency * 100).toFixed(0)}%) missing from current set`,
-          expectedImprovement: topic.frequency * topic.marks * 0.1
+          expectedImprovement: topic.frequency * topic.marks * 0.1,
         })
       }
     })
@@ -596,7 +578,7 @@ export class NEETSyllabusOptimizer {
 
   private findTopicById(topicId: string): NEETTopic | null {
     const allTopics = this.getAllTopics()
-    return allTopics.find(topic => topic.id === topicId) || null
+    return allTopics.find((topic) => topic.id === topicId) || null
   }
 
   private analyzeCurrentDistribution(questions: any[]): DistributionAnalysis {
@@ -606,7 +588,7 @@ export class NEETSyllabusOptimizer {
       chapterDistribution: {},
       difficultyDistribution: { easy: 0, medium: 0, hard: 0 },
       cognitiveDistribution: {},
-      topicCoverage: 0
+      topicCoverage: 0,
     }
   }
 
@@ -620,7 +602,7 @@ export class NEETSyllabusOptimizer {
       chapterDistribution: {},
       difficultyDistribution: { easy: 0.3, medium: 0.5, hard: 0.2 },
       cognitiveDistribution: {},
-      topicCoverage: 0.85
+      topicCoverage: 0.85,
     }
   }
 
@@ -642,10 +624,7 @@ export class NEETSyllabusOptimizer {
     return []
   }
 
-  private calculatePriorityTopics(
-    weakAreas: WeakArea[],
-    timeRemaining: number
-  ): PriorityTopic[] {
+  private calculatePriorityTopics(weakAreas: WeakArea[], timeRemaining: number): PriorityTopic[] {
     // Calculate priority topics based on weak areas and time constraints
     return []
   }
@@ -660,26 +639,20 @@ export class NEETSyllabusOptimizer {
       phases: [],
       dailyTargets: [],
       weeklyGoals: [],
-      assessmentSchedule: []
+      assessmentSchedule: [],
     }
   }
 
-  private optimizeTimeAllocation(
-    studyPlan: StudyPlan,
-    availableTime: number
-  ): TimeAllocation {
+  private optimizeTimeAllocation(studyPlan: StudyPlan, availableTime: number): TimeAllocation {
     // Optimize time allocation across topics
     return {
       topicHours: {},
       dailySchedule: [],
-      bufferTime: 0
+      bufferTime: 0,
     }
   }
 
-  private createStudyMilestones(
-    studyPlan: StudyPlan,
-    targetDate: Date
-  ): StudyMilestone[] {
+  private createStudyMilestones(studyPlan: StudyPlan, targetDate: Date): StudyMilestone[] {
     // Create study milestones and checkpoints
     return []
   }
@@ -700,14 +673,12 @@ export class NEETSyllabusOptimizer {
     return []
   }
 
-  private validateAgainstNEETPatterns(
-    specs: QuestionSpecification[]
-  ): ValidationResult {
+  private validateAgainstNEETPatterns(specs: QuestionSpecification[]): ValidationResult {
     // Validate question set against NEET exam patterns
     return {
       isValid: true,
       issues: [],
-      suggestions: []
+      suggestions: [],
     }
   }
 

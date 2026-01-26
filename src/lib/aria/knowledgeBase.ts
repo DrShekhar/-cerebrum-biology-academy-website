@@ -6,7 +6,7 @@
 export const COURSE_TIERS = {
   pinnacle: {
     name: 'Pinnacle',
-    tagline: "Premium Tier - For those aiming AIR under 1000",
+    tagline: 'Premium Tier - For those aiming AIR under 1000',
     batchSize: '10-12 students',
     hoursPerWeek: '10-12 hours',
     features: [
@@ -65,7 +65,8 @@ export const PRICING = {
     pursuit: '₹48,000',
   },
   'Class XII NEET / Dropper (Pinnacle ZA)': {
-    pinnacle: '₹1,56,000 (includes Class 11+12 simultaneous teaching, NEET Test Series, Supervised Learning, Mentorship)',
+    pinnacle:
+      '₹1,56,000 (includes Class 11+12 simultaneous teaching, NEET Test Series, Supervised Learning, Mentorship)',
     ascent: '₹76,000 (Class XII) / ₹90,000 (Dropper)',
     pursuit: '₹70,000',
   },
@@ -295,7 +296,11 @@ If this works for your budget, I can:
 2. **Share our contact numbers** so you can call us directly: +91 8826444334 or +91 9311946297
 
 Which would you prefer?`,
-    followUp: ['Share my details for callback', 'I will call directly', 'Tell me more about one-on-one'],
+    followUp: [
+      'Share my details for callback',
+      'I will call directly',
+      'Tell me more about one-on-one',
+    ],
   },
 }
 
@@ -378,7 +383,7 @@ export const FAQ_DATA = {
   alreadyInCoaching: {
     question: 'I am already in Aakash/Allen/PhysicsWallah. Should I join Cerebrum?',
     answer:
-      'Absolutely YES! 70% of our top performers are already in Allen, Aakash, or PW. Here\'s the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. We are India\'s finest NEET Biology institute - we SUPPLEMENT your main coaching with: (1) Small batches where faculty knows YOU personally (10-40 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? We will.',
+      "Absolutely YES! 70% of our top performers are already in Allen, Aakash, or PW. Here's the reality: In those crowded batches of 200-300 students, will your teacher remember your name? Your specific weak areas? Biology is 360 marks - HALF of NEET! You need personal attention, not just lectures. We are India's finest NEET Biology institute - we SUPPLEMENT your main coaching with: (1) Small batches where faculty knows YOU personally (10-40 students), (2) AIIMS faculty who actually care about your individual goals, (3) Personal mentorship from Dr. Shekhar himself, (4) Flexible timings that complement your schedule. Corporate coachings teach everyone the same way. We teach YOU the way you need. Ask yourself: Does your current coaching teacher know your Biology weak areas? We will.",
   },
   parentInvolvement: {
     question: 'How can parents support NEET preparation?',

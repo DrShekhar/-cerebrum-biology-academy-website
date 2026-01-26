@@ -35,15 +35,13 @@ export function SeminarValueProps() {
 
         {/* Value Props */}
         <div className="text-center mb-10">
-          <p className="text-lg text-green-600 font-semibold mb-2">
-            GET ANSWERS IN THIS SEMINAR
-          </p>
+          <p className="text-lg text-green-600 font-semibold mb-2">GET ANSWERS IN THIS SEMINAR</p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
             What You'll Learn in 60 Minutes
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Practical, actionable strategies that you can implement immediately to
-            support your child's NEET journey.
+            Practical, actionable strategies that you can implement immediately to support your
+            child's NEET journey.
           </p>
         </div>
 
@@ -58,9 +56,7 @@ export function SeminarValueProps() {
                 <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center mb-4">
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  {prop.title}
-                </h3>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{prop.title}</h3>
                 <p className="text-slate-600 text-sm">{prop.description}</p>
               </div>
             )
@@ -74,8 +70,8 @@ export function SeminarValueProps() {
             BONUS: Free Resources Worth ₹999
           </h3>
           <p className="text-slate-600 max-w-xl mx-auto mb-4">
-            All attendees receive our exclusive "NEET Parent's Handbook" + Biology
-            Revision Checklist + 12-Month Study Planner template.
+            All attendees receive our exclusive "NEET Parent's Handbook" + Biology Revision
+            Checklist + 12-Month Study Planner template.
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="bg-white px-4 py-2 rounded-full text-sm font-medium text-slate-700 shadow-sm">

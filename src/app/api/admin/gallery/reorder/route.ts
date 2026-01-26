@@ -10,12 +10,14 @@ import { requireAdminAuth } from '@/lib/auth'
 import { reorderGalleryItems } from '@/lib/gallery'
 
 const reorderSchema = z.object({
-  items: z.array(
-    z.object({
-      id: z.string(),
-      displayOrder: z.number().int().min(0),
-    })
-  ).min(1, 'At least one item is required'),
+  items: z
+    .array(
+      z.object({
+        id: z.string(),
+        displayOrder: z.number().int().min(0),
+      })
+    )
+    .min(1, 'At least one item is required'),
 })
 
 export async function POST(request: NextRequest) {
@@ -28,10 +30,7 @@ export async function POST(request: NextRequest) {
     const result = await reorderGalleryItems(validatedData.items)
 
     if (!result.success) {
-      return NextResponse.json(
-        { success: false, error: result.error },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: result.error }, { status: 400 })
     }
 
     return NextResponse.json({

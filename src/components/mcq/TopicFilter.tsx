@@ -2,12 +2,7 @@
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  BIOLOGY_TOPICS,
-  BIOLOGY_CHAPTERS,
-  PYQ_YEARS,
-  type BiologyTopic,
-} from '@/lib/mcq/types'
+import { BIOLOGY_TOPICS, BIOLOGY_CHAPTERS, PYQ_YEARS, type BiologyTopic } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
 // Question count options

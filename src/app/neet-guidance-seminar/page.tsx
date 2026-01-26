@@ -117,9 +117,9 @@ export default function NEETGuidanceSeminarPage() {
               Your Child's NEET Success Starts with Informed Parents
             </h2>
             <p className="text-lg text-green-100 mb-8 max-w-2xl mx-auto">
-              Join 500+ parents who have transformed their approach to supporting
-              their NEET aspirant. This seminar has helped children improve by 20+
-              percentile points on average.
+              Join 500+ parents who have transformed their approach to supporting their NEET
+              aspirant. This seminar has helped children improve by 20+ percentile points on
+              average.
             </p>
             <a
               href="#register"

@@ -29,7 +29,9 @@ const MockedRazorpay = Razorpay as jest.MockedClass<typeof Razorpay>
 
 // Import the mock to control it in tests
 import { validateUserSession } from '@/lib/auth/config'
-const mockValidateUserSession = validateUserSession as jest.MockedFunction<typeof validateUserSession>
+const mockValidateUserSession = validateUserSession as jest.MockedFunction<
+  typeof validateUserSession
+>
 
 describe('POST /api/payments/create-order', () => {
   const originalEnv = process.env

@@ -31,7 +31,10 @@ interface UseBadgesReturn {
   completionPercentage: number
   isLoading: boolean
   error: string | null
-  toggleShowcase: (badgeId: string, showcased: boolean) => Promise<{ success: boolean; message: string }>
+  toggleShowcase: (
+    badgeId: string,
+    showcased: boolean
+  ) => Promise<{ success: boolean; message: string }>
   refetch: () => Promise<void>
 }
 

@@ -486,7 +486,11 @@ export default function BiologyTutorsNearMePage() {
                     </ul>
                   </div>
                   <div className="text-center">
-                    <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={getWhatsAppEnquiryUrl(PAGE_KEYWORD)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Button size="xl" className="bg-green-500 hover:bg-green-600">
                         <MessageCircle className="w-5 h-5 mr-2" />
                         Enquire on WhatsApp

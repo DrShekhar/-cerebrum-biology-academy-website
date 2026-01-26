@@ -792,8 +792,8 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             <div className="p-6 space-y-4">
               <p className="text-white/90 mb-6 text-center">
                 Call our expert counselors at{' '}
-                <span className="font-bold text-blue-400">{getDisplayPhone()}</span> for personalized course
-                guidance!
+                <span className="font-bold text-blue-400">{getDisplayPhone()}</span> for
+                personalized course guidance!
               </p>
 
               <button

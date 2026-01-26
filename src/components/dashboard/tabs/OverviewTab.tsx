@@ -2,16 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import {
-  TrendingUp,
-  Target,
-  Clock,
-  Award,
-  Brain,
-  Star,
-  ArrowUp,
-  ArrowDown,
-} from 'lucide-react'
+import { TrendingUp, Target, Clock, Award, Brain, Star, ArrowUp, ArrowDown } from 'lucide-react'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 import { AchievementsDisplay } from '@/components/gamification/AchievementsDisplay'
 import { XPProgressCard } from '@/components/gamification/XPProgressCard'
@@ -109,9 +100,7 @@ export function OverviewTab({
       <div className="bg-gradient-to-r from-green-600 to-navy-700 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-white">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
           <div>
-            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
-              🎯 NEET Biology Score
-            </h3>
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">🎯 NEET Biology Score</h3>
             <div className="space-y-1.5 sm:space-y-2">
               <div className="text-xs sm:text-sm text-blue-100">Current Score</div>
               <BiologyScoreDisplay
@@ -139,18 +128,13 @@ export function OverviewTab({
             </div>
           </div>
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
-              Target Progress
-            </h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Target Progress</h4>
             <div className="space-y-3 sm:space-y-4">
               <div>
                 <div className="flex justify-between text-xs sm:text-sm mb-2">
                   <span>Progress to Target ({neetProgress.targetScore})</span>
                   <span>
-                    {Math.round(
-                      (neetProgress.currentScore / neetProgress.targetScore) * 100
-                    )}
-                    %
+                    {Math.round((neetProgress.currentScore / neetProgress.targetScore) * 100)}%
                   </span>
                 </div>
                 <div className="w-full bg-blue-400 rounded-full h-2 sm:h-3">
@@ -163,8 +147,7 @@ export function OverviewTab({
                 </div>
               </div>
               <div className="text-xs sm:text-sm text-blue-100">
-                {Math.max(0, neetProgress.targetScore - neetProgress.currentScore)} marks to
-                target
+                {Math.max(0, neetProgress.targetScore - neetProgress.currentScore)} marks to target
               </div>
               <div className="text-xs sm:text-sm text-blue-200">
                 Biology: Zoology + Botany (180 + 180)
@@ -172,9 +155,7 @@ export function OverviewTab({
             </div>
           </div>
           <div>
-            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">
-              Performance Metrics
-            </h4>
+            <h4 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4">Performance Metrics</h4>
             <div className="space-y-1.5 sm:space-y-2">
               {neetProgress.rank > 0 && (
                 <>
@@ -217,9 +198,7 @@ export function OverviewTab({
               <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-green-600" />
             </div>
             <div className="min-w-0">
-              <div className="text-lg sm:text-2xl font-bold text-gray-900">
-                {averageScore}%
-              </div>
+              <div className="text-lg sm:text-2xl font-bold text-gray-900">{averageScore}%</div>
               <div className="text-xs sm:text-sm text-gray-500 truncate">Avg Score</div>
             </div>
           </div>
@@ -231,9 +210,7 @@ export function OverviewTab({
               <Target className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
             </div>
             <div className="min-w-0">
-              <div className="text-lg sm:text-2xl font-bold text-gray-900">
-                {testsCompleted}
-              </div>
+              <div className="text-lg sm:text-2xl font-bold text-gray-900">{testsCompleted}</div>
               <div className="text-xs sm:text-sm text-gray-500 truncate">Tests Done</div>
             </div>
           </div>
@@ -347,4 +324,11 @@ export function OverviewTab({
   )
 }
 
-export type { WeakArea, NEETProgress, StudySession, GamificationData, GamificationStats, GamificationAchievement }
+export type {
+  WeakArea,
+  NEETProgress,
+  StudySession,
+  GamificationData,
+  GamificationStats,
+  GamificationAchievement,
+}

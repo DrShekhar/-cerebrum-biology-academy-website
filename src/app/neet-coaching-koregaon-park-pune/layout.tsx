@@ -1,10 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Koregaon Park Pune | Kalyani Nagar, Viman Nagar | Cerebrum Academy',
+  title: 'Best NEET Coaching in Koregaon Park Pune | Kalyani Nagar, Viman Nagar | Cerebrum Academy',
   description:
-    'Premium NEET biology coaching in Koregaon Park, Pune\'s elite address. 94.2% success rate, AIIMS faculty. KP Main, Kalyani Nagar, Viman Nagar, Kharadi. Fee ₹24,000+. Book free demo!',
+    "Premium NEET biology coaching in Koregaon Park, Pune's elite address. 94.2% success rate, AIIMS faculty. KP Main, Kalyani Nagar, Viman Nagar, Kharadi. Fee ₹24,000+. Book free demo!",
   keywords:
     'NEET coaching Koregaon Park, NEET biology coaching Koregaon Park Pune, best NEET coaching Kalyani Nagar, NEET classes Viman Nagar, biology coaching Kharadi, NEET tuition East Pune, NEET coaching premium Pune, international school NEET prep, IB biology NEET, IGCSE NEET preparation, Symbiosis NEET coaching, MBIS NEET prep',
   openGraph: {
@@ -27,6 +26,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function KoregaonParkPuneCoachingLayout({ children }: { children: React.ReactNode }) {
+export default function KoregaonParkPuneCoachingLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

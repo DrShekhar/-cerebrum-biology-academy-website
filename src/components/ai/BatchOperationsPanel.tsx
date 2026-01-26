@@ -20,7 +20,7 @@ import {
   X,
   Search,
   Plus,
-  PlayCircle
+  PlayCircle,
 } from 'lucide-react'
 
 interface Question {
@@ -73,7 +73,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
   questions,
   onQuestionsUpdate,
   onBulkGenerate,
-  isGenerating
+  isGenerating,
 }) => {
   const [selectedQuestions, setSelectedQuestions] = useState<Set<string>>(new Set())
   const [showFilters, setShowFilters] = useState(false)
@@ -88,7 +88,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
     bloomsLevels: [],
     markRange: [1, 10],
     timeRange: [30, 600],
-    searchQuery: ''
+    searchQuery: '',
   })
 
   const [bulkGenerate, setBulkGenerate] = useState({
@@ -97,7 +97,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
     difficultyDistribution: { easy: 30, medium: 50, hard: 20 },
     questionTypes: { mcq: 70, assertion: 20, numerical: 10, matching: 0 },
     totalQuestions: 50,
-    generateMode: 'balanced' as 'balanced' | 'topic-focused' | 'difficulty-focused'
+    generateMode: 'balanced' as 'balanced' | 'topic-focused' | 'difficulty-focused',
   })
 
   const batchOperations: BatchOperation[] = [
@@ -109,7 +109,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       description: 'Update difficulty level for selected questions',
       requiresInput: true,
       inputType: 'select',
-      options: ['easy', 'medium', 'hard']
+      options: ['easy', 'medium', 'hard'],
     },
     {
       id: 'edit-marks',
@@ -118,7 +118,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       icon: <Target className="w-4 h-4" />,
       description: 'Change marks for selected questions',
       requiresInput: true,
-      inputType: 'number'
+      inputType: 'number',
     },
     {
       id: 'edit-time',
@@ -127,7 +127,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       icon: <Clock className="w-4 h-4" />,
       description: 'Change estimated time for selected questions',
       requiresInput: true,
-      inputType: 'number'
+      inputType: 'number',
     },
     {
       id: 'add-tags',
@@ -136,7 +136,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       icon: <Tag className="w-4 h-4" />,
       description: 'Add tags to selected questions',
       requiresInput: true,
-      inputType: 'tags'
+      inputType: 'tags',
     },
     {
       id: 'duplicate',
@@ -144,7 +144,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       label: 'Duplicate',
       icon: <Copy className="w-4 h-4" />,
       description: 'Create copies of selected questions',
-      requiresInput: false
+      requiresInput: false,
     },
     {
       id: 'export',
@@ -152,7 +152,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       label: 'Export',
       icon: <Download className="w-4 h-4" />,
       description: 'Export selected questions',
-      requiresInput: false
+      requiresInput: false,
     },
     {
       id: 'delete',
@@ -160,18 +160,21 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       label: 'Delete',
       icon: <Trash2 className="w-4 h-4" />,
       description: 'Remove selected questions',
-      requiresInput: false
-    }
+      requiresInput: false,
+    },
   ]
 
   // Get unique values for filter options
-  const uniqueTopics = Array.from(new Set(questions.map(q => q.topic)))
-  const uniqueChapters = Array.from(new Set(questions.map(q => q.chapter)))
-  const uniqueBloomsLevels = Array.from(new Set(questions.map(q => q.bloomsLevel)))
+  const uniqueTopics = Array.from(new Set(questions.map((q) => q.topic)))
+  const uniqueChapters = Array.from(new Set(questions.map((q) => q.chapter)))
+  const uniqueBloomsLevels = Array.from(new Set(questions.map((q) => q.bloomsLevel)))
 
   // Filter questions based on current filters
-  const filteredQuestions = questions.filter(question => {
-    if (filters.searchQuery && !question.question.toLowerCase().includes(filters.searchQuery.toLowerCase())) {
+  const filteredQuestions = questions.filter((question) => {
+    if (
+      filters.searchQuery &&
+      !question.question.toLowerCase().includes(filters.searchQuery.toLowerCase())
+    ) {
       return false
     }
     if (filters.difficulty.length > 0 && !filters.difficulty.includes(question.difficulty)) {
@@ -189,7 +192,10 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
     if (question.marks < filters.markRange[0] || question.marks > filters.markRange[1]) {
       return false
     }
-    if (question.estimatedTime < filters.timeRange[0] || question.estimatedTime > filters.timeRange[1]) {
+    if (
+      question.estimatedTime < filters.timeRange[0] ||
+      question.estimatedTime > filters.timeRange[1]
+    ) {
       return false
     }
     return true
@@ -199,26 +205,29 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
     if (selectedQuestions.size === filteredQuestions.length) {
       setSelectedQuestions(new Set())
     } else {
-      setSelectedQuestions(new Set(filteredQuestions.map(q => q.id)))
+      setSelectedQuestions(new Set(filteredQuestions.map((q) => q.id)))
     }
   }, [selectedQuestions.size, filteredQuestions])
 
-  const handleSelectQuestion = useCallback((questionId: string) => {
-    const newSelected = new Set(selectedQuestions)
-    if (newSelected.has(questionId)) {
-      newSelected.delete(questionId)
-    } else {
-      newSelected.add(questionId)
-    }
-    setSelectedQuestions(newSelected)
-  }, [selectedQuestions])
+  const handleSelectQuestion = useCallback(
+    (questionId: string) => {
+      const newSelected = new Set(selectedQuestions)
+      if (newSelected.has(questionId)) {
+        newSelected.delete(questionId)
+      } else {
+        newSelected.add(questionId)
+      }
+      setSelectedQuestions(newSelected)
+    },
+    [selectedQuestions]
+  )
 
   const executeBatchOperation = async (operation: BatchOperation) => {
-    const selectedQuestionObjects = questions.filter(q => selectedQuestions.has(q.id))
+    const selectedQuestionObjects = questions.filter((q) => selectedQuestions.has(q.id))
 
     switch (operation.type) {
       case 'difficulty':
-        const updatedDifficultyQuestions = questions.map(q =>
+        const updatedDifficultyQuestions = questions.map((q) =>
           selectedQuestions.has(q.id)
             ? { ...q, difficulty: operationValue as 'easy' | 'medium' | 'hard' }
             : q
@@ -227,16 +236,14 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
         break
 
       case 'marks':
-        const updatedMarksQuestions = questions.map(q =>
-          selectedQuestions.has(q.id)
-            ? { ...q, marks: parseInt(operationValue) || q.marks }
-            : q
+        const updatedMarksQuestions = questions.map((q) =>
+          selectedQuestions.has(q.id) ? { ...q, marks: parseInt(operationValue) || q.marks } : q
         )
         onQuestionsUpdate(updatedMarksQuestions)
         break
 
       case 'time':
-        const updatedTimeQuestions = questions.map(q =>
+        const updatedTimeQuestions = questions.map((q) =>
           selectedQuestions.has(q.id)
             ? { ...q, estimatedTime: parseInt(operationValue) || q.estimatedTime }
             : q
@@ -245,20 +252,21 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
         break
 
       case 'tag':
-        const newTags = operationValue.split(',').map(tag => tag.trim()).filter(tag => tag)
-        const updatedTagQuestions = questions.map(q =>
-          selectedQuestions.has(q.id)
-            ? { ...q, tags: [...new Set([...q.tags, ...newTags])] }
-            : q
+        const newTags = operationValue
+          .split(',')
+          .map((tag) => tag.trim())
+          .filter((tag) => tag)
+        const updatedTagQuestions = questions.map((q) =>
+          selectedQuestions.has(q.id) ? { ...q, tags: [...new Set([...q.tags, ...newTags])] } : q
         )
         onQuestionsUpdate(updatedTagQuestions)
         break
 
       case 'duplicate':
-        const duplicatedQuestions = selectedQuestionObjects.map(q => ({
+        const duplicatedQuestions = selectedQuestionObjects.map((q) => ({
           ...q,
           id: `${q.id}_copy_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-          question: `${q.question} (Copy)`
+          question: `${q.question} (Copy)`,
         }))
         onQuestionsUpdate([...questions, ...duplicatedQuestions])
         break
@@ -267,7 +275,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
         const exportData = {
           questions: selectedQuestionObjects,
           exportDate: new Date().toISOString(),
-          totalQuestions: selectedQuestionObjects.length
+          totalQuestions: selectedQuestionObjects.length,
         }
         const dataStr = JSON.stringify(exportData, null, 2)
         const dataBlob = new Blob([dataStr], { type: 'application/json' })
@@ -279,7 +287,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
         break
 
       case 'delete':
-        const remainingQuestions = questions.filter(q => !selectedQuestions.has(q.id))
+        const remainingQuestions = questions.filter((q) => !selectedQuestions.has(q.id))
         onQuestionsUpdate(remainingQuestions)
         setSelectedQuestions(new Set())
         break
@@ -296,7 +304,7 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       totalQuestions: bulkGenerate.totalQuestions,
       difficultyDistribution: bulkGenerate.difficultyDistribution,
       questionTypes: bulkGenerate.questionTypes,
-      mode: bulkGenerate.generateMode
+      mode: bulkGenerate.generateMode,
     }
 
     await onBulkGenerate(criteria)
@@ -305,10 +313,14 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'easy': return 'bg-green-100 text-green-700 border-green-200'
-      case 'medium': return 'bg-yellow-100 text-yellow-700 border-yellow-200'
-      case 'hard': return 'bg-red-100 text-red-700 border-red-200'
-      default: return 'bg-gray-100 text-gray-700 border-gray-200'
+      case 'easy':
+        return 'bg-green-100 text-green-700 border-green-200'
+      case 'medium':
+        return 'bg-yellow-100 text-yellow-700 border-yellow-200'
+      case 'hard':
+        return 'bg-red-100 text-red-700 border-red-200'
+      default:
+        return 'bg-gray-100 text-gray-700 border-gray-200'
     }
   }
 
@@ -357,12 +369,13 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="w-5 h-5 text-blue-600" />
                 <span className="text-blue-800 font-medium">
-                  {selectedQuestions.size} question{selectedQuestions.size !== 1 ? 's' : ''} selected
+                  {selectedQuestions.size} question{selectedQuestions.size !== 1 ? 's' : ''}{' '}
+                  selected
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
-                {batchOperations.map(operation => (
+                {batchOperations.map((operation) => (
                   <button
                     key={operation.id}
                     onClick={() => setActiveOperation(operation)}
@@ -390,13 +403,17 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {/* Search */}
                 <div className="md:col-span-3 lg:col-span-1">
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Search Questions</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Search Questions
+                  </label>
                   <div className="relative">
                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
                     <input
                       type="text"
                       value={filters.searchQuery}
-                      onChange={(e) => setFilters(prev => ({ ...prev, searchQuery: e.target.value }))}
+                      onChange={(e) =>
+                        setFilters((prev) => ({ ...prev, searchQuery: e.target.value }))
+                      }
                       placeholder="Search question text..."
                       className="w-full pl-10 pr-4 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-sm"
                     />
@@ -407,16 +424,22 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
                   <div className="space-y-1">
-                    {['easy', 'medium', 'hard'].map(difficulty => (
+                    {['easy', 'medium', 'hard'].map((difficulty) => (
                       <label key={difficulty} className="flex items-center gap-2 text-sm">
                         <input
                           type="checkbox"
                           checked={filters.difficulty.includes(difficulty)}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setFilters(prev => ({ ...prev, difficulty: [...prev.difficulty, difficulty] }))
+                              setFilters((prev) => ({
+                                ...prev,
+                                difficulty: [...prev.difficulty, difficulty],
+                              }))
                             } else {
-                              setFilters(prev => ({ ...prev, difficulty: prev.difficulty.filter(d => d !== difficulty) }))
+                              setFilters((prev) => ({
+                                ...prev,
+                                difficulty: prev.difficulty.filter((d) => d !== difficulty),
+                              }))
                             }
                           }}
                           className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
@@ -431,16 +454,19 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Topics</label>
                   <div className="space-y-1 max-h-32 overflow-y-auto">
-                    {uniqueTopics.map(topic => (
+                    {uniqueTopics.map((topic) => (
                       <label key={topic} className="flex items-center gap-2 text-sm">
                         <input
                           type="checkbox"
                           checked={filters.topics.includes(topic)}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setFilters(prev => ({ ...prev, topics: [...prev.topics, topic] }))
+                              setFilters((prev) => ({ ...prev, topics: [...prev.topics, topic] }))
                             } else {
-                              setFilters(prev => ({ ...prev, topics: prev.topics.filter(t => t !== topic) }))
+                              setFilters((prev) => ({
+                                ...prev,
+                                topics: prev.topics.filter((t) => t !== topic),
+                              }))
                             }
                           }}
                           className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
@@ -453,18 +479,23 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
 
                 {/* Question Types Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Question Types</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Question Types
+                  </label>
                   <div className="space-y-1">
-                    {['mcq', 'assertion', 'numerical', 'matching'].map(type => (
+                    {['mcq', 'assertion', 'numerical', 'matching'].map((type) => (
                       <label key={type} className="flex items-center gap-2 text-sm">
                         <input
                           type="checkbox"
                           checked={filters.types.includes(type)}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setFilters(prev => ({ ...prev, types: [...prev.types, type] }))
+                              setFilters((prev) => ({ ...prev, types: [...prev.types, type] }))
                             } else {
-                              setFilters(prev => ({ ...prev, types: prev.types.filter(t => t !== type) }))
+                              setFilters((prev) => ({
+                                ...prev,
+                                types: prev.types.filter((t) => t !== type),
+                              }))
                             }
                           }}
                           className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
@@ -478,15 +509,17 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
 
               <div className="flex justify-end mt-4 gap-2">
                 <button
-                  onClick={() => setFilters({
-                    difficulty: [],
-                    topics: [],
-                    types: [],
-                    bloomsLevels: [],
-                    markRange: [1, 10],
-                    timeRange: [30, 600],
-                    searchQuery: ''
-                  })}
+                  onClick={() =>
+                    setFilters({
+                      difficulty: [],
+                      topics: [],
+                      types: [],
+                      bloomsLevels: [],
+                      markRange: [1, 10],
+                      timeRange: [30, 600],
+                      searchQuery: '',
+                    })
+                  }
                   className="px-3 py-1 text-sm text-gray-600 hover:text-gray-800 transition-colors"
                 >
                   Clear Filters
@@ -506,7 +539,8 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                 onClick={handleSelectAll}
                 className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800"
               >
-                {selectedQuestions.size === filteredQuestions.length && filteredQuestions.length > 0 ? (
+                {selectedQuestions.size === filteredQuestions.length &&
+                filteredQuestions.length > 0 ? (
                   <CheckSquare className="w-4 h-4" />
                 ) : (
                   <Square className="w-4 h-4" />
@@ -562,7 +596,9 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                     </span>
                   </td>
                   <td className="p-3">
-                    <span className={`px-2 py-1 rounded border text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
+                    <span
+                      className={`px-2 py-1 rounded border text-xs font-medium ${getDifficultyColor(question.difficulty)}`}
+                    >
                       {question.difficulty}
                     </span>
                   </td>
@@ -576,12 +612,17 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                     <span className="font-medium text-gray-800">{question.marks}</span>
                   </td>
                   <td className="p-3 text-center">
-                    <span className="text-sm text-gray-600">{Math.round(question.estimatedTime / 60)}m</span>
+                    <span className="text-sm text-gray-600">
+                      {Math.round(question.estimatedTime / 60)}m
+                    </span>
                   </td>
                   <td className="p-3">
                     <div className="flex flex-wrap gap-1">
-                      {question.tags.slice(0, 2).map(tag => (
-                        <span key={tag} className="px-1 py-0.5 bg-blue-100 text-blue-700 rounded text-xs">
+                      {question.tags.slice(0, 2).map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-1 py-0.5 bg-blue-100 text-blue-700 rounded text-xs"
+                        >
                           {tag}
                         </span>
                       ))}
@@ -606,15 +647,17 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
             <Database className="w-12 h-12 mx-auto mb-3 opacity-50" />
             <p>No questions match your current filters</p>
             <button
-              onClick={() => setFilters({
-                difficulty: [],
-                topics: [],
-                types: [],
-                bloomsLevels: [],
-                markRange: [1, 10],
-                timeRange: [30, 600],
-                searchQuery: ''
-              })}
+              onClick={() =>
+                setFilters({
+                  difficulty: [],
+                  topics: [],
+                  types: [],
+                  bloomsLevels: [],
+                  markRange: [1, 10],
+                  timeRange: [30, 600],
+                  searchQuery: '',
+                })
+              }
               className="mt-2 text-purple-600 hover:text-purple-700 text-sm"
             >
               Clear filters to see all questions
@@ -653,7 +696,8 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
 
               <p className="text-gray-600 mb-4">{activeOperation.description}</p>
               <p className="text-sm text-gray-500 mb-4">
-                This will affect {selectedQuestions.size} selected question{selectedQuestions.size !== 1 ? 's' : ''}.
+                This will affect {selectedQuestions.size} selected question
+                {selectedQuestions.size !== 1 ? 's' : ''}.
               </p>
 
               {activeOperation.requiresInput && (
@@ -665,8 +709,10 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     >
                       <option value="">Select {activeOperation.type}...</option>
-                      {activeOperation.options?.map(option => (
-                        <option key={option} value={option}>{option}</option>
+                      {activeOperation.options?.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
                       ))}
                     </select>
                   ) : activeOperation.inputType === 'number' ? (
@@ -752,16 +798,32 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
               <div className="space-y-6">
                 {/* Generation Mode */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">Generation Mode</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    Generation Mode
+                  </label>
                   <div className="grid grid-cols-3 gap-3">
                     {[
-                      { id: 'balanced', label: 'Balanced', desc: 'Even distribution across topics' },
-                      { id: 'topic-focused', label: 'Topic Focused', desc: 'Focus on specific topics' },
-                      { id: 'difficulty-focused', label: 'Difficulty Focused', desc: 'Focus on difficulty distribution' }
-                    ].map(mode => (
+                      {
+                        id: 'balanced',
+                        label: 'Balanced',
+                        desc: 'Even distribution across topics',
+                      },
+                      {
+                        id: 'topic-focused',
+                        label: 'Topic Focused',
+                        desc: 'Focus on specific topics',
+                      },
+                      {
+                        id: 'difficulty-focused',
+                        label: 'Difficulty Focused',
+                        desc: 'Focus on difficulty distribution',
+                      },
+                    ].map((mode) => (
                       <button
                         key={mode.id}
-                        onClick={() => setBulkGenerate(prev => ({ ...prev, generateMode: mode.id as any }))}
+                        onClick={() =>
+                          setBulkGenerate((prev) => ({ ...prev, generateMode: mode.id as any }))
+                        }
                         className={`p-3 border rounded-lg text-left transition-colors ${
                           bulkGenerate.generateMode === mode.id
                             ? 'border-purple-300 bg-purple-50'
@@ -777,23 +839,25 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
 
                 {/* Topics Selection */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">Topics to Generate</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    Topics to Generate
+                  </label>
                   <div className="grid grid-cols-2 gap-2 max-h-40 overflow-y-auto border rounded-lg p-3">
-                    {uniqueTopics.map(topic => (
+                    {uniqueTopics.map((topic) => (
                       <label key={topic} className="flex items-center gap-2 text-sm">
                         <input
                           type="checkbox"
                           checked={bulkGenerate.topicsToGenerate.includes(topic)}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setBulkGenerate(prev => ({
+                              setBulkGenerate((prev) => ({
                                 ...prev,
-                                topicsToGenerate: [...prev.topicsToGenerate, topic]
+                                topicsToGenerate: [...prev.topicsToGenerate, topic],
                               }))
                             } else {
-                              setBulkGenerate(prev => ({
+                              setBulkGenerate((prev) => ({
                                 ...prev,
-                                topicsToGenerate: prev.topicsToGenerate.filter(t => t !== topic)
+                                topicsToGenerate: prev.topicsToGenerate.filter((t) => t !== topic),
                               }))
                             }
                           }}
@@ -808,20 +872,34 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                 {/* Generation Settings */}
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Total Questions</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Total Questions
+                    </label>
                     <input
                       type="number"
                       value={bulkGenerate.totalQuestions}
-                      onChange={(e) => setBulkGenerate(prev => ({ ...prev, totalQuestions: parseInt(e.target.value) || 50 }))}
+                      onChange={(e) =>
+                        setBulkGenerate((prev) => ({
+                          ...prev,
+                          totalQuestions: parseInt(e.target.value) || 50,
+                        }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Questions per Topic</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Questions per Topic
+                    </label>
                     <input
                       type="number"
                       value={bulkGenerate.questionsPerTopic}
-                      onChange={(e) => setBulkGenerate(prev => ({ ...prev, questionsPerTopic: parseInt(e.target.value) || 5 }))}
+                      onChange={(e) =>
+                        setBulkGenerate((prev) => ({
+                          ...prev,
+                          questionsPerTopic: parseInt(e.target.value) || 5,
+                        }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                     />
                   </div>
@@ -829,28 +907,34 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
 
                 {/* Difficulty Distribution */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-3">Difficulty Distribution</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-3">
+                    Difficulty Distribution
+                  </label>
                   <div className="space-y-3">
-                    {Object.entries(bulkGenerate.difficultyDistribution).map(([difficulty, percentage]) => (
-                      <div key={difficulty} className="flex items-center gap-3">
-                        <span className="w-16 text-sm capitalize">{difficulty}:</span>
-                        <input
-                          type="range"
-                          min="0"
-                          max="100"
-                          value={percentage}
-                          onChange={(e) => setBulkGenerate(prev => ({
-                            ...prev,
-                            difficultyDistribution: {
-                              ...prev.difficultyDistribution,
-                              [difficulty]: parseInt(e.target.value)
+                    {Object.entries(bulkGenerate.difficultyDistribution).map(
+                      ([difficulty, percentage]) => (
+                        <div key={difficulty} className="flex items-center gap-3">
+                          <span className="w-16 text-sm capitalize">{difficulty}:</span>
+                          <input
+                            type="range"
+                            min="0"
+                            max="100"
+                            value={percentage}
+                            onChange={(e) =>
+                              setBulkGenerate((prev) => ({
+                                ...prev,
+                                difficultyDistribution: {
+                                  ...prev.difficultyDistribution,
+                                  [difficulty]: parseInt(e.target.value),
+                                },
+                              }))
                             }
-                          }))}
-                          className="flex-1"
-                        />
-                        <span className="w-8 text-sm">{percentage}%</span>
-                      </div>
-                    ))}
+                            className="flex-1"
+                          />
+                          <span className="w-8 text-sm">{percentage}%</span>
+                        </div>
+                      )
+                    )}
                   </div>
                 </div>
 

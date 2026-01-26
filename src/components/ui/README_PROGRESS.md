@@ -87,6 +87,7 @@ View live demo at: `/demo/progress-indicators`
 ## Examples
 
 Integration examples available at:
+
 - `/components/examples/TestGenerationWithProgress.tsx`
 - `/components/examples/FileUploadWithProgress.tsx`
 - `/components/examples/BulkOperationsWithProgress.tsx`

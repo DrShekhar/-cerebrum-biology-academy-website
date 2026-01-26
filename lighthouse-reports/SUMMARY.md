@@ -9,21 +9,21 @@
 
 ### Homepage (cerebrumbiologyacademy.com)
 
-| Category | Score | Status |
-|----------|-------|--------|
-| 🚀 Performance | **56/100** | ⚠️ Needs Improvement |
-| ♿ Accessibility | **88/100** | ✅ Good |
-| 🛡️ Best Practices | **75/100** | ⚠️ Needs Improvement |
-| 🔍 SEO | **100/100** | ✅ Perfect |
+| Category          | Score       | Status               |
+| ----------------- | ----------- | -------------------- |
+| 🚀 Performance    | **56/100**  | ⚠️ Needs Improvement |
+| ♿ Accessibility  | **88/100**  | ✅ Good              |
+| 🛡️ Best Practices | **75/100**  | ⚠️ Needs Improvement |
+| 🔍 SEO            | **100/100** | ✅ Perfect           |
 
 ### SEO Landing Page (/neet-biology-coaching-delhi-ncr)
 
-| Category | Score | Status |
-|----------|-------|--------|
-| 🚀 Performance | **67/100** | ⚠️ Needs Improvement |
-| ♿ Accessibility | **88/100** | ✅ Good |
+| Category          | Score      | Status               |
+| ----------------- | ---------- | -------------------- |
+| 🚀 Performance    | **67/100** | ⚠️ Needs Improvement |
+| ♿ Accessibility  | **88/100** | ✅ Good              |
 | 🛡️ Best Practices | **75/100** | ⚠️ Needs Improvement |
-| 🔍 SEO | **92/100** | ✅ Good |
+| 🔍 SEO            | **92/100** | ✅ Good              |
 
 ---
 
@@ -31,20 +31,22 @@
 
 ### 1. **Largest Contentful Paint (LCP) - CRITICAL**
 
-| Page | LCP | Target | Status |
-|------|-----|--------|--------|
-| Homepage | **11.1s** | <2.5s | 🔴 FAIL (4.4x slower) |
-| SEO Page | **14.3s** | <2.5s | 🔴 FAIL (5.7x slower) |
+| Page     | LCP       | Target | Status                |
+| -------- | --------- | ------ | --------------------- |
+| Homepage | **11.1s** | <2.5s  | 🔴 FAIL (4.4x slower) |
+| SEO Page | **14.3s** | <2.5s  | 🔴 FAIL (5.7x slower) |
 
 **Impact:** Users wait 11-14 seconds to see main content. This severely hurts user experience and SEO rankings.
 
 **Causes:**
+
 - Render-blocking resources (Est. 300ms savings)
 - Unused JavaScript (643 KiB to remove)
 - Large bundle sizes
 - Slow server response time
 
 **Recommended Fixes:**
+
 1. Enable Next.js Image Optimization for hero images
 2. Remove unused dependencies (643 KiB identified)
 3. Implement code splitting for large bundles
@@ -56,14 +58,15 @@
 
 ### 2. **Speed Index - CRITICAL**
 
-| Page | Speed Index | Target | Status |
-|------|-------------|--------|--------|
-| Homepage | **8.6s** | <3.4s | 🔴 FAIL (2.5x slower) |
-| SEO Page | **4.5s** | <3.4s | 🟡 MARGINAL |
+| Page     | Speed Index | Target | Status                |
+| -------- | ----------- | ------ | --------------------- |
+| Homepage | **8.6s**    | <3.4s  | 🔴 FAIL (2.5x slower) |
+| SEO Page | **4.5s**    | <3.4s  | 🟡 MARGINAL           |
 
 **Impact:** Visual progress of page load is slow, users perceive site as sluggish.
 
 **Recommended Fixes:**
+
 1. Defer non-critical JavaScript
 2. Inline critical CSS
 3. Use resource hints (`preconnect`, `dns-prefetch`)
@@ -73,14 +76,15 @@
 
 ### 3. **Total Blocking Time (TBT) - MODERATE**
 
-| Page | TBT | Target | Status |
-|------|-----|--------|--------|
+| Page     | TBT       | Target | Status      |
+| -------- | --------- | ------ | ----------- |
 | Homepage | **300ms** | <200ms | 🟡 MARGINAL |
 | SEO Page | **250ms** | <200ms | 🟡 MARGINAL |
 
 **Impact:** Main thread is blocked, page feels unresponsive.
 
 **Recommended Fixes:**
+
 1. Split large JavaScript tasks
 2. Use web workers for heavy computation
 3. Reduce third-party script impact
@@ -142,6 +146,7 @@ npx unimport
 ```
 
 **Common culprits:**
+
 - Unused Radix UI components
 - Entire icon libraries (use tree-shaking)
 - Lodash (use individual functions)
@@ -187,14 +192,14 @@ const Calendar = dynamic(() => import('./Calendar'), {
 
 Set these thresholds in CI/CD:
 
-| Metric | Current | Target | Max Allowed |
-|--------|---------|--------|-------------|
-| LCP | 11.1s | <2.5s | <3.0s |
-| FCP | 2.6s | <1.8s | <2.0s |
-| TBT | 300ms | <200ms | <300ms |
-| CLS | 0 | <0.1 | <0.25 |
-| Speed Index | 8.6s | <3.4s | <4.0s |
-| Bundle Size | ~1MB | <500KB | <700KB |
+| Metric      | Current | Target | Max Allowed |
+| ----------- | ------- | ------ | ----------- |
+| LCP         | 11.1s   | <2.5s  | <3.0s       |
+| FCP         | 2.6s    | <1.8s  | <2.0s       |
+| TBT         | 300ms   | <200ms | <300ms      |
+| CLS         | 0       | <0.1   | <0.25       |
+| Speed Index | 8.6s    | <3.4s  | <4.0s       |
+| Bundle Size | ~1MB    | <500KB | <700KB      |
 
 ---
 

@@ -53,8 +53,8 @@ export default function InternationalHubPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Personalized online tutoring for AP Biology, GCSE, A-Level, IB, and
-            all major exam systems. Learn in your timezone with expert tutors.
+            Personalized online tutoring for AP Biology, GCSE, A-Level, IB, and all major exam
+            systems. Learn in your timezone with expert tutors.
           </p>
 
           {/* Stats */}
@@ -78,8 +78,7 @@ export default function InternationalHubPage() {
           </div>
 
           <p className="text-slate-400 text-sm">
-            Select your country below to see courses and pricing in your local
-            currency
+            Select your country below to see courses and pricing in your local currency
           </p>
         </div>
       </section>
@@ -91,8 +90,8 @@ export default function InternationalHubPage() {
             Choose Your Country
           </h2>
           <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-            We offer specialized tutoring tailored to your country&apos;s exam
-            systems and curriculum. All prices shown in local currency.
+            We offer specialized tutoring tailored to your country&apos;s exam systems and
+            curriculum. All prices shown in local currency.
           </p>
 
           {Object.entries(countriesByRegion).map(([region, countries]) => (
@@ -116,9 +115,7 @@ export default function InternationalHubPage() {
                         <h4 className="font-bold text-slate-900 group-hover:text-green-600 transition-colors">
                           {country.name}
                         </h4>
-                        <p className="text-sm text-slate-500">
-                          {country.timezoneAbbr}
-                        </p>
+                        <p className="text-sm text-slate-500">{country.timezoneAbbr}</p>
                       </div>
                     </div>
 
@@ -149,21 +146,14 @@ export default function InternationalHubPage() {
                       <div>
                         <p className="text-xs text-slate-500">Small Group</p>
                         <p className="font-bold text-green-600">
-                          {formatPrice(
-                            country.pricing.smallGroup,
-                            country.currency
-                          )}
+                          {formatPrice(country.pricing.smallGroup, country.currency)}
                           /hr
                         </p>
                       </div>
                       <div className="text-right">
                         <p className="text-xs text-slate-500">1-on-1</p>
                         <p className="font-semibold text-slate-700">
-                          from{' '}
-                          {formatPrice(
-                            country.pricing.oneOnOneMin,
-                            country.currency
-                          )}
+                          from {formatPrice(country.pricing.oneOnOneMin, country.currency)}
                           /hr
                         </p>
                       </div>
@@ -208,12 +198,10 @@ export default function InternationalHubPage() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="font-bold text-slate-900 mb-2">
-                Flexible Timezones
-              </h3>
+              <h3 className="font-bold text-slate-900 mb-2">Flexible Timezones</h3>
               <p className="text-slate-600 text-sm">
-                Classes scheduled to match your timezone. Morning, afternoon, or
-                evening slots available.
+                Classes scheduled to match your timezone. Morning, afternoon, or evening slots
+                available.
               </p>
             </div>
 
@@ -221,12 +209,9 @@ export default function InternationalHubPage() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <GraduationCap className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="font-bold text-slate-900 mb-2">
-                Curriculum Experts
-              </h3>
+              <h3 className="font-bold text-slate-900 mb-2">Curriculum Experts</h3>
               <p className="text-slate-600 text-sm">
-                Tutors specialized in your exact exam system. AP, GCSE, A-Level,
-                IB, NCEA, and more.
+                Tutors specialized in your exact exam system. AP, GCSE, A-Level, IB, NCEA, and more.
               </p>
             </div>
 
@@ -234,12 +219,10 @@ export default function InternationalHubPage() {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="font-bold text-slate-900 mb-2">
-                Local Currency Pricing
-              </h3>
+              <h3 className="font-bold text-slate-900 mb-2">Local Currency Pricing</h3>
               <p className="text-slate-600 text-sm">
-                Pay in your local currency with transparent pricing. No hidden
-                fees or conversion charges.
+                Pay in your local currency with transparent pricing. No hidden fees or conversion
+                charges.
               </p>
             </div>
 
@@ -247,12 +230,9 @@ export default function InternationalHubPage() {
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MessageCircle className="w-8 h-8 text-yellow-600" />
               </div>
-              <h3 className="font-bold text-slate-900 mb-2">
-                WhatsApp Support
-              </h3>
+              <h3 className="font-bold text-slate-900 mb-2">WhatsApp Support</h3>
               <p className="text-slate-600 text-sm">
-                Quick doubts? Message us anytime on WhatsApp. Average response
-                time under 2 minutes.
+                Quick doubts? Message us anytime on WhatsApp. Average response time under 2 minutes.
               </p>
             </div>
           </div>
@@ -266,20 +246,19 @@ export default function InternationalHubPage() {
             Ready to Excel in Biology?
           </h2>
           <p className="text-lg text-slate-300 mb-8">
-            Join students from around the world who are achieving their academic
-            goals with personalized tutoring.
+            Join students from around the world who are achieving their academic goals with
+            personalized tutoring.
           </p>
           <a
             href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20biology%20tutoring.%20Can%20you%20share%20more%20details?"
-            target="_blank" rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-3 px-10 py-5 text-xl font-semibold bg-green-500 hover:bg-green-600 text-white rounded-lg shadow-xl hover:shadow-2xl transition-all duration-200"
           >
             <MessageCircle className="w-6 h-6" />
             Chat on WhatsApp
           </a>
-          <p className="mt-4 text-sm text-slate-400">
-            Free demo class • No commitment required
-          </p>
+          <p className="mt-4 text-sm text-slate-400">Free demo class • No commitment required</p>
         </div>
       </section>
     </main>

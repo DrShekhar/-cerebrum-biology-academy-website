@@ -118,9 +118,7 @@ function CourseCard({
           </ul>
         )}
 
-        {card.price && (
-          <div className="mb-2 text-sm font-bold text-green-600">{card.price}</div>
-        )}
+        {card.price && <div className="mb-2 text-sm font-bold text-green-600">{card.price}</div>}
 
         {card.ctaText && card.ctaAction && (
           <button
@@ -136,13 +134,7 @@ function CourseCard({
 }
 
 // Carousel Component
-function Carousel({
-  items,
-  language,
-}: {
-  items: RichCarouselItem[]
-  language: Language
-}) {
+function Carousel({ items, language }: { items: RichCarouselItem[]; language: Language }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const next = () => setCurrentIndex((i) => (i + 1) % items.length)
@@ -200,7 +192,8 @@ function PDFPreview({ pdf, language }: { pdf: RichPDF; language: Language }) {
   return (
     <a
       href={pdf.url}
-      target="_blank" rel="noopener noreferrer"
+      target="_blank"
+      rel="noopener noreferrer"
       className="flex items-center gap-3 rounded-lg border border-slate-200 bg-white p-3 transition-all hover:border-green-300 hover:bg-green-50"
     >
       <div className="flex h-12 w-10 items-center justify-center rounded bg-red-100 text-red-600">
@@ -208,9 +201,7 @@ function PDFPreview({ pdf, language }: { pdf: RichPDF; language: Language }) {
       </div>
       <div className="flex-1">
         <h4 className="text-sm font-medium text-slate-800">{pdf.title}</h4>
-        {pdf.description && (
-          <p className="text-xs text-slate-500">{pdf.description}</p>
-        )}
+        {pdf.description && <p className="text-xs text-slate-500">{pdf.description}</p>}
       </div>
       <ExternalLink className="h-4 w-4 text-slate-400" />
     </a>
@@ -240,13 +231,7 @@ function RichImageDisplay({ image }: { image: RichImage }) {
 }
 
 // Success Story Card
-function SuccessStoryCard({
-  story,
-  language,
-}: {
-  story: SuccessStory
-  language: Language
-}) {
+function SuccessStoryCard({ story, language }: { story: SuccessStory; language: Language }) {
   return (
     <div className="rounded-lg border border-yellow-200 bg-gradient-to-br from-yellow-50 to-orange-50 p-3">
       <div className="mb-2 flex items-center gap-3">
@@ -283,13 +268,7 @@ function SuccessStoryCard({
 }
 
 // Faculty Profile Card
-function FacultyCard({
-  faculty,
-  language,
-}: {
-  faculty: FacultyProfile
-  language: Language
-}) {
+function FacultyCard({ faculty, language }: { faculty: FacultyProfile; language: Language }) {
   return (
     <div className="rounded-lg border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-3">
       <div className="mb-2 flex items-center gap-3">
@@ -314,10 +293,7 @@ function FacultyCard({
 
       <div className="mb-2 flex flex-wrap gap-1">
         {faculty.credentials.slice(0, 3).map((cred, i) => (
-          <span
-            key={i}
-            className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] text-blue-700"
-          >
+          <span key={i} className="rounded bg-blue-100 px-1.5 py-0.5 text-[10px] text-blue-700">
             {cred}
           </span>
         ))}

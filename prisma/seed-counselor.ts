@@ -260,7 +260,18 @@ async function seedCounselorData() {
     activityCount++
 
     // Add more activities for contacted/advanced leads
-    if (['CONTACTED', 'DEMO_SCHEDULED', 'DEMO_COMPLETED', 'OFFER_SENT', 'NEGOTIATING', 'PAYMENT_PENDING', 'ENROLLED', 'ACTIVE_STUDENT'].includes(lead.stage)) {
+    if (
+      [
+        'CONTACTED',
+        'DEMO_SCHEDULED',
+        'DEMO_COMPLETED',
+        'OFFER_SENT',
+        'NEGOTIATING',
+        'PAYMENT_PENDING',
+        'ENROLLED',
+        'ACTIVE_STUDENT',
+      ].includes(lead.stage)
+    ) {
       await prisma.activities.create({
         data: {
           leadId: lead.id,
@@ -273,7 +284,16 @@ async function seedCounselorData() {
       activityCount++
     }
 
-    if (['DEMO_COMPLETED', 'OFFER_SENT', 'NEGOTIATING', 'PAYMENT_PENDING', 'ENROLLED', 'ACTIVE_STUDENT'].includes(lead.stage)) {
+    if (
+      [
+        'DEMO_COMPLETED',
+        'OFFER_SENT',
+        'NEGOTIATING',
+        'PAYMENT_PENDING',
+        'ENROLLED',
+        'ACTIVE_STUDENT',
+      ].includes(lead.stage)
+    ) {
       await prisma.activities.create({
         data: {
           leadId: lead.id,
@@ -294,7 +314,8 @@ async function seedCounselorData() {
     {
       leadId: createdLeads[0].id,
       title: 'Initial Follow-up Call',
-      description: 'Call Rahul Sharma to introduce yourself and understand his NEET preparation goals.',
+      description:
+        'Call Rahul Sharma to introduce yourself and understand his NEET preparation goals.',
       type: 'FOLLOW_UP',
       priority: 'HIGH',
       status: 'TODO',
@@ -421,7 +442,7 @@ async function seedCounselorData() {
     const installmentAmount = Math.floor((45000 - 9000) / 3)
     for (let i = 0; i <= 3; i++) {
       const dueDate = new Date()
-      dueDate.setDate(dueDate.getDate() + (i * 30))
+      dueDate.setDate(dueDate.getDate() + i * 30)
 
       await prisma.installments.create({
         data: {

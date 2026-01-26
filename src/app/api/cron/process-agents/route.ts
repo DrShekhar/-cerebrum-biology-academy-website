@@ -7,7 +7,11 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 import { processPendingAgentTasks } from '@/lib/crm-agents/processor'
-import { verifyCronAuth, createCronUnauthorizedResponse, createCronConfigErrorResponse } from '@/lib/auth/cron-auth'
+import {
+  verifyCronAuth,
+  createCronUnauthorizedResponse,
+  createCronConfigErrorResponse,
+} from '@/lib/auth/cron-auth'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60

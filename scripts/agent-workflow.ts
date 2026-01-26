@@ -12,51 +12,51 @@
  *   npm run agent "Create a leaderboard showing top students"
  */
 
-import { MasterOrchestrator } from '../src/lib/agents/orchestrator/MasterOrchestrator';
-import type { UserCommand } from '../src/lib/agents/types';
+import { MasterOrchestrator } from '../src/lib/agents/orchestrator/MasterOrchestrator'
+import type { UserCommand } from '../src/lib/agents/types'
 
 async function main() {
-  const args = process.argv.slice(2);
+  const args = process.argv.slice(2)
 
   if (args.length === 0) {
-    printHelp();
-    process.exit(0);
+    printHelp()
+    process.exit(0)
   }
 
-  const command = args.join(' ');
+  const command = args.join(' ')
 
   // Parse special flags
-  const skipTests = command.includes('--skip-tests');
-  const autoApprove = command.includes('--auto-approve');
-  const deployImmediately = command.includes('--deploy-now');
+  const skipTests = command.includes('--skip-tests')
+  const autoApprove = command.includes('--auto-approve')
+  const deployImmediately = command.includes('--deploy-now')
 
   // Remove flags from feature description
   const featureDescription = command
     .replace('--skip-tests', '')
     .replace('--auto-approve', '')
     .replace('--deploy-now', '')
-    .trim();
+    .trim()
 
   if (!featureDescription) {
-    console.error('❌ Please provide a feature description\n');
-    printHelp();
-    process.exit(1);
+    console.error('❌ Please provide a feature description\n')
+    printHelp()
+    process.exit(1)
   }
 
-  console.log('\n🚀 Cerebrum Biology Academy - Agent Workflow System\n');
-  console.log(`📝 Feature Request: "${featureDescription}"\n`);
+  console.log('\n🚀 Cerebrum Biology Academy - Agent Workflow System\n')
+  console.log(`📝 Feature Request: "${featureDescription}"\n`)
 
   if (skipTests) {
-    console.log('⚠️  Skipping tests (not recommended)');
+    console.log('⚠️  Skipping tests (not recommended)')
   }
   if (autoApprove) {
-    console.log('✅ Auto-approve enabled');
+    console.log('✅ Auto-approve enabled')
   }
   if (deployImmediately) {
-    console.log('🚀 Deploy immediately after build');
+    console.log('🚀 Deploy immediately after build')
   }
 
-  console.log('\n' + '='.repeat(70) + '\n');
+  console.log('\n' + '='.repeat(70) + '\n')
 
   // Create orchestrator
   const orchestrator = new MasterOrchestrator({
@@ -64,7 +64,7 @@ async function main() {
     enableLearning: true,
     enableMonitoring: true,
     logLevel: 'info',
-  });
+  })
 
   // Create user command
   const userCommand: UserCommand = {
@@ -75,44 +75,44 @@ async function main() {
       autoApprove,
       deployImmediately,
     },
-  };
+  }
 
   try {
     // Execute workflow
-    const execution = await orchestrator.requestFeature(userCommand);
+    const execution = await orchestrator.requestFeature(userCommand)
 
-    console.log('\n' + '='.repeat(70) + '\n');
-    console.log('✅ Feature development completed!\n');
-    console.log(`📊 Execution ID: ${execution.id}`);
-    console.log(`⏱️  Duration: ${formatDuration(execution.duration || 0)}`);
-    console.log(`📈 Status: ${execution.status}`);
-    console.log(`✅ Completed Tasks: ${execution.metrics.completedTasks}`);
+    console.log('\n' + '='.repeat(70) + '\n')
+    console.log('✅ Feature development completed!\n')
+    console.log(`📊 Execution ID: ${execution.id}`)
+    console.log(`⏱️  Duration: ${formatDuration(execution.duration || 0)}`)
+    console.log(`📈 Status: ${execution.status}`)
+    console.log(`✅ Completed Tasks: ${execution.metrics.completedTasks}`)
 
     if (execution.metrics.failedTasks > 0) {
-      console.log(`❌ Failed Tasks: ${execution.metrics.failedTasks}`);
+      console.log(`❌ Failed Tasks: ${execution.metrics.failedTasks}`)
     }
 
-    console.log('\n');
+    console.log('\n')
 
     if (execution.status === 'deployed') {
-      console.log('🎉 Your feature is now live in production!');
-      console.log('🌐 Visit: https://cerebrum-biology-academy.vercel.app');
+      console.log('🎉 Your feature is now live in production!')
+      console.log('🌐 Visit: https://cerebrum-biology-academy.vercel.app')
     } else {
-      console.log('✅ Feature is ready for review and deployment');
-      console.log('\nNext steps:');
-      console.log('  1. Review the changes in your code editor');
-      console.log('  2. Test locally with: npm run dev');
-      console.log('  3. Deploy with: npm run agent "deploy previous feature" --deploy-now');
+      console.log('✅ Feature is ready for review and deployment')
+      console.log('\nNext steps:')
+      console.log('  1. Review the changes in your code editor')
+      console.log('  2. Test locally with: npm run dev')
+      console.log('  3. Deploy with: npm run agent "deploy previous feature" --deploy-now')
     }
 
-    console.log('\n');
-    process.exit(0);
+    console.log('\n')
+    process.exit(0)
   } catch (error) {
-    console.error('\n❌ Feature development failed\n');
-    console.error(error instanceof Error ? error.message : error);
-    console.log('\n💡 Tip: Review the error message and try again');
-    console.log('    If the issue persists, check the logs or contact support\n');
-    process.exit(1);
+    console.error('\n❌ Feature development failed\n')
+    console.error(error instanceof Error ? error.message : error)
+    console.log('\n💡 Tip: Review the error message and try again')
+    console.log('    If the issue persists, check the logs or contact support\n')
+    process.exit(1)
   }
 }
 
@@ -173,25 +173,25 @@ NEED HELP?
   - View agent status: npm run agent:status
   - List all agents: npm run agent:list
   - Report issues: https://github.com/your-repo/issues
-`);
+`)
 }
 
 function formatDuration(ms: number): string {
-  const seconds = Math.floor(ms / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
+  const seconds = Math.floor(ms / 1000)
+  const minutes = Math.floor(seconds / 60)
+  const hours = Math.floor(minutes / 60)
 
   if (hours > 0) {
-    return `${hours}h ${minutes % 60}m ${seconds % 60}s`;
+    return `${hours}h ${minutes % 60}m ${seconds % 60}s`
   } else if (minutes > 0) {
-    return `${minutes}m ${seconds % 60}s`;
+    return `${minutes}m ${seconds % 60}s`
   } else {
-    return `${seconds}s`;
+    return `${seconds}s`
   }
 }
 
 // Run the CLI
 main().catch((error) => {
-  console.error('Fatal error:', error);
-  process.exit(1);
-});
+  console.error('Fatal error:', error)
+  process.exit(1)
+})

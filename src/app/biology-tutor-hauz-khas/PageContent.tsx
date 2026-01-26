@@ -57,12 +57,14 @@ const whyChooseUs = [
   {
     icon: Palette,
     title: 'Creative Learning Hub',
-    description: 'Hauz Khas is known for creativity. Our innovative teaching methods match the area\'s academic vibe.',
+    description:
+      "Hauz Khas is known for creativity. Our innovative teaching methods match the area's academic vibe.",
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Strong results with students from DPS RK Puram, Sardar Patel, and JNU area schools.',
+    description:
+      'Strong results with students from DPS RK Puram, Sardar Patel, and JNU area schools.',
   },
   {
     icon: GraduationCap,
@@ -72,7 +74,8 @@ const whyChooseUs = [
   {
     icon: Star,
     title: 'Near IIT/JNU Hub',
-    description: 'Quality matching the academic standards of IIT Delhi and JNU neighborhood students.',
+    description:
+      'Quality matching the academic standards of IIT Delhi and JNU neighborhood students.',
   },
 ]
 
@@ -160,8 +163,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Hauz Khas</span>
+              Biology Tutor in <span className="text-yellow-400">Hauz Khas</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +171,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Personalized Biology tutoring for Hauz Khas, Green Park, SDA & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - quality matching IIT area standards.
+              Personalized Biology tutoring for Hauz Khas, Green Park, SDA & nearby areas. Learn
+              from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - quality matching IIT area
+              standards.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +201,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Hauz%20Khas%20and%20interested%20in%20Biology%20tutoring"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +378,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Hauz%20Khas%20and%20interested%20in%20Biology%20tutoring"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

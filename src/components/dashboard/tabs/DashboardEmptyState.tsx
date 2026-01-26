@@ -42,8 +42,8 @@ export function DashboardEmptyState({ userName }: DashboardEmptyStateProps) {
             Let&apos;s Start Your Journey! 🚀
           </h2>
           <p className="text-gray-600 mb-6 sm:mb-8 max-w-md mx-auto text-sm sm:text-base">
-            Take your first practice test to unlock personalized insights, track
-            your progress, and get AI-powered recommendations for NEET success.
+            Take your first practice test to unlock personalized insights, track your progress, and
+            get AI-powered recommendations for NEET success.
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
             <Link

@@ -73,7 +73,15 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const { q: query, category, class: ncertClass, chapter: ncertChapter, source, limit, offset } = parseResult.data
+    const {
+      q: query,
+      category,
+      class: ncertClass,
+      chapter: ncertChapter,
+      source,
+      limit,
+      offset,
+    } = parseResult.data
 
     const where: any = {
       isActive: true,

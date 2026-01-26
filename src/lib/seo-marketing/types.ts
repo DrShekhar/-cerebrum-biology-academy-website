@@ -13,18 +13,18 @@ export type SEOContentType =
   | 'LEAD_MAGNET'
 
 export type DraftStatus =
-  | 'draft'          // AI-generated, pending review
-  | 'in_review'      // Being reviewed
-  | 'approved'       // Ready to publish
-  | 'rejected'       // Needs revision
-  | 'published'      // Live on site
-  | 'archived'       // No longer relevant
+  | 'draft' // AI-generated, pending review
+  | 'in_review' // Being reviewed
+  | 'approved' // Ready to publish
+  | 'rejected' // Needs revision
+  | 'published' // Live on site
+  | 'archived' // No longer relevant
 
 export type ContentPriority =
-  | 'urgent'         // Time-sensitive (NTA announcements)
-  | 'high'           // Important content
-  | 'normal'         // Regular content
-  | 'low'            // Can wait
+  | 'urgent' // Time-sensitive (NTA announcements)
+  | 'high' // Important content
+  | 'normal' // Regular content
+  | 'low' // Can wait
 
 export type ContentDifficulty = 'Beginner' | 'Intermediate' | 'Advanced'
 
@@ -40,12 +40,7 @@ export type BlogCategory =
   | 'biology-concepts'
   | 'exam-updates'
 
-export type SocialPlatform =
-  | 'twitter'
-  | 'linkedin'
-  | 'instagram'
-  | 'whatsapp'
-  | 'youtube'
+export type SocialPlatform = 'twitter' | 'linkedin' | 'instagram' | 'whatsapp' | 'youtube'
 
 // ============================================
 // BASE CONTENT INTERFACES
@@ -108,7 +103,7 @@ export interface BlogFrontmatter {
 export interface BlogDraft extends ContentMetadata {
   type: 'BLOG_POST'
   frontmatter: BlogFrontmatter
-  content: string  // MDX content body
+  content: string // MDX content body
   wordCount: number
 }
 
@@ -148,7 +143,7 @@ export interface NewsArticleFrontmatter {
   seoTitle: string
   seoDescription: string
   isBreakingNews: boolean
-  expiresAt?: string  // For time-sensitive news
+  expiresAt?: string // For time-sensitive news
   sources: NewsSource[]
   relatedLinks: Array<{ title: string; url: string }>
 }
@@ -233,13 +228,13 @@ export interface SEOLandingGenerationInput {
 export interface SocialPostDraft extends ContentMetadata {
   type: 'SOCIAL_POST'
   platform: SocialPlatform
-  sourceContentId?: string  // Reference to blog/news being repurposed
+  sourceContentId?: string // Reference to blog/news being repurposed
   content: SocialPostContent
 }
 
 export interface SocialPostContent {
   // Twitter/X
-  thread?: string[]  // Array of tweets for thread
+  thread?: string[] // Array of tweets for thread
 
   // LinkedIn
   longFormPost?: string
@@ -360,7 +355,7 @@ export interface CLIGenerateOptions {
   headline?: string
   sourceUrl?: string
   urgent?: boolean
-  batch?: string  // Path to batch file
+  batch?: string // Path to batch file
   output?: string // Custom output path
 }
 
@@ -427,12 +422,13 @@ export const DEFAULT_CONFIG: SEOMarketingConfig = {
   publishedDir: 'content/blog',
   defaultAuthor: {
     name: 'Dr. Shekhar Singh',
-    role: 'Founder & Senior Faculty'
+    role: 'Founder & Senior Faculty',
   },
   defaultPriority: 'normal',
   autoGenerateSlugs: true,
   maxDraftsInQueue: 100,
   urgentExpiryHours: 24,
   whatsappNumber: '+918826444334',
-  whatsappMessage: 'Hi! I found you through your website and would like to know more about your NEET Biology coaching.'
+  whatsappMessage:
+    'Hi! I found you through your website and would like to know more about your NEET Biology coaching.',
 }

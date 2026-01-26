@@ -7,7 +7,13 @@ import { ClassSelector, ClassType } from '@/components/simple/ClassSelector'
 import { TestInterface } from '@/components/simple/TestInterface'
 import { TestResults } from '@/components/simple/TestResults'
 import { SimpleTest, TestResponse } from '@/types/simpleTest'
-import { getTestProgress, hasUserTakenTest, getBestScoreForTest, getAttemptCount, SavedTestProgress } from '@/utils/testStorage'
+import {
+  getTestProgress,
+  hasUserTakenTest,
+  getBestScoreForTest,
+  getAttemptCount,
+  SavedTestProgress,
+} from '@/utils/testStorage'
 
 export default function TestPage() {
   const params = useParams()
@@ -95,7 +101,7 @@ export default function TestPage() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Test Not Found</h1>
           <p className="text-gray-600 mb-6">The test you&apos;re looking for doesn&apos;t exist.</p>
-          <button 
+          <button
             onClick={() => router.push('/mock-tests')}
             className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
           >
@@ -112,7 +118,7 @@ export default function TestPage() {
         {/* Header */}
         <div className="bg-white border-b border-gray-200 py-4">
           <div className="max-w-7xl mx-auto px-6">
-            <button 
+            <button
               onClick={() => router.push('/mock-tests')}
               className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
             >
@@ -129,11 +135,8 @@ export default function TestPage() {
               <h1 className="text-3xl font-bold text-gray-900 mb-2">{test.title}</h1>
               <p className="text-gray-600">{test.description}</p>
             </div>
-            
-            <ClassSelector 
-              onClassSelect={handleClassSelect}
-              selectedClass={selectedClass}
-            />
+
+            <ClassSelector onClassSelect={handleClassSelect} selectedClass={selectedClass} />
           </div>
         </div>
       </div>
@@ -143,7 +146,9 @@ export default function TestPage() {
   // Resume test dialog
   if (showResumeDialog && savedProgress) {
     const progress = savedProgress
-    const answeredCount = progress.responses.filter((r: TestResponse) => r.selectedAnswer !== null).length
+    const answeredCount = progress.responses.filter(
+      (r: TestResponse) => r.selectedAnswer !== null
+    ).length
     const timeElapsed = Math.round((Date.now() - progress.startTime) / 60000) // minutes
 
     return (
@@ -160,7 +165,9 @@ export default function TestPage() {
           <div className="bg-gray-50 rounded-2xl p-4 mb-6">
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="text-center">
-                <div className="font-semibold text-gray-900">{answeredCount}/{test.totalQuestions}</div>
+                <div className="font-semibold text-gray-900">
+                  {answeredCount}/{test.totalQuestions}
+                </div>
                 <div className="text-gray-600">Answered</div>
               </div>
               <div className="text-center">
@@ -221,14 +228,14 @@ export default function TestPage() {
       {/* Header */}
       <div className="bg-white border-b border-gray-200 py-4">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-          <button 
+          <button
             onClick={() => router.push('/mock-tests')}
             className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
           >
             <span className="mr-2">←</span>
             Back to Tests
           </button>
-          <button 
+          <button
             onClick={handleChangeClass}
             className="text-blue-600 hover:text-blue-700 text-sm font-medium"
           >
@@ -244,19 +251,28 @@ export default function TestPage() {
           <div className="bg-white rounded-3xl shadow-lg p-8 mb-8">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center space-x-3">
-                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                  test.difficulty === 'easy' ? 'bg-green-100 text-green-800' :
-                  test.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-800' :
-                  'bg-red-100 text-red-800'
-                }`}>
+                <span
+                  className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                    test.difficulty === 'easy'
+                      ? 'bg-green-100 text-green-800'
+                      : test.difficulty === 'medium'
+                        ? 'bg-yellow-100 text-yellow-800'
+                        : 'bg-red-100 text-red-800'
+                  }`}
+                >
                   {test.difficulty.toUpperCase()}
                 </span>
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">
-                  {selectedClass === 'class-11' ? 'Class 11' : 
-                   selectedClass === 'class-12' ? 'Class 12' : 'Dropper'}
+                  {selectedClass === 'class-11'
+                    ? 'Class 11'
+                    : selectedClass === 'class-12'
+                      ? 'Class 12'
+                      : 'Dropper'}
                 </span>
               </div>
-              <span className="text-gray-500 text-sm">{test.category.replace('-', ' ').toUpperCase()}</span>
+              <span className="text-gray-500 text-sm">
+                {test.category.replace('-', ' ').toUpperCase()}
+              </span>
             </div>
 
             <h1 className="text-3xl font-bold text-gray-900 mb-4">{test.title}</h1>
@@ -315,11 +331,15 @@ export default function TestPage() {
                 <h3 className="text-lg font-bold text-blue-900 mb-4">Your Previous Performance</h3>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600">{getBestScoreForTest(test.id)}%</div>
+                    <div className="text-3xl font-bold text-blue-600">
+                      {getBestScoreForTest(test.id)}%
+                    </div>
                     <div className="text-blue-800">Best Score</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600">{getAttemptCount(test.id)}</div>
+                    <div className="text-3xl font-bold text-blue-600">
+                      {getAttemptCount(test.id)}
+                    </div>
                     <div className="text-blue-800">Attempts</div>
                   </div>
                 </div>
@@ -328,7 +348,7 @@ export default function TestPage() {
 
             {/* Start Button */}
             <div className="text-center">
-              <button 
+              <button
                 onClick={handleStartTest}
                 className="bg-blue-600 text-white px-12 py-4 rounded-xl font-semibold text-lg hover:bg-blue-700 transition-colors"
               >

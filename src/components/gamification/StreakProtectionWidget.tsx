@@ -63,7 +63,9 @@ export function StreakProtectionWidget({
   }
 
   return (
-    <div className={`bg-gradient-to-br ${getStreakColor()} rounded-xl shadow-lg p-6 text-white ${className}`}>
+    <div
+      className={`bg-gradient-to-br ${getStreakColor()} rounded-xl shadow-lg p-6 text-white ${className}`}
+    >
       {/* Header with Streak Count */}
       <div className="flex items-center justify-between mb-4">
         <div>
@@ -89,8 +91,8 @@ export function StreakProtectionWidget({
             {status.isProtected
               ? 'Your streak is safe until tomorrow'
               : status.isAtRisk
-              ? 'Practice now to save your streak!'
-              : 'Keep the momentum going!'}
+                ? 'Practice now to save your streak!'
+                : 'Keep the momentum going!'}
           </p>
         </div>
         <motion.div
@@ -103,7 +105,9 @@ export function StreakProtectionWidget({
           {status.isProtected ? (
             <Shield className="w-8 h-8 text-cyan-200" />
           ) : (
-            <Flame className={`w-8 h-8 ${status.currentStreak > 0 ? 'text-yellow-300' : 'text-white/50'}`} />
+            <Flame
+              className={`w-8 h-8 ${status.currentStreak > 0 ? 'text-yellow-300' : 'text-white/50'}`}
+            />
           )}
         </motion.div>
       </div>
@@ -199,9 +203,7 @@ export function StreakProtectionWidget({
             <div
               key={i}
               className={`w-3 h-3 rounded-full ${
-                i < status.freezesAvailable
-                  ? 'bg-cyan-300'
-                  : 'bg-white/20'
+                i < status.freezesAvailable ? 'bg-cyan-300' : 'bg-white/20'
               }`}
             />
           ))}
@@ -231,8 +233,9 @@ export function StreakProtectionWidget({
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Use Streak Freeze?</h3>
                 <p className="text-gray-600 mb-6">
-                  This will protect your {status.currentStreak}-day streak until tomorrow.
-                  You have {status.freezesAvailable} freeze{status.freezesAvailable !== 1 ? 's' : ''} left this week.
+                  This will protect your {status.currentStreak}-day streak until tomorrow. You have{' '}
+                  {status.freezesAvailable} freeze{status.freezesAvailable !== 1 ? 's' : ''} left
+                  this week.
                 </p>
                 <div className="flex space-x-3">
                   <button
@@ -282,13 +285,16 @@ export function StreakProtectionWidget({
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Recover Your Streak?</h3>
                 <p className="text-gray-600 mb-4">
-                  Spend <span className="font-bold text-yellow-600">{status.recoveryXpCost} XP</span> to restore your streak.
+                  Spend{' '}
+                  <span className="font-bold text-yellow-600">{status.recoveryXpCost} XP</span> to
+                  restore your streak.
                 </p>
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-3 mb-6">
                   <div className="flex items-center justify-center space-x-2 text-yellow-800">
                     <Clock className="w-4 h-4" />
                     <span className="text-sm font-medium">
-                      Offer expires in {status.recoveryDeadline ? getTimeRemaining(status.recoveryDeadline) : 'soon'}
+                      Offer expires in{' '}
+                      {status.recoveryDeadline ? getTimeRemaining(status.recoveryDeadline) : 'soon'}
                     </span>
                   </div>
                 </div>

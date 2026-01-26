@@ -5,7 +5,13 @@ import { MessageCircle, Loader2 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
-export type WhatsAppButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'floating' | 'icon'
+export type WhatsAppButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'outline'
+  | 'ghost'
+  | 'floating'
+  | 'icon'
 export type WhatsAppButtonSize = 'sm' | 'md' | 'lg' | 'xl'
 
 interface TrackedWhatsAppButtonProps {
@@ -23,18 +29,12 @@ interface TrackedWhatsAppButtonProps {
 }
 
 const variantStyles: Record<WhatsAppButtonVariant, string> = {
-  primary:
-    'bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-lg hover:shadow-xl',
-  secondary:
-    'bg-green-100 hover:bg-green-200 text-green-700 border border-green-300',
-  outline:
-    'border-2 border-green-500 text-green-600 hover:bg-green-50',
-  ghost:
-    'text-green-600 hover:bg-green-50',
-  floating:
-    'bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-2xl hover:shadow-3xl rounded-full',
-  icon:
-    'bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full p-2',
+  primary: 'bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-lg hover:shadow-xl',
+  secondary: 'bg-green-100 hover:bg-green-200 text-green-700 border border-green-300',
+  outline: 'border-2 border-green-500 text-green-600 hover:bg-green-50',
+  ghost: 'text-green-600 hover:bg-green-50',
+  floating: 'bg-[#25D366] hover:bg-[#20BD5A] text-white shadow-2xl hover:shadow-3xl rounded-full',
+  icon: 'bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-full p-2',
 }
 
 const sizeStyles: Record<WhatsAppButtonSize, string> = {
@@ -230,11 +230,7 @@ export function WhatsAppFloatingButton({
       )}
       aria-label="Chat on WhatsApp"
     >
-      {isLoading ? (
-        <Loader2 className="animate-spin" size={28} />
-      ) : (
-        <MessageCircle size={28} />
-      )}
+      {isLoading ? <Loader2 className="animate-spin" size={28} /> : <MessageCircle size={28} />}
     </button>
   )
 }

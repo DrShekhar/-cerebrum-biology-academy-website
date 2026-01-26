@@ -85,9 +85,9 @@ export const NEETCoachingRoles: SecurityRole[] = [
     permissions: [
       {
         resource: '*',
-        actions: ['create', 'read', 'update', 'delete', 'execute']
-      }
-    ]
+        actions: ['create', 'read', 'update', 'delete', 'execute'],
+      },
+    ],
   },
   {
     id: 'admin',
@@ -103,34 +103,34 @@ export const NEETCoachingRoles: SecurityRole[] = [
         resource: 'users',
         actions: ['create', 'read', 'update', 'delete'],
         conditions: [
-          { field: 'role', operator: 'not_equals', value: 'super_admin', context: 'user' }
-        ]
+          { field: 'role', operator: 'not_equals', value: 'super_admin', context: 'user' },
+        ],
       },
       {
         resource: 'courses',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'enrollments',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'payments',
-        actions: ['read', 'update']
+        actions: ['read', 'update'],
       },
       {
         resource: 'analytics',
-        actions: ['read']
+        actions: ['read'],
       },
       {
         resource: 'marketing',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'reports',
-        actions: ['read', 'execute']
-      }
-    ]
+        actions: ['read', 'execute'],
+      },
+    ],
   },
   {
     id: 'academic_head',
@@ -144,32 +144,30 @@ export const NEETCoachingRoles: SecurityRole[] = [
     permissions: [
       {
         resource: 'faculty',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'courses',
-        actions: ['create', 'read', 'update']
+        actions: ['create', 'read', 'update'],
       },
       {
         resource: 'schedules',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'students',
         actions: ['read', 'update'],
-        dataFilters: [
-          { field: 'academic_department', constraint: 'department_data' }
-        ]
+        dataFilters: [{ field: 'academic_department', constraint: 'department_data' }],
       },
       {
         resource: 'attendance',
-        actions: ['read', 'update']
+        actions: ['read', 'update'],
       },
       {
         resource: 'assessments',
-        actions: ['create', 'read', 'update', 'delete']
-      }
-    ]
+        actions: ['create', 'read', 'update', 'delete'],
+      },
+    ],
   },
   {
     id: 'operations_manager',
@@ -183,32 +181,32 @@ export const NEETCoachingRoles: SecurityRole[] = [
     permissions: [
       {
         resource: 'enrollments',
-        actions: ['create', 'read', 'update']
+        actions: ['create', 'read', 'update'],
       },
       {
         resource: 'demo_bookings',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'payments',
         actions: ['read', 'update'],
         conditions: [
-          { field: 'status', operator: 'not_equals', value: 'completed', context: 'user' }
-        ]
+          { field: 'status', operator: 'not_equals', value: 'completed', context: 'user' },
+        ],
       },
       {
         resource: 'students',
-        actions: ['read', 'update']
+        actions: ['read', 'update'],
       },
       {
         resource: 'support_tickets',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'communications',
-        actions: ['create', 'read', 'execute']
-      }
-    ]
+        actions: ['create', 'read', 'execute'],
+      },
+    ],
   },
   {
     id: 'sales_manager',
@@ -222,28 +220,26 @@ export const NEETCoachingRoles: SecurityRole[] = [
     permissions: [
       {
         resource: 'leads',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'demo_bookings',
-        actions: ['create', 'read', 'update']
+        actions: ['create', 'read', 'update'],
       },
       {
         resource: 'marketing_campaigns',
-        actions: ['read', 'execute']
+        actions: ['read', 'execute'],
       },
       {
         resource: 'sales_reports',
-        actions: ['read']
+        actions: ['read'],
       },
       {
         resource: 'students',
         actions: ['read'],
-        dataFilters: [
-          { field: 'enrollment_status', constraint: 'public_data' }
-        ]
-      }
-    ]
+        dataFilters: [{ field: 'enrollment_status', constraint: 'public_data' }],
+      },
+    ],
   },
   {
     id: 'faculty',
@@ -258,36 +254,28 @@ export const NEETCoachingRoles: SecurityRole[] = [
       {
         resource: 'classes',
         actions: ['create', 'read', 'update'],
-        dataFilters: [
-          { field: 'faculty_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'faculty_id', constraint: 'own_data' }],
       },
       {
         resource: 'students',
         actions: ['read', 'update'],
-        dataFilters: [
-          { field: 'enrolled_courses', constraint: 'team_data' }
-        ]
+        dataFilters: [{ field: 'enrolled_courses', constraint: 'team_data' }],
       },
       {
         resource: 'attendance',
         actions: ['create', 'read', 'update'],
-        dataFilters: [
-          { field: 'class_faculty', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'class_faculty', constraint: 'own_data' }],
       },
       {
         resource: 'assignments',
         actions: ['create', 'read', 'update', 'delete'],
-        dataFilters: [
-          { field: 'created_by', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'created_by', constraint: 'own_data' }],
       },
       {
         resource: 'doubts',
-        actions: ['read', 'update']
-      }
-    ]
+        actions: ['read', 'update'],
+      },
+    ],
   },
   {
     id: 'counselor',
@@ -302,23 +290,21 @@ export const NEETCoachingRoles: SecurityRole[] = [
       {
         resource: 'students',
         actions: ['read', 'update'],
-        dataFilters: [
-          { field: 'assigned_counselor', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'assigned_counselor', constraint: 'own_data' }],
       },
       {
         resource: 'counseling_sessions',
-        actions: ['create', 'read', 'update', 'delete']
+        actions: ['create', 'read', 'update', 'delete'],
       },
       {
         resource: 'student_progress',
-        actions: ['read']
+        actions: ['read'],
       },
       {
         resource: 'communications',
-        actions: ['create', 'read']
-      }
-    ]
+        actions: ['create', 'read'],
+      },
+    ],
   },
   {
     id: 'consultant',
@@ -333,56 +319,47 @@ export const NEETCoachingRoles: SecurityRole[] = [
       {
         resource: 'leads',
         actions: ['create', 'read', 'update'],
-        dataFilters: [
-          { field: 'referred_by', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'referred_by', constraint: 'own_data' }],
       },
       {
         resource: 'referrals',
         actions: ['read'],
-        dataFilters: [
-          { field: 'consultant_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'consultant_id', constraint: 'own_data' }],
       },
       {
         resource: 'commissions',
         actions: ['read'],
-        dataFilters: [
-          { field: 'consultant_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'consultant_id', constraint: 'own_data' }],
       },
       {
         resource: 'referral_links',
         actions: ['create', 'read'],
-        dataFilters: [
-          { field: 'consultant_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'consultant_id', constraint: 'own_data' }],
       },
       {
         resource: 'communications',
         actions: ['read'],
-        dataFilters: [
-          { field: 'lead_referred_by', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'lead_referred_by', constraint: 'own_data' }],
       },
       {
         resource: 'demo_bookings',
         actions: ['read'],
-        dataFilters: [
-          { field: 'referred_by', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'referred_by', constraint: 'own_data' }],
       },
       {
         resource: 'payments',
         actions: ['read'],
-        dataFilters: [
-          { field: 'enrollment_referred_by', constraint: 'own_data' }
-        ],
+        dataFilters: [{ field: 'enrollment_referred_by', constraint: 'own_data' }],
         conditions: [
-          { field: 'data_scope', operator: 'in', value: ['status', 'amount', 'date'], context: 'user' }
-        ]
-      }
-    ]
+          {
+            field: 'data_scope',
+            operator: 'in',
+            value: ['status', 'amount', 'date'],
+            context: 'user',
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'student',
@@ -397,44 +374,34 @@ export const NEETCoachingRoles: SecurityRole[] = [
       {
         resource: 'courses',
         actions: ['read'],
-        dataFilters: [
-          { field: 'enrollment_status', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'enrollment_status', constraint: 'own_data' }],
       },
       {
         resource: 'classes',
         actions: ['read'],
-        dataFilters: [
-          { field: 'enrolled_students', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'enrolled_students', constraint: 'own_data' }],
       },
       {
         resource: 'assignments',
         actions: ['read', 'update'],
-        dataFilters: [
-          { field: 'student_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'student_id', constraint: 'own_data' }],
       },
       {
         resource: 'doubts',
         actions: ['create', 'read'],
-        dataFilters: [
-          { field: 'student_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'student_id', constraint: 'own_data' }],
       },
       {
         resource: 'progress',
         actions: ['read'],
-        dataFilters: [
-          { field: 'student_id', constraint: 'own_data' }
-        ]
-      }
-    ]
+        dataFilters: [{ field: 'student_id', constraint: 'own_data' }],
+      },
+    ],
   },
   {
     id: 'parent',
     name: 'Parent/Guardian',
-    description: 'Parent access to child\'s academic progress',
+    description: "Parent access to child's academic progress",
     hierarchy: 1,
     isSystemRole: false,
     maxSessionDuration: 60,
@@ -444,33 +411,25 @@ export const NEETCoachingRoles: SecurityRole[] = [
       {
         resource: 'student_progress',
         actions: ['read'],
-        dataFilters: [
-          { field: 'parent_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'parent_id', constraint: 'own_data' }],
       },
       {
         resource: 'attendance',
         actions: ['read'],
-        dataFilters: [
-          { field: 'parent_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'parent_id', constraint: 'own_data' }],
       },
       {
         resource: 'payments',
         actions: ['read'],
-        dataFilters: [
-          { field: 'parent_id', constraint: 'own_data' }
-        ]
+        dataFilters: [{ field: 'parent_id', constraint: 'own_data' }],
       },
       {
         resource: 'communications',
         actions: ['read'],
-        dataFilters: [
-          { field: 'recipient_type', constraint: 'own_data' }
-        ]
-      }
-    ]
-  }
+        dataFilters: [{ field: 'recipient_type', constraint: 'own_data' }],
+      },
+    ],
+  },
 ]
 
 // Security Implementation Class
@@ -518,13 +477,8 @@ export class RBACSecurityEngine {
       }
 
       // Check resource permissions
-      const hasPermission = await this.checkResourcePermission(
-        userRole,
-        resource,
-        action,
-        context
-      )
-      
+      const hasPermission = await this.checkResourcePermission(userRole, resource, action, context)
+
       if (!hasPermission) {
         return { allowed: false, reason: 'Insufficient permissions' }
       }
@@ -533,7 +487,6 @@ export class RBACSecurityEngine {
       await this.logSecurityEvent(userId, resource, action, 'success', 'low')
 
       return { allowed: true }
-
     } catch (error) {
       // Log security error
       await this.logSecurityEvent(userId, resource, action, 'failure', 'high')
@@ -551,7 +504,7 @@ export class RBACSecurityEngine {
     if (!userRole) throw new Error('User role not found')
 
     const sessionId = this.generateSecureSessionId()
-    const expiresAt = Date.now() + (userRole.maxSessionDuration * 60 * 1000)
+    const expiresAt = Date.now() + userRole.maxSessionDuration * 60 * 1000
 
     const session = {
       userId,
@@ -562,15 +515,18 @@ export class RBACSecurityEngine {
       expiresAt,
       lastActivity: Date.now(),
       role: userRole.id,
-      mfaVerified: !userRole.requiresMfa // Will be updated after MFA
+      mfaVerified: !userRole.requiresMfa, // Will be updated after MFA
     }
 
     this.activeSessions.set(sessionId, session)
 
     // Set up automatic session cleanup
-    setTimeout(() => {
-      this.activeSessions.delete(sessionId)
-    }, userRole.maxSessionDuration * 60 * 1000)
+    setTimeout(
+      () => {
+        this.activeSessions.delete(sessionId)
+      },
+      userRole.maxSessionDuration * 60 * 1000
+    )
 
     await this.logSecurityEvent(userId, 'session', 'create', 'success', 'low')
 
@@ -596,9 +552,9 @@ export class RBACSecurityEngine {
     // Minor data protection (under 18)
     if (dataType === 'student' && data.age < 18) {
       if (!data.parentConsent) {
-        return { 
-          compliant: false, 
-          actions: ['Obtain parent consent before processing'] 
+        return {
+          compliant: false,
+          actions: ['Obtain parent consent before processing'],
         }
       }
       actions.push('Apply enhanced minor data protection')
@@ -628,15 +584,15 @@ export class RBACSecurityEngine {
     recommendations: string[]
   }> {
     const recentLogs = this.auditLogs
-      .filter(log => log.userId === userId)
-      .filter(log => Date.now() - log.timestamp < 24 * 60 * 60 * 1000) // Last 24 hours
+      .filter((log) => log.userId === userId)
+      .filter((log) => Date.now() - log.timestamp < 24 * 60 * 60 * 1000) // Last 24 hours
 
     const anomalies: string[] = []
     const recommendations: string[] = []
     let riskLevel: 'low' | 'medium' | 'high' | 'critical' = 'low'
 
     // Check for unusual access patterns
-    const uniqueIPs = new Set(recentLogs.map(log => log.ipAddress))
+    const uniqueIPs = new Set(recentLogs.map((log) => log.ipAddress))
     if (uniqueIPs.size > 3) {
       anomalies.push('Multiple IP addresses detected')
       riskLevel = 'medium'
@@ -644,7 +600,7 @@ export class RBACSecurityEngine {
     }
 
     // Check for failed access attempts
-    const failedAttempts = recentLogs.filter(log => log.result === 'failure')
+    const failedAttempts = recentLogs.filter((log) => log.result === 'failure')
     if (failedAttempts.length > 5) {
       anomalies.push('High number of failed access attempts')
       riskLevel = 'high'
@@ -652,7 +608,7 @@ export class RBACSecurityEngine {
     }
 
     // Check for unusual time patterns
-    const nightAccess = recentLogs.filter(log => {
+    const nightAccess = recentLogs.filter((log) => {
       const hour = new Date(log.timestamp).getHours()
       return hour < 6 || hour > 23
     })
@@ -663,8 +619,8 @@ export class RBACSecurityEngine {
     }
 
     // Check for privilege escalation attempts
-    const privilegeAttempts = recentLogs.filter(log => 
-      log.action.includes('admin') || log.action.includes('privilege')
+    const privilegeAttempts = recentLogs.filter(
+      (log) => log.action.includes('admin') || log.action.includes('privilege')
     )
     if (privilegeAttempts.length > 0) {
       anomalies.push('Potential privilege escalation attempts')
@@ -679,7 +635,7 @@ export class RBACSecurityEngine {
   private async getUserRole(userId: string): Promise<SecurityRole | null> {
     // In production, fetch from database
     // For now, return a default role
-    return NEETCoachingRoles.find(role => role.id === 'student') || null
+    return NEETCoachingRoles.find((role) => role.id === 'student') || null
   }
 
   private async validateSession(userId: string): Promise<boolean> {
@@ -705,42 +661,40 @@ export class RBACSecurityEngine {
     }
 
     const requests = this.rateLimiters.get(key)
-    
+
     // Remove old requests outside the window
     const validRequests = requests.filter((timestamp: number) => now - timestamp < window)
-    
+
     if (validRequests.length >= limit) {
       return false
     }
 
     validRequests.push(now)
     this.rateLimiters.set(key, validRequests)
-    
+
     return true
   }
 
   private async validateIpAccess(userId: string, ipAddress?: string): Promise<boolean> {
     if (!ipAddress) return true
-    
+
     const userRole = await this.getUserRole(userId)
     if (!userRole?.allowedIpRanges) return true
 
     // Check if IP is in allowed ranges
-    return userRole.allowedIpRanges.some(range => 
-      this.isIpInRange(ipAddress, range)
-    )
+    return userRole.allowedIpRanges.some((range) => this.isIpInRange(ipAddress, range))
   }
 
   private async validateMFA(userId: string, role: SecurityRole): Promise<boolean> {
     if (!role.requiresMfa) return true
-    
+
     // Check if MFA is verified for current session
     for (const [sessionId, session] of this.activeSessions) {
       if (session.userId === userId) {
         return session.mfaVerified || false
       }
     }
-    
+
     return false
   }
 
@@ -751,13 +705,13 @@ export class RBACSecurityEngine {
     context?: any
   ): Promise<boolean> {
     // Check if role has wildcard permission
-    const wildcardPermission = role.permissions.find(p => p.resource === '*')
+    const wildcardPermission = role.permissions.find((p) => p.resource === '*')
     if (wildcardPermission && wildcardPermission.actions.includes(action as any)) {
       return true
     }
 
     // Check specific resource permission
-    const permission = role.permissions.find(p => p.resource === resource)
+    const permission = role.permissions.find((p) => p.resource === resource)
     if (!permission) return false
 
     // Check if action is allowed
@@ -786,7 +740,7 @@ export class RBACSecurityEngine {
 
   private evaluateCondition(condition: PermissionCondition, context: any): boolean {
     const contextValue = context?.[condition.field]
-    
+
     switch (condition.operator) {
       case 'equals':
         return contextValue === condition.value
@@ -838,7 +792,7 @@ export class RBACSecurityEngine {
       userAgent: 'unknown', // Would be populated from request
       sessionId: 'unknown', // Would be populated from session
       timestamp: Date.now(),
-      complianceFlags: this.getComplianceFlags(resource, action)
+      complianceFlags: this.getComplianceFlags(resource, action),
     }
 
     this.auditLogs.push(logEntry)
@@ -855,38 +809,38 @@ export class RBACSecurityEngine {
         studentDataRetention: 7 * 365 * 24 * 60 * 60 * 1000, // 7 years
         parentConsentRequired: true,
         minorDataProtection: true,
-        crossBorderDataTransfer: 'prohibited'
+        crossBorderDataTransfer: 'prohibited',
       },
       financialCompliance: {
         femaCompliance: true,
         gstCompliance: true,
         paymentDataRetention: 10 * 365 * 24 * 60 * 60 * 1000, // 10 years
-        auditTrailRequired: true
+        auditTrailRequired: true,
       },
       educationalCompliance: {
         rteCompliance: true,
         ugcGuidelines: true,
         studentPrivacyProtection: true,
-        examDataSecurity: true
-      }
+        examDataSecurity: true,
+      },
     }
   }
 
   private getComplianceFlags(resource: string, action: string): string[] {
     const flags: string[] = []
-    
+
     if (resource.includes('student') || resource.includes('academic')) {
       flags.push('RTE_ACT', 'STUDENT_PRIVACY')
     }
-    
+
     if (resource.includes('payment') || resource.includes('financial')) {
       flags.push('FEMA_COMPLIANCE', 'GST_COMPLIANCE')
     }
-    
+
     if (action === 'delete' || action === 'export') {
       flags.push('DATA_RETENTION', 'AUDIT_REQUIRED')
     }
-    
+
     return flags
   }
 

@@ -9,15 +9,7 @@ import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { Button } from '@/components/ui/Button'
-import {
-  Calendar,
-  FileText,
-  Users,
-  CheckCircle,
-  BookOpen,
-  Target,
-  Activity,
-} from 'lucide-react'
+import { Calendar, FileText, Users, CheckCircle, BookOpen, Target, Activity } from 'lucide-react'
 import { showToast } from '@/lib/toast'
 
 interface Analytics {

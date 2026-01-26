@@ -106,7 +106,8 @@ export function SolutionsTab({
               onChange={(e) =>
                 setSolutionSettings((prev) => ({
                   ...prev,
-                  distributionMethod: e.target.value as SolutionReleaseSettings['distributionMethod'],
+                  distributionMethod: e.target
+                    .value as SolutionReleaseSettings['distributionMethod'],
                 }))
               }
               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"

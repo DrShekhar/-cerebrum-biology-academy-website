@@ -55,8 +55,13 @@ function mapDifficulty(difficulty: string): 'EASY' | 'MEDIUM' | 'HARD' | 'EXPERT
 }
 
 // Map category to enum
-function mapCategory(category: string): 'PRACTICE' | 'MOCK_TEST' | 'PREVIOUS_YEAR' | 'CONCEPT_BUILDER' | 'COMPETITIVE' {
-  const mapping: Record<string, 'PRACTICE' | 'MOCK_TEST' | 'PREVIOUS_YEAR' | 'CONCEPT_BUILDER' | 'COMPETITIVE'> = {
+function mapCategory(
+  category: string
+): 'PRACTICE' | 'MOCK_TEST' | 'PREVIOUS_YEAR' | 'CONCEPT_BUILDER' | 'COMPETITIVE' {
+  const mapping: Record<
+    string,
+    'PRACTICE' | 'MOCK_TEST' | 'PREVIOUS_YEAR' | 'CONCEPT_BUILDER' | 'COMPETITIVE'
+  > = {
     PRACTICE: 'PRACTICE',
     MOCK_TEST: 'MOCK_TEST',
     PREVIOUS_YEAR: 'PREVIOUS_YEAR',
@@ -152,8 +157,12 @@ async function seedQuestion(q: QuestionSeed, chapterSet: ChapterQuestionSet): Pr
 }
 
 // Seed all questions from a chapter set
-async function seedChapterQuestions(chapterSet: ChapterQuestionSet): Promise<{ success: number; skipped: number; failed: number }> {
-  console.log(`\n📚 Seeding: Class ${chapterSet.ncertClass} - Chapter ${chapterSet.chapterNo}: ${chapterSet.chapterName}`)
+async function seedChapterQuestions(
+  chapterSet: ChapterQuestionSet
+): Promise<{ success: number; skipped: number; failed: number }> {
+  console.log(
+    `\n📚 Seeding: Class ${chapterSet.ncertClass} - Chapter ${chapterSet.chapterNo}: ${chapterSet.chapterName}`
+  )
   console.log(`   Total questions: ${chapterSet.questions.length}`)
 
   let success = 0
@@ -177,7 +186,7 @@ async function seedChapterQuestions(chapterSet: ChapterQuestionSet): Promise<{ s
 
 // Main seeding function
 async function main() {
-  console.log('=' .repeat(60))
+  console.log('='.repeat(60))
   console.log('NCERT Biology Question Seeder')
   console.log('='.repeat(60))
 

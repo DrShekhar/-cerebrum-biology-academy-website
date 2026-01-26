@@ -47,14 +47,12 @@ const seoSlugs = getAllSEOSlugs()
 ### Created
 
 1. **`src/data/seo-landing/slugs-static.ts`** (~3KB)
-
    - Contains only slug strings organized by category
    - Pre-generated, committed to repo
    - Used by sitemap.ts for efficient slug lookup
    - Provides utility functions (validation, counts, etc.)
 
 2. **`scripts/generate-seo-slugs.js`**
-
    - Script to regenerate slugs-static.ts
    - Extracts slugs using regex (no JS parsing)
    - Run via: `npm run generate:seo-slugs`

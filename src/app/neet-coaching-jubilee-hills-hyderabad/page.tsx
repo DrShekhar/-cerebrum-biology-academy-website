@@ -92,27 +92,32 @@ const features = [
   {
     icon: Users,
     title: 'Elite Small Batches (10-15)',
-    description: 'Exclusive batches for Jubilee Hills students with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Jubilee Hills students with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Jubilee Hills deserves.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Jubilee Hills deserves.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement your premium school schedule.',
+    description:
+      'Morning, afternoon, and evening batches to complement your premium school schedule.',
   },
   {
     icon: Shield,
     title: 'Stress-Free Learning',
-    description: 'No Hyderabad traffic stress. Study in comfort from your premium Jubilee Hills residence.',
+    description:
+      'No Hyderabad traffic stress. Study in comfort from your premium Jubilee Hills residence.',
   },
 ]
 
@@ -137,7 +142,7 @@ const faqs = [
   {
     question: 'What is the fee for premium NEET coaching in Jubilee Hills?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This is competitive with Hyderabad\'s premium coaching centers while offering superior flexibility and personalized attention. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This is competitive with Hyderabad's premium coaching centers while offering superior flexibility and personalized attention. EMI options available.",
   },
   {
     question: 'How does this compare to coaching centers in Ameerpet?',
@@ -152,7 +157,7 @@ const faqs = [
   {
     question: 'What medical colleges can Hyderabad students target?',
     answer:
-      'With proper NEET preparation, Jubilee Hills students can target top colleges like Osmania Medical College, Gandhi Medical College, Nizam\'s Institute of Medical Sciences (NIMS), and all-India institutes like AIIMS and JIPMER.',
+      "With proper NEET preparation, Jubilee Hills students can target top colleges like Osmania Medical College, Gandhi Medical College, Nizam's Institute of Medical Sciences (NIMS), and all-India institutes like AIIMS and JIPMER.",
   },
 ]
 
@@ -186,7 +191,7 @@ const whyJubileeHills = [
     icon: GraduationCap,
     title: 'Elite Student Network',
     description:
-      'Study with peers from Jubilee Hills & Banjara Hills\' top schools. Network with motivated students from premium institutions.',
+      "Study with peers from Jubilee Hills & Banjara Hills' top schools. Network with motivated students from premium institutions.",
   },
 ]
 
@@ -228,7 +233,8 @@ export default function NeetCoachingJubileeHillsPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Best <span className="text-yellow-300">NEET Coaching in Jubilee Hills</span>, Hyderabad
+              Best <span className="text-yellow-300">NEET Coaching in Jubilee Hills</span>,
+              Hyderabad
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -236,8 +242,9 @@ export default function NeetCoachingJubileeHillsPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Hyderabad&apos;s elite schools. 94.2% success rate, AIIMS
-              faculty, zero traffic commute. Join students from Chirec, Oakridge, Glendale Academy.
+              Premium NEET Biology coaching for Hyderabad&apos;s elite schools. 94.2% success rate,
+              AIIMS faculty, zero traffic commute. Join students from Chirec, Oakridge, Glendale
+              Academy.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,8 +305,8 @@ export default function NeetCoachingJubileeHillsPage() {
               NEET Coaching Across Jubilee Hills & Banjara Hills
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Road No. 36 to Film Nagar, Banjara Hills to Panjagutta - premium coaching for every
-              locality.
+              From Road No. 36 to Film Nagar, Banjara Hills to Panjagutta - premium coaching for
+              every locality.
             </p>
           </motion.div>
 
@@ -321,9 +328,7 @@ export default function NeetCoachingJubileeHillsPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-rose-600" />
                   </div>
-                  <div className="text-2xl font-bold text-rose-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-rose-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-rose-100 text-rose-700 px-2 py-1 rounded-full">

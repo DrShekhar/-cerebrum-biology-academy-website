@@ -36,10 +36,6 @@ export const metadata: Metadata = {
   },
 }
 
-export default function BiologyTutorNoidaLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function BiologyTutorNoidaLayout({ children }: { children: React.ReactNode }) {
   return children
 }

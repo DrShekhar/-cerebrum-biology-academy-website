@@ -30,10 +30,7 @@ interface ExportLead {
   demoCompleted: boolean
 }
 
-async function handleGET(
-  request: NextRequest,
-  _session: ValidatedSession
-): Promise<NextResponse> {
+async function handleGET(request: NextRequest, _session: ValidatedSession): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url)
 
@@ -123,14 +120,15 @@ async function handleGET(
 
     if (includeContent) {
       const contentLeads = await prisma.content_leads.findMany({
-        where: startDate || endDate
-          ? {
-              createdAt: {
-                ...(startDate && { gte: new Date(startDate) }),
-                ...(endDate && { lte: new Date(endDate) }),
-              },
-            }
-          : undefined,
+        where:
+          startDate || endDate
+            ? {
+                createdAt: {
+                  ...(startDate && { gte: new Date(startDate) }),
+                  ...(endDate && { lte: new Date(endDate) }),
+                },
+              }
+            : undefined,
         take: limit,
         orderBy: { createdAt: 'desc' },
       })
@@ -224,9 +222,17 @@ async function handleGET(
       csvRows.push('') // Empty row
       csvRows.push('CONTENT LEADS')
       csvRows.push(
-        ['ID', 'Name', 'Email', 'Phone', 'Source', 'Capture Type', 'Engagement Score', 'Article', 'Created At'].join(
-          ','
-        )
+        [
+          'ID',
+          'Name',
+          'Email',
+          'Phone',
+          'Source',
+          'Capture Type',
+          'Engagement Score',
+          'Article',
+          'Created At',
+        ].join(',')
       )
 
       for (const lead of contentLeadsExport) {
@@ -257,10 +263,7 @@ async function handleGET(
     })
   } catch (error) {
     console.error('Error exporting leads:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to export leads' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to export leads' }, { status: 500 })
   }
 }
 
@@ -275,10 +278,7 @@ function escapeCSV(value: string): string {
 }
 
 // POST: Generate export with custom columns (advanced)
-async function handlePOST(
-  request: NextRequest,
-  session: ValidatedSession
-): Promise<NextResponse> {
+async function handlePOST(request: NextRequest, session: ValidatedSession): Promise<NextResponse> {
   try {
     const body = await request.json()
     const { columns, filters, format = 'csv' } = body

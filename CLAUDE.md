@@ -9,35 +9,38 @@ Full-stack educational platform for NEET Biology preparation built with Next.js 
 ## 🎨 CEREBRUM DESIGN STYLE (SPECIAL MENTION)
 
 ### Brand Identity
+
 **Premium, Modern, Achievement-Focused** - A sophisticated SaaS-style design targeting aspirational NEET students. High contrast between dark gradients and bright accent colors creates visual hierarchy emphasizing exclusivity and success.
 
 ### ⭐ FAVORITE ACCENT COLORS (Primary Palette)
 
 These 6 colors are the **preferred accent colors** for CTAs, badges, highlights, and visual emphasis:
 
-| Color | Tailwind | Hex | Usage |
-|-------|----------|-----|-------|
-| **Green 500** | `bg-green-500` | `#22c55e` | Success, NEET strategy, positive actions |
-| **Google Red** | `bg-[#ea4335]` | `#ea4335` | Hearts, alerts, urgent notifications |
-| **Teal 600** | `bg-teal-600` | `#0d9488` | Biology-themed buttons, medical feel |
-| **Blue 600** | `bg-blue-600` | `#2563eb` | Links, info buttons, trust signals |
-| **Purple 700** | `bg-purple-700` | `#7c3aed` | Premium features, VIP badges |
+| Color          | Tailwind        | Hex       | Usage                                            |
+| -------------- | --------------- | --------- | ------------------------------------------------ |
+| **Green 500**  | `bg-green-500`  | `#22c55e` | Success, NEET strategy, positive actions         |
+| **Google Red** | `bg-[#ea4335]`  | `#ea4335` | Hearts, alerts, urgent notifications             |
+| **Teal 600**   | `bg-teal-600`   | `#0d9488` | Biology-themed buttons, medical feel             |
+| **Blue 600**   | `bg-blue-600`   | `#2563eb` | Links, info buttons, trust signals               |
+| **Purple 700** | `bg-purple-700` | `#7c3aed` | Premium features, VIP badges                     |
 | **Yellow 800** | `bg-yellow-800` | `#854d0e` | **Prominent buttons**, earthy CTAs, gold accents |
 
 ### Warning & Alert Colors
 
-| Color | Tailwind | Hex | Usage |
-|-------|----------|-----|-------|
-| **Red 100** | `bg-red-100` | `#fee2e2` | Warning message backgrounds |
-| **Red 200** | `bg-red-200` | `#fecaca` | Warning borders, light alerts |
+| Color       | Tailwind     | Hex       | Usage                             |
+| ----------- | ------------ | --------- | --------------------------------- |
+| **Red 100** | `bg-red-100` | `#fee2e2` | Warning message backgrounds       |
+| **Red 200** | `bg-red-200` | `#fecaca` | Warning borders, light alerts     |
 | **Red 500** | `bg-red-500` | `#ef4444` | Warning text on light backgrounds |
 
 ### Typography Style
+
 - **Font**: Geist Sans with system fallbacks
 - **Hierarchy**: Large display text (2xl-6xl) for heroes, semibold/bold for emphasis
 - **Line Height**: 1.5 for body text, tighter for headings
 
 ### Visual Effects
+
 - **Cards**: Rounded corners (0.5rem), white backgrounds, shadow-xl
 - **Buttons**: Rounded-lg, hover scale (1.02x), shadow-lg on primary
 - **Animations**: Fade-in-up transitions (0.4s ease-out)
@@ -45,6 +48,7 @@ These 6 colors are the **preferred accent colors** for CTAs, badges, highlights,
 - **Gradients**: Dark blue-900 heroes, light pastel backgrounds for sections
 
 ### Component Style Patterns
+
 - **Hero Sections**: Dark gradient (slate-900 to slate-800) with yellow/white text
 - **Cards**: White bg, rounded-xl, shadow-xl, border-slate-200
 - **Primary CTAs**: Yellow (#facc15) with hover (#fde047) - high visibility
@@ -52,6 +56,7 @@ These 6 colors are the **preferred accent colors** for CTAs, badges, highlights,
 - **Headers**: Sticky with backdrop blur (8px), semi-transparent
 
 ### Reference Page
+
 **Live Example**: https://cerebrumbiologyacademy.com/courses/intensive-neet-biology
 
 ---
@@ -104,36 +109,38 @@ These 6 colors are the **preferred accent colors** for CTAs, badges, highlights,
 **GRADIENTS:** Only use the 8 approved gradients listed below. No custom gradients.
 
 **AVOID these colors** (unless absolutely necessary):
+
 - Cyan (use Blue instead)
 - Pink (use Indigo/Purple instead)
 - Emerald (use Green instead)
 
 #### Brand-Specific Colors (Custom)
-| Name | Tailwind | Hex |
-|------|----------|-----|
-| Cerebrum Green | `bg-[#4a5d4a]` | `#4a5d4a` |
-| Cerebrum Dark | `bg-[#3d4d3d]` | `#3d4d3d` |
-| Cerebrum Light | `bg-[#5a6d5a]` | `#5a6d5a` |
+
+| Name             | Tailwind       | Hex       |
+| ---------------- | -------------- | --------- |
+| Cerebrum Green   | `bg-[#4a5d4a]` | `#4a5d4a` |
+| Cerebrum Dark    | `bg-[#3d4d3d]` | `#3d4d3d` |
+| Cerebrum Light   | `bg-[#5a6d5a]` | `#5a6d5a` |
 | Cerebrum V.Light | `bg-[#e8ede8]` | `#e8ede8` |
-| Google Blue | `bg-[#4285f4]` | `#4285f4` |
-| Google Green | `bg-[#34a853]` | `#34a853` |
-| Google Red | `bg-[#ea4335]` | `#ea4335` |
-| Google Yellow | `bg-[#fbbc04]` | `#fbbc04` |
+| Google Blue      | `bg-[#4285f4]` | `#4285f4` |
+| Google Green     | `bg-[#34a853]` | `#34a853` |
+| Google Red       | `bg-[#ea4335]` | `#ea4335` |
+| Google Yellow    | `bg-[#fbbc04]` | `#fbbc04` |
 
 > **Full palette reference**: Visit `/color-palette` page for all 64 approved colors with visual swatches.
 
 #### Allowed Gradients (8 gradients)
 
-| Name | Tailwind Classes | Usage |
-|------|------------------|-------|
-| Orange to Red | `bg-gradient-to-r from-orange-500 to-red-500` | Urgent CTAs |
-| Orange to Yellow | `bg-gradient-to-r from-orange-500 to-yellow-500` | Highlights |
-| Blue 50 to Purple 50 | `bg-gradient-to-br from-blue-50 to-purple-50` | Card BG |
-| Green 50 to Teal 50 | `bg-gradient-to-br from-green-50 to-teal-50` | Bio sections |
-| Purple 50 to Pink 50 | `bg-gradient-to-br from-purple-50 to-pink-50` | Premium BG |
-| Gray 50 to White | `bg-gradient-to-b from-gray-50 to-white` | Page sections |
-| Slate 900 to 800 | `bg-gradient-to-br from-slate-900 to-slate-800` | Dark hero |
-| Blue to Purple | `bg-gradient-to-r from-blue-600 to-purple-600` | CTAs, badges |
+| Name                 | Tailwind Classes                                 | Usage         |
+| -------------------- | ------------------------------------------------ | ------------- |
+| Orange to Red        | `bg-gradient-to-r from-orange-500 to-red-500`    | Urgent CTAs   |
+| Orange to Yellow     | `bg-gradient-to-r from-orange-500 to-yellow-500` | Highlights    |
+| Blue 50 to Purple 50 | `bg-gradient-to-br from-blue-50 to-purple-50`    | Card BG       |
+| Green 50 to Teal 50  | `bg-gradient-to-br from-green-50 to-teal-50`     | Bio sections  |
+| Purple 50 to Pink 50 | `bg-gradient-to-br from-purple-50 to-pink-50`    | Premium BG    |
+| Gray 50 to White     | `bg-gradient-to-b from-gray-50 to-white`         | Page sections |
+| Slate 900 to 800     | `bg-gradient-to-br from-slate-900 to-slate-800`  | Dark hero     |
+| Blue to Purple       | `bg-gradient-to-r from-blue-600 to-purple-600`   | CTAs, badges  |
 
 ### Authentication
 
@@ -240,11 +247,13 @@ Required in `.env.local`:
 ### Responsive Design Checklist
 
 Before committing any UI changes, verify:
+
 - [ ] Mobile (375px): Content readable, no horizontal scroll, touch-friendly buttons
 - [ ] iPad (768px): Grid layouts appropriate (not too cramped or sparse)
 - [ ] Desktop (1280px+): Full layout displays correctly
 
 **Common Responsive Patterns:**
+
 ```tsx
 // Grids: Mobile → Tablet → Desktop
 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3     // 1 → 2 → 3 columns
@@ -320,18 +329,18 @@ After completing work:
 
 ### Memory Locations
 
-| File | Purpose |
-|------|---------|
+| File                              | Purpose                               |
+| --------------------------------- | ------------------------------------- |
 | `.claude/cto/memory/decisions.md` | Architectural Decision Records (ADRs) |
-| `.claude/cto/memory/learnings.md` | Project-specific learnings |
-| `.claude/cto/memory/roadmap.md` | Current priorities (P0/P1/P2) |
-| `.claude/cto/memory/tech-debt.md` | Technical debt tracker |
+| `.claude/cto/memory/learnings.md` | Project-specific learnings            |
+| `.claude/cto/memory/roadmap.md`   | Current priorities (P0/P1/P2)         |
+| `.claude/cto/memory/tech-debt.md` | Technical debt tracker                |
 
 ### Knowledge Base
 
-| File | Purpose |
-|------|---------|
-| `.claude/cto/knowledge/edtech-trends.md` | 2026 EdTech landscape |
-| `.claude/cto/knowledge/lms-patterns.md` | LMS architecture patterns |
-| `.claude/cto/knowledge/neet-market.md` | NEET exam data & personas |
-| `.claude/cto/knowledge/competitors.md` | Competitor analysis |
+| File                                     | Purpose                   |
+| ---------------------------------------- | ------------------------- |
+| `.claude/cto/knowledge/edtech-trends.md` | 2026 EdTech landscape     |
+| `.claude/cto/knowledge/lms-patterns.md`  | LMS architecture patterns |
+| `.claude/cto/knowledge/neet-market.md`   | NEET exam data & personas |
+| `.claude/cto/knowledge/competitors.md`   | Competitor analysis       |

@@ -55,7 +55,8 @@ const whyFoundation = [
   {
     icon: Sprout,
     title: 'Build Strong Basics',
-    description: 'Class 9 introduces cell biology, tissues, and classification - foundational for NEET.',
+    description:
+      'Class 9 introduces cell biology, tissues, and classification - foundational for NEET.',
   },
   {
     icon: Lightbulb,
@@ -155,8 +156,7 @@ export default function OnlineBiologyTutorClass9Page() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Online Biology Tutor for{' '}
-              <span className="text-yellow-400">Class 9</span>
+              Online Biology Tutor for <span className="text-yellow-400">Class 9</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">

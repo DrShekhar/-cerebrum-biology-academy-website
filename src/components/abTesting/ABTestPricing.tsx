@@ -3,13 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import { useABTestVariant } from './ABTestProvider'
 import { EnrollmentCTA } from './ABTestCTA'
-import {
-  Check,
-  Clock,
-  ShieldCheck,
-  Star,
-  Trophy,
-} from 'lucide-react'
+import { Check, Clock, ShieldCheck, Star, Trophy } from 'lucide-react'
 
 interface PricingTier {
   id: string

@@ -29,10 +29,7 @@ export async function GET(request: NextRequest) {
     const chapterNum = parseInt(chapterParam)
 
     if (ncertClass !== 11 && ncertClass !== 12) {
-      return NextResponse.json(
-        { error: 'Invalid class. Must be 11 or 12.' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Invalid class. Must be 11 or 12.' }, { status: 400 })
     }
 
     // Get chapter metadata

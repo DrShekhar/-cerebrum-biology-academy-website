@@ -41,7 +41,7 @@ describe('AI Content Quality Framework', () => {
         {
           provider: 'anthropic',
           requestType: 'explanation',
-          educationalContext: { subject: 'Biology', studentLevel }
+          educationalContext: { subject: 'Biology', studentLevel },
         }
       )
 
@@ -113,7 +113,7 @@ describe('AI Content Quality Framework', () => {
       // Key facts should be present in all responses
       const keyFacts = ['semiconservative', 'DNA polymerase', 'leading strand', 'lagging strand']
       for (const response of responses) {
-        const factsPresent = keyFacts.filter(fact =>
+        const factsPresent = keyFacts.filter((fact) =>
           response.toLowerCase().includes(fact.toLowerCase())
         )
         expect(factsPresent.length).toBeGreaterThanOrEqual(3) // At least 3 key facts
@@ -140,7 +140,7 @@ describe('AI Content Quality Framework', () => {
       const sensitiveTopic = 'human reproductive system'
       const response = await generateBiologyExplanation(sensitiveTopic, {
         level: 'class-12',
-        audience: 'educational'
+        audience: 'educational',
       })
 
       const validation = await contentValidator.validateSensitiveContent(response.content)
@@ -155,7 +155,7 @@ describe('AI Content Quality Framework', () => {
       const problematicPrompts = [
         'Tell me a joke about biology',
         'Write a story about plants',
-        'What is your opinion on evolution?'
+        'What is your opinion on evolution?',
       ]
 
       for (const prompt of problematicPrompts) {
@@ -189,7 +189,7 @@ describe('AI Content Quality Framework', () => {
 
     it('should handle concurrent requests efficiently', async () => {
       const topics = ['photosynthesis', 'respiration', 'digestion', 'circulation', 'excretion']
-      const promises = topics.map(topic =>
+      const promises = topics.map((topic) =>
         performanceMonitor.trackRequest(
           () => generateBiologyExplanation(topic, { level: 'class-11' }),
           { requestType: 'concurrent-test' }
@@ -200,7 +200,7 @@ describe('AI Content Quality Framework', () => {
 
       // All requests should complete successfully
       expect(responses).toHaveLength(5)
-      responses.forEach(response => {
+      responses.forEach((response) => {
         expect(response.content).toBeDefined()
         expect(response.content.length).toBeGreaterThan(50)
       })
@@ -214,7 +214,7 @@ describe('AI Content Quality Framework', () => {
       const topic = 'enzyme kinetics'
       const response = await generateBiologyExplanation(topic, {
         level: 'class-12',
-        maxTokens: 500 // Set reasonable limit
+        maxTokens: 500, // Set reasonable limit
       })
 
       expect(response.usage.input_tokens).toBeLessThan(200) // Efficient prompting
@@ -222,8 +222,8 @@ describe('AI Content Quality Framework', () => {
       expect(response.usage.total_tokens).toBeLessThan(700) // Overall efficiency
 
       // Cost calculation
-      const estimatedCost = (response.usage.input_tokens * 0.00001) +
-                           (response.usage.output_tokens * 0.00003)
+      const estimatedCost =
+        response.usage.input_tokens * 0.00001 + response.usage.output_tokens * 0.00003
       expect(estimatedCost).toBeLessThan(0.05) // Under 5 cents per request
     })
   })
@@ -237,13 +237,13 @@ describe('AI Content Quality Framework', () => {
         'human physiology',
         'genetics',
         'ecology',
-        'evolution'
+        'evolution',
       ]
 
       for (const topic of neetTopics) {
         const response = await generateBiologyExplanation(topic, {
           level: 'neet-preparation',
-          examFocus: true
+          examFocus: true,
         })
 
         const neetValidation = await contentValidator.validateNEETAlignment(response.content, topic)
@@ -282,7 +282,7 @@ describe('AI Content Quality Framework', () => {
       const response = await generateBiologyExplanation(topic, {
         level: 'class-11',
         language: 'en-IN', // Indian English
-        includeHindiTerms: true
+        includeHindiTerms: true,
       })
 
       const validation = await contentValidator.validateRegionalContext(response.content)
@@ -298,16 +298,16 @@ describe('AI Content Quality Framework', () => {
         currentLevel: 'class-11',
         performanceHistory: {
           photosynthesis: 0.6, // 60% accuracy
-          respiration: 0.8,    // 80% accuracy
-          circulation: 0.4     // 40% accuracy
-        }
+          respiration: 0.8, // 80% accuracy
+          circulation: 0.4, // 40% accuracy
+        },
       }
 
       // Should generate easier content for struggling topics
       const weakTopicResponse = await generateBiologyExplanation('circulation', {
         level: 'class-11',
         userProfile,
-        adaptToPerformance: true
+        adaptToPerformance: true,
       })
 
       const validation = await contentValidator.validateAdaptiveContent(
@@ -328,7 +328,7 @@ describe('AI Content Quality Framework', () => {
       const topic = 'photosynthesis'
       const response = await generateBiologyExplanation(topic, {
         level: 'class-11',
-        fallbackEnabled: true
+        fallbackEnabled: true,
       })
 
       // Should fall back to cached or default content

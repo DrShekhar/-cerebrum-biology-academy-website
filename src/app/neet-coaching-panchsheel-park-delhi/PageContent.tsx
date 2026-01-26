@@ -57,22 +57,26 @@ const whyChooseUs = [
   {
     icon: Crown,
     title: 'Premium Education',
-    description: 'Panchsheel families expect the best - our AIIMS faculty and comprehensive approach delivers exactly that.',
+    description:
+      'Panchsheel families expect the best - our AIIMS faculty and comprehensive approach delivers exactly that.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from premier schools in Panchsheel and GK areas.',
+    description:
+      'Proven track record with students from premier schools in Panchsheel and GK areas.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience teaching top students.',
+    description:
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience teaching top students.',
   },
   {
     icon: Star,
     title: 'Top Results',
-    description: 'Panchsheel area students scored 680+ in NEET and 95%+ in boards with our guidance.',
+    description:
+      'Panchsheel area students scored 680+ in NEET and 95%+ in boards with our guidance.',
   },
 ]
 
@@ -120,7 +124,8 @@ export default function PageContent() {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Cerebrum Biology Academy - NEET Coaching Panchsheel Park',
-    description: 'Best NEET Coaching for Panchsheel Park students - Premium South Delhi Biology Coaching',
+    description:
+      'Best NEET Coaching for Panchsheel Park students - Premium South Delhi Biology Coaching',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-panchsheel-park-delhi',
     telephone: '+91-88264-44334',
     address: {
@@ -129,7 +134,13 @@ export default function PageContent() {
       addressRegion: 'Uttar Pradesh',
       addressCountry: 'IN',
     },
-    areaServed: ['Panchsheel Park', 'Panchsheel Enclave', 'Greater Kailash', 'Chirag Enclave', 'Gulmohar Park'],
+    areaServed: [
+      'Panchsheel Park',
+      'Panchsheel Enclave',
+      'Greater Kailash',
+      'Chirag Enclave',
+      'Gulmohar Park',
+    ],
     priceRange: '$$',
   }
 
@@ -160,8 +171,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Coaching in{' '}
-              <span className="text-yellow-400">Panchsheel Park</span>
+              NEET Coaching in <span className="text-yellow-400">Panchsheel Park</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +179,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Panchsheel Park, Greater Kailash, Chirag Enclave & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - matching Panchsheel&apos;s high standards.
+              Premium NEET coaching for Panchsheel Park, Greater Kailash, Chirag Enclave & nearby
+              areas. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - matching
+              Panchsheel&apos;s high standards.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +209,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Panchsheel%20Park%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +386,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Panchsheel%20Park%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Ahmedabad | Satellite, SG Highway, Bopal | Cerebrum Academy',
+  title: 'Best NEET Coaching in Ahmedabad | Satellite, SG Highway, Bopal | Cerebrum Academy',
   description:
     'Top NEET biology coaching in Ahmedabad for Gujarat students. 94.2% success rate, AIIMS faculty. Satellite, SG Highway, Bopal, Prahlad Nagar, Gandhinagar. 3,500+ students. Book free demo!',
   keywords:

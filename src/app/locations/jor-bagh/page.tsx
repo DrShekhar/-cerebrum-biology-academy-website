@@ -24,6 +24,10 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import {
+  RelatedLocations,
+  getRelatedLocations,
+} from '@/components/locations/RelatedLocations'
 
 export default function JorBaghPage() {
   useEffect(() => {
@@ -231,6 +235,12 @@ export default function JorBaghPage() {
             </div>
           </div>
         </section>
+
+        <RelatedLocations
+          currentLocation="Jor Bagh"
+          locations={getRelatedLocations('jor-bagh')}
+          className="bg-white"
+        />
 
         <section className="py-12 bg-slate-900 text-white">
           <div className="container mx-auto px-4">

@@ -47,10 +47,18 @@ function HeroPlaceholder() {
       {/* Micro Social Proof - Must match HeroClientInteractive */}
       <div className="flex items-center gap-2 mb-8 xs:mb-12">
         <div className="flex -space-x-2">
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">S</div>
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">R</div>
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">A</div>
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">+</div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            S
+          </div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            R
+          </div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            A
+          </div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            +
+          </div>
         </div>
         <span className="text-blue-100 text-xs xs:text-sm">
           <span className="text-green-300 font-semibold">127+ students</span> booked demos this week
@@ -60,17 +68,23 @@ function HeroPlaceholder() {
       {/* Stats Grid - Must match HeroClientInteractive */}
       <div className="grid grid-cols-3 gap-3 xs:gap-4 sm:gap-6 max-w-2xl mb-6 xs:mb-8">
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
-          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-green-400">695</div>
+          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-green-400">
+            695
+          </div>
           <div className="text-xs sm:text-sm text-blue-200 mt-1">Sadhna&apos;s Score</div>
           <div className="text-xs text-green-300 mt-0.5">100 Percentile</div>
         </div>
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
-          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">98%</div>
+          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">
+            98%
+          </div>
           <div className="text-xs sm:text-sm text-blue-200 mt-1">Success Rate</div>
           <div className="text-xs text-yellow-300 mt-0.5">NEET Qualified</div>
         </div>
         <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
-          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400">2500+</div>
+          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400">
+            2500+
+          </div>
           <div className="text-xs sm:text-sm text-blue-200 mt-1">Students</div>
           <div className="text-xs text-purple-300 mt-0.5">And Counting</div>
         </div>

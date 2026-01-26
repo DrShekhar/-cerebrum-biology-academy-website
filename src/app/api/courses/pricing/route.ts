@@ -6,7 +6,9 @@ export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
     const courseId = searchParams.get('courseId')
-    const requestedCurrency = searchParams.get('currency')?.toUpperCase() as SupportedCurrency | undefined
+    const requestedCurrency = searchParams.get('currency')?.toUpperCase() as
+      | SupportedCurrency
+      | undefined
 
     const country =
       request.headers.get('cf-ipcountry') ||

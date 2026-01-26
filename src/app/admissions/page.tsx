@@ -691,10 +691,7 @@ export default function AdmissionsPage() {
             </div>
 
             {/* Right Column - Quick Inquiry Form with CSS animation */}
-            <div
-              className="lg:pl-8 animate-fade-in-right"
-              style={{ animationDelay: '0.3s' }}
-            >
+            <div className="lg:pl-8 animate-fade-in-right" style={{ animationDelay: '0.3s' }}>
               <QuickInquiryForm variant="hero" />
             </div>
           </div>

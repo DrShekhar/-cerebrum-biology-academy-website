@@ -173,9 +173,7 @@ export default function CommissionsPage() {
               `₹${(data?.summary.totalPaid || 0).toLocaleString('en-IN')}`
             )}
           </p>
-          <p className="text-xs text-gray-500 mt-1">
-            {data?.summary.countPaid || 0} commissions
-          </p>
+          <p className="text-xs text-gray-500 mt-1">{data?.summary.countPaid || 0} commissions</p>
         </div>
 
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
@@ -192,9 +190,7 @@ export default function CommissionsPage() {
               `₹${(data?.summary.totalPending || 0).toLocaleString('en-IN')}`
             )}
           </p>
-          <p className="text-xs text-gray-500 mt-1">
-            {data?.summary.countPending || 0} pending
-          </p>
+          <p className="text-xs text-gray-500 mt-1">{data?.summary.countPending || 0} pending</p>
         </div>
 
         <div className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
@@ -228,8 +224,14 @@ export default function CommissionsPage() {
             {data.monthlyBreakdown.map((month) => {
               const heightPercent = (month.earned / maxMonthlyAmount) * 100
               return (
-                <div key={`${month.month}-${month.year}`} className="flex-1 flex flex-col items-center">
-                  <div className="relative w-full flex flex-col items-center" style={{ height: '120px' }}>
+                <div
+                  key={`${month.month}-${month.year}`}
+                  className="flex-1 flex flex-col items-center"
+                >
+                  <div
+                    className="relative w-full flex flex-col items-center"
+                    style={{ height: '120px' }}
+                  >
                     <div
                       className="w-full max-w-[40px] bg-teal-500 rounded-t transition-all hover:bg-teal-600"
                       style={{ height: `${Math.max(heightPercent, 2)}%` }}
@@ -337,7 +339,10 @@ export default function CommissionsPage() {
       {loading && !data && (
         <div className="space-y-4">
           {[...Array(5)].map((_, i) => (
-            <div key={i} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 animate-pulse">
+            <div
+              key={i}
+              className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 animate-pulse"
+            >
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
                 <div className="flex-1">
@@ -412,7 +417,9 @@ export default function CommissionsPage() {
                           </span>
                         )}
                         {commission.referral?.courseInterest && (
-                          <span className="hidden sm:inline">{commission.referral.courseInterest}</span>
+                          <span className="hidden sm:inline">
+                            {commission.referral.courseInterest}
+                          </span>
                         )}
                       </div>
                     </div>

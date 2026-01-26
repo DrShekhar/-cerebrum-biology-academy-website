@@ -49,7 +49,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Cell theory, prokaryotic vs eukaryotic cells',
             difficulty: 'Easy',
             weightage: 2.5,
-            questionCount: 25
+            questionCount: 25,
           },
           {
             id: 'topic-9-1-2',
@@ -57,7 +57,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Nucleus, mitochondria, chloroplasts, ER, Golgi apparatus',
             difficulty: 'Medium',
             weightage: 3.0,
-            questionCount: 35
+            questionCount: 35,
           },
           {
             id: 'topic-9-1-3',
@@ -65,9 +65,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Structure and functions of cell boundaries',
             difficulty: 'Easy',
             weightage: 2.0,
-            questionCount: 25
-          }
-        ]
+            questionCount: 25,
+          },
+        ],
       },
       {
         id: 'ch-9-2',
@@ -82,7 +82,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Meristematic and permanent tissues',
             difficulty: 'Medium',
             weightage: 2.8,
-            questionCount: 35
+            questionCount: 35,
           },
           {
             id: 'topic-9-2-2',
@@ -90,11 +90,11 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Epithelial, connective, muscular, nervous tissues',
             difficulty: 'Medium',
             weightage: 3.2,
-            questionCount: 35
-          }
-        ]
-      }
-    ]
+            questionCount: 35,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'class-10',
@@ -116,7 +116,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Autotrophic and heterotrophic nutrition',
             difficulty: 'Medium',
             weightage: 4.0,
-            questionCount: 40
+            questionCount: 40,
           },
           {
             id: 'topic-10-1-2',
@@ -124,7 +124,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Aerobic and anaerobic respiration',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 30
+            questionCount: 30,
           },
           {
             id: 'topic-10-1-3',
@@ -132,7 +132,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Circulatory system in animals, transport in plants',
             difficulty: 'Medium',
             weightage: 3.0,
-            questionCount: 25
+            questionCount: 25,
           },
           {
             id: 'topic-10-1-4',
@@ -140,9 +140,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Excretory system and waste removal',
             difficulty: 'Easy',
             weightage: 2.5,
-            questionCount: 25
-          }
-        ]
+            questionCount: 25,
+          },
+        ],
       },
       {
         id: 'ch-10-2',
@@ -157,7 +157,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Central and peripheral nervous system',
             difficulty: 'Hard',
             weightage: 4.5,
-            questionCount: 45
+            questionCount: 45,
           },
           {
             id: 'topic-10-2-2',
@@ -165,9 +165,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Endocrine system and hormones',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 40
-          }
-        ]
+            questionCount: 40,
+          },
+        ],
       },
       {
         id: 'ch-10-3',
@@ -182,19 +182,19 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Mendelian genetics and inheritance patterns',
             difficulty: 'Hard',
             weightage: 5.0,
-            questionCount: 50
+            questionCount: 50,
           },
           {
             id: 'topic-10-3-2',
             name: 'Evolution',
-            description: 'Darwin\'s theory and evidence of evolution',
+            description: "Darwin's theory and evidence of evolution",
             difficulty: 'Medium',
             weightage: 4.0,
-            questionCount: 45
-          }
-        ]
-      }
-    ]
+            questionCount: 45,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'class-11',
@@ -216,7 +216,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Growth, reproduction, metabolism, consciousness',
             difficulty: 'Easy',
             weightage: 1.5,
-            questionCount: 20
+            questionCount: 20,
           },
           {
             id: 'topic-11-1-2',
@@ -224,9 +224,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Classification principles and nomenclature',
             difficulty: 'Medium',
             weightage: 2.0,
-            questionCount: 25
-          }
-        ]
+            questionCount: 25,
+          },
+        ],
       },
       {
         id: 'ch-11-2',
@@ -241,7 +241,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Monera, Protista, Fungi, Plantae, Animalia',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 40
+            questionCount: 40,
           },
           {
             id: 'topic-11-2-2',
@@ -249,9 +249,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Non-cellular and composite organisms',
             difficulty: 'Easy',
             weightage: 2.0,
-            questionCount: 25
-          }
-        ]
+            questionCount: 25,
+          },
+        ],
       },
       {
         id: 'ch-11-3',
@@ -266,7 +266,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Characteristics and classification of algae',
             difficulty: 'Medium',
             weightage: 2.5,
-            questionCount: 20
+            questionCount: 20,
           },
           {
             id: 'topic-11-3-2',
@@ -274,7 +274,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Mosses and liverworts',
             difficulty: 'Medium',
             weightage: 2.0,
-            questionCount: 15
+            questionCount: 15,
           },
           {
             id: 'topic-11-3-3',
@@ -282,7 +282,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Ferns and their characteristics',
             difficulty: 'Medium',
             weightage: 2.0,
-            questionCount: 15
+            questionCount: 15,
           },
           {
             id: 'topic-11-3-4',
@@ -290,7 +290,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Naked seed plants',
             difficulty: 'Medium',
             weightage: 2.5,
-            questionCount: 15
+            questionCount: 15,
           },
           {
             id: 'topic-11-3-5',
@@ -298,9 +298,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Flowering plants and their classification',
             difficulty: 'Hard',
             weightage: 3.0,
-            questionCount: 20
-          }
-        ]
+            questionCount: 20,
+          },
+        ],
       },
       {
         id: 'ch-11-4',
@@ -315,7 +315,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Invertebrate phyla and their characteristics',
             difficulty: 'Hard',
             weightage: 4.0,
-            questionCount: 50
+            questionCount: 50,
           },
           {
             id: 'topic-11-4-2',
@@ -323,9 +323,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Vertebrate classes and their features',
             difficulty: 'Hard',
             weightage: 4.5,
-            questionCount: 45
-          }
-        ]
+            questionCount: 45,
+          },
+        ],
       },
       {
         id: 'ch-11-8',
@@ -340,7 +340,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Prokaryotic and eukaryotic cell structure',
             difficulty: 'Medium',
             weightage: 4.0,
-            questionCount: 40
+            questionCount: 40,
           },
           {
             id: 'topic-11-8-2',
@@ -348,7 +348,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Structure and functions of organelles',
             difficulty: 'Hard',
             weightage: 5.5,
-            questionCount: 50
+            questionCount: 50,
           },
           {
             id: 'topic-11-8-3',
@@ -356,9 +356,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Membrane structure and transport mechanisms',
             difficulty: 'Hard',
             weightage: 4.5,
-            questionCount: 30
-          }
-        ]
+            questionCount: 30,
+          },
+        ],
       },
       {
         id: 'ch-11-9',
@@ -373,7 +373,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Structure and functions of sugars and polysaccharides',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 25
+            questionCount: 25,
           },
           {
             id: 'topic-11-9-2',
@@ -381,7 +381,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Amino acids, protein structure and enzymes',
             difficulty: 'Hard',
             weightage: 5.0,
-            questionCount: 40
+            questionCount: 40,
           },
           {
             id: 'topic-11-9-3',
@@ -389,7 +389,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Fats, oils and membrane lipids',
             difficulty: 'Medium',
             weightage: 2.5,
-            questionCount: 20
+            questionCount: 20,
           },
           {
             id: 'topic-11-9-4',
@@ -397,9 +397,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'DNA and RNA structure and functions',
             difficulty: 'Hard',
             weightage: 4.0,
-            questionCount: 25
-          }
-        ]
+            questionCount: 25,
+          },
+        ],
       },
       {
         id: 'ch-11-13',
@@ -414,7 +414,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Photosystem I and II, ATP synthesis',
             difficulty: 'Hard',
             weightage: 5.0,
-            questionCount: 45
+            questionCount: 45,
           },
           {
             id: 'topic-11-13-2',
@@ -422,7 +422,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Carbon fixation and reduction',
             difficulty: 'Hard',
             weightage: 4.5,
-            questionCount: 35
+            questionCount: 35,
           },
           {
             id: 'topic-11-13-3',
@@ -430,11 +430,11 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Alternative photosynthetic pathways',
             difficulty: 'Medium',
             weightage: 3.0,
-            questionCount: 20
-          }
-        ]
-      }
-    ]
+            questionCount: 20,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'class-12',
@@ -456,7 +456,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Binary fission, budding, fragmentation, spore formation',
             difficulty: 'Easy',
             weightage: 2.5,
-            questionCount: 30
+            questionCount: 30,
           },
           {
             id: 'topic-12-1-2',
@@ -464,9 +464,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Gamete formation and fertilization',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 45
-          }
-        ]
+            questionCount: 45,
+          },
+        ],
       },
       {
         id: 'ch-12-2',
@@ -481,7 +481,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Microsporogenesis and megasporogenesis',
             difficulty: 'Hard',
             weightage: 4.0,
-            questionCount: 35
+            questionCount: 35,
           },
           {
             id: 'topic-12-2-2',
@@ -489,7 +489,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Types of pollination and double fertilization',
             difficulty: 'Hard',
             weightage: 4.5,
-            questionCount: 40
+            questionCount: 40,
           },
           {
             id: 'topic-12-2-3',
@@ -497,9 +497,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Post-fertilization changes',
             difficulty: 'Medium',
             weightage: 2.5,
-            questionCount: 15
-          }
-        ]
+            questionCount: 15,
+          },
+        ],
       },
       {
         id: 'ch-12-3',
@@ -514,7 +514,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Structure and functions, spermatogenesis',
             difficulty: 'Hard',
             weightage: 4.0,
-            questionCount: 35
+            questionCount: 35,
           },
           {
             id: 'topic-12-3-2',
@@ -522,7 +522,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Structure and functions, oogenesis, menstrual cycle',
             difficulty: 'Hard',
             weightage: 5.0,
-            questionCount: 45
+            questionCount: 45,
           },
           {
             id: 'topic-12-3-3',
@@ -530,9 +530,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Implantation, embryonic development, parturition',
             difficulty: 'Hard',
             weightage: 4.5,
-            questionCount: 25
-          }
-        ]
+            questionCount: 25,
+          },
+        ],
       },
       {
         id: 'ch-12-5',
@@ -543,11 +543,11 @@ export const ncertBiologyCurriculum: Class[] = [
         topics: [
           {
             id: 'topic-12-5-1',
-            name: 'Mendel\'s Laws',
+            name: "Mendel's Laws",
             description: 'Law of segregation and independent assortment',
             difficulty: 'Hard',
             weightage: 5.5,
-            questionCount: 50
+            questionCount: 50,
           },
           {
             id: 'topic-12-5-2',
@@ -555,7 +555,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Linkage, crossing over, sex determination',
             difficulty: 'Hard',
             weightage: 5.0,
-            questionCount: 40
+            questionCount: 40,
           },
           {
             id: 'topic-12-5-3',
@@ -563,9 +563,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Mendelian and chromosomal disorders',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 25
-          }
-        ]
+            questionCount: 25,
+          },
+        ],
       },
       {
         id: 'ch-12-6',
@@ -580,7 +580,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Double helix model and DNA replication',
             difficulty: 'Hard',
             weightage: 5.0,
-            questionCount: 45
+            questionCount: 45,
           },
           {
             id: 'topic-12-6-2',
@@ -588,7 +588,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'RNA synthesis and protein synthesis',
             difficulty: 'Hard',
             weightage: 5.5,
-            questionCount: 50
+            questionCount: 50,
           },
           {
             id: 'topic-12-6-3',
@@ -596,9 +596,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Lac operon and genetic control',
             difficulty: 'Hard',
             weightage: 4.0,
-            questionCount: 30
-          }
-        ]
+            questionCount: 30,
+          },
+        ],
       },
       {
         id: 'ch-12-7',
@@ -613,7 +613,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Chemical evolution and Miller-Urey experiment',
             difficulty: 'Medium',
             weightage: 3.0,
-            questionCount: 25
+            questionCount: 25,
           },
           {
             id: 'topic-12-7-2',
@@ -621,7 +621,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Morphological, anatomical, embryological evidence',
             difficulty: 'Medium',
             weightage: 4.0,
-            questionCount: 35
+            questionCount: 35,
           },
           {
             id: 'topic-12-7-3',
@@ -629,9 +629,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Primate evolution and human ancestry',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 35
-          }
-        ]
+            questionCount: 35,
+          },
+        ],
       },
       {
         id: 'ch-12-13',
@@ -646,7 +646,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Food chains, food webs, ecological pyramids',
             difficulty: 'Medium',
             weightage: 4.0,
-            questionCount: 40
+            questionCount: 40,
           },
           {
             id: 'topic-12-13-2',
@@ -654,7 +654,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Carbon, nitrogen, phosphorus cycles',
             difficulty: 'Medium',
             weightage: 3.5,
-            questionCount: 30
+            questionCount: 30,
           },
           {
             id: 'topic-12-13-3',
@@ -662,11 +662,11 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Primary and secondary succession',
             difficulty: 'Easy',
             weightage: 2.5,
-            questionCount: 15
-          }
-        ]
-      }
-    ]
+            questionCount: 15,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'dropper',
@@ -685,10 +685,11 @@ export const ncertBiologyCurriculum: Class[] = [
           {
             id: 'topic-dropper-1-1',
             name: 'Human Physiology (Complete)',
-            description: 'Digestive, respiratory, circulatory, excretory, neural, endocrine systems',
+            description:
+              'Digestive, respiratory, circulatory, excretory, neural, endocrine systems',
             difficulty: 'Hard',
             weightage: 25.0,
-            questionCount: 80
+            questionCount: 80,
           },
           {
             id: 'topic-dropper-1-2',
@@ -696,7 +697,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Inheritance patterns, molecular genetics, evolution theories',
             difficulty: 'Hard',
             weightage: 20.0,
-            questionCount: 70
+            questionCount: 70,
           },
           {
             id: 'topic-dropper-1-3',
@@ -704,7 +705,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Photosynthesis, respiration, transport, reproduction',
             difficulty: 'Hard',
             weightage: 18.0,
-            questionCount: 60
+            questionCount: 60,
           },
           {
             id: 'topic-dropper-1-4',
@@ -712,9 +713,9 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Cell structure, biomolecules, cell division',
             difficulty: 'Hard',
             weightage: 15.0,
-            questionCount: 40
-          }
-        ]
+            questionCount: 40,
+          },
+        ],
       },
       {
         id: 'ch-dropper-2',
@@ -729,7 +730,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Recent 5 years question analysis and practice',
             difficulty: 'Hard',
             weightage: 30.0,
-            questionCount: 200
+            questionCount: 200,
           },
           {
             id: 'topic-dropper-2-2',
@@ -737,7 +738,7 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Historical question patterns and trends',
             difficulty: 'Hard',
             weightage: 25.0,
-            questionCount: 150
+            questionCount: 150,
           },
           {
             id: 'topic-dropper-2-3',
@@ -745,51 +746,53 @@ export const ncertBiologyCurriculum: Class[] = [
             description: 'Full-length tests based on NEET pattern',
             difficulty: 'Hard',
             weightage: 20.0,
-            questionCount: 50
-          }
-        ]
-      }
-    ]
-  }
+            questionCount: 50,
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export const getClassById = (classId: string): Class | undefined => {
-  return ncertBiologyCurriculum.find(cls => cls.id === classId)
+  return ncertBiologyCurriculum.find((cls) => cls.id === classId)
 }
 
 export const getChapterById = (classId: string, chapterId: string): Chapter | undefined => {
   const cls = getClassById(classId)
-  return cls?.chapters.find(chapter => chapter.id === chapterId)
+  return cls?.chapters.find((chapter) => chapter.id === chapterId)
 }
 
-export const getTopicById = (classId: string, chapterId: string, topicId: string): Topic | undefined => {
+export const getTopicById = (
+  classId: string,
+  chapterId: string,
+  topicId: string
+): Topic | undefined => {
   const chapter = getChapterById(classId, chapterId)
-  return chapter?.topics.find(topic => topic.id === topicId)
+  return chapter?.topics.find((topic) => topic.id === topicId)
 }
 
 export const getAllTopicsForClass = (classId: string): Topic[] => {
   const cls = getClassById(classId)
   if (!cls) return []
 
-  return cls.chapters.flatMap(chapter => chapter.topics)
+  return cls.chapters.flatMap((chapter) => chapter.topics)
 }
 
 export const getHighWeightageTopics = (limit: number = 20): Topic[] => {
-  const allTopics = ncertBiologyCurriculum.flatMap(cls =>
-    cls.chapters.flatMap(chapter => chapter.topics)
+  const allTopics = ncertBiologyCurriculum.flatMap((cls) =>
+    cls.chapters.flatMap((chapter) => chapter.topics)
   )
 
-  return allTopics
-    .sort((a, b) => b.weightage - a.weightage)
-    .slice(0, limit)
+  return allTopics.sort((a, b) => b.weightage - a.weightage).slice(0, limit)
 }
 
 export const getTopicsByDifficulty = (difficulty: 'Easy' | 'Medium' | 'Hard'): Topic[] => {
-  const allTopics = ncertBiologyCurriculum.flatMap(cls =>
-    cls.chapters.flatMap(chapter => chapter.topics)
+  const allTopics = ncertBiologyCurriculum.flatMap((cls) =>
+    cls.chapters.flatMap((chapter) => chapter.topics)
   )
 
-  return allTopics.filter(topic => topic.difficulty === difficulty)
+  return allTopics.filter((topic) => topic.difficulty === difficulty)
 }
 
 // Statistics
@@ -797,16 +800,16 @@ export const getCurriculumStats = () => {
   const totalClasses = ncertBiologyCurriculum.length
   const totalChapters = ncertBiologyCurriculum.reduce((sum, cls) => sum + cls.totalChapters, 0)
   const totalTopics = ncertBiologyCurriculum.reduce((sum, cls) => sum + cls.totalTopics, 0)
-  const totalQuestions = ncertBiologyCurriculum.reduce((sum, cls) =>
-    sum + cls.chapters.reduce((chapterSum, chapter) =>
-      chapterSum + chapter.totalQuestions, 0
-    ), 0
+  const totalQuestions = ncertBiologyCurriculum.reduce(
+    (sum, cls) =>
+      sum + cls.chapters.reduce((chapterSum, chapter) => chapterSum + chapter.totalQuestions, 0),
+    0
   )
 
   return {
     totalClasses,
     totalChapters,
     totalTopics,
-    totalQuestions
+    totalQuestions,
   }
 }

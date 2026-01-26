@@ -53,9 +53,7 @@ export function PublishTab({
           {!publishSettings.publishImmediately && (
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Publish Date
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Publish Date</label>
                 <input
                   type="date"
                   value={publishSettings.publishDate}
@@ -66,9 +64,7 @@ export function PublishTab({
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Publish Time
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Publish Time</label>
                 <input
                   type="time"
                   value={publishSettings.publishTime}

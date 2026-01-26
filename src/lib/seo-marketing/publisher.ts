@@ -83,19 +83,28 @@ export async function publishContent(queueItemId: string): Promise<PublishResult
 
     switch (item.type) {
       case 'BLOG_POST':
-        const blogResult = await publishBlogPost(parsed, item.generatedSlug || generateSlug(item.topic))
+        const blogResult = await publishBlogPost(
+          parsed,
+          item.generatedSlug || generateSlug(item.topic)
+        )
         filePath = blogResult.filePath
         publishedUrl = blogResult.url
         break
 
       case 'NEWS_ARTICLE':
-        const newsResult = await publishNewsArticle(parsed, item.generatedSlug || generateSlug(item.topic))
+        const newsResult = await publishNewsArticle(
+          parsed,
+          item.generatedSlug || generateSlug(item.topic)
+        )
         filePath = newsResult.filePath
         publishedUrl = newsResult.url
         break
 
       case 'SEO_LANDING_PAGE':
-        const pageResult = await publishLandingPage(parsed, item.generatedSlug || generateSlug(item.topic))
+        const pageResult = await publishLandingPage(
+          parsed,
+          item.generatedSlug || generateSlug(item.topic)
+        )
         filePath = pageResult.filePath
         publishedUrl = pageResult.url
         break
@@ -201,17 +210,20 @@ async function publishBlogPost(
   const { frontmatter, content: body } = content
 
   // Build MDX content with frontmatter
-  const mdxContent = buildMdxContent({
-    title: frontmatter.title,
-    excerpt: frontmatter.excerpt || frontmatter.summary,
-    date: new Date().toISOString().split('T')[0],
-    author: frontmatter.author || 'Cerebrum Biology Academy',
-    category: frontmatter.category || 'NEET Preparation',
-    tags: frontmatter.tags || [],
-    readTime: frontmatter.readTime || calculateReadTime(body),
-    featured: frontmatter.featured || false,
-    published: true,
-  }, body)
+  const mdxContent = buildMdxContent(
+    {
+      title: frontmatter.title,
+      excerpt: frontmatter.excerpt || frontmatter.summary,
+      date: new Date().toISOString().split('T')[0],
+      author: frontmatter.author || 'Cerebrum Biology Academy',
+      category: frontmatter.category || 'NEET Preparation',
+      tags: frontmatter.tags || [],
+      readTime: frontmatter.readTime || calculateReadTime(body),
+      featured: frontmatter.featured || false,
+      published: true,
+    },
+    body
+  )
 
   const filePath = path.join(process.cwd(), 'content/blog', `${slug}.mdx`)
 
@@ -235,17 +247,20 @@ async function publishNewsArticle(
 ): Promise<{ filePath: string; url: string }> {
   const { frontmatter, content: body } = content
 
-  const mdxContent = buildMdxContent({
-    title: frontmatter.title,
-    excerpt: frontmatter.excerpt || frontmatter.summary,
-    date: new Date().toISOString().split('T')[0],
-    author: frontmatter.author || 'Cerebrum Biology Academy',
-    category: frontmatter.category || 'NEET News',
-    sourceUrl: frontmatter.sourceUrl,
-    tags: frontmatter.tags || ['NEET 2026', 'News'],
-    readTime: frontmatter.readTime || calculateReadTime(body),
-    published: true,
-  }, body)
+  const mdxContent = buildMdxContent(
+    {
+      title: frontmatter.title,
+      excerpt: frontmatter.excerpt || frontmatter.summary,
+      date: new Date().toISOString().split('T')[0],
+      author: frontmatter.author || 'Cerebrum Biology Academy',
+      category: frontmatter.category || 'NEET News',
+      sourceUrl: frontmatter.sourceUrl,
+      tags: frontmatter.tags || ['NEET 2026', 'News'],
+      readTime: frontmatter.readTime || calculateReadTime(body),
+      published: true,
+    },
+    body
+  )
 
   const filePath = path.join(process.cwd(), 'content/news', `${slug}.mdx`)
 
@@ -274,11 +289,7 @@ async function publishLandingPage(
   const pageContent = generateLandingPageComponent(pageData, slug)
 
   // Create directory for the page
-  const pageDirPath = path.join(
-    process.cwd(),
-    'src/app/(marketing)/neet-biology',
-    slug
-  )
+  const pageDirPath = path.join(process.cwd(), 'src/app/(marketing)/neet-biology', slug)
 
   await ensureDirectoryExists(pageDirPath)
 

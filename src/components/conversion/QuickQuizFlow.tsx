@@ -3,14 +3,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
-import {
-  ChevronRight,
-  CheckCircle2,
-  Sparkles,
-  Trophy,
-  Clock,
-  GraduationCap,
-} from 'lucide-react'
+import { ChevronRight, CheckCircle2, Sparkles, Trophy, Clock, GraduationCap } from 'lucide-react'
 
 interface QuickQuizFlowProps {
   onComplete?: (result: QuizResult) => void
@@ -165,11 +158,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
 
   if (currentStep === 'intro') {
     return (
-      <PremiumCard
-        variant="luxury"
-        size="lg"
-        className={`bg-gray-50 border-blue-200 ${className}`}
-      >
+      <PremiumCard variant="luxury" size="lg" className={`bg-gray-50 border-blue-200 ${className}`}>
         <div className="text-center space-y-6 p-6">
           <div className="space-y-2">
             <div className="flex items-center justify-center gap-2 text-sm text-blue-600 font-semibold">

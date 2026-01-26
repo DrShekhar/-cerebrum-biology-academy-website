@@ -52,8 +52,18 @@ async function visualCheck() {
     },
 
     // Internal/conversion pages
-    { route: '/demo-booking', name: 'demo-booking', description: 'Demo Booking Page', category: 'internal' },
-    { route: '/enrollment', name: 'enrollment', description: 'Enrollment Page', category: 'internal' },
+    {
+      route: '/demo-booking',
+      name: 'demo-booking',
+      description: 'Demo Booking Page',
+      category: 'internal',
+    },
+    {
+      route: '/enrollment',
+      name: 'enrollment',
+      description: 'Enrollment Page',
+      category: 'internal',
+    },
     { route: '/results', name: 'results', description: 'Results Page', category: 'internal' },
     { route: '/tests', name: 'tests', description: 'Tests Page', category: 'internal' },
 
@@ -63,11 +73,12 @@ async function visualCheck() {
 
   for (const { route, name, description, category } of pages) {
     try {
-      const categoryEmoji = {
-        public: '🌐',
-        seo: '🔍',
-        internal: '🔐',
-      }[category] || '📄'
+      const categoryEmoji =
+        {
+          public: '🌐',
+          seo: '🔍',
+          internal: '🔐',
+        }[category] || '📄'
       console.log(`${categoryEmoji} Capturing: ${description} (${route})`)
 
       await page.goto(`${baseUrl}${route}`, {

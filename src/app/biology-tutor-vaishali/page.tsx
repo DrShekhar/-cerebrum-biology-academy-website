@@ -42,12 +42,42 @@ function useScrollAnimation(threshold = 0.1) {
 }
 
 const vaishaliAreas = [
-  { name: 'Vaishali Sector 1', distance: '10 km', metro: 'Vaishali Metro', landmark: 'Near Metro Station' },
-  { name: 'Vaishali Sector 2', distance: '10 km', metro: 'Vaishali Metro', landmark: 'Residential Hub' },
-  { name: 'Vaishali Sector 3', distance: '11 km', metro: 'Vaishali Metro', landmark: 'Mahagun Mall' },
-  { name: 'Vaishali Sector 4', distance: '11 km', metro: 'Vaishali Metro', landmark: 'Schools Area' },
-  { name: 'Vaishali Sector 5', distance: '12 km', metro: 'Vaishali Metro', landmark: 'Commercial Hub' },
-  { name: 'Vaishali Sector 6', distance: '12 km', metro: 'Vaishali Metro', landmark: 'Near Indirapuram' },
+  {
+    name: 'Vaishali Sector 1',
+    distance: '10 km',
+    metro: 'Vaishali Metro',
+    landmark: 'Near Metro Station',
+  },
+  {
+    name: 'Vaishali Sector 2',
+    distance: '10 km',
+    metro: 'Vaishali Metro',
+    landmark: 'Residential Hub',
+  },
+  {
+    name: 'Vaishali Sector 3',
+    distance: '11 km',
+    metro: 'Vaishali Metro',
+    landmark: 'Mahagun Mall',
+  },
+  {
+    name: 'Vaishali Sector 4',
+    distance: '11 km',
+    metro: 'Vaishali Metro',
+    landmark: 'Schools Area',
+  },
+  {
+    name: 'Vaishali Sector 5',
+    distance: '12 km',
+    metro: 'Vaishali Metro',
+    landmark: 'Commercial Hub',
+  },
+  {
+    name: 'Vaishali Sector 6',
+    distance: '12 km',
+    metro: 'Vaishali Metro',
+    landmark: 'Near Indirapuram',
+  },
   { name: 'Kaushambi', distance: '13 km', metro: 'Kaushambi Metro', landmark: 'Anand Vihar ISBT' },
   { name: 'Indirapuram', distance: '8 km', metro: 'Vaishali Metro', landmark: 'Shipra Mall' },
 ]
@@ -89,7 +119,7 @@ const faqs = [
   {
     question: 'What makes your coaching better than local Vaishali centers?',
     answer:
-      'Our AIIMS faculty, proven track record of 500+ NEET selections, and comprehensive study material set us apart. Many parents prefer quality over convenience for their children\'s future.',
+      "Our AIIMS faculty, proven track record of 500+ NEET selections, and comprehensive study material set us apart. Many parents prefer quality over convenience for their children's future.",
   },
   {
     question: 'Are online classes available for Vaishali students?',
@@ -160,8 +190,7 @@ export default function BiologyTutorVaishaliPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Vaishali</span>
+              Biology Tutor in <span className="text-yellow-400">Vaishali</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +198,8 @@ export default function BiologyTutorVaishaliPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for Vaishali students.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert Biology coaching for Vaishali students. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -332,9 +361,7 @@ export default function BiologyTutorVaishaliPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Vaishali Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Vaishali Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Quality NEET coaching with AIIMS faculty
             </p>

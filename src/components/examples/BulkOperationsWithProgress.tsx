@@ -340,9 +340,7 @@ export default function BulkOperationsWithProgress() {
                       <CheckCircle2 className="w-8 h-8 text-green-600" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="text-lg font-bold text-green-800 mb-1">
-                        Operation Complete!
-                      </h3>
+                      <h3 className="text-lg font-bold text-green-800 mb-1">Operation Complete!</h3>
                       <p className="text-green-700 mb-3">
                         Successfully processed {successCount} out of {totalItems} items
                         {errorCount > 0 && ` with ${errorCount} error${errorCount > 1 ? 's' : ''}`}

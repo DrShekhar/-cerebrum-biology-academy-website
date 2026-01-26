@@ -12,10 +12,10 @@ import { getTranslation } from '@/lib/aria/translations'
 const STORAGE_KEY = 'aria_engagement'
 
 interface EngagementConfig {
-  exitIntentDelay: number      // ms before exit intent is active
-  timeOnPageDelay: number      // ms before time-based trigger
+  exitIntentDelay: number // ms before exit intent is active
+  timeOnPageDelay: number // ms before time-based trigger
   scrollDepthThreshold: number // percentage (0-1)
-  pricingPageDelay: number     // ms delay on pricing pages
+  pricingPageDelay: number // ms delay on pricing pages
   returningVisitorDelay: number // ms delay for return visitors
 }
 
@@ -26,7 +26,12 @@ interface StoredEngagement {
   sessionCount: number
 }
 
-type TriggerType = 'exit_intent' | 'time_on_page' | 'scroll_depth' | 'pricing_page' | 'returning_visitor'
+type TriggerType =
+  | 'exit_intent'
+  | 'time_on_page'
+  | 'scroll_depth'
+  | 'pricing_page'
+  | 'returning_visitor'
 
 interface ProactiveTrigger {
   type: TriggerType
@@ -34,10 +39,10 @@ interface ProactiveTrigger {
 }
 
 const DEFAULT_CONFIG: EngagementConfig = {
-  exitIntentDelay: 30000,      // 30s before exit intent
-  timeOnPageDelay: 45000,      // 45s idle time
-  scrollDepthThreshold: 0.6,   // 60% scroll
-  pricingPageDelay: 5000,      // 5s on pricing page
+  exitIntentDelay: 30000, // 30s before exit intent
+  timeOnPageDelay: 45000, // 45s idle time
+  scrollDepthThreshold: 0.6, // 60% scroll
+  pricingPageDelay: 5000, // 5s on pricing page
   returningVisitorDelay: 5000, // 5s for returning visitors
 }
 
@@ -91,17 +96,20 @@ export function useProactiveEngagement(
   }, [])
 
   // Update stored engagement state
-  const updateStoredState = useCallback((updates: Partial<StoredEngagement>) => {
-    if (typeof window === 'undefined') return
+  const updateStoredState = useCallback(
+    (updates: Partial<StoredEngagement>) => {
+      if (typeof window === 'undefined') return
 
-    try {
-      const current = getStoredState()
-      const newState = { ...current, ...updates }
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newState))
-    } catch {
-      // localStorage unavailable
-    }
-  }, [getStoredState])
+      try {
+        const current = getStoredState()
+        const newState = { ...current, ...updates }
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(newState))
+      } catch {
+        // localStorage unavailable
+      }
+    },
+    [getStoredState]
+  )
 
   // Trigger proactive engagement
   const triggerProactive = useCallback(
@@ -242,13 +250,7 @@ export function useProactiveEngagement(
         clearTimeout(timeoutRef.current)
       }
     }
-  }, [
-    fullConfig,
-    getStoredState,
-    shouldTrigger,
-    triggerProactive,
-    updateStoredState,
-  ])
+  }, [fullConfig, getStoredState, shouldTrigger, triggerProactive, updateStoredState])
 
   // Exit intent detection (desktop only)
   useEffect(() => {

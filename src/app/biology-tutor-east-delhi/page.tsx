@@ -56,7 +56,8 @@ const whyChooseUs = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years teaching experience.',
+    description:
+      'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years teaching experience.',
   },
   {
     icon: Target,
@@ -66,7 +67,8 @@ const whyChooseUs = [
   {
     icon: Clock,
     title: 'Convenient Access',
-    description: 'East Delhi students can easily access our online classes or travel to Greater Noida.',
+    description:
+      'East Delhi students can easily access our online classes or travel to Greater Noida.',
   },
   {
     icon: Star,
@@ -129,7 +131,8 @@ export default function BiologyTutorEastDelhiPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - East Delhi',
-            description: 'Best Biology Tutor for East Delhi students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for East Delhi students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-east-delhi',
             telephone: '+91-88264-44334',
             address: {
@@ -168,8 +171,7 @@ export default function BiologyTutorEastDelhiPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">East Delhi</span>
+              Biology Tutor in <span className="text-yellow-400">East Delhi</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -177,9 +179,8 @@ export default function BiologyTutorEastDelhiPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for students in Preet Vihar, Laxmi Nagar, Mayur Vihar,
-              and all East Delhi areas. Learn from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert Biology coaching for students in Preet Vihar, Laxmi Nagar, Mayur Vihar, and all
+              East Delhi areas. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -339,9 +340,7 @@ export default function BiologyTutorEastDelhiPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              East Delhi Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">East Delhi Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Experience quality NEET coaching - online or hybrid mode
             </p>

@@ -70,12 +70,42 @@ interface Lead {
 }
 
 const statusColors: Record<string, { bg: string; text: string; dot: string; border: string }> = {
-  NEW_LEAD: { bg: 'bg-blue-50', text: 'text-blue-700', dot: 'bg-blue-500', border: 'border-blue-200' },
-  DEMO_SCHEDULED: { bg: 'bg-purple-50', text: 'text-purple-700', dot: 'bg-purple-500', border: 'border-purple-200' },
-  DEMO_COMPLETED: { bg: 'bg-indigo-50', text: 'text-indigo-700', dot: 'bg-indigo-500', border: 'border-indigo-200' },
-  OFFER_SENT: { bg: 'bg-orange-50', text: 'text-orange-700', dot: 'bg-orange-500', border: 'border-orange-200' },
-  PAYMENT_PENDING: { bg: 'bg-yellow-50', text: 'text-yellow-700', dot: 'bg-yellow-500', border: 'border-yellow-200' },
-  ENROLLED: { bg: 'bg-green-50', text: 'text-green-700', dot: 'bg-green-500', border: 'border-green-200' },
+  NEW_LEAD: {
+    bg: 'bg-blue-50',
+    text: 'text-blue-700',
+    dot: 'bg-blue-500',
+    border: 'border-blue-200',
+  },
+  DEMO_SCHEDULED: {
+    bg: 'bg-purple-50',
+    text: 'text-purple-700',
+    dot: 'bg-purple-500',
+    border: 'border-purple-200',
+  },
+  DEMO_COMPLETED: {
+    bg: 'bg-indigo-50',
+    text: 'text-indigo-700',
+    dot: 'bg-indigo-500',
+    border: 'border-indigo-200',
+  },
+  OFFER_SENT: {
+    bg: 'bg-orange-50',
+    text: 'text-orange-700',
+    dot: 'bg-orange-500',
+    border: 'border-orange-200',
+  },
+  PAYMENT_PENDING: {
+    bg: 'bg-yellow-50',
+    text: 'text-yellow-700',
+    dot: 'bg-yellow-500',
+    border: 'border-yellow-200',
+  },
+  ENROLLED: {
+    bg: 'bg-green-50',
+    text: 'text-green-700',
+    dot: 'bg-green-500',
+    border: 'border-green-200',
+  },
   LOST: { bg: 'bg-red-50', text: 'text-red-700', dot: 'bg-red-500', border: 'border-red-200' },
 }
 
@@ -350,11 +380,19 @@ export default function LeadDetailPage() {
                             : 'bg-gray-100 text-gray-400'
                       }`}
                     >
-                      {isCompleted ? <CheckCircle2 className="w-6 h-6" /> : <Icon className="w-5 h-5" />}
+                      {isCompleted ? (
+                        <CheckCircle2 className="w-6 h-6" />
+                      ) : (
+                        <Icon className="w-5 h-5" />
+                      )}
                     </div>
                     <span
                       className={`text-xs mt-2 text-center font-medium ${
-                        isCurrent ? 'text-teal-600' : isCompleted ? 'text-gray-700' : 'text-gray-400'
+                        isCurrent
+                          ? 'text-teal-600'
+                          : isCompleted
+                            ? 'text-gray-700'
+                            : 'text-gray-400'
                       }`}
                     >
                       {step.label}
@@ -436,7 +474,9 @@ export default function LeadDetailPage() {
                       )}
                     </div>
                     <div className="pb-4">
-                      <p className={`font-medium ${event.isCurrent ? eventColors.text : 'text-gray-700'}`}>
+                      <p
+                        className={`font-medium ${event.isCurrent ? eventColors.text : 'text-gray-700'}`}
+                      >
                         {event.label}
                       </p>
                       <p className="text-sm text-gray-500">
@@ -477,7 +517,9 @@ export default function LeadDetailPage() {
             <dl className="space-y-3">
               <div>
                 <dt className="text-sm text-gray-500">Course Interest</dt>
-                <dd className="font-medium text-gray-900">{lead.courseInterest || 'Not specified'}</dd>
+                <dd className="font-medium text-gray-900">
+                  {lead.courseInterest || 'Not specified'}
+                </dd>
               </div>
               <div>
                 <dt className="text-sm text-gray-500">Source</dt>

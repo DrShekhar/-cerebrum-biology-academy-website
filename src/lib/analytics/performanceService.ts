@@ -5,22 +5,25 @@ import type {
   TopicAnalytics,
   ProgressTrend,
   ComparativeAnalytics,
-  PerformanceMetrics
+  PerformanceMetrics,
 } from '@/lib/types/analytics'
 
 export class PerformanceAnalyticsService {
   /**
    * Get comprehensive user performance data
    */
-  async getUserPerformanceData(userId: string, timeRange?: { from: Date; to: Date }): Promise<UserPerformanceData> {
+  async getUserPerformanceData(
+    userId: string,
+    timeRange?: { from: Date; to: Date }
+  ): Promise<UserPerformanceData> {
     const whereClause = {
       freeUserId: userId,
       ...(timeRange && {
         startedAt: {
           gte: timeRange.from,
-          lte: timeRange.to
-        }
-      })
+          lte: timeRange.to,
+        },
+      }),
     }
 
     // Get test attempts with detailed analysis
@@ -29,11 +32,11 @@ export class PerformanceAnalyticsService {
       include: {
         testQuestions: {
           include: {
-            question: true
-          }
-        }
+            question: true,
+          },
+        },
       },
-      orderBy: { startedAt: 'desc' }
+      orderBy: { startedAt: 'desc' },
     })
 
     // Get user profile
@@ -41,8 +44,8 @@ export class PerformanceAnalyticsService {
       where: { id: userId },
       include: {
         achievements: true,
-        studyPlans: true
-      }
+        studyPlans: true,
+      },
     })
 
     if (!user) {
@@ -51,16 +54,15 @@ export class PerformanceAnalyticsService {
 
     // Calculate overall metrics
     const totalTests = testAttempts.length
-    const completedTests = testAttempts.filter(t => t.status === 'COMPLETED').length
-    const averageScore = totalTests > 0
-      ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / totalTests
-      : 0
+    const completedTests = testAttempts.filter((t) => t.status === 'COMPLETED').length
+    const averageScore =
+      totalTests > 0 ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / totalTests : 0
 
     // Calculate topic-wise performance
     const topicPerformance: Record<string, TopicAnalytics> = {}
 
-    testAttempts.forEach(attempt => {
-      attempt.testQuestions.forEach(tq => {
+    testAttempts.forEach((attempt) => {
+      attempt.testQuestions.forEach((tq) => {
         const topic = tq.question.topic
         if (!topicPerformance[topic]) {
           topicPerformance[topic] = {
@@ -73,8 +75,8 @@ export class PerformanceAnalyticsService {
             difficulty: {
               easy: { correct: 0, total: 0 },
               medium: { correct: 0, total: 0 },
-              hard: { correct: 0, total: 0 }
-            }
+              hard: { correct: 0, total: 0 },
+            },
           }
         }
 
@@ -97,18 +99,17 @@ export class PerformanceAnalyticsService {
     })
 
     // Calculate accuracy for each topic
-    Object.values(topicPerformance).forEach(topic => {
-      topic.accuracy = topic.totalQuestions > 0
-        ? (topic.correctAnswers / topic.totalQuestions) * 100
-        : 0
+    Object.values(topicPerformance).forEach((topic) => {
+      topic.accuracy =
+        topic.totalQuestions > 0 ? (topic.correctAnswers / topic.totalQuestions) * 100 : 0
     })
 
     // Calculate progress trends (last 30 days)
     const last30Days = new Date()
     last30Days.setDate(last30Days.getDate() - 30)
 
-    const recentTests = testAttempts.filter(t =>
-      t.startedAt >= last30Days && t.status === 'COMPLETED'
+    const recentTests = testAttempts.filter(
+      (t) => t.startedAt >= last30Days && t.status === 'COMPLETED'
     )
 
     const progressTrend: ProgressTrend[] = this.generateProgressTrend(recentTests)
@@ -126,13 +127,13 @@ export class PerformanceAnalyticsService {
       progressTrend,
       strengths: this.identifyStrengths(topicPerformance),
       weaknesses: this.identifyWeaknesses(topicPerformance),
-      achievements: user.achievements.map(a => ({
+      achievements: user.achievements.map((a) => ({
         type: a.type,
         title: a.title,
         earnedAt: a.earnedAt,
-        points: a.points
+        points: a.points,
       })),
-      timeRange: timeRange || { from: new Date(0), to: new Date() }
+      timeRange: timeRange || { from: new Date(0), to: new Date() },
     }
   }
 
@@ -145,11 +146,11 @@ export class PerformanceAnalyticsService {
       include: {
         testQuestions: {
           include: {
-            question: true
-          }
+            question: true,
+          },
         },
-        freeUser: true
-      }
+        freeUser: true,
+      },
     })
 
     if (!testAttempt) {
@@ -157,11 +158,11 @@ export class PerformanceAnalyticsService {
     }
 
     const totalQuestions = testAttempt.testQuestions.length
-    const correctAnswers = testAttempt.testQuestions.filter(tq => tq.isCorrect).length
+    const correctAnswers = testAttempt.testQuestions.filter((tq) => tq.isCorrect).length
     const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0
 
     // Question-wise analysis
-    const questionAnalysis = testAttempt.testQuestions.map(tq => ({
+    const questionAnalysis = testAttempt.testQuestions.map((tq) => ({
       questionId: tq.questionId,
       topic: tq.question.topic,
       difficulty: tq.question.difficulty,
@@ -169,19 +170,19 @@ export class PerformanceAnalyticsService {
       timeSpent: tq.timeSpent || 0,
       selectedAnswer: tq.selectedAnswer,
       correctAnswer: tq.question.correctAnswer,
-      explanation: tq.question.explanation
+      explanation: tq.question.explanation,
     }))
 
     // Topic-wise breakdown
     const topicBreakdown: Record<string, any> = {}
-    testAttempt.testQuestions.forEach(tq => {
+    testAttempt.testQuestions.forEach((tq) => {
       const topic = tq.question.topic
       if (!topicBreakdown[topic]) {
         topicBreakdown[topic] = {
           topic,
           total: 0,
           correct: 0,
-          timeSpent: 0
+          timeSpent: 0,
         }
       }
       topicBreakdown[topic].total++
@@ -205,7 +206,10 @@ export class PerformanceAnalyticsService {
       submittedAt: testAttempt.submittedAt,
       questionAnalysis,
       topicBreakdown: Object.values(topicBreakdown),
-      recommendations: this.generateRecommendations(questionAnalysis, Object.values(topicBreakdown))
+      recommendations: this.generateRecommendations(
+        questionAnalysis,
+        Object.values(topicBreakdown)
+      ),
     }
   }
 
@@ -218,19 +222,19 @@ export class PerformanceAnalyticsService {
         freeUserId: userId,
         topics: {
           path: '$',
-          array_contains: topic
-        }
+          array_contains: topic,
+        },
       },
       include: {
         testQuestions: {
           include: {
             question: {
-              where: { topic }
-            }
-          }
-        }
+              where: { topic },
+            },
+          },
+        },
       },
-      orderBy: { startedAt: 'desc' }
+      orderBy: { startedAt: 'desc' },
     })
 
     let totalQuestions = 0
@@ -239,17 +243,17 @@ export class PerformanceAnalyticsService {
     const difficulty = {
       easy: { correct: 0, total: 0 },
       medium: { correct: 0, total: 0 },
-      hard: { correct: 0, total: 0 }
+      hard: { correct: 0, total: 0 },
     }
 
     // Calculate trend data (last 10 tests)
     const trend: Array<{ date: Date; accuracy: number; timePerQuestion: number }> = []
 
-    testAttempts.slice(0, 10).forEach(attempt => {
-      const topicQuestions = attempt.testQuestions.filter(tq => tq.question.topic === topic)
+    testAttempts.slice(0, 10).forEach((attempt) => {
+      const topicQuestions = attempt.testQuestions.filter((tq) => tq.question.topic === topic)
       if (topicQuestions.length === 0) return
 
-      const correct = topicQuestions.filter(tq => tq.isCorrect).length
+      const correct = topicQuestions.filter((tq) => tq.isCorrect).length
       const total = topicQuestions.length
       const time = topicQuestions.reduce((sum, tq) => sum + (tq.timeSpent || 0), 0)
 
@@ -260,11 +264,11 @@ export class PerformanceAnalyticsService {
       trend.push({
         date: attempt.startedAt,
         accuracy: total > 0 ? (correct / total) * 100 : 0,
-        timePerQuestion: total > 0 ? time / total : 0
+        timePerQuestion: total > 0 ? time / total : 0,
       })
 
       // Track difficulty
-      topicQuestions.forEach(tq => {
+      topicQuestions.forEach((tq) => {
         const diff = tq.question.difficulty.toLowerCase() as 'easy' | 'medium' | 'hard'
         if (difficulty[diff]) {
           difficulty[diff].total++
@@ -280,7 +284,7 @@ export class PerformanceAnalyticsService {
       accuracy: totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0,
       averageTime: totalQuestions > 0 ? totalTime / totalQuestions : 0,
       difficulty,
-      trend: trend.reverse() // Show chronological order
+      trend: trend.reverse(), // Show chronological order
     }
   }
 
@@ -289,7 +293,7 @@ export class PerformanceAnalyticsService {
    */
   async getComparativeAnalytics(userId: string, grade: string): Promise<ComparativeAnalytics> {
     const user = await db.freeUser.findUnique({
-      where: { id: userId }
+      where: { id: userId },
     })
 
     if (!user) {
@@ -303,13 +307,13 @@ export class PerformanceAnalyticsService {
     const classUsers = await db.freeUser.findMany({
       where: {
         grade,
-        id: { not: userId }
+        id: { not: userId },
       },
       include: {
         testAttempts: {
-          where: { status: 'COMPLETED' }
-        }
-      }
+          where: { status: 'COMPLETED' },
+        },
+      },
     })
 
     // Calculate class averages
@@ -318,15 +322,16 @@ export class PerformanceAnalyticsService {
       averageScore: 0,
       averageTestsTaken: 0,
       averageStudyTime: 0,
-      topPerformers: []
+      topPerformers: [],
     }
 
     if (classUsers.length > 0) {
-      const classStats = classUsers.map(classUser => {
-        const completedTests = classUser.testAttempts.filter(t => t.status === 'COMPLETED')
-        const avgScore = completedTests.length > 0
-          ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
-          : 0
+      const classStats = classUsers.map((classUser) => {
+        const completedTests = classUser.testAttempts.filter((t) => t.status === 'COMPLETED')
+        const avgScore =
+          completedTests.length > 0
+            ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
+            : 0
         const totalTime = completedTests.reduce((sum, test) => sum + (test.timeSpent || 0), 0)
 
         return {
@@ -334,13 +339,16 @@ export class PerformanceAnalyticsService {
           name: classUser.name,
           avgScore,
           testsTaken: completedTests.length,
-          totalTime
+          totalTime,
         }
       })
 
-      classData.averageScore = classStats.reduce((sum, user) => sum + user.avgScore, 0) / classStats.length
-      classData.averageTestsTaken = classStats.reduce((sum, user) => sum + user.testsTaken, 0) / classStats.length
-      classData.averageStudyTime = classStats.reduce((sum, user) => sum + user.totalTime, 0) / classStats.length
+      classData.averageScore =
+        classStats.reduce((sum, user) => sum + user.avgScore, 0) / classStats.length
+      classData.averageTestsTaken =
+        classStats.reduce((sum, user) => sum + user.testsTaken, 0) / classStats.length
+      classData.averageStudyTime =
+        classStats.reduce((sum, user) => sum + user.totalTime, 0) / classStats.length
 
       // Get top 5 performers
       classData.topPerformers = classStats
@@ -349,18 +357,20 @@ export class PerformanceAnalyticsService {
         .map((user, index) => ({
           rank: index + 1,
           name: user.name || 'Anonymous',
-          score: user.avgScore
+          score: user.avgScore,
         }))
     }
 
     // Calculate user rank
-    const userRank = classUsers.filter(classUser => {
-      const completedTests = classUser.testAttempts.filter(t => t.status === 'COMPLETED')
-      const avgScore = completedTests.length > 0
-        ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
-        : 0
-      return avgScore > userPerformance.averageScore
-    }).length + 1
+    const userRank =
+      classUsers.filter((classUser) => {
+        const completedTests = classUser.testAttempts.filter((t) => t.status === 'COMPLETED')
+        const avgScore =
+          completedTests.length > 0
+            ? completedTests.reduce((sum, test) => sum + test.percentage, 0) / completedTests.length
+            : 0
+        return avgScore > userPerformance.averageScore
+      }).length + 1
 
     return {
       user: {
@@ -369,22 +379,26 @@ export class PerformanceAnalyticsService {
         testsTaken: userPerformance.completedTests,
         studyTime: userPerformance.totalStudyTime,
         strengths: userPerformance.strengths,
-        weaknesses: userPerformance.weaknesses
+        weaknesses: userPerformance.weaknesses,
       },
       class: classData,
-      percentile: classUsers.length > 0 ? ((classUsers.length - userRank + 1) / classUsers.length) * 100 : 0,
+      percentile:
+        classUsers.length > 0 ? ((classUsers.length - userRank + 1) / classUsers.length) * 100 : 0,
       comparison: {
         scoreComparison: userPerformance.averageScore - classData.averageScore,
         testsComparison: userPerformance.completedTests - classData.averageTestsTaken,
-        timeComparison: userPerformance.totalStudyTime - classData.averageStudyTime
-      }
+        timeComparison: userPerformance.totalStudyTime - classData.averageStudyTime,
+      },
     }
   }
 
   /**
    * Get performance metrics for dashboard
    */
-  async getPerformanceMetrics(userId: string, period: 'week' | 'month' | 'quarter' = 'month'): Promise<PerformanceMetrics> {
+  async getPerformanceMetrics(
+    userId: string,
+    period: 'week' | 'month' | 'quarter' = 'month'
+  ): Promise<PerformanceMetrics> {
     const now = new Date()
     const startDate = new Date()
 
@@ -404,37 +418,40 @@ export class PerformanceAnalyticsService {
       where: {
         freeUserId: userId,
         startedAt: {
-          gte: startDate
+          gte: startDate,
         },
-        status: 'COMPLETED'
+        status: 'COMPLETED',
       },
       include: {
         testQuestions: {
           include: {
-            question: true
-          }
-        }
-      }
+            question: true,
+          },
+        },
+      },
     })
 
     const totalTests = testAttempts.length
     const totalQuestions = testAttempts.reduce((sum, test) => sum + test.testQuestions.length, 0)
-    const correctAnswers = testAttempts.reduce((sum, test) =>
-      sum + test.testQuestions.filter(tq => tq.isCorrect).length, 0
+    const correctAnswers = testAttempts.reduce(
+      (sum, test) => sum + test.testQuestions.filter((tq) => tq.isCorrect).length,
+      0
     )
     const totalTime = testAttempts.reduce((sum, test) => sum + (test.timeSpent || 0), 0)
 
     // Get improvement metrics
     const midPoint = new Date(startDate.getTime() + (now.getTime() - startDate.getTime()) / 2)
-    const firstHalf = testAttempts.filter(t => t.startedAt < midPoint)
-    const secondHalf = testAttempts.filter(t => t.startedAt >= midPoint)
+    const firstHalf = testAttempts.filter((t) => t.startedAt < midPoint)
+    const secondHalf = testAttempts.filter((t) => t.startedAt >= midPoint)
 
-    const firstHalfAvg = firstHalf.length > 0
-      ? firstHalf.reduce((sum, test) => sum + test.percentage, 0) / firstHalf.length
-      : 0
-    const secondHalfAvg = secondHalf.length > 0
-      ? secondHalf.reduce((sum, test) => sum + test.percentage, 0) / secondHalf.length
-      : 0
+    const firstHalfAvg =
+      firstHalf.length > 0
+        ? firstHalf.reduce((sum, test) => sum + test.percentage, 0) / firstHalf.length
+        : 0
+    const secondHalfAvg =
+      secondHalf.length > 0
+        ? secondHalf.reduce((sum, test) => sum + test.percentage, 0) / secondHalf.length
+        : 0
 
     return {
       period,
@@ -442,43 +459,44 @@ export class PerformanceAnalyticsService {
       totalQuestions,
       correctAnswers,
       accuracy: totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0,
-      averageScore: totalTests > 0
-        ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / totalTests
-        : 0,
+      averageScore:
+        totalTests > 0
+          ? testAttempts.reduce((sum, test) => sum + test.percentage, 0) / totalTests
+          : 0,
       totalStudyTime: totalTime,
       averageTestTime: totalTests > 0 ? totalTime / totalTests : 0,
       improvement: secondHalfAvg - firstHalfAvg,
       consistencyScore: this.calculateConsistencyScore(testAttempts),
       topTopics: this.getTopPerformingTopics(testAttempts, 5),
-      weakTopics: this.getWeakPerformingTopics(testAttempts, 5)
+      weakTopics: this.getWeakPerformingTopics(testAttempts, 5),
     }
   }
 
   // Helper methods
   private generateProgressTrend(tests: any[]): ProgressTrend[] {
-    return tests.map(test => ({
+    return tests.map((test) => ({
       date: test.startedAt,
       score: test.percentage,
       accuracy: test.percentage,
       testsCompleted: 1,
-      studyTime: test.timeSpent || 0
+      studyTime: test.timeSpent || 0,
     }))
   }
 
   private identifyStrengths(topicPerformance: Record<string, TopicAnalytics>): string[] {
     return Object.values(topicPerformance)
-      .filter(topic => topic.accuracy >= 80 && topic.totalQuestions >= 5)
+      .filter((topic) => topic.accuracy >= 80 && topic.totalQuestions >= 5)
       .sort((a, b) => b.accuracy - a.accuracy)
       .slice(0, 3)
-      .map(topic => topic.topic)
+      .map((topic) => topic.topic)
   }
 
   private identifyWeaknesses(topicPerformance: Record<string, TopicAnalytics>): string[] {
     return Object.values(topicPerformance)
-      .filter(topic => topic.accuracy < 60 && topic.totalQuestions >= 5)
+      .filter((topic) => topic.accuracy < 60 && topic.totalQuestions >= 5)
       .sort((a, b) => a.accuracy - b.accuracy)
       .slice(0, 3)
-      .map(topic => topic.topic)
+      .map((topic) => topic.topic)
   }
 
   private generateRecommendations(questionAnalysis: any[], topicBreakdown: any[]): string[] {
@@ -486,24 +504,27 @@ export class PerformanceAnalyticsService {
 
     // Weak topics
     const weakTopics = topicBreakdown
-      .filter(topic => topic.correct / topic.total < 0.6)
-      .map(topic => topic.topic)
+      .filter((topic) => topic.correct / topic.total < 0.6)
+      .map((topic) => topic.topic)
 
     if (weakTopics.length > 0) {
       recommendations.push(`Focus on improving: ${weakTopics.join(', ')}`)
     }
 
     // Time management
-    const avgTimePerQuestion = questionAnalysis.reduce((sum, q) => sum + q.timeSpent, 0) / questionAnalysis.length
-    if (avgTimePerQuestion > 120) { // More than 2 minutes per question
+    const avgTimePerQuestion =
+      questionAnalysis.reduce((sum, q) => sum + q.timeSpent, 0) / questionAnalysis.length
+    if (avgTimePerQuestion > 120) {
+      // More than 2 minutes per question
       recommendations.push('Work on time management - try to solve questions faster')
     }
 
     // Difficulty patterns
-    const hardQuestions = questionAnalysis.filter(q => q.difficulty === 'Hard')
-    const hardAccuracy = hardQuestions.length > 0
-      ? hardQuestions.filter(q => q.isCorrect).length / hardQuestions.length
-      : 0
+    const hardQuestions = questionAnalysis.filter((q) => q.difficulty === 'Hard')
+    const hardAccuracy =
+      hardQuestions.length > 0
+        ? hardQuestions.filter((q) => q.isCorrect).length / hardQuestions.length
+        : 0
 
     if (hardAccuracy < 0.4) {
       recommendations.push('Practice more challenging questions to improve problem-solving skills')
@@ -515,19 +536,23 @@ export class PerformanceAnalyticsService {
   private calculateConsistencyScore(tests: any[]): number {
     if (tests.length < 2) return 100
 
-    const scores = tests.map(test => test.percentage)
+    const scores = tests.map((test) => test.percentage)
     const mean = scores.reduce((sum, score) => sum + score, 0) / scores.length
-    const variance = scores.reduce((sum, score) => sum + Math.pow(score - mean, 2), 0) / scores.length
+    const variance =
+      scores.reduce((sum, score) => sum + Math.pow(score - mean, 2), 0) / scores.length
     const standardDeviation = Math.sqrt(variance)
 
     // Consistency score: lower standard deviation = higher consistency
     return Math.max(0, 100 - standardDeviation)
   }
 
-  private getTopPerformingTopics(tests: any[], limit: number): Array<{ topic: string; accuracy: number }> {
+  private getTopPerformingTopics(
+    tests: any[],
+    limit: number
+  ): Array<{ topic: string; accuracy: number }> {
     const topicStats: Record<string, { correct: number; total: number }> = {}
 
-    tests.forEach(test => {
+    tests.forEach((test) => {
       test.testQuestions.forEach((tq: any) => {
         const topic = tq.question.topic
         if (!topicStats[topic]) {
@@ -541,17 +566,20 @@ export class PerformanceAnalyticsService {
     return Object.entries(topicStats)
       .map(([topic, stats]) => ({
         topic,
-        accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0
+        accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
       }))
-      .filter(item => item.accuracy > 0)
+      .filter((item) => item.accuracy > 0)
       .sort((a, b) => b.accuracy - a.accuracy)
       .slice(0, limit)
   }
 
-  private getWeakPerformingTopics(tests: any[], limit: number): Array<{ topic: string; accuracy: number }> {
+  private getWeakPerformingTopics(
+    tests: any[],
+    limit: number
+  ): Array<{ topic: string; accuracy: number }> {
     const topicStats: Record<string, { correct: number; total: number }> = {}
 
-    tests.forEach(test => {
+    tests.forEach((test) => {
       test.testQuestions.forEach((tq: any) => {
         const topic = tq.question.topic
         if (!topicStats[topic]) {
@@ -565,9 +593,9 @@ export class PerformanceAnalyticsService {
     return Object.entries(topicStats)
       .map(([topic, stats]) => ({
         topic,
-        accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0
+        accuracy: stats.total > 0 ? (stats.correct / stats.total) * 100 : 0,
       }))
-      .filter(item => item.accuracy < 100)
+      .filter((item) => item.accuracy < 100)
       .sort((a, b) => a.accuracy - b.accuracy)
       .slice(0, limit)
   }

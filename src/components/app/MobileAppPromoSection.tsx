@@ -207,9 +207,7 @@ export function MobileAppPromoSection({
           </div>
 
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            <span className="text-blue-400">
-              Your NEET Success Partner
-            </span>
+            <span className="text-blue-400">Your NEET Success Partner</span>
             <br />
             <span className="text-white">in Your Pocket</span>
           </h2>

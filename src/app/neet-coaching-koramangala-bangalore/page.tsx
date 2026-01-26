@@ -97,12 +97,14 @@ const features = [
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Koramangala families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Koramangala families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
@@ -112,7 +114,8 @@ const features = [
   {
     icon: Shield,
     title: 'Stress-Free Learning',
-    description: 'No ORR or Silk Board traffic stress. Study in comfort from your Koramangala home.',
+    description:
+      'No ORR or Silk Board traffic stress. Study in comfort from your Koramangala home.',
   },
 ]
 
@@ -127,7 +130,7 @@ const faqs = [
   {
     question: 'Why do Koramangala students choose online NEET coaching?',
     answer:
-      'Koramangala is Bangalore\'s startup hub with tech-savvy families who understand digital learning. Our online classes offer AIIMS faculty without Silk Board or ORR traffic. Save 2-3 hours daily on commute to coaching centers in Jayanagar or Rajajinagar.',
+      "Koramangala is Bangalore's startup hub with tech-savvy families who understand digital learning. Our online classes offer AIIMS faculty without Silk Board or ORR traffic. Save 2-3 hours daily on commute to coaching centers in Jayanagar or Rajajinagar.",
   },
   {
     question: 'Which areas in Koramangala do you serve?',
@@ -137,7 +140,7 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching in Koramangala?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Koramangala\'s premium education standards while offering superior flexibility. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Koramangala's premium education standards while offering superior flexibility. EMI options available.",
   },
   {
     question: 'How does this compare to coaching centers in Jayanagar?',
@@ -152,7 +155,7 @@ const faqs = [
   {
     question: 'What medical colleges can Koramangala students target?',
     answer:
-      'With proper NEET preparation, Koramangala students can target top colleges like Bangalore Medical College, St. John\'s Medical College, MS Ramaiah Medical College, and all-India institutes like AIIMS and JIPMER.',
+      "With proper NEET preparation, Koramangala students can target top colleges like Bangalore Medical College, St. John's Medical College, MS Ramaiah Medical College, and all-India institutes like AIIMS and JIPMER.",
   },
 ]
 
@@ -298,7 +301,8 @@ export default function NeetCoachingKoramangalaPage() {
               NEET Coaching Across Koramangala & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From 1st Block to 8th Block, BTM to Madiwala - premium coaching for every Koramangala locality.
+              From 1st Block to 8th Block, BTM to Madiwala - premium coaching for every Koramangala
+              locality.
             </p>
           </motion.div>
 
@@ -320,9 +324,7 @@ export default function NeetCoachingKoramangalaPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-teal-600" />
                   </div>
-                  <div className="text-2xl font-bold text-teal-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-teal-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-teal-100 text-teal-700 px-2 py-1 rounded-full">
@@ -351,7 +353,8 @@ export default function NeetCoachingKoramangalaPage() {
               Why Koramangala&apos;s Startup Families Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Digital excellence meets premium education - designed for Bangalore&apos;s startup hub.
+              Digital excellence meets premium education - designed for Bangalore&apos;s startup
+              hub.
             </p>
           </motion.div>
 

@@ -12,7 +12,11 @@ import { AgentTaskManager } from '@/lib/crm-agents/base'
 import { processPendingAgentTasks } from '@/lib/crm-agents/processor'
 import { AgentTaskStatus } from '@/generated/prisma'
 import { authenticateCounselor } from '@/lib/auth/counselor-auth'
-import { verifyCronAuth, createCronUnauthorizedResponse, createCronConfigErrorResponse } from '@/lib/auth/cron-auth'
+import {
+  verifyCronAuth,
+  createCronUnauthorizedResponse,
+  createCronConfigErrorResponse,
+} from '@/lib/auth/cron-auth'
 
 /**
  * GET /api/agents/tasks

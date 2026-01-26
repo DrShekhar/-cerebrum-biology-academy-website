@@ -68,7 +68,11 @@ export const trackCourseEnrollment = (
  * Track demo booking conversion
  * Call this when a student books a free demo class
  */
-export const trackDemoBooking = (studentName: string, courseInterest: string, value: number = 0) => {
+export const trackDemoBooking = (
+  studentName: string,
+  courseInterest: string,
+  value: number = 0
+) => {
   const conversionLabel = 'DEMO_BOOKING_LABEL' // TODO: Replace with actual label
 
   gtagReportConversion(conversionLabel, value, 'INR')

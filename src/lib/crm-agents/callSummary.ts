@@ -5,12 +5,7 @@
  * concise summaries with key insights and sentiment analysis.
  */
 
-import {
-  BaseAgent,
-  AgentContext,
-  AgentResponse,
-  AgentTaskManager,
-} from './base'
+import { BaseAgent, AgentContext, AgentResponse, AgentTaskManager } from './base'
 import { prisma } from '@/lib/prisma'
 import { AgentType } from '@/generated/prisma'
 

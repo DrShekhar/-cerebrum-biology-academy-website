@@ -1,8 +1,4 @@
-import {
-  signInWithPhoneNumber,
-  RecaptchaVerifier,
-  ConfirmationResult,
-} from 'firebase/auth'
+import { signInWithPhoneNumber, RecaptchaVerifier, ConfirmationResult } from 'firebase/auth'
 import { auth } from './config'
 
 // Store confirmation result for OTP verification
@@ -31,7 +27,7 @@ function resetRecaptchaVerifier(): void {
 
   // Also remove any lingering reCAPTCHA DOM elements
   const recaptchaContainers = document.querySelectorAll('.grecaptcha-badge, [id^="recaptcha"]')
-  recaptchaContainers.forEach(el => {
+  recaptchaContainers.forEach((el) => {
     try {
       el.remove()
     } catch (e) {
@@ -121,7 +117,12 @@ export async function sendOTP(
   console.log('[OTP] Sending to:', formattedPhone)
 
   // Helper to attempt OTP send
-  const attemptSend = async (): Promise<{ success: boolean; error?: string; shouldRetry?: boolean; shouldRefresh?: boolean }> => {
+  const attemptSend = async (): Promise<{
+    success: boolean
+    error?: string
+    shouldRetry?: boolean
+    shouldRefresh?: boolean
+  }> => {
     try {
       // Always reinitialize recaptcha for fresh token
       // This helps avoid stale Enterprise verification issues
@@ -133,11 +134,7 @@ export async function sendOTP(
 
       // Send OTP via Firebase
       console.log('[OTP] Calling signInWithPhoneNumber...')
-      confirmationResult = await signInWithPhoneNumber(
-        auth,
-        formattedPhone,
-        recaptchaVerifier
-      )
+      confirmationResult = await signInWithPhoneNumber(auth, formattedPhone, recaptchaVerifier)
 
       console.log('[OTP] Successfully sent!')
       initAttempts = 0
@@ -157,7 +154,8 @@ export async function sendOTP(
           break
 
         case 'auth/too-many-requests':
-          errorMessage = 'Too many attempts. Please wait 10-15 minutes before trying again, or use a different phone number.'
+          errorMessage =
+            'Too many attempts. Please wait 10-15 minutes before trying again, or use a different phone number.'
           // Rate limit is server-side, no point in retrying
           break
 
@@ -172,7 +170,9 @@ export async function sendOTP(
           initAttempts++
           if (initAttempts < MAX_INIT_ATTEMPTS) {
             shouldRetry = true
-            console.log(`[OTP] reCAPTCHA failed, will retry (attempt ${initAttempts}/${MAX_INIT_ATTEMPTS})`)
+            console.log(
+              `[OTP] reCAPTCHA failed, will retry (attempt ${initAttempts}/${MAX_INIT_ATTEMPTS})`
+            )
           } else {
             errorMessage = 'Verification check failed. Please refresh the page and try again.'
             shouldRefresh = true
@@ -195,9 +195,12 @@ export async function sendOTP(
           initAttempts++
           if (initAttempts < MAX_INIT_ATTEMPTS) {
             shouldRetry = true
-            console.log(`[OTP] Internal error (possibly reCAPTCHA Enterprise), will retry (attempt ${initAttempts}/${MAX_INIT_ATTEMPTS})`)
+            console.log(
+              `[OTP] Internal error (possibly reCAPTCHA Enterprise), will retry (attempt ${initAttempts}/${MAX_INIT_ATTEMPTS})`
+            )
           } else {
-            errorMessage = 'Verification service temporarily unavailable. Please refresh and try again.'
+            errorMessage =
+              'Verification service temporarily unavailable. Please refresh and try again.'
             shouldRefresh = true
           }
           break
@@ -221,7 +224,7 @@ export async function sendOTP(
   while (result.shouldRetry && initAttempts < MAX_INIT_ATTEMPTS) {
     console.log(`[OTP] Retrying after delay...`)
     // Small delay before retry
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    await new Promise((resolve) => setTimeout(resolve, 1000))
     result = await attemptSend()
   }
 
@@ -236,9 +239,11 @@ export async function sendOTP(
  * Verify OTP code entered by user
  * Returns Firebase user if successful
  */
-export async function verifyOTP(
-  code: string
-): Promise<{ success: boolean; user?: { uid: string; phoneNumber: string | null }; error?: string }> {
+export async function verifyOTP(code: string): Promise<{
+  success: boolean
+  user?: { uid: string; phoneNumber: string | null }
+  error?: string
+}> {
   try {
     if (!confirmationResult) {
       return { success: false, error: 'No OTP was sent. Please request a new code' }

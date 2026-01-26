@@ -25,13 +25,14 @@ class CostOptimizationDemo {
     const demoScenarios = [
       {
         name: 'NEET Biology Question Explanation',
-        prompt: 'Can you please explain the detailed process of photosynthesis in plants including the light reactions and Calvin cycle with examples for NEET preparation?',
+        prompt:
+          'Can you please explain the detailed process of photosynthesis in plants including the light reactions and Calvin cycle with examples for NEET preparation?',
         context: {
           subject: 'Biology',
           level: 'Class 12',
           questionType: 'explanation',
-          priority: 'high'
-        }
+          priority: 'high',
+        },
       },
       {
         name: 'Quick Biology Definition',
@@ -40,8 +41,8 @@ class CostOptimizationDemo {
           subject: 'Biology',
           level: 'Class 11',
           questionType: 'definition',
-          priority: 'medium'
-        }
+          priority: 'medium',
+        },
       },
       {
         name: 'Repeated Educational Query',
@@ -50,8 +51,8 @@ class CostOptimizationDemo {
           subject: 'Biology',
           level: 'Class 12',
           questionType: 'explanation',
-          priority: 'medium'
-        }
+          priority: 'medium',
+        },
       },
       {
         name: 'Biology Question Generation',
@@ -60,19 +61,20 @@ class CostOptimizationDemo {
           subject: 'Biology',
           level: 'Class 12',
           questionType: 'generation',
-          priority: 'low'
-        }
+          priority: 'low',
+        },
       },
       {
         name: 'Complex Biology Analysis',
-        prompt: 'Could you help me understand the molecular mechanism of ATP synthesis in mitochondria and compare it with photosynthetic ATP production in detail?',
+        prompt:
+          'Could you help me understand the molecular mechanism of ATP synthesis in mitochondria and compare it with photosynthetic ATP production in detail?',
         context: {
           subject: 'Biology',
           level: 'Class 12',
           questionType: 'analysis',
-          priority: 'high'
-        }
-      }
+          priority: 'high',
+        },
+      },
     ]
 
     console.log('📋 Running 5 Biology Education AI Requests...\n')
@@ -98,11 +100,13 @@ class CostOptimizationDemo {
     const tokenOptimization = this.optimizeTokens(scenario.prompt)
     console.log(`      Original: ${tokenOptimization.originalTokens} tokens`)
     console.log(`      Optimized: ${tokenOptimization.optimizedTokens} tokens`)
-    console.log(`      Savings: ${tokenOptimization.tokenSavings} tokens (${tokenOptimization.savingsPercentage}%)`)
+    console.log(
+      `      Savings: ${tokenOptimization.tokenSavings} tokens (${tokenOptimization.savingsPercentage}%)`
+    )
 
     if (tokenOptimization.techniques.length > 0) {
       console.log(`      Techniques: ${tokenOptimization.techniques.join(', ')}`)
-      tokenOptimization.techniques.forEach(tech => this.optimizationTechniques.add(tech))
+      tokenOptimization.techniques.forEach((tech) => this.optimizationTechniques.add(tech))
     }
 
     // Step 2: Cache Check
@@ -146,7 +150,7 @@ class CostOptimizationDemo {
     // Step 5: Simulate AI Processing
     console.log('   ⚡ Step 5: AI Processing')
     const processingTime = this.simulateProcessing(scenario.context.priority)
-    await new Promise(resolve => setTimeout(resolve, processingTime))
+    await new Promise((resolve) => setTimeout(resolve, processingTime))
 
     // Step 6: Calculate Final Results
     const finalCost = routingDecision.estimatedCost * (batchingDecision.shouldBatch ? 0.8 : 1.0)
@@ -156,7 +160,9 @@ class CostOptimizationDemo {
     console.log('   📊 Results:')
     console.log(`      Original Cost: $${originalCost.toFixed(4)}`)
     console.log(`      Optimized Cost: $${finalCost.toFixed(4)}`)
-    console.log(`      Cost Savings: $${totalSavings.toFixed(4)} (${((totalSavings/originalCost)*100).toFixed(1)}%)`)
+    console.log(
+      `      Cost Savings: $${totalSavings.toFixed(4)} (${((totalSavings / originalCost) * 100).toFixed(1)}%)`
+    )
     console.log(`      Processing Time: ${Date.now() - startTime}ms`)
 
     this.totalCostSaved += totalSavings
@@ -205,7 +211,7 @@ class CostOptimizationDemo {
       tokenSavings,
       savingsPercentage,
       techniques,
-      optimizedPrompt
+      optimizedPrompt,
     }
   }
 
@@ -221,7 +227,7 @@ class CostOptimizationDemo {
           hit: true,
           type: 'Semantic match',
           costSaved: 0.0234,
-          responseTime: 150
+          responseTime: 150,
         }
       }
     }
@@ -231,7 +237,7 @@ class CostOptimizationDemo {
         hit: true,
         type: 'Exact match',
         costSaved: 0.0156,
-        responseTime: 120
+        responseTime: 120,
       }
     }
 
@@ -242,7 +248,7 @@ class CostOptimizationDemo {
     const providers = {
       google: { cost: 0.0002, quality: 0.75, speed: 'fast' },
       anthropic: { cost: 0.008, quality: 0.95, speed: 'medium' },
-      openai: { cost: 0.015, quality: 0.90, speed: 'medium' }
+      openai: { cost: 0.015, quality: 0.9, speed: 'medium' },
     }
 
     // Routing logic based on request characteristics
@@ -252,7 +258,7 @@ class CostOptimizationDemo {
         model: 'gemini-2.0-flash',
         estimatedCost: 0.0045,
         confidence: 0.85,
-        reasoning: 'Cost-optimized routing for educational content'
+        reasoning: 'Cost-optimized routing for educational content',
       }
     }
 
@@ -262,7 +268,7 @@ class CostOptimizationDemo {
         model: 'claude-3-5-sonnet',
         estimatedCost: 0.0187,
         confidence: 0.92,
-        reasoning: 'High-quality routing for complex reasoning'
+        reasoning: 'High-quality routing for complex reasoning',
       }
     }
 
@@ -271,7 +277,7 @@ class CostOptimizationDemo {
       model: 'gpt-4o',
       estimatedCost: 0.0156,
       confidence: 0.88,
-      reasoning: 'Balanced cost-quality routing'
+      reasoning: 'Balanced cost-quality routing',
     }
   }
 
@@ -287,7 +293,7 @@ class CostOptimizationDemo {
         shouldBatch: true,
         queueType: 'Question Generation Queue',
         waitTime: 3000,
-        reason: 'Similar content type for batching'
+        reason: 'Similar content type for batching',
       }
     }
 
@@ -297,7 +303,7 @@ class CostOptimizationDemo {
         shouldBatch: true,
         queueType: 'Simple Query Queue',
         waitTime: 2000,
-        reason: 'Simple query suitable for batching'
+        reason: 'Simple query suitable for batching',
       }
     }
 
@@ -306,9 +312,9 @@ class CostOptimizationDemo {
 
   simulateProcessing(priority) {
     const processingTimes = {
-      'high': 800,
-      'medium': 1200,
-      'low': 1800
+      high: 800,
+      medium: 1200,
+      low: 1800,
     }
     return processingTimes[priority] || 1200
   }
@@ -316,14 +322,16 @@ class CostOptimizationDemo {
   estimateOriginalCost(prompt) {
     // Estimate cost without optimization
     const tokens = Math.ceil(prompt.split(' ').length * 1.3 * 3) // Include response
-    return (tokens / 1000) * 0.020 // $0.02 per 1K tokens (expensive provider)
+    return (tokens / 1000) * 0.02 // $0.02 per 1K tokens (expensive provider)
   }
 
   shouldCache(scenario) {
     // Cache educational content and common queries
-    return scenario.context.subject === 'Biology' ||
-           scenario.context.questionType === 'explanation' ||
-           scenario.context.questionType === 'definition'
+    return (
+      scenario.context.subject === 'Biology' ||
+      scenario.context.questionType === 'explanation' ||
+      scenario.context.questionType === 'definition'
+    )
   }
 
   cacheResponse(prompt, context) {
@@ -341,13 +349,15 @@ class CostOptimizationDemo {
 
     console.log('')
     console.log('📊 COST SAVINGS SUMMARY:')
-    console.table([{
-      'Total Requests': this.totalRequests,
-      'Total Cost Saved': `$${this.totalCostSaved.toFixed(4)}`,
-      'Avg Savings/Request': `$${averageSavingsPerRequest.toFixed(4)}`,
-      'Est. Monthly Savings': `$${monthlySavingsEstimate.toFixed(2)}`,
-      'Cost Reduction': `${((this.totalCostSaved / (0.1 + this.totalCostSaved)) * 100).toFixed(1)}%`
-    }])
+    console.table([
+      {
+        'Total Requests': this.totalRequests,
+        'Total Cost Saved': `$${this.totalCostSaved.toFixed(4)}`,
+        'Avg Savings/Request': `$${averageSavingsPerRequest.toFixed(4)}`,
+        'Est. Monthly Savings': `$${monthlySavingsEstimate.toFixed(2)}`,
+        'Cost Reduction': `${((this.totalCostSaved / (0.1 + this.totalCostSaved)) * 100).toFixed(1)}%`,
+      },
+    ])
 
     console.log('')
     console.log('🔧 OPTIMIZATION TECHNIQUES USED:')
@@ -357,13 +367,15 @@ class CostOptimizationDemo {
 
     console.log('')
     console.log('📈 OPTIMIZATION PERFORMANCE:')
-    console.table([{
-      'Cache Hit Rate': '40%', // 2 out of 5 requests hit cache
-      'Token Reduction': '25%', // Average token optimization
-      'Routing Efficiency': '92%', // Smart provider selection
-      'Batch Utilization': '60%', // 3 out of 5 eligible for batching
-      'Overall Score': '78/100' // Combined optimization score
-    }])
+    console.table([
+      {
+        'Cache Hit Rate': '40%', // 2 out of 5 requests hit cache
+        'Token Reduction': '25%', // Average token optimization
+        'Routing Efficiency': '92%', // Smart provider selection
+        'Batch Utilization': '60%', // 3 out of 5 eligible for batching
+        'Overall Score': '78/100', // Combined optimization score
+      },
+    ])
 
     console.log('')
     console.log('🎯 KEY ACHIEVEMENTS:')
@@ -384,7 +396,9 @@ class CostOptimizationDemo {
     console.log('')
     console.log('🚀 IMPACT FOR CEREBRUM BIOLOGY ACADEMY:')
     console.log(`   💰 Estimated monthly savings: $${monthlySavingsEstimate.toFixed(2)}`)
-    console.log(`   🎯 Cost reduction achieved: ${((this.totalCostSaved / (0.1 + this.totalCostSaved)) * 100).toFixed(1)}%`)
+    console.log(
+      `   🎯 Cost reduction achieved: ${((this.totalCostSaved / (0.1 + this.totalCostSaved)) * 100).toFixed(1)}%`
+    )
     console.log('   📚 Quality maintained for educational content')
     console.log('   ⚡ Response times optimized through intelligent caching')
     console.log('   📊 Real-time monitoring and optimization active')

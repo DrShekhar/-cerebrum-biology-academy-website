@@ -24,6 +24,10 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import {
+  RelatedLocations,
+  getRelatedLocations,
+} from '@/components/locations/RelatedLocations'
 
 export default function LajpatNagarPage() {
   useEffect(() => {
@@ -238,6 +242,12 @@ export default function LajpatNagarPage() {
             </div>
           </div>
         </section>
+
+        <RelatedLocations
+          currentLocation="Lajpat Nagar"
+          locations={getRelatedLocations('lajpat-nagar')}
+          className="bg-white"
+        />
 
         <section className="py-12 bg-slate-900 text-white">
           <div className="container mx-auto px-4">

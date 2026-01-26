@@ -21,11 +21,7 @@ export const metadata: Metadata = {
 // Force dynamic rendering for fresh state
 export const dynamic = 'force-dynamic'
 
-export default function OverlayLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function OverlayLayout({ children }: { children: React.ReactNode }) {
   // Just pass through children - root layout handles the HTML structure
   // CSS handles hiding header/footer when obs-overlay-mode class is present
   return <>{children}</>

@@ -551,11 +551,7 @@ export default function NeetFoundationCoursePage() {
                 and most relaxed learning pace.
               </p>
               <Link href="/class-9-foundation">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="w-full bg-blue-600"
-                >
+                <Button variant="primary" size="lg" className="w-full bg-blue-600">
                   Explore Class 9 Program
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -580,11 +576,7 @@ export default function NeetFoundationCoursePage() {
                 preparation, with board exam alignment.
               </p>
               <Link href="/class-10-foundation">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  className="w-full bg-green-600"
-                >
+                <Button variant="primary" size="lg" className="w-full bg-green-600">
                   Explore Class 10 Program
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>

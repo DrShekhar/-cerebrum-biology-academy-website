@@ -14,7 +14,8 @@
 
 // Cloudflare API configuration
 const CF_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID
-const CF_IMAGES_API_TOKEN = process.env.CLOUDFLARE_IMAGES_API_TOKEN || process.env.CLOUDFLARE_API_TOKEN
+const CF_IMAGES_API_TOKEN =
+  process.env.CLOUDFLARE_IMAGES_API_TOKEN || process.env.CLOUDFLARE_API_TOKEN
 const CF_IMAGES_ACCOUNT_HASH = process.env.CLOUDFLARE_IMAGES_ACCOUNT_HASH
 
 const CF_IMAGES_API = `https://api.cloudflare.com/client/v4/accounts/${CF_ACCOUNT_ID}/images/v1`
@@ -52,12 +53,12 @@ export interface DirectUploadResult {
 
 // Predefined variants for gallery images
 export const IMAGE_VARIANTS = {
-  thumbnail: 'thumbnail',   // 150x150, fit=cover
-  small: 'small',           // 320px width
-  medium: 'medium',         // 640px width
-  large: 'large',           // 1024px width
-  full: 'full',             // Original size
-  blur: 'blur',             // Tiny blur placeholder
+  thumbnail: 'thumbnail', // 150x150, fit=cover
+  small: 'small', // 320px width
+  medium: 'medium', // 640px width
+  large: 'large', // 1024px width
+  full: 'full', // Original size
+  blur: 'blur', // Tiny blur placeholder
 } as const
 
 export type ImageVariant = keyof typeof IMAGE_VARIANTS
@@ -279,9 +280,7 @@ export async function getImageDetails(
 /**
  * Delete an image from Cloudflare
  */
-export async function deleteImage(
-  imageId: string
-): Promise<{ success: boolean; error?: string }> {
+export async function deleteImage(imageId: string): Promise<{ success: boolean; error?: string }> {
   if (!CF_ACCOUNT_ID || !CF_IMAGES_API_TOKEN) {
     return { success: false, error: 'Cloudflare Images credentials not configured' }
   }
@@ -320,10 +319,7 @@ export async function deleteImage(
  * Or with flexible variants:
  * https://imagedelivery.net/<account_hash>/<image_id>/w=<width>,h=<height>,fit=<fit>
  */
-export function getImageUrl(
-  imageId: string,
-  variant: ImageVariant | string = 'medium'
-): string {
+export function getImageUrl(imageId: string, variant: ImageVariant | string = 'medium'): string {
   if (!CF_IMAGES_DELIVERY) {
     // Fallback to direct API URL if account hash not set
     return `https://imagedelivery.net/${CF_ACCOUNT_ID}/${imageId}/${variant}`
@@ -423,10 +419,9 @@ export async function listImages(
   }
 
   try {
-    const response = await fetch(
-      `${CF_IMAGES_API}?page=${page}&per_page=${perPage}`,
-      { headers: getHeaders() }
-    )
+    const response = await fetch(`${CF_IMAGES_API}?page=${page}&per_page=${perPage}`, {
+      headers: getHeaders(),
+    })
 
     const data = await response.json()
 
@@ -457,13 +452,9 @@ export async function listImages(
 export async function batchDeleteImages(
   imageIds: string[]
 ): Promise<{ success: boolean; deleted: number; errors: string[] }> {
-  const results = await Promise.allSettled(
-    imageIds.map((id) => deleteImage(id))
-  )
+  const results = await Promise.allSettled(imageIds.map((id) => deleteImage(id)))
 
-  const deleted = results.filter(
-    (r) => r.status === 'fulfilled' && r.value.success
-  ).length
+  const deleted = results.filter((r) => r.status === 'fulfilled' && r.value.success).length
 
   const errors = results
     .filter((r) => r.status === 'rejected' || (r.status === 'fulfilled' && !r.value.success))

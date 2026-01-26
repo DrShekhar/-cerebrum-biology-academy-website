@@ -30,7 +30,9 @@ type TestState = 'preview' | 'class-selection' | 'taking' | 'completed'
 
 export function TestInterface({ test }: TestInterfaceProps) {
   const [testState, setTestState] = useState<TestState>('preview')
-  const [selectedClass, setSelectedClass] = useState<'class-11' | 'class-12' | 'dropper' | null>(null)
+  const [selectedClass, setSelectedClass] = useState<'class-11' | 'class-12' | 'dropper' | null>(
+    null
+  )
   const [testResponses, setTestResponses] = useState<TestResponse[]>([])
   const [timeTaken, setTimeTaken] = useState<number>(0)
 
@@ -39,7 +41,11 @@ export function TestInterface({ test }: TestInterfaceProps) {
 
   useEffect(() => {
     // Check if user has a stored class preference
-    const storedClass = localStorage.getItem('selectedClass') as 'class-11' | 'class-12' | 'dropper' | null
+    const storedClass = localStorage.getItem('selectedClass') as
+      | 'class-11'
+      | 'class-12'
+      | 'dropper'
+      | null
     if (storedClass) {
       setSelectedClass(storedClass)
     }
@@ -107,10 +113,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
                 </Button>
               </Link>
             </div>
-            <ClassSelection 
-              onClassSelect={handleClassSelect}
-              selectedClass={selectedClass}
-            />
+            <ClassSelection onClassSelect={handleClassSelect} selectedClass={selectedClass} />
           </div>
         </div>
       </div>
@@ -166,9 +169,11 @@ export function TestInterface({ test }: TestInterfaceProps) {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center space-x-3 mb-4">
-              <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                test.isPremium ? 'bg-yellow-500 text-yellow-900' : 'bg-green-600 text-green-900'
-              }`}>
+              <span
+                className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                  test.isPremium ? 'bg-yellow-500 text-yellow-900' : 'bg-green-600 text-green-900'
+                }`}
+              >
                 {test.isPremium ? 'PREMIUM' : 'FREE'}
               </span>
               <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold">
@@ -176,15 +181,18 @@ export function TestInterface({ test }: TestInterfaceProps) {
               </span>
               {selectedClass && (
                 <span className="bg-blue-500 px-3 py-1 rounded-full text-sm font-semibold">
-                  {selectedClass === 'class-11' ? 'Class 11' : 
-                   selectedClass === 'class-12' ? 'Class 12' : 'Dropper'}
+                  {selectedClass === 'class-11'
+                    ? 'Class 11'
+                    : selectedClass === 'class-12'
+                      ? 'Class 12'
+                      : 'Dropper'}
                 </span>
               )}
             </div>
-            
+
             <h1 className="text-4xl font-bold mb-4">{test.title}</h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">{test.description}</p>
-            
+
             {/* Quick Stats */}
             <div className="grid md:grid-cols-4 gap-6">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
@@ -269,8 +277,12 @@ export function TestInterface({ test }: TestInterfaceProps) {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <h2 className="text-2xl font-bold text-blue-900 mb-6">
-                    Personalized for {selectedClass === 'class-11' ? 'Class 11' : 
-                                     selectedClass === 'class-12' ? 'Class 12' : 'Droppers'}
+                    Personalized for{' '}
+                    {selectedClass === 'class-11'
+                      ? 'Class 11'
+                      : selectedClass === 'class-12'
+                        ? 'Class 12'
+                        : 'Droppers'}
                   </h2>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-white rounded-2xl p-6">
@@ -302,7 +314,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
                 transition={{ duration: 0.5 }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Ready to Begin?</h3>
-                
+
                 {!selectedClass ? (
                   <div className="mb-6">
                     <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-4 mb-4">
@@ -324,8 +336,12 @@ export function TestInterface({ test }: TestInterfaceProps) {
                     <div className="bg-green-50 border border-green-200 rounded-2xl p-4 mb-4">
                       <CheckCircle className="w-5 h-5 text-green-600 mb-2" />
                       <p className="text-green-800 text-sm">
-                        Test personalized for {selectedClass === 'class-11' ? 'Class 11' : 
-                                              selectedClass === 'class-12' ? 'Class 12' : 'Droppers'}
+                        Test personalized for{' '}
+                        {selectedClass === 'class-11'
+                          ? 'Class 11'
+                          : selectedClass === 'class-12'
+                            ? 'Class 12'
+                            : 'Droppers'}
                       </p>
                     </div>
                   </div>
@@ -400,12 +416,16 @@ export function TestInterface({ test }: TestInterfaceProps) {
                   <div className="p-4 bg-gray-50 rounded-2xl">
                     <h4 className="font-medium text-gray-900 mb-1">Plant Physiology Test</h4>
                     <p className="text-sm text-gray-600 mb-2">20 questions • 30 min</p>
-                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">FREE</span>
+                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">
+                      FREE
+                    </span>
                   </div>
                   <div className="p-4 bg-gray-50 rounded-2xl">
                     <h4 className="font-medium text-gray-900 mb-1">Genetics Deep Dive</h4>
                     <p className="text-sm text-gray-600 mb-2">25 questions • 45 min</p>
-                    <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">PREMIUM</span>
+                    <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs">
+                      PREMIUM
+                    </span>
                   </div>
                 </div>
               </motion.div>

@@ -3,11 +3,7 @@
  * Tests Hindi/English translations and language utilities
  */
 
-import {
-  ariaTranslations,
-  getTranslation,
-  detectLanguage,
-} from '@/lib/aria/translations'
+import { ariaTranslations, getTranslation, detectLanguage } from '@/lib/aria/translations'
 import type { Language } from '@/lib/aria/types'
 
 describe('ariaTranslations', () => {
@@ -147,7 +143,7 @@ describe('getTranslation', () => {
   it('should handle all known keys without errors', () => {
     const keys = Object.keys(ariaTranslations.en)
 
-    keys.forEach(key => {
+    keys.forEach((key) => {
       const enResult = getTranslation(key, 'en')
       const hiResult = getTranslation(key, 'hi')
 
@@ -197,7 +193,7 @@ describe('content quality', () => {
   it('should have non-empty translations', () => {
     const languages = ['en', 'hi'] as const
 
-    languages.forEach(lang => {
+    languages.forEach((lang) => {
       Object.entries(ariaTranslations[lang]).forEach(([key, value]) => {
         expect(value).toBeTruthy()
         expect(value.trim().length).toBeGreaterThan(0)
@@ -209,9 +205,9 @@ describe('content quality', () => {
     const languages = ['en', 'hi'] as const
     const placeholderPatterns = ['TODO', 'FIXME', 'placeholder_', 'lorem ipsum', 'xxx']
 
-    languages.forEach(lang => {
+    languages.forEach((lang) => {
       Object.entries(ariaTranslations[lang]).forEach(([key, value]) => {
-        placeholderPatterns.forEach(pattern => {
+        placeholderPatterns.forEach((pattern) => {
           expect(value.toLowerCase()).not.toContain(pattern.toLowerCase())
         })
       })
@@ -222,7 +218,7 @@ describe('content quality', () => {
     // Brand names should be consistent across translations
     const brandTerms = ['ARIA', 'Cerebrum', 'NEET']
 
-    brandTerms.forEach(term => {
+    brandTerms.forEach((term) => {
       Object.entries(ariaTranslations.en).forEach(([key, value]) => {
         if (value.includes(term)) {
           // If English has this term, Hindi should too (or equivalent)

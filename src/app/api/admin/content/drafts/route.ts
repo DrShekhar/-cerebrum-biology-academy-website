@@ -49,7 +49,7 @@ function getDraftsFromFileSystem(): DraftItem[] {
     const dirPath = path.join(draftsDir, subDir)
     if (!fs.existsSync(dirPath)) continue
 
-    const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json'))
+    const files = fs.readdirSync(dirPath).filter((f) => f.endsWith('.json'))
     for (const file of files) {
       const filePath = path.join(dirPath, file)
       try {
@@ -75,9 +75,7 @@ function getDraftsFromFileSystem(): DraftItem[] {
     }
   }
 
-  return drafts.sort((a, b) =>
-    new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
-  )
+  return drafts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
 }
 
 function findDraftFile(draftId: string): string | null {
@@ -88,7 +86,7 @@ function findDraftFile(draftId: string): string | null {
     const dirPath = path.join(draftsDir, subDir)
     if (!fs.existsSync(dirPath)) continue
 
-    const files = fs.readdirSync(dirPath).filter(f => f.endsWith('.json'))
+    const files = fs.readdirSync(dirPath).filter((f) => f.endsWith('.json'))
     for (const file of files) {
       const filePath = path.join(dirPath, file)
       try {

@@ -39,7 +39,8 @@ const FloatingWhatsAppButton = () => {
   return (
     <motion.a
       href={`https://wa.me/${whatsappNumber}?text=${message}`}
-      target="_blank" rel="noopener noreferrer"
+      target="_blank"
+      rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-5 py-4 rounded-full shadow-2xl transition-all duration-300 group"
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
@@ -267,7 +268,7 @@ export default function IBBiologyPage() {
       score: '7/7 HL',
       image: '/testimonials/student1.jpg',
       quote:
-        "The IA guidance was exceptional. My tutor helped me design an investigation that was both manageable and impressive. Scored 23/24 on my IA!",
+        'The IA guidance was exceptional. My tutor helped me design an investigation that was both manageable and impressive. Scored 23/24 on my IA!',
     },
     {
       name: 'Sophie L.',
@@ -387,7 +388,8 @@ export default function IBBiologyPage() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <motion.a
                   href={`https://wa.me/918826444334?text=${encodeURIComponent("Hi! I'm interested in IB Biology coaching. Please share program details.")}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all shadow-lg shadow-green-500/25"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -452,7 +454,9 @@ export default function IBBiologyPage() {
                   ))}
                   <span className="text-white ml-2">4.9/5 Rating</span>
                 </div>
-                <p className="text-center text-gray-400 text-sm mt-2">Based on 200+ student reviews</p>
+                <p className="text-center text-gray-400 text-sm mt-2">
+                  Based on 200+ student reviews
+                </p>
               </div>
             </motion.div>
           </div>
@@ -508,9 +512,7 @@ export default function IBBiologyPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              How We Compare
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How We Compare</h2>
             <p className="text-lg text-gray-600">See why students switch to Cerebrum</p>
           </motion.div>
 
@@ -721,7 +723,8 @@ export default function IBBiologyPage() {
 
                 <motion.a
                   href={`https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I'm interested in the ${plan.name} for IB Biology coaching.`)}`}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold transition-all ${
                     plan.highlight
                       ? 'bg-green-500 hover:bg-green-600 text-white'
@@ -830,8 +833,9 @@ export default function IBBiologyPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <motion.a
-                href={`https://wa.me/918826444334?text=${encodeURIComponent("Hi! I want to book a free consultation for IB Biology coaching.")}`}
-                target="_blank" rel="noopener noreferrer"
+                href={`https://wa.me/918826444334?text=${encodeURIComponent('Hi! I want to book a free consultation for IB Biology coaching.')}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-3 bg-white text-green-700 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-green-50 transition-all shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}

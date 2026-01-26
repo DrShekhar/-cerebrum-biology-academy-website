@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Andheri Mumbai | Lokhandwala, Versova | Cerebrum Academy',
+  title: 'Best NEET Coaching in Andheri Mumbai | Lokhandwala, Versova | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Andheri, Mumbai. 94.2% success rate, AIIMS faculty. Lokhandwala, Versova, DN Nagar, Four Bungalows. 850+ students. Fee ₹24,000+. Book free demo!',
   keywords:

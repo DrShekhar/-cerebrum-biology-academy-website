@@ -19,7 +19,13 @@ interface ChatInterfaceProps {
   isLoading: boolean
 }
 
-export function ChatInterface({ isOpen, onClose, messages, onSendMessage, isLoading }: ChatInterfaceProps) {
+export function ChatInterface({
+  isOpen,
+  onClose,
+  messages,
+  onSendMessage,
+  isLoading,
+}: ChatInterfaceProps) {
   const [input, setInput] = useState('')
 
   const handleSend = () => {
@@ -87,14 +93,16 @@ export function ChatInterface({ isOpen, onClose, messages, onSendMessage, isLoad
                 message.sender === 'user'
                   ? 'bg-gradient-to-r from-blue-500 to-blue-500 text-white'
                   : message.type === 'recommendation'
-                  ? 'bg-gradient-to-r from-green-100 to-green-100 text-green-800 border border-green-200'
-                  : 'bg-gray-100 text-gray-800'
+                    ? 'bg-gradient-to-r from-green-100 to-green-100 text-green-800 border border-green-200'
+                    : 'bg-gray-100 text-gray-800'
               }`}
             >
               <p className="text-sm whitespace-pre-wrap">{message.text}</p>
-              <p className={`text-xs mt-1 ${
-                message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'
-              }`}>
+              <p
+                className={`text-xs mt-1 ${
+                  message.sender === 'user' ? 'text-blue-100' : 'text-gray-500'
+                }`}
+              >
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </p>
             </div>
@@ -105,8 +113,14 @@ export function ChatInterface({ isOpen, onClose, messages, onSendMessage, isLoad
             <div className="bg-gray-100 text-gray-800 p-3 rounded-2xl">
               <div className="flex space-x-1">
                 <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                <div
+                  className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                  style={{ animationDelay: '0.1s' }}
+                ></div>
+                <div
+                  className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"
+                  style={{ animationDelay: '0.2s' }}
+                ></div>
               </div>
             </div>
           </div>

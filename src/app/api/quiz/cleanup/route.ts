@@ -14,7 +14,11 @@ function isCleanupConfigured(): boolean {
 }
 
 // Verify the cleanup secret with timing-safe comparison
-function verifyCleanupAuth(request: NextRequest): { valid: boolean; error?: string; status?: number } {
+function verifyCleanupAuth(request: NextRequest): {
+  valid: boolean
+  error?: string
+  status?: number
+} {
   // Fail closed: require properly configured secret
   if (!isCleanupConfigured()) {
     console.error('QUIZ_CLEANUP_SECRET not configured or too short (min 32 chars)')

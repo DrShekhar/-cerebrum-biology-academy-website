@@ -56,7 +56,8 @@ const whyChooseUs = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years teaching experience.',
+    description:
+      'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years teaching experience.',
   },
   {
     icon: Target,
@@ -129,7 +130,8 @@ export default function BiologyTutorNorthDelhiPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - North Delhi',
-            description: 'Best Biology Tutor for North Delhi students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for North Delhi students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-north-delhi',
             telephone: '+91-88264-44334',
             address: {
@@ -169,8 +171,7 @@ export default function BiologyTutorNorthDelhiPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">North Delhi</span>
+              Biology Tutor in <span className="text-yellow-400">North Delhi</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -178,8 +179,8 @@ export default function BiologyTutorNorthDelhiPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for students in Rohini, Pitampura, Model Town,
-              Civil Lines, and all North Delhi areas. Learn from{' '}
+              Expert Biology coaching for students in Rohini, Pitampura, Model Town, Civil Lines,
+              and all North Delhi areas. Learn from{' '}
               <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
@@ -340,9 +341,7 @@ export default function BiologyTutorNorthDelhiPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              North Delhi Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">North Delhi Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Experience quality NEET coaching from the comfort of your home
             </p>

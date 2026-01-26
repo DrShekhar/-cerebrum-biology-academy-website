@@ -44,53 +44,56 @@ export function GalleryPageContent() {
   const [hasMore, setHasMore] = useState(false)
   const [totalCount, setTotalCount] = useState(0)
 
-  const fetchGallery = useCallback(async (pageNum: number, category: string | null, append: boolean = false) => {
-    try {
-      setIsLoading(true)
-      setError(null)
+  const fetchGallery = useCallback(
+    async (pageNum: number, category: string | null, append: boolean = false) => {
+      try {
+        setIsLoading(true)
+        setError(null)
 
-      const params = new URLSearchParams()
-      params.set('page', String(pageNum))
-      params.set('limit', '24')
-      params.set('includeCategories', 'true')
+        const params = new URLSearchParams()
+        params.set('page', String(pageNum))
+        params.set('limit', '24')
+        params.set('includeCategories', 'true')
 
-      if (category) {
-        params.set('category', category)
+        if (category) {
+          params.set('category', category)
+        }
+
+        const response = await fetch(`/api/gallery?${params.toString()}`)
+        const data: GalleryApiResponse = await response.json()
+
+        if (!data.success || !data.data) {
+          throw new Error(data.error || 'Failed to fetch gallery')
+        }
+
+        const { items: newItems, pagination, categories: categoryCounts } = data.data
+
+        if (append) {
+          setItems((prev) => [...prev, ...newItems])
+        } else {
+          setItems(newItems)
+        }
+
+        setHasMore(pagination.page < pagination.pages)
+        setTotalCount(pagination.total)
+
+        if (categoryCounts && !append) {
+          const formattedCategories: GalleryCategory[] = categoryCounts.map((cat) => ({
+            value: cat.category,
+            label: CATEGORY_CONFIG[cat.category]?.label || cat.category,
+            icon: CATEGORY_CONFIG[cat.category]?.icon || '📷',
+            count: cat.count,
+          }))
+          setCategories(formattedCategories)
+        }
+      } catch (err) {
+        setError(err instanceof Error ? err.message : 'An error occurred')
+      } finally {
+        setIsLoading(false)
       }
-
-      const response = await fetch(`/api/gallery?${params.toString()}`)
-      const data: GalleryApiResponse = await response.json()
-
-      if (!data.success || !data.data) {
-        throw new Error(data.error || 'Failed to fetch gallery')
-      }
-
-      const { items: newItems, pagination, categories: categoryCounts } = data.data
-
-      if (append) {
-        setItems(prev => [...prev, ...newItems])
-      } else {
-        setItems(newItems)
-      }
-
-      setHasMore(pagination.page < pagination.pages)
-      setTotalCount(pagination.total)
-
-      if (categoryCounts && !append) {
-        const formattedCategories: GalleryCategory[] = categoryCounts.map(cat => ({
-          value: cat.category,
-          label: CATEGORY_CONFIG[cat.category]?.label || cat.category,
-          icon: CATEGORY_CONFIG[cat.category]?.icon || '📷',
-          count: cat.count,
-        }))
-        setCategories(formattedCategories)
-      }
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'An error occurred')
-    } finally {
-      setIsLoading(false)
-    }
-  }, [])
+    },
+    []
+  )
 
   useEffect(() => {
     fetchGallery(1, selectedCategory, false)

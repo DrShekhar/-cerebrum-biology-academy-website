@@ -55,11 +55,7 @@
   },
   "estimatedPages": 2,
   "downloadGate": {
-    "requiredFields": [
-      "name",
-      "phone",
-      "class"
-    ],
+    "requiredFields": ["name", "phone", "class"],
     "whatsappOptIn": true,
     "emailOptIn": false,
     "thankYouMessage": "🎉 Your cheat sheet is ready! Check your WhatsApp for the download link and exclusive study tips.",

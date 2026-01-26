@@ -2,14 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Users,
-  TrendingUp,
-  Clock,
-  BookOpen,
-  Zap,
-  UserPlus,
-} from 'lucide-react'
+import { Users, TrendingUp, Clock, BookOpen, Zap, UserPlus } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'
 import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
 

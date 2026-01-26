@@ -65,7 +65,12 @@ const syllabus = [
   },
   {
     unit: 'Genetics & Evolution',
-    topics: ['Mendelian Genetics', 'Molecular Genetics', 'Population Genetics', 'Evolutionary Theory'],
+    topics: [
+      'Mendelian Genetics',
+      'Molecular Genetics',
+      'Population Genetics',
+      'Evolutionary Theory',
+    ],
     weightage: '20%',
     icon: Dna,
   },
@@ -99,7 +104,8 @@ const features = [
   {
     icon: Award,
     title: 'Olympiad-Trained Faculty',
-    description: 'Learn from HBCSE-trained mentors with IBO mentoring experience and deep subject expertise.',
+    description:
+      'Learn from HBCSE-trained mentors with IBO mentoring experience and deep subject expertise.',
   },
   {
     icon: BookOpen,
@@ -109,12 +115,14 @@ const features = [
   {
     icon: Users,
     title: 'Flexible Learning Options',
-    description: '1:1 personalized tutoring or small batches (4-8 students) for intensive training.',
+    description:
+      '1:1 personalized tutoring or small batches (4-8 students) for intensive training.',
   },
   {
     icon: Clock,
     title: 'IST Time Zone Classes',
-    description: 'Convenient scheduling for Indian students across all states and union territories.',
+    description:
+      'Convenient scheduling for Indian students across all states and union territories.',
   },
   {
     icon: Target,
@@ -201,14 +209,24 @@ const juniorFacultyPricing = [
     hours: 32,
     price: 80000,
     perHour: 2500,
-    features: ['32 hours of 1:1 tutoring', 'Complete NSEB prep', 'All mock tests', 'Priority scheduling'],
+    features: [
+      '32 hours of 1:1 tutoring',
+      'Complete NSEB prep',
+      'All mock tests',
+      'Priority scheduling',
+    ],
   },
   {
     name: 'Comprehensive',
     hours: 40,
     price: 80000,
     perHour: 2000,
-    features: ['40 hours of tutoring', 'Full program access', 'NSEB + INBiO prep', 'Regular assessments'],
+    features: [
+      '40 hours of tutoring',
+      'Full program access',
+      'NSEB + INBiO prep',
+      'Regular assessments',
+    ],
   },
 ]
 
@@ -229,7 +247,12 @@ const batchPricing = [
     price: 36000,
     perHour: 1500,
     students: '4-6',
-    features: ['24 hours (12 sessions)', 'Advanced topics', 'Mock INBiO papers', 'Individual feedback'],
+    features: [
+      '24 hours (12 sessions)',
+      'Advanced topics',
+      'Mock INBiO papers',
+      'Individual feedback',
+    ],
     popular: true,
   },
   {
@@ -239,7 +262,12 @@ const batchPricing = [
     price: 48000,
     perHour: 1500,
     students: '4-6',
-    features: ['32 hours (16 sessions)', 'NSEB + INBiO prep', 'Complete mock tests', 'Progress tracking'],
+    features: [
+      '32 hours (16 sessions)',
+      'NSEB + INBiO prep',
+      'Complete mock tests',
+      'Progress tracking',
+    ],
   },
   {
     name: 'OCSC Track',
@@ -248,7 +276,12 @@ const batchPricing = [
     price: 60000,
     perHour: 1500,
     students: '4-6',
-    features: ['40 hours (20 sessions)', 'All stages covered', 'Practical training', 'OCSC prep included'],
+    features: [
+      '40 hours (20 sessions)',
+      'All stages covered',
+      'Practical training',
+      'OCSC prep included',
+    ],
   },
 ]
 
@@ -256,7 +289,7 @@ const faqs = [
   {
     question: 'What is INBO/NSEB?',
     answer:
-      'INBO (Indian National Biology Olympiad) is India\'s pathway to the International Biology Olympiad. It starts with NSEB (National Standard Examination in Biology) conducted by IAPT, followed by INBiO (Indian National Biology Olympiad) at HBCSE, and culminates in OCSC (Orientation Cum Selection Camp) for IBO team selection.',
+      "INBO (Indian National Biology Olympiad) is India's pathway to the International Biology Olympiad. It starts with NSEB (National Standard Examination in Biology) conducted by IAPT, followed by INBiO (Indian National Biology Olympiad) at HBCSE, and culminates in OCSC (Orientation Cum Selection Camp) for IBO team selection.",
   },
   {
     question: 'Who is eligible to participate in NSEB?',
@@ -367,9 +400,9 @@ export default function INBOCoachingPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Prepare for NSEB, INBiO, and OCSC with expert coaching. Our program covers the complete
-              Indian Biology Olympiad pathway with HBCSE-pattern training, flexible IST scheduling, and
-              personalized attention. Aim for Team India at IBO!
+              Prepare for NSEB, INBiO, and OCSC with expert coaching. Our program covers the
+              complete Indian Biology Olympiad pathway with HBCSE-pattern training, flexible IST
+              scheduling, and personalized attention. Aim for Team India at IBO!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -556,7 +589,9 @@ export default function INBOCoachingPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Pricing & Programs</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Pricing & Programs
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the learning format that works best for you (Prices in INR)
             </p>
@@ -569,8 +604,12 @@ export default function INBOCoachingPage() {
                 <Award className="w-5 h-5 text-purple-600 mr-2" />
                 <span className="text-purple-700 font-semibold">Premium Tier</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Senior Faculty (15+ Years Experience)</h3>
-              <p className="text-gray-600 mt-2">HBCSE-trained mentors • IBO coaches • ₹1,400-2,000/hr</p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Senior Faculty (15+ Years Experience)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                HBCSE-trained mentors • IBO coaches • ₹1,400-2,000/hr
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {seniorFacultyPricing.map((pkg, index) => (
@@ -593,9 +632,13 @@ export default function INBOCoachingPage() {
                   <div className="text-sm text-gray-500 mb-4">{pkg.hours} hours</div>
                   <div className="flex items-baseline mb-1">
                     <span className="text-lg text-purple-600 mr-1">₹</span>
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price.toLocaleString()}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
-                  <div className="text-sm text-purple-600 font-medium mb-4">₹{pkg.perHour.toLocaleString()}/hour</div>
+                  <div className="text-sm text-purple-600 font-medium mb-4">
+                    ₹{pkg.perHour.toLocaleString()}/hour
+                  </div>
                   <ul className="space-y-2 mb-6">
                     {pkg.features.map((feature) => (
                       <li key={feature} className="text-sm text-gray-600 flex items-start">
@@ -622,8 +665,12 @@ export default function INBOCoachingPage() {
                 <Users className="w-5 h-5 text-green-600 mr-2" />
                 <span className="text-green-700 font-semibold">Value Tier</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Junior Faculty (Experienced Tutors)</h3>
-              <p className="text-gray-600 mt-2">Biology graduates • NSEB qualifiers • ₹700-1,000/hr</p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Junior Faculty (Experienced Tutors)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Biology graduates • NSEB qualifiers • ₹700-1,000/hr
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {juniorFacultyPricing.map((pkg, index) => (
@@ -646,7 +693,9 @@ export default function INBOCoachingPage() {
                   <div className="text-sm text-gray-500 mb-4">{pkg.hours} hours</div>
                   <div className="flex items-baseline mb-1">
                     <span className="text-lg text-green-600 mr-1">₹</span>
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price.toLocaleString()}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-green-600 font-medium mb-4">₹{pkg.perHour}/hour</div>
                   <ul className="space-y-2 mb-6">
@@ -675,8 +724,12 @@ export default function INBOCoachingPage() {
                 <Users className="w-5 h-5 text-teal-600 mr-2" />
                 <span className="text-teal-700 font-semibold">Group Learning</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Small Batch Programs (4-8 Students)</h3>
-              <p className="text-gray-600 mt-2">Collaborative learning • Peer discussions • ₹500/hr per student</p>
+              <h3 className="text-2xl font-bold text-gray-900">
+                Small Batch Programs (4-8 Students)
+              </h3>
+              <p className="text-gray-600 mt-2">
+                Collaborative learning • Peer discussions • ₹500/hr per student
+              </p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {batchPricing.map((pkg, index) => (
@@ -699,10 +752,14 @@ export default function INBOCoachingPage() {
                   <div className="text-sm text-gray-500 mb-1">
                     {pkg.duration} • {pkg.hours} hours
                   </div>
-                  <div className="text-sm text-gray-500 mb-4">{pkg.students} students per batch</div>
+                  <div className="text-sm text-gray-500 mb-4">
+                    {pkg.students} students per batch
+                  </div>
                   <div className="flex items-baseline mb-1">
                     <span className="text-lg text-teal-600 mr-1">₹</span>
-                    <span className="text-3xl font-bold text-gray-900">{pkg.price.toLocaleString()}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {pkg.price.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-teal-600 font-medium mb-4">₹{pkg.perHour}/hour</div>
                   <ul className="space-y-2 mb-6">
@@ -736,7 +793,9 @@ export default function INBOCoachingPage() {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Frequently Asked Questions
+            </h2>
           </motion.div>
 
           <div className="space-y-6">
@@ -753,7 +812,9 @@ export default function INBOCoachingPage() {
                   <MessageCircle className="w-5 h-5 md:w-6 md:h-6 mr-2 md:mr-3 text-[#3d4d3d] flex-shrink-0 mt-0.5" />
                   {faq.question}
                 </h3>
-                <p className="text-sm md:text-base text-gray-700 leading-relaxed ml-7 md:ml-9">{faq.answer}</p>
+                <p className="text-sm md:text-base text-gray-700 leading-relaxed ml-7 md:ml-9">
+                  {faq.answer}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -799,7 +860,9 @@ export default function INBOCoachingPage() {
       {/* Related Pages */}
       <section className="py-12 bg-[#e8ede8]">
         <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More Programs</h3>
+          <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">
+            Explore More Programs
+          </h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/campbell-biology/"

@@ -156,7 +156,6 @@ const [selected, setSelected] = useState<Set<string>>(new Set())
 
 ```tsx
 import { CRMErrorBoundary } from '@/components/errors/CRMErrorBoundary'
-
 ;<CRMErrorBoundary>
   <YourComponent />
 </CRMErrorBoundary>

@@ -3,6 +3,7 @@
 ## Executive Summary
 
 **Current State:**
+
 - Build directory size: **3.6GB** (.next)
 - Deployment size: **189MB** (.vercel/output)
 - Server bundle: **381MB**
@@ -11,6 +12,7 @@
 - Pages: **597 pages** (many SEO landing pages)
 
 **Critical Issues Identified:**
+
 1. ❌ **2.8MB single chunk** (29717.js) - CRITICAL BLOAT
 2. ❌ **No bundle analyzer** installed
 3. ⚠️ **Barrel export pattern** causing unnecessary imports
@@ -43,13 +45,13 @@ ui.js                         161KB     ✅ Acceptable for UI library
 
 ### Heavy Dependencies
 
-| Package | Size | Instances | Optimization Potential |
-|---------|------|-----------|----------------------|
-| `@prisma/client` | 116MB | Used in API routes | ⚠️ Server-side only - ensure not in client bundle |
-| `@clerk/nextjs` | 13MB | Auth provider | ✅ Already optimized in next.config |
-| `framer-motion` | 3MB | 538+ imports | 🚨 **HIGH** - Many pages over-using animations |
-| `@radix-ui/*` | ~2MB | 6 packages | ✅ Already in optimizePackageImports |
-| `lucide-react` | ~1.5MB | Heavy usage | ✅ Already in optimizePackageImports |
+| Package          | Size   | Instances          | Optimization Potential                            |
+| ---------------- | ------ | ------------------ | ------------------------------------------------- |
+| `@prisma/client` | 116MB  | Used in API routes | ⚠️ Server-side only - ensure not in client bundle |
+| `@clerk/nextjs`  | 13MB   | Auth provider      | ✅ Already optimized in next.config               |
+| `framer-motion`  | 3MB    | 538+ imports       | 🚨 **HIGH** - Many pages over-using animations    |
+| `@radix-ui/*`    | ~2MB   | 6 packages         | ✅ Already in optimizePackageImports              |
+| `lucide-react`   | ~1.5MB | Heavy usage        | ✅ Already in optimizePackageImports              |
 
 ---
 
@@ -58,6 +60,7 @@ ui.js                         161KB     ✅ Acceptable for UI library
 ### ❌ CRITICAL: Barrel Export Pattern
 
 **Found in:**
+
 ```typescript
 // src/components/illustrations/blog/index.ts
 export * from './shared'
@@ -71,6 +74,7 @@ export { ClassStartTimeIllustration } from './ClassStartTimeIllustration'
 **Impact:** Estimated **100-500KB** unnecessary bloat per page using these imports.
 
 **Solution:**
+
 ```typescript
 // ❌ BAD - imports entire barrel
 import { KotaVsOnlineIllustration } from '@/components/illustrations/blog'
@@ -80,6 +84,7 @@ import { KotaVsOnlineIllustration } from '@/components/illustrations/blog/KotaVs
 ```
 
 ### Other Barrel Exports Found:
+
 - `src/lib/validation/index.ts`
 - `src/lib/images/index.ts`
 - `src/lib/omr/index.ts`
@@ -92,11 +97,13 @@ import { KotaVsOnlineIllustration } from '@/components/illustrations/blog/KotaVs
 ## 4. Framer Motion Overuse
 
 ### Current State
+
 - **538+ imports** across the codebase
 - Used on SEO landing pages (unnecessary for static content)
 - Many pages import `motion` but use simple animations
 
 ### Analysis
+
 ```bash
 # Pages with framer-motion imports (sample)
 src/app/demo/join/page.tsx
@@ -112,6 +119,7 @@ src/app/neet-coaching-institute/page.tsx
 ### Solutions
 
 #### Strategy 1: CSS-Only Animations (Best for SEO pages)
+
 ```tsx
 // ❌ BEFORE (90KB)
 import { motion } from 'framer-motion'
@@ -150,15 +158,16 @@ module.exports = {
 **Estimated Savings:** 90KB × 300 pages = **27MB** in total bundle reduction
 
 #### Strategy 2: Lazy Load framer-motion
+
 ```tsx
 // For interactive pages that genuinely need animations
-const MotionDiv = dynamic(
-  () => import('framer-motion').then(mod => mod.motion.div),
-  { ssr: false }
-)
+const MotionDiv = dynamic(() => import('framer-motion').then((mod) => mod.motion.div), {
+  ssr: false,
+})
 ```
 
 #### Strategy 3: Remove from SEO Landing Pages
+
 SEO pages are static and don't need animations for search engines.
 
 ---
@@ -172,6 +181,7 @@ npm install --save-dev @next/bundle-analyzer
 ```
 
 **File: `next.config.mjs`**
+
 ```javascript
 import bundleAnalyzer from '@next/bundle-analyzer'
 
@@ -183,11 +193,13 @@ export default withBundleAnalyzer(withSentryConfig(withMDX(nextConfig), ...))
 ```
 
 **Usage:**
+
 ```bash
 ANALYZE=true npm run build
 ```
 
 This will generate an interactive HTML report showing:
+
 - Exact breakdown of that 2.8MB chunk
 - Which components are bundled together
 - Duplicate dependencies
@@ -202,6 +214,7 @@ This will generate an interactive HTML report showing:
 Based on bundle analysis, these components should be dynamically imported:
 
 #### High Priority (Heavy Components)
+
 ```typescript
 // 1. Rich Text Editors (if used)
 const RichTextEditor = dynamic(() => import('@/components/editor/RichTextEditor'), {
@@ -234,6 +247,7 @@ const CodeBlock = dynamic(() => import('@/components/markdown/CodeBlock'), {
 ```
 
 #### Medium Priority (Nice to Have)
+
 ```typescript
 // Admin Dashboard Components
 const AdminAnalytics = dynamic(() => import('@/components/admin/Analytics'))
@@ -251,6 +265,7 @@ const PaymentGateway = dynamic(() => import('@/components/payment/RazorpayChecko
 ### Icon Libraries
 
 **Current Config (Good ✅):**
+
 ```javascript
 // next.config.mjs - already optimized
 experimental: {
@@ -263,6 +278,7 @@ experimental: {
 ```
 
 **Import Pattern Check:**
+
 ```bash
 # ✅ GOOD - Named imports detected
 import { BookOpen, Clock, GraduationCap } from 'lucide-react'
@@ -301,6 +317,7 @@ splitChunks: {
 **Analysis:** ✅ Configuration is well-structured
 
 **Issue:** The 2.8MB chunk exists DESPITE good config, suggesting:
+
 1. A specific page/route is importing too much
 2. A component is pulling in heavy dependencies
 3. A barrel export is breaking tree shaking
@@ -310,12 +327,14 @@ splitChunks: {
 ## 9. Prisma Client Optimization
 
 ### Current State
+
 - **116MB** in node_modules
 - Imported as: `import { PrismaClient } from '@/generated/prisma'`
 
 ### Critical Check
 
 **Verify Prisma is NOT in client bundles:**
+
 ```bash
 # Run after implementing bundle analyzer
 ANALYZE=true npm run build
@@ -327,6 +346,7 @@ ANALYZE=true npm run build
 ### Optimization Tips
 
 1. **Ensure singleton pattern:**
+
 ```typescript
 // ✅ GOOD - lib/prisma.ts (should already exist)
 import { PrismaClient } from '@/generated/prisma'
@@ -343,6 +363,7 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma
 ```
 
 2. **Never import in client components:**
+
 ```typescript
 // ❌ BAD
 'use client'
@@ -354,6 +375,7 @@ import { prisma } from '@/lib/prisma' // Server-side only
 ```
 
 3. **Generate optimized client:**
+
 ```bash
 # prisma/schema.prisma
 generator client {
@@ -371,6 +393,7 @@ generator client {
 ### High Impact (Do First)
 
 #### 1. Install Bundle Analyzer
+
 ```bash
 npm install --save-dev @next/bundle-analyzer
 ```
@@ -384,6 +407,7 @@ npm install --save-dev @next/bundle-analyzer
 ---
 
 #### 2. Eliminate Barrel Exports
+
 ```bash
 # Find all barrel exports
 find src -name "index.ts" -o -name "index.tsx"
@@ -392,6 +416,7 @@ find src -name "index.ts" -o -name "index.tsx"
 ```
 
 **Files to Fix:**
+
 1. `src/components/illustrations/blog/index.ts` (50+ exports)
 2. `src/lib/validation/index.ts`
 3. `src/lib/images/index.ts`
@@ -407,6 +432,7 @@ find src -name "index.ts" -o -name "index.tsx"
 ---
 
 #### 3. Remove framer-motion from SEO Pages
+
 Target the top 100 SEO landing pages (static content pages):
 
 ```bash
@@ -419,14 +445,16 @@ grep -r "import.*framer-motion" src/app --include="*.tsx" | \
 Replace with CSS animations:
 
 **Create utility file:**
+
 ```typescript
 // src/lib/animations.ts
-export const fadeInUpClass = "animate-fadeInUp"
-export const fadeInClass = "animate-fadeIn"
-export const slideInRightClass = "animate-slideInRight"
+export const fadeInUpClass = 'animate-fadeInUp'
+export const fadeInClass = 'animate-fadeIn'
+export const slideInRightClass = 'animate-slideInRight'
 ```
 
 **Update tailwind.config.ts:**
+
 ```typescript
 module.exports = {
   theme: {
@@ -473,7 +501,7 @@ const AdminDashboard = dynamic(() => import('@/components/admin/Dashboard'))
 
 // app/student/certificates/*/page.tsx
 const CertificateGenerator = dynamic(() => import('@/components/pdf/Certificate'), {
-  ssr: false // PDF generation doesn't need SSR
+  ssr: false, // PDF generation doesn't need SSR
 })
 
 // app/tests/*/page.tsx
@@ -493,6 +521,7 @@ const TestInterface = dynamic(() => import('@/components/tests/TestInterface'))
 #### 5. Optimize Images
 
 **Current config is good**, but verify:
+
 ```javascript
 // next.config.mjs
 images: {
@@ -503,6 +532,7 @@ images: {
 ```
 
 **Add image optimization:**
+
 ```typescript
 // components/OptimizedImage.tsx
 import Image from 'next/image'
@@ -577,6 +607,7 @@ depcheck
 ```
 
 **Candidates for removal:**
+
 - `compression` (Next.js handles this)
 - `express-rate-limit` (use Vercel edge config)
 - Unused testing libraries in production
@@ -644,6 +675,7 @@ import * as Clerk from '@clerk/nextjs'
 ### Set Up Bundle Size Tracking
 
 **Create `.github/workflows/bundle-size.yml`:**
+
 ```yaml
 name: Bundle Size Check
 
@@ -672,13 +704,13 @@ jobs:
 
 ### Key Metrics to Track
 
-| Metric | Current | Target | Priority |
-|--------|---------|--------|----------|
-| Largest chunk | 2.8MB | <250KB | 🔴 Critical |
-| Total .next size | 3.6GB | <500MB | 🔴 Critical |
-| Deployment size | 189MB | <100MB | 🟡 High |
-| First Load JS | Unknown | <200KB | 🟡 High |
-| Framer-motion usage | 538+ | <50 | 🟡 High |
+| Metric              | Current | Target | Priority    |
+| ------------------- | ------- | ------ | ----------- |
+| Largest chunk       | 2.8MB   | <250KB | 🔴 Critical |
+| Total .next size    | 3.6GB   | <500MB | 🔴 Critical |
+| Deployment size     | 189MB   | <100MB | 🟡 High     |
+| First Load JS       | Unknown | <200KB | 🟡 High     |
+| Framer-motion usage | 538+    | <50    | 🟡 High     |
 
 ---
 
@@ -686,14 +718,14 @@ jobs:
 
 ### Conservative Estimates
 
-| Optimization | Bundle Reduction | Deployment Reduction |
-|--------------|-----------------|---------------------|
-| Fix barrel exports | 500KB-1MB | 10-20MB |
-| Remove framer-motion (300 pages) | 27MB total | 50-100MB |
-| Dynamic imports | 500KB-1MB | 10-20MB |
-| Image optimization | N/A | 20-30MB |
-| Remove unused deps | N/A | 5-10MB |
-| **Total** | **28-29MB** | **95-180MB** |
+| Optimization                     | Bundle Reduction | Deployment Reduction |
+| -------------------------------- | ---------------- | -------------------- |
+| Fix barrel exports               | 500KB-1MB        | 10-20MB              |
+| Remove framer-motion (300 pages) | 27MB total       | 50-100MB             |
+| Dynamic imports                  | 500KB-1MB        | 10-20MB              |
+| Image optimization               | N/A              | 20-30MB              |
+| Remove unused deps               | N/A              | 5-10MB               |
+| **Total**                        | **28-29MB**      | **95-180MB**         |
 
 ### Final Target State
 
@@ -710,12 +742,15 @@ Largest chunk: 2.8MB   →  <250KB
 ## 14. Quick Wins (Can Do Today)
 
 ### 1. Add Bundle Analyzer (15 min)
+
 ```bash
 npm install --save-dev @next/bundle-analyzer
 ```
 
 ### 2. Fix One Barrel Export (30 min)
+
 Replace this in 10 most-used files:
+
 ```typescript
 // ❌ Before
 import { Icon } from '@/components/illustrations/blog'
@@ -725,6 +760,7 @@ import { Icon } from '@/components/illustrations/blog/Icon'
 ```
 
 ### 3. Remove framer-motion from 5 SEO pages (1 hour)
+
 ```bash
 # Target these first:
 src/app/neet-coaching-institute/page.tsx
@@ -761,6 +797,7 @@ ls -lhS .next/static/chunks/*.js | head -20
 ```
 
 ### Next.js Docs
+
 - [Bundle Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 - [Dynamic Imports](https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading)
 - [Package Imports Optimization](https://nextjs.org/docs/app/api-reference/next-config-js/optimizePackageImports)
@@ -772,6 +809,7 @@ ls -lhS .next/static/chunks/*.js | head -20
 Your bundle size issues are **fixable** and **high-impact**. The 2.8MB chunk is the smoking gun.
 
 **Start with:**
+
 1. Bundle analyzer (today)
 2. Fix barrel exports (this week)
 3. Remove framer-motion from SEO pages (next week)
@@ -779,6 +817,7 @@ Your bundle size issues are **fixable** and **high-impact**. The 2.8MB chunk is 
 These three actions alone should reduce your deployment from **189MB → <100MB**.
 
 **Next Steps:**
+
 1. Run `ANALYZE=true npm run build` after installing bundle analyzer
 2. Share the analyzer report for deeper investigation
 3. Pick 5 SEO pages and remove framer-motion as a proof of concept

@@ -16,7 +16,7 @@ export default function SimpleTestGenerator() {
     'Evolution',
     'Ecology',
     'Biotechnology',
-    'Reproduction'
+    'Reproduction',
   ]
 
   const generateQuestions = async () => {
@@ -25,12 +25,14 @@ export default function SimpleTestGenerator() {
 
     try {
       // Generate mock questions for now
-      const mockQuestions = Array.from({ length: count }, (_, i) =>
-        `Question ${i + 1}: What is the key concept in ${topic} related to cellular processes and biological functions? Explain with examples.`
+      const mockQuestions = Array.from(
+        { length: count },
+        (_, i) =>
+          `Question ${i + 1}: What is the key concept in ${topic} related to cellular processes and biological functions? Explain with examples.`
       )
 
       // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000))
+      await new Promise((resolve) => setTimeout(resolve, 1000))
 
       setQuestions(mockQuestions)
     } catch (error) {
@@ -59,14 +61,18 @@ export default function SimpleTestGenerator() {
                 onChange={(e) => setTopic(e.target.value)}
                 className="w-full p-2 border rounded focus:ring-2 focus:ring-blue-500"
               >
-                {topics.map(t => (
-                  <option key={t} value={t}>{t}</option>
+                {topics.map((t) => (
+                  <option key={t} value={t}>
+                    {t}
+                  </option>
                 ))}
               </select>
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-gray-900 mb-2">Number of Questions:</label>
+              <label className="block text-sm font-semibold text-gray-900 mb-2">
+                Number of Questions:
+              </label>
               <input
                 type="number"
                 min="1"

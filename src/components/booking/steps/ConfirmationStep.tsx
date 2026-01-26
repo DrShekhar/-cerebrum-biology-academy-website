@@ -2,14 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import {
-  BookOpen,
-  CheckCircle,
-  Gift,
-  Zap,
-  Check,
-  ArrowLeft,
-} from 'lucide-react'
+import { BookOpen, CheckCircle, Gift, Zap, Check, ArrowLeft } from 'lucide-react'
 
 interface ConfirmationStepProps {
   bookingData: {

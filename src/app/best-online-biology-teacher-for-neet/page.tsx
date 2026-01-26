@@ -3,12 +3,7 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
-import {
-  CheckCircle,
-  Phone,
-  Target,
-  Zap,
-} from 'lucide-react'
+import { CheckCircle, Phone, Target, Zap } from 'lucide-react'
 
 const neetBiologyStats = [
   { label: 'Total Questions', value: '90', desc: 'Biology questions in NEET' },

@@ -29,7 +29,11 @@ export class SecurityScanner {
   private violations: SecurityViolation[] = []
   private testResults: { test: string; passed: boolean }[] = []
 
-  async scanForXSS(page: Page, inputSelectors: string[], xssVectors: string[]): Promise<SecurityViolation[]> {
+  async scanForXSS(
+    page: Page,
+    inputSelectors: string[],
+    xssVectors: string[]
+  ): Promise<SecurityViolation[]> {
     const xssViolations: SecurityViolation[] = []
 
     for (const selector of inputSelectors) {
@@ -45,7 +49,7 @@ export class SecurityScanner {
               severity: 'high',
               description: `XSS vulnerability found in input field ${selector}`,
               location: selector,
-              evidence: vector
+              evidence: vector,
             })
           }
 
@@ -60,7 +64,7 @@ export class SecurityScanner {
               severity: 'critical',
               description: `XSS script execution detected in ${selector}`,
               location: selector,
-              evidence: vector
+              evidence: vector,
             })
           }
         } catch (_error) {
@@ -73,7 +77,11 @@ export class SecurityScanner {
     return xssViolations
   }
 
-  async scanForSQLInjection(page: Page, endpoint: string, parameters: string[]): Promise<SecurityViolation[]> {
+  async scanForSQLInjection(
+    page: Page,
+    endpoint: string,
+    parameters: string[]
+  ): Promise<SecurityViolation[]> {
     const sqlViolations: SecurityViolation[] = []
 
     const sqlInjectionPayloads = [
@@ -82,7 +90,7 @@ export class SecurityScanner {
       "admin'--",
       "' UNION SELECT * FROM users --",
       "'; WAITFOR DELAY '00:00:05' --",
-      "1' AND SLEEP(5) --"
+      "1' AND SLEEP(5) --",
     ]
 
     for (const param of parameters) {
@@ -99,16 +107,16 @@ export class SecurityScanner {
             /ora-\d+/i,
             /microsoft.*odbc/i,
             /postgresql.*error/i,
-            /sqlite.*error/i
+            /sqlite.*error/i,
           ]
 
-          if (sqlErrorPatterns.some(pattern => pattern.test(responseText))) {
+          if (sqlErrorPatterns.some((pattern) => pattern.test(responseText))) {
             sqlViolations.push({
               type: 'sql_injection',
               severity: 'critical',
               description: `SQL injection vulnerability detected in parameter ${param}`,
               location: `${endpoint}?${param}`,
-              evidence: payload
+              evidence: payload,
             })
           }
 
@@ -123,7 +131,7 @@ export class SecurityScanner {
               severity: 'high',
               description: `Time-based SQL injection detected in parameter ${param}`,
               location: `${endpoint}?${param}`,
-              evidence: payload
+              evidence: payload,
             })
           }
         } catch (_error) {
@@ -142,14 +150,17 @@ export class SecurityScanner {
     for (const formSelector of forms) {
       try {
         // Check if form has CSRF token
-        const csrfTokenExists = await page.locator(`${formSelector} input[name*="csrf"], ${formSelector} input[name*="_token"]`).count() > 0
+        const csrfTokenExists =
+          (await page
+            .locator(`${formSelector} input[name*="csrf"], ${formSelector} input[name*="_token"]`)
+            .count()) > 0
 
         if (!csrfTokenExists) {
           csrfViolations.push({
             type: 'csrf',
             severity: 'high',
             description: `CSRF protection missing for form`,
-            location: formSelector
+            location: formSelector,
           })
         }
 
@@ -159,23 +170,27 @@ export class SecurityScanner {
           if (form) {
             // Remove CSRF token if exists
             const csrfInputs = form.querySelectorAll('input[name*="csrf"], input[name*="_token"]')
-            csrfInputs.forEach(input => input.remove())
+            csrfInputs.forEach((input) => input.remove())
           }
         }, formSelector)
 
         // Try to submit form
-        const submitButton = await page.locator(`${formSelector} button[type="submit"], ${formSelector} input[type="submit"]`)
-        if (await submitButton.count() > 0) {
+        const submitButton = await page.locator(
+          `${formSelector} button[type="submit"], ${formSelector} input[type="submit"]`
+        )
+        if ((await submitButton.count()) > 0) {
           await submitButton.click()
 
           // Check if submission was rejected
-          const errorMessage = await page.locator('[data-testid="error-message"], .error, .alert-danger').textContent()
+          const errorMessage = await page
+            .locator('[data-testid="error-message"], .error, .alert-danger')
+            .textContent()
           if (!errorMessage || !errorMessage.toLowerCase().includes('token')) {
             csrfViolations.push({
               type: 'csrf',
               severity: 'medium',
               description: `Form submission succeeded without CSRF token`,
-              location: formSelector
+              location: formSelector,
             })
           }
         }
@@ -205,7 +220,7 @@ export class SecurityScanner {
             type: 'authentication',
             severity: 'medium',
             description: `Weak password accepted: ${weakPassword}`,
-            location: '/auth/register'
+            location: '/auth/register',
           })
         }
       } catch (_error) {
@@ -230,7 +245,7 @@ export class SecurityScanner {
           type: 'authentication',
           severity: 'medium',
           description: 'Session fixation vulnerability - session ID not regenerated after login',
-          location: '/auth/login'
+          location: '/auth/login',
         })
       }
     } catch (_error) {
@@ -249,8 +264,11 @@ export class SecurityScanner {
       { pattern: /api[_-]?key.*[:=]\s*["']?[a-zA-Z0-9]{20,}/gi, description: 'API key exposure' },
       { pattern: /secret.*[:=]\s*["']?[a-zA-Z0-9]{20,}/gi, description: 'Secret key exposure' },
       { pattern: /token.*[:=]\s*["']?[a-zA-Z0-9]{50,}/gi, description: 'Token exposure' },
-      { pattern: /\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/g, description: 'Credit card number exposure' },
-      { pattern: /\b\d{3}-\d{2}-\d{4}\b/g, description: 'SSN exposure' }
+      {
+        pattern: /\b\d{4}[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4}\b/g,
+        description: 'Credit card number exposure',
+      },
+      { pattern: /\b\d{3}-\d{2}-\d{4}\b/g, description: 'SSN exposure' },
     ]
 
     for (const endpoint of endpoints) {
@@ -266,7 +284,7 @@ export class SecurityScanner {
               severity: 'critical',
               description: `${description} in API response`,
               location: endpoint,
-              evidence: matches[0].substring(0, 50) + '...'
+              evidence: matches[0].substring(0, 50) + '...',
             })
           }
         }
@@ -276,18 +294,17 @@ export class SecurityScanner {
           /create\s+table/gi,
           /alter\s+table/gi,
           /drop\s+table/gi,
-          /database.*schema/gi
+          /database.*schema/gi,
         ]
 
-        if (schemaPatterns.some(pattern => pattern.test(responseText))) {
+        if (schemaPatterns.some((pattern) => pattern.test(responseText))) {
           dataViolations.push({
             type: 'data_exposure',
             severity: 'high',
             description: 'Database schema information exposed',
-            location: endpoint
+            location: endpoint,
           })
         }
-
       } catch (_error) {
         // Endpoint access denied - good security
       }
@@ -304,11 +321,31 @@ export class SecurityScanner {
     const headers = response.headers()
 
     const requiredHeaders = [
-      { name: 'strict-transport-security', severity: 'high' as const, description: 'HSTS header missing' },
-      { name: 'x-content-type-options', severity: 'medium' as const, description: 'X-Content-Type-Options header missing' },
-      { name: 'x-frame-options', severity: 'medium' as const, description: 'X-Frame-Options header missing' },
-      { name: 'content-security-policy', severity: 'high' as const, description: 'CSP header missing' },
-      { name: 'x-xss-protection', severity: 'medium' as const, description: 'X-XSS-Protection header missing' }
+      {
+        name: 'strict-transport-security',
+        severity: 'high' as const,
+        description: 'HSTS header missing',
+      },
+      {
+        name: 'x-content-type-options',
+        severity: 'medium' as const,
+        description: 'X-Content-Type-Options header missing',
+      },
+      {
+        name: 'x-frame-options',
+        severity: 'medium' as const,
+        description: 'X-Frame-Options header missing',
+      },
+      {
+        name: 'content-security-policy',
+        severity: 'high' as const,
+        description: 'CSP header missing',
+      },
+      {
+        name: 'x-xss-protection',
+        severity: 'medium' as const,
+        description: 'X-XSS-Protection header missing',
+      },
     ]
 
     for (const header of requiredHeaders) {
@@ -317,7 +354,7 @@ export class SecurityScanner {
           type: 'authentication',
           severity: header.severity,
           description: header.description,
-          location: 'HTTP headers'
+          location: 'HTTP headers',
         })
       }
     }
@@ -331,7 +368,7 @@ export class SecurityScanner {
           severity: 'medium',
           description: 'Weak Content Security Policy detected',
           location: 'CSP header',
-          evidence: cspHeader
+          evidence: cspHeader,
         })
       }
     }
@@ -346,7 +383,7 @@ export class SecurityScanner {
     const maliciousFiles = [
       { name: 'shell.php', content: '<?php system($_GET["cmd"]); ?>', type: 'application/x-php' },
       { name: 'script.js', content: 'alert("XSS")', type: 'application/javascript' },
-      { name: 'malware.exe', content: 'MZ...', type: 'application/x-msdownload' }
+      { name: 'malware.exe', content: 'MZ...', type: 'application/x-msdownload' },
     ]
 
     for (const file of maliciousFiles) {
@@ -356,7 +393,7 @@ export class SecurityScanner {
         await page.setInputFiles('[type="file"]', {
           name: file.name,
           mimeType: file.type,
-          buffer: Buffer.from(file.content)
+          buffer: Buffer.from(file.content),
         })
 
         await page.click('[type="submit"], button[type="submit"]')
@@ -368,7 +405,7 @@ export class SecurityScanner {
             severity: 'critical',
             description: `Malicious file upload accepted: ${file.name}`,
             location: uploadEndpoint,
-            evidence: file.name
+            evidence: file.name,
           })
         }
       } catch (_error) {
@@ -390,7 +427,11 @@ export class SecurityScanner {
     const encodedChars = ['&lt;', '&gt;', '&quot;', '&#x27;', '&amp;']
 
     for (let i = 0; i < dangerousChars.length; i++) {
-      if (input.includes(dangerousChars[i]) && output.includes(dangerousChars[i]) && !output.includes(encodedChars[i])) {
+      if (
+        input.includes(dangerousChars[i]) &&
+        output.includes(dangerousChars[i]) &&
+        !output.includes(encodedChars[i])
+      ) {
         return false
       }
     }
@@ -400,12 +441,12 @@ export class SecurityScanner {
 
   async generateReport(): Promise<SecurityReport> {
     const totalTests = this.testResults.length
-    const passedTests = this.testResults.filter(result => result.passed).length
+    const passedTests = this.testResults.filter((result) => result.passed).length
     const failedTests = totalTests - passedTests
 
     // Calculate risk level
-    const criticalViolations = this.violations.filter(v => v.severity === 'critical').length
-    const highViolations = this.violations.filter(v => v.severity === 'high').length
+    const criticalViolations = this.violations.filter((v) => v.severity === 'critical').length
+    const highViolations = this.violations.filter((v) => v.severity === 'high').length
 
     let riskLevel: 'low' | 'medium' | 'high' | 'critical' = 'low'
     if (criticalViolations > 0) {
@@ -425,24 +466,28 @@ export class SecurityScanner {
         passed: passedTests,
         failed: failedTests,
         violations: this.violations.length,
-        riskLevel
+        riskLevel,
       },
       violations: this.violations,
-      recommendations
+      recommendations,
     }
   }
 
   private generateRecommendations(): string[] {
     const recommendations: string[] = []
 
-    const violationTypes = new Set(this.violations.map(v => v.type))
+    const violationTypes = new Set(this.violations.map((v) => v.type))
 
     if (violationTypes.has('xss')) {
-      recommendations.push('Implement proper input validation and output encoding to prevent XSS attacks')
+      recommendations.push(
+        'Implement proper input validation and output encoding to prevent XSS attacks'
+      )
     }
 
     if (violationTypes.has('sql_injection')) {
-      recommendations.push('Use parameterized queries and input validation to prevent SQL injection')
+      recommendations.push(
+        'Use parameterized queries and input validation to prevent SQL injection'
+      )
     }
 
     if (violationTypes.has('csrf')) {
@@ -450,15 +495,19 @@ export class SecurityScanner {
     }
 
     if (violationTypes.has('authentication')) {
-      recommendations.push('Strengthen authentication security with proper session management and password policies')
+      recommendations.push(
+        'Strengthen authentication security with proper session management and password policies'
+      )
     }
 
     if (violationTypes.has('data_exposure')) {
       recommendations.push('Review API responses and ensure sensitive data is not exposed')
     }
 
-    if (this.violations.filter(v => v.severity === 'critical').length > 0) {
-      recommendations.push('Address critical security vulnerabilities immediately before production deployment')
+    if (this.violations.filter((v) => v.severity === 'critical').length > 0) {
+      recommendations.push(
+        'Address critical security vulnerabilities immediately before production deployment'
+      )
     }
 
     return recommendations

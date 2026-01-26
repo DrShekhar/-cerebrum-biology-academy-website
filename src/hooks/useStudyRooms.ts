@@ -122,9 +122,12 @@ export function useStudyRooms() {
   /**
    * Get rooms by topic
    */
-  const getRoomsByTopic = useCallback(async (topic: string): Promise<StudyRoom[]> => {
-    return fetchRooms({ topic })
-  }, [fetchRooms])
+  const getRoomsByTopic = useCallback(
+    async (topic: string): Promise<StudyRoom[]> => {
+      return fetchRooms({ topic })
+    },
+    [fetchRooms]
+  )
 
   /**
    * Get rooms by difficulty

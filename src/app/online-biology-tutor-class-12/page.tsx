@@ -181,8 +181,7 @@ export default function OnlineBiologyTutorClass12Page() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Online Biology Tutor for{' '}
-              <span className="text-yellow-400">Class 12</span>
+              Online Biology Tutor for <span className="text-yellow-400">Class 12</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -286,9 +285,7 @@ export default function OnlineBiologyTutorClass12Page() {
               featuresHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Course Features
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Course Features</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -346,9 +343,7 @@ export default function OnlineBiologyTutorClass12Page() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Ace Your Boards & NEET 2026!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Ace Your Boards & NEET 2026!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join Class 12 Biology online course. Book your free demo today!
             </p>

@@ -11,24 +11,28 @@ This document outlines the comprehensive course categorization system designed f
 The system organizes courses into four main categories:
 
 #### Class 9th Foundation Courses
+
 - **Target**: Students starting their biology journey
 - **Focus**: Building strong fundamentals and scientific temperament
 - **Duration**: 1 year programs
 - **Teaching Hours**: 6 hours/week
 
-#### Class 10th Foundation Courses  
+#### Class 10th Foundation Courses
+
 - **Target**: Students preparing for advanced NEET studies
 - **Focus**: Advanced foundation concepts with practical applications
 - **Duration**: 1 year programs
 - **Teaching Hours**: 8 hours/week
 
 #### Class 11th NEET Courses
+
 - **Target**: Students beginning intensive NEET preparation
 - **Focus**: Comprehensive syllabus coverage with conceptual mastery
 - **Duration**: 2-2.5 year programs
 - **Teaching Hours**: 12 hours/week
 
 #### Class 12th NEET Courses
+
 - **Target**: Final year students with dual Board + NEET preparation
 - **Focus**: Intensive preparation with time management and strategy
 - **Duration**: 1 year programs
@@ -39,6 +43,7 @@ The system organizes courses into four main categories:
 Based on the biologyforneetug.com analysis, the system implements three distinct tiers:
 
 #### Pinnacle Series (Premium Tier)
+
 - **Price Range**: ₹98,000 - ₹1,80,000
 - **Batch Size**: 12 students (ultra-small for maximum attention)
 - **Key Features**:
@@ -48,6 +53,7 @@ Based on the biologyforneetug.com analysis, the system implements three distinct
   - Customized study plans and career guidance
 
 #### Ascent Series (Standard Tier)
+
 - **Price Range**: ₹58,000 - ₹76,000
 - **Batch Size**: 20 students (optimal balance)
 - **Key Features**:
@@ -57,6 +63,7 @@ Based on the biologyforneetug.com analysis, the system implements three distinct
   - Regular faculty interaction
 
 #### Pursuit Series (Value Tier)
+
 - **Price Range**: ₹48,000 - ₹88,000
 - **Batch Size**: 25 students (cost-effective)
 - **Key Features**:
@@ -70,11 +77,13 @@ Based on the biologyforneetug.com analysis, the system implements three distinct
 Each course offers flexible payment structures:
 
 #### One-Time Payment
+
 - **Discount**: 5% off total course fee
 - **Benefits**: Immediate access to all features
 - **Calculation**: Automatic discount application
 
 #### 3-Installment Plan
+
 - **Structure**: 40% + 30% + 30%
 - **Timeline**: At enrollment, after 3 months, after 6 months
 - **Benefits**: Manageable payment structure
@@ -85,18 +94,21 @@ Each course offers flexible payment structures:
 The system includes comprehensive features across all tiers:
 
 #### Core Teaching Features
+
 - Live interactive classes (all tiers)
 - Recorded video lectures (all tiers)
 - Personal mentoring (Pinnacle only)
 - Doubt clearing sessions (Pinnacle & Ascent)
 
 #### Study Materials
+
 - Printed study materials (all tiers)
 - Digital notes and worksheets (all tiers)
 - Previous year question papers (all tiers)
 - Advanced worksheets (Pinnacle & Ascent)
 
 #### Assessment & Testing
+
 - Weekly tests (all tiers)
 - Comprehensive test series (Pinnacle & Ascent)
 - Mock tests (all tiers)
@@ -104,6 +116,7 @@ The system includes comprehensive features across all tiers:
 - All India ranking (Pinnacle & Ascent)
 
 #### Support Services
+
 - Parent counseling (Pinnacle only)
 - Career guidance (Pinnacle & Ascent)
 - Regular feedback (Pinnacle & Ascent)
@@ -112,6 +125,7 @@ The system includes comprehensive features across all tiers:
 ## Technical Implementation
 
 ### File Structure
+
 ```
 src/
 ├── types/
@@ -130,6 +144,7 @@ src/
 ### Key TypeScript Interfaces
 
 #### CourseProgram Interface
+
 ```typescript
 interface CourseProgram {
   id: string
@@ -152,6 +167,7 @@ interface CourseProgram {
 ```
 
 #### PaymentOptions Interface
+
 ```typescript
 interface PaymentOptions {
   oneTime: {
@@ -180,12 +196,14 @@ The system includes comprehensive utility functions for:
 ## Sample Course Data
 
 ### Class 9th Foundation Biology
+
 - **Pinnacle Tier**: ₹98,000 (12 students)
 - **Ascent Tier**: ₹58,000 (20 students)
 - **Pursuit Tier**: ₹48,000 (25 students)
 - **Features**: 8 modules, 240 total hours, 24 tests
 
 ### Class 11th NEET Comprehensive
+
 - **Pinnacle Tier**: ₹1,80,000 (12 students)
 - **Ascent Tier**: ₹76,000 (20 students)
 - **Pursuit Tier**: ₹88,000 (25 students)
@@ -194,21 +212,25 @@ The system includes comprehensive utility functions for:
 ## Key Benefits of This System
 
 ### 1. Scalability
+
 - Easy to add new courses and tiers
 - Flexible pricing structure
 - Modular feature system
 
 ### 2. Professional Structure
+
 - Clear tier differentiation
 - Comprehensive feature matrix
 - Professional pricing strategy
 
 ### 3. Student-Centric Design
+
 - Multiple payment options
 - Tier recommendations based on needs
 - Clear feature comparisons
 
 ### 4. Business Benefits
+
 - Revenue optimization through tiers
 - Clear value proposition for each tier
 - Flexible enrollment options
@@ -216,6 +238,7 @@ The system includes comprehensive utility functions for:
 ## Usage Examples
 
 ### Getting Course Data
+
 ```typescript
 import { getCoursesByClass, getCoursePricing } from '@/utils/courseUtils'
 
@@ -227,6 +250,7 @@ const pricing = getCoursePricing('class-11-neet-comprehensive', 'ascent')
 ```
 
 ### Calculating Savings
+
 ```typescript
 import { calculateSavings } from '@/utils/courseUtils'
 
@@ -235,6 +259,7 @@ const savings = calculateSavings('class-11-neet-comprehensive', 'pinnacle')
 ```
 
 ### Tier Recommendation
+
 ```typescript
 import { recommendTier } from '@/utils/courseUtils'
 
@@ -242,7 +267,7 @@ const recommendedTier = recommendTier({
   budget: 100000,
   needsPersonalAttention: true,
   isHighAchiever: true,
-  parentalSupervision: true
+  parentalSupervision: true,
 })
 // Returns: 'pinnacle' | 'ascent' | 'pursuit'
 ```
@@ -250,15 +275,19 @@ const recommendedTier = recommendTier({
 ## Integration Guidelines
 
 ### 1. Database Schema
+
 The provided TypeScript interfaces can be directly used to design database schemas for storing course information.
 
 ### 2. API Design
+
 Utility functions provide a blueprint for API endpoints needed for course management.
 
 ### 3. Frontend Components
+
 The demo component showcases how to implement the course system in React applications.
 
 ### 4. Payment Integration
+
 Payment structures are designed to integrate seamlessly with payment gateways like Razorpay.
 
 ## Conclusion

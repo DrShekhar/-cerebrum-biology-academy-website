@@ -56,7 +56,8 @@ const whyChooseUs = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years teaching experience.',
+    description:
+      'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years teaching experience.',
   },
   {
     icon: Target,
@@ -129,7 +130,8 @@ export default function BiologyTutorCentralDelhiPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Central Delhi',
-            description: 'Best Biology Tutor for Central Delhi students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for Central Delhi students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-central-delhi',
             telephone: '+91-88264-44334',
             address: {
@@ -169,8 +171,7 @@ export default function BiologyTutorCentralDelhiPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Central Delhi</span>
+              Biology Tutor in <span className="text-yellow-400">Central Delhi</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">

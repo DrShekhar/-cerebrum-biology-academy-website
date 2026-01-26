@@ -35,19 +35,37 @@ class MockHeaders {
       }
     }
   }
-  get(name) { return this._headers.get(name.toLowerCase()) || null }
-  set(name, value) { this._headers.set(name.toLowerCase(), value) }
-  has(name) { return this._headers.has(name.toLowerCase()) }
-  delete(name) { this._headers.delete(name.toLowerCase()) }
+  get(name) {
+    return this._headers.get(name.toLowerCase()) || null
+  }
+  set(name, value) {
+    this._headers.set(name.toLowerCase(), value)
+  }
+  has(name) {
+    return this._headers.has(name.toLowerCase())
+  }
+  delete(name) {
+    this._headers.delete(name.toLowerCase())
+  }
   append(name, value) {
     const existing = this._headers.get(name.toLowerCase())
     this._headers.set(name.toLowerCase(), existing ? `${existing}, ${value}` : value)
   }
-  forEach(cb) { this._headers.forEach((v, k) => cb(v, k, this)) }
-  entries() { return this._headers.entries() }
-  keys() { return this._headers.keys() }
-  values() { return this._headers.values() }
-  [Symbol.iterator]() { return this._headers.entries() }
+  forEach(cb) {
+    this._headers.forEach((v, k) => cb(v, k, this))
+  }
+  entries() {
+    return this._headers.entries()
+  }
+  keys() {
+    return this._headers.keys()
+  }
+  values() {
+    return this._headers.values()
+  }
+  [Symbol.iterator]() {
+    return this._headers.entries()
+  }
 }
 
 global.Headers = MockHeaders
@@ -70,7 +88,11 @@ class MockRequest {
     return this._body || ''
   }
   clone() {
-    return new MockRequest(this.url, { method: this.method, headers: this.headers, body: this._body })
+    return new MockRequest(this.url, {
+      method: this.method,
+      headers: this.headers,
+      body: this._body,
+    })
   }
 }
 
@@ -85,13 +107,19 @@ class MockResponse {
     this.headers = new MockHeaders(init.headers)
     this.ok = this.status >= 200 && this.status < 300
   }
-  async json() { return typeof this._body === 'string' ? JSON.parse(this._body) : this._body }
-  async text() { return typeof this._body === 'string' ? this._body : JSON.stringify(this._body) }
-  clone() { return new MockResponse(this._body, { status: this.status, headers: this.headers }) }
+  async json() {
+    return typeof this._body === 'string' ? JSON.parse(this._body) : this._body
+  }
+  async text() {
+    return typeof this._body === 'string' ? this._body : JSON.stringify(this._body)
+  }
+  clone() {
+    return new MockResponse(this._body, { status: this.status, headers: this.headers })
+  }
   static json(data, init = {}) {
     return new MockResponse(JSON.stringify(data), {
       ...init,
-      headers: { 'content-type': 'application/json', ...init.headers }
+      headers: { 'content-type': 'application/json', ...init.headers },
     })
   }
 }
@@ -127,7 +155,11 @@ jest.mock('next/server', () => {
       return this._body || ''
     }
     clone() {
-      return new MockNextRequest(this.url, { method: this.method, headers: this.headers, body: this._body })
+      return new MockNextRequest(this.url, {
+        method: this.method,
+        headers: this.headers,
+        body: this._body,
+      })
     }
   }
 
@@ -144,7 +176,7 @@ jest.mock('next/server', () => {
     static json(data, init = {}) {
       const response = new MockNextResponse(JSON.stringify(data), {
         ...init,
-        headers: { 'content-type': 'application/json', ...(init.headers || {}) }
+        headers: { 'content-type': 'application/json', ...(init.headers || {}) },
       })
       response.status = init.status || 200
       return response
@@ -234,9 +266,12 @@ jest.mock('framer-motion', () => ({
 jest.mock('lucide-react', () => {
   const MockIcon = (props) => <span {...props} data-testid="mock-icon" />
 
-  return new Proxy({}, {
-    get: () => MockIcon,
-  })
+  return new Proxy(
+    {},
+    {
+      get: () => MockIcon,
+    }
+  )
 })
 
 // Mock Toast component
@@ -283,7 +318,7 @@ global.ResizeObserver = jest.fn().mockImplementation(() => ({
 }))
 
 // Mock matchMedia
-global.matchMedia = jest.fn().mockImplementation(query => ({
+global.matchMedia = jest.fn().mockImplementation((query) => ({
   matches: false,
   media: query,
   onchange: null,
@@ -297,7 +332,7 @@ global.matchMedia = jest.fn().mockImplementation(query => ({
 // Mock crypto for tests
 Object.defineProperty(global, 'crypto', {
   value: {
-    getRandomValues: jest.fn().mockImplementation(arr => {
+    getRandomValues: jest.fn().mockImplementation((arr) => {
       for (let i = 0; i < arr.length; i++) {
         arr[i] = Math.floor(Math.random() * 256)
       }
@@ -311,10 +346,7 @@ Object.defineProperty(global, 'crypto', {
 const originalWarn = console.warn
 beforeAll(() => {
   console.warn = (...args) => {
-    if (
-      typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is deprecated')
-    ) {
+    if (typeof args[0] === 'string' && args[0].includes('Warning: ReactDOM.render is deprecated')) {
       return
     }
     originalWarn.call(console, ...args)

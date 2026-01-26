@@ -92,17 +92,20 @@ const features = [
   {
     icon: Users,
     title: 'Elite Small Batches (10-15)',
-    description: 'Exclusive batches for Andheri students with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Andheri students with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Andheri families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Andheri families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
@@ -127,7 +130,7 @@ const faqs = [
   {
     question: 'Why do Andheri students choose online NEET coaching?',
     answer:
-      'Andheri is Mumbai\'s commercial hub with notorious traffic. Our online classes save students 2-3 hours daily that would be spent commuting to coaching centers. With Lokhandwala, Versova, and Andheri East all under one platform, students get premium coaching without travel stress.',
+      "Andheri is Mumbai's commercial hub with notorious traffic. Our online classes save students 2-3 hours daily that would be spent commuting to coaching centers. With Lokhandwala, Versova, and Andheri East all under one platform, students get premium coaching without travel stress.",
   },
   {
     question: 'Which areas in Andheri do you serve?',
@@ -137,7 +140,7 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching in Andheri?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This is competitive with Andheri\'s premium coaching centers while offering superior flexibility and personalized attention. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This is competitive with Andheri's premium coaching centers while offering superior flexibility and personalized attention. EMI options available.",
   },
   {
     question: 'How does this compare to physical coaching centers in Andheri?',
@@ -162,7 +165,7 @@ const premiumSchools = [
   'Podar International School',
   'Billabong High School',
   'Ryan International',
-  'St. Anne\'s High School',
+  "St. Anne's High School",
   'Holy Cross High School',
   'Jasudben ML School',
   'Universal High School',
@@ -178,7 +181,7 @@ const whyAndheri = [
   },
   {
     icon: Building,
-    title: 'Mumbai\'s Coaching Alternative',
+    title: "Mumbai's Coaching Alternative",
     description:
       'Get Kota-level coaching without leaving Andheri. AIIMS faculty, small batches, and premium infrastructure.',
   },
@@ -236,8 +239,8 @@ export default function NeetCoachingAndheriPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Andheri students. 94.2% success rate, AIIMS
-              faculty, zero traffic stress. Join 850+ students from Lokhandwala to Marol.
+              Premium NEET Biology coaching for Andheri students. 94.2% success rate, AIIMS faculty,
+              zero traffic stress. Join 850+ students from Lokhandwala to Marol.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +301,8 @@ export default function NeetCoachingAndheriPage() {
               NEET Coaching Across Andheri & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Lokhandwala to SEEPZ, Versova to Marol - premium coaching for every Andheri locality.
+              From Lokhandwala to SEEPZ, Versova to Marol - premium coaching for every Andheri
+              locality.
             </p>
           </motion.div>
 
@@ -320,9 +324,7 @@ export default function NeetCoachingAndheriPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-orange-600" />
                   </div>
-                  <div className="text-2xl font-bold text-orange-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-orange-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full">

@@ -437,7 +437,10 @@ export async function checkAndAwardBadges(
 /**
  * Award a specific badge to a user
  */
-export async function awardBadge(userId: string, badge: BadgeDefinition): Promise<UserBadge | null> {
+export async function awardBadge(
+  userId: string,
+  badge: BadgeDefinition
+): Promise<UserBadge | null> {
   // Check if already earned
   const existing = await prisma.gamification_user_badges.findFirst({
     where: { userId, badgeId: badge.id },

@@ -48,7 +48,7 @@ export interface MockTest {
     difficultyByClass: {
       'class-11': 'easy' | 'medium' | 'hard'
       'class-12': 'easy' | 'medium' | 'hard'
-      'dropper': 'easy' | 'medium' | 'hard'
+      dropper: 'easy' | 'medium' | 'hard'
     }
   }
   // Adaptive features
@@ -56,8 +56,8 @@ export interface MockTest {
     enableAdaptive: boolean
     questionPoolByClass: {
       'class-11': string[] // question IDs
-      'class-12': string[] // question IDs  
-      'dropper': string[] // question IDs
+      'class-12': string[] // question IDs
+      dropper: string[] // question IDs
     }
     progressionRules: {
       easyToMediumThreshold: number // percentage correct

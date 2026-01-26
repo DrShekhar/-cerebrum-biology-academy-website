@@ -12,12 +12,7 @@ interface DraftTabProps {
   saveAsDraft: () => void
 }
 
-export function DraftTab({
-  draftSettings,
-  setDraftSettings,
-  saving,
-  saveAsDraft,
-}: DraftTabProps) {
+export function DraftTab({ draftSettings, setDraftSettings, saving, saveAsDraft }: DraftTabProps) {
   return (
     <motion.div
       key="draft"

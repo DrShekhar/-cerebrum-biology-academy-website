@@ -90,13 +90,9 @@ describe('AriaErrorBoundary', () => {
         </AriaErrorBoundary>
       )
 
-      expect(
-        screen.getByText(/ARIA is temporarily unavailable/i)
-      ).toBeInTheDocument()
+      expect(screen.getByText(/ARIA is temporarily unavailable/i)).toBeInTheDocument()
       // Check that WhatsApp is mentioned in the helpful message
-      expect(
-        screen.getByText(/you can still reach us on WhatsApp/i)
-      ).toBeInTheDocument()
+      expect(screen.getByText(/you can still reach us on WhatsApp/i)).toBeInTheDocument()
     })
 
     it('should display error ID', () => {
@@ -289,9 +285,7 @@ describe('AriaLoadingFallback', () => {
   it('should show helpful message', () => {
     render(<AriaLoadingFallback />)
 
-    expect(
-      screen.getByText(/Taking longer than expected/i)
-    ).toBeInTheDocument()
+    expect(screen.getByText(/Taking longer than expected/i)).toBeInTheDocument()
   })
 
   it('should show WhatsApp button', () => {

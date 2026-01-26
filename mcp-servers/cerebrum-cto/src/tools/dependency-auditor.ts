@@ -102,7 +102,8 @@ export async function auditDependencies(params: AuditParams) {
           output += '✅ All packages are up to date!\n\n'
         } else {
           output += `Found **${packages.length}** outdated packages:\n\n`
-          output += '| Package | Current | Wanted | Latest |\n|---------|---------|--------|--------|\n'
+          output +=
+            '| Package | Current | Wanted | Latest |\n|---------|---------|--------|--------|\n'
 
           // Sort by importance (major updates first)
           const sorted = packages.sort(([, a]: [string, any], [, b]: [string, any]) => {
@@ -123,7 +124,8 @@ export async function auditDependencies(params: AuditParams) {
             output += `\n*...and ${packages.length - 15} more*\n`
           }
 
-          output += '\n**Update command:** `npm update` (safe) or `npm install <pkg>@latest` (major)\n'
+          output +=
+            '\n**Update command:** `npm update` (safe) or `npm install <pkg>@latest` (major)\n'
         }
       } else {
         output += '✅ All packages are up to date!\n\n'

@@ -178,12 +178,7 @@ export const campbellUnits: CampbellBiologyUnit[] = [
     metaTitle: 'Campbell Biology Unit 7: Animal Form & Function | Online Coaching',
     metaDescription:
       'Master animal physiology from Campbell Biology Unit 7. Human biology for NEET, Biology Olympiad. Expert tutoring.',
-    keywords: [
-      'Campbell Biology Unit 7',
-      'animal physiology',
-      'human biology',
-      'organ systems',
-    ],
+    keywords: ['Campbell Biology Unit 7', 'animal physiology', 'human biology', 'organ systems'],
     whatsappMessage:
       "Hi! I'm studying Campbell Biology Unit 7: Animal Form & Function. I need help with animal physiology. Can you help?",
   },

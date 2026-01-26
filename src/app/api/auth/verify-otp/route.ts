@@ -102,10 +102,7 @@ export async function POST(request: NextRequest) {
     // Check if OTP is expired
     if (otpRecord.expiresAt < new Date()) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'OTP has expired. Please request a new one.' },
-          { status: 400 }
-        )
+        NextResponse.json({ error: 'OTP has expired. Please request a new one.' }, { status: 400 })
       )
     }
 
@@ -206,10 +203,7 @@ export async function POST(request: NextRequest) {
 
       if (!user) {
         return addSecurityHeaders(
-          NextResponse.json(
-            { error: 'User not found. Please register first.' },
-            { status: 404 }
-          )
+          NextResponse.json({ error: 'User not found. Please register first.' }, { status: 404 })
         )
       }
 

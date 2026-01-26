@@ -13,10 +13,7 @@ export async function POST(request: NextRequest) {
     // Get user session
     const session = await getServerSession(authOptions)
     if (!session?.user?.id) {
-      return NextResponse.json(
-        { error: 'Authentication required' },
-        { status: 401 }
-      )
+      return NextResponse.json({ error: 'Authentication required' }, { status: 401 })
     }
 
     // Parse request body
@@ -29,15 +26,12 @@ export async function POST(request: NextRequest) {
       termination,
       adaptation,
       performance,
-      reporting
+      reporting,
     } = body
 
     // Validate required fields
     if (!curriculum || !grade) {
-      return NextResponse.json(
-        { error: 'Curriculum and grade are required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ error: 'Curriculum and grade are required' }, { status: 400 })
     }
 
     // Create adaptive test configuration
@@ -53,7 +47,7 @@ export async function POST(request: NextRequest) {
         targetInformation: 10,
         timeLimit: 60,
         masteryThreshold: 0.8,
-        ...termination
+        ...termination,
       },
       adaptation: {
         algorithm: 'cat_hybrid',
@@ -62,22 +56,22 @@ export async function POST(request: NextRequest) {
         realTimeAdjustment: true,
         gapDetection: true,
         personalizedSequencing: true,
-        ...adaptation
+        ...adaptation,
       },
       performance: {
         cacheResults: true,
         batchSize: 5,
         maxConcurrentSessions: 100,
         enablePredictiveLoading: true,
-        ...performance
+        ...performance,
       },
       reporting: {
         generateDetailedReport: true,
         includeGapAnalysis: true,
         includePredictions: true,
         enableRealTimeAnalytics: true,
-        ...reporting
-      }
+        ...reporting,
+      },
     }
 
     // Create session
@@ -94,17 +88,16 @@ export async function POST(request: NextRequest) {
         studentId: adaptiveSession.studentId,
         state: adaptiveSession.state,
         configuration: adaptiveSession.configuration,
-        timestamps: adaptiveSession.timestamps
-      }
+        timestamps: adaptiveSession.timestamps,
+      },
     })
-
   } catch (error) {
     console.error('Error creating adaptive test session:', error)
 
     return NextResponse.json(
       {
         error: 'Failed to create adaptive test session',
-        details: error instanceof Error ? error.message : 'Unknown error'
+        details: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     )
@@ -112,8 +105,5 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET(_request: NextRequest) {
-  return NextResponse.json(
-    { error: 'Method not allowed' },
-    { status: 405 }
-  )
+  return NextResponse.json({ error: 'Method not allowed' }, { status: 405 })
 }

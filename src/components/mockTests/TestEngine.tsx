@@ -42,13 +42,15 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showQuestionPalette, setShowQuestionPalette] = useState(false)
   const [confidence, setConfidence] = useState<'high' | 'medium' | 'low'>('medium')
-  
+
   const timerRef = useRef<NodeJS.Timeout | null>(null)
   const testContainerRef = useRef<HTMLDivElement>(null)
-  
+
   // Get questions based on user class
-  const questions = test.adaptiveSettings.enableAdaptive 
-    ? test.questions.filter(q => test.adaptiveSettings.questionPoolByClass[userClass].includes(q.id))
+  const questions = test.adaptiveSettings.enableAdaptive
+    ? test.questions.filter((q) =>
+        test.adaptiveSettings.questionPoolByClass[userClass].includes(q.id)
+      )
     : test.questions
 
   const currentQuestion = questions[currentQuestionIndex]
@@ -58,7 +60,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   useEffect(() => {
     if (isTestStarted && !isPaused && timeRemaining > 0) {
       timerRef.current = setInterval(() => {
-        setTimeRemaining(prev => {
+        setTimeRemaining((prev) => {
           if (prev <= 1) {
             handleTestSubmit()
             return 0
@@ -99,17 +101,17 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   const handleOptionSelect = (optionId: string) => {
     const timeTaken = Math.floor((Date.now() - questionStartTime) / 1000)
     const isCorrect = optionId === currentQuestion.correctAnswer
-    
+
     const response: TestResponse = {
       questionId: currentQuestion.id,
       selectedAnswer: optionId,
       isCorrect,
       timeTaken,
       isMarkedForReview: markedForReview.has(currentQuestionIndex),
-      confidence
+      confidence,
     }
-    
-    setResponses(prev => new Map(prev.set(currentQuestionIndex, response)))
+
+    setResponses((prev) => new Map(prev.set(currentQuestionIndex, response)))
   }
 
   // Toggle mark for review
@@ -140,10 +142,10 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
     if (timerRef.current) {
       clearInterval(timerRef.current)
     }
-    
-    const totalTimeTaken = (test.duration * 60) - timeRemaining
+
+    const totalTimeTaken = test.duration * 60 - timeRemaining
     const finalResponses = Array.from(responses.values())
-    
+
     onTestComplete(finalResponses, totalTimeTaken)
   }
 
@@ -162,7 +164,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   const getQuestionStatus = (index: number) => {
     const hasResponse = responses.has(index)
     const isMarked = markedForReview.has(index)
-    
+
     if (index === currentQuestionIndex) return 'current'
     if (hasResponse && isMarked) return 'answered-marked'
     if (hasResponse) return 'answered'
@@ -173,12 +175,18 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   // Question palette colors
   const getQuestionStatusColor = (status: string) => {
     switch (status) {
-      case 'current': return 'bg-blue-600 text-white'
-      case 'answered': return 'bg-green-600 text-white'
-      case 'answered-marked': return 'bg-purple-500 text-white'
-      case 'marked': return 'bg-yellow-500 text-white'
-      case 'not-visited': return 'bg-gray-200 text-gray-700 hover:bg-gray-300'
-      default: return 'bg-gray-200 text-gray-700'
+      case 'current':
+        return 'bg-blue-600 text-white'
+      case 'answered':
+        return 'bg-green-600 text-white'
+      case 'answered-marked':
+        return 'bg-purple-500 text-white'
+      case 'marked':
+        return 'bg-yellow-500 text-white'
+      case 'not-visited':
+        return 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+      default:
+        return 'bg-gray-200 text-gray-700'
     }
   }
 
@@ -257,7 +265,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   }
 
   return (
-    <div 
+    <div
       ref={testContainerRef}
       className={`min-h-screen bg-white ${isFullscreen ? 'fixed inset-0 z-50' : ''}`}
     >
@@ -283,7 +291,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
               </Button>
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <Button
               variant="outline"
@@ -326,7 +334,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
               transition={{ duration: 0.3 }}
             >
               <h3 className="font-bold text-gray-900 mb-4">Question Palette</h3>
-              
+
               {/* Legend */}
               <div className="mb-6 space-y-2 text-sm">
                 <div className="flex items-center">
@@ -400,14 +408,17 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                     Question {currentQuestionIndex + 1} of {totalQuestions}
                   </span>
                   <span className="text-gray-600">
-                    {currentQuestion.marks} marks • {Math.floor(currentQuestion.timeAllocated / 60)} min
+                    {currentQuestion.marks} marks • {Math.floor(currentQuestion.timeAllocated / 60)}{' '}
+                    min
                   </span>
                 </div>
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={toggleMarkForReview}
-                  className={markedForReview.has(currentQuestionIndex) ? 'bg-yellow-100 text-yellow-800' : ''}
+                  className={
+                    markedForReview.has(currentQuestionIndex) ? 'bg-yellow-100 text-yellow-800' : ''
+                  }
                 >
                   <Flag className="w-4 h-4 mr-2" />
                   {markedForReview.has(currentQuestionIndex) ? 'Marked' : 'Mark for Review'}
@@ -443,7 +454,8 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                 {/* Options */}
                 <div className="space-y-4">
                   {currentQuestion.options.map((option) => {
-                    const isSelected = responses.get(currentQuestionIndex)?.selectedAnswer === option.id
+                    const isSelected =
+                      responses.get(currentQuestionIndex)?.selectedAnswer === option.id
                     return (
                       <motion.button
                         key={option.id}
@@ -457,9 +469,11 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                         whileTap={{ scale: 0.99 }}
                       >
                         <div className="flex items-center">
-                          <div className={`w-6 h-6 rounded-full border-2 mr-4 flex items-center justify-center ${
-                            isSelected ? 'border-blue-500 bg-blue-500' : 'border-gray-300'
-                          }`}>
+                          <div
+                            className={`w-6 h-6 rounded-full border-2 mr-4 flex items-center justify-center ${
+                              isSelected ? 'border-blue-500 bg-blue-500' : 'border-gray-300'
+                            }`}
+                          >
                             {isSelected && <div className="w-2 h-2 bg-white rounded-full"></div>}
                           </div>
                           <span className="text-gray-900">{option.text}</span>
@@ -484,7 +498,9 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                 {/* Confidence Level */}
                 {responses.has(currentQuestionIndex) && (
                   <div className="mt-6 pt-6 border-t border-gray-200">
-                    <p className="text-sm font-semibold text-gray-900 mb-3">How confident are you?</p>
+                    <p className="text-sm font-semibold text-gray-900 mb-3">
+                      How confident are you?
+                    </p>
                     <div className="flex space-x-3">
                       {(['high', 'medium', 'low'] as const).map((level) => (
                         <button
@@ -526,7 +542,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                   <SkipForward className="w-5 h-5 mr-2" />
                   Skip
                 </Button>
-                
+
                 {currentQuestionIndex === totalQuestions - 1 ? (
                   <Button variant="primary" onClick={handleTestSubmit}>
                     <CheckCircle className="w-5 h-5 mr-2" />

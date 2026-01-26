@@ -74,9 +74,10 @@ async function handlePOST(req: NextRequest, session: ValidatedSession) {
       type: 'GENERAL',
       priority: validatedData.priority,
       customChannels: validatedData.channels,
-      emailData: validatedData.channels.email && validatedData.email && validatedData.subject
-        ? { subject: validatedData.subject, html: convertMessageToHTML(validatedData.message) }
-        : undefined,
+      emailData:
+        validatedData.channels.email && validatedData.email && validatedData.subject
+          ? { subject: validatedData.subject, html: convertMessageToHTML(validatedData.message) }
+          : undefined,
       whatsappData: validatedData.channels.whatsapp
         ? { message: validatedData.message }
         : undefined,

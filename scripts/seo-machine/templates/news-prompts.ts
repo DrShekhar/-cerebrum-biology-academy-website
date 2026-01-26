@@ -61,7 +61,7 @@ export const newsArticleTemplate: PromptTemplate = {
   userPromptTemplate: NEWS_USER_PROMPT_TEMPLATE,
   outputFormat: 'mdx',
   requiredVariables: ['headline'],
-  optionalVariables: ['sourceUrl', 'sourceSummary', 'announcementType']
+  optionalVariables: ['sourceUrl', 'sourceSummary', 'announcementType'],
 }
 
 // Quick news templates for common announcement types
@@ -120,7 +120,7 @@ NTA has released NEET {{year}} results. Here's how to check:
 ## Next Steps
 - Download scorecard immediately
 - Start counseling preparation
-- Check expected cutoffs`
+- Check expected cutoffs`,
 }
 
 // News categories with SEO metadata
@@ -128,21 +128,21 @@ export const newsCategories = {
   nta: {
     name: 'NTA Announcements',
     keywords: ['NTA', 'NEET notification', 'official announcement'],
-    priority: 'urgent'
+    priority: 'urgent',
   },
   government: {
     name: 'Government Updates',
     keywords: ['medical education', 'policy change', 'MBBS seats'],
-    priority: 'high'
+    priority: 'high',
   },
   'medical-college': {
     name: 'Medical College News',
     keywords: ['medical college', 'admission', 'cutoff'],
-    priority: 'normal'
+    priority: 'normal',
   },
   general: {
     name: 'Education News',
     keywords: ['education', 'exam', 'students'],
-    priority: 'normal'
-  }
+    priority: 'normal',
+  },
 }

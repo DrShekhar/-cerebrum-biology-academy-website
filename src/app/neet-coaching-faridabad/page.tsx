@@ -26,6 +26,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 const faridabadAreas = [
   {
@@ -1012,15 +1013,15 @@ export default function NeetCoachingFaridabadPage() {
                 Visit Our Center or Join Online
               </h3>
               <div className="rounded-xl overflow-hidden shadow-lg mb-4">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.123456789!2d77.2155!3d28.5733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzI0LjAiTiA3N8KwMTInNTUuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Cerebrum Biology Academy Location"
+                <LazyGoogleMap
+                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.123456789!2d77.2155!3d28.5733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM0JzI0LjAiTiA3N8KwMTInNTUuOCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                  title="NEET Coaching Center Location"
+                  height={300}
+                  placeholder={{
+                    lat: 28.5733,
+                    lng: 77.2155,
+                    address: "Cerebrum Biology Academy, South Extension, New Delhi"
+                  }}
                 />
               </div>
               <div className="space-y-2 text-gray-700">

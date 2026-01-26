@@ -10,14 +10,7 @@ import React, { useState, useRef, useEffect } from 'react'
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Volume2,
-  Brain,
-  Sparkles,
-  Languages,
-  Heart,
-  Zap,
-} from 'lucide-react'
+import { Volume2, Brain, Sparkles, Languages, Heart, Zap } from 'lucide-react'
 import VoiceMemosUI from '../voice/VoiceMemosUI'
 import VoiceRecognitionService, {
   VoiceRecognitionResult,

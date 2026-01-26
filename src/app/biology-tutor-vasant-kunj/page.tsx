@@ -129,7 +129,8 @@ export default function BiologyTutorVasantKunjPage() {
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
             name: 'Cerebrum Biology Academy - Vasant Kunj',
-            description: 'Best Biology Tutor for Vasant Kunj students - NEET & Board exam preparation',
+            description:
+              'Best Biology Tutor for Vasant Kunj students - NEET & Board exam preparation',
             url: 'https://cerebrumbiologyacademy.com/biology-tutor-vasant-kunj',
             telephone: '+91-88264-44334',
             address: {
@@ -160,8 +161,7 @@ export default function BiologyTutorVasantKunjPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Vasant Kunj</span>
+              Biology Tutor in <span className="text-yellow-400">Vasant Kunj</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -328,9 +328,7 @@ export default function BiologyTutorVasantKunjPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Vasant Kunj Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Vasant Kunj Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Premium quality NEET coaching for South Delhi students
             </p>

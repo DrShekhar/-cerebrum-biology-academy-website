@@ -2,13 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import {
-  CheckCircle,
-  Phone,
-  ArrowRight,
-  Microscope,
-  Play,
-} from 'lucide-react'
+import { CheckCircle, Phone, ArrowRight, Microscope, Play } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 
 const areasList = [

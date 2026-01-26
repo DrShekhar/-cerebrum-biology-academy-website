@@ -1511,9 +1511,9 @@ Notes:
 
 ### Test Execution Summary
 
-**Test Cycle:** ****\_\_****
-**Date:** ****\_\_****
-**Tester:** ****\_\_****
+**Test Cycle:** \***\*\_\_\*\***
+**Date:** \***\*\_\_\*\***
+**Tester:** \***\*\_\_\*\***
 **Environment:** Development / Staging / Production
 
 ### Overall Results
@@ -1562,11 +1562,11 @@ Next.js Version: __________
 
 ### Sign-off
 
-**QA Tester:** ********\_\_\_\_********
-**Date:** ****\_\_****
+**QA Tester:** **\*\*\*\***\_\_\_\_**\*\*\*\***
+**Date:** \***\*\_\_\*\***
 
-**Release Approval:** ********\_\_\_\_********
-**Date:** ****\_\_****
+**Release Approval:** **\*\*\*\***\_\_\_\_**\*\*\*\***
+**Date:** \***\*\_\_\*\***
 
 ---
 

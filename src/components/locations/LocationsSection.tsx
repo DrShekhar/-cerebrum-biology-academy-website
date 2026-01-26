@@ -80,7 +80,9 @@ export function LocationsSection() {
                     <MapPin className="w-4 h-4 text-[#3d4d3d] mr-2 mt-0.5 flex-shrink-0" />
                     <div>
                       <span className="line-clamp-2">{location.address}</span>
-                      <span className="block text-gray-500">{location.city}, {location.pincode}</span>
+                      <span className="block text-gray-500">
+                        {location.city}, {location.pincode}
+                      </span>
                     </div>
                   </div>
 
@@ -102,7 +104,8 @@ export function LocationsSection() {
 
                 <a
                   href={location.googleMapsUrl}
-                  target="_blank" rel="noopener noreferrer"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center w-full bg-[#3d4d3d] text-white py-2.5 rounded-lg font-medium text-sm hover:bg-[#4a5d4a] transition-colors"
                 >
                   Get Directions

@@ -26,10 +26,7 @@ import {
 } from 'lucide-react'
 import { useUserFlow } from '@/hooks/useUserFlow'
 import { UpgradeModal } from '@/components/UpgradeModal'
-import {
-  CoachingTrialBanner,
-  useCoachingTrialStatus,
-} from '@/components/trial/CoachingTrialBanner'
+import { CoachingTrialBanner, useCoachingTrialStatus } from '@/components/trial/CoachingTrialBanner'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { EmptyState } from '@/components/ui/EmptyState'
@@ -66,7 +63,14 @@ interface RecentActivity {
 }
 
 export default function StudentDashboard() {
-  const { user, isAuthenticated, isLoading: authLoading, isPaidUser, isGuestUser, freeUserId: userFlowFreeUserId } = useUserFlow()
+  const {
+    user,
+    isAuthenticated,
+    isLoading: authLoading,
+    isPaidUser,
+    isGuestUser,
+    freeUserId: userFlowFreeUserId,
+  } = useUserFlow()
   const { trialStatus: coachingTrialStatus, isLoading: trialLoading } = useCoachingTrialStatus()
   const [isLoading, setIsLoading] = useState(true)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)

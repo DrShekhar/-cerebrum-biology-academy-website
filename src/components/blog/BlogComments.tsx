@@ -47,85 +47,85 @@ export function BlogComments({ slug, title }: BlogCommentsProps) {
         </div>
 
         <div className="space-y-6 animate-fade-in-up">
-            {/* Stats bar */}
-            <div className="flex items-center justify-center gap-6 py-4 bg-blue-50 rounded-xl">
-              <div className="flex items-center gap-2 text-blue-700">
-                <Users className="w-5 h-5" />
-                <span className="font-semibold">2.4K+ students</span>
-                <span className="text-blue-600">joined the discussion</span>
-              </div>
-              <div className="flex items-center gap-2 text-green-700">
-                <ThumbsUp className="w-5 h-5" />
-                <span className="font-semibold">98%</span>
-                <span className="text-green-600">found this helpful</span>
-              </div>
+          {/* Stats bar */}
+          <div className="flex items-center justify-center gap-6 py-4 bg-blue-50 rounded-xl">
+            <div className="flex items-center gap-2 text-blue-700">
+              <Users className="w-5 h-5" />
+              <span className="font-semibold">2.4K+ students</span>
+              <span className="text-blue-600">joined the discussion</span>
             </div>
-
-            {/* Question form */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Have a doubt about this topic?
-              </h3>
-              <form onSubmit={handleQuestionSubmit} className="space-y-4">
-                <textarea
-                  value={question}
-                  onChange={(e) => setQuestion(e.target.value)}
-                  placeholder="Type your question here... Our faculty will respond within 24 hours on WhatsApp!"
-                  className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none h-32 text-gray-700"
-                  style={{ fontSize: '16px' }}
-                />
-                <div className="flex items-center justify-between">
-                  <p className="text-sm text-gray-500">Get expert answers from our AIIMS faculty</p>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting || !question.trim()}
-                    className="flex items-center gap-2 px-6 py-3 bg-[#4a5d4a] text-white font-semibold rounded-xl hover:from-green-600 hover:to-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
-                  >
-                    <Send className="w-4 h-4" />
-                    Ask on WhatsApp
-                  </button>
-                </div>
-              </form>
-            </div>
-
-            {/* Sample questions */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Popular Questions from Students
-              </h3>
-              <div className="space-y-4">
-                {[
-                  {
-                    q: 'How many hours should I study Biology daily for NEET?',
-                    a: 'For NEET Biology, aim for 3-4 hours of focused study daily. Quality matters more than quantity!',
-                    likes: 124,
-                  },
-                  {
-                    q: 'Is NCERT enough for Biology in NEET?',
-                    a: 'Yes! NCERT covers 95% of NEET Biology questions. Master it completely before any reference book.',
-                    likes: 89,
-                  },
-                  {
-                    q: 'Which chapters have maximum weightage?',
-                    a: 'Human Physiology (20%), Genetics (18%), and Ecology (12%) are the highest-scoring areas.',
-                    likes: 156,
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-blue-200 transition-colors"
-                  >
-                    <p className="font-medium text-gray-900 mb-2">{item.q}</p>
-                    <p className="text-sm text-gray-600 mb-2">{item.a}</p>
-                    <div className="flex items-center gap-2 text-sm text-gray-500">
-                      <ThumbsUp className="w-4 h-4 text-blue-500" />
-                      <span>{item.likes} found this helpful</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="flex items-center gap-2 text-green-700">
+              <ThumbsUp className="w-5 h-5" />
+              <span className="font-semibold">98%</span>
+              <span className="text-green-600">found this helpful</span>
             </div>
           </div>
+
+          {/* Question form */}
+          <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Have a doubt about this topic?
+            </h3>
+            <form onSubmit={handleQuestionSubmit} className="space-y-4">
+              <textarea
+                value={question}
+                onChange={(e) => setQuestion(e.target.value)}
+                placeholder="Type your question here... Our faculty will respond within 24 hours on WhatsApp!"
+                className="w-full p-4 border border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none h-32 text-gray-700"
+                style={{ fontSize: '16px' }}
+              />
+              <div className="flex items-center justify-between">
+                <p className="text-sm text-gray-500">Get expert answers from our AIIMS faculty</p>
+                <button
+                  type="submit"
+                  disabled={isSubmitting || !question.trim()}
+                  className="flex items-center gap-2 px-6 py-3 bg-[#4a5d4a] text-white font-semibold rounded-xl hover:from-green-600 hover:to-green-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                >
+                  <Send className="w-4 h-4" />
+                  Ask on WhatsApp
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* Sample questions */}
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">
+              Popular Questions from Students
+            </h3>
+            <div className="space-y-4">
+              {[
+                {
+                  q: 'How many hours should I study Biology daily for NEET?',
+                  a: 'For NEET Biology, aim for 3-4 hours of focused study daily. Quality matters more than quantity!',
+                  likes: 124,
+                },
+                {
+                  q: 'Is NCERT enough for Biology in NEET?',
+                  a: 'Yes! NCERT covers 95% of NEET Biology questions. Master it completely before any reference book.',
+                  likes: 89,
+                },
+                {
+                  q: 'Which chapters have maximum weightage?',
+                  a: 'Human Physiology (20%), Genetics (18%), and Ecology (12%) are the highest-scoring areas.',
+                  likes: 156,
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="p-4 bg-gray-50 rounded-xl border border-gray-100 hover:border-blue-200 transition-colors"
+                >
+                  <p className="font-medium text-gray-900 mb-2">{item.q}</p>
+                  <p className="text-sm text-gray-600 mb-2">{item.a}</p>
+                  <div className="flex items-center gap-2 text-sm text-gray-500">
+                    <ThumbsUp className="w-4 h-4 text-blue-500" />
+                    <span>{item.likes} found this helpful</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
         <noscript>
           <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 text-center">

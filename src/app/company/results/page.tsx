@@ -1,15 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import {
-  Trophy,
-  Star,
-  ArrowRight,
-  Medal,
-  Target,
-  TrendingUp,
-  Crown,
-  Zap,
-} from 'lucide-react'
+import { Trophy, Star, ArrowRight, Medal, Target, TrendingUp, Crown, Zap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Student Results & Success Stories | NEET Biology Achievements | Cerebrum Biology Academy',

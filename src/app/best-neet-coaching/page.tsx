@@ -423,8 +423,8 @@ export default function BestNeetCoachingPage() {
               Join India&apos;s Best NEET Coaching Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              98% success rate, AIIMS trained faculty, 1,50,000+ selections. Your medical dream starts
-              here!
+              98% success rate, AIIMS trained faculty, 1,50,000+ selections. Your medical dream
+              starts here!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

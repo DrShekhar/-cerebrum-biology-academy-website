@@ -6,7 +6,13 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import type { AriaMessage, LeadData, ConversationState, Language, LeadStage } from '@/lib/aria/types'
+import type {
+  AriaMessage,
+  LeadData,
+  ConversationState,
+  Language,
+  LeadStage,
+} from '@/lib/aria/types'
 
 const STORAGE_KEY = 'aria_conversation'
 const MAX_MESSAGES = 50
@@ -121,9 +127,8 @@ export function useConversationPersistence(initialLanguage: Language = 'en') {
       const messages = [...prev.messages, message]
 
       // Trim to max messages, keeping the most recent
-      const trimmedMessages = messages.length > MAX_MESSAGES
-        ? messages.slice(-MAX_MESSAGES)
-        : messages
+      const trimmedMessages =
+        messages.length > MAX_MESSAGES ? messages.slice(-MAX_MESSAGES) : messages
 
       return {
         ...prev,
@@ -137,9 +142,7 @@ export function useConversationPersistence(initialLanguage: Language = 'en') {
   const updateMessage = useCallback((messageId: string, updates: Partial<AriaMessage>) => {
     setConversationState((prev) => ({
       ...prev,
-      messages: prev.messages.map((msg) =>
-        msg.id === messageId ? { ...msg, ...updates } : msg
-      ),
+      messages: prev.messages.map((msg) => (msg.id === messageId ? { ...msg, ...updates } : msg)),
       lastActivity: new Date(),
     }))
   }, [])
@@ -186,7 +189,7 @@ export function useConversationPersistence(initialLanguage: Language = 'en') {
     return conversationState.messages
       .filter((msg) => msg.sender === 'user' || msg.sender === 'bot')
       .map((msg) => ({
-        role: msg.sender === 'user' ? 'user' as const : 'assistant' as const,
+        role: msg.sender === 'user' ? ('user' as const) : ('assistant' as const),
         content: msg.text,
       }))
   }, [conversationState.messages])

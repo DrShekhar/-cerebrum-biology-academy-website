@@ -23,7 +23,7 @@ import {
   Copy,
   Edit,
   Trash2,
-  Plus
+  Plus,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -90,14 +90,18 @@ interface QuestionFilter {
 }
 
 const QuestionBank: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'search' | 'filter' | 'favorites' | 'history' | 'stats' | 'community' | 'rating'>('search')
+  const [activeTab, setActiveTab] = useState<
+    'search' | 'filter' | 'favorites' | 'history' | 'stats' | 'community' | 'rating'
+  >('search')
   const [questions, setQuestions] = useState<Question[]>([])
   const [filteredQuestions, setFilteredQuestions] = useState<Question[]>([])
   const [loading, setLoading] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedQuestions, setSelectedQuestions] = useState<string[]>([])
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('list')
-  const [sortBy, setSortBy] = useState<'recent' | 'popular' | 'rating' | 'difficulty' | 'usage'>('recent')
+  const [sortBy, setSortBy] = useState<'recent' | 'popular' | 'rating' | 'difficulty' | 'usage'>(
+    'recent'
+  )
   const [expandedQuestion, setExpandedQuestion] = useState<string | null>(null)
 
   const [filters, setFilters] = useState<QuestionFilter>({
@@ -112,20 +116,29 @@ const QuestionBank: React.FC = () => {
     usageRange: { min: 0, max: 100 },
     ratingRange: { min: 0, max: 5 },
     onlyFavorites: false,
-    onlyCommunity: false
+    onlyCommunity: false,
   })
 
   // Mock data - replace with actual API calls
   const [availableOptions] = useState({
     subjects: ['Biology', 'Physics', 'Chemistry'],
     topics: [
-      'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Human Physiology',
-      'Plant Physiology', 'Reproduction', 'Biotechnology', 'Molecular Biology',
-      'Taxonomy', 'Anatomy', 'Environmental Biology'
+      'Cell Biology',
+      'Genetics',
+      'Evolution',
+      'Ecology',
+      'Human Physiology',
+      'Plant Physiology',
+      'Reproduction',
+      'Biotechnology',
+      'Molecular Biology',
+      'Taxonomy',
+      'Anatomy',
+      'Environmental Biology',
     ],
     difficulties: ['easy', 'medium', 'hard'],
     types: ['mcq', 'assertion', 'numerical', 'matching'],
-    tags: ['neet', 'jee', 'board', 'previous-year', 'conceptual', 'numerical', 'diagram-based']
+    tags: ['neet', 'jee', 'board', 'previous-year', 'conceptual', 'numerical', 'diagram-based'],
   })
 
   // Initialize with mock questions
@@ -137,8 +150,12 @@ const QuestionBank: React.FC = () => {
     const mockQuestions: Question[] = Array.from({ length: 50 }, (_, i) => ({
       id: `q_${i + 1}`,
       question: `Sample Biology question ${i + 1} about ${availableOptions.topics[i % availableOptions.topics.length]}`,
-      type: availableOptions.types[Math.floor(Math.random() * availableOptions.types.length)] as any,
-      difficulty: availableOptions.difficulties[Math.floor(Math.random() * availableOptions.difficulties.length)] as any,
+      type: availableOptions.types[
+        Math.floor(Math.random() * availableOptions.types.length)
+      ] as any,
+      difficulty: availableOptions.difficulties[
+        Math.floor(Math.random() * availableOptions.difficulties.length)
+      ] as any,
       topic: availableOptions.topics[i % availableOptions.topics.length],
       subtopic: `Subtopic ${(i % 3) + 1}`,
       chapter: `Chapter ${Math.floor(i / 5) + 1}`,
@@ -149,7 +166,9 @@ const QuestionBank: React.FC = () => {
       marks: [1, 2, 4][Math.floor(Math.random() * 3)],
       estimatedTime: Math.floor(Math.random() * 5) + 2,
       tags: [availableOptions.tags[Math.floor(Math.random() * availableOptions.tags.length)]],
-      createdBy: ['Dr. Smith', 'Prof. Johnson', 'Dr. Patel', 'Community'][Math.floor(Math.random() * 4)],
+      createdBy: ['Dr. Smith', 'Prof. Johnson', 'Dr. Patel', 'Community'][
+        Math.floor(Math.random() * 4)
+      ],
       createdAt: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString(),
       isFavorite: Math.random() > 0.7,
       usageCount: Math.floor(Math.random() * 50),
@@ -158,7 +177,7 @@ const QuestionBank: React.FC = () => {
         totalAttempts: Math.floor(Math.random() * 1000) + 100,
         correctAttempts: Math.floor(Math.random() * 800) + 50,
         averageTime: Math.floor(Math.random() * 300) + 60,
-        difficultyRating: Math.random() * 5
+        difficultyRating: Math.random() * 5,
       },
       communityStats: {
         views: Math.floor(Math.random() * 5000) + 100,
@@ -166,10 +185,10 @@ const QuestionBank: React.FC = () => {
         dislikes: Math.floor(Math.random() * 50),
         comments: Math.floor(Math.random() * 30),
         rating: Math.random() * 5,
-        totalRatings: Math.floor(Math.random() * 100) + 10
+        totalRatings: Math.floor(Math.random() * 100) + 10,
       },
       isPublic: Math.random() > 0.3,
-      contributorRating: Math.random() * 5
+      contributorRating: Math.random() * 5,
     }))
 
     setQuestions(mockQuestions)
@@ -190,50 +209,51 @@ const QuestionBank: React.FC = () => {
     // Keywords search
     if (newFilters.keywords) {
       const keywords = newFilters.keywords.toLowerCase().split(' ')
-      filtered = filtered.filter(q =>
-        keywords.some(keyword =>
-          q.question.toLowerCase().includes(keyword) ||
-          q.topic.toLowerCase().includes(keyword) ||
-          q.tags.some(tag => tag.toLowerCase().includes(keyword))
+      filtered = filtered.filter((q) =>
+        keywords.some(
+          (keyword) =>
+            q.question.toLowerCase().includes(keyword) ||
+            q.topic.toLowerCase().includes(keyword) ||
+            q.tags.some((tag) => tag.toLowerCase().includes(keyword))
         )
       )
     }
 
     // Difficulty filter
     if (newFilters.difficulty.length > 0) {
-      filtered = filtered.filter(q => newFilters.difficulty.includes(q.difficulty))
+      filtered = filtered.filter((q) => newFilters.difficulty.includes(q.difficulty))
     }
 
     // Topic filter
     if (newFilters.topics.length > 0) {
-      filtered = filtered.filter(q => newFilters.topics.includes(q.topic))
+      filtered = filtered.filter((q) => newFilters.topics.includes(q.topic))
     }
 
     // Type filter
     if (newFilters.types.length > 0) {
-      filtered = filtered.filter(q => newFilters.types.includes(q.type))
+      filtered = filtered.filter((q) => newFilters.types.includes(q.type))
     }
 
     // Favorites filter
     if (newFilters.onlyFavorites) {
-      filtered = filtered.filter(q => q.isFavorite)
+      filtered = filtered.filter((q) => q.isFavorite)
     }
 
     // Community filter
     if (newFilters.onlyCommunity) {
-      filtered = filtered.filter(q => q.isPublic && q.createdBy === 'Community')
+      filtered = filtered.filter((q) => q.isPublic && q.createdBy === 'Community')
     }
 
     // Rating range filter
-    filtered = filtered.filter(q =>
-      q.communityStats.rating >= newFilters.ratingRange.min &&
-      q.communityStats.rating <= newFilters.ratingRange.max
+    filtered = filtered.filter(
+      (q) =>
+        q.communityStats.rating >= newFilters.ratingRange.min &&
+        q.communityStats.rating <= newFilters.ratingRange.max
     )
 
     // Usage range filter
-    filtered = filtered.filter(q =>
-      q.usageCount >= newFilters.usageRange.min &&
-      q.usageCount <= newFilters.usageRange.max
+    filtered = filtered.filter(
+      (q) => q.usageCount >= newFilters.usageRange.min && q.usageCount <= newFilters.usageRange.max
     )
 
     // Sort filtered results
@@ -265,30 +285,28 @@ const QuestionBank: React.FC = () => {
 
   // Favorite functionality
   const toggleFavorite = (questionId: string) => {
-    setQuestions(prev =>
-      prev.map(q =>
-        q.id === questionId ? { ...q, isFavorite: !q.isFavorite } : q
-      )
+    setQuestions((prev) =>
+      prev.map((q) => (q.id === questionId ? { ...q, isFavorite: !q.isFavorite } : q))
     )
-    setFilteredQuestions(prev =>
-      prev.map(q =>
-        q.id === questionId ? { ...q, isFavorite: !q.isFavorite } : q
-      )
+    setFilteredQuestions((prev) =>
+      prev.map((q) => (q.id === questionId ? { ...q, isFavorite: !q.isFavorite } : q))
     )
   }
 
   // Rating functionality
   const rateQuestion = (questionId: string, rating: number) => {
-    setQuestions(prev =>
-      prev.map(q =>
+    setQuestions((prev) =>
+      prev.map((q) =>
         q.id === questionId
           ? {
               ...q,
               communityStats: {
                 ...q.communityStats,
-                rating: ((q.communityStats.rating * q.communityStats.totalRatings) + rating) / (q.communityStats.totalRatings + 1),
-                totalRatings: q.communityStats.totalRatings + 1
-              }
+                rating:
+                  (q.communityStats.rating * q.communityStats.totalRatings + rating) /
+                  (q.communityStats.totalRatings + 1),
+                totalRatings: q.communityStats.totalRatings + 1,
+              },
             }
           : q
       )
@@ -297,29 +315,36 @@ const QuestionBank: React.FC = () => {
 
   // Question selection
   const toggleQuestionSelection = (questionId: string) => {
-    setSelectedQuestions(prev =>
-      prev.includes(questionId)
-        ? prev.filter(id => id !== questionId)
-        : [...prev, questionId]
+    setSelectedQuestions((prev) =>
+      prev.includes(questionId) ? prev.filter((id) => id !== questionId) : [...prev, questionId]
     )
   }
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'easy': return 'text-green-600 bg-green-100'
-      case 'medium': return 'text-yellow-600 bg-yellow-100'
-      case 'hard': return 'text-red-600 bg-red-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'easy':
+        return 'text-green-600 bg-green-100'
+      case 'medium':
+        return 'text-yellow-600 bg-yellow-100'
+      case 'hard':
+        return 'text-red-600 bg-red-100'
+      default:
+        return 'text-gray-600 bg-gray-100'
     }
   }
 
   const getTypeColor = (type: string) => {
     switch (type) {
-      case 'mcq': return 'text-blue-600 bg-blue-100'
-      case 'assertion': return 'text-purple-600 bg-purple-100'
-      case 'numerical': return 'text-green-600 bg-green-100'
-      case 'matching': return 'text-orange-600 bg-orange-100'
-      default: return 'text-gray-600 bg-gray-100'
+      case 'mcq':
+        return 'text-blue-600 bg-blue-100'
+      case 'assertion':
+        return 'text-purple-600 bg-purple-100'
+      case 'numerical':
+        return 'text-green-600 bg-green-100'
+      case 'matching':
+        return 'text-orange-600 bg-orange-100'
+      default:
+        return 'text-gray-600 bg-gray-100'
     }
   }
 
@@ -340,7 +365,8 @@ const QuestionBank: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Comprehensive question management system with advanced search, filtering, performance tracking, and community features
+          Comprehensive question management system with advanced search, filtering, performance
+          tracking, and community features
         </p>
       </div>
 
@@ -354,7 +380,7 @@ const QuestionBank: React.FC = () => {
             { id: 'history', label: 'History', icon: Clock },
             { id: 'stats', label: 'Statistics', icon: BarChart3 },
             { id: 'community', label: 'Community', icon: Users },
-            { id: 'rating', label: 'Rating', icon: Star }
+            { id: 'rating', label: 'Rating', icon: Star },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -450,10 +476,14 @@ const QuestionBank: React.FC = () => {
                           onChange={() => toggleQuestionSelection(question.id)}
                           className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                         />
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}
+                        >
                           {question.difficulty}
                         </span>
-                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(question.type)}`}>
+                        <span
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(question.type)}`}
+                        >
                           {question.type.toUpperCase()}
                         </span>
                         <span className="text-sm text-gray-500">{question.topic}</span>
@@ -498,10 +528,16 @@ const QuestionBank: React.FC = () => {
                         <Heart className={`w-5 h-5 ${question.isFavorite ? 'fill-current' : ''}`} />
                       </button>
                       <button
-                        onClick={() => setExpandedQuestion(expandedQuestion === question.id ? null : question.id)}
+                        onClick={() =>
+                          setExpandedQuestion(expandedQuestion === question.id ? null : question.id)
+                        }
                         className="p-2 text-gray-400 hover:text-gray-600 rounded-lg hover:bg-gray-100 transition-colors"
                       >
-                        {expandedQuestion === question.id ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                        {expandedQuestion === question.id ? (
+                          <ChevronUp className="w-5 h-5" />
+                        ) : (
+                          <ChevronDown className="w-5 h-5" />
+                        )}
                       </button>
                     </div>
                   </div>
@@ -540,21 +576,33 @@ const QuestionBank: React.FC = () => {
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
                           <div className="bg-gray-50 p-3 rounded-lg">
                             <span className="text-gray-500">Attempts</span>
-                            <p className="font-semibold">{question.performanceStats.totalAttempts}</p>
+                            <p className="font-semibold">
+                              {question.performanceStats.totalAttempts}
+                            </p>
                           </div>
                           <div className="bg-gray-50 p-3 rounded-lg">
                             <span className="text-gray-500">Success Rate</span>
                             <p className="font-semibold">
-                              {((question.performanceStats.correctAttempts / question.performanceStats.totalAttempts) * 100).toFixed(1)}%
+                              {(
+                                (question.performanceStats.correctAttempts /
+                                  question.performanceStats.totalAttempts) *
+                                100
+                              ).toFixed(1)}
+                              %
                             </p>
                           </div>
                           <div className="bg-gray-50 p-3 rounded-lg">
                             <span className="text-gray-500">Avg Time</span>
-                            <p className="font-semibold">{Math.floor(question.performanceStats.averageTime / 60)}m {question.performanceStats.averageTime % 60}s</p>
+                            <p className="font-semibold">
+                              {Math.floor(question.performanceStats.averageTime / 60)}m{' '}
+                              {question.performanceStats.averageTime % 60}s
+                            </p>
                           </div>
                           <div className="bg-gray-50 p-3 rounded-lg">
                             <span className="text-gray-500">Community Rating</span>
-                            <p className="font-semibold">{question.communityStats.rating.toFixed(1)}/5</p>
+                            <p className="font-semibold">
+                              {question.communityStats.rating.toFixed(1)}/5
+                            </p>
                           </div>
                         </div>
 
@@ -604,7 +652,7 @@ const QuestionBank: React.FC = () => {
                     Difficulty Level
                   </label>
                   <div className="flex gap-2">
-                    {availableOptions.difficulties.map(difficulty => (
+                    {availableOptions.difficulties.map((difficulty) => (
                       <label key={difficulty} className="flex items-center">
                         <input
                           type="checkbox"
@@ -612,12 +660,14 @@ const QuestionBank: React.FC = () => {
                           onChange={(e) => {
                             const newDifficulty = e.target.checked
                               ? [...filters.difficulty, difficulty]
-                              : filters.difficulty.filter(d => d !== difficulty)
+                              : filters.difficulty.filter((d) => d !== difficulty)
                             applyFilters({ ...filters, difficulty: newDifficulty })
                           }}
                           className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                         />
-                        <span className={`ml-2 px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(difficulty)}`}>
+                        <span
+                          className={`ml-2 px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(difficulty)}`}
+                        >
                           {difficulty}
                         </span>
                       </label>
@@ -627,11 +677,9 @@ const QuestionBank: React.FC = () => {
 
                 {/* Topic Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Topics
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Topics</label>
                   <div className="grid grid-cols-2 gap-2 max-h-32 overflow-y-auto">
-                    {availableOptions.topics.map(topic => (
+                    {availableOptions.topics.map((topic) => (
                       <label key={topic} className="flex items-center">
                         <input
                           type="checkbox"
@@ -639,7 +687,7 @@ const QuestionBank: React.FC = () => {
                           onChange={(e) => {
                             const newTopics = e.target.checked
                               ? [...filters.topics, topic]
-                              : filters.topics.filter(t => t !== topic)
+                              : filters.topics.filter((t) => t !== topic)
                             applyFilters({ ...filters, topics: newTopics })
                           }}
                           className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
@@ -656,7 +704,7 @@ const QuestionBank: React.FC = () => {
                     Question Types
                   </label>
                   <div className="flex gap-2">
-                    {availableOptions.types.map(type => (
+                    {availableOptions.types.map((type) => (
                       <label key={type} className="flex items-center">
                         <input
                           type="checkbox"
@@ -664,12 +712,14 @@ const QuestionBank: React.FC = () => {
                           onChange={(e) => {
                             const newTypes = e.target.checked
                               ? [...filters.types, type]
-                              : filters.types.filter(t => t !== type)
+                              : filters.types.filter((t) => t !== type)
                             applyFilters({ ...filters, types: newTypes })
                           }}
                           className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                         />
-                        <span className={`ml-2 px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(type)}`}>
+                        <span
+                          className={`ml-2 px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(type)}`}
+                        >
                           {type.toUpperCase()}
                         </span>
                       </label>
@@ -699,10 +749,12 @@ const QuestionBank: React.FC = () => {
                       max="5"
                       step="0.1"
                       value={filters.ratingRange.min}
-                      onChange={(e) => applyFilters({
-                        ...filters,
-                        ratingRange: { ...filters.ratingRange, min: parseFloat(e.target.value) }
-                      })}
+                      onChange={(e) =>
+                        applyFilters({
+                          ...filters,
+                          ratingRange: { ...filters.ratingRange, min: parseFloat(e.target.value) },
+                        })
+                      }
                       className="flex-1"
                     />
                     <span className="text-sm text-gray-500 min-w-[4rem]">
@@ -714,10 +766,12 @@ const QuestionBank: React.FC = () => {
                       max="5"
                       step="0.1"
                       value={filters.ratingRange.max}
-                      onChange={(e) => applyFilters({
-                        ...filters,
-                        ratingRange: { ...filters.ratingRange, max: parseFloat(e.target.value) }
-                      })}
+                      onChange={(e) =>
+                        applyFilters({
+                          ...filters,
+                          ratingRange: { ...filters.ratingRange, max: parseFloat(e.target.value) },
+                        })
+                      }
                       className="flex-1"
                     />
                   </div>
@@ -734,10 +788,12 @@ const QuestionBank: React.FC = () => {
                       min="0"
                       max="100"
                       value={filters.usageRange.min}
-                      onChange={(e) => applyFilters({
-                        ...filters,
-                        usageRange: { ...filters.usageRange, min: parseInt(e.target.value) }
-                      })}
+                      onChange={(e) =>
+                        applyFilters({
+                          ...filters,
+                          usageRange: { ...filters.usageRange, min: parseInt(e.target.value) },
+                        })
+                      }
                       className="flex-1"
                     />
                     <span className="text-sm text-gray-500 min-w-[4rem]">
@@ -748,10 +804,12 @@ const QuestionBank: React.FC = () => {
                       min="0"
                       max="100"
                       value={filters.usageRange.max}
-                      onChange={(e) => applyFilters({
-                        ...filters,
-                        usageRange: { ...filters.usageRange, max: parseInt(e.target.value) }
-                      })}
+                      onChange={(e) =>
+                        applyFilters({
+                          ...filters,
+                          usageRange: { ...filters.usageRange, max: parseInt(e.target.value) },
+                        })
+                      }
                       className="flex-1"
                     />
                   </div>
@@ -763,7 +821,9 @@ const QuestionBank: React.FC = () => {
                     <input
                       type="checkbox"
                       checked={filters.onlyFavorites}
-                      onChange={(e) => applyFilters({ ...filters, onlyFavorites: e.target.checked })}
+                      onChange={(e) =>
+                        applyFilters({ ...filters, onlyFavorites: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                     />
                     <span className="ml-2 text-sm">Only show favorites</span>
@@ -772,7 +832,9 @@ const QuestionBank: React.FC = () => {
                     <input
                       type="checkbox"
                       checked={filters.onlyCommunity}
-                      onChange={(e) => applyFilters({ ...filters, onlyCommunity: e.target.checked })}
+                      onChange={(e) =>
+                        applyFilters({ ...filters, onlyCommunity: e.target.checked })
+                      }
                       className="rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                     />
                     <span className="ml-2 text-sm">Only show community questions</span>
@@ -781,9 +843,7 @@ const QuestionBank: React.FC = () => {
 
                 {/* Creator Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Created By
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Created By</label>
                   <input
                     type="text"
                     placeholder="Filter by creator name"
@@ -816,7 +876,7 @@ const QuestionBank: React.FC = () => {
                         usageRange: { min: 0, max: 100 },
                         ratingRange: { min: 0, max: 5 },
                         onlyFavorites: false,
-                        onlyCommunity: false
+                        onlyCommunity: false,
                       })
                       setFilteredQuestions(questions)
                     }}
@@ -849,31 +909,41 @@ const QuestionBank: React.FC = () => {
               </h3>
 
               <div className="space-y-4">
-                {questions.filter(q => q.isFavorite).map((question) => (
-                  <div key={question.id} className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
-                            {question.difficulty}
-                          </span>
-                          <span className="text-sm text-gray-500">{question.topic}</span>
+                {questions
+                  .filter((q) => q.isFavorite)
+                  .map((question) => (
+                    <div
+                      key={question.id}
+                      className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}
+                            >
+                              {question.difficulty}
+                            </span>
+                            <span className="text-sm text-gray-500">{question.topic}</span>
+                          </div>
+                          <p className="text-gray-800 font-medium line-clamp-1">
+                            {question.question}
+                          </p>
+                          <p className="text-sm text-gray-500 mt-1">
+                            Used {question.usageCount} times • Rating:{' '}
+                            {question.communityStats.rating.toFixed(1)}/5
+                          </p>
                         </div>
-                        <p className="text-gray-800 font-medium line-clamp-1">{question.question}</p>
-                        <p className="text-sm text-gray-500 mt-1">
-                          Used {question.usageCount} times • Rating: {question.communityStats.rating.toFixed(1)}/5
-                        </p>
+                        <button
+                          onClick={() => toggleFavorite(question.id)}
+                          className="p-2 text-red-600 bg-red-100 rounded-lg hover:bg-red-200 transition-colors"
+                        >
+                          <Heart className="w-5 h-5 fill-current" />
+                        </button>
                       </div>
-                      <button
-                        onClick={() => toggleFavorite(question.id)}
-                        className="p-2 text-red-600 bg-red-100 rounded-lg hover:bg-red-200 transition-colors"
-                      >
-                        <Heart className="w-5 h-5 fill-current" />
-                      </button>
                     </div>
-                  </div>
-                ))}
-                {questions.filter(q => q.isFavorite).length === 0 && (
+                  ))}
+                {questions.filter((q) => q.isFavorite).length === 0 && (
                   <div className="text-center py-8 text-gray-500">
                     <Heart className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                     <p>No favorite questions yet. Start adding questions to your favorites!</p>
@@ -904,37 +974,48 @@ const QuestionBank: React.FC = () => {
                   .sort((a, b) => new Date(b.lastUsed).getTime() - new Date(a.lastUsed).getTime())
                   .slice(0, 20)
                   .map((question) => (
-                  <div key={question.id} className="p-4 border rounded-lg">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
-                            {question.difficulty}
-                          </span>
-                          <span className="text-sm text-gray-500">{question.topic}</span>
-                          <span className="text-xs text-gray-400">
-                            Last used: {new Date(question.lastUsed).toLocaleDateString()}
-                          </span>
+                    <div key={question.id} className="p-4 border rounded-lg">
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}
+                            >
+                              {question.difficulty}
+                            </span>
+                            <span className="text-sm text-gray-500">{question.topic}</span>
+                            <span className="text-xs text-gray-400">
+                              Last used: {new Date(question.lastUsed).toLocaleDateString()}
+                            </span>
+                          </div>
+                          <p className="text-gray-800 font-medium line-clamp-1">
+                            {question.question}
+                          </p>
+                          <div className="flex items-center gap-4 text-sm text-gray-500 mt-1">
+                            <span>Used {question.usageCount} times</span>
+                            <span>
+                              Success rate:{' '}
+                              {(
+                                (question.performanceStats.correctAttempts /
+                                  question.performanceStats.totalAttempts) *
+                                100
+                              ).toFixed(1)}
+                              %
+                            </span>
+                          </div>
                         </div>
-                        <p className="text-gray-800 font-medium line-clamp-1">{question.question}</p>
-                        <div className="flex items-center gap-4 text-sm text-gray-500 mt-1">
-                          <span>Used {question.usageCount} times</span>
-                          <span>
-                            Success rate: {((question.performanceStats.correctAttempts / question.performanceStats.totalAttempts) * 100).toFixed(1)}%
-                          </span>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-sm font-medium text-gray-800">
-                          {question.usageCount} uses
-                        </div>
-                        <div className="text-xs text-gray-500">
-                          {Math.floor(question.performanceStats.averageTime / 60)}m {question.performanceStats.averageTime % 60}s avg
+                        <div className="text-right">
+                          <div className="text-sm font-medium text-gray-800">
+                            {question.usageCount} uses
+                          </div>
+                          <div className="text-xs text-gray-500">
+                            {Math.floor(question.performanceStats.averageTime / 60)}m{' '}
+                            {question.performanceStats.averageTime % 60}s avg
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </motion.div>
@@ -961,7 +1042,9 @@ const QuestionBank: React.FC = () => {
                   <div key={question.id} className="p-4 bg-gray-50 rounded-lg">
                     <div className="flex items-center justify-between mb-2">
                       <span className="font-medium text-sm line-clamp-1">{question.question}</span>
-                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
+                      <span
+                        className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}
+                      >
                         {question.difficulty}
                       </span>
                     </div>
@@ -973,13 +1056,19 @@ const QuestionBank: React.FC = () => {
                       <div>
                         <span className="text-gray-500">Success Rate</span>
                         <p className="font-semibold text-green-600">
-                          {((question.performanceStats.correctAttempts / question.performanceStats.totalAttempts) * 100).toFixed(1)}%
+                          {(
+                            (question.performanceStats.correctAttempts /
+                              question.performanceStats.totalAttempts) *
+                            100
+                          ).toFixed(1)}
+                          %
                         </p>
                       </div>
                       <div>
                         <span className="text-gray-500">Avg Time</span>
                         <p className="font-semibold">
-                          {Math.floor(question.performanceStats.averageTime / 60)}m {question.performanceStats.averageTime % 60}s
+                          {Math.floor(question.performanceStats.averageTime / 60)}m{' '}
+                          {question.performanceStats.averageTime % 60}s
                         </p>
                       </div>
                     </div>
@@ -996,9 +1085,9 @@ const QuestionBank: React.FC = () => {
               </h3>
 
               <div className="space-y-3">
-                {availableOptions.topics.map(topic => {
-                  const topicQuestions = questions.filter(q => q.topic === topic)
-                  const percentage = (topicQuestions.length / questions.length * 100).toFixed(1)
+                {availableOptions.topics.map((topic) => {
+                  const topicQuestions = questions.filter((q) => q.topic === topic)
+                  const percentage = ((topicQuestions.length / questions.length) * 100).toFixed(1)
                   return (
                     <div key={topic} className="flex items-center justify-between">
                       <span className="text-sm font-medium">{topic}</span>
@@ -1031,19 +1120,24 @@ const QuestionBank: React.FC = () => {
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg text-center">
                   <div className="text-2xl font-bold text-green-600">
-                    {questions.filter(q => q.isFavorite).length}
+                    {questions.filter((q) => q.isFavorite).length}
                   </div>
                   <div className="text-sm text-green-600">Favorites</div>
                 </div>
                 <div className="bg-purple-50 p-4 rounded-lg text-center">
                   <div className="text-2xl font-bold text-purple-600">
-                    {(questions.reduce((sum, q) => sum + q.communityStats.rating, 0) / questions.length).toFixed(1)}
+                    {(
+                      questions.reduce((sum, q) => sum + q.communityStats.rating, 0) /
+                      questions.length
+                    ).toFixed(1)}
                   </div>
                   <div className="text-sm text-purple-600">Avg Rating</div>
                 </div>
                 <div className="bg-orange-50 p-4 rounded-lg text-center">
                   <div className="text-2xl font-bold text-orange-600">
-                    {Math.round(questions.reduce((sum, q) => sum + q.usageCount, 0) / questions.length)}
+                    {Math.round(
+                      questions.reduce((sum, q) => sum + q.usageCount, 0) / questions.length
+                    )}
                   </div>
                   <div className="text-sm text-orange-600">Avg Usage</div>
                 </div>
@@ -1069,63 +1163,72 @@ const QuestionBank: React.FC = () => {
 
               <div className="space-y-4">
                 {questions
-                  .filter(q => q.isPublic)
+                  .filter((q) => q.isPublic)
                   .sort((a, b) => b.communityStats.views - a.communityStats.views)
                   .slice(0, 15)
                   .map((question) => (
-                  <div key={question.id} className="p-4 border rounded-lg hover:bg-gray-50 transition-colors">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
-                            {question.difficulty}
-                          </span>
-                          <span className="text-sm text-gray-500">{question.topic}</span>
-                          <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
-                            {question.createdBy}
-                          </span>
+                    <div
+                      key={question.id}
+                      className="p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}
+                            >
+                              {question.difficulty}
+                            </span>
+                            <span className="text-sm text-gray-500">{question.topic}</span>
+                            <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded-full">
+                              {question.createdBy}
+                            </span>
+                          </div>
+                          <p className="text-gray-800 font-medium line-clamp-2 mb-2">
+                            {question.question}
+                          </p>
+                          <div className="flex items-center gap-4 text-sm text-gray-500">
+                            <span className="flex items-center gap-1">
+                              <Eye className="w-4 h-4" />
+                              {question.communityStats.views}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <ThumbsUp className="w-4 h-4" />
+                              {question.communityStats.likes}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <MessageSquare className="w-4 h-4" />
+                              {question.communityStats.comments}
+                            </span>
+                            <span className="flex items-center gap-1">
+                              <Star className="w-4 h-4" />
+                              {question.communityStats.rating.toFixed(1)}
+                            </span>
+                          </div>
                         </div>
-                        <p className="text-gray-800 font-medium line-clamp-2 mb-2">{question.question}</p>
-                        <div className="flex items-center gap-4 text-sm text-gray-500">
-                          <span className="flex items-center gap-1">
-                            <Eye className="w-4 h-4" />
-                            {question.communityStats.views}
-                          </span>
-                          <span className="flex items-center gap-1">
+                        <div className="flex items-center gap-2 ml-4">
+                          <button className="p-2 text-gray-400 hover:text-green-600 rounded-lg hover:bg-green-50 transition-colors">
                             <ThumbsUp className="w-4 h-4" />
-                            {question.communityStats.likes}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <MessageSquare className="w-4 h-4" />
-                            {question.communityStats.comments}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Star className="w-4 h-4" />
-                            {question.communityStats.rating.toFixed(1)}
-                          </span>
+                          </button>
+                          <button className="p-2 text-gray-400 hover:text-red-600 rounded-lg hover:bg-red-50 transition-colors">
+                            <ThumbsDown className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => toggleFavorite(question.id)}
+                            className={`p-2 rounded-lg transition-colors ${
+                              question.isFavorite
+                                ? 'text-red-600 bg-red-100'
+                                : 'text-gray-400 hover:text-red-600 hover:bg-red-50'
+                            }`}
+                          >
+                            <Heart
+                              className={`w-4 h-4 ${question.isFavorite ? 'fill-current' : ''}`}
+                            />
+                          </button>
                         </div>
-                      </div>
-                      <div className="flex items-center gap-2 ml-4">
-                        <button className="p-2 text-gray-400 hover:text-green-600 rounded-lg hover:bg-green-50 transition-colors">
-                          <ThumbsUp className="w-4 h-4" />
-                        </button>
-                        <button className="p-2 text-gray-400 hover:text-red-600 rounded-lg hover:bg-red-50 transition-colors">
-                          <ThumbsDown className="w-4 h-4" />
-                        </button>
-                        <button
-                          onClick={() => toggleFavorite(question.id)}
-                          className={`p-2 rounded-lg transition-colors ${
-                            question.isFavorite
-                              ? 'text-red-600 bg-red-100'
-                              : 'text-gray-400 hover:text-red-600 hover:bg-red-50'
-                          }`}
-                        >
-                          <Heart className={`w-4 h-4 ${question.isFavorite ? 'fill-current' : ''}`} />
-                        </button>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
 
               <div className="mt-6 text-center">
@@ -1158,57 +1261,62 @@ const QuestionBank: React.FC = () => {
                   .sort((a, b) => b.communityStats.rating - a.communityStats.rating)
                   .slice(0, 15)
                   .map((question) => (
-                  <div key={question.id} className="p-4 border rounded-lg">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}>
-                            {question.difficulty}
-                          </span>
-                          <span className="text-sm text-gray-500">{question.topic}</span>
-                          <div className="flex items-center gap-1">
-                            {[1, 2, 3, 4, 5].map((star) => (
-                              <Star
-                                key={star}
-                                className={`w-4 h-4 ${
-                                  star <= question.communityStats.rating
-                                    ? 'text-yellow-400 fill-current'
-                                    : 'text-gray-300'
-                                }`}
-                              />
-                            ))}
-                            <span className="text-sm text-gray-500 ml-1">
-                              ({question.communityStats.totalRatings})
+                    <div key={question.id} className="p-4 border rounded-lg">
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <span
+                              className={`px-2 py-1 rounded-full text-xs font-medium ${getDifficultyColor(question.difficulty)}`}
+                            >
+                              {question.difficulty}
                             </span>
+                            <span className="text-sm text-gray-500">{question.topic}</span>
+                            <div className="flex items-center gap-1">
+                              {[1, 2, 3, 4, 5].map((star) => (
+                                <Star
+                                  key={star}
+                                  className={`w-4 h-4 ${
+                                    star <= question.communityStats.rating
+                                      ? 'text-yellow-400 fill-current'
+                                      : 'text-gray-300'
+                                  }`}
+                                />
+                              ))}
+                              <span className="text-sm text-gray-500 ml-1">
+                                ({question.communityStats.totalRatings})
+                              </span>
+                            </div>
+                          </div>
+                          <p className="text-gray-800 font-medium line-clamp-2 mb-2">
+                            {question.question}
+                          </p>
+                          <div className="text-sm text-gray-500">
+                            Created by {question.createdBy} •{' '}
+                            {question.communityStats.rating.toFixed(1)}/5 rating
                           </div>
                         </div>
-                        <p className="text-gray-800 font-medium line-clamp-2 mb-2">{question.question}</p>
-                        <div className="text-sm text-gray-500">
-                          Created by {question.createdBy} • {question.communityStats.rating.toFixed(1)}/5 rating
-                        </div>
-                      </div>
-                      <div className="ml-4">
-                        <div className="flex gap-1">
-                          {[1, 2, 3, 4, 5].map((star) => (
-                            <button
-                              key={star}
-                              onClick={() => rateQuestion(question.id, star)}
-                              className="p-1 hover:bg-yellow-50 rounded transition-colors"
-                            >
-                              <Star
-                                className={`w-5 h-5 ${
-                                  star <= question.communityStats.rating
-                                    ? 'text-yellow-400 fill-current'
-                                    : 'text-gray-300 hover:text-yellow-400'
-                                }`}
-                              />
-                            </button>
-                          ))}
+                        <div className="ml-4">
+                          <div className="flex gap-1">
+                            {[1, 2, 3, 4, 5].map((star) => (
+                              <button
+                                key={star}
+                                onClick={() => rateQuestion(question.id, star)}
+                                className="p-1 hover:bg-yellow-50 rounded transition-colors"
+                              >
+                                <Star
+                                  className={`w-5 h-5 ${
+                                    star <= question.communityStats.rating
+                                      ? 'text-yellow-400 fill-current'
+                                      : 'text-gray-300 hover:text-yellow-400'
+                                  }`}
+                                />
+                              </button>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
               </div>
             </div>
           </motion.div>

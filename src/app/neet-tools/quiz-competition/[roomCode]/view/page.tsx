@@ -618,7 +618,8 @@ export default function StudentViewPage() {
             Back to Quiz Competition
           </Link>
           <p className="mt-6 text-xs text-slate-500">
-            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
+            Powered by{' '}
+            <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </main>
@@ -742,7 +743,8 @@ export default function StudentViewPage() {
           </div>
 
           <p className="mt-4 text-center text-xs text-slate-500">
-            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
+            Powered by{' '}
+            <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </main>
@@ -828,7 +830,8 @@ export default function StudentViewPage() {
           </Link>
 
           <p className="mt-6 text-center text-xs text-slate-500">
-            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
+            Powered by{' '}
+            <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </main>
@@ -1395,7 +1398,8 @@ export default function StudentViewPage() {
         <div className="mt-4 text-center">
           <p className="text-xs text-slate-500">Last updated: {lastUpdate.toLocaleTimeString()}</p>
           <p className="mt-2 text-xs text-slate-600">
-            Powered by <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
+            Powered by{' '}
+            <span className="font-semibold text-[#4a5d4a]">Cerebrum Biology Academy</span>
           </p>
         </div>
       </div>

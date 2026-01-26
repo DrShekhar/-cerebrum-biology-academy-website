@@ -3,15 +3,7 @@
 import React, { useState, useRef, useCallback } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  Camera,
-  Upload,
-  X,
-  Eye,
-  Sparkles,
-  Brain,
-  Zap,
-} from 'lucide-react'
+import { Camera, Upload, X, Eye, Sparkles, Brain, Zap } from 'lucide-react'
 
 interface ImageAnalysisResult {
   id: string

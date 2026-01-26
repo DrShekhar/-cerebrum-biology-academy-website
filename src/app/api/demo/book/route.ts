@@ -21,16 +21,23 @@ const demoBookingSchema = z.object({
     .min(2, 'Name must be at least 2 characters')
     .max(100, 'Name must be less than 100 characters')
     // Support Unicode letters (Hindi, Tamil, etc.) and spaces
-    .regex(/^[\p{L}\p{M}\s'-]+$/u, 'Name can only contain letters, spaces, hyphens, and apostrophes'),
-  email: z.string().email('Please enter a valid email address').transform((email) => email.toLowerCase().trim()),
-  phone: z
+    .regex(
+      /^[\p{L}\p{M}\s'-]+$/u,
+      'Name can only contain letters, spaces, hyphens, and apostrophes'
+    ),
+  email: z
     .string()
-    .refine(validatePhoneNumber, 'Phone must have 10-15 digits'),
+    .email('Please enter a valid email address')
+    .transform((email) => email.toLowerCase().trim()),
+  phone: z.string().refine(validatePhoneNumber, 'Phone must have 10-15 digits'),
   preferredDate: z
     .string()
     .regex(/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2})?/)
     .or(z.enum(['TODAY', 'TOMORROW', 'ASAP'])), // Allow urgent options
-  preferredTime: z.string().regex(/^\d{2}:\d{2}$/).or(z.enum(['ASAP', 'MORNING', 'AFTERNOON', 'EVENING'])),
+  preferredTime: z
+    .string()
+    .regex(/^\d{2}:\d{2}$/)
+    .or(z.enum(['ASAP', 'MORNING', 'AFTERNOON', 'EVENING'])),
   courseInterest: z.string().min(1).max(100),
   studentClass: z.string().max(50).optional(),
   previousKnowledge: z.string().max(1000).optional(),
@@ -111,7 +118,10 @@ export async function POST(request: NextRequest) {
     if (spamResult?.blocked) {
       logger.warn('Blocked spam IP attempted demo booking', { clientIp })
       return NextResponse.json(
-        { success: false, error: 'Your IP has been temporarily blocked due to suspicious activity.' },
+        {
+          success: false,
+          error: 'Your IP has been temporarily blocked due to suspicious activity.',
+        },
         { status: 403 }
       )
     }
@@ -377,7 +387,9 @@ export async function POST(request: NextRequest) {
               stage: 'DEMO_SCHEDULED',
               demoBookingId: booking.id,
               // Update if name is different
-              ...(body.studentName !== existingLead.studentName && { studentName: body.studentName }),
+              ...(body.studentName !== existingLead.studentName && {
+                studentName: body.studentName,
+              }),
             },
           })
         } else {

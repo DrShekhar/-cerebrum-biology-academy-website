@@ -441,7 +441,9 @@ export default function ParentChildAttendancePage() {
                       </div>
                       <p className="text-sm text-gray-600 mt-1">{record.session.course.name}</p>
                       {record.notes && (
-                        <p className="text-sm text-gray-500 mt-2 italic">&quot;{record.notes}&quot;</p>
+                        <p className="text-sm text-gray-500 mt-2 italic">
+                          &quot;{record.notes}&quot;
+                        </p>
                       )}
                     </div>
                     <div className="text-right flex-shrink-0">

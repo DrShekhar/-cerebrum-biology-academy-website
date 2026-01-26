@@ -19,15 +19,15 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
   const [showExitConfirm, setShowExitConfirm] = useState(false)
 
   const currentQuestion = test.questions[currentQuestionIndex]
-  const currentResponse = responses.find(r => r.questionId === currentQuestion.id)
+  const currentResponse = responses.find((r) => r.questionId === currentQuestion.id)
 
   // Initialize responses array
   useEffect(() => {
-    const initialResponses: TestResponse[] = test.questions.map(q => ({
+    const initialResponses: TestResponse[] = test.questions.map((q) => ({
       questionId: q.id,
       selectedAnswer: null,
       isMarkedForReview: false,
-      timeTaken: 0
+      timeTaken: 0,
     }))
     setResponses(initialResponses)
   }, [test.questions])
@@ -45,7 +45,7 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
         responses,
         currentQuestionIndex,
         startTime,
-        lastSavedTime: Date.now()
+        lastSavedTime: Date.now(),
       })
     }
 
@@ -55,30 +55,34 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
   }, [responses, currentQuestionIndex, test.id, userClass, startTime])
 
   const handleAnswerSelect = (optionIndex: number) => {
-    setResponses(prev => prev.map(response => 
-      response.questionId === currentQuestion.id
-        ? { ...response, selectedAnswer: optionIndex }
-        : response
-    ))
+    setResponses((prev) =>
+      prev.map((response) =>
+        response.questionId === currentQuestion.id
+          ? { ...response, selectedAnswer: optionIndex }
+          : response
+      )
+    )
   }
 
   const handleMarkForReview = () => {
-    setResponses(prev => prev.map(response => 
-      response.questionId === currentQuestion.id
-        ? { ...response, isMarkedForReview: !response.isMarkedForReview }
-        : response
-    ))
+    setResponses((prev) =>
+      prev.map((response) =>
+        response.questionId === currentQuestion.id
+          ? { ...response, isMarkedForReview: !response.isMarkedForReview }
+          : response
+      )
+    )
   }
 
   const handleNext = () => {
     if (currentQuestionIndex < test.questions.length - 1) {
-      setCurrentQuestionIndex(prev => prev + 1)
+      setCurrentQuestionIndex((prev) => prev + 1)
     }
   }
 
   const handlePrevious = () => {
     if (currentQuestionIndex > 0) {
-      setCurrentQuestionIndex(prev => prev - 1)
+      setCurrentQuestionIndex((prev) => prev - 1)
     }
   }
 
@@ -97,11 +101,11 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
   }
 
   const getAnsweredCount = () => {
-    return responses.filter(r => r.selectedAnswer !== null).length
+    return responses.filter((r) => r.selectedAnswer !== null).length
   }
 
   const getMarkedCount = () => {
-    return responses.filter(r => r.isMarkedForReview).length
+    return responses.filter((r) => r.isMarkedForReview).length
   }
 
   if (showExitConfirm) {
@@ -113,13 +117,13 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
             Are you sure you want to exit? Your progress will be lost.
           </p>
           <div className="flex space-x-4">
-            <button 
+            <button
               onClick={handleExitCancel}
               className="flex-1 bg-gray-200 text-gray-800 py-3 rounded-xl font-semibold hover:bg-gray-300 transition-colors"
             >
               Cancel
             </button>
-            <button 
+            <button
               onClick={onTestExit}
               className="flex-1 bg-red-600 text-white py-3 rounded-xl font-semibold hover:bg-red-700 transition-colors"
             >
@@ -137,7 +141,7 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
       <div className="bg-white border-b border-gray-200 py-4 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <button 
+            <button
               onClick={handleExitConfirm}
               className="text-red-600 hover:text-red-700 font-medium"
             >
@@ -153,9 +157,7 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
             <div className="text-green-600 font-medium">
               Answered: {getAnsweredCount()}/{test.totalQuestions}
             </div>
-            <div className="text-yellow-600 font-medium">
-              Marked: {getMarkedCount()}
-            </div>
+            <div className="text-yellow-600 font-medium">Marked: {getMarkedCount()}</div>
           </div>
         </div>
       </div>
@@ -171,11 +173,15 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
                   Question {currentQuestionIndex + 1} of {test.totalQuestions}
                 </div>
                 <div className="flex items-center space-x-2">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    currentQuestion.difficulty === 'easy' ? 'bg-green-100 text-green-800' :
-                    currentQuestion.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-800' :
-                    'bg-red-100 text-red-800'
-                  }`}>
+                  <span
+                    className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      currentQuestion.difficulty === 'easy'
+                        ? 'bg-green-100 text-green-800'
+                        : currentQuestion.difficulty === 'medium'
+                          ? 'bg-yellow-100 text-yellow-800'
+                          : 'bg-red-100 text-red-800'
+                    }`}
+                  >
                     {currentQuestion.difficulty}
                   </span>
                   <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold">
@@ -204,11 +210,13 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
                     }`}
                   >
                     <div className="flex items-center space-x-4">
-                      <div className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-semibold ${
-                        currentResponse?.selectedAnswer === index
-                          ? 'border-blue-500 bg-blue-500 text-white'
-                          : 'border-gray-300 text-gray-600'
-                      }`}>
+                      <div
+                        className={`w-8 h-8 rounded-full border-2 flex items-center justify-center font-semibold ${
+                          currentResponse?.selectedAnswer === index
+                            ? 'border-blue-500 bg-blue-500 text-white'
+                            : 'border-gray-300 text-gray-600'
+                        }`}
+                      >
                         {String.fromCharCode(65 + index)}
                       </div>
                       <span className="text-gray-800">{option}</span>
@@ -262,10 +270,10 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
           <div className="lg:col-span-1">
             <div className="bg-white rounded-3xl shadow-lg p-6 sticky top-24">
               <h3 className="text-lg font-bold text-gray-900 mb-4">Question Palette</h3>
-              
+
               <div className="grid grid-cols-5 gap-2 mb-6">
                 {test.questions.map((_, index) => {
-                  const response = responses.find(r => r.questionId === test.questions[index].id)
+                  const response = responses.find((r) => r.questionId === test.questions[index].id)
                   const isAnswered = response?.selectedAnswer !== null
                   const isMarked = response?.isMarkedForReview
                   const isCurrent = index === currentQuestionIndex
@@ -278,10 +286,10 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
                         isCurrent
                           ? 'bg-blue-600 text-white'
                           : isAnswered
-                          ? 'bg-green-600 text-white hover:bg-green-600'
-                          : isMarked
-                          ? 'bg-yellow-500 text-white hover:bg-yellow-600'
-                          : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                            ? 'bg-green-600 text-white hover:bg-green-600'
+                            : isMarked
+                              ? 'bg-yellow-500 text-white hover:bg-yellow-600'
+                              : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
                       }`}
                     >
                       {index + 1}
@@ -316,7 +324,7 @@ export function TestInterface({ test, userClass, onTestComplete, onTestExit }: T
                   Progress: {getAnsweredCount()}/{test.totalQuestions}
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div 
+                  <div
                     className="bg-blue-600 h-2 rounded-full transition-all"
                     style={{ width: `${(getAnsweredCount() / test.totalQuestions) * 100}%` }}
                   ></div>

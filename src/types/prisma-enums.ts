@@ -55,11 +55,7 @@ export type NoteType = 'TEXT' | 'DRAWING' | 'MIXED'
 
 export type EvaluationSlot = 'MORNING' | 'AFTERNOON' | 'EVENING'
 
-export type StreakProtectionType =
-  | 'FREEZE'
-  | 'WEEKEND_PAUSE'
-  | 'SICK_LEAVE'
-  | 'EMERGENCY'
+export type StreakProtectionType = 'FREEZE' | 'WEEKEND_PAUSE' | 'SICK_LEAVE' | 'EMERGENCY'
 
 // Re-export SubmissionStatus from Prisma for consistency
 export type { SubmissionStatus } from '@/generated/prisma'

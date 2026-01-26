@@ -78,7 +78,10 @@ export function Breadcrumbs({ items, className = '' }: BreadcrumbsProps) {
     <nav className={`breadcrumbs text-sm text-gray-400 py-2 ${className}`} aria-label="Breadcrumb">
       <ol className="flex items-center space-x-1">
         {breadcrumbItems.map((item, index) => (
-          <li key={`crumb-${item.label.toLowerCase().replace(/\s+/g, '-')}-${item.href || 'current'}`} className="flex items-center">
+          <li
+            key={`crumb-${item.label.toLowerCase().replace(/\s+/g, '-')}-${item.href || 'current'}`}
+            className="flex items-center"
+          >
             {index > 0 && <span className="mx-2 text-gray-500">/</span>}
 
             {item.href && !item.current ? (

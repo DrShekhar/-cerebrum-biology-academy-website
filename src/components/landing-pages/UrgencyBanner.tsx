@@ -68,9 +68,7 @@ export function UrgencyBanner({
           className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-white sm:px-6 sm:py-3"
         >
           <Clock className="h-5 w-5" />
-          <span className="text-sm font-semibold sm:text-base">
-            Batch starts: {batchStartDate}
-          </span>
+          <span className="text-sm font-semibold sm:text-base">Batch starts: {batchStartDate}</span>
         </motion.div>
       )}
 
@@ -83,7 +81,10 @@ export function UrgencyBanner({
       >
         <Users className="h-5 w-5 text-yellow-800" />
         <span className="text-sm font-semibold text-slate-900 sm:text-base">
-          <span className="font-bold text-[#ea4335]">{seatsFilled}/{seatsTotal}</span> seats filled
+          <span className="font-bold text-[#ea4335]">
+            {seatsFilled}/{seatsTotal}
+          </span>{' '}
+          seats filled
         </span>
       </motion.div>
     </div>
@@ -103,8 +104,20 @@ const MOCK_ACTIVITIES: ActivityNotification[] = [
   { id: '1', name: 'Rahul S.', location: 'Noida', action: 'booked a demo', timestamp: new Date() },
   { id: '2', name: 'Priya K.', location: 'Gurgaon', action: 'enrolled', timestamp: new Date() },
   { id: '3', name: 'Amit R.', location: 'Delhi', action: 'booked a demo', timestamp: new Date() },
-  { id: '4', name: 'Sneha M.', location: 'Faridabad', action: 'started trial', timestamp: new Date() },
-  { id: '5', name: 'Rohan P.', location: 'Ghaziabad', action: 'booked a demo', timestamp: new Date() },
+  {
+    id: '4',
+    name: 'Sneha M.',
+    location: 'Faridabad',
+    action: 'started trial',
+    timestamp: new Date(),
+  },
+  {
+    id: '5',
+    name: 'Rohan P.',
+    location: 'Ghaziabad',
+    action: 'booked a demo',
+    timestamp: new Date(),
+  },
 ]
 
 export function SocialProofNotifications() {

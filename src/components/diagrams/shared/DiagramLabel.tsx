@@ -33,8 +33,7 @@ export function DiagramLabel({
   const textAnchor = side === 'left' ? 'end' : side === 'right' ? 'start' : 'middle'
   const dy = side === 'top' ? -8 : side === 'bottom' ? 16 : 4
 
-  const labelX =
-    side === 'left' ? position.x - 10 : side === 'right' ? position.x + 10 : position.x
+  const labelX = side === 'left' ? position.x - 10 : side === 'right' ? position.x + 10 : position.x
   const labelY = position.y
 
   return (

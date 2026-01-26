@@ -22,6 +22,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 const southDelhiAreas = [
   {
@@ -1051,16 +1052,15 @@ export default function PageContent() {
             <div className="grid lg:grid-cols-2">
               {/* Map */}
               <div className="relative h-96 lg:h-auto bg-gray-100">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8904729344643!2d77.21443931508122!3d28.56964948244002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e9f6f5f5f5%3A0x1234567890abcdef!2sSouth%20Extension%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-                  width="100%"
+                <LazyGoogleMap
+                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8904729344643!2d77.21443931508122!3d28.56964948244002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3e9f6f5f5f5%3A0x1234567890abcdef!2sSouth%20Extension%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  title="NEET Coaching Center Location"
                   height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Cerebrum Biology Academy Location - South Delhi"
-                  className="w-full h-full"
+                  placeholder={{
+                    lat: 28.56964948244002,
+                    lng: 77.21443931508122,
+                    address: "South Extension, New Delhi"
+                  }}
                 />
               </div>
 

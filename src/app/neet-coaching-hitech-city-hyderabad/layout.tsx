@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Hitech City Hyderabad | Madhapur, Kukatpally | Cerebrum Academy',
+  title: 'Best NEET Coaching in Hitech City Hyderabad | Madhapur, Kukatpally | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Hitech City IT corridor, Hyderabad. 94.2% success rate, AIIMS faculty. Madhapur, Kukatpally, KPHB, Miyapur, Raidurgam. IT families. Fee ₹24,000+. Book free demo!',
   keywords:
@@ -27,6 +26,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function HitechCityHyderabadCoachingLayout({ children }: { children: React.ReactNode }) {
+export default function HitechCityHyderabadCoachingLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

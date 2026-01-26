@@ -59,7 +59,11 @@ interface WorkTrackingWidgetProps {
   compact?: boolean
 }
 
-export function WorkTrackingWidget({ className, period = '7', compact = false }: WorkTrackingWidgetProps) {
+export function WorkTrackingWidget({
+  className,
+  period = '7',
+  compact = false,
+}: WorkTrackingWidgetProps) {
   const [summary, setSummary] = useState<WorkTrackingSummary | null>(null)
   const [isLoading, setIsLoading] = useState(true)
 
@@ -153,19 +157,22 @@ export function WorkTrackingWidget({ className, period = '7', compact = false }:
             </Button>
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-1">
-          Last {summary.period.days} days
-        </p>
+        <p className="text-xs text-gray-500 mt-1">Last {summary.period.days} days</p>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           {/* Overall Completion Score */}
           <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg border border-blue-100">
-            <div className={cn(
-              'text-3xl font-bold mb-1',
-              summary.completionRates.overall >= 80 ? 'text-green-600' :
-              summary.completionRates.overall >= 60 ? 'text-yellow-600' : 'text-red-600'
-            )}>
+            <div
+              className={cn(
+                'text-3xl font-bold mb-1',
+                summary.completionRates.overall >= 80
+                  ? 'text-green-600'
+                  : summary.completionRates.overall >= 60
+                    ? 'text-yellow-600'
+                    : 'text-red-600'
+              )}
+            >
               {summary.completionRates.overall}%
             </div>
             <div className="text-sm text-gray-600">Overall Completion</div>
@@ -229,9 +236,7 @@ export function WorkTrackingWidget({ className, period = '7', compact = false }:
                     <Clock className="w-4 h-4" />
                     Study Hours
                   </span>
-                  <span className="font-semibold text-gray-900">
-                    {summary.studyHours}h
-                  </span>
+                  <span className="font-semibold text-gray-900">{summary.studyHours}h</span>
                 </div>
               </div>
             </>

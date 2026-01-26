@@ -66,27 +66,30 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    return NextResponse.json({
-      success: true,
-      message: 'Gallery item created successfully',
-      item: {
-        id: item.id,
-        type: item.type,
-        title: item.title,
-        description: item.description,
-        category: item.category,
-        tags: item.tags,
-        featured: item.featured,
-        eventDate: item.eventDate,
-        cloudflareId: item.cloudflareId,
-        url: item.url,
-        thumbnailUrl: item.thumbnailUrl,
-        blurHash: item.blurHash,
-        width: item.width,
-        height: item.height,
-        createdAt: item.createdAt,
+    return NextResponse.json(
+      {
+        success: true,
+        message: 'Gallery item created successfully',
+        item: {
+          id: item.id,
+          type: item.type,
+          title: item.title,
+          description: item.description,
+          category: item.category,
+          tags: item.tags,
+          featured: item.featured,
+          eventDate: item.eventDate,
+          cloudflareId: item.cloudflareId,
+          url: item.url,
+          thumbnailUrl: item.thumbnailUrl,
+          blurHash: item.blurHash,
+          width: item.width,
+          height: item.height,
+          createdAt: item.createdAt,
+        },
       },
-    }, { status: 201 })
+      { status: 201 }
+    )
   } catch (error) {
     console.error('Admin gallery confirm error:', error)
 
@@ -101,9 +104,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    return NextResponse.json(
-      { success: false, error: 'Failed to confirm upload' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to confirm upload' }, { status: 500 })
   }
 }

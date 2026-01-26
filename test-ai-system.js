@@ -24,7 +24,7 @@ async function testServer() {
       console.log('   ❌ Server not responding properly')
     }
   } catch (error) {
-    console.log('   ❌ Server not accessible. Make sure it\'s running on port 3000')
+    console.log("   ❌ Server not accessible. Make sure it's running on port 3000")
   }
 }
 
@@ -56,10 +56,10 @@ const componentPaths = [
   'src/lib/ai/AssessmentAI.ts',
   'src/lib/ai/ContentIntelligence.ts',
   'src/lib/ai/PerformancePredictionAI.ts',
-  'src/lib/ai/AIEducationOrchestrator.ts'
+  'src/lib/ai/AIEducationOrchestrator.ts',
 ]
 
-componentPaths.forEach(filePath => {
+componentPaths.forEach((filePath) => {
   if (fs.existsSync(filePath)) {
     console.log(`   ✅ ${path.basename(filePath)} - Ready`)
   } else {

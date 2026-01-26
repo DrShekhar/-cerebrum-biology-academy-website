@@ -293,8 +293,6 @@ export default async function BiologyTopicPage({ params }: PageProps) {
           }),
         }}
       />
-
-      
     </div>
   )
 }

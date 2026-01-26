@@ -136,18 +136,24 @@ async function generateAllNCERTMCQs(config: Partial<GenerationConfig> = {}): Pro
   for (const chapter of chapters) {
     // Skip if already completed
     if (isChapterCompleted(state, chapter.ncertClass, chapter.number)) {
-      console.log(`[SKIP] Class ${chapter.ncertClass} Ch.${chapter.number}: ${chapter.name} (already done)`)
+      console.log(
+        `[SKIP] Class ${chapter.ncertClass} Ch.${chapter.number}: ${chapter.name} (already done)`
+      )
       continue
     }
 
     // Skip if PDF not available
     if (!chapter.pdfAvailable) {
-      console.log(`[SKIP] Class ${chapter.ncertClass} Ch.${chapter.number}: ${chapter.name} (no PDF)`)
+      console.log(
+        `[SKIP] Class ${chapter.ncertClass} Ch.${chapter.number}: ${chapter.name} (no PDF)`
+      )
       continue
     }
 
     processedCount++
-    console.log(`\n[${'#'.repeat(processedCount)}${'.'.repeat(totalToProcess - processedCount)}] Processing ${processedCount}/${totalToProcess}`)
+    console.log(
+      `\n[${'#'.repeat(processedCount)}${'.'.repeat(totalToProcess - processedCount)}] Processing ${processedCount}/${totalToProcess}`
+    )
 
     try {
       const result = await generateChapterMCQs(chapter.ncertClass as 11 | 12, chapter.number, {
@@ -166,7 +172,9 @@ async function generateAllNCERTMCQs(config: Partial<GenerationConfig> = {}): Pro
 
       saveProgress(state)
 
-      console.log(`[SUCCESS] Class ${chapter.ncertClass} Ch.${chapter.number}: ${result.totalSaved} questions saved`)
+      console.log(
+        `[SUCCESS] Class ${chapter.ncertClass} Ch.${chapter.number}: ${result.totalSaved} questions saved`
+      )
 
       // Longer delay between chapters to avoid rate limits
       await sleep(5000)
@@ -194,7 +202,9 @@ async function generateAllNCERTMCQs(config: Partial<GenerationConfig> = {}): Pro
   console.log(`Failed chapters: ${state.failedChapters.length}`)
   console.log(`Total questions generated: ${state.totalQuestionsGenerated}`)
   console.log(`Target: ${state.totalQuestionsTarget}`)
-  console.log(`Achievement: ${((state.totalQuestionsGenerated / state.totalQuestionsTarget) * 100).toFixed(1)}%`)
+  console.log(
+    `Achievement: ${((state.totalQuestionsGenerated / state.totalQuestionsTarget) * 100).toFixed(1)}%`
+  )
 
   if (state.failedChapters.length > 0) {
     console.log('\nFailed chapters:')
@@ -239,7 +249,9 @@ async function printDatabaseStats(): Promise<void> {
   `
 
   // Chapter distribution
-  const chapterDist = await prisma.$queryRaw<{ ncertClass: number; ncertChapter: number; count: bigint }[]>`
+  const chapterDist = await prisma.$queryRaw<
+    { ncertClass: number; ncertChapter: number; count: bigint }[]
+  >`
     SELECT "ncertClass", "ncertChapter", COUNT(*) as count
     FROM questions
     WHERE "isNcertBased" = true AND "ncertClass" IS NOT NULL
@@ -248,7 +260,9 @@ async function printDatabaseStats(): Promise<void> {
   `
 
   console.log(`\nTotal questions: ${totalQuestions}`)
-  console.log(`NCERT-based: ${ncertQuestions} (${((ncertQuestions / totalQuestions) * 100).toFixed(1)}%)`)
+  console.log(
+    `NCERT-based: ${ncertQuestions} (${((ncertQuestions / totalQuestions) * 100).toFixed(1)}%)`
+  )
   console.log(`PYQs: ${pyqQuestions} (${((pyqQuestions / totalQuestions) * 100).toFixed(1)}%)`)
 
   console.log('\nAnswer Distribution (NCERT questions):')
@@ -316,7 +330,10 @@ async function retryFailedChapters(config: Partial<GenerationConfig> = {}): Prom
 /**
  * Generate questions for a specific class only
  */
-async function generateForClass(ncertClass: 11 | 12, config: Partial<GenerationConfig> = {}): Promise<void> {
+async function generateForClass(
+  ncertClass: 11 | 12,
+  config: Partial<GenerationConfig> = {}
+): Promise<void> {
   const chapters = await ncertReader.getChaptersForClass(ncertClass)
   const state = loadProgress()
 
@@ -397,7 +414,9 @@ async function main() {
       default:
         console.log('NCERT MCQ Generator - Master Script')
         console.log('\nUsage:')
-        console.log('  npx ts-node scripts/ncert-mcq/generate-all-ncert-mcqs.ts [command] [options]')
+        console.log(
+          '  npx ts-node scripts/ncert-mcq/generate-all-ncert-mcqs.ts [command] [options]'
+        )
         console.log('\nCommands:')
         console.log('  all       - Generate for all chapters (default)')
         console.log('  class11   - Generate for Class 11 only')

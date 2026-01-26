@@ -36,7 +36,10 @@ export async function GET(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { searchParams } = new URL(request.url)
@@ -118,7 +121,10 @@ export async function GET(request: NextRequest) {
     })
   } catch (error) {
     console.error('Error fetching self-evaluations:', error)
-    return NextResponse.json({ success: false, error: 'Failed to fetch self-evaluations' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to fetch self-evaluations' },
+      { status: 500 }
+    )
   }
 }
 
@@ -131,7 +137,10 @@ export async function POST(request: NextRequest) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const body: CreateEvaluationData = await request.json()
@@ -154,13 +163,19 @@ export async function POST(request: NextRequest) {
     }
 
     // Validate ratings (1-5 scale)
-    if (body.difficultyRating !== undefined && (body.difficultyRating < 1 || body.difficultyRating > 5)) {
+    if (
+      body.difficultyRating !== undefined &&
+      (body.difficultyRating < 1 || body.difficultyRating > 5)
+    ) {
       return NextResponse.json(
         { success: false, error: 'Difficulty rating must be between 1 and 5' },
         { status: 400 }
       )
     }
-    if (body.confidenceLevel !== undefined && (body.confidenceLevel < 1 || body.confidenceLevel > 5)) {
+    if (
+      body.confidenceLevel !== undefined &&
+      (body.confidenceLevel < 1 || body.confidenceLevel > 5)
+    ) {
       return NextResponse.json(
         { success: false, error: 'Confidence level must be between 1 and 5' },
         { status: 400 }
@@ -221,6 +236,9 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('Error saving self-evaluation:', error)
-    return NextResponse.json({ success: false, error: 'Failed to save self-evaluation' }, { status: 500 })
+    return NextResponse.json(
+      { success: false, error: 'Failed to save self-evaluation' },
+      { status: 500 }
+    )
   }
 }

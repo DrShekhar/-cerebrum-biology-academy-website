@@ -93,19 +93,22 @@ export function AriaDatePicker({
     [existingPhone]
   )
 
-  const validatePhone = useCallback((value: string): boolean => {
-    const cleaned = value.replace(/\D/g, '')
-    if (cleaned.length !== 10) {
-      setPhoneError(language === 'hi' ? 'कृपया 10 अंकों का नंबर दें' : 'Please enter 10 digits')
-      return false
-    }
-    if (!/^[6-9]/.test(cleaned)) {
-      setPhoneError(language === 'hi' ? 'अमान्य मोबाइल नंबर' : 'Invalid mobile number')
-      return false
-    }
-    setPhoneError('')
-    return true
-  }, [language])
+  const validatePhone = useCallback(
+    (value: string): boolean => {
+      const cleaned = value.replace(/\D/g, '')
+      if (cleaned.length !== 10) {
+        setPhoneError(language === 'hi' ? 'कृपया 10 अंकों का नंबर दें' : 'Please enter 10 digits')
+        return false
+      }
+      if (!/^[6-9]/.test(cleaned)) {
+        setPhoneError(language === 'hi' ? 'अमान्य मोबाइल नंबर' : 'Invalid mobile number')
+        return false
+      }
+      setPhoneError('')
+      return true
+    },
+    [language]
+  )
 
   const handlePhoneSubmit = useCallback(() => {
     if (validatePhone(phone)) {
@@ -158,21 +161,19 @@ export function AriaDatePicker({
 
       {/* Step indicator */}
       <div className="mb-3 flex gap-1">
-        {['date', 'time', existingPhone ? null : 'phone', 'confirm']
-          .filter(Boolean)
-          .map((s) => (
-            <div
-              key={s}
-              className={`h-1 flex-1 rounded-full ${
-                step === s
-                  ? 'bg-green-500'
-                  : ['date', 'time', 'phone', 'confirm'].indexOf(step) >
+        {['date', 'time', existingPhone ? null : 'phone', 'confirm'].filter(Boolean).map((s) => (
+          <div
+            key={s}
+            className={`h-1 flex-1 rounded-full ${
+              step === s
+                ? 'bg-green-500'
+                : ['date', 'time', 'phone', 'confirm'].indexOf(step) >
                     ['date', 'time', 'phone', 'confirm'].indexOf(s as string)
                   ? 'bg-green-200'
                   : 'bg-slate-200'
-              }`}
-            />
-          ))}
+            }`}
+          />
+        ))}
       </div>
 
       {/* Date Selection */}
@@ -195,8 +196,8 @@ export function AriaDatePicker({
                       ? 'सप्ताहांत'
                       : 'Weekend'
                     : language === 'hi'
-                    ? 'कार्यदिवस'
-                    : 'Weekday'}
+                      ? 'कार्यदिवस'
+                      : 'Weekday'}
                 </span>
               </button>
             ))}
@@ -211,10 +212,7 @@ export function AriaDatePicker({
             <p className="text-xs text-slate-500">
               {language === 'hi' ? 'समय चुनें:' : 'Select time:'}
             </p>
-            <button
-              onClick={handleBack}
-              className="text-xs text-green-600 hover:text-green-700"
-            >
+            <button onClick={handleBack} className="text-xs text-green-600 hover:text-green-700">
               ← {language === 'hi' ? 'वापस' : 'Back'}
             </button>
           </div>
@@ -245,10 +243,7 @@ export function AriaDatePicker({
             <p className="text-xs text-slate-500">
               {language === 'hi' ? 'फ़ोन नंबर:' : 'Phone number:'}
             </p>
-            <button
-              onClick={handleBack}
-              className="text-xs text-green-600 hover:text-green-700"
-            >
+            <button onClick={handleBack} className="text-xs text-green-600 hover:text-green-700">
               ← {language === 'hi' ? 'वापस' : 'Back'}
             </button>
           </div>
@@ -285,10 +280,7 @@ export function AriaDatePicker({
             <p className="text-xs text-slate-500">
               {language === 'hi' ? 'पुष्टि करें:' : 'Confirm booking:'}
             </p>
-            <button
-              onClick={handleBack}
-              className="text-xs text-green-600 hover:text-green-700"
-            >
+            <button onClick={handleBack} className="text-xs text-green-600 hover:text-green-700">
               ← {language === 'hi' ? 'बदलें' : 'Change'}
             </button>
           </div>

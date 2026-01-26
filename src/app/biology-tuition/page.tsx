@@ -68,7 +68,8 @@ const tuitionByClass = [
   {
     title: 'Class 9-10 Biology Tuition',
     slug: '/biology-tuition-class-9-10',
-    description: 'Foundation building for NEET aspirants. Strong conceptual clarity from early years.',
+    description:
+      'Foundation building for NEET aspirants. Strong conceptual clarity from early years.',
     highlights: ['NCERT-focused curriculum', 'Foundation for NEET', 'Board exam preparation'],
     icon: BookOpen,
     color: 'bg-green-600',

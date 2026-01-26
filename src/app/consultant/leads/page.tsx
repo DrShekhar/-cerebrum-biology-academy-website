@@ -59,12 +59,42 @@ const statusFilters = [
 ]
 
 const statusColors: Record<string, { bg: string; text: string; dot: string; border: string }> = {
-  NEW_LEAD: { bg: 'bg-blue-50', text: 'text-blue-700', dot: 'bg-blue-500', border: 'border-blue-200' },
-  DEMO_SCHEDULED: { bg: 'bg-purple-50', text: 'text-purple-700', dot: 'bg-purple-500', border: 'border-purple-200' },
-  DEMO_COMPLETED: { bg: 'bg-indigo-50', text: 'text-indigo-700', dot: 'bg-indigo-500', border: 'border-indigo-200' },
-  OFFER_SENT: { bg: 'bg-orange-50', text: 'text-orange-700', dot: 'bg-orange-500', border: 'border-orange-200' },
-  PAYMENT_PENDING: { bg: 'bg-yellow-50', text: 'text-yellow-700', dot: 'bg-yellow-500', border: 'border-yellow-200' },
-  ENROLLED: { bg: 'bg-green-50', text: 'text-green-700', dot: 'bg-green-500', border: 'border-green-200' },
+  NEW_LEAD: {
+    bg: 'bg-blue-50',
+    text: 'text-blue-700',
+    dot: 'bg-blue-500',
+    border: 'border-blue-200',
+  },
+  DEMO_SCHEDULED: {
+    bg: 'bg-purple-50',
+    text: 'text-purple-700',
+    dot: 'bg-purple-500',
+    border: 'border-purple-200',
+  },
+  DEMO_COMPLETED: {
+    bg: 'bg-indigo-50',
+    text: 'text-indigo-700',
+    dot: 'bg-indigo-500',
+    border: 'border-indigo-200',
+  },
+  OFFER_SENT: {
+    bg: 'bg-orange-50',
+    text: 'text-orange-700',
+    dot: 'bg-orange-500',
+    border: 'border-orange-200',
+  },
+  PAYMENT_PENDING: {
+    bg: 'bg-yellow-50',
+    text: 'text-yellow-700',
+    dot: 'bg-yellow-500',
+    border: 'border-yellow-200',
+  },
+  ENROLLED: {
+    bg: 'bg-green-50',
+    text: 'text-green-700',
+    dot: 'bg-green-500',
+    border: 'border-green-200',
+  },
   LOST: { bg: 'bg-red-50', text: 'text-red-700', dot: 'bg-red-500', border: 'border-red-200' },
 }
 
@@ -172,7 +202,9 @@ export default function ConsultantLeads() {
             >
               {statusFilters.map((filter) => (
                 <option key={filter.value} value={filter.value}>
-                  {filter.label} {data?.statusCounts?.[filter.value] !== undefined && `(${data.statusCounts[filter.value]})`}
+                  {filter.label}{' '}
+                  {data?.statusCounts?.[filter.value] !== undefined &&
+                    `(${data.statusCounts[filter.value]})`}
                 </option>
               ))}
             </select>
@@ -232,7 +264,10 @@ export default function ConsultantLeads() {
       {loading && !data && (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[...Array(6)].map((_, i) => (
-            <div key={i} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 animate-pulse">
+            <div
+              key={i}
+              className="bg-white rounded-xl p-5 shadow-sm border border-gray-100 animate-pulse"
+            >
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
                 <div className="flex-1">
@@ -257,8 +292,8 @@ export default function ConsultantLeads() {
             {search
               ? `No leads matching "${search}"`
               : status !== 'all'
-              ? `No leads with status "${statusFilters.find((f) => f.value === status)?.label}"`
-              : 'Start by adding your first lead'}
+                ? `No leads with status "${statusFilters.find((f) => f.value === status)?.label}"`
+                : 'Start by adding your first lead'}
           </p>
           <Link
             href="/consultant/leads/new"
@@ -284,14 +319,18 @@ export default function ConsultantLeads() {
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex items-center gap-3">
-                      <div className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-semibold ${colors.bg} ${colors.text}`}>
+                      <div
+                        className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-semibold ${colors.bg} ${colors.text}`}
+                      >
                         {lead.studentName.charAt(0).toUpperCase()}
                       </div>
                       <div>
                         <h3 className="font-semibold text-gray-900 group-hover:text-teal-600 transition-colors">
                           {lead.studentName}
                         </h3>
-                        <span className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}>
+                        <span
+                          className={`inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`}
+                        >
                           <span className={`w-1.5 h-1.5 rounded-full ${colors.dot}`}></span>
                           {lead.statusLabel}
                         </span>
@@ -320,7 +359,9 @@ export default function ConsultantLeads() {
                   {lead.courseInterest && (
                     <div className="mt-3 pt-3 border-t border-gray-100">
                       <p className="text-xs text-gray-500">Interested in:</p>
-                      <p className="text-sm font-medium text-gray-700 truncate">{lead.courseInterest}</p>
+                      <p className="text-sm font-medium text-gray-700 truncate">
+                        {lead.courseInterest}
+                      </p>
                     </div>
                   )}
 

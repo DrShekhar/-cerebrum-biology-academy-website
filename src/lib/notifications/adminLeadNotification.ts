@@ -148,7 +148,8 @@ function buildNotificationMessage(data: LeadNotificationData): string {
   }
 
   if (data.message) {
-    const truncatedMessage = data.message.length > 100 ? data.message.slice(0, 100) + '...' : data.message
+    const truncatedMessage =
+      data.message.length > 100 ? data.message.slice(0, 100) + '...' : data.message
     message += `💬 *Message:* ${truncatedMessage}\n`
   }
 

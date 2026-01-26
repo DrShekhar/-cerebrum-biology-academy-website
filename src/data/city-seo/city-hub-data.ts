@@ -963,6 +963,72 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  'neet-coaching-gurgaon-sector-14': {
+    slug: 'neet-coaching-gurgaon-sector-14',
+    cityName: 'Sector 14 Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 14 Gurgaon 2026 | Best Biology Classes | Cerebrum',
+    metaDescription:
+      'Top NEET coaching for Sector 14 Gurgaon students. Better alternative to crowded Sector 14 institutes. AIIMS faculty, small batches, 98% results. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 14 Gurgaon Students',
+    heroSubtitle:
+      'Looking for NEET coaching in Sector 14? Our Sector 51 center offers personalized attention with AIIMS faculty - just 20 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram NEET Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '20 minutes from Sector 14',
+    },
+    localities: [
+      { name: 'Sector 14 Market', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'HUDA City Centre', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'Sector 15', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'Sector 17', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'MG Road', url: '/neet-coaching-mg-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Gurgaon NEET', url: '/neet-coaching-gurgaon' },
+      { name: 'Sector 51 NEET', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'DLF NEET', url: '/neet-coaching-dlf-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Why choose Cerebrum over Sector 14 coaching institutes?',
+        answer:
+          'Sector 14 has crowded institutes with 60-100+ students per batch. At Cerebrum Sector 51, you get: 15-20 student batches, AIIMS-trained faculty (Dr. Shekhar Singh), 98% success rate, and personalized attention. Just 20 minutes from Sector 14.',
+      },
+      {
+        question: 'Which coaching institutes are in Sector 14 Gurgaon?',
+        answer:
+          'Sector 14 has Aakash, Narayana, Equalsign, and others. While these offer all subjects, Cerebrum specializes in Biology (360/720 marks in NEET). Our focused approach in smaller batches delivers better results.',
+      },
+      {
+        question: 'How far is Cerebrum from Sector 14?',
+        answer:
+          'Our M2K Corporate Park center in Sector 51 is just 20 minutes from Sector 14 via MG Road. Many Sector 14 residents prefer our smaller batches over the crowded Sector 14 institutes.',
+      },
+      {
+        question: 'What are the fees compared to Sector 14 institutes?',
+        answer:
+          'Our fees start at ₹60,000/year vs ₹1.5-2 lakh at Aakash/Narayana. You get AIIMS faculty, smaller batches, and better results at 50-70% lower cost.',
+      },
+      {
+        question: 'Is there online option for Sector 14 students?',
+        answer:
+          'Yes! Live online classes are available if you prefer studying from home. Same AIIMS faculty, same study material. Many Sector 14 students choose online to avoid travel.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4651',
+      lng: '77.0266',
+    },
+  },
+
   'neet-coaching-dlf-gurgaon': {
     slug: 'neet-coaching-dlf-gurgaon',
     cityName: 'DLF Gurgaon',
@@ -4222,6 +4288,186 @@ export const cityHubData: Record<string, CityHubData> = {
     stats: {
       studentsFromCity: '2,500+',
       successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-tutor-gurugram': {
+    slug: 'biology-tutor-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Best Biology Tutor in Gurugram 2026 | AIIMS Faculty | Cerebrum Academy',
+    metaDescription:
+      'Top biology tutor in Gurugram for NEET & Boards. AIIMS-trained faculty, 98% success rate. Class 9-12, NEET. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'Best Biology Tutor in Gurugram',
+    heroSubtitle:
+      'Learn from AIIMS-trained biology experts. Personal attention in small batches at our Gurugram center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Your local biology expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Biology Tuition Gurugram', url: '/biology-tuition-gurgaon' },
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+      { name: 'Biology Classes Gurugram', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Who is the best biology tutor in Gurugram?',
+        answer:
+          'Dr. Shekhar Singh (AIIMS alumnus) at Cerebrum Biology Academy is considered one of the best biology tutors in Gurugram. With 15+ years experience and 98% success rate, he has helped thousands crack NEET.',
+      },
+      {
+        question: 'What classes do you offer biology tutoring for?',
+        answer:
+          'We offer biology tutoring for Class 9, 10, 11, 12 and NEET preparation. Our tutors specialize in CBSE, ICSE, and Haryana Board curricula along with competitive exam prep.',
+      },
+      {
+        question: 'Do you offer home tuition in Gurugram?',
+        answer:
+          'We offer center-based coaching in small batches (15-20 students) which is more effective than home tuition. For students who cannot travel, we have live online classes with the same faculty.',
+      },
+      {
+        question: 'What is the fee for biology tutoring in Gurugram?',
+        answer:
+          'Our biology tutoring fees range from ₹35,000-60,000/year for Class 9-10 and ₹45,000-75,000 for Class 11-12/NEET. This includes classes, study material, and test series.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '2,500+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'aiims-coaching-gurugram': {
+    slug: 'aiims-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'AIIMS Coaching in Gurugram 2026 | Medical Entrance Prep | Cerebrum Academy',
+    metaDescription:
+      'Top AIIMS coaching in Gurugram for NEET-UG. AIIMS alumni faculty, 65+ AIIMS selections, 98% success. Medical entrance preparation. Call 88264-44334!',
+    heroTitle: 'AIIMS Coaching in Gurugram',
+    heroSubtitle:
+      'Prepare for AIIMS and top medical colleges with faculty who studied there. 65+ AIIMS selections from our center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'AIIMS-trained faculty here',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/neet-coaching-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/neet-coaching-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/neet-coaching-golf-course-road-gurgaon' },
+      { name: 'Sohna Road', url: '/neet-coaching-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+      { name: 'Best NEET Coaching', url: '/best-neet-coaching-gurugram' },
+      { name: 'NEET Fees Gurugram', url: '/neet-coaching-fees-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Can I get into AIIMS from Gurugram coaching?',
+        answer:
+          'Yes! 65+ students from Cerebrum have secured admission to AIIMS Delhi and other AIIMS campuses. Our AIIMS alumni faculty know exactly what it takes to crack AIIMS.',
+      },
+      {
+        question: 'What score is needed for AIIMS Delhi?',
+        answer:
+          'AIIMS Delhi typically requires 700+ marks in NEET (99.9+ percentile). Our focused Biology coaching helps students score 340-360/360 in Biology section, crucial for high overall scores.',
+      },
+      {
+        question: 'Do you only prepare for AIIMS?',
+        answer:
+          'We prepare for all medical colleges through NEET-UG. AIIMS, JIPMER, and all government medical colleges admit through NEET. Our coaching targets 650+ scores for top college admissions.',
+      },
+      {
+        question: 'Who teaches AIIMS coaching at Cerebrum?',
+        answer:
+          'Dr. Shekhar Singh (AIIMS alumnus with 15+ years experience) leads our faculty. All teachers are from top medical colleges and understand the NEET pattern thoroughly.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '65+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'biology-10th-boards-gurgaon': {
+    slug: 'biology-10th-boards-gurgaon',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'Biology Coaching for 10th Boards Gurgaon | CBSE Class 10 | Cerebrum Academy',
+    metaDescription:
+      'Best biology coaching for Class 10 board exams in Gurgaon. CBSE, ICSE, Haryana Board. Strong foundation for NEET. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'Biology Coaching for 10th Board Exams Gurgaon',
+    heroSubtitle:
+      'Build a strong biology foundation in Class 10. Perfect preparation for boards and future NEET success.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 10 Biology Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'South City', url: '/biology-classes-south-city-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Biology Class 9-10 Gurgaon', url: '/biology-class-9-10-gurgaon' },
+      { name: 'Biology Class 11 Gurgaon', url: '/biology-class-11-gurgaon' },
+      { name: 'NEET Foundation', url: '/neet-foundation-class-10-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Do you offer biology coaching for Class 10 boards?',
+        answer:
+          'Yes! We offer specialized Class 10 biology coaching for CBSE, ICSE, and Haryana Board. Our program covers complete syllabus with focus on scoring maximum in boards.',
+      },
+      {
+        question: 'How does Class 10 biology help for NEET?',
+        answer:
+          'Class 10 builds the foundation. Topics like cell biology, life processes, heredity, and evolution are directly tested in NEET. Strong Class 10 basics make Class 11-12 NEET prep easier.',
+      },
+      {
+        question: 'What is the fee for Class 10 biology coaching?',
+        answer:
+          'Class 10 biology coaching costs ₹35,000-45,000/year including study material and test series. Combined Class 9-10 foundation program available at special rates.',
+      },
+      {
+        question: 'Can Class 10 students prepare for NEET simultaneously?',
+        answer:
+          'Yes! Our NEET Foundation program for Class 10 covers board syllabus plus introduces NEET-level concepts. Students who start early have better success rates in NEET.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '500+',
+      successRate: '95%',
       rating: '4.9',
     },
     geoCoordinates: {

@@ -2,14 +2,7 @@
 
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import {
-  X,
-  Check,
-  Star,
-  Award,
-  TrendingUp,
-  AlertTriangle,
-} from 'lucide-react'
+import { X, Check, Star, Award, TrendingUp, AlertTriangle } from 'lucide-react'
 import { type Course } from '@/data/courseData'
 
 interface CourseComparisonProps {

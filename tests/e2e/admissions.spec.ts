@@ -27,11 +27,15 @@ test.describe('Admissions Page', () => {
     await page.waitForSelector('main', { timeout: 15000 })
 
     // Check for page content - look for hero section or form
-    const heroHeading = page.locator('h1:has-text("NEET"), h1:has-text("Journey"), h1:has-text("Admission")')
+    const heroHeading = page.locator(
+      'h1:has-text("NEET"), h1:has-text("Journey"), h1:has-text("Admission")'
+    )
     await expect(heroHeading.first()).toBeVisible({ timeout: 15000 })
 
     // Check for any form elements that should be on the page
-    const formSection = page.locator('form, [class*="form"], input[type="text"], input[type="email"]')
+    const formSection = page.locator(
+      'form, [class*="form"], input[type="text"], input[type="email"]'
+    )
     await expect(formSection.first()).toBeVisible({ timeout: 10000 })
   })
 
@@ -235,7 +239,7 @@ test.describe('Exit Intent Popup', () => {
     await page.goto('/admissions')
 
     // Popup should not be visible initially
-    const popup = page.locator('text=Wait! Don\'t Miss This')
+    const popup = page.locator("text=Wait! Don't Miss This")
     await expect(popup).toBeHidden()
   })
 

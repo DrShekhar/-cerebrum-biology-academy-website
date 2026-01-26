@@ -83,9 +83,10 @@ function hasCommonlyConfused(options: string[]): boolean {
     ['symbiosis', 'parasitism'],
     ['xylem', 'phloem'],
   ]
-  return confusedPairs.some(([a, b]) =>
-    options.some((o) => o.toLowerCase().includes(a)) &&
-    options.some((o) => o.toLowerCase().includes(b))
+  return confusedPairs.some(
+    ([a, b]) =>
+      options.some((o) => o.toLowerCase().includes(a)) &&
+      options.some((o) => o.toLowerCase().includes(b))
   )
 }
 
@@ -148,7 +149,10 @@ async function analyzePYQPatterns(): Promise<PatternAnalysis> {
 
   // 2. Analyze question types
   const questionTypes = [
-    { type: 'DIRECT_FACTUAL', patterns: ['WHICH_FOLLOWING', 'WHICH_ONE_FOLLOWING', 'FUNCTION_OF', 'PROCESS_OF'] },
+    {
+      type: 'DIRECT_FACTUAL',
+      patterns: ['WHICH_FOLLOWING', 'WHICH_ONE_FOLLOWING', 'FUNCTION_OF', 'PROCESS_OF'],
+    },
     { type: 'CONCEPTUAL', patterns: ['CONSIDER_STATEMENTS', 'READ_STATEMENTS', 'SELECT_CORRECT'] },
     { type: 'ASSERTION_REASON', patterns: ['ASSERTION_REASON'] },
     { type: 'MATCH_FOLLOWING', patterns: ['MATCH_FOLLOWING'] },
@@ -244,7 +248,9 @@ async function analyzePYQPatterns(): Promise<PatternAnalysis> {
 
   console.log('\nDistractor Techniques:')
   for (const dt of distractorTechniques) {
-    console.log(`  ${dt.technique}: ${dt.frequency} (${((dt.frequency / pyqs.length) * 100).toFixed(1)}%)`)
+    console.log(
+      `  ${dt.technique}: ${dt.frequency} (${((dt.frequency / pyqs.length) * 100).toFixed(1)}%)`
+    )
   }
 
   // 6. NCERT chapter frequency

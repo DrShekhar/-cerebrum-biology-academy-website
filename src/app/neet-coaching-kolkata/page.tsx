@@ -382,9 +382,7 @@ export default function NeetCoachingKolkataPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-purple-600" />
                   </div>
-                  <div className="text-2xl font-bold text-purple-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-purple-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">

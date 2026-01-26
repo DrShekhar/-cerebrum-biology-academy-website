@@ -65,7 +65,7 @@ export class PerformanceMonitor {
         // Get FCP
         new PerformanceObserver((list) => {
           const entries = list.getEntries()
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint')
+          const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint')
           if (fcpEntry) {
             metrics.FCP = fcpEntry.startTime
           }
@@ -83,7 +83,9 @@ export class PerformanceMonitor {
         }).observe({ entryTypes: ['layout-shift'] })
 
         // Get TTFB
-        const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+        const navigationEntry = performance.getEntriesByType(
+          'navigation'
+        )[0] as PerformanceNavigationTiming
         metrics.TTFB = navigationEntry?.responseStart - navigationEntry?.requestStart || 0
 
         // FID will be 0 for automated tests (requires real user interaction)
@@ -96,7 +98,7 @@ export class PerformanceMonitor {
             FID: metrics.FID || 0,
             CLS: metrics.CLS || 0,
             FCP: metrics.FCP || 0,
-            TTFB: metrics.TTFB || 0
+            TTFB: metrics.TTFB || 0,
           })
         }, 2000)
       })
@@ -109,13 +111,13 @@ export class PerformanceMonitor {
         return {
           usedJSHeapSize: (performance as any).memory.usedJSHeapSize,
           totalJSHeapSize: (performance as any).memory.totalJSHeapSize,
-          jsHeapSizeLimit: (performance as any).memory.jsHeapSizeLimit
+          jsHeapSizeLimit: (performance as any).memory.jsHeapSizeLimit,
         }
       }
       return {
         usedJSHeapSize: 0,
         totalJSHeapSize: 0,
-        jsHeapSizeLimit: 0
+        jsHeapSizeLimit: 0,
       }
     })
   }
@@ -127,13 +129,13 @@ export class PerformanceMonitor {
       averageFPS: 0,
       networkRequests: { total: 0, failed: 0, slow: 0, cached: 0 },
       jsErrors: 0,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     }
 
     // Monitor network requests
     const networkMetrics = { total: 0, failed: 0, slow: 0, cached: 0 }
 
-    page.on('response', response => {
+    page.on('response', (response) => {
       networkMetrics.total++
       if (response.status() >= 400) {
         networkMetrics.failed++
@@ -163,17 +165,14 @@ export class PerformanceMonitor {
     await page.waitForTimeout(duration)
 
     // Collect results
-    const [averageFPS, memoryLeaks] = await Promise.all([
-      fpsPromise,
-      memoryLeaksPromise
-    ])
+    const [averageFPS, memoryLeaks] = await Promise.all([fpsPromise, memoryLeaksPromise])
 
     return {
       memoryLeaks,
       averageFPS,
       networkRequests: networkMetrics,
       jsErrors,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     }
   }
 
@@ -212,7 +211,7 @@ export class PerformanceMonitor {
     try {
       await page.evaluate(() => {
         if ('gc' in window) {
-          (window as any).gc()
+          ;(window as any).gc()
         }
       })
 
@@ -255,19 +254,19 @@ export class PerformanceMonitor {
         firstContentfulPaint: 0,
         timeToInteractive: 0, // Estimated
         domContentLoaded: perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
-        pageLoad: perfData.loadEventEnd - perfData.loadEventStart
+        pageLoad: perfData.loadEventEnd - perfData.loadEventStart,
       }
     })
 
     // Get paint timing
     const paintTimings = await page.evaluate(() => {
       const paints = performance.getEntriesByType('paint')
-      const fp = paints.find(paint => paint.name === 'first-paint')
-      const fcp = paints.find(paint => paint.name === 'first-contentful-paint')
+      const fp = paints.find((paint) => paint.name === 'first-paint')
+      const fcp = paints.find((paint) => paint.name === 'first-contentful-paint')
 
       return {
         firstPaint: fp?.startTime || 0,
-        firstContentfulPaint: fcp?.startTime || 0
+        firstContentfulPaint: fcp?.startTime || 0,
       }
     })
 
@@ -282,11 +281,15 @@ export class PerformanceMonitor {
       largestContentfulPaint: coreVitals.LCP,
       timeToInteractive: performanceMetrics.timeToInteractive,
       cumulativeLayoutShift: coreVitals.CLS,
-      firstInputDelay: coreVitals.FID
+      firstInputDelay: coreVitals.FID,
     }
   }
 
-  async measureAPIPerformance(page: Page, apiEndpoint: string, requestCount: number = 10): Promise<{
+  async measureAPIPerformance(
+    page: Page,
+    apiEndpoint: string,
+    requestCount: number = 10
+  ): Promise<{
     averageResponseTime: number
     minResponseTime: number
     maxResponseTime: number
@@ -297,21 +300,23 @@ export class PerformanceMonitor {
     let successCount = 0
     const startTime = Date.now()
 
-    const promises = Array(requestCount).fill(null).map(async () => {
-      const requestStart = Date.now()
+    const promises = Array(requestCount)
+      .fill(null)
+      .map(async () => {
+        const requestStart = Date.now()
 
-      try {
-        const response = await page.request.get(apiEndpoint)
-        const responseTime = Date.now() - requestStart
-        responseTimes.push(responseTime)
+        try {
+          const response = await page.request.get(apiEndpoint)
+          const responseTime = Date.now() - requestStart
+          responseTimes.push(responseTime)
 
-        if (response.status() < 400) {
-          successCount++
+          if (response.status() < 400) {
+            successCount++
+          }
+        } catch (error) {
+          responseTimes.push(Date.now() - requestStart)
         }
-      } catch (error) {
-        responseTimes.push(Date.now() - requestStart)
-      }
-    })
+      })
 
     await Promise.all(promises)
 
@@ -323,7 +328,7 @@ export class PerformanceMonitor {
       minResponseTime: Math.min(...responseTimes),
       maxResponseTime: Math.max(...responseTimes),
       successRate: successCount / requestCount,
-      throughput: requestCount / (totalTime / 1000) // requests per second
+      throughput: requestCount / (totalTime / 1000), // requests per second
     }
   }
 
@@ -344,7 +349,7 @@ export class PerformanceMonitor {
       const images: number[] = []
       const fonts: number[] = []
 
-      resources.forEach(resource => {
+      resources.forEach((resource) => {
         const loadTime = resource.responseEnd - resource.requestStart
 
         if (resource.name.includes('.css')) {
@@ -365,7 +370,7 @@ export class PerformanceMonitor {
 
     return {
       ...resourceTimings,
-      total: totalResources
+      total: totalResources,
     }
   }
 
@@ -380,7 +385,7 @@ export class PerformanceMonitor {
         timestamp: new Date().toISOString(),
         duration: endTime - startTime,
         success: true,
-        context
+        context,
       })
 
       return result
@@ -392,7 +397,7 @@ export class PerformanceMonitor {
         duration: endTime - startTime,
         success: false,
         error: error.message,
-        context
+        context,
       })
 
       throw error
@@ -400,15 +405,15 @@ export class PerformanceMonitor {
   }
 
   getMetrics() {
-    const successful = this.metrics.filter(m => m.success)
-    const failed = this.metrics.filter(m => !m.success)
+    const successful = this.metrics.filter((m) => m.success)
+    const failed = this.metrics.filter((m) => !m.success)
 
     if (successful.length === 0) {
       return {
         avgResponseTime: 0,
         successRate: 0,
         failureRate: 1,
-        totalRequests: this.metrics.length
+        totalRequests: this.metrics.length,
       }
     }
 
@@ -420,7 +425,7 @@ export class PerformanceMonitor {
       successRate,
       failureRate: failed.length / this.metrics.length,
       totalRequests: this.metrics.length,
-      metrics: this.metrics
+      metrics: this.metrics,
     }
   }
 
@@ -456,10 +461,10 @@ export class PerformanceMonitor {
         averageResponseTime: `${metrics.avgResponseTime.toFixed(2)}ms`,
         successRate: `${(metrics.successRate * 100).toFixed(2)}%`,
         failureRate: `${(metrics.failureRate * 100).toFixed(2)}%`,
-        testDuration: `${(Date.now() - this.startTime) / 1000}s`
+        testDuration: `${(Date.now() - this.startTime) / 1000}s`,
       },
       details: this.metrics,
-      recommendations
+      recommendations,
     }
   }
 }

@@ -103,111 +103,132 @@ export function useFacebookPixel() {
   /**
    * Track demo booking as a Lead event
    */
-  const trackDemoBooking = useCallback((data: DemoBookingData) => {
-    // Client-side pixel tracking
-    trackEvent('Lead', {
-      contentType: 'Demo Class',
-      contentName: `${data.subject} Demo - Class ${data.studentClass}`,
-      value: 500, // Estimated lead value in INR
-      studentClass: data.studentClass,
-      courseInterest: data.subject,
-      trafficSource: data.source || 'direct',
-    })
+  const trackDemoBooking = useCallback(
+    (data: DemoBookingData) => {
+      // Client-side pixel tracking
+      trackEvent('Lead', {
+        contentType: 'Demo Class',
+        contentName: `${data.subject} Demo - Class ${data.studentClass}`,
+        value: 500, // Estimated lead value in INR
+        studentClass: data.studentClass,
+        courseInterest: data.subject,
+        trafficSource: data.source || 'direct',
+      })
 
-    // Send to Conversion API (server-side)
-    sendConversionAPIEvent('Lead', {
-      email: data.email,
-      phone: data.phoneNumber,
-      firstName: data.studentName.split(' ')[0],
-      lastName: data.studentName.split(' ').slice(1).join(' '),
-      customData: {
-        content_type: 'Demo Class',
-        value: 500,
-        currency: 'INR',
-      },
-    })
-  }, [trackEvent])
+      // Send to Conversion API (server-side)
+      sendConversionAPIEvent('Lead', {
+        email: data.email,
+        phone: data.phoneNumber,
+        firstName: data.studentName.split(' ')[0],
+        lastName: data.studentName.split(' ').slice(1).join(' '),
+        customData: {
+          content_type: 'Demo Class',
+          value: 500,
+          currency: 'INR',
+        },
+      })
+    },
+    [trackEvent]
+  )
 
   /**
    * Track course enrollment as a Purchase event
    */
-  const trackEnrollment = useCallback((data: EnrollmentData) => {
-    trackEvent('Purchase', {
-      contentType: 'Course Enrollment',
-      contentName: data.courseName,
-      value: data.coursePrice,
-      currency: 'INR',
-      studentClass: data.studentClass,
-    })
-
-    // Send to Conversion API
-    sendConversionAPIEvent('Purchase', {
-      email: data.email,
-      phone: data.phoneNumber,
-      firstName: data.studentName.split(' ')[0],
-      lastName: data.studentName.split(' ').slice(1).join(' '),
-      customData: {
-        content_type: 'Course',
-        content_ids: [data.courseId],
+  const trackEnrollment = useCallback(
+    (data: EnrollmentData) => {
+      trackEvent('Purchase', {
+        contentType: 'Course Enrollment',
+        contentName: data.courseName,
         value: data.coursePrice,
         currency: 'INR',
-        num_items: 1,
-      },
-    })
-  }, [trackEvent])
+        studentClass: data.studentClass,
+      })
+
+      // Send to Conversion API
+      sendConversionAPIEvent('Purchase', {
+        email: data.email,
+        phone: data.phoneNumber,
+        firstName: data.studentName.split(' ')[0],
+        lastName: data.studentName.split(' ').slice(1).join(' '),
+        customData: {
+          content_type: 'Course',
+          content_ids: [data.courseId],
+          value: data.coursePrice,
+          currency: 'INR',
+          num_items: 1,
+        },
+      })
+    },
+    [trackEvent]
+  )
 
   /**
    * Track content view (course page, lesson, etc.)
    */
-  const trackContentView = useCallback((contentName: string, contentType: string = 'Course Page') => {
-    trackEvent('ViewContent', {
-      contentName,
-      contentType,
-      contentCategory: 'Education',
-    })
-  }, [trackEvent])
+  const trackContentView = useCallback(
+    (contentName: string, contentType: string = 'Course Page') => {
+      trackEvent('ViewContent', {
+        contentName,
+        contentType,
+        contentCategory: 'Education',
+      })
+    },
+    [trackEvent]
+  )
 
   /**
    * Track course added to cart/wishlist
    */
-  const trackAddToCart = useCallback((courseName: string, price: number) => {
-    trackEvent('AddToCart', {
-      contentName: courseName,
-      contentType: 'Course',
-      value: price,
-      currency: 'INR',
-    })
-  }, [trackEvent])
+  const trackAddToCart = useCallback(
+    (courseName: string, price: number) => {
+      trackEvent('AddToCart', {
+        contentName: courseName,
+        contentType: 'Course',
+        value: price,
+        currency: 'INR',
+      })
+    },
+    [trackEvent]
+  )
 
   /**
    * Track form initiation
    */
-  const trackFormStart = useCallback((formName: string) => {
-    trackCustomEvent('FormStart', {
-      contentName: formName,
-      contentType: 'Lead Form',
-    })
-  }, [trackCustomEvent])
+  const trackFormStart = useCallback(
+    (formName: string) => {
+      trackCustomEvent('FormStart', {
+        contentName: formName,
+        contentType: 'Lead Form',
+      })
+    },
+    [trackCustomEvent]
+  )
 
   /**
    * Track WhatsApp click
    */
-  const trackWhatsAppClick = useCallback((source: string) => {
-    trackCustomEvent('WhatsAppClick', {
-      contentName: 'WhatsApp Inquiry',
-      trafficSource: source,
-    })
-  }, [trackCustomEvent])
+  const trackWhatsAppClick = useCallback(
+    (source: string) => {
+      trackCustomEvent('WhatsAppClick', {
+        contentName: 'WhatsApp Inquiry',
+        trafficSource: source,
+      })
+    },
+    [trackCustomEvent]
+  )
 
   /**
    * Track phone call click
    */
-  const trackPhoneClick = useCallback((source: string) => {
-    trackCustomEvent('PhoneCallClick', {
-      contentName: 'Phone Inquiry',
-      trafficSource: source,
-    })
-  }, [trackCustomEvent])
+  const trackPhoneClick = useCallback(
+    (source: string) => {
+      trackCustomEvent('PhoneCallClick', {
+        contentName: 'Phone Inquiry',
+        trafficSource: source,
+      })
+    },
+    [trackCustomEvent]
+  )
 
   return {
     trackEvent,

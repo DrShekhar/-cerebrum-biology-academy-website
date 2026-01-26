@@ -149,10 +149,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             throw new Error('Invalid email or password')
           }
 
-          const isValidPassword = await bcrypt.compare(
-            validatedData.password,
-            user.passwordHash
-          )
+          const isValidPassword = await bcrypt.compare(validatedData.password, user.passwordHash)
 
           if (!isValidPassword) {
             // Log failed login attempt

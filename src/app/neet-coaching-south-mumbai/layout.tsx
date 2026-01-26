@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in South Mumbai | Colaba, Malabar Hill, Worli | Cerebrum Academy',
+  title: 'Best NEET Coaching in South Mumbai | Colaba, Malabar Hill, Worli | Cerebrum Academy',
   description:
     'Ultra-premium NEET biology coaching in South Mumbai for elite schools. 94.2% success rate, AIIMS faculty. Colaba, Cuffe Parade, Malabar Hill, Breach Candy, Pedder Road, Worli. Fee ₹24,000+. Book free demo!',
   keywords:

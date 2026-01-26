@@ -9,41 +9,41 @@ import { z } from 'zod'
 const updateWebhookSchema = z.object({
   name: z.string().min(1).max(100).optional(),
   url: z.string().url().optional(),
-  events: z.array(z.enum([
-    'lead.created',
-    'lead.updated',
-    'lead.stage_changed',
-    'lead.assigned',
-    'lead.converted',
-    'lead.lost',
-    'demo.booked',
-    'demo.completed',
-    'payment.received',
-    'communication.sent',
-  ])).optional(),
+  events: z
+    .array(
+      z.enum([
+        'lead.created',
+        'lead.updated',
+        'lead.stage_changed',
+        'lead.assigned',
+        'lead.converted',
+        'lead.lost',
+        'demo.booked',
+        'demo.completed',
+        'payment.received',
+        'communication.sent',
+      ])
+    )
+    .optional(),
   isActive: z.boolean().optional(),
   headers: z.record(z.string(), z.string()).optional(),
-  retryPolicy: z.object({
-    maxRetries: z.number().min(0).max(10).optional(),
-    retryDelayMs: z.number().min(1000).max(60000).optional(),
-  }).optional(),
+  retryPolicy: z
+    .object({
+      maxRetries: z.number().min(0).max(10).optional(),
+      retryDelayMs: z.number().min(1000).max(60000).optional(),
+    })
+    .optional(),
   metadata: z.record(z.string(), z.unknown()).optional(),
 })
 
 // GET: Get webhook details with delivery history
-async function handleGET(
-  request: NextRequest,
-  _session: ValidatedSession
-): Promise<NextResponse> {
+async function handleGET(request: NextRequest, _session: ValidatedSession): Promise<NextResponse> {
   try {
     const url = new URL(request.url)
     const id = url.pathname.split('/').pop()
 
     if (!id) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook ID required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook ID required' }, { status: 400 })
     }
 
     const webhook = await prisma.webhooks.findUnique({
@@ -71,10 +71,7 @@ async function handleGET(
     })
 
     if (!webhook) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook not found' }, { status: 404 })
     }
 
     // Get stats
@@ -101,35 +98,27 @@ async function handleGET(
           failureCount,
           pendingCount,
           totalDeliveries: successCount + failureCount + pendingCount,
-          successRate: (successCount + failureCount) > 0
-            ? Math.round((successCount / (successCount + failureCount)) * 100)
-            : 0,
+          successRate:
+            successCount + failureCount > 0
+              ? Math.round((successCount / (successCount + failureCount)) * 100)
+              : 0,
         },
       },
     })
   } catch (error) {
     console.error('Error fetching webhook:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch webhook' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch webhook' }, { status: 500 })
   }
 }
 
 // PATCH: Update webhook
-async function handlePATCH(
-  request: NextRequest,
-  session: ValidatedSession
-): Promise<NextResponse> {
+async function handlePATCH(request: NextRequest, session: ValidatedSession): Promise<NextResponse> {
   try {
     const url = new URL(request.url)
     const id = url.pathname.split('/').pop()
 
     if (!id) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook ID required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook ID required' }, { status: 400 })
     }
 
     const body = await request.json()
@@ -140,10 +129,7 @@ async function handlePATCH(
     })
 
     if (!existingWebhook) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook not found' }, { status: 404 })
     }
 
     const webhook = await prisma.webhooks.update({
@@ -182,10 +168,7 @@ async function handlePATCH(
     }
 
     console.error('Error updating webhook:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to update webhook' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to update webhook' }, { status: 500 })
   }
 }
 
@@ -199,10 +182,7 @@ async function handleDELETE(
     const id = url.pathname.split('/').pop()
 
     if (!id) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook ID required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook ID required' }, { status: 400 })
     }
 
     const existingWebhook = await prisma.webhooks.findUnique({
@@ -210,10 +190,7 @@ async function handleDELETE(
     })
 
     if (!existingWebhook) {
-      return NextResponse.json(
-        { success: false, error: 'Webhook not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Webhook not found' }, { status: 404 })
     }
 
     // Delete deliveries first (cascade)
@@ -243,10 +220,7 @@ async function handleDELETE(
     })
   } catch (error) {
     console.error('Error deleting webhook:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to delete webhook' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to delete webhook' }, { status: 500 })
   }
 }
 

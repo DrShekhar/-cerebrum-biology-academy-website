@@ -285,7 +285,8 @@ export function ExitIntentPopup({
                           onClick={async () => {
                             await trackAndOpenWhatsApp({
                               source: 'exit-intent-popup',
-                              message: 'Hi! I saw the discount offer. Please help me claim 20% off.',
+                              message:
+                                'Hi! I saw the discount offer. Please help me claim 20% off.',
                               campaign: 'exit-intent-discount',
                             })
                           }}
@@ -400,7 +401,10 @@ export function ExitIntentPopup({
                       {/* Features Grid */}
                       <div className="grid grid-cols-1 gap-2 mb-6 max-h-40 overflow-y-auto">
                         {catalogFeatures.map((feature) => (
-                          <div key={`feature-${feature.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-start">
+                          <div
+                            key={`feature-${feature.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`}
+                            className="flex items-start"
+                          >
                             <CheckCircle className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-gray-700">{feature}</span>
                           </div>

@@ -81,9 +81,7 @@ export default async function VerifyCertificatePage({ params }: PageProps) {
         </div>
 
         <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-          <div
-            className={`px-8 py-6 ${verified ? 'bg-green-600' : 'bg-red-600'}`}
-          >
+          <div className={`px-8 py-6 ${verified ? 'bg-green-600' : 'bg-red-600'}`}>
             <div className="flex items-center justify-center gap-3 text-white">
               {verified ? (
                 <>
@@ -250,7 +248,8 @@ export default async function VerifyCertificatePage({ params }: PageProps) {
                   <p className="font-medium text-gray-900">{issuer.name}</p>
                   <a
                     href={issuer.website}
-                    target="_blank" rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700"
                   >
                     {issuer.website}

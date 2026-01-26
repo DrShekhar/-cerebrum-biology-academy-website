@@ -134,21 +134,31 @@ class PersonalizedSequencing {
   // Biology domain knowledge structure
   private biologyDomain = {
     topics: [
-      'Cell Biology', 'Genetics', 'Evolution', 'Ecology', 'Plant Biology',
-      'Animal Physiology', 'Molecular Biology', 'Biochemistry', 'Microbiology'
+      'Cell Biology',
+      'Genetics',
+      'Evolution',
+      'Ecology',
+      'Plant Biology',
+      'Animal Physiology',
+      'Molecular Biology',
+      'Biochemistry',
+      'Microbiology',
     ],
     conceptHierarchy: new Map<string, string[]>([
-      ['Cell Biology', ['Cell Structure', 'Cell Division', 'Cellular Respiration', 'Photosynthesis']],
+      [
+        'Cell Biology',
+        ['Cell Structure', 'Cell Division', 'Cellular Respiration', 'Photosynthesis'],
+      ],
       ['Genetics', ['Mendelian Genetics', 'DNA Structure', 'Gene Expression', 'Mutations']],
       ['Evolution', ['Natural Selection', 'Speciation', 'Phylogeny', 'Population Genetics']],
-      ['Ecology', ['Ecosystems', 'Population Dynamics', 'Food Webs', 'Biodiversity']]
+      ['Ecology', ['Ecosystems', 'Population Dynamics', 'Food Webs', 'Biodiversity']],
     ]),
     prerequisites: new Map<string, string[]>([
       ['Gene Expression', ['DNA Structure', 'Cell Structure']],
       ['Cellular Respiration', ['Cell Structure', 'Biochemistry Basics']],
       ['Population Genetics', ['Mendelian Genetics', 'Statistics Basics']],
-      ['Ecosystems', ['Population Dynamics', 'Energy Flow']]
-    ])
+      ['Ecosystems', ['Population Dynamics', 'Energy Flow']],
+    ]),
   }
 
   constructor() {
@@ -191,23 +201,23 @@ class PersonalizedSequencing {
         personalizations: [],
         difficultyAdjustments: [],
         paceModifications: [],
-        contentSubstitutions: new Map()
+        contentSubstitutions: new Map(),
       },
       progressTracking: {
         completedObjectives: [],
         masteredConcepts: [],
         strugglingAreas: [],
-        timeSpent: new Map()
+        timeSpent: new Map(),
       },
       optimization: {
         algorithm: 'hybrid',
         parameters: new Map([
           ['mastery_threshold', 0.8],
           ['difficulty_increment', 0.2],
-          ['engagement_weight', 0.3]
+          ['engagement_weight', 0.3],
         ]),
-        constraints: ['prerequisite_enforcement', 'cognitive_load_management']
-      }
+        constraints: ['prerequisite_enforcement', 'cognitive_load_management'],
+      },
     }
 
     this.learningPaths.set(studentId, learningPath)
@@ -237,10 +247,20 @@ class PersonalizedSequencing {
     const strategy = this.selectOptimalStrategy(currentPerformance, learningPath)
 
     // Generate candidate questions using the strategy
-    const candidateItems = strategy.algorithm(availableItems, knowledgeGraph, learningPath, currentPerformance)
+    const candidateItems = strategy.algorithm(
+      availableItems,
+      knowledgeGraph,
+      learningPath,
+      currentPerformance
+    )
 
     // Apply multi-objective optimization
-    const selectedItem = this.optimizeSelection(candidateItems, knowledgeGraph, learningPath, currentPerformance)
+    const selectedItem = this.optimizeSelection(
+      candidateItems,
+      knowledgeGraph,
+      learningPath,
+      currentPerformance
+    )
 
     // Generate reasoning and predictions
     const decision = this.generateSequencingDecision(
@@ -286,7 +306,10 @@ class PersonalizedSequencing {
 
     // Detect need for prerequisite review
     if (patterns.prerequisiteGaps.length > 0) {
-      const reviewObjectives = this.insertPrerequisiteReview(learningPath, patterns.prerequisiteGaps)
+      const reviewObjectives = this.insertPrerequisiteReview(
+        learningPath,
+        patterns.prerequisiteGaps
+      )
       if (reviewObjectives.length > 0) {
         pathModified = true
         changes.push(`Inserted prerequisite review: ${reviewObjectives.join(', ')}`)
@@ -336,7 +359,7 @@ class PersonalizedSequencing {
       pathModified,
       changes,
       newSequence,
-      reasoning: reasoning.trim() || 'No adaptations needed'
+      reasoning: reasoning.trim() || 'No adaptations needed',
     }
   }
 
@@ -381,8 +404,10 @@ class PersonalizedSequencing {
       position: learningPath.currentPosition,
       totalObjectives: learningPath.objectives.length,
       percentage: (learningPath.currentPosition / learningPath.objectives.length) * 100,
-      timeSpent: Array.from(learningPath.progressTracking.timeSpent.values())
-        .reduce((sum, time) => sum + time, 0)
+      timeSpent: Array.from(learningPath.progressTracking.timeSpent.values()).reduce(
+        (sum, time) => sum + time,
+        0
+      ),
     }
 
     // Analyze mastery levels
@@ -393,7 +418,7 @@ class PersonalizedSequencing {
       efficiency: this.calculatePathEfficiency(learningPath),
       personalizations: learningPath.adaptations.personalizations.length,
       adaptations: learningPath.adaptations.difficultyAdjustments.length,
-      recommendedChanges: this.generatePathRecommendations(learningPath, knowledgeGraph)
+      recommendedChanges: this.generatePathRecommendations(learningPath, knowledgeGraph),
     }
 
     // Generate predictions
@@ -403,7 +428,7 @@ class PersonalizedSequencing {
       currentProgress,
       masteryAnalysis,
       pathOptimization,
-      predictions
+      predictions,
     }
   }
 
@@ -416,7 +441,7 @@ class PersonalizedSequencing {
       description: 'Ensures solid foundation before advancing',
       algorithm: (items, knowledge, path, performance) => {
         return items
-          .filter(item => this.arePrerequisitesMet(item, knowledge))
+          .filter((item) => this.arePrerequisitesMet(item, knowledge))
           .sort((a, b) => {
             const masteryA = this.calculateConceptMastery(a.topic, knowledge)
             const masteryB = this.calculateConceptMastery(b.topic, knowledge)
@@ -428,8 +453,8 @@ class PersonalizedSequencing {
         difficultyProgression: 0.3,
         engagementOptimization: 0.1,
         timeEfficiency: 0.1,
-        masteryReinforcement: 0.1
-      }
+        masteryReinforcement: 0.1,
+      },
     })
 
     // Engagement-optimal sequencing strategy
@@ -438,7 +463,7 @@ class PersonalizedSequencing {
       description: 'Maximizes student engagement and motivation',
       algorithm: (items, knowledge, path, performance) => {
         return items
-          .filter(item => this.arePrerequisitesMet(item, knowledge))
+          .filter((item) => this.arePrerequisitesMet(item, knowledge))
           .sort((a, b) => {
             const engagementA = this.predictEngagement(a, performance)
             const engagementB = this.predictEngagement(b, performance)
@@ -450,8 +475,8 @@ class PersonalizedSequencing {
         difficultyProgression: 0.2,
         engagementOptimization: 0.4,
         timeEfficiency: 0.1,
-        masteryReinforcement: 0.1
-      }
+        masteryReinforcement: 0.1,
+      },
     })
 
     // Hybrid sequencing strategy
@@ -460,7 +485,7 @@ class PersonalizedSequencing {
       description: 'Balances multiple optimization objectives',
       algorithm: (items, knowledge, path, performance) => {
         return items
-          .filter(item => this.arePrerequisitesMet(item, knowledge))
+          .filter((item) => this.arePrerequisitesMet(item, knowledge))
           .sort((a, b) => {
             const scoreA = this.calculateHybridScore(a, knowledge, path, performance)
             const scoreB = this.calculateHybridScore(b, knowledge, path, performance)
@@ -472,8 +497,8 @@ class PersonalizedSequencing {
         difficultyProgression: 0.25,
         engagementOptimization: 0.25,
         timeEfficiency: 0.15,
-        masteryReinforcement: 0.1
-      }
+        masteryReinforcement: 0.1,
+      },
     })
   }
 
@@ -482,7 +507,7 @@ class PersonalizedSequencing {
     this.optimizationEngine = {
       objectives: ['mastery', 'engagement', 'efficiency', 'coverage'],
       constraints: ['prerequisites', 'time_limits', 'cognitive_load'],
-      algorithms: ['pareto_optimal', 'weighted_sum', 'lexicographic']
+      algorithms: ['pareto_optimal', 'weighted_sum', 'lexicographic'],
     }
   }
 
@@ -511,8 +536,8 @@ class PersonalizedSequencing {
             attempts: 0,
             successes: 0,
             averageTime: 0,
-            recentPerformance: []
-          }
+            recentPerformance: [],
+          },
         }
 
         knowledgeGraph.set(nodeId, node)
@@ -544,7 +569,7 @@ class PersonalizedSequencing {
           estimatedTime: this.estimateObjectiveTime(subtopic),
           importance: this.calculateImportance(subtopic, curriculum),
           keywords: this.generateKeywords(subtopic),
-          conceptualDepth: this.determineConceptualDepth(subtopic, grade)
+          conceptualDepth: this.determineConceptualDepth(subtopic, grade),
         }
 
         objectives.push(objective)
@@ -569,10 +594,10 @@ class PersonalizedSequencing {
 
       visiting.add(objectiveId)
 
-      const objective = objectives.find(obj => obj.id === objectiveId)
+      const objective = objectives.find((obj) => obj.id === objectiveId)
       if (objective) {
         for (const prereq of objective.prerequisites) {
-          const prereqObjective = objectives.find(obj => obj.subtopic === prereq)
+          const prereqObjective = objectives.find((obj) => obj.subtopic === prereq)
           if (prereqObjective) {
             visit(prereqObjective.id)
           }
@@ -599,7 +624,7 @@ class PersonalizedSequencing {
     responses: StudentResponse[],
     items: ItemParameters[]
   ): void {
-    const itemLookup = new Map(items.map(item => [item.id, item]))
+    const itemLookup = new Map(items.map((item) => [item.id, item]))
 
     for (const response of responses) {
       const item = itemLookup.get(response.itemId)
@@ -622,10 +647,11 @@ class PersonalizedSequencing {
 
       // Update mastery level using Bayesian updating
       const accuracy = node.evidence.successes / node.evidence.attempts
-      const recentAccuracy = node.evidence.recentPerformance.reduce((sum, val) => sum + val, 0) /
-                            Math.max(1, node.evidence.recentPerformance.length)
+      const recentAccuracy =
+        node.evidence.recentPerformance.reduce((sum, val) => sum + val, 0) /
+        Math.max(1, node.evidence.recentPerformance.length)
 
-      node.masteryLevel = (accuracy * 0.7) + (recentAccuracy * 0.3)
+      node.masteryLevel = accuracy * 0.7 + recentAccuracy * 0.3
       node.confidence = Math.min(1, node.evidence.attempts / 10) // More attempts = higher confidence
       node.lastAssessed = new Date()
 
@@ -657,9 +683,9 @@ class PersonalizedSequencing {
     if (candidates.length === 1) return candidates[0]
 
     // Multi-objective optimization
-    const scores = candidates.map(item => ({
+    const scores = candidates.map((item) => ({
       item,
-      score: this.calculateMultiObjectiveScore(item, knowledgeGraph, learningPath, performance)
+      score: this.calculateMultiObjectiveScore(item, knowledgeGraph, learningPath, performance),
     }))
 
     // Return highest scoring item
@@ -698,7 +724,12 @@ class PersonalizedSequencing {
     learningPath: LearningPath,
     performance: PerformanceProfile
   ): SequencingDecision {
-    const reasoning = this.generateReasoningForSelection(selectedItem, candidates, knowledgeGraph, performance)
+    const reasoning = this.generateReasoningForSelection(
+      selectedItem,
+      candidates,
+      knowledgeGraph,
+      performance
+    )
     const adaptation = this.calculateAdaptationNeeds(selectedItem, performance)
     const predictions = this.generateSelectionPredictions(selectedItem, knowledgeGraph, performance)
 
@@ -706,7 +737,7 @@ class PersonalizedSequencing {
       selectedItem,
       reasoning,
       adaptation,
-      predictions
+      predictions,
     }
   }
 
@@ -721,11 +752,16 @@ class PersonalizedSequencing {
     // Track time spent
     const objectiveId = `obj_${decision.selectedItem.topic}_${decision.selectedItem.subtopic}`
     const currentTime = learningPath.progressTracking.timeSpent.get(objectiveId) || 0
-    learningPath.progressTracking.timeSpent.set(objectiveId, currentTime + decision.predictions.timeToComplete)
+    learningPath.progressTracking.timeSpent.set(
+      objectiveId,
+      currentTime + decision.predictions.timeToComplete
+    )
 
     // Record adaptations
     if (decision.adaptation.pathModification) {
-      learningPath.adaptations.personalizations.push(`Path modified for ${decision.selectedItem.topic}`)
+      learningPath.adaptations.personalizations.push(
+        `Path modified for ${decision.selectedItem.topic}`
+      )
     }
 
     if (decision.adaptation.difficultyAdjustment !== 0) {
@@ -738,17 +774,23 @@ class PersonalizedSequencing {
   }
 
   // Additional helper methods (simplified implementations)
-  private arePrerequisitesMet(item: ItemParameters, knowledgeGraph: Map<string, KnowledgeNode>): boolean {
+  private arePrerequisitesMet(
+    item: ItemParameters,
+    knowledgeGraph: Map<string, KnowledgeNode>
+  ): boolean {
     const prerequisites = this.biologyDomain.prerequisites.get(item.subtopic) || []
-    return prerequisites.every(prereq => {
+    return prerequisites.every((prereq) => {
       const node = knowledgeGraph.get(`${item.topic}_${prereq}`)
       return node ? node.masteryLevel >= 0.6 : false
     })
   }
 
-  private calculateConceptMastery(topic: string, knowledgeGraph: Map<string, KnowledgeNode>): number {
-    const relevantNodes = Array.from(knowledgeGraph.values()).filter(node =>
-      node.concept.includes(topic) || node.id.includes(topic)
+  private calculateConceptMastery(
+    topic: string,
+    knowledgeGraph: Map<string, KnowledgeNode>
+  ): number {
+    const relevantNodes = Array.from(knowledgeGraph.values()).filter(
+      (node) => node.concept.includes(topic) || node.id.includes(topic)
     )
     if (relevantNodes.length === 0) return 0
     return relevantNodes.reduce((sum, node) => sum + node.masteryLevel, 0) / relevantNodes.length
@@ -758,7 +800,7 @@ class PersonalizedSequencing {
     // Simplified engagement prediction
     const difficultyMatch = 1 - Math.abs(item.difficulty - performance.currentState.currentAbility)
     const topicInterest = 0.8 // Would use student preferences
-    return (difficultyMatch * 0.6) + (topicInterest * 0.4)
+    return difficultyMatch * 0.6 + topicInterest * 0.4
   }
 
   private calculateHybridScore(
@@ -822,7 +864,7 @@ class PersonalizedSequencing {
       prerequisiteGaps: [],
       difficultyMismatch: null,
       engagementIssues: null,
-      masteredAreas: []
+      masteredAreas: [],
     }
   }
 
@@ -842,17 +884,22 @@ class PersonalizedSequencing {
     return { modified: false, description: '' }
   }
 
-  private regenerateSequence(learningPath: LearningPath, knowledgeGraph: Map<string, KnowledgeNode>): string[] {
+  private regenerateSequence(
+    learningPath: LearningPath,
+    knowledgeGraph: Map<string, KnowledgeNode>
+  ): string[] {
     return learningPath.sequence // Simplified
   }
 
   private analyzeMasteryLevels(knowledgeGraph: Map<string, KnowledgeNode>): any {
     const nodes = Array.from(knowledgeGraph.values())
     return {
-      strongAreas: nodes.filter(n => n.masteryLevel >= 0.8).map(n => n.concept),
-      developingAreas: nodes.filter(n => n.masteryLevel >= 0.5 && n.masteryLevel < 0.8).map(n => n.concept),
-      strugglingAreas: nodes.filter(n => n.masteryLevel < 0.5).map(n => n.concept),
-      masteryTrend: 'improving' as const
+      strongAreas: nodes.filter((n) => n.masteryLevel >= 0.8).map((n) => n.concept),
+      developingAreas: nodes
+        .filter((n) => n.masteryLevel >= 0.5 && n.masteryLevel < 0.8)
+        .map((n) => n.concept),
+      strugglingAreas: nodes.filter((n) => n.masteryLevel < 0.5).map((n) => n.concept),
+      masteryTrend: 'improving' as const,
     }
   }
 
@@ -860,20 +907,29 @@ class PersonalizedSequencing {
     return 0.8 // Simplified
   }
 
-  private generatePathRecommendations(learningPath: LearningPath, knowledgeGraph: Map<string, KnowledgeNode>): string[] {
+  private generatePathRecommendations(
+    learningPath: LearningPath,
+    knowledgeGraph: Map<string, KnowledgeNode>
+  ): string[] {
     return ['Continue current path'] // Simplified
   }
 
-  private generatePathPredictions(learningPath: LearningPath, knowledgeGraph: Map<string, KnowledgeNode>): any {
+  private generatePathPredictions(
+    learningPath: LearningPath,
+    knowledgeGraph: Map<string, KnowledgeNode>
+  ): any {
     return {
       timeToCompletion: 120, // minutes
       finalMasteryLevel: 0.85,
       riskAreas: [],
-      accelerationOpportunities: []
+      accelerationOpportunities: [],
     }
   }
 
-  private calculatePrerequisiteScore(item: ItemParameters, knowledgeGraph: Map<string, KnowledgeNode>): number {
+  private calculatePrerequisiteScore(
+    item: ItemParameters,
+    knowledgeGraph: Map<string, KnowledgeNode>
+  ): number {
     return this.arePrerequisitesMet(item, knowledgeGraph) ? 1 : 0
   }
 
@@ -885,7 +941,10 @@ class PersonalizedSequencing {
     return Math.min(1, performance.currentState.speed / (item.estimatedTime / 60))
   }
 
-  private calculateMasteryReinforcementScore(item: ItemParameters, knowledgeGraph: Map<string, KnowledgeNode>): number {
+  private calculateMasteryReinforcementScore(
+    item: ItemParameters,
+    knowledgeGraph: Map<string, KnowledgeNode>
+  ): number {
     const mastery = this.calculateConceptMastery(item.topic, knowledgeGraph)
     return mastery < 0.8 ? 1 - mastery : 0.5 // Prefer areas that need reinforcement
   }
@@ -899,8 +958,8 @@ class PersonalizedSequencing {
     return {
       primaryFactor: 'prerequisite_readiness',
       contributingFactors: ['difficulty_match', 'mastery_gap'],
-      alternativesConsidered: candidates.slice(0, 3).map(c => c.id),
-      expectedOutcome: 'mastery_advancement'
+      alternativesConsidered: candidates.slice(0, 3).map((c) => c.id),
+      expectedOutcome: 'mastery_advancement',
     }
   }
 
@@ -909,7 +968,7 @@ class PersonalizedSequencing {
       pathModification: false,
       difficultyAdjustment: 0,
       paceChange: 0,
-      strategicShift: false
+      strategicShift: false,
     }
   }
 
@@ -922,7 +981,7 @@ class PersonalizedSequencing {
       masteryGain: 0.1,
       engagementImpact: 0.05,
       timeToComplete: item.estimatedTime,
-      nextRecommendations: ['Continue with related concepts']
+      nextRecommendations: ['Continue with related concepts'],
     }
   }
 }

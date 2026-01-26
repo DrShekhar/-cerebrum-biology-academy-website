@@ -137,9 +137,9 @@ export const cities: CityData[] = [
     studentCount: '5,800+',
     metaTitle: 'Online Biology Classes in Hyderabad | NEET Coaching | Cerebrum Academy',
     metaDescription:
-      'Join Hyderabad\'s best online biology classes for NEET. Personal attention, AIIMS faculty, flexible timing. 5,800+ students. Not a factory - we care.',
+      "Join Hyderabad's best online biology classes for NEET. Personal attention, AIIMS faculty, flexible timing. 5,800+ students. Not a factory - we care.",
     heroSubtitle:
-      'Escape the coaching factory model. Get personalized NEET preparation from India\'s best faculty.',
+      "Escape the coaching factory model. Get personalized NEET preparation from India's best faculty.",
   },
   {
     name: 'Noida',
@@ -170,8 +170,7 @@ export const cities: CityData[] = [
     metaTitle: 'Online Biology Classes in Noida | NEET Preparation | Cerebrum Academy',
     metaDescription:
       'Top online biology classes for Noida students. NEET preparation with AIIMS faculty. No DND commute needed. 4,500+ students from Noida & Greater Noida.',
-    heroSubtitle:
-      'Why cross the border when Delhi\'s best teaching comes to your Noida home?',
+    heroSubtitle: "Why cross the border when Delhi's best teaching comes to your Noida home?",
   },
   {
     name: 'Gurugram',
@@ -203,14 +202,14 @@ export const cities: CityData[] = [
     metaDescription:
       'Best online biology classes in Gurugram for NEET & boards. AIIMS faculty, flexible timing. 3,800+ students from DLF, Golf Course Road & Sohna Road areas.',
     heroSubtitle:
-      'Gurugram\'s DLF and Golf Course Road families choose smart - online NEET coaching that works.',
+      "Gurugram's DLF and Golf Course Road families choose smart - online NEET coaching that works.",
   },
   {
     name: 'Pune',
     slug: 'pune',
     state: 'Maharashtra',
     topSchools: [
-      'The Bishop\'s School',
+      "The Bishop's School",
       'Symbiosis International School',
       'Mercedes-Benz International School',
       'VIBGYOR High School',
@@ -228,12 +227,12 @@ export const cities: CityData[] = [
       'Get Mumbai/Delhi level teaching in Pune',
       'Pleasant weather = perfect study environment at home',
       'Access specialized NEET biology expertise',
-      'Cost-effective for Pune\'s value-conscious families',
+      "Cost-effective for Pune's value-conscious families",
     ],
     studentCount: '4,200+',
     metaTitle: 'Online Biology Classes in Pune | NEET Preparation | Cerebrum Academy',
     metaDescription:
-      'Join Pune\'s top online biology classes for NEET. AIIMS-trained teachers, live sessions. 4,200+ Pune students. Get Delhi teaching in your Pune home.',
+      "Join Pune's top online biology classes for NEET. AIIMS-trained teachers, live sessions. 4,200+ Pune students. Get Delhi teaching in your Pune home.",
     heroSubtitle:
       'Pune has great weather and smart students. Now get great NEET teaching too - online.',
   },

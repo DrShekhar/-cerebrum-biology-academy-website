@@ -32,12 +32,12 @@ function validateCSRF(request: NextRequest): boolean {
 
   // Origin header is more reliable than referer
   if (origin) {
-    return allowedOrigins.some(allowed => origin.startsWith(allowed || ''))
+    return allowedOrigins.some((allowed) => origin.startsWith(allowed || ''))
   }
 
   // Fall back to referer if origin not present
   if (referer) {
-    return allowedOrigins.some(allowed => referer.startsWith(allowed || ''))
+    return allowedOrigins.some((allowed) => referer.startsWith(allowed || ''))
   }
 
   // Reject if no origin/referer (could be direct API call from attacker)

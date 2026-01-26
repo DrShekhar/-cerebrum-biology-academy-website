@@ -268,11 +268,7 @@ async function handlePATCH(
 
       // Check for stage change
       if (validatedData.stage && validatedData.stage !== existingLead.stage) {
-        await WebhookService.onLeadStageChanged(
-          leadData,
-          existingLead.stage,
-          validatedData.stage
-        )
+        await WebhookService.onLeadStageChanged(leadData, existingLead.stage, validatedData.stage)
 
         // Handle special stage events
         if (validatedData.stage === 'ENROLLED') {

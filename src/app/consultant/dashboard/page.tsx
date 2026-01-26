@@ -153,7 +153,8 @@ export default function ConsultantDashboard() {
 
   if (!data) return null
 
-  const { consultant, summary, recentReferrals, pendingCommissions, activeLinks, monthlyTrend } = data
+  const { consultant, summary, recentReferrals, pendingCommissions, activeLinks, monthlyTrend } =
+    data
 
   return (
     <div className="space-y-6">
@@ -164,9 +165,11 @@ export default function ConsultantDashboard() {
             Welcome back, {consultant.displayName}
           </h1>
           <p className="text-gray-600 mt-1">
-            Consultant Code: <span className="font-mono font-semibold">{consultant.consultantCode}</span>
+            Consultant Code:{' '}
+            <span className="font-mono font-semibold">{consultant.consultantCode}</span>
             {' • '}
-            Commission Rate: <span className="font-semibold text-teal-600">{consultant.commissionRate}%</span>
+            Commission Rate:{' '}
+            <span className="font-semibold text-teal-600">{consultant.commissionRate}%</span>
           </p>
         </div>
         <Link
@@ -279,7 +282,11 @@ export default function ConsultantDashboard() {
             { label: 'Demo Scheduled', value: summary.statusCounts.demoScheduled, color: 'purple' },
             { label: 'Demo Done', value: summary.statusCounts.demoCompleted, color: 'indigo' },
             { label: 'Offer Sent', value: summary.statusCounts.offerSent, color: 'orange' },
-            { label: 'Payment Pending', value: summary.statusCounts.paymentPending, color: 'yellow' },
+            {
+              label: 'Payment Pending',
+              value: summary.statusCounts.paymentPending,
+              color: 'yellow',
+            },
             { label: 'Enrolled', value: summary.statusCounts.enrolled, color: 'green' },
             { label: 'Lost', value: summary.statusCounts.lost, color: 'red' },
           ].map((stat) => (
@@ -373,9 +380,7 @@ export default function ConsultantDashboard() {
                 pendingCommissions.slice(0, 3).map((commission) => (
                   <div key={commission.id} className="flex items-center justify-between p-4">
                     <div>
-                      <p className="font-medium text-gray-900">
-                        {commission.referral.studentName}
-                      </p>
+                      <p className="font-medium text-gray-900">{commission.referral.studentName}</p>
                       <p className="text-sm text-gray-500">
                         {new Date(commission.createdAt).toLocaleDateString()}
                       </p>
@@ -428,9 +433,7 @@ export default function ConsultantDashboard() {
                       <p className="text-sm text-gray-600">
                         <span className="font-semibold">{link.clickCount}</span> clicks
                       </p>
-                      <p className="text-xs text-teal-600">
-                        {link.conversionRate}% conversion
-                      </p>
+                      <p className="text-xs text-teal-600">{link.conversionRate}% conversion</p>
                     </div>
                   </div>
                 ))

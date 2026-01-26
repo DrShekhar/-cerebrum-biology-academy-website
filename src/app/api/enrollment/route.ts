@@ -31,7 +31,10 @@ export async function POST(request: NextRequest) {
     if (validatedData.userId && validatedData.userId !== session.user.id) {
       // Only admin can create enrollment for other users
       if (session.user.role !== 'admin') {
-        return NextResponse.json({ error: 'Cannot create enrollment for another user' }, { status: 403 })
+        return NextResponse.json(
+          { error: 'Cannot create enrollment for another user' },
+          { status: 403 }
+        )
       }
       userId = validatedData.userId
     }

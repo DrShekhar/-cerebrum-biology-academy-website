@@ -10,30 +10,30 @@ export interface AdminAnalytics {
     newRegistrations: number
     activeUsers: number
     userRetention: number
-    
+
     // Enrollment & Revenue metrics
     totalEnrollments: number
     enrollmentConversionRate: number
     revenue: number
     averageOrderValue: number
-    
+
     // Marketing metrics
     demoBookings: number
     demoConversionRate: number
     leadGeneration: number
     whatsappEngagement: number
-    
+
     // Course-specific metrics
-    popularCourses: Array<{courseId: string, enrollmentCount: number}>
+    popularCourses: Array<{ courseId: string; enrollmentCount: number }>
     classDistribution: {
       class11: number
       class12: number
       dropper: number
       foundation: number
     }
-    
+
     // Geographic distribution
-    topCities: Array<{city: string, userCount: number}>
+    topCities: Array<{ city: string; userCount: number }>
     stateDistribution: Record<string, number>
   }
   createdAt: number
@@ -46,28 +46,28 @@ export interface Faculty {
   email: string
   mobile: string
   whatsappNumber?: string
-  
+
   // Professional details
   qualification: string[]
   experience: number
   subjects: ('Physics' | 'Chemistry' | 'Biology' | 'Mathematics')[]
   specialization: string[]
   designation: 'Senior Faculty' | 'Faculty' | 'Assistant Faculty' | 'Guest Faculty'
-  
+
   // Performance metrics
   rating: number
   totalStudentsTaught: number
   successRate: number
   studentFeedbackScore: number
-  
+
   // Availability and scheduling
   availability: {
     days: ('monday' | 'tuesday' | 'wednesday' | 'thursday' | 'friday' | 'saturday' | 'sunday')[]
-    timeSlots: Array<{startTime: string, endTime: string}>
+    timeSlots: Array<{ startTime: string; endTime: string }>
     maxClassesPerDay: number
     preferredBatchSize: number
   }
-  
+
   // Admin fields
   isActive: boolean
   dateJoined: number
@@ -75,7 +75,7 @@ export interface Faculty {
   salary?: number
   createdAt: number
   updatedAt: number
-  
+
   profile?: {
     bio: string
     achievements: string[]
@@ -95,7 +95,7 @@ export interface ClassSchedule {
   courseId: string
   facultyId: string
   batchId: string
-  
+
   // Schedule details
   title: string
   description?: string
@@ -103,19 +103,19 @@ export interface ClassSchedule {
   startTime: string // HH:mm format
   endTime: string // HH:mm format
   duration: number // in minutes
-  
+
   // Class details
   type: 'live' | 'recorded' | 'doubt-clearing' | 'test' | 'revision'
   platform: 'zoom' | 'google-meet' | 'youtube' | 'classroom'
   meetingLink?: string
   recordingLink?: string
-  
+
   // Attendance and engagement
   maxStudents: number
   enrolledStudents: string[] // User IDs
   attendedStudents: string[] // User IDs
   status: 'scheduled' | 'ongoing' | 'completed' | 'cancelled'
-  
+
   // Resources
   materials: Array<{
     type: 'pdf' | 'video' | 'link' | 'assignment'
@@ -123,7 +123,7 @@ export interface ClassSchedule {
     url: string
     description?: string
   }>
-  
+
   createdAt: number
   updatedAt: number
 }
@@ -138,23 +138,23 @@ export interface EnhancedDemoBooking extends DemoBooking {
     campaign: string
     content?: string
   }
-  
+
   // Assignment and follow-up
   assignedTo?: string // Faculty/Sales team member ID
   followUpDate?: number
   remindersSent: number
-  
+
   // Demographics and targeting
   studentClass: '10th' | '11th' | '12th' | 'Dropper'
   currentScore?: number
   targetScore?: number
   competitiveExams: ('NEET' | 'AIIMS' | 'JIPMER' | 'State CET')[]
-  
+
   // Conversion tracking
   convertedToEnrollment: boolean
   conversionDate?: number
   rejectionReason?: string
-  
+
   // Communication logs
   communicationHistory: Array<{
     type: 'call' | 'whatsapp' | 'email' | 'sms'
@@ -163,7 +163,7 @@ export interface EnhancedDemoBooking extends DemoBooking {
     response?: string
     sentBy: string
   }>
-  
+
   // Demo feedback
   demoFeedback?: {
     rating: number
@@ -181,35 +181,35 @@ export interface PaymentTransaction {
   enrollmentId: string
   userId: string
   courseId: string
-  
+
   // Payment details
   amount: number
   currency: 'INR'
   paymentMethod: 'razorpay' | 'paytm' | 'gpay' | 'phonepe' | 'bank_transfer' | 'cash'
   status: 'pending' | 'processing' | 'completed' | 'failed' | 'refunded' | 'cancelled'
-  
+
   // Gateway details
   gatewayTransactionId?: string
   gatewayResponse?: Record<string, any>
   failureReason?: string
-  
+
   // Pricing and discounts
   originalAmount: number
   discountAmount: number
   discountCode?: string
   tax: number
   finalAmount: number
-  
+
   // Timeline
   initiatedAt: number
   completedAt?: number
   expiresAt?: number
-  
+
   // Refund information
   refundAmount?: number
   refundReason?: string
   refundedAt?: number
-  
+
   createdAt: number
   updatedAt: number
 }
@@ -220,7 +220,7 @@ export interface MarketingCampaign {
   name: string
   type: 'whatsapp' | 'sms' | 'email' | 'facebook' | 'google' | 'mixed'
   status: 'draft' | 'scheduled' | 'active' | 'paused' | 'completed'
-  
+
   // Campaign details
   objective: 'enrollment' | 'demo_booking' | 'retention' | 'upsell' | 'referral'
   targetAudience: {
@@ -228,7 +228,7 @@ export interface MarketingCampaign {
       class: ('10th' | '11th' | '12th' | 'Dropper')[]
       city?: string[]
       state?: string[]
-      score_range?: {min: number, max: number}
+      score_range?: { min: number; max: number }
     }
     behavior: {
       enrollment_status?: ('enrolled' | 'demo_taken' | 'lead' | 'inactive')[]
@@ -237,7 +237,7 @@ export interface MarketingCampaign {
     }
     customSegment?: string // ID of custom audience segment
   }
-  
+
   // Campaign content
   content: {
     whatsapp?: {
@@ -254,12 +254,12 @@ export interface MarketingCampaign {
       textContent: string
     }
   }
-  
+
   // Scheduling
   scheduledAt?: number
   frequency?: 'once' | 'daily' | 'weekly' | 'monthly'
   endDate?: number
-  
+
   // Performance metrics
   metrics: {
     sent: number
@@ -270,7 +270,7 @@ export interface MarketingCampaign {
     unsubscribed: number
     cost: number
   }
-  
+
   createdBy: string
   createdAt: number
   updatedAt: number
@@ -282,7 +282,7 @@ export interface AbandonedCart {
   userId: string
   courseId: string
   sessionId: string
-  
+
   // Cart details
   items: Array<{
     courseId: string
@@ -291,13 +291,13 @@ export interface AbandonedCart {
     discountApplied?: number
   }>
   totalAmount: number
-  
+
   // Abandonment tracking
   abandonedAt: number
   lastInteraction: number
   pageExited: string
   timeSpentOnPage: number
-  
+
   // Recovery attempts
   recoveryAttempts: Array<{
     type: 'whatsapp' | 'sms' | 'email' | 'push'
@@ -306,12 +306,12 @@ export interface AbandonedCart {
     clicked?: boolean
     content: string
   }>
-  
+
   // Outcome
   recovered: boolean
   recoveredAt?: number
   finalPurchaseAmount?: number
-  
+
   // Personalization data
   userBehavior: {
     previousCourses: string[]
@@ -330,18 +330,18 @@ export interface AdminActionLog {
   action: string
   resourceType: 'user' | 'enrollment' | 'payment' | 'campaign' | 'demo' | 'faculty' | 'schedule'
   resourceId: string
-  
+
   // Action details
   actionType: 'create' | 'update' | 'delete' | 'approve' | 'reject' | 'export'
   previousValues?: Record<string, any>
   newValues?: Record<string, any>
   reason?: string
-  
+
   // Context
   ipAddress: string
   userAgent: string
   timestamp: number
-  
+
   // Impact assessment
   affectedUsers?: string[]
   criticalAction: boolean
@@ -351,23 +351,23 @@ export interface AdminActionLog {
 export interface SystemMetrics {
   id: string
   timestamp: number
-  
+
   // Performance metrics
   responseTime: number
   activeConnections: number
   databaseLatency: number
   errorRate: number
-  
+
   // User activity
   onlineUsers: number
   concurrentClasses: number
   apiCallsPerMinute: number
-  
+
   // Business metrics
   conversionRateToday: number
   revenueToday: number
   enrollmentsToday: number
-  
+
   // System health
   serverLoad: number
   memoryUsage: number
@@ -381,13 +381,13 @@ export interface CourseBatch {
   courseId: string
   batchName: string
   facultyId: string
-  
+
   // Batch configuration
   maxStudents: number
   currentStudents: number
   startDate: string
   endDate: string
-  
+
   // Schedule
   schedule: {
     days: string[]
@@ -395,7 +395,7 @@ export interface CourseBatch {
     duration: number
     totalClasses: number
   }
-  
+
   // Student management
   enrolledStudents: Array<{
     userId: string
@@ -403,12 +403,12 @@ export interface CourseBatch {
     paymentStatus: 'pending' | 'partial' | 'completed'
     attendancePercentage: number
   }>
-  
+
   // Performance tracking
   averageAttendance: number
   completionRate: number
   studentSatisfaction: number
-  
+
   status: 'upcoming' | 'ongoing' | 'completed' | 'cancelled'
   createdAt: number
   updatedAt: number
@@ -418,22 +418,22 @@ export interface ClassAttendance {
   id: string
   classScheduleId: string
   studentId: string
-  
+
   // Attendance details
   status: 'present' | 'absent' | 'late' | 'excused'
   joinTime?: number
   leaveTime?: number
   duration?: number
-  
+
   // Engagement metrics
   questionsAsked: number
   chatParticipation: number
   quizScore?: number
-  
+
   // Technical details
   deviceType: 'mobile' | 'desktop' | 'tablet'
   connectionQuality: 'excellent' | 'good' | 'poor'
   technicalIssues?: string[]
-  
+
   createdAt: number
 }

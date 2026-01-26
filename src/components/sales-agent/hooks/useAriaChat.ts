@@ -214,8 +214,7 @@ export function useAriaChat(options: UseAriaChatOptions = {}) {
           return
         }
 
-        const errorMessage =
-          err instanceof Error ? err.message : 'Failed to get response'
+        const errorMessage = err instanceof Error ? err.message : 'Failed to get response'
         setError(errorMessage)
 
         // Update bot message with error
@@ -315,9 +314,7 @@ export function useAriaChat(options: UseAriaChatOptions = {}) {
 
   // Handle WhatsApp handoff
   const openWhatsAppHandoff = useCallback(() => {
-    const lastUserMessage = messages
-      .filter((m) => m.sender === 'user')
-      .pop()?.text
+    const lastUserMessage = messages.filter((m) => m.sender === 'user').pop()?.text
 
     const link = getAriaWhatsAppLink({
       leadData,

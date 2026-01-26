@@ -21,12 +21,12 @@ function readJSONFile(filePath) {
 function calculateOverallScore(results) {
   const weights = {
     unit: 0.25,
-    integration: 0.20,
-    e2e: 0.20,
+    integration: 0.2,
+    e2e: 0.2,
     performance: 0.15,
-    security: 0.10,
+    security: 0.1,
     accessibility: 0.05,
-    ai: 0.05
+    ai: 0.05,
   }
 
   let totalScore = 0
@@ -39,7 +39,7 @@ function calculateOverallScore(results) {
     }
   })
 
-  return totalWeight > 0 ? (totalScore / totalWeight) : 0
+  return totalWeight > 0 ? totalScore / totalWeight : 0
 }
 
 function generateBadge(score) {
@@ -70,7 +70,7 @@ function generateReport() {
       total: jestResults.total?.lines?.total || 0,
       covered: jestResults.total?.lines?.covered || 0,
       percentage: jestResults.total?.lines?.pct || 0,
-      score: jestResults.total?.lines?.pct || 0
+      score: jestResults.total?.lines?.pct || 0,
     }
   }
 
@@ -81,9 +81,10 @@ function generateReport() {
       total: integrationResults.numTotalTests || 0,
       passed: integrationResults.numPassedTests || 0,
       failed: integrationResults.numFailedTests || 0,
-      score: integrationResults.numTotalTests > 0
-        ? (integrationResults.numPassedTests / integrationResults.numTotalTests * 100)
-        : 0
+      score:
+        integrationResults.numTotalTests > 0
+          ? (integrationResults.numPassedTests / integrationResults.numTotalTests) * 100
+          : 0,
     }
   }
 
@@ -95,9 +96,10 @@ function generateReport() {
       passed: playwrightResults.stats?.passed || 0,
       failed: playwrightResults.stats?.failed || 0,
       duration: playwrightResults.stats?.duration || 0,
-      score: playwrightResults.stats?.total > 0
-        ? (playwrightResults.stats?.passed / playwrightResults.stats?.total * 100)
-        : 0
+      score:
+        playwrightResults.stats?.total > 0
+          ? (playwrightResults.stats?.passed / playwrightResults.stats?.total) * 100
+          : 0,
     }
   }
 
@@ -109,9 +111,10 @@ function generateReport() {
       avgApiResponse: performanceResults.avgApiResponse || 0,
       passedBenchmarks: performanceResults.passedBenchmarks || 0,
       totalBenchmarks: performanceResults.totalBenchmarks || 0,
-      score: performanceResults.totalBenchmarks > 0
-        ? (performanceResults.passedBenchmarks / performanceResults.totalBenchmarks * 100)
-        : 0
+      score:
+        performanceResults.totalBenchmarks > 0
+          ? (performanceResults.passedBenchmarks / performanceResults.totalBenchmarks) * 100
+          : 0,
     }
   }
 
@@ -123,7 +126,10 @@ function generateReport() {
       criticalIssues: securityResults.critical || 0,
       warningIssues: securityResults.warnings || 0,
       passed: securityResults.passed || 0,
-      score: securityResults.vulnerabilities === 0 ? 100 : Math.max(0, 100 - (securityResults.critical * 20 + securityResults.warnings * 5))
+      score:
+        securityResults.vulnerabilities === 0
+          ? 100
+          : Math.max(0, 100 - (securityResults.critical * 20 + securityResults.warnings * 5)),
     }
   }
 
@@ -135,7 +141,10 @@ function generateReport() {
       warnings: accessibilityResults.warnings || 0,
       passed: accessibilityResults.passed || 0,
       wcagLevel: accessibilityResults.wcagLevel || 'AA',
-      score: accessibilityResults.violations === 0 ? 100 : Math.max(0, 100 - (accessibilityResults.violations * 10))
+      score:
+        accessibilityResults.violations === 0
+          ? 100
+          : Math.max(0, 100 - accessibilityResults.violations * 10),
     }
   }
 
@@ -147,7 +156,7 @@ function generateReport() {
       aiResponseTests: aiResults.aiResponses || 0,
       performanceTests: aiResults.aiPerformance || 0,
       accuracyScore: aiResults.accuracyScore || 0,
-      score: aiResults.accuracyScore || 0
+      score: aiResults.accuracyScore || 0,
     }
   }
 
@@ -170,14 +179,16 @@ function generateReport() {
 
   // Unit Tests
   if (results.unit) {
-    const status = results.unit.percentage >= 80 ? '✅' : results.unit.percentage >= 70 ? '⚠️' : '❌'
+    const status =
+      results.unit.percentage >= 80 ? '✅' : results.unit.percentage >= 70 ? '⚠️' : '❌'
     report += `
 | Unit Tests | ${status} | ${results.unit.percentage.toFixed(1)}% | ${results.unit.covered}/${results.unit.total} lines covered |`
   }
 
   // Integration Tests
   if (results.integration) {
-    const status = results.integration.score >= 90 ? '✅' : results.integration.score >= 80 ? '⚠️' : '❌'
+    const status =
+      results.integration.score >= 90 ? '✅' : results.integration.score >= 80 ? '⚠️' : '❌'
     report += `
 | Integration Tests | ${status} | ${results.integration.score.toFixed(1)}% | ${results.integration.passed}/${results.integration.total} tests passed |`
   }
@@ -191,28 +202,40 @@ function generateReport() {
 
   // Performance Tests
   if (results.performance) {
-    const status = results.performance.score >= 80 ? '✅' : results.performance.score >= 60 ? '⚠️' : '❌'
+    const status =
+      results.performance.score >= 80 ? '✅' : results.performance.score >= 60 ? '⚠️' : '❌'
     report += `
 | Performance Tests | ${status} | ${results.performance.score.toFixed(1)}% | ${results.performance.passedBenchmarks}/${results.performance.totalBenchmarks} benchmarks passed |`
   }
 
   // Security Tests
   if (results.security) {
-    const status = results.security.criticalIssues === 0 ? '✅' : results.security.criticalIssues <= 2 ? '⚠️' : '❌'
+    const status =
+      results.security.criticalIssues === 0
+        ? '✅'
+        : results.security.criticalIssues <= 2
+          ? '⚠️'
+          : '❌'
     report += `
 | Security Tests | ${status} | ${results.security.score.toFixed(1)}% | ${results.security.vulnerabilities} vulnerabilities, ${results.security.criticalIssues} critical |`
   }
 
   // Accessibility Tests
   if (results.accessibility) {
-    const status = results.accessibility.violations === 0 ? '✅' : results.accessibility.violations <= 5 ? '⚠️' : '❌'
+    const status =
+      results.accessibility.violations === 0
+        ? '✅'
+        : results.accessibility.violations <= 5
+          ? '⚠️'
+          : '❌'
     report += `
 | Accessibility Tests | ${status} | ${results.accessibility.score.toFixed(1)}% | ${results.accessibility.violations} violations, WCAG ${results.accessibility.wcagLevel} |`
   }
 
   // AI Tests
   if (results.ai) {
-    const status = results.ai.accuracyScore >= 90 ? '✅' : results.ai.accuracyScore >= 80 ? '⚠️' : '❌'
+    const status =
+      results.ai.accuracyScore >= 90 ? '✅' : results.ai.accuracyScore >= 80 ? '⚠️' : '❌'
     report += `
 | AI Content Quality | ${status} | ${results.ai.accuracyScore.toFixed(1)}% | ${results.ai.contentQualityTests} content tests, ${results.ai.aiResponseTests} response tests |`
   }
@@ -372,7 +395,7 @@ function generateReport() {
 
 ✅ **All tests are passing!** Your code meets the quality standards.`
   } else {
-    recommendations.forEach(rec => {
+    recommendations.forEach((rec) => {
       report += `
 - ${rec}`
     })

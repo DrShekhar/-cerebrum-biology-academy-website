@@ -3,10 +3,7 @@
 import { MessageCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import {
-  getCountryWhatsAppMessage,
-  type MessageType,
-} from '@/lib/international/whatsapp-messages'
+import { getCountryWhatsAppMessage, type MessageType } from '@/lib/international/whatsapp-messages'
 
 interface CountryWhatsAppCTAProps {
   variant?: 'hero' | 'primary' | 'secondary' | 'inline' | 'floating'
@@ -22,11 +19,9 @@ interface CountryWhatsAppCTAProps {
 const variantStyles = {
   hero: 'bg-green-500 hover:bg-green-600 text-white shadow-xl hover:shadow-2xl',
   primary: 'bg-green-500 hover:bg-green-600 text-white shadow-lg',
-  secondary:
-    'bg-white border-2 border-green-500 text-green-600 hover:bg-green-50',
+  secondary: 'bg-white border-2 border-green-500 text-green-600 hover:bg-green-50',
   inline: 'bg-green-100 hover:bg-green-200 text-green-700',
-  floating:
-    'bg-green-500 hover:bg-green-600 text-white shadow-2xl rounded-full',
+  floating: 'bg-green-500 hover:bg-green-600 text-white shadow-2xl rounded-full',
 }
 
 const sizeStyles = {

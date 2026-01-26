@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Bandra Mumbai | Pali Hill, Carter Road, Khar | Cerebrum Academy',
+  title: 'Best NEET Coaching in Bandra Mumbai | Pali Hill, Carter Road, Khar | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Bandra, Mumbai for elite schools. 94.2% success rate, AIIMS faculty. Bandra West, Pali Hill, Carter Road, Khar West. ASB, Cathedral, Ecole Mondiale students. Fee ₹24,000+. Book free demo!',
   keywords:

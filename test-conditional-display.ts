@@ -27,7 +27,9 @@ async function testConditionalDisplay() {
     .catch(() => false)
 
   console.log(`  ✓ Aria visible: ${ariaOnPublic || ariaButtonOnPublic}`)
-  console.log(`  ✓ WhatsApp button present: ${await page.locator('button[aria-label*="WhatsApp"]').isVisible()}`)
+  console.log(
+    `  ✓ WhatsApp button present: ${await page.locator('button[aria-label*="WhatsApp"]').isVisible()}`
+  )
   console.log()
 
   // Test 2: Landing page - should also show Aria

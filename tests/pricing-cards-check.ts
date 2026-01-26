@@ -3,17 +3,22 @@ import { chromium } from 'playwright'
 async function checkPricingCards() {
   const browser = await chromium.launch({ headless: true })
   const context = await browser.newContext({
-    viewport: { width: 1440, height: 900 }
+    viewport: { width: 1440, height: 900 },
   })
   const page = await context.newPage()
   page.setDefaultTimeout(60000)
 
   console.log('Navigating to pricing page...')
-  await page.goto('https://cerebrumbiologyacademy.com/pricing', { waitUntil: 'domcontentloaded', timeout: 60000 })
+  await page.goto('https://cerebrumbiologyacademy.com/pricing', {
+    waitUntil: 'domcontentloaded',
+    timeout: 60000,
+  })
   await page.waitForTimeout(2000)
 
   // Close the popup if visible
-  const closeButton = page.locator('button:has-text("×"), [class*="close"], button:has(svg)').first()
+  const closeButton = page
+    .locator('button:has-text("×"), [class*="close"], button:has(svg)')
+    .first()
   try {
     if (await closeButton.isVisible({ timeout: 3000 })) {
       await closeButton.click()

@@ -25,7 +25,7 @@ import {
   Star,
   Calendar,
   Users,
-  Gauge
+  Gauge,
 } from 'lucide-react'
 
 interface AdaptiveTestResults {
@@ -94,9 +94,11 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
   onRetakeTest,
   onViewDetailedReport,
   onDownloadReport,
-  onShareResults
+  onShareResults,
 }) => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'performance' | 'adaptations' | 'gaps' | 'recommendations'>('overview')
+  const [activeTab, setActiveTab] = useState<
+    'overview' | 'performance' | 'adaptations' | 'gaps' | 'recommendations'
+  >('overview')
   const [showDiagnostics, setShowDiagnostics] = useState(false)
 
   const getScoreColor = (score: number): string => {
@@ -121,11 +123,16 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
 
   const getMasteryColor = (level: string): string => {
     switch (level.toLowerCase()) {
-      case 'advanced': return 'bg-green-600'
-      case 'proficient': return 'from-blue-500 to-blue-500'
-      case 'developing': return 'from-yellow-500 to-orange-500'
-      case 'beginning': return 'bg-orange-600'
-      default: return 'from-gray-500 to-gray-600'
+      case 'advanced':
+        return 'bg-green-600'
+      case 'proficient':
+        return 'from-blue-500 to-blue-500'
+      case 'developing':
+        return 'from-yellow-500 to-orange-500'
+      case 'beginning':
+        return 'bg-orange-600'
+      default:
+        return 'from-gray-500 to-gray-600'
     }
   }
 
@@ -147,7 +154,9 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
         className="text-center space-y-4"
       >
         <div className="flex items-center justify-center gap-3">
-          <div className={`p-4 bg-gradient-to-r ${getMasteryColor(results.results.masteryLevel)} rounded-xl`}>
+          <div
+            className={`p-4 bg-gradient-to-r ${getMasteryColor(results.results.masteryLevel)} rounded-xl`}
+          >
             <Award className="w-8 h-8 text-white" />
           </div>
           <div>
@@ -181,12 +190,15 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
 
           {/* Mastery Level */}
           <div className="text-center">
-            <div className={`inline-block px-6 py-3 rounded-xl bg-gradient-to-r ${getMasteryColor(results.results.masteryLevel)} text-white text-xl font-bold mb-2`}>
+            <div
+              className={`inline-block px-6 py-3 rounded-xl bg-gradient-to-r ${getMasteryColor(results.results.masteryLevel)} text-white text-xl font-bold mb-2`}
+            >
               {results.results.masteryLevel}
             </div>
             <div className="text-gray-600 mb-2">Mastery Level</div>
             <div className="text-sm text-gray-500">
-              Ability: {results.results.abilityEstimate.theta.toFixed(2)} ± {results.results.abilityEstimate.standardError.toFixed(2)}
+              Ability: {results.results.abilityEstimate.theta.toFixed(2)} ±{' '}
+              {results.results.abilityEstimate.standardError.toFixed(2)}
             </div>
             <div className="text-sm text-gray-500">
               Confidence: {Math.round(results.results.abilityEstimate.confidence * 100)}%
@@ -252,7 +264,7 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
               { id: 'performance', label: 'Performance', icon: TrendingUp },
               { id: 'adaptations', label: 'Adaptations', icon: Zap },
               { id: 'gaps', label: 'Learning Gaps', icon: AlertTriangle },
-              { id: 'recommendations', label: 'Recommendations', icon: Lightbulb }
+              { id: 'recommendations', label: 'Recommendations', icon: Lightbulb },
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -300,10 +312,13 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div
                               className={`h-2 rounded-full bg-gradient-to-r ${
-                                score >= 80 ? 'from-green-400 to-green-600' :
-                                score >= 60 ? 'from-blue-400 to-blue-600' :
-                                score >= 40 ? 'from-yellow-400 to-yellow-600' :
-                                'from-red-400 to-red-600'
+                                score >= 80
+                                  ? 'from-green-400 to-green-600'
+                                  : score >= 60
+                                    ? 'from-blue-400 to-blue-600'
+                                    : score >= 40
+                                      ? 'from-yellow-400 to-yellow-600'
+                                      : 'from-red-400 to-red-600'
                               }`}
                               style={{ width: `${Math.min(100, Math.max(0, score))}%` }}
                             />
@@ -325,7 +340,10 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                       </h3>
                       <div className="space-y-2">
                         {results.predictions.strengths.map((strength, index) => (
-                          <div key={index} className="flex items-center gap-2 p-3 bg-green-50 rounded-lg">
+                          <div
+                            key={index}
+                            className="flex items-center gap-2 p-3 bg-green-50 rounded-lg"
+                          >
                             <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0" />
                             <span className="text-green-800">{strength}</span>
                           </div>
@@ -343,7 +361,10 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                       </h3>
                       <div className="space-y-2">
                         {results.predictions.riskFactors.map((risk, index) => (
-                          <div key={index} className="flex items-center gap-2 p-3 bg-orange-50 rounded-lg">
+                          <div
+                            key={index}
+                            className="flex items-center gap-2 p-3 bg-orange-50 rounded-lg"
+                          >
                             <AlertTriangle className="w-4 h-4 text-orange-600 flex-shrink-0" />
                             <span className="text-orange-800">{risk}</span>
                           </div>
@@ -366,19 +387,27 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                 {/* Performance Metrics */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-2xl font-bold text-blue-600">{results.performance.itemsCompleted}</div>
+                    <div className="text-2xl font-bold text-blue-600">
+                      {results.performance.itemsCompleted}
+                    </div>
                     <div className="text-sm text-gray-600">Questions Completed</div>
                   </div>
                   <div className="text-center p-4 bg-green-50 rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">{formatTime(results.performance.totalTime)}</div>
+                    <div className="text-2xl font-bold text-green-600">
+                      {formatTime(results.performance.totalTime)}
+                    </div>
                     <div className="text-sm text-gray-600">Total Time</div>
                   </div>
                   <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-2xl font-bold text-purple-600">{Math.round(results.performance.averageItemTime)}m</div>
+                    <div className="text-2xl font-bold text-purple-600">
+                      {Math.round(results.performance.averageItemTime)}m
+                    </div>
                     <div className="text-sm text-gray-600">Avg per Question</div>
                   </div>
                   <div className="text-center p-4 bg-orange-50 rounded-lg">
-                    <div className="text-2xl font-bold text-orange-600">{results.performance.efficiency}%</div>
+                    <div className="text-2xl font-bold text-orange-600">
+                      {results.performance.efficiency}%
+                    </div>
                     <div className="text-sm text-gray-600">Efficiency</div>
                   </div>
                 </div>
@@ -392,14 +421,18 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <div className="text-sm text-gray-600 mb-2">Current Readiness Level</div>
-                      <div className="text-2xl font-bold text-blue-600 mb-2">{results.predictions.readinessLevel}</div>
+                      <div className="text-2xl font-bold text-blue-600 mb-2">
+                        {results.predictions.readinessLevel}
+                      </div>
                       <div className="text-sm text-gray-700">
                         Based on your performance patterns and ability estimate
                       </div>
                     </div>
                     <div>
                       <div className="text-sm text-gray-600 mb-2">Predicted Future Performance</div>
-                      <div className="text-2xl font-bold text-green-600 mb-2">{results.predictions.futurePerformance}%</div>
+                      <div className="text-2xl font-bold text-green-600 mb-2">
+                        {results.predictions.futurePerformance}%
+                      </div>
                       <div className="text-sm text-gray-700">
                         Expected performance on similar assessments
                       </div>
@@ -415,7 +448,9 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                   >
                     <Activity className="w-5 h-5" />
                     <span className="font-medium">Algorithm Diagnostics</span>
-                    <ArrowRight className={`w-4 h-4 transition-transform ${showDiagnostics ? 'rotate-90' : ''}`} />
+                    <ArrowRight
+                      className={`w-4 h-4 transition-transform ${showDiagnostics ? 'rotate-90' : ''}`}
+                    />
                   </button>
 
                   {showDiagnostics && (
@@ -441,8 +476,13 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                         </div>
                       </div>
                       <div className="text-sm text-gray-600">
-                        The adaptive algorithm successfully {results.diagnostics.algorithmPerformance.convergence ? 'converged' : 'processed'} your ability estimate
-                        in {results.diagnostics.algorithmPerformance.iterations} iterations with a final standard error of {results.diagnostics.algorithmPerformance.finalSE}.
+                        The adaptive algorithm successfully{' '}
+                        {results.diagnostics.algorithmPerformance.convergence
+                          ? 'converged'
+                          : 'processed'}{' '}
+                        your ability estimate in{' '}
+                        {results.diagnostics.algorithmPerformance.iterations} iterations with a
+                        final standard error of {results.diagnostics.algorithmPerformance.finalSE}.
                       </div>
                     </div>
                   )}
@@ -490,7 +530,10 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                       </h3>
                       <div className="space-y-2">
                         {results.adaptations.interventions.map((intervention, index) => (
-                          <div key={index} className="p-3 bg-purple-50 rounded-lg border border-purple-200">
+                          <div
+                            key={index}
+                            className="p-3 bg-purple-50 rounded-lg border border-purple-200"
+                          >
                             <div className="flex items-center gap-2">
                               <Zap className="w-4 h-4 text-purple-600 flex-shrink-0" />
                               <span className="text-purple-800">{intervention}</span>
@@ -509,7 +552,10 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                       </h3>
                       <div className="space-y-2">
                         {results.adaptations.personalizations.map((personalization, index) => (
-                          <div key={index} className="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                          <div
+                            key={index}
+                            className="p-3 bg-blue-50 rounded-lg border border-blue-200"
+                          >
                             <div className="flex items-center gap-2">
                               <Users className="w-4 h-4 text-blue-600 flex-shrink-0" />
                               <span className="text-blue-800">{personalization}</span>
@@ -584,18 +630,29 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {results.gaps.identifiedGaps.map((gap, index) => (
-                        <div key={index} className={`p-4 rounded-lg border ${
-                          results.gaps.criticalGaps.includes(gap)
-                            ? 'bg-red-50 border-red-200'
-                            : 'bg-orange-50 border-orange-200'
-                        }`}>
+                        <div
+                          key={index}
+                          className={`p-4 rounded-lg border ${
+                            results.gaps.criticalGaps.includes(gap)
+                              ? 'bg-red-50 border-red-200'
+                              : 'bg-orange-50 border-orange-200'
+                          }`}
+                        >
                           <div className="flex items-center gap-2">
-                            <AlertTriangle className={`w-4 h-4 ${
-                              results.gaps.criticalGaps.includes(gap) ? 'text-red-600' : 'text-orange-600'
-                            }`} />
-                            <span className={`font-medium ${
-                              results.gaps.criticalGaps.includes(gap) ? 'text-red-800' : 'text-orange-800'
-                            }`}>
+                            <AlertTriangle
+                              className={`w-4 h-4 ${
+                                results.gaps.criticalGaps.includes(gap)
+                                  ? 'text-red-600'
+                                  : 'text-orange-600'
+                              }`}
+                            />
+                            <span
+                              className={`font-medium ${
+                                results.gaps.criticalGaps.includes(gap)
+                                  ? 'text-red-800'
+                                  : 'text-orange-800'
+                              }`}
+                            >
                               {gap}
                             </span>
                             {results.gaps.criticalGaps.includes(gap) && (
@@ -619,7 +676,8 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </h3>
                     <p className="text-blue-800 mb-4">
                       A customized learning plan has been generated to address your specific gaps.
-                      This plan includes targeted practice, concept review, and skill-building activities.
+                      This plan includes targeted practice, concept review, and skill-building
+                      activities.
                     </p>
                     <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
                       View Remediation Plan
@@ -646,7 +704,10 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </h3>
                     <div className="space-y-3">
                       {results.gaps.recommendations.map((recommendation, index) => (
-                        <div key={index} className="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                        <div
+                          key={index}
+                          className="p-4 bg-yellow-50 rounded-lg border border-yellow-200"
+                        >
                           <div className="flex items-start gap-3">
                             <CheckCircle2 className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                             <div>
@@ -676,7 +737,9 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                         </ul>
                       </div>
                       <div className="p-4 bg-white rounded-lg">
-                        <div className="font-medium text-gray-900 mb-2">Medium Term (3-4 weeks)</div>
+                        <div className="font-medium text-gray-900 mb-2">
+                          Medium Term (3-4 weeks)
+                        </div>
                         <ul className="text-sm text-gray-700 space-y-1">
                           <li>• Strengthen foundations</li>
                           <li>• Practice problem-solving</li>
@@ -703,19 +766,27 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                   </h3>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">1</div>
+                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        1
+                      </div>
                       <span>Review your detailed performance report</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">2</div>
+                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        2
+                      </div>
                       <span>Start with the remediation plan for critical gaps</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">3</div>
+                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        3
+                      </div>
                       <span>Schedule regular practice sessions</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">4</div>
+                      <div className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                        4
+                      </div>
                       <span>Retake the adaptive test in 2-3 weeks to track progress</span>
                     </div>
                   </div>

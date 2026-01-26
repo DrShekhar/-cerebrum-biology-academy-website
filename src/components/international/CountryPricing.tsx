@@ -63,9 +63,7 @@ export function CountryPricing({ country }: CountryPricingProps) {
                 </span>
               )}
 
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                {plan.name}
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">{plan.name}</h3>
               <p className="text-slate-600 mb-6">{plan.description}</p>
 
               <div className="mb-6">

@@ -375,9 +375,24 @@ export default function WestDelhiAreaPage() {
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
-              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-              { '@type': 'ListItem', position: 2, name: 'West Delhi', item: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi' },
-              { '@type': 'ListItem', position: 3, name: area.name, item: `https://cerebrumbiologyacademy.com/neet-coaching-west-delhi/${areaSlug}` },
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'West Delhi',
+                item: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: area.name,
+                item: `https://cerebrumbiologyacademy.com/neet-coaching-west-delhi/${areaSlug}`,
+              },
             ],
           }),
         }}

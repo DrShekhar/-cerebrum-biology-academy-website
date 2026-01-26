@@ -2,8 +2,8 @@
 // BreadcrumbList Schema - Better Navigation Display in SERP
 
 interface BreadcrumbItem {
-  name: string;
-  url: string;
+  name: string
+  url: string
 }
 
 /**
@@ -12,108 +12,114 @@ interface BreadcrumbItem {
  */
 export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
   return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "name": item.name,
-      "item": item.url
-    }))
-  };
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  }
 }
 
 // Pre-configured breadcrumb paths for all main pages
 export const breadcrumbPaths: Record<string, BreadcrumbItem[]> = {
   courses: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Courses", url: "https://cerebrumbiologyacademy.com/courses" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses' },
   ],
   crashCourse: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Courses", url: "https://cerebrumbiologyacademy.com/courses" },
-    { name: "NEET Crash Course", url: "https://cerebrumbiologyacademy.com/courses/neet-crash-course" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses' },
+    {
+      name: 'NEET Crash Course',
+      url: 'https://cerebrumbiologyacademy.com/courses/neet-crash-course',
+    },
   ],
   twoYearProgram: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Courses", url: "https://cerebrumbiologyacademy.com/courses" },
-    { name: "Two-Year Program", url: "https://cerebrumbiologyacademy.com/courses/two-year-program" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses' },
+    {
+      name: 'Two-Year Program',
+      url: 'https://cerebrumbiologyacademy.com/courses/two-year-program',
+    },
   ],
   dropperCourse: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Courses", url: "https://cerebrumbiologyacademy.com/courses" },
-    { name: "Dropper Course", url: "https://cerebrumbiologyacademy.com/courses/dropper-course" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses' },
+    { name: 'Dropper Course', url: 'https://cerebrumbiologyacademy.com/courses/dropper-course' },
   ],
   foundation: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Courses", url: "https://cerebrumbiologyacademy.com/courses" },
-    { name: "Foundation Course", url: "https://cerebrumbiologyacademy.com/courses/foundation" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Courses', url: 'https://cerebrumbiologyacademy.com/courses' },
+    { name: 'Foundation Course', url: 'https://cerebrumbiologyacademy.com/courses/foundation' },
   ],
   faculty: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Faculty", url: "https://cerebrumbiologyacademy.com/faculty" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Faculty', url: 'https://cerebrumbiologyacademy.com/faculty' },
   ],
   results: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Results", url: "https://cerebrumbiologyacademy.com/results" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Results', url: 'https://cerebrumbiologyacademy.com/results' },
   ],
   testimonials: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Testimonials", url: "https://cerebrumbiologyacademy.com/testimonials" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Testimonials', url: 'https://cerebrumbiologyacademy.com/testimonials' },
   ],
   blog: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Blog", url: "https://cerebrumbiologyacademy.com/blog" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Blog', url: 'https://cerebrumbiologyacademy.com/blog' },
   ],
   contact: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Contact", url: "https://cerebrumbiologyacademy.com/contact" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Contact', url: 'https://cerebrumbiologyacademy.com/contact' },
   ],
   demo: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Book Demo", url: "https://cerebrumbiologyacademy.com/demo" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Book Demo', url: 'https://cerebrumbiologyacademy.com/demo' },
   ],
   about: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "About Us", url: "https://cerebrumbiologyacademy.com/about" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'About Us', url: 'https://cerebrumbiologyacademy.com/about' },
   ],
   // Location-specific breadcrumbs
   southExtension: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Centers", url: "https://cerebrumbiologyacademy.com/centers" },
-    { name: "South Extension", url: "https://cerebrumbiologyacademy.com/centers/south-extension" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
+    { name: 'South Extension', url: 'https://cerebrumbiologyacademy.com/centers/south-extension' },
   ],
   rohini: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Centers", url: "https://cerebrumbiologyacademy.com/centers" },
-    { name: "Rohini", url: "https://cerebrumbiologyacademy.com/centers/rohini" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
+    { name: 'Rohini', url: 'https://cerebrumbiologyacademy.com/centers/rohini' },
   ],
   gurugram: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Centers", url: "https://cerebrumbiologyacademy.com/centers" },
-    { name: "Gurugram", url: "https://cerebrumbiologyacademy.com/centers/gurugram" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
+    { name: 'Gurugram', url: 'https://cerebrumbiologyacademy.com/centers/gurugram' },
   ],
   greenPark: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Centers", url: "https://cerebrumbiologyacademy.com/centers" },
-    { name: "Green Park", url: "https://cerebrumbiologyacademy.com/centers/green-park" }
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
+    { name: 'Green Park', url: 'https://cerebrumbiologyacademy.com/centers/green-park' },
   ],
   faridabad: [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Centers", url: "https://cerebrumbiologyacademy.com/centers" },
-    { name: "Faridabad", url: "https://cerebrumbiologyacademy.com/centers/faridabad" }
-  ]
-};
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Centers', url: 'https://cerebrumbiologyacademy.com/centers' },
+    { name: 'Faridabad', url: 'https://cerebrumbiologyacademy.com/centers/faridabad' },
+  ],
+}
 
 /**
  * Generate breadcrumb schema for a blog post
  */
 export function generateBlogBreadcrumb(postTitle: string, postSlug: string): BreadcrumbItem[] {
   return [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Blog", url: "https://cerebrumbiologyacademy.com/blog" },
-    { name: postTitle, url: `https://cerebrumbiologyacademy.com/blog/${postSlug}` }
-  ];
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Blog', url: 'https://cerebrumbiologyacademy.com/blog' },
+    { name: postTitle, url: `https://cerebrumbiologyacademy.com/blog/${postSlug}` },
+  ]
 }
 
 /**
@@ -121,8 +127,8 @@ export function generateBlogBreadcrumb(postTitle: string, postSlug: string): Bre
  */
 export function generateCityBreadcrumb(cityName: string, citySlug: string): BreadcrumbItem[] {
   return [
-    { name: "Home", url: "https://cerebrumbiologyacademy.com" },
-    { name: "Locations", url: "https://cerebrumbiologyacademy.com/locations" },
-    { name: cityName, url: `https://cerebrumbiologyacademy.com/locations/${citySlug}` }
-  ];
+    { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+    { name: 'Locations', url: 'https://cerebrumbiologyacademy.com/locations' },
+    { name: cityName, url: `https://cerebrumbiologyacademy.com/locations/${citySlug}` },
+  ]
 }

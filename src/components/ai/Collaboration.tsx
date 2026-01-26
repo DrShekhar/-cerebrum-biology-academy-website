@@ -22,7 +22,7 @@ import {
   Settings,
   Star,
   Copy,
-  ExternalLink
+  ExternalLink,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -142,7 +142,9 @@ interface QuestionShare {
 }
 
 const Collaboration: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'invitations' | 'reviews' | 'comments' | 'versions' | 'history' | 'workflow' | 'sharing'>('invitations')
+  const [activeTab, setActiveTab] = useState<
+    'invitations' | 'reviews' | 'comments' | 'versions' | 'history' | 'workflow' | 'sharing'
+  >('invitations')
 
   // Sample data for demonstration
   const [collaborators, setCollaborators] = useState<User[]>([
@@ -160,8 +162,8 @@ const Collaboration: React.FC = () => {
         { action: 'create', scope: 'all' },
         { action: 'edit', scope: 'all' },
         { action: 'delete', scope: 'all' },
-        { action: 'approve', scope: 'all' }
-      ]
+        { action: 'approve', scope: 'all' },
+      ],
     },
     {
       id: 'user2',
@@ -175,8 +177,8 @@ const Collaboration: React.FC = () => {
       permissions: [
         { action: 'create', scope: 'department' },
         { action: 'edit', scope: 'own' },
-        { action: 'review', scope: 'department' }
-      ]
+        { action: 'review', scope: 'department' },
+      ],
     },
     {
       id: 'user3',
@@ -189,9 +191,9 @@ const Collaboration: React.FC = () => {
       lastActive: new Date(Date.now() - 1800000).toISOString(),
       permissions: [
         { action: 'review', scope: 'all' },
-        { action: 'comment', scope: 'all' }
-      ]
-    }
+        { action: 'comment', scope: 'all' },
+      ],
+    },
   ])
 
   const [invitations, setInvitations] = useState<Invitation[]>([
@@ -205,8 +207,8 @@ const Collaboration: React.FC = () => {
       invitedAt: new Date(Date.now() - 86400000).toISOString(),
       status: 'pending',
       message: 'We would like you to join our biology test review team',
-      expiresAt: new Date(Date.now() + 604800000).toISOString()
-    }
+      expiresAt: new Date(Date.now() + 604800000).toISOString(),
+    },
   ])
 
   const [comments, setComments] = useState<Comment[]>([
@@ -215,7 +217,8 @@ const Collaboration: React.FC = () => {
       questionId: 'q1',
       authorId: 'user2',
       authorName: 'Prof. Michael Chen',
-      content: 'This question seems too difficult for the target audience. Consider simplifying the language.',
+      content:
+        'This question seems too difficult for the target audience. Consider simplifying the language.',
       type: 'suggestion',
       createdAt: new Date(Date.now() - 3600000).toISOString(),
       replies: [
@@ -224,21 +227,21 @@ const Collaboration: React.FC = () => {
           questionId: 'q1',
           authorId: 'user1',
           authorName: 'Dr. Sarah Johnson',
-          content: 'Good point. I\'ll revise the wording to make it more accessible.',
+          content: "Good point. I'll revise the wording to make it more accessible.",
           type: 'general',
           createdAt: new Date(Date.now() - 1800000).toISOString(),
           replies: [],
           reactions: {},
           status: 'open',
           priority: 'medium',
-          tags: []
-        }
+          tags: [],
+        },
       ],
-      reactions: { 'user1': 'like', 'user3': 'helpful' },
+      reactions: { user1: 'like', user3: 'helpful' },
       status: 'open',
       priority: 'medium',
-      tags: ['difficulty', 'language']
-    }
+      tags: ['difficulty', 'language'],
+    },
   ])
 
   const [reviews, setReviews] = useState<Review[]>([
@@ -249,17 +252,18 @@ const Collaboration: React.FC = () => {
       reviewerName: 'Dr. Emily Rodriguez',
       status: 'approved',
       score: 4,
-      comments: 'Well-structured question with clear learning objectives. Minor suggestions for improvement.',
+      comments:
+        'Well-structured question with clear learning objectives. Minor suggestions for improvement.',
       checklist: {
         'Clear question stem': true,
         'Appropriate difficulty': true,
         'Correct answer key': true,
         'Grammar and spelling': false,
-        'Aligned with objectives': true
+        'Aligned with objectives': true,
       },
       submittedAt: new Date(Date.now() - 7200000).toISOString(),
-      decidedAt: new Date(Date.now() - 3600000).toISOString()
-    }
+      decidedAt: new Date(Date.now() - 3600000).toISOString(),
+    },
   ])
 
   const [versions, setVersions] = useState<Version[]>([
@@ -273,7 +277,7 @@ const Collaboration: React.FC = () => {
       createdAt: new Date(Date.now() - 86400000).toISOString(),
       changes: ['Initial creation'],
       description: 'Initial version of cell biology question',
-      status: 'published'
+      status: 'published',
     },
     {
       id: 'v2',
@@ -286,8 +290,8 @@ const Collaboration: React.FC = () => {
       changes: ['Simplified language', 'Updated explanation'],
       description: 'Revised based on peer feedback',
       status: 'approved',
-      parentVersion: 'v1'
-    }
+      parentVersion: 'v1',
+    },
   ])
 
   const [workflows, setWorkflows] = useState<ApprovalWorkflow[]>([
@@ -308,7 +312,7 @@ const Collaboration: React.FC = () => {
           requiredApprovals: 1,
           autoAdvance: false,
           timeLimit: 48,
-          conditions: ['Content accuracy', 'Difficulty appropriateness']
+          conditions: ['Content accuracy', 'Difficulty appropriateness'],
         },
         {
           id: 'step2',
@@ -318,7 +322,7 @@ const Collaboration: React.FC = () => {
           requiredApprovals: 1,
           autoAdvance: false,
           timeLimit: 24,
-          conditions: ['Grammar and spelling', 'Format consistency']
+          conditions: ['Grammar and spelling', 'Format consistency'],
         },
         {
           id: 'step3',
@@ -327,10 +331,10 @@ const Collaboration: React.FC = () => {
           assigneeRole: 'admin',
           requiredApprovals: 1,
           autoAdvance: true,
-          conditions: ['All previous steps completed']
-        }
-      ]
-    }
+          conditions: ['All previous steps completed'],
+        },
+      ],
+    },
   ])
 
   const [shares, setShares] = useState<QuestionShare[]>([
@@ -343,22 +347,22 @@ const Collaboration: React.FC = () => {
       permissions: [{ action: 'review', scope: 'assigned' }],
       createdAt: new Date(Date.now() - 86400000).toISOString(),
       accessCount: 3,
-      shareLink: 'https://platform.com/shared/abc123'
-    }
+      shareLink: 'https://platform.com/shared/abc123',
+    },
   ])
 
   const [newInvitation, setNewInvitation] = useState({
     email: '',
     name: '',
     role: 'reviewer' as User['role'],
-    message: ''
+    message: '',
   })
 
   const [newComment, setNewComment] = useState({
     questionId: 'q1',
     content: '',
     type: 'general' as Comment['type'],
-    priority: 'medium' as Comment['priority']
+    priority: 'medium' as Comment['priority'],
   })
 
   // Event Handlers
@@ -375,10 +379,10 @@ const Collaboration: React.FC = () => {
       invitedAt: new Date().toISOString(),
       status: 'pending',
       message: newInvitation.message,
-      expiresAt: new Date(Date.now() + 604800000).toISOString()
+      expiresAt: new Date(Date.now() + 604800000).toISOString(),
     }
 
-    setInvitations(prev => [invitation, ...prev])
+    setInvitations((prev) => [invitation, ...prev])
     setNewInvitation({ email: '', name: '', role: 'reviewer', message: '' })
   }
 
@@ -388,20 +392,18 @@ const Collaboration: React.FC = () => {
         { action: 'create' as const, scope: 'all' as const },
         { action: 'edit' as const, scope: 'all' as const },
         { action: 'delete' as const, scope: 'all' as const },
-        { action: 'approve' as const, scope: 'all' as const }
+        { action: 'approve' as const, scope: 'all' as const },
       ],
       editor: [
         { action: 'create' as const, scope: 'department' as const },
         { action: 'edit' as const, scope: 'own' as const },
-        { action: 'review' as const, scope: 'department' as const }
+        { action: 'review' as const, scope: 'department' as const },
       ],
       reviewer: [
         { action: 'review' as const, scope: 'all' as const },
-        { action: 'comment' as const, scope: 'all' as const }
+        { action: 'comment' as const, scope: 'all' as const },
       ],
-      viewer: [
-        { action: 'comment' as const, scope: 'assigned' as const }
-      ]
+      viewer: [{ action: 'comment' as const, scope: 'assigned' as const }],
     }
     return permissionMap[role]
   }
@@ -421,10 +423,10 @@ const Collaboration: React.FC = () => {
       reactions: {},
       status: 'open',
       priority: newComment.priority,
-      tags: []
+      tags: [],
     }
 
-    setComments(prev => [comment, ...prev])
+    setComments((prev) => [comment, ...prev])
     setNewComment({ questionId: 'q1', content: '', type: 'general', priority: 'medium' })
   }
 
@@ -435,13 +437,16 @@ const Collaboration: React.FC = () => {
       sharedBy: 'user1',
       sharedWith: [],
       shareType,
-      permissions: shareType === 'view' ? [{ action: 'review', scope: 'assigned' }] : [{ action: 'edit', scope: 'assigned' }],
+      permissions:
+        shareType === 'view'
+          ? [{ action: 'review', scope: 'assigned' }]
+          : [{ action: 'edit', scope: 'assigned' }],
       createdAt: new Date().toISOString(),
       accessCount: 0,
-      shareLink: `https://platform.com/shared/${Math.random().toString(36).substring(2)}`
+      shareLink: `https://platform.com/shared/${Math.random().toString(36).substring(2)}`,
     }
 
-    setShares(prev => [share, ...prev])
+    setShares((prev) => [share, ...prev])
     return share.shareLink
   }
 
@@ -469,42 +474,66 @@ const Collaboration: React.FC = () => {
       high: 'red',
       medium: 'orange',
       low: 'yellow',
-      info: 'blue'
+      info: 'blue',
     }
     return colors[status as keyof typeof colors] || 'gray'
   }
 
   const getStatusBgClass = (status: string) => {
     const color = getStatusColor(status)
-    return color === 'yellow' ? 'bg-yellow-100' :
-      color === 'green' ? 'bg-green-100' :
-      color === 'red' ? 'bg-red-100' :
-      color === 'orange' ? 'bg-orange-100' :
-      color === 'blue' ? 'bg-blue-100' :
-      color === 'purple' ? 'bg-purple-100' :
-      color === 'gray' ? 'bg-gray-100' : 'bg-gray-100'
+    return color === 'yellow'
+      ? 'bg-yellow-100'
+      : color === 'green'
+        ? 'bg-green-100'
+        : color === 'red'
+          ? 'bg-red-100'
+          : color === 'orange'
+            ? 'bg-orange-100'
+            : color === 'blue'
+              ? 'bg-blue-100'
+              : color === 'purple'
+                ? 'bg-purple-100'
+                : color === 'gray'
+                  ? 'bg-gray-100'
+                  : 'bg-gray-100'
   }
 
   const getStatusTextClass = (status: string) => {
     const color = getStatusColor(status)
-    return color === 'yellow' ? 'text-yellow-700' :
-      color === 'green' ? 'text-green-700' :
-      color === 'red' ? 'text-red-700' :
-      color === 'orange' ? 'text-orange-700' :
-      color === 'blue' ? 'text-blue-700' :
-      color === 'purple' ? 'text-purple-700' :
-      color === 'gray' ? 'text-gray-700' : 'text-gray-700'
+    return color === 'yellow'
+      ? 'text-yellow-700'
+      : color === 'green'
+        ? 'text-green-700'
+        : color === 'red'
+          ? 'text-red-700'
+          : color === 'orange'
+            ? 'text-orange-700'
+            : color === 'blue'
+              ? 'text-blue-700'
+              : color === 'purple'
+                ? 'text-purple-700'
+                : color === 'gray'
+                  ? 'text-gray-700'
+                  : 'text-gray-700'
   }
 
   const getStatusDotClass = (status: string) => {
     const color = getStatusColor(status)
-    return color === 'yellow' ? 'bg-yellow-500' :
-      color === 'green' ? 'bg-green-600' :
-      color === 'red' ? 'bg-red-500' :
-      color === 'orange' ? 'bg-orange-500' :
-      color === 'blue' ? 'bg-blue-500' :
-      color === 'purple' ? 'bg-purple-500' :
-      color === 'gray' ? 'bg-gray-500' : 'bg-gray-500'
+    return color === 'yellow'
+      ? 'bg-yellow-500'
+      : color === 'green'
+        ? 'bg-green-600'
+        : color === 'red'
+          ? 'bg-red-500'
+          : color === 'orange'
+            ? 'bg-orange-500'
+            : color === 'blue'
+              ? 'bg-blue-500'
+              : color === 'purple'
+                ? 'bg-purple-500'
+                : color === 'gray'
+                  ? 'bg-gray-500'
+                  : 'bg-gray-500'
   }
 
   const getRoleIcon = (role: User['role']) => {
@@ -512,7 +541,7 @@ const Collaboration: React.FC = () => {
       admin: Crown,
       editor: Edit3,
       reviewer: Eye,
-      viewer: Users
+      viewer: Users,
     }
     return icons[role]
   }
@@ -534,8 +563,8 @@ const Collaboration: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Collaborative test development with peer review, version control, approval workflows,
-          and seamless team communication
+          Collaborative test development with peer review, version control, approval workflows, and
+          seamless team communication
         </p>
       </div>
 
@@ -550,13 +579,21 @@ const Collaboration: React.FC = () => {
           {collaborators.map((user) => {
             const RoleIcon = getRoleIcon(user.role)
             return (
-              <div key={user.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+              <div
+                key={user.id}
+                className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+              >
                 <div className="flex items-start gap-3">
                   <div className="relative">
                     <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
-                      {user.name.split(' ').map(n => n[0]).join('')}
+                      {user.name
+                        .split(' ')
+                        .map((n) => n[0])
+                        .join('')}
                     </div>
-                    <div className={`absolute -bottom-1 -right-1 w-4 h-4 ${getStatusDotClass(user.status)} border-2 border-white rounded-full`} />
+                    <div
+                      className={`absolute -bottom-1 -right-1 w-4 h-4 ${getStatusDotClass(user.status)} border-2 border-white rounded-full`}
+                    />
                   </div>
 
                   <div className="flex-1 min-w-0">
@@ -566,22 +603,31 @@ const Collaboration: React.FC = () => {
                     </div>
                     <p className="text-sm text-gray-600 mb-2">{user.email}</p>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className={`px-2 py-1 rounded text-xs font-medium capitalize ${getStatusBgClass(user.role)} ${getStatusTextClass(user.role)}`}>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium capitalize ${getStatusBgClass(user.role)} ${getStatusTextClass(user.role)}`}
+                      >
                         {user.role}
                       </span>
-                      <span className={`px-2 py-1 rounded text-xs font-medium capitalize ${getStatusBgClass(user.status)} ${getStatusTextClass(user.status)}`}>
+                      <span
+                        className={`px-2 py-1 rounded text-xs font-medium capitalize ${getStatusBgClass(user.status)} ${getStatusTextClass(user.status)}`}
+                      >
                         {user.status}
                       </span>
                     </div>
                     <p className="text-xs text-gray-500">{user.department}</p>
                     <div className="flex flex-wrap gap-1 mt-2">
                       {user.expertise.slice(0, 2).map((skill, index) => (
-                        <span key={index} className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
+                        <span
+                          key={index}
+                          className="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs"
+                        >
                           {skill}
                         </span>
                       ))}
                       {user.expertise.length > 2 && (
-                        <span className="text-xs text-gray-500">+{user.expertise.length - 2} more</span>
+                        <span className="text-xs text-gray-500">
+                          +{user.expertise.length - 2} more
+                        </span>
                       )}
                     </div>
                   </div>
@@ -602,7 +648,7 @@ const Collaboration: React.FC = () => {
             { id: 'versions', label: 'Versions', icon: GitBranch },
             { id: 'history', label: 'History', icon: History },
             { id: 'workflow', label: 'Workflow', icon: CheckCircle },
-            { id: 'sharing', label: 'Sharing', icon: Share2 }
+            { id: 'sharing', label: 'Sharing', icon: Share2 },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -646,32 +692,37 @@ const Collaboration: React.FC = () => {
                   <input
                     type="email"
                     value={newInvitation.email}
-                    onChange={(e) => setNewInvitation(prev => ({ ...prev, email: e.target.value }))}
+                    onChange={(e) =>
+                      setNewInvitation((prev) => ({ ...prev, email: e.target.value }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="colleague@university.edu"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                   <input
                     type="text"
                     value={newInvitation.name}
-                    onChange={(e) => setNewInvitation(prev => ({ ...prev, name: e.target.value }))}
+                    onChange={(e) =>
+                      setNewInvitation((prev) => ({ ...prev, name: e.target.value }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Dr. John Smith"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Role
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Role</label>
                   <select
                     value={newInvitation.role}
-                    onChange={(e) => setNewInvitation(prev => ({ ...prev, role: e.target.value as User['role'] }))}
+                    onChange={(e) =>
+                      setNewInvitation((prev) => ({
+                        ...prev,
+                        role: e.target.value as User['role'],
+                      }))
+                    }
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="viewer">Viewer</option>
@@ -687,7 +738,9 @@ const Collaboration: React.FC = () => {
                   </label>
                   <textarea
                     value={newInvitation.message}
-                    onChange={(e) => setNewInvitation(prev => ({ ...prev, message: e.target.value }))}
+                    onChange={(e) =>
+                      setNewInvitation((prev) => ({ ...prev, message: e.target.value }))
+                    }
                     rows={3}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Welcome to our biology test development team!"
@@ -708,7 +761,7 @@ const Collaboration: React.FC = () => {
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Clock className="w-5 h-5 text-yellow-600" />
-                Pending Invitations ({invitations.filter(i => i.status === 'pending').length})
+                Pending Invitations ({invitations.filter((i) => i.status === 'pending').length})
               </h3>
 
               {invitations.length === 0 ? (
@@ -720,17 +773,24 @@ const Collaboration: React.FC = () => {
               ) : (
                 <div className="space-y-4">
                   {invitations.map((invitation) => (
-                    <div key={invitation.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                    <div
+                      key={invitation.id}
+                      className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                    >
                       <div className="flex justify-between items-start mb-3">
                         <div>
                           <h4 className="font-medium text-gray-800">{invitation.recipientName}</h4>
                           <p className="text-sm text-gray-600">{invitation.recipientEmail}</p>
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.status)}-100 text-${getStatusColor(invitation.status)}-700`}>
+                          <span
+                            className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.status)}-100 text-${getStatusColor(invitation.status)}-700`}
+                          >
                             {invitation.status}
                           </span>
-                          <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.role)}-100 text-${getStatusColor(invitation.role)}-700`}>
+                          <span
+                            className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(invitation.role)}-100 text-${getStatusColor(invitation.role)}-700`}
+                          >
                             {invitation.role}
                           </span>
                         </div>
@@ -751,9 +811,7 @@ const Collaboration: React.FC = () => {
                         <button className="text-blue-600 hover:text-blue-800 text-sm">
                           Resend
                         </button>
-                        <button className="text-red-600 hover:text-red-800 text-sm">
-                          Cancel
-                        </button>
+                        <button className="text-red-600 hover:text-red-800 text-sm">Cancel</button>
                       </div>
                     </div>
                   ))}
@@ -776,25 +834,25 @@ const Collaboration: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <div className="bg-white rounded-xl p-4 border text-center">
                 <div className="text-2xl font-bold text-yellow-600">
-                  {reviews.filter(r => r.status === 'pending').length}
+                  {reviews.filter((r) => r.status === 'pending').length}
                 </div>
                 <div className="text-sm text-yellow-800">Pending Reviews</div>
               </div>
               <div className="bg-white rounded-xl p-4 border text-center">
                 <div className="text-2xl font-bold text-green-600">
-                  {reviews.filter(r => r.status === 'approved').length}
+                  {reviews.filter((r) => r.status === 'approved').length}
                 </div>
                 <div className="text-sm text-green-800">Approved</div>
               </div>
               <div className="bg-white rounded-xl p-4 border text-center">
                 <div className="text-2xl font-bold text-red-600">
-                  {reviews.filter(r => r.status === 'rejected').length}
+                  {reviews.filter((r) => r.status === 'rejected').length}
                 </div>
                 <div className="text-sm text-red-800">Rejected</div>
               </div>
               <div className="bg-white rounded-xl p-4 border text-center">
                 <div className="text-2xl font-bold text-orange-600">
-                  {reviews.filter(r => r.status === 'needs_changes').length}
+                  {reviews.filter((r) => r.status === 'needs_changes').length}
                 </div>
                 <div className="text-sm text-orange-800">Needs Changes</div>
               </div>
@@ -809,14 +867,19 @@ const Collaboration: React.FC = () => {
 
               <div className="space-y-4">
                 {reviews.map((review) => (
-                  <div key={review.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <div
+                    key={review.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
                     <div className="flex justify-between items-start mb-3">
                       <div>
                         <h4 className="font-medium text-gray-800">Question {review.questionId}</h4>
                         <p className="text-sm text-gray-600">Reviewed by {review.reviewerName}</p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(review.status)}-100 text-${getStatusColor(review.status)}-700`}>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(review.status)}-100 text-${getStatusColor(review.status)}-700`}
+                        >
                           {review.status.replace('_', ' ')}
                         </span>
                         <div className="flex items-center gap-1">
@@ -862,7 +925,9 @@ const Collaboration: React.FC = () => {
                 <div className="text-center py-12 text-gray-500">
                   <Eye className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                   <p>No reviews submitted yet</p>
-                  <p className="text-sm">Reviews will appear here as team members evaluate questions</p>
+                  <p className="text-sm">
+                    Reviews will appear here as team members evaluate questions
+                  </p>
                 </div>
               )}
             </div>
@@ -893,7 +958,9 @@ const Collaboration: React.FC = () => {
                     </label>
                     <select
                       value={newComment.questionId}
-                      onChange={(e) => setNewComment(prev => ({ ...prev, questionId: e.target.value }))}
+                      onChange={(e) =>
+                        setNewComment((prev) => ({ ...prev, questionId: e.target.value }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="q1">Question 1</option>
@@ -908,7 +975,12 @@ const Collaboration: React.FC = () => {
                     </label>
                     <select
                       value={newComment.type}
-                      onChange={(e) => setNewComment(prev => ({ ...prev, type: e.target.value as Comment['type'] }))}
+                      onChange={(e) =>
+                        setNewComment((prev) => ({
+                          ...prev,
+                          type: e.target.value as Comment['type'],
+                        }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="general">General</option>
@@ -920,12 +992,15 @@ const Collaboration: React.FC = () => {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Priority
-                    </label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Priority</label>
                     <select
                       value={newComment.priority}
-                      onChange={(e) => setNewComment(prev => ({ ...prev, priority: e.target.value as Comment['priority'] }))}
+                      onChange={(e) =>
+                        setNewComment((prev) => ({
+                          ...prev,
+                          priority: e.target.value as Comment['priority'],
+                        }))
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="low">Low</option>
@@ -936,12 +1011,12 @@ const Collaboration: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Comment
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Comment</label>
                   <textarea
                     value={newComment.content}
-                    onChange={(e) => setNewComment(prev => ({ ...prev, content: e.target.value }))}
+                    onChange={(e) =>
+                      setNewComment((prev) => ({ ...prev, content: e.target.value }))
+                    }
                     rows={4}
                     className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     placeholder="Enter your feedback or comment..."
@@ -971,7 +1046,10 @@ const Collaboration: React.FC = () => {
                     <div className="flex justify-between items-start mb-2">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
-                          {comment.authorName.split(' ').map(n => n[0]).join('')}
+                          {comment.authorName
+                            .split(' ')
+                            .map((n) => n[0])
+                            .join('')}
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-800">{comment.authorName}</h4>
@@ -983,10 +1061,14 @@ const Collaboration: React.FC = () => {
                         </div>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.type)}-100 text-${getStatusColor(comment.type)}-700`}>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.type)}-100 text-${getStatusColor(comment.type)}-700`}
+                        >
                           {comment.type}
                         </span>
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.priority)}-100 text-${getStatusColor(comment.priority)}-700`}>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(comment.priority)}-100 text-${getStatusColor(comment.priority)}-700`}
+                        >
                           {comment.priority}
                         </span>
                       </div>
@@ -999,11 +1081,15 @@ const Collaboration: React.FC = () => {
                       <div className="flex items-center gap-2">
                         <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-blue-600">
                           <ThumbsUp className="w-4 h-4" />
-                          <span>{Object.values(comment.reactions).filter(r => r === 'like').length}</span>
+                          <span>
+                            {Object.values(comment.reactions).filter((r) => r === 'like').length}
+                          </span>
                         </button>
                         <button className="flex items-center gap-1 text-sm text-gray-500 hover:text-red-600">
                           <ThumbsDown className="w-4 h-4" />
-                          <span>{Object.values(comment.reactions).filter(r => r === 'dislike').length}</span>
+                          <span>
+                            {Object.values(comment.reactions).filter((r) => r === 'dislike').length}
+                          </span>
                         </button>
                         <button className="text-sm text-gray-500 hover:text-green-600">
                           Reply
@@ -1021,10 +1107,15 @@ const Collaboration: React.FC = () => {
                           <div key={reply.id} className="text-sm">
                             <div className="flex items-center gap-2 mb-1">
                               <div className="w-6 h-6 bg-gradient-to-r from-gray-400 to-gray-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
-                                {reply.authorName.split(' ').map(n => n[0]).join('')}
+                                {reply.authorName
+                                  .split(' ')
+                                  .map((n) => n[0])
+                                  .join('')}
                               </div>
                               <span className="font-medium">{reply.authorName}</span>
-                              <span className="text-gray-500">{new Date(reply.createdAt).toLocaleString()}</span>
+                              <span className="text-gray-500">
+                                {new Date(reply.createdAt).toLocaleString()}
+                              </span>
                             </div>
                             <p className="text-gray-700">{reply.content}</p>
                           </div>
@@ -1070,12 +1161,17 @@ const Collaboration: React.FC = () => {
                     )}
 
                     <div className="flex gap-4">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
-                        version.status === 'published' ? 'bg-green-600' :
-                        version.status === 'approved' ? 'bg-blue-500' :
-                        version.status === 'review' ? 'bg-yellow-500' :
-                        'bg-gray-500'
-                      }`}>
+                      <div
+                        className={`w-8 h-8 rounded-full flex items-center justify-center text-white font-bold ${
+                          version.status === 'published'
+                            ? 'bg-green-600'
+                            : version.status === 'approved'
+                              ? 'bg-blue-500'
+                              : version.status === 'review'
+                                ? 'bg-yellow-500'
+                                : 'bg-gray-500'
+                        }`}
+                      >
                         v{version.version}
                       </div>
 
@@ -1086,11 +1182,14 @@ const Collaboration: React.FC = () => {
                               Version {version.version} - {version.description}
                             </h4>
                             <p className="text-sm text-gray-600">
-                              by {version.authorName} • {new Date(version.createdAt).toLocaleString()}
+                              by {version.authorName} •{' '}
+                              {new Date(version.createdAt).toLocaleString()}
                             </p>
                           </div>
                           <div className="flex items-center gap-2">
-                            <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(version.status)}-100 text-${getStatusColor(version.status)}-700`}>
+                            <span
+                              className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(version.status)}-100 text-${getStatusColor(version.status)}-700`}
+                            >
                               {version.status}
                             </span>
                             <button className="text-blue-600 hover:text-blue-800 text-sm">
@@ -1155,7 +1254,7 @@ const Collaboration: React.FC = () => {
                     user: 'Dr. Emily Rodriguez',
                     timestamp: new Date(Date.now() - 3600000),
                     details: 'Question Q1 approved with minor suggestions',
-                    type: 'approval'
+                    type: 'approval',
                   },
                   {
                     id: '2',
@@ -1163,7 +1262,7 @@ const Collaboration: React.FC = () => {
                     user: 'Prof. Michael Chen',
                     timestamp: new Date(Date.now() - 7200000),
                     details: 'Suggested simplifying the language in Q1',
-                    type: 'comment'
+                    type: 'comment',
                   },
                   {
                     id: '3',
@@ -1171,7 +1270,7 @@ const Collaboration: React.FC = () => {
                     user: 'Dr. Sarah Johnson',
                     timestamp: new Date(Date.now() - 10800000),
                     details: 'Created version 2 with revised content',
-                    type: 'version'
+                    type: 'version',
                   },
                   {
                     id: '4',
@@ -1179,7 +1278,7 @@ const Collaboration: React.FC = () => {
                     user: 'Dr. Emily Rodriguez',
                     timestamp: new Date(Date.now() - 14400000),
                     details: 'Submitted review for Q1 with score 4/5',
-                    type: 'review'
+                    type: 'review',
                   },
                   {
                     id: '5',
@@ -1187,8 +1286,8 @@ const Collaboration: React.FC = () => {
                     user: 'Dr. Sarah Johnson',
                     timestamp: new Date(Date.now() - 18000000),
                     details: 'Shared Q1 with external reviewers',
-                    type: 'share'
-                  }
+                    type: 'share',
+                  },
                 ].map((activity, index) => (
                   <div key={activity.id} className="relative">
                     {index < 4 && (
@@ -1196,18 +1295,30 @@ const Collaboration: React.FC = () => {
                     )}
 
                     <div className="flex gap-4">
-                      <div className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${
-                        activity.type === 'approval' ? 'bg-green-600' :
-                        activity.type === 'comment' ? 'bg-blue-500' :
-                        activity.type === 'version' ? 'bg-purple-500' :
-                        activity.type === 'review' ? 'bg-yellow-500' :
-                        'bg-gray-500'
-                      }`}>
-                        {activity.type === 'approval' ? <CheckCircle className="w-4 h-4" /> :
-                         activity.type === 'comment' ? <MessageSquare className="w-4 h-4" /> :
-                         activity.type === 'version' ? <GitBranch className="w-4 h-4" /> :
-                         activity.type === 'review' ? <Eye className="w-4 h-4" /> :
-                         <Share2 className="w-4 h-4" />}
+                      <div
+                        className={`w-8 h-8 rounded-full flex items-center justify-center text-white ${
+                          activity.type === 'approval'
+                            ? 'bg-green-600'
+                            : activity.type === 'comment'
+                              ? 'bg-blue-500'
+                              : activity.type === 'version'
+                                ? 'bg-purple-500'
+                                : activity.type === 'review'
+                                  ? 'bg-yellow-500'
+                                  : 'bg-gray-500'
+                        }`}
+                      >
+                        {activity.type === 'approval' ? (
+                          <CheckCircle className="w-4 h-4" />
+                        ) : activity.type === 'comment' ? (
+                          <MessageSquare className="w-4 h-4" />
+                        ) : activity.type === 'version' ? (
+                          <GitBranch className="w-4 h-4" />
+                        ) : activity.type === 'review' ? (
+                          <Eye className="w-4 h-4" />
+                        ) : (
+                          <Share2 className="w-4 h-4" />
+                        )}
                       </div>
 
                       <div className="flex-1">
@@ -1252,15 +1363,15 @@ const Collaboration: React.FC = () => {
                         <h4 className="font-medium text-gray-800 flex items-center gap-2">
                           {workflow.name}
                           {workflow.isDefault && (
-                            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">Default</span>
+                            <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+                              Default
+                            </span>
                           )}
                         </h4>
                         <p className="text-sm text-gray-600">{workflow.description}</p>
                       </div>
                       <div className="flex gap-2">
-                        <button className="text-blue-600 hover:text-blue-800 text-sm">
-                          Edit
-                        </button>
+                        <button className="text-blue-600 hover:text-blue-800 text-sm">Edit</button>
                         <button className="text-green-600 hover:text-green-800 text-sm">
                           Duplicate
                         </button>
@@ -1296,8 +1407,8 @@ const Collaboration: React.FC = () => {
                               </div>
                               <p className="text-sm text-gray-600 mb-2">{step.description}</p>
                               <div className="text-xs text-gray-500">
-                                Requires {step.requiredApprovals} approval(s) •
-                                Auto-advance: {step.autoAdvance ? 'Yes' : 'No'}
+                                Requires {step.requiredApprovals} approval(s) • Auto-advance:{' '}
+                                {step.autoAdvance ? 'Yes' : 'No'}
                               </div>
                             </div>
                           </div>
@@ -1329,9 +1440,7 @@ const Collaboration: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Question
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Question</label>
                   <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
                     <option value="q1">Question 1 - Cell Biology</option>
                     <option value="q2">Question 2 - Genetics</option>
@@ -1340,9 +1449,7 @@ const Collaboration: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Share Type
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Share Type</label>
                   <select className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent">
                     <option value="view">View Only</option>
                     <option value="collaborate">Collaborate</option>
@@ -1371,7 +1478,10 @@ const Collaboration: React.FC = () => {
 
               <div className="space-y-4">
                 {shares.map((share) => (
-                  <div key={share.id} className="border rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <div
+                    key={share.id}
+                    className="border rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
                     <div className="flex justify-between items-start mb-3">
                       <div>
                         <h4 className="font-medium text-gray-800">Question {share.questionId}</h4>
@@ -1380,12 +1490,12 @@ const Collaboration: React.FC = () => {
                         </p>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(share.shareType)}-100 text-${getStatusColor(share.shareType)}-700`}>
+                        <span
+                          className={`px-2 py-1 rounded text-xs font-medium ${getStatusBgClass(share.shareType)}-100 text-${getStatusColor(share.shareType)}-700`}
+                        >
                           {share.shareType}
                         </span>
-                        <span className="text-sm text-gray-500">
-                          {share.accessCount} views
-                        </span>
+                        <span className="text-sm text-gray-500">{share.accessCount} views</span>
                       </div>
                     </div>
 
@@ -1410,7 +1520,10 @@ const Collaboration: React.FC = () => {
                         <p className="text-sm font-medium text-gray-700 mb-1">Shared with:</p>
                         <div className="flex flex-wrap gap-2">
                           {share.sharedWith.map((email, index) => (
-                            <span key={index} className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs">
+                            <span
+                              key={index}
+                              className="bg-blue-100 text-blue-700 px-2 py-1 rounded text-xs"
+                            >
                               {email}
                             </span>
                           ))}
@@ -1437,7 +1550,9 @@ const Collaboration: React.FC = () => {
                 <div className="text-center py-12 text-gray-500">
                   <Share2 className="w-12 h-12 mx-auto mb-4 text-gray-300" />
                   <p>No questions shared yet</p>
-                  <p className="text-sm">Create share links to collaborate with external partners</p>
+                  <p className="text-sm">
+                    Create share links to collaborate with external partners
+                  </p>
                 </div>
               )}
             </div>
@@ -1450,9 +1565,7 @@ const Collaboration: React.FC = () => {
         <div className="flex justify-between items-center">
           <div>
             <h3 className="text-lg font-semibold text-gray-800">Collaboration Tools</h3>
-            <p className="text-gray-600">
-              Streamline your team's test development workflow
-            </p>
+            <p className="text-gray-600">Streamline your team's test development workflow</p>
           </div>
           <div className="flex gap-3">
             <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">

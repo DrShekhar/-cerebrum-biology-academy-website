@@ -38,7 +38,10 @@ interface DraftItem {
   tags?: string[]
 }
 
-const statusConfig: Record<DraftStatus, { label: string; color: string; icon: typeof CheckCircle }> = {
+const statusConfig: Record<
+  DraftStatus,
+  { label: string; color: string; icon: typeof CheckCircle }
+> = {
   draft: { label: 'Draft', color: 'bg-yellow-100 text-yellow-800', icon: AlertCircle },
   in_review: { label: 'In Review', color: 'bg-blue-100 text-blue-800', icon: Eye },
   approved: { label: 'Approved', color: 'bg-green-100 text-green-800', icon: CheckCircle },
@@ -109,14 +112,16 @@ export default function ContentDraftsPage() {
     }
   }
 
-  const filteredDrafts = selectedStatus === 'all'
-    ? drafts
-    : drafts.filter(d => d.status === selectedStatus)
+  const filteredDrafts =
+    selectedStatus === 'all' ? drafts : drafts.filter((d) => d.status === selectedStatus)
 
-  const draftsByStatus = drafts.reduce((acc, draft) => {
-    acc[draft.status] = (acc[draft.status] || 0) + 1
-    return acc
-  }, {} as Record<DraftStatus, number>)
+  const draftsByStatus = drafts.reduce(
+    (acc, draft) => {
+      acc[draft.status] = (acc[draft.status] || 0) + 1
+      return acc
+    },
+    {} as Record<DraftStatus, number>
+  )
 
   return (
     <AdminLayout>
@@ -141,7 +146,9 @@ export default function ContentDraftsPage() {
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4 mb-6 md:mb-8">
-          {(['draft', 'in_review', 'approved', 'rejected', 'published', 'archived'] as DraftStatus[]).map((status) => {
+          {(
+            ['draft', 'in_review', 'approved', 'rejected', 'published', 'archived'] as DraftStatus[]
+          ).map((status) => {
             const config = statusConfig[status]
             const Icon = config.icon
             const count = draftsByStatus[status] || 0
@@ -158,7 +165,9 @@ export default function ContentDraftsPage() {
               >
                 <div className="flex items-center gap-2 mb-1">
                   <Icon className="w-4 h-4 text-gray-500" />
-                  <span className="text-xs font-medium text-gray-500 uppercase">{config.label}</span>
+                  <span className="text-xs font-medium text-gray-500 uppercase">
+                    {config.label}
+                  </span>
                 </div>
                 <div className="text-xl md:text-2xl font-bold text-gray-900">{count}</div>
               </button>
@@ -187,7 +196,10 @@ export default function ContentDraftsPage() {
             <FileText className="w-12 h-12 text-gray-400 mx-auto mb-4" />
             <p className="text-gray-600 mb-2">No drafts found</p>
             <p className="text-sm text-gray-500">
-              Generate content with: <code className="bg-gray-200 px-2 py-1 rounded">npm run seo:blog &quot;Topic&quot;</code>
+              Generate content with:{' '}
+              <code className="bg-gray-200 px-2 py-1 rounded">
+                npm run seo:blog &quot;Topic&quot;
+              </code>
             </p>
           </div>
         ) : (
@@ -212,12 +224,8 @@ export default function ContentDraftsPage() {
                       <div className="flex flex-col md:flex-row md:items-center gap-4">
                         {/* Priority & Type */}
                         <div className="flex items-center gap-3 md:w-32">
-                          {draft.priority === 'urgent' && (
-                            <span className="text-lg">⚡</span>
-                          )}
-                          {draft.priority === 'high' && (
-                            <span className="text-lg">🔥</span>
-                          )}
+                          {draft.priority === 'urgent' && <span className="text-lg">⚡</span>}
+                          {draft.priority === 'high' && <span className="text-lg">🔥</span>}
                           <span className={`px-2 py-1 text-xs font-medium rounded ${config.color}`}>
                             {typeLabels[draft.type]}
                           </span>
@@ -231,16 +239,16 @@ export default function ContentDraftsPage() {
                               <Clock className="w-3 h-3" />
                               {getAge(draft.createdAt)}
                             </span>
-                            {draft.wordCount && (
-                              <span>{draft.wordCount} words</span>
-                            )}
+                            {draft.wordCount && <span>{draft.wordCount} words</span>}
                             <span className="font-mono text-xs text-gray-400">{draft.id}</span>
                           </div>
                         </div>
 
                         {/* Status Badge */}
                         <div className="flex items-center gap-3">
-                          <span className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm ${config.color}`}>
+                          <span
+                            className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm ${config.color}`}
+                          >
                             <StatusIcon className="w-4 h-4" />
                             {config.label}
                           </span>
@@ -252,7 +260,11 @@ export default function ContentDraftsPage() {
                             onClick={() => setExpandedDraft(isExpanded ? null : draft.id)}
                             className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-lg"
                           >
-                            {isExpanded ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+                            {isExpanded ? (
+                              <ChevronUp className="w-5 h-5" />
+                            ) : (
+                              <ChevronDown className="w-5 h-5" />
+                            )}
                           </button>
                         </div>
                       </div>
@@ -268,9 +280,7 @@ export default function ContentDraftsPage() {
                           className="border-t border-gray-100 bg-gray-50"
                         >
                           <div className="p-4 md:p-6">
-                            {draft.excerpt && (
-                              <p className="text-gray-600 mb-4">{draft.excerpt}</p>
-                            )}
+                            {draft.excerpt && <p className="text-gray-600 mb-4">{draft.excerpt}</p>}
 
                             {draft.tags && draft.tags.length > 0 && (
                               <div className="flex flex-wrap gap-2 mb-4">
@@ -322,7 +332,10 @@ export default function ContentDraftsPage() {
 
                               {draft.status === 'published' && draft.type === 'BLOG_POST' && (
                                 <a
-                                  href={`/blog/${draft.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 60)}`}
+                                  href={`/blog/${draft.title
+                                    .toLowerCase()
+                                    .replace(/[^a-z0-9]+/g, '-')
+                                    .slice(0, 60)}`}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="flex items-center gap-2 px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200"

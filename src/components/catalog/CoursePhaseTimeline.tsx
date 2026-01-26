@@ -159,9 +159,7 @@ export function CoursePhaseTimeline({
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Your{' '}
-            <span className="bg-indigo-500 bg-clip-text text-transparent">
-              Learning Journey
-            </span>
+            <span className="bg-indigo-500 bg-clip-text text-transparent">Learning Journey</span>
             <br />
             to Medical College
           </h2>

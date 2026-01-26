@@ -102,7 +102,10 @@ export async function POST(req: NextRequest) {
     // SECURITY: Rate limit per user to prevent API abuse
     if (!checkRateLimit(userId)) {
       return new Response(
-        JSON.stringify({ error: 'Rate limit exceeded. Please try again later.', code: 'RATE_LIMITED' }),
+        JSON.stringify({
+          error: 'Rate limit exceeded. Please try again later.',
+          code: 'RATE_LIMITED',
+        }),
         { status: 429, headers: { 'Content-Type': 'application/json' } }
       )
     }

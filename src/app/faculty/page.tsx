@@ -274,7 +274,11 @@ export default function FacultyPage() {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border-2 border-white/20">
                         <span className="text-white font-bold text-3xl">
-                          {faculty.name.split(' ').map(n => n[0]).slice(0, 2).join('')}
+                          {faculty.name
+                            .split(' ')
+                            .map((n) => n[0])
+                            .slice(0, 2)
+                            .join('')}
                         </span>
                       </div>
                     </div>

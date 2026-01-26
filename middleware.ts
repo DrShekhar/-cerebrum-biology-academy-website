@@ -45,7 +45,7 @@ const publicRoutes = [
 
 // Check if path matches public routes
 function isPublicRoute(pathname: string): boolean {
-  return publicRoutes.some(route => {
+  return publicRoutes.some((route) => {
     if (route === '/') return pathname === '/'
     return pathname === route || pathname.startsWith(route + '/')
   })
@@ -67,8 +67,8 @@ function isProtectedRoute(pathname: string): boolean {
     '/counselor',
     '/select-role',
   ]
-  return protectedPrefixes.some(prefix =>
-    pathname === prefix || pathname.startsWith(prefix + '/')
+  return protectedPrefixes.some(
+    (prefix) => pathname === prefix || pathname.startsWith(prefix + '/')
   )
 }
 
@@ -109,7 +109,7 @@ function getUserFromToken(req: NextRequest): { userId: string; role: string } | 
       }
       return {
         userId: decoded.id,
-        role: (decoded.role || 'student').toUpperCase()
+        role: (decoded.role || 'student').toUpperCase(),
       }
     }
     return null

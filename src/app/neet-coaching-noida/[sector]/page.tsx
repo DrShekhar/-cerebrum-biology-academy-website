@@ -910,8 +910,14 @@ export default function SectorPage() {
               worstRating: '1',
             },
             hasCredential: [
-              { '@type': 'EducationalOccupationalCredential', credentialCategory: 'NEET Biology Specialist' },
-              { '@type': 'EducationalOccupationalCredential', credentialCategory: 'AIIMS/JIPMER Faculty' },
+              {
+                '@type': 'EducationalOccupationalCredential',
+                credentialCategory: 'NEET Biology Specialist',
+              },
+              {
+                '@type': 'EducationalOccupationalCredential',
+                credentialCategory: 'AIIMS/JIPMER Faculty',
+              },
             ],
             sameAs: [
               'https://www.instagram.com/cerebrumbiologyacademy',

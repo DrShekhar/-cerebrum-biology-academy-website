@@ -238,9 +238,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
 
   if (currentStep === 'explore') {
     return (
-      <div
-        className={`min-h-screen bg-gray-50 py-12 ${className}`}
-      >
+      <div className={`min-h-screen bg-gray-50 py-12 ${className}`}>
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">
@@ -738,9 +736,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
 
   if (currentStep === 'counseling') {
     return (
-      <div
-        className={`min-h-screen bg-orange-50 py-12 ${className}`}
-      >
+      <div className={`min-h-screen bg-orange-50 py-12 ${className}`}>
         {/* Progress Tracker - hidden on mobile */}
         <div className="hidden sm:block fixed top-4 right-4 z-50 bg-white rounded-lg shadow-lg p-4 text-sm">
           <div className="flex items-center gap-2 mb-2">

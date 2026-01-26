@@ -24,7 +24,9 @@ async function testCLIMCQGeneration() {
       includeNEETImportant: true,
     })
 
-    console.log(`Generated ${result.questions.length} questions in ${result.metadata.generationTime}ms\n`)
+    console.log(
+      `Generated ${result.questions.length} questions in ${result.metadata.generationTime}ms\n`
+    )
 
     if (result.questions.length > 0) {
       console.log('Sample Question:')

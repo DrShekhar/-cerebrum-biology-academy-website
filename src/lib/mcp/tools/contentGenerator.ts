@@ -6,12 +6,7 @@
 
 import { Anthropic } from '@anthropic-ai/sdk'
 import Redis from 'ioredis'
-import type {
-  EducationalAgent,
-  StudentQuery,
-  AgentResponse,
-  NEETCurriculum,
-} from '../types'
+import type { EducationalAgent, StudentQuery, AgentResponse, NEETCurriculum } from '../types'
 import { AgentType, AgentCapability, DifficultyLevel, ExamType } from '../types'
 
 interface AgentConfig {

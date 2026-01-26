@@ -45,11 +45,21 @@ function useScrollAnimation(threshold = 0.1) {
 const noidaAreas = [
   { name: 'Sector 62', distance: '8 km', metro: 'Sector 62 Metro', highlight: 'IT Hub' },
   { name: 'Sector 18', distance: '12 km', metro: 'Sector 18 Metro', highlight: 'Atta Market' },
-  { name: 'Sector 15', distance: '14 km', metro: 'Sector 15 Metro', highlight: 'Brahmaputra Market' },
+  {
+    name: 'Sector 15',
+    distance: '14 km',
+    metro: 'Sector 15 Metro',
+    highlight: 'Brahmaputra Market',
+  },
   { name: 'Sector 16', distance: '13 km', metro: 'Sector 16 Metro', highlight: 'Noida Stadium' },
   { name: 'Sector 50', distance: '6 km', metro: 'Sector 50 Metro', highlight: 'Residential Hub' },
   { name: 'Sector 44', distance: '10 km', metro: 'Sector 34 Metro', highlight: 'Film City' },
-  { name: 'Noida Extension', distance: '5 km', metro: 'Nearby Aqua Line', highlight: 'Greater Noida West' },
+  {
+    name: 'Noida Extension',
+    distance: '5 km',
+    metro: 'Nearby Aqua Line',
+    highlight: 'Greater Noida West',
+  },
   { name: 'Greater Noida', distance: '2 km', metro: 'Aqua Line', highlight: 'Our Center Location' },
 ]
 
@@ -161,8 +171,7 @@ export default function BiologyTutorNoidaPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Noida</span>
+              Biology Tutor in <span className="text-yellow-400">Noida</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -170,8 +179,8 @@ export default function BiologyTutorNoidaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for all Noida sectors and Greater Noida.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
+              Expert Biology coaching for all Noida sectors and Greater Noida. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -335,9 +344,7 @@ export default function BiologyTutorNoidaPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Noida Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Noida Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Best NEET coaching for Noida and Greater Noida students
             </p>

@@ -5,12 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import { ABTestDashboard } from '@/components/abTesting/ABTestDashboard'
 import { useState } from 'react'
-import {
-  FlaskConical,
-  BarChart2,
-  Settings,
-  FileDown,
-} from 'lucide-react'
+import { FlaskConical, BarChart2, Settings, FileDown } from 'lucide-react'
 
 export default function ABTestingPage() {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'settings' | 'export'>('dashboard')

@@ -75,11 +75,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
               className="md:hidden text-white p-2"
               aria-label="Toggle mobile menu"
             >
-              {mobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>

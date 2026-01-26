@@ -107,11 +107,7 @@ export default function NEET2026PreparationPage() {
       name: 'Crash Course',
       target: 'NEET 2026',
       duration: '3-4 Months',
-      features: [
-        'Rapid syllabus revision',
-        'High-yield topic focus',
-        'Intensive mock tests',
-      ],
+      features: ['Rapid syllabus revision', 'High-yield topic focus', 'Intensive mock tests'],
       price: '₹45,000',
       color: 'bg-[#3d4d3d]',
       description:

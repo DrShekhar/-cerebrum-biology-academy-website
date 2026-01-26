@@ -53,13 +53,13 @@ Check the data flow end-to-end
 
 ### Common Frontend Issues
 
-| Symptom | Likely Cause | Solution |
-|---------|--------------|----------|
-| Page blank | JS error, hydration mismatch | Check console errors |
-| Styling broken | CSS not loading, wrong classes | Check Network tab, inspect element |
-| Data not showing | API error, state not updated | Check Network tab, React DevTools |
-| Infinite loading | Promise not resolving | Add timeout, check error handling |
-| Wrong data | Stale cache, wrong props | Clear cache, check data flow |
+| Symptom          | Likely Cause                   | Solution                           |
+| ---------------- | ------------------------------ | ---------------------------------- |
+| Page blank       | JS error, hydration mismatch   | Check console errors               |
+| Styling broken   | CSS not loading, wrong classes | Check Network tab, inspect element |
+| Data not showing | API error, state not updated   | Check Network tab, React DevTools  |
+| Infinite loading | Promise not resolving          | Add timeout, check error handling  |
+| Wrong data       | Stale cache, wrong props       | Clear cache, check data flow       |
 
 ### React/Next.js Specific
 
@@ -84,11 +84,13 @@ useEffect(() => {
 ### Hydration Errors
 
 Common causes:
+
 1. Date/time differences between server and client
 2. Browser extensions modifying DOM
 3. Conditional rendering based on `window`
 
 Fix:
+
 ```typescript
 // Use dynamic import with ssr: false
 const ClientOnly = dynamic(() => import('./Component'), { ssr: false })
@@ -132,35 +134,39 @@ const rawResult = await prisma.$queryRaw`SELECT * FROM users WHERE email = 'test
 
 ### Common Backend Issues
 
-| Symptom | Likely Cause | Solution |
-|---------|--------------|----------|
-| 500 error | Unhandled exception | Check server logs |
-| 401/403 | Auth issue | Check token, session, permissions |
-| 404 | Wrong route, missing resource | Check URL, database |
-| Slow response | Database query, external API | Add timing logs |
-| Timeout | Long operation, deadlock | Add timeouts, check queries |
+| Symptom       | Likely Cause                  | Solution                          |
+| ------------- | ----------------------------- | --------------------------------- |
+| 500 error     | Unhandled exception           | Check server logs                 |
+| 401/403       | Auth issue                    | Check token, session, permissions |
+| 404           | Wrong route, missing resource | Check URL, database               |
+| Slow response | Database query, external API  | Add timing logs                   |
+| Timeout       | Long operation, deadlock      | Add timeouts, check queries       |
 
 ### Logging Best Practices
 
 ```typescript
 // Structured logging
-console.log(JSON.stringify({
-  event: 'api_request',
-  endpoint: '/api/users',
-  method: 'POST',
-  userId: user.id,
-  duration: Date.now() - startTime,
-  status: 'success',
-}))
+console.log(
+  JSON.stringify({
+    event: 'api_request',
+    endpoint: '/api/users',
+    method: 'POST',
+    userId: user.id,
+    duration: Date.now() - startTime,
+    status: 'success',
+  })
+)
 
 // Error logging with context
-console.error(JSON.stringify({
-  event: 'api_error',
-  endpoint: '/api/users',
-  error: error.message,
-  stack: error.stack,
-  requestBody: body,
-}))
+console.error(
+  JSON.stringify({
+    event: 'api_error',
+    endpoint: '/api/users',
+    error: error.message,
+    stack: error.stack,
+    requestBody: body,
+  })
+)
 ```
 
 ---
@@ -185,12 +191,12 @@ curl -X GET https://cerebrumbiologyacademy.com/api/user/me \
 
 ### Common Network Issues
 
-| Symptom | Likely Cause | Solution |
-|---------|--------------|----------|
-| CORS error | Missing CORS headers | Add headers in next.config.js |
-| SSL error | Certificate issue | Check domain configuration |
-| Timeout | Server slow, firewall | Check server logs, ping |
-| 502/503 | Server down, deployment issue | Check Vercel dashboard |
+| Symptom    | Likely Cause                  | Solution                      |
+| ---------- | ----------------------------- | ----------------------------- |
+| CORS error | Missing CORS headers          | Add headers in next.config.js |
+| SSL error  | Certificate issue             | Check domain configuration    |
+| Timeout    | Server slow, firewall         | Check server logs, ping       |
+| 502/503    | Server down, deployment issue | Check Vercel dashboard        |
 
 ---
 
@@ -311,32 +317,40 @@ vercel logs cerebrumbiologyacademy.com -n 100
 ## Bug Report: [Title]
 
 ### Description
+
 [What's happening vs. what should happen]
 
 ### Steps to Reproduce
+
 1. Go to [page]
 2. Click [button]
 3. Enter [data]
 4. See error
 
 ### Expected Behavior
+
 [What should happen]
 
 ### Actual Behavior
+
 [What actually happens]
 
 ### Environment
+
 - Browser: [Chrome 120, Safari 17, etc.]
 - Device: [Desktop, iPhone 14, etc.]
 - User type: [Student, Admin, etc.]
 
 ### Screenshots/Logs
+
 [Attach relevant screenshots, console errors, network logs]
 
 ### Frequency
+
 [Always, sometimes, once]
 
 ### Workaround
+
 [Any known workaround?]
 ```
 

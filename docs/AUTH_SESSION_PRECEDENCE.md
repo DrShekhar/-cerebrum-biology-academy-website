@@ -50,6 +50,7 @@ export default clerkMiddleware(async (auth, req) => {
 ```
 
 **Behavior**:
+
 - If Clerk session exists → user is authenticated at middleware level
 - If no Clerk session → redirected to `/sign-in` for protected routes
 - Role checking uses `sessionClaims.metadata.role` from Clerk Dashboard
@@ -68,6 +69,7 @@ Some API routes (especially OTP/phone auth) use legacy authentication:
 ```
 
 **Routes Still Using Legacy Auth**:
+
 - `/api/auth/signin` - Custom email/password login
 - `/api/auth/signup` - Custom registration
 - `/api/auth/change-password` - Password change (uses `withAuth` middleware)
@@ -99,7 +101,7 @@ const isPublicRoute = createRouteMatcher([
   '/sign-in(.*)',
   '/sign-up(.*)',
   '/auth/(.*)',
-  '/api/auth/(.*)',      // OTP login endpoints
+  '/api/auth/(.*)', // OTP login endpoints
   '/api/public/(.*)',
   '/api/webhooks/(.*)',
 ])
@@ -153,12 +155,12 @@ export const withStudent = (h) => withRole(['STUDENT'], h)
 
 When both auth systems could apply:
 
-| Scenario | Resolution |
-|----------|------------|
+| Scenario                       | Resolution                                     |
+| ------------------------------ | ---------------------------------------------- |
 | Clerk session + Legacy session | Clerk takes precedence (middleware runs first) |
-| Clerk session only | User authenticated everywhere |
-| Legacy session only | Only works on `/api/auth/*` routes |
-| No sessions | Unauthenticated |
+| Clerk session only             | User authenticated everywhere                  |
+| Legacy session only            | Only works on `/api/auth/*` routes             |
+| No sessions                    | Unauthenticated                                |
 
 ### Example Flow
 
@@ -198,12 +200,14 @@ const initializeAuth = async () => {
 ## Migration Status
 
 ### ✅ Active (Keep)
+
 - `PasswordUtils` - Password hashing/validation
 - `ROLE_PERMISSIONS` - Permission definitions
 - `addSecurityHeaders` - Security headers
 - `ALLOWED_ORIGINS` - CORS configuration
 
 ### ⚠️ Deprecated (To Be Removed)
+
 - `TokenUtils` - Use Clerk session tokens
 - `SessionManager` - Use Clerk session management
 - `CookieManager` - Use Clerk cookie handling
@@ -212,6 +216,7 @@ const initializeAuth = async () => {
 - `AuthRateLimit` - Use Clerk's built-in rate limiting
 
 ### 📋 Migration TODO
+
 - [ ] Migrate `/api/auth/*` routes to Clerk
 - [ ] Migrate `/api/test/*` to Clerk authentication
 - [ ] Migrate `/api/questions/*` to Clerk authentication
@@ -221,6 +226,7 @@ const initializeAuth = async () => {
 ## Security Considerations
 
 1. **Session Claims Setup**: Role must be configured in Clerk Dashboard:
+
    ```json
    { "metadata": "{{user.public_metadata}}" }
    ```
@@ -241,6 +247,7 @@ const initializeAuth = async () => {
 ## Debugging Auth Issues
 
 ### Check Clerk Session
+
 ```typescript
 // Server Component / API Route
 import { auth } from '@clerk/nextjs/server'
@@ -249,6 +256,7 @@ console.log('Clerk:', { userId, role: sessionClaims?.metadata?.role })
 ```
 
 ### Check Legacy Session
+
 ```typescript
 // API Route
 import { validateUserSession } from '@/lib/auth/config'
@@ -257,6 +265,8 @@ console.log('Legacy:', { valid: session.valid, role: session.role })
 ```
 
 ### Debug Headers (Development Only)
+
 When `NODE_ENV === 'development'` and user is authenticated:
+
 - `X-Clerk-User-ID`: Clerk user ID
 - `X-User-Role`: User role from session claims

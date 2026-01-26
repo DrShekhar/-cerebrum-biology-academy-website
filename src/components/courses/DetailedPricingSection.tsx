@@ -522,19 +522,21 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
           <div className="p-6 md:p-8">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex-1 text-center md:text-left">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  👨‍👩‍👧 Are You a Parent?
-                </h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">👨‍👩‍👧 Are You a Parent?</h3>
                 <p className="text-gray-600 mb-4">
-                  We understand your concerns about your child's NEET preparation. Chat directly with our counselors to understand fee structure, batch timings, and how we track student progress.
+                  We understand your concerns about your child's NEET preparation. Chat directly
+                  with our counselors to understand fee structure, batch timings, and how we track
+                  student progress.
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <button
-                    onClick={() => trackAndOpenWhatsApp({
-                      source: 'pricing-parent-cta',
-                      message: WHATSAPP_MESSAGES.parentFees,
-                      campaign: 'parent-engagement',
-                    })}
+                    onClick={() =>
+                      trackAndOpenWhatsApp({
+                        source: 'pricing-parent-cta',
+                        message: WHATSAPP_MESSAGES.parentFees,
+                        campaign: 'parent-engagement',
+                      })
+                    }
                     className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-5 rounded-lg shadow-md hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
                   >
                     <MessageCircle className="h-5 w-5" />
@@ -564,11 +566,13 @@ export function DetailedPricingSection({ course }: DetailedPricingSectionProps) 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
-                onClick={() => trackAndOpenWhatsApp({
-                  source: 'pricing-section-cta',
-                  message: WHATSAPP_MESSAGES.pricing,
-                  campaign: 'pricing-page',
-                })}
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    source: 'pricing-section-cta',
+                    message: WHATSAPP_MESSAGES.pricing,
+                    campaign: 'pricing-page',
+                  })
+                }
                 className="inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <MessageCircle className="h-5 w-5" />

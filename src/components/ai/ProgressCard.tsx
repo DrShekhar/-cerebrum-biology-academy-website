@@ -2,15 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimationControls } from 'framer-motion'
-import {
-  LucideIcon,
-  Flame,
-  Clock,
-  Target,
-  BookOpen,
-  TrendingUp,
-  Sparkles,
-} from 'lucide-react'
+import { LucideIcon, Flame, Clock, Target, BookOpen, TrendingUp, Sparkles } from 'lucide-react'
 import { ProgressRing } from '../ui/ProgressRing'
 import { AnimatedCounter } from '../ui/AnimatedCounter'
 import { MilestoneIndicator } from '../ui/MilestoneIndicator'

@@ -48,10 +48,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (recentLead) {
-      return NextResponse.json(
-        { error: 'Please wait before requesting again' },
-        { status: 429 }
-      )
+      return NextResponse.json({ error: 'Please wait before requesting again' }, { status: 429 })
     }
 
     // Generate unique lead ID
@@ -139,7 +136,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Log successful conversion
-    console.log(`[CATALOG-DOWNLOAD] ${body.email} - ${body.source || 'direct'} - Lead ID: ${leadId}`)
+    console.log(
+      `[CATALOG-DOWNLOAD] ${body.email} - ${body.source || 'direct'} - Lead ID: ${leadId}`
+    )
 
     return NextResponse.json({
       success: true,
@@ -150,10 +149,7 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('Catalog download error:', error)
-    return NextResponse.json(
-      { error: 'Failed to process catalog request' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to process catalog request' }, { status: 500 })
   }
 }
 

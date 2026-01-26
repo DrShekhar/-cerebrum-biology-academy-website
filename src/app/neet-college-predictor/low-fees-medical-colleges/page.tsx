@@ -2,14 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import Link from 'next/link'
-import {
-  ArrowLeft,
-  Building2,
-  IndianRupee,
-  Search,
-  ChevronRight,
-  Sparkles,
-} from 'lucide-react'
+import { ArrowLeft, Building2, IndianRupee, Search, ChevronRight, Sparkles } from 'lucide-react'
 
 interface College {
   name: string

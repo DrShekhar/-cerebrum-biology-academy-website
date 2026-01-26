@@ -131,34 +131,19 @@ export default function NEETCrashCoursePage() {
     {
       week: 'Week 5-8',
       title: 'Core Concepts',
-      topics: [
-        'Human Physiology',
-        'Genetics & Evolution',
-        'Biotechnology',
-        'Ecology',
-      ],
+      topics: ['Human Physiology', 'Genetics & Evolution', 'Biotechnology', 'Ecology'],
       hours: '5 hrs/day',
     },
     {
       week: 'Week 9-10',
       title: 'PYQ Analysis',
-      topics: [
-        'Last 10 years papers',
-        'Pattern analysis',
-        'Common mistakes',
-        'Scoring strategy',
-      ],
+      topics: ['Last 10 years papers', 'Pattern analysis', 'Common mistakes', 'Scoring strategy'],
       hours: '6 hrs/day',
     },
     {
       week: 'Week 11-12',
       title: 'Test & Revise',
-      topics: [
-        'Daily full tests',
-        'Quick revision notes',
-        'Doubt clearing',
-        'Final tips',
-      ],
+      topics: ['Daily full tests', 'Quick revision notes', 'Doubt clearing', 'Final tips'],
       hours: '6 hrs/day',
     },
   ]

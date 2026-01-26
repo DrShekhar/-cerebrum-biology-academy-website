@@ -92,17 +92,20 @@ const features = [
   {
     icon: Users,
     title: 'Premium Batches (10-15)',
-    description: 'Exclusive batches for Indiranagar families with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Indiranagar families with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Indiranagar families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Indiranagar families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
@@ -127,7 +130,7 @@ const faqs = [
   {
     question: 'Why do Indiranagar students choose online NEET coaching?',
     answer:
-      'Indiranagar is East Bangalore\'s most sought-after address with busy professional families. Our online classes offer AIIMS faculty without ORR or airport road traffic. Save 2+ hours daily on commute to coaching centers in Rajajinagar or Jayanagar.',
+      "Indiranagar is East Bangalore's most sought-after address with busy professional families. Our online classes offer AIIMS faculty without ORR or airport road traffic. Save 2+ hours daily on commute to coaching centers in Rajajinagar or Jayanagar.",
   },
   {
     question: 'Which areas in Indiranagar do you serve?',
@@ -137,7 +140,7 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching in Indiranagar?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Indiranagar\'s premium education standards while offering superior flexibility. EMI options available.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Indiranagar's premium education standards while offering superior flexibility. EMI options available.",
   },
   {
     question: 'How does this compare to coaching centers in Old Airport Road?',
@@ -147,19 +150,19 @@ const faqs = [
   {
     question: 'Do you support CBSE and international school students?',
     answer:
-      'Yes! We have batches for CBSE, Karnataka State Board, and international curriculum (IB, IGCSE) students. Many of our Indiranagar students are from Bishop Cotton, St. Joseph\'s, Inventure Academy, and Harvest International.',
+      "Yes! We have batches for CBSE, Karnataka State Board, and international curriculum (IB, IGCSE) students. Many of our Indiranagar students are from Bishop Cotton, St. Joseph's, Inventure Academy, and Harvest International.",
   },
   {
     question: 'What medical colleges can Indiranagar students target?',
     answer:
-      'With proper NEET preparation, Indiranagar students can target top colleges like Bangalore Medical College, St. John\'s Medical College (nearby in Koramangala), MS Ramaiah, Kempegowda Institute, and all-India institutes like AIIMS and JIPMER.',
+      "With proper NEET preparation, Indiranagar students can target top colleges like Bangalore Medical College, St. John's Medical College (nearby in Koramangala), MS Ramaiah, Kempegowda Institute, and all-India institutes like AIIMS and JIPMER.",
   },
 ]
 
 const premiumSchools = [
   'Bishop Cotton Boys School',
   'Bishop Cotton Girls School',
-  'St. Joseph\'s Boys High School',
+  "St. Joseph's Boys High School",
   'Harvest International School',
   'Inventure Academy',
   'Greenwood High',
@@ -178,15 +181,15 @@ const whyIndiranagar = [
   },
   {
     icon: Building,
-    title: 'East Bangalore\'s Best',
+    title: "East Bangalore's Best",
     description:
-      'Designed for Indiranagar\'s discerning families. Premium infrastructure, concierge support.',
+      "Designed for Indiranagar's discerning families. Premium infrastructure, concierge support.",
   },
   {
     icon: GraduationCap,
     title: 'Elite School Expert',
     description:
-      'We understand Bishop Cotton, St. Joseph\'s, Harvest curriculums. Our faculty bridges school learning with NEET.',
+      "We understand Bishop Cotton, St. Joseph's, Harvest curriculums. Our faculty bridges school learning with NEET.",
   },
 ]
 
@@ -236,8 +239,9 @@ export default function NeetCoachingIndiranagarPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Indiranagar&apos;s elite schools. 94.2% success rate, AIIMS
-              faculty, zero traffic stress. Join 590+ students from Bishop Cotton, St. Joseph&apos;s.
+              Premium NEET Biology coaching for Indiranagar&apos;s elite schools. 94.2% success
+              rate, AIIMS faculty, zero traffic stress. Join 590+ students from Bishop Cotton, St.
+              Joseph&apos;s.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +302,8 @@ export default function NeetCoachingIndiranagarPage() {
               NEET Coaching Across Indiranagar & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From 100 Feet Road to Domlur, HAL to CMH Road - premium coaching for every Indiranagar locality.
+              From 100 Feet Road to Domlur, HAL to CMH Road - premium coaching for every Indiranagar
+              locality.
             </p>
           </motion.div>
 
@@ -320,9 +325,7 @@ export default function NeetCoachingIndiranagarPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-orange-600" />
                   </div>
-                  <div className="text-2xl font-bold text-orange-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-orange-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded-full">
@@ -351,7 +354,8 @@ export default function NeetCoachingIndiranagarPage() {
               Why Indiranagar&apos;s Elite Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Premium education meets convenience - designed for East Bangalore&apos;s discerning families.
+              Premium education meets convenience - designed for East Bangalore&apos;s discerning
+              families.
             </p>
           </motion.div>
 

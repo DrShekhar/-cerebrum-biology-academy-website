@@ -74,18 +74,13 @@ export function CountryFAQ({ country }: CountryFAQProps) {
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border border-slate-200 rounded-xl overflow-hidden"
-            >
+            <div key={index} className="border border-slate-200 rounded-xl overflow-hidden">
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full flex items-center justify-between p-6 text-left bg-white hover:bg-slate-50 transition-colors"
                 aria-expanded={openIndex === index}
               >
-                <span className="font-semibold text-slate-900 pr-4">
-                  {faq.question}
-                </span>
+                <span className="font-semibold text-slate-900 pr-4">{faq.question}</span>
                 <ChevronDown
                   className={cn(
                     'w-5 h-5 text-slate-500 flex-shrink-0 transition-transform duration-200',

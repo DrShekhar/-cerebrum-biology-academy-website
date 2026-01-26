@@ -82,6 +82,7 @@ StepIndicator (Step-by-Step Component)
 ### Step Indicator States
 
 #### Horizontal Layout
+
 ```
 ┌──────────────────────────────────────────────────────┐
 │  (✓)────────●────────○────────○                      │
@@ -97,6 +98,7 @@ Legend:
 ```
 
 #### Vertical Layout
+
 ```
 ┌─────────────────────────┐
 │ (✓) Setup               │
@@ -116,6 +118,7 @@ Legend:
 ## Color Themes
 
 ### Blue Theme (Default)
+
 ```
 Progress: ████████ (Blue #3B82F6)
 Background: ░░░░░░░░ (Slate #E2E8F0)
@@ -123,6 +126,7 @@ Text: Dark Blue (#1E40AF)
 ```
 
 ### Emerald Theme (Success/Upload)
+
 ```
 Progress: ████████ (Emerald #10B981)
 Background: ░░░░░░░░ (Slate #E2E8F0)
@@ -130,6 +134,7 @@ Text: Dark Green (#047857)
 ```
 
 ### Purple Theme (Export/Transform)
+
 ```
 Progress: ████████ (Purple #8B5CF6)
 Background: ░░░░░░░░ (Slate #E2E8F0)
@@ -137,6 +142,7 @@ Text: Dark Purple (#6D28D9)
 ```
 
 ### Amber Theme (Warning/Bulk)
+
 ```
 Progress: ████████ (Amber #F59E0B)
 Background: ░░░░░░░░ (Slate #E2E8F0)
@@ -146,6 +152,7 @@ Text: Dark Amber (#B45309)
 ## Size Variations
 
 ### Small (sm)
+
 ```
 Height: 1.5 (6px)
 Circle: 6 (24px)
@@ -154,6 +161,7 @@ Spacing: gap-2 (8px)
 ```
 
 ### Medium (md) - Default
+
 ```
 Height: 2.5 (10px)
 Circle: 8 (32px)
@@ -162,6 +170,7 @@ Spacing: gap-4 (16px)
 ```
 
 ### Large (lg)
+
 ```
 Height: 3 (12px)
 Circle: 10 (40px)
@@ -172,6 +181,7 @@ Spacing: gap-6 (24px)
 ## Animation Flow
 
 ### Linear Progress Animation
+
 ```
 Frame 1: [░░░░░░░░░░░░░░░░░░░░] 0%
 Frame 2: [██░░░░░░░░░░░░░░░░░░] 10%
@@ -185,6 +195,7 @@ Easing: ease-out
 ```
 
 ### Circular Progress Animation
+
 ```
    0%        25%        50%        75%       100%
    ●         ◔          ◑          ◕          ●
@@ -197,6 +208,7 @@ Stroke Animation:
 ```
 
 ### Step Indicator Animation
+
 ```
 Step Completion Sequence:
 1. Circle fills with color (200ms)
@@ -208,6 +220,7 @@ Total: ~850ms per step
 ```
 
 ### Indeterminate Animation
+
 ```
 [    ●→      ] → [     ●→     ] → [      ●→    ]
 [   ●→       ] → [    ●→      ] → [     ●→     ]
@@ -221,17 +234,14 @@ Movement: Linear from -100% to 250%
 ## Use Case Patterns
 
 ### Pattern 1: Simple Progress
+
 ```tsx
 // Single operation with known progress
-<ProgressIndicator
-  current={progress}
-  total={100}
-  status="Loading..."
-  variant="linear"
-/>
+<ProgressIndicator current={progress} total={100} status="Loading..." variant="linear" />
 ```
 
 ### Pattern 2: Multi-Step Process
+
 ```tsx
 // Complex workflow with distinct phases
 <StepIndicator steps={steps} currentStep={current} />
@@ -244,19 +254,21 @@ Movement: Linear from -100% to 250%
 ```
 
 ### Pattern 3: File Upload
+
 ```tsx
 // Upload with processing phase
 <ProgressIndicator
   current={uploadPhase}
   total={2}
   percentage={uploadProgress}
-  status={uploadProgress < 100 ? "Uploading..." : "Processing..."}
+  status={uploadProgress < 100 ? 'Uploading...' : 'Processing...'}
   variant="circular"
   color="emerald"
 />
 ```
 
 ### Pattern 4: Bulk Operations
+
 ```tsx
 // Many items to process
 <ProgressIndicator
@@ -272,6 +284,7 @@ Movement: Linear from -100% to 250%
 ## Status Message Templates
 
 ### Good Status Messages
+
 ```
 ✓ "Generating question 25 of 50..."
 ✓ "Uploading file... 45%"
@@ -281,6 +294,7 @@ Movement: Linear from -100% to 250%
 ```
 
 ### Avoid
+
 ```
 ✗ "Loading..."  (too generic)
 ✗ "Please wait"  (no context)
@@ -291,6 +305,7 @@ Movement: Linear from -100% to 250%
 ## Error States
 
 ### Error Display
+
 ```
 ┌─────────────────────────────────────┐
 │ [████████░░░░░░░░░░░░] ⚠           │
@@ -301,6 +316,7 @@ Movement: Linear from -100% to 250%
 ```
 
 ### Success Display
+
 ```
 ┌─────────────────────────────────────┐
 │ [████████████████████] ✓           │
@@ -313,6 +329,7 @@ Movement: Linear from -100% to 250%
 ## Responsive Behavior
 
 ### Desktop (> 1024px)
+
 ```
 ┌──────────────────────────────────────────┐
 │ [████████████░░░░░░░░░░░░] 60%          │
@@ -322,6 +339,7 @@ Movement: Linear from -100% to 250%
 ```
 
 ### Tablet (768px - 1024px)
+
 ```
 ┌────────────────────────────────┐
 │ [████████░░░░░░░░] 60%        │
@@ -331,6 +349,7 @@ Movement: Linear from -100% to 250%
 ```
 
 ### Mobile (< 768px)
+
 ```
 ┌───────────────────────┐
 │ [████░░░░] 60%       │
@@ -356,24 +375,27 @@ Movement: Linear from -100% to 250%
 ## Performance Tips
 
 ### Good Practice
+
 ```tsx
 // Update every 100ms
 const interval = setInterval(() => {
-  setProgress(prev => prev + 1)
+  setProgress((prev) => prev + 1)
 }, 100)
 ```
 
 ### Avoid
+
 ```tsx
 // Too frequent updates (every 10ms)
 const interval = setInterval(() => {
-  setProgress(prev => prev + 1)
-}, 10)  // Performance issue!
+  setProgress((prev) => prev + 1)
+}, 10) // Performance issue!
 ```
 
 ## Quick Copy-Paste Examples
 
 ### Test Generation
+
 ```tsx
 <ProgressIndicator
   current={currentStep}
@@ -388,6 +410,7 @@ const interval = setInterval(() => {
 ```
 
 ### File Upload
+
 ```tsx
 <ProgressIndicator
   current={1}
@@ -401,6 +424,7 @@ const interval = setInterval(() => {
 ```
 
 ### Bulk Operations
+
 ```tsx
 <ProgressIndicator
   current={processedCount}
@@ -415,6 +439,7 @@ const interval = setInterval(() => {
 ## Keyboard Shortcuts
 
 When cancel button is focused:
+
 - `Enter` or `Space`: Cancel operation
 - `Escape`: Cancel operation (if enabled)
 - `Tab`: Navigate away
@@ -422,6 +447,7 @@ When cancel button is focused:
 ## ARIA Attributes
 
 Components include:
+
 - `role="progressbar"`
 - `aria-valuenow={current}`
 - `aria-valuemin="0"`

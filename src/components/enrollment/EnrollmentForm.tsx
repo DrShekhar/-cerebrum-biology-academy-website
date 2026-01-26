@@ -2,15 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import {
-  User,
-  Mail,
-  Phone,
-  CreditCard,
-  IndianRupee,
-  CheckCircle,
-  AlertCircle,
-} from 'lucide-react'
+import { User, Mail, Phone, CreditCard, IndianRupee, CheckCircle, AlertCircle } from 'lucide-react'
 import { razorpayService } from '@/lib/payments/razorpay'
 import { useAnalytics } from '@/hooks/useAnalytics'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'

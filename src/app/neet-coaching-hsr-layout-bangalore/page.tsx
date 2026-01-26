@@ -92,17 +92,20 @@ const features = [
   {
     icon: Users,
     title: 'Tech-Savvy Batches (10-15)',
-    description: 'Exclusive batches for HSR IT families with personalized attention and premium support.',
+    description:
+      'Exclusive batches for HSR IT families with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality HSR families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality HSR families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
@@ -127,7 +130,7 @@ const faqs = [
   {
     question: 'Why do HSR Layout students choose online NEET coaching?',
     answer:
-      'HSR Layout is home to Bangalore\'s tech workforce with families who understand digital learning. Our online classes offer AIIMS faculty without ORR or Silk Board traffic. Save 2-3 hours daily on commute to coaching centers in Jayanagar or Koramangala.',
+      "HSR Layout is home to Bangalore's tech workforce with families who understand digital learning. Our online classes offer AIIMS faculty without ORR or Silk Board traffic. Save 2-3 hours daily on commute to coaching centers in Jayanagar or Koramangala.",
   },
   {
     question: 'Which areas in HSR Layout do you serve?',
@@ -137,7 +140,7 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching in HSR Layout?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches HSR\'s premium education standards while offering superior flexibility. EMI options available for IT professionals.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches HSR's premium education standards while offering superior flexibility. EMI options available for IT professionals.",
   },
   {
     question: 'How does this compare to coaching centers in Jayanagar?',
@@ -152,7 +155,7 @@ const faqs = [
   {
     question: 'What medical colleges can HSR Layout students target?',
     answer:
-      'With proper NEET preparation, HSR students can target top colleges like Bangalore Medical College, St. John\'s Medical College, MS Ramaiah Medical College, and all-India institutes like AIIMS, JIPMER, and CMC Vellore.',
+      "With proper NEET preparation, HSR students can target top colleges like Bangalore Medical College, St. John's Medical College, MS Ramaiah Medical College, and all-India institutes like AIIMS, JIPMER, and CMC Vellore.",
   },
 ]
 
@@ -236,8 +239,8 @@ export default function NeetCoachingHSRLayoutPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Tech-forward NEET Biology coaching for HSR Layout IT families. 94.2% success rate, AIIMS
-              faculty, zero Silk Board traffic. Join 620+ students from Ryan, Vibgyor, DPS.
+              Tech-forward NEET Biology coaching for HSR Layout IT families. 94.2% success rate,
+              AIIMS faculty, zero Silk Board traffic. Join 620+ students from Ryan, Vibgyor, DPS.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +301,8 @@ export default function NeetCoachingHSRLayoutPage() {
               NEET Coaching Across HSR Layout & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Sector 1 to Sector 7, Agara to Bommanahalli - premium coaching for all HSR localities.
+              From Sector 1 to Sector 7, Agara to Bommanahalli - premium coaching for all HSR
+              localities.
             </p>
           </motion.div>
 
@@ -320,9 +324,7 @@ export default function NeetCoachingHSRLayoutPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-indigo-600" />
                   </div>
-                  <div className="text-2xl font-bold text-indigo-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-indigo-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full">

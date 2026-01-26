@@ -6,13 +6,7 @@
 'use client'
 
 import React, { useState } from 'react'
-import {
-  Users,
-  Trophy,
-  Flame,
-  Target,
-  Award,
-} from 'lucide-react'
+import { Users, Trophy, Flame, Target, Award } from 'lucide-react'
 
 interface StudyStreak {
   currentStreak: number

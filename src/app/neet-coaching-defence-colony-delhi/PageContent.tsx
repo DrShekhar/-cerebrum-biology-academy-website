@@ -57,22 +57,26 @@ const whyChooseUs = [
   {
     icon: Shield,
     title: 'Defence Families Trust Us',
-    description: 'Many students from defence officer families in Defence Colony have achieved top NEET ranks with us.',
+    description:
+      'Many students from defence officer families in Defence Colony have achieved top NEET ranks with us.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from DPS Mathura Road, Springdales, and defence background schools.',
+    description:
+      'Proven track record with students from DPS Mathura Road, Springdales, and defence background schools.',
   },
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching motivated students.',
+    description:
+      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching motivated students.',
   },
   {
     icon: Star,
     title: 'Top Results',
-    description: 'Defence Colony students scored 680+ in NEET and secured AIIMS, Maulana Azad admissions.',
+    description:
+      'Defence Colony students scored 680+ in NEET and secured AIIMS, Maulana Azad admissions.',
   },
 ]
 
@@ -160,8 +164,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Coaching in{' '}
-              <span className="text-yellow-400">Defence Colony</span>
+              NEET Coaching in <span className="text-yellow-400">Defence Colony</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +172,9 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Defence Colony, Lajpat Nagar, South Extension & nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by defence officer families.
+              Premium NEET coaching for Defence Colony, Lajpat Nagar, South Extension & nearby
+              areas. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by
+              defence officer families.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -187,7 +191,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Defence%20Colony%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -363,7 +368,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Defence%20Colony%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

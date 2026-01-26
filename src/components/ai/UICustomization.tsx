@@ -19,7 +19,7 @@ import {
   Tablet,
   Check,
   Plus,
-  Trash2
+  Trash2,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -146,7 +146,9 @@ interface UICustomizationData {
 }
 
 const UICustomization: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'themes' | 'fonts' | 'colors' | 'instructions' | 'branding' | 'messages' | 'progress'>('themes')
+  const [activeTab, setActiveTab] = useState<
+    'themes' | 'fonts' | 'colors' | 'instructions' | 'branding' | 'messages' | 'progress'
+  >('themes')
   const [customizationData, setCustomizationData] = useState<UICustomizationData | null>(null)
   const [previewMode, setPreviewMode] = useState<'desktop' | 'tablet' | 'mobile'>('desktop')
   const [saving, setSaving] = useState(false)
@@ -172,7 +174,7 @@ const UICustomization: React.FC = () => {
           borderRadius: '0.5rem',
           fontFamily: 'Inter',
           isDark: false,
-          preview: 'light-preview.jpg'
+          preview: 'light-preview.jpg',
         },
         {
           id: 'modern-dark',
@@ -186,7 +188,7 @@ const UICustomization: React.FC = () => {
           borderRadius: '0.5rem',
           fontFamily: 'Inter',
           isDark: true,
-          preview: 'dark-preview.jpg'
+          preview: 'dark-preview.jpg',
         },
         {
           id: 'academic',
@@ -200,7 +202,7 @@ const UICustomization: React.FC = () => {
           borderRadius: '0.25rem',
           fontFamily: 'Georgia',
           isDark: false,
-          preview: 'academic-preview.jpg'
+          preview: 'academic-preview.jpg',
         },
         {
           id: 'vibrant',
@@ -214,8 +216,8 @@ const UICustomization: React.FC = () => {
           borderRadius: '1rem',
           fontFamily: 'Poppins',
           isDark: false,
-          preview: 'vibrant-preview.jpg'
-        }
+          preview: 'vibrant-preview.jpg',
+        },
       ],
       selectedTheme: 'modern-light',
       fontSettings: {
@@ -224,37 +226,38 @@ const UICustomization: React.FC = () => {
           small: '14px',
           medium: '16px',
           large: '18px',
-          xlarge: '20px'
+          xlarge: '20px',
         },
         weight: '400',
         lineHeight: '1.5',
-        letterSpacing: '0'
+        letterSpacing: '0',
       },
       difficultyColors: {
         easy: {
           background: '#DCFCE7',
           text: '#166534',
-          border: '#BBF7D0'
+          border: '#BBF7D0',
         },
         medium: {
           background: '#FEF3C7',
           text: '#92400E',
-          border: '#FDE68A'
+          border: '#FDE68A',
         },
         hard: {
           background: '#FEE2E2',
           text: '#DC2626',
-          border: '#FECACA'
-        }
+          border: '#FECACA',
+        },
       },
       customInstructions: [
         {
           id: 'welcome',
           title: 'Welcome Instructions',
-          content: 'Welcome to the NEET Biology Test. Please read all questions carefully before answering.',
+          content:
+            'Welcome to the NEET Biology Test. Please read all questions carefully before answering.',
           position: 'top',
           style: 'info',
-          isActive: true
+          isActive: true,
         },
         {
           id: 'time-warning',
@@ -262,15 +265,15 @@ const UICustomization: React.FC = () => {
           content: 'You have 15 minutes remaining. Please manage your time accordingly.',
           position: 'top',
           style: 'warning',
-          isActive: true
-        }
+          isActive: true,
+        },
       ],
       brandingSettings: {
         logo: {
           url: '/logo-cerebrum.png',
           width: '150px',
           height: '50px',
-          position: 'top-left'
+          position: 'top-left',
         },
         organizationName: 'Cerebrum Biology Academy',
         tagline: 'Excellence in Biology Education',
@@ -278,35 +281,37 @@ const UICustomization: React.FC = () => {
         watermark: {
           text: 'Cerebrum Academy',
           opacity: '0.1',
-          position: 'center'
+          position: 'center',
         },
-        customCSS: '/* Custom styles */'
+        customCSS: '/* Custom styles */',
       },
       statusMessages: {
         success: {
           title: 'Test Completed Successfully!',
-          message: 'Congratulations! You have completed the test. Your results will be available shortly.',
+          message:
+            'Congratulations! You have completed the test. Your results will be available shortly.',
           icon: '🎉',
-          color: '#10B981'
+          color: '#10B981',
         },
         failure: {
           title: 'Test Incomplete',
-          message: 'Unfortunately, you were unable to complete the test. Please contact your instructor.',
+          message:
+            'Unfortunately, you were unable to complete the test. Please contact your instructor.',
           icon: '😞',
-          color: '#EF4444'
+          color: '#EF4444',
         },
         timeout: {
-          title: 'Time\'s Up!',
+          title: "Time's Up!",
           message: 'The test time has expired. Your responses have been automatically submitted.',
           icon: '⏰',
-          color: '#F59E0B'
+          color: '#F59E0B',
         },
         submission: {
           title: 'Submitting Your Test',
           message: 'Please wait while we process your responses...',
           icon: '📤',
-          color: '#3B82F6'
-        }
+          color: '#3B82F6',
+        },
       },
       progressBarSettings: {
         style: 'rounded',
@@ -316,8 +321,8 @@ const UICustomization: React.FC = () => {
         showPercentage: true,
         showTimeRemaining: true,
         position: 'top',
-        height: '8px'
-      }
+        height: '8px',
+      },
     }
 
     setCustomizationData(mockData)
@@ -327,7 +332,7 @@ const UICustomization: React.FC = () => {
     if (!customizationData) return
     setCustomizationData({
       ...customizationData,
-      selectedTheme: themeId
+      selectedTheme: themeId,
     })
   }
 
@@ -337,12 +342,16 @@ const UICustomization: React.FC = () => {
       ...customizationData,
       fontSettings: {
         ...customizationData.fontSettings,
-        ...newFontSettings
-      }
+        ...newFontSettings,
+      },
     })
   }
 
-  const updateDifficultyColors = (difficulty: keyof DifficultyColors, colorType: keyof DifficultyColors['easy'], value: string) => {
+  const updateDifficultyColors = (
+    difficulty: keyof DifficultyColors,
+    colorType: keyof DifficultyColors['easy'],
+    value: string
+  ) => {
     if (!customizationData) return
     setCustomizationData({
       ...customizationData,
@@ -350,9 +359,9 @@ const UICustomization: React.FC = () => {
         ...customizationData.difficultyColors,
         [difficulty]: {
           ...customizationData.difficultyColors[difficulty],
-          [colorType]: value
-        }
-      }
+          [colorType]: value,
+        },
+      },
     })
   }
 
@@ -364,11 +373,11 @@ const UICustomization: React.FC = () => {
       content: 'Enter your custom instruction here...',
       position: 'top',
       style: 'info',
-      isActive: true
+      isActive: true,
     }
     setCustomizationData({
       ...customizationData,
-      customInstructions: [...customizationData.customInstructions, newInstruction]
+      customInstructions: [...customizationData.customInstructions, newInstruction],
     })
   }
 
@@ -376,9 +385,9 @@ const UICustomization: React.FC = () => {
     if (!customizationData) return
     setCustomizationData({
       ...customizationData,
-      customInstructions: customizationData.customInstructions.map(instruction =>
+      customInstructions: customizationData.customInstructions.map((instruction) =>
         instruction.id === id ? { ...instruction, ...updates } : instruction
-      )
+      ),
     })
   }
 
@@ -386,7 +395,9 @@ const UICustomization: React.FC = () => {
     if (!customizationData) return
     setCustomizationData({
       ...customizationData,
-      customInstructions: customizationData.customInstructions.filter(instruction => instruction.id !== id)
+      customInstructions: customizationData.customInstructions.filter(
+        (instruction) => instruction.id !== id
+      ),
     })
   }
 
@@ -396,12 +407,15 @@ const UICustomization: React.FC = () => {
       ...customizationData,
       brandingSettings: {
         ...customizationData.brandingSettings,
-        ...updates
-      }
+        ...updates,
+      },
     })
   }
 
-  const updateStatusMessages = (messageType: keyof StatusMessages, updates: Partial<StatusMessages['success']>) => {
+  const updateStatusMessages = (
+    messageType: keyof StatusMessages,
+    updates: Partial<StatusMessages['success']>
+  ) => {
     if (!customizationData) return
     setCustomizationData({
       ...customizationData,
@@ -409,9 +423,9 @@ const UICustomization: React.FC = () => {
         ...customizationData.statusMessages,
         [messageType]: {
           ...customizationData.statusMessages[messageType],
-          ...updates
-        }
-      }
+          ...updates,
+        },
+      },
     })
   }
 
@@ -421,8 +435,8 @@ const UICustomization: React.FC = () => {
       ...customizationData,
       progressBarSettings: {
         ...customizationData.progressBarSettings,
-        ...updates
-      }
+        ...updates,
+      },
     })
   }
 
@@ -447,20 +461,29 @@ const UICustomization: React.FC = () => {
 
   const getStyleColor = (style: string) => {
     switch (style) {
-      case 'info': return 'bg-blue-100 text-blue-800 border-blue-200'
-      case 'warning': return 'bg-yellow-100 text-yellow-800 border-yellow-200'
-      case 'success': return 'bg-green-100 text-green-800 border-green-200'
-      case 'error': return 'bg-red-100 text-red-800 border-red-200'
-      default: return 'bg-gray-100 text-gray-800 border-gray-200'
+      case 'info':
+        return 'bg-blue-100 text-blue-800 border-blue-200'
+      case 'warning':
+        return 'bg-yellow-100 text-yellow-800 border-yellow-200'
+      case 'success':
+        return 'bg-green-100 text-green-800 border-green-200'
+      case 'error':
+        return 'bg-red-100 text-red-800 border-red-200'
+      default:
+        return 'bg-gray-100 text-gray-800 border-gray-200'
     }
   }
 
   const getPreviewSize = () => {
     switch (previewMode) {
-      case 'mobile': return 'w-80 h-96'
-      case 'tablet': return 'w-96 h-80'
-      case 'desktop': return 'w-full h-96'
-      default: return 'w-full h-96'
+      case 'mobile':
+        return 'w-80 h-96'
+      case 'tablet':
+        return 'w-96 h-80'
+      case 'desktop':
+        return 'w-full h-96'
+      default:
+        return 'w-full h-96'
     }
   }
 
@@ -494,7 +517,8 @@ const UICustomization: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Comprehensive interface customization with themes, fonts, colors, branding, and personalized user experience settings
+          Comprehensive interface customization with themes, fonts, colors, branding, and
+          personalized user experience settings
         </p>
       </div>
 
@@ -575,7 +599,7 @@ const UICustomization: React.FC = () => {
             { id: 'instructions', label: 'Instructions', icon: FileText },
             { id: 'branding', label: 'Branding', icon: Image },
             { id: 'messages', label: 'Messages', icon: MessageSquare },
-            { id: 'progress', label: 'Progress', icon: BarChart3 }
+            { id: 'progress', label: 'Progress', icon: BarChart3 },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -658,7 +682,7 @@ const UICustomization: React.FC = () => {
                             backgroundColor: theme.backgroundColor,
                             color: theme.textColor,
                             borderRadius: theme.borderRadius,
-                            fontFamily: theme.fontFamily
+                            fontFamily: theme.fontFamily,
                           }}
                         >
                           <div className="text-sm">Sample Question Text</div>
@@ -750,9 +774,14 @@ const UICustomization: React.FC = () => {
                           <input
                             type="text"
                             value={value}
-                            onChange={(e) => updateFontSettings({
-                              size: { ...customizationData.fontSettings.size, [size]: e.target.value }
-                            })}
+                            onChange={(e) =>
+                              updateFontSettings({
+                                size: {
+                                  ...customizationData.fontSettings.size,
+                                  [size]: e.target.value,
+                                },
+                              })
+                            }
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
                             placeholder="16px"
                           />
@@ -815,7 +844,7 @@ const UICustomization: React.FC = () => {
                         fontFamily: customizationData.fontSettings.family,
                         fontWeight: customizationData.fontSettings.weight,
                         lineHeight: customizationData.fontSettings.lineHeight,
-                        letterSpacing: customizationData.fontSettings.letterSpacing
+                        letterSpacing: customizationData.fontSettings.letterSpacing,
                       }}
                     >
                       <div
@@ -836,9 +865,7 @@ const UICustomization: React.FC = () => {
                       >
                         Answer Options (Medium)
                       </div>
-                      <div
-                        style={{ fontSize: customizationData.fontSettings.size.small }}
-                      >
+                      <div style={{ fontSize: customizationData.fontSettings.size.small }}>
                         Instructions and Help Text (Small)
                       </div>
                     </div>
@@ -862,93 +889,134 @@ const UICustomization: React.FC = () => {
                 </h3>
 
                 <div className="space-y-6">
-                  {Object.entries(customizationData.difficultyColors).map(([difficulty, colors]) => (
-                    <div key={difficulty} className="space-y-4">
-                      <h4 className="font-medium capitalize flex items-center gap-2">
-                        <div
-                          className="w-4 h-4 rounded-full"
-                          style={{ backgroundColor: colors.background }}
-                        />
-                        {difficulty} Questions
-                      </h4>
+                  {Object.entries(customizationData.difficultyColors).map(
+                    ([difficulty, colors]) => (
+                      <div key={difficulty} className="space-y-4">
+                        <h4 className="font-medium capitalize flex items-center gap-2">
+                          <div
+                            className="w-4 h-4 rounded-full"
+                            style={{ backgroundColor: colors.background }}
+                          />
+                          {difficulty} Questions
+                        </h4>
 
-                      <div className="grid grid-cols-3 gap-4">
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-2">Background</label>
-                          <div className="flex gap-2">
-                            <input
-                              type="color"
-                              value={colors.background}
-                              onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'background', e.target.value)}
-                              className="w-12 h-10 border rounded-lg cursor-pointer"
-                            />
-                            <input
-                              type="text"
-                              value={colors.background}
-                              onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'background', e.target.value)}
-                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
-                            />
+                        <div className="grid grid-cols-3 gap-4">
+                          <div>
+                            <label className="block text-sm text-gray-600 mb-2">Background</label>
+                            <div className="flex gap-2">
+                              <input
+                                type="color"
+                                value={colors.background}
+                                onChange={(e) =>
+                                  updateDifficultyColors(
+                                    difficulty as keyof DifficultyColors,
+                                    'background',
+                                    e.target.value
+                                  )
+                                }
+                                className="w-12 h-10 border rounded-lg cursor-pointer"
+                              />
+                              <input
+                                type="text"
+                                value={colors.background}
+                                onChange={(e) =>
+                                  updateDifficultyColors(
+                                    difficulty as keyof DifficultyColors,
+                                    'background',
+                                    e.target.value
+                                  )
+                                }
+                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
+                              />
+                            </div>
+                          </div>
+
+                          <div>
+                            <label className="block text-sm text-gray-600 mb-2">Text</label>
+                            <div className="flex gap-2">
+                              <input
+                                type="color"
+                                value={colors.text}
+                                onChange={(e) =>
+                                  updateDifficultyColors(
+                                    difficulty as keyof DifficultyColors,
+                                    'text',
+                                    e.target.value
+                                  )
+                                }
+                                className="w-12 h-10 border rounded-lg cursor-pointer"
+                              />
+                              <input
+                                type="text"
+                                value={colors.text}
+                                onChange={(e) =>
+                                  updateDifficultyColors(
+                                    difficulty as keyof DifficultyColors,
+                                    'text',
+                                    e.target.value
+                                  )
+                                }
+                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
+                              />
+                            </div>
+                          </div>
+
+                          <div>
+                            <label className="block text-sm text-gray-600 mb-2">Border</label>
+                            <div className="flex gap-2">
+                              <input
+                                type="color"
+                                value={colors.border}
+                                onChange={(e) =>
+                                  updateDifficultyColors(
+                                    difficulty as keyof DifficultyColors,
+                                    'border',
+                                    e.target.value
+                                  )
+                                }
+                                className="w-12 h-10 border rounded-lg cursor-pointer"
+                              />
+                              <input
+                                type="text"
+                                value={colors.border}
+                                onChange={(e) =>
+                                  updateDifficultyColors(
+                                    difficulty as keyof DifficultyColors,
+                                    'border',
+                                    e.target.value
+                                  )
+                                }
+                                className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
+                              />
+                            </div>
                           </div>
                         </div>
 
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-2">Text</label>
-                          <div className="flex gap-2">
-                            <input
-                              type="color"
-                              value={colors.text}
-                              onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'text', e.target.value)}
-                              className="w-12 h-10 border rounded-lg cursor-pointer"
-                            />
-                            <input
-                              type="text"
-                              value={colors.text}
-                              onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'text', e.target.value)}
-                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
-                            />
-                          </div>
-                        </div>
-
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-2">Border</label>
-                          <div className="flex gap-2">
-                            <input
-                              type="color"
-                              value={colors.border}
-                              onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'border', e.target.value)}
-                              className="w-12 h-10 border rounded-lg cursor-pointer"
-                            />
-                            <input
-                              type="text"
-                              value={colors.border}
-                              onChange={(e) => updateDifficultyColors(difficulty as keyof DifficultyColors, 'border', e.target.value)}
-                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent text-sm font-mono"
-                            />
+                        {/* Preview */}
+                        <div className="bg-gray-50 p-4 rounded-lg">
+                          <div
+                            className="inline-block px-4 py-2 rounded-lg border-2 font-medium"
+                            style={{
+                              backgroundColor: colors.background,
+                              color: colors.text,
+                              borderColor: colors.border,
+                            }}
+                          >
+                            {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)} Question
+                            Sample
                           </div>
                         </div>
                       </div>
-
-                      {/* Preview */}
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <div
-                          className="inline-block px-4 py-2 rounded-lg border-2 font-medium"
-                          style={{
-                            backgroundColor: colors.background,
-                            color: colors.text,
-                            borderColor: colors.border
-                          }}
-                        >
-                          {difficulty.charAt(0).toUpperCase() + difficulty.slice(1)} Question Sample
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                    )
+                  )}
 
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h4 className="font-medium text-blue-800 mb-2">Color Guidelines</h4>
                     <ul className="text-sm text-blue-700 space-y-1">
                       <li>• Use high contrast ratios for accessibility (4.5:1 minimum)</li>
-                      <li>• Green typically represents easy, yellow/orange for medium, red for hard</li>
+                      <li>
+                        • Green typically represents easy, yellow/orange for medium, red for hard
+                      </li>
                       <li>• Consider colorblind users - use additional visual cues</li>
                       <li>• Test colors in different lighting conditions</li>
                     </ul>
@@ -987,7 +1055,9 @@ const UICustomization: React.FC = () => {
                         <input
                           type="text"
                           value={instruction.title}
-                          onChange={(e) => updateCustomInstruction(instruction.id, { title: e.target.value })}
+                          onChange={(e) =>
+                            updateCustomInstruction(instruction.id, { title: e.target.value })
+                          }
                           className="font-medium text-lg bg-transparent border-none focus:outline-none focus:ring-2 focus:ring-purple-500 rounded px-2"
                         />
                         <div className="flex items-center gap-2">
@@ -995,7 +1065,11 @@ const UICustomization: React.FC = () => {
                             <input
                               type="checkbox"
                               checked={instruction.isActive}
-                              onChange={(e) => updateCustomInstruction(instruction.id, { isActive: e.target.checked })}
+                              onChange={(e) =>
+                                updateCustomInstruction(instruction.id, {
+                                  isActive: e.target.checked,
+                                })
+                              }
                               className="rounded border-gray-300 text-purple-600 focus:ring-purple-500"
                             />
                             <span className="ml-2 text-sm text-gray-600">Active</span>
@@ -1011,7 +1085,9 @@ const UICustomization: React.FC = () => {
 
                       <textarea
                         value={instruction.content}
-                        onChange={(e) => updateCustomInstruction(instruction.id, { content: e.target.value })}
+                        onChange={(e) =>
+                          updateCustomInstruction(instruction.id, { content: e.target.value })
+                        }
                         rows={3}
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent mb-3"
                         placeholder="Enter instruction content..."
@@ -1022,7 +1098,11 @@ const UICustomization: React.FC = () => {
                           <label className="block text-sm text-gray-600 mb-1">Position</label>
                           <select
                             value={instruction.position}
-                            onChange={(e) => updateCustomInstruction(instruction.id, { position: e.target.value as any })}
+                            onChange={(e) =>
+                              updateCustomInstruction(instruction.id, {
+                                position: e.target.value as any,
+                              })
+                            }
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                           >
                             <option value="top">Top</option>
@@ -1034,7 +1114,11 @@ const UICustomization: React.FC = () => {
                           <label className="block text-sm text-gray-600 mb-1">Style</label>
                           <select
                             value={instruction.style}
-                            onChange={(e) => updateCustomInstruction(instruction.id, { style: e.target.value as any })}
+                            onChange={(e) =>
+                              updateCustomInstruction(instruction.id, {
+                                style: e.target.value as any,
+                              })
+                            }
                             className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                           >
                             <option value="info">Info</option>
@@ -1047,7 +1131,9 @@ const UICustomization: React.FC = () => {
 
                       {/* Preview */}
                       <div className="mt-3">
-                        <div className={`p-3 rounded-lg border ${getStyleColor(instruction.style)}`}>
+                        <div
+                          className={`p-3 rounded-lg border ${getStyleColor(instruction.style)}`}
+                        >
                           <div className="font-medium mb-1">{instruction.title}</div>
                           <div className="text-sm">{instruction.content}</div>
                         </div>
@@ -1083,9 +1169,14 @@ const UICustomization: React.FC = () => {
                           <input
                             type="url"
                             value={customizationData.brandingSettings.logo.url}
-                            onChange={(e) => updateBrandingSettings({
-                              logo: { ...customizationData.brandingSettings.logo, url: e.target.value }
-                            })}
+                            onChange={(e) =>
+                              updateBrandingSettings({
+                                logo: {
+                                  ...customizationData.brandingSettings.logo,
+                                  url: e.target.value,
+                                },
+                              })
+                            }
                             className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                             placeholder="https://example.com/logo.png"
                           />
@@ -1099,9 +1190,14 @@ const UICustomization: React.FC = () => {
                         <label className="block text-sm text-gray-600 mb-2">Position</label>
                         <select
                           value={customizationData.brandingSettings.logo.position}
-                          onChange={(e) => updateBrandingSettings({
-                            logo: { ...customizationData.brandingSettings.logo, position: e.target.value as any }
-                          })}
+                          onChange={(e) =>
+                            updateBrandingSettings({
+                              logo: {
+                                ...customizationData.brandingSettings.logo,
+                                position: e.target.value as any,
+                              },
+                            })
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="top-left">Top Left</option>
@@ -1115,9 +1211,14 @@ const UICustomization: React.FC = () => {
                         <input
                           type="text"
                           value={customizationData.brandingSettings.logo.width}
-                          onChange={(e) => updateBrandingSettings({
-                            logo: { ...customizationData.brandingSettings.logo, width: e.target.value }
-                          })}
+                          onChange={(e) =>
+                            updateBrandingSettings({
+                              logo: {
+                                ...customizationData.brandingSettings.logo,
+                                width: e.target.value,
+                              },
+                            })
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                           placeholder="150px"
                         />
@@ -1128,9 +1229,14 @@ const UICustomization: React.FC = () => {
                         <input
                           type="text"
                           value={customizationData.brandingSettings.logo.height}
-                          onChange={(e) => updateBrandingSettings({
-                            logo: { ...customizationData.brandingSettings.logo, height: e.target.value }
-                          })}
+                          onChange={(e) =>
+                            updateBrandingSettings({
+                              logo: {
+                                ...customizationData.brandingSettings.logo,
+                                height: e.target.value,
+                              },
+                            })
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                           placeholder="50px"
                         />
@@ -1143,11 +1249,15 @@ const UICustomization: React.FC = () => {
                     <h4 className="font-medium mb-3">Organization Information</h4>
                     <div className="space-y-4">
                       <div>
-                        <label className="block text-sm text-gray-600 mb-2">Organization Name</label>
+                        <label className="block text-sm text-gray-600 mb-2">
+                          Organization Name
+                        </label>
                         <input
                           type="text"
                           value={customizationData.brandingSettings.organizationName}
-                          onChange={(e) => updateBrandingSettings({ organizationName: e.target.value })}
+                          onChange={(e) =>
+                            updateBrandingSettings({ organizationName: e.target.value })
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                           placeholder="Your Organization"
                         />
@@ -1175,9 +1285,14 @@ const UICustomization: React.FC = () => {
                         <input
                           type="text"
                           value={customizationData.brandingSettings.watermark.text}
-                          onChange={(e) => updateBrandingSettings({
-                            watermark: { ...customizationData.brandingSettings.watermark, text: e.target.value }
-                          })}
+                          onChange={(e) =>
+                            updateBrandingSettings({
+                              watermark: {
+                                ...customizationData.brandingSettings.watermark,
+                                text: e.target.value,
+                              },
+                            })
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                           placeholder="Watermark text"
                         />
@@ -1191,13 +1306,21 @@ const UICustomization: React.FC = () => {
                           max="1"
                           step="0.1"
                           value={customizationData.brandingSettings.watermark.opacity}
-                          onChange={(e) => updateBrandingSettings({
-                            watermark: { ...customizationData.brandingSettings.watermark, opacity: e.target.value }
-                          })}
+                          onChange={(e) =>
+                            updateBrandingSettings({
+                              watermark: {
+                                ...customizationData.brandingSettings.watermark,
+                                opacity: e.target.value,
+                              },
+                            })
+                          }
                           className="w-full"
                         />
                         <div className="text-xs text-gray-500 mt-1">
-                          {(parseFloat(customizationData.brandingSettings.watermark.opacity) * 100).toFixed(0)}%
+                          {(
+                            parseFloat(customizationData.brandingSettings.watermark.opacity) * 100
+                          ).toFixed(0)}
+                          %
                         </div>
                       </div>
 
@@ -1205,9 +1328,14 @@ const UICustomization: React.FC = () => {
                         <label className="block text-sm text-gray-600 mb-2">Position</label>
                         <select
                           value={customizationData.brandingSettings.watermark.position}
-                          onChange={(e) => updateBrandingSettings({
-                            watermark: { ...customizationData.brandingSettings.watermark, position: e.target.value as any }
-                          })}
+                          onChange={(e) =>
+                            updateBrandingSettings({
+                              watermark: {
+                                ...customizationData.brandingSettings.watermark,
+                                position: e.target.value as any,
+                              },
+                            })
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="top-left">Top Left</option>
@@ -1250,78 +1378,100 @@ const UICustomization: React.FC = () => {
                 </h3>
 
                 <div className="space-y-6">
-                  {Object.entries(customizationData.statusMessages).map(([messageType, message]) => (
-                    <div key={messageType} className="space-y-4">
-                      <h4 className="font-medium capitalize">{messageType} Message</h4>
+                  {Object.entries(customizationData.statusMessages).map(
+                    ([messageType, message]) => (
+                      <div key={messageType} className="space-y-4">
+                        <h4 className="font-medium capitalize">{messageType} Message</h4>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-2">Title</label>
-                          <input
-                            type="text"
-                            value={message.title}
-                            onChange={(e) => updateStatusMessages(messageType as keyof StatusMessages, { title: e.target.value })}
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                          />
-                        </div>
-
-                        <div>
-                          <label className="block text-sm text-gray-600 mb-2">Icon</label>
-                          <input
-                            type="text"
-                            value={message.icon}
-                            onChange={(e) => updateStatusMessages(messageType as keyof StatusMessages, { icon: e.target.value })}
-                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                            placeholder="🎉"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Message</label>
-                        <textarea
-                          value={message.message}
-                          onChange={(e) => updateStatusMessages(messageType as keyof StatusMessages, { message: e.target.value })}
-                          rows={3}
-                          className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm text-gray-600 mb-2">Color</label>
-                        <div className="flex gap-2">
-                          <input
-                            type="color"
-                            value={message.color}
-                            onChange={(e) => updateStatusMessages(messageType as keyof StatusMessages, { color: e.target.value })}
-                            className="w-12 h-10 border rounded-lg cursor-pointer"
-                          />
-                          <input
-                            type="text"
-                            value={message.color}
-                            onChange={(e) => updateStatusMessages(messageType as keyof StatusMessages, { color: e.target.value })}
-                            className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent font-mono"
-                          />
-                        </div>
-                      </div>
-
-                      {/* Preview */}
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <div
-                          className="p-4 rounded-lg border-l-4 bg-white"
-                          style={{ borderLeftColor: message.color }}
-                        >
-                          <div className="flex items-center gap-2 mb-2">
-                            <span className="text-xl">{message.icon}</span>
-                            <h5 className="font-medium" style={{ color: message.color }}>
-                              {message.title}
-                            </h5>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <div>
+                            <label className="block text-sm text-gray-600 mb-2">Title</label>
+                            <input
+                              type="text"
+                              value={message.title}
+                              onChange={(e) =>
+                                updateStatusMessages(messageType as keyof StatusMessages, {
+                                  title: e.target.value,
+                                })
+                              }
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                            />
                           </div>
-                          <p className="text-gray-700">{message.message}</p>
+
+                          <div>
+                            <label className="block text-sm text-gray-600 mb-2">Icon</label>
+                            <input
+                              type="text"
+                              value={message.icon}
+                              onChange={(e) =>
+                                updateStatusMessages(messageType as keyof StatusMessages, {
+                                  icon: e.target.value,
+                                })
+                              }
+                              className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                              placeholder="🎉"
+                            />
+                          </div>
+                        </div>
+
+                        <div>
+                          <label className="block text-sm text-gray-600 mb-2">Message</label>
+                          <textarea
+                            value={message.message}
+                            onChange={(e) =>
+                              updateStatusMessages(messageType as keyof StatusMessages, {
+                                message: e.target.value,
+                              })
+                            }
+                            rows={3}
+                            className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                          />
+                        </div>
+
+                        <div>
+                          <label className="block text-sm text-gray-600 mb-2">Color</label>
+                          <div className="flex gap-2">
+                            <input
+                              type="color"
+                              value={message.color}
+                              onChange={(e) =>
+                                updateStatusMessages(messageType as keyof StatusMessages, {
+                                  color: e.target.value,
+                                })
+                              }
+                              className="w-12 h-10 border rounded-lg cursor-pointer"
+                            />
+                            <input
+                              type="text"
+                              value={message.color}
+                              onChange={(e) =>
+                                updateStatusMessages(messageType as keyof StatusMessages, {
+                                  color: e.target.value,
+                                })
+                              }
+                              className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent font-mono"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Preview */}
+                        <div className="bg-gray-50 p-4 rounded-lg">
+                          <div
+                            className="p-4 rounded-lg border-l-4 bg-white"
+                            style={{ borderLeftColor: message.color }}
+                          >
+                            <div className="flex items-center gap-2 mb-2">
+                              <span className="text-xl">{message.icon}</span>
+                              <h5 className="font-medium" style={{ color: message.color }}>
+                                {message.title}
+                              </h5>
+                            </div>
+                            <p className="text-gray-700">{message.message}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    )
+                  )}
                 </div>
               </motion.div>
             )}
@@ -1347,7 +1497,9 @@ const UICustomization: React.FC = () => {
                       <label className="block text-sm text-gray-600 mb-2">Style</label>
                       <select
                         value={customizationData.progressBarSettings.style}
-                        onChange={(e) => updateProgressBarSettings({ style: e.target.value as any })}
+                        onChange={(e) =>
+                          updateProgressBarSettings({ style: e.target.value as any })
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       >
                         <option value="thin">Thin</option>
@@ -1361,7 +1513,9 @@ const UICustomization: React.FC = () => {
                       <label className="block text-sm text-gray-600 mb-2">Position</label>
                       <select
                         value={customizationData.progressBarSettings.position}
-                        onChange={(e) => updateProgressBarSettings({ position: e.target.value as any })}
+                        onChange={(e) =>
+                          updateProgressBarSettings({ position: e.target.value as any })
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       >
                         <option value="top">Top</option>
@@ -1397,13 +1551,17 @@ const UICustomization: React.FC = () => {
                         <input
                           type="color"
                           value={customizationData.progressBarSettings.backgroundColor}
-                          onChange={(e) => updateProgressBarSettings({ backgroundColor: e.target.value })}
+                          onChange={(e) =>
+                            updateProgressBarSettings({ backgroundColor: e.target.value })
+                          }
                           className="w-12 h-10 border rounded-lg cursor-pointer"
                         />
                         <input
                           type="text"
                           value={customizationData.progressBarSettings.backgroundColor}
-                          onChange={(e) => updateProgressBarSettings({ backgroundColor: e.target.value })}
+                          onChange={(e) =>
+                            updateProgressBarSettings({ backgroundColor: e.target.value })
+                          }
                           className="flex-1 px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent font-mono"
                         />
                       </div>
@@ -1426,7 +1584,9 @@ const UICustomization: React.FC = () => {
                     <label className="block text-sm text-gray-600 mb-2">Animation</label>
                     <select
                       value={customizationData.progressBarSettings.animation}
-                      onChange={(e) => updateProgressBarSettings({ animation: e.target.value as any })}
+                      onChange={(e) =>
+                        updateProgressBarSettings({ animation: e.target.value as any })
+                      }
                       className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                     >
                       <option value="none">None</option>
@@ -1442,7 +1602,9 @@ const UICustomization: React.FC = () => {
                       <input
                         type="checkbox"
                         checked={customizationData.progressBarSettings.showPercentage}
-                        onChange={(e) => updateProgressBarSettings({ showPercentage: e.target.checked })}
+                        onChange={(e) =>
+                          updateProgressBarSettings({ showPercentage: e.target.checked })
+                        }
                         className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                       />
                       <span className="ml-2 text-sm text-gray-700">Show percentage</span>
@@ -1451,7 +1613,9 @@ const UICustomization: React.FC = () => {
                       <input
                         type="checkbox"
                         checked={customizationData.progressBarSettings.showTimeRemaining}
-                        onChange={(e) => updateProgressBarSettings({ showTimeRemaining: e.target.checked })}
+                        onChange={(e) =>
+                          updateProgressBarSettings({ showTimeRemaining: e.target.checked })
+                        }
                         className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                       />
                       <span className="ml-2 text-sm text-gray-700">Show time remaining</span>
@@ -1466,24 +1630,32 @@ const UICustomization: React.FC = () => {
                         className="w-full rounded-full"
                         style={{
                           backgroundColor: customizationData.progressBarSettings.backgroundColor,
-                          height: customizationData.progressBarSettings.height
+                          height: customizationData.progressBarSettings.height,
                         }}
                       >
                         <div
                           className={`h-full rounded-full transition-all ${
-                            customizationData.progressBarSettings.animation === 'pulse' ? 'animate-pulse' :
-                            customizationData.progressBarSettings.animation === 'glow' ? 'shadow-lg' : ''
+                            customizationData.progressBarSettings.animation === 'pulse'
+                              ? 'animate-pulse'
+                              : customizationData.progressBarSettings.animation === 'glow'
+                                ? 'shadow-lg'
+                                : ''
                           }`}
                           style={{
                             backgroundColor: customizationData.progressBarSettings.color,
-                            width: '65%'
+                            width: '65%',
                           }}
                         />
                       </div>
-                      {(customizationData.progressBarSettings.showPercentage || customizationData.progressBarSettings.showTimeRemaining) && (
+                      {(customizationData.progressBarSettings.showPercentage ||
+                        customizationData.progressBarSettings.showTimeRemaining) && (
                         <div className="flex justify-between text-sm text-gray-600">
-                          {customizationData.progressBarSettings.showPercentage && <span>65% Complete</span>}
-                          {customizationData.progressBarSettings.showTimeRemaining && <span>35 minutes remaining</span>}
+                          {customizationData.progressBarSettings.showPercentage && (
+                            <span>65% Complete</span>
+                          )}
+                          {customizationData.progressBarSettings.showTimeRemaining && (
+                            <span>35 minutes remaining</span>
+                          )}
                         </div>
                       )}
                     </div>
@@ -1501,9 +1673,15 @@ const UICustomization: React.FC = () => {
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-semibold">Live Preview</h3>
                 <div className="flex items-center gap-2">
-                  <Monitor className={`w-4 h-4 ${previewMode === 'desktop' ? 'text-indigo-600' : 'text-gray-400'}`} />
-                  <Tablet className={`w-4 h-4 ${previewMode === 'tablet' ? 'text-indigo-600' : 'text-gray-400'}`} />
-                  <Smartphone className={`w-4 h-4 ${previewMode === 'mobile' ? 'text-indigo-600' : 'text-gray-400'}`} />
+                  <Monitor
+                    className={`w-4 h-4 ${previewMode === 'desktop' ? 'text-indigo-600' : 'text-gray-400'}`}
+                  />
+                  <Tablet
+                    className={`w-4 h-4 ${previewMode === 'tablet' ? 'text-indigo-600' : 'text-gray-400'}`}
+                  />
+                  <Smartphone
+                    className={`w-4 h-4 ${previewMode === 'mobile' ? 'text-indigo-600' : 'text-gray-400'}`}
+                  />
                 </div>
               </div>
 
@@ -1514,13 +1692,16 @@ const UICustomization: React.FC = () => {
                     fontFamily: customizationData.fontSettings.family,
                     fontSize: customizationData.fontSettings.size.medium,
                     fontWeight: customizationData.fontSettings.weight,
-                    lineHeight: customizationData.fontSettings.lineHeight
+                    lineHeight: customizationData.fontSettings.lineHeight,
                   }}
                 >
                   {/* Preview Content */}
                   <div className="bg-white rounded-lg p-4 h-full overflow-y-auto">
                     <div className="mb-4">
-                      <h4 className="font-bold mb-2" style={{ fontSize: customizationData.fontSettings.size.large }}>
+                      <h4
+                        className="font-bold mb-2"
+                        style={{ fontSize: customizationData.fontSettings.size.large }}
+                      >
                         Sample Biology Question
                       </h4>
                       <div
@@ -1528,7 +1709,7 @@ const UICustomization: React.FC = () => {
                         style={{
                           backgroundColor: customizationData.difficultyColors.medium.background,
                           color: customizationData.difficultyColors.medium.text,
-                          border: `1px solid ${customizationData.difficultyColors.medium.border}`
+                          border: `1px solid ${customizationData.difficultyColors.medium.border}`,
                         }}
                       >
                         Medium
@@ -1538,11 +1719,16 @@ const UICustomization: React.FC = () => {
                     <p className="mb-4">Which of the following is the powerhouse of the cell?</p>
 
                     <div className="space-y-2 mb-4">
-                      {['A) Nucleus', 'B) Mitochondria', 'C) Ribosome', 'D) Golgi Body'].map((option, index) => (
-                        <div key={index} className="p-2 border rounded hover:bg-gray-50 cursor-pointer">
-                          {option}
-                        </div>
-                      ))}
+                      {['A) Nucleus', 'B) Mitochondria', 'C) Ribosome', 'D) Golgi Body'].map(
+                        (option, index) => (
+                          <div
+                            key={index}
+                            className="p-2 border rounded hover:bg-gray-50 cursor-pointer"
+                          >
+                            {option}
+                          </div>
+                        )
+                      )}
                     </div>
 
                     {/* Progress Bar Preview */}
@@ -1551,14 +1737,14 @@ const UICustomization: React.FC = () => {
                         className="w-full rounded-full mb-2"
                         style={{
                           backgroundColor: customizationData.progressBarSettings.backgroundColor,
-                          height: customizationData.progressBarSettings.height
+                          height: customizationData.progressBarSettings.height,
                         }}
                       >
                         <div
                           className="h-full rounded-full"
                           style={{
                             backgroundColor: customizationData.progressBarSettings.color,
-                            width: '40%'
+                            width: '40%',
                           }}
                         />
                       </div>
@@ -1572,7 +1758,10 @@ const UICustomization: React.FC = () => {
                     >
                       <div className="flex items-center gap-2">
                         <span>{customizationData.statusMessages.success.icon}</span>
-                        <span className="font-medium" style={{ color: customizationData.statusMessages.success.color }}>
+                        <span
+                          className="font-medium"
+                          style={{ color: customizationData.statusMessages.success.color }}
+                        >
                           {customizationData.statusMessages.success.title}
                         </span>
                       </div>

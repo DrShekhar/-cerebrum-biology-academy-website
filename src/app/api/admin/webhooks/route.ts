@@ -49,7 +49,11 @@ function validateWebhookUrl(url: string): { valid: boolean; error?: string } {
     // Check for blocked hosts
     const hostname = parsedUrl.hostname.toLowerCase()
     for (const blocked of BLOCKED_HOSTS) {
-      if (hostname === blocked || hostname.startsWith(blocked) || hostname.endsWith('.' + blocked)) {
+      if (
+        hostname === blocked ||
+        hostname.startsWith(blocked) ||
+        hostname.endsWith('.' + blocked)
+      ) {
         return { valid: false, error: 'Webhook URL cannot point to internal/private networks' }
       }
     }
@@ -59,17 +63,23 @@ function validateWebhookUrl(url: string): { valid: boolean; error?: string } {
     if (ipv4Regex.test(hostname)) {
       const octets = hostname.split('.').map(Number)
       // Block private ranges
-      if (octets[0] === 10 ||
-          (octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31) ||
-          (octets[0] === 192 && octets[1] === 168) ||
-          (octets[0] === 127) ||
-          (octets[0] === 169 && octets[1] === 254)) {
+      if (
+        octets[0] === 10 ||
+        (octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31) ||
+        (octets[0] === 192 && octets[1] === 168) ||
+        octets[0] === 127 ||
+        (octets[0] === 169 && octets[1] === 254)
+      ) {
         return { valid: false, error: 'Webhook URL cannot point to private IP addresses' }
       }
     }
 
     // Must have a valid port (default 443 for https, 80 for http)
-    const port = parsedUrl.port ? parseInt(parsedUrl.port) : (parsedUrl.protocol === 'https:' ? 443 : 80)
+    const port = parsedUrl.port
+      ? parseInt(parsedUrl.port)
+      : parsedUrl.protocol === 'https:'
+        ? 443
+        : 80
     if (port < 1 || port > 65535) {
       return { valid: false, error: 'Invalid port number' }
     }
@@ -82,37 +92,40 @@ function validateWebhookUrl(url: string): { valid: boolean; error?: string } {
 
 const webhookSchema = z.object({
   name: z.string().min(1).max(100),
-  url: z.string().url().refine(
-    (url) => validateWebhookUrl(url).valid,
-    { message: 'Invalid webhook URL - blocked host or invalid format' }
+  url: z
+    .string()
+    .url()
+    .refine((url) => validateWebhookUrl(url).valid, {
+      message: 'Invalid webhook URL - blocked host or invalid format',
+    }),
+  events: z.array(
+    z.enum([
+      'lead.created',
+      'lead.updated',
+      'lead.stage_changed',
+      'lead.assigned',
+      'lead.converted',
+      'lead.lost',
+      'demo.booked',
+      'demo.completed',
+      'payment.received',
+      'communication.sent',
+    ])
   ),
-  events: z.array(z.enum([
-    'lead.created',
-    'lead.updated',
-    'lead.stage_changed',
-    'lead.assigned',
-    'lead.converted',
-    'lead.lost',
-    'demo.booked',
-    'demo.completed',
-    'payment.received',
-    'communication.sent',
-  ])),
   isActive: z.boolean().optional().default(true),
   secret: z.string().optional(), // For HMAC signature verification
   headers: z.record(z.string(), z.string()).optional(), // Custom headers
-  retryPolicy: z.object({
-    maxRetries: z.number().min(0).max(10).optional().default(3),
-    retryDelayMs: z.number().min(1000).max(60000).optional().default(5000),
-  }).optional(),
+  retryPolicy: z
+    .object({
+      maxRetries: z.number().min(0).max(10).optional().default(3),
+      retryDelayMs: z.number().min(1000).max(60000).optional().default(5000),
+    })
+    .optional(),
   metadata: z.record(z.string(), z.unknown()).optional(),
 })
 
 // GET: List all webhooks
-async function handleGET(
-  request: NextRequest,
-  _session: ValidatedSession
-): Promise<NextResponse> {
+async function handleGET(request: NextRequest, _session: ValidatedSession): Promise<NextResponse> {
   try {
     const { searchParams } = new URL(request.url)
     const includeInactive = searchParams.get('includeInactive') === 'true'
@@ -160,9 +173,10 @@ async function handleGET(
             totalDeliveries: webhook._count.webhook_deliveries,
             successCount,
             failureCount,
-            successRate: webhook._count.webhook_deliveries > 0
-              ? Math.round((successCount / webhook._count.webhook_deliveries) * 100)
-              : 0,
+            successRate:
+              webhook._count.webhook_deliveries > 0
+                ? Math.round((successCount / webhook._count.webhook_deliveries) * 100)
+                : 0,
             lastDelivery: lastDelivery?.createdAt || null,
             lastStatus: lastDelivery?.status || null,
           },
@@ -176,18 +190,12 @@ async function handleGET(
     })
   } catch (error) {
     console.error('Error fetching webhooks:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to fetch webhooks' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to fetch webhooks' }, { status: 500 })
   }
 }
 
 // POST: Create new webhook
-async function handlePOST(
-  request: NextRequest,
-  session: ValidatedSession
-): Promise<NextResponse> {
+async function handlePOST(request: NextRequest, session: ValidatedSession): Promise<NextResponse> {
   try {
     const body = await request.json()
     const validatedData = webhookSchema.parse(body)
@@ -239,10 +247,7 @@ async function handlePOST(
     }
 
     console.error('Error creating webhook:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to create webhook' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to create webhook' }, { status: 500 })
   }
 }
 

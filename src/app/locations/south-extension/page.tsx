@@ -29,6 +29,7 @@ import {
   RelatedLocations,
   getRelatedLocations,
 } from '@/components/locations/RelatedLocations'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 export default function SouthExtensionLocationPage() {
   useEffect(() => {
@@ -230,16 +231,15 @@ export default function SouthExtensionLocationPage() {
             <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Map */}
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5!2d77.22!3d28.567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSouth+Extension+Part+2!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="350"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="South Extension Center Location"
-                  className="w-full"
+                <LazyGoogleMap
+                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5!2d77.22!3d28.567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSouth+Extension+Part+2!5e0!3m2!1sen!2sin!4v1234567890"
+                  title="South Extension NEET Coaching Center"
+                  height={350}
+                  placeholder={{
+                    lat: 28.567,
+                    lng: 77.22,
+                    address: `${center.streetAddress}, ${center.addressLocality}`
+                  }}
                 />
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-3 flex items-center gap-2">

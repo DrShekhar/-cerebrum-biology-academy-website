@@ -5,15 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import {
-  BookOpen,
-  Clock,
-  Play,
-  Calendar,
-  Trophy,
-  GraduationCap,
-  Loader2,
-} from 'lucide-react'
+import { BookOpen, Clock, Play, Calendar, Trophy, GraduationCap, Loader2 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'

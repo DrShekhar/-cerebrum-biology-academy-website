@@ -304,9 +304,8 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
       // Use role-based redirect if no custom redirectUrl was provided
       const userRole = data.user?.role
-      const finalRedirectUrl = redirectUrl === '/dashboard'
-        ? getRoleDashboardUrl(userRole)
-        : redirectUrl
+      const finalRedirectUrl =
+        redirectUrl === '/dashboard' ? getRoleDashboardUrl(userRole) : redirectUrl
 
       const redirectWithTimestamp = finalRedirectUrl.includes('?')
         ? `${finalRedirectUrl}&_t=${Date.now()}`

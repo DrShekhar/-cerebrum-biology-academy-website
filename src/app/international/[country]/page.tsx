@@ -1,9 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import {
-  getCountryConfig,
-  SUPPORTED_COUNTRIES,
-} from '@/lib/international/countries'
+import { getCountryConfig, SUPPORTED_COUNTRIES } from '@/lib/international/countries'
 import { CountryHero } from '@/components/international/CountryHero'
 import { CountryWhatsAppCTA } from '@/components/international/CountryWhatsAppCTA'
 import { CountryExamSystems } from '@/components/international/CountryExamSystems'
@@ -159,8 +156,7 @@ export default async function CountryPage({ params }: Props) {
               Courses for Every {config.name} Student
             </h2>
             <p className="text-lg text-slate-600 text-center mb-12 max-w-2xl mx-auto">
-              From high school to pre-med, we have courses tailored to your
-              academic journey.
+              From high school to pre-med, we have courses tailored to your academic journey.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -196,8 +192,8 @@ export default async function CountryPage({ params }: Props) {
               Ready to Excel in Biology?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Join students across {config.name} who are achieving their
-              academic goals with personalized online tutoring.
+              Join students across {config.name} who are achieving their academic goals with
+              personalized online tutoring.
             </p>
             <CountryWhatsAppCTA
               variant="hero"
@@ -209,8 +205,7 @@ export default async function CountryPage({ params }: Props) {
               Start Your Journey Today
             </CountryWhatsAppCTA>
             <p className="mt-4 text-sm text-slate-400">
-              Free demo class • No commitment • {config.timezoneAbbr} timezone
-              friendly
+              Free demo class • No commitment • {config.timezoneAbbr} timezone friendly
             </p>
           </div>
         </section>

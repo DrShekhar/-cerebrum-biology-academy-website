@@ -79,7 +79,9 @@ export default function ClaudeChatDemo() {
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">10 Features That Make Learning Easier</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              10 Features That Make Learning Easier
+            </h2>
             <p className="text-xl text-gray-600">
               Tools designed by NEET educators to help you study smarter
             </p>

@@ -354,8 +354,8 @@ export default function OnlineClassesPage() {
               Next-Generation Learning Technology
             </h2>
             <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
-              Experience modern educational technology that makes online learning more engaging
-              and effective than traditional classroom teaching
+              Experience modern educational technology that makes online learning more engaging and
+              effective than traditional classroom teaching
             </p>
           </div>
 

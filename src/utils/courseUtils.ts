@@ -1,6 +1,12 @@
 // Course System Utility Functions for Cerebrum Biology Academy
 
-import { CourseProgram, CourseSeries, ClassLevel, PaymentOptions, CourseFeatures } from '@/types/courseSystem'
+import {
+  CourseProgram,
+  CourseSeries,
+  ClassLevel,
+  PaymentOptions,
+  CourseFeatures,
+} from '@/types/courseSystem'
 import { cerebrumCourseSystem } from '@/data/courseSystemData'
 
 /**
@@ -8,8 +14,8 @@ import { cerebrumCourseSystem } from '@/data/courseSystemData'
  */
 export function getCoursesByClass(classLevel: ClassLevel): CourseProgram[] {
   return cerebrumCourseSystem.categories
-    .filter(category => category.targetClass.includes(classLevel))
-    .flatMap(category => category.courses)
+    .filter((category) => category.targetClass.includes(classLevel))
+    .flatMap((category) => category.courses)
 }
 
 /**
@@ -17,21 +23,24 @@ export function getCoursesByClass(classLevel: ClassLevel): CourseProgram[] {
  */
 export function getCourseById(courseId: string): CourseProgram | undefined {
   return cerebrumCourseSystem.categories
-    .flatMap(category => category.courses)
-    .find(course => course.id === courseId)
+    .flatMap((category) => category.courses)
+    .find((course) => course.id === courseId)
 }
 
 /**
  * Get course pricing for a specific tier
  */
-export function getCoursePricing(courseId: string, tier: CourseSeries): {
+export function getCoursePricing(
+  courseId: string,
+  tier: CourseSeries
+): {
   price: number
   batchSize: number
   payment: PaymentOptions
 } | null {
   const course = getCourseById(courseId)
   if (!course) return null
-  
+
   const tierDetails = course.tiers[tier]
   return {
     price: tierDetails.price,
@@ -43,21 +52,23 @@ export function getCoursePricing(courseId: string, tier: CourseSeries): {
 /**
  * Compare features across different tiers for a course
  */
-export function compareTierFeatures(courseId: string): {
-  tier: CourseSeries
-  name: string
-  price: number
-  batchSize: number
-  features: CourseFeatures
-  highlights: string[]
-}[] | null {
+export function compareTierFeatures(courseId: string):
+  | {
+      tier: CourseSeries
+      name: string
+      price: number
+      batchSize: number
+      features: CourseFeatures
+      highlights: string[]
+    }[]
+  | null {
   const course = getCourseById(courseId)
   if (!course) return null
-  
+
   const tierInfo = cerebrumCourseSystem.tiers
-  
+
   return Object.entries(course.tiers).map(([tierKey, tierDetails]) => {
-    const tierMetadata = tierInfo.find(t => t.series === tierKey as CourseSeries)!
+    const tierMetadata = tierInfo.find((t) => t.series === (tierKey as CourseSeries))!
     return {
       tier: tierKey as CourseSeries,
       name: tierMetadata.name,
@@ -72,7 +83,10 @@ export function compareTierFeatures(courseId: string): {
 /**
  * Calculate total savings for one-time payment
  */
-export function calculateSavings(courseId: string, tier: CourseSeries): {
+export function calculateSavings(
+  courseId: string,
+  tier: CourseSeries
+): {
   originalPrice: number
   discountedPrice: number
   savings: number
@@ -80,10 +94,10 @@ export function calculateSavings(courseId: string, tier: CourseSeries): {
 } | null {
   const pricing = getCoursePricing(courseId, tier)
   if (!pricing) return null
-  
+
   const { price, payment } = pricing
   const savings = price - payment.oneTime.discountedAmount
-  
+
   return {
     originalPrice: price,
     discountedPrice: payment.oneTime.discountedAmount,
@@ -103,14 +117,14 @@ export function getRecommendedCourses(studentProfile: {
 }): CourseProgram[] {
   const { currentClass, budget, preferredMode } = studentProfile
   let courses = getCoursesByClass(currentClass)
-  
+
   // Filter by learning mode preference
   if (preferredMode && preferredMode.length > 0) {
-    courses = courses.filter(course => 
-      course.learningMode.some(mode => preferredMode.includes(mode))
+    courses = courses.filter((course) =>
+      course.learningMode.some((mode) => preferredMode.includes(mode))
     )
   }
-  
+
   // Sort by popularity and features
   return courses.sort((a, b) => {
     if (a.isPopular && !b.isPopular) return -1
@@ -133,9 +147,9 @@ export function getCourseStats(courseId: string): {
 } | null {
   const course = getCourseById(courseId)
   if (!course) return null
-  
-  const prices = Object.values(course.tiers).map(tier => tier.price)
-  
+
+  const prices = Object.values(course.tiers).map((tier) => tier.price)
+
   return {
     totalTiers: Object.keys(course.tiers).length,
     priceRange: {
@@ -158,7 +172,7 @@ export function formatCourseDuration(duration: string): string {
     '2 years': 'Two-Year Foundation',
     '2.5 years': 'Extended Preparation Program',
   }
-  
+
   return durationMap[duration] || duration
 }
 
@@ -172,15 +186,15 @@ export function recommendTier(studentProfile: {
   parentalSupervision: boolean
 }): CourseSeries {
   const { budget, needsPersonalAttention, isHighAchiever, parentalSupervision } = studentProfile
-  
+
   if (budget >= 150000 && (needsPersonalAttention || isHighAchiever || parentalSupervision)) {
     return 'pinnacle'
   }
-  
+
   if (budget >= 70000 && (needsPersonalAttention || isHighAchiever)) {
     return 'ascent'
   }
-  
+
   return 'pursuit'
 }
 
@@ -193,10 +207,10 @@ export function generateCourseComparison(courseIds: string[]): Array<{
   tierComparison: ReturnType<typeof compareTierFeatures>
 }> {
   return courseIds
-    .map(id => {
+    .map((id) => {
       const course = getCourseById(id)
       if (!course) return null
-      
+
       return {
         course,
         stats: getCourseStats(id),
@@ -204,10 +218,10 @@ export function generateCourseComparison(courseIds: string[]): Array<{
       }
     })
     .filter(Boolean) as Array<{
-      course: CourseProgram
-      stats: ReturnType<typeof getCourseStats>
-      tierComparison: ReturnType<typeof compareTierFeatures>
-    }>
+    course: CourseProgram
+    stats: ReturnType<typeof getCourseStats>
+    tierComparison: ReturnType<typeof compareTierFeatures>
+  }>
 }
 
 /**
@@ -224,31 +238,31 @@ export function validateEnrollment(enrollment: {
   }
 }): { isValid: boolean; errors: string[] } {
   const errors: string[] = []
-  
+
   // Validate course exists
   const course = getCourseById(enrollment.courseId)
   if (!course) {
     errors.push('Invalid course selected')
   }
-  
+
   // Validate student info
   if (!enrollment.studentInfo.name.trim()) {
     errors.push('Student name is required')
   }
-  
+
   if (!enrollment.studentInfo.email.includes('@')) {
     errors.push('Valid email is required')
   }
-  
+
   if (enrollment.studentInfo.phone.length < 10) {
     errors.push('Valid phone number is required')
   }
-  
+
   // Validate class compatibility
   if (course && course.targetClass !== enrollment.studentInfo.currentClass) {
     errors.push('Course is not suitable for the selected class')
   }
-  
+
   return {
     isValid: errors.length === 0,
     errors,

@@ -22,7 +22,7 @@ export function ExportButton({
   testAttemptId,
   grade,
   timeRange,
-  className
+  className,
 }: ExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false)
   const [showOptions, setShowOptions] = useState(false)
@@ -34,20 +34,20 @@ export function ExportButton({
         format,
         timeRange: timeRange || {
           from: new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000),
-          to: new Date()
+          to: new Date(),
         },
         filters: {
           userId,
           grade,
-          testAttemptId
+          testAttemptId,
         },
         includeCharts: format === 'pdf',
-        includeRawData: true
+        includeRawData: true,
       }
 
       const requestBody: any = {
         type: exportType,
-        options: exportOptions
+        options: exportOptions,
       }
 
       if (userId) requestBody.userId = userId
@@ -57,7 +57,7 @@ export function ExportButton({
       const response = await fetch('/api/analytics/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(requestBody)
+        body: JSON.stringify(requestBody),
       })
 
       if (response.ok) {
@@ -176,20 +176,20 @@ export function BulkExportButton({ exports, timeRange, className }: BulkExportBu
           format,
           timeRange: timeRange || {
             from: new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000),
-            to: new Date()
+            to: new Date(),
           },
           filters: {
             userId: exportItem.userId,
             grade: exportItem.grade,
-            testAttemptId: exportItem.testAttemptId
+            testAttemptId: exportItem.testAttemptId,
           },
           includeCharts: format === 'pdf',
-          includeRawData: true
+          includeRawData: true,
         }
 
         const requestBody: any = {
           type: exportItem.type,
-          options: exportOptions
+          options: exportOptions,
         }
 
         if (exportItem.userId) requestBody.userId = exportItem.userId
@@ -199,7 +199,7 @@ export function BulkExportButton({ exports, timeRange, className }: BulkExportBu
         const response = await fetch('/api/analytics/export', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(requestBody)
+          body: JSON.stringify(requestBody),
         })
 
         if (response.ok) {
@@ -218,7 +218,7 @@ export function BulkExportButton({ exports, timeRange, className }: BulkExportBu
           document.body.removeChild(a)
 
           // Small delay between downloads
-          await new Promise(resolve => setTimeout(resolve, 1000))
+          await new Promise((resolve) => setTimeout(resolve, 1000))
         } else {
           throw new Error(`Export failed for ${exportItem.label}`)
         }
@@ -350,45 +350,55 @@ function generatePerformanceCSV(data: any): string {
     ['Average Score', data.averageScore || 0],
     ['Total Study Time', data.totalStudyTime || 0],
     ['Current Streak', data.currentStreak || 0],
-    ['Total Points', data.totalPoints || 0]
+    ['Total Points', data.totalPoints || 0],
   ]
 
-  return [headers, ...rows].map(row => row.join(',')).join('\n')
+  return [headers, ...rows].map((row) => row.join(',')).join('\n')
 }
 
 function generateProgressCSV(data: any[]): string {
   const headers = ['Date', 'Score', 'Accuracy', 'Tests Completed', 'Study Time']
-  const rows = data.map(point => [
+  const rows = data.map((point) => [
     point.date.toLocaleDateString(),
     point.score,
     point.accuracy,
     point.testsCompleted,
-    point.studyTime
+    point.studyTime,
   ])
 
-  return [headers, ...rows].map(row => row.join(',')).join('\n')
+  return [headers, ...rows].map((row) => row.join(',')).join('\n')
 }
 
 function generateTopicsCSV(data: any[]): string {
   const headers = ['Topic', 'Total Questions', 'Correct Answers', 'Accuracy', 'Average Time']
-  const rows = data.map(topic => [
+  const rows = data.map((topic) => [
     topic.topic,
     topic.totalQuestions,
     topic.correctAnswers,
     topic.accuracy,
-    topic.averageTime
+    topic.averageTime,
   ])
 
-  return [headers, ...rows].map(row => row.join(',')).join('\n')
+  return [headers, ...rows].map((row) => row.join(',')).join('\n')
 }
 
 function generateComparisonCSV(data: any): string {
   const headers = ['Metric', 'User Value', 'Class Average', 'Difference']
   const rows = [
     ['Score', data.user.score, data.class.averageScore, data.comparison.scoreComparison],
-    ['Tests Taken', data.user.testsTaken, data.class.averageTestsTaken, data.comparison.testsComparison],
-    ['Study Time', data.user.studyTime, data.class.averageStudyTime, data.comparison.timeComparison]
+    [
+      'Tests Taken',
+      data.user.testsTaken,
+      data.class.averageTestsTaken,
+      data.comparison.testsComparison,
+    ],
+    [
+      'Study Time',
+      data.user.studyTime,
+      data.class.averageStudyTime,
+      data.comparison.timeComparison,
+    ],
   ]
 
-  return [headers, ...rows].map(row => row.join(',')).join('\n')
+  return [headers, ...rows].map((row) => row.join(',')).join('\n')
 }

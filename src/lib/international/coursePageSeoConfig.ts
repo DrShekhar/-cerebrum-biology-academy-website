@@ -465,12 +465,7 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
         name: 'Ontario Biology',
         abbreviation: 'SBI3U/SBI4U',
         level: 'high-school',
-        keywords: [
-          'Ontario biology',
-          'SBI4U tutor',
-          'SBI3U biology',
-          'Grade 12 biology Ontario',
-        ],
+        keywords: ['Ontario biology', 'SBI4U tutor', 'SBI3U biology', 'Grade 12 biology Ontario'],
         popularTopics: [
           'Biochemistry',
           'Metabolic Processes',
@@ -512,7 +507,12 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
         name: 'IB Biology',
         abbreviation: 'IB',
         level: 'high-school',
-        keywords: ['IB biology Canada', 'IB DP biology', 'IB biology Toronto', 'IB biology Vancouver'],
+        keywords: [
+          'IB biology Canada',
+          'IB DP biology',
+          'IB biology Toronto',
+          'IB biology Vancouver',
+        ],
         popularTopics: ['HL Extension', 'SL Core', 'Internal Assessment', 'Extended Essay'],
       },
       {
@@ -641,12 +641,7 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
         abbreviation: 'QCE',
         level: 'pre-university',
         keywords: ['QCE biology', 'Queensland biology', 'QCE Unit 3 4', 'ATAR biology QLD'],
-        popularTopics: [
-          'Biodiversity and Ecosystems',
-          'Cell Biology',
-          'Heredity',
-          'Evolution',
-        ],
+        popularTopics: ['Biodiversity and Ecosystems', 'Cell Biology', 'Heredity', 'Evolution'],
       },
       {
         name: 'WACE Biology',
@@ -659,19 +654,19 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
         name: 'SACE Biology',
         abbreviation: 'SACE',
         level: 'pre-university',
-        keywords: [
-          'SACE biology',
-          'South Australia biology',
-          'Stage 2 biology',
-          'ATAR biology SA',
-        ],
+        keywords: ['SACE biology', 'South Australia biology', 'Stage 2 biology', 'ATAR biology SA'],
         popularTopics: ['DNA and Proteins', 'Cells', 'Homeostasis', 'Evolution'],
       },
       {
         name: 'IB Biology',
         abbreviation: 'IB',
         level: 'pre-university',
-        keywords: ['IB biology Australia', 'IB DP biology', 'IB biology Sydney', 'IB biology Melbourne'],
+        keywords: [
+          'IB biology Australia',
+          'IB DP biology',
+          'IB biology Sydney',
+          'IB biology Melbourne',
+        ],
         popularTopics: ['HL Topics', 'SL Topics', 'Internal Assessment', 'Extended Essay'],
       },
     ],
@@ -971,13 +966,24 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
           'AS biology UAE',
           'A2 biology',
         ],
-        popularTopics: ['Cell Structure', 'Biological Molecules', 'Transport', 'Genetics', 'Ecology'],
+        popularTopics: [
+          'Cell Structure',
+          'Biological Molecules',
+          'Transport',
+          'Genetics',
+          'Ecology',
+        ],
       },
       {
         name: 'IB Biology',
         abbreviation: 'IB',
         level: 'pre-university',
-        keywords: ['IB biology UAE', 'IB DP biology Dubai', 'IB biology HL SL', 'IB school biology'],
+        keywords: [
+          'IB biology UAE',
+          'IB DP biology Dubai',
+          'IB biology HL SL',
+          'IB school biology',
+        ],
         popularTopics: ['Core Topics', 'HL Extension', 'Internal Assessment', 'Extended Essay'],
       },
       {
@@ -1135,12 +1141,7 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
           'JC science',
           'first year science',
         ],
-        popularTopics: [
-          'Biological World',
-          'Physical World',
-          'Chemical World',
-          'Earth and Space',
-        ],
+        popularTopics: ['Biological World', 'Physical World', 'Chemical World', 'Earth and Space'],
       },
       {
         name: 'HPAT',
@@ -1152,11 +1153,7 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
           'medical school entry Ireland',
           'HPAT section 3',
         ],
-        popularTopics: [
-          'Logical Reasoning',
-          'Interpersonal Understanding',
-          'Non-verbal Reasoning',
-        ],
+        popularTopics: ['Logical Reasoning', 'Interpersonal Understanding', 'Non-verbal Reasoning'],
       },
       {
         name: 'IB Biology',
@@ -1343,7 +1340,7 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
     competitorKeywords: [
       'Beacon College biology',
       'Modern Education biology',
-      'King\'s Glory biology',
+      "King's Glory biology",
       'DSE tutor HK',
     ],
     seasonalKeywords: [
@@ -1428,24 +1425,14 @@ export const COURSE_PAGE_SEO_CONFIG: Record<string, CoursePageSEO> = {
         abbreviation: 'L1',
         level: 'secondary',
         keywords: ['NCEA Level 1 biology', 'Year 11 biology NZ', 'L1 biology internals'],
-        popularTopics: [
-          'Life Processes',
-          'Diversity of Life',
-          'Ecology',
-          'Genetics Introduction',
-        ],
+        popularTopics: ['Life Processes', 'Diversity of Life', 'Ecology', 'Genetics Introduction'],
       },
       {
         name: 'NCEA Level 2 Biology',
         abbreviation: 'L2',
         level: 'high-school',
         keywords: ['NCEA Level 2 biology', 'Year 12 biology NZ', 'L2 biology externals'],
-        popularTopics: [
-          'Cell Biology',
-          'Gene Expression',
-          'Adaptation',
-          'Ecological Communities',
-        ],
+        popularTopics: ['Cell Biology', 'Gene Expression', 'Adaptation', 'Ecological Communities'],
       },
       {
         name: 'NCEA Level 3 Biology',

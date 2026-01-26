@@ -3,14 +3,7 @@
 import React, { useEffect, useState, useRef, memo } from 'react'
 import { useRouter } from 'next/navigation'
 import { PremiumButton } from '@/components/ui/PremiumDesignSystem'
-import {
-  Trophy,
-  Star,
-  Play,
-  Clock,
-  Sparkles,
-  GraduationCap,
-} from 'lucide-react'
+import { Trophy, Star, Play, Clock, Sparkles, GraduationCap } from 'lucide-react'
 import { useI18n } from '@/contexts/I18nContext'
 
 interface OptimizedHeroSectionProps {

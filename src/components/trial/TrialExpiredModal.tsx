@@ -242,7 +242,8 @@ export function TrialExpiredModal({
                         onClick={async () => {
                           await trackAndOpenWhatsApp({
                             source: 'trial-expired-modal',
-                            message: 'Hi! My trial has expired. I need help with upgrading or extending my trial.',
+                            message:
+                              'Hi! My trial has expired. I need help with upgrading or extending my trial.',
                             campaign: 'trial-expiry',
                           })
                         }}

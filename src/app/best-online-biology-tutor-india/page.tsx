@@ -48,7 +48,8 @@ const whyBest = [
   {
     icon: GraduationCap,
     title: 'AIIMS Faculty',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years of teaching excellence.',
+    description:
+      'Learn from Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years of teaching excellence.',
   },
   {
     icon: Trophy,
@@ -210,8 +211,7 @@ export default function BestOnlineBiologyTutorIndiaPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Best Online Biology Tutor{' '}
-              <span className="text-yellow-400">in India</span>
+              Best Online Biology Tutor <span className="text-yellow-400">in India</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -347,7 +347,9 @@ export default function BestOnlineBiologyTutorIndiaPage() {
           <div
             ref={locationsHeaderAnim.ref}
             className={`text-center mb-16 transition-all duration-600 ${
-              locationsHeaderAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
+              locationsHeaderAnim.isVisible
+                ? 'opacity-100 translate-y-0'
+                : 'opacity-0 translate-y-5'
             }`}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -412,9 +414,7 @@ export default function BestOnlineBiologyTutorIndiaPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Learn from India's Best!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Learn from India's Best!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join 5000+ successful students. Book your free demo class today!
             </p>

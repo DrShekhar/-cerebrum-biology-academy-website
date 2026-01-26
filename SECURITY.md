@@ -235,6 +235,7 @@ npm run test:security
 ```
 
 Runs:
+
 - Environment variable validation
 - Secret scanning
 - Dependency vulnerability check

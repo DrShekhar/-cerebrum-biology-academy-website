@@ -141,26 +141,26 @@ grep -h "slug:" src/data/seo-landing/*-content.ts | wc -l
 
 ## File Size Breakdown
 
-| File                     | Size   | Purpose           |
-| ------------------------ | ------ | ----------------- |
-| slugs-static.ts          | ~3KB   | Sitemap, routing  |
-| index.ts                 | ~3KB   | Full content API  |
-| types.ts                 | ~4KB   | Type definitions  |
-| class-9-content.ts       | ~25KB  | Class 9 pages     |
-| class-10-content.ts      | ~25KB  | Class 10 pages    |
-| class-11-content.ts      | ~38KB  | Class 11 pages    |
-| class-12-content.ts      | ~36KB  | Class 12 pages    |
-| dropper-content.ts       | ~30KB  | Dropper pages     |
-| universal-content.ts     | ~30KB  | Universal pages   |
-| ncert-content.ts         | ~47KB  | NCERT pages       |
-| topics-content.ts        | ~82KB  | Topic pages       |
-| international-content.ts | ~70KB  | International     |
-| neet-guide-content.ts    | ~116KB | NEET guide pages  |
-| resources-content.ts     | ~56KB  | Resources pages   |
-| chapter-notes-content.ts | ~86KB  | Chapter notes     |
-| crash-course-content.ts  | ~33KB  | Crash courses     |
-| comparison-content.ts    | ~46KB  | Comparison pages  |
-| **Total**                | ~727KB | All content       |
+| File                     | Size   | Purpose          |
+| ------------------------ | ------ | ---------------- |
+| slugs-static.ts          | ~3KB   | Sitemap, routing |
+| index.ts                 | ~3KB   | Full content API |
+| types.ts                 | ~4KB   | Type definitions |
+| class-9-content.ts       | ~25KB  | Class 9 pages    |
+| class-10-content.ts      | ~25KB  | Class 10 pages   |
+| class-11-content.ts      | ~38KB  | Class 11 pages   |
+| class-12-content.ts      | ~36KB  | Class 12 pages   |
+| dropper-content.ts       | ~30KB  | Dropper pages    |
+| universal-content.ts     | ~30KB  | Universal pages  |
+| ncert-content.ts         | ~47KB  | NCERT pages      |
+| topics-content.ts        | ~82KB  | Topic pages      |
+| international-content.ts | ~70KB  | International    |
+| neet-guide-content.ts    | ~116KB | NEET guide pages |
+| resources-content.ts     | ~56KB  | Resources pages  |
+| chapter-notes-content.ts | ~86KB  | Chapter notes    |
+| crash-course-content.ts  | ~33KB  | Crash courses    |
+| comparison-content.ts    | ~46KB  | Comparison pages |
+| **Total**                | ~727KB | All content      |
 
 ## Future Optimizations
 

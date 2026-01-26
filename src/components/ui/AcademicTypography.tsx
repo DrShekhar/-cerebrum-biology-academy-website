@@ -48,8 +48,7 @@ export const AcademicHeadline: React.FC<AcademicHeadlineProps> = ({
       'text-gray-900 border-l-4 border-blue-600 pl-6': variant === 'research',
       'text-blue-900 font-extrabold': variant === 'emphasis' && !gradient,
     },
-    gradient &&
-      'bg-blue-600 bg-clip-text text-transparent',
+    gradient && 'bg-blue-600 bg-clip-text text-transparent',
     className
   )
 

@@ -62,7 +62,7 @@ export function VideoTestimonial({
         transition={{ duration: 0.5 }}
       >
         {/* Video Container */}
-        <div 
+        <div
           className="relative aspect-video bg-gray-900 cursor-pointer group"
           onClick={handlePlayPause}
           onMouseEnter={() => setShowControls(true)}
@@ -124,9 +124,13 @@ export function VideoTestimonial({
                     }}
                     className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/30 transition-colors"
                   >
-                    {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                    {isPlaying ? (
+                      <Pause className="w-5 h-5" />
+                    ) : (
+                      <Play className="w-5 h-5 ml-0.5" />
+                    )}
                   </button>
-                  
+
                   <button
                     onClick={(e) => {
                       e.stopPropagation()
@@ -187,9 +191,7 @@ export function VideoTestimonial({
           </div>
 
           {/* Quote */}
-          <blockquote className="text-gray-700 italic mb-4">
-            &ldquo;{quote}&rdquo;
-          </blockquote>
+          <blockquote className="text-gray-700 italic mb-4">&ldquo;{quote}&rdquo;</blockquote>
 
           {/* Rating */}
           <div className="flex items-center">
@@ -237,7 +239,9 @@ export function VideoTestimonial({
             <div className="absolute bottom-6 left-6 bg-black/60 backdrop-blur-sm text-white p-4 rounded-2xl">
               <h3 className="font-bold text-lg">{studentName}</h3>
               <p className="text-blue-300">{college}</p>
-              <p className="text-green-300">NEET Score: {neetScore} (+{improvement} improvement)</p>
+              <p className="text-green-300">
+                NEET Score: {neetScore} (+{improvement} improvement)
+              </p>
             </div>
           </motion.div>
         )}

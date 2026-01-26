@@ -92,22 +92,26 @@ const features = [
   {
     icon: Users,
     title: 'Tech-Professional Batches (10-15)',
-    description: 'Exclusive batches for Powai IT families with personalized attention and premium support.',
+    description:
+      'Exclusive batches for Powai IT families with personalized attention and premium support.',
   },
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert doctors and teachers from premier medical institutions. Quality Powai IT families expect.',
+    description:
+      'Expert doctors and teachers from premier medical institutions. Quality Powai IT families expect.',
   },
   {
     icon: BookOpen,
     title: 'Complete Premium Package',
-    description: 'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
+    description:
+      'NCERT mastery, advanced materials, unlimited doubt sessions - everything included.',
   },
   {
     icon: Clock,
     title: 'Flexible Timings',
-    description: 'Morning, afternoon, and evening batches to complement your IB/IGCSE school schedule.',
+    description:
+      'Morning, afternoon, and evening batches to complement your IB/IGCSE school schedule.',
   },
   {
     icon: Shield,
@@ -127,7 +131,7 @@ const faqs = [
   {
     question: 'Why do Powai students choose online NEET coaching?',
     answer:
-      'Powai\'s tech-forward families understand the power of online learning. With IIT Bombay in the neighborhood, excellence in education is expected. Our online classes offer AIIMS faculty at your fingertips, without LBS Marg traffic. Save 2+ hours daily on commute to coaching centers in Andheri or Dadar.',
+      "Powai's tech-forward families understand the power of online learning. With IIT Bombay in the neighborhood, excellence in education is expected. Our online classes offer AIIMS faculty at your fingertips, without LBS Marg traffic. Save 2+ hours daily on commute to coaching centers in Andheri or Dadar.",
   },
   {
     question: 'Which areas in Powai do you serve?',
@@ -137,7 +141,7 @@ const faqs = [
   {
     question: 'What is the fee for premium NEET coaching in Powai?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Powai\'s premium education standards while offering superior flexibility and personalized attention. EMI options available for IT professionals.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year depending on the program chosen. This matches Powai's premium education standards while offering superior flexibility and personalized attention. EMI options available for IT professionals.",
   },
   {
     question: 'How does this compare to coaching centers in Andheri?',
@@ -236,8 +240,9 @@ export default function NeetCoachingPowaiPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Tech-forward NEET Biology coaching for Powai&apos;s IT families. 94.2% success rate, AIIMS
-              faculty, zero traffic commute. Join 720+ students from Hiranandani and Powai schools.
+              Tech-forward NEET Biology coaching for Powai&apos;s IT families. 94.2% success rate,
+              AIIMS faculty, zero traffic commute. Join 720+ students from Hiranandani and Powai
+              schools.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -298,7 +303,8 @@ export default function NeetCoachingPowaiPage() {
               NEET Coaching Across Powai & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From Hiranandani Gardens to IIT Bombay area - premium coaching for every Powai locality.
+              From Hiranandani Gardens to IIT Bombay area - premium coaching for every Powai
+              locality.
             </p>
           </motion.div>
 
@@ -320,9 +326,7 @@ export default function NeetCoachingPowaiPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-cyan-600" />
                   </div>
-                  <div className="text-2xl font-bold text-cyan-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-cyan-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-cyan-100 text-cyan-700 px-2 py-1 rounded-full">
@@ -351,7 +355,8 @@ export default function NeetCoachingPowaiPage() {
               Why Powai&apos;s Tech Families Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Digital excellence meets premium education - designed for Powai&apos;s tech-forward families.
+              Digital excellence meets premium education - designed for Powai&apos;s tech-forward
+              families.
             </p>
           </motion.div>
 

@@ -166,7 +166,9 @@ export async function withRateLimit(
     // Security-sensitive endpoints should fail closed (block request on error)
     // Non-sensitive endpoints fail open (allow request) to prevent DoS from rate limit failures
     if (config.failClosed) {
-      logger.warn('Rate limiting failed closed for security endpoint:', { identifier: config.identifier })
+      logger.warn('Rate limiting failed closed for security endpoint:', {
+        identifier: config.identifier,
+      })
       return {
         success: false,
         limit: config.limit,
@@ -201,7 +203,7 @@ export async function apiRateLimit(
   const {
     limit = 100,
     window = 60 * 60 * 1000, // 1 hour
-    endpoint = 'api'
+    endpoint = 'api',
   } = options
 
   const identifier = getClientIdentifier(request, userIdentifier)
@@ -211,7 +213,7 @@ export async function apiRateLimit(
     identifier,
     limit,
     window,
-    keyPrefix
+    keyPrefix,
   })
 }
 
@@ -224,7 +226,7 @@ export async function authRateLimit(
     identifier,
     limit: 5, // 5 attempts per hour
     window: 60 * 60 * 1000,
-    keyPrefix: 'auth'
+    keyPrefix: 'auth',
   })
 }
 
@@ -237,7 +239,7 @@ export async function testSubmissionRateLimit(
     identifier: userIdentifier,
     limit: 10, // 10 test submissions per hour
     window: 60 * 60 * 1000,
-    keyPrefix: 'test:submit'
+    keyPrefix: 'test:submit',
   })
 }
 
@@ -250,7 +252,7 @@ export async function questionCreationRateLimit(
     identifier: userIdentifier,
     limit: 50, // 50 questions per hour
     window: 60 * 60 * 1000,
-    keyPrefix: 'question:create'
+    keyPrefix: 'question:create',
   })
 }
 
@@ -264,7 +266,7 @@ export async function bulkOperationRateLimit(
     identifier: userIdentifier,
     limit: 5, // 5 bulk operations per hour
     window: 60 * 60 * 1000,
-    keyPrefix: `bulk:${operationType}`
+    keyPrefix: `bulk:${operationType}`,
   })
 }
 
@@ -294,11 +296,7 @@ export async function adaptiveRateLimit(
     suspiciousActivity?: number // Suspicious activity score (0-1)
   } = {}
 ): Promise<RateLimitResult> {
-  const {
-    baseEndpoint = 'adaptive',
-    successRate = 1,
-    suspiciousActivity = 0
-  } = options
+  const { baseEndpoint = 'adaptive', successRate = 1, suspiciousActivity = 0 } = options
 
   const roleLimits = getRoleLimits(userRole)
   let adjustedLimit = roleLimits.limit
@@ -321,7 +319,7 @@ export async function adaptiveRateLimit(
     identifier: userIdentifier,
     limit: Math.max(10, adjustedLimit), // Minimum 10 requests
     window: roleLimits.window,
-    keyPrefix: `adaptive:${baseEndpoint}`
+    keyPrefix: `adaptive:${baseEndpoint}`,
   })
 }
 
@@ -331,7 +329,7 @@ export function getRateLimitHeaders(result: RateLimitResult): Record<string, str
     'X-RateLimit-Limit': result.limit.toString(),
     'X-RateLimit-Remaining': result.remaining.toString(),
     'X-RateLimit-Reset': new Date(result.resetTime).toISOString(),
-    'X-RateLimit-Reset-Time': result.resetTime.toString()
+    'X-RateLimit-Reset-Time': result.resetTime.toString(),
   }
 }
 
@@ -347,7 +345,7 @@ export async function ipRateLimit(
   const {
     limit = 50,
     window = 15 * 60 * 1000, // 15 minutes
-    endpoint = 'public'
+    endpoint = 'public',
   } = options
 
   const identifier = getClientIdentifier(request)
@@ -356,7 +354,7 @@ export async function ipRateLimit(
     identifier,
     limit,
     window,
-    keyPrefix: `ip:${endpoint}`
+    keyPrefix: `ip:${endpoint}`,
   })
 }
 
@@ -368,13 +366,13 @@ export async function geoRateLimit(
 ): Promise<RateLimitResult> {
   // Higher limits for certain regions, lower for others
   const countryLimits: Record<string, number> = {
-    'IN': 200, // India - higher limit
-    'US': 150, // USA
-    'GB': 150, // UK
-    'CA': 150, // Canada
-    'AU': 150, // Australia
-    'SG': 150, // Singapore
-    'default': 100
+    IN: 200, // India - higher limit
+    US: 150, // USA
+    GB: 150, // UK
+    CA: 150, // Canada
+    AU: 150, // Australia
+    SG: 150, // Singapore
+    default: 100,
   }
 
   const limit = countryLimits[countryCode || 'default'] || countryLimits.default
@@ -383,7 +381,7 @@ export async function geoRateLimit(
     identifier: userIdentifier,
     limit,
     window: 60 * 60 * 1000,
-    keyPrefix: `geo:${countryCode || 'unknown'}`
+    keyPrefix: `geo:${countryCode || 'unknown'}`,
   })
 }
 
@@ -404,7 +402,7 @@ export async function timeBasedRateLimit(
     identifier: userIdentifier,
     limit: adjustedLimit,
     window: 60 * 60 * 1000,
-    keyPrefix: `time:${isPeakHours ? 'peak' : 'off-peak'}`
+    keyPrefix: `time:${isPeakHours ? 'peak' : 'off-peak'}`,
   })
 }
 
@@ -423,7 +421,7 @@ export async function burstRateLimit(
     burstLimit = 20,
     burstWindow = 60 * 1000, // 1 minute
     sustainedLimit = 100,
-    sustainedWindow = 60 * 60 * 1000 // 1 hour
+    sustainedWindow = 60 * 60 * 1000, // 1 hour
   } = options
 
   // Check burst limit first
@@ -431,7 +429,7 @@ export async function burstRateLimit(
     identifier: userIdentifier,
     limit: burstLimit,
     window: burstWindow,
-    keyPrefix: 'burst'
+    keyPrefix: 'burst',
   })
 
   if (!burstResult.success) {
@@ -443,7 +441,7 @@ export async function burstRateLimit(
     identifier: userIdentifier,
     limit: sustainedLimit,
     window: sustainedWindow,
-    keyPrefix: 'sustained'
+    keyPrefix: 'sustained',
   })
 
   // Return the more restrictive result
@@ -466,7 +464,7 @@ export function getRateLimitStats(): {
   return {
     totalKeys: rateLimitStorage.size,
     keysByPrefix,
-    memoryUsage: JSON.stringify([...rateLimitStorage.entries()]).length // Rough estimate
+    memoryUsage: JSON.stringify([...rateLimitStorage.entries()]).length, // Rough estimate
   }
 }
 
@@ -485,7 +483,10 @@ export function clearRateLimit(identifier: string, prefix?: string): number {
 }
 
 // Spam pattern detection storage (distributed when Redis available)
-const spamPatternStorage = new Map<string, { violations: number[]; blocked: boolean; blockedUntil?: number }>()
+const spamPatternStorage = new Map<
+  string,
+  { violations: number[]; blocked: boolean; blockedUntil?: number }
+>()
 
 // Check and track spam patterns for an IP/identifier
 export async function checkSpamPattern(
@@ -498,7 +499,11 @@ export async function checkSpamPattern(
   // Try Redis first for distributed spam tracking
   if (upstashRedis) {
     try {
-      const data = await upstashRedis.get<{ violations: number[]; blocked: boolean; blockedUntil?: number }>(key)
+      const data = await upstashRedis.get<{
+        violations: number[]
+        blocked: boolean
+        blockedUntil?: number
+      }>(key)
 
       if (!data) {
         return null
@@ -563,7 +568,11 @@ export async function recordSpamViolation(
   // Try Redis first
   if (upstashRedis) {
     try {
-      const data = await upstashRedis.get<{ violations: number[]; blocked: boolean; blockedUntil?: number }>(key)
+      const data = await upstashRedis.get<{
+        violations: number[]
+        blocked: boolean
+        blockedUntil?: number
+      }>(key)
       const record = data || { violations: [], blocked: false }
 
       // Filter to recent violations
@@ -630,5 +639,5 @@ export default {
   getRateLimitStats,
   clearRateLimit,
   checkSpamPattern,
-  recordSpamViolation
+  recordSpamViolation,
 }

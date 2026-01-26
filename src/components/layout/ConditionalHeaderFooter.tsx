@@ -5,7 +5,13 @@ import { ReactNode, useState, useEffect } from 'react'
 
 // Routes where header/footer should be hidden
 // These pages have their own self-contained layouts
-const HIDDEN_ROUTES = ['/sign-in', '/sign-up', '/sso-callback', '/study-with-me/obs', '/study-with-me']
+const HIDDEN_ROUTES = [
+  '/sign-in',
+  '/sign-up',
+  '/sso-callback',
+  '/study-with-me/obs',
+  '/study-with-me',
+]
 
 interface ConditionalHeaderFooterProps {
   children: ReactNode
@@ -34,7 +40,14 @@ export function ConditionalHeaderFooter({ children }: ConditionalHeaderFooterPro
 
   // Debug logging
   if (typeof window !== 'undefined') {
-    console.log('[ConditionalHeaderFooter] pathname:', pathname, 'shouldHide:', shouldHide, 'mounted:', mounted)
+    console.log(
+      '[ConditionalHeaderFooter] pathname:',
+      pathname,
+      'shouldHide:',
+      shouldHide,
+      'mounted:',
+      mounted
+    )
   }
 
   // During SSR and initial render, show children but hidden via CSS if on hidden route

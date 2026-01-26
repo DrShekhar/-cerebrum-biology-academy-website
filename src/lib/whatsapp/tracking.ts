@@ -22,7 +22,7 @@ export function getUTMParams(): Record<string, string> {
   const utmParams: Record<string, string> = {}
 
   const utmKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term']
-  utmKeys.forEach(key => {
+  utmKeys.forEach((key) => {
     const value = urlParams.get(key)
     if (value) {
       utmParams[key] = value
@@ -188,7 +188,7 @@ export const WHATSAPP_MESSAGES = {
   parent: 'Hi! I am a parent enquiring about NEET Biology coaching for my child.',
   parentDemo: 'Hi! I am a parent. I want to book a demo class for my child.',
   parentFees: 'Hi! I am a parent. Please share the fee structure and batch timings.',
-  parentProgress: 'Hi! I am a parent. How can I track my child\'s progress in the course?',
+  parentProgress: "Hi! I am a parent. How can I track my child's progress in the course?",
 
   // NEET 2026/2027 specific
   neet2026: 'Hi! I want to enroll for NEET 2026 preparation. What batches are available?',
@@ -204,7 +204,8 @@ export const WHATSAPP_MESSAGES = {
   // Seminar messages
   seminarFAQ: 'Hi, I have a question about the NEET Parent Seminar.',
   seminarSupport: 'Hi! I just registered for the NEET Guidance Seminar and need help.',
-  careerSeminar: 'Hi! I attended the School-Career Seminar. I want to know more about NEET coaching.',
+  careerSeminar:
+    'Hi! I attended the School-Career Seminar. I want to know more about NEET coaching.',
 } as const
 
 // Page-to-message mapping for automatic context detection
@@ -239,7 +240,10 @@ export function getContextAwareMessage(pathname?: string): string {
   // Locality-specific messages for better conversion
   const locality = extractLocalityFromPath(pathname)
   if (locality) {
-    const localityName = locality.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+    const localityName = locality
+      .split(' ')
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ')
 
     if (pathname.includes('neet-coaching')) {
       return `Hi! I'm from ${localityName}. I want to join NEET Biology coaching. What batches are available nearby?`

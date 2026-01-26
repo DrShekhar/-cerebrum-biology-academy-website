@@ -12,12 +12,7 @@ interface CloneTabProps {
   cloneTest: () => void
 }
 
-export function CloneTab({
-  cloneSettings,
-  setCloneSettings,
-  loading,
-  cloneTest,
-}: CloneTabProps) {
+export function CloneTab({ cloneSettings, setCloneSettings, loading, cloneTest }: CloneTabProps) {
   return (
     <motion.div
       key="clone"
@@ -49,7 +44,9 @@ export function CloneTab({
             <input
               type="text"
               value={cloneSettings.targetYear}
-              onChange={(e) => setCloneSettings((prev) => ({ ...prev, targetYear: e.target.value }))}
+              onChange={(e) =>
+                setCloneSettings((prev) => ({ ...prev, targetYear: e.target.value }))
+              }
               className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
             />
           </div>

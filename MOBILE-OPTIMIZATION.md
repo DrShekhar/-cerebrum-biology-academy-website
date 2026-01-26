@@ -173,7 +173,6 @@ import { MobileInstallPrompt } from '@/components/counselor/MobileInstallPrompt'
 
 ```tsx
 import { MobilePaymentView } from '@/components/counselor/MobilePaymentView'
-
 ;<MobilePaymentView
   payments={installments}
   onPaymentClick={(payment) => setSelectedPayment(payment)}

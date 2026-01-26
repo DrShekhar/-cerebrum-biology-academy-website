@@ -58,22 +58,22 @@ export const phaseOverviews: PhaseOverview[] = [
       'Establish 1000+ high-quality questions for core NEET topics',
       'Implement advanced question types and enhanced UI',
       'Set up content quality framework and validation process',
-      'Create topic-wise question banks for high-weightage chapters'
+      'Create topic-wise question banks for high-weightage chapters',
     ],
     keyDeliverables: [
       '1000+ validated NEET questions',
       'Enhanced test generator with 4 question types',
       'Content management system',
-      'Quality assurance framework'
+      'Quality assurance framework',
     ],
     questionTargets: {
       total: 1000,
       easy: 400,
       medium: 400,
-      hard: 200
+      hard: 200,
     },
     budgetEstimate: 500000, // ₹5 Lakhs
-    teamSize: 8
+    teamSize: 8,
   },
   {
     phase: 'Phase 2: Complete NCERT Coverage',
@@ -82,22 +82,22 @@ export const phaseOverviews: PhaseOverview[] = [
       'Expand to 2500+ questions covering entire NCERT syllabus',
       'Implement adaptive testing and personalization',
       'Add performance analytics and detailed reporting',
-      'Create comprehensive study materials integration'
+      'Create comprehensive study materials integration',
     ],
     keyDeliverables: [
       '2500+ validated questions',
       'Adaptive test engine',
       'Advanced analytics dashboard',
-      'Study material integration'
+      'Study material integration',
     ],
     questionTargets: {
       total: 2500,
       easy: 1000,
       medium: 1000,
-      hard: 500
+      hard: 500,
     },
     budgetEstimate: 1200000, // ₹12 Lakhs
-    teamSize: 12
+    teamSize: 12,
   },
   {
     phase: 'Phase 3: AI-Powered Enhancement',
@@ -106,23 +106,23 @@ export const phaseOverviews: PhaseOverview[] = [
       'Implement AI-powered question generation',
       'Add multi-modal features (voice, image analysis)',
       'Create personalized learning paths',
-      'Launch premium features and monetization'
+      'Launch premium features and monetization',
     ],
     keyDeliverables: [
       'AI question generator',
       'Multi-modal test interface',
       'Personalized learning system',
-      'Premium subscription model'
+      'Premium subscription model',
     ],
     questionTargets: {
       total: 4000,
       easy: 1500,
       medium: 1500,
-      hard: 1000
+      hard: 1000,
     },
     budgetEstimate: 2000000, // ₹20 Lakhs
-    teamSize: 15
-  }
+    teamSize: 15,
+  },
 ]
 
 // Detailed Implementation Timeline
@@ -131,7 +131,8 @@ export const implementationMilestones: Milestone[] = [
   {
     id: 'p1-m1',
     name: 'Project Setup & Infrastructure',
-    description: 'Set up development environment, content management system, and quality frameworks',
+    description:
+      'Set up development environment, content management system, and quality frameworks',
     startDate: '2024-10-07',
     endDate: '2024-10-20',
     duration: '2 weeks',
@@ -142,33 +143,46 @@ export const implementationMilestones: Milestone[] = [
       'Enhanced project structure',
       'Content management system setup',
       'Quality validation framework',
-      'Development and staging environments'
+      'Development and staging environments',
     ],
     successCriteria: [
       'All development environments operational',
       'Content management workflows established',
       'Quality standards documented and approved',
-      'Team onboarding completed'
+      'Team onboarding completed',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Full-stack Developer', quantity: 2, duration: '2 weeks' },
       { type: 'personnel', resource: 'DevOps Engineer', quantity: 1, duration: '2 weeks' },
-      { type: 'technology', resource: 'Cloud Infrastructure', quantity: 1, duration: '2 weeks', cost: 50000 },
-      { type: 'infrastructure', resource: 'Development Tools', quantity: 1, duration: '2 weeks', cost: 25000 }
+      {
+        type: 'technology',
+        resource: 'Cloud Infrastructure',
+        quantity: 1,
+        duration: '2 weeks',
+        cost: 50000,
+      },
+      {
+        type: 'infrastructure',
+        resource: 'Development Tools',
+        quantity: 1,
+        duration: '2 weeks',
+        cost: 25000,
+      },
     ],
     riskFactors: [
       {
         risk: 'Infrastructure setup delays',
         probability: 'Medium',
         impact: 'Medium',
-        mitigation: 'Use existing Vercel infrastructure and cloud services'
-      }
-    ]
+        mitigation: 'Use existing Vercel infrastructure and cloud services',
+      },
+    ],
   },
   {
     id: 'p1-m2',
     name: 'Advanced Question Types Implementation',
-    description: 'Develop UI components and logic for Assertion-Reason, Match Following, and Diagram-based questions',
+    description:
+      'Develop UI components and logic for Assertion-Reason, Match Following, and Diagram-based questions',
     startDate: '2024-10-14',
     endDate: '2024-10-28',
     duration: '2 weeks',
@@ -179,27 +193,27 @@ export const implementationMilestones: Milestone[] = [
       'AdvancedQuestionRenderer component',
       'Question type handlers',
       'Enhanced test-taking interface',
-      'Answer validation logic'
+      'Answer validation logic',
     ],
     successCriteria: [
       'All 4 question types fully functional',
       'Responsive design across devices',
       'Proper answer validation and scoring',
-      'User experience testing completed'
+      'User experience testing completed',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Frontend Developer', quantity: 2, duration: '2 weeks' },
       { type: 'personnel', resource: 'UX Designer', quantity: 1, duration: '2 weeks' },
-      { type: 'personnel', resource: 'QA Tester', quantity: 1, duration: '1 week' }
+      { type: 'personnel', resource: 'QA Tester', quantity: 1, duration: '1 week' },
     ],
     riskFactors: [
       {
         risk: 'Complex UI requirements for match following questions',
         probability: 'Medium',
         impact: 'Low',
-        mitigation: 'Prototype early and iterate based on feedback'
-      }
-    ]
+        mitigation: 'Prototype early and iterate based on feedback',
+      },
+    ],
   },
   {
     id: 'p1-m3',
@@ -216,34 +230,40 @@ export const implementationMilestones: Milestone[] = [
       '150 Biomolecules questions',
       '150 Photosynthesis questions',
       'Complete explanations and metadata',
-      'Quality validation reports'
+      'Quality validation reports',
     ],
     successCriteria: [
       'All questions pass quality validation',
       '85% average quality score achieved',
       'NCERT alignment verified',
-      'Difficulty distribution as planned'
+      'Difficulty distribution as planned',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Biology Subject Expert', quantity: 3, duration: '3 weeks' },
       { type: 'personnel', resource: 'Content Editor', quantity: 2, duration: '3 weeks' },
       { type: 'personnel', resource: 'Quality Reviewer', quantity: 2, duration: '2 weeks' },
-      { type: 'content', resource: 'NCERT Textbooks & References', quantity: 1, duration: '3 weeks', cost: 15000 }
+      {
+        type: 'content',
+        resource: 'NCERT Textbooks & References',
+        quantity: 1,
+        duration: '3 weeks',
+        cost: 15000,
+      },
     ],
     riskFactors: [
       {
         risk: 'Content creation pace slower than expected',
         probability: 'Medium',
         impact: 'High',
-        mitigation: 'Parallel content creation by multiple experts with clear guidelines'
+        mitigation: 'Parallel content creation by multiple experts with clear guidelines',
       },
       {
         risk: 'Quality validation bottleneck',
         probability: 'Low',
         impact: 'Medium',
-        mitigation: 'Establish review pipeline with multiple reviewers'
-      }
-    ]
+        mitigation: 'Establish review pipeline with multiple reviewers',
+      },
+    ],
   },
   {
     id: 'p1-m4',
@@ -259,26 +279,26 @@ export const implementationMilestones: Milestone[] = [
       'Chapter-wise topic selection',
       'Advanced filtering system',
       'Custom test creation',
-      'Test templates and presets'
+      'Test templates and presets',
     ],
     successCriteria: [
       'Intuitive chapter selection interface',
       'Functional advanced filters',
       'Seamless test customization',
-      'Template system operational'
+      'Template system operational',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Frontend Developer', quantity: 2, duration: '2 weeks' },
-      { type: 'personnel', resource: 'Backend Developer', quantity: 1, duration: '2 weeks' }
+      { type: 'personnel', resource: 'Backend Developer', quantity: 1, duration: '2 weeks' },
     ],
     riskFactors: [
       {
         risk: 'Complex filter logic implementation',
         probability: 'Low',
         impact: 'Low',
-        mitigation: 'Use existing filtering libraries and patterns'
-      }
-    ]
+        mitigation: 'Use existing filtering libraries and patterns',
+      },
+    ],
   },
   {
     id: 'p1-m5',
@@ -294,27 +314,27 @@ export const implementationMilestones: Milestone[] = [
       '200 Genetics questions with problem-solving',
       '200 Molecular Biology questions',
       'Numerical problems for genetic crosses',
-      'Diagram-based molecular process questions'
+      'Diagram-based molecular process questions',
     ],
     successCriteria: [
       'Complex genetic problems included',
       'Molecular diagrams properly integrated',
       'Numerical calculation questions validated',
-      'Quality standards maintained'
+      'Quality standards maintained',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Genetics Expert', quantity: 2, duration: '3 weeks' },
       { type: 'personnel', resource: 'Molecular Biology Expert', quantity: 2, duration: '3 weeks' },
-      { type: 'personnel', resource: 'Diagram Artist', quantity: 1, duration: '2 weeks' }
+      { type: 'personnel', resource: 'Diagram Artist', quantity: 1, duration: '2 weeks' },
     ],
     riskFactors: [
       {
         risk: 'Complex genetic problem validation',
         probability: 'Medium',
         impact: 'Medium',
-        mitigation: 'Multiple expert reviews for numerical problems'
-      }
-    ]
+        mitigation: 'Multiple expert reviews for numerical problems',
+      },
+    ],
   },
   {
     id: 'p1-m6',
@@ -330,26 +350,31 @@ export const implementationMilestones: Milestone[] = [
       '100 Human Physiology questions',
       'Complete Phase 1 question bank',
       'Final quality validation report',
-      'Performance metrics documentation'
+      'Performance metrics documentation',
     ],
     successCriteria: [
       '1000+ questions completed and validated',
       'All quality thresholds met',
       'Question distribution as planned',
-      'Ready for platform integration'
+      'Ready for platform integration',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Physiology Expert', quantity: 2, duration: '2 weeks' },
-      { type: 'personnel', resource: 'Quality Assurance Manager', quantity: 1, duration: '2 weeks' }
+      {
+        type: 'personnel',
+        resource: 'Quality Assurance Manager',
+        quantity: 1,
+        duration: '2 weeks',
+      },
     ],
     riskFactors: [
       {
         risk: 'Rush to complete may compromise quality',
         probability: 'Low',
         impact: 'High',
-        mitigation: 'Maintain quality standards, extend timeline if necessary'
-      }
-    ]
+        mitigation: 'Maintain quality standards, extend timeline if necessary',
+      },
+    ],
   },
   {
     id: 'p1-m7',
@@ -365,27 +390,27 @@ export const implementationMilestones: Milestone[] = [
       'Complete question bank integration',
       'Platform performance optimization',
       'User acceptance testing completion',
-      'Launch-ready Phase 1 platform'
+      'Launch-ready Phase 1 platform',
     ],
     successCriteria: [
       'All questions properly integrated',
       'Platform performance meets standards',
       'User testing feedback incorporated',
-      'Ready for Phase 1 launch'
+      'Ready for Phase 1 launch',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Full-stack Developer', quantity: 2, duration: '2 weeks' },
       { type: 'personnel', resource: 'QA Tester', quantity: 2, duration: '2 weeks' },
-      { type: 'personnel', resource: 'Performance Engineer', quantity: 1, duration: '1 week' }
+      { type: 'personnel', resource: 'Performance Engineer', quantity: 1, duration: '1 week' },
     ],
     riskFactors: [
       {
         risk: 'Performance issues with large question bank',
         probability: 'Medium',
         impact: 'Medium',
-        mitigation: 'Implement lazy loading and caching strategies'
-      }
-    ]
+        mitigation: 'Implement lazy loading and caching strategies',
+      },
+    ],
   },
 
   // PHASE 2: COMPLETE NCERT COVERAGE (Weeks 9-20)
@@ -403,26 +428,31 @@ export const implementationMilestones: Milestone[] = [
       'Complete NCERT topic mapping',
       'Expanded content creation workflow',
       'Enhanced quality processes',
-      'Team scaling plan'
+      'Team scaling plan',
     ],
     successCriteria: [
       'All NCERT topics mapped and prioritized',
       'Scalable content creation process',
       'Quality processes optimized',
-      'Team expansion completed'
+      'Team expansion completed',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Content Strategy Manager', quantity: 1, duration: '2 weeks' },
-      { type: 'personnel', resource: 'Additional Subject Experts', quantity: 4, duration: '2 weeks' }
+      {
+        type: 'personnel',
+        resource: 'Additional Subject Experts',
+        quantity: 4,
+        duration: '2 weeks',
+      },
     ],
     riskFactors: [
       {
         risk: 'Difficulty in scaling content creation',
         probability: 'Medium',
         impact: 'Medium',
-        mitigation: 'Standardize processes and provide comprehensive training'
-      }
-    ]
+        mitigation: 'Standardize processes and provide comprehensive training',
+      },
+    ],
   },
   {
     id: 'p2-m2',
@@ -438,27 +468,33 @@ export const implementationMilestones: Milestone[] = [
       'Adaptive algorithm implementation',
       'Performance tracking system',
       'Difficulty adjustment logic',
-      'Personalization engine'
+      'Personalization engine',
     ],
     successCriteria: [
       'Adaptive testing functional',
       'Performance tracking accurate',
       'Personalization effective',
-      'Student engagement improved'
+      'Student engagement improved',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'AI/ML Engineer', quantity: 2, duration: '4 weeks' },
       { type: 'personnel', resource: 'Data Scientist', quantity: 1, duration: '4 weeks' },
-      { type: 'technology', resource: 'ML Infrastructure', quantity: 1, duration: '4 weeks', cost: 100000 }
+      {
+        type: 'technology',
+        resource: 'ML Infrastructure',
+        quantity: 1,
+        duration: '4 weeks',
+        cost: 100000,
+      },
     ],
     riskFactors: [
       {
         risk: 'Complex algorithm development',
         probability: 'High',
         impact: 'Medium',
-        mitigation: 'Start with simple algorithms and iterate'
-      }
-    ]
+        mitigation: 'Start with simple algorithms and iterate',
+      },
+    ],
   },
   {
     id: 'p2-m3',
@@ -474,27 +510,27 @@ export const implementationMilestones: Milestone[] = [
       '1500 additional validated questions',
       'Complete NCERT chapter coverage',
       'Advanced question types distribution',
-      'Comprehensive explanation library'
+      'Comprehensive explanation library',
     ],
     successCriteria: [
       'All NCERT topics covered',
       'Quality standards maintained',
       'Advanced question types included',
-      'Comprehensive explanations provided'
+      'Comprehensive explanations provided',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Subject Experts', quantity: 6, duration: '8 weeks' },
       { type: 'personnel', resource: 'Content Editors', quantity: 4, duration: '8 weeks' },
-      { type: 'personnel', resource: 'Quality Reviewers', quantity: 3, duration: '6 weeks' }
+      { type: 'personnel', resource: 'Quality Reviewers', quantity: 3, duration: '6 weeks' },
     ],
     riskFactors: [
       {
         risk: 'Content creation pace',
         probability: 'Medium',
         impact: 'High',
-        mitigation: 'Parallel workflows and regular progress monitoring'
-      }
-    ]
+        mitigation: 'Parallel workflows and regular progress monitoring',
+      },
+    ],
   },
   {
     id: 'p2-m4',
@@ -510,26 +546,26 @@ export const implementationMilestones: Milestone[] = [
       'Advanced analytics dashboard',
       'Detailed performance reports',
       'Predictive analytics features',
-      'Parent/teacher reporting system'
+      'Parent/teacher reporting system',
     ],
     successCriteria: [
       'Comprehensive analytics available',
       'Actionable insights provided',
       'Predictive features functional',
-      'Stakeholder reporting effective'
+      'Stakeholder reporting effective',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Frontend Developer', quantity: 2, duration: '3 weeks' },
-      { type: 'personnel', resource: 'Data Analyst', quantity: 1, duration: '3 weeks' }
+      { type: 'personnel', resource: 'Data Analyst', quantity: 1, duration: '3 weeks' },
     ],
     riskFactors: [
       {
         risk: 'Complex reporting requirements',
         probability: 'Low',
         impact: 'Low',
-        mitigation: 'Use established analytics frameworks'
-      }
-    ]
+        mitigation: 'Use established analytics frameworks',
+      },
+    ],
   },
   {
     id: 'p2-m5',
@@ -545,27 +581,33 @@ export const implementationMilestones: Milestone[] = [
       'Complete platform integration',
       'Comprehensive testing completion',
       'Performance optimization',
-      'Phase 2 platform launch'
+      'Phase 2 platform launch',
     ],
     successCriteria: [
       'All features integrated successfully',
       'Performance meets requirements',
       'User testing completed',
-      'Platform launched successfully'
+      'Platform launched successfully',
     ],
     resourceRequirements: [
       { type: 'personnel', resource: 'Full Development Team', quantity: 12, duration: '2 weeks' },
-      { type: 'infrastructure', resource: 'Production Infrastructure', quantity: 1, duration: '2 weeks', cost: 150000 }
+      {
+        type: 'infrastructure',
+        resource: 'Production Infrastructure',
+        quantity: 1,
+        duration: '2 weeks',
+        cost: 150000,
+      },
     ],
     riskFactors: [
       {
         risk: 'Integration complexity',
         probability: 'Medium',
         impact: 'High',
-        mitigation: 'Thorough testing and staged deployment'
-      }
-    ]
-  }
+        mitigation: 'Thorough testing and staged deployment',
+      },
+    ],
+  },
 ]
 
 // Success Metrics for Each Phase
@@ -574,53 +616,53 @@ export const successMetrics = {
     questionBank: {
       target: 1000,
       quality: '85% average score',
-      coverage: 'Top 10 high-weightage topics'
+      coverage: 'Top 10 high-weightage topics',
     },
     userEngagement: {
       testCompletionRate: '75%',
       averageTestDuration: '45 minutes',
-      returnUserRate: '60%'
+      returnUserRate: '60%',
     },
     technicalPerformance: {
       pageLoadTime: '<3 seconds',
       uptimeTarget: '99.5%',
-      mobileResponsiveness: '100%'
-    }
+      mobileResponsiveness: '100%',
+    },
   },
   phase2: {
     questionBank: {
       target: 2500,
       quality: '87% average score',
-      coverage: 'Complete NCERT syllabus'
+      coverage: 'Complete NCERT syllabus',
     },
     adaptiveFeatures: {
       personalizationAccuracy: '80%',
       performanceImprovement: '25%',
-      studentSatisfaction: '85%'
+      studentSatisfaction: '85%',
     },
     analytics: {
       reportingAccuracy: '95%',
       insightActionability: '80%',
-      stakeholderAdoption: '70%'
-    }
+      stakeholderAdoption: '70%',
+    },
   },
   phase3: {
     questionBank: {
       target: 4000,
       aiGenerated: '30%',
-      multiModal: '20%'
+      multiModal: '20%',
     },
     aiFeatures: {
       generationAccuracy: '85%',
       personalizationEffectiveness: '90%',
-      userSatisfaction: '90%'
+      userSatisfaction: '90%',
     },
     monetization: {
       conversionRate: '15%',
       revenueTarget: '₹10L/month',
-      userRetention: '80%'
-    }
-  }
+      userRetention: '80%',
+    },
+  },
 }
 
 export const totalImplementationTimeline = {
@@ -628,12 +670,12 @@ export const totalImplementationTimeline = {
   totalBudget: 3700000, // ₹37 Lakhs
   peakTeamSize: 15,
   totalQuestions: 4000,
-  expectedRevenue: '₹10L/month by Phase 3 completion'
+  expectedRevenue: '₹10L/month by Phase 3 completion',
 }
 
 export default {
   phaseOverviews,
   implementationMilestones,
   successMetrics,
-  totalImplementationTimeline
+  totalImplementationTimeline,
 }

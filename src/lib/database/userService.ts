@@ -1,10 +1,6 @@
 import { prisma } from './connection'
 import { UserCacheService } from '../cache/redis'
-import type {
-  free_users,
-  user_progress,
-  performance_reports,
-} from '@/generated/prisma'
+import type { free_users, user_progress, performance_reports } from '@/generated/prisma'
 
 export interface CreateFreeUserInput {
   email: string

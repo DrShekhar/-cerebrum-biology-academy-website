@@ -1768,7 +1768,8 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       '@type': 'Course',
       courseName: 'NEET Human Physiology Guide',
       provider: 'Cerebrum Biology Academy',
-      description: 'Complete Human Physiology preparation guide for NEET with 12-15% weightage coverage',
+      description:
+        'Complete Human Physiology preparation guide for NEET with 12-15% weightage coverage',
       duration: '6 weeks',
       price: 9999,
       priceCurrency: 'INR',
@@ -1928,7 +1929,8 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       '@type': 'Course',
       courseName: 'NEET Genetics Preparation',
       provider: 'Cerebrum Biology Academy',
-      description: 'Complete genetics preparation for NEET including Mendelian genetics, molecular biology, biotechnology and evolution',
+      description:
+        'Complete genetics preparation for NEET including Mendelian genetics, molecular biology, biotechnology and evolution',
       duration: '8 weeks',
       price: 12999,
       priceCurrency: 'INR',
@@ -2256,7 +2258,8 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       '@type': 'Course',
       courseName: 'NEET Dropper Success Program',
       provider: 'Cerebrum Biology Academy',
-      description: 'Comprehensive NEET preparation program for droppers with 78% government seat success rate',
+      description:
+        'Comprehensive NEET preparation program for droppers with 78% government seat success rate',
       duration: '12 months',
       price: 65000,
       priceCurrency: 'INR',
@@ -2284,7 +2287,8 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     hero: {
       headline: 'Live Online NEET Classes',
-      subheadline: 'Real-time interactive biology sessions with AIIMS faculty. Ask questions, get instant answers.',
+      subheadline:
+        'Real-time interactive biology sessions with AIIMS faculty. Ask questions, get instant answers.',
       highlightedText: 'Live & Interactive',
       ctaText: 'Join Free Live Demo',
       ctaLink: '/book-demo?type=live-online',
@@ -2295,17 +2299,20 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'confused',
           question: 'Recorded videos feel one-way?',
-          solution: 'Live classes allow real-time interaction - ask doubts instantly, get immediate feedback.',
+          solution:
+            'Live classes allow real-time interaction - ask doubts instantly, get immediate feedback.',
         },
         {
           icon: 'stuck',
           question: 'Cant ask questions while watching?',
-          solution: 'Raise your hand virtually, type in chat, or unmute to speak directly with faculty.',
+          solution:
+            'Raise your hand virtually, type in chat, or unmute to speak directly with faculty.',
         },
         {
           icon: 'overwhelmed',
           question: 'No accountability with self-study?',
-          solution: 'Scheduled live classes create discipline. Daily attendance tracking keeps you on track.',
+          solution:
+            'Scheduled live classes create discipline. Daily attendance tracking keeps you on track.',
         },
         {
           icon: 'isolated',
@@ -2341,12 +2348,14 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'group',
           title: 'Peer Learning',
-          description: 'Learn with classmates, see their questions, benefit from group discussions.',
+          description:
+            'Learn with classmates, see their questions, benefit from group discussions.',
         },
         {
           icon: 'schedule',
           title: 'Structured Schedule',
-          description: 'Fixed class timings create discipline and routine for consistent preparation.',
+          description:
+            'Fixed class timings create discipline and routine for consistent preparation.',
         },
       ],
     },
@@ -2360,37 +2369,44 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Riya Sharma',
         achievement: 'NEET 2024 - 680/720',
-        quote: 'Live classes felt like being in a real classroom. I could ask doubts immediately and the teacher knew my name!',
+        quote:
+          'Live classes felt like being in a real classroom. I could ask doubts immediately and the teacher knew my name!',
         score: '680/720',
       },
       {
         name: 'Aditya Verma',
         achievement: 'NEET 2024 - 645/720',
-        quote: 'The live quizzes during class kept me engaged. Much better than passively watching recorded videos.',
+        quote:
+          'The live quizzes during class kept me engaged. Much better than passively watching recorded videos.',
         score: '645/720',
       },
       {
         name: 'Sneha Patel',
         achievement: 'From Tier 3 City',
-        quote: 'Living in a small town, live online classes gave me access to Delhi-level coaching.',
+        quote:
+          'Living in a small town, live online classes gave me access to Delhi-level coaching.',
       },
     ],
     faqs: [
       {
         question: 'What platform do you use for live classes?',
-        answer: 'We use a custom-built platform optimized for education with features like virtual hand-raise, breakout rooms for doubt sessions, and integrated whiteboard.',
+        answer:
+          'We use a custom-built platform optimized for education with features like virtual hand-raise, breakout rooms for doubt sessions, and integrated whiteboard.',
       },
       {
         question: 'What if I miss a live class?',
-        answer: 'Recordings are available within 2 hours of class completion. However, we encourage attending live for maximum benefit.',
+        answer:
+          'Recordings are available within 2 hours of class completion. However, we encourage attending live for maximum benefit.',
       },
       {
         question: 'How many students in a live batch?',
-        answer: 'We limit batches to 30 students to ensure everyone can interact and get their doubts resolved.',
+        answer:
+          'We limit batches to 30 students to ensure everyone can interact and get their doubts resolved.',
       },
       {
         question: 'What internet speed do I need?',
-        answer: 'Minimum 2 Mbps for smooth streaming. Our platform adapts to lower bandwidth but 5+ Mbps is recommended.',
+        answer:
+          'Minimum 2 Mbps for smooth streaming. Our platform adapts to lower bandwidth but 5+ Mbps is recommended.',
       },
     ],
     courseSummary: {
@@ -2460,7 +2476,8 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     ],
     hero: {
       headline: 'Online NEET Test Series 2025-26',
-      subheadline: '200+ mock tests designed by AIIMS faculty. Real NEET experience with AI-powered analysis.',
+      subheadline:
+        '200+ mock tests designed by AIIMS faculty. Real NEET experience with AI-powered analysis.',
       highlightedText: '200+ Tests',
       ctaText: 'Start Free Trial',
       ctaLink: '/tools/neet-mcq',
@@ -2536,7 +2553,8 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Priya Singh',
         achievement: 'NEET 2024 - 695/720',
-        quote: 'The test series predicted my rank within 500 positions. The analysis helped me identify weak chapters I had ignored.',
+        quote:
+          'The test series predicted my rank within 500 positions. The analysis helped me identify weak chapters I had ignored.',
         score: '695/720',
       },
       {
@@ -2547,14 +2565,16 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Ananya Reddy',
         achievement: 'NEET 2024 - 660/720',
-        quote: 'Video solutions were game-changer. Understood every mistake and never repeated them.',
+        quote:
+          'Video solutions were game-changer. Understood every mistake and never repeated them.',
         score: '660/720',
       },
     ],
     faqs: [
       {
         question: 'How many tests are included?',
-        answer: '200+ tests including 40 chapter tests (Botany + Zoology), 20 part tests, 30 full syllabus tests, and 100+ topic-wise tests.',
+        answer:
+          '200+ tests including 40 chapter tests (Botany + Zoology), 20 part tests, 30 full syllabus tests, and 100+ topic-wise tests.',
       },
       {
         question: 'Is there negative marking?',
@@ -2609,7 +2629,8 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       '@type': 'Course',
       courseName: 'Online NEET Test Series 2025-26',
       provider: 'Cerebrum Biology Academy',
-      description: 'Comprehensive online NEET test series with 200+ mock tests and AI-powered analysis',
+      description:
+        'Comprehensive online NEET test series with 200+ mock tests and AI-powered analysis',
       duration: '12 months',
       price: 2999,
       priceCurrency: 'INR',
@@ -2653,20 +2674,17 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'clock',
           question: 'Wasting hours in commute?',
-          solution:
-            'Save 2-3 hours daily. Use saved time for self-study and revision.',
+          solution: 'Save 2-3 hours daily. Use saved time for self-study and revision.',
         },
         {
           icon: 'wallet',
           question: 'Offline coaching too expensive?',
-          solution:
-            'Save 60-70% on total costs. No hostel, food, or travel expenses.',
+          solution: 'Save 60-70% on total costs. No hostel, food, or travel expenses.',
         },
         {
           icon: 'repeat',
           question: 'Miss topics in crowded classes?',
-          solution:
-            'Small batches of 10-15 students + recorded backup of every class.',
+          solution: 'Small batches of 10-15 students + recorded backup of every class.',
         },
       ],
     },
@@ -2695,8 +2713,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'message',
           title: '24/7 Doubt Support',
-          description:
-            'WhatsApp support with 2-hour response time. Weekly live doubt sessions.',
+          description: 'WhatsApp support with 2-hour response time. Weekly live doubt sessions.',
         },
         {
           icon: 'repeat',
@@ -2722,19 +2739,22 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Priya Sharma',
         achievement: 'NEET 2024 - 685/720',
-        quote: 'Online classes gave me access to AIIMS-level teaching from my hometown. The small batch meant teacher knew my weak areas.',
+        quote:
+          'Online classes gave me access to AIIMS-level teaching from my hometown. The small batch meant teacher knew my weak areas.',
         score: '685/720',
       },
       {
         name: 'Arjun Verma',
         achievement: 'NEET 2024 - 650/720',
-        quote: 'Saved 3 hours daily on commute. Used that time for self-study. Best decision for my NEET preparation.',
+        quote:
+          'Saved 3 hours daily on commute. Used that time for self-study. Best decision for my NEET preparation.',
         score: '650/720',
       },
       {
         name: 'Sneha Patel',
         achievement: 'Government College',
-        quote: 'As a dropper, online classes helped me prepare without leaving home. Got into a government medical college!',
+        quote:
+          'As a dropper, online classes helped me prepare without leaving home. Got into a government medical college!',
       },
     ],
     faqs: [
@@ -2850,8 +2870,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'user',
           question: 'Need individual attention?',
-          solution:
-            '1-on-1 tuition option with fully customized pace and syllabus coverage.',
+          solution: '1-on-1 tuition option with fully customized pace and syllabus coverage.',
         },
         {
           icon: 'clock',
@@ -2862,14 +2881,12 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'location',
           question: 'No good biology tutor nearby?',
-          solution:
-            'Access AIIMS faculty online. Better than any local tutor at lower cost.',
+          solution: 'Access AIIMS faculty online. Better than any local tutor at lower cost.',
         },
         {
           icon: 'question',
           question: 'Embarrassed to ask doubts in class?',
-          solution:
-            'Personal tuition means ask unlimited questions without hesitation.',
+          solution: 'Personal tuition means ask unlimited questions without hesitation.',
         },
       ],
     },
@@ -2886,32 +2903,27 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'users',
           title: 'Small Batch (5-8 students)',
-          description:
-            'Peer learning benefits with personal attention. Cost-effective option.',
+          description: 'Peer learning benefits with personal attention. Cost-effective option.',
         },
         {
           icon: 'video',
           title: 'Visual Learning',
-          description:
-            'HD video explanations with diagrams and animations. Biology made visual.',
+          description: 'HD video explanations with diagrams and animations. Biology made visual.',
         },
         {
           icon: 'book',
           title: 'NCERT Focus',
-          description:
-            'Screen sharing for NCERT discussions. Every line covered systematically.',
+          description: 'Screen sharing for NCERT discussions. Every line covered systematically.',
         },
         {
           icon: 'repeat',
           title: 'Session Recordings',
-          description:
-            'All tuition sessions recorded. Revise concepts anytime.',
+          description: 'All tuition sessions recorded. Revise concepts anytime.',
         },
         {
           icon: 'calendar',
           title: 'Flexible Scheduling',
-          description:
-            'Morning, afternoon, evening, or weekend slots. You choose.',
+          description: 'Morning, afternoon, evening, or weekend slots. You choose.',
         },
       ],
     },
@@ -2925,18 +2937,21 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Riya Singh',
         achievement: 'NEET 2024 - 670/720',
-        quote: '1-on-1 tuition helped me cover weak chapters at my pace. Teacher understood my learning style perfectly.',
+        quote:
+          '1-on-1 tuition helped me cover weak chapters at my pace. Teacher understood my learning style perfectly.',
         score: '670/720',
       },
       {
         name: 'Karan Mehta',
         achievement: 'Improved 200 marks',
-        quote: 'Moved from group coaching to personal tuition. My score jumped from 450 to 650 in 6 months!',
+        quote:
+          'Moved from group coaching to personal tuition. My score jumped from 450 to 650 in 6 months!',
       },
       {
         name: 'Ananya Reddy',
         achievement: 'NEET 2024 - 655/720',
-        quote: 'Small batch tuition gave me confidence to ask any doubt. No hesitation, no judgement.',
+        quote:
+          'Small batch tuition gave me confidence to ask any doubt. No hesitation, no judgement.',
         score: '655/720',
       },
     ],
@@ -3047,26 +3062,22 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'question',
           question: "Don't know how to plan study hours?",
-          solution:
-            'Ready-made day-wise schedules based on your class level and target.',
+          solution: 'Ready-made day-wise schedules based on your class level and target.',
         },
         {
           icon: 'book',
           question: 'Struggling to balance school + NEET?',
-          solution:
-            'Integrated Board + NEET timetables for Class 11 and 12 students.',
+          solution: 'Integrated Board + NEET timetables for Class 11 and 12 students.',
         },
         {
           icon: 'clock',
           question: 'Procrastinating without structure?',
-          solution:
-            'Scientifically designed routines with built-in breaks and revision slots.',
+          solution: 'Scientifically designed routines with built-in breaks and revision slots.',
         },
         {
           icon: 'target',
           question: 'Not sure if your plan is effective?',
-          solution:
-            'These timetables created by NEET toppers and expert faculty.',
+          solution: 'These timetables created by NEET toppers and expert faculty.',
         },
       ],
     },
@@ -3089,8 +3100,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'calendar',
           title: 'Dropper Intensive',
-          description:
-            'Full-time NEET focus. 10-12 hours daily with structured revision cycles.',
+          description: 'Full-time NEET focus. 10-12 hours daily with structured revision cycles.',
         },
         {
           icon: 'calendar',
@@ -3101,14 +3111,12 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'calendar',
           title: 'Last 3 Month Sprint',
-          description:
-            'High-intensity revision. Focus on weak areas and maximum practice.',
+          description: 'High-intensity revision. Focus on weak areas and maximum practice.',
         },
         {
           icon: 'calendar',
           title: 'Last 30 Days Plan',
-          description:
-            'Final revision + mock tests. Maintain confidence and peak performance.',
+          description: 'Final revision + mock tests. Maintain confidence and peak performance.',
         },
       ],
     },
@@ -3122,19 +3130,22 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Sneha P.',
         achievement: 'NEET 2024 - 665/720',
-        quote: 'The Class 12 timetable helped me balance boards and NEET perfectly. Following the schedule consistently made all the difference!',
+        quote:
+          'The Class 12 timetable helped me balance boards and NEET perfectly. Following the schedule consistently made all the difference!',
         score: '665/720',
       },
       {
         name: 'Varun M.',
         achievement: 'NEET 2024 - 640/720 (Dropper)',
-        quote: 'As a dropper, I was lost. The intensive timetable gave me structure and accountability. Best decision I made.',
+        quote:
+          'As a dropper, I was lost. The intensive timetable gave me structure and accountability. Best decision I made.',
         score: '640/720',
       },
       {
         name: 'Ananya R.',
         achievement: 'NEET 2024 - 680/720',
-        quote: 'The last 3-month sprint schedule was intense but exactly what I needed. High-yield topic focus really worked.',
+        quote:
+          'The last 3-month sprint schedule was intense but exactly what I needed. High-yield topic focus really worked.',
         score: '680/720',
       },
     ],
@@ -3244,26 +3255,22 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'pencil',
           question: "Can't draw diagrams in exam?",
-          solution:
-            'Pre-labeled quick-reference diagrams. Memorize structure, not drawing skills.',
+          solution: 'Pre-labeled quick-reference diagrams. Memorize structure, not drawing skills.',
         },
         {
           icon: 'clock',
           question: 'Spending too much time on diagrams?',
-          solution:
-            'Ready-to-memorize visual sheets. Focus on concepts, not artistic ability.',
+          solution: 'Ready-to-memorize visual sheets. Focus on concepts, not artistic ability.',
         },
         {
           icon: 'question',
           question: 'Missing labels in diagram questions?',
-          solution:
-            'Complete NCERT-aligned labeling. Every important part marked clearly.',
+          solution: 'Complete NCERT-aligned labeling. Every important part marked clearly.',
         },
         {
           icon: 'book',
           question: 'Scattered diagram resources?',
-          solution:
-            'All 500+ diagrams in one organized PDF. Chapter-wise arrangement.',
+          solution: 'All 500+ diagrams in one organized PDF. Chapter-wise arrangement.',
         },
       ],
     },
@@ -3274,38 +3281,32 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'book',
           title: 'Chapter-wise Organization',
-          description:
-            'All 38 chapters covered. Botany + Zoology complete. Easy to navigate.',
+          description: 'All 38 chapters covered. Botany + Zoology complete. Easy to navigate.',
         },
         {
           icon: 'target',
           title: 'NCERT-Based Accuracy',
-          description:
-            'Every diagram matches NCERT exactly. No confusion with exam pattern.',
+          description: 'Every diagram matches NCERT exactly. No confusion with exam pattern.',
         },
         {
           icon: 'star',
           title: 'High-Resolution Quality',
-          description:
-            'Printable quality. Clear labels even when printed. Study anywhere.',
+          description: 'Printable quality. Clear labels even when printed. Study anywhere.',
         },
         {
           icon: 'checkmark',
           title: 'Exam-Important Marked',
-          description:
-            'Frequently asked diagrams highlighted. Know what to prioritize.',
+          description: 'Frequently asked diagrams highlighted. Know what to prioritize.',
         },
         {
           icon: 'lightbulb',
           title: 'Memory Tips Included',
-          description:
-            'Mnemonics and shortcuts for complex diagrams. Easier memorization.',
+          description: 'Mnemonics and shortcuts for complex diagrams. Easier memorization.',
         },
         {
           icon: 'repeat',
           title: 'Updated for NEET 2025',
-          description:
-            'Latest syllabus coverage. Includes recent exam trends.',
+          description: 'Latest syllabus coverage. Includes recent exam trends.',
         },
       ],
     },
@@ -3319,19 +3320,22 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Kavya S.',
         achievement: 'NEET 2024 - 670/720',
-        quote: 'The diagram PDF was my revision companion. Before every test, I would go through the diagrams. Saved me 15+ marks in the actual exam!',
+        quote:
+          'The diagram PDF was my revision companion. Before every test, I would go through the diagrams. Saved me 15+ marks in the actual exam!',
         score: '670/720',
       },
       {
         name: 'Rohan K.',
         achievement: 'NEET 2024 - 655/720',
-        quote: 'I was terrible at diagrams. This organized collection made memorization easy. The exam-important marking helped prioritize.',
+        quote:
+          'I was terrible at diagrams. This organized collection made memorization easy. The exam-important marking helped prioritize.',
         score: '655/720',
       },
       {
         name: 'Meera N.',
         achievement: 'NEET 2024 - 690/720',
-        quote: 'Best resource for last-minute revision. I could quickly scan through all diagrams in one sitting. Highly recommended!',
+        quote:
+          'Best resource for last-minute revision. I could quickly scan through all diagrams in one sitting. Highly recommended!',
         score: '690/720',
       },
     ],
@@ -3448,20 +3452,17 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'question',
           question: 'Not sure if online coaching works for you?',
-          solution:
-            "Try free lectures first. Experience Dr. Shekhar's teaching before deciding.",
+          solution: "Try free lectures first. Experience Dr. Shekhar's teaching before deciding.",
         },
         {
           icon: 'book',
           question: 'Need help with specific topics?',
-          solution:
-            'Free chapter lectures available. Learn exactly what you need.',
+          solution: 'Free chapter lectures available. Learn exactly what you need.',
         },
         {
           icon: 'shield',
           question: 'Worried about content quality?',
-          solution:
-            'Same AIIMS faculty, same quality as paid courses. Just limited chapters free.',
+          solution: 'Same AIIMS faculty, same quality as paid courses. Just limited chapters free.',
         },
       ],
     },
@@ -3478,20 +3479,17 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'video',
           title: 'Class 11 Zoology',
-          description:
-            'Free chapters: Animal Kingdom, Structural Organisation in Animals basics.',
+          description: 'Free chapters: Animal Kingdom, Structural Organisation in Animals basics.',
         },
         {
           icon: 'video',
           title: 'Class 12 Botany',
-          description:
-            'Free chapters: Reproduction in Plants preview, Genetics introduction.',
+          description: 'Free chapters: Reproduction in Plants preview, Genetics introduction.',
         },
         {
           icon: 'video',
           title: 'Class 12 Zoology',
-          description:
-            'Free chapters: Human Physiology basics - Digestion, Breathing preview.',
+          description: 'Free chapters: Human Physiology basics - Digestion, Breathing preview.',
         },
         {
           icon: 'star',
@@ -3502,8 +3500,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'star',
           title: 'Featured: Genetics Basics',
-          description:
-            '2-hour genetics foundation lecture. Mendelian inheritance complete.',
+          description: '2-hour genetics foundation lecture. Mendelian inheritance complete.',
         },
       ],
     },
@@ -3517,18 +3514,21 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Rahul Kumar',
         achievement: 'Started with Free, Now NEET 2024 - 640/720',
-        quote: 'Free lectures convinced me to join full course. Same teacher, same quality. Best decision!',
+        quote:
+          'Free lectures convinced me to join full course. Same teacher, same quality. Best decision!',
         score: '640/720',
       },
       {
         name: 'Meera Joshi',
         achievement: 'Tier 3 City Student',
-        quote: "Couldn't afford coaching initially. Free lectures kept me on track until I could join the paid course.",
+        quote:
+          "Couldn't afford coaching initially. Free lectures kept me on track until I could join the paid course.",
       },
       {
         name: 'Vikram Patel',
         achievement: 'NEET 2024 - 615/720',
-        quote: 'Dr. Shekhar explains so clearly even in free content. Photosynthesis lecture was life-changing!',
+        quote:
+          'Dr. Shekhar explains so clearly even in free content. Photosynthesis lecture was life-changing!',
         score: '615/720',
       },
     ],
@@ -3645,8 +3645,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'repeat',
           question: 'Worried as a dropper?',
-          solution:
-            '40% of our selections are droppers. Second chance often becomes best chance.',
+          solution: '40% of our selections are droppers. Second chance often becomes best chance.',
         },
         {
           icon: 'location',
@@ -3657,8 +3656,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'target',
           question: 'Aiming for government college?',
-          solution:
-            '70% of our selections got government medical colleges. Dreams achievable.',
+          solution: '70% of our selections got government medical colleges. Dreams achievable.',
         },
       ],
     },
@@ -3669,8 +3667,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'star',
           title: 'Toppers (680+ Scores)',
-          description:
-            'Students who scored 680+ with our guidance. All India top ranks achieved.',
+          description: 'Students who scored 680+ with our guidance. All India top ranks achieved.',
         },
         {
           icon: 'checkmark',
@@ -3687,20 +3684,17 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: 'chart',
           title: 'Improvement Stories',
-          description:
-            'From 300 to 600+. Dramatic score improvements with right strategy.',
+          description: 'From 300 to 600+. Dramatic score improvements with right strategy.',
         },
         {
           icon: 'building',
           title: 'Government College Selections',
-          description:
-            'Students now in AIIMS, JIPMER, government medical colleges across India.',
+          description: 'Students now in AIIMS, JIPMER, government medical colleges across India.',
         },
         {
           icon: 'globe',
           title: 'Online Success',
-          description:
-            'Students who succeeded purely through online coaching. Proof it works.',
+          description: 'Students who succeeded purely through online coaching. Proof it works.',
         },
       ],
     },
@@ -3714,19 +3708,22 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         name: 'Aditya Sharma',
         achievement: 'NEET 2024 - 695/720, AIIMS Delhi',
-        quote: 'From a small village to AIIMS Delhi. Dr. Shekhar sir believed in me when I doubted myself.',
+        quote:
+          'From a small village to AIIMS Delhi. Dr. Shekhar sir believed in me when I doubted myself.',
         score: '695/720',
       },
       {
         name: 'Priya Gupta',
         achievement: 'Dropper - NEET 2024 - 665/720',
-        quote: 'Failed first attempt with 380. Second attempt 665. Online coaching gave me a second chance.',
+        quote:
+          'Failed first attempt with 380. Second attempt 665. Online coaching gave me a second chance.',
         score: '665/720',
       },
       {
         name: 'Mohammed Asif',
         achievement: 'NEET 2024 - 640/720, JIPMER',
-        quote: 'Government college was a dream. Now studying at JIPMER. All thanks to Cerebrum guidance.',
+        quote:
+          'Government college was a dream. Now studying at JIPMER. All thanks to Cerebrum guidance.',
         score: '640/720',
       },
     ],

@@ -191,7 +191,7 @@ export async function generateBlogPost(
   }
 
   const limits = await getOrCreateMonthlyLimits()
-  if (limits.remainingBudget < 0.10) {
+  if (limits.remainingBudget < 0.1) {
     return { success: false, error: 'Insufficient budget for content generation' }
   }
 
@@ -255,7 +255,8 @@ Return a JSON object with this exact structure:
       updatedAt: now,
       readTime: parsed.frontmatter.readTime || calculateReadTime(parsed.content),
       isPublished: false,
-      seoTitle: parsed.frontmatter.seoTitle || `${parsed.frontmatter.title} | Cerebrum Biology Academy`,
+      seoTitle:
+        parsed.frontmatter.seoTitle || `${parsed.frontmatter.title} | Cerebrum Biology Academy`,
       seoDescription: parsed.frontmatter.seoDescription || parsed.frontmatter.excerpt,
       difficulty: parsed.frontmatter.difficulty || 'Intermediate',
       neetChapter: parsed.frontmatter.neetChapter || undefined,
@@ -269,7 +270,8 @@ Return a JSON object with this exact structure:
     // Calculate cost
     const costPerInputToken = 0.000003
     const costPerOutputToken = 0.000015
-    const costUsd = usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
+    const costUsd =
+      usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
 
     logger.info('Generated blog post', {
       service: 'seo-generator',
@@ -317,7 +319,7 @@ export async function generateNewsArticle(
   }
 
   const limits = await getOrCreateMonthlyLimits()
-  if (limits.remainingBudget < 0.10) {
+  if (limits.remainingBudget < 0.1) {
     return { success: false, error: 'Insufficient budget for content generation' }
   }
 
@@ -391,7 +393,8 @@ Return a JSON object with this exact structure:
 
     const costPerInputToken = 0.000003
     const costPerOutputToken = 0.000015
-    const costUsd = usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
+    const costUsd =
+      usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
 
     logger.info('Generated news article', {
       service: 'seo-generator',
@@ -440,7 +443,7 @@ export async function generateLandingPage(
   }
 
   const limits = await getOrCreateMonthlyLimits()
-  if (limits.remainingBudget < 0.10) {
+  if (limits.remainingBudget < 0.1) {
     return { success: false, error: 'Insufficient budget for content generation' }
   }
 
@@ -504,7 +507,8 @@ Return a JSON object with this structure:
 
     const costPerInputToken = 0.000003
     const costPerOutputToken = 0.000015
-    const costUsd = usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
+    const costUsd =
+      usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
 
     logger.info('Generated landing page', {
       service: 'seo-generator',
@@ -548,7 +552,7 @@ export async function regenerateWithFeedback(
   }
 
   const limits = await getOrCreateMonthlyLimits()
-  if (limits.remainingBudget < 0.10) {
+  if (limits.remainingBudget < 0.1) {
     return { success: false, error: 'Insufficient budget for regeneration' }
   }
 
@@ -589,7 +593,8 @@ Return the revised content in the same JSON format as the original.`
 
     const costPerInputToken = 0.000003
     const costPerOutputToken = 0.000015
-    const costUsd = usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
+    const costUsd =
+      usage.input_tokens * costPerInputToken + usage.output_tokens * costPerOutputToken
 
     // Update the queue item with new content
     await updateQueueStatus(queueItemId, 'REVIEW', {
@@ -645,7 +650,11 @@ export async function processQueueItem(queueItemId: string): Promise<GenerationR
   try {
     switch (item.type) {
       case 'BLOG_POST':
-        result = await generateBlogPost(item.topic, item.keywords, item.additionalContext || undefined)
+        result = await generateBlogPost(
+          item.topic,
+          item.keywords,
+          item.additionalContext || undefined
+        )
         break
       case 'NEWS_ARTICLE':
         result = await generateNewsArticle(item.topic, item.sourceUrl || undefined)
@@ -686,7 +695,9 @@ export async function processQueueItem(queueItemId: string): Promise<GenerationR
         generatedSlug: slug,
         generatedContent: contentJson,
         generatedExcerpt: excerpt,
-        tokensUsed: result.tokensUsed ? result.tokensUsed.input + result.tokensUsed.output : undefined,
+        tokensUsed: result.tokensUsed
+          ? result.tokensUsed.input + result.tokensUsed.output
+          : undefined,
         costUsd: result.costUsd,
       })
 

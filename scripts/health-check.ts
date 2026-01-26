@@ -27,18 +27,25 @@ async function runHealthCheck() {
     console.log('   - Analytics Service:', dbHealth.services.analyticsService ? '✅' : '❌')
 
     // Cache Health
-    console.log('\n💾 Cache Status:', cacheHealth.status === 'healthy' ? '✅ Healthy' : '❌ Unhealthy')
+    console.log(
+      '\n💾 Cache Status:',
+      cacheHealth.status === 'healthy' ? '✅ Healthy' : '❌ Unhealthy'
+    )
     console.log(`   - Latency: ${cacheHealth.latency}ms`)
     if (cacheHealth.memory) {
       console.log(`   - Memory Usage: Available`)
     }
 
     // Overall Status
-    const overallHealthy = dbHealth.database &&
-                          cacheHealth.status === 'healthy' &&
-                          Object.values(dbHealth.services).every(status => status)
+    const overallHealthy =
+      dbHealth.database &&
+      cacheHealth.status === 'healthy' &&
+      Object.values(dbHealth.services).every((status) => status)
 
-    console.log('\n🎯 Overall System Status:', overallHealthy ? '✅ All Systems Operational' : '⚠️  Issues Detected')
+    console.log(
+      '\n🎯 Overall System Status:',
+      overallHealthy ? '✅ All Systems Operational' : '⚠️  Issues Detected'
+    )
 
     if (!overallHealthy) {
       console.log('\n🔧 Troubleshooting:')
@@ -74,7 +81,6 @@ async function runHealthCheck() {
     }
 
     process.exit(overallHealthy ? 0 : 1)
-
   } catch (error) {
     console.error('❌ Health check failed:', error)
     console.log('\n🔧 Please check:')
@@ -86,7 +92,7 @@ async function runHealthCheck() {
 }
 
 // Run the health check
-runHealthCheck().catch(error => {
+runHealthCheck().catch((error) => {
   console.error('Failed to run health check:', error)
   process.exit(1)
 })

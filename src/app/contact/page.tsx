@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { FAQDisplay } from '@/components/seo/FAQSchema'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 const contactFAQs = [
   {
@@ -479,7 +480,11 @@ export default function ContactPage() {
                 </div>
 
                 <div className="mt-6 sm:mt-7 md:mt-8">
-                  <Button variant="primary" size="lg" className="w-full min-h-11 sm:min-h-12 bg-[#3d4d3d] hover:bg-[#4a5d4a]">
+                  <Button
+                    variant="primary"
+                    size="lg"
+                    className="w-full min-h-11 sm:min-h-12 bg-[#3d4d3d] hover:bg-[#4a5d4a]"
+                  >
                     <Calendar className="w-5 h-5 mr-2" />
                     Schedule Campus Visit
                   </Button>
@@ -487,17 +492,16 @@ export default function ContactPage() {
               </div>
 
               <div className="h-64 sm:h-80 md:h-96 lg:h-full w-full">
-                <iframe
-                  src="https://maps.google.com/maps?q=McDonald's,+South+Extension+Part+2,+New+Delhi,+India&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
+                <LazyGoogleMap
+                  embedUrl="https://maps.google.com/maps?q=McDonald's,+South+Extension+Part+2,+New+Delhi,+India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  title="NEET Coaching Center Location"
                   height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Cerebrum Biology Academy Location - South Extension 2, New Delhi"
-                  className="rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none"
-                ></iframe>
+                  placeholder={{
+                    lat: 28.5697,
+                    lng: 77.2219,
+                    address: "South Extension, New Delhi"
+                  }}
+                />
               </div>
             </div>
           </div>

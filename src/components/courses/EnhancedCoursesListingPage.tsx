@@ -284,7 +284,9 @@ export function EnhancedCoursesListingPage() {
                     {tier.series === 'pinnacle' ? '👑' : tier.series === 'ascent' ? '🎯' : '🌟'}
                   </div>
                   <h4 className="text-lg font-bold text-gray-900">{tier.name}</h4>
-                  <p className="text-sm text-gray-600">Batch: {tier.batchSizeDisplay || tier.batchSize} students</p>
+                  <p className="text-sm text-gray-600">
+                    Batch: {tier.batchSizeDisplay || tier.batchSize} students
+                  </p>
                 </div>
               ))}
             </div>
@@ -294,17 +296,27 @@ export function EnhancedCoursesListingPage() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="text-left p-3 sm:p-4 font-semibold text-gray-900 border-b">Course</th>
-                    <th className="text-center p-3 sm:p-4 font-semibold text-purple-700 border-b">Pinnacle</th>
-                    <th className="text-center p-3 sm:p-4 font-semibold text-blue-700 border-b">Ascent</th>
-                    <th className="text-center p-3 sm:p-4 font-semibold text-green-700 border-b">Pursuit</th>
+                    <th className="text-left p-3 sm:p-4 font-semibold text-gray-900 border-b">
+                      Course
+                    </th>
+                    <th className="text-center p-3 sm:p-4 font-semibold text-purple-700 border-b">
+                      Pinnacle
+                    </th>
+                    <th className="text-center p-3 sm:p-4 font-semibold text-blue-700 border-b">
+                      Ascent
+                    </th>
+                    <th className="text-center p-3 sm:p-4 font-semibold text-green-700 border-b">
+                      Pursuit
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {coursePrograms.map((course, index) => (
                     <tr key={course.id} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
                       <td className="p-3 sm:p-4 border-b">
-                        <div className="font-medium text-gray-900 text-sm sm:text-base">{course.name}</div>
+                        <div className="font-medium text-gray-900 text-sm sm:text-base">
+                          {course.name}
+                        </div>
                         <div className="text-xs text-gray-500">{course.duration}</div>
                       </td>
                       <td className="text-center p-3 sm:p-4 border-b">
@@ -332,18 +344,23 @@ export function EnhancedCoursesListingPage() {
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
               {courseTiers.map((tier) => (
                 <div key={tier.series} className="p-4">
-                  <h5 className={`font-bold mb-3 ${
-                    tier.series === 'pinnacle'
-                      ? 'text-purple-700'
-                      : tier.series === 'ascent'
-                        ? 'text-blue-700'
-                        : 'text-green-700'
-                  }`}>
+                  <h5
+                    className={`font-bold mb-3 ${
+                      tier.series === 'pinnacle'
+                        ? 'text-purple-700'
+                        : tier.series === 'ascent'
+                          ? 'text-blue-700'
+                          : 'text-green-700'
+                    }`}
+                  >
                     {tier.name} Features
                   </h5>
                   <div className="space-y-2">
                     {tier.highlights.slice(0, 4).map((highlight, index) => (
-                      <div key={index} className="flex items-start text-xs sm:text-sm text-gray-700">
+                      <div
+                        key={index}
+                        className="flex items-start text-xs sm:text-sm text-gray-700"
+                      >
                         <span className="text-green-600 mr-2 mt-0.5">✓</span>
                         {highlight}
                       </div>

@@ -1,14 +1,7 @@
 'use client'
 
 import { useEffect, useState, memo } from 'react'
-import {
-  Play,
-  Star,
-  Clock,
-  Sparkles,
-  GraduationCap,
-  MessageCircle,
-} from 'lucide-react'
+import { Play, Star, Clock, Sparkles, GraduationCap, MessageCircle } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 // PERFORMANCE: Static strings for initial render to avoid blocking LCP
@@ -150,11 +143,13 @@ export function HeroClientInteractive() {
 
         {/* SECONDARY CTA: WhatsApp - low-friction contact */}
         <button
-          onClick={() => trackAndOpenWhatsApp({
-            source: 'hero-cta-secondary',
-            message: WHATSAPP_MESSAGES.enquiry,
-            campaign: 'homepage-hero',
-          })}
+          onClick={() =>
+            trackAndOpenWhatsApp({
+              source: 'hero-cta-secondary',
+              message: WHATSAPP_MESSAGES.enquiry,
+              campaign: 'homepage-hero',
+            })
+          }
           className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-[#25D366]/20 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg border-2 border-[#25D366] hover:border-[#20BD5A] hover:scale-[1.02] active:scale-[0.98] group"
         >
           <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 text-[#25D366] group-hover:scale-110 transition-transform flex-shrink-0" />
@@ -177,10 +172,18 @@ export function HeroClientInteractive() {
         style={{ animationDelay: '0.35s' }}
       >
         <div className="flex -space-x-2">
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">S</div>
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">R</div>
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">A</div>
-          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">+</div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-green-400 to-green-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            S
+          </div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            R
+          </div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            A
+          </div>
+          <div className="w-6 h-6 xs:w-8 xs:h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white/30 flex items-center justify-center text-white text-xs font-bold">
+            +
+          </div>
         </div>
         <span className="text-blue-100 text-xs xs:text-sm">
           <span className="text-green-300 font-semibold">127+ students</span> booked demos this week
@@ -233,17 +236,23 @@ export function HeroClientInteractive() {
           </div>
           <span className="text-red-200">:</span>
           <div className="bg-white/20 px-2 py-1 rounded text-center">
-            <span className="text-white font-bold text-sm xs:text-base">{String(timeLeft.hours).padStart(2, '0')}</span>
+            <span className="text-white font-bold text-sm xs:text-base">
+              {String(timeLeft.hours).padStart(2, '0')}
+            </span>
             <span className="text-red-200 text-xs ml-0.5">h</span>
           </div>
           <span className="text-red-200">:</span>
           <div className="bg-white/20 px-2 py-1 rounded text-center">
-            <span className="text-white font-bold text-sm xs:text-base">{String(timeLeft.minutes).padStart(2, '0')}</span>
+            <span className="text-white font-bold text-sm xs:text-base">
+              {String(timeLeft.minutes).padStart(2, '0')}
+            </span>
             <span className="text-red-200 text-xs ml-0.5">m</span>
           </div>
           <span className="text-red-200">:</span>
           <div className="bg-white/20 px-2 py-1 rounded text-center min-w-[40px]">
-            <span className="text-white font-bold text-sm xs:text-base">{String(timeLeft.seconds).padStart(2, '0')}</span>
+            <span className="text-white font-bold text-sm xs:text-base">
+              {String(timeLeft.seconds).padStart(2, '0')}
+            </span>
             <span className="text-red-200 text-xs ml-0.5">s</span>
           </div>
         </div>

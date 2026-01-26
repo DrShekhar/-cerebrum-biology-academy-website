@@ -843,7 +843,8 @@ export const neetRepeaters2026: SEOLandingContent = {
       {
         icon: 'users',
         question: 'Friends moving to college while you retake?',
-        solution: 'Join a community of 200+ motivated repeaters who understand your journey. You are not alone.',
+        solution:
+          'Join a community of 200+ motivated repeaters who understand your journey. You are not alone.',
       },
       {
         icon: 'clock',
@@ -867,32 +868,38 @@ export const neetRepeaters2026: SEOLandingContent = {
       {
         icon: 'search',
         title: 'Diagnostic Assessment',
-        description: 'Detailed analysis of your 2025 attempt to identify exactly what needs fixing.',
+        description:
+          'Detailed analysis of your 2025 attempt to identify exactly what needs fixing.',
       },
       {
         icon: 'calendar',
         title: 'Full Year Dedication',
-        description: 'No school distractions. 100% focus on NEET for 12 months. Maximum study hours.',
+        description:
+          'No school distractions. 100% focus on NEET for 12 months. Maximum study hours.',
       },
       {
         icon: 'zap',
         title: 'Intensive Schedule',
-        description: '6 days/week classes with 10+ hours daily productive time. Transform through consistency.',
+        description:
+          '6 days/week classes with 10+ hours daily productive time. Transform through consistency.',
       },
       {
         icon: 'bar-chart',
         title: 'Weekly Mock Tests',
-        description: '50+ full-length tests throughout the year. Practice exam pressure until it becomes routine.',
+        description:
+          '50+ full-length tests throughout the year. Practice exam pressure until it becomes routine.',
       },
       {
         icon: 'heart',
         title: 'Mental Wellness Focus',
-        description: 'Dedicated counseling and motivation sessions. Drop year stress is real - we address it.',
+        description:
+          'Dedicated counseling and motivation sessions. Drop year stress is real - we address it.',
       },
       {
         icon: 'user-check',
         title: 'Personal Mentorship',
-        description: 'Dr. Shekhar personally tracks every repeater student. Monthly one-on-one sessions.',
+        description:
+          'Dr. Shekhar personally tracks every repeater student. Monthly one-on-one sessions.',
       },
     ],
   },

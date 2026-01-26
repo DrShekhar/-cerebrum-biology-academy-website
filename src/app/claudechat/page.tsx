@@ -218,9 +218,7 @@ export default function ClaudeChatPage() {
                 {/* Message */}
                 <div
                   className={`p-4 rounded-2xl shadow-md ${
-                    message.type === 'user'
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-white text-gray-800'
+                    message.type === 'user' ? 'bg-blue-500 text-white' : 'bg-white text-gray-800'
                   }`}
                 >
                   <p className="text-sm leading-relaxed whitespace-pre-wrap">

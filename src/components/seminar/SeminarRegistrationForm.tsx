@@ -3,11 +3,7 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { User, Mail, Phone, MapPin, Loader2, Shield, CheckCircle } from 'lucide-react'
-import {
-  SEMINAR_CONFIG,
-  getNextSeminarDate,
-  formatSeminarDate,
-} from '@/lib/seminar/config'
+import { SEMINAR_CONFIG, getNextSeminarDate, formatSeminarDate } from '@/lib/seminar/config'
 
 interface FormData {
   parentName: string
@@ -146,9 +142,7 @@ export function SeminarRegistrationForm() {
           const verifyData = await verifyResponse.json()
 
           if (verifyData.success) {
-            router.push(
-              `/neet-guidance-seminar/thank-you?id=${orderData.registrationId}`
-            )
+            router.push(`/neet-guidance-seminar/thank-you?id=${orderData.registrationId}`)
           } else {
             alert('Payment verification failed. Please contact support.')
           }
@@ -169,9 +163,7 @@ export function SeminarRegistrationForm() {
     }
   }
 
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
     // Clear error when user starts typing
@@ -185,12 +177,14 @@ export function SeminarRegistrationForm() {
       <div className="max-w-2xl mx-auto px-4">
         <div className="text-center mb-8">
           <p className="text-green-400 font-semibold mb-2">REGISTER NOW</p>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Secure Your Seat
-          </h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Secure Your Seat</h2>
           {seminarDate && (
             <p className="text-slate-300">
-              Next Session: <span className="text-yellow-400 font-semibold">{formatSeminarDate(seminarDate)}</span> at 8:00 PM IST
+              Next Session:{' '}
+              <span className="text-yellow-400 font-semibold">
+                {formatSeminarDate(seminarDate)}
+              </span>{' '}
+              at 8:00 PM IST
             </p>
           )}
         </div>
@@ -238,9 +232,7 @@ export function SeminarRegistrationForm() {
                   }`}
                 />
               </div>
-              {errors.email && (
-                <p className="mt-1 text-sm text-red-500">{errors.email}</p>
-              )}
+              {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
             </div>
 
             {/* WhatsApp Number */}
@@ -288,9 +280,7 @@ export function SeminarRegistrationForm() {
                   }`}
                 />
               </div>
-              {errors.city && (
-                <p className="mt-1 text-sm text-red-500">{errors.city}</p>
-              )}
+              {errors.city && <p className="mt-1 text-sm text-red-500">{errors.city}</p>}
             </div>
 
             {/* Student Class (Optional) */}
@@ -356,9 +346,7 @@ export function SeminarRegistrationForm() {
                   Processing...
                 </>
               ) : (
-                <>
-                  🎯 Pay ₹{SEMINAR_CONFIG.pricing.standard} & Register
-                </>
+                <>🎯 Pay ₹{SEMINAR_CONFIG.pricing.standard} & Register</>
               )}
             </button>
 

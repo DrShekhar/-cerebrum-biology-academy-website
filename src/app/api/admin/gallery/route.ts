@@ -117,10 +117,7 @@ export async function POST(request: NextRequest) {
       })
 
       if (!result.success) {
-        return NextResponse.json(
-          { success: false, error: result.error },
-          { status: 400 }
-        )
+        return NextResponse.json({ success: false, error: result.error }, { status: 400 })
       }
 
       return NextResponse.json(
@@ -132,7 +129,10 @@ export async function POST(request: NextRequest) {
     // Handle photo items uploaded from URL
     if (!validatedData.imageUrl) {
       return NextResponse.json(
-        { success: false, error: 'imageUrl is required for photo items. Use /upload endpoint for file uploads.' },
+        {
+          success: false,
+          error: 'imageUrl is required for photo items. Use /upload endpoint for file uploads.',
+        },
         { status: 400 }
       )
     }
@@ -149,10 +149,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (!result.success) {
-      return NextResponse.json(
-        { success: false, error: result.error },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: result.error }, { status: 400 })
     }
 
     return NextResponse.json(

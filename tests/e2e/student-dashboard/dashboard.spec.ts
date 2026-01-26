@@ -233,7 +233,14 @@ test.describe('Student Dashboard - Navigation', () => {
   })
 
   test('TC-123: tab navigation flow complete', async ({ page }) => {
-    const tabs = ['Progress Tracking', 'Study Session', 'Weak Areas', 'Practice Tests', 'Study Schedule', 'Overview']
+    const tabs = [
+      'Progress Tracking',
+      'Study Session',
+      'Weak Areas',
+      'Practice Tests',
+      'Study Schedule',
+      'Overview',
+    ]
 
     for (const tabName of tabs) {
       await page.click(`button:has-text("${tabName}")`)
@@ -352,7 +359,9 @@ test.describe('Student Dashboard - Error Handling', () => {
     await page.goto('/student/dashboard')
 
     // Should show error message or empty state
-    await expect(page.locator('text=Unable to load').or(page.locator('text=Ready to Start'))).toBeVisible({
+    await expect(
+      page.locator('text=Unable to load').or(page.locator('text=Ready to Start'))
+    ).toBeVisible({
       timeout: 10000,
     })
   })

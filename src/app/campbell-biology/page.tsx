@@ -1,5 +1,15 @@
 import Link from 'next/link'
-import { Book, GraduationCap, Trophy, Clock, MessageCircle, ChevronRight, Star, Users, Award } from 'lucide-react'
+import {
+  Book,
+  GraduationCap,
+  Trophy,
+  Clock,
+  MessageCircle,
+  ChevronRight,
+  Star,
+  Users,
+  Award,
+} from 'lucide-react'
 import { campbellUnits, CAMPBELL_STATS } from '@/data/campbell-biology'
 import { getChaptersByUnitId } from '@/data/campbell-biology'
 import { CampbellWhatsAppCTA } from '@/components/campbell/CampbellWhatsAppCTA'
@@ -28,13 +38,15 @@ export default function CampbellBiologyHubPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Master all 56 chapters of Campbell Biology with expert tutoring.
-            Prepare for Biology Olympiads, NEET, MCAT, AP & IB Biology.
+            Master all 56 chapters of Campbell Biology with expert tutoring. Prepare for Biology
+            Olympiads, NEET, MCAT, AP & IB Biology.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-yellow-400">{CAMPBELL_STATS.totalChapters}</div>
+              <div className="text-3xl font-bold text-yellow-400">
+                {CAMPBELL_STATS.totalChapters}
+              </div>
               <div className="text-slate-300 text-sm">Chapters</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -42,7 +54,9 @@ export default function CampbellBiologyHubPage() {
               <div className="text-slate-300 text-sm">Units</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-blue-400">{CAMPBELL_STATS.totalEstimatedHours}+</div>
+              <div className="text-3xl font-bold text-blue-400">
+                {CAMPBELL_STATS.totalEstimatedHours}+
+              </div>
               <div className="text-slate-300 text-sm">Hours Content</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -60,9 +74,7 @@ export default function CampbellBiologyHubPage() {
             Chat on WhatsApp
           </CampbellWhatsAppCTA>
 
-          <p className="mt-4 text-sm text-slate-400">
-            Free demo class • No commitment required
-          </p>
+          <p className="mt-4 text-sm text-slate-400">Free demo class • No commitment required</p>
         </div>
       </section>
 
@@ -120,7 +132,10 @@ export default function CampbellBiologyHubPage() {
             {campbellUnits.map((unit) => {
               const unitChapters = getChaptersByUnitId(unit.id)
               return (
-                <div key={unit.id} className="bg-gradient-to-br from-slate-50 to-white rounded-2xl border border-slate-200 overflow-hidden shadow-lg">
+                <div
+                  key={unit.id}
+                  className="bg-gradient-to-br from-slate-50 to-white rounded-2xl border border-slate-200 overflow-hidden shadow-lg"
+                >
                   {/* Unit Header */}
                   <div className="bg-gradient-to-r from-slate-800 to-slate-700 p-6">
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -128,12 +143,8 @@ export default function CampbellBiologyHubPage() {
                         <div className="text-green-400 text-sm font-medium mb-1">
                           Unit {unit.unitNumber}
                         </div>
-                        <h3 className="text-xl md:text-2xl font-bold text-white">
-                          {unit.title}
-                        </h3>
-                        <p className="text-slate-300 text-sm mt-1">
-                          {unit.subtitle}
-                        </p>
+                        <h3 className="text-xl md:text-2xl font-bold text-white">{unit.title}</h3>
+                        <p className="text-slate-300 text-sm mt-1">{unit.subtitle}</p>
                       </div>
                       <div className="flex items-center gap-6 text-slate-300 text-sm">
                         <div className="flex items-center gap-2">
@@ -173,13 +184,15 @@ export default function CampbellBiologyHubPage() {
                                 <Clock className="w-3 h-3" />
                                 {chapter.estimatedHours}h
                               </span>
-                              <span className={`px-1.5 py-0.5 rounded-full ${
-                                chapter.difficulty === 'foundational'
-                                  ? 'bg-green-100 text-green-700'
-                                  : chapter.difficulty === 'intermediate'
-                                  ? 'bg-yellow-100 text-yellow-700'
-                                  : 'bg-red-100 text-red-700'
-                              }`}>
+                              <span
+                                className={`px-1.5 py-0.5 rounded-full ${
+                                  chapter.difficulty === 'foundational'
+                                    ? 'bg-green-100 text-green-700'
+                                    : chapter.difficulty === 'intermediate'
+                                      ? 'bg-yellow-100 text-yellow-700'
+                                      : 'bg-red-100 text-red-700'
+                                }`}
+                              >
                                 {chapter.difficulty}
                               </span>
                             </div>
@@ -220,7 +233,8 @@ export default function CampbellBiologyHubPage() {
               </div>
               <h3 className="font-bold text-slate-900 mb-2">Expert Faculty</h3>
               <p className="text-slate-600 text-sm">
-                Taught by Dr. Shekhar Singh with 15+ years of experience in competitive biology coaching.
+                Taught by Dr. Shekhar Singh with 15+ years of experience in competitive biology
+                coaching.
               </p>
             </div>
 
@@ -322,7 +336,8 @@ export default function CampbellBiologyHubPage() {
             Ready to Master Campbell Biology?
           </h2>
           <p className="text-lg text-slate-300 mb-8">
-            Join students from 10+ countries who are preparing for Biology Olympiads and competitive exams with us.
+            Join students from 10+ countries who are preparing for Biology Olympiads and competitive
+            exams with us.
           </p>
 
           <CampbellWhatsAppCTA

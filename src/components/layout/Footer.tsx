@@ -195,7 +195,11 @@ export const Footer = memo(function Footer() {
       href: 'https://www.facebook.com/people/Cerebrum-Biology-Academy/100063640374134/',
       icon: Facebook,
     },
-    { name: 'Instagram', href: 'https://www.instagram.com/cerebrumbiologyacademy/', icon: Instagram },
+    {
+      name: 'Instagram',
+      href: 'https://www.instagram.com/cerebrumbiologyacademy/',
+      icon: Instagram,
+    },
     {
       name: 'YouTube',
       href: 'https://www.youtube.com/channel/UCzTybzV6CmTuestvWo2bRQw',

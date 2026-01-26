@@ -8,14 +8,7 @@ import {
 } from '@/lib/payments/internationalPayments'
 import { CurrencyService, SupportedCurrency } from '@/lib/international/currencyService'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
-import {
-  CreditCard,
-  Banknote,
-  Smartphone,
-  ShieldCheck,
-  Clock,
-  AlertTriangle,
-} from 'lucide-react'
+import { CreditCard, Banknote, Smartphone, ShieldCheck, Clock, AlertTriangle } from 'lucide-react'
 
 interface InternationalPaymentFormProps {
   courseType: keyof typeof CurrencyService.BASE_PRICES

@@ -13,7 +13,10 @@ async function testBurgerMenuOnProduction() {
 
   try {
     // Go to production
-    await page.goto('https://cerebrumbiologyacademy.com', { waitUntil: 'domcontentloaded', timeout: 60000 })
+    await page.goto('https://cerebrumbiologyacademy.com', {
+      waitUntil: 'domcontentloaded',
+      timeout: 60000,
+    })
     console.log('✅ Loaded production homepage')
     await page.waitForTimeout(2000) // Wait for initial render
 

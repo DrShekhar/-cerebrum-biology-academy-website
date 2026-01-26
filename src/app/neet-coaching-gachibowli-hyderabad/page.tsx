@@ -86,7 +86,7 @@ const features = [
     icon: Video,
     title: 'Live Interactive Classes',
     description:
-      'Premium online coaching for IT professionals\' children. No traffic from Gachibowli. Study from home.',
+      "Premium online coaching for IT professionals' children. No traffic from Gachibowli. Study from home.",
   },
   {
     icon: Users,
@@ -111,7 +111,8 @@ const features = [
   {
     icon: Cpu,
     title: 'Tech-Forward Learning',
-    description: 'Digital-native learning platform. App access, recorded lectures, AI-powered practice.',
+    description:
+      'Digital-native learning platform. App access, recorded lectures, AI-powered practice.',
   },
 ]
 
@@ -126,7 +127,7 @@ const faqs = [
   {
     question: 'Why do Gachibowli IT families choose online NEET coaching?',
     answer:
-      'Gachibowli\'s IT professionals understand the value of quality online education. With demanding work schedules and traffic, online coaching saves 2-3 hours daily. Our tech-forward platform provides the same quality as physical coaching with superior flexibility. 94.2% success rate proves effectiveness.',
+      "Gachibowli's IT professionals understand the value of quality online education. With demanding work schedules and traffic, online coaching saves 2-3 hours daily. Our tech-forward platform provides the same quality as physical coaching with superior flexibility. 94.2% success rate proves effectiveness.",
   },
   {
     question: 'Which areas in Gachibowli do you serve?',
@@ -136,10 +137,10 @@ const faqs = [
   {
     question: 'What is the fee for NEET coaching in Gachibowli?',
     answer:
-      'Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year. For Gachibowli\'s IT families, this represents excellent value - premium education at a fraction of physical coaching costs, with zero commute time.',
+      "Our complete NEET Biology course ranges from Rs 24,000 to Rs 68,000 per year. For Gachibowli's IT families, this represents excellent value - premium education at a fraction of physical coaching costs, with zero commute time.",
   },
   {
-    question: 'How does this fit with IT professional parents\' schedules?',
+    question: "How does this fit with IT professional parents' schedules?",
     answer:
       'We offer multiple batch timings including early morning, evening, and weekend intensive options. Parents can monitor progress through our app. Recorded lectures allow students to catch up if they miss a class.',
   },
@@ -236,7 +237,8 @@ export default function NeetCoachingGachibowliPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Premium NEET Biology coaching for IT families. 94.2% success rate, AIIMS faculty,
-              tech-forward platform. Zero ORR traffic. Join 950+ students from Gachibowli IT corridor.
+              tech-forward platform. Zero ORR traffic. Join 950+ students from Gachibowli IT
+              corridor.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -316,9 +318,7 @@ export default function NeetCoachingGachibowliPage() {
                     <h3 className="text-lg font-bold text-gray-900">{locality.name}</h3>
                     <MapPin className="w-5 h-5 text-cyan-600" />
                   </div>
-                  <div className="text-2xl font-bold text-cyan-600 mb-1">
-                    {locality.students}
-                  </div>
+                  <div className="text-2xl font-bold text-cyan-600 mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                   {locality.priority === 'high' && (
                     <div className="mt-2 inline-flex items-center text-xs bg-cyan-100 text-cyan-700 px-2 py-1 rounded-full">

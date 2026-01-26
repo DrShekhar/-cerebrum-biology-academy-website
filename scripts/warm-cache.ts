@@ -26,11 +26,18 @@ async function warmCache() {
       'Genetics',
       'Plant Physiology',
       'Human Physiology',
-      'Ecology'
+      'Ecology',
     ]
 
     for (const topic of topics) {
-      const questions = await QuestionService.getQuestionsByTopic(topic, undefined, 'NEET', 'CLASS_12', 1, 10)
+      const questions = await QuestionService.getQuestionsByTopic(
+        topic,
+        undefined,
+        'NEET',
+        'CLASS_12',
+        1,
+        10
+      )
       for (const question of questions) {
         await QuestionCacheService.cacheQuestion(question)
         cachedItems++
@@ -54,9 +61,27 @@ async function warmCache() {
     // Warm random questions for common configurations
     console.log('\n🎲 Warming random questions cache...')
     const commonConfigs = [
-      { count: 20, topics: ['Cell Biology'], difficulty: ['EASY'], curriculum: 'NEET', grade: 'CLASS_12' },
-      { count: 20, topics: ['Genetics'], difficulty: ['MEDIUM'], curriculum: 'NEET', grade: 'CLASS_12' },
-      { count: 20, topics: ['Human Physiology'], difficulty: ['HARD'], curriculum: 'NEET', grade: 'CLASS_12' }
+      {
+        count: 20,
+        topics: ['Cell Biology'],
+        difficulty: ['EASY'],
+        curriculum: 'NEET',
+        grade: 'CLASS_12',
+      },
+      {
+        count: 20,
+        topics: ['Genetics'],
+        difficulty: ['MEDIUM'],
+        curriculum: 'NEET',
+        grade: 'CLASS_12',
+      },
+      {
+        count: 20,
+        topics: ['Human Physiology'],
+        difficulty: ['HARD'],
+        curriculum: 'NEET',
+        grade: 'CLASS_12',
+      },
     ]
 
     for (const config of commonConfigs) {
@@ -69,7 +94,6 @@ async function warmCache() {
     console.log(`\n🎉 Cache warming completed successfully!`)
     console.log(`   📊 Total items cached: ${cachedItems}`)
     console.log(`   ⚡ Cache is now ready for high-performance access`)
-
   } catch (error) {
     console.error('❌ Cache warming failed:', error)
     console.log('\n🔧 Please check:')
@@ -81,7 +105,7 @@ async function warmCache() {
 }
 
 // Run cache warming
-warmCache().catch(error => {
+warmCache().catch((error) => {
   console.error('Failed to warm cache:', error)
   process.exit(1)
 })

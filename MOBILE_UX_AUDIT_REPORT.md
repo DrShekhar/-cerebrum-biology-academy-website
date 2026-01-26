@@ -11,6 +11,7 @@
 A comprehensive mobile UX audit was conducted on https://cerebrumbiologyacademy.com using a mobile viewport (375x812px). The site is **generally functional** on mobile with good touch target compliance for most interactive elements. However, several **critical layout issues** and **readability concerns** were identified that could impact user experience.
 
 ### Overall Assessment
+
 - ✅ **Good:** Navigation structure, touch targets mostly compliant (44px+)
 - ⚠️ **Needs Attention:** Horizontal overflow, small text sizes, decorative element overflow
 - ❌ **Critical:** Elements exceeding viewport width causing horizontal scroll
@@ -26,6 +27,7 @@ A comprehensive mobile UX audit was conducted on https://cerebrumbiologyacademy.
 **Location:** Multiple pages
 
 #### Issues Found:
+
 1. **Decorative Background Elements** (600px-1387px wide on 375px viewport)
    - Animated gradient divs with `absolute` positioning
    - Classes: `absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-conic`
@@ -36,6 +38,7 @@ A comprehensive mobile UX audit was conducted on https://cerebrumbiologyacademy.
    - Likely caused by padding/border calculations
 
 **File Location:**
+
 ```
 Likely in hero/banner components - check:
 - src/app/page.tsx (homepage)
@@ -43,6 +46,7 @@ Likely in hero/banner components - check:
 ```
 
 **Fix Required:**
+
 ```css
 /* Ensure all positioned elements stay within viewport */
 .hero-decorative-elements {
@@ -58,6 +62,7 @@ Likely in hero/banner components - check:
 ```
 
 **Screenshot Evidence:**
+
 - `homepage-mobile-initial` - Shows decorative overflow
 - All page screenshots show 1px overflow issues
 
@@ -88,6 +93,7 @@ Likely in hero/banner components - check:
    - Accessibility link, acceptable as it's for keyboard users
 
 **File Location:**
+
 ```
 src/components/navigation/BurgerMenu.tsx - ✅ Already compliant (44x44px)
 Footer component - ❌ Phone links too small
@@ -95,6 +101,7 @@ Carousel/Testimonials - ❌ Navigation dots too small
 ```
 
 **Fix Required:**
+
 ```tsx
 // Phone links - add padding
 <a
@@ -140,6 +147,7 @@ Carousel/Testimonials - ❌ Navigation dots too small
    - Class: `text-sm xs:text-base`
 
 **File Locations:**
+
 ```
 src/components/layout/Header.tsx - Logo subtitle
 src/components/ui/Badge.tsx or similar - Badge text
@@ -147,6 +155,7 @@ src/components/ui/Button.tsx - Button text sizing
 ```
 
 **Fix Required:**
+
 ```tsx
 // Update Tailwind classes for mobile-first
 <p className="text-base sm:text-lg"> {/* 16px base instead of 14px */}
@@ -168,12 +177,14 @@ fontSize: {
 **Location:** `/blog/[slug]` pages
 
 **Findings:**
+
 - Email subscription form exists in footer ("Stay Updated")
 - Form is functional with proper input sizing
 - However, no dedicated lead capture form found before footer on blog posts
 - Only standard footer newsletter signup visible
 
 **Screenshot Evidence:**
+
 - `blog-post-mobile-bottom-form` - Shows footer form only
 - `blog-post-mobile-lead-form` - Content area, no prominent lead form
 
@@ -190,6 +201,7 @@ Consider adding a more prominent lead capture CTA mid-article or after article c
 ```
 
 **File Location:**
+
 ```
 src/app/blog/[slug]/page.tsx - Blog post layout
 Create: src/components/blog/LeadCaptureCard.tsx
@@ -202,6 +214,7 @@ Create: src/components/blog/LeadCaptureCard.tsx
 ### 5. Fixed/Sticky Elements - Z-Index Management
 
 **Findings:**
+
 - Header uses `sticky` positioning - ✅ Working correctly
 - Toast container at z-index 20000 - Extremely high
 - Burger menu overlay at z-100, panel at z-101
@@ -210,6 +223,7 @@ Create: src/components/blog/LeadCaptureCard.tsx
 Very high z-index values (20,000) can cause stacking issues and are typically unnecessary.
 
 **File Location:**
+
 ```
 src/components/layout/Header.tsx - sticky header
 src/components/ui/Toast.tsx or notification system - z-20000
@@ -217,6 +231,7 @@ src/components/navigation/BurgerMenu.tsx - z-100/101 (reasonable)
 ```
 
 **Recommendation:**
+
 ```css
 /* Establish z-index scale in globals.css or theme */
 :root {
@@ -241,6 +256,7 @@ src/components/navigation/BurgerMenu.tsx - z-100/101 (reasonable)
 ### 6. Console Warnings
 
 **Findings:**
+
 ```
 [warn] Clerk: Loaded with development keys - should not be in production
 [warn] Clerk: "afterSignInUrl" prop deprecated, use "fallbackRedirectUrl"
@@ -249,12 +265,14 @@ src/components/navigation/BurgerMenu.tsx - z-100/101 (reasonable)
 **Impact:** Development artifacts visible, deprecated API usage
 
 **File Location:**
+
 ```
 Search for: "afterSignInUrl" in src/
 Likely in: src/app/layout.tsx or auth configuration
 ```
 
 **Fix:**
+
 ```tsx
 // Replace deprecated prop
 <ClerkProvider
@@ -275,6 +293,7 @@ When scrolling on homepage, search modal appeared automatically. This might be i
 **Screenshot:** `homepage-mobile-scrolled` shows search modal open
 
 **File Location:**
+
 ```
 src/components/navigation/SearchMenu.tsx
 Check scroll event listeners in header components
@@ -286,11 +305,13 @@ Check scroll event listeners in header components
 
 **Positive Finding:** ✅
 Mobile bottom navigation bar is present and functional with proper touch targets:
+
 - Home, Tests, Progress, Chat, Profile tabs
 - Icons clearly visible
 - Adequate spacing between items
 
 **File Location:**
+
 ```
 src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ```
@@ -300,6 +321,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ## Page-by-Page Breakdown
 
 ### Homepage (/)
+
 - ✅ Hero section loads correctly
 - ✅ CTA buttons visible and accessible
 - ⚠️ Decorative overflow elements (1387px wide)
@@ -308,24 +330,28 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 - ✅ Burger menu functional
 
 **Screenshots:**
+
 - `homepage-mobile-initial` - Initial load
 - `homepage-mobile-scrolled` - After scroll (search modal visible)
 
 ---
 
 ### Blog List (/blog)
+
 - ✅ Hero section with stats (56+ articles, 23M+ reads)
 - ✅ Clean layout, good spacing
 - ✅ Footer email form functional
 - ℹ️ Shows "NaN" for average read time (data issue)
 
 **Screenshots:**
+
 - `blog-mobile-initial` - Blog list hero
 - `blog-mobile-bottom` - Footer with email subscription
 
 ---
 
 ### Blog Post (/blog/[slug])
+
 - ✅ "Back to Blog" navigation present
 - ✅ Category tags visible
 - ✅ Content readable
@@ -334,6 +360,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 - ⚠️ Some small text in content area
 
 **Screenshots:**
+
 - `blog-post-mobile-top` - Article header
 - `blog-post-mobile-lead-form` - Mid-content (table view)
 - `blog-post-mobile-bottom-form` - Footer area
@@ -341,6 +368,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ---
 
 ### Courses (/courses)
+
 - ✅ Hero section clear
 - ✅ Stats cards (5 programs, 306 capacity, etc.)
 - ✅ Course cards well-formatted
@@ -348,12 +376,14 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 - ✅ Tier badges (Pinnacle, Ascent, Pursuit) visible
 
 **Screenshots:**
+
 - `courses-mobile-initial` - Hero
 - `courses-mobile-scrolled` - Course cards
 
 ---
 
 ### Demo Booking (/demo-booking)
+
 - ✅ Clear two-step process indicator
 - ✅ Date picker accessible
 - ✅ Social proof elements (847+ bookings, 4.9/5 rating)
@@ -362,6 +392,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 - ⚠️ Carousel navigation dots too small (12x12px)
 
 **Screenshots:**
+
 - `demo-booking-mobile-initial` - Form and stats
 - `demo-booking-mobile-form` - Benefits section
 
@@ -370,6 +401,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ## Technical Audit Data
 
 ### Viewport Analysis
+
 ```json
 {
   "testedViewport": { "width": 375, "height": 812 },
@@ -379,6 +411,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ```
 
 ### Elements Exceeding Viewport
+
 ```
 1. Decorative gradient div: 1387px (370% overflow)
 2. Background animation div: 1387px (370% overflow)
@@ -387,6 +420,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ```
 
 ### Touch Target Compliance
+
 - **Total Interactive Elements Tested:** 50+
 - **Compliant (≥44px):** ~40 (80%)
 - **Non-Compliant (<44px):** ~10 (20%)
@@ -395,6 +429,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
   - Small text links: 3 instances
 
 ### Font Size Distribution
+
 - **12px:** ~10 elements (badges, labels)
 - **14px:** ~20 elements (buttons, links, descriptions)
 - **16px+:** Majority of body text ✅
@@ -405,18 +440,21 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ## Recommendations Summary
 
 ### Immediate Actions (This Week)
+
 1. **Fix horizontal overflow** - Add `overflow: hidden` to hero containers
 2. **Increase carousel dot sizes** - 12px → 44px minimum
 3. **Fix phone link touch targets** - Add padding to meet 44x44px
 4. **Update deprecated Clerk props** - Remove console warnings
 
 ### Short Term (Next Sprint)
+
 1. **Audit all text sizes** - Ensure minimum 16px for readability
 2. **Normalize z-index scale** - Reduce from 20000 to <1100 range
 3. **Add blog lead capture** - Create prominent CTA in blog posts
 4. **Test "Watch Video" buttons** - Increase width to 44px minimum
 
 ### Long Term (Ongoing)
+
 1. **Establish design system** - Document minimum sizes, z-index scale
 2. **Add mobile-specific tests** - Playwright tests for touch targets
 3. **Implement touch heatmap** - Analytics to identify problem areas
@@ -452,6 +490,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ## Files Requiring Updates
 
 ### Critical
+
 ```
 1. Hero/Background Components
    - src/app/page.tsx
@@ -468,6 +507,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ```
 
 ### High Priority
+
 ```
 4. Typography Configuration
    - tailwind.config.ts
@@ -483,6 +523,7 @@ src/components/layout/MobileBottomNav.tsx - ✅ Well implemented
 ```
 
 ### Medium Priority
+
 ```
 7. Blog Post Template
    - src/app/blog/[slug]/page.tsx
@@ -534,6 +575,7 @@ Use this checklist for future mobile updates:
 ## Appendix: Screenshots
 
 All screenshots saved and referenced in this report:
+
 - `homepage-mobile-initial`
 - `homepage-mobile-scrolled`
 - `blog-mobile-initial`

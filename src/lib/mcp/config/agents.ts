@@ -4,10 +4,7 @@
  * Performance tuning and capability definitions
  */
 
-import {
-  AgentType,
-  AgentCapability,
-} from '../types'
+import { AgentType, AgentCapability } from '../types'
 
 export interface AgentConfigProfile {
   id: string

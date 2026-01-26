@@ -180,7 +180,11 @@ function FeaturedAchieverCard({ achiever }: FeaturedAchieverCardProps) {
         {/* Category & Period */}
         <div className="flex items-center gap-2 mt-4">
           <span
-            className={cn('px-2 py-0.5 rounded-full text-xs font-medium', config.bgColor, config.color)}
+            className={cn(
+              'px-2 py-0.5 rounded-full text-xs font-medium',
+              config.bgColor,
+              config.color
+            )}
           >
             {config.icon} {achiever.category}
           </span>
@@ -261,17 +265,11 @@ function AchieverCard({ achiever }: AchieverCardProps) {
           {/* Footer */}
           <div className="flex items-center justify-between mt-2 text-xs text-gray-500">
             <div className="flex items-center gap-3">
-              {achiever.rank && (
-                <span className="font-medium">
-                  Rank #{achiever.rank}
-                </span>
-              )}
+              {achiever.rank && <span className="font-medium">Rank #{achiever.rank}</span>}
               {achiever.score !== null && (
                 <span className="font-medium text-green-600">{achiever.score}%</span>
               )}
-              {achiever.nominationCount > 0 && (
-                <span>👍 {achiever.nominationCount}</span>
-              )}
+              {achiever.nominationCount > 0 && <span>👍 {achiever.nominationCount}</span>}
             </div>
             {achiever.period && <span>{achiever.period}</span>}
           </div>
@@ -285,7 +283,11 @@ function AchieverCard({ achiever }: AchieverCardProps) {
 // MAIN COMPONENT
 // ============================================
 
-export function WallOfAchievers({ className, showFeaturedOnly = false, limit = 20 }: WallOfAchieversProps) {
+export function WallOfAchievers({
+  className,
+  showFeaturedOnly = false,
+  limit = 20,
+}: WallOfAchieversProps) {
   const [achievers, setAchievers] = useState<Achiever[]>([])
   const [filters, setFilters] = useState<Filters>({ categories: [], periods: [] })
   const [isLoading, setIsLoading] = useState(true)

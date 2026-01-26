@@ -27,10 +27,7 @@ export async function POST(
     const { roomCode } = await params
 
     if (!roomCode || roomCode.length !== 6) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid room code' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Invalid room code' }, { status: 400 })
     }
 
     const authResult = await verifyHostToken(request, roomCode)
@@ -50,17 +47,11 @@ export async function POST(
     })
 
     if (!session) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz session not found' },
-        { status: 404 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz session not found' }, { status: 404 })
     }
 
     if (session.status === 'COMPLETED') {
-      return NextResponse.json(
-        { success: false, error: 'Quiz already ended' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz already ended' }, { status: 400 })
     }
 
     // Calculate winner before update
@@ -96,11 +87,7 @@ export async function POST(
         status: updated.status,
         winner,
         winnerName:
-          winner === 'TEAM_A'
-            ? session.teamAName
-            : winner === 'TEAM_B'
-              ? session.teamBName
-              : 'Tie',
+          winner === 'TEAM_A' ? session.teamAName : winner === 'TEAM_B' ? session.teamBName : 'Tie',
         finalScores: {
           teamA: {
             name: session.teamAName,
@@ -124,9 +111,6 @@ export async function POST(
     })
   } catch (error) {
     console.error('Error ending quiz:', error)
-    return NextResponse.json(
-      { success: false, error: 'Failed to end quiz' },
-      { status: 500 }
-    )
+    return NextResponse.json({ success: false, error: 'Failed to end quiz' }, { status: 500 })
   }
 }

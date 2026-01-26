@@ -1,7 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cleanupExpiredOTPs } from '@/lib/auth/otpCleanup'
 import { logger } from '@/lib/utils'
-import { verifyCronAuth, createCronUnauthorizedResponse, createCronConfigErrorResponse } from '@/lib/auth/cron-auth'
+import {
+  verifyCronAuth,
+  createCronUnauthorizedResponse,
+  createCronConfigErrorResponse,
+} from '@/lib/auth/cron-auth'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'

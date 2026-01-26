@@ -1,26 +1,97 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getAllMetroSlugs, getMetroBySlug } from '@/data/south-delhi-metros'
+import {
+  MapPin,
+  Train,
+  Clock,
+  Phone,
+  ArrowRight,
+  CheckCircle,
+  GraduationCap,
+  Home,
+  ChevronRight,
+} from 'lucide-react'
+import { getAllMetroSlugs, getMetroBySlug, MetroStation } from '@/data/south-delhi-metros'
+import {
+  getAllGurugramMetroSlugs,
+  getGurugramMetroBySlug,
+  GurugramMetroStation,
+} from '@/data/gurugram-metros'
 import { areaDetails } from '@/data/south-delhi-areas'
-import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
-import { MapPin, Train, Clock, Phone, ArrowRight, CheckCircle, GraduationCap, Home, ChevronRight } from 'lucide-react'
+import { gurugramAreaDetails } from '@/data/gurugram-areas'
+import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
 import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
+
+// Combined metro type
+type CombinedMetroStation = (MetroStation | GurugramMetroStation) & {
+  location: 'south-delhi' | 'gurugram'
+}
+
+// Get all metro slugs from both locations
+function getAllCombinedMetroSlugs(): string[] {
+  const southDelhiSlugs = getAllMetroSlugs()
+  const gurugramSlugs = getAllGurugramMetroSlugs()
+  return [...southDelhiSlugs, ...gurugramSlugs]
+}
+
+// Get metro by slug with location detection
+function getCombinedMetroBySlug(slug: string): CombinedMetroStation | undefined {
+  // First check South Delhi
+  const southDelhiMetro = getMetroBySlug(slug)
+  if (southDelhiMetro) {
+    return { ...southDelhiMetro, location: 'south-delhi' }
+  }
+
+  // Then check Gurugram
+  const gurugramMetro = getGurugramMetroBySlug(slug)
+  if (gurugramMetro) {
+    return { ...gurugramMetro, location: 'gurugram' }
+  }
+
+  return undefined
+}
+
+// Get location-specific details
+function getLocationDetails(location: 'south-delhi' | 'gurugram') {
+  if (location === 'gurugram') {
+    return {
+      addressLocality: 'Gurugram',
+      addressRegion: 'Haryana',
+      mainAddress: GURUGRAM_CENTER_METRICS.address,
+      pincode: GURUGRAM_CENTER_METRICS.pincode,
+      areaPagePath: '/neet-coaching-gurugram',
+      areaDetails: gurugramAreaDetails,
+      hubPageLink: '/neet-coaching-gurugram',
+      hubPageName: 'NEET Coaching Gurugram',
+    }
+  }
+  return {
+    addressLocality: 'South Delhi',
+    addressRegion: 'Delhi',
+    mainAddress: CEREBRUM_METRICS.mainAddress,
+    pincode: CEREBRUM_METRICS.pincode,
+    areaPagePath: '/neet-coaching-south-delhi',
+    areaDetails: areaDetails,
+    hubPageLink: '/neet-coaching-south-delhi',
+    hubPageName: 'NEET Coaching South Delhi',
+  }
+}
 
 interface PageProps {
   params: Promise<{ metro: string }>
 }
 
 export async function generateStaticParams() {
-  return getAllMetroSlugs().map((metro) => ({
+  return getAllCombinedMetroSlugs().map((metro) => ({
     metro,
   }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { metro: metroSlug } = await params
-  const metro = getMetroBySlug(metroSlug)
+  const metro = getCombinedMetroBySlug(metroSlug)
 
   if (!metro) {
     return {
@@ -28,8 +99,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     }
   }
 
-  const title = `NEET Coaching Near ${metro.name} Metro | Cerebrum Academy`
-  const description = `Best NEET Biology coaching near ${metro.name} Metro. ${CEREBRUM_METRICS.successRateText} success rate, just ${metro.walkingTime}. Small batches, expert faculty.`
+  const locationName = metro.location === 'gurugram' ? 'Gurugram' : 'South Delhi'
+  const title = `NEET Coaching Near ${metro.name} Metro | ${locationName} | Cerebrum Academy`
+  const description = `Best NEET Biology coaching near ${metro.name} Metro in ${locationName}. ${CEREBRUM_METRICS.successRateText} success rate, just ${metro.walkingTime}. Small batches, expert faculty.`
 
   return {
     title,
@@ -37,9 +109,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     keywords: [
       `NEET coaching near ${metro.name} metro`,
       `NEET coaching ${metro.name} metro`,
-      `Biology coaching near ${metro.name} metro`,
+      `Biology coaching near ${metro.name} metro ${locationName}`,
       `NEET preparation near ${metro.name}`,
       `Medical coaching near ${metro.name} metro`,
+      `NEET coaching ${locationName}`,
       ...metro.nearbyAreas.map((area) => `NEET coaching ${area}`),
     ],
     openGraph: {
@@ -63,16 +136,19 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function MetroLandingPage({ params }: PageProps) {
   const { metro: metroSlug } = await params
-  const metro = getMetroBySlug(metroSlug)
+  const metro = getCombinedMetroBySlug(metroSlug)
 
   if (!metro) {
     notFound()
   }
 
+  const locationDetails = getLocationDetails(metro.location)
+  const locationName = metro.location === 'gurugram' ? 'Gurugram' : 'South Delhi'
+
   const nearbyAreaDetails = metro.nearbyAreas
     .map((areaName) => {
       const slug = areaName.toLowerCase().replace(/\s+/g, '-')
-      return areaDetails[slug]
+      return locationDetails.areaDetails[slug]
     })
     .filter(Boolean)
 
@@ -93,10 +169,10 @@ export default async function MetroLandingPage({ params }: PageProps) {
     parentOrganization: { '@id': organizationId },
     address: {
       '@type': 'PostalAddress',
-      streetAddress: CEREBRUM_METRICS.mainAddress,
-      addressLocality: 'South Delhi',
-      addressRegion: 'Delhi',
-      postalCode: CEREBRUM_METRICS.pincode,
+      streetAddress: locationDetails.mainAddress,
+      addressLocality: locationDetails.addressLocality,
+      addressRegion: locationDetails.addressRegion,
+      postalCode: locationDetails.pincode,
       addressCountry: 'IN',
     },
     geo: {
@@ -167,7 +243,8 @@ export default async function MetroLandingPage({ params }: PageProps) {
           itemOffered: {
             '@type': 'Course',
             name: 'Class 12 Intensive NEET Biology',
-            description: '1-year intensive NEET Biology course with focus on board + NEET integration',
+            description:
+              '1-year intensive NEET Biology course with focus on board + NEET integration',
             provider: { '@id': organizationId },
             educationalLevel: 'Class 12',
             timeRequired: 'P1Y',
@@ -212,8 +289,8 @@ export default async function MetroLandingPage({ params }: PageProps) {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'NEET Coaching South Delhi',
-        item: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi',
+        name: locationDetails.hubPageName,
+        item: `https://cerebrumbiologyacademy.com${locationDetails.hubPageLink}`,
       },
       {
         '@type': 'ListItem',
@@ -391,13 +468,13 @@ export default async function MetroLandingPage({ params }: PageProps) {
     location: [
       {
         '@type': 'Place',
-        name: 'Cerebrum Biology Academy',
+        name: `Cerebrum Biology Academy - ${locationName}`,
         address: {
           '@type': 'PostalAddress',
-          streetAddress: CEREBRUM_METRICS.mainAddress,
-          addressLocality: 'South Delhi',
-          addressRegion: 'Delhi',
-          postalCode: CEREBRUM_METRICS.pincode,
+          streetAddress: locationDetails.mainAddress,
+          addressLocality: locationDetails.addressLocality,
+          addressRegion: locationDetails.addressRegion,
+          postalCode: locationDetails.pincode,
           addressCountry: 'IN',
         },
       },
@@ -448,7 +525,7 @@ export default async function MetroLandingPage({ params }: PageProps) {
     '@id': 'https://cerebrumbiologyacademy.com/#website',
     url: 'https://cerebrumbiologyacademy.com',
     name: 'Cerebrum Biology Academy',
-    description: 'Best NEET Biology Coaching in South Delhi with 94% success rate',
+    description: `Best NEET Biology Coaching in ${locationName} with 94% success rate`,
     publisher: { '@id': organizationId },
     inLanguage: 'en-IN',
     potentialAction: {
@@ -469,15 +546,21 @@ export default async function MetroLandingPage({ params }: PageProps) {
           <div className="max-w-7xl mx-auto">
             <ol className="flex items-center flex-wrap gap-1 text-sm">
               <li className="flex items-center">
-                <Link href="/" className="text-gray-600 hover:text-purple-600 transition-colors flex items-center">
+                <Link
+                  href="/"
+                  className="text-gray-600 hover:text-purple-600 transition-colors flex items-center"
+                >
                   <Home className="w-4 h-4" />
                   <span className="sr-only">Home</span>
                 </Link>
               </li>
               <li className="flex items-center">
                 <ChevronRight className="w-4 h-4 text-gray-400 mx-1" />
-                <Link href="/neet-coaching-south-delhi" className="text-gray-600 hover:text-purple-600 transition-colors">
-                  NEET Coaching South Delhi
+                <Link
+                  href={locationDetails.hubPageLink}
+                  className="text-gray-600 hover:text-purple-600 transition-colors"
+                >
+                  {locationDetails.hubPageName}
                 </Link>
               </li>
               <li className="flex items-center">
@@ -507,7 +590,9 @@ export default async function MetroLandingPage({ params }: PageProps) {
                 NEET Coaching Near <span className="text-yellow-400">{metro.name} Metro</span>
               </h1>
 
-              <p className="hero-description text-lg md:text-xl text-gray-300 mb-4">{metro.description}</p>
+              <p className="hero-description text-lg md:text-xl text-gray-300 mb-4">
+                {metro.description}
+              </p>
 
               <div className="flex items-center justify-center gap-2 text-yellow-400 mb-8">
                 <Clock className="w-5 h-5" />
@@ -554,13 +639,13 @@ export default async function MetroLandingPage({ params }: PageProps) {
                 <ul className="space-y-3">
                   {metro.nearbyAreas.map((area) => {
                     const slug = area.toLowerCase().replace(/\s+/g, '-')
-                    const hasPage = areaDetails[slug]
+                    const hasPage = locationDetails.areaDetails[slug]
                     return (
                       <li key={area} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
                         {hasPage ? (
                           <Link
-                            href={`/neet-coaching-south-delhi/${slug}`}
+                            href={`${locationDetails.areaPagePath}/${slug}`}
                             className="text-purple-600 hover:text-purple-800 font-medium"
                           >
                             {area}
@@ -647,12 +732,12 @@ export default async function MetroLandingPage({ params }: PageProps) {
                 Explore NEET Coaching in Nearby Areas
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
-                {nearbyAreaDetails.slice(0, 3).map((area) => {
+                {nearbyAreaDetails.slice(0, 3).map((area: any) => {
                   const slug = area.name.toLowerCase().replace(/\s+/g, '-')
                   return (
                     <Link
                       key={slug}
-                      href={`/neet-coaching-south-delhi/${slug}`}
+                      href={`${locationDetails.areaPagePath}/${slug}`}
                       className="block bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow"
                     >
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -689,14 +774,14 @@ export default async function MetroLandingPage({ params }: PageProps) {
                   Book Free Demo Class
                 </Button>
               </Link>
-              <Link href="/neet-coaching-south-delhi">
+              <Link href={locationDetails.hubPageLink}>
                 <Button
                   variant="outline"
                   size="xl"
                   className="border-white text-white hover:bg-white hover:text-purple-700"
                 >
                   <ArrowRight className="w-5 h-5 mr-2" />
-                  View All Areas
+                  View All {locationName} Areas
                 </Button>
               </Link>
             </div>

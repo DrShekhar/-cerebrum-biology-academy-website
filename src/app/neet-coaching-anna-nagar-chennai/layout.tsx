@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Anna Nagar Chennai | East, West | Cerebrum Academy',
+  title: 'Best NEET Coaching in Anna Nagar Chennai | East, West | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Anna Nagar, North Chennai. 94.2% success rate, AIIMS faculty. Anna Nagar East, West, Thirumangalam, Mogappair. Fee ₹24,000+. Book free demo!',
   keywords:
@@ -27,6 +26,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function AnnaNagarChennaiCoachingLayout({ children }: { children: React.ReactNode }) {
+export default function AnnaNagarChennaiCoachingLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return <>{children}</>
 }

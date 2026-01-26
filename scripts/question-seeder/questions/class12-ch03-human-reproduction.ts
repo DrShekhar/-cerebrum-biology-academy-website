@@ -20,7 +20,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Testis', 'Epididymis', 'Vas deferens', 'Prostate'],
       correctAnswer: 'Testis',
-      explanation: 'Testes (plural of testis) are the primary male reproductive organs. They produce spermatozoa (spermatogenesis) and secrete testosterone (Leydig cells). NCERT page 42.',
+      explanation:
+        'Testes (plural of testis) are the primary male reproductive organs. They produce spermatozoa (spermatogenesis) and secrete testosterone (Leydig cells). NCERT page 42.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -39,7 +40,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Seminiferous tubules', 'Interstitial space', 'Epididymis', 'Prostate gland'],
       correctAnswer: 'Seminiferous tubules',
-      explanation: 'Sertoli cells (nurse cells) are found in seminiferous tubules. They provide nutrition to developing spermatozoa and secrete inhibin. NCERT page 44.',
+      explanation:
+        'Sertoli cells (nurse cells) are found in seminiferous tubules. They provide nutrition to developing spermatozoa and secrete inhibin. NCERT page 44.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -59,7 +61,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Testosterone', 'Estrogen', 'Progesterone', 'Inhibin'],
       correctAnswer: 'Testosterone',
-      explanation: 'Leydig cells (interstitial cells) are present in the interstitial space between seminiferous tubules. They synthesize and secrete androgens, mainly testosterone. NCERT page 44.',
+      explanation:
+        'Leydig cells (interstitial cells) are present in the interstitial space between seminiferous tubules. They synthesize and secrete androgens, mainly testosterone. NCERT page 44.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -76,9 +79,15 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
     {
       question: 'The head of sperm contains:',
       type: 'MCQ',
-      options: ['Acrosome and nucleus', 'Mitochondria and nucleus', 'Centriole and acrosome', 'Mitochondria and centriole'],
+      options: [
+        'Acrosome and nucleus',
+        'Mitochondria and nucleus',
+        'Centriole and acrosome',
+        'Mitochondria and centriole',
+      ],
       correctAnswer: 'Acrosome and nucleus',
-      explanation: 'The head of sperm contains a haploid nucleus and acrosome. Acrosome is a cap-like structure containing enzymes (hyaluronidase, acrosin) that help in fertilization. NCERT page 47.',
+      explanation:
+        'The head of sperm contains a haploid nucleus and acrosome. Acrosome is a cap-like structure containing enzymes (hyaluronidase, acrosin) that help in fertilization. NCERT page 47.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -97,7 +106,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Mitochondria', 'Acrosome', 'Nucleus', 'Golgi body'],
       correctAnswer: 'Mitochondria',
-      explanation: 'The middle piece of sperm contains mitochondria arranged spirally around the axial filament. Mitochondria provide energy (ATP) for sperm motility. NCERT page 47.',
+      explanation:
+        'The middle piece of sperm contains mitochondria arranged spirally around the axial filament. Mitochondria provide energy (ATP) for sperm motility. NCERT page 47.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -114,9 +124,15 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
     {
       question: 'Spermatogenesis is regulated by:',
       type: 'MCQ',
-      options: ['FSH and testosterone', 'LH and estrogen', 'Progesterone and LH', 'Prolactin and oxytocin'],
+      options: [
+        'FSH and testosterone',
+        'LH and estrogen',
+        'Progesterone and LH',
+        'Prolactin and oxytocin',
+      ],
       correctAnswer: 'FSH and testosterone',
-      explanation: 'Spermatogenesis is regulated by FSH (from anterior pituitary) acting on Sertoli cells, and testosterone (from Leydig cells) acting on germinal epithelium. NCERT page 47.',
+      explanation:
+        'Spermatogenesis is regulated by FSH (from anterior pituitary) acting on Sertoli cells, and testosterone (from Leydig cells) acting on germinal epithelium. NCERT page 47.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -132,9 +148,15 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
     {
       question: 'Seminal plasma is contributed by:',
       type: 'MCQ',
-      options: ['Seminal vesicles, prostate and bulbourethral glands', 'Testis and epididymis only', 'Only prostate gland', 'Only seminal vesicles'],
+      options: [
+        'Seminal vesicles, prostate and bulbourethral glands',
+        'Testis and epididymis only',
+        'Only prostate gland',
+        'Only seminal vesicles',
+      ],
       correctAnswer: 'Seminal vesicles, prostate and bulbourethral glands',
-      explanation: 'Seminal plasma (fluid part of semen) is contributed by seminal vesicles (60%), prostate gland (30%), and bulbourethral glands (10%). It provides nutrition and activation to sperms. NCERT page 45.',
+      explanation:
+        'Seminal plasma (fluid part of semen) is contributed by seminal vesicles (60%), prostate gland (30%), and bulbourethral glands (10%). It provides nutrition and activation to sperms. NCERT page 45.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -152,7 +174,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Epididymis', 'Seminiferous tubules', 'Vas deferens', 'Ejaculatory duct'],
       correctAnswer: 'Epididymis',
-      explanation: 'Sperms produced in seminiferous tubules are immotile. They acquire motility and ability to fertilize during their passage through epididymis (maturation). NCERT page 45.',
+      explanation:
+        'Sperms produced in seminiferous tubules are immotile. They acquire motility and ability to fertilize during their passage through epididymis (maturation). NCERT page 45.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -173,7 +196,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Ovary', 'Uterus', 'Fallopian tube', 'Vagina'],
       correctAnswer: 'Ovary',
-      explanation: 'Ovaries are the primary female reproductive organs. They produce ova (oogenesis) and secrete female sex hormones (estrogen and progesterone). NCERT page 46.',
+      explanation:
+        'Ovaries are the primary female reproductive organs. They produce ova (oogenesis) and secrete female sex hormones (estrogen and progesterone). NCERT page 46.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -192,7 +216,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Infundibulum', 'Ampulla', 'Isthmus', 'Fimbriae'],
       correctAnswer: 'Infundibulum',
-      explanation: 'Infundibulum is the funnel-shaped proximal part of fallopian tube near the ovary. Its edges have finger-like projections called fimbriae that help collect the ovum. NCERT page 46.',
+      explanation:
+        'Infundibulum is the funnel-shaped proximal part of fallopian tube near the ovary. Its edges have finger-like projections called fimbriae that help collect the ovum. NCERT page 46.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -211,7 +236,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Ampulla of fallopian tube', 'Uterus', 'Vagina', 'Isthmus'],
       correctAnswer: 'Ampulla of fallopian tube',
-      explanation: 'Fertilization (fusion of sperm and ovum) normally occurs in the ampulla-isthmus junction of fallopian tube. The fertilized egg then moves to uterus for implantation. NCERT page 51.',
+      explanation:
+        'Fertilization (fusion of sperm and ovum) normally occurs in the ampulla-isthmus junction of fallopian tube. The fertilized egg then moves to uterus for implantation. NCERT page 51.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -230,7 +256,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Endometrium', 'Myometrium', 'Perimetrium', 'Mesometrium'],
       correctAnswer: 'Endometrium',
-      explanation: 'The uterine wall has three layers: perimetrium (outer), myometrium (middle muscular), and endometrium (inner glandular). Endometrium undergoes cyclic changes during menstrual cycle. NCERT page 46.',
+      explanation:
+        'The uterine wall has three layers: perimetrium (outer), myometrium (middle muscular), and endometrium (inner glandular). Endometrium undergoes cyclic changes during menstrual cycle. NCERT page 46.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -250,7 +277,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['4', '2', '1', '8'],
       correctAnswer: '4',
-      explanation: 'One primary spermatocyte (2n) undergoes meiosis I to form two secondary spermatocytes (n), which undergo meiosis II to form four spermatids (n), differentiating into four sperms. NCERT page 47.',
+      explanation:
+        'One primary spermatocyte (2n) undergoes meiosis I to form two secondary spermatocytes (n), which undergo meiosis II to form four spermatids (n), differentiating into four sperms. NCERT page 47.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -269,7 +297,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['1', '2', '4', '8'],
       correctAnswer: '1',
-      explanation: 'One primary oocyte (2n) produces only one functional ovum and three polar bodies. Unequal division ensures most cytoplasm goes to the ovum for future embryo development. NCERT page 48.',
+      explanation:
+        'One primary oocyte (2n) produces only one functional ovum and three polar bodies. Unequal division ensures most cytoplasm goes to the ovum for future embryo development. NCERT page 48.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -289,7 +318,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Fetal development', 'Puberty', 'After marriage', 'After first menstruation'],
       correctAnswer: 'Fetal development',
-      explanation: 'Oogenesis starts during fetal development when oogonia multiply and enter prophase I of meiosis to form primary oocytes. At birth, about 1-2 million primary oocytes are present. NCERT page 48.',
+      explanation:
+        'Oogenesis starts during fetal development when oogonia multiply and enter prophase I of meiosis to form primary oocytes. At birth, about 1-2 million primary oocytes are present. NCERT page 48.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -307,7 +337,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Entry of sperm', 'Ovulation', 'At puberty', 'During fetal life'],
       correctAnswer: 'Entry of sperm',
-      explanation: 'Secondary oocyte is released during ovulation (arrested at metaphase II). It completes meiosis II only when a sperm enters the ovum during fertilization. NCERT page 48.',
+      explanation:
+        'Secondary oocyte is released during ovulation (arrested at metaphase II). It completes meiosis II only when a sperm enters the ovum during fertilization. NCERT page 48.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -327,7 +358,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['28 days', '14 days', '21 days', '35 days'],
       correctAnswer: '28 days',
-      explanation: 'The average menstrual cycle is 28 days (can range from 21-35 days). It includes menstrual phase (3-5 days), follicular phase, ovulatory phase, and luteal phase. NCERT page 49.',
+      explanation:
+        'The average menstrual cycle is 28 days (can range from 21-35 days). It includes menstrual phase (3-5 days), follicular phase, ovulatory phase, and luteal phase. NCERT page 49.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -346,7 +378,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['14th day', '1st day', '28th day', '21st day'],
       correctAnswer: '14th day',
-      explanation: 'In a 28-day cycle, ovulation typically occurs on the 14th day. LH surge triggers ovulation - release of secondary oocyte from Graafian follicle. NCERT page 50.',
+      explanation:
+        'In a 28-day cycle, ovulation typically occurs on the 14th day. LH surge triggers ovulation - release of secondary oocyte from Graafian follicle. NCERT page 50.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -365,7 +398,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Progesterone', 'Estrogen only', 'FSH', 'LH'],
       correctAnswer: 'Progesterone',
-      explanation: 'Corpus luteum (formed from ruptured Graafian follicle after ovulation) secretes large amounts of progesterone and some estrogen. Progesterone prepares endometrium for implantation. NCERT page 50.',
+      explanation:
+        'Corpus luteum (formed from ruptured Graafian follicle after ovulation) secretes large amounts of progesterone and some estrogen. Progesterone prepares endometrium for implantation. NCERT page 50.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -384,7 +418,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['LH surge', 'FSH', 'Progesterone', 'Estrogen'],
       correctAnswer: 'LH surge',
-      explanation: 'A sudden surge of LH (luteinizing hormone) from anterior pituitary triggers ovulation - release of secondary oocyte from mature Graafian follicle on 14th day. NCERT page 50.',
+      explanation:
+        'A sudden surge of LH (luteinizing hormone) from anterior pituitary triggers ovulation - release of secondary oocyte from mature Graafian follicle on 14th day. NCERT page 50.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -400,9 +435,15 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
     {
       question: 'Menstruation occurs due to:',
       type: 'MCQ',
-      options: ['Withdrawal of progesterone and estrogen', 'Increase in progesterone', 'LH surge', 'FSH increase'],
+      options: [
+        'Withdrawal of progesterone and estrogen',
+        'Increase in progesterone',
+        'LH surge',
+        'FSH increase',
+      ],
       correctAnswer: 'Withdrawal of progesterone and estrogen',
-      explanation: 'If fertilization does not occur, corpus luteum degenerates. The sudden drop in progesterone and estrogen levels causes breakdown of endometrium, leading to menstruation. NCERT page 50.',
+      explanation:
+        'If fertilization does not occur, corpus luteum degenerates. The sudden drop in progesterone and estrogen levels causes breakdown of endometrium, leading to menstruation. NCERT page 50.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -420,7 +461,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Follicular phase', 'Luteal phase', 'Secretory phase', 'Menstrual phase'],
       correctAnswer: 'Follicular phase',
-      explanation: 'The proliferative phase (days 6-13) is also called follicular phase. During this phase, follicles develop under FSH influence and endometrium proliferates under estrogen influence. NCERT page 50.',
+      explanation:
+        'The proliferative phase (days 6-13) is also called follicular phase. During this phase, follicles develop under FSH influence and endometrium proliferates under estrogen influence. NCERT page 50.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -440,7 +482,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Penetrate zona pellucida', 'Swim faster', 'Find the ovum', 'Survive longer'],
       correctAnswer: 'Penetrate zona pellucida',
-      explanation: 'Acrosomal reaction releases enzymes (hyaluronidase, acrosin) that help sperm penetrate through corona radiata and zona pellucida of the ovum. NCERT page 51.',
+      explanation:
+        'Acrosomal reaction releases enzymes (hyaluronidase, acrosin) that help sperm penetrate through corona radiata and zona pellucida of the ovum. NCERT page 51.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -458,7 +501,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Cortical reaction', 'Acrosomal reaction', 'Capacitation', 'Spermiation'],
       correctAnswer: 'Cortical reaction',
-      explanation: 'After one sperm enters, cortical granules release their contents, causing zona pellucida to harden (zona reaction). This prevents entry of additional sperms (polyspermy block). NCERT page 51.',
+      explanation:
+        'After one sperm enters, cortical granules release their contents, causing zona pellucida to harden (zona reaction). This prevents entry of additional sperms (polyspermy block). NCERT page 51.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -476,7 +520,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['7th day', '1st day', '14th day', '21st day'],
       correctAnswer: '7th day',
-      explanation: 'Blastocyst implants in the endometrium of uterus about 7 days after fertilization. The trophoblast cells help in implantation and later form placenta. NCERT page 52.',
+      explanation:
+        'Blastocyst implants in the endometrium of uterus about 7 days after fertilization. The trophoblast cells help in implantation and later form placenta. NCERT page 52.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -495,7 +540,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Chorionic villi', 'Fimbriae', 'Microvilli', 'Villi'],
       correctAnswer: 'Chorionic villi',
-      explanation: 'Chorionic villi are finger-like projections of the chorion (formed from trophoblast) that penetrate the endometrium. They form the fetal part of placenta. NCERT page 52.',
+      explanation:
+        'Chorionic villi are finger-like projections of the chorion (formed from trophoblast) that penetrate the endometrium. They form the fetal part of placenta. NCERT page 52.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -515,7 +561,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Trophoblast/Chorion', 'Corpus luteum', 'Anterior pituitary', 'Hypothalamus'],
       correctAnswer: 'Trophoblast/Chorion',
-      explanation: 'Human chorionic gonadotropin (hCG) is secreted by the trophoblast (later chorion). It maintains corpus luteum in early pregnancy. Detection of hCG in urine confirms pregnancy. NCERT page 52.',
+      explanation:
+        'Human chorionic gonadotropin (hCG) is secreted by the trophoblast (later chorion). It maintains corpus luteum in early pregnancy. Detection of hCG in urine confirms pregnancy. NCERT page 52.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -534,7 +581,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Umbilical cord', 'Amnion', 'Chorion', 'Yolk sac'],
       correctAnswer: 'Umbilical cord',
-      explanation: 'The umbilical cord connects the placenta to the developing embryo/fetus. It contains two umbilical arteries and one umbilical vein for exchange of materials. NCERT page 53.',
+      explanation:
+        'The umbilical cord connects the placenta to the developing embryo/fetus. It contains two umbilical arteries and one umbilical vein for exchange of materials. NCERT page 53.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -552,7 +600,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['FSH', 'hCG', 'hPL', 'Estrogen'],
       correctAnswer: 'FSH',
-      explanation: 'Placenta secretes hCG, hPL (human placental lactogen), estrogen, progesterone, and relaxin. FSH is secreted by anterior pituitary, not by placenta. NCERT page 53.',
+      explanation:
+        'Placenta secretes hCG, hPL (human placental lactogen), estrogen, progesterone, and relaxin. FSH is secreted by anterior pituitary, not by placenta. NCERT page 53.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -570,7 +619,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Organogenesis', 'Gastrulation', 'Cleavage', 'Implantation'],
       correctAnswer: 'Organogenesis',
-      explanation: 'Organogenesis is the process of organ formation from germ layers. By the end of first trimester (12 weeks), most organs are formed. The embryo is then called fetus. NCERT page 54.',
+      explanation:
+        'Organogenesis is the process of organ formation from germ layers. By the end of first trimester (12 weeks), most organs are formed. The embryo is then called fetus. NCERT page 54.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -588,7 +638,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['9 months (266 days)', '7 months', '12 months', '6 months'],
       correctAnswer: '9 months (266 days)',
-      explanation: 'Human pregnancy (gestation period) lasts about 9 months or 266 days from fertilization (280 days or 40 weeks from last menstrual period). NCERT page 54.',
+      explanation:
+        'Human pregnancy (gestation period) lasts about 9 months or 266 days from fertilization (280 days or 40 weeks from last menstrual period). NCERT page 54.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -608,7 +659,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Oxytocin', 'Prolactin', 'FSH', 'Progesterone'],
       correctAnswer: 'Oxytocin',
-      explanation: 'Parturition (childbirth) is induced by oxytocin released from posterior pituitary. Oxytocin causes strong uterine contractions leading to delivery of baby. NCERT page 55.',
+      explanation:
+        'Parturition (childbirth) is induced by oxytocin released from posterior pituitary. Oxytocin causes strong uterine contractions leading to delivery of baby. NCERT page 55.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -627,7 +679,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Ovary and placenta', 'Anterior pituitary', 'Posterior pituitary', 'Adrenal gland'],
       correctAnswer: 'Ovary and placenta',
-      explanation: 'Relaxin is secreted by ovary and placenta during pregnancy. It relaxes pelvic ligaments and dilates cervix to facilitate parturition. NCERT page 55.',
+      explanation:
+        'Relaxin is secreted by ovary and placenta during pregnancy. It relaxes pelvic ligaments and dilates cervix to facilitate parturition. NCERT page 55.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -643,9 +696,15 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
     {
       question: 'Colostrum is:',
       type: 'MCQ',
-      options: ['First milk rich in antibodies', 'Normal breast milk', 'Formula milk', 'Artificial milk'],
+      options: [
+        'First milk rich in antibodies',
+        'Normal breast milk',
+        'Formula milk',
+        'Artificial milk',
+      ],
       correctAnswer: 'First milk rich in antibodies',
-      explanation: 'Colostrum is the yellowish milk produced in first few days after delivery. It is rich in antibodies (IgA), proteins, and provides passive immunity to newborn. NCERT page 55.',
+      explanation:
+        'Colostrum is the yellowish milk produced in first few days after delivery. It is rich in antibodies (IgA), proteins, and provides passive immunity to newborn. NCERT page 55.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -663,7 +722,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Milk production', 'Milk ejection', 'Uterine contraction', 'Ovulation'],
       correctAnswer: 'Milk production',
-      explanation: 'Prolactin from anterior pituitary stimulates milk production (lactogenesis) in mammary glands. Oxytocin causes milk ejection (let-down reflex). NCERT page 55.',
+      explanation:
+        'Prolactin from anterior pituitary stimulates milk production (lactogenesis) in mammary glands. Oxytocin causes milk ejection (let-down reflex). NCERT page 55.',
       difficulty: 'EASY',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -683,7 +743,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Female reproductive tract', 'Male reproductive tract', 'Testis', 'Epididymis'],
       correctAnswer: 'Female reproductive tract',
-      explanation: 'Capacitation is the final maturation of sperm that occurs in female reproductive tract. It involves removal of cholesterol coat and activation of enzymes for acrosomal reaction. NCERT page 51.',
+      explanation:
+        'Capacitation is the final maturation of sperm that occurs in female reproductive tract. It involves removal of cholesterol coat and activation of enzymes for acrosomal reaction. NCERT page 51.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -701,7 +762,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Amnion', 'Chorion', 'Allantois', 'Yolk sac'],
       correctAnswer: 'Amnion',
-      explanation: 'Amnion is the innermost embryonic membrane that surrounds the embryo. It contains amniotic fluid that protects the embryo from desiccation and mechanical shock. NCERT page 53.',
+      explanation:
+        'Amnion is the innermost embryonic membrane that surrounds the embryo. It contains amniotic fluid that protects the embryo from desiccation and mechanical shock. NCERT page 53.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -719,7 +781,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Quickening', 'Lightening', 'Engagement', 'Effacement'],
       correctAnswer: 'Quickening',
-      explanation: 'Quickening is the first fetal movement felt by the mother, usually around 16-20 weeks of pregnancy. It indicates active fetal development. NCERT page 54.',
+      explanation:
+        'Quickening is the first fetal movement felt by the mother, usually around 16-20 weeks of pregnancy. It indicates active fetal development. NCERT page 54.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -737,7 +800,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Ectoderm', 'Mesoderm', 'Endoderm', 'All three'],
       correctAnswer: 'Ectoderm',
-      explanation: 'Ectoderm (outermost germ layer) gives rise to nervous system, epidermis, hair, nails, and sense organs. Neural tube forms from ectoderm by neurulation. NCERT page 54.',
+      explanation:
+        'Ectoderm (outermost germ layer) gives rise to nervous system, epidermis, hair, nails, and sense organs. Neural tube forms from ectoderm by neurulation. NCERT page 54.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -755,7 +819,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Mesoderm', 'Ectoderm', 'Endoderm', 'Trophoblast'],
       correctAnswer: 'Mesoderm',
-      explanation: 'Mesoderm (middle germ layer) gives rise to muscles, skeleton, circulatory system, excretory system, and reproductive system. NCERT page 54.',
+      explanation:
+        'Mesoderm (middle germ layer) gives rise to muscles, skeleton, circulatory system, excretory system, and reproductive system. NCERT page 54.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -773,7 +838,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Endoderm', 'Ectoderm', 'Mesoderm', 'Chorion'],
       correctAnswer: 'Endoderm',
-      explanation: 'Endoderm (innermost germ layer) gives rise to the lining of alimentary canal, respiratory tract, and associated glands like liver, pancreas, thyroid, etc. NCERT page 54.',
+      explanation:
+        'Endoderm (innermost germ layer) gives rise to the lining of alimentary canal, respiratory tract, and associated glands like liver, pancreas, thyroid, etc. NCERT page 54.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -792,7 +858,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Chorion and uterine tissue', 'Amnion', 'Yolk sac', 'Allantois only'],
       correctAnswer: 'Chorion and uterine tissue',
-      explanation: 'Placenta has two parts: fetal part (chorion with chorionic villi) and maternal part (uterine endometrium). Together they form the functional placenta. NCERT page 53.',
+      explanation:
+        'Placenta has two parts: fetal part (chorion with chorionic villi) and maternal part (uterine endometrium). Together they form the functional placenta. NCERT page 53.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',
@@ -810,7 +877,8 @@ export const chapter3Class12Questions: ChapterQuestionSet = {
       type: 'MCQ',
       options: ['Production of FSH', 'Gas exchange', 'Nutrient transfer', 'Hormone production'],
       correctAnswer: 'Production of FSH',
-      explanation: 'Placenta performs gas exchange, nutrient transfer, waste removal, and produces hormones (hCG, hPL, estrogen, progesterone). FSH is produced by anterior pituitary, not placenta. NCERT page 53.',
+      explanation:
+        'Placenta performs gas exchange, nutrient transfer, waste removal, and produces hormones (hCG, hPL, estrogen, progesterone). FSH is produced by anterior pituitary, not placenta. NCERT page 53.',
       difficulty: 'MEDIUM',
       category: 'PRACTICE',
       topic: 'Human Reproduction',

@@ -69,18 +69,42 @@ interface PaymentSummary {
 type EnquiryCategory = 'INSTALLMENT' | 'SCHOLARSHIP' | 'REFUND' | 'PAYMENT_ISSUE' | 'OTHER'
 
 const enquiryCategories: { value: EnquiryCategory; label: string; description: string }[] = [
-  { value: 'INSTALLMENT', label: 'Installment Query', description: 'Questions about payment schedule' },
-  { value: 'SCHOLARSHIP', label: 'Scholarship', description: 'Apply or enquire about scholarships' },
+  {
+    value: 'INSTALLMENT',
+    label: 'Installment Query',
+    description: 'Questions about payment schedule',
+  },
+  {
+    value: 'SCHOLARSHIP',
+    label: 'Scholarship',
+    description: 'Apply or enquire about scholarships',
+  },
   { value: 'REFUND', label: 'Refund Request', description: 'Request refund or cancellation' },
   { value: 'PAYMENT_ISSUE', label: 'Payment Issue', description: 'Problem with a payment' },
   { value: 'OTHER', label: 'Other', description: 'General fee enquiry' },
 ]
 
 const scholarships = [
-  { title: 'Merit Scholarship', discount: 'Up to 25%', criteria: 'Based on previous academic performance' },
-  { title: 'Early Bird Discount', discount: 'Up to 15%', criteria: 'Register 2 months before course start' },
-  { title: 'Sibling Discount', discount: 'Up to 10%', criteria: 'Multiple enrollments from same family' },
-  { title: 'Referral Bonus', discount: 'Up to 5%', criteria: 'Refer a friend and both get discount' },
+  {
+    title: 'Merit Scholarship',
+    discount: 'Up to 25%',
+    criteria: 'Based on previous academic performance',
+  },
+  {
+    title: 'Early Bird Discount',
+    discount: 'Up to 15%',
+    criteria: 'Register 2 months before course start',
+  },
+  {
+    title: 'Sibling Discount',
+    discount: 'Up to 10%',
+    criteria: 'Multiple enrollments from same family',
+  },
+  {
+    title: 'Referral Bonus',
+    discount: 'Up to 5%',
+    criteria: 'Refer a friend and both get discount',
+  },
 ]
 
 export default function StudentFeesPage() {
@@ -251,7 +275,9 @@ export default function StudentFeesPage() {
                   Dashboard
                 </Button>
               </div>
-              <h1 className="text-2xl md:text-3xl font-bold text-gray-900">Fee Details & Enquiry</h1>
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Fee Details & Enquiry
+              </h1>
               <p className="text-gray-600 mt-1">
                 View your fee structure, payment schedule, and raise enquiries
               </p>
@@ -333,8 +359,8 @@ export default function StudentFeesPage() {
                       <div className="flex-1">
                         <h3 className="font-semibold text-red-800">Overdue Payment Alert</h3>
                         <p className="text-sm text-red-700 mt-1">
-                          You have {formatCurrency(summary.totalOverdue)} in overdue payments. Please
-                          clear these to avoid any service interruption.
+                          You have {formatCurrency(summary.totalOverdue)} in overdue payments.
+                          Please clear these to avoid any service interruption.
                         </p>
                         <div className="mt-3 flex gap-2">
                           <Link href="/student/payments">
@@ -422,7 +448,9 @@ export default function StudentFeesPage() {
                     <div className="p-3 bg-green-50 rounded-lg">
                       <div className="flex items-center gap-2 text-green-700">
                         <Percent className="w-4 h-4" />
-                        <span className="text-sm font-medium">0% Processing Fee on all payments</span>
+                        <span className="text-sm font-medium">
+                          0% Processing Fee on all payments
+                        </span>
                       </div>
                     </div>
                     <Link href="/student/payments">
@@ -441,7 +469,8 @@ export default function StudentFeesPage() {
                     <div>
                       <h3 className="text-xl font-semibold mb-2">Need Help with Fees?</h3>
                       <p className="text-blue-100">
-                        Our counselors are available to discuss payment plans and financial assistance.
+                        Our counselors are available to discuss payment plans and financial
+                        assistance.
                       </p>
                     </div>
                     <div className="flex gap-3">
@@ -486,100 +515,106 @@ export default function StudentFeesPage() {
                   </CardContent>
                 </Card>
               ) : (
-                Object.entries(groupedInstallments).map(([planName, { plan, installments: planInstallments }]) => (
-                  <Card key={planName}>
-                    <CardHeader>
-                      <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <CardTitle className="text-lg">{planName}</CardTitle>
+                Object.entries(groupedInstallments).map(
+                  ([planName, { plan, installments: planInstallments }]) => (
+                    <Card key={planName}>
+                      <CardHeader>
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                          <CardTitle className="text-lg">{planName}</CardTitle>
+                          {plan && (
+                            <div className="flex items-center gap-4 text-sm">
+                              <span className="text-gray-500">
+                                Total:{' '}
+                                <span className="font-semibold text-gray-900">
+                                  {formatCurrency(plan.totalFee)}
+                                </span>
+                              </span>
+                              <span className="text-green-600">
+                                Paid: {formatCurrency(plan.amountPaid)}
+                              </span>
+                              <span className="text-orange-600">
+                                Due: {formatCurrency(plan.amountDue)}
+                              </span>
+                            </div>
+                          )}
+                        </div>
                         {plan && (
-                          <div className="flex items-center gap-4 text-sm">
-                            <span className="text-gray-500">
-                              Total: <span className="font-semibold text-gray-900">{formatCurrency(plan.totalFee)}</span>
-                            </span>
-                            <span className="text-green-600">
-                              Paid: {formatCurrency(plan.amountPaid)}
-                            </span>
-                            <span className="text-orange-600">
-                              Due: {formatCurrency(plan.amountDue)}
-                            </span>
+                          <div className="mt-3">
+                            <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
+                              <div
+                                className="h-full bg-green-500 transition-all duration-500"
+                                style={{
+                                  width: `${(plan.amountPaid / plan.totalFee) * 100}%`,
+                                }}
+                              />
+                            </div>
+                            <p className="text-xs text-gray-500 mt-1">
+                              {((plan.amountPaid / plan.totalFee) * 100).toFixed(0)}% paid
+                            </p>
                           </div>
                         )}
-                      </div>
-                      {plan && (
-                        <div className="mt-3">
-                          <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                            <div
-                              className="h-full bg-green-500 transition-all duration-500"
-                              style={{
-                                width: `${(plan.amountPaid / plan.totalFee) * 100}%`,
-                              }}
-                            />
-                          </div>
-                          <p className="text-xs text-gray-500 mt-1">
-                            {((plan.amountPaid / plan.totalFee) * 100).toFixed(0)}% paid
-                          </p>
-                        </div>
-                      )}
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {planInstallments
-                          .sort((a, b) => a.installmentNumber - b.installmentNumber)
-                          .map((installment) => {
-                            const status = getInstallmentStatus(installment)
-                            const StatusIcon = status.icon
-                            return (
-                              <div
-                                key={installment.id}
-                                className={cn(
-                                  'flex items-center justify-between p-4 rounded-lg border',
-                                  installment.status === 'OVERDUE' ||
-                                  (installment.status === 'PENDING' && isBefore(new Date(installment.dueDate), new Date()))
-                                    ? 'border-red-200 bg-red-50'
-                                    : 'border-gray-200 bg-gray-50'
-                                )}
-                              >
-                                <div className="flex items-center gap-4">
-                                  <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
-                                    <span className="font-semibold text-gray-700">
-                                      {installment.installmentNumber}
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-3">
+                          {planInstallments
+                            .sort((a, b) => a.installmentNumber - b.installmentNumber)
+                            .map((installment) => {
+                              const status = getInstallmentStatus(installment)
+                              const StatusIcon = status.icon
+                              return (
+                                <div
+                                  key={installment.id}
+                                  className={cn(
+                                    'flex items-center justify-between p-4 rounded-lg border',
+                                    installment.status === 'OVERDUE' ||
+                                      (installment.status === 'PENDING' &&
+                                        isBefore(new Date(installment.dueDate), new Date()))
+                                      ? 'border-red-200 bg-red-50'
+                                      : 'border-gray-200 bg-gray-50'
+                                  )}
+                                >
+                                  <div className="flex items-center gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                                      <span className="font-semibold text-gray-700">
+                                        {installment.installmentNumber}
+                                      </span>
+                                    </div>
+                                    <div>
+                                      <p className="font-medium text-gray-900">
+                                        Installment {installment.installmentNumber}
+                                      </p>
+                                      <p className="text-sm text-gray-500">
+                                        Due: {format(new Date(installment.dueDate), 'MMM d, yyyy')}
+                                        {installment.paidAt && (
+                                          <span className="ml-2 text-green-600">
+                                            • Paid {format(new Date(installment.paidAt), 'MMM d')}
+                                          </span>
+                                        )}
+                                      </p>
+                                    </div>
+                                  </div>
+                                  <div className="flex items-center gap-4">
+                                    <span className="font-semibold text-gray-900">
+                                      {formatCurrency(installment.amount)}
+                                    </span>
+                                    <span
+                                      className={cn(
+                                        'flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium',
+                                        status.color
+                                      )}
+                                    >
+                                      <StatusIcon className="w-3 h-3" />
+                                      {status.label}
                                     </span>
                                   </div>
-                                  <div>
-                                    <p className="font-medium text-gray-900">
-                                      Installment {installment.installmentNumber}
-                                    </p>
-                                    <p className="text-sm text-gray-500">
-                                      Due: {format(new Date(installment.dueDate), 'MMM d, yyyy')}
-                                      {installment.paidAt && (
-                                        <span className="ml-2 text-green-600">
-                                          • Paid {format(new Date(installment.paidAt), 'MMM d')}
-                                        </span>
-                                      )}
-                                    </p>
-                                  </div>
                                 </div>
-                                <div className="flex items-center gap-4">
-                                  <span className="font-semibold text-gray-900">
-                                    {formatCurrency(installment.amount)}
-                                  </span>
-                                  <span
-                                    className={cn(
-                                      'flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium',
-                                      status.color
-                                    )}
-                                  >
-                                    <StatusIcon className="w-3 h-3" />
-                                    {status.label}
-                                  </span>
-                                </div>
-                              </div>
-                            )
-                          })}
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))
+                              )
+                            })}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  )
+                )
               )}
             </motion.div>
           )}
@@ -625,7 +660,10 @@ export default function StudentFeesPage() {
                       </div>
 
                       <div>
-                        <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
+                        <label
+                          htmlFor="subject"
+                          className="block text-sm font-medium text-gray-700 mb-1"
+                        >
                           Subject
                         </label>
                         <Input
@@ -638,7 +676,10 @@ export default function StudentFeesPage() {
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                        <label
+                          htmlFor="message"
+                          className="block text-sm font-medium text-gray-700 mb-1"
+                        >
                           Message
                         </label>
                         <Textarea
@@ -649,7 +690,9 @@ export default function StudentFeesPage() {
                           rows={5}
                           maxLength={1000}
                         />
-                        <p className="text-xs text-gray-500 mt-1">{enquiryMessage.length}/1000 characters</p>
+                        <p className="text-xs text-gray-500 mt-1">
+                          {enquiryMessage.length}/1000 characters
+                        </p>
                       </div>
 
                       <div className="flex justify-end gap-3">
@@ -666,7 +709,12 @@ export default function StudentFeesPage() {
                         </Button>
                         <Button
                           type="submit"
-                          disabled={isSubmitting || !enquiryCategory || !enquirySubject.trim() || !enquiryMessage.trim()}
+                          disabled={
+                            isSubmitting ||
+                            !enquiryCategory ||
+                            !enquirySubject.trim() ||
+                            !enquiryMessage.trim()
+                          }
                         >
                           {isSubmitting ? (
                             'Submitting...'
@@ -722,9 +770,15 @@ export default function StudentFeesPage() {
                   </CardHeader>
                   <CardContent className="space-y-3">
                     {[
-                      { q: 'Can I pay in installments?', a: 'Yes, flexible EMI options available.' },
+                      {
+                        q: 'Can I pay in installments?',
+                        a: 'Yes, flexible EMI options available.',
+                      },
                       { q: 'What if I miss a payment?', a: 'Contact us for extension options.' },
-                      { q: 'Are scholarships available?', a: 'Yes, merit and need-based scholarships.' },
+                      {
+                        q: 'Are scholarships available?',
+                        a: 'Yes, merit and need-based scholarships.',
+                      },
                       { q: 'Is there a refund policy?', a: 'Yes, pro-rata refund within 30 days.' },
                     ].map((faq, index) => (
                       <div key={index} className="p-3 bg-gray-50 rounded-lg">

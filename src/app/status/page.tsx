@@ -3,12 +3,8 @@ export default function StatusPage() {
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-green-600 mb-4">
-            ✅ Platform Status: ACTIVE
-          </h1>
-          <p className="text-gray-600 mb-6">
-            Cerebrum Biology Academy - AI Education Platform
-          </p>
+          <h1 className="text-3xl font-bold text-green-600 mb-4">✅ Platform Status: ACTIVE</h1>
+          <p className="text-gray-600 mb-6">Cerebrum Biology Academy - AI Education Platform</p>
 
           <div className="space-y-4 text-left">
             <div className="flex justify-between items-center p-3 bg-green-50 rounded">
@@ -38,13 +34,22 @@ export default function StatusPage() {
               <a href="/" className="p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors">
                 🏠 Homepage
               </a>
-              <a href="/courses" className="p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors">
+              <a
+                href="/courses"
+                className="p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors"
+              >
                 📚 Courses
               </a>
-              <a href="/faculty" className="p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors">
+              <a
+                href="/faculty"
+                className="p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors"
+              >
                 👨‍🏫 Faculty
               </a>
-              <a href="/success-stories" className="p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors">
+              <a
+                href="/success-stories"
+                className="p-2 bg-blue-50 rounded hover:bg-blue-100 transition-colors"
+              >
                 🏆 Success Stories
               </a>
             </div>

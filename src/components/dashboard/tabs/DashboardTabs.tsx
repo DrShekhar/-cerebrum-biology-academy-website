@@ -28,9 +28,7 @@ export function DashboardTabs({
   swipeHandlers = {},
 }: DashboardTabsProps) {
   return (
-    <div
-      className="bg-white shadow-sm border-b sticky top-0 z-40"
-    >
+    <div className="bg-white shadow-sm border-b sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
         <button
           onClick={onPrevious}

@@ -63,14 +63,18 @@ interface WorksheetListProps {
 // CONFIG
 // ============================================
 
-const difficultyConfig: Record<DifficultyLevel, { label: string; color: string; bgColor: string }> = {
-  EASY: { label: 'Easy', color: 'text-green-700', bgColor: 'bg-green-100' },
-  MEDIUM: { label: 'Medium', color: 'text-yellow-700', bgColor: 'bg-yellow-100' },
-  HARD: { label: 'Hard', color: 'text-orange-700', bgColor: 'bg-orange-100' },
-  EXPERT: { label: 'Expert', color: 'text-red-700', bgColor: 'bg-red-100' },
-}
+const difficultyConfig: Record<DifficultyLevel, { label: string; color: string; bgColor: string }> =
+  {
+    EASY: { label: 'Easy', color: 'text-green-700', bgColor: 'bg-green-100' },
+    MEDIUM: { label: 'Medium', color: 'text-yellow-700', bgColor: 'bg-yellow-100' },
+    HARD: { label: 'Hard', color: 'text-orange-700', bgColor: 'bg-orange-100' },
+    EXPERT: { label: 'Expert', color: 'text-red-700', bgColor: 'bg-red-100' },
+  }
 
-const statusConfig: Record<SubmissionStatus, { label: string; icon: string; color: string; bgColor: string }> = {
+const statusConfig: Record<
+  SubmissionStatus,
+  { label: string; icon: string; color: string; bgColor: string }
+> = {
   NOT_STARTED: { label: 'Not Started', icon: '📄', color: 'text-gray-600', bgColor: 'bg-gray-100' },
   IN_PROGRESS: { label: 'In Progress', icon: '✏️', color: 'text-blue-600', bgColor: 'bg-blue-100' },
   SUBMITTED: { label: 'Submitted', icon: '📤', color: 'text-purple-600', bgColor: 'bg-purple-100' },
@@ -257,7 +261,9 @@ export function WorksheetList({ className, onSelectWorksheet }: WorksheetListPro
   const [stats, setStats] = useState<WorksheetStats | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [filter, setFilter] = useState<'all' | 'pending' | 'in_progress' | 'submitted' | 'graded'>('all')
+  const [filter, setFilter] = useState<'all' | 'pending' | 'in_progress' | 'submitted' | 'graded'>(
+    'all'
+  )
 
   useEffect(() => {
     fetchWorksheets()

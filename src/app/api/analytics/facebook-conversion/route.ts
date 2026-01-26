@@ -51,9 +51,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Get client IP and user agent for better matching
-    const clientIp = request.headers.get('x-forwarded-for')?.split(',')[0] ||
-                     request.headers.get('x-real-ip') ||
-                     'unknown'
+    const clientIp =
+      request.headers.get('x-forwarded-for')?.split(',')[0] ||
+      request.headers.get('x-real-ip') ||
+      'unknown'
     const userAgent = request.headers.get('user-agent') || ''
 
     // Build the event data
@@ -73,28 +74,22 @@ export async function POST(request: NextRequest) {
     }
 
     // Send to Facebook Conversion API
-    const fbResponse = await fetch(
-      `https://graph.facebook.com/v18.0/${FB_PIXEL_ID}/events`,
-      {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          data: [eventData],
-          access_token: FB_ACCESS_TOKEN,
-          ...(FB_TEST_EVENT_CODE && { test_event_code: FB_TEST_EVENT_CODE }),
-        }),
-      }
-    )
+    const fbResponse = await fetch(`https://graph.facebook.com/v18.0/${FB_PIXEL_ID}/events`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        data: [eventData],
+        access_token: FB_ACCESS_TOKEN,
+        ...(FB_TEST_EVENT_CODE && { test_event_code: FB_TEST_EVENT_CODE }),
+      }),
+    })
 
     if (!fbResponse.ok) {
       const errorData = await fbResponse.json()
       console.error('[Facebook Conversion API] Error:', errorData)
-      return NextResponse.json(
-        { error: 'Facebook API error', details: errorData },
-        { status: 502 }
-      )
+      return NextResponse.json({ error: 'Facebook API error', details: errorData }, { status: 502 })
     }
 
     const result = await fbResponse.json()
@@ -107,9 +102,6 @@ export async function POST(request: NextRequest) {
     })
   } catch (error) {
     console.error('[Facebook Conversion API] Error:', error)
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

@@ -100,7 +100,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   }
 
   // Get display name from Firebase user
-  const displayName = user?.fullName || user?.name || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
+  const displayName =
+    user?.fullName || user?.name || (isOwner ? 'Dr. Shekhar (Owner)' : 'Admin User')
   const displayEmail = user?.email || (isOwner ? 'Owner Access' : '')
 
   const navigation: NavItem[] = [
@@ -211,8 +212,18 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       icon: PenTool,
       href: '/admin/content',
       children: [
-        { id: 'content-drafts', name: 'Drafts Queue', icon: FileText, href: '/admin/content/drafts' },
-        { id: 'content-published', name: 'Published', icon: Send, href: '/admin/content/published' },
+        {
+          id: 'content-drafts',
+          name: 'Drafts Queue',
+          icon: FileText,
+          href: '/admin/content/drafts',
+        },
+        {
+          id: 'content-published',
+          name: 'Published',
+          icon: Send,
+          href: '/admin/content/published',
+        },
       ],
     },
     {

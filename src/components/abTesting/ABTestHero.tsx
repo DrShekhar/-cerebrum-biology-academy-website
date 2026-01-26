@@ -3,13 +3,7 @@
 import React from 'react'
 import { useABTestVariant } from './ABTestProvider'
 import { Button } from '@/components/ui/Button'
-import {
-  ArrowRight,
-  Clock,
-  Star,
-  Play,
-  Phone,
-} from 'lucide-react'
+import { ArrowRight, Clock, Star, Play, Phone } from 'lucide-react'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface ABTestHeroProps {

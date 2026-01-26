@@ -3,13 +3,16 @@ import { chromium } from 'playwright'
 async function checkPricingUI() {
   const browser = await chromium.launch({ headless: true })
   const context = await browser.newContext({
-    viewport: { width: 1440, height: 900 }
+    viewport: { width: 1440, height: 900 },
   })
   const page = await context.newPage()
   page.setDefaultTimeout(60000)
 
   console.log('Navigating to pricing page...')
-  await page.goto('https://cerebrumbiologyacademy.com/pricing', { waitUntil: 'domcontentloaded', timeout: 60000 })
+  await page.goto('https://cerebrumbiologyacademy.com/pricing', {
+    waitUntil: 'domcontentloaded',
+    timeout: 60000,
+  })
 
   // Wait for content to load
   await page.waitForTimeout(3000)
@@ -51,7 +54,9 @@ async function checkPricingUI() {
   console.log(`Page body height: ${bodyHeight}px`)
 
   await browser.close()
-  console.log('\nScreenshots saved. Check pricing-desktop.png, pricing-mobile.png, pricing-tablet.png')
+  console.log(
+    '\nScreenshots saved. Check pricing-desktop.png, pricing-mobile.png, pricing-tablet.png'
+  )
 }
 
 checkPricingUI().catch(console.error)

@@ -104,7 +104,9 @@ async function extractClassPdfs(classNum: 11 | 12): Promise<ExtractionResult[]> 
         success: true,
       })
 
-      console.log(`    ✓ Saved: chapter-${chapterNum}.txt (${text.length} chars, ~${approxPages} pages)`)
+      console.log(
+        `    ✓ Saved: chapter-${chapterNum}.txt (${text.length} chars, ~${approxPages} pages)`
+      )
     } catch (error) {
       console.log(`    ✗ Failed: ${error}`)
       results.push({

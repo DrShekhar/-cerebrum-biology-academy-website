@@ -45,10 +45,7 @@ export function getPrimaryContact() {
   return primaryContact
 }
 
-export function generateLocalBusinessSchema(
-  keyword: string,
-  centers: NearMeCenter[]
-): object[] {
+export function generateLocalBusinessSchema(keyword: string, centers: NearMeCenter[]): object[] {
   return centers.map((center) => ({
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
@@ -61,7 +58,8 @@ export function generateLocalBusinessSchema(
       '@type': 'PostalAddress',
       streetAddress: center.address,
       addressLocality: center.city,
-      addressRegion: center.city === 'Gurugram' || center.city === 'Faridabad' ? 'Haryana' : 'Delhi',
+      addressRegion:
+        center.city === 'Gurugram' || center.city === 'Faridabad' ? 'Haryana' : 'Delhi',
       addressCountry: 'IN',
     },
     geo: getCoordinates(center.locationId),
@@ -91,7 +89,9 @@ export function generateLocalBusinessSchema(
   }))
 }
 
-function getCoordinates(locationId: string): { '@type': string; latitude: number; longitude: number } | undefined {
+function getCoordinates(
+  locationId: string
+): { '@type': string; latitude: number; longitude: number } | undefined {
   const coords: Record<string, { lat: number; lng: number }> = {
     rohini: { lat: 28.7041, lng: 77.1025 },
     gurugram: { lat: 28.4595, lng: 77.0266 },
@@ -200,10 +200,7 @@ export const NEAR_ME_KEYWORDS = [
 
 export type NearMeKeyword = (typeof NEAR_ME_KEYWORDS)[number]
 
-export function getWhatsAppEnquiryUrl(
-  keyword: string,
-  location?: string
-): string {
+export function getWhatsAppEnquiryUrl(keyword: string, location?: string): string {
   const message = encodeURIComponent(
     `Hi! I'm looking for ${keyword.replace(/-/g, ' ')}${location ? ` in ${location}` : ''}. Can you share course details?`
   )

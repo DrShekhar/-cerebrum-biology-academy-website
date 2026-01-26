@@ -20,7 +20,9 @@ async function verifyDatabase() {
     // Check if we can run queries
     const dbInfo = await prisma.$queryRaw`SELECT version() as version`
     console.log('✅ Database query test: SUCCESS')
-    console.log(`📊 Database: ${dbInfo[0].version.includes('PostgreSQL') ? 'PostgreSQL' : 'SQLite'}`)
+    console.log(
+      `📊 Database: ${dbInfo[0].version.includes('PostgreSQL') ? 'PostgreSQL' : 'SQLite'}`
+    )
 
     // Test core tables
     console.log('\n📋 Checking core tables...')
@@ -63,7 +65,6 @@ async function verifyDatabase() {
     console.log('   ✅ Demo booking system')
     console.log('   ✅ Course management')
     console.log('   ✅ Payment transaction logs')
-
   } catch (error) {
     console.error('❌ Database verification failed:', error.message)
     console.log('\n🔧 Troubleshooting:')

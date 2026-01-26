@@ -23,21 +23,23 @@ export class RealTimeAnalyticsService {
     const updated: RealTimeSession = {
       ...existing,
       ...sessionData,
-      lastActivity: new Date()
+      lastActivity: new Date(),
     } as RealTimeSession
 
     this.activeSessions.set(sessionData.sessionId, updated)
 
     // Update database
-    await db.testSession.update({
-      where: { sessionToken: sessionData.sessionId },
-      data: {
-        currentQuestionIndex: sessionData.currentQuestion,
-        updatedAt: new Date()
-      }
-    }).catch(() => {
-      // Handle error silently for real-time updates
-    })
+    await db.testSession
+      .update({
+        where: { sessionToken: sessionData.sessionId },
+        data: {
+          currentQuestionIndex: sessionData.currentQuestion,
+          updatedAt: new Date(),
+        },
+      })
+      .catch(() => {
+        // Handle error silently for real-time updates
+      })
 
     // Broadcast updates
     this.broadcastUpdate()
@@ -49,7 +51,7 @@ export class RealTimeAnalyticsService {
   async startSession(sessionData: RealTimeSession): Promise<void> {
     this.activeSessions.set(sessionData.sessionId, {
       ...sessionData,
-      lastActivity: new Date()
+      lastActivity: new Date(),
     })
 
     this.broadcastUpdate()
@@ -82,37 +84,38 @@ export class RealTimeAnalyticsService {
     const todayTests = await db.testAttempt.findMany({
       where: {
         submittedAt: {
-          gte: today
+          gte: today,
         },
-        status: 'COMPLETED'
-      }
+        status: 'COMPLETED',
+      },
     })
 
     const completedTestsToday = todayTests.length
-    const averageScoreToday = todayTests.length > 0
-      ? todayTests.reduce((sum, test) => sum + test.percentage, 0) / todayTests.length
-      : 0
+    const averageScoreToday =
+      todayTests.length > 0
+        ? todayTests.reduce((sum, test) => sum + test.percentage, 0) / todayTests.length
+        : 0
 
     // Get popular topics from recent sessions
     const recentTests = await db.testAttempt.findMany({
       where: {
         startedAt: {
-          gte: new Date(Date.now() - 24 * 60 * 60 * 1000) // Last 24 hours
-        }
+          gte: new Date(Date.now() - 24 * 60 * 60 * 1000), // Last 24 hours
+        },
       },
       include: {
         testQuestions: {
           include: {
-            question: true
-          }
-        }
-      }
+            question: true,
+          },
+        },
+      },
     })
 
     const topicStats: Record<string, { attempts: number; totalScore: number }> = {}
 
-    recentTests.forEach(test => {
-      test.testQuestions.forEach(tq => {
+    recentTests.forEach((test) => {
+      test.testQuestions.forEach((tq) => {
         const topic = tq.question.topic
         if (!topicStats[topic]) {
           topicStats[topic] = { attempts: 0, totalScore: 0 }
@@ -126,14 +129,14 @@ export class RealTimeAnalyticsService {
       .map(([topic, stats]) => ({
         topic,
         testsAttempted: stats.attempts,
-        averageScore: stats.attempts > 0 ? (stats.totalScore / stats.attempts) * 100 : 0
+        averageScore: stats.attempts > 0 ? (stats.totalScore / stats.attempts) * 100 : 0,
       }))
       .sort((a, b) => b.testsAttempted - a.testsAttempted)
       .slice(0, 10)
 
     // Get overall performance metrics
     const totalTests = await db.testAttempt.count({
-      where: { status: 'COMPLETED' }
+      where: { status: 'COMPLETED' },
     })
 
     const totalUsers = await db.freeUser.count()
@@ -141,9 +144,9 @@ export class RealTimeAnalyticsService {
     const activeUsersLast7Days = await db.freeUser.count({
       where: {
         lastActiveDate: {
-          gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
-        }
-      }
+          gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
+        },
+      },
     })
 
     return {
@@ -156,8 +159,8 @@ export class RealTimeAnalyticsService {
         totalTests,
         totalUsers,
         conversionRate: 0, // Calculate based on demo bookings vs enrollments
-        retentionRate: totalUsers > 0 ? (activeUsersLast7Days / totalUsers) * 100 : 0
-      }
+        retentionRate: totalUsers > 0 ? (activeUsersLast7Days / totalUsers) * 100 : 0,
+      },
     }
   }
 
@@ -178,12 +181,15 @@ export class RealTimeAnalyticsService {
   /**
    * Update test progress in real-time
    */
-  async updateTestProgress(sessionId: string, progress: {
-    currentQuestion: number
-    score: number
-    accuracy: number
-    timeRemaining?: number
-  }): Promise<void> {
+  async updateTestProgress(
+    sessionId: string,
+    progress: {
+      currentQuestion: number
+      score: number
+      accuracy: number
+      timeRemaining?: number
+    }
+  ): Promise<void> {
     const session = this.activeSessions.get(sessionId)
     if (!session) return
 
@@ -193,7 +199,7 @@ export class RealTimeAnalyticsService {
       score: progress.score,
       accuracy: progress.accuracy,
       timeRemaining: progress.timeRemaining || session.timeRemaining,
-      lastActivity: new Date()
+      lastActivity: new Date(),
     }
 
     this.activeSessions.set(sessionId, updated)
@@ -203,11 +209,14 @@ export class RealTimeAnalyticsService {
   /**
    * Track test completion in real-time
    */
-  async completeTest(sessionId: string, finalResults: {
-    score: number
-    accuracy: number
-    timeTaken: number
-  }): Promise<void> {
+  async completeTest(
+    sessionId: string,
+    finalResults: {
+      score: number
+      accuracy: number
+      timeTaken: number
+    }
+  ): Promise<void> {
     const session = this.activeSessions.get(sessionId)
     if (!session) return
 
@@ -216,7 +225,7 @@ export class RealTimeAnalyticsService {
       status: 'completed',
       score: finalResults.score,
       accuracy: finalResults.accuracy,
-      lastActivity: new Date()
+      lastActivity: new Date(),
     }
 
     this.activeSessions.set(sessionId, completed)
@@ -240,7 +249,7 @@ export class RealTimeAnalyticsService {
     topPerformers: Array<{ name: string; score: number }>
   }> {
     const activeSessions = Array.from(this.activeSessions.values())
-    const activeTests = activeSessions.filter(s => s.status === 'active').length
+    const activeTests = activeSessions.filter((s) => s.status === 'active').length
 
     const today = new Date()
     today.setHours(0, 0, 0, 0)
@@ -248,34 +257,35 @@ export class RealTimeAnalyticsService {
     const todayCompletions = await db.testAttempt.findMany({
       where: {
         submittedAt: {
-          gte: today
+          gte: today,
         },
-        status: 'COMPLETED'
+        status: 'COMPLETED',
       },
       include: {
-        freeUser: true
+        freeUser: true,
       },
       orderBy: {
-        percentage: 'desc'
+        percentage: 'desc',
       },
-      take: 5
+      take: 5,
     })
 
     const completedToday = todayCompletions.length
-    const averageScore = completedToday > 0
-      ? todayCompletions.reduce((sum, test) => sum + test.percentage, 0) / completedToday
-      : 0
+    const averageScore =
+      completedToday > 0
+        ? todayCompletions.reduce((sum, test) => sum + test.percentage, 0) / completedToday
+        : 0
 
-    const topPerformers = todayCompletions.map(test => ({
+    const topPerformers = todayCompletions.map((test) => ({
       name: test.freeUser.name || 'Anonymous',
-      score: test.percentage
+      score: test.percentage,
     }))
 
     return {
       activeTests,
       completedToday,
       averageScore,
-      topPerformers
+      topPerformers,
     }
   }
 
@@ -285,7 +295,7 @@ export class RealTimeAnalyticsService {
   private async broadcastUpdate(): Promise<void> {
     try {
       const liveData = await this.getLiveAnalytics()
-      this.subscribers.forEach(callback => {
+      this.subscribers.forEach((callback) => {
         try {
           callback(liveData)
         } catch (error) {
@@ -307,16 +317,16 @@ export class RealTimeAnalyticsService {
         where: {
           status: 'IN_PROGRESS',
           updatedAt: {
-            gte: new Date(Date.now() - 5 * 60 * 1000) // Last 5 minutes
-          }
+            gte: new Date(Date.now() - 5 * 60 * 1000), // Last 5 minutes
+          },
         },
         include: {
           testTemplate: true,
-          freeUser: true
-        }
+          freeUser: true,
+        },
       })
 
-      activeSessions.forEach(session => {
+      activeSessions.forEach((session) => {
         const realTimeSession: RealTimeSession = {
           sessionId: session.sessionToken,
           userId: session.freeUserId || '',
@@ -327,7 +337,7 @@ export class RealTimeAnalyticsService {
           status: 'active',
           score: session.totalScore || 0,
           accuracy: session.percentage || 0,
-          lastActivity: session.updatedAt
+          lastActivity: session.updatedAt,
         }
 
         this.activeSessions.set(session.sessionToken, realTimeSession)

@@ -57,10 +57,7 @@ export async function POST(request: NextRequest) {
     const body: CreateQuizRequest = await request.json()
 
     if (!body.title || body.title.trim().length === 0) {
-      return NextResponse.json(
-        { success: false, error: 'Quiz title is required' },
-        { status: 400 }
-      )
+      return NextResponse.json({ success: false, error: 'Quiz title is required' }, { status: 400 })
     }
 
     if (!body.format || !['MODERATOR', 'TEAMS_ASK_EACH_OTHER'].includes(body.format)) {

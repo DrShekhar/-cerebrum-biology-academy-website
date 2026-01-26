@@ -261,7 +261,9 @@ export const ReceiptPDF: React.FC<ReceiptPDFProps> = ({ data }) => {
         <View style={styles.footer}>
           <Text style={styles.footerBold}>Cerebrum Biology Academy</Text>
           <Text style={styles.footerText}>Email: support@cerebrumbiologyacademy.com</Text>
-          <Text style={styles.footerText}>Phone: {CONTACT_INFO.phone.display.hyphenated.primary}</Text>
+          <Text style={styles.footerText}>
+            Phone: {CONTACT_INFO.phone.display.hyphenated.primary}
+          </Text>
           <Text style={styles.footerText}>Website: www.cerebrumbiologyacademy.com</Text>
           <Text style={[styles.footerText, { marginTop: 15 }]}>
             Thank you for choosing Cerebrum Biology Academy!

@@ -1118,7 +1118,8 @@ export default function DrShekharSinghPage() {
                     onClick={async () => {
                       await trackAndOpenWhatsApp({
                         source: 'dr-shekhar-singh-cta',
-                        message: 'Hi, I would like to know more about NEET Biology coaching with Dr. Shekhar Singh',
+                        message:
+                          'Hi, I would like to know more about NEET Biology coaching with Dr. Shekhar Singh',
                         campaign: 'faculty-page',
                       })
                     }}

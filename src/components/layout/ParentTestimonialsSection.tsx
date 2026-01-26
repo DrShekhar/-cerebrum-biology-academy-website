@@ -18,10 +18,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import {
-  parentTestimonials,
-  parentSuccessMetrics,
-} from '@/data/parentTestimonialsData'
+import { parentTestimonials, parentSuccessMetrics } from '@/data/parentTestimonialsData'
 
 interface ParentTestimonialsSectionProps {
   showVideoTestimonials?: boolean
@@ -299,7 +296,11 @@ export function ParentTestimonialsSection({
             </div>
 
             {/* Testimonial Indicators */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2" role="tablist" aria-label="Parent testimonial navigation">
+            <div
+              className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2"
+              role="tablist"
+              aria-label="Parent testimonial navigation"
+            >
               {featuredTestimonials.map((testimonial, index) => (
                 <button
                   key={index}
@@ -309,7 +310,10 @@ export function ParentTestimonialsSection({
                   aria-selected={index === currentTestimonial}
                   aria-label={`View testimonial from ${testimonial.parentName}`}
                 >
-                  <span className={`w-3 h-3 rounded-full ${index === currentTestimonial ? 'bg-green-600' : 'bg-white/50'}`} aria-hidden="true" />
+                  <span
+                    className={`w-3 h-3 rounded-full ${index === currentTestimonial ? 'bg-green-600' : 'bg-white/50'}`}
+                    aria-hidden="true"
+                  />
                 </button>
               ))}
             </div>

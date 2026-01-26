@@ -5,7 +5,7 @@ export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams
     const userId = searchParams.get('userId')
-    const period = searchParams.get('period') as 'week' | 'month' | 'quarter' || 'month'
+    const period = (searchParams.get('period') as 'week' | 'month' | 'quarter') || 'month'
 
     if (!userId) {
       return NextResponse.json({ error: 'User ID is required' }, { status: 400 })
@@ -15,15 +15,11 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      data: performanceData
+      data: performanceData,
     })
-
   } catch (error) {
     console.error('Error fetching performance analytics:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch performance analytics' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to fetch performance analytics' }, { status: 500 })
   }
 }
 
@@ -38,22 +34,20 @@ export async function POST(request: NextRequest) {
 
     const performanceData = await performanceAnalytics.getUserPerformanceData(
       userId,
-      timeRange ? {
-        from: new Date(timeRange.from),
-        to: new Date(timeRange.to)
-      } : undefined
+      timeRange
+        ? {
+            from: new Date(timeRange.from),
+            to: new Date(timeRange.to),
+          }
+        : undefined
     )
 
     return NextResponse.json({
       success: true,
-      data: performanceData
+      data: performanceData,
     })
-
   } catch (error) {
     console.error('Error fetching user performance data:', error)
-    return NextResponse.json(
-      { error: 'Failed to fetch user performance data' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: 'Failed to fetch user performance data' }, { status: 500 })
   }
 }

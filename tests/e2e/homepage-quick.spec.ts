@@ -41,7 +41,9 @@ test.describe('Homepage Quick Tests', () => {
     // Look for chat button (ARIA widget or WhatsApp CTA)
     // ARIA: aria-label="Open ARIA Sales Agent Chat"
     // WhatsApp: aria-label="Chat on WhatsApp"
-    const chatButton = page.locator('button[aria-label*="ARIA"], button[aria-label*="Chat"], button[aria-label*="chat"], button[aria-label*="WhatsApp"]')
+    const chatButton = page.locator(
+      'button[aria-label*="ARIA"], button[aria-label*="Chat"], button[aria-label*="chat"], button[aria-label*="WhatsApp"]'
+    )
     await expect(chatButton.first()).toBeVisible({ timeout: 15000 })
   })
 })

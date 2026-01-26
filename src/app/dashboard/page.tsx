@@ -114,9 +114,7 @@ function SessionErrorMessage({ error, onRetry }: { error: Error | null; onRetry:
         </ul>
 
         {error && (
-          <p className="text-xs text-red-500 bg-red-50 p-2 rounded mb-6">
-            Error: {error.message}
-          </p>
+          <p className="text-xs text-red-500 bg-red-50 p-2 rounded mb-6">Error: {error.message}</p>
         )}
 
         <div className="space-y-4">
@@ -158,7 +156,8 @@ function LoadingTimeout({ onRetry }: { onRetry: () => void }) {
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Taking Longer Than Expected</h1>
 
         <p className="text-gray-600 mb-6">
-          The session check is taking longer than usual. This might be due to slow network connection.
+          The session check is taking longer than usual. This might be due to slow network
+          connection.
         </p>
 
         <div className="space-y-4">
@@ -197,7 +196,10 @@ export default function DashboardPage() {
       userRole: user?.role,
       error: error?.message,
       cookies: document.cookie ? 'present' : 'empty',
-      cookieList: document.cookie.split(';').map(c => c.trim().split('=')[0]).filter(Boolean),
+      cookieList: document.cookie
+        .split(';')
+        .map((c) => c.trim().split('=')[0])
+        .filter(Boolean),
     })
   }, [isLoading, isAuthenticated, sessionChecked, user, error])
 

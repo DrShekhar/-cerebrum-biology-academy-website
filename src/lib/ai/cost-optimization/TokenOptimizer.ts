@@ -43,7 +43,7 @@ export class TokenOptimizer {
     ['photosynthesis process', 'photosynthesis'],
     ['cellular respiration process', 'cellular respiration'],
     ['mitochondrial membrane', 'mitochondrial membrane'],
-    ['endoplasmic reticulum', 'ER']
+    ['endoplasmic reticulum', 'ER'],
   ])
 
   // Common educational prompt optimizations
@@ -57,7 +57,7 @@ export class TokenOptimizer {
     ['give me an overview of', 'overview:'],
     ['tell me about', 'about'],
     ['describe in detail', 'describe'],
-    ['what is the significance of', 'significance:']
+    ['what is the significance of', 'significance:'],
   ])
 
   // Token-expensive patterns to optimize
@@ -68,22 +68,28 @@ export class TokenOptimizer {
     /would\s+you\s+/gi,
     /i\s+would\s+like\s+to\s+know\s+/gi,
     /i\s+need\s+help\s+with\s+/gi,
-    /help\s+me\s+understand\s+/gi
+    /help\s+me\s+understand\s+/gi,
   ]
 
   // Essential biology context that should be preserved
   private essentialContext = [
-    'NEET', 'NCERT', 'Class 11', 'Class 12',
-    'medical entrance', 'biology exam',
-    'molecular level', 'cellular level',
-    'organism level', 'ecosystem level'
+    'NEET',
+    'NCERT',
+    'Class 11',
+    'Class 12',
+    'medical entrance',
+    'biology exam',
+    'molecular level',
+    'cellular level',
+    'organism level',
+    'ecosystem level',
   ]
 
   private optimizationStats = {
     totalOptimizations: 0,
     totalTokensSaved: 0,
     totalCostSaved: 0,
-    averageTokenReduction: 0
+    averageTokenReduction: 0,
   }
 
   constructor() {
@@ -147,14 +153,14 @@ export class TokenOptimizer {
       costSavings,
       optimizationTechniques: appliedTechniques,
       qualityScore: this.calculateQualityScore(prompt, optimizedPrompt),
-      recommendations: this.generateRecommendations(prompt, optimizedPrompt, context)
+      recommendations: this.generateRecommendations(prompt, optimizedPrompt, context),
     }
 
     console.log('🔧 Prompt optimized:', {
       tokenReduction: `${tokenSavings} tokens (${((tokenSavings / originalTokenCount) * 100).toFixed(1)}%)`,
       costSavings: `$${costSavings.toFixed(4)}`,
       techniques: appliedTechniques.length,
-      quality: `${(result.qualityScore * 100).toFixed(1)}%`
+      quality: `${(result.qualityScore * 100).toFixed(1)}%`,
     })
 
     return result
@@ -211,17 +217,49 @@ export class TokenOptimizer {
 
     // Educational phrase compressions
     const compressions = [
-      { from: /explain\s+the\s+process\s+of\s+/gi, to: 'explain ', description: 'Simplified process explanation' },
-      { from: /what\s+is\s+the\s+function\s+of\s+/gi, to: 'function of ', description: 'Compressed function query' },
-      { from: /how\s+does\s+the\s+process\s+of\s+/gi, to: 'how does ', description: 'Simplified process question' },
-      { from: /in\s+the\s+context\s+of\s+biology\s+/gi, to: 'in biology ', description: 'Compressed biology context' },
-      { from: /according\s+to\s+the\s+ncert\s+textbook\s+/gi, to: 'per NCERT ', description: 'Compressed NCERT reference' },
-      { from: /for\s+the\s+neet\s+examination\s+/gi, to: 'for NEET ', description: 'Compressed NEET context' },
-      { from: /at\s+the\s+molecular\s+level\s+/gi, to: 'molecularly ', description: 'Compressed molecular level' },
-      { from: /at\s+the\s+cellular\s+level\s+/gi, to: 'cellularly ', description: 'Compressed cellular level' }
+      {
+        from: /explain\s+the\s+process\s+of\s+/gi,
+        to: 'explain ',
+        description: 'Simplified process explanation',
+      },
+      {
+        from: /what\s+is\s+the\s+function\s+of\s+/gi,
+        to: 'function of ',
+        description: 'Compressed function query',
+      },
+      {
+        from: /how\s+does\s+the\s+process\s+of\s+/gi,
+        to: 'how does ',
+        description: 'Simplified process question',
+      },
+      {
+        from: /in\s+the\s+context\s+of\s+biology\s+/gi,
+        to: 'in biology ',
+        description: 'Compressed biology context',
+      },
+      {
+        from: /according\s+to\s+the\s+ncert\s+textbook\s+/gi,
+        to: 'per NCERT ',
+        description: 'Compressed NCERT reference',
+      },
+      {
+        from: /for\s+the\s+neet\s+examination\s+/gi,
+        to: 'for NEET ',
+        description: 'Compressed NEET context',
+      },
+      {
+        from: /at\s+the\s+molecular\s+level\s+/gi,
+        to: 'molecularly ',
+        description: 'Compressed molecular level',
+      },
+      {
+        from: /at\s+the\s+cellular\s+level\s+/gi,
+        to: 'cellularly ',
+        description: 'Compressed cellular level',
+      },
     ]
 
-    compressions.forEach(compression => {
+    compressions.forEach((compression) => {
       if (compression.from.test(optimized)) {
         optimized = optimized.replace(compression.from, compression.to)
         techniques.push(compression.description)
@@ -239,7 +277,10 @@ export class TokenOptimizer {
 
     // Question structure optimizations
     if (optimized.includes('What is') && optimized.includes('and how does it')) {
-      optimized = optimized.replace(/what\s+is\s+(.+?)\s+and\s+how\s+does\s+it\s+/gi, 'Define $1 and its ')
+      optimized = optimized.replace(
+        /what\s+is\s+(.+?)\s+and\s+how\s+does\s+it\s+/gi,
+        'Define $1 and its '
+      )
       techniques.push('Optimized definition + function question structure')
     }
 
@@ -269,7 +310,7 @@ export class TokenOptimizer {
       /\s+quite\s+/gi,
       /\s+very\s+much\s+/gi,
       /\s+kind\s+of\s+/gi,
-      /\s+sort\s+of\s+/gi
+      /\s+sort\s+of\s+/gi,
     ]
 
     fillerWords.forEach((filler, index) => {
@@ -288,10 +329,14 @@ export class TokenOptimizer {
   /**
    * Preserve essential educational context
    */
-  private preserveEssentialContext(originalPrompt: string, optimizedPrompt: string, techniques: string[]): string {
+  private preserveEssentialContext(
+    originalPrompt: string,
+    optimizedPrompt: string,
+    techniques: string[]
+  ): string {
     let preserved = optimizedPrompt
 
-    this.essentialContext.forEach(context => {
+    this.essentialContext.forEach((context) => {
       const contextRegex = new RegExp(context, 'gi')
       if (contextRegex.test(originalPrompt) && !contextRegex.test(preserved)) {
         preserved = `${context}: ${preserved}`
@@ -365,10 +410,10 @@ export class TokenOptimizer {
       efficiency: {
         promptEfficiency,
         responseRelevance,
-        overallEfficiency
+        overallEfficiency,
       },
       wastageAreas,
-      optimizationOpportunities
+      optimizationOpportunities,
     }
   }
 
@@ -386,7 +431,8 @@ export class TokenOptimizer {
     })
 
     // Penalty for filler words
-    const fillerCount = (prompt.match(/\s+(very|really|quite|actually|basically)\s+/gi) || []).length
+    const fillerCount = (prompt.match(/\s+(very|really|quite|actually|basically)\s+/gi) || [])
+      .length
     efficiency -= fillerCount * 0.02
 
     // Bonus for concise biology terms
@@ -397,7 +443,11 @@ export class TokenOptimizer {
     })
 
     // Bonus for direct questions
-    if (prompt.startsWith('Explain') || prompt.startsWith('Define') || prompt.startsWith('Compare')) {
+    if (
+      prompt.startsWith('Explain') ||
+      prompt.startsWith('Define') ||
+      prompt.startsWith('Compare')
+    ) {
       efficiency += 0.1
     }
 
@@ -412,8 +462,8 @@ export class TokenOptimizer {
     const promptKeywords = this.extractKeywords(prompt)
     const responseKeywords = this.extractKeywords(response)
 
-    const overlap = promptKeywords.filter(keyword =>
-      responseKeywords.some(rKeyword => rKeyword.includes(keyword) || keyword.includes(rKeyword))
+    const overlap = promptKeywords.filter((keyword) =>
+      responseKeywords.some((rKeyword) => rKeyword.includes(keyword) || keyword.includes(rKeyword))
     )
 
     const relevance = overlap.length / Math.max(promptKeywords.length, 1)
@@ -433,14 +483,26 @@ export class TokenOptimizer {
    * Extract keywords from text
    */
   private extractKeywords(text: string): string[] {
-    const words = text.toLowerCase()
+    const words = text
+      .toLowerCase()
       .replace(/[^\w\s]/g, '')
       .split(/\s+/)
-      .filter(word => word.length > 3)
+      .filter((word) => word.length > 3)
 
     // Filter out common stop words
-    const stopWords = ['that', 'this', 'with', 'from', 'they', 'them', 'their', 'there', 'then', 'than']
-    return words.filter(word => !stopWords.includes(word))
+    const stopWords = [
+      'that',
+      'this',
+      'with',
+      'from',
+      'they',
+      'them',
+      'their',
+      'there',
+      'then',
+      'than',
+    ]
+    return words.filter((word) => !stopWords.includes(word))
   }
 
   /**
@@ -458,8 +520,8 @@ export class TokenOptimizer {
 
     // Check for repeated information
     const promptWords = prompt.toLowerCase().split(/\s+/)
-    const duplicates = promptWords.filter((word, index) =>
-      promptWords.indexOf(word) !== index && word.length > 4
+    const duplicates = promptWords.filter(
+      (word, index) => promptWords.indexOf(word) !== index && word.length > 4
     )
 
     if (duplicates.length > 0) {
@@ -502,9 +564,16 @@ export class TokenOptimizer {
 
     // Check for caching opportunities
     const promptKeywords = this.extractKeywords(prompt)
-    const commonBiologyTopics = ['photosynthesis', 'respiration', 'mitosis', 'meiosis', 'dna', 'rna']
+    const commonBiologyTopics = [
+      'photosynthesis',
+      'respiration',
+      'mitosis',
+      'meiosis',
+      'dna',
+      'rna',
+    ]
 
-    if (promptKeywords.some(keyword => commonBiologyTopics.includes(keyword))) {
+    if (promptKeywords.some((keyword) => commonBiologyTopics.includes(keyword))) {
       opportunities.push('Common biology topic - ideal for caching')
     }
 
@@ -554,15 +623,15 @@ export class TokenOptimizer {
     const originalKeywords = this.extractKeywords(original)
     const optimizedKeywords = this.extractKeywords(optimized)
 
-    const preservedKeywords = originalKeywords.filter(keyword =>
-      optimizedKeywords.some(oKeyword => oKeyword.includes(keyword) || keyword.includes(oKeyword))
+    const preservedKeywords = originalKeywords.filter((keyword) =>
+      optimizedKeywords.some((oKeyword) => oKeyword.includes(keyword) || keyword.includes(oKeyword))
     )
 
     const keywordPreservation = preservedKeywords.length / Math.max(originalKeywords.length, 1)
     quality *= keywordPreservation
 
     // Check if essential context is preserved
-    this.essentialContext.forEach(context => {
+    this.essentialContext.forEach((context) => {
       const contextRegex = new RegExp(context, 'gi')
       if (contextRegex.test(original) && !contextRegex.test(optimized)) {
         quality *= 0.9 // 10% penalty for lost context
@@ -581,18 +650,16 @@ export class TokenOptimizer {
   /**
    * Generate optimization recommendations
    */
-  private generateRecommendations(
-    original: string,
-    optimized: string,
-    context?: any
-  ): string[] {
+  private generateRecommendations(original: string, optimized: string, context?: any): string[] {
     const recommendations = []
 
     const tokenReduction = this.estimateTokenCount(original) - this.estimateTokenCount(optimized)
     const reductionPercentage = (tokenReduction / this.estimateTokenCount(original)) * 100
 
     if (reductionPercentage > 30) {
-      recommendations.push('Excellent optimization achieved - consider applying similar patterns to future prompts')
+      recommendations.push(
+        'Excellent optimization achieved - consider applying similar patterns to future prompts'
+      )
     } else if (reductionPercentage > 15) {
       recommendations.push('Good optimization - monitor response quality for further improvements')
     } else if (reductionPercentage < 5) {
@@ -635,22 +702,22 @@ export class TokenOptimizer {
   } {
     return {
       ...this.optimizationStats,
-      estimatedMonthlySavings: this.optimizationStats.totalCostSaved * 30 // Rough monthly estimate
+      estimatedMonthlySavings: this.optimizationStats.totalCostSaved * 30, // Rough monthly estimate
     }
   }
 
   /**
    * Optimize multiple prompts in batch
    */
-  optimizeBatch(prompts: Array<{
-    prompt: string
-    context?: any
-  }>): OptimizationResult[] {
+  optimizeBatch(
+    prompts: Array<{
+      prompt: string
+      context?: any
+    }>
+  ): OptimizationResult[] {
     console.log(`🔧 Optimizing batch of ${prompts.length} prompts...`)
 
-    const results = prompts.map(({ prompt, context }) =>
-      this.optimizePrompt(prompt, context)
-    )
+    const results = prompts.map(({ prompt, context }) => this.optimizePrompt(prompt, context))
 
     const totalTokenSavings = results.reduce((sum, result) => sum + result.tokenSavings, 0)
     const totalCostSavings = results.reduce((sum, result) => sum + result.costSavings, 0)
@@ -659,7 +726,7 @@ export class TokenOptimizer {
       prompts: results.length,
       totalTokenSavings,
       totalCostSavings: `$${totalCostSavings.toFixed(4)}`,
-      averageReduction: `${(totalTokenSavings / results.length).toFixed(1)} tokens`
+      averageReduction: `${(totalTokenSavings / results.length).toFixed(1)} tokens`,
     })
 
     return results
@@ -676,7 +743,7 @@ export class TokenOptimizer {
       topOptimizationTechniques: this.getTopOptimizationTechniques(),
       biologySpecificOptimizations: Array.from(this.biologyTermOptimizations.entries()),
       educationalOptimizations: Array.from(this.educationalOptimizations.entries()),
-      recommendations: this.generateOverallRecommendations(stats)
+      recommendations: this.generateOverallRecommendations(stats),
     }
   }
 
@@ -688,8 +755,11 @@ export class TokenOptimizer {
       { technique: 'Biology term abbreviation', impact: 'High - 20-30% token reduction' },
       { technique: 'Educational phrase compression', impact: 'Medium - 10-20% token reduction' },
       { technique: 'Redundant phrase removal', impact: 'Medium - 15-25% token reduction' },
-      { technique: 'Question structure optimization', impact: 'Low-Medium - 5-15% token reduction' },
-      { technique: 'Filler word removal', impact: 'Low - 2-8% token reduction' }
+      {
+        technique: 'Question structure optimization',
+        impact: 'Low-Medium - 5-15% token reduction',
+      },
+      { technique: 'Filler word removal', impact: 'Low - 2-8% token reduction' },
     ]
   }
 
@@ -702,17 +772,25 @@ export class TokenOptimizer {
     if (stats.averageTokenReduction > 50) {
       recommendations.push('Excellent optimization performance - maintain current strategies')
     } else if (stats.averageTokenReduction > 20) {
-      recommendations.push('Good optimization - consider more aggressive techniques for low-priority requests')
+      recommendations.push(
+        'Good optimization - consider more aggressive techniques for low-priority requests'
+      )
     } else {
       recommendations.push('Optimization potential exists - review and apply more techniques')
     }
 
     if (stats.totalCostSaved > 10) {
-      recommendations.push('Significant cost savings achieved - scale optimization across all requests')
+      recommendations.push(
+        'Significant cost savings achieved - scale optimization across all requests'
+      )
     }
 
-    recommendations.push('Consider implementing automatic prompt optimization for recurring patterns')
-    recommendations.push('Monitor response quality to ensure optimization doesn\'t impact educational value')
+    recommendations.push(
+      'Consider implementing automatic prompt optimization for recurring patterns'
+    )
+    recommendations.push(
+      "Monitor response quality to ensure optimization doesn't impact educational value"
+    )
 
     return recommendations
   }

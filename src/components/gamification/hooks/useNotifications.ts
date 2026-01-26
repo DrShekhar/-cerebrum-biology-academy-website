@@ -124,9 +124,7 @@ export function useNotifications(options: UseNotificationsOptions = {}): UseNoti
       const data = await response.json()
 
       if (data.success) {
-        setNotifications((prev) =>
-          prev.map((n) => (n.id === id ? { ...n, isRead: true } : n))
-        )
+        setNotifications((prev) => prev.map((n) => (n.id === id ? { ...n, isRead: true } : n)))
         if (data.data?.unreadCount !== undefined) {
           setUnreadCount(data.data.unreadCount)
         }

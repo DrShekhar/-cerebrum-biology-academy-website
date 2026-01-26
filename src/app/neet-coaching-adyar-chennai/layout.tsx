@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title:
-    'Best NEET Coaching in Adyar Chennai | Besant Nagar, Thiruvanmiyur | Cerebrum Academy',
+  title: 'Best NEET Coaching in Adyar Chennai | Besant Nagar, Thiruvanmiyur | Cerebrum Academy',
   description:
     'Premium NEET biology coaching in Adyar, Chennai educational hub. 94.2% success rate, AIIMS faculty. Besant Nagar, Thiruvanmiyur, Kotturpuram, IIT Gate. Fee ₹24,000+. Book free demo!',
   keywords:

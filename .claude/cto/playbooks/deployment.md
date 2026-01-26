@@ -1,6 +1,7 @@
 # Deployment Playbook
 
 ## Pre-Deployment Checklist
+
 - [ ] All tests passing
 - [ ] Type check clean: `npm run type-check`
 - [ ] Lint clean: `npm run lint`
@@ -8,6 +9,7 @@
 - [ ] Database migrations ready
 
 ## Deployment Commands
+
 ```bash
 # Pre-check
 npm run deploy:pre-check
@@ -20,6 +22,7 @@ npm run verify:production
 ```
 
 ## Rollback Procedure
+
 1. Identify failing deployment
 2. Revert to previous deployment in Vercel
 3. Investigate root cause

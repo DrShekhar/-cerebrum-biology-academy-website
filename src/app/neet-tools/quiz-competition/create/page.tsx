@@ -3,16 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import {
-  ArrowLeft,
-  Loader2,
-  Users,
-  Swords,
-  Settings,
-  Check,
-  BookOpen,
-  Zap,
-} from 'lucide-react'
+import { ArrowLeft, Loader2, Users, Swords, Settings, Check, BookOpen, Zap } from 'lucide-react'
 import { getChaptersByClass } from '@/data/quiz-chapters'
 
 interface ScoringRules {
@@ -50,9 +41,7 @@ export default function CreateQuizPage() {
 
   const toggleChapter = (chapterId: string) => {
     setSelectedChapters((prev) =>
-      prev.includes(chapterId)
-        ? prev.filter((id) => id !== chapterId)
-        : [...prev, chapterId]
+      prev.includes(chapterId) ? prev.filter((id) => id !== chapterId) : [...prev, chapterId]
     )
   }
 
@@ -127,9 +116,7 @@ export default function CreateQuizPage() {
         <form onSubmit={handleSubmit} className="space-y-8">
           {/* Quiz Title */}
           <div className="rounded-xl border border-gray-200 bg-white p-6">
-            <label className="mb-2 block text-sm font-medium text-gray-700">
-              Quiz Title
-            </label>
+            <label className="mb-2 block text-sm font-medium text-gray-700">Quiz Title</label>
             <input
               type="text"
               value={formData.title}
@@ -142,9 +129,7 @@ export default function CreateQuizPage() {
 
           {/* Quiz Format */}
           <div className="rounded-xl border border-gray-200 bg-white p-6">
-            <label className="mb-4 block text-sm font-medium text-gray-700">
-              Quiz Format
-            </label>
+            <label className="mb-4 block text-sm font-medium text-gray-700">Quiz Format</label>
             <div className="grid gap-4 md:grid-cols-2">
               <button
                 type="button"
@@ -156,12 +141,16 @@ export default function CreateQuizPage() {
                 }`}
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${
-                    formData.format === 'MODERATOR' ? 'bg-indigo-100' : 'bg-gray-100'
-                  }`}>
-                    <Users className={`h-5 w-5 ${
-                      formData.format === 'MODERATOR' ? 'text-indigo-600' : 'text-gray-500'
-                    }`} />
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+                      formData.format === 'MODERATOR' ? 'bg-indigo-100' : 'bg-gray-100'
+                    }`}
+                  >
+                    <Users
+                      className={`h-5 w-5 ${
+                        formData.format === 'MODERATOR' ? 'text-indigo-600' : 'text-gray-500'
+                      }`}
+                    />
                   </div>
                   {formData.format === 'MODERATOR' && (
                     <Check className="ml-auto h-5 w-5 text-indigo-600" />
@@ -183,12 +172,18 @@ export default function CreateQuizPage() {
                 }`}
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${
-                    formData.format === 'TEAMS_ASK_EACH_OTHER' ? 'bg-purple-100' : 'bg-gray-100'
-                  }`}>
-                    <Swords className={`h-5 w-5 ${
-                      formData.format === 'TEAMS_ASK_EACH_OTHER' ? 'text-purple-600' : 'text-gray-500'
-                    }`} />
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+                      formData.format === 'TEAMS_ASK_EACH_OTHER' ? 'bg-purple-100' : 'bg-gray-100'
+                    }`}
+                  >
+                    <Swords
+                      className={`h-5 w-5 ${
+                        formData.format === 'TEAMS_ASK_EACH_OTHER'
+                          ? 'text-purple-600'
+                          : 'text-gray-500'
+                      }`}
+                    />
                   </div>
                   {formData.format === 'TEAMS_ASK_EACH_OTHER' && (
                     <Check className="ml-auto h-5 w-5 text-purple-600" />
@@ -204,9 +199,7 @@ export default function CreateQuizPage() {
 
           {/* Question Mode */}
           <div className="rounded-xl border border-gray-200 bg-white p-6">
-            <label className="mb-4 block text-sm font-medium text-gray-700">
-              Question Mode
-            </label>
+            <label className="mb-4 block text-sm font-medium text-gray-700">Question Mode</label>
             <div className="grid gap-4 md:grid-cols-2">
               <button
                 type="button"
@@ -218,12 +211,18 @@ export default function CreateQuizPage() {
                 }`}
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${
-                    formData.questionMode === 'SIMPLE_SCOREBOARD' ? 'bg-green-100' : 'bg-gray-100'
-                  }`}>
-                    <Settings className={`h-5 w-5 ${
-                      formData.questionMode === 'SIMPLE_SCOREBOARD' ? 'text-green-600' : 'text-gray-500'
-                    }`} />
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+                      formData.questionMode === 'SIMPLE_SCOREBOARD' ? 'bg-green-100' : 'bg-gray-100'
+                    }`}
+                  >
+                    <Settings
+                      className={`h-5 w-5 ${
+                        formData.questionMode === 'SIMPLE_SCOREBOARD'
+                          ? 'text-green-600'
+                          : 'text-gray-500'
+                      }`}
+                    />
                   </div>
                   {formData.questionMode === 'SIMPLE_SCOREBOARD' && (
                     <Check className="ml-auto h-5 w-5 text-green-600" />
@@ -245,12 +244,16 @@ export default function CreateQuizPage() {
                 }`}
               >
                 <div className="mb-2 flex items-center gap-2">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg ${
-                    formData.questionMode === 'PRELOADED' ? 'bg-teal-100' : 'bg-gray-100'
-                  }`}>
-                    <Zap className={`h-5 w-5 ${
-                      formData.questionMode === 'PRELOADED' ? 'text-teal-600' : 'text-gray-500'
-                    }`} />
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-lg ${
+                      formData.questionMode === 'PRELOADED' ? 'bg-teal-100' : 'bg-gray-100'
+                    }`}
+                  >
+                    <Zap
+                      className={`h-5 w-5 ${
+                        formData.questionMode === 'PRELOADED' ? 'text-teal-600' : 'text-gray-500'
+                      }`}
+                    />
                   </div>
                   {formData.questionMode === 'PRELOADED' && (
                     <Check className="ml-auto h-5 w-5 text-teal-600" />
@@ -269,9 +272,7 @@ export default function CreateQuizPage() {
             <div className="rounded-xl border border-teal-200 bg-teal-50/50 p-6">
               <div className="mb-4 flex items-center gap-2">
                 <BookOpen className="h-5 w-5 text-teal-600" />
-                <label className="text-sm font-medium text-gray-700">
-                  Select Chapters
-                </label>
+                <label className="text-sm font-medium text-gray-700">Select Chapters</label>
               </div>
 
               {/* Class Selection */}
@@ -327,9 +328,7 @@ export default function CreateQuizPage() {
                             : 'border border-gray-300 bg-white'
                         }`}
                       >
-                        {selectedChapters.includes(chapter.id) && (
-                          <Check className="h-3 w-3" />
-                        )}
+                        {selectedChapters.includes(chapter.id) && <Check className="h-3 w-3" />}
                       </div>
                       <span className="truncate">{chapter.name}</span>
                     </div>
@@ -363,9 +362,7 @@ export default function CreateQuizPage() {
 
           {/* Team Names */}
           <div className="rounded-xl border border-gray-200 bg-white p-6">
-            <label className="mb-4 block text-sm font-medium text-gray-700">
-              Team Names
-            </label>
+            <label className="mb-4 block text-sm font-medium text-gray-700">Team Names</label>
             <div className="grid gap-4 md:grid-cols-2">
               <div>
                 <label className="mb-1 block text-xs text-gray-500">Team A</label>
@@ -394,9 +391,7 @@ export default function CreateQuizPage() {
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <div className="mb-4 flex items-center gap-2">
               <Settings className="h-5 w-5 text-gray-500" />
-              <label className="text-sm font-medium text-gray-700">
-                Scoring Rules
-              </label>
+              <label className="text-sm font-medium text-gray-700">Scoring Rules</label>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
               <div>
@@ -474,20 +469,23 @@ export default function CreateQuizPage() {
 
           {/* Error Message */}
           {error && (
-            <div className={`rounded-lg p-4 ${
-              error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('wait')
-                ? 'border-2 border-orange-300 bg-orange-50 text-orange-700'
-                : 'bg-red-50 text-red-600'
-            }`}>
+            <div
+              className={`rounded-lg p-4 ${
+                error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('wait')
+                  ? 'border-2 border-orange-300 bg-orange-50 text-orange-700'
+                  : 'bg-red-50 text-red-600'
+              }`}
+            >
               <div className="flex items-start gap-3">
-                {(error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('wait')) && (
-                  <span className="text-2xl">⏳</span>
-                )}
+                {(error.toLowerCase().includes('rate limit') ||
+                  error.toLowerCase().includes('wait')) && <span className="text-2xl">⏳</span>}
                 <div>
                   <p className="font-medium">{error}</p>
-                  {(error.toLowerCase().includes('rate limit') || error.toLowerCase().includes('wait')) && (
+                  {(error.toLowerCase().includes('rate limit') ||
+                    error.toLowerCase().includes('wait')) && (
                     <p className="mt-1 text-sm text-orange-600">
-                      You've created too many quizzes recently. Please wait a few minutes and try again.
+                      You've created too many quizzes recently. Please wait a few minutes and try
+                      again.
                     </p>
                   )}
                 </div>

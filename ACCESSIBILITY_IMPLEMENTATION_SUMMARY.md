@@ -151,7 +151,6 @@ import { SkipToContent } from '@/components/accessibility/SkipToContent'
 
 ```tsx
 import { ScreenReaderOnly } from '@/components/accessibility/ScreenReaderOnly'
-
 ;<ScreenReaderOnly>Additional context for screen readers</ScreenReaderOnly>
 ```
 

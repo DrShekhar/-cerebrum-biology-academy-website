@@ -350,7 +350,11 @@ export default function ResultsPage() {
 
           <div className="text-center mt-8">
             <p className="text-gray-600 mb-4">Want to see more success stories?</p>
-            <Button variant="outline" size="lg" className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white">
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-[#3d4d3d] text-[#3d4d3d] hover:bg-[#3d4d3d] hover:text-white"
+            >
               <Play className="h-5 w-5 mr-2" />
               View All Video Testimonials
             </Button>
@@ -374,7 +378,9 @@ export default function ResultsPage() {
                 className="p-6 hover:shadow-xl transition-all bg-white border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`w-10 h-10 ${college.iconBg} rounded-xl flex items-center justify-center`}>
+                  <div
+                    className={`w-10 h-10 ${college.iconBg} rounded-xl flex items-center justify-center`}
+                  >
                     <GraduationCap className="h-5 w-5 text-white" />
                   </div>
                   <Badge className="bg-[#e8ede8] text-[#3d4d3d] border-0 font-bold">
@@ -470,7 +476,9 @@ export default function ResultsPage() {
                 className="p-6 hover:shadow-xl transition-all bg-white border border-gray-100 hover:border-gray-200"
               >
                 <div className="flex items-start gap-4">
-                  <div className={`w-12 h-12 ${method.bgColor} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                  <div
+                    className={`w-12 h-12 ${method.bgColor} rounded-xl flex items-center justify-center flex-shrink-0`}
+                  >
                     <method.icon className="h-6 w-6 text-white" />
                   </div>
                   <div className="flex-1">

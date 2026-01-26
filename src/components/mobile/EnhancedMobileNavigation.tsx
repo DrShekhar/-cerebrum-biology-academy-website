@@ -120,7 +120,7 @@ export function EnhancedMobileNavigation({
   currentLanguage = 'en',
   isAuthenticated = false,
   onLanguageChange,
-  className = ''
+  className = '',
 }: EnhancedMobileNavigationProps) {
   const pathname = usePathname()
   const [showSideMenu, setShowSideMenu] = useState(false)
@@ -172,13 +172,15 @@ export function EnhancedMobileNavigation({
   }
 
   const filteredSecondaryNav = SECONDARY_NAVIGATION.filter(
-    item => !item.requiresAuth || isAuthenticated
+    (item) => !item.requiresAuth || isAuthenticated
   )
 
   return (
     <>
       {/* Top Header */}
-      <header className={`mobile-header fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200 ${className}`}>
+      <header
+        className={`mobile-header fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200 ${className}`}
+      >
         <div className="flex items-center justify-between h-16 px-4">
           {/* Menu Button */}
           <Button
@@ -241,19 +243,19 @@ export function EnhancedMobileNavigation({
             const isExternal = item.href.startsWith('tel:') || item.href.startsWith('https:')
 
             const content = (
-              <div className={`nav-item flex flex-col items-center justify-center py-2 px-1 min-h-touch-md transition-all duration-200 touch-target ripple-effect ${
-                item.isWhatsApp
-                  ? 'text-[#25D366] bg-green-50'
-                  : item.highlight
-                    ? 'text-green-600 bg-green-50'
-                    : active
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-500 hover:text-gray-700'
-              }`}>
+              <div
+                className={`nav-item flex flex-col items-center justify-center py-2 px-1 min-h-touch-md transition-all duration-200 touch-target ripple-effect ${
+                  item.isWhatsApp
+                    ? 'text-[#25D366] bg-green-50'
+                    : item.highlight
+                      ? 'text-green-600 bg-green-50'
+                      : active
+                        ? 'text-blue-600 bg-blue-50'
+                        : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
                 <item.icon className="w-6 h-6 mb-1" />
-                <span className="text-xs font-medium leading-tight">
-                  {getLabel(item)}
-                </span>
+                <span className="text-xs font-medium leading-tight">{getLabel(item)}</span>
                 {item.badge && (
                   <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-xs rounded-full flex items-center justify-center">
                     {item.badge}
@@ -337,7 +339,7 @@ export function EnhancedMobileNavigation({
               initial={{ x: -320 }}
               animate={{ x: dragOffset }}
               exit={{ x: -320 }}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               onPanStart={handlePanStart}
               onPan={handlePan}
               onPanEnd={handlePanEnd}
@@ -545,19 +547,19 @@ export function EnhancedMobileNavigation({
                       'Biology Mock Test',
                       'NEET Previous Papers',
                       'Plant Kingdom Notes',
-                      'Human Physiology'
-                    ].filter(item =>
-                      item.toLowerCase().includes(searchQuery.toLowerCase())
-                    ).map((suggestion, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleSearch(suggestion)}
-                        className="flex items-center w-full p-3 hover:bg-gray-50 rounded-lg transition-colors text-left touch-target"
-                      >
-                        <Search className="w-4 h-4 text-gray-400 mr-3" />
-                        <span>{suggestion}</span>
-                      </button>
-                    ))}
+                      'Human Physiology',
+                    ]
+                      .filter((item) => item.toLowerCase().includes(searchQuery.toLowerCase()))
+                      .map((suggestion, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleSearch(suggestion)}
+                          className="flex items-center w-full p-3 hover:bg-gray-50 rounded-lg transition-colors text-left touch-target"
+                        >
+                          <Search className="w-4 h-4 text-gray-400 mr-3" />
+                          <span>{suggestion}</span>
+                        </button>
+                      ))}
                   </div>
                 )}
               </div>

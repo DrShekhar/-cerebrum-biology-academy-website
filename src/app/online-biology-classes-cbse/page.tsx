@@ -77,7 +77,8 @@ export default function OnlineBiologyClassesCBSEPage() {
             '@context': 'https://schema.org',
             '@type': 'Course',
             name: 'Online Biology Classes for CBSE Students',
-            description: 'NCERT-focused online biology classes for CBSE students preparing for NEET',
+            description:
+              'NCERT-focused online biology classes for CBSE students preparing for NEET',
             provider: {
               '@type': 'Organization',
               name: 'Cerebrum Biology Academy',
@@ -166,7 +167,9 @@ export default function OnlineBiologyClassesCBSEPage() {
               <Target className="h-5 w-5" />
               <span className="font-semibold">CBSE + NEET Perfect Alignment</span>
             </div>
-            <h2 className="mb-4 text-3xl font-bold text-gray-900">Why CBSE Students Have an Advantage</h2>
+            <h2 className="mb-4 text-3xl font-bold text-gray-900">
+              Why CBSE Students Have an Advantage
+            </h2>
             <p className="text-lg text-gray-700">{board.neetAlignment}</p>
           </motion.div>
         </div>
@@ -212,7 +215,9 @@ export default function OnlineBiologyClassesCBSEPage() {
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               NCERT Chapters with NEET Weightage
             </h2>
-            <p className="text-lg text-gray-600">We teach every chapter with its NEET importance in mind</p>
+            <p className="text-lg text-gray-600">
+              We teach every chapter with its NEET importance in mind
+            </p>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2">

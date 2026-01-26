@@ -313,9 +313,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                     <div className="border-t border-slate-600 pt-4">
                       <div className="flex justify-between items-center">
                         <span className="text-green-500 font-semibold">You Save</span>
-                        <span className="text-green-500 font-bold">
-                          {feeTransparency.savings}
-                        </span>
+                        <span className="text-green-500 font-bold">{feeTransparency.savings}</span>
                       </div>
                     </div>
                   </div>

@@ -94,9 +94,7 @@ export async function getStreakStatus(userId: string): Promise<StreakStatus | nu
 
   // Check if currently protected
   const now = new Date()
-  const isProtected = userStats.streakProtectedUntil
-    ? userStats.streakProtectedUntil > now
-    : false
+  const isProtected = userStats.streakProtectedUntil ? userStats.streakProtectedUntil > now : false
 
   // Check if can recover (within recovery window)
   const canRecover = userStats.streakRecoveryDeadline
@@ -215,7 +213,7 @@ export async function recoverStreak(userId: string): Promise<ProtectionResult> {
   if (userStats.totalPoints < status.recoveryXpCost) {
     return {
       success: false,
-      message: `Not enough XP. Need ${status.recoveryXpCost} XP, have ${userStats.totalPoints} XP`
+      message: `Not enough XP. Need ${status.recoveryXpCost} XP, have ${userStats.totalPoints} XP`,
     }
   }
 
@@ -338,7 +336,9 @@ export async function breakStreak(userId: string): Promise<void> {
 
   const brokenStreak = userStats.currentStreak
   const recoveryDeadline = new Date()
-  recoveryDeadline.setHours(recoveryDeadline.getHours() + STREAK_PROTECTION_CONFIG.RECOVERY_WINDOW_HOURS)
+  recoveryDeadline.setHours(
+    recoveryDeadline.getHours() + STREAK_PROTECTION_CONFIG.RECOVERY_WINDOW_HOURS
+  )
 
   await prisma.$transaction([
     prisma.mcq_user_stats.update({
@@ -406,8 +406,10 @@ function getWeekStart(): Date {
 }
 
 function calculateRecoveryCost(streakLength: number): number {
-  return STREAK_PROTECTION_CONFIG.RECOVERY_BASE_XP_COST +
-    (streakLength * STREAK_PROTECTION_CONFIG.RECOVERY_XP_PER_DAY)
+  return (
+    STREAK_PROTECTION_CONFIG.RECOVERY_BASE_XP_COST +
+    streakLength * STREAK_PROTECTION_CONFIG.RECOVERY_XP_PER_DAY
+  )
 }
 
 async function getStreakAtBreak(userId: string, breakDate: Date): Promise<number> {
@@ -448,7 +450,9 @@ async function getStreakAtBreak(userId: string, breakDate: Date): Promise<number
     const sessionDate = new Date(sessions[i].createdAt)
     sessionDate.setHours(0, 0, 0, 0)
 
-    const diffDays = Math.floor((lastDate.getTime() - sessionDate.getTime()) / (1000 * 60 * 60 * 24))
+    const diffDays = Math.floor(
+      (lastDate.getTime() - sessionDate.getTime()) / (1000 * 60 * 60 * 24)
+    )
 
     if (diffDays === 1) {
       streak++

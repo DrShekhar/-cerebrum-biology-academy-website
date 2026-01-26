@@ -15,8 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Quiz Competition - Classroom Quiz Tool',
-    description:
-      'Conduct engaging team-based quizzes with live score updates across all devices.',
+    description: 'Conduct engaging team-based quizzes with live score updates across all devices.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-tools/quiz-competition',
   },

@@ -104,12 +104,15 @@ function parseArgs(): Record<string, string | boolean> {
 // LEAD MAGNET TEMPLATES
 // ============================================
 
-const MAGNET_TEMPLATES: Record<LeadMagnetType, {
-  titleTemplate: string
-  description: string
-  defaultPages: number
-  sectionStructure: string[]
-}> = {
+const MAGNET_TEMPLATES: Record<
+  LeadMagnetType,
+  {
+    titleTemplate: string
+    description: string
+    defaultPages: number
+    sectionStructure: string[]
+  }
+> = {
   'cheat-sheet': {
     titleTemplate: '{topic} - Quick Revision Cheat Sheet',
     description: 'One-page summary with all key formulas, facts, and diagrams',
@@ -120,8 +123,8 @@ const MAGNET_TEMPLATES: Record<LeadMagnetType, {
       'Diagram Summary',
       'Quick Facts',
       'Common Mistakes',
-      'NEET Tips'
-    ]
+      'NEET Tips',
+    ],
   },
   'chapter-notes': {
     titleTemplate: '{topic} - Complete Chapter Notes',
@@ -134,8 +137,8 @@ const MAGNET_TEMPLATES: Record<LeadMagnetType, {
       'Important Diagrams',
       'NCERT Points',
       'Previous Year Questions',
-      'Summary'
-    ]
+      'Summary',
+    ],
   },
   'pyq-analysis': {
     titleTemplate: '{topic} - PYQ Analysis (2019-2024)',
@@ -148,8 +151,8 @@ const MAGNET_TEMPLATES: Record<LeadMagnetType, {
       'Most Asked Concepts',
       'Solved Examples',
       'Practice Questions',
-      'Expected Questions'
-    ]
+      'Expected Questions',
+    ],
   },
   'revision-guide': {
     titleTemplate: '{topic} - Last Minute Revision Guide',
@@ -161,8 +164,8 @@ const MAGNET_TEMPLATES: Record<LeadMagnetType, {
       '50 Must-Know Facts',
       'Diagram Bank',
       'Formula Sheet',
-      'Quick Recall Questions'
-    ]
+      'Quick Recall Questions',
+    ],
   },
   'formula-sheet': {
     titleTemplate: '{topic} - Formula & Fact Sheet',
@@ -173,8 +176,8 @@ const MAGNET_TEMPLATES: Record<LeadMagnetType, {
       'Numerical Values',
       'Units & Conversions',
       'Important Constants',
-      'Exceptions & Special Cases'
-    ]
+      'Exceptions & Special Cases',
+    ],
   },
   'mind-map': {
     titleTemplate: '{topic} - Visual Mind Map Collection',
@@ -185,8 +188,8 @@ const MAGNET_TEMPLATES: Record<LeadMagnetType, {
       'Sub-topic Flowcharts',
       'Process Diagrams',
       'Comparison Tables',
-      'Classification Charts'
-    ]
+      'Classification Charts',
+    ],
   },
   'question-bank': {
     titleTemplate: '{topic} - 100+ MCQ Question Bank',
@@ -197,18 +200,16 @@ const MAGNET_TEMPLATES: Record<LeadMagnetType, {
       'Medium Questions (40)',
       'Hard Questions (30)',
       'Answer Key',
-      'Detailed Solutions'
-    ]
-  }
+      'Detailed Solutions',
+    ],
+  },
 }
 
 // ============================================
 // CONTENT GENERATORS
 // ============================================
 
-function generateLeadMagnetContent(
-  input: LeadMagnetGenerationInput
-): LeadMagnetContent {
+function generateLeadMagnetContent(input: LeadMagnetGenerationInput): LeadMagnetContent {
   const template = MAGNET_TEMPLATES[input.magnetType]
   const title = template.titleTemplate.replace('{topic}', input.topic)
 
@@ -220,13 +221,24 @@ function generateLeadMagnetContent(
     if (heading.toLowerCase().includes('formula') || heading.toLowerCase().includes('equation')) {
       type = 'formula'
       content = `[CLAUDE: Generate relevant formulas for ${input.topic}]`
-    } else if (heading.toLowerCase().includes('table') || heading.toLowerCase().includes('comparison')) {
+    } else if (
+      heading.toLowerCase().includes('table') ||
+      heading.toLowerCase().includes('comparison')
+    ) {
       type = 'table'
       content = `[CLAUDE: Create comparison table for ${input.topic}]`
-    } else if (heading.toLowerCase().includes('diagram') || heading.toLowerCase().includes('chart') || heading.toLowerCase().includes('map')) {
+    } else if (
+      heading.toLowerCase().includes('diagram') ||
+      heading.toLowerCase().includes('chart') ||
+      heading.toLowerCase().includes('map')
+    ) {
       type = 'diagram'
       content = `[CLAUDE: Describe diagram for ${input.topic}]`
-    } else if (heading.toLowerCase().includes('facts') || heading.toLowerCase().includes('points') || heading.toLowerCase().includes('question')) {
+    } else if (
+      heading.toLowerCase().includes('facts') ||
+      heading.toLowerCase().includes('points') ||
+      heading.toLowerCase().includes('question')
+    ) {
       type = 'list'
       content = `[CLAUDE: Generate list for ${heading} about ${input.topic}]`
     } else {
@@ -241,7 +253,7 @@ function generateLeadMagnetContent(
     title,
     subtitle: `NEET 2026 Biology | ${input.targetChapter || input.topic}`,
     sections,
-    footer: `© ${new Date().getFullYear()} Cerebrum Biology Academy | WhatsApp: ${DEFAULT_CONFIG.whatsappNumber}`
+    footer: `© ${new Date().getFullYear()} Cerebrum Biology Academy | WhatsApp: ${DEFAULT_CONFIG.whatsappNumber}`,
   }
 }
 
@@ -251,7 +263,7 @@ function generateDownloadGateConfig(magnetType: LeadMagnetType): DownloadGateCon
     whatsappOptIn: true,
     emailOptIn: false,
     thankYouMessage: `🎉 Your ${magnetType.replace('-', ' ')} is ready! Check your WhatsApp for the download link and exclusive study tips.`,
-    redirectUrl: '/resources/thank-you'
+    redirectUrl: '/resources/thank-you',
   }
 }
 
@@ -298,9 +310,7 @@ ${input.includeDiagrams ? '✓ Include detailed diagram descriptions' : ''}
 // MAIN GENERATOR
 // ============================================
 
-async function generateLeadMagnet(
-  input: LeadMagnetGenerationInput
-): Promise<LeadMagnetDraft> {
+async function generateLeadMagnet(input: LeadMagnetGenerationInput): Promise<LeadMagnetDraft> {
   const id = generateId()
   const now = new Date().toISOString()
   const template = MAGNET_TEMPLATES[input.magnetType]
@@ -322,11 +332,11 @@ async function generateLeadMagnet(
       `${input.topic} notes`,
       `${input.topic} PDF`,
       `NEET ${input.topic}`,
-      `${input.magnetType.replace('-', ' ')} ${input.topic}`
+      `${input.magnetType.replace('-', ' ')} ${input.topic}`,
     ],
     content: generateLeadMagnetContent(input),
     estimatedPages: input.pageCount || template.defaultPages,
-    downloadGate: generateDownloadGateConfig(input.magnetType)
+    downloadGate: generateDownloadGateConfig(input.magnetType),
   }
 
   return draft
@@ -342,9 +352,7 @@ async function main() {
   logHeader('Lead Magnet PDF Generator')
 
   // Get topic
-  const topic = (args.topic as string) ||
-                (args.chapter as string) ||
-                (args.positional as string)
+  const topic = (args.topic as string) || (args.chapter as string) || (args.positional as string)
 
   if (!topic) {
     log('Error: Topic is required', 'red')
@@ -355,8 +363,13 @@ async function main() {
   // Get magnet type
   const magnetType = (args.type as LeadMagnetType) || 'cheat-sheet'
   const validTypes: LeadMagnetType[] = [
-    'cheat-sheet', 'chapter-notes', 'pyq-analysis',
-    'revision-guide', 'formula-sheet', 'mind-map', 'question-bank'
+    'cheat-sheet',
+    'chapter-notes',
+    'pyq-analysis',
+    'revision-guide',
+    'formula-sheet',
+    'mind-map',
+    'question-bank',
   ]
 
   if (!validTypes.includes(magnetType)) {
@@ -379,7 +392,7 @@ async function main() {
       targetChapter: args.chapter as string,
       pageCount,
       includeFormulas: Boolean(args.formulas),
-      includeDiagrams: Boolean(args.diagrams)
+      includeDiagrams: Boolean(args.diagrams),
     }
 
     const draft = await generateLeadMagnet(input)
@@ -402,7 +415,7 @@ async function main() {
         table: '📊',
         diagram: '🖼️',
         list: '📋',
-        formula: '🔢'
+        formula: '🔢',
       }
       log(`   ${i + 1}. ${typeIcon[section.type] || '•'} ${section.heading}`, 'cyan')
     })
@@ -435,9 +448,8 @@ async function main() {
     log('  SEO KEYWORDS', 'bright')
     log('═'.repeat(60), 'green')
     console.log('')
-    draft.targetKeywords.forEach(kw => log(`   • ${kw}`, 'cyan'))
+    draft.targetKeywords.forEach((kw) => log(`   • ${kw}`, 'cyan'))
     console.log('')
-
   } catch (error) {
     log(`Error: ${error}`, 'red')
     process.exit(1)

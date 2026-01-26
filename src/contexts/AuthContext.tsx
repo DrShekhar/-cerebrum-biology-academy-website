@@ -148,9 +148,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
     let intervalId: NodeJS.Timeout | null = null
 
     const startInterval = () => {
-      intervalId = setInterval(() => {
-        refreshToken()
-      }, 14 * 60 * 1000) // Refresh every 14 minutes
+      intervalId = setInterval(
+        () => {
+          refreshToken()
+        },
+        14 * 60 * 1000
+      ) // Refresh every 14 minutes
     }
 
     const handleVisibilityChange = () => {

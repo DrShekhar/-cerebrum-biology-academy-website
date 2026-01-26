@@ -58,9 +58,7 @@ export function RegradeTab({
               </label>
               <textarea
                 value={regradeOptions.reason}
-                onChange={(e) =>
-                  setRegradeOptions((prev) => ({ ...prev, reason: e.target.value }))
-                }
+                onChange={(e) => setRegradeOptions((prev) => ({ ...prev, reason: e.target.value }))}
                 rows={3}
                 placeholder="Describe the reason for regrade..."
                 className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"

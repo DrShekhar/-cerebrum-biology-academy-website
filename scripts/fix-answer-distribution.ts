@@ -97,7 +97,10 @@ async function fixAnswerDistribution() {
     const needsMore = Object.entries(counts).filter(([_, c]) => c <= targetPerAnswer)
 
     // If all are balanced, just keep current
-    if (needsMore.length === 0 || counts[q.correctAnswer as keyof typeof counts] < targetPerAnswer) {
+    if (
+      needsMore.length === 0 ||
+      counts[q.correctAnswer as keyof typeof counts] < targetPerAnswer
+    ) {
       counts[q.correctAnswer as keyof typeof counts]++
       continue
     }

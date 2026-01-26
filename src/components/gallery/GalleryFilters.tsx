@@ -30,9 +30,8 @@ export function GalleryFilters({
   return (
     <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3">
       {allCategories.map((category) => {
-        const isSelected = category.value === 'all'
-          ? selectedCategory === null
-          : selectedCategory === category.value
+        const isSelected =
+          category.value === 'all' ? selectedCategory === null : selectedCategory === category.value
 
         return (
           <motion.button

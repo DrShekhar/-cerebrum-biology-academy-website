@@ -333,7 +333,10 @@ Or call us: ${CONTACT_INFO.phone.display.primary}`,
  * preferredDate format: "2026-01-15" or "January 15, 2026"
  * preferredTime format: "10:00 AM" or "14:00"
  */
-function parseDemoDateTime(preferredDate: string | null, preferredTime: string | null): Date | undefined {
+function parseDemoDateTime(
+  preferredDate: string | null,
+  preferredTime: string | null
+): Date | undefined {
   if (!preferredDate) return undefined
 
   try {
@@ -705,7 +708,9 @@ export class WhatsAppDripService {
         },
       })
 
-      console.log(`Started ${sequenceType} sequence for lead ${leadId}: ${scheduledCount} steps scheduled`)
+      console.log(
+        `Started ${sequenceType} sequence for lead ${leadId}: ${scheduledCount} steps scheduled`
+      )
 
       return { success: true, scheduledCount }
     } catch (error) {
@@ -809,7 +814,6 @@ export class WhatsAppDripService {
         stats.processed++
 
         try {
-
           // Mark as processing
           await prisma.followup_queue.update({
             where: { id: item.id },

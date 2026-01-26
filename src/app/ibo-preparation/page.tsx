@@ -239,7 +239,7 @@ const faqs = [
   {
     question: 'How do I qualify for IBO?',
     answer:
-      'To participate in IBO, you must first excel in your national Biology Olympiad (USABO, BBO, INBO, etc.). Only the top performers from national competitions are selected for their country\'s IBO training camp, and ultimately only 4 students per country compete at IBO. The selection process varies by country but typically involves multiple rounds of exams.',
+      "To participate in IBO, you must first excel in your national Biology Olympiad (USABO, BBO, INBO, etc.). Only the top performers from national competitions are selected for their country's IBO training camp, and ultimately only 4 students per country compete at IBO. The selection process varies by country but typically involves multiple rounds of exams.",
   },
   {
     question: 'What topics are covered in IBO?',
@@ -307,15 +307,13 @@ export default function IBOPreparationPage() {
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               IBO Preparation
-              <span className="block text-yellow-400 mt-2">
-                International Biology Olympiad
-              </span>
+              <span className="block text-yellow-400 mt-2">International Biology Olympiad</span>
             </h1>
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
-              Expert coaching to help you compete at the highest level of pre-university
-              biology. Join 80+ countries in the world&apos;s most prestigious biology
-              competition. Learn from IBO medalists and national team trainers.
+              Expert coaching to help you compete at the highest level of pre-university biology.
+              Join 80+ countries in the world&apos;s most prestigious biology competition. Learn
+              from IBO medalists and national team trainers.
             </p>
 
             <div className="flex flex-wrap items-center gap-4 mb-8">
@@ -366,9 +364,7 @@ export default function IBOPreparationPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Your Path to IBO
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Your Path to IBO</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               The journey from national olympiad to international gold medal
             </p>
@@ -390,9 +386,7 @@ export default function IBOPreparationPage() {
                   >
                     <stage.icon className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-sm font-medium text-slate-500 mb-1">
-                    Stage {index + 1}
-                  </div>
+                  <div className="text-sm font-medium text-slate-500 mb-1">Stage {index + 1}</div>
                   <h3 className="text-lg font-bold text-slate-900 mb-2">{stage.stage}</h3>
                   <p className="text-sm text-slate-600">{stage.description}</p>
                 </div>
@@ -420,8 +414,8 @@ export default function IBOPreparationPage() {
               IBO Syllabus Coverage
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Comprehensive preparation covering all IBO syllabus areas with Campbell
-              Biology as the foundation
+              Comprehensive preparation covering all IBO syllabus areas with Campbell Biology as the
+              foundation
             </p>
           </motion.div>
 
@@ -439,9 +433,7 @@ export default function IBOPreparationPage() {
                   <div className={`p-3 bg-white rounded-xl shadow-sm`}>
                     <unit.icon className={`w-6 h-6 ${unit.color}`} />
                   </div>
-                  <span className="text-2xl font-bold text-slate-900">
-                    {unit.percentage}
-                  </span>
+                  <span className="text-2xl font-bold text-slate-900">{unit.percentage}</span>
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">{unit.category}</h3>
                 <ul className="space-y-2">
@@ -505,9 +497,7 @@ export default function IBOPreparationPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              IBO Coaching Plans
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">IBO Coaching Plans</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Flexible options for students from all countries preparing for IBO
             </p>
@@ -589,9 +579,7 @@ export default function IBOPreparationPage() {
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
                   className="w-full flex items-center justify-between p-6 text-left hover:bg-slate-50 transition-colors"
                 >
-                  <span className="text-lg font-semibold text-slate-900 pr-4">
-                    {faq.question}
-                  </span>
+                  <span className="text-lg font-semibold text-slate-900 pr-4">{faq.question}</span>
                   <ChevronRight
                     className={`w-5 h-5 text-slate-400 transition-transform ${openFaq === index ? 'rotate-90' : ''}`}
                   />
@@ -619,9 +607,7 @@ export default function IBOPreparationPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
               National Olympiad Preparation
             </h2>
-            <p className="text-slate-600">
-              First qualify through your national Biology Olympiad
-            </p>
+            <p className="text-slate-600">First qualify through your national Biology Olympiad</p>
           </motion.div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -631,7 +617,19 @@ export default function IBOPreparationPage() {
                 href={olympiad.link}
                 className="bg-white rounded-xl p-4 text-center border border-slate-200 hover:border-yellow-400 hover:shadow-lg transition-all group"
               >
-                <div className="text-2xl mb-2">{olympiad.country === 'USA' ? '🇺🇸' : olympiad.country === 'UK' ? '🇬🇧' : olympiad.country === 'India' ? '🇮🇳' : olympiad.country === 'China' ? '🇨🇳' : olympiad.country === 'Australia' ? '🇦🇺' : '🇨🇦'}</div>
+                <div className="text-2xl mb-2">
+                  {olympiad.country === 'USA'
+                    ? '🇺🇸'
+                    : olympiad.country === 'UK'
+                      ? '🇬🇧'
+                      : olympiad.country === 'India'
+                        ? '🇮🇳'
+                        : olympiad.country === 'China'
+                          ? '🇨🇳'
+                          : olympiad.country === 'Australia'
+                            ? '🇦🇺'
+                            : '🇨🇦'}
+                </div>
                 <div className="font-bold text-slate-900 group-hover:text-yellow-600 transition-colors">
                   {olympiad.name}
                 </div>
@@ -708,8 +706,8 @@ export default function IBOPreparationPage() {
               Ready to Compete at the Highest Level?
             </h2>
             <p className="text-xl text-yellow-800 mb-8 max-w-2xl mx-auto">
-              Join the elite group of students preparing for the International Biology
-              Olympiad. Our expert faculty will guide you every step of the way.
+              Join the elite group of students preparing for the International Biology Olympiad. Our
+              expert faculty will guide you every step of the way.
             </p>
             <motion.button
               whileHover={{ scale: 1.02 }}
@@ -738,14 +736,13 @@ export default function IBOPreparationPage() {
             '@type': 'Course',
             name: 'International Biology Olympiad (IBO) Preparation',
             description:
-              'Expert coaching for IBO - the world\'s most prestigious pre-university biology competition',
+              "Expert coaching for IBO - the world's most prestigious pre-university biology competition",
             provider: {
               '@type': 'EducationalOrganization',
               name: 'Cerebrum Biology Academy',
               sameAs: 'https://cerebrumbiologyacademy.com',
             },
-            coursePrerequisites:
-              'National Biology Olympiad qualification (USABO, BBO, INBO, etc.)',
+            coursePrerequisites: 'National Biology Olympiad qualification (USABO, BBO, INBO, etc.)',
             educationalLevel: 'Advanced - International Competition Level',
           }),
         }}

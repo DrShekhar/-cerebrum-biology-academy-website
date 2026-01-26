@@ -116,8 +116,7 @@ export const it = {
   responseTime: 'Tempo di Risposta',
   immediateAssistance: 'Per assistenza immediata, chiamaci direttamente',
   neetSuccessFramework: 'Sistema di Successo NEET',
-  frameworkDescription:
-    'Il nostro sistema collaudato che ti guida da dove sei a dove vuoi essere.',
+  frameworkDescription: 'Il nostro sistema collaudato che ti guida da dove sei a dove vuoi essere.',
   diagnosticAssessment: 'Valutazione Diagnostica',
   strategicLearning: 'Apprendimento Strategico',
   performanceOptimization: 'Ottimizzazione delle Prestazioni',

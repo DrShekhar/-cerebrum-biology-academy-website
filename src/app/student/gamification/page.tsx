@@ -4,16 +4,7 @@ export const dynamic = 'force-dynamic'
 
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
-import {
-  Trophy,
-  Flame,
-  Target,
-  Users,
-  Crown,
-  Sparkles,
-  Star,
-  Zap,
-} from 'lucide-react'
+import { Trophy, Flame, Target, Users, Crown, Sparkles, Star, Zap } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -41,11 +32,26 @@ type LeaderboardType = 'CLASS' | 'BATCH' | 'GLOBAL'
 
 export default function GamificationDashboard() {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
-  const [activeTab, setActiveTab] = useState<'overview' | 'badges' | 'leaderboard' | 'goals'>('overview')
+  const [activeTab, setActiveTab] = useState<'overview' | 'badges' | 'leaderboard' | 'goals'>(
+    'overview'
+  )
 
-  const { gamification, isLoading: gamificationLoading, error: gamificationError } = useGamification()
+  const {
+    gamification,
+    isLoading: gamificationLoading,
+    error: gamificationError,
+  } = useGamification()
   const { status: streakStatus, config: streakConfig, useFreeze, recoverStreak } = useStreak()
-  const { earned: earnedBadges, inProgress: inProgressBadges, available: availableBadges, showcased, toggleShowcase, completionPercentage, totalBadges, earnedCount } = useBadges()
+  const {
+    earned: earnedBadges,
+    inProgress: inProgressBadges,
+    available: availableBadges,
+    showcased,
+    toggleShowcase,
+    completionPercentage,
+    totalBadges,
+    earnedCount,
+  } = useBadges()
   const { notifications, unreadCount, markAsRead, markAllAsRead } = useNotifications({ limit: 5 })
   const { leaderboard, setPeriod } = useLeaderboard({ limit: 10 })
   const { dailyGoals, weeklyGoals, summary: goalSummary } = useGoals()
@@ -62,15 +68,15 @@ export default function GamificationDashboard() {
 
   // Combine all goals for GoalProgressCard
   const allGoals = useMemo(() => {
-    const daily = dailyGoals.map(item => item.goal)
-    const weekly = weeklyGoals.map(item => item.goal)
+    const daily = dailyGoals.map((item) => item.goal)
+    const weekly = weeklyGoals.map((item) => item.goal)
     return [...daily, ...weekly]
   }, [dailyGoals, weeklyGoals])
 
   // Transform leaderboard entries to match component interface
   const leaderboardEntries = useMemo(() => {
     if (!leaderboard?.entries) return []
-    return leaderboard.entries.map(entry => ({
+    return leaderboard.entries.map((entry) => ({
       rank: entry.rank,
       previousRank: entry.previousRank ?? null,
       userId: entry.userId || entry.freeUserId || '',
@@ -85,7 +91,7 @@ export default function GamificationDashboard() {
 
   // Find current user's leaderboard entry
   const currentUserLeaderboardEntry = useMemo(() => {
-    return leaderboardEntries.find(entry => entry.isCurrentUser) || null
+    return leaderboardEntries.find((entry) => entry.isCurrentUser) || null
   }, [leaderboardEntries])
 
   if (isLoading) {
@@ -100,7 +106,9 @@ export default function GamificationDashboard() {
             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Zap className="w-8 h-8 text-red-500" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">Unable to Load Gamification</h3>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              Unable to Load Gamification
+            </h3>
             <p className="text-gray-600 mb-4">{gamificationError}</p>
             <Button onClick={() => window.location.reload()}>Try Again</Button>
           </CardContent>
@@ -337,7 +345,8 @@ function OverviewTab({
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-xl font-bold text-gray-900">Today's Goals</h2>
           <span className="text-sm text-gray-600">
-            {goalSummary?.completedToday || 0} of {goalSummary?.totalGoals || allGoals.length} completed
+            {goalSummary?.completedToday || 0} of {goalSummary?.totalGoals || allGoals.length}{' '}
+            completed
           </span>
         </div>
         {allGoals.length > 0 ? (
@@ -349,7 +358,9 @@ function OverviewTab({
           <Card>
             <CardContent className="p-6 text-center">
               <Target className="w-12 h-12 text-gray-400 mx-auto mb-3" />
-              <p className="text-gray-600">No goals set yet. Complete activities to unlock goals!</p>
+              <p className="text-gray-600">
+                No goals set yet. Complete activities to unlock goals!
+              </p>
             </CardContent>
           </Card>
         )}
@@ -395,7 +406,9 @@ function BadgesTab({
               </p>
             </div>
             <div className="text-right">
-              <div className="text-3xl font-bold text-purple-600">{Math.round(completionPercentage)}%</div>
+              <div className="text-3xl font-bold text-purple-600">
+                {Math.round(completionPercentage)}%
+              </div>
               <p className="text-sm text-gray-500">Collection Complete</p>
             </div>
           </div>
@@ -411,11 +424,7 @@ function BadgesTab({
       </Card>
 
       {/* Badge Gallery */}
-      <BadgeGallery
-        badges={allBadges}
-        earnedCount={earnedCount}
-        totalCount={totalBadges}
-      />
+      <BadgeGallery badges={allBadges} earnedCount={earnedCount} totalCount={totalBadges} />
     </div>
   )
 }
@@ -465,7 +474,9 @@ function GoalsTab({
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-3xl font-bold text-green-600">{goalSummary?.completedToday || 0}</div>
+            <div className="text-3xl font-bold text-green-600">
+              {goalSummary?.completedToday || 0}
+            </div>
             <p className="text-sm text-gray-600 mt-1">Completed Today</p>
           </CardContent>
         </Card>
@@ -477,7 +488,9 @@ function GoalsTab({
         </Card>
         <Card>
           <CardContent className="p-6 text-center">
-            <div className="text-3xl font-bold text-purple-600">{goalSummary?.totalXpFromGoals?.toLocaleString() || 0}</div>
+            <div className="text-3xl font-bold text-purple-600">
+              {goalSummary?.totalXpFromGoals?.toLocaleString() || 0}
+            </div>
             <p className="text-sm text-gray-600 mt-1">XP from Goals</p>
           </CardContent>
         </Card>
@@ -485,10 +498,7 @@ function GoalsTab({
 
       {/* Goals Card */}
       {allGoals.length > 0 ? (
-        <GoalProgressCard
-          goals={allGoals}
-          currentStreakDays={currentStreakDays}
-        />
+        <GoalProgressCard goals={allGoals} currentStreakDays={currentStreakDays} />
       ) : (
         <Card>
           <CardContent className="p-6 text-center">
@@ -516,7 +526,9 @@ function QuickStatBadge({
 }) {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 flex items-center gap-3">
-      <div className={cn('w-10 h-10 rounded-lg flex items-center justify-center text-white', color)}>
+      <div
+        className={cn('w-10 h-10 rounded-lg flex items-center justify-center text-white', color)}
+      >
         {icon}
       </div>
       <div>
@@ -540,10 +552,12 @@ function BadgeCard({ badge }: { badge: any }) {
     <Card className="overflow-hidden">
       <CardContent className="p-4">
         <div className="flex items-center gap-3">
-          <div className={cn(
-            'w-12 h-12 rounded-full bg-gradient-to-br flex items-center justify-center text-2xl',
-            rarityColors[badge.rarity as keyof typeof rarityColors] || rarityColors.COMMON
-          )}>
+          <div
+            className={cn(
+              'w-12 h-12 rounded-full bg-gradient-to-br flex items-center justify-center text-2xl',
+              rarityColors[badge.rarity as keyof typeof rarityColors] || rarityColors.COMMON
+            )}
+          >
             {badge.icon || '🏆'}
           </div>
           <div className="flex-1 min-w-0">

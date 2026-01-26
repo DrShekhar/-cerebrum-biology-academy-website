@@ -25,7 +25,7 @@ import {
   Trash2,
   Zap,
   Target,
-  Brain
+  Brain,
 } from 'lucide-react'
 
 // Types and Interfaces
@@ -136,7 +136,15 @@ interface SecurityConfiguration {
 
 interface SecurityEvent {
   id: string
-  type: 'browser' | 'copy_paste' | 'right_click' | 'tab_switch' | 'webcam' | 'screen' | 'plagiarism' | 'time'
+  type:
+    | 'browser'
+    | 'copy_paste'
+    | 'right_click'
+    | 'tab_switch'
+    | 'webcam'
+    | 'screen'
+    | 'plagiarism'
+    | 'time'
   severity: 'low' | 'medium' | 'high' | 'critical'
   description: string
   timestamp: string
@@ -146,7 +154,16 @@ interface SecurityEvent {
 }
 
 const SecurityFeatures: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'browser' | 'copy' | 'rightclick' | 'tabswitch' | 'webcam' | 'screen' | 'plagiarism' | 'tracking'>('browser')
+  const [activeTab, setActiveTab] = useState<
+    | 'browser'
+    | 'copy'
+    | 'rightclick'
+    | 'tabswitch'
+    | 'webcam'
+    | 'screen'
+    | 'plagiarism'
+    | 'tracking'
+  >('browser')
   const [configuration, setConfiguration] = useState<SecurityConfiguration>({
     browserLockdown: {
       enabled: false,
@@ -157,7 +174,7 @@ const SecurityFeatures: React.FC = () => {
       preventNavigation: true,
       disableShortcuts: true,
       kioskMode: false,
-      customBlockList: []
+      customBlockList: [],
     },
     copyPaste: {
       enabled: false,
@@ -167,7 +184,7 @@ const SecurityFeatures: React.FC = () => {
       disableSelect: false,
       allowTextInput: true,
       detectClipboardAccess: true,
-      logViolations: true
+      logViolations: true,
     },
     rightClick: {
       enabled: false,
@@ -177,7 +194,7 @@ const SecurityFeatures: React.FC = () => {
       disablePrintScreen: true,
       customMessage: 'Right-click is disabled during the test',
       showWarning: true,
-      logAttempts: true
+      logAttempts: true,
     },
     tabSwitch: {
       enabled: false,
@@ -187,7 +204,7 @@ const SecurityFeatures: React.FC = () => {
       autoSubmitOnViolation: false,
       allowedSwitches: 2,
       gracePeriod: 5,
-      notificationSound: true
+      notificationSound: true,
     },
     webcam: {
       enabled: false,
@@ -199,7 +216,7 @@ const SecurityFeatures: React.FC = () => {
       captureInterval: 30,
       storageLocation: 'cloud',
       encryptionEnabled: true,
-      autoAnalysis: false
+      autoAnalysis: false,
     },
     screenRecording: {
       enabled: false,
@@ -210,7 +227,7 @@ const SecurityFeatures: React.FC = () => {
       resolution: '1080p',
       frameRate: 30,
       storageLimit: 1000,
-      automaticUpload: true
+      automaticUpload: true,
     },
     plagiarism: {
       enabled: false,
@@ -221,7 +238,7 @@ const SecurityFeatures: React.FC = () => {
       patternAnalysis: true,
       behaviorAnalysis: true,
       generateReport: true,
-      flagSuspiciousActivity: true
+      flagSuspiciousActivity: true,
     },
     timeTracking: {
       enabled: true,
@@ -232,20 +249,31 @@ const SecurityFeatures: React.FC = () => {
       timeWarnings: true,
       adaptiveTimeouts: false,
       detailedReporting: true,
-      behaviorProfiling: false
-    }
+      behaviorProfiling: false,
+    },
   })
 
   const [securityEvents, setSecurityEvents] = useState<SecurityEvent[]>([])
   const [isMonitoring, setIsMonitoring] = useState(false)
-  const [systemStatus, setSystemStatus] = useState<'ready' | 'active' | 'warning' | 'error'>('ready')
+  const [systemStatus, setSystemStatus] = useState<'ready' | 'active' | 'warning' | 'error'>(
+    'ready'
+  )
 
   // Simulate security events for demonstration
   useEffect(() => {
     if (isMonitoring) {
       const interval = setInterval(() => {
         // Simulate random security events
-        const eventTypes = ['browser', 'copy_paste', 'right_click', 'tab_switch', 'webcam', 'screen', 'plagiarism', 'time']
+        const eventTypes = [
+          'browser',
+          'copy_paste',
+          'right_click',
+          'tab_switch',
+          'webcam',
+          'screen',
+          'plagiarism',
+          'time',
+        ]
         const severities = ['low', 'medium', 'high', 'critical']
         const randomEvent: SecurityEvent = {
           id: `event_${Date.now()}`,
@@ -254,10 +282,10 @@ const SecurityFeatures: React.FC = () => {
           description: 'Simulated security event for demonstration',
           timestamp: new Date().toISOString(),
           studentId: 'student_123',
-          action: 'logged'
+          action: 'logged',
         }
 
-        setSecurityEvents(prev => [randomEvent, ...prev.slice(0, 19)]) // Keep last 20 events
+        setSecurityEvents((prev) => [randomEvent, ...prev.slice(0, 19)]) // Keep last 20 events
       }, 5000)
 
       return () => clearInterval(interval)
@@ -290,7 +318,7 @@ const SecurityFeatures: React.FC = () => {
   }
 
   const getActiveSecurityFeatures = (): number => {
-    return Object.values(configuration).filter(config => config.enabled).length
+    return Object.values(configuration).filter((config) => config.enabled).length
   }
 
   const getSecurityScore = (): number => {
@@ -315,8 +343,8 @@ const SecurityFeatures: React.FC = () => {
           </h1>
         </motion.div>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Advanced security monitoring and proctoring features for test integrity,
-          including browser lockdown, copy-paste detection, webcam monitoring, and plagiarism checking
+          Advanced security monitoring and proctoring features for test integrity, including browser
+          lockdown, copy-paste detection, webcam monitoring, and plagiarism checking
         </p>
       </div>
 
@@ -324,16 +352,28 @@ const SecurityFeatures: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
         <div className="bg-white rounded-xl p-4 border">
           <div className="flex items-center gap-3">
-            <div className={`p-2 rounded-lg ${
-              systemStatus === 'active' ? 'bg-green-100' :
-              systemStatus === 'warning' ? 'bg-yellow-100' :
-              systemStatus === 'error' ? 'bg-red-100' : 'bg-gray-100'
-            }`}>
-              <Activity className={`w-5 h-5 ${
-                systemStatus === 'active' ? 'text-green-600' :
-                systemStatus === 'warning' ? 'text-yellow-600' :
-                systemStatus === 'error' ? 'text-red-600' : 'text-gray-600'
-              }`} />
+            <div
+              className={`p-2 rounded-lg ${
+                systemStatus === 'active'
+                  ? 'bg-green-100'
+                  : systemStatus === 'warning'
+                    ? 'bg-yellow-100'
+                    : systemStatus === 'error'
+                      ? 'bg-red-100'
+                      : 'bg-gray-100'
+              }`}
+            >
+              <Activity
+                className={`w-5 h-5 ${
+                  systemStatus === 'active'
+                    ? 'text-green-600'
+                    : systemStatus === 'warning'
+                      ? 'text-yellow-600'
+                      : systemStatus === 'error'
+                        ? 'text-red-600'
+                        : 'text-gray-600'
+                }`}
+              />
             </div>
             <div>
               <p className="text-sm text-gray-500">System Status</p>
@@ -413,9 +453,11 @@ const SecurityFeatures: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-            isMonitoring ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'
-          }`}>
+          <span
+            className={`px-3 py-1 rounded-full text-sm font-medium ${
+              isMonitoring ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'
+            }`}
+          >
             {isMonitoring ? '● Monitoring Active' : '○ Monitoring Inactive'}
           </span>
 
@@ -440,7 +482,7 @@ const SecurityFeatures: React.FC = () => {
             { id: 'webcam', label: 'Webcam', icon: Camera },
             { id: 'screen', label: 'Screen Rec', icon: Video },
             { id: 'plagiarism', label: 'Plagiarism', icon: Search },
-            { id: 'tracking', label: 'Time Track', icon: Timer }
+            { id: 'tracking', label: 'Time Track', icon: Timer },
           ].map(({ id, label, icon: Icon }) => (
             <button
               key={id}
@@ -479,14 +521,23 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Browser Lockdown</label>
-                    <p className="text-xs text-gray-500">Restrict browser functionality during test</p>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Browser Lockdown
+                    </label>
+                    <p className="text-xs text-gray-500">
+                      Restrict browser functionality during test
+                    </p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      browserLockdown: { ...prev.browserLockdown, enabled: !prev.browserLockdown.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        browserLockdown: {
+                          ...prev.browserLockdown,
+                          enabled: !prev.browserLockdown.enabled,
+                        },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.browserLockdown.enabled ? 'bg-red-600' : 'bg-gray-200'
                     }`}
@@ -502,13 +553,37 @@ const SecurityFeatures: React.FC = () => {
                 {configuration.browserLockdown.enabled && (
                   <div className="space-y-3">
                     {[
-                      { key: 'fullScreenMode', label: 'Full Screen Mode', desc: 'Force full screen during test' },
-                      { key: 'disableDevTools', label: 'Disable Dev Tools', desc: 'Block F12 and developer tools' },
-                      { key: 'disableExtensions', label: 'Disable Extensions', desc: 'Block browser extensions' },
-                      { key: 'blockNewTabs', label: 'Block New Tabs', desc: 'Prevent opening new tabs' },
-                      { key: 'preventNavigation', label: 'Prevent Navigation', desc: 'Block back/forward buttons' },
-                      { key: 'disableShortcuts', label: 'Disable Shortcuts', desc: 'Block keyboard shortcuts' },
-                      { key: 'kioskMode', label: 'Kiosk Mode', desc: 'Run in secure kiosk mode' }
+                      {
+                        key: 'fullScreenMode',
+                        label: 'Full Screen Mode',
+                        desc: 'Force full screen during test',
+                      },
+                      {
+                        key: 'disableDevTools',
+                        label: 'Disable Dev Tools',
+                        desc: 'Block F12 and developer tools',
+                      },
+                      {
+                        key: 'disableExtensions',
+                        label: 'Disable Extensions',
+                        desc: 'Block browser extensions',
+                      },
+                      {
+                        key: 'blockNewTabs',
+                        label: 'Block New Tabs',
+                        desc: 'Prevent opening new tabs',
+                      },
+                      {
+                        key: 'preventNavigation',
+                        label: 'Prevent Navigation',
+                        desc: 'Block back/forward buttons',
+                      },
+                      {
+                        key: 'disableShortcuts',
+                        label: 'Disable Shortcuts',
+                        desc: 'Block keyboard shortcuts',
+                      },
+                      { key: 'kioskMode', label: 'Kiosk Mode', desc: 'Run in secure kiosk mode' },
                     ].map(({ key, label, desc }) => (
                       <div key={key} className="flex items-center justify-between">
                         <div>
@@ -516,17 +591,26 @@ const SecurityFeatures: React.FC = () => {
                           <p className="text-xs text-gray-500">{desc}</p>
                         </div>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            browserLockdown: { ...prev.browserLockdown, [key]: !prev.browserLockdown[key as keyof BrowserLockdownSettings] }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              browserLockdown: {
+                                ...prev.browserLockdown,
+                                [key]: !prev.browserLockdown[key as keyof BrowserLockdownSettings],
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.browserLockdown[key as keyof BrowserLockdownSettings] ? 'bg-red-600' : 'bg-gray-200'
+                            configuration.browserLockdown[key as keyof BrowserLockdownSettings]
+                              ? 'bg-red-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.browserLockdown[key as keyof BrowserLockdownSettings] ? 'translate-x-5' : 'translate-x-1'
+                              configuration.browserLockdown[key as keyof BrowserLockdownSettings]
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -600,14 +684,18 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Copy/Paste Protection</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Copy/Paste Protection
+                    </label>
                     <p className="text-xs text-gray-500">Prevent copying and pasting content</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      copyPaste: { ...prev.copyPaste, enabled: !prev.copyPaste.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        copyPaste: { ...prev.copyPaste, enabled: !prev.copyPaste.enabled },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.copyPaste.enabled ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
@@ -623,13 +711,41 @@ const SecurityFeatures: React.FC = () => {
                 {configuration.copyPaste.enabled && (
                   <div className="space-y-3">
                     {[
-                      { key: 'disableCopy', label: 'Disable Copy (Ctrl+C)', desc: 'Prevent copying text' },
-                      { key: 'disablePaste', label: 'Disable Paste (Ctrl+V)', desc: 'Prevent pasting content' },
-                      { key: 'disableCut', label: 'Disable Cut (Ctrl+X)', desc: 'Prevent cutting text' },
-                      { key: 'disableSelect', label: 'Disable Text Selection', desc: 'Prevent text selection' },
-                      { key: 'allowTextInput', label: 'Allow Text Input', desc: 'Allow typing in answer fields' },
-                      { key: 'detectClipboardAccess', label: 'Detect Clipboard Access', desc: 'Monitor clipboard usage' },
-                      { key: 'logViolations', label: 'Log Violations', desc: 'Record copy/paste attempts' }
+                      {
+                        key: 'disableCopy',
+                        label: 'Disable Copy (Ctrl+C)',
+                        desc: 'Prevent copying text',
+                      },
+                      {
+                        key: 'disablePaste',
+                        label: 'Disable Paste (Ctrl+V)',
+                        desc: 'Prevent pasting content',
+                      },
+                      {
+                        key: 'disableCut',
+                        label: 'Disable Cut (Ctrl+X)',
+                        desc: 'Prevent cutting text',
+                      },
+                      {
+                        key: 'disableSelect',
+                        label: 'Disable Text Selection',
+                        desc: 'Prevent text selection',
+                      },
+                      {
+                        key: 'allowTextInput',
+                        label: 'Allow Text Input',
+                        desc: 'Allow typing in answer fields',
+                      },
+                      {
+                        key: 'detectClipboardAccess',
+                        label: 'Detect Clipboard Access',
+                        desc: 'Monitor clipboard usage',
+                      },
+                      {
+                        key: 'logViolations',
+                        label: 'Log Violations',
+                        desc: 'Record copy/paste attempts',
+                      },
                     ].map(({ key, label, desc }) => (
                       <div key={key} className="flex items-center justify-between">
                         <div>
@@ -637,17 +753,26 @@ const SecurityFeatures: React.FC = () => {
                           <p className="text-xs text-gray-500">{desc}</p>
                         </div>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            copyPaste: { ...prev.copyPaste, [key]: !prev.copyPaste[key as keyof CopyPasteSettings] }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              copyPaste: {
+                                ...prev.copyPaste,
+                                [key]: !prev.copyPaste[key as keyof CopyPasteSettings],
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.copyPaste[key as keyof CopyPasteSettings] ? 'bg-blue-600' : 'bg-gray-200'
+                            configuration.copyPaste[key as keyof CopyPasteSettings]
+                              ? 'bg-blue-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.copyPaste[key as keyof CopyPasteSettings] ? 'translate-x-5' : 'translate-x-1'
+                              configuration.copyPaste[key as keyof CopyPasteSettings]
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -737,14 +862,18 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Right Click Protection</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Right Click Protection
+                    </label>
                     <p className="text-xs text-gray-500">Disable context menu and inspect tools</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      rightClick: { ...prev.rightClick, enabled: !prev.rightClick.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        rightClick: { ...prev.rightClick, enabled: !prev.rightClick.enabled },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.rightClick.enabled ? 'bg-purple-600' : 'bg-gray-200'
                     }`}
@@ -761,12 +890,36 @@ const SecurityFeatures: React.FC = () => {
                   <>
                     <div className="space-y-3">
                       {[
-                        { key: 'disableContextMenu', label: 'Disable Context Menu', desc: 'Block right-click menu' },
-                        { key: 'disableInspectElement', label: 'Disable Inspect Element', desc: 'Block element inspection' },
-                        { key: 'disableViewSource', label: 'Disable View Source', desc: 'Block source code viewing' },
-                        { key: 'disablePrintScreen', label: 'Disable Print Screen', desc: 'Block screenshot shortcuts' },
-                        { key: 'showWarning', label: 'Show Warning Message', desc: 'Display warning on attempts' },
-                        { key: 'logAttempts', label: 'Log Attempts', desc: 'Record right-click attempts' }
+                        {
+                          key: 'disableContextMenu',
+                          label: 'Disable Context Menu',
+                          desc: 'Block right-click menu',
+                        },
+                        {
+                          key: 'disableInspectElement',
+                          label: 'Disable Inspect Element',
+                          desc: 'Block element inspection',
+                        },
+                        {
+                          key: 'disableViewSource',
+                          label: 'Disable View Source',
+                          desc: 'Block source code viewing',
+                        },
+                        {
+                          key: 'disablePrintScreen',
+                          label: 'Disable Print Screen',
+                          desc: 'Block screenshot shortcuts',
+                        },
+                        {
+                          key: 'showWarning',
+                          label: 'Show Warning Message',
+                          desc: 'Display warning on attempts',
+                        },
+                        {
+                          key: 'logAttempts',
+                          label: 'Log Attempts',
+                          desc: 'Record right-click attempts',
+                        },
                       ].map(({ key, label, desc }) => (
                         <div key={key} className="flex items-center justify-between">
                           <div>
@@ -774,17 +927,26 @@ const SecurityFeatures: React.FC = () => {
                             <p className="text-xs text-gray-500">{desc}</p>
                           </div>
                           <button
-                            onClick={() => setConfiguration(prev => ({
-                              ...prev,
-                              rightClick: { ...prev.rightClick, [key]: !prev.rightClick[key as keyof RightClickSettings] }
-                            }))}
+                            onClick={() =>
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                rightClick: {
+                                  ...prev.rightClick,
+                                  [key]: !prev.rightClick[key as keyof RightClickSettings],
+                                },
+                              }))
+                            }
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.rightClick[key as keyof RightClickSettings] ? 'bg-purple-600' : 'bg-gray-200'
+                              configuration.rightClick[key as keyof RightClickSettings]
+                                ? 'bg-purple-600'
+                                : 'bg-gray-200'
                             }`}
                           >
                             <span
                               className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                                configuration.rightClick[key as keyof RightClickSettings] ? 'translate-x-5' : 'translate-x-1'
+                                configuration.rightClick[key as keyof RightClickSettings]
+                                  ? 'translate-x-5'
+                                  : 'translate-x-1'
                               }`}
                             />
                           </button>
@@ -798,10 +960,12 @@ const SecurityFeatures: React.FC = () => {
                       </label>
                       <textarea
                         value={configuration.rightClick.customMessage}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          rightClick: { ...prev.rightClick, customMessage: e.target.value }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            rightClick: { ...prev.rightClick, customMessage: e.target.value },
+                          }))
+                        }
                         rows={3}
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                         placeholder="Enter message to show when right-click is attempted"
@@ -827,7 +991,8 @@ const SecurityFeatures: React.FC = () => {
                       <h4 className="text-lg font-semibold text-red-800">Access Restricted</h4>
                     </div>
                     <p className="text-red-700 mb-4">
-                      {configuration.rightClick.customMessage || 'Right-click is disabled during the test'}
+                      {configuration.rightClick.customMessage ||
+                        'Right-click is disabled during the test'}
                     </p>
                     <div className="flex gap-2">
                       <button className="bg-red-600 text-white px-4 py-2 rounded text-sm hover:bg-red-700">
@@ -874,14 +1039,18 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Tab Switch Detection</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Tab Switch Detection
+                    </label>
                     <p className="text-xs text-gray-500">Monitor when student leaves test tab</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      tabSwitch: { ...prev.tabSwitch, enabled: !prev.tabSwitch.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        tabSwitch: { ...prev.tabSwitch, enabled: !prev.tabSwitch.enabled },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.tabSwitch.enabled ? 'bg-green-600' : 'bg-gray-200'
                     }`}
@@ -898,10 +1067,26 @@ const SecurityFeatures: React.FC = () => {
                   <>
                     <div className="space-y-3">
                       {[
-                        { key: 'detectFocusLoss', label: 'Detect Focus Loss', desc: 'Monitor window focus changes' },
-                        { key: 'detectVisibilityChange', label: 'Detect Visibility Change', desc: 'Monitor tab visibility' },
-                        { key: 'autoSubmitOnViolation', label: 'Auto Submit on Violation', desc: 'Submit test after threshold' },
-                        { key: 'notificationSound', label: 'Warning Sound', desc: 'Play sound on tab switch' }
+                        {
+                          key: 'detectFocusLoss',
+                          label: 'Detect Focus Loss',
+                          desc: 'Monitor window focus changes',
+                        },
+                        {
+                          key: 'detectVisibilityChange',
+                          label: 'Detect Visibility Change',
+                          desc: 'Monitor tab visibility',
+                        },
+                        {
+                          key: 'autoSubmitOnViolation',
+                          label: 'Auto Submit on Violation',
+                          desc: 'Submit test after threshold',
+                        },
+                        {
+                          key: 'notificationSound',
+                          label: 'Warning Sound',
+                          desc: 'Play sound on tab switch',
+                        },
                       ].map(({ key, label, desc }) => (
                         <div key={key} className="flex items-center justify-between">
                           <div>
@@ -909,17 +1094,26 @@ const SecurityFeatures: React.FC = () => {
                             <p className="text-xs text-gray-500">{desc}</p>
                           </div>
                           <button
-                            onClick={() => setConfiguration(prev => ({
-                              ...prev,
-                              tabSwitch: { ...prev.tabSwitch, [key]: !prev.tabSwitch[key as keyof TabSwitchSettings] }
-                            }))}
+                            onClick={() =>
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                tabSwitch: {
+                                  ...prev.tabSwitch,
+                                  [key]: !prev.tabSwitch[key as keyof TabSwitchSettings],
+                                },
+                              }))
+                            }
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.tabSwitch[key as keyof TabSwitchSettings] ? 'bg-green-600' : 'bg-gray-200'
+                              configuration.tabSwitch[key as keyof TabSwitchSettings]
+                                ? 'bg-green-600'
+                                : 'bg-gray-200'
                             }`}
                           >
                             <span
                               className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                                configuration.tabSwitch[key as keyof TabSwitchSettings] ? 'translate-x-5' : 'translate-x-1'
+                                configuration.tabSwitch[key as keyof TabSwitchSettings]
+                                  ? 'translate-x-5'
+                                  : 'translate-x-1'
                               }`}
                             />
                           </button>
@@ -937,10 +1131,15 @@ const SecurityFeatures: React.FC = () => {
                           min="1"
                           max="10"
                           value={configuration.tabSwitch.warningThreshold}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            tabSwitch: { ...prev.tabSwitch, warningThreshold: parseInt(e.target.value) || 1 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              tabSwitch: {
+                                ...prev.tabSwitch,
+                                warningThreshold: parseInt(e.target.value) || 1,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                         />
                       </div>
@@ -954,10 +1153,15 @@ const SecurityFeatures: React.FC = () => {
                           min="0"
                           max="5"
                           value={configuration.tabSwitch.allowedSwitches}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            tabSwitch: { ...prev.tabSwitch, allowedSwitches: parseInt(e.target.value) || 0 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              tabSwitch: {
+                                ...prev.tabSwitch,
+                                allowedSwitches: parseInt(e.target.value) || 0,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                         />
                       </div>
@@ -972,10 +1176,15 @@ const SecurityFeatures: React.FC = () => {
                         min="0"
                         max="30"
                         value={configuration.tabSwitch.gracePeriod}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          tabSwitch: { ...prev.tabSwitch, gracePeriod: parseInt(e.target.value) || 0 }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            tabSwitch: {
+                              ...prev.tabSwitch,
+                              gracePeriod: parseInt(e.target.value) || 0,
+                            },
+                          }))
+                        }
                         className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-green-600 focus:border-transparent"
                       />
                     </div>
@@ -996,10 +1205,15 @@ const SecurityFeatures: React.FC = () => {
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                     <h4 className="font-medium text-green-800 mb-3">Detection Policy</h4>
                     <div className="text-sm text-green-700 space-y-1">
-                      <div>• Warnings after {configuration.tabSwitch.warningThreshold} violations</div>
+                      <div>
+                        • Warnings after {configuration.tabSwitch.warningThreshold} violations
+                      </div>
                       <div>• Allowed switches: {configuration.tabSwitch.allowedSwitches}</div>
                       <div>• Grace period: {configuration.tabSwitch.gracePeriod} seconds</div>
-                      <div>• Auto submit: {configuration.tabSwitch.autoSubmitOnViolation ? 'Enabled' : 'Disabled'}</div>
+                      <div>
+                        • Auto submit:{' '}
+                        {configuration.tabSwitch.autoSubmitOnViolation ? 'Enabled' : 'Disabled'}
+                      </div>
                     </div>
                   </div>
 
@@ -1050,14 +1264,18 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Webcam Proctoring</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Webcam Proctoring
+                    </label>
                     <p className="text-xs text-gray-500">Monitor student via webcam</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      webcam: { ...prev.webcam, enabled: !prev.webcam.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        webcam: { ...prev.webcam, enabled: !prev.webcam.enabled },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.webcam.enabled ? 'bg-indigo-600' : 'bg-gray-200'
                     }`}
@@ -1074,13 +1292,41 @@ const SecurityFeatures: React.FC = () => {
                   <>
                     <div className="space-y-3">
                       {[
-                        { key: 'recordingEnabled', label: 'Video Recording', desc: 'Record entire session' },
-                        { key: 'facialRecognition', label: 'Facial Recognition', desc: 'Verify student identity' },
-                        { key: 'multiplePersonDetection', label: 'Multiple Person Detection', desc: 'Detect additional people' },
-                        { key: 'eyeTrackingEnabled', label: 'Eye Tracking', desc: 'Monitor eye movement' },
-                        { key: 'attentionTracking', label: 'Attention Tracking', desc: 'Monitor focus levels' },
-                        { key: 'encryptionEnabled', label: 'Encryption', desc: 'Encrypt recorded data' },
-                        { key: 'autoAnalysis', label: 'Auto Analysis', desc: 'AI-powered behavior analysis' }
+                        {
+                          key: 'recordingEnabled',
+                          label: 'Video Recording',
+                          desc: 'Record entire session',
+                        },
+                        {
+                          key: 'facialRecognition',
+                          label: 'Facial Recognition',
+                          desc: 'Verify student identity',
+                        },
+                        {
+                          key: 'multiplePersonDetection',
+                          label: 'Multiple Person Detection',
+                          desc: 'Detect additional people',
+                        },
+                        {
+                          key: 'eyeTrackingEnabled',
+                          label: 'Eye Tracking',
+                          desc: 'Monitor eye movement',
+                        },
+                        {
+                          key: 'attentionTracking',
+                          label: 'Attention Tracking',
+                          desc: 'Monitor focus levels',
+                        },
+                        {
+                          key: 'encryptionEnabled',
+                          label: 'Encryption',
+                          desc: 'Encrypt recorded data',
+                        },
+                        {
+                          key: 'autoAnalysis',
+                          label: 'Auto Analysis',
+                          desc: 'AI-powered behavior analysis',
+                        },
                       ].map(({ key, label, desc }) => (
                         <div key={key} className="flex items-center justify-between">
                           <div>
@@ -1088,17 +1334,26 @@ const SecurityFeatures: React.FC = () => {
                             <p className="text-xs text-gray-500">{desc}</p>
                           </div>
                           <button
-                            onClick={() => setConfiguration(prev => ({
-                              ...prev,
-                              webcam: { ...prev.webcam, [key]: !prev.webcam[key as keyof WebcamSettings] }
-                            }))}
+                            onClick={() =>
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                webcam: {
+                                  ...prev.webcam,
+                                  [key]: !prev.webcam[key as keyof WebcamSettings],
+                                },
+                              }))
+                            }
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.webcam[key as keyof WebcamSettings] ? 'bg-indigo-600' : 'bg-gray-200'
+                              configuration.webcam[key as keyof WebcamSettings]
+                                ? 'bg-indigo-600'
+                                : 'bg-gray-200'
                             }`}
                           >
                             <span
                               className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                                configuration.webcam[key as keyof WebcamSettings] ? 'translate-x-5' : 'translate-x-1'
+                                configuration.webcam[key as keyof WebcamSettings]
+                                  ? 'translate-x-5'
+                                  : 'translate-x-1'
                               }`}
                             />
                           </button>
@@ -1116,10 +1371,15 @@ const SecurityFeatures: React.FC = () => {
                           min="5"
                           max="300"
                           value={configuration.webcam.captureInterval}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            webcam: { ...prev.webcam, captureInterval: parseInt(e.target.value) || 30 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              webcam: {
+                                ...prev.webcam,
+                                captureInterval: parseInt(e.target.value) || 30,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         />
                       </div>
@@ -1130,10 +1390,15 @@ const SecurityFeatures: React.FC = () => {
                         </label>
                         <select
                           value={configuration.webcam.storageLocation}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            webcam: { ...prev.webcam, storageLocation: e.target.value as 'local' | 'cloud' }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              webcam: {
+                                ...prev.webcam,
+                                storageLocation: e.target.value as 'local' | 'cloud',
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="local">Local Storage</option>
@@ -1223,14 +1488,21 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Screen Recording</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Screen Recording
+                    </label>
                     <p className="text-xs text-gray-500">Record student's screen activity</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      screenRecording: { ...prev.screenRecording, enabled: !prev.screenRecording.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        screenRecording: {
+                          ...prev.screenRecording,
+                          enabled: !prev.screenRecording.enabled,
+                        },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.screenRecording.enabled ? 'bg-indigo-600' : 'bg-gray-200'
                     }`}
@@ -1247,10 +1519,26 @@ const SecurityFeatures: React.FC = () => {
                   <>
                     <div className="space-y-3">
                       {[
-                        { key: 'fullScreenRecording', label: 'Full Screen Recording', desc: 'Record entire screen' },
-                        { key: 'applicationSpecific', label: 'Application Specific', desc: 'Record only test application' },
-                        { key: 'audioRecording', label: 'Audio Recording', desc: 'Include microphone audio' },
-                        { key: 'automaticUpload', label: 'Automatic Upload', desc: 'Upload recordings automatically' }
+                        {
+                          key: 'fullScreenRecording',
+                          label: 'Full Screen Recording',
+                          desc: 'Record entire screen',
+                        },
+                        {
+                          key: 'applicationSpecific',
+                          label: 'Application Specific',
+                          desc: 'Record only test application',
+                        },
+                        {
+                          key: 'audioRecording',
+                          label: 'Audio Recording',
+                          desc: 'Include microphone audio',
+                        },
+                        {
+                          key: 'automaticUpload',
+                          label: 'Automatic Upload',
+                          desc: 'Upload recordings automatically',
+                        },
                       ].map(({ key, label, desc }) => (
                         <div key={key} className="flex items-center justify-between">
                           <div>
@@ -1258,17 +1546,27 @@ const SecurityFeatures: React.FC = () => {
                             <p className="text-xs text-gray-500">{desc}</p>
                           </div>
                           <button
-                            onClick={() => setConfiguration(prev => ({
-                              ...prev,
-                              screenRecording: { ...prev.screenRecording, [key]: !prev.screenRecording[key as keyof ScreenRecordingSettings] }
-                            }))}
+                            onClick={() =>
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                screenRecording: {
+                                  ...prev.screenRecording,
+                                  [key]:
+                                    !prev.screenRecording[key as keyof ScreenRecordingSettings],
+                                },
+                              }))
+                            }
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.screenRecording[key as keyof ScreenRecordingSettings] ? 'bg-indigo-600' : 'bg-gray-200'
+                              configuration.screenRecording[key as keyof ScreenRecordingSettings]
+                                ? 'bg-indigo-600'
+                                : 'bg-gray-200'
                             }`}
                           >
                             <span
                               className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                                configuration.screenRecording[key as keyof ScreenRecordingSettings] ? 'translate-x-5' : 'translate-x-1'
+                                configuration.screenRecording[key as keyof ScreenRecordingSettings]
+                                  ? 'translate-x-5'
+                                  : 'translate-x-1'
                               }`}
                             />
                           </button>
@@ -1283,10 +1581,15 @@ const SecurityFeatures: React.FC = () => {
                         </label>
                         <select
                           value={configuration.screenRecording.compressionLevel}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            screenRecording: { ...prev.screenRecording, compressionLevel: e.target.value as 'low' | 'medium' | 'high' }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              screenRecording: {
+                                ...prev.screenRecording,
+                                compressionLevel: e.target.value as 'low' | 'medium' | 'high',
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="low">Low (Better Quality)</option>
@@ -1301,10 +1604,15 @@ const SecurityFeatures: React.FC = () => {
                         </label>
                         <select
                           value={configuration.screenRecording.resolution}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            screenRecording: { ...prev.screenRecording, resolution: e.target.value as '720p' | '1080p' | '4K' }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              screenRecording: {
+                                ...prev.screenRecording,
+                                resolution: e.target.value as '720p' | '1080p' | '4K',
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="720p">720p (Standard)</option>
@@ -1321,10 +1629,15 @@ const SecurityFeatures: React.FC = () => {
                         </label>
                         <select
                           value={configuration.screenRecording.frameRate}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            screenRecording: { ...prev.screenRecording, frameRate: parseInt(e.target.value) as 15 | 30 | 60 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              screenRecording: {
+                                ...prev.screenRecording,
+                                frameRate: parseInt(e.target.value) as 15 | 30 | 60,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         >
                           <option value="15">15 FPS (Low)</option>
@@ -1342,10 +1655,15 @@ const SecurityFeatures: React.FC = () => {
                           min="100"
                           max="10000"
                           value={configuration.screenRecording.storageLimit}
-                          onChange={(e) => setConfiguration(prev => ({
-                            ...prev,
-                            screenRecording: { ...prev.screenRecording, storageLimit: parseInt(e.target.value) || 1000 }
-                          }))}
+                          onChange={(e) =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              screenRecording: {
+                                ...prev.screenRecording,
+                                storageLimit: parseInt(e.target.value) || 1000,
+                              },
+                            }))
+                          }
                           className="w-full px-3 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
                         />
                       </div>
@@ -1380,19 +1698,27 @@ const SecurityFeatures: React.FC = () => {
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
                         <span className="text-gray-600">Resolution:</span>
-                        <span className="font-medium">{configuration.screenRecording.resolution}</span>
+                        <span className="font-medium">
+                          {configuration.screenRecording.resolution}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Frame Rate:</span>
-                        <span className="font-medium">{configuration.screenRecording.frameRate} FPS</span>
+                        <span className="font-medium">
+                          {configuration.screenRecording.frameRate} FPS
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Compression:</span>
-                        <span className="font-medium capitalize">{configuration.screenRecording.compressionLevel}</span>
+                        <span className="font-medium capitalize">
+                          {configuration.screenRecording.compressionLevel}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Storage Limit:</span>
-                        <span className="font-medium">{configuration.screenRecording.storageLimit} MB</span>
+                        <span className="font-medium">
+                          {configuration.screenRecording.storageLimit} MB
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -1400,7 +1726,10 @@ const SecurityFeatures: React.FC = () => {
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <h4 className="font-medium text-blue-800 mb-2">Storage Information</h4>
                     <div className="text-sm text-blue-700 space-y-1">
-                      <div>• Estimated file size: ~{Math.round(configuration.screenRecording.storageLimit * 0.7)} MB per hour</div>
+                      <div>
+                        • Estimated file size: ~
+                        {Math.round(configuration.screenRecording.storageLimit * 0.7)} MB per hour
+                      </div>
                       <div>• Retention period: 90 days (configurable)</div>
                       <div>• Encryption: AES-256 standard</div>
                       <div>• Backup: Automatic cloud backup enabled</div>
@@ -1441,14 +1770,18 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Plagiarism Detection</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Plagiarism Detection
+                    </label>
                     <p className="text-xs text-gray-500">Check for copied content and AI usage</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      plagiarism: { ...prev.plagiarism, enabled: !prev.plagiarism.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        plagiarism: { ...prev.plagiarism, enabled: !prev.plagiarism.enabled },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.plagiarism.enabled ? 'bg-green-600' : 'bg-gray-200'
                     }`}
@@ -1465,12 +1798,36 @@ const SecurityFeatures: React.FC = () => {
                   <>
                     <div className="space-y-3">
                       {[
-                        { key: 'realTimeChecking', label: 'Real-time Checking', desc: 'Check content as student types' },
-                        { key: 'aiDetection', label: 'AI Content Detection', desc: 'Detect AI-generated text' },
-                        { key: 'patternAnalysis', label: 'Pattern Analysis', desc: 'Analyze writing patterns' },
-                        { key: 'behaviorAnalysis', label: 'Behavior Analysis', desc: 'Monitor typing behavior' },
-                        { key: 'generateReport', label: 'Generate Reports', desc: 'Create detailed plagiarism reports' },
-                        { key: 'flagSuspiciousActivity', label: 'Flag Suspicious Activity', desc: 'Auto-flag potential violations' }
+                        {
+                          key: 'realTimeChecking',
+                          label: 'Real-time Checking',
+                          desc: 'Check content as student types',
+                        },
+                        {
+                          key: 'aiDetection',
+                          label: 'AI Content Detection',
+                          desc: 'Detect AI-generated text',
+                        },
+                        {
+                          key: 'patternAnalysis',
+                          label: 'Pattern Analysis',
+                          desc: 'Analyze writing patterns',
+                        },
+                        {
+                          key: 'behaviorAnalysis',
+                          label: 'Behavior Analysis',
+                          desc: 'Monitor typing behavior',
+                        },
+                        {
+                          key: 'generateReport',
+                          label: 'Generate Reports',
+                          desc: 'Create detailed plagiarism reports',
+                        },
+                        {
+                          key: 'flagSuspiciousActivity',
+                          label: 'Flag Suspicious Activity',
+                          desc: 'Auto-flag potential violations',
+                        },
                       ].map(({ key, label, desc }) => (
                         <div key={key} className="flex items-center justify-between">
                           <div>
@@ -1478,17 +1835,26 @@ const SecurityFeatures: React.FC = () => {
                             <p className="text-xs text-gray-500">{desc}</p>
                           </div>
                           <button
-                            onClick={() => setConfiguration(prev => ({
-                              ...prev,
-                              plagiarism: { ...prev.plagiarism, [key]: !prev.plagiarism[key as keyof PlagiarismSettings] }
-                            }))}
+                            onClick={() =>
+                              setConfiguration((prev) => ({
+                                ...prev,
+                                plagiarism: {
+                                  ...prev.plagiarism,
+                                  [key]: !prev.plagiarism[key as keyof PlagiarismSettings],
+                                },
+                              }))
+                            }
                             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                              configuration.plagiarism[key as keyof PlagiarismSettings] ? 'bg-green-600' : 'bg-gray-200'
+                              configuration.plagiarism[key as keyof PlagiarismSettings]
+                                ? 'bg-green-600'
+                                : 'bg-gray-200'
                             }`}
                           >
                             <span
                               className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                                configuration.plagiarism[key as keyof PlagiarismSettings] ? 'translate-x-5' : 'translate-x-1'
+                                configuration.plagiarism[key as keyof PlagiarismSettings]
+                                  ? 'translate-x-5'
+                                  : 'translate-x-1'
                               }`}
                             />
                           </button>
@@ -1505,15 +1871,22 @@ const SecurityFeatures: React.FC = () => {
                         min="10"
                         max="100"
                         value={configuration.plagiarism.similarityThreshold}
-                        onChange={(e) => setConfiguration(prev => ({
-                          ...prev,
-                          plagiarism: { ...prev.plagiarism, similarityThreshold: parseInt(e.target.value) }
-                        }))}
+                        onChange={(e) =>
+                          setConfiguration((prev) => ({
+                            ...prev,
+                            plagiarism: {
+                              ...prev.plagiarism,
+                              similarityThreshold: parseInt(e.target.value),
+                            },
+                          }))
+                        }
                         className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                       />
                       <div className="flex justify-between text-xs text-gray-500 mt-1">
                         <span>10%</span>
-                        <span className="font-medium">{configuration.plagiarism.similarityThreshold}%</span>
+                        <span className="font-medium">
+                          {configuration.plagiarism.similarityThreshold}%
+                        </span>
                         <span>100%</span>
                       </div>
                     </div>
@@ -1523,7 +1896,13 @@ const SecurityFeatures: React.FC = () => {
                         Database Sources
                       </label>
                       <div className="space-y-2">
-                        {['internet', 'academic_papers', 'previous_submissions', 'textbooks', 'journals'].map(source => (
+                        {[
+                          'internet',
+                          'academic_papers',
+                          'previous_submissions',
+                          'textbooks',
+                          'journals',
+                        ].map((source) => (
                           <label key={source} className="flex items-center gap-2">
                             <input
                               type="checkbox"
@@ -1531,26 +1910,28 @@ const SecurityFeatures: React.FC = () => {
                               onChange={(e) => {
                                 const sources = configuration.plagiarism.databaseSources
                                 if (e.target.checked) {
-                                  setConfiguration(prev => ({
+                                  setConfiguration((prev) => ({
                                     ...prev,
                                     plagiarism: {
                                       ...prev.plagiarism,
-                                      databaseSources: [...sources, source]
-                                    }
+                                      databaseSources: [...sources, source],
+                                    },
                                   }))
                                 } else {
-                                  setConfiguration(prev => ({
+                                  setConfiguration((prev) => ({
                                     ...prev,
                                     plagiarism: {
                                       ...prev.plagiarism,
-                                      databaseSources: sources.filter(s => s !== source)
-                                    }
+                                      databaseSources: sources.filter((s) => s !== source),
+                                    },
                                   }))
                                 }
                               }}
                               className="rounded border-gray-300 text-green-600 focus:ring-green-600"
                             />
-                            <span className="text-sm text-gray-700 capitalize">{source.replace('_', ' ')}</span>
+                            <span className="text-sm text-gray-700 capitalize">
+                              {source.replace('_', ' ')}
+                            </span>
                           </label>
                         ))}
                       </div>
@@ -1585,15 +1966,21 @@ const SecurityFeatures: React.FC = () => {
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
                         <span className="text-gray-600">Similarity threshold:</span>
-                        <span className="font-medium">{configuration.plagiarism.similarityThreshold}%</span>
+                        <span className="font-medium">
+                          {configuration.plagiarism.similarityThreshold}%
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Active databases:</span>
-                        <span className="font-medium">{configuration.plagiarism.databaseSources.length}</span>
+                        <span className="font-medium">
+                          {configuration.plagiarism.databaseSources.length}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Real-time checking:</span>
-                        <span className="font-medium">{configuration.plagiarism.realTimeChecking ? 'Enabled' : 'Disabled'}</span>
+                        <span className="font-medium">
+                          {configuration.plagiarism.realTimeChecking ? 'Enabled' : 'Disabled'}
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -1646,14 +2033,18 @@ const SecurityFeatures: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <div>
-                    <label className="text-sm font-medium text-gray-700">Enable Time Tracking</label>
+                    <label className="text-sm font-medium text-gray-700">
+                      Enable Time Tracking
+                    </label>
                     <p className="text-xs text-gray-500">Monitor detailed time usage patterns</p>
                   </div>
                   <button
-                    onClick={() => setConfiguration(prev => ({
-                      ...prev,
-                      timeTracking: { ...prev.timeTracking, enabled: !prev.timeTracking.enabled }
-                    }))}
+                    onClick={() =>
+                      setConfiguration((prev) => ({
+                        ...prev,
+                        timeTracking: { ...prev.timeTracking, enabled: !prev.timeTracking.enabled },
+                      }))
+                    }
                     className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
                       configuration.timeTracking.enabled ? 'bg-blue-600' : 'bg-gray-200'
                     }`}
@@ -1669,14 +2060,46 @@ const SecurityFeatures: React.FC = () => {
                 {configuration.timeTracking.enabled && (
                   <div className="space-y-3">
                     {[
-                      { key: 'perQuestionTiming', label: 'Per Question Timing', desc: 'Track time spent on each question' },
-                      { key: 'idleTimeDetection', label: 'Idle Time Detection', desc: 'Detect when student is inactive' },
-                      { key: 'speedAnalysis', label: 'Speed Analysis', desc: 'Analyze answering speed patterns' },
-                      { key: 'pauseDetection', label: 'Pause Detection', desc: 'Detect unusually long pauses' },
-                      { key: 'timeWarnings', label: 'Time Warnings', desc: 'Warn students about time limits' },
-                      { key: 'adaptiveTimeouts', label: 'Adaptive Timeouts', desc: 'Adjust timeouts based on behavior' },
-                      { key: 'detailedReporting', label: 'Detailed Reporting', desc: 'Generate comprehensive time reports' },
-                      { key: 'behaviorProfiling', label: 'Behavior Profiling', desc: 'Build student behavior profiles' }
+                      {
+                        key: 'perQuestionTiming',
+                        label: 'Per Question Timing',
+                        desc: 'Track time spent on each question',
+                      },
+                      {
+                        key: 'idleTimeDetection',
+                        label: 'Idle Time Detection',
+                        desc: 'Detect when student is inactive',
+                      },
+                      {
+                        key: 'speedAnalysis',
+                        label: 'Speed Analysis',
+                        desc: 'Analyze answering speed patterns',
+                      },
+                      {
+                        key: 'pauseDetection',
+                        label: 'Pause Detection',
+                        desc: 'Detect unusually long pauses',
+                      },
+                      {
+                        key: 'timeWarnings',
+                        label: 'Time Warnings',
+                        desc: 'Warn students about time limits',
+                      },
+                      {
+                        key: 'adaptiveTimeouts',
+                        label: 'Adaptive Timeouts',
+                        desc: 'Adjust timeouts based on behavior',
+                      },
+                      {
+                        key: 'detailedReporting',
+                        label: 'Detailed Reporting',
+                        desc: 'Generate comprehensive time reports',
+                      },
+                      {
+                        key: 'behaviorProfiling',
+                        label: 'Behavior Profiling',
+                        desc: 'Build student behavior profiles',
+                      },
                     ].map(({ key, label, desc }) => (
                       <div key={key} className="flex items-center justify-between">
                         <div>
@@ -1684,17 +2107,26 @@ const SecurityFeatures: React.FC = () => {
                           <p className="text-xs text-gray-500">{desc}</p>
                         </div>
                         <button
-                          onClick={() => setConfiguration(prev => ({
-                            ...prev,
-                            timeTracking: { ...prev.timeTracking, [key]: !prev.timeTracking[key as keyof TimeTrackingSettings] }
-                          }))}
+                          onClick={() =>
+                            setConfiguration((prev) => ({
+                              ...prev,
+                              timeTracking: {
+                                ...prev.timeTracking,
+                                [key]: !prev.timeTracking[key as keyof TimeTrackingSettings],
+                              },
+                            }))
+                          }
                           className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                            configuration.timeTracking[key as keyof TimeTrackingSettings] ? 'bg-blue-600' : 'bg-gray-200'
+                            configuration.timeTracking[key as keyof TimeTrackingSettings]
+                              ? 'bg-blue-600'
+                              : 'bg-gray-200'
                           }`}
                         >
                           <span
                             className={`inline-block h-3 w-3 transform rounded-full bg-white transition-transform ${
-                              configuration.timeTracking[key as keyof TimeTrackingSettings] ? 'translate-x-5' : 'translate-x-1'
+                              configuration.timeTracking[key as keyof TimeTrackingSettings]
+                                ? 'translate-x-5'
+                                : 'translate-x-1'
                             }`}
                           />
                         </button>
@@ -1789,15 +2221,23 @@ const SecurityFeatures: React.FC = () => {
 
           <div className="space-y-3 max-h-96 overflow-y-auto">
             {securityEvents.map((event) => (
-              <div key={event.id} className="border rounded-lg p-3 hover:bg-gray-50 transition-colors">
+              <div
+                key={event.id}
+                className="border rounded-lg p-3 hover:bg-gray-50 transition-colors"
+              >
                 <div className="flex justify-between items-start mb-2">
                   <div className="flex items-center gap-2">
-                    <span className={`px-2 py-1 rounded text-xs font-medium ${
-                      event.severity === 'critical' ? 'bg-red-100 text-red-700' :
-                      event.severity === 'high' ? 'bg-orange-100 text-orange-700' :
-                      event.severity === 'medium' ? 'bg-yellow-100 text-yellow-700' :
-                      'bg-blue-100 text-blue-700'
-                    }`}>
+                    <span
+                      className={`px-2 py-1 rounded text-xs font-medium ${
+                        event.severity === 'critical'
+                          ? 'bg-red-100 text-red-700'
+                          : event.severity === 'high'
+                            ? 'bg-orange-100 text-orange-700'
+                            : event.severity === 'medium'
+                              ? 'bg-yellow-100 text-yellow-700'
+                              : 'bg-blue-100 text-blue-700'
+                      }`}
+                    >
                       {event.severity}
                     </span>
                     <span className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium capitalize">

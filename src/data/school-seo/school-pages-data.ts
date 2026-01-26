@@ -71,13 +71,15 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Ananya Sharma',
         batch: 'DPS RK Puram, Class of 2023',
         result: 'AIIMS Delhi - MBBS',
-        quote: 'Cerebrum understood the pressure of DPS academics. They helped me balance both perfectly.',
+        quote:
+          'Cerebrum understood the pressure of DPS academics. They helped me balance both perfectly.',
       },
       {
         name: 'Rohan Mehta',
         batch: 'DPS RK Puram, Class of 2024',
         result: 'NEET Score: 685',
-        quote: 'The after-school timing was perfect. I could attend classes without missing anything at school.',
+        quote:
+          'The after-school timing was perfect. I could attend classes without missing anything at school.',
       },
     ],
     faqs: [
@@ -136,7 +138,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     whyStudentsChoose: [
       {
         title: 'South Delhi Location',
-        description: 'South Extension center is easily accessible from Vasant Kunj via Outer Ring Road.',
+        description:
+          'South Extension center is easily accessible from Vasant Kunj via Outer Ring Road.',
       },
       {
         title: 'Flexible Timing',
@@ -210,11 +213,13 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     whyStudentsChoose: [
       {
         title: 'Central Location',
-        description: 'South Extension is easily accessible from Connaught Place and Barakhamba area.',
+        description:
+          'South Extension is easily accessible from Connaught Place and Barakhamba area.',
       },
       {
         title: 'Modern School Peer Group',
-        description: 'Study with fellow Modern School students who share similar academic standards.',
+        description:
+          'Study with fellow Modern School students who share similar academic standards.',
       },
       {
         title: 'Hybrid Learning',
@@ -222,7 +227,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       },
       {
         title: 'AIIMS-Quality Teaching',
-        description: 'Learn from AIIMS alumni who understand the rigor required for top medical colleges.',
+        description:
+          'Learn from AIIMS alumni who understand the rigor required for top medical colleges.',
       },
     ],
     successStories: [
@@ -230,7 +236,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Arjun Kapoor',
         batch: 'Modern School, Class of 2023',
         result: 'AIIMS Delhi - MBBS',
-        quote: 'Dr. Shekhar teaching style matched what I was used to at Modern School - rigorous and thorough.',
+        quote:
+          'Dr. Shekhar teaching style matched what I was used to at Modern School - rigorous and thorough.',
       },
     ],
     faqs: [
@@ -279,7 +286,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
     whyStudentsChoose: [
       {
         title: 'Closest Center',
-        description: 'Our Sector 51 center is just 3-4 km from Amity, the closest quality coaching available.',
+        description:
+          'Our Sector 51 center is just 3-4 km from Amity, the closest quality coaching available.',
       },
       {
         title: 'Amity-Specific Timing',
@@ -299,7 +307,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Ishaan Malhotra',
         batch: 'Amity Gurgaon, Class of 2024',
         result: 'NEET Score: 695',
-        quote: 'Being so close to school made it easy to attend daily. The 3:30 batch was perfect for Amity timing.',
+        quote:
+          'Being so close to school made it easy to attend daily. The 3:30 batch was perfect for Amity timing.',
       },
       {
         name: 'Sanya Gupta',
@@ -385,7 +394,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Kavya Jain',
         batch: 'DPS Gurgaon, Class of 2024',
         result: 'NEET Score: 710',
-        quote: 'Having 80+ DPS friends at coaching created healthy competition. We pushed each other.',
+        quote:
+          'Having 80+ DPS friends at coaching created healthy competition. We pushed each other.',
       },
     ],
     faqs: [
@@ -459,7 +469,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Shreya Verma',
         batch: 'Bal Bharati Rohini, Class of 2024',
         result: 'NEET Score: 680',
-        quote: 'I literally walked to Cerebrum after school. It felt like an extension of my school day.',
+        quote:
+          'I literally walked to Cerebrum after school. It felt like an extension of my school day.',
       },
     ],
     faqs: [
@@ -533,7 +544,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Rahul Gupta',
         batch: 'DPS Rohini, Class of 2023',
         result: 'MAMC Delhi - MBBS',
-        quote: 'The DPS network at Cerebrum is amazing. I made friends from DPS schools across Delhi.',
+        quote:
+          'The DPS network at Cerebrum is amazing. I made friends from DPS schools across Delhi.',
       },
     ],
     faqs: [
@@ -671,7 +683,8 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
         name: 'Aryan Malhotra',
         batch: 'TSRS Aravalli, Class of 2024',
         result: 'NEET Score: 705',
-        quote: 'Coming from TSRS, I needed coaching that matched our school level. Cerebrum delivered.',
+        quote:
+          'Coming from TSRS, I needed coaching that matched our school level. Cerebrum delivered.',
       },
     ],
     faqs: [

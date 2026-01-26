@@ -8,19 +8,14 @@ export function SeminarTestimonials() {
     <section className="py-16 bg-gradient-to-br from-green-50 to-teal-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-10">
-          <p className="text-green-600 font-semibold mb-2">
-            WHAT PARENTS ARE SAYING
-          </p>
+          <p className="text-green-600 font-semibold mb-2">WHAT PARENTS ARE SAYING</p>
           <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">
             Join 500+ Parents Who Transformed Their Approach
           </h2>
           <div className="flex items-center justify-center gap-2">
             <div className="flex">
               {[1, 2, 3, 4, 5].map((i) => (
-                <Star
-                  key={i}
-                  className="w-5 h-5 text-yellow-400 fill-yellow-400"
-                />
+                <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
               ))}
             </div>
             <span className="text-slate-600">4.9/5 average rating</span>
@@ -39,9 +34,7 @@ export function SeminarTestimonials() {
               </div>
 
               {/* Quote */}
-              <p className="text-slate-700 mb-6 leading-relaxed">
-                "{testimonial.quote}"
-              </p>
+              <p className="text-slate-700 mb-6 leading-relaxed">"{testimonial.quote}"</p>
 
               {/* Result Badge */}
               <div className="bg-green-50 text-green-700 px-3 py-2 rounded-lg text-sm font-medium mb-4">
@@ -52,9 +45,7 @@ export function SeminarTestimonials() {
               <div className="flex items-center gap-3">
                 <span className="text-4xl">{testimonial.avatar}</span>
                 <div>
-                  <p className="font-semibold text-slate-900">
-                    {testimonial.name}
-                  </p>
+                  <p className="font-semibold text-slate-900">{testimonial.name}</p>
                   <p className="text-sm text-slate-500">{testimonial.location}</p>
                 </div>
               </div>

@@ -54,11 +54,14 @@ interface NotificationPopoverProps {
   className?: string
 }
 
-const NOTIFICATION_CONFIG: Record<NotificationType, {
-  icon: React.ComponentType<{ className?: string }>
-  color: string
-  bgColor: string
-}> = {
+const NOTIFICATION_CONFIG: Record<
+  NotificationType,
+  {
+    icon: React.ComponentType<{ className?: string }>
+    color: string
+    bgColor: string
+  }
+> = {
   BADGE_EARNED: {
     icon: Medal,
     color: 'text-yellow-600',
@@ -142,7 +145,9 @@ function NotificationItem({
     >
       <div className="flex items-start space-x-3">
         {/* Icon */}
-        <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${config.bgColor}`}>
+        <div
+          className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center ${config.bgColor}`}
+        >
           <Icon className={`w-5 h-5 ${config.color}`} />
         </div>
 
@@ -150,12 +155,12 @@ function NotificationItem({
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between">
             <div>
-              <h4 className={`font-semibold text-gray-900 ${!notification.isRead ? 'font-bold' : ''}`}>
+              <h4
+                className={`font-semibold text-gray-900 ${!notification.isRead ? 'font-bold' : ''}`}
+              >
                 {notification.title}
               </h4>
-              <p className="text-sm text-gray-600 mt-0.5 line-clamp-2">
-                {notification.message}
-              </p>
+              <p className="text-sm text-gray-600 mt-0.5 line-clamp-2">{notification.message}</p>
             </div>
 
             {/* Dismiss button */}
@@ -192,19 +197,20 @@ function NotificationItem({
           </div>
 
           {/* Priority indicator */}
-          {notification.priority === 'HIGH' || notification.priority === 'URGENT' && (
-            <div className={`mt-2 text-xs font-medium ${
-              notification.priority === 'URGENT' ? 'text-red-600' : 'text-orange-600'
-            }`}>
-              {notification.priority === 'URGENT' ? '⚡ Urgent' : '❗ Important'}
-            </div>
-          )}
+          {notification.priority === 'HIGH' ||
+            (notification.priority === 'URGENT' && (
+              <div
+                className={`mt-2 text-xs font-medium ${
+                  notification.priority === 'URGENT' ? 'text-red-600' : 'text-orange-600'
+                }`}
+              >
+                {notification.priority === 'URGENT' ? '⚡ Urgent' : '❗ Important'}
+              </div>
+            ))}
         </div>
 
         {/* Unread indicator */}
-        {!notification.isRead && (
-          <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full" />
-        )}
+        {!notification.isRead && <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full" />}
       </div>
     </motion.div>
   )

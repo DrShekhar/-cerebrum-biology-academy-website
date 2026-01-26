@@ -1,4 +1,3 @@
-
 export interface ABTestVariant {
   id: string
   name: string

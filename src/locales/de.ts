@@ -108,8 +108,7 @@ export const de = {
   freeDemoClass: 'Kostenlose Demo-Klasse',
   experienceMethodology: 'Erleben Sie unsere Lehrmethodik mit einer kostenlosen Biologiesitzung',
   noHiddenFees: 'Keine Versteckten Gebühren',
-  transparentPricing:
-    'Transparente Preise ohne Überraschungen. Was Sie sehen, ist was Sie zahlen',
+  transparentPricing: 'Transparente Preise ohne Überraschungen. Was Sie sehen, ist was Sie zahlen',
   otherWaysToReach: 'Andere Wege, Uns zu Erreichen',
   joinOurSuccess: 'Werden Sie Teil Unserer Erfolgsgeschichte',
   studentsEnrolled: 'Eingeschriebene Studenten',

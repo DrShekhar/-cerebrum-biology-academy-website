@@ -22,7 +22,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const session = await auth()
 
     if (!session?.user) {
-      return NextResponse.json({ success: false, error: 'Authentication required' }, { status: 401 })
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
     }
 
     const { childId } = await params
@@ -46,7 +49,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     if (!parentChildRelation) {
       return NextResponse.json(
-        { success: false, error: 'You do not have access to this child\'s data' },
+        { success: false, error: "You do not have access to this child's data" },
         { status: 403 }
       )
     }
@@ -140,14 +143,18 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Calculate statistics
     const allSubmissions = await prisma.assignment_submissions.findMany({
       where: { studentId: childId },
-      select: { status: true, grade: true, isLate: true, assignment: { select: { maxMarks: true } } },
+      select: {
+        status: true,
+        grade: true,
+        isLate: true,
+        assignment: { select: { maxMarks: true } },
+      },
     })
 
     const stats = {
       total: allSubmissions.length,
-      pending: allSubmissions.filter(
-        (s) => s.status === 'NOT_SUBMITTED' || s.status === 'PENDING'
-      ).length,
+      pending: allSubmissions.filter((s) => s.status === 'NOT_SUBMITTED' || s.status === 'PENDING')
+        .length,
       submitted: allSubmissions.filter((s) => s.status === 'SUBMITTED').length,
       graded: allSubmissions.filter((s) => s.status === 'GRADED').length,
       late: allSubmissions.filter((s) => s.isLate).length,

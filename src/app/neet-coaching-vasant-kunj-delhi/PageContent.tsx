@@ -57,12 +57,14 @@ const whyChooseUs = [
   {
     icon: Award,
     title: 'NEET Specialists',
-    description: 'Focused NEET preparation with comprehensive coverage of Biology syllabus for medical entrance.',
+    description:
+      'Focused NEET preparation with comprehensive coverage of Biology syllabus for medical entrance.',
   },
   {
     icon: Target,
     title: '500+ NEET Selections',
-    description: 'Proven track record with students from DPS Vasant Kunj, Sanskriti, and top schools.',
+    description:
+      'Proven track record with students from DPS Vasant Kunj, Sanskriti, and top schools.',
   },
   {
     icon: GraduationCap,
@@ -72,7 +74,8 @@ const whyChooseUs = [
   {
     icon: Star,
     title: 'Top Results',
-    description: 'Vasant Kunj students scored 670+ in NEET and secured top medical college admissions.',
+    description:
+      'Vasant Kunj students scored 670+ in NEET and secured top medical college admissions.',
   },
 ]
 
@@ -160,8 +163,7 @@ export default function PageContent() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              NEET Coaching in{' '}
-              <span className="text-yellow-400">Vasant Kunj</span>
+              NEET Coaching in <span className="text-yellow-400">Vasant Kunj</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +171,8 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Vasant Kunj students across all sectors.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - expert in NEET Biology.
+              Premium NEET coaching for Vasant Kunj students across all sectors. Learn from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - expert in NEET Biology.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -198,7 +200,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Vasant%20Kunj%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"
@@ -374,7 +377,8 @@ export default function PageContent() {
 
               <a
                 href="https://wa.me/918826444334?text=Hi%2C%20I%20am%20from%20Vasant%20Kunj%20and%20interested%20in%20NEET%20coaching"
-                target="_blank" rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Button
                   variant="outline"

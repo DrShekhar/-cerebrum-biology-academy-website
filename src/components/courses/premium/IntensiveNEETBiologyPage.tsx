@@ -537,9 +537,7 @@ export function IntensiveNEETBiologyPage() {
                     <span className="text-4xl font-bold text-gray-900">{tier.price}</span>
                     <span className="text-gray-500">/ {tier.duration}</span>
                   </div>
-                  {tier.priceNote && (
-                    <p className="text-sm text-gray-500 mt-1">{tier.priceNote}</p>
-                  )}
+                  {tier.priceNote && <p className="text-sm text-gray-500 mt-1">{tier.priceNote}</p>}
                 </div>
 
                 <ul className="space-y-3 mb-8">

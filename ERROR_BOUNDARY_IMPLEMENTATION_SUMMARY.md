@@ -63,7 +63,6 @@ A comprehensive hierarchical error boundary system has been successfully impleme
 
 ```tsx
 import { ErrorBoundary } from '@/components/errors'
-
 ;<ErrorBoundary context={{ page: 'checkout', component: 'PaymentForm' }} severity="critical">
   <CriticalComponent />
 </ErrorBoundary>

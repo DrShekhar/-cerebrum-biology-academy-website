@@ -25,7 +25,10 @@ export async function POST(request: NextRequest) {
     const cleanPhone = data.phone.replace(/[\s\-\+]/g, '')
     const indianPhoneRegex = /^(91)?[6-9]\d{9}$/
     if (!indianPhoneRegex.test(cleanPhone)) {
-      return NextResponse.json({ error: 'Invalid phone number format. Please use Indian mobile number.' }, { status: 400 })
+      return NextResponse.json(
+        { error: 'Invalid phone number format. Please use Indian mobile number.' },
+        { status: 400 }
+      )
     }
 
     // Validate email format

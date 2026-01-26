@@ -53,7 +53,9 @@ function TierCard({ tier, pricing, isPopular, onEnrollClick }: TierCardProps) {
           <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-2">
             {tierPricing.formattedPrice}
           </div>
-          <div className="text-xs sm:text-sm text-gray-500">{formatCurrency(tierPricing.price)} per year</div>
+          <div className="text-xs sm:text-sm text-gray-500">
+            {formatCurrency(tierPricing.price)} per year
+          </div>
         </div>
 
         <div className="flex items-center justify-center space-x-4 text-sm text-gray-600 mb-6">
@@ -70,7 +72,10 @@ function TierCard({ tier, pricing, isPopular, onEnrollClick }: TierCardProps) {
 
       <div className="space-y-3 mb-8">
         {tierInfo.highlights.slice(0, 6).map((highlight: string) => (
-          <div key={`highlight-${highlight.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-start">
+          <div
+            key={`highlight-${highlight.slice(0, 25).replace(/\s+/g, '-').toLowerCase()}`}
+            className="flex items-start"
+          >
             <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
             <span className="text-gray-700 text-sm">{highlight}</span>
           </div>

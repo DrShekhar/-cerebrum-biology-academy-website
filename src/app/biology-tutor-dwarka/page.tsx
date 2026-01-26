@@ -160,8 +160,7 @@ export default function BiologyTutorDwarkaPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Dwarka</span>
+              Biology Tutor in <span className="text-yellow-400">Dwarka</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -169,8 +168,8 @@ export default function BiologyTutorDwarkaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Biology coaching for Dwarka Sectors 1-23, Dwarka Mor, and nearby areas.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>. Online classes available.
+              Expert Biology coaching for Dwarka Sectors 1-23, Dwarka Mor, and nearby areas. Learn
+              from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>. Online classes available.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -331,9 +330,7 @@ export default function BiologyTutorDwarkaPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Dwarka Students, Join Us!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Dwarka Students, Join Us!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Quality NEET coaching accessible from all Dwarka sectors
             </p>

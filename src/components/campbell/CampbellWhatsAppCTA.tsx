@@ -25,11 +25,9 @@ interface CampbellWhatsAppCTAProps {
 const variantStyles = {
   hero: 'bg-green-500 hover:bg-green-600 text-white shadow-xl hover:shadow-2xl',
   primary: 'bg-green-500 hover:bg-green-600 text-white shadow-lg',
-  secondary:
-    'bg-white border-2 border-green-500 text-green-600 hover:bg-green-50',
+  secondary: 'bg-white border-2 border-green-500 text-green-600 hover:bg-green-50',
   inline: 'bg-green-100 hover:bg-green-200 text-green-700',
-  floating:
-    'bg-green-500 hover:bg-green-600 text-white shadow-2xl rounded-full',
+  floating: 'bg-green-500 hover:bg-green-600 text-white shadow-2xl rounded-full',
 }
 
 const sizeStyles = {
@@ -51,8 +49,7 @@ export function CampbellWhatsAppCTA({
   campaign,
   source,
 }: CampbellWhatsAppCTAProps) {
-  const whatsappMessage =
-    customMessage || getCampbellWhatsAppMessage(messageType, messageParams)
+  const whatsappMessage = customMessage || getCampbellWhatsAppMessage(messageType, messageParams)
 
   const handleClick = async () => {
     await trackAndOpenWhatsApp({

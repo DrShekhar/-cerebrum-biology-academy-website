@@ -143,10 +143,25 @@ export default function NEETDropperPage() {
   ]
 
   const successStats = [
-    { number: '89%', label: 'Rank Improvement', description: 'Significant rank boost', icon: TrendingUp },
+    {
+      number: '89%',
+      label: 'Rank Improvement',
+      description: 'Significant rank boost',
+      icon: TrendingUp,
+    },
     { number: '350+', label: 'Avg Biology Score', description: 'Target achievement', icon: Target },
-    { number: '1500+', label: 'Droppers Coached', description: 'Successful transformations', icon: Users },
-    { number: '95%', label: 'Target Achievement', description: 'Desired rank/college', icon: Trophy },
+    {
+      number: '1500+',
+      label: 'Droppers Coached',
+      description: 'Successful transformations',
+      icon: Users,
+    },
+    {
+      number: '95%',
+      label: 'Target Achievement',
+      description: 'Desired rank/college',
+      icon: Trophy,
+    },
   ]
 
   const uniqueFeatures = [
@@ -362,7 +377,9 @@ export default function NEETDropperPage() {
                     { value: countdown.seconds, label: 'Secs' },
                   ].map((item) => (
                     <div key={item.label} className="bg-[#e8ede8] rounded-lg p-2 text-center">
-                      <div className="text-lg sm:text-xl font-bold text-[#3d4d3d]">{item.value}</div>
+                      <div className="text-lg sm:text-xl font-bold text-[#3d4d3d]">
+                        {item.value}
+                      </div>
                       <div className="text-[10px] sm:text-xs text-gray-600">{item.label}</div>
                     </div>
                   ))}
@@ -374,12 +391,16 @@ export default function NEETDropperPage() {
                       <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-green-600" />
                     </div>
                     <h4 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Thank You!</h4>
-                    <p className="text-gray-600 text-sm">Redirecting to book your counseling session...</p>
+                    <p className="text-gray-600 text-sm">
+                      Redirecting to book your counseling session...
+                    </p>
                   </div>
                 ) : (
                   <form onSubmit={handleLeadSubmit} className="space-y-3 sm:space-y-4">
                     <div>
-                      <label htmlFor="name" className="sr-only">Your Name (required)</label>
+                      <label htmlFor="name" className="sr-only">
+                        Your Name (required)
+                      </label>
                       <input
                         id="name"
                         type="text"
@@ -392,7 +413,9 @@ export default function NEETDropperPage() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="phone" className="sr-only">Phone Number (required)</label>
+                      <label htmlFor="phone" className="sr-only">
+                        Phone Number (required)
+                      </label>
                       <input
                         id="phone"
                         type="tel"
@@ -405,7 +428,9 @@ export default function NEETDropperPage() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="sr-only">Email Address (optional)</label>
+                      <label htmlFor="email" className="sr-only">
+                        Email Address (optional)
+                      </label>
                       <input
                         id="email"
                         type="email"
@@ -416,11 +441,15 @@ export default function NEETDropperPage() {
                       />
                     </div>
                     <div>
-                      <label htmlFor="previousScore" className="sr-only">Previous NEET Score (optional)</label>
+                      <label htmlFor="previousScore" className="sr-only">
+                        Previous NEET Score (optional)
+                      </label>
                       <select
                         id="previousScore"
                         value={formData.previousScore}
-                        onChange={(e) => setFormData({ ...formData, previousScore: e.target.value })}
+                        onChange={(e) =>
+                          setFormData({ ...formData, previousScore: e.target.value })
+                        }
                         className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:border-[#4a5d4a] focus:outline-none focus:ring-2 focus:ring-[#4a5d4a]/20 text-gray-900 text-sm sm:text-base"
                         aria-label="Previous NEET Score"
                       >
@@ -440,7 +469,11 @@ export default function NEETDropperPage() {
                       size="lg"
                       className="w-full bg-[#3d4d3d] hover:bg-[#4a5d4a] text-white py-3 sm:py-4 text-sm sm:text-base"
                       disabled={isSubmitting}
-                      aria-label={isSubmitting ? "Processing your request" : "Get Free Counseling and Study Kit"}
+                      aria-label={
+                        isSubmitting
+                          ? 'Processing your request'
+                          : 'Get Free Counseling and Study Kit'
+                      }
                     >
                       {isSubmitting ? (
                         <span className="flex items-center justify-center">
@@ -469,7 +502,10 @@ export default function NEETDropperPage() {
                         </span>
                       ) : (
                         <>
-                          <Gift className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" aria-hidden="true" />
+                          <Gift
+                            className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0"
+                            aria-hidden="true"
+                          />
                           <span className="hidden sm:inline">Get Free Counseling + Study Kit</span>
                           <span className="sm:hidden">Free Counseling</span>
                         </>
@@ -519,7 +555,8 @@ export default function NEETDropperPage() {
               Why Droppers Choose Cerebrum?
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-              Specialized features designed specifically for dropper students' unique needs and challenges
+              Specialized features designed specifically for dropper students' unique needs and
+              challenges
             </p>
           </motion.div>
 
@@ -604,18 +641,24 @@ export default function NEETDropperPage() {
                   className={`rounded-xl p-4 sm:p-6 shadow-lg border-l-4 ${colorClasses[phase.color]}`}
                 >
                   <div className="flex justify-between items-start mb-3 sm:mb-4">
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900">{phase.phase}</h3>
+                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900">
+                      {phase.phase}
+                    </h3>
                     <span
                       className={`px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium ${textClasses[phase.color]} bg-white`}
                     >
                       {phase.duration}
                     </span>
                   </div>
-                  <p className="text-gray-700 font-medium mb-3 sm:mb-4 text-sm sm:text-base">{phase.focus}</p>
+                  <p className="text-gray-700 font-medium mb-3 sm:mb-4 text-sm sm:text-base">
+                    {phase.focus}
+                  </p>
                   <div className="space-y-1.5 sm:space-y-2">
                     {phase.topics.map((topic, topicIndex) => (
                       <div key={topicIndex} className="flex items-center">
-                        <CheckCircle className={`w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2 ${checkClasses[phase.color]}`} />
+                        <CheckCircle
+                          className={`w-3.5 h-3.5 sm:w-4 sm:h-4 mr-2 ${checkClasses[phase.color]}`}
+                        />
                         <span className="text-gray-700 text-xs sm:text-sm">{topic}</span>
                       </div>
                     ))}
@@ -682,11 +725,15 @@ export default function NEETDropperPage() {
                   <div className="space-y-2 sm:space-y-3">
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">10-12 months comprehensive program</span>
+                      <span className="text-sm sm:text-base">
+                        10-12 months comprehensive program
+                      </span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Exclusive dropper batch environment</span>
+                      <span className="text-sm sm:text-base">
+                        Exclusive dropper batch environment
+                      </span>
                     </div>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-500 mr-2 flex-shrink-0" />
@@ -698,7 +745,9 @@ export default function NEETDropperPage() {
                     </div>
                     <div className="flex items-center">
                       <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 flex-shrink-0" />
-                      <span className="text-sm sm:text-base font-semibold text-green-700">30-Day Money-Back Guarantee</span>
+                      <span className="text-sm sm:text-base font-semibold text-green-700">
+                        30-Day Money-Back Guarantee
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -755,9 +804,9 @@ export default function NEETDropperPage() {
                   👨‍👩‍👧 Are You a Parent?
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  We understand your concerns about your child&apos;s NEET dropper year. Chat directly
-                  with our counselors to understand fee structure, batch timings, and how we support
-                  droppers emotionally and academically.
+                  We understand your concerns about your child&apos;s NEET dropper year. Chat
+                  directly with our counselors to understand fee structure, batch timings, and how
+                  we support droppers emotionally and academically.
                 </p>
                 <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                   <button

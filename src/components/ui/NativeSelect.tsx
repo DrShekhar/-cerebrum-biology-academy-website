@@ -35,7 +35,10 @@ const NativeSelect = React.forwardRef<HTMLSelectElement, NativeSelectProps>(
           >
             {children}
           </select>
-          <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 opacity-50" aria-hidden="true" />
+          <ChevronDown
+            className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 opacity-50"
+            aria-hidden="true"
+          />
         </div>
         {error && (
           <p id={errorId} className="mt-1 text-sm text-red-600" role="alert">

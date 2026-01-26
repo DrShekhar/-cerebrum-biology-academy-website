@@ -24,7 +24,8 @@ export async function POST(request: NextRequest) {
 
     // Get client info for audit logging
     const forwardedFor = request.headers.get('x-forwarded-for')
-    const clientIp = forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
+    const clientIp =
+      forwardedFor?.split(',')[0].trim() || request.headers.get('x-real-ip') || 'unknown'
     const userAgent = request.headers.get('user-agent') || 'unknown'
 
     const body = await request.json()
@@ -84,17 +85,11 @@ export async function POST(request: NextRequest) {
     })
 
     // SECURITY: Log admin action to security audit trail
-    logAdminUserCreation(
-      session.user.email,
-      session.user.id,
-      clientIp,
-      userAgent,
-      {
-        id: user.id,
-        email: user.email,
-        role: validatedData.role,
-      }
-    )
+    logAdminUserCreation(session.user.email, session.user.id, clientIp, userAgent, {
+      id: user.id,
+      email: user.email,
+      role: validatedData.role,
+    })
 
     const sanitizedUser = {
       ...user,

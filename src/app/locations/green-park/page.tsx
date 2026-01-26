@@ -24,6 +24,11 @@ import {
   trackPhoneCallConversion,
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
+import {
+  RelatedLocations,
+  getRelatedLocations,
+} from '@/components/locations/RelatedLocations'
+import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 export default function GreenParkLocationPage() {
   useEffect(() => {
@@ -224,16 +229,15 @@ export default function GreenParkLocationPage() {
             <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {/* Map */}
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504!2d77.209!3d28.560!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sGreen+Park+Delhi!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="350"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Green Park Center Location"
-                  className="w-full"
+                <LazyGoogleMap
+                  embedUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504!2d77.209!3d28.560!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sGreen+Park+Delhi!5e0!3m2!1sen!2sin!4v1234567890"
+                  title="Green Park NEET Coaching Center"
+                  height={350}
+                  placeholder={{
+                    lat: 28.560,
+                    lng: 77.209,
+                    address: `${center.streetAddress}, ${center.addressLocality}`
+                  }}
                 />
                 <div className="p-6">
                   <h3 className="font-bold text-xl mb-3 flex items-center gap-2">
@@ -343,6 +347,12 @@ export default function GreenParkLocationPage() {
             </div>
           </div>
         </section>
+
+        <RelatedLocations
+          currentLocation="Green Park"
+          locations={getRelatedLocations('green-park')}
+          className="bg-white"
+        />
 
         {/* Stats */}
         <section className="py-12 bg-slate-900 text-white">

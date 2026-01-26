@@ -340,7 +340,15 @@ export function RelatedCityLinks({
 
 // Quick links component for footer or sidebar
 export function CityQuickLinks() {
-  const tier1Cities: CityKey[] = ['mumbai', 'bangalore', 'hyderabad', 'chennai', 'pune', 'kolkata', 'ahmedabad']
+  const tier1Cities: CityKey[] = [
+    'mumbai',
+    'bangalore',
+    'hyderabad',
+    'chennai',
+    'pune',
+    'kolkata',
+    'ahmedabad',
+  ]
   const delhiNCRCities: CityKey[] = [
     'delhiNCR',
     'southDelhi',

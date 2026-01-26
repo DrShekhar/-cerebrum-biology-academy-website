@@ -135,9 +135,7 @@ export class AriaErrorBoundary extends Component<Props, State> {
               )}
             </div>
 
-            <p className="text-xs text-slate-400 mt-6">
-              Error ID: {this.state.errorId}
-            </p>
+            <p className="text-xs text-slate-400 mt-6">Error ID: {this.state.errorId}</p>
           </div>
         </div>
       )
@@ -151,9 +149,16 @@ export class AriaErrorBoundary extends Component<Props, State> {
  * Fallback component for when ARIA fails to load (e.g., network issues, lazy load failure).
  * This is a functional component for use outside the error boundary.
  */
-export function AriaLoadingFallback({ onRetry, onClose }: { onRetry?: () => void; onClose?: () => void }) {
+export function AriaLoadingFallback({
+  onRetry,
+  onClose,
+}: {
+  onRetry?: () => void
+  onClose?: () => void
+}) {
   const handleWhatsApp = () => {
-    const message = 'Hi! I want to know more about NEET Biology courses at Cerebrum Biology Academy.'
+    const message =
+      'Hi! I want to know more about NEET Biology courses at Cerebrum Biology Academy.'
     window.open(getWhatsAppLink(message), '_blank', 'noopener,noreferrer')
   }
 
@@ -182,9 +187,7 @@ export function AriaLoadingFallback({ onRetry, onClose }: { onRetry?: () => void
       <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
         <div className="w-12 h-12 rounded-full border-4 border-yellow-500 border-t-transparent animate-spin mb-4" />
 
-        <h3 className="text-lg font-semibold text-slate-800 mb-2">
-          Loading ARIA...
-        </h3>
+        <h3 className="text-lg font-semibold text-slate-800 mb-2">Loading ARIA...</h3>
 
         <p className="text-slate-600 text-sm mb-6 max-w-[280px]">
           Taking longer than expected? Chat with us on WhatsApp instead!

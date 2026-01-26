@@ -2,16 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  MessageCircle,
-  X,
-  Send,
-  Bot,
-  BookOpen,
-  Calendar,
-  Phone,
-  Download,
-} from 'lucide-react'
+import { MessageCircle, X, Send, Bot, BookOpen, Calendar, Phone, Download } from 'lucide-react'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
 import {

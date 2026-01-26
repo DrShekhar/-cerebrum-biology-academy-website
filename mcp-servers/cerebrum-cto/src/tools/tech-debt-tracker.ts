@@ -69,7 +69,10 @@ export async function listTechDebt(params: ListParams) {
       let itemStatus: TechDebtItem['status'] = 'open'
       if (sectionContent.toLowerCase().includes('in progress')) {
         itemStatus = 'in_progress'
-      } else if (sectionContent.toLowerCase().includes('done') || sectionContent.toLowerCase().includes('completed')) {
+      } else if (
+        sectionContent.toLowerCase().includes('done') ||
+        sectionContent.toLowerCase().includes('completed')
+      ) {
         itemStatus = 'done'
       }
 

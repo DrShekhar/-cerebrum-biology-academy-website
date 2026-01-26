@@ -3,11 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
-  PremiumButton,
-  PremiumCard,
-  AnimatedCounter,
-} from '@/components/ui/PremiumDesignSystem'
+import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
   GraduationCap,
   Heart,
@@ -237,8 +233,11 @@ export function EmotionalHeroSection({
 
               <p className="text-xl md:text-2xl text-slate-100 leading-relaxed max-w-2xl">
                 Join <span className="font-bold text-amber-300">5,000+ students</span> who
-                <span className="font-bold text-green-400"> achieved their medical dreams</span> with
-                India's premier
+                <span className="font-bold text-green-400">
+                  {' '}
+                  achieved their medical dreams
+                </span>{' '}
+                with India's premier
                 <span className="font-bold text-green-200"> Biology coaching academy</span>
               </p>
             </motion.div>

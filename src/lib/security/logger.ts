@@ -101,7 +101,7 @@ function redactObject(obj: any): any {
       'card',
     ]
 
-    if (sensitiveKeys.some(k => key.toLowerCase().includes(k.toLowerCase()))) {
+    if (sensitiveKeys.some((k) => key.toLowerCase().includes(k.toLowerCase()))) {
       redacted[key] = '[REDACTED]'
     } else if (typeof value === 'string') {
       redacted[key] = redactPII(value)
@@ -125,7 +125,7 @@ export function createLogger(name: string) {
     name,
     level: process.env.LOG_LEVEL || (isProduction ? 'info' : 'debug'),
     formatters: {
-      level: label => ({ level: label }),
+      level: (label) => ({ level: label }),
     },
     serializers: {
       // Redact request objects
@@ -191,31 +191,43 @@ export const logger = createLogger('cerebrum')
  */
 export const safeLog = {
   info: (...args: unknown[]) => {
-    const redacted = args.map(arg =>
+    const redacted = args.map((arg) =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.info({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'info')
+    logger.info(
+      { data: redacted },
+      redacted.filter((r) => typeof r === 'string').join(' ') || 'info'
+    )
   },
 
   error: (...args: unknown[]) => {
-    const redacted = args.map(arg =>
+    const redacted = args.map((arg) =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.error({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'error')
+    logger.error(
+      { data: redacted },
+      redacted.filter((r) => typeof r === 'string').join(' ') || 'error'
+    )
   },
 
   warn: (...args: unknown[]) => {
-    const redacted = args.map(arg =>
+    const redacted = args.map((arg) =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.warn({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'warning')
+    logger.warn(
+      { data: redacted },
+      redacted.filter((r) => typeof r === 'string').join(' ') || 'warning'
+    )
   },
 
   debug: (...args: unknown[]) => {
-    const redacted = args.map(arg =>
+    const redacted = args.map((arg) =>
       typeof arg === 'string' ? redactPII(arg) : redactObject(arg)
     )
-    logger.debug({ data: redacted }, redacted.filter(r => typeof r === 'string').join(' ') || 'debug')
+    logger.debug(
+      { data: redacted },
+      redacted.filter((r) => typeof r === 'string').join(' ') || 'debug'
+    )
   },
 }
 

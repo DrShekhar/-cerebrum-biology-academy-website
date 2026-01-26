@@ -57,7 +57,10 @@ export async function POST(request: Request) {
       body
 
     if (!classType || !batchNumber || !days || !startTime || !endTime || !offlineLocation) {
-      return NextResponse.json({ success: false, error: 'Missing required fields' }, { status: 400 })
+      return NextResponse.json(
+        { success: false, error: 'Missing required fields' },
+        { status: 400 }
+      )
     }
 
     const batch = await prisma.batches.create({

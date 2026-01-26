@@ -152,7 +152,15 @@ export default function BiologyTutorGreaterNoidaPage() {
               addressRegion: 'Uttar Pradesh',
               addressCountry: 'IN',
             },
-            areaServed: ['Greater Noida', 'Knowledge Park', 'Pari Chowk', 'Alpha', 'Beta', 'Delta', 'Gamma'],
+            areaServed: [
+              'Greater Noida',
+              'Knowledge Park',
+              'Pari Chowk',
+              'Alpha',
+              'Beta',
+              'Delta',
+              'Gamma',
+            ],
             priceRange: '$$',
           }),
         }}
@@ -174,8 +182,7 @@ export default function BiologyTutorGreaterNoidaPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Biology Tutor in{' '}
-              <span className="text-yellow-400">Greater Noida</span>
+              Biology Tutor in <span className="text-yellow-400">Greater Noida</span>
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
@@ -183,8 +190,9 @@ export default function BiologyTutorGreaterNoidaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Welcome to our center! Learn Biology from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>.
-              Visit us for a <strong>FREE demo class</strong> today.
+              Welcome to our center! Learn Biology from{' '}
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong>. Visit us for a{' '}
+              <strong>FREE demo class</strong> today.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -265,21 +273,29 @@ export default function BiologyTutorGreaterNoidaPage() {
                 }`}
                 style={{ animationDelay: `${index * 50}ms` }}
               >
-                <MapPin className={`w-8 h-8 mb-4 ${area.highlight ? 'text-yellow-400' : 'text-green-600'}`} />
-                <h3 className={`text-lg font-bold mb-2 ${area.highlight ? 'text-white' : 'text-gray-900'}`}>
+                <MapPin
+                  className={`w-8 h-8 mb-4 ${area.highlight ? 'text-yellow-400' : 'text-green-600'}`}
+                />
+                <h3
+                  className={`text-lg font-bold mb-2 ${area.highlight ? 'text-white' : 'text-gray-900'}`}
+                >
                   {area.name}
                 </h3>
                 <p className={`text-sm mb-1 ${area.highlight ? 'text-white/80' : 'text-gray-500'}`}>
                   {area.distance} from center
                 </p>
                 {area.metro && (
-                  <div className={`flex items-center text-sm ${area.highlight ? 'text-yellow-300' : 'text-blue-600'}`}>
+                  <div
+                    className={`flex items-center text-sm ${area.highlight ? 'text-yellow-300' : 'text-blue-600'}`}
+                  >
                     <Train className="w-4 h-4 mr-1" />
                     {area.metro}
                   </div>
                 )}
                 {area.landmark && (
-                  <p className={`text-sm font-medium ${area.highlight ? 'text-yellow-300' : 'text-green-600'}`}>
+                  <p
+                    className={`text-sm font-medium ${area.highlight ? 'text-yellow-300' : 'text-green-600'}`}
+                  >
                     {area.landmark}
                   </p>
                 )}
@@ -388,9 +404,7 @@ export default function BiologyTutorGreaterNoidaPage() {
               ctaAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
             }`}
           >
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Visit Our Center Today!
-            </h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Visit Our Center Today!</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Book a free demo class and experience our teaching
             </p>

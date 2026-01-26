@@ -45,7 +45,7 @@ export function useFirebaseSession(): SessionState {
       const cookies = document.cookie
       console.log('[useFirebaseSession] Starting session check...', {
         hasCookies: !!cookies,
-        cookieNames: cookies ? cookies.split(';').map(c => c.trim().split('=')[0]) : [],
+        cookieNames: cookies ? cookies.split(';').map((c) => c.trim().split('=')[0]) : [],
         timestamp: new Date().toISOString(),
       })
 
@@ -53,7 +53,11 @@ export function useFirebaseSession(): SessionState {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => {
         controller.abort()
-        console.error('[useFirebaseSession] Session check timed out after', SESSION_CHECK_TIMEOUT, 'ms')
+        console.error(
+          '[useFirebaseSession] Session check timed out after',
+          SESSION_CHECK_TIMEOUT,
+          'ms'
+        )
       }, SESSION_CHECK_TIMEOUT)
 
       const response = await fetch('/api/auth/session', {
@@ -68,7 +72,12 @@ export function useFirebaseSession(): SessionState {
       clearTimeout(timeoutId)
 
       const elapsed = Date.now() - startTime
-      console.log('[useFirebaseSession] Session API responded in', elapsed, 'ms, status:', response.status)
+      console.log(
+        '[useFirebaseSession] Session API responded in',
+        elapsed,
+        'ms, status:',
+        response.status
+      )
 
       if (!response.ok) {
         throw new Error(`Session check failed with status ${response.status}`)
@@ -92,8 +101,11 @@ export function useFirebaseSession(): SessionState {
         // Not authenticated - check if we should retry (cookies might not be set yet)
         if (retryCount.current < maxRetries && cookies.includes('authjs.session-token')) {
           retryCount.current++
-          console.log('[useFirebaseSession] Cookie found but not authenticated, retrying...', retryCount.current)
-          await new Promise(resolve => setTimeout(resolve, 500)) // Wait 500ms before retry
+          console.log(
+            '[useFirebaseSession] Cookie found but not authenticated, retrying...',
+            retryCount.current
+          )
+          await new Promise((resolve) => setTimeout(resolve, 500)) // Wait 500ms before retry
           return checkSession()
         }
         setUser(null)

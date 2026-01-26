@@ -142,10 +142,7 @@ export const SEO_PAGE_SLUGS = {
     'free-neet-biology-lectures',
     'neet-success-stories',
   ],
-  online: [
-    'live-online-neet-classes',
-    'online-neet-test-series',
-  ],
+  online: ['live-online-neet-classes', 'online-neet-test-series'],
   chapterNotes: [
     'genetics-notes-neet',
     'human-physiology-notes-neet',
@@ -217,9 +214,7 @@ export function getAllSEOSlugs(): string[] {
 /**
  * Get slugs by category
  */
-export function getSEOSlugsByCategory(
-  category: keyof typeof SEO_PAGE_SLUGS
-): readonly string[] {
+export function getSEOSlugsByCategory(category: keyof typeof SEO_PAGE_SLUGS): readonly string[] {
   return SEO_PAGE_SLUGS[category]
 }
 
