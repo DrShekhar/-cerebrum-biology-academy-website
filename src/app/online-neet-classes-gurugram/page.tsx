@@ -66,6 +66,31 @@ const faqs = [
     answer:
       'Online-only batches start at ₹45,000/year (vs ₹60,000 offline). This includes live classes, recordings, study material (PDF), test series, and doubt support. Hybrid option available at ₹55,000.',
   },
+  {
+    question: 'What are the class timings for online batches?',
+    answer:
+      'We offer flexible timing: Morning batch (7-9 AM before school), Evening batch (5-7 PM after school), and Weekend batch (4-hour sessions). You can choose the slot that best fits your school schedule.',
+  },
+  {
+    question: 'How can parents monitor my progress in online classes?',
+    answer:
+      'Parents receive weekly progress reports via WhatsApp/email, including attendance, test scores, and teacher feedback. We also conduct monthly parent-teacher video calls and provide access to our parent portal for real-time tracking.',
+  },
+  {
+    question: 'Are online classes as effective as offline coaching?',
+    answer:
+      'Our data shows online students achieve comparable results to offline students. In NEET 2024, 42% of our 650+ qualifiers were online students. The key is active participation, regular attendance, and completing all assignments.',
+  },
+  {
+    question: 'How are tests conducted in online mode?',
+    answer:
+      'Weekly chapter tests are conducted via our online platform with AI-proctoring. Monthly full-length mock tests simulate actual NEET conditions. All tests include detailed analysis, rank prediction, and personalized improvement suggestions.',
+  },
+  {
+    question: 'What if I face technical issues during live class?',
+    answer:
+      'We have a dedicated tech support team available during all class hours. Classes are also recorded, so you never miss content. Our platform has low-bandwidth mode for areas with internet issues. Support: tech@cerebrumbiologyacademy.com',
+  },
 ]
 
 export default function OnlineNEETClassesGurugramPage() {

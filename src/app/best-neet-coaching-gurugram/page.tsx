@@ -66,6 +66,31 @@ const faqs = [
     answer:
       'Yes, we accept lateral entries with prorated fees. Many students switch to Cerebrum for Biology after realizing they need specialized coaching. We offer catch-up sessions to help you align with the current batch. Contact us for evaluation.',
   },
+  {
+    question: 'Do Gurugram coaching institutes offer online NEET classes?',
+    answer:
+      'Yes, most institutes now offer online options. Cerebrum provides live Zoom classes with recording access, digital study material, and online doubt sessions. Allen and Aakash have their own apps. Online fees are typically 30-40% lower than offline.',
+  },
+  {
+    question: 'What is the best time to start NEET coaching?',
+    answer:
+      'Ideally, start from Class 11 for a strong foundation. However, Class 12 students can join 1-year intensive programs. Droppers should start immediately after results. Early starters at Cerebrum show 25% higher average scores than late joiners.',
+  },
+  {
+    question: 'Are dropper batches available at Gurugram coaching centers?',
+    answer:
+      'Yes, all major institutes offer dropper/repeater batches. Cerebrum has dedicated dropper batches with intensive daily classes (6+ hours). These batches focus on weak area improvement, regular mock tests, and personalized mentoring for better results.',
+  },
+  {
+    question: 'Can I take a demo class before enrolling?',
+    answer:
+      'Cerebrum offers free demo classes - experience our teaching style before committing. Most major institutes like Aakash and Allen also offer trial sessions. Demo classes help you assess faculty quality, batch environment, and teaching methodology firsthand.',
+  },
+  {
+    question: 'How do coaching institutes keep parents updated on progress?',
+    answer:
+      'Cerebrum provides monthly parent-teacher meetings, regular test score reports, and WhatsApp updates. Large institutes use apps for progress tracking. Smaller batch sizes at Cerebrum allow more personalized feedback on student performance and areas needing improvement.',
+  },
 ]
 
 export default function BestNEETCoachingGurugramPage() {

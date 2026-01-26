@@ -24,6 +24,7 @@ import {
 } from 'lucide-react'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
+import { VideoSchema } from '@/components/seo/VideoSchema'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -1562,6 +1563,32 @@ export default function NEETCoachingGurgaonPage() {
           <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full" />
         </motion.a>
       </div>
+
+      {/* Video Testimonial Schemas for SEO */}
+      <VideoSchema
+        name="Sadhna Sirin - 695/720 NEET 2023 Delhi-NCR Topper Testimonial"
+        description="Watch Sadhna Sirin share her NEET 2023 success story. She scored 695/720 with 100 percentile in Biology, becoming the Delhi-NCR topper. Learn how Cerebrum Biology Academy helped her achieve this remarkable score."
+        thumbnailUrl="https://img.youtube.com/vi/bk6wQCh6b9w/maxresdefault.jpg"
+        uploadDate="2023-07-15"
+        duration="PT8M30S"
+        embedUrl="https://www.youtube.com/embed/bk6wQCh6b9w"
+      />
+      <VideoSchema
+        name="Abhisek - AFMC Selection Success Story"
+        description="Abhisek shares his journey to Armed Forces Medical College (AFMC) Pune. Watch how focused Biology preparation at Cerebrum helped him crack one of India's most prestigious medical institutions."
+        thumbnailUrl="https://img.youtube.com/vi/NfhkGqOQXzk/maxresdefault.jpg"
+        uploadDate="2023-08-20"
+        duration="PT6M45S"
+        embedUrl="https://www.youtube.com/embed/NfhkGqOQXzk"
+      />
+      <VideoSchema
+        name="Nishita - Medical College in Just 6 Months"
+        description="Nishita shares how she secured admission to a medical college through the 6-month intensive NEET program at Cerebrum Biology Academy. A quick success story for NEET aspirants."
+        thumbnailUrl="https://img.youtube.com/vi/t5F8RBuHITM/maxresdefault.jpg"
+        uploadDate="2024-01-10"
+        duration="PT5M20S"
+        embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
+      />
     </>
   )
 }

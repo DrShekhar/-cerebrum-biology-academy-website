@@ -66,6 +66,31 @@ const faqs = [
     answer:
       'Yes! Our hybrid model allows you to attend some classes online and some offline. Many students from Manesar, Pataudi, and Sohna prefer 2 days offline + online support. Full online batches are also available.',
   },
+  {
+    question: 'What is the best route from DLF/Cyber City?',
+    answer:
+      'From DLF/Cyber City: Take Golf Course Extension Road towards Sector 56, then right towards Sector 51. Alternatively, use Sohna Road via Subhash Chowk. Google Maps provides real-time traffic updates. Average travel time: 15-20 minutes.',
+  },
+  {
+    question: 'What time should I leave to avoid traffic?',
+    answer:
+      'For morning batch (6:30 AM start), traffic is minimal. For evening batch (5 PM), leave 30 minutes early from DLF/Cyber City area. Weekend batches have no traffic concerns. We share traffic updates in our student WhatsApp group.',
+  },
+  {
+    question: 'Is the area safe for students coming alone?',
+    answer:
+      'Yes, M2K Corporate Park is in a well-developed commercial area of Sector 51. The building has security, CCTV, and is well-lit. Many female students attend evening batches safely. Parents can wait in the lobby if preferred.',
+  },
+  {
+    question: 'Are there food options near the coaching center?',
+    answer:
+      'Yes! Several cafes and restaurants within 500m including Chaayos, McDonalds, and local eateries. We also have a small canteen in the building for snacks and beverages. Students often use the break time for meals.',
+  },
+  {
+    question: 'What facilities are available at the coaching center?',
+    answer:
+      'Our center has AC classrooms, projector-based teaching, drinking water, clean washrooms, waiting area for parents, free WiFi, and a small library. We also have a doubt room where students can study after classes.',
+  },
 ]
 
 export default function NEETCoachingNearMeGurugramPage() {
