@@ -5509,6 +5509,726 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  // Gurugram Sector-Specific Pages (P2)
+  'neet-coaching-gurgaon-sector-15': {
+    slug: 'neet-coaching-gurgaon-sector-15',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 15 Gurgaon | Near HUDA Market | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 15 Gurgaon students. 15 min from our Sector 51 center. AIIMS faculty, 98% results. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 15 Gurgaon',
+    heroSubtitle:
+      'Sector 15 students - join Gurugram\'s top NEET coaching. Just 15 minutes from HUDA Market to our Sector 51 center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '15 min from Sector 15',
+    },
+    localities: [
+      { name: 'Sector 14', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'Sector 17', url: '/neet-coaching-gurgaon-sector-17' },
+      { name: 'Old Gurgaon', url: '/neet-coaching-old-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How far is Cerebrum center from Sector 15?',
+        answer: 'Our Sector 51 center is 15 minutes by car from Sector 15 HUDA Market. Direct route via Golf Course Extension Road.',
+      },
+      {
+        question: 'Is there any coaching in Sector 15 itself?',
+        answer: 'Major coaching centers are in Sector 14. Cerebrum in Sector 51 offers better faculty and smaller batches compared to crowded Sector 14 institutes.',
+      },
+    ],
+    stats: { studentsFromCity: '150+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4650', lng: '77.0300' },
+  },
+
+  'neet-coaching-gurgaon-sector-17': {
+    slug: 'neet-coaching-gurgaon-sector-17',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 17 Gurgaon | Old Gurgaon | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 17 Gurgaon students. Serving Old Gurgaon since 2015. AIIMS faculty, small batches. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 17 Gurgaon',
+    heroSubtitle:
+      'Old Gurgaon\'s trusted NEET coaching partner. Students from Sectors 17, 18, 21 join our Sector 51 center.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '12 min from Sector 17',
+    },
+    localities: [
+      { name: 'Sector 15', url: '/neet-coaching-gurgaon-sector-15' },
+      { name: 'Sector 18', url: '/neet-coaching-gurgaon-sector-18' },
+      { name: 'Sector 21', url: '/neet-coaching-gurgaon-sector-21' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How do Sector 17 students reach the center?',
+        answer: 'Via Mehrauli-Gurgaon Road to Golf Course Extension. 12 minutes by car. Many students carpool from Sector 17-18 area.',
+      },
+      {
+        question: 'Any pickup facility from Sector 17?',
+        answer: 'We can arrange carpool groups. Contact us to connect with other Sector 17 students already attending.',
+      },
+    ],
+    stats: { studentsFromCity: '120+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4580', lng: '77.0250' },
+  },
+
+  'neet-coaching-gurgaon-sector-18': {
+    slug: 'neet-coaching-gurgaon-sector-18',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 18 Gurgaon | Near Vyapar Kendra | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 18 Gurgaon students. Near Vyapar Kendra. AIIMS faculty, 98% results. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 18 Gurgaon',
+    heroSubtitle:
+      'Sector 18 students - premium NEET coaching just 12 minutes away. Escape the crowd, join small batches.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '12 min from Sector 18',
+    },
+    localities: [
+      { name: 'Sector 17', url: '/neet-coaching-gurgaon-sector-17' },
+      { name: 'Sector 21', url: '/neet-coaching-gurgaon-sector-21' },
+      { name: 'Sector 22', url: '/neet-coaching-gurgaon-sector-22' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Is there direct route from Sector 18 to center?',
+        answer: 'Yes! Sector 18 → MG Road → Golf Course Extension → Sector 51. 12 minutes with minimal traffic.',
+      },
+      {
+        question: 'What schools in Sector 18 do you serve?',
+        answer: 'Students from DAV, St. Xaviers, and schools in nearby sectors regularly attend. We understand their curriculum.',
+      },
+    ],
+    stats: { studentsFromCity: '100+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4550', lng: '77.0200' },
+  },
+
+  'neet-coaching-gurgaon-sector-40': {
+    slug: 'neet-coaching-gurgaon-sector-40',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 40 Gurgaon | Near Huda City Centre | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 40 Gurgaon. 10 min from Huda City Centre Metro. AIIMS faculty, small batches. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 40 Gurgaon',
+    heroSubtitle:
+      'Sector 40 residents - top NEET coaching just 10 minutes away. Near Huda City Centre Metro for easy commute.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '10 min from Sector 40',
+    },
+    localities: [
+      { name: 'Sector 42', url: '/neet-coaching-gurgaon-sector-42' },
+      { name: 'Sector 43', url: '/neet-coaching-gurgaon-sector-43' },
+      { name: 'Huda City Centre', url: '/neet-coaching-huda-city-centre-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Can I come by metro from Sector 40?',
+        answer: 'Yes! Take metro to Huda City Centre, then 10-minute auto/cab to Sector 51. Many students use this route.',
+      },
+      {
+        question: 'Which societies in Sector 40 do students come from?',
+        answer: 'Students from Vatika City, Vipul Greens, and other Sector 40 societies attend. Short, safe commute.',
+      },
+    ],
+    stats: { studentsFromCity: '180+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4400', lng: '77.0450' },
+  },
+
+  'neet-coaching-gurgaon-sector-42': {
+    slug: 'neet-coaching-gurgaon-sector-42',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 42 Gurgaon | Near Medanta | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 42 Gurgaon students. Near Medanta Hospital. AIIMS faculty, 98% results. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 42 Gurgaon',
+    heroSubtitle:
+      'Sector 42 students - inspired by Medanta nearby? Join top NEET coaching to become a doctor yourself.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '8 min from Sector 42',
+    },
+    localities: [
+      { name: 'Sector 40', url: '/neet-coaching-gurgaon-sector-40' },
+      { name: 'Sector 43', url: '/neet-coaching-gurgaon-sector-43' },
+      { name: 'Sector 44', url: '/neet-coaching-gurgaon-sector-44' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How close is the center to Sector 42?',
+        answer: 'Just 8 minutes via Golf Course Extension Road. Many Sector 42 students cycle to our center.',
+      },
+      {
+        question: 'Do students from Medanta Colony area attend?',
+        answer: 'Yes! Several students from Medanta staff families study with us. They see medical careers daily and are highly motivated.',
+      },
+    ],
+    stats: { studentsFromCity: '140+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4420', lng: '77.0500' },
+  },
+
+  'neet-coaching-gurgaon-sector-44': {
+    slug: 'neet-coaching-gurgaon-sector-44',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 44 Gurgaon | Premium Locality | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 44 Gurgaon. Premium coaching for premium locality. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 44 Gurgaon',
+    heroSubtitle:
+      'Sector 44 families deserve premium education. Our AIIMS faculty delivers results that match your expectations.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '7 min from Sector 44',
+    },
+    localities: [
+      { name: 'Sector 42', url: '/neet-coaching-gurgaon-sector-42' },
+      { name: 'Sector 46', url: '/neet-coaching-gurgaon-sector-46' },
+      { name: 'Sector 45', url: '/neet-coaching-gurgaon-sector-45' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'What makes your coaching suitable for Sector 44 families?',
+        answer: 'Premium infrastructure, AC classrooms, small batches of 25 students, and AIIMS-trained faculty. Quality that matches Sector 44 standards.',
+      },
+      {
+        question: 'Do you offer personalized attention?',
+        answer: 'Yes! Each student gets a dedicated mentor. Weekly parent updates. Personal attention that premium families expect.',
+      },
+    ],
+    stats: { studentsFromCity: '120+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4450', lng: '77.0550' },
+  },
+
+  'neet-coaching-gurgaon-sector-46': {
+    slug: 'neet-coaching-gurgaon-sector-46',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 46 Gurgaon | Near Paras Hospital | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 46 Gurgaon. Near Paras Hospital. See doctors daily, become one yourself. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 46 Gurgaon',
+    heroSubtitle:
+      'Sector 46 - with Paras Hospital nearby, medical aspirations run high. Channel that motivation with expert coaching.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '6 min from Sector 46',
+    },
+    localities: [
+      { name: 'Sector 44', url: '/neet-coaching-gurgaon-sector-46' },
+      { name: 'Sector 47', url: '/neet-coaching-gurgaon-sector-47' },
+      { name: 'Sector 48', url: '/neet-coaching-gurgaon-sector-48' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How far is the center from Sector 46?',
+        answer: 'Just 6 minutes via Golf Course Extension Road. Sector 46 is one of our highest-contributing localities.',
+      },
+      {
+        question: 'Any students from Paras World School?',
+        answer: 'Yes! Many Paras World School students from Sector 46 and nearby areas attend our coaching.',
+      },
+    ],
+    stats: { studentsFromCity: '160+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4480', lng: '77.0600' },
+  },
+
+  'neet-coaching-gurgaon-sector-47': {
+    slug: 'neet-coaching-gurgaon-sector-47',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 47 Gurgaon | Central Location | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 47 Gurgaon students. Centrally located. AIIMS faculty, small batches. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 47 Gurgaon',
+    heroSubtitle:
+      'Sector 47 students - you\'re in the heart of New Gurgaon. Access the best NEET coaching just 5 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '5 min from Sector 47',
+    },
+    localities: [
+      { name: 'Sector 46', url: '/neet-coaching-gurgaon-sector-46' },
+      { name: 'Sector 48', url: '/neet-coaching-gurgaon-sector-48' },
+      { name: 'Sector 50', url: '/neet-coaching-gurgaon-sector-50' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'What is the commute time from Sector 47?',
+        answer: 'Just 5 minutes by any mode - car, auto, or even bicycle. Many students walk during good weather.',
+      },
+      {
+        question: 'Which Sector 47 societies do students come from?',
+        answer: 'Students from Orchid Petals, Uppal Southend, Vipul Belmonte and other Sector 47 societies attend regularly.',
+      },
+    ],
+    stats: { studentsFromCity: '200+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4500', lng: '77.0650' },
+  },
+
+  'neet-coaching-gurgaon-sector-48': {
+    slug: 'neet-coaching-gurgaon-sector-48',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 48 Gurgaon | Near Vega School | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 48 Gurgaon. Vega School, Presidium students welcome. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 48 Gurgaon',
+    heroSubtitle:
+      'Sector 48 - home to Vega School and premium societies. Get premium NEET coaching to match.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '4 min from Sector 48',
+    },
+    localities: [
+      { name: 'Sector 47', url: '/neet-coaching-gurgaon-sector-47' },
+      { name: 'Sector 49', url: '/neet-coaching-gurgaon-sector-49' },
+      { name: 'Sector 50', url: '/neet-coaching-gurgaon-sector-50' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Do you have students from Vega School?',
+        answer: 'Yes! Vega School students form a significant group. We understand their IB/IGCSE curriculum and bridge to NEET.',
+      },
+      {
+        question: 'How close is Sector 48 to your center?',
+        answer: 'Sector 48 is our neighboring sector - just 4 minutes away. Some students walk to class.',
+      },
+    ],
+    stats: { studentsFromCity: '180+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4520', lng: '77.0700' },
+  },
+
+  'neet-coaching-gurgaon-sector-50': {
+    slug: 'neet-coaching-gurgaon-sector-50',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 50 Gurgaon | Near Lotus Valley | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 50 Gurgaon. Lotus Valley, Ryan International students. 3 min walk to our center. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 50 Gurgaon',
+    heroSubtitle:
+      'Sector 50 students - you\'re our closest neighbors! Walk to class and maximize your study time.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '3 min walk from Sector 50',
+    },
+    localities: [
+      { name: 'Sector 48', url: '/neet-coaching-gurgaon-sector-48' },
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Sector 52', url: '/neet-coaching-gurgaon-sector-52' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How close is the center to Sector 50?',
+        answer: 'We are literally next door! 3-minute walk from most Sector 50 societies. No commute hassle.',
+      },
+      {
+        question: 'Do Lotus Valley students attend?',
+        answer: 'Yes! Lotus Valley School (Sector 50) students form a large group. We coordinate with their school schedule.',
+      },
+    ],
+    stats: { studentsFromCity: '220+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4540', lng: '77.0730' },
+  },
+
+  'neet-coaching-gurgaon-sector-52': {
+    slug: 'neet-coaching-gurgaon-sector-52',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 52 Gurgaon | Rapid Metro | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 52 Gurgaon. Near Rapid Metro station. Easy commute, AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 52 Gurgaon',
+    heroSubtitle:
+      'Sector 52 - well connected by Rapid Metro. Quick commute to our Sector 51 center for quality NEET prep.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '5 min from Sector 52',
+    },
+    localities: [
+      { name: 'Sector 50', url: '/neet-coaching-gurgaon-sector-50' },
+      { name: 'Sector 53', url: '/neet-coaching-gurgaon-sector-53' },
+      { name: 'Sector 54', url: '/neet-coaching-gurgaon-sector-54' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Can I use Rapid Metro to reach the center?',
+        answer: 'Yes! Sector 52 Rapid Metro station is 5 minutes from our center. Many students use this route.',
+      },
+      {
+        question: 'Which Sector 52 societies do students come from?',
+        answer: 'Students from Tulip Violet, Ansal API, and other Sector 52 societies attend regularly.',
+      },
+    ],
+    stats: { studentsFromCity: '150+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4560', lng: '77.0780' },
+  },
+
+  'neet-coaching-gurgaon-sector-53': {
+    slug: 'neet-coaching-gurgaon-sector-53',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 53 Gurgaon | Golf Course Extension | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 53 Gurgaon on Golf Course Extension Road. Premium coaching, AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 53 Gurgaon',
+    heroSubtitle:
+      'Sector 53 families on Golf Course Extension - premium NEET coaching just minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '6 min from Sector 53',
+    },
+    localities: [
+      { name: 'Sector 52', url: '/neet-coaching-gurgaon-sector-52' },
+      { name: 'Sector 54', url: '/neet-coaching-gurgaon-sector-54' },
+      { name: 'Golf Course Extension', url: '/neet-coaching-golf-course-extension-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How do I reach from Sector 53?',
+        answer: 'Direct drive via Golf Course Extension Road - 6 minutes. Or use the internal sector roads.',
+      },
+      {
+        question: 'Is parking available at the center?',
+        answer: 'Yes! Ample parking at M2K Corporate Park. Both car and two-wheeler parking available.',
+      },
+    ],
+    stats: { studentsFromCity: '130+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4580', lng: '77.0820' },
+  },
+
+  'neet-coaching-gurgaon-sector-54': {
+    slug: 'neet-coaching-gurgaon-sector-54',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 54 Gurgaon | Near Golf Course Road | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 54 Gurgaon. Near Golf Course Road. Premium location, AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 54 Gurgaon',
+    heroSubtitle:
+      'Sector 54 - at the intersection of Golf Course and Golf Course Extension. Premium coaching for premium location.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '7 min from Sector 54',
+    },
+    localities: [
+      { name: 'Sector 53', url: '/neet-coaching-gurgaon-sector-53' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+      { name: 'Sector 56', url: '/neet-coaching-gurgaon-sector-56' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Which Sector 54 societies do students come from?',
+        answer: 'Students from Puri Emerald Bay, Godrej Frontier, and other premium Sector 54 projects attend.',
+      },
+      {
+        question: 'Is the coaching quality suitable for Sector 54 standards?',
+        answer: 'Absolutely! AIIMS faculty, AC classrooms, small batches. Quality that matches your expectations.',
+      },
+    ],
+    stats: { studentsFromCity: '140+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4600', lng: '77.0860' },
+  },
+
+  'neet-coaching-gurgaon-sector-58': {
+    slug: 'neet-coaching-gurgaon-sector-58',
+    cityName: 'Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Sector 58 Gurgaon | Growing Locality | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Sector 58 Gurgaon. Serving growing families in this developing sector. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Sector 58 Gurgaon',
+    heroSubtitle:
+      'Sector 58 - a growing locality deserves quality education. Top NEET coaching just 10 minutes away.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '10 min from Sector 58',
+    },
+    localities: [
+      { name: 'Sector 56', url: '/neet-coaching-gurgaon-sector-56' },
+      { name: 'Sector 60', url: '/neet-coaching-gurgaon-sector-60' },
+      { name: 'Sector 61', url: '/neet-coaching-gurgaon-sector-61' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Biology Classes Gurgaon', url: '/biology-classes-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How do Sector 58 students commute?',
+        answer: 'Via Sector 56/57 - about 10 minutes by car. Carpool groups available with other Sector 58 students.',
+      },
+      {
+        question: 'Is Sector 58 well-represented at your center?',
+        answer: 'Yes! As Sector 58 grows, more families discover us. Strong community of students from this area.',
+      },
+    ],
+    stats: { studentsFromCity: '100+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4640', lng: '77.0900' },
+  },
+
+  // Gurugram Area Pages (P2)
+  'neet-coaching-manesar-gurgaon': {
+    slug: 'neet-coaching-manesar-gurgaon',
+    cityName: 'Manesar',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in Manesar Gurgaon 2026 | Industrial Hub | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Manesar students. Serving IMT Manesar, residential sectors. 25 min from Sector 51. Online + Offline. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Manesar Gurgaon',
+    heroSubtitle:
+      'Manesar families - quality NEET coaching is now accessible. Join our center or study online with the same faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '25 min from Manesar',
+    },
+    localities: [
+      { name: 'IMT Manesar', url: '/neet-coaching-imt-manesar' },
+      { name: 'Sector 1-8 Manesar', url: '/neet-coaching-manesar-sectors' },
+      { name: 'Dharuhera', url: '/neet-coaching-dharuhera' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Online NEET Classes', url: '/online-neet-classes-gurugram' },
+      { name: 'Weekend Batch', url: '/weekend-neet-batch-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Is 25 minutes commute worth it for NEET coaching?',
+        answer: 'Many Manesar students commute daily. Quality faculty and small batches make it worthwhile. Weekend batch also available to reduce travel.',
+      },
+      {
+        question: 'Do you offer online classes for Manesar students?',
+        answer: 'Yes! Our online classes have the same faculty and curriculum. Many Manesar students attend online on weekdays and offline on weekends.',
+      },
+      {
+        question: 'Any carpool from Manesar?',
+        answer: 'We can connect you with other Manesar students for carpool. Several groups already operate from IMT area.',
+      },
+    ],
+    stats: { studentsFromCity: '80+', successRate: '95%', rating: '4.8' },
+    geoCoordinates: { lat: '28.3600', lng: '76.9400' },
+  },
+
+  'neet-coaching-dwarka-expressway-gurgaon': {
+    slug: 'neet-coaching-dwarka-expressway-gurgaon',
+    cityName: 'Dwarka Expressway',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching Dwarka Expressway Gurgaon 2026 | SPR Road | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Dwarka Expressway residents. Sectors 99-115. Growing area, quality coaching. 20 min drive. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Dwarka Expressway Gurgaon',
+    heroSubtitle:
+      'Dwarka Expressway - Gurgaon\'s fastest growing corridor. Get premium NEET coaching before the crowd.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '20 min via expressway',
+    },
+    localities: [
+      { name: 'Sector 99', url: '/neet-coaching-sector-99-gurgaon' },
+      { name: 'Sector 102-106', url: '/neet-coaching-new-gurgaon' },
+      { name: 'Sector 108-115', url: '/neet-coaching-new-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'New Gurgaon NEET', url: '/neet-coaching-new-gurgaon' },
+      { name: 'SPR Road Coaching', url: '/neet-coaching-spr-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'How do I reach from Dwarka Expressway?',
+        answer: 'Direct drive via SPR to Golf Course Extension - 20 minutes. Smooth expressway driving most of the way.',
+      },
+      {
+        question: 'Which Dwarka Expressway projects do students come from?',
+        answer: 'Students from Sobha City, Godrej Summit, Puri Diplomatic Greens, Conscient Heritage Max attend regularly.',
+      },
+      {
+        question: 'Is there coaching closer to Dwarka Expressway?',
+        answer: 'Major quality coaching is in central Gurgaon. The 20-minute drive is worth it for AIIMS faculty and proven results.',
+      },
+    ],
+    stats: { studentsFromCity: '120+', successRate: '96%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4200', lng: '76.9800' },
+  },
+
+  'neet-coaching-new-gurgaon': {
+    slug: 'neet-coaching-new-gurgaon',
+    cityName: 'New Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching in New Gurgaon 2026 | Sectors 80-115 | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for New Gurgaon (Sectors 80-115). Premium coaching for premium localities. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for New Gurgaon (Sectors 80-115)',
+    heroSubtitle:
+      'New Gurgaon families chose premium homes. Now choose premium education for your child\'s medical dreams.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '15-25 min from New Gurgaon',
+    },
+    localities: [
+      { name: 'Sector 81-85', url: '/neet-coaching-sectors-81-85-gurgaon' },
+      { name: 'Sector 86-90', url: '/neet-coaching-sectors-86-90-gurgaon' },
+      { name: 'Sector 91-95', url: '/neet-coaching-sectors-91-95-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Dwarka Expressway', url: '/neet-coaching-dwarka-expressway-gurgaon' },
+      { name: 'SPR Road', url: '/neet-coaching-spr-gurgaon' },
+    ],
+    faqs: [
+      {
+        question: 'Which New Gurgaon sectors do you serve?',
+        answer: 'All sectors from 80 to 115. Students from Emaar, Raheja, BPTP, M3M projects attend our center.',
+      },
+      {
+        question: 'Is the commute from New Gurgaon manageable?',
+        answer: '15-25 minutes depending on exact location. Many students use the expressway drive for self-study (audio lectures).',
+      },
+      {
+        question: 'Any plans for a center in New Gurgaon?',
+        answer: 'We focus on one premium center with the best faculty. Quality over quantity. The commute ensures you get the best teachers.',
+      },
+    ],
+    stats: { studentsFromCity: '200+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4100', lng: '77.0200' },
+  },
+
+  'neet-coaching-spr-gurgaon': {
+    slug: 'neet-coaching-spr-gurgaon',
+    cityName: 'SPR Road Gurgaon',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching SPR Road Gurgaon 2026 | Southern Peripheral Road | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for SPR Road Gurgaon students. Sectors 68-84. Easy expressway access. AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for SPR Road Gurgaon',
+    heroSubtitle:
+      'SPR (Southern Peripheral Road) - quick expressway access to premium NEET coaching in Sector 51.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '12-18 min via SPR',
+    },
+    localities: [
+      { name: 'Sector 68-72', url: '/neet-coaching-sectors-68-72-gurgaon' },
+      { name: 'Sector 73-78', url: '/neet-coaching-sectors-73-78-gurgaon' },
+      { name: 'Sector 79-84', url: '/neet-coaching-sectors-79-84-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+      { name: 'Golf Course Extension', url: '/neet-coaching-golf-course-extension' },
+    ],
+    faqs: [
+      {
+        question: 'How is the commute from SPR road?',
+        answer: 'Smooth 12-18 minute drive via the expressway. No traffic signals, quick access to our Sector 51 center.',
+      },
+      {
+        question: 'Which SPR projects do students come from?',
+        answer: 'Students from Ireo Skyon, Ramprastha Edge Towers, Pareena Coban Residences, and other SPR projects attend.',
+      },
+    ],
+    stats: { studentsFromCity: '150+', successRate: '97%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4300', lng: '77.0500' },
+  },
+
   // Gurugram Class-Specific Pages
   'biology-class-11-gurgaon': {
     slug: 'biology-class-11-gurgaon',
