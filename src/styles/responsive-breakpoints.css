@@ -158,11 +158,18 @@
    COURSE WIZARD RESPONSIVE STYLES
    ================================ */
 
-/* Wizard Container */
+/* Wizard Container - iOS Safari fix: use dvh for dynamic viewport */
 .wizard-container {
-  min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100vh; /* Fallback */
   display: flex;
   flex-direction: column;
+}
+
+@supports (min-height: 100dvh) {
+  .wizard-container {
+    min-height: 100dvh;
+  }
 }
 
 .wizard-header {
@@ -179,7 +186,7 @@
   flex: 1;
   padding: var(--wizard-step-padding);
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  /* Removed deprecated -webkit-overflow-scrolling: touch */
 }
 
 .wizard-navigation {
@@ -372,7 +379,14 @@
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    min-height: calc(100vh - var(--space-16));
+    min-height: calc(100dvh - var(--space-16));
+    min-height: calc(100vh - var(--space-16)); /* Fallback */
+  }
+
+  @supports (min-height: 100dvh) {
+    .wizard-container {
+      min-height: calc(100dvh - var(--space-16));
+    }
   }
 
   .md\:grid-cols-2 {

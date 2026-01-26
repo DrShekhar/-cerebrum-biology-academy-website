@@ -9,7 +9,7 @@
 /* Optimized for mobile gestures */
 .swipe-container {
   touch-action: pan-x;
-  -webkit-overflow-scrolling: touch;
+  /* Removed deprecated -webkit-overflow-scrolling: touch */
 }
 
 /* Enhanced mobile typography */

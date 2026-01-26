@@ -490,8 +490,14 @@ In the meantime, would you like to:
             className={`fixed z-[80] flex flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl transition-all duration-300 ${
               isFullscreen
                 ? 'inset-0 rounded-none'
-                : 'bottom-56 left-4 w-[calc(100vw-1rem)] max-h-[60vh] rounded-2xl sm:bottom-24 sm:left-6 sm:w-[480px] sm:max-h-[75vh] lg:w-[420px] lg:max-h-[80vh] xl:w-[480px]'
+                : 'bottom-56 left-4 w-[calc(100vw-1rem)] max-h-[60dvh] max-h-[60vh] rounded-2xl sm:bottom-24 sm:left-6 sm:w-[480px] sm:max-h-[75dvh] sm:max-h-[75vh] lg:w-[420px] lg:max-h-[80dvh] lg:max-h-[80vh] xl:w-[480px]'
             }`}
+            style={isFullscreen ? {
+              paddingTop: 'env(safe-area-inset-top)',
+              paddingBottom: 'env(safe-area-inset-bottom)',
+              paddingLeft: 'env(safe-area-inset-left)',
+              paddingRight: 'env(safe-area-inset-right)',
+            } : undefined}
           >
             {/* Header */}
             <div className={`bg-green-500 text-white ${isFullscreen ? 'p-4 sm:p-5' : 'p-4'}`}>

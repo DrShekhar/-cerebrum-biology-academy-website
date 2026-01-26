@@ -621,7 +621,8 @@
 
 /* PERFORMANCE: Subtle pulse animation for CTAs - GPU accelerated */
 @keyframes pulse-subtle {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(250, 204, 21, 0.4);
   }
   50% {
@@ -793,6 +794,42 @@ body {
   overflow-x: hidden;
 }
 
+/* ========================================
+   iOS Safari Global Fixes
+   ======================================== */
+
+/* Remove tap highlight on all interactive elements */
+a,
+button,
+input,
+select,
+textarea,
+[role="button"],
+[tabindex]:not([tabindex="-1"]) {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+/* Enable fast tap response - removes 300ms delay */
+* {
+  touch-action: manipulation;
+}
+
+/* Enhanced touch feedback for buttons */
+button:active,
+a:active,
+[role="button"]:active {
+  transform: scale(0.98);
+  opacity: 0.9;
+}
+
+/* Prevent text selection on buttons during tap */
+button,
+[role="button"] {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /* Mobile Experience Optimizations - Phase 1.5 */
 @layer utilities {
   /* Touch-friendly interactions */
@@ -837,7 +874,7 @@ body {
   /* Scroll behavior optimizations */
   .smooth-scroll {
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    /* Removed deprecated -webkit-overflow-scrolling: touch - no longer needed in modern iOS */
   }
 
   /* Touch-friendly spacing */
@@ -889,11 +926,18 @@ body {
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   }
 
-  /* Mobile hero optimizations */
+  /* Mobile hero optimizations - iOS Safari fix: use dvh for dynamic viewport */
   .mobile-hero {
-    min-height: calc(100vh - 60px);
+    min-height: calc(100dvh - 60px);
+    min-height: calc(100vh - 60px); /* Fallback for older browsers */
     padding-top: 80px;
     padding-bottom: 40px;
+  }
+
+  @supports (min-height: 100dvh) {
+    .mobile-hero {
+      min-height: calc(100dvh - 60px);
+    }
   }
 
   /* Mobile section spacing */
@@ -1820,9 +1864,16 @@ body.auth-page > div > footer {
 }
 
 body.auth-page main#main-content {
-  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  min-height: 100vh !important; /* Fallback */
   padding-bottom: 0 !important;
   padding-top: 0 !important;
+}
+
+@supports (min-height: 100dvh) {
+  body.auth-page main#main-content {
+    min-height: 100dvh !important;
+  }
 }
 
 body.auth-page {
@@ -1857,7 +1908,14 @@ body.obs-overlay-mode [role='navigation'] {
 body.obs-overlay-mode main {
   padding: 0 !important;
   margin: 0 !important;
-  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  min-height: 100vh !important; /* Fallback */
+}
+
+@supports (min-height: 100dvh) {
+  body.obs-overlay-mode main {
+    min-height: 100dvh !important;
+  }
 }
 
 body.obs-overlay-mode {

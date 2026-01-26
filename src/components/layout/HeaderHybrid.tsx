@@ -71,7 +71,7 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             </Suspense>
 
             {/* Logo - Server rendered for instant LCP */}
-            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group">
+            <Link href="/" className="flex items-center gap-2 sm:gap-3 group overflow-hidden max-w-[200px] sm:max-w-none">
               <div className="relative flex-shrink-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
@@ -82,17 +82,16 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
                     sizes="(max-width: 640px) 32px, 40px"
                     className="object-contain w-8 h-8 sm:w-10 sm:h-10"
                     priority
-                    unoptimized
                   />
                 </div>
               </div>
 
-              {/* Responsive brand text - single element */}
-              <div className="flex flex-col justify-center min-w-0">
-                <span className="text-lg sm:text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em]">
+              {/* Responsive brand text - iOS Safari fix: use overflow-hidden and explicit widths */}
+              <div className="flex flex-col justify-center min-w-0 overflow-hidden flex-shrink">
+                <span className="text-lg sm:text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em] whitespace-nowrap overflow-hidden text-ellipsis">
                   Cerebrum
                 </span>
-                <span className="text-[10px] sm:text-sm text-slate-600 font-medium tracking-wide leading-tight">
+                <span className="text-[10px] sm:text-sm text-slate-600 font-medium tracking-wide leading-tight whitespace-nowrap overflow-hidden text-ellipsis">
                   Biology Academy
                 </span>
               </div>

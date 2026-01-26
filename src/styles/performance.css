@@ -809,7 +809,7 @@ html {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  /* Removed deprecated -webkit-overflow-scrolling: touch */
   scrollbar-width: none;
   -ms-overflow-style: none;
   gap: 1rem;
@@ -1098,7 +1098,7 @@ html {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
+  /* Removed deprecated -webkit-overflow-scrolling: touch */
   gap: 1rem;
   padding: 1rem;
   scrollbar-width: none;
@@ -1148,13 +1148,20 @@ html {
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100dvh;
+  height: 100vh; /* Fallback */
   width: 280px;
   background: white;
   transform: translateX(100%);
   transition: transform 0.3s ease;
   z-index: 91;
   overflow-y: auto;
+}
+
+@supports (height: 100dvh) {
+  .mobile-menu-content {
+    height: 100dvh;
+  }
 }
 
 .mobile-menu-overlay.open .mobile-menu-content {
