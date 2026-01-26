@@ -4476,6 +4476,202 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  'class-9-biology-tuition-gurugram': {
+    slug: 'class-9-biology-tuition-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Class 9 Biology Tuition in Gurugram 2026 | Foundation Course | Cerebrum Academy',
+    metaDescription:
+      'Best Class 9 biology tuition in Gurugram. Build strong foundation for NEET. CBSE, ICSE curriculum. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'Class 9 Biology Tuition in Gurugram',
+    heroSubtitle:
+      'Start your NEET journey early with our Class 9 biology foundation. Build concepts that matter for Class 10, 11, 12 and NEET.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 9 Biology Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 9-10 Biology Gurgaon', url: '/biology-class-9-10-gurgaon' },
+      { name: 'NEET Foundation Class 9', url: '/neet-foundation-class-9-gurugram' },
+      { name: 'Class 10 Biology Tuition', url: '/class-10-biology-tuition-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Is Class 9 biology tuition necessary for NEET?',
+        answer:
+          'Starting Class 9 builds strong foundation. Topics like cell biology, tissues, life processes lay groundwork for NEET. Early starters have 25% better NEET scores.',
+      },
+      {
+        question: 'What is the fee for Class 9 biology tuition?',
+        answer:
+          'Class 9 biology tuition costs ₹30,000-40,000/year including study material. Combined Class 9-10 foundation available at ₹55,000 for 2 years.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '300+',
+      successRate: '95%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'class-10-biology-tuition-gurugram': {
+    slug: 'class-10-biology-tuition-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Class 10 Biology Tuition in Gurugram 2026 | Board + NEET Prep | Cerebrum Academy',
+    metaDescription:
+      'Best Class 10 biology tuition in Gurugram for boards and NEET foundation. CBSE, ICSE, Haryana Board. Sector 51 center. Call 88264-44334!',
+    heroTitle: 'Class 10 Biology Tuition in Gurugram',
+    heroSubtitle:
+      'Excel in board exams while building NEET foundation. Comprehensive Class 10 biology coaching.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 10 Biology Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: '10th Boards Biology', url: '/biology-10th-boards-gurgaon' },
+      { name: 'NEET Foundation Class 10', url: '/neet-foundation-class-10-gurugram' },
+      { name: 'Class 11 Biology', url: '/class-11-biology-tuition-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What topics are covered in Class 10 biology tuition?',
+        answer:
+          'Complete CBSE/ICSE syllabus: Life Processes, Control & Coordination, Reproduction, Heredity & Evolution, Environment. Plus NEET foundation topics.',
+      },
+      {
+        question: 'How does Class 10 biology help for NEET?',
+        answer:
+          'Class 10 covers 15-20% of NEET Biology syllabus directly. Strong foundation in heredity, evolution, and life processes is crucial for NEET success.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '400+',
+      successRate: '96%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'class-11-biology-tuition-gurugram': {
+    slug: 'class-11-biology-tuition-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Class 11 Biology Tuition in Gurugram 2026 | NEET Foundation | Cerebrum Academy',
+    metaDescription:
+      'Top Class 11 biology tuition in Gurugram for NEET preparation. AIIMS faculty, 98% results. Botany + Zoology. Sector 51. Call 88264-44334!',
+    heroTitle: 'Class 11 Biology Tuition in Gurugram',
+    heroSubtitle:
+      'The most important year for NEET prep begins. Master Class 11 Biology with AIIMS-trained faculty.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 11 NEET Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 11 Biology Gurgaon', url: '/biology-class-11-gurgaon' },
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+      { name: 'Class 12 Biology', url: '/class-12-biology-tuition-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why is Class 11 biology crucial for NEET?',
+        answer:
+          'Class 11 covers 50% of NEET Biology syllabus. Topics like Plant Kingdom, Animal Kingdom, Cell Biology, and Plant Physiology appear heavily in NEET. Strong Class 11 = easier Class 12.',
+      },
+      {
+        question: 'What is the fee for Class 11 biology tuition?',
+        answer:
+          'Class 11 NEET biology tuition costs ₹60,000-75,000/year including study material, test series, and doubt clearing. 2-year package (Class 11+12) available at ₹1,10,000.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '600+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
+  'class-12-biology-tuition-gurugram': {
+    slug: 'class-12-biology-tuition-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Class 12 Biology Tuition in Gurugram 2026 | Board + NEET | Cerebrum Academy',
+    metaDescription:
+      'Best Class 12 biology tuition in Gurugram for boards and NEET. AIIMS faculty, 98% results. Intensive preparation. Sector 51. Call 88264-44334!',
+    heroTitle: 'Class 12 Biology Tuition in Gurugram',
+    heroSubtitle:
+      'Final year, maximum stakes. Excel in boards and crack NEET with our intensive Class 12 program.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Class 12 NEET Expert',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Phases', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Sohna Road', url: '/biology-classes-sohna-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'Class 12 Biology Gurgaon', url: '/biology-class-12-gurgaon' },
+      { name: '12th Boards Biology', url: '/biology-12th-boards-gurgaon' },
+      { name: 'NEET Coaching', url: '/neet-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Can I prepare for boards and NEET together in Class 12?',
+        answer:
+          'Yes! 85% of NEET Biology is from NCERT. Our Class 12 program covers boards thoroughly while adding NEET-level practice. Most students score 90%+ in boards and 300+/360 in NEET Biology.',
+      },
+      {
+        question: 'What is the fee for Class 12 biology coaching?',
+        answer:
+          'Class 12 NEET biology coaching costs ₹70,000-85,000/year including study material, test series, and daily doubt clearing. Intensive batch with extra classes available at ₹95,000.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '800+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.4495',
+      lng: '77.0726',
+    },
+  },
+
   'biology-home-tuition-gurgaon': {
     slug: 'biology-home-tuition-gurgaon',
     cityName: 'Gurgaon',
