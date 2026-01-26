@@ -158,7 +158,7 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-[400px]">
               <LazyGoogleMap
-                src={CONTACT_INFO.location.gurugram.mapUrl}
+                embedUrl={CONTACT_INFO.location.gurugram.mapUrl}
                 title="Cerebrum Biology Academy Location - Sector 51 Gurugram"
               />
             </div>

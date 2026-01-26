@@ -6229,6 +6229,429 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: { lat: '28.4300', lng: '77.0500' },
   },
 
+  // Question-Based Pages (Voice Search - P3)
+  'best-neet-coaching-in-gurugram': {
+    slug: 'best-neet-coaching-in-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Which is the Best NEET Coaching in Gurugram 2026? | Expert Answer',
+    metaDescription:
+      'Looking for the best NEET coaching in Gurugram? Compare top institutes, fees, results. Cerebrum Biology Academy - 98% success, AIIMS faculty. Call 88264-44334!',
+    heroTitle: 'Which is the Best NEET Coaching in Gurugram?',
+    heroSubtitle:
+      'An honest comparison of NEET coaching options in Gurugram to help you make the right choice for your medical career.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Top Rated Institute',
+    },
+    localities: [
+      { name: 'Sector 14 Institutes', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'Sector 51 Center', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Area', url: '/biology-classes-dlf-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Fees', url: '/neet-coaching-fees-gurugram' },
+      { name: 'Top 10 NEET Coaching', url: '/top-10-neet-coaching-gurugram' },
+      { name: 'NEET Reviews', url: '/neet-coaching-reviews-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Gurugram?',
+        answer: 'Based on results (98% selection), faculty (AIIMS-trained), and student reviews (4.9/5), Cerebrum Biology Academy is the top choice. Located in Sector 51 with small batches of 25 students.',
+      },
+      {
+        question: 'How to choose the best NEET coaching?',
+        answer: 'Check: 1) Faculty credentials (AIIMS/MBBS), 2) Batch size (<30 ideal), 3) Past results (ask for proof), 4) Student reviews, 5) Fee transparency. Visit and take demo class.',
+      },
+      {
+        question: 'Is Aakash or Allen better in Gurugram?',
+        answer: 'Both are large chains with 100+ student batches. For personalized attention and biology focus, consider specialized institutes like Cerebrum with 25-student batches and AIIMS faculty.',
+      },
+      {
+        question: 'What is the fee of best NEET coaching in Gurugram?',
+        answer: 'Top coaching fees range ₹75,000-2,50,000/year. Cerebrum offers premium quality at ₹75,000-95,000 - best value for AIIMS faculty and small batches.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  'how-to-prepare-for-neet-in-gurugram': {
+    slug: 'how-to-prepare-for-neet-in-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'How to Prepare for NEET in Gurugram 2026 | Complete Guide | Cerebrum Academy',
+    metaDescription:
+      'Complete guide on how to prepare for NEET in Gurugram. Study plan, coaching options, tips from toppers. Expert guidance from AIIMS faculty. 88264-44334!',
+    heroTitle: 'How to Prepare for NEET in Gurugram - Complete Guide',
+    heroSubtitle:
+      'A comprehensive roadmap for Gurugram students preparing for NEET 2026. From choosing coaching to cracking the exam.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Expert Guidance Center',
+    },
+    localities: [
+      { name: 'NEET Coaching Options', url: '/neet-coaching-gurugram' },
+      { name: 'Study Material', url: '/neet-study-material-gurugram' },
+      { name: 'Test Series', url: '/neet-test-series-gurugram' },
+    ],
+    relatedCities: [
+      { name: 'Best NEET Coaching', url: '/best-neet-coaching-in-gurugram' },
+      { name: 'NEET 2026 Preparation', url: '/neet-2026-preparation-gurugram' },
+      { name: '2 Year NEET Course', url: '/2-year-neet-course-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'How to start NEET preparation in Gurugram?',
+        answer: 'Step 1: Join quality coaching (check faculty, batch size). Step 2: Follow NCERT thoroughly. Step 3: Practice 100+ MCQs daily. Step 4: Take weekly tests. Cerebrum provides all this in one place.',
+      },
+      {
+        question: 'Is self-study enough for NEET in Gurugram?',
+        answer: 'Self-study success rate is 5-10%. With coaching, it rises to 40-50%. With quality coaching like Cerebrum (98% success), your chances multiply significantly.',
+      },
+      {
+        question: 'How many hours to study for NEET daily?',
+        answer: 'Class 11: 4-5 hours. Class 12: 6-8 hours. Dropper: 10-12 hours. Quality matters more than quantity. Our structured program optimizes your study time.',
+      },
+      {
+        question: 'What books are best for NEET preparation?',
+        answer: 'NCERT is 85% of NEET. Add: MTG for Biology, HC Verma for Physics, MS Chouhan for Chemistry. Our study material covers everything with NEET-focused approach.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  'neet-coaching-fees-in-gurugram': {
+    slug: 'neet-coaching-fees-in-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'What is NEET Coaching Fee in Gurugram 2026? | Fee Comparison | Cerebrum',
+    metaDescription:
+      'Complete NEET coaching fees comparison in Gurugram. Aakash, Allen, Cerebrum fees compared. Best value coaching at ₹75K-95K. Call 88264-44334!',
+    heroTitle: 'What is NEET Coaching Fee in Gurugram?',
+    heroSubtitle:
+      'Transparent fee comparison of all major NEET coaching institutes in Gurugram. Find the best value for your investment.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Best Value Coaching',
+    },
+    localities: [
+      { name: 'Fee Comparison', url: '/neet-coaching-fees-gurugram' },
+      { name: 'Scholarship', url: '/neet-scholarship-gurugram' },
+      { name: 'EMI Options', url: '/neet-coaching-emi-gurugram' },
+    ],
+    relatedCities: [
+      { name: 'Best NEET Coaching', url: '/best-neet-coaching-in-gurugram' },
+      { name: 'Affordable Coaching', url: '/affordable-neet-coaching-gurugram' },
+      { name: 'Scholarship Test', url: '/neet-scholarship-test-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What is the fee for NEET coaching in Gurugram?',
+        answer: 'Fees range: Aakash ₹1.5-2.5L, Allen ₹1.2-2L, FIITJEE ₹1.8-2.5L, Cerebrum ₹75K-95K. Cerebrum offers best value with AIIMS faculty and small batches.',
+      },
+      {
+        question: 'Which is the cheapest NEET coaching in Gurugram?',
+        answer: 'Local tutors: ₹30-50K (low results). Quality coaching: ₹75K-95K (Cerebrum - 98% results). Big brands: ₹1.5-2.5L. Cerebrum offers best quality-price ratio.',
+      },
+      {
+        question: 'Is EMI available for NEET coaching fees?',
+        answer: 'Yes! Cerebrum offers 0% EMI for 6-12 months. Pay ₹8,000-15,000/month instead of lump sum. No financial barrier to quality education.',
+      },
+      {
+        question: 'Are there scholarships for NEET coaching?',
+        answer: 'Cerebrum offers up to 50% scholarship based on entrance test. Toppers from Class 10/12 boards get additional discounts. Merit rewarded.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  // Review & Comparison Pages (P3)
+  'top-10-neet-coaching-gurugram': {
+    slug: 'top-10-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Top 10 NEET Coaching in Gurugram 2026 | Ranking & Comparison | Cerebrum',
+    metaDescription:
+      'Honest ranking of top 10 NEET coaching institutes in Gurugram 2026. Based on results, faculty, fees, reviews. Find your perfect fit. 88264-44334!',
+    heroTitle: 'Top 10 NEET Coaching Institutes in Gurugram 2026',
+    heroSubtitle:
+      'Unbiased ranking based on results, faculty credentials, student reviews, and value for money.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '#1 Rated Institute',
+    },
+    localities: [
+      { name: 'Sector 14 Coaching Hub', url: '/neet-coaching-gurgaon-sector-14' },
+      { name: 'Sector 51 Center', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Online Options', url: '/online-neet-classes-gurugram' },
+    ],
+    relatedCities: [
+      { name: 'Best NEET Coaching', url: '/best-neet-coaching-in-gurugram' },
+      { name: 'NEET Reviews', url: '/neet-coaching-reviews-gurugram' },
+      { name: 'Fee Comparison', url: '/neet-coaching-fees-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What are the top 10 NEET coaching in Gurugram?',
+        answer: '1. Cerebrum (98% results, AIIMS faculty), 2. Aakash (brand, large batches), 3. Allen (Kota-style), 4. FIITJEE (IIT focus), 5. Narayana, 6. VMC, 7. Career Point, 8. Resonance, 9. Physics Wallah, 10. Local institutes.',
+      },
+      {
+        question: 'How is Cerebrum ranked #1?',
+        answer: 'Criteria: Results (98% - highest), Faculty (AIIMS-trained), Batch size (25 - smallest), Reviews (4.9/5 - highest), Value (₹75-95K - best ratio).',
+      },
+      {
+        question: 'Should I join a ranked institute or local tutor?',
+        answer: 'Ranked institutes have proven systems, experienced faculty, and peer competition. Local tutors lack resources for comprehensive NEET prep. Invest in quality.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  'neet-coaching-reviews-gurugram': {
+    slug: 'neet-coaching-reviews-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'NEET Coaching Reviews Gurugram 2026 | Student Testimonials | Cerebrum',
+    metaDescription:
+      'Real student reviews of NEET coaching in Gurugram. Read experiences, results, faculty feedback. Cerebrum - 4.9/5 rating. Make informed choice. 88264-44334!',
+    heroTitle: 'NEET Coaching Reviews in Gurugram',
+    heroSubtitle:
+      'Real feedback from real students. Read verified reviews before choosing your NEET coaching.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '4.9/5 Student Rating',
+    },
+    localities: [
+      { name: 'Google Reviews', url: 'https://g.page/cerebrum-biology-academy' },
+      { name: 'Student Testimonials', url: '/testimonials' },
+      { name: 'Success Stories', url: '/success-stories-gurugram' },
+    ],
+    relatedCities: [
+      { name: 'Top 10 Coaching', url: '/top-10-neet-coaching-gurugram' },
+      { name: 'Best Coaching', url: '/best-neet-coaching-in-gurugram' },
+      { name: 'Coaching Comparison', url: '/neet-coaching-comparison-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'What do students say about Cerebrum?',
+        answer: 'Common themes: "Best biology teaching", "Personal attention", "Small batches helped", "Faculty actually cares", "Worth every rupee". 4.9/5 average on Google with 500+ reviews.',
+      },
+      {
+        question: 'How to verify coaching reviews?',
+        answer: 'Check Google reviews (verified), ask for student contacts, visit and talk to current students, check social media for organic feedback. We welcome your due diligence.',
+      },
+      {
+        question: 'Are online reviews reliable?',
+        answer: 'Look for detailed reviews with specific experiences, not just star ratings. Cerebrum reviews mention specific faculty, topics, and experiences - indicating authenticity.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  // Specialized Keyword Pages (P3)
+  'girls-neet-coaching-gurugram': {
+    slug: 'girls-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Girls NEET Coaching Gurugram 2026 | Safe Environment | Cerebrum Academy',
+    metaDescription:
+      'Safe and supportive NEET coaching for girls in Gurugram. Female faculty available, women-friendly environment. 60% female students. Call 88264-44334!',
+    heroTitle: 'NEET Coaching for Girls in Gurugram',
+    heroSubtitle:
+      'A safe, supportive environment where female medical aspirants thrive. 60% of our toppers are girls.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Safe Campus',
+    },
+    localities: [
+      { name: 'Sector 51 Center', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'DLF Area', url: '/biology-classes-dlf-gurgaon' },
+      { name: 'Golf Course Road', url: '/biology-classes-golf-course-road-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+      { name: 'Evening Batch', url: '/evening-batch-neet-gurugram' },
+      { name: 'Weekend Batch', url: '/weekend-neet-batch-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Is the coaching environment safe for girls?',
+        answer: 'Absolutely. CCTV monitored campus, female staff, strict anti-harassment policy, well-lit premises, and 60% female student population creates comfortable environment.',
+      },
+      {
+        question: 'Are there female faculty members?',
+        answer: 'Yes! We have female biology and chemistry faculty. Students can request female mentors if preferred.',
+      },
+      {
+        question: 'What are batch timings suitable for girls?',
+        answer: 'We offer morning (8 AM-12 PM) and afternoon (2 PM-6 PM) batches ensuring girls reach home before dark. Weekend batches also available.',
+      },
+      {
+        question: 'Any special facilities for female students?',
+        answer: 'Separate washrooms, rest room, dedicated female counselor, parent communication for safety, and girls study groups for peer support.',
+      },
+    ],
+    stats: { studentsFromCity: '1,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  'english-medium-neet-coaching-gurugram': {
+    slug: 'english-medium-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'English Medium NEET Coaching Gurugram 2026 | Premium Quality | Cerebrum',
+    metaDescription:
+      'English medium NEET coaching in Gurugram. Perfect for CBSE, ICSE, international school students. AIIMS faculty, premium teaching. Call 88264-44334!',
+    heroTitle: 'English Medium NEET Coaching in Gurugram',
+    heroSubtitle:
+      'Premium English-medium coaching for students from CBSE, ICSE, IB, IGCSE backgrounds.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'English Medium Expert',
+    },
+    localities: [
+      { name: 'DPS Students', url: '/biology-classes-dps-gurgaon' },
+      { name: 'Shri Ram School', url: '/biology-classes-shri-ram-school-gurgaon' },
+      { name: 'International Schools', url: '/neet-coaching-international-school-gurgaon' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching Gurugram', url: '/neet-coaching-gurugram' },
+      { name: 'CBSE NEET Prep', url: '/cbse-neet-coaching-gurugram' },
+      { name: 'IB to NEET', url: '/ib-to-neet-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Is coaching only in English?',
+        answer: 'Yes! All teaching, study material, and tests are in English. Faculty are fluent English speakers from top medical colleges.',
+      },
+      {
+        question: 'Is NEET easier in English or Hindi?',
+        answer: 'NCERT (85% of NEET) is originally in English. English medium students have slight advantage. Our English coaching aligns perfectly with NCERT.',
+      },
+      {
+        question: 'Do you teach IB/IGCSE students?',
+        answer: 'Yes! We bridge IB/IGCSE curriculum to NEET. Special batches help international school students adapt to NCERT-based competitive exam pattern.',
+      },
+    ],
+    stats: { studentsFromCity: '1,800+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  'small-batch-neet-coaching-gurugram': {
+    slug: 'small-batch-neet-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'Small Batch NEET Coaching Gurugram 2026 | 25 Students Only | Cerebrum',
+    metaDescription:
+      'Small batch NEET coaching in Gurugram with only 25 students per batch. Personal attention, better results. Not a factory. Call 88264-44334!',
+    heroTitle: 'Small Batch NEET Coaching in Gurugram',
+    heroSubtitle:
+      'Maximum 25 students per batch. Because personal attention creates doctors, not assembly lines.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: '25 Students Max',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Premium Coaching', url: '/premium-neet-coaching-gurugram' },
+      { name: 'Personalized Learning', url: '/personalized-neet-coaching-gurugram' },
+    ],
+    relatedCities: [
+      { name: 'Best NEET Coaching', url: '/best-neet-coaching-in-gurugram' },
+      { name: 'Aakash Alternative', url: '/aakash-alternative-gurugram' },
+      { name: 'Personal Attention', url: '/personal-attention-neet-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Why small batch size matters?',
+        answer: 'In 100+ student batches, teachers cannot track individual progress. In our 25-student batches, faculty knows each student by name, understands their weaknesses, and provides targeted help.',
+      },
+      {
+        question: 'How does small batch improve results?',
+        answer: 'More questions answered, more doubt sessions, more test feedback, more personal motivation. Our 98% success rate vs industry average 20% proves the impact.',
+      },
+      {
+        question: 'Is small batch more expensive?',
+        answer: 'Surprisingly, no! We charge ₹75-95K/year while big institutes with 100+ batches charge ₹1.5-2.5L. Better quality at lower cost.',
+      },
+      {
+        question: 'Do you have limited seats?',
+        answer: 'Yes! Only 4 batches × 25 students = 100 students per program. Book early to secure your seat. Quality over quantity.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
+  'pcb-coaching-gurugram': {
+    slug: 'pcb-coaching-gurugram',
+    cityName: 'Gurugram',
+    stateName: 'Haryana',
+    metaTitle: 'PCB Coaching Gurugram 2026 | Physics Chemistry Biology | Cerebrum Academy',
+    metaDescription:
+      'Complete PCB coaching in Gurugram for NEET. Physics, Chemistry, Biology by expert faculty. Integrated preparation. Sector 51. Call 88264-44334!',
+    heroTitle: 'PCB Coaching for NEET in Gurugram',
+    heroSubtitle:
+      'Complete Physics, Chemistry, Biology coaching under one roof. Integrated NEET preparation with subject experts.',
+    hasOfflineCenter: true,
+    nearestCenter: {
+      name: 'Gurugram Center',
+      address: 'M2K Corporate Park, Sector 51, Gurugram 122018',
+      distance: 'Complete PCB Center',
+    },
+    localities: [
+      { name: 'Sector 51', url: '/biology-classes-gurgaon-sector-51' },
+      { name: 'Biology Coaching', url: '/biology-coaching-gurugram' },
+      { name: 'Chemistry Coaching', url: '/chemistry-coaching-gurugram' },
+    ],
+    relatedCities: [
+      { name: 'NEET Coaching', url: '/neet-coaching-gurugram' },
+      { name: 'Science Coaching', url: '/science-coaching-gurugram' },
+      { name: 'Medical Coaching', url: '/medical-coaching-gurugram' },
+    ],
+    faqs: [
+      {
+        question: 'Do you teach all three subjects?',
+        answer: 'Yes! Complete PCB coaching with: Biology (AIIMS faculty), Physics (IIT-trained), Chemistry (PhD holders). All subjects under one roof.',
+      },
+      {
+        question: 'What is weightage of each subject in NEET?',
+        answer: 'Biology: 360/720 (50%), Chemistry: 180/720 (25%), Physics: 180/720 (25%). We allocate teaching time proportionally with biology focus.',
+      },
+      {
+        question: 'Can I join only for Biology?',
+        answer: 'Yes! We offer Biology-only program at ₹45,000/year. Many students take Physics/Chemistry elsewhere and Biology from us.',
+      },
+      {
+        question: 'How is the schedule organized?',
+        answer: 'Typically: Mon-Tue Physics, Wed-Thu Chemistry, Fri-Sat Biology. Sunday tests and doubt sessions. Balanced coverage of all subjects.',
+      },
+    ],
+    stats: { studentsFromCity: '2,500+', successRate: '98%', rating: '4.9' },
+    geoCoordinates: { lat: '28.4495', lng: '77.0726' },
+  },
+
   // Gurugram Class-Specific Pages
   'biology-class-11-gurgaon': {
     slug: 'biology-class-11-gurgaon',
