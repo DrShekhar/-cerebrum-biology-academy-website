@@ -457,7 +457,7 @@ In the meantime, would you like to:
       <motion.button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? 'Close ARIA Sales Agent Chat' : 'Open ARIA Sales Agent Chat'}
-        className="fixed bottom-44 left-4 md:bottom-6 md:left-6 z-[80] bg-green-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all"
+        className="fixed bottom-20 left-4 md:bottom-6 md:left-6 z-[80] bg-green-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 50 }}
@@ -490,7 +490,7 @@ In the meantime, would you like to:
             className={`fixed z-[80] flex flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl transition-all duration-300 ${
               isFullscreen
                 ? 'inset-0 rounded-none'
-                : 'bottom-56 left-4 w-[calc(100vw-1rem)] max-h-[60dvh] max-h-[60vh] rounded-2xl sm:bottom-24 sm:left-6 sm:w-[480px] sm:max-h-[75dvh] sm:max-h-[75vh] lg:w-[420px] lg:max-h-[80dvh] lg:max-h-[80vh] xl:w-[480px]'
+                : 'bottom-36 left-4 w-[calc(100vw-2rem)] max-h-[55dvh] max-h-[55vh] rounded-2xl sm:bottom-24 sm:left-6 sm:w-[400px] sm:max-h-[70dvh] sm:max-h-[70vh] md:w-[420px] lg:max-h-[75dvh] lg:max-h-[75vh] xl:w-[480px]'
             }`}
             style={isFullscreen ? {
               paddingTop: 'env(safe-area-inset-top)',
