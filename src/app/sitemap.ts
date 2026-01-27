@@ -4127,6 +4127,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/how-to-prepare-for-neet-in-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/how-to-prepare-for-neet-online`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/human-physiology-notes-neet`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
