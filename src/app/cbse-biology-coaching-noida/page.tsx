@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap, FileText } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Monitor, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap, FileText } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'CBSE Biology Coaching in Noida 2026 | Class 11-12 | Score 95%+ | Cerebrum',
@@ -324,57 +325,18 @@ export default function CBSEBiologyCoachingNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'CBSE Biology Coaching',
-            description: 'CBSE Biology coaching for Class 11-12 in Noida with NCERT mastery',
-            provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
-            },
-            offers: [
-              { '@type': 'Offer', price: '45000', priceCurrency: 'INR', name: 'Class 11' },
-              { '@type': 'Offer', price: '48000', priceCurrency: 'INR', name: 'Class 12' },
-              { '@type': 'Offer', price: '70000', priceCurrency: 'INR', name: 'CBSE + NEET Combo' },
-            ],
-            educationalLevel: 'CBSE Class 11-12',
-            about: 'CBSE Board Biology',
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'CBSE Biology Coaching Noida - Cerebrum Academy',
-            description: 'CBSE Biology coaching for board exams in Noida',
-            url: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida',
-            telephone: '+918826444334',
-            areaServed: ['Noida', 'Greater Noida', 'Gaur City', 'Sector 150'],
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="CBSE Biology Coaching in Noida"
+        pageDescription="CBSE Biology coaching for Class 11-12 in Noida. NCERT mastery, board exam preparation with AIIMS faculty."
+        pageUrl="https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'CBSE Biology Coaching', url: 'https://cerebrumbiologyacademy.com/cbse-biology-coaching-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

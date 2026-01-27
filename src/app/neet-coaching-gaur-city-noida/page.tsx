@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, Building2, Clock, Train } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for Gaur City Noida | Online & Hybrid Classes | Cerebrum',
@@ -323,44 +324,21 @@ export default function NEETCoachingGaurCityPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: 'Cerebrum Biology Academy - Gaur City Noida',
-        description: 'NEET Biology coaching for Gaur City, Greater Noida West students. Online and hybrid learning options.',
-        url: 'https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida',
-        telephone: '+918826444334',
-        areaServed: {
-          '@type': 'Place',
-          name: 'Gaur City, Greater Noida West',
-          containedIn: { '@type': 'City', name: 'Noida' },
-        },
-        aggregateRating: {
-          '@type': 'AggregateRating',
-          ratingValue: '4.9',
-          reviewCount: '180',
-          bestRating: '5',
-        },
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-        })),
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-          { '@type': 'ListItem', position: 2, name: 'NEET Coaching Noida', item: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
-          { '@type': 'ListItem', position: 3, name: 'Gaur City', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida' },
-        ],
-      }) }} />
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Greater Noida West"
+        society="Gaur City"
+        pageName="NEET Coaching for Gaur City Noida"
+        pageDescription="NEET Biology coaching for Gaur City, Greater Noida West students. Online classes + hybrid mode available."
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'NEET Coaching Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
+          { name: 'Gaur City', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida' },
+        ]}
+        customFAQs={faqs}
+        coordinates={{ lat: '28.5708', lng: '77.4522' }}
+      />
     </div>
   )
 }

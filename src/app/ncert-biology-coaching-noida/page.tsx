@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, Book } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Star, Trophy, Monitor, Building2, ArrowRight, BookOpen, Target, Clock, Gift, Book } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'NCERT Biology Coaching in Noida 2026 | Class 11 & 12 | Cerebrum',
@@ -319,38 +320,18 @@ export default function NcertBiologyCoachingNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'NCERT Biology Coaching Noida',
-            description: 'Complete NCERT Biology coaching for Class 11 & 12 students in Noida',
-            provider: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-            offers: {
-              '@type': 'AggregateOffer',
-              lowPrice: '48000',
-              highPrice: '98000',
-              priceCurrency: 'INR',
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="NCERT Biology Coaching in Noida"
+        pageDescription="Complete NCERT Biology coaching for Class 11 & 12 in Noida. 95% NEET syllabus covered through NCERT mastery."
+        pageUrl="https://cerebrumbiologyacademy.com/ncert-biology-coaching-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'NCERT Biology Coaching', url: 'https://cerebrumbiologyacademy.com/ncert-biology-coaching-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

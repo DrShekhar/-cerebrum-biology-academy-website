@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, AlertTriangle } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, AlertTriangle } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Class 12 Biology Coaching in Noida 2026 | NEET + Board | Cerebrum Academy',
@@ -319,58 +320,18 @@ export default function BiologyClass12NoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'Class 12 Biology Coaching - NEET Comprehensive',
-            description: 'Class 12 Biology coaching for NEET + Board preparation in Noida with AIIMS faculty',
-            provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
-            },
-            offers: [
-              { '@type': 'Offer', price: '70000', priceCurrency: 'INR', name: 'Online Mode' },
-              { '@type': 'Offer', price: '85000', priceCurrency: 'INR', name: 'Hybrid Mode' },
-              { '@type': 'Offer', price: '98000', priceCurrency: 'INR', name: 'Intensive Offline' },
-            ],
-            courseMode: ['Online', 'Blended', 'Offline'],
-            educationalLevel: 'Class 12',
-            about: 'NEET + Board Biology',
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Cerebrum Biology Academy - Class 12 Noida',
-            description: 'Class 12 Biology coaching for NEET and Board exams in Noida',
-            url: 'https://cerebrumbiologyacademy.com/biology-class-12-noida',
-            telephone: '+918826444334',
-            areaServed: ['Noida', 'Greater Noida', 'Gaur City', 'Sector 150'],
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Class 12 Biology Coaching in Noida"
+        pageDescription="Best Class 12 Biology coaching in Noida. NEET + Board integrated preparation. AIIMS faculty, Rs 70,000/year onwards."
+        pageUrl="https://cerebrumbiologyacademy.com/biology-class-12-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Class 12 Biology Noida', url: 'https://cerebrumbiologyacademy.com/biology-class-12-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

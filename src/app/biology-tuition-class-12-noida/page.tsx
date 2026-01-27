@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Biology Tuition for Class 12 in Noida 2026 | NEET + Board | Cerebrum',
@@ -323,39 +324,18 @@ export default function BiologyTuitionClass12NoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'Biology Tuition Class 12 Noida',
-            description: 'Biology tuition for Class 12 students in Noida with NEET + Board preparation',
-            provider: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-            educationalLevel: 'Class 12',
-            offers: {
-              '@type': 'AggregateOffer',
-              lowPrice: '70000',
-              highPrice: '98000',
-              priceCurrency: 'INR',
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Biology Tuition for Class 12 in Noida"
+        pageDescription="Biology tuition for Class 12 students in Noida. NEET + Board preparation with AIIMS faculty."
+        pageUrl="https://cerebrumbiologyacademy.com/biology-tuition-class-12-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Biology Tuition Class 12', url: 'https://cerebrumbiologyacademy.com/biology-tuition-class-12-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

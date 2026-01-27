@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, Home, Wifi, Video } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, Home, Wifi, Video } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Home Biology Tutor in Noida 2026 | Online Home Tuition | Rs 45,000/year',
@@ -314,43 +315,18 @@ export default function HomeBiologyTutorNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Service',
-            name: 'Home Biology Tuition Noida',
-            description: 'Online home tuition for Biology in Noida with AIIMS faculty',
-            provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
-            },
-            areaServed: ['Noida', 'Greater Noida', 'Gaur City', 'Sector 150'],
-            offers: {
-              '@type': 'Offer',
-              price: '45000',
-              priceCurrency: 'INR',
-              description: 'Online home tuition per year',
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Home Biology Tutor in Noida"
+        pageDescription="Home Biology tutor in Noida. Online home tuition with AIIMS faculty for Class 9-12 & NEET."
+        pageUrl="https://cerebrumbiologyacademy.com/home-biology-tutor-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Home Biology Tutor', url: 'https://cerebrumbiologyacademy.com/home-biology-tutor-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

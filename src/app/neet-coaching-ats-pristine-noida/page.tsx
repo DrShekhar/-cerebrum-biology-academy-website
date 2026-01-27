@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, Building2, Clock, Train } from 'lucide-react'
+import { Phone, MapPin, Monitor, Users, Trophy, Star, Building2 } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for ATS Pristine Sector 150 Noida | Online Classes',
@@ -145,21 +146,21 @@ export default function NEETCoachingATSPristinePage() {
         </div>
       </section>
 
-      {/* Schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: 'Cerebrum Biology Academy - ATS Pristine Noida',
-        description: 'NEET Biology coaching for ATS Pristine, Sector 150 Noida students.',
-        url: 'https://cerebrumbiologyacademy.com/neet-coaching-ats-pristine-noida',
-        telephone: '+918826444334',
-        areaServed: { '@type': 'Place', name: 'ATS Pristine, Sector 150, Noida' },
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        sector="150"
+        society="ATS Pristine"
+        pageName="NEET Coaching for ATS Pristine Sector 150 Noida"
+        pageDescription="NEET Biology coaching for ATS Pristine, Sector 150 Noida students. Online classes with AIIMS faculty."
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-ats-pristine-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'ATS Pristine', url: 'https://cerebrumbiologyacademy.com/neet-coaching-ats-pristine-noida' },
+        ]}
+        customFAQs={faqs}
+      />
     </div>
   )
 }

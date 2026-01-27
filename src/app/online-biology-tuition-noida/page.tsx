@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, Wifi, Video, Laptop } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, Wifi, Video, Laptop } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Online Biology Tuition in Noida 2026 | Live Classes | Rs 48,000/year | Cerebrum',
@@ -317,44 +318,18 @@ export default function OnlineBiologyTuitionNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'Online Biology Tuition Noida',
-            description: 'Live online Biology tuition for Noida students with AIIMS faculty',
-            provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
-            },
-            courseMode: 'Online',
-            educationalLevel: 'Class 9-12, NEET',
-            offers: {
-              '@type': 'AggregateOffer',
-              lowPrice: '48000',
-              highPrice: '156000',
-              priceCurrency: 'INR',
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Online Biology Tuition in Noida"
+        pageDescription="Live online Biology tuition for Noida students. Class 9-12 & NEET with AIIMS faculty."
+        pageUrl="https://cerebrumbiologyacademy.com/online-biology-tuition-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Online Biology Tuition', url: 'https://cerebrumbiologyacademy.com/online-biology-tuition-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

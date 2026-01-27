@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, Building2, Clock, Train, Wifi, Video, MessageCircle, BookOpen } from 'lucide-react'
+import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, Building2, Clock, Wifi, Video, MessageCircle, BookOpen } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Online NEET Classes for Noida Students | Live & Hybrid Mode | Cerebrum',
@@ -276,41 +277,19 @@ export default function OnlineNEETClassesNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Course',
-        name: 'Online NEET Biology Classes for Noida',
-        description: 'Live online NEET Biology coaching for Noida students with hybrid option for weekend offline classes.',
-        provider: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        courseMode: ['online', 'blended'],
-        hasCourseInstance: [
-          { '@type': 'CourseInstance', courseMode: 'online', name: '100% Online', description: 'Live classes from home' },
-          { '@type': 'CourseInstance', courseMode: 'blended', name: 'Hybrid Mode', description: 'Online + Weekend offline' },
-        ],
-        offers: [
-          { '@type': 'Offer', name: 'Online Mode', price: '45000', priceCurrency: 'INR' },
-          { '@type': 'Offer', name: 'Hybrid Mode', price: '55000', priceCurrency: 'INR' },
-        ],
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-        })),
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-          { '@type': 'ListItem', position: 2, name: 'NEET Coaching Noida', item: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
-          { '@type': 'ListItem', position: 3, name: 'Online Classes', item: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida' },
-        ],
-      }) }} />
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Online NEET Classes for Noida"
+        pageDescription="Online NEET Biology classes for Noida students. Live interactive sessions + hybrid mode with weekend offline at South Extension."
+        pageUrl="https://cerebrumbiologyacademy.com/online-neet-classes-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'NEET Coaching Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
+          { name: 'Online Classes', url: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida' },
+        ]}
+        customFAQs={faqs}
+      />
     </div>
   )
 }

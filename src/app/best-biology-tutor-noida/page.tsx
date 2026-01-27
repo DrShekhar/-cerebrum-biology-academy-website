@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap, Award, Quote } from 'lucide-react'
+import { Phone, MessageCircle, Star, Users, Trophy, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap, Award, Quote } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Best Biology Tutor in Noida 2026 | AIIMS Faculty | Dr. Shekhar | Cerebrum',
@@ -292,53 +293,18 @@ export default function BestBiologyTutorNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Person',
-            name: 'Dr. Shekhar C Singh',
-            jobTitle: 'Biology Tutor & NEET Expert',
-            description: 'Best Biology tutor in Noida with AIIMS background and 500+ NEET selections',
-            alumniOf: { '@type': 'Organization', name: 'AIIMS Delhi' },
-            worksFor: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-            knowsAbout: ['NEET Biology', 'CBSE Biology', 'Medical Entrance Exams'],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Best Biology Tutor Noida - Cerebrum Academy',
-            description: 'Best Biology tutor in Noida for NEET and board exams',
-            url: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida',
-            telephone: '+918826444334',
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              reviewCount: '500',
-            },
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Best Biology Tutor in Noida"
+        pageDescription="Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus) with 15+ years experience. 500+ NEET selections."
+        pageUrl="https://cerebrumbiologyacademy.com/best-biology-tutor-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Best Biology Tutor Noida', url: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

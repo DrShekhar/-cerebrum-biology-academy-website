@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, User, Navigation } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Star, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, User, Navigation } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Biology Teacher Near Me in Noida 2026 | NEET Expert | Cerebrum',
@@ -330,44 +331,18 @@ export default function BiologyTeacherNearMeNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Cerebrum Biology Academy',
-            description: 'Expert Biology teacher for NEET in Noida',
-            address: {
-              '@type': 'PostalAddress',
-              addressLocality: 'Noida',
-              addressRegion: 'UP',
-              addressCountry: 'IN',
-            },
-            geo: {
-              '@type': 'GeoCoordinates',
-              latitude: '28.5355',
-              longitude: '77.3910',
-            },
-            telephone: '+91-8826444334',
-            priceRange: 'Rs 48,000 - Rs 1,56,000',
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Biology Teacher Near Me in Noida"
+        pageDescription="Find expert Biology teacher near you in Noida. AIIMS-trained faculty for NEET and Board preparation."
+        pageUrl="https://cerebrumbiologyacademy.com/biology-teacher-near-me-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Biology Teacher Near Me', url: 'https://cerebrumbiologyacademy.com/biology-teacher-near-me-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

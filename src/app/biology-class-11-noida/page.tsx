@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Class 11 Biology Coaching in Noida 2026 | NEET Foundation | Cerebrum Academy',
@@ -314,58 +315,18 @@ export default function BiologyClass11NoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'Class 11 Biology Coaching - NEET Foundation',
-            description: 'Class 11 Biology coaching for NEET preparation in Noida with AIIMS faculty',
-            provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
-            },
-            offers: [
-              { '@type': 'Offer', price: '48000', priceCurrency: 'INR', name: 'Online Mode' },
-              { '@type': 'Offer', price: '58000', priceCurrency: 'INR', name: 'Hybrid Mode' },
-              { '@type': 'Offer', price: '65000', priceCurrency: 'INR', name: 'Offline Mode' },
-            ],
-            courseMode: ['Online', 'Blended', 'Offline'],
-            educationalLevel: 'Class 11',
-            about: 'NEET Biology Foundation',
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'LocalBusiness',
-            name: 'Cerebrum Biology Academy - Class 11 Noida',
-            description: 'Class 11 Biology coaching for Noida students',
-            url: 'https://cerebrumbiologyacademy.com/biology-class-11-noida',
-            telephone: '+918826444334',
-            areaServed: ['Noida', 'Greater Noida', 'Gaur City', 'Sector 150'],
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Class 11 Biology Coaching in Noida"
+        pageDescription="Best Class 11 Biology coaching in Noida. NEET foundation with AIIMS faculty. Small batches, Rs 48,000/year onwards."
+        pageUrl="https://cerebrumbiologyacademy.com/biology-class-11-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Class 11 Biology Noida', url: 'https://cerebrumbiologyacademy.com/biology-class-11-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

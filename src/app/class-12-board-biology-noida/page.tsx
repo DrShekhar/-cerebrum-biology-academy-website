@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Star, Monitor, Building2, ArrowRight, BookOpen, Target, Clock, Gift, GraduationCap } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Class 12 Board Exam Biology Coaching Noida 2026 | Score 95%+ | Cerebrum',
@@ -318,43 +319,18 @@ export default function Class12BoardBiologyNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Course',
-            name: 'Class 12 Board Biology Coaching',
-            description: 'Class 12 Board exam Biology preparation for CBSE/ISC in Noida',
-            provider: {
-              '@type': 'Organization',
-              name: 'Cerebrum Biology Academy',
-              url: 'https://cerebrumbiologyacademy.com',
-            },
-            offers: [
-              { '@type': 'Offer', price: '35000', priceCurrency: 'INR', name: 'Board Express' },
-              { '@type': 'Offer', price: '70000', priceCurrency: 'INR', name: 'Board + NEET Combo' },
-              { '@type': 'Offer', price: '45000', priceCurrency: 'INR', name: 'Intensive Offline' },
-            ],
-            educationalLevel: 'Class 12 Board',
-            about: 'CBSE/ISC Biology Board Exam',
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Class 12 Board Exam Biology Coaching in Noida"
+        pageDescription="Class 12 Board exam Biology coaching in Noida. Score 95%+ in CBSE/ISC Biology with AIIMS faculty."
+        pageUrl="https://cerebrumbiologyacademy.com/class-12-board-biology-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Class 12 Board Biology', url: 'https://cerebrumbiologyacademy.com/class-12-board-biology-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

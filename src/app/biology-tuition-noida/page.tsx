@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Monitor, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, User, IndianRupee } from 'lucide-react'
+import { Phone, MessageCircle, CheckCircle, Star, Users, Trophy, Building2, MapPin, ArrowRight, BookOpen, Target, Clock, Gift, User, IndianRupee } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'Biology Tuition in Noida 2026 | Class 9-12 & NEET | Rs 45,000/year | Cerebrum',
@@ -350,35 +351,18 @@ export default function BiologyTuitionNoidaPage() {
         </div>
       </section>
 
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'EducationalOrganization',
-            name: 'Cerebrum Biology Academy - Noida Tuition',
-            description: 'Biology tuition for Class 9-12 and NEET in Noida',
-            url: 'https://cerebrumbiologyacademy.com/biology-tuition-noida',
-            telephone: '+918826444334',
-            areaServed: ['Noida', 'Greater Noida', 'Gaur City', 'Sector 150'],
-            priceRange: '₹45,000 - ₹85,000/year',
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: faqs.map((faq) => ({
-              '@type': 'Question',
-              name: faq.question,
-              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-            })),
-          }),
-        }}
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="Biology Tuition in Noida"
+        pageDescription="Expert Biology tuition for Class 9-12 & NEET in Noida. AIIMS faculty, small batches, affordable fees starting Rs 45,000/year."
+        pageUrl="https://cerebrumbiologyacademy.com/biology-tuition-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Biology Tuition Noida', url: 'https://cerebrumbiologyacademy.com/biology-tuition-noida' },
+        ]}
+        customFAQs={faqs}
       />
     </div>
   )

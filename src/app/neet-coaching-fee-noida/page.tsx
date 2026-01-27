@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Phone, IndianRupee, CheckCircle, ArrowRight, Star, Monitor, MapPin, Building2 } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison | Cerebrum Academy',
@@ -259,39 +260,19 @@ export default function NEETCoachingFeeNoidaPage() {
         </div>
       </section>
 
-      {/* Schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({
-          '@type': 'Question',
-          name: faq.question,
-          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-        })),
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Article',
-        headline: 'NEET Coaching Fee in Noida 2026 - Complete Comparison',
-        description: quickAnswer.answer,
-        author: { '@type': 'Organization', name: 'Cerebrum Biology Academy' },
-        datePublished: '2026-01-01',
-        dateModified: '2026-01-27',
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'Table',
-        about: 'NEET Coaching Fee Comparison Noida 2026',
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
-          { '@type': 'ListItem', position: 2, name: 'NEET Coaching Noida', item: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
-          { '@type': 'ListItem', position: 3, name: 'Fee Comparison', item: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-noida' },
-        ],
-      }) }} />
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        pageName="NEET Coaching Fee in Noida"
+        pageDescription="Complete NEET coaching fee comparison in Noida 2026. Compare fees from Rs 45,000 to Rs 3,50,000 across institutes."
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-fee-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'NEET Coaching Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
+          { name: 'Fee Comparison', url: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-noida' },
+        ]}
+        customFAQs={faqs}
+      />
     </div>
   )
 }

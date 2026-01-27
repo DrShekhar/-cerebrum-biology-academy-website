@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Monitor, Users, Trophy, Star, CheckCircle, ArrowRight, Building2 } from 'lucide-react'
+import { Phone, MapPin, Monitor, Users, Trophy, Star, Building2 } from 'lucide-react'
+import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for Jaypee Greens Noida | Online & Hybrid Classes',
@@ -145,21 +146,21 @@ export default function NEETCoachingJaypeeGreensPage() {
         </div>
       </section>
 
-      {/* Schema */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'LocalBusiness',
-        name: 'Cerebrum Biology Academy - Jaypee Greens Noida',
-        description: 'NEET Biology coaching for Jaypee Greens, Sector 128 Noida students.',
-        url: 'https://cerebrumbiologyacademy.com/neet-coaching-jaypee-greens-noida',
-        telephone: '+918826444334',
-        areaServed: { '@type': 'Place', name: 'Jaypee Greens, Sector 128, Noida' },
-      }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })),
-      }) }} />
+      {/* Comprehensive Schema Markup */}
+      <NoidaPageSchemas
+        area="Noida"
+        sector="128"
+        society="Jaypee Greens"
+        pageName="NEET Coaching for Jaypee Greens Noida"
+        pageDescription="NEET Biology coaching for Jaypee Greens, Sector 128 Noida students. Online + hybrid mode available."
+        pageUrl="https://cerebrumbiologyacademy.com/neet-coaching-jaypee-greens-noida"
+        breadcrumbs={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/locations/noida' },
+          { name: 'Jaypee Greens', url: 'https://cerebrumbiologyacademy.com/neet-coaching-jaypee-greens-noida' },
+        ]}
+        customFAQs={faqs}
+      />
     </div>
   )
 }
