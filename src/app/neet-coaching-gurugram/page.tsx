@@ -1926,6 +1926,57 @@ export default function NeetCoachingGurugramPage() {
         embedUrl="https://www.youtube.com/embed/t5F8RBuHITM"
         interactionCount={12000}
       />
+
+      {/* Topic Cluster Schema - Related Content */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'NEET Coaching Gurugram - Related Resources',
+            description: 'Comprehensive resources for NEET preparation in Gurugram',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'How to Prepare for NEET in Gurugram',
+                url: 'https://cerebrumbiologyacademy.com/how-to-prepare-for-neet-in-gurugram',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'NEET Coaching Fee Comparison Gurugram',
+                url: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-gurugram',
+              },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: 'Top 5 NEET Coaching in Gurugram',
+                url: 'https://cerebrumbiologyacademy.com/top-5-neet-coaching-gurugram',
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: 'NEET Biology Chapter Weightage',
+                url: 'https://cerebrumbiologyacademy.com/neet-biology-chapter-weightage-gurugram',
+              },
+              {
+                '@type': 'ListItem',
+                position: 5,
+                name: 'NEET Coaching Reviews Gurugram',
+                url: 'https://cerebrumbiologyacademy.com/neet-coaching-reviews-gurugram',
+              },
+              {
+                '@type': 'ListItem',
+                position: 6,
+                name: 'Dr. Shekhar Singh - NEET Biology Faculty',
+                url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+              },
+            ],
+          }),
+        }}
+      />
     </div>
   )
 }
