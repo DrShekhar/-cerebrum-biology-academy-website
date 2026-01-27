@@ -8,10 +8,4 @@
 export { LazyVideo } from './LazyVideo'
 export { LazyYouTubeEmbed } from './LazyYouTubeEmbed'
 export { LazyGoogleMap } from './LazyGoogleMap'
-export {
-  LoadingPriority,
-  useLazyLoading,
-  LazySection,
-  OptimizedImage,
-  DeferredVideo,
-} from './LoadingPriority'
+export { LoadingPriority, useLazyLoading, LazySection } from './LoadingPriority'

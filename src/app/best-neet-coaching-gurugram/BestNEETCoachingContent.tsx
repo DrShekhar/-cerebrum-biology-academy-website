@@ -100,7 +100,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
     trackAndOpenWhatsApp({
       message: 'Hi! I want to compare NEET coaching options in Gurugram. Can you help me understand why Cerebrum is the best choice for Biology preparation?',
       source: 'best-neet-coaching-gurugram',
-      medium: 'comparison-page',
+      page: 'comparison-page',
     })
   }
 

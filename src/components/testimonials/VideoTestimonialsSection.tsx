@@ -227,7 +227,6 @@ export function VideoTestimonialsSection() {
                       key={index}
                       onClick={() => {
                         setActiveIndex(index)
-                        setIsPlaying(false)
                       }}
                       className={`w-3 h-3 rounded-full transition-colors ${
                         index === activeIndex ? 'bg-blue-600' : 'bg-gray-300'

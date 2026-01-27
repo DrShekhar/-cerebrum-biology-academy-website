@@ -412,7 +412,7 @@ export default function NoidaVsKotaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href={`https://wa.me/${CONTACT_INFO.phone.whatsapp}?text=Hi, I'm comparing Noida vs Kota for NEET. Can you share more details?`}
+                href={`https://wa.me/${CONTACT_INFO.whatsapp.number}?text=Hi, I'm comparing Noida vs Kota for NEET. Can you share more details?`}
                 className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold flex items-center justify-center gap-2"
               >
                 <Phone className="h-5 w-5" />

@@ -296,7 +296,7 @@ export function NoidaLocalBusinessSchema({
       },
       {
         '@type': 'ContactPoint',
-        telephone: CONTACT_INFO.phone.whatsapp || CONTACT_INFO.phone.primary,
+        telephone: CONTACT_INFO.whatsapp.number || CONTACT_INFO.phone.primary,
         contactType: 'sales',
         contactOption: 'TollFree',
         areaServed: 'IN',
@@ -928,7 +928,7 @@ interface NoidaResultsSchemaProps {
 }
 
 export function NoidaResultsSchema({ toppers }: NoidaResultsSchemaProps) {
-  const defaultToppers = [
+  const defaultToppers: NoidaResultsSchemaProps['toppers'] = [
     { name: 'Priya Sharma', score: 698, college: 'AIIMS Delhi', year: 2025 },
     { name: 'Rahul Verma', score: 685, college: 'AIIMS Delhi', year: 2025 },
     { name: 'Ananya Gupta', score: 672, college: 'JIPMER', year: 2025 },

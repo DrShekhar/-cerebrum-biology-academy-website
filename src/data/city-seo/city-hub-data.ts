@@ -6773,66 +6773,6 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
-  'biology-12th-boards-gurgaon': {
-    slug: 'biology-12th-boards-gurgaon',
-    cityName: 'Gurgaon',
-    stateName: 'Haryana',
-    metaTitle: '12th Boards Biology Coaching Gurgaon | CBSE Board Prep | Cerebrum Academy',
-    metaDescription:
-      'Ace your 12th Board biology exam with Cerebrum Gurgaon. CBSE-focused preparation, NCERT mastery, sample papers. Sector 51 center. Call 88264-44334!',
-    heroTitle: '12th Board Biology Exam Preparation in Gurgaon',
-    heroSubtitle:
-      'Score 95%+ in CBSE Biology Board exam. NCERT-focused teaching, extensive practice, and exam strategies.',
-    hasOfflineCenter: true,
-    nearestCenter: {
-      name: 'Gurgaon Sector 51 Center',
-      address: 'M2K Corporate Park, Sector 51, Gurugram',
-      distance: 'Board Exam Excellence Center',
-    },
-    localities: [
-      { name: 'CBSE Schools Gurgaon', url: '/biology-classes-gurgaon' },
-      { name: 'DPS Students', url: '/biology-classes-dps-gurgaon' },
-      { name: 'Amity Students', url: '/biology-classes-amity-gurgaon' },
-      { name: 'GD Goenka Students', url: '/biology-classes-gd-goenka-gurgaon' },
-    ],
-    relatedCities: [
-      { name: 'Class 12 Biology Gurgaon', url: '/biology-class-12-gurgaon' },
-      { name: 'NEET Coaching Gurgaon', url: '/neet-coaching-gurgaon' },
-      { name: 'Biology Tuition Gurgaon', url: '/biology-tuition-gurgaon' },
-    ],
-    faqs: [
-      {
-        question: 'How can I score 95+ in Biology Board exam?',
-        answer:
-          'Our Board-focused program emphasizes NCERT mastery, diagram practice, previous year question analysis, and answer writing techniques. Most of our students score 90%+ with proper preparation.',
-      },
-      {
-        question: 'Is NCERT enough for Biology Board exam?',
-        answer:
-          'NCERT is the primary source for Board exams. We ensure thorough NCERT coverage plus supplementary practice from Exemplar problems and previous year papers for complete preparation.',
-      },
-      {
-        question: 'Do you have a crash course for Board exams?',
-        answer:
-          'Yes! We offer intensive Board exam crash courses starting December. These cover complete revision, chapter-wise tests, and full mock Board exams with detailed feedback.',
-      },
-      {
-        question: 'How many sample papers should I solve before Boards?',
-        answer:
-          'We recommend solving at least 20 sample papers before Boards. Our program includes 30+ mock tests and sample paper practice sessions with time management training.',
-      },
-    ],
-    stats: {
-      studentsFromCity: '600+',
-      successRate: '99%',
-      rating: '4.9',
-    },
-    geoCoordinates: {
-      lat: '28.4495',
-      lng: '77.0726',
-    },
-  },
-
   'biology-class-9-10-gurgaon': {
     slug: 'biology-class-9-10-gurgaon',
     cityName: 'Gurgaon',
