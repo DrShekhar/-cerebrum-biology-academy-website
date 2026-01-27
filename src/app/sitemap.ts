@@ -766,6 +766,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     },
+    // E-E-A-T Authority Pages
+    {
+      url: `${baseUrl}/dr-shekhar-singh-neet-biology-faculty`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    },
     // Gurugram Results & Authority Pages
     {
       url: `${baseUrl}/neet-result-2025-gurugram`,

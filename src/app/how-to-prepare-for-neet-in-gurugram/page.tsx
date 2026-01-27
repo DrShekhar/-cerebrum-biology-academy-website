@@ -26,5 +26,36 @@ export const metadata: Metadata = {
 }
 
 export default function HowToPrepareForNEETInGurugramPage() {
-  return <CityHubPage data={cityData} />
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'How to Prepare for NEET in Gurugram - Complete Guide 2026',
+    description: cityData.metaDescription,
+    author: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+    datePublished: '2025-01-01',
+    dateModified: '2026-01-27',
+    mainEntityOfPage: 'https://cerebrumbiologyacademy.com/how-to-prepare-for-neet-in-gurugram',
+  }
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }
