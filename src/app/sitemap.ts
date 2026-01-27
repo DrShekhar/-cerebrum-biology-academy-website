@@ -741,6 +741,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.95,
     },
+    // Gurugram Featured Snippet / AEO Pages
+    {
+      url: `${baseUrl}/neet-coaching-fee-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-success-rate-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/top-5-neet-coaching-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-biology-chapter-weightage-gurugram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
     // Gurugram Results & Authority Pages
     {
       url: `${baseUrl}/neet-result-2025-gurugram`,
