@@ -1316,6 +1316,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // Noida Metro Station Pages
+    {
+      url: `${baseUrl}/neet-coaching-near-metro/botanical-garden`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-near-metro/noida-city-centre`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-near-metro/sector-18-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-near-metro/sector-137-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-near-metro/pari-chowk-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: lastUpdated,
