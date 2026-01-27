@@ -264,6 +264,30 @@ export default function NEETResult2025Gurugram() {
         </div>
       </section>
 
+      <section className="py-12 bg-white border-t">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold text-center mb-8">Explore More</h2>
+          <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <Link href="/neet-topper-interview-gurugram" className="bg-purple-50 p-4 rounded-lg hover:bg-purple-100 transition text-center">
+              <h3 className="font-semibold text-purple-800">Topper Interviews</h3>
+              <p className="text-sm text-gray-600">Learn strategies from 650+ scorers</p>
+            </Link>
+            <Link href="/neet-biology-faculty-gurugram" className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition text-center">
+              <h3 className="font-semibold text-blue-800">Our Faculty</h3>
+              <p className="text-sm text-gray-600">Meet our AIIMS-trained teachers</p>
+            </Link>
+            <Link href="/free-neet-demo-class-gurugram" className="bg-green-50 p-4 rounded-lg hover:bg-green-100 transition text-center">
+              <h3 className="font-semibold text-green-800">Free Demo Class</h3>
+              <p className="text-sm text-gray-600">Experience our teaching style</p>
+            </Link>
+            <Link href="/neet-coaching-gurugram" className="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition text-center">
+              <h3 className="font-semibold text-amber-800">NEET Coaching</h3>
+              <p className="text-sm text-gray-600">Complete program details</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-green-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our NEET 2026 Batch</h2>

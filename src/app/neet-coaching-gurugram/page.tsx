@@ -1728,6 +1728,24 @@ export default function NeetCoachingGurugramPage() {
               <p className="text-sm text-gray-600">Intensive preparation</p>
             </Link>
           </div>
+          <div className="grid md:grid-cols-4 gap-4 mt-4">
+            <Link href="/neet-result-2025-gurugram" className="bg-green-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-green-100">
+              <h3 className="font-semibold text-green-700">NEET 2025 Results</h3>
+              <p className="text-sm text-gray-600">97% success rate</p>
+            </Link>
+            <Link href="/neet-topper-interview-gurugram" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-purple-100">
+              <h3 className="font-semibold text-purple-700">Topper Interviews</h3>
+              <p className="text-sm text-gray-600">Learn from 650+ scorers</p>
+            </Link>
+            <Link href="/neet-biology-faculty-gurugram" className="bg-blue-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-blue-100">
+              <h3 className="font-semibold text-blue-700">Our Faculty</h3>
+              <p className="text-sm text-gray-600">AIIMS-trained teachers</p>
+            </Link>
+            <Link href="/free-neet-demo-class-gurugram" className="bg-amber-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-amber-100">
+              <h3 className="font-semibold text-amber-700">Free Demo Class</h3>
+              <p className="text-sm text-gray-600">Experience our teaching</p>
+            </Link>
+          </div>
         </div>
       </section>
 
