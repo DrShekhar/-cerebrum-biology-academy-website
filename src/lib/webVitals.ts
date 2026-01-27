@@ -44,6 +44,29 @@ function sendToAnalytics(metric: Metric, options: { path: string; analyticsId?: 
   }
 }
 
+function sendToDatabase(metric: Metric, path: string) {
+  const body = JSON.stringify({
+    name: metric.name,
+    value: metric.value,
+    rating: metric.rating,
+    page: path,
+    id: metric.id,
+    delta: metric.delta,
+    connection: getConnectionSpeed(),
+  })
+
+  if (navigator.sendBeacon) {
+    navigator.sendBeacon('/api/vitals', body)
+  } else {
+    fetch('/api/vitals', {
+      method: 'POST',
+      body,
+      headers: { 'Content-Type': 'application/json' },
+      keepalive: true,
+    }).catch(() => {})
+  }
+}
+
 function sendToGoogleAnalytics(metric: Metric) {
   const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag
   if (typeof gtag !== 'function') return
@@ -80,6 +103,8 @@ export function reportWebVitals(onReport?: ReportHandler) {
     sendToGoogleAnalytics(metric)
 
     sendToAnalytics(metric, { path })
+
+    sendToDatabase(metric, path)
 
     if (onReport) {
       onReport({

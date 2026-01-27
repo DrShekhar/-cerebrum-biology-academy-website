@@ -4096,3 +4096,23 @@ enum VideoUploadStatus {
   FAILED
   DELETED
 }
+
+// Web Vitals Monitoring
+model WebVital {
+  id          String   @id @default(cuid())
+  metricName  String   // LCP, FCP, CLS, INP, TTFB
+  metricValue Float
+  rating      String   // good, needs-improvement, poor
+  page        String
+  metricId    String
+  delta       Float
+  connection  String?
+  userAgent   String?
+  country     String?
+  createdAt   DateTime @default(now())
+
+  @@index([metricName])
+  @@index([page])
+  @@index([createdAt])
+  @@index([rating])
+}
