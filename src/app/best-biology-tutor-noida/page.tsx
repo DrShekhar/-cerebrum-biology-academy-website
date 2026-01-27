@@ -71,10 +71,10 @@ const freeTools = [
 ]
 
 const courses = [
-  { name: 'Class 11 NEET Foundation', fee: '48,000', mode: 'Online/Hybrid', link: '/biology-class-11-noida' },
-  { name: 'Class 12 NEET Comprehensive', fee: '70,000', mode: 'Online/Hybrid', link: '/biology-class-12-noida' },
-  { name: 'NEET Dropper Batch', fee: '85,000', mode: 'Online/Offline', link: '/neet-dropper-batch-online' },
-  { name: 'Board Biology Express', fee: '35,000', mode: 'Online', link: '/class-12-board-biology-noida' },
+  { name: 'Class 11 NEET (Pursuit to Pinnacle)', fee: '48,000 - 98,000', mode: 'Online/Hybrid', link: '/biology-class-11-noida' },
+  { name: 'Class 12 NEET (Pursuit to Pinnacle)', fee: '70,000 - 98,000', mode: 'Online/Hybrid', link: '/biology-class-12-noida' },
+  { name: 'Dropper Batch (Pursuit to Pinnacle ZA)', fee: '70,000 - 1,56,000', mode: 'Online/Offline', link: '/neet-dropper-batch-online' },
+  { name: 'Board Only (Pursuit to Pinnacle)', fee: '40,000 - 68,000', mode: 'Online', link: '/class-12-board-biology-noida' },
 ]
 
 const faqs = [
@@ -84,7 +84,7 @@ const faqs = [
   },
   {
     question: 'What are the fees for the best Biology tutor in Noida?',
-    answer: 'Dr. Shekhar\'s Biology coaching: Class 11 - Rs 48,000/year, Class 12 - Rs 70,000/year, Droppers - Rs 85,000/year. This is significantly lower than big coaching chains while offering better faculty and smaller batches.',
+    answer: 'Dr. Shekhar\'s Biology coaching has 3 tiers: Pursuit (30-40 students), Ascent (16-18 students), Pinnacle (10-12 students). Class 11: Rs 48,000-98,000/year, Class 12: Rs 70,000-98,000/year, Droppers: Rs 70,000-1,56,000/year. Pinnacle tier includes personal mentorship from Dr. Shekhar.',
   },
   {
     question: 'Does the best Biology tutor offer online classes for Noida students?',

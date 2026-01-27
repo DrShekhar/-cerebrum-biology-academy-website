@@ -29,32 +29,32 @@ export const metadata: Metadata = {
 const tuitionOptions = [
   {
     level: 'Class 9-10 Foundation',
-    fee: '45,000',
-    perMonth: '3,750',
-    features: ['NCERT + competitive edge', 'Weekly tests', 'Science Olympiad prep', 'WhatsApp support'],
+    fee: '45,000 - 90,000',
+    perMonth: '3,750 - 7,500',
+    features: ['NCERT + competitive edge', 'NEET foundation prep', 'Multiple tier options', 'AIIMS faculty'],
     link: '/biology-coaching-class-10',
   },
   {
-    level: 'Class 11 NEET Foundation',
-    fee: '48,000',
-    perMonth: '4,000',
-    features: ['NEET foundation building', 'Board + competitive', 'Small batch (15)', 'Daily doubt clearing'],
+    level: 'Class 11 NEET',
+    fee: '48,000 - 98,000',
+    perMonth: '4,000 - 8,167',
+    features: ['Pursuit/Ascent/Pinnacle tiers', '3,000-7,000+ questions', 'Board + NEET', 'AI doubt bot'],
     link: '/biology-class-11-noida',
     popular: true,
   },
   {
-    level: 'Class 12 NEET Comprehensive',
-    fee: '70,000',
-    perMonth: '5,833',
-    features: ['Board + NEET integrated', '6 days/week classes', 'Test series included', 'Personal mentoring'],
+    level: 'Class 12 NEET',
+    fee: '70,000 - 98,000',
+    perMonth: '5,833 - 8,167',
+    features: ['Board + NEET integrated', '5,000-15,000+ questions', '20-50+ mock tests', 'Personal mentoring'],
     link: '/biology-class-12-noida',
     recommended: true,
   },
   {
-    level: 'NEET Dropper Batch',
-    fee: '85,000',
-    perMonth: '7,083',
-    features: ['Full syllabus revision', 'Daily 4-hour sessions', 'Mock tests weekly', 'Counseling support'],
+    level: 'Dropper/Repeater Batch',
+    fee: '70,000 - 1,56,000',
+    perMonth: '5,833 - 13,000',
+    features: ['Complete 11+12 revision', 'Pinnacle ZA Program available', '50+ mock tests', 'Counseling support'],
     link: '/neet-dropper-batch-online',
   },
 ]
@@ -75,7 +75,7 @@ const whyChooseUs = [
 const faqs = [
   {
     question: 'What is the fee for Biology tuition in Noida?',
-    answer: 'Our Biology tuition fees: Class 9-10: Rs 45,000/year, Class 11: Rs 48,000/year, Class 12: Rs 70,000/year, Droppers: Rs 85,000/year. EMI options available. This is significantly lower than big coaching chains charging Rs 1.5-3 lakhs.',
+    answer: 'Our Biology tuition fees by tier: Class 9-10: Rs 45,000-90,000/year, Class 11: Rs 48,000-98,000/year, Class 12: Rs 70,000-98,000/year, Droppers: Rs 70,000-1,56,000/year. Three tiers available: Pursuit (budget), Ascent (balanced), Pinnacle (premium). EMI options available.',
   },
   {
     question: 'Do you offer private Biology tuition?',

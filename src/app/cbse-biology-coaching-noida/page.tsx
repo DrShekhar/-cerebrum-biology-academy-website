@@ -27,25 +27,25 @@ export const metadata: Metadata = {
 
 const courses = [
   {
-    name: 'CBSE Biology Class 11',
-    fee: '45,000',
+    name: 'CBSE Class 11 (Academic)',
+    fee: '40,000 - 98,000',
     duration: '12 months',
-    features: ['Complete NCERT coverage', 'Chapter tests', 'Diagram practice', 'WhatsApp support'],
+    features: ['Complete NCERT coverage', 'Chapter tests', '3 tier options (Pursuit/Ascent/Pinnacle)', 'AIIMS faculty'],
     link: '/biology-class-11-noida',
   },
   {
-    name: 'CBSE Biology Class 12',
-    fee: '48,000',
+    name: 'CBSE Class 12 (Board Only)',
+    fee: '40,000 - 68,000',
     duration: '12 months',
     features: ['NCERT + Previous years', 'Practical viva prep', 'Sample papers', 'Board exam strategy'],
-    link: '/biology-class-12-noida',
+    link: '/class-12-board-biology-noida',
     popular: true,
   },
   {
     name: 'CBSE + NEET Combo',
-    fee: '70,000',
+    fee: '70,000 - 98,000',
     duration: '12 months',
-    features: ['Board + NEET integrated', 'Competitive edge', 'Test series', 'Personal mentoring'],
+    features: ['Board + NEET integrated', 'Competitive edge', '20-50+ mock tests', 'Personal mentoring options'],
     link: '/neet-coaching-noida',
     recommended: true,
   },
@@ -77,7 +77,7 @@ const faqs = [
   },
   {
     question: 'What is the fee for CBSE Biology coaching in Noida?',
-    answer: 'CBSE Class 11 Biology: Rs 45,000/year, CBSE Class 12: Rs 48,000/year, CBSE + NEET combo: Rs 70,000/year. Online mode available for all courses.',
+    answer: 'CBSE fees vary by tier (Pursuit/Ascent/Pinnacle): Class 11 Academic: Rs 40,000-98,000/year, Class 12 Board-Only: Rs 40,000-68,000/year, CBSE + NEET combo: Rs 70,000-98,000/year. Online mode available for all tiers.',
   },
   {
     question: 'Can I prepare for both CBSE boards and NEET together?',

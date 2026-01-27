@@ -27,26 +27,26 @@ export const metadata: Metadata = {
 
 const homeTuitionModes = [
   {
-    mode: 'Online Home Tuition',
-    description: 'Live classes from your Noida home',
-    fee: '45,000',
-    features: ['Live interactive classes', 'Learn from your room', 'No travel hassle', 'Recorded for revision'],
+    mode: 'Pursuit Tier (Online)',
+    description: '30-40 students | 6 hrs/week',
+    fee: '48,000 - 70,000',
+    features: ['Live interactive classes', 'Learn from your room', 'AI doubt bot access', 'Recorded lectures'],
     icon: Wifi,
     popular: true,
   },
   {
-    mode: 'Hybrid Home + Center',
-    description: 'Online daily + Weekend offline tests',
-    fee: '55,000',
-    features: ['Best of both worlds', 'Online convenience', 'Offline accountability', 'Test at South Extension'],
+    mode: 'Ascent Tier (Online)',
+    description: '16-18 students | 8 hrs/week',
+    fee: '76,000',
+    features: ['Weekly group doubt sessions', 'Performance tracking', 'Better attention', 'Standard mock tests'],
     icon: Building2,
     recommended: true,
   },
   {
-    mode: 'Premium 1-on-1',
-    description: 'Private online sessions',
-    fee: '1,500/hour',
-    features: ['Completely personalized', 'Your pace, your time', 'Direct AIIMS faculty', 'Flexible scheduling'],
+    mode: 'Pinnacle Tier (Online)',
+    description: '10-12 students | 10-12 hrs/week',
+    fee: '98,000 - 1,56,000',
+    features: ['Personal mentorship from Dr. Shekhar', 'Weekly 1-on-1 doubt sessions', 'Money-back guarantee', 'Priority support'],
     icon: Video,
   },
 ]
@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     question: 'What is the fee for home Biology tutor in Noida?',
-    answer: 'Online home tuition: Rs 45,000/year. Hybrid mode: Rs 55,000/year. Premium 1-on-1 private sessions: Rs 1,500/hour. Compare with traditional home tutors charging Rs 1,000-2,000/hour with lesser expertise.',
+    answer: 'Online home tuition fees by tier: Pursuit (30-40 students): Rs 48,000-70,000/year, Ascent (16-18 students): Rs 76,000/year, Pinnacle (10-12 students): Rs 98,000-1,56,000/year. All tiers include AIIMS faculty and recorded lectures. Much better value than home tutors charging Rs 1,000-2,000/hour.',
   },
   {
     question: 'How does online home tuition work?',

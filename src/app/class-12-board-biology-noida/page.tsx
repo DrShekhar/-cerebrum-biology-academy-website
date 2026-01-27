@@ -27,27 +27,27 @@ export const metadata: Metadata = {
 
 const courses = [
   {
-    name: 'Board Biology Express',
-    duration: '6 months',
-    mode: 'Online',
-    fee: '35,000',
-    features: ['Complete NCERT coverage', 'Previous year solutions', 'Sample paper practice', 'WhatsApp doubt support'],
+    name: 'Pursuit - Board Only',
+    duration: '12 months',
+    mode: '30-40 students | 6 hrs/week',
+    fee: '40,000',
+    features: ['Complete NCERT coverage', 'Previous year solutions', 'Basic mock tests', 'AI doubt bot'],
     popular: true,
   },
   {
-    name: 'Board + NEET Combo',
+    name: 'Ascent - Board Only',
     duration: '12 months',
-    mode: 'Online + Weekend Tests',
-    fee: '70,000',
-    features: ['Board + NEET integrated', 'Practical viva preparation', 'Weekly mock tests', 'Personal mentoring'],
+    mode: '16-18 students | 8 hrs/week',
+    fee: '58,000',
+    features: ['NCERT + Previous years', 'Practical viva preparation', 'Weekly group doubt sessions', 'Performance tracking'],
     recommended: true,
   },
   {
-    name: 'Board Biology Intensive',
-    duration: '6 months',
-    mode: 'Full Offline',
-    fee: '45,000',
-    features: ['Daily classroom sessions', 'Small batch (10 students)', 'Practical demonstration', 'Guaranteed improvement'],
+    name: 'Pinnacle - Board Only',
+    duration: '12 months',
+    mode: '10-12 students | 10-12 hrs/week',
+    fee: '68,000',
+    features: ['Personal mentorship', 'Complete practical preparation', 'Daily doubt sessions', 'Money-back guarantee'],
   },
 ]
 
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     question: 'What is the fee for Class 12 Board Biology coaching in Noida?',
-    answer: 'Board-focused course: Rs 35,000 (6 months), Board + NEET combo: Rs 70,000 (12 months), Intensive offline: Rs 45,000. All include study material and test series.',
+    answer: 'Board-only course: Pursuit - Rs 40,000, Ascent - Rs 58,000, Pinnacle - Rs 68,000/year. For Board + NEET combo, fees range from Rs 70,000 to Rs 98,000/year. All include study material and test series.',
   },
   {
     question: 'Do you cover CBSE and ISC both?',

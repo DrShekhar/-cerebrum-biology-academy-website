@@ -28,27 +28,27 @@ export const metadata: Metadata = {
 
 const courses = [
   {
-    name: 'NEET Foundation Class 11',
+    name: 'Pursuit - Class 11 NEET',
     duration: '12 months',
-    mode: 'Online',
+    mode: '30-40 students | 6 hrs/week',
     fee: '48,000',
-    features: ['Live interactive classes', 'NCERT + NEET syllabus', 'Weekly tests', 'WhatsApp doubt support'],
+    features: ['AIIMS faculty teaching', 'NCERT syllabus', '3,000+ practice questions', 'AI doubt bot access'],
     popular: true,
   },
   {
-    name: 'NEET Foundation Class 11 - Hybrid',
+    name: 'Ascent - Class 11 NEET',
     duration: '12 months',
-    mode: 'Online + Weekend Offline',
-    fee: '58,000',
-    features: ['All online benefits', 'Weekend tests at center', 'Face-to-face doubt sessions', 'Library access'],
+    mode: '16-18 students | 8 hrs/week',
+    fee: '76,000',
+    features: ['AIIMS faculty teaching', '5,000+ practice questions', 'Weekly group doubt sessions', 'Performance tracking'],
     recommended: true,
   },
   {
-    name: 'Class 11 Biology Regular',
+    name: 'Pinnacle - Class 11 NEET',
     duration: '12 months',
-    mode: 'Full Offline',
-    fee: '65,000',
-    features: ['Daily classroom sessions', 'Small batch (15 students)', 'South Extension center', 'Personal mentoring'],
+    mode: '10-12 students | 10-12 hrs/week',
+    fee: '98,000',
+    features: ['Personal mentorship from Dr. Shekhar', '7,000+ practice questions', 'Weekly 1-on-1 doubt sessions', 'Money-back guarantee'],
   },
 ]
 
@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     question: 'What is the fee for Class 11 Biology coaching in Noida?',
-    answer: 'Our Class 11 Biology coaching fees: Online - Rs 48,000/year, Hybrid - Rs 58,000/year, Offline - Rs 65,000/year. All courses include NCERT + NEET preparation, weekly tests, and doubt support.',
+    answer: 'Our Class 11 Biology coaching fees: Pursuit (30-40 students) - Rs 48,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All tiers include AIIMS faculty teaching and doubt support.',
   },
   {
     question: 'Can Noida students attend online classes?',

@@ -28,27 +28,27 @@ export const metadata: Metadata = {
 
 const courses = [
   {
-    name: 'NEET Comprehensive Class 12',
+    name: 'Pursuit - Class 12 NEET',
     duration: '12 months',
-    mode: 'Online',
+    mode: '30-40 students | 6 hrs/week',
     fee: '70,000',
-    features: ['Live classes 6 days/week', 'Board + NEET integrated', 'Daily practice questions', 'WhatsApp doubt support 24/7'],
+    features: ['AIIMS faculty teaching', 'NEET syllabus coverage', '5,000+ practice questions', '20+ mock tests'],
     popular: true,
   },
   {
-    name: 'NEET Comprehensive Class 12 - Hybrid',
+    name: 'Ascent - Class 12 NEET',
     duration: '12 months',
-    mode: 'Online + Weekend Offline',
-    fee: '85,000',
-    features: ['All online benefits', 'Weekend tests at center', 'Monthly parent meetings', 'Personal mentoring'],
+    mode: '16-18 students | 8 hrs/week',
+    fee: '76,000',
+    features: ['Focused NEET preparation', '8,000+ practice questions', '30+ mock tests', 'NEET strategy sessions'],
     recommended: true,
   },
   {
-    name: 'Class 12 Biology Intensive',
+    name: 'Pinnacle - Class 12 NEET',
     duration: '12 months',
-    mode: 'Full Offline',
+    mode: '10-12 students | 10-12 hrs/week',
     fee: '98,000',
-    features: ['Daily 3-hour sessions', 'Small batch (12 students)', 'South Extension center', 'Revision + Test series'],
+    features: ['Personal mentorship from Dr. Shekhar', '15,000+ practice questions', '50+ full-length mocks', 'Money-back guarantee'],
   },
 ]
 
@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     question: 'What is the fee for Class 12 Biology coaching in Noida?',
-    answer: 'Our Class 12 Biology fees: Online - Rs 70,000/year, Hybrid - Rs 85,000/year, Intensive Offline - Rs 98,000/year. EMI options available. Fee includes test series, study material, and doubt support.',
+    answer: 'Our Class 12 Biology fees: Pursuit (30-40 students) - Rs 70,000/year, Ascent (16-18 students) - Rs 76,000/year, Pinnacle (10-12 students) - Rs 98,000/year. All tiers include AIIMS faculty, test series, and doubt support.',
   },
   {
     question: 'Is it too late to join NEET coaching in Class 12?',
