@@ -1,4 +1,5 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { DrShekharSinghSchema } from './StructuredData'
 
 interface NoidaLocalBusinessSchemaProps {
   area?: string
@@ -372,6 +373,7 @@ interface NoidaPageSchemasProps {
   breadcrumbs: Array<{ name: string; url: string }>
   customFAQs?: Array<{ question: string; answer: string }>
   coordinates?: { lat: string; lng: string }
+  includePersonSchema?: boolean
 }
 
 export function NoidaPageSchemas({
@@ -384,6 +386,7 @@ export function NoidaPageSchemas({
   breadcrumbs,
   customFAQs = [],
   coordinates,
+  includePersonSchema = true,
 }: NoidaPageSchemasProps) {
   return (
     <>
@@ -405,6 +408,7 @@ export function NoidaPageSchemas({
         pageDescription={pageDescription}
         pageUrl={pageUrl}
       />
+      {includePersonSchema && <DrShekharSinghSchema />}
     </>
   )
 }
