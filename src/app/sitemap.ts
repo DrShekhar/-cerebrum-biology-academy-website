@@ -5137,6 +5137,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/neet-coaching-ats-pristine-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-jaypee-greens-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/online-neet-classes-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-fee-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
     // East Delhi Expansion Pages
     {
       url: `${baseUrl}/neet-coaching-mayur-vihar`,
