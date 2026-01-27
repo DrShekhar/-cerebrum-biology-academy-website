@@ -23,8 +23,8 @@ interface SessionState {
   refresh: () => Promise<void>
 }
 
-// Session check timeout (10 seconds)
-const SESSION_CHECK_TIMEOUT = 10000
+// Session check timeout (15 seconds - increased for slower connections)
+const SESSION_CHECK_TIMEOUT = 15000
 
 export function useFirebaseSession(): SessionState {
   const [user, setUser] = useState<SessionUser | null>(null)
@@ -32,7 +32,7 @@ export function useFirebaseSession(): SessionState {
   const [error, setError] = useState<Error | null>(null)
   const [sessionChecked, setSessionChecked] = useState(false)
   const retryCount = useRef(0)
-  const maxRetries = 2
+  const maxRetries = 3 // Increased from 2 for better reliability
 
   const checkSession = useCallback(async () => {
     const startTime = Date.now()
@@ -99,13 +99,24 @@ export function useFirebaseSession(): SessionState {
         retryCount.current = 0 // Reset retry count on success
       } else {
         // Not authenticated - check if we should retry (cookies might not be set yet)
-        if (retryCount.current < maxRetries && cookies.includes('authjs.session-token')) {
+        // Check for various cookie names that might indicate a pending session
+        const hasSessionCookie =
+          cookies.includes('authjs.session-token') ||
+          cookies.includes('__Secure-authjs.session-token') ||
+          cookies.includes('firebase-session')
+
+        if (retryCount.current < maxRetries && hasSessionCookie) {
           retryCount.current++
+          // Exponential backoff: 800ms, 1200ms, 1800ms
+          const delay = 800 * Math.pow(1.5, retryCount.current - 1)
           console.log(
-            '[useFirebaseSession] Cookie found but not authenticated, retrying...',
-            retryCount.current
+            '[useFirebaseSession] Cookie found but not authenticated, retrying in',
+            delay,
+            'ms (attempt',
+            retryCount.current,
+            ')'
           )
-          await new Promise((resolve) => setTimeout(resolve, 500)) // Wait 500ms before retry
+          await new Promise((resolve) => setTimeout(resolve, delay))
           return checkSession()
         }
         setUser(null)

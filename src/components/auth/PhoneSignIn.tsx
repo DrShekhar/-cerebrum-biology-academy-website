@@ -232,13 +232,13 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
   }
 
   const verifySessionWithRetry = async (
-    maxRetries: number = 4,
-    initialDelay: number = 300
+    maxRetries: number = 5,
+    initialDelay: number = 600
   ): Promise<boolean> => {
     let delay = initialDelay
 
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
-      console.log(`[PhoneSignIn] Session verification attempt ${attempt}/${maxRetries}`)
+      console.log(`[PhoneSignIn] Session verification attempt ${attempt}/${maxRetries}, delay: ${delay}ms`)
 
       await new Promise((resolve) => setTimeout(resolve, delay))
 
@@ -247,12 +247,17 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
           method: 'GET',
           credentials: 'include',
           cache: 'no-store',
+          headers: {
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+          },
         })
 
         const data = await response.json()
         console.log(`[PhoneSignIn] Attempt ${attempt} result:`, {
           authenticated: data.authenticated,
           hasUser: !!data.user,
+          userId: data.user?.id,
         })
 
         if (data.authenticated && data.user) {
@@ -262,7 +267,8 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
         console.error(`[PhoneSignIn] Verification attempt ${attempt} error:`, err)
       }
 
-      delay *= 1.5
+      // Exponential backoff with cap
+      delay = Math.min(delay * 1.5, 2000)
     }
 
     return false
@@ -311,14 +317,17 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
         ? `${finalRedirectUrl}&_t=${Date.now()}`
         : `${finalRedirectUrl}?_t=${Date.now()}`
 
+      // Longer delay to ensure cookies are fully propagated before redirect
+      // This prevents the race condition where middleware reads stale session state
       setTimeout(() => {
         if (onSuccess) {
           onSuccess()
         } else {
           console.log('[PhoneSignIn] Redirecting to:', redirectWithTimestamp, 'role:', userRole)
-          window.location.href = redirectWithTimestamp
+          // Use replace to prevent back button from returning to login
+          window.location.replace(redirectWithTimestamp)
         }
-      }, 500)
+      }, 1200)
     } catch (err: unknown) {
       const error = err as Error
       console.error('[PhoneSignIn] Session creation error:', error)
