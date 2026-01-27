@@ -30,5 +30,43 @@ export const metadata: Metadata = {
 }
 
 export default function SixMonthNEETCoachingGurugramPage() {
-  return <CityHubPage data={cityData} />
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: '6 Month NEET Biology Course - Gurugram',
+    description: '6-month intensive NEET Biology coaching for late starters and droppers needing focused preparation',
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'M2K Corporate Park',
+        addressLocality: 'Sector 51, Gurugram',
+        addressRegion: 'Haryana',
+        postalCode: '122018',
+        addressCountry: 'IN',
+      },
+    },
+    educationalLevel: 'Class 12 / Dropper',
+    timeRequired: 'P6M',
+    teaches: ['NEET Biology Complete Syllabus', 'NCERT Mastery', 'Mock Tests', 'Doubt Clearing'],
+    offers: {
+      '@type': 'Offer',
+      price: '45000',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Offline',
+      duration: 'P6M',
+    },
+  }
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
+      <CityHubPage data={cityData} />
+    </>
+  )
 }
