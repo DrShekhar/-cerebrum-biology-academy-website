@@ -1354,6 +1354,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    // Noida vs Kota Comparison
+    {
+      url: `${baseUrl}/neet-coaching-noida-vs-kota`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    // Noida Toppers/Results
+    {
+      url: `${baseUrl}/neet-toppers-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: lastUpdated,

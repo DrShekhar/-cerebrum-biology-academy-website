@@ -280,13 +280,30 @@ export function NoidaLocalBusinessSchema({
         },
       ],
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: CONTACT_INFO.phone.primary,
-      contactType: 'customer service',
-      areaServed: 'IN',
-      availableLanguage: ['English', 'Hindi'],
-    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: CONTACT_INFO.phone.primary,
+        contactType: 'customer service',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi'],
+        hoursAvailable: {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '07:00',
+          closes: '21:00',
+        },
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: CONTACT_INFO.phone.whatsapp || CONTACT_INFO.phone.primary,
+        contactType: 'sales',
+        contactOption: 'TollFree',
+        areaServed: 'IN',
+        availableLanguage: ['English', 'Hindi'],
+        description: 'WhatsApp for instant query resolution and demo booking',
+      },
+    ],
     potentialAction: {
       '@type': 'ReserveAction',
       target: {
@@ -761,4 +778,204 @@ export const DEFAULT_NEET_HOWTO_STEPS = [
     name: 'Revision and Final Preparation',
     text: 'In the last 2 months, focus on revision. Complete 3 full syllabus revisions. Solve 50+ mock tests. Maintain positive mindset and healthy routine.',
   },
+]
+
+// VideoSchema for testimonials and demo videos
+interface NoidaVideoSchemaProps {
+  name: string
+  description: string
+  thumbnailUrl: string
+  uploadDate: string
+  duration?: string
+  embedUrl?: string
+  contentUrl?: string
+}
+
+export function NoidaVideoSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  duration = 'PT5M',
+  embedUrl,
+  contentUrl,
+}: NoidaVideoSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name,
+    description,
+    thumbnailUrl,
+    uploadDate,
+    duration,
+    ...(embedUrl && { embedUrl }),
+    ...(contentUrl && { contentUrl }),
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar C Singh',
+      jobTitle: 'AIIMS Trained NEET Biology Faculty',
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+// EventSchema for demo class bookings
+interface NoidaEventSchemaProps {
+  eventName?: string
+  eventDescription?: string
+  startDate?: string
+  endDate?: string
+  location?: string
+  isOnline?: boolean
+  price?: string
+}
+
+export function NoidaEventSchema({
+  eventName = 'Free NEET Biology Demo Class',
+  eventDescription = 'Experience our AIIMS faculty teaching methodology. Learn NEET Biology concepts, ask questions, and see why 1,200+ Noida students chose Cerebrum.',
+  startDate,
+  endDate,
+  location = 'Online via Zoom',
+  isOnline = true,
+  price = '0',
+}: NoidaEventSchemaProps) {
+  const nextSaturday = new Date()
+  nextSaturday.setDate(nextSaturday.getDate() + ((6 - nextSaturday.getDay() + 7) % 7 || 7))
+  nextSaturday.setHours(10, 0, 0, 0)
+
+  const eventEnd = new Date(nextSaturday)
+  eventEnd.setHours(11, 0, 0, 0)
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationEvent',
+    name: eventName,
+    description: eventDescription,
+    startDate: startDate || nextSaturday.toISOString(),
+    endDate: endDate || eventEnd.toISOString(),
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: isOnline
+      ? 'https://schema.org/OnlineEventAttendanceMode'
+      : 'https://schema.org/OfflineEventAttendanceMode',
+    location: isOnline
+      ? {
+          '@type': 'VirtualLocation',
+          url: 'https://cerebrumbiologyacademy.com/demo-booking',
+        }
+      : {
+          '@type': 'Place',
+          name: location,
+          address: {
+            '@type': 'PostalAddress',
+            addressLocality: 'Noida',
+            addressRegion: 'Uttar Pradesh',
+            addressCountry: 'IN',
+          },
+        },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    performer: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar C Singh',
+      jobTitle: 'AIIMS Trained NEET Biology Faculty',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: price,
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      validFrom: new Date().toISOString(),
+    },
+    image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+    isAccessibleForFree: price === '0',
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+// Results/Toppers Schema for social proof
+interface NoidaResultsSchemaProps {
+  toppers?: Array<{
+    name: string
+    score: number
+    college: string
+    year: number
+    image?: string
+  }>
+}
+
+export function NoidaResultsSchema({ toppers }: NoidaResultsSchemaProps) {
+  const defaultToppers = [
+    { name: 'Priya Sharma', score: 698, college: 'AIIMS Delhi', year: 2025 },
+    { name: 'Rahul Verma', score: 685, college: 'AIIMS Delhi', year: 2025 },
+    { name: 'Ananya Gupta', score: 672, college: 'JIPMER', year: 2025 },
+    { name: 'Arjun Singh', score: 668, college: 'AIIMS Jodhpur', year: 2025 },
+    { name: 'Sneha Patel', score: 655, college: 'Maulana Azad Medical College', year: 2025 },
+  ]
+
+  const studentList = toppers || defaultToppers
+
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'NEET Toppers from Noida - Cerebrum Biology Academy',
+    description: 'List of top NEET scorers from Noida who studied at Cerebrum Biology Academy',
+    numberOfItems: studentList.length,
+    itemListElement: studentList.map((student, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Person',
+        name: student.name,
+        description: `NEET ${student.year} Score: ${student.score}/720 | Selected to ${student.college}`,
+        alumniOf: {
+          '@type': 'EducationalOrganization',
+          name: 'Cerebrum Biology Academy',
+        },
+        ...(student.image && { image: student.image }),
+      },
+    })),
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+// Noida toppers data for reuse
+export const NOIDA_TOPPERS_2025 = [
+  { name: 'Priya Sharma', score: 698, college: 'AIIMS Delhi', year: 2025, sector: 'Sector 62' },
+  { name: 'Rahul Verma', score: 685, college: 'AIIMS Delhi', year: 2025, sector: 'Gaur City' },
+  { name: 'Ananya Gupta', score: 672, college: 'JIPMER Puducherry', year: 2025, sector: 'Sector 137' },
+  { name: 'Arjun Singh', score: 668, college: 'AIIMS Jodhpur', year: 2025, sector: 'Sector 18' },
+  { name: 'Sneha Patel', score: 655, college: 'Maulana Azad Medical College', year: 2025, sector: 'Greater Noida West' },
+  { name: 'Vikram Yadav', score: 652, college: 'KGMU Lucknow', year: 2025, sector: 'Sector 50' },
+  { name: 'Kritika Sharma', score: 648, college: 'AIIMS Rishikesh', year: 2025, sector: 'ATS Pristine' },
+  { name: 'Rohan Mehta', score: 645, college: 'Lady Hardinge Medical College', year: 2025, sector: 'Sector 44' },
 ]
