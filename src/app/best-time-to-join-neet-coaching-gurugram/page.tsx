@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, ArrowRight, Calendar, Clock, CheckCircle, AlertTriangle } from 'lucide-react'
+import { Phone, ArrowRight, Calendar, CheckCircle, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Best Time to Join NEET Coaching 2025 | April vs July | Gurugram',

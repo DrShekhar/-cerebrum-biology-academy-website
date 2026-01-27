@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import {
-  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, Clock, BookOpen, Star, Navigation, Car, Train, Building, Compass,
+import { ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
+  Users, Clock, Navigation, Car, Train, Building, Compass,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'

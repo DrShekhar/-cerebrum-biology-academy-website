@@ -9,9 +9,7 @@ import {
   Award,
   ArrowRight,
   TrendingUp,
-  Building,
   Wallet,
-  Clock,
 } from 'lucide-react'
 
 export const metadata: Metadata = {

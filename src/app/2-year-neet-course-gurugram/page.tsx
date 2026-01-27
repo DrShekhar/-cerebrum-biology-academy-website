@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Clock, Calendar, CheckCircle, Trophy, BookOpen, GraduationCap, ArrowRight, Star } from 'lucide-react'
+import { Phone, MapPin, Clock, Calendar, CheckCircle, Trophy, GraduationCap, ArrowRight, Star } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: '2 Year NEET Course Gurugram 2026 | Class 11-12 Integrated | Cerebrum',

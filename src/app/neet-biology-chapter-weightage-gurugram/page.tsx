@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, BookOpen, TrendingUp, ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react'
+import { Phone, BookOpen, ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'NEET Biology Chapter Weightage 2026 | Important Topics | Cerebrum Academy',

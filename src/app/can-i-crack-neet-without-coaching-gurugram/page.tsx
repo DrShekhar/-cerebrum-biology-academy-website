@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, ArrowRight, CheckCircle, Target, BookOpen, Clock, AlertTriangle, Users } from 'lucide-react'
+import { Phone, ArrowRight, Target, BookOpen, Clock, AlertTriangle, Users } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Can I Crack NEET Without Coaching? Self-Study Guide 2025',

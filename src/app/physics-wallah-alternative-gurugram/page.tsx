@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, CheckCircle, Users, Clock, Video, Award, ArrowRight, Monitor, Building } from 'lucide-react'
+import { Phone, MapPin, CheckCircle, Users, Clock, Video, ArrowRight, Monitor, Building } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Physics Wallah Alternative Gurugram | Offline Expert Biology | Cerebrum 2026',

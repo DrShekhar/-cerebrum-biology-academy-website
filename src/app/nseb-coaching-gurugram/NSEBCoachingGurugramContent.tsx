@@ -19,7 +19,6 @@ import {
   Award,
   FileText,
   Users,
-  Beaker,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'

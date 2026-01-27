@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { rateLimit } from '@/lib/rateLimit'
+import { processContentLead } from '@/lib/whatsapp/contentLeadFollowup'
 
 function generateDiscountCode(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
@@ -83,6 +84,18 @@ export async function POST(request: NextRequest) {
       email,
       discountCode,
       variant,
+    })
+
+    // Send WhatsApp welcome + notify admin + schedule nurturing (non-blocking)
+    processContentLead({
+      phone,
+      name: name || undefined,
+      email,
+      source: `exit_intent_${variant || 'discount'}`,
+      discountCode,
+      leadId: newLead.id,
+    }).catch((err) => {
+      console.error('WhatsApp processing failed (non-blocking):', err)
     })
 
     return NextResponse.json({

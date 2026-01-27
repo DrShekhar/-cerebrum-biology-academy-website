@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { headers } from 'next/headers'
 import { prisma } from '@/lib/prisma'
+import { processContentLead } from '@/lib/whatsapp/contentLeadFollowup'
 
 interface CatalogDownloadRequest {
   email: string
@@ -139,6 +140,17 @@ export async function POST(request: NextRequest) {
     console.log(
       `[CATALOG-DOWNLOAD] ${body.email} - ${body.source || 'direct'} - Lead ID: ${leadId}`
     )
+
+    // Send WhatsApp welcome + notify admin + schedule nurturing (non-blocking)
+    processContentLead({
+      phone: normalizedPhone,
+      name: body.name || undefined,
+      email: body.email,
+      source: body.source || 'catalog_download',
+      leadId,
+    }).catch((err) => {
+      console.error('WhatsApp processing failed (non-blocking):', err)
+    })
 
     return NextResponse.json({
       success: true,

@@ -1,16 +1,13 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   CheckCircle,
   Users,
-  Award,
   Target,
   Star,
   ArrowRight,
-  Trophy,
   Zap,
   Phone,
   MessageCircle,
@@ -27,7 +24,7 @@ import {
   Brain,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 
 export default function NEETCrashCoursePage() {

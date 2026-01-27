@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import NEETFoundationClass9Content from './NEETFoundationClass9Content'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 

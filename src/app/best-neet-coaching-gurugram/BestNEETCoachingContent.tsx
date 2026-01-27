@@ -3,16 +3,14 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import {
-  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, Clock, BookOpen, Star, Award, Shield, TrendingUp, X, Check,
+import { ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
+  Users, Clock, BookOpen, Star, Shield, X, Check,
   GraduationCap, Building, Trophy,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface FAQ { question: string; answer: string }
 

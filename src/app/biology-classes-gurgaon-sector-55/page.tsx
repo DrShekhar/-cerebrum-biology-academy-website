@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { CityHubPage } from '@/components/seo/CityHubPage'
 import { getCityData } from '@/data/city-seo/city-hub-data'
-import { MapPin, Users, CheckCircle, Building, Train } from 'lucide-react'
+import { Users, CheckCircle, Building, Train } from 'lucide-react'
 
 const cityData = getCityData('gurgaon-sector-55')!
 

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, ArrowRight, CheckCircle, XCircle, Users, BookOpen, Clock, Target } from 'lucide-react'
+import { Phone, ArrowRight, CheckCircle, XCircle, Users, BookOpen, Target } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching vs Self-Study: Which is Better? 2025 Guide | Gurugram',

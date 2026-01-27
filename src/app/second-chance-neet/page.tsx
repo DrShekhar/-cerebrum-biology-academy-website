@@ -10,7 +10,6 @@ import {
   trackWhatsAppConversion,
   trackLeadFormConversion,
   trackDemoBookingConversion,
-  GOOGLE_ADS_CONVERSIONS,
 } from '@/lib/analytics/googleAdsConversions'
 
 export default function SecondChanceNEETPage() {

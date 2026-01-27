@@ -4,8 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
-  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, Target, Award, Clock, BookOpen, Star, RefreshCw, TrendingUp, Zap,
+  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home, Target, Clock, BookOpen, RefreshCw, TrendingUp, Zap,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'

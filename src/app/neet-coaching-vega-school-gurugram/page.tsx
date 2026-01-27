@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Car, ArrowRight, GraduationCap, Users, Sparkles, Globe } from 'lucide-react'
+import { Phone, MapPin, Car, ArrowRight, Users, Sparkles, Globe } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching for Vega School Gurugram | Cerebrum Academy',

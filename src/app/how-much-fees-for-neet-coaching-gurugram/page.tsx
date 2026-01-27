@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, IndianRupee, ArrowRight, CheckCircle, Award, Users, Building } from 'lucide-react'
+import { Phone, IndianRupee, ArrowRight, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'NEET Coaching Fees in Gurugram 2025 | ₹45K-₹3L Comparison',

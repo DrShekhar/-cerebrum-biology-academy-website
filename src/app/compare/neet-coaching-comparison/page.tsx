@@ -2,18 +2,13 @@
 
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
 import {
   CheckCircle2,
   XCircle,
   Users,
   GraduationCap,
-  Trophy,
-  IndianRupee,
-  Star,
   MessageSquare,
   Phone,
-  ArrowRight,
   Award,
   Target,
   BookOpen,

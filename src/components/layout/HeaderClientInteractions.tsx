@@ -3,7 +3,6 @@
 import { useState, useEffect, memo } from 'react'
 import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 import { useAuth } from '@/hooks/useAuth'
 
 // Direct import for BurgerMenu - critical UI that must always render

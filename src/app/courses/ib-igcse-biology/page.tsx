@@ -13,9 +13,7 @@ import {
   CheckCircle2,
   Award,
   BookOpen,
-  GraduationCap,
   ArrowRight,
-  Sparkles,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'

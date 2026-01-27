@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, Award, BookOpen, Users, GraduationCap, Star, ArrowRight, CheckCircle, MapPin, Calendar, Trophy } from 'lucide-react'
+import { Phone, Award, Users, GraduationCap, Star, ArrowRight, CheckCircle, Calendar, Trophy } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dr. Shekhar C Singh | AIIMS Alumni | Lead NEET Biology Faculty',

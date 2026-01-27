@@ -4,13 +4,10 @@ import {
   Phone,
   CheckCircle,
   Award,
-  Percent,
   Calculator,
   FileText,
-  Calendar,
   ArrowRight,
   Gift,
-  Star,
   Users,
   Trophy,
 } from 'lucide-react'

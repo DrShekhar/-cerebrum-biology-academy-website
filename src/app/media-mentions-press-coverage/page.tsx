@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Newspaper, ExternalLink, Calendar, Quote, Award, Users, TrendingUp, BookOpen } from 'lucide-react'
+import { Newspaper, Calendar, Quote, Award, Users, TrendingUp, BookOpen } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Media Mentions & Press Coverage | Cerebrum Biology Academy',

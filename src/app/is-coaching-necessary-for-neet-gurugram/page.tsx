@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, CheckCircle, XCircle, ArrowRight, BookOpen, Users, Target, AlertTriangle } from 'lucide-react'
+import { Phone, CheckCircle, ArrowRight, BookOpen, Target, AlertTriangle } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Is Coaching Necessary for NEET? Gurugram Expert Answer | 2025',

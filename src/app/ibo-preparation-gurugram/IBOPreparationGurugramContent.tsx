@@ -15,9 +15,7 @@ import {
   Phone,
   Play,
   Home,
-  Award,
   Users,
-  Target,
   Brain,
   Microscope,
 } from 'lucide-react'

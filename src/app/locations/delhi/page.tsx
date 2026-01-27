@@ -12,7 +12,6 @@ import {
   Trophy,
   CheckCircle2,
   Train,
-  Building2,
   ArrowRight,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'

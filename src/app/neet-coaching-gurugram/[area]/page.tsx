@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
-  gurugramAreaDetails,
   getAllGurugramAreaSlugs,
   getGurugramAreaBySlug,
 } from '@/data/gurugram-areas'

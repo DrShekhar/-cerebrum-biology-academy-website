@@ -5,7 +5,6 @@ import Link from 'next/link'
 import {
   Phone,
   CheckCircle,
-  Star,
   IndianRupee,
   Users,
   Award,

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, Trophy, Award, Star, TrendingUp, Users, ArrowRight, MapPin, GraduationCap } from 'lucide-react'
+import { Phone, Trophy, Award, Star, TrendingUp, Users, ArrowRight, GraduationCap } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'NEET 2024 Results Gurugram | 98% Success | Cerebrum Biology Academy',

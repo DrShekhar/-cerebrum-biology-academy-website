@@ -4116,3 +4116,22 @@ model WebVital {
   @@index([createdAt])
   @@index([rating])
 }
+
+// WhatsApp Nurturing Sequences
+model whatsapp_nurturing {
+  id            String    @id
+  phone         String
+  name          String
+  leadId        String
+  source        String
+  status        String    @default("ACTIVE") // ACTIVE, COMPLETED, STOPPED
+  currentStep   Int       @default(1)
+  totalSteps    Int       @default(4)
+  nextMessageAt DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime
+
+  @@index([phone])
+  @@index([status])
+  @@index([nextMessageAt])
+}

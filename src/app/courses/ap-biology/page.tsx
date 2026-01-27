@@ -4,14 +4,10 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
-  MapPin,
   Phone,
   MessageSquare,
   Star,
-  Users,
-  Trophy,
   CheckCircle2,
-  ArrowRight,
   Award,
   BookOpen,
   Target,

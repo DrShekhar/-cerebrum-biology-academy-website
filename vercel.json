@@ -153,6 +153,10 @@
       "schedule": "*/15 * * * *"
     },
     {
+      "path": "/api/cron/nurturing-sequence",
+      "schedule": "30 4 * * *"
+    },
+    {
       "path": "/api/cron/seo-reminder",
       "schedule": "0 4 * * 5"
     },

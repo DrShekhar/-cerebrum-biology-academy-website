@@ -9,7 +9,6 @@ import {
   MessageSquare,
   Star,
   Users,
-  Trophy,
   CheckCircle2,
   Target,
   GraduationCap,

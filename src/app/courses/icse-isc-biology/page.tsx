@@ -4,17 +4,12 @@ import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
-  BookOpen,
   Phone,
   MessageSquare,
   Star,
-  Users,
-  Trophy,
   CheckCircle2,
-  Award,
   GraduationCap,
   ArrowRight,
-  FileText,
   Microscope,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'

@@ -5,7 +5,6 @@
  * Sends delayed WhatsApp messages asking for Google reviews
  */
 
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Google Business Profile review link - UPDATE THIS with your actual link
 export const GOOGLE_REVIEW_LINK = 'https://g.page/r/cerebrum-biology-academy/review'

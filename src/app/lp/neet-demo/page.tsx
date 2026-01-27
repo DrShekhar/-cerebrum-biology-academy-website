@@ -6,7 +6,6 @@ import { Phone, MessageSquare, CheckCircle2, Users, Trophy, Clock, Star } from '
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
-  trackGoogleAdsConversion,
   trackWhatsAppConversion,
   trackPhoneCallConversion,
   trackLeadFormConversion,

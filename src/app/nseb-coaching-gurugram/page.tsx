@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import NSEBCoachingGurugramContent from './NSEBCoachingGurugramContent'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
-import { CEREBRUM_METRICS, GURUGRAM_CENTER_METRICS } from '@/lib/constants/metrics'
 
 const gurugramLocation = CONTACT_INFO.location.gurugram
 

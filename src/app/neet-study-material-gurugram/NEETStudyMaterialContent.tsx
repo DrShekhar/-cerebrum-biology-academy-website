@@ -4,15 +4,13 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
-  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, BookOpen, Star, FileText, Download, Package, Truck, Laptop,
+  CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Home, BookOpen, Star, FileText, Download, Package, Truck, Laptop,
   ClipboardList, Image, Sparkles,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
 
 interface FAQ { question: string; answer: string }

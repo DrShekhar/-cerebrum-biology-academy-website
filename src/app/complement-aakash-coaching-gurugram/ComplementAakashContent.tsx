@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Users, Target, Clock, BookOpen, Zap, Calendar, TrendingUp, Monitor,
+  Users, Clock, BookOpen, Zap, Calendar, TrendingUp, Monitor,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
