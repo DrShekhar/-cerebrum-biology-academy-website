@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-// Cache NCERT chapters for 1 hour - static curriculum data
-export const revalidate = 3600
+export const dynamic = 'force-dynamic'
 
 /**
  * GET /api/mcq/ncert-chapters
