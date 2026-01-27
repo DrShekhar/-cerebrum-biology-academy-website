@@ -6,7 +6,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { processContentLead } from '@/lib/whatsapp/contentLeadFollowup'
-import { sendWhatsAppMessage } from '@/lib/interakt'
+import { sendTemplateMessage } from '@/lib/interakt'
+import { UTILITY_TEMPLATES } from '@/lib/interakt-templates'
 import { logger } from '@/lib/utils/logger'
 
 const ADMIN_PHONE = process.env.ADMIN_WHATSAPP_NUMBER || '+918826444334'
@@ -215,26 +216,22 @@ async function notifyAdminAriaLead(params: {
   const { name, phone, studentClass, conversationSummary, currentPage, isReturning } = params
   const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
 
-  const message = `🤖 *${isReturning ? 'RETURNING' : 'NEW'} ARIA CHATBOT LEAD*
-
-📱 Phone: ${phone}
-👤 Name: ${name || 'Not provided'}
-📚 Class: ${studentClass || 'Not specified'}
-📍 Page: ${currentPage || 'Unknown'}
-⏰ Time: ${timestamp}
-
-${conversationSummary ? `💬 *Conversation:*\n${conversationSummary.slice(0, 200)}...` : ''}
-
-🔥 *THIS IS A HOT LEAD!*
-They actively chatted and shared their number.
-
-⚡ *CALL WITHIN 30 MINUTES!*`
-
+  // Use 'class_reminder' template (APPROVED) - repurposed for lead alerts
+  // Template: Hi {{1}}, Your class starts in {{2}}: Subject: {{3}}, Topic: {{4}}, Faculty: {{5}}, Join: {{6}}
   try {
-    await sendWhatsAppMessage({
+    await sendTemplateMessage({
       phone: ADMIN_PHONE,
-      message,
+      templateName: UTILITY_TEMPLATES.CLASS_REMINDER.name, // 'class_reminder'
+      bodyValues: [
+        `🔥 ${isReturning ? 'RETURNING' : 'NEW'} LEAD`,
+        `${name || 'Unknown'} - ${phone}`,
+        studentClass ? `NEET Biology - ${studentClass}` : 'NEET Biology',
+        conversationSummary?.slice(0, 100) || 'Chatbot inquiry',
+        `Aria Chat - ${currentPage || 'Homepage'}`,
+        `Call NOW! ${timestamp}`,
+      ],
     })
+    logger.info('Admin notified via template', { service: 'aria-lead', phone })
     return { success: true }
   } catch (error) {
     logger.error('Failed to notify admin of Aria lead', { error })
