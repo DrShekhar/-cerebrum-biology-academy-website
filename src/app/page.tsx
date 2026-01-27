@@ -80,8 +80,11 @@ export default function Home() {
       <HomePageClient />
 
       {/* 1. Hero Section - Server rendered for instant LCP */}
-      {/* LCP Critical: No content-visibility to ensure immediate rendering */}
-      <section className="lcp-critical">
+      {/* LCP Critical: No content-visibility, inline styles for immediate paint */}
+      <section
+        className="lcp-critical"
+        style={{ contentVisibility: 'visible', containIntrinsicSize: 'auto 100vh' }}
+      >
         <HeroSection />
       </section>
 

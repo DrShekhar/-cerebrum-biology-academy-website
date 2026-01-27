@@ -34,6 +34,12 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
   return (
     <div
       className={`relative min-h-screen bg-indigo-600 overflow-hidden -mt-16 lg:-mt-20 ${className}`}
+      style={{
+        backgroundColor: '#4f46e5',
+        minHeight: '100vh',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
       {/* Background - CSS only, no external image for faster LCP */}
       {/* PERFORMANCE: contain: strict isolates this layer from affecting LCP */}
@@ -69,15 +75,34 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             </span>
           </div>
 
-          {/* H1 - LCP CRITICAL: No animation, visible immediately for fastest LCP */}
-          <h1 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 xs:mb-6 leading-tight text-white break-words">
-            <span className="text-yellow-300">NEET Biology Coaching</span>
+          {/* H1 - LCP CRITICAL: Inline styles ensure immediate visibility before CSS loads */}
+          <h1
+            className="text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 xs:mb-6 leading-tight text-white break-words"
+            style={{
+              color: '#ffffff',
+              fontWeight: 700,
+              lineHeight: 1.1,
+              fontSize: 'clamp(1.25rem, 5vw, 3.75rem)',
+            }}
+          >
+            <span style={{ color: '#fcd34d' }} className="text-yellow-300">
+              NEET Biology Coaching
+            </span>
             <br />
-            <span className="text-green-300">India&apos;s #1 Institute</span>
+            <span style={{ color: '#86efac' }} className="text-green-300">
+              India&apos;s #1 Institute
+            </span>
           </h1>
 
-          {/* H2 - Also LCP candidate, no animation */}
-          <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200">
+          {/* H2 - Also LCP candidate, inline styles for immediate visibility */}
+          <h2
+            className="text-lg xs:text-xl sm:text-2xl md:text-3xl font-semibold mb-3 text-yellow-200"
+            style={{
+              color: '#fef08a',
+              fontWeight: 600,
+              fontSize: 'clamp(1.125rem, 3vw, 1.875rem)',
+            }}
+          >
             Delhi NCR - Offline in South Extension, Gurugram, Rohini • Online - Serving Worldwide
           </h2>
 

@@ -34,8 +34,9 @@ import './globals.css'
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-  display: 'swap', // Optimize font loading
+  display: 'optional', // PERFORMANCE: 'optional' prevents font-swap flash, shows fallback immediately if font not cached
   preload: true, // Preload critical font
+  adjustFontFallback: true, // Reduce CLS by adjusting fallback font metrics
 })
 
 const geistMono = Geist_Mono({
@@ -143,13 +144,15 @@ export default function RootLayout({
         <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
 
         {/* PERFORMANCE: Preload critical chunks to reduce LCP render delay */}
-        {/* These hints tell the browser to start loading JS earlier */}
+        {/* Priority hints for LCP optimization */}
         <link
           rel="preload"
           href="/_next/static/chunks/webpack.js"
           as="script"
           crossOrigin="anonymous"
         />
+        {/* CRITICAL: Preload main CSS to reduce render-blocking time */}
+        <link rel="preload" as="style" href="/_next/static/css/app/layout.css" />
 
         {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
         {/* Google Fonts - CRITICAL for reducing render blocking */}
@@ -248,7 +251,7 @@ export default function RootLayout({
               .mb-6{margin-bottom:1.5rem}
               .gap-2{gap:.5rem}
               .gap-4{gap:1rem}
-              /* Hero critical styles */
+              /* Hero critical styles - LCP OPTIMIZATION */
               .min-h-screen{min-height:100vh}
               .relative{position:relative}
               .absolute{position:absolute}
@@ -257,12 +260,16 @@ export default function RootLayout({
               .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
               .from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}
               .to-blue-900{--tw-gradient-to:#1e3a8a}
+              .bg-indigo-600{background-color:#4f46e5}
               .text-yellow-300{color:#fcd34d}
               .text-yellow-200{color:#fef08a}
               .text-green-300{color:#86efac}
               .text-green-100{color:#dcfce7}
               .text-blue-100{color:#dbeafe}
               .text-white{color:#fff}
+              /* LCP text sizing - clamp for responsive without media query delay */
+              .lcp-critical h1{font-size:clamp(1.25rem,5vw,3.75rem);line-height:1.1;font-weight:700}
+              .lcp-critical h2{font-size:clamp(1.125rem,3vw,1.875rem);font-weight:600}
               .font-bold{font-weight:700}
               .font-semibold{font-weight:600}
               .font-medium{font-weight:500}
@@ -341,9 +348,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
         suppressHydrationWarning
       >
-        <GoogleAnalytics />
-        <FacebookPixel />
-        <WebVitalsReporter />
+        {/* PERFORMANCE: Analytics moved after main content for better LCP */}
+        {/* These scripts use lazyOnload strategy but still benefit from being after content */}
         <DynamicPWAProvider />
         <FocusVisibleStyles />
         <I18nProvider>
@@ -402,6 +408,10 @@ export default function RootLayout({
                         <ConditionalHeaderFooter>
                           <DynamicMaintenancePopup />
                         </ConditionalHeaderFooter>
+                        {/* PERFORMANCE: Analytics after main content for better LCP */}
+                        <GoogleAnalytics />
+                        <FacebookPixel />
+                        <WebVitalsReporter />
                       </PageErrorBoundary>
                     </MotionProvider>
                   </PersonalizationProvider>

@@ -38,6 +38,13 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
     <header
       className="bg-white/95 backdrop-blur-sm shadow-md sticky top-0 z-50 border-b border-gray-100"
       role="banner"
+      style={{
+        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+        position: 'sticky',
+        top: 0,
+        zIndex: 50,
+        contain: 'layout style',
+      }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
