@@ -773,6 +773,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/media-mentions-press-coverage`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
     // Gurugram Results & Authority Pages
     {
       url: `${baseUrl}/neet-result-2025-gurugram`,
