@@ -31,6 +31,8 @@ import {
   FAQSchema,
   DrShekharSinghSchema,
   VideoSchema,
+  BreadcrumbSchema,
+  SpeakableSchema,
 } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
@@ -1882,6 +1884,19 @@ export default function NeetCoachingGurugramPage() {
       <GurugramServiceSchema />
       <FAQSchema />
       <DrShekharSinghSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'NEET Coaching', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+          { name: 'Gurugram', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+        ]}
+      />
+      <SpeakableSchema
+        name="NEET Coaching in Gurugram"
+        description="Best NEET Biology coaching in Gurugram with AIIMS faculty. Small batches of 15 students, 98% success rate."
+        speakableSelectors={['h1', '.quick-answer', '.hero-description']}
+        url="https://cerebrumbiologyacademy.com/neet-coaching-gurugram"
+      />
 
       {/* Video Testimonial Schemas */}
       <VideoSchema

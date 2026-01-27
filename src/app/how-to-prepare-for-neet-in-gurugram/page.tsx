@@ -118,6 +118,28 @@ export default function HowToPrepareForNEETInGurugramPage() {
     ],
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+      { '@type': 'ListItem', position: 3, name: 'How to Prepare for NEET', item: 'https://cerebrumbiologyacademy.com/how-to-prepare-for-neet-in-gurugram' },
+    ],
+  }
+
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'How to Prepare for NEET in Gurugram',
+    description: 'Step-by-step NEET preparation guide for Gurugram students with 8 proven strategies.',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.quick-answer', 'article h2'],
+    },
+    url: 'https://cerebrumbiologyacademy.com/how-to-prepare-for-neet-in-gurugram',
+  }
+
   return (
     <>
       <script
@@ -127,6 +149,14 @@ export default function HowToPrepareForNEETInGurugramPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <CityHubPage data={cityData} />
     </>

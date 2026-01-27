@@ -305,6 +305,26 @@ export default function NEETCoachingFeeGurugram() {
         '@type': 'Table',
         about: 'NEET Coaching Fee Comparison Gurugram 2026',
       }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+          { '@type': 'ListItem', position: 2, name: 'NEET Coaching Gurugram', item: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+          { '@type': 'ListItem', position: 3, name: 'Fee Comparison', item: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-gurugram' },
+        ],
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        name: 'NEET Coaching Fee in Gurugram',
+        description: 'NEET coaching fees in Gurugram range from Rs 25,000 to Rs 3,50,000 per year.',
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['h1', '.quick-answer', 'table'],
+        },
+        url: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-gurugram',
+      }) }} />
     </div>
   )
 }

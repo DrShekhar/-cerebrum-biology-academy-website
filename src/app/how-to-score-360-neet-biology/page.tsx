@@ -120,6 +120,28 @@ export default function HowToScore360NEETBiologyPage() {
     ],
   }
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      { '@type': 'ListItem', position: 2, name: 'NEET Biology', item: 'https://cerebrumbiologyacademy.com/neet-biology-coaching' },
+      { '@type': 'ListItem', position: 3, name: 'Score 360 in Biology', item: 'https://cerebrumbiologyacademy.com/how-to-score-360-neet-biology' },
+    ],
+  }
+
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'How to Score 360 in NEET Biology',
+    description: 'Expert 8-step strategy to score full marks in NEET Biology from AIIMS faculty.',
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', '.quick-answer', 'article h2'],
+    },
+    url: 'https://cerebrumbiologyacademy.com/how-to-score-360-neet-biology',
+  }
+
   return (
     <>
       <script
@@ -129,6 +151,14 @@ export default function HowToScore360NEETBiologyPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <IntentLandingPage data={pageData} />
     </>

@@ -1301,6 +1301,43 @@ export function ReviewListSchema({
   )
 }
 
+/**
+ * SpeakableSchema - For voice search optimization
+ * Marks content that is especially suitable for text-to-speech
+ */
+export interface SpeakableSchemaProps {
+  name: string
+  description: string
+  speakableSelectors: string[]
+  url: string
+}
+
+export function SpeakableSchema({
+  name,
+  description,
+  speakableSelectors,
+  url,
+}: SpeakableSchemaProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name,
+    description,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: speakableSelectors,
+    },
+    url,
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export function StructuredData() {
   // Note: FAQSchema is NOT included globally to prevent duplicate FAQ errors in Google Search Console
   // Include FAQSchema only on specific pages that have FAQ content
