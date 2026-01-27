@@ -3,7 +3,7 @@
  * Sends immediate welcome messages and schedules nurturing sequence
  */
 
-import { sendWhatsAppMessage, sendTemplateMessage, trackUser } from '@/lib/interakt'
+import { sendWhatsAppMessage, trackUser } from '@/lib/interakt'
 import { prisma } from '@/lib/prisma'
 import { logger } from '@/lib/utils/logger'
 

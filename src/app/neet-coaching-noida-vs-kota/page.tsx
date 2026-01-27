@@ -2,7 +2,6 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import {
   CheckCircle,
-  XCircle,
   Phone,
   ArrowRight,
   Home,
@@ -11,7 +10,6 @@ import {
   Users,
   Clock,
   Award,
-  MapPin,
   Wifi,
   Heart,
 } from 'lucide-react'

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { Phone, MapPin, Monitor, Users, Trophy, Star, Train, MessageCircle, CheckCircle, Clock } from 'lucide-react'
+import { Phone, MapPin, Monitor, Users, Trophy, Train, MessageCircle, Clock } from 'lucide-react'
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 import { notFound } from 'next/navigation'
 

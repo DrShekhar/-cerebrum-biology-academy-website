@@ -10,9 +10,7 @@ import {
   ArrowRight,
   Star,
   Users,
-  Award,
   Brain,
-  FileText,
   Calendar,
 } from 'lucide-react'
 import {

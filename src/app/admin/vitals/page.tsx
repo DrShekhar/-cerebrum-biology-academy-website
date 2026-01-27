@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Activity, TrendingUp, TrendingDown, AlertTriangle, CheckCircle } from 'lucide-react'
+import { Activity, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'
 
 interface VitalData {
   good: number

@@ -2,11 +2,9 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import {
   Trophy,
-  Star,
   Award,
   GraduationCap,
   TrendingUp,
-  Users,
   Phone,
   ArrowRight,
   Quote,
