@@ -24,7 +24,7 @@ import {
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
+import { LocalBusinessSchema, FAQSchema, BreadcrumbSchema, SpeakableSchema } from '@/components/seo/StructuredData'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
 const noidaSectors = [
@@ -355,6 +355,137 @@ export default function NeetCoachingNoidaPage() {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Learning Modes Section - Online/Hybrid/Offline */}
+      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <span className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
+              <Monitor className="w-4 h-4" />
+              Flexible Learning Options
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Choose Your Learning Mode
+            </h2>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto">
+              Study from your Noida home or visit our South Extension center - the choice is yours
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Online Mode */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition"
+            >
+              <div className="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center mb-4">
+                <Monitor className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">100% Online</h3>
+              <p className="text-slate-300 mb-4">Live interactive classes from your Noida home. No travel needed.</p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Live classes with Dr. Shekhar</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Instant doubt resolution</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Recorded lectures for revision</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" />Digital study material</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-white/20">
+                <span className="text-yellow-400 font-semibold">Rs 45,000/year</span>
+                <span className="text-slate-400 text-sm ml-2">Most Popular</span>
+              </div>
+            </motion.div>
+
+            {/* Hybrid Mode */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-yellow-500 rounded-2xl p-6 text-slate-900 relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 bg-slate-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMENDED</div>
+              <div className="w-14 h-14 bg-slate-900 rounded-xl flex items-center justify-center mb-4">
+                <TrendingUp className="w-7 h-7 text-yellow-400" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Hybrid Mode</h3>
+              <p className="text-slate-700 mb-4">Online classes + Weekend offline sessions at South Extension.</p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />All online benefits included</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />Weekend tests at center</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />Face-to-face doubt sessions</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-slate-900" />Peer learning environment</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-slate-900/20">
+                <span className="text-slate-900 font-semibold">Rs 55,000/year</span>
+                <span className="text-slate-700 text-sm ml-2">Best Value</span>
+              </div>
+            </motion.div>
+
+            {/* Offline Mode */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition"
+            >
+              <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
+                <MapPin className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">Full Offline</h3>
+              <p className="text-slate-300 mb-4">Daily classes at our South Extension center, Delhi.</p>
+              <ul className="space-y-2 text-sm">
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Regular classroom learning</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Small batch of 15 students</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Physical library access</li>
+                <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-blue-400" />Daily doubt classes</li>
+              </ul>
+              <div className="mt-4 pt-4 border-t border-white/20">
+                <span className="text-yellow-400 font-semibold">Rs 65,000/year</span>
+                <span className="text-slate-400 text-sm ml-2">Premium</span>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* South Extension Center Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="mt-12 bg-white/5 rounded-2xl p-6 max-w-4xl mx-auto"
+          >
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-2">South Extension Offline Center</h3>
+                <p className="text-slate-300 mb-4">
+                  Our flagship center in South Extension, Delhi is just 45-60 minutes from most Noida locations via Noida-Greater Noida Expressway.
+                </p>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  <span className="flex items-center gap-1"><Train className="w-4 h-4 text-yellow-400" />Metro: AIIMS + Auto</span>
+                  <span className="flex items-center gap-1"><Clock className="w-4 h-4 text-yellow-400" />45-60 min from Noida</span>
+                  <span className="flex items-center gap-1"><MapPin className="w-4 h-4 text-yellow-400" />M-Block, South Extension</span>
+                </div>
+              </div>
+              <Link
+                href="/locations/south-extension"
+                className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition whitespace-nowrap"
+              >
+                View Center Details <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -2027,6 +2158,83 @@ export default function NeetCoachingNoidaPage() {
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />
       <FAQSchema />
+      <BreadcrumbSchema
+        items={[
+          { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },
+          { name: 'NEET Coaching', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram' },
+          { name: 'Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida' },
+        ]}
+      />
+      <SpeakableSchema
+        name="NEET Coaching in Noida"
+        description="Best NEET Biology coaching for Noida students. Online classes with optional offline at South Extension. Serving all premium societies and high-rises."
+        speakableSelectors={['h1', '.quick-answer', '.hero-description']}
+        url="https://cerebrumbiologyacademy.com/neet-coaching-noida"
+      />
+
+      {/* Noida Service Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            '@id': 'https://cerebrumbiologyacademy.com/neet-coaching-noida#service',
+            name: 'NEET Biology Coaching Noida',
+            description: 'Online NEET Biology coaching for Noida students with optional offline classes at South Extension, Delhi. Serving Gaur City, ATS Pristine, Jaypee Greens, and all premium societies.',
+            provider: {
+              '@type': 'EducationalOrganization',
+              name: 'Cerebrum Biology Academy',
+            },
+            areaServed: [
+              { '@type': 'City', name: 'Noida', containedIn: { '@type': 'State', name: 'Uttar Pradesh' } },
+              { '@type': 'City', name: 'Greater Noida', containedIn: { '@type': 'State', name: 'Uttar Pradesh' } },
+            ],
+            serviceType: 'Online NEET Coaching with Hybrid Option',
+            availableChannel: {
+              '@type': 'ServiceChannel',
+              serviceUrl: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',
+              servicePhone: '+918826444334',
+              availableLanguage: ['English', 'Hindi'],
+            },
+            offers: [
+              {
+                '@type': 'Offer',
+                name: 'Online NEET Biology Classes',
+                description: 'Live interactive online classes from home',
+                price: '45000',
+                priceCurrency: 'INR',
+              },
+              {
+                '@type': 'Offer',
+                name: 'Hybrid Mode (Online + Weekend Offline)',
+                description: 'Online classes with weekend offline sessions at South Extension',
+                price: '55000',
+                priceCurrency: 'INR',
+              },
+            ],
+          }),
+        }}
+      />
+
+      {/* Topic Cluster Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'NEET Coaching Noida - Related Resources',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Online NEET Classes Noida', url: 'https://cerebrumbiologyacademy.com/online-neet-classes-noida' },
+              { '@type': 'ListItem', position: 2, name: 'NEET Coaching Fee Noida', url: 'https://cerebrumbiologyacademy.com/neet-coaching-fee-noida' },
+              { '@type': 'ListItem', position: 3, name: 'Gaur City NEET Coaching', url: 'https://cerebrumbiologyacademy.com/neet-coaching-gaur-city-noida' },
+              { '@type': 'ListItem', position: 4, name: 'How to Prepare for NEET in Noida', url: 'https://cerebrumbiologyacademy.com/how-to-prepare-for-neet-in-noida' },
+              { '@type': 'ListItem', position: 5, name: 'South Extension Offline Center', url: 'https://cerebrumbiologyacademy.com/locations/south-extension' },
+            ],
+          }),
+        }}
+      />
     </div>
   )
 }
