@@ -34,6 +34,36 @@ function generateMessageId(): string {
   return `msg_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`
 }
 
+interface AriaLeadPayload {
+  name?: string
+  phone: string
+  studentClass?: string
+  sessionId: string
+  conversationSummary?: string
+  currentPage?: string
+}
+
+async function saveLeadToDatabase(payload: AriaLeadPayload): Promise<void> {
+  const response = await fetch('/api/aria/lead-capture', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: payload.name,
+      phone: payload.phone,
+      studentClass: payload.studentClass,
+      sessionId: payload.sessionId,
+      conversationSummary: payload.conversationSummary,
+      source: 'aria_chatbot',
+      currentPage: payload.currentPage,
+    }),
+  })
+
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({}))
+    throw new Error(error.error || 'Failed to save lead')
+  }
+}
+
 export function useAriaChat(options: UseAriaChatOptions = {}) {
   const {
     initialLanguage = 'en',
@@ -255,6 +285,19 @@ export function useAriaChat(options: UseAriaChatOptions = {}) {
     }
   }, [])
 
+  // Generate conversation summary for lead capture
+  const getConversationSummary = useCallback((): string => {
+    const userMessages = messages
+      .filter((m) => m.sender === 'user')
+      .map((m) => m.text)
+      .slice(-5) // Last 5 user messages
+
+    if (userMessages.length === 0) return ''
+
+    // Create a brief summary of what the user asked about
+    return userMessages.join(' → ')
+  }, [messages])
+
   // Handle lead capture field submission
   const submitLeadField = useCallback(
     (field: 'name' | 'phone' | 'class', value: string) => {
@@ -290,18 +333,42 @@ export function useAriaChat(options: UseAriaChatOptions = {}) {
 
       // Check if lead is complete
       if (nextStage === 'complete') {
-        onLeadCaptured?.({
+        const capturedLeadData = {
           ...leadData,
           [field === 'class' ? 'studentClass' : field]: validation.sanitizedValue,
-        })
+        }
+
+        onLeadCaptured?.(capturedLeadData)
         onAnalyticsEvent?.('aria_lead_captured', { sessionId })
+
+        // Save lead to database and trigger WhatsApp notifications
+        saveLeadToDatabase({
+          name: capturedLeadData.name as string | undefined,
+          phone: capturedLeadData.phone as string,
+          studentClass: capturedLeadData.studentClass as string | undefined,
+          sessionId,
+          conversationSummary: getConversationSummary(),
+          currentPage,
+        }).catch((err) => {
+          console.error('Failed to save Aria lead to database:', err)
+        })
       } else {
         onAnalyticsEvent?.('aria_lead_capture_started', { stage: nextStage })
       }
 
       return true
     },
-    [leadStage, leadData, sessionId, updateLeadData, setLeadStage, onLeadCaptured, onAnalyticsEvent]
+    [
+      leadStage,
+      leadData,
+      sessionId,
+      currentPage,
+      updateLeadData,
+      setLeadStage,
+      onLeadCaptured,
+      onAnalyticsEvent,
+      getConversationSummary,
+    ]
   )
 
   // Start lead capture flow

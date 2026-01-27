@@ -32,6 +32,10 @@
     "src/app/api/whatsapp/**/*.ts": {
       "maxDuration": 30,
       "memory": 512
+    },
+    "src/app/api/aria/**/*.ts": {
+      "maxDuration": 30,
+      "memory": 512
     }
   },
   "images": {
