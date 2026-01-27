@@ -1347,6 +1347,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.8,
     },
+    // Noida HowTo Guide Page
+    {
+      url: `${baseUrl}/how-to-prepare-neet-noida`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: lastUpdated,

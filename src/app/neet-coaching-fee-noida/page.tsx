@@ -4,9 +4,9 @@ import { Phone, IndianRupee, CheckCircle, ArrowRight, Star, Monitor, MapPin, Bui
 import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 
 export const metadata: Metadata = {
-  title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison | Cerebrum Academy',
+  title: 'NEET Coaching Fee in Noida 2026 | Fee Comparison Rs 48,000-3,50,000 | Cerebrum',
   description:
-    'NEET coaching fee comparison in Noida 2026. Fees range from Rs 45,000 to Rs 3,50,000. Compare Aakash, Allen, FIITJEE, Cerebrum fees. Online & hybrid options. Call 88264-44334!',
+    'NEET coaching fee in Noida 2026: Rs 48,000-3,50,000. Compare Cerebrum (Rs 48,000, AIIMS faculty), Allen, Aakash, FIITJEE fees. EMI available. 98% success rate. Best value coaching in Noida!',
   keywords: [
     'neet coaching fee noida',
     'neet coaching fees greater noida',
@@ -14,6 +14,17 @@ export const metadata: Metadata = {
     'neet coaching fee comparison noida',
     'affordable neet coaching noida',
     'online neet coaching fee noida',
+    'cheapest neet coaching noida',
+    'neet coaching emi noida',
+    'neet coaching installment noida',
+    'neet dropper fee noida',
+    'neet foundation fee noida',
+    'class 11 neet coaching fee noida',
+    'class 12 neet coaching fee noida',
+    'neet coaching fee sector 18 noida',
+    'neet coaching fee sector 62 noida',
+    'best value neet coaching noida',
+    'neet coaching scholarship noida',
   ],
   openGraph: {
     title: 'NEET Coaching Fee Noida 2026 | Complete Fee Comparison',
