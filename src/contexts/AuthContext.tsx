@@ -1,9 +1,22 @@
 'use client'
 
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react'
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  useCallback,
+  useRef,
+  ReactNode,
+} from 'react'
 import { useRouter } from 'next/navigation'
 import type { UserRole } from '@/generated/prisma'
 import { signOut as firebaseSignOut } from '@/lib/firebase/phone-auth'
+
+// Token expiry configuration
+const TOKEN_EXPIRY_MS = 15 * 60 * 1000 // 15 minutes
+const REFRESH_BUFFER_MS = 2 * 60 * 1000 // Refresh 2 minutes before expiry
+const MIN_REFRESH_INTERVAL_MS = 30 * 1000 // Don't refresh more than once per 30 seconds
 
 export interface NotificationPreferences {
   email?: boolean
@@ -80,6 +93,7 @@ export interface AuthContextType {
   permissions: string[]
   hasPermission: (permission: string) => boolean
   hasRole: (role: UserRole | UserRole[]) => boolean
+  authFetch: (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>
 }
 
 export interface SignupData {
@@ -116,6 +130,52 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const [permissions, setPermissions] = useState<string[]>([])
   const router = useRouter()
 
+  // Track token expiry and refresh state
+  const tokenExpiryRef = useRef<number>(0)
+  const lastRefreshRef = useRef<number>(0)
+  const refreshTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const isRefreshingRef = useRef<boolean>(false)
+
+  // Update token expiry time
+  const updateTokenExpiry = useCallback((expiresInSeconds?: number) => {
+    const expiryMs = expiresInSeconds ? expiresInSeconds * 1000 : TOKEN_EXPIRY_MS
+    tokenExpiryRef.current = Date.now() + expiryMs
+  }, [])
+
+  // Check if token needs refresh
+  const shouldRefreshToken = useCallback(() => {
+    const now = Date.now()
+    const timeSinceLastRefresh = now - lastRefreshRef.current
+    const timeUntilExpiry = tokenExpiryRef.current - now
+
+    // Don't refresh too frequently
+    if (timeSinceLastRefresh < MIN_REFRESH_INTERVAL_MS) {
+      return false
+    }
+
+    // Refresh if within buffer period of expiry
+    return timeUntilExpiry <= REFRESH_BUFFER_MS
+  }, [])
+
+  // Schedule next refresh
+  const scheduleRefresh = useCallback(() => {
+    if (refreshTimeoutRef.current) {
+      clearTimeout(refreshTimeoutRef.current)
+    }
+
+    const now = Date.now()
+    const timeUntilRefresh = Math.max(
+      tokenExpiryRef.current - now - REFRESH_BUFFER_MS,
+      MIN_REFRESH_INTERVAL_MS
+    )
+
+    refreshTimeoutRef.current = setTimeout(() => {
+      if (user && !isRefreshingRef.current) {
+        refreshTokenInternal()
+      }
+    }, timeUntilRefresh)
+  }, [user])
+
   // PERFORMANCE: Defer auth initialization to avoid blocking initial render
   // Only check auth immediately on protected routes, defer on public pages
   useEffect(() => {
@@ -141,38 +201,43 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }, [])
 
-  // Auto-refresh tokens with Page Visibility API
+  // Handle visibility change - refresh immediately if needed when tab becomes visible
   useEffect(() => {
     if (!user) return
 
-    let intervalId: NodeJS.Timeout | null = null
-
-    const startInterval = () => {
-      intervalId = setInterval(
-        () => {
-          refreshToken()
-        },
-        14 * 60 * 1000
-      ) // Refresh every 14 minutes
+    const handleVisibilityChange = () => {
+      if (!document.hidden && user) {
+        // Tab became visible - check if we need to refresh
+        if (shouldRefreshToken()) {
+          refreshTokenInternal()
+        } else {
+          // Reschedule refresh based on current expiry
+          scheduleRefresh()
+        }
+      }
     }
 
-    const handleVisibilityChange = () => {
-      if (document.hidden && intervalId) {
-        clearInterval(intervalId)
-        intervalId = null
-      } else if (!document.hidden && !intervalId) {
-        startInterval()
+    // Handle online/offline status
+    const handleOnline = () => {
+      if (user && shouldRefreshToken()) {
+        refreshTokenInternal()
       }
     }
 
     document.addEventListener('visibilitychange', handleVisibilityChange)
-    startInterval()
+    window.addEventListener('online', handleOnline)
+
+    // Initial schedule
+    scheduleRefresh()
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange)
-      if (intervalId) clearInterval(intervalId)
+      window.removeEventListener('online', handleOnline)
+      if (refreshTimeoutRef.current) {
+        clearTimeout(refreshTimeoutRef.current)
+      }
     }
-  }, [user])
+  }, [user, shouldRefreshToken, scheduleRefresh])
 
   const initializeAuth = async () => {
     try {
@@ -189,12 +254,64 @@ export function AuthProvider({ children }: AuthProviderProps) {
         if (data.valid && data.user) {
           setUser(data.user)
           setPermissions(getUserPermissions(data.user.role))
+          // Set expiry based on response or default
+          if (data.expiresAt) {
+            tokenExpiryRef.current = new Date(data.expiresAt).getTime()
+          } else {
+            updateTokenExpiry()
+          }
+          lastRefreshRef.current = Date.now()
         }
       }
     } catch (error) {
       console.error('Auth initialization error:', error)
     } finally {
       setIsLoading(false)
+    }
+  }
+
+  // Internal refresh function with locking
+  const refreshTokenInternal = async (): Promise<boolean> => {
+    // Prevent concurrent refreshes
+    if (isRefreshingRef.current) {
+      return false
+    }
+
+    isRefreshingRef.current = true
+
+    try {
+      const response = await fetch('/api/auth/refresh', {
+        method: 'POST',
+        credentials: 'include',
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        if (data.success && data.user) {
+          setUser(data.user)
+          setPermissions(getUserPermissions(data.user.role))
+          // Update expiry from response
+          updateTokenExpiry(data.expiresIn)
+          lastRefreshRef.current = Date.now()
+          // Schedule next refresh
+          scheduleRefresh()
+          return true
+        }
+      }
+
+      // If refresh fails, clear auth state
+      setUser(null)
+      setPermissions([])
+      tokenExpiryRef.current = 0
+      return false
+    } catch (error) {
+      console.error('Token refresh error:', error)
+      setUser(null)
+      setPermissions([])
+      tokenExpiryRef.current = 0
+      return false
+    } finally {
+      isRefreshingRef.current = false
     }
   }
 
@@ -214,6 +331,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
       if (response.ok && data.success) {
         setUser(data.user)
         setPermissions(getUserPermissions(data.user.role))
+        // Set token expiry
+        updateTokenExpiry(data.expiresIn)
+        lastRefreshRef.current = Date.now()
+        // Schedule auto-refresh
+        scheduleRefresh()
         return { success: true }
       } else {
         return { success: false, error: data.message || 'Login failed' }
@@ -240,6 +362,11 @@ export function AuthProvider({ children }: AuthProviderProps) {
       if (response.ok && data.success) {
         setUser(data.user)
         setPermissions(getUserPermissions(data.user.role))
+        // Set token expiry
+        updateTokenExpiry(data.expiresIn)
+        lastRefreshRef.current = Date.now()
+        // Schedule auto-refresh
+        scheduleRefresh()
         return { success: true }
       } else {
         return { success: false, error: data.message || 'Signup failed' }
@@ -252,6 +379,21 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
   const logout = async () => {
     try {
+      // Clear refresh timeout
+      if (refreshTimeoutRef.current) {
+        clearTimeout(refreshTimeoutRef.current)
+        refreshTimeoutRef.current = null
+      }
+      // Clear token expiry
+      tokenExpiryRef.current = 0
+      lastRefreshRef.current = 0
+
+      // Call logout API to clear server-side session
+      await fetch('/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include',
+      }).catch(() => {})
+
       await firebaseSignOut()
     } catch (error) {
       console.error('Logout error:', error)
@@ -262,33 +404,36 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
   }
 
+  // Public refresh function (delegates to internal)
   const refreshToken = async (): Promise<boolean> => {
-    try {
-      const response = await fetch('/api/auth/refresh', {
-        method: 'POST',
-        credentials: 'include',
-      })
+    return refreshTokenInternal()
+  }
 
-      if (response.ok) {
-        const data = await response.json()
-        if (data.success && data.user) {
-          setUser(data.user)
-          setPermissions(getUserPermissions(data.user.role))
-          return true
+  // Authenticated fetch wrapper that handles 401 errors with automatic refresh
+  const authFetch = useCallback(
+    async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+      // Ensure credentials are included
+      const fetchInit: RequestInit = {
+        ...init,
+        credentials: 'include',
+      }
+
+      // First attempt
+      let response = await fetch(input, fetchInit)
+
+      // If 401, try to refresh and retry once
+      if (response.status === 401 && user) {
+        const refreshed = await refreshTokenInternal()
+        if (refreshed) {
+          // Retry the original request
+          response = await fetch(input, fetchInit)
         }
       }
 
-      // If refresh fails, clear auth state
-      setUser(null)
-      setPermissions([])
-      return false
-    } catch (error) {
-      console.error('Token refresh error:', error)
-      setUser(null)
-      setPermissions([])
-      return false
-    }
-  }
+      return response
+    },
+    [user]
+  )
 
   const updateProfile = async (profileData: ProfileUpdateData) => {
     try {
@@ -337,6 +482,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     permissions,
     hasPermission,
     hasRole,
+    authFetch,
   }
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
