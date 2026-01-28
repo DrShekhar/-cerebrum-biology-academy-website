@@ -546,6 +546,7 @@ export class AuthRateLimit {
   private static devAttempts = new Map<string, { count: number; lastAttempt: number }>()
   private static readonly MAX_ATTEMPTS = 10 // Reasonable limit for auth attempts
   private static readonly LOCKOUT_DURATION_SECONDS = 15 * 60 // 15 minutes lockout
+  private static hasLoggedProductionWarning = false
 
   /**
    * Check rate limit using Upstash Redis (production) or in-memory (development)
@@ -582,16 +583,25 @@ export class AuthRateLimit {
       }
     } catch (error) {
       // Log error but continue with fallback
-      console.error('[AuthRateLimit] Redis rate limit error, using fallback:', error)
+      console.error('[AuthRateLimit] Redis rate limit error:', error)
+
+      // In production, log critical security warning but allow request
+      // to prevent service outage while ensuring visibility of the issue
+      if (process.env.NODE_ENV === 'production') {
+        if (!this.hasLoggedProductionWarning) {
+          console.error(
+            '[SECURITY CRITICAL] Redis rate limiting failed in production! ' +
+              'Auth endpoints are vulnerable to brute force attacks. ' +
+              'Configure UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN immediately.'
+          )
+          this.hasLoggedProductionWarning = true
+        }
+        // Allow request but log - don't block legitimate users due to Redis issues
+        return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS }
+      }
     }
 
-    // Fallback to in-memory for development
-    if (process.env.NODE_ENV === 'production') {
-      console.warn(
-        '[SECURITY WARNING] Using in-memory rate limiting in production. Configure UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN for proper distributed rate limiting.'
-      )
-    }
-
+    // In development, use in-memory fallback
     return this.checkRateLimitInMemory(identifier)
   }
 

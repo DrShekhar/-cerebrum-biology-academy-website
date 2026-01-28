@@ -13,12 +13,24 @@ const upstashRedis =
       })
     : null
 
-// Log Redis status once at startup (only in development)
-if (process.env.NODE_ENV === 'development') {
-  if (upstashRedis) {
+// Track if production warning has been logged
+let hasLoggedProductionWarning = false
+
+// Log Redis status once at startup
+if (upstashRedis) {
+  if (process.env.NODE_ENV === 'development') {
     console.info('Rate Limiting: Using Upstash Redis (distributed)')
-  } else {
+  }
+} else {
+  if (process.env.NODE_ENV === 'development') {
     console.info('Rate Limiting: Using in-memory storage (local only)')
+  } else if (process.env.NODE_ENV === 'production' && !hasLoggedProductionWarning) {
+    console.error(
+      '[SECURITY CRITICAL] Upstash Redis not configured in production! ' +
+        'Rate limiting will be ineffective. Configure UPSTASH_REDIS_REST_URL ' +
+        'and UPSTASH_REDIS_REST_TOKEN environment variables.'
+    )
+    hasLoggedProductionWarning = true
   }
 }
 
@@ -107,12 +119,27 @@ export async function withRateLimit(
           error: result.success ? undefined : 'Rate limit exceeded',
         }
       } catch (upstashError) {
-        logger.error('Upstash rate limiting error, falling back to in-memory:', upstashError)
-        // Fall through to in-memory rate limiting
+        logger.error('Upstash rate limiting error:', upstashError)
+
+        // In production, log critical error but don't fall through to in-memory
+        if (process.env.NODE_ENV === 'production') {
+          logger.error(
+            '[SECURITY] Redis rate limiting failed in production - allowing request to prevent service disruption'
+          )
+          // Allow request but log the failure for monitoring
+          return {
+            success: true,
+            limit,
+            remaining: limit,
+            resetTime: Date.now() + window,
+            error: undefined,
+          }
+        }
+        // In development, fall through to in-memory rate limiting
       }
     }
 
-    // Fallback: In-memory rate limiting (for local dev or if Upstash unavailable)
+    // Fallback: In-memory rate limiting (for local dev only - ineffective in production serverless)
     const now = Date.now()
 
     // Get current rate limit state

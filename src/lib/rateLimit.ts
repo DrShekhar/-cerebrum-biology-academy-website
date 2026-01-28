@@ -1,13 +1,23 @@
 import { NextRequest } from 'next/server'
 import { RateLimitService } from '@/lib/cache/redis'
 
+const IS_PRODUCTION = process.env.NODE_ENV === 'production'
+
+// Check if Redis is configured
+const REDIS_CONFIGURED = !!(
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+)
+
 interface RateLimitStore {
   count: number
   resetTime: number
 }
 
-// In-memory fallback when Redis is unavailable
+// In-memory fallback when Redis is unavailable (development only)
 const rateLimitStore = new Map<string, RateLimitStore>()
+
+// Track if we've already warned about missing Redis in production
+let hasWarnedAboutRedis = false
 
 export interface RateLimitConfig {
   maxRequests: number
@@ -28,6 +38,26 @@ export async function rateLimit(
   const identifier = getClientIdentifier(req)
   const windowSeconds = Math.ceil(config.windowMs / 1000)
 
+  // In production, enforce Redis requirement
+  if (IS_PRODUCTION && !REDIS_CONFIGURED) {
+    if (!hasWarnedAboutRedis) {
+      console.error(
+        '[SECURITY CRITICAL] Redis not configured in production! ' +
+          'Rate limiting is disabled. Configure UPSTASH_REDIS_REST_URL and ' +
+          'UPSTASH_REDIS_REST_TOKEN environment variables immediately.'
+      )
+      hasWarnedAboutRedis = true
+    }
+    // In production without Redis, allow requests but log the security risk
+    // This prevents service outage while alerting about the misconfiguration
+    return {
+      success: true,
+      limit: config.maxRequests,
+      remaining: config.maxRequests,
+      reset: Date.now() + config.windowMs,
+    }
+  }
+
   try {
     // Use Redis-based rate limiting (primary)
     const result = await RateLimitService.checkIPRateLimit(
@@ -43,7 +73,20 @@ export async function rateLimit(
       reset: result.resetTime,
     }
   } catch (error) {
-    // Fallback to in-memory rate limiting if Redis fails
+    // In production, Redis failures are critical
+    if (IS_PRODUCTION) {
+      console.error('[SECURITY] Redis rate limiting failed in production:', error)
+      // Allow request but log the failure - don't block users due to Redis issues
+      // but ensure the error is tracked for immediate investigation
+      return {
+        success: true,
+        limit: config.maxRequests,
+        remaining: config.maxRequests,
+        reset: Date.now() + config.windowMs,
+      }
+    }
+
+    // In development, fallback to in-memory rate limiting
     console.warn('Redis rate limiting failed, using in-memory fallback:', error)
     return inMemoryRateLimit(identifier, config)
   }
