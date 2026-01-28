@@ -98,22 +98,28 @@ export function useFirebaseSession(): SessionState {
         })
         retryCount.current = 0 // Reset retry count on success
       } else {
-        // Not authenticated - check if we should retry (cookies might not be set yet)
-        // Check for various cookie names that might indicate a pending session
-        const hasSessionCookie =
-          cookies.includes('authjs.session-token') ||
-          cookies.includes('__Secure-authjs.session-token') ||
-          cookies.includes('firebase-session')
+        // Not authenticated - retry a few times since cookies might not be set yet
+        // Note: httpOnly cookies aren't visible to document.cookie, so we retry
+        // based on whether this looks like a fresh page load after login
+        const isLikelyPostLogin =
+          window.location.search.includes('_t=') || // Timestamp from redirect
+          document.referrer.includes('sign-in') ||
+          document.referrer.includes('sign-up')
 
-        if (retryCount.current < maxRetries && hasSessionCookie) {
+        // Always retry at least once on initial load, more times if this looks like post-login
+        const shouldRetry = retryCount.current < (isLikelyPostLogin ? maxRetries : 1)
+
+        if (shouldRetry) {
           retryCount.current++
-          // Exponential backoff: 800ms, 1200ms, 1800ms
-          const delay = 800 * Math.pow(1.5, retryCount.current - 1)
+          // Exponential backoff: 600ms, 900ms, 1350ms
+          const delay = 600 * Math.pow(1.5, retryCount.current - 1)
           console.log(
-            '[useFirebaseSession] Cookie found but not authenticated, retrying in',
+            '[useFirebaseSession] Not authenticated yet, retrying in',
             delay,
             'ms (attempt',
             retryCount.current,
+            '/',
+            isLikelyPostLogin ? maxRetries : 1,
             ')'
           )
           await new Promise((resolve) => setTimeout(resolve, delay))

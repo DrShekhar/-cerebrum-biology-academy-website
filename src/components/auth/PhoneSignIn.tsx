@@ -317,17 +317,34 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
         ? `${finalRedirectUrl}&_t=${Date.now()}`
         : `${finalRedirectUrl}?_t=${Date.now()}`
 
-      // Longer delay to ensure cookies are fully propagated before redirect
-      // This prevents the race condition where middleware reads stale session state
-      setTimeout(() => {
+      // Redirect after a brief delay to ensure cookies are propagated
+      // Using shorter delay (800ms) with immediate fallback
+      const performRedirect = () => {
         if (onSuccess) {
           onSuccess()
         } else {
           console.log('[PhoneSignIn] Redirecting to:', redirectWithTimestamp, 'role:', userRole)
-          // Use replace to prevent back button from returning to login
-          window.location.replace(redirectWithTimestamp)
+          try {
+            // Primary: Use replace to prevent back button from returning to login
+            window.location.replace(redirectWithTimestamp)
+          } catch (redirectError) {
+            console.error('[PhoneSignIn] Replace failed, using href:', redirectError)
+            // Fallback: Direct assignment
+            window.location.href = redirectWithTimestamp
+          }
         }
-      }, 1200)
+      }
+
+      // Execute redirect after delay
+      setTimeout(performRedirect, 800)
+
+      // Failsafe: If still on this page after 3 seconds, force redirect
+      setTimeout(() => {
+        if (window.location.pathname.includes('sign-in')) {
+          console.warn('[PhoneSignIn] Failsafe redirect triggered')
+          window.location.href = redirectWithTimestamp
+        }
+      }, 3000)
     } catch (err: unknown) {
       const error = err as Error
       console.error('[PhoneSignIn] Session creation error:', error)
