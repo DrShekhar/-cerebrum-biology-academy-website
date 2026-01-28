@@ -149,17 +149,17 @@ const locationData = {
   },
   faridabad: {
     name: 'Cerebrum Biology Academy - Faridabad',
-    address: 'Sector 15, Near Crown Interiors Mall',
-    streetAddress: 'Sector 15, Near Crown Interiors Mall',
+    address: 'Sector 17, Faridabad',
+    streetAddress: 'Sector 17',
     addressLocality: 'Faridabad',
     addressRegion: 'Haryana',
-    postalCode: '121007',
+    postalCode: '121002',
     geo: { lat: '28.3870', lng: '77.3070' },
     phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
     image: 'https://cerebrumbiologyacademy.com/locations/faridabad-center.jpg',
     priceRange: '₹₹',
-    nearbyLandmarks: ['Crown Interiors Mall', 'Sector 15 Faridabad', 'NHPC Chowk'],
+    nearbyLandmarks: ['Sector 17 Market', 'NHPC Chowk', 'Faridabad Railway Station'],
     studentCount: '550',
     reviews: [
       {

@@ -94,7 +94,7 @@ Disallow: /dashboard/
 # 2. Rohini, Delhi (DC Chauk, Sector 9 - Near Rohini West Metro)
 # 3. Gurugram, Haryana (Sector 51 - Near HUDA City Centre Metro)
 # 4. Green Park, New Delhi (Near Green Park Metro)
-# 5. Faridabad, Haryana (Sector 21)
+# 5. Faridabad, Haryana (Sector 17)
 
 # =====================================================
 # CONTACT INFORMATION

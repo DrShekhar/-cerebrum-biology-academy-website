@@ -171,10 +171,10 @@ export const delhiNCRAreas: LocalArea[] = [
     displayName: 'Faridabad',
     state: 'Haryana',
     description:
-      'Expert biology coaching in Faridabad for NEET droppers and Class 11-12 students. Located in Sector 15 with proven track record of medical admissions.',
+      'Expert biology coaching in Faridabad for NEET droppers and Class 11-12 students. Located in Sector 17 with proven track record of medical admissions.',
     metaTitle: 'Biology Coaching Faridabad | NEET Droppers Batch | Best Biology Teacher',
     metaDescription:
-      'Specialized biology coaching in Faridabad for NEET preparation. Expert faculty from AIIMS, small batch sizes, guaranteed results. Sector 15 location.',
+      'Specialized biology coaching in Faridabad for NEET preparation. Expert faculty from AIIMS, small batch sizes, guaranteed results. Sector 17 location.',
     keywords: [
       'biology coaching faridabad',
       'NEET coaching faridabad',
@@ -221,7 +221,7 @@ export const delhiNCRAreas: LocalArea[] = [
       'Weekend intensive programs available',
     ],
     localTestimonials: ['3', '4'],
-    centerAddress: 'SCO 45, Sector 15, Near NIT, Faridabad - 121007',
+    centerAddress: 'Sector 17, Near NIT, Faridabad - 121002',
     coordinates: { lat: 28.4089, lng: 77.3178 },
   },
   {

@@ -70,11 +70,11 @@ export const offlineLocations: Location[] = [
   {
     id: 'faridabad',
     name: 'Faridabad Center',
-    address: 'Sector 15, Near Crown Interiors Mall',
+    address: 'Sector 17, Faridabad',
     city: 'Faridabad',
-    pincode: '121007',
+    pincode: '121002',
     phone: ['+918826444334', '+919311946297'],
-    googleMapsUrl: 'https://maps.google.com/?q=Sector+15+Faridabad+121007',
+    googleMapsUrl: 'https://maps.google.com/?q=Sector+17+Faridabad+121002',
     googleMapsEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3508.123!2d77.310!3d28.380!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDIyJzQ4LjAiTiA3N8KwMTgnMzYuMCJF!5e0!3m2!1sen!2sin!4v1234567890',
     features: ['Spacious Classrooms', 'Study Material Library', 'Mock Test Center'],

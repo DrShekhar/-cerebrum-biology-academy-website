@@ -81,7 +81,7 @@ Comprehensive SEO enhancement for Cerebrum Biology Academy to achieve Delhi NCR 
 
 | Page          | URL                          | Target Areas                    |
 | ------------- | ---------------------------- | ------------------------------- |
-| Faridabad Hub | `/biology-tutor-faridabad`   | NIT, Sector 15, Old Faridabad   |
+| Faridabad Hub | `/biology-tutor-faridabad`   | NIT, Sector 17, Old Faridabad   |
 | Ballabhgarh   | `/biology-tutor-ballabhgarh` | Greater Faridabad, Sector 64-89 |
 | Gurugram      | `/biology-tutor-gurugram`    | DLF, Sohna Road, Golf Course    |
 

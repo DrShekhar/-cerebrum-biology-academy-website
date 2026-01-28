@@ -49,7 +49,7 @@ const BUSINESS_INFO = {
     },
     {
       name: 'Cerebrum Biology Academy - Faridabad',
-      address: 'Sector 15, Near Crown Interiors Mall, Faridabad - 121007',
+      address: 'Sector 17, Faridabad - 121002',
       phone: CONTACT_INFO.phone.formatted.primary,
       geo: { lat: '28.3870', lng: '77.3070' },
     },

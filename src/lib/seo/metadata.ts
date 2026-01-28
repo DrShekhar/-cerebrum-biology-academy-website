@@ -715,9 +715,9 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-ghaziabad',
   },
   neetCoachingFaridabad: {
-    title: 'Best NEET Coaching in Faridabad 2025 | Sector 15, 16, 21 | Cerebrum Academy',
+    title: 'Best NEET Coaching in Faridabad 2025 | Sector 17 | Cerebrum Academy',
     description:
-      'Best NEET coaching in Faridabad - Sector 15, 16, 21, NIT, Ballabhgarh. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
+      'Best NEET coaching in Faridabad - Sector 17, NIT, Ballabhgarh. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
       'neet coaching faridabad',
       'best neet coaching faridabad',
