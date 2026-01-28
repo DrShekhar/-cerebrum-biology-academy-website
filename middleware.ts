@@ -338,13 +338,9 @@ export default async function middleware(req: NextRequest) {
     )
   }
 
-  // Debug headers in development
-  if (process.env.NODE_ENV === 'development' && userId) {
-    response.headers.set('X-User-ID', userId)
-    if (userRole) {
-      response.headers.set('X-User-Role', userRole)
-    }
-  }
+  // SECURITY (2026-01-28): Debug headers removed - never expose user IDs or roles in headers
+  // Even in development, these can be logged by proxies, browser extensions, or debugging tools
+  // Use browser DevTools Application tab to inspect cookies instead
 
   // Permissions Policy
   response.headers.set(

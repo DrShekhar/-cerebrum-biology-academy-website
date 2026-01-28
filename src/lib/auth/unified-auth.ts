@@ -1,21 +1,47 @@
 /**
  * Unified Authentication Service
  *
+ * CANONICAL AUTH SYSTEM - Use this for all server-side authentication
+ *
  * This module provides a single entry point for authentication validation,
- * coordinating between multiple auth methods:
- * 1. NextAuth sessions (primary for web)
- * 2. Firebase JWT tokens (for Firebase-authenticated users)
- * 3. Custom JWT tokens (for API clients)
+ * coordinating between multiple auth methods in order of priority:
+ *
+ * AUTH HIERARCHY (2026-01-28):
+ * ===========================
+ * 1. NextAuth sessions (PRIMARY for web users)
+ *    - Cookie: __Secure-authjs.session-token or authjs.session-token
+ *    - Used by: Browser-based users after login
+ *
+ * 2. Custom JWT tokens (for API clients and mobile apps)
+ *    - Header: Authorization: Bearer <token>
+ *    - Cookie: auth-token
+ *    - Used by: API consumers, mobile apps
+ *
+ * 3. API Keys (for service-to-service calls)
+ *    - Header: x-api-key or x-admin-key
+ *    - Used by: Internal services, admin tools
+ *
+ * 4. Firebase tokens (DEPRECATED - kept for backwards compatibility)
+ *    - Header: x-firebase-token
+ *    - NOTE: Firebase auth is deprecated. Use NextAuth instead.
+ *
+ * CLIENT-SIDE AUTH:
+ * - Use `useAuth()` from `@/contexts/AuthContext` (NOT from firebase/auth-context)
  *
  * USAGE:
  * ```typescript
- * import { unifiedAuth } from '@/lib/auth/unified-auth'
+ * import { unifiedAuth, requireAuth, requireAdmin } from '@/lib/auth/unified-auth'
  *
- * // In API route
+ * // Basic auth check
  * const auth = await unifiedAuth.validate(request)
  * if (!auth.authenticated) {
  *   return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
  * }
+ *
+ * // Role-based auth
+ * const auth = await requireAdmin(request)
+ * const auth = await requireTeacher(request)
+ * const auth = await requireRole(request, ['ADMIN', 'COUNSELOR'])
  * ```
  *
  * @module unified-auth
@@ -250,20 +276,30 @@ export class UnifiedAuthService {
 
   /**
    * Try Firebase auth validation
+   * @deprecated Firebase auth is deprecated. Use NextAuth or custom JWT instead.
+   * This method is kept for backwards compatibility only.
    */
   private async tryFirebaseAuth(request: NextRequest): Promise<UnifiedAuthResult> {
     try {
-      // Firebase auth typically uses custom tokens that are validated differently
-      // Check for firebase-specific indicators
       const firebaseToken = request.headers.get('x-firebase-token')
 
       if (!firebaseToken) {
         return { authenticated: false, error: 'No Firebase token' }
       }
 
-      // Firebase tokens should be validated via Firebase Admin SDK
-      // This is a placeholder - actual implementation depends on Firebase setup
-      return { authenticated: false, error: 'Firebase validation not implemented' }
+      // DEPRECATED: Firebase auth is no longer supported
+      // Log warning when someone attempts to use Firebase auth
+      console.warn(
+        '[DEPRECATED] Firebase authentication attempted. ' +
+          'Firebase auth is deprecated - migrate to NextAuth or custom JWT. ' +
+          'See @/lib/auth/unified-auth.ts for the auth hierarchy.'
+      )
+
+      // Firebase tokens are not validated - this auth method is deprecated
+      return {
+        authenticated: false,
+        error: 'Firebase auth is deprecated. Use NextAuth or JWT authentication instead.',
+      }
     } catch (error) {
       return {
         authenticated: false,

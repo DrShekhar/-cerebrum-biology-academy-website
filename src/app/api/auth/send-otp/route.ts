@@ -20,12 +20,19 @@ function generateOTP(): string {
 }
 
 // Rate limiting: Max 5 OTPs per mobile per hour, with progressive delays
-async function checkRateLimit(mobile: string): Promise<{ allowed: boolean; waitTime?: number }> {
-  const oneHourAgo = new Date(Date.now() - 60 * 60 * 1000)
-  const fiveMinutesAgo = new Date(Date.now() - 5 * 60 * 1000)
+// SECURITY (2026-01-28): Fail-secure on errors, explicit UTC timestamps
+async function checkRateLimit(mobile: string): Promise<{
+  allowed: boolean
+  waitTime?: number
+  securityDegraded?: boolean
+}> {
+  // Use server-side timestamps in UTC explicitly
+  const now = Date.now()
+  const oneHourAgo = new Date(now - 60 * 60 * 1000)
+  const fiveMinutesAgo = new Date(now - 5 * 60 * 1000)
 
   try {
-    // Check last hour
+    // Check last hour - database timestamps are stored in UTC
     const recentOtps = await prisma.otpVerification.findMany({
       where: {
         mobile: mobile,
@@ -40,15 +47,17 @@ async function checkRateLimit(mobile: string): Promise<{ allowed: boolean; waitT
 
     const otpCount = recentOtps.length
 
-    // Check last 5 minutes
-    const recentOtpsShort = recentOtps.filter((otp) => otp.createdAt >= fiveMinutesAgo)
+    // Check last 5 minutes - compare using getTime() for accurate UTC comparison
+    const recentOtpsShort = recentOtps.filter(
+      (otp) => otp.createdAt.getTime() >= fiveMinutesAgo.getTime()
+    )
 
     const shortTermCount = recentOtpsShort.length
 
     // Allow up to 5 OTPs per hour, but max 2 in 5 minutes
     if (shortTermCount >= 2) {
       const lastOtpTime = recentOtpsShort[0]?.createdAt.getTime() || 0
-      const waitTime = Math.max(0, 5 * 60 * 1000 - (Date.now() - lastOtpTime))
+      const waitTime = Math.max(0, 5 * 60 * 1000 - (now - lastOtpTime))
       return { allowed: false, waitTime }
     }
 
@@ -58,8 +67,19 @@ async function checkRateLimit(mobile: string): Promise<{ allowed: boolean; waitT
 
     return { allowed: true }
   } catch (error) {
-    console.error('Rate limit check error:', error)
-    return { allowed: true } // Allow on error to not block users
+    console.error('[SECURITY] Rate limit check error:', error)
+    // SECURITY: Fail-secure - block on error to prevent abuse
+    // This prevents attackers from exploiting database errors to bypass rate limiting
+    if (process.env.NODE_ENV === 'production') {
+      console.error(
+        '[SECURITY ALERT] OTP rate limiting failed - blocking request for security. ' +
+          'Investigate database connectivity issues immediately.'
+      )
+      return { allowed: false, waitTime: 60 * 1000, securityDegraded: true } // 1 minute wait on error
+    }
+    // In development, allow with warning
+    console.warn('[DEV] Rate limit check failed, allowing for development')
+    return { allowed: true, securityDegraded: true }
   }
 }
 

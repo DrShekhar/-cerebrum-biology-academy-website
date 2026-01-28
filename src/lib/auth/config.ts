@@ -537,25 +537,33 @@ export class SessionManager {
  * Uses Upstash Redis in production for distributed rate limiting
  * Falls back to in-memory for development (with warning)
  *
- * SECURITY NOTE: In-memory rate limiting is ineffective in serverless environments
- * because each function instance has its own memory. Always configure Upstash
- * Redis for production deployments.
+ * SECURITY NOTE (2026-01-28):
+ * - In production, Redis failures now trigger FAIL-SECURE behavior
+ * - Limited emergency fallback allows 3 attempts per instance to prevent complete lockout
+ * - This is a defense-in-depth measure, not a replacement for proper Redis configuration
  */
 export class AuthRateLimit {
-  // In-memory fallback for development only
-  private static devAttempts = new Map<string, { count: number; lastAttempt: number }>()
-  private static readonly MAX_ATTEMPTS = 10 // Reasonable limit for auth attempts
+  // In-memory tracking - used for development and emergency production fallback
+  private static attempts = new Map<string, { count: number; lastAttempt: number }>()
+  private static readonly MAX_ATTEMPTS = 10 // Normal limit with Redis
+  private static readonly EMERGENCY_MAX_ATTEMPTS = 3 // Strict limit when Redis fails (per serverless instance)
   private static readonly LOCKOUT_DURATION_SECONDS = 15 * 60 // 15 minutes lockout
   private static hasLoggedProductionWarning = false
+  private static redisFailureCount = 0
+  private static readonly MAX_REDIS_FAILURES_BEFORE_ALERT = 5
 
   /**
    * Check rate limit using Upstash Redis (production) or in-memory (development)
+   * SECURITY: Implements fail-secure pattern - rejects requests when Redis unavailable in production
    */
   static async checkRateLimit(identifier: string): Promise<{
     allowed: boolean
     remainingAttempts?: number
     lockoutEndsAt?: Date
+    securityDegraded?: boolean // Indicates running in emergency fallback mode
   }> {
+    const isProduction = process.env.NODE_ENV === 'production'
+
     // Try to use Upstash rate limiter first (production)
     try {
       const { getRateLimiter, isRateLimitEnabled } = await import('@/lib/ratelimit/config')
@@ -564,6 +572,9 @@ export class AuthRateLimit {
         const limiter = getRateLimiter('authLogin')
         if (limiter) {
           const result = await limiter.limit(identifier)
+
+          // Reset failure count on success
+          this.redisFailureCount = 0
 
           if (!result.success) {
             // Calculate lockout end time from reset timestamp
@@ -581,73 +592,120 @@ export class AuthRateLimit {
           }
         }
       }
-    } catch (error) {
-      // Log error but continue with fallback
-      console.error('[AuthRateLimit] Redis rate limit error:', error)
 
-      // In production, log critical security warning but allow request
-      // to prevent service outage while ensuring visibility of the issue
-      if (process.env.NODE_ENV === 'production') {
+      // Redis not configured - handle based on environment
+      if (isProduction) {
         if (!this.hasLoggedProductionWarning) {
           console.error(
-            '[SECURITY CRITICAL] Redis rate limiting failed in production! ' +
-              'Auth endpoints are vulnerable to brute force attacks. ' +
-              'Configure UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN immediately.'
+            '[SECURITY CRITICAL] Redis rate limiting not configured in production! ' +
+              'Configure UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN immediately. ' +
+              'Using emergency per-instance fallback with strict limits.'
           )
           this.hasLoggedProductionWarning = true
         }
-        // Allow request but log - don't block legitimate users due to Redis issues
-        return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS }
+        // Use emergency fallback with strict limits
+        return this.checkEmergencyRateLimit(identifier)
+      }
+    } catch (error) {
+      // Log error and track failure count
+      console.error('[AuthRateLimit] Redis rate limit error:', error)
+      this.redisFailureCount++
+
+      // In production, implement fail-secure with emergency fallback
+      if (isProduction) {
+        // Log escalating warnings
+        if (this.redisFailureCount >= this.MAX_REDIS_FAILURES_BEFORE_ALERT) {
+          console.error(
+            `[SECURITY ALERT] Redis rate limiting has failed ${this.redisFailureCount} times! ` +
+              'System is operating in degraded security mode. ' +
+              'Investigate immediately: check UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN.'
+          )
+        } else if (!this.hasLoggedProductionWarning) {
+          console.error(
+            '[SECURITY WARNING] Redis rate limiting failed in production. ' +
+              'Using emergency per-instance fallback with strict limits.'
+          )
+          this.hasLoggedProductionWarning = true
+        }
+
+        // Use emergency fallback instead of allowing all requests
+        return this.checkEmergencyRateLimit(identifier)
       }
     }
 
-    // In development, use in-memory fallback
-    return this.checkRateLimitInMemory(identifier)
+    // In development, use in-memory fallback with normal limits
+    return this.checkRateLimitInMemory(identifier, this.MAX_ATTEMPTS)
   }
 
   /**
-   * In-memory rate limiting fallback (development only)
+   * Emergency rate limiting for production when Redis is unavailable
+   * SECURITY: Uses very strict limits (3 attempts per serverless instance)
+   * This is not perfect but provides some protection against brute force
    */
-  private static checkRateLimitInMemory(identifier: string): {
+  private static checkEmergencyRateLimit(identifier: string): {
+    allowed: boolean
+    remainingAttempts?: number
+    lockoutEndsAt?: Date
+    securityDegraded: boolean
+  } {
+    const result = this.checkRateLimitInMemory(identifier, this.EMERGENCY_MAX_ATTEMPTS)
+    return {
+      ...result,
+      securityDegraded: true, // Flag to indicate degraded security mode
+    }
+  }
+
+  /**
+   * In-memory rate limiting fallback
+   * Used for development and as emergency fallback in production
+   * @param identifier - The client identifier (usually IP address)
+   * @param maxAttempts - Maximum attempts before lockout (stricter in production fallback)
+   */
+  private static checkRateLimitInMemory(
+    identifier: string,
+    maxAttempts: number
+  ): {
     allowed: boolean
     remainingAttempts?: number
     lockoutEndsAt?: Date
   } {
     const now = Date.now()
-    const record = this.devAttempts.get(identifier)
+    const record = this.attempts.get(identifier)
     const lockoutMs = this.LOCKOUT_DURATION_SECONDS * 1000
 
     if (!record) {
-      this.devAttempts.set(identifier, { count: 1, lastAttempt: now })
-      return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS - 1 }
+      this.attempts.set(identifier, { count: 1, lastAttempt: now })
+      return { allowed: true, remainingAttempts: maxAttempts - 1 }
     }
 
     // Check if lockout period has expired
-    if (record.count >= this.MAX_ATTEMPTS && now - record.lastAttempt < lockoutMs) {
+    if (record.count >= maxAttempts && now - record.lastAttempt < lockoutMs) {
       return {
         allowed: false,
+        remainingAttempts: 0,
         lockoutEndsAt: new Date(record.lastAttempt + lockoutMs),
       }
     }
 
     // Reset if lockout period expired
     if (now - record.lastAttempt > lockoutMs) {
-      this.devAttempts.set(identifier, { count: 1, lastAttempt: now })
-      return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS - 1 }
+      this.attempts.set(identifier, { count: 1, lastAttempt: now })
+      return { allowed: true, remainingAttempts: maxAttempts - 1 }
     }
 
     // Increment attempt count
     record.count++
     record.lastAttempt = now
 
-    if (record.count >= this.MAX_ATTEMPTS) {
+    if (record.count >= maxAttempts) {
       return {
         allowed: false,
+        remainingAttempts: 0,
         lockoutEndsAt: new Date(now + lockoutMs),
       }
     }
 
-    return { allowed: true, remainingAttempts: this.MAX_ATTEMPTS - record.count }
+    return { allowed: true, remainingAttempts: maxAttempts - record.count }
   }
 
   /**
@@ -656,7 +714,22 @@ export class AuthRateLimit {
    */
   static resetRateLimit(identifier: string): void {
     // Clear in-memory record (Upstash handles its own expiration)
-    this.devAttempts.delete(identifier)
+    this.attempts.delete(identifier)
+  }
+
+  /**
+   * Get current security status for monitoring
+   */
+  static getSecurityStatus(): {
+    redisFailureCount: number
+    isSecurityDegraded: boolean
+    inMemoryTrackedIdentifiers: number
+  } {
+    return {
+      redisFailureCount: this.redisFailureCount,
+      isSecurityDegraded: this.redisFailureCount > 0 && process.env.NODE_ENV === 'production',
+      inMemoryTrackedIdentifiers: this.attempts.size,
+    }
   }
 }
 

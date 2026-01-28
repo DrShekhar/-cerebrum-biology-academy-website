@@ -26,9 +26,10 @@ declare module 'next-auth' {
 }
 
 // Validation schemas
+// SECURITY (2026-01-28): Password minimum is 8 characters, consistent with registration
 const loginSchema = z.object({
   email: z.string().email('Invalid email format'),
-  password: z.string().min(6, 'Password must be at least 6 characters'),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
 })
 
 // SECURITY: Hardcoded admin credentials removed (2026-01-23)
