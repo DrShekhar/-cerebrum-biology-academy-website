@@ -1,9 +1,8 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   Users,
@@ -17,77 +16,105 @@ import {
   Calendar,
   Lock,
   Check,
-  MoreVertical,
+  Loader2,
+  AlertCircle,
+  RefreshCw,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddUserForm } from '@/components/admin/AddUserForm'
+import { EditUserForm } from '@/components/admin/EditUserForm'
+import toast from 'react-hot-toast'
 
 interface User {
   id: string
   name: string
   email: string
   phone: string
-  role: 'ADMIN' | 'COUNSELOR' | 'FACULTY' | 'STAFF'
+  role: 'ADMIN' | 'COUNSELOR' | 'TEACHER' | 'STAFF'
   status: 'active' | 'inactive' | 'suspended'
   createdAt: string
   lastLogin: string
   permissions: string[]
 }
 
-const mockUsers: User[] = [
-  {
-    id: '1',
-    name: 'Dr. Shekhar Singh',
-    email: 'shekhar@cerebrumbiologyacademy.com',
-    phone: '+91 98765 43210',
-    role: 'ADMIN',
-    status: 'active',
-    createdAt: '2024-01-01',
-    lastLogin: '2025-01-17T10:30:00Z',
-    permissions: ['all'],
-  },
-  {
-    id: '2',
-    name: 'Dr. Priya Sharma',
-    email: 'priya@cerebrumbiologyacademy.com',
-    phone: '+91 98765 43211',
-    role: 'COUNSELOR',
-    status: 'active',
-    createdAt: '2024-02-15',
-    lastLogin: '2025-01-17T09:15:00Z',
-    permissions: ['leads', 'students', 'bookings'],
-  },
-  {
-    id: '3',
-    name: 'Dr. Rajesh Kumar',
-    email: 'rajesh@cerebrumbiologyacademy.com',
-    phone: '+91 98765 43212',
-    role: 'FACULTY',
-    status: 'active',
-    createdAt: '2024-03-10',
-    lastLogin: '2025-01-16T16:45:00Z',
-    permissions: ['courses', 'students', 'lms'],
-  },
-  {
-    id: '4',
-    name: 'Anjali Verma',
-    email: 'anjali@cerebrumbiologyacademy.com',
-    phone: '+91 98765 43213',
-    role: 'STAFF',
-    status: 'active',
-    createdAt: '2024-04-20',
-    lastLogin: '2025-01-17T08:00:00Z',
-    permissions: ['bookings', 'payments'],
-  },
-]
-
 export default function UsersSettingsPage() {
-  const [users, setUsers] = useState<User[]>(mockUsers)
+  const [users, setUsers] = useState<User[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [roleFilter, setRoleFilter] = useState<string>('all')
   const [isAddUserModalOpen, setIsAddUserModalOpen] = useState(false)
+  const [isEditUserModalOpen, setIsEditUserModalOpen] = useState(false)
+  const [isDeleteConfirmOpen, setIsDeleteConfirmOpen] = useState(false)
+  const [selectedUser, setSelectedUser] = useState<User | null>(null)
+  const [deleting, setDeleting] = useState(false)
+
+  const fetchUsers = useCallback(async () => {
+    setLoading(true)
+    setError(null)
+    try {
+      const params = new URLSearchParams()
+      if (roleFilter !== 'all') params.set('role', roleFilter)
+      if (searchTerm) params.set('search', searchTerm)
+
+      const response = await fetch(`/api/admin/users?${params.toString()}`)
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to fetch users')
+      }
+
+      setUsers(result.data)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to fetch users')
+    } finally {
+      setLoading(false)
+    }
+  }, [roleFilter, searchTerm])
+
+  useEffect(() => {
+    fetchUsers()
+  }, [fetchUsers])
+
+  const handleEditClick = (user: User) => {
+    setSelectedUser(user)
+    setIsEditUserModalOpen(true)
+  }
+
+  const handleDeleteClick = (user: User) => {
+    setSelectedUser(user)
+    setIsDeleteConfirmOpen(true)
+  }
+
+  const handleDeleteConfirm = async () => {
+    if (!selectedUser) return
+
+    setDeleting(true)
+    try {
+      const response = await fetch('/api/admin/users', {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: selectedUser.id }),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to delete user')
+      }
+
+      toast.success('User deactivated successfully')
+      setIsDeleteConfirmOpen(false)
+      setSelectedUser(null)
+      fetchUsers()
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : 'Failed to delete user')
+    } finally {
+      setDeleting(false)
+    }
+  }
 
   const getRoleColor = (role: string) => {
     switch (role) {
@@ -95,7 +122,7 @@ export default function UsersSettingsPage() {
         return 'bg-red-100 text-red-800 border-red-300'
       case 'COUNSELOR':
         return 'bg-blue-100 text-blue-800 border-blue-300'
-      case 'FACULTY':
+      case 'TEACHER':
         return 'bg-purple-100 text-purple-800 border-purple-300'
       case 'STAFF':
         return 'bg-gray-100 text-gray-800 border-gray-300'
@@ -121,29 +148,32 @@ export default function UsersSettingsPage() {
     const matchesSearch =
       user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       user.email.toLowerCase().includes(searchTerm.toLowerCase())
-    const matchesRole = roleFilter === 'all' || user.role === roleFilter
-    return matchesSearch && matchesRole
+    return matchesSearch
   })
 
   return (
     <AdminLayout>
       <div className="p-6 max-w-7xl mx-auto">
-        {/* Header */}
         <div className="mb-8 flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 mb-2">User Management</h1>
             <p className="text-gray-600">Manage admin users, roles, and permissions</p>
           </div>
-          <Button
-            className="bg-blue-600 hover:bg-blue-700 text-white"
-            onClick={() => setIsAddUserModalOpen(true)}
-          >
-            <UserPlus className="w-4 h-4 mr-2" />
-            Add User
-          </Button>
+          <div className="flex gap-2">
+            <Button variant="outline" onClick={fetchUsers} disabled={loading}>
+              <RefreshCw className={`w-4 h-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
+              Refresh
+            </Button>
+            <Button
+              className="bg-blue-600 hover:bg-blue-700 text-white"
+              onClick={() => setIsAddUserModalOpen(true)}
+            >
+              <UserPlus className="w-4 h-4 mr-2" />
+              Add User
+            </Button>
+          </div>
         </div>
 
-        {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -211,7 +241,6 @@ export default function UsersSettingsPage() {
           </motion.div>
         </div>
 
-        {/* Filters */}
         <div className="bg-white p-6 rounded-xl border border-gray-200 mb-6">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1">
@@ -234,138 +263,181 @@ export default function UsersSettingsPage() {
               <option value="all">All Roles</option>
               <option value="ADMIN">Admin</option>
               <option value="COUNSELOR">Counselor</option>
-              <option value="FACULTY">Faculty</option>
+              <option value="TEACHER">Teacher</option>
               <option value="STAFF">Staff</option>
             </select>
           </div>
         </div>
 
-        {/* Users Table */}
-        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="min-w-full divide-y divide-gray-200">
-              <thead className="bg-gray-50">
-                <tr>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    User
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Role
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Status
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Last Login
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Permissions
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                {filteredUsers.map((user) => (
-                  <tr key={user.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div>
-                        <div className="text-sm font-medium text-gray-900">{user.name}</div>
-                        <div className="text-sm text-gray-500 flex items-center">
-                          <Mail className="w-3 h-3 mr-1" />
-                          {user.email}
-                        </div>
-                        <div className="text-sm text-gray-500 flex items-center">
-                          <Phone className="w-3 h-3 mr-1" />
-                          {user.phone}
-                        </div>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span
-                        className={`inline-flex px-3 py-1 text-xs font-medium rounded-full border ${getRoleColor(
-                          user.role
-                        )}`}
-                      >
-                        {user.role}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span
-                        className={`inline-flex px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(
-                          user.status
-                        )}`}
-                      >
-                        {user.status.charAt(0).toUpperCase() + user.status.slice(1)}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      <div className="flex items-center">
-                        <Calendar className="w-3 h-3 mr-1" />
-                        {new Date(user.lastLogin).toLocaleDateString()}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4">
-                      <div className="flex flex-wrap gap-1">
-                        {user.permissions.slice(0, 3).map((perm) => (
-                          <span
-                            key={perm}
-                            className="inline-block px-2 py-0.5 text-xs bg-blue-50 text-blue-600 rounded"
-                          >
-                            {perm}
-                          </span>
-                        ))}
-                        {user.permissions.length > 3 && (
-                          <span className="inline-block px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded">
-                            +{user.permissions.length - 3}
-                          </span>
-                        )}
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                      <div className="flex items-center space-x-2">
-                        <button className="text-blue-600 hover:text-blue-900">
-                          <Edit className="w-4 h-4" />
-                        </button>
-                        <button className="text-gray-600 hover:text-gray-900">
-                          <Lock className="w-4 h-4" />
-                        </button>
-                        {user.role !== 'ADMIN' && (
-                          <button className="text-red-600 hover:text-red-900">
-                            <Trash2 className="w-4 h-4" />
-                          </button>
-                        )}
-                        <button className="text-gray-600 hover:text-gray-900">
-                          <MoreVertical className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+        {error && (
+          <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 flex items-center gap-3">
+            <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
+            <p className="text-red-700">{error}</p>
+            <Button variant="outline" size="sm" onClick={fetchUsers} className="ml-auto">
+              Retry
+            </Button>
           </div>
+        )}
+
+        <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
+          {loading ? (
+            <div className="flex items-center justify-center py-12">
+              <Loader2 className="w-8 h-8 animate-spin text-blue-500" />
+              <span className="ml-3 text-gray-600">Loading users...</span>
+            </div>
+          ) : filteredUsers.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-12 text-gray-500">
+              <Users className="w-12 h-12 mb-3 opacity-50" />
+              <p>No users found</p>
+              {(searchTerm || roleFilter !== 'all') && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => {
+                    setSearchTerm('')
+                    setRoleFilter('all')
+                  }}
+                  className="mt-3"
+                >
+                  Clear filters
+                </Button>
+              )}
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="min-w-full divide-y divide-gray-200">
+                <thead className="bg-gray-50">
+                  <tr>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      User
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Role
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Status
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Last Login
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Permissions
+                    </th>
+                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Actions
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="bg-white divide-y divide-gray-200">
+                  {filteredUsers.map((user) => (
+                    <tr key={user.id} className="hover:bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div>
+                          <div className="text-sm font-medium text-gray-900">{user.name}</div>
+                          <div className="text-sm text-gray-500 flex items-center">
+                            <Mail className="w-3 h-3 mr-1" />
+                            {user.email}
+                          </div>
+                          {user.phone && (
+                            <div className="text-sm text-gray-500 flex items-center">
+                              <Phone className="w-3 h-3 mr-1" />
+                              {user.phone}
+                            </div>
+                          )}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span
+                          className={`inline-flex px-3 py-1 text-xs font-medium rounded-full border ${getRoleColor(
+                            user.role
+                          )}`}
+                        >
+                          {user.role}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span
+                          className={`inline-flex px-3 py-1 text-xs font-medium rounded-full ${getStatusColor(
+                            user.status
+                          )}`}
+                        >
+                          {user.status.charAt(0).toUpperCase() + user.status.slice(1)}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        <div className="flex items-center">
+                          <Calendar className="w-3 h-3 mr-1" />
+                          {new Date(user.lastLogin).toLocaleDateString()}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4">
+                        <div className="flex flex-wrap gap-1">
+                          {user.permissions.slice(0, 3).map((perm) => (
+                            <span
+                              key={perm}
+                              className="inline-block px-2 py-0.5 text-xs bg-blue-50 text-blue-600 rounded"
+                            >
+                              {perm}
+                            </span>
+                          ))}
+                          {user.permissions.length > 3 && (
+                            <span className="inline-block px-2 py-0.5 text-xs bg-gray-100 text-gray-600 rounded">
+                              +{user.permissions.length - 3}
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                        <div className="flex items-center space-x-2">
+                          <button
+                            className="text-blue-600 hover:text-blue-900 p-1"
+                            onClick={() => handleEditClick(user)}
+                            title="Edit user"
+                          >
+                            <Edit className="w-4 h-4" />
+                          </button>
+                          <button
+                            className="text-gray-600 hover:text-gray-900 p-1"
+                            title="Reset password"
+                          >
+                            <Lock className="w-4 h-4" />
+                          </button>
+                          {user.role !== 'ADMIN' && (
+                            <button
+                              className="text-red-600 hover:text-red-900 p-1"
+                              onClick={() => handleDeleteClick(user)}
+                              title="Deactivate user"
+                            >
+                              <Trash2 className="w-4 h-4" />
+                            </button>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
 
-        {/* Role Permissions Info */}
         <div className="mt-8 bg-gray-50 rounded-xl p-6">
           <h3 className="text-lg font-bold text-gray-900 mb-4">Role Permissions</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
             <div>
-              <p className="font-semibold text-red-700 mb-2">🔴 ADMIN</p>
+              <p className="font-semibold text-red-700 mb-2">ADMIN</p>
               <p className="text-gray-600">Full system access, user management, settings</p>
             </div>
             <div>
-              <p className="font-semibold text-blue-700 mb-2">🔵 COUNSELOR</p>
+              <p className="font-semibold text-blue-700 mb-2">COUNSELOR</p>
               <p className="text-gray-600">Lead management, student enrollment, bookings</p>
             </div>
             <div>
-              <p className="font-semibold text-purple-700 mb-2">🟣 FACULTY</p>
+              <p className="font-semibold text-purple-700 mb-2">TEACHER</p>
               <p className="text-gray-600">Course management, LMS access, student grades</p>
             </div>
             <div>
-              <p className="font-semibold text-gray-700 mb-2">⚫ STAFF</p>
+              <p className="font-semibold text-gray-700 mb-2">STAFF</p>
               <p className="text-gray-600">Limited access to bookings and payments</p>
             </div>
           </div>
@@ -382,10 +454,77 @@ export default function UsersSettingsPage() {
         <AddUserForm
           onSuccess={() => {
             setIsAddUserModalOpen(false)
-            window.location.reload()
+            fetchUsers()
           }}
           onCancel={() => setIsAddUserModalOpen(false)}
         />
+      </Modal>
+
+      <Modal
+        open={isEditUserModalOpen}
+        onOpenChange={setIsEditUserModalOpen}
+        title="Edit User"
+        description="Update user details, role, and permissions."
+        size="lg"
+      >
+        {selectedUser && (
+          <EditUserForm
+            user={selectedUser}
+            onSuccess={() => {
+              setIsEditUserModalOpen(false)
+              setSelectedUser(null)
+              fetchUsers()
+            }}
+            onCancel={() => {
+              setIsEditUserModalOpen(false)
+              setSelectedUser(null)
+            }}
+          />
+        )}
+      </Modal>
+
+      <Modal
+        open={isDeleteConfirmOpen}
+        onOpenChange={setIsDeleteConfirmOpen}
+        title="Deactivate User"
+        description="Are you sure you want to deactivate this user? They will no longer be able to access the system."
+        size="sm"
+      >
+        <div className="space-y-4">
+          {selectedUser && (
+            <div className="bg-gray-50 rounded-lg p-4">
+              <p className="font-medium text-gray-900">{selectedUser.name}</p>
+              <p className="text-sm text-gray-500">{selectedUser.email}</p>
+              <p className="text-sm text-gray-500">Role: {selectedUser.role}</p>
+            </div>
+          )}
+          <div className="flex justify-end gap-3">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setIsDeleteConfirmOpen(false)
+                setSelectedUser(null)
+              }}
+              disabled={deleting}
+            >
+              Cancel
+            </Button>
+            <Button
+              className="bg-red-600 hover:bg-red-700 text-white"
+              onClick={handleDeleteConfirm}
+              disabled={deleting}
+            >
+              {deleting ? (
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  Deactivating...
+                </>
+              ) : (
+                'Deactivate User'
+              )}
+            </Button>
+          </div>
+        </div>
       </Modal>
     </AdminLayout>
   )
