@@ -165,7 +165,8 @@ export async function GET(request: NextRequest) {
     }
 
     // Check if session exists in database
-    const session = await prisma.session.findFirst({
+    // SECURITY (2026-01-28): Fixed model name from session to sessions
+    const session = await prisma.sessions.findFirst({
       where: {
         sessionToken: payload.sessionId,
         userId: payload.userId,

@@ -2,14 +2,35 @@
  * LMS Material Management API - Individual Material Operations
  *
  * GET /api/admin/lms/materials/[id] - Get single material
- * PATCH /api/admin/lms/materials/[id] - Update material
- * DELETE /api/admin/lms/materials/[id] - Delete material
+ * PATCH /api/admin/lms/materials/[id] - Update material (CSRF protected)
+ * DELETE /api/admin/lms/materials/[id] - Delete material (CSRF protected)
+ *
+ * SECURITY (2026-01-28): Added CSRF protection for mutating operations
  */
 
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { deletePDF } from '@/lib/lms/blobStorage'
 import { auth } from '@/lib/auth'
+import { CSRFProtection } from '@/lib/auth/csrf'
+
+/**
+ * Helper to validate CSRF token for mutating operations
+ */
+async function validateCSRF(request: NextRequest): Promise<{ valid: boolean; error?: string }> {
+  const csrfToken = request.headers.get('x-csrf-token') || request.headers.get('csrf-token')
+
+  if (!csrfToken) {
+    return { valid: false, error: 'CSRF token required for this operation' }
+  }
+
+  const isValid = await CSRFProtection.validateToken(csrfToken)
+  if (!isValid) {
+    return { valid: false, error: 'Invalid or expired CSRF token' }
+  }
+
+  return { valid: true }
+}
 
 /**
  * GET - Fetch single material by ID
@@ -18,7 +39,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
   try {
     // Authentication check
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role?.toUpperCase() !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
     }
 
@@ -58,13 +79,20 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 
 /**
  * PATCH - Update material metadata
+ * SECURITY: Requires CSRF token in x-csrf-token header
  */
 export async function PATCH(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     // Authentication check
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role?.toUpperCase() !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    }
+
+    // CSRF validation for mutating operation
+    const csrfResult = await validateCSRF(request)
+    if (!csrfResult.valid) {
+      return NextResponse.json({ error: csrfResult.error, code: 'CSRF_VALIDATION_FAILED' }, { status: 403 })
     }
 
     const { id } = await params
@@ -140,6 +168,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
 
 /**
  * DELETE - Delete material and associated file
+ * SECURITY: Requires CSRF token in x-csrf-token header
  */
 export async function DELETE(
   request: NextRequest,
@@ -148,8 +177,14 @@ export async function DELETE(
   try {
     // Authentication check
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role?.toUpperCase() !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    }
+
+    // CSRF validation for mutating operation
+    const csrfResult = await validateCSRF(request)
+    if (!csrfResult.valid) {
+      return NextResponse.json({ error: csrfResult.error, code: 'CSRF_VALIDATION_FAILED' }, { status: 403 })
     }
 
     const { id } = await params

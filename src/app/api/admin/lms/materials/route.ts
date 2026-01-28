@@ -15,9 +15,9 @@ import { auth } from '@/lib/auth'
  */
 export async function GET(request: NextRequest) {
   try {
-    // Authentication check
+    // Authentication check - SECURITY (2026-01-28): Case-insensitive role check
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role?.toUpperCase() !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
     }
 

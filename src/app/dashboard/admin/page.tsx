@@ -4,6 +4,7 @@
 export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -21,18 +22,25 @@ import {
   CheckCircle,
   Download,
   Settings,
+  ShieldX,
 } from 'lucide-react'
 import type { AdminAnalytics } from '@/lib/types/analytics'
 
 export default function AdminDashboard() {
   const { user, isLoading } = useAuth()
+  const router = useRouter()
   const [analytics, setAnalytics] = useState<AdminAnalytics | null>(null)
   const [realTimeData, setRealTimeData] = useState<any>(null)
   const [isLoadingData, setIsLoadingData] = useState(true)
   const [selectedMetric, setSelectedMetric] = useState('users')
 
+  // SECURITY (2026-01-28): Client-side role enforcement
+  // Redirect non-admin users to main dashboard
+  const isAdmin = user?.role?.toUpperCase() === 'ADMIN'
+
   useEffect(() => {
-    if (user) {
+    // Only fetch data if user is admin
+    if (user && isAdmin) {
       fetchAnalyticsData()
       fetchRealTimeData()
 
@@ -40,7 +48,7 @@ export default function AdminDashboard() {
       const interval = setInterval(fetchRealTimeData, 30000) // Update every 30 seconds
       return () => clearInterval(interval)
     }
-  }, [user])
+  }, [user, isAdmin])
 
   const fetchAnalyticsData = async () => {
     setIsLoadingData(true)
@@ -106,8 +114,19 @@ export default function AdminDashboard() {
     }
   }
 
-  if (isLoading || !user) {
+  if (isLoading) {
     return <LoadingDashboard />
+  }
+
+  if (!user) {
+    // Redirect to sign-in if not authenticated
+    router.push('/sign-in?redirect_url=/dashboard/admin')
+    return <LoadingDashboard />
+  }
+
+  // SECURITY: Block non-admin users from viewing admin dashboard
+  if (!isAdmin) {
+    return <UnauthorizedAccess userRole={user.role} />
   }
 
   return (
@@ -677,6 +696,53 @@ function LoadingDashboard() {
           </div>
 
           <div className="h-96 bg-gray-300 rounded-lg"></div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/**
+ * SECURITY: Unauthorized access component for non-admin users
+ * Displays a clear message and redirects to appropriate dashboard
+ */
+function UnauthorizedAccess({ userRole }: { userRole?: string }) {
+  const router = useRouter()
+
+  const handleGoBack = () => {
+    // Redirect to role-appropriate dashboard
+    const roleDashboard: Record<string, string> = {
+      STUDENT: '/dashboard',
+      TEACHER: '/teacher/dashboard',
+      COUNSELOR: '/counselor',
+      PARENT: '/dashboard',
+    }
+    const destination = roleDashboard[userRole?.toUpperCase() || ''] || '/dashboard'
+    router.push(destination)
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+        <div className="mx-auto w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+          <ShieldX className="w-8 h-8 text-red-600" />
+        </div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
+        <p className="text-gray-600 mb-6">
+          You don&apos;t have permission to access the admin dashboard.
+          {userRole && (
+            <span className="block mt-2 text-sm">
+              Your current role: <span className="font-medium">{userRole}</span>
+            </span>
+          )}
+        </p>
+        <div className="space-y-3">
+          <Button onClick={handleGoBack} className="w-full">
+            Go to Your Dashboard
+          </Button>
+          <p className="text-xs text-gray-500">
+            If you believe this is an error, please contact your administrator.
+          </p>
         </div>
       </div>
     </div>

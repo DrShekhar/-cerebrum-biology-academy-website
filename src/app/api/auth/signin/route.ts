@@ -138,14 +138,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Check if email is verified (optional based on your flow)
-    if (!user.emailVerified && process.env.REQUIRE_EMAIL_VERIFICATION === 'true') {
+    // SECURITY (2026-01-28): Email verification is REQUIRED by default
+    // Set SKIP_EMAIL_VERIFICATION=true only in development to bypass this check
+    const skipEmailVerification = process.env.SKIP_EMAIL_VERIFICATION === 'true'
+    if (!user.emailVerified && !skipEmailVerification) {
+      // Log attempt to sign in with unverified email
+      console.warn(
+        `[SECURITY] Sign-in attempt with unverified email: ${email.slice(0, 3)}***@${email.split('@')[1]} from IP: ${clientIP}`
+      )
       return addSecurityHeaders(
         NextResponse.json(
           {
             error: 'Email not verified',
-            message: 'Please verify your email address before signing in',
+            message: 'Please verify your email address before signing in. Check your inbox for a verification link.',
             requiresVerification: true,
+            email: email, // Return email so frontend can offer to resend verification
           },
           { status: 403 }
         )

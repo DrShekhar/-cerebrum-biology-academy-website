@@ -17,6 +17,7 @@ import { uploadPDF } from '@/lib/lms/blobStorage'
 import { validateFile, validatePDFContent, formatFileSize } from '@/lib/lms/fileValidation'
 import { prisma } from '@/lib/prisma'
 import { auth } from '@/lib/auth'
+import { CSRFProtection } from '@/lib/auth/csrf'
 
 // Increase payload size limit for PDF uploads (50MB)
 export const runtime = 'nodejs'
@@ -37,10 +38,26 @@ interface UploadMetadata {
 
 export async function POST(request: NextRequest) {
   try {
-    // Authentication check
+    // Authentication check - SECURITY (2026-01-28): Case-insensitive role check
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role?.toUpperCase() !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized. Admin access required.' }, { status: 401 })
+    }
+
+    // CSRF validation - SECURITY (2026-01-28): Protect file uploads from CSRF
+    const csrfToken = request.headers.get('x-csrf-token') || request.headers.get('csrf-token')
+    if (!csrfToken) {
+      return NextResponse.json(
+        { error: 'CSRF token required for file upload', code: 'CSRF_TOKEN_MISSING' },
+        { status: 403 }
+      )
+    }
+    const isValidToken = await CSRFProtection.validateToken(csrfToken)
+    if (!isValidToken) {
+      return NextResponse.json(
+        { error: 'Invalid or expired CSRF token', code: 'CSRF_TOKEN_INVALID' },
+        { status: 403 }
+      )
     }
 
     // Parse multipart form data

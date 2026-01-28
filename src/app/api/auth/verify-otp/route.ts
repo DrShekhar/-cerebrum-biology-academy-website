@@ -116,7 +116,8 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Mark OTP as verified
+    // Mark OTP as verified and then delete to prevent any replay attacks
+    // SECURITY (2026-01-28): Double protection - mark as verified then delete
     await prisma.otpVerification.update({
       where: { id: otpId },
       data: {
@@ -124,6 +125,16 @@ export async function POST(request: NextRequest) {
         attempts: otpRecord.attempts + 1,
       },
     })
+
+    // Delete the OTP record after successful verification (belt-and-suspenders approach)
+    try {
+      await prisma.otpVerification.delete({
+        where: { id: otpId },
+      })
+    } catch (deleteError) {
+      // Log but don't fail if delete fails - the verified flag already prevents reuse
+      console.warn('Failed to delete OTP record after verification:', deleteError)
+    }
 
     let user
     const currentTime = Date.now()
