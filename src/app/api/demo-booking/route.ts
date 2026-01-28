@@ -300,6 +300,28 @@ export async function POST(request: NextRequest) {
       source,
     } = rawData
 
+    // DEMO-001 & DEMO-005: Validate slot availability before creating booking
+    // This prevents double-bookings and ensures the slot is actually free
+    const preferredDateObj = new Date(data.preferredDate + 'T00:00:00')
+    const availableSlots = await zoomService.getAvailableSlots(preferredDateObj)
+
+    // Extract start time from format like "10:00 AM - 11:00 AM" or "10:00"
+    const requestedTimeMatch = data.preferredTime.match(/^(\d{1,2}:\d{2})/)
+    const requestedTime = requestedTimeMatch
+      ? `${requestedTimeMatch[1].split(':')[0].padStart(2, '0')}:${requestedTimeMatch[1].split(':')[1]}`
+      : data.preferredTime
+
+    if (!availableSlots.includes(requestedTime)) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'This time slot is no longer available. Please select a different time.',
+          availableSlots,
+        },
+        { status: 409 }
+      )
+    }
+
     // Save demo booking and link to lead in a transaction for data integrity
     // Use serializable isolation to prevent duplicate lead race conditions
     let demoBooking
@@ -308,6 +330,24 @@ export async function POST(request: NextRequest) {
     try {
       const result = await prisma.$transaction(
         async (tx) => {
+          // DEMO-005: Check for slot conflict inside transaction (race condition prevention)
+          // Even though we checked availability above, we need atomic verification
+          const conflictingBooking = await tx.demoBooking.findFirst({
+            where: {
+              preferredDate: data.preferredDate,
+              preferredTime: {
+                startsWith: requestedTime
+              },
+              status: {
+                in: ['PENDING', 'CONFIRMED', 'RESCHEDULED']
+              }
+            }
+          })
+
+          if (conflictingBooking) {
+            throw new Error('SLOT_CONFLICT')
+          }
+
           // 1. Create the demo booking
           const booking = await tx.demoBooking.create({
             data: {
@@ -438,6 +478,22 @@ export async function POST(request: NextRequest) {
       demoBooking = result.booking
       lead = result.lead
     } catch (dbError) {
+      // DEMO-005: Handle slot conflict error specifically
+      if (dbError instanceof Error && dbError.message === 'SLOT_CONFLICT') {
+        console.log('[Demo Booking] Slot conflict detected:', {
+          date: data.preferredDate,
+          time: requestedTime,
+        })
+        return NextResponse.json(
+          {
+            success: false,
+            error: 'This time slot was just booked by someone else. Please select a different time.',
+            code: 'SLOT_CONFLICT',
+          },
+          { status: 409 }
+        )
+      }
+
       // Log error without sensitive data
       console.error('Database transaction failed:', {
         error: dbError instanceof Error ? dbError.message : 'Unknown error',

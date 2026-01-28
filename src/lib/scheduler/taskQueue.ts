@@ -172,9 +172,12 @@ export class TaskScheduler {
     const timeout = setTimeout(async () => {
       try {
         await this.processTask({ name, data: payload })
-        this.fallbackTasks.delete(taskId)
       } catch (error) {
         logger.error('Fallback task execution failed', { taskId, name, error })
+      } finally {
+        // ALWAYS cleanup task from Map, regardless of success or failure
+        // This prevents memory leaks from accumulating failed tasks
+        this.fallbackTasks.delete(taskId)
       }
     }, delay)
 

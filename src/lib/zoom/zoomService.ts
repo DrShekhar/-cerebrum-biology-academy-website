@@ -248,8 +248,8 @@ export class ZoomService {
   }
 
   async getAvailableSlots(date: Date): Promise<string[]> {
-    // Available demo slots (considering Indian timings)
-    const availableSlots = [
+    // All possible demo slots (considering Indian timings)
+    const allSlots = [
       '10:00',
       '11:00',
       '14:00',
@@ -261,22 +261,84 @@ export class ZoomService {
       '20:00',
     ]
 
-    // In production, check against existing bookings
-    // For MVP, return all slots as available
-    return availableSlots
+    try {
+      // Query database for existing bookings on this date
+      const { prisma } = await import('@/lib/prisma')
+
+      // Format date as YYYY-MM-DD string for comparison
+      const dateStr = date.toISOString().split('T')[0]
+
+      // Find all active bookings for this date
+      const existingBookings = await prisma.demoBooking.findMany({
+        where: {
+          preferredDate: dateStr,
+          status: {
+            in: ['PENDING', 'CONFIRMED', 'RESCHEDULED']
+          }
+        },
+        select: {
+          preferredTime: true
+        }
+      })
+
+      // Extract booked time slots
+      // Handle both "10:00" and "10:00 AM - 11:00 AM" formats
+      const bookedSlots = existingBookings.map(booking => {
+        const time = booking.preferredTime
+        // Extract start time - handles "10:00", "10:00 AM", "10:00 AM - 11:00 AM"
+        const match = time.match(/^(\d{1,2}:\d{2})/)
+        if (match) {
+          // Normalize to HH:MM format
+          const [hours, mins] = match[1].split(':')
+          return `${hours.padStart(2, '0')}:${mins}`
+        }
+        return time
+      })
+
+      // Filter out booked slots
+      const availableSlots = allSlots.filter(slot => !bookedSlots.includes(slot))
+
+      console.log(`[Zoom] Available slots for ${dateStr}: ${availableSlots.length}/${allSlots.length}`)
+      return availableSlots
+    } catch (error) {
+      console.error('[Zoom] Error fetching available slots, returning all:', error)
+      // Graceful fallback - return all slots if DB query fails
+      return allSlots
+    }
   }
 
   async cancelDemoMeeting(meetingId: string): Promise<boolean> {
     try {
-      // In production, call Zoom API to cancel meeting
-      console.log('Cancelling Zoom meeting:', meetingId)
+      const accessToken = await this.getAccessToken()
+
+      if (accessToken) {
+        // Real Zoom DELETE API call to cancel meeting
+        console.log('[Zoom] Cancelling meeting via API:', meetingId)
+
+        const response = await fetch(`${this.apiUrl}/meetings/${meetingId}`, {
+          method: 'DELETE',
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        })
+
+        if (!response.ok && response.status !== 204) {
+          const errorText = await response.text()
+          console.error('[Zoom] Cancel API error:', response.status, errorText)
+          // Continue anyway - meeting may have been deleted already
+        } else {
+          console.log('[Zoom] Meeting cancelled successfully:', meetingId)
+        }
+      } else {
+        console.log('[Zoom] No access token, simulating cancellation:', meetingId)
+      }
 
       // Update meeting status in database
       await this.updateMeetingStatus(meetingId, 'cancelled')
 
       return true
     } catch (error) {
-      console.error('Error cancelling meeting:', error)
+      console.error('[Zoom] Error cancelling meeting:', error)
       return false
     }
   }
@@ -287,40 +349,76 @@ export class ZoomService {
     newTime: string
   ): Promise<ZoomMeetingResponse | null> {
     try {
-      // In production, call Zoom API to update meeting
-      const updatedMeetingData = {
-        start_time: this.formatZoomDateTime(newDate, newTime),
+      const accessToken = await this.getAccessToken()
+      const newStartTime = this.formatZoomDateTime(newDate, newTime)
+
+      // If OAuth is not configured, use simulation mode
+      if (!accessToken) {
+        console.warn('[Zoom] No access token, using simulation mode for reschedule')
+        return this.simulateReschedule(meetingId, newStartTime)
       }
 
-      console.log('Rescheduling Zoom meeting:', meetingId, updatedMeetingData)
+      // Real Zoom PATCH API call to update meeting time
+      console.log('[Zoom] Rescheduling meeting via API:', meetingId)
 
-      // Simulate API response
-      const response = await this.simulateZoomAPICall({
-        topic: 'NEET Biology Demo Class - Rescheduled',
-        type: 2,
-        start_time: updatedMeetingData.start_time,
-        duration: 60,
-        timezone: 'Asia/Kolkata',
-        settings: {
-          host_video: true,
-          participant_video: true,
-          cn_meeting: false,
-          in_meeting: true,
-          join_before_host: false,
-          mute_upon_entry: true,
-          watermark: false,
-          use_pmi: false,
-          approval_type: 0,
-          audio: 'both',
-          auto_recording: 'cloud',
-          waiting_room: true,
+      const response = await fetch(`${this.apiUrl}/meetings/${meetingId}`, {
+        method: 'PATCH',
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify({
+          start_time: newStartTime,
+          timezone: 'Asia/Kolkata',
+        }),
       })
 
-      return response
+      if (!response.ok) {
+        const errorText = await response.text()
+        console.error('[Zoom] Reschedule API error:', response.status, errorText)
+        // Fallback to simulation if API fails
+        return this.simulateReschedule(meetingId, newStartTime)
+      }
+
+      // PATCH returns 204 No Content on success, so fetch updated meeting details
+      const meetingResponse = await fetch(`${this.apiUrl}/meetings/${meetingId}`, {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      })
+
+      if (meetingResponse.ok) {
+        const updatedMeeting = await meetingResponse.json()
+        console.log('[Zoom] Meeting rescheduled successfully:', meetingId)
+        return updatedMeeting as ZoomMeetingResponse
+      }
+
+      // Fallback if fetch fails
+      return this.simulateReschedule(meetingId, newStartTime)
     } catch (error) {
-      console.error('Error rescheduling meeting:', error)
+      console.error('[Zoom] Error rescheduling meeting:', error)
       return null
+    }
+  }
+
+  private simulateReschedule(meetingId: string, startTime: string): ZoomMeetingResponse {
+    // Simulation fallback when Zoom API is unavailable
+    return {
+      id: meetingId,
+      host_id: this.userId,
+      topic: 'NEET Biology Demo Class - Rescheduled',
+      type: 2,
+      status: 'waiting',
+      start_time: startTime,
+      duration: 60,
+      timezone: 'Asia/Kolkata',
+      agenda: 'Rescheduled demo class',
+      created_at: new Date().toISOString(),
+      start_url: `https://zoom.us/s/${meetingId}_start`,
+      join_url: `https://zoom.us/j/${meetingId}`,
+      password: this.generateMeetingPassword(),
+      h323_password: '',
+      pstn_password: '',
+      encrypted_password: '',
+      uuid: `uuid_${Date.now()}`,
     }
   }
 

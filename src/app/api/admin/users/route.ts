@@ -18,7 +18,7 @@ const createUserSchema = z.object({
     .string()
     .min(10, 'Phone must be at least 10 digits')
     .regex(/^[+]?[\d\s()-]+$/, 'Invalid phone number format'),
-  role: z.enum(['ADMIN', 'COUNSELOR', 'STAFF']),
+  role: z.enum(['ADMIN', 'COUNSELOR', 'TEACHER']),
   password: z.string().min(8, 'Password must be at least 8 characters'),
   permissions: z.array(z.string()).min(1, 'Select at least one permission'),
 })

@@ -14,7 +14,7 @@ const addUserSchema = z.object({
     .string()
     .min(10, 'Phone must be at least 10 digits')
     .regex(/^[+]?[\d\s()-]+$/, 'Invalid phone number format'),
-  role: z.enum(['ADMIN', 'COUNSELOR', 'STAFF']),
+  role: z.enum(['ADMIN', 'COUNSELOR', 'TEACHER']),
   password: z.string().min(8, 'Password must be at least 8 characters'),
   permissions: z.array(z.string()).min(1, 'Select at least one permission'),
 })
@@ -29,7 +29,7 @@ interface AddUserFormProps {
 const USER_ROLES = [
   { value: 'ADMIN', label: 'Admin - Full Access' },
   { value: 'COUNSELOR', label: 'Counselor - Lead & Student Management' },
-  { value: 'STAFF', label: 'Staff - Limited Access' },
+  { value: 'TEACHER', label: 'Teacher - Course & Student Access' },
 ]
 
 const PERMISSION_OPTIONS = [
@@ -54,7 +54,7 @@ export function AddUserForm({ onSuccess, onCancel }: AddUserFormProps) {
   } = useForm<AddUserFormData>({
     resolver: zodResolver(addUserSchema),
     defaultValues: {
-      role: 'STAFF',
+      role: 'TEACHER',
       permissions: [],
     },
   })
