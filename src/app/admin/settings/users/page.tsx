@@ -32,7 +32,7 @@ interface User {
   name: string
   email: string
   phone: string
-  role: 'ADMIN' | 'COUNSELOR' | 'TEACHER' | 'STAFF'
+  role: 'ADMIN' | 'COUNSELOR' | 'TEACHER'
   status: 'active' | 'inactive' | 'suspended'
   createdAt: string
   lastLogin: string
@@ -124,8 +124,6 @@ export default function UsersSettingsPage() {
         return 'bg-blue-100 text-blue-800 border-blue-300'
       case 'TEACHER':
         return 'bg-purple-100 text-purple-800 border-purple-300'
-      case 'STAFF':
-        return 'bg-gray-100 text-gray-800 border-gray-300'
       default:
         return 'bg-gray-100 text-gray-800 border-gray-300'
     }
@@ -264,7 +262,6 @@ export default function UsersSettingsPage() {
               <option value="ADMIN">Admin</option>
               <option value="COUNSELOR">Counselor</option>
               <option value="TEACHER">Teacher</option>
-              <option value="STAFF">Staff</option>
             </select>
           </div>
         </div>
@@ -423,7 +420,7 @@ export default function UsersSettingsPage() {
 
         <div className="mt-8 bg-gray-50 rounded-xl p-6">
           <h3 className="text-lg font-bold text-gray-900 mb-4">Role Permissions</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
             <div>
               <p className="font-semibold text-red-700 mb-2">ADMIN</p>
               <p className="text-gray-600">Full system access, user management, settings</p>
@@ -435,10 +432,6 @@ export default function UsersSettingsPage() {
             <div>
               <p className="font-semibold text-purple-700 mb-2">TEACHER</p>
               <p className="text-gray-600">Course management, LMS access, student grades</p>
-            </div>
-            <div>
-              <p className="font-semibold text-gray-700 mb-2">STAFF</p>
-              <p className="text-gray-600">Limited access to bookings and payments</p>
             </div>
           </div>
         </div>

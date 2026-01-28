@@ -14,7 +14,7 @@ const editUserSchema = z.object({
     .string()
     .min(10, 'Phone must be at least 10 digits')
     .regex(/^[+]?[\d\s()-]+$/, 'Invalid phone number format'),
-  role: z.enum(['ADMIN', 'COUNSELOR', 'STAFF', 'TEACHER']),
+  role: z.enum(['ADMIN', 'COUNSELOR', 'TEACHER']),
   permissions: z.array(z.string()).min(1, 'Select at least one permission'),
   status: z.enum(['active', 'inactive', 'suspended']),
   password: z
@@ -31,7 +31,7 @@ interface User {
   name: string
   email: string
   phone: string
-  role: 'ADMIN' | 'COUNSELOR' | 'TEACHER' | 'STAFF'
+  role: 'ADMIN' | 'COUNSELOR' | 'TEACHER'
   status: 'active' | 'inactive' | 'suspended'
   permissions: string[]
 }
@@ -46,7 +46,6 @@ const USER_ROLES = [
   { value: 'ADMIN', label: 'Admin - Full Access' },
   { value: 'COUNSELOR', label: 'Counselor - Lead & Student Management' },
   { value: 'TEACHER', label: 'Teacher - Course & LMS Access' },
-  { value: 'STAFF', label: 'Staff - Limited Access' },
 ]
 
 const STATUS_OPTIONS = [

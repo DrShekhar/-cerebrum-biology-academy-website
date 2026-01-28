@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { prisma } from '@/lib/prisma'
+import { UserRole } from '@/generated/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
 import bcrypt from 'bcryptjs'
@@ -30,7 +31,7 @@ const updateUserSchema = z.object({
     .min(10, 'Phone must be at least 10 digits')
     .regex(/^[+]?[\d\s()-]+$/, 'Invalid phone number format')
     .optional(),
-  role: z.enum(['ADMIN', 'COUNSELOR', 'STAFF', 'TEACHER']).optional(),
+  role: z.enum(['ADMIN', 'COUNSELOR', 'TEACHER']).optional(),
   permissions: z.array(z.string()).optional(),
   status: z.enum(['active', 'inactive', 'suspended']).optional(),
   password: z.string().min(8, 'Password must be at least 8 characters').optional(),
@@ -153,14 +154,15 @@ export async function GET(request: NextRequest) {
     const status = searchParams.get('status')
     const search = searchParams.get('search')
 
+    const adminRoles = [UserRole.ADMIN, UserRole.COUNSELOR, UserRole.TEACHER]
     const whereClause: any = {
       role: {
-        in: ['ADMIN', 'COUNSELOR', 'TEACHER', 'STAFF'],
+        in: adminRoles,
       },
     }
 
     if (role && role !== 'all') {
-      whereClause.role = role
+      whereClause.role = role as UserRole
     }
 
     if (search) {
