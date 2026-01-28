@@ -382,13 +382,15 @@ export async function DELETE(request: NextRequest) {
     }
 
     if (userToDelete.role === 'ADMIN') {
-      const adminCount = await prisma.users.count({
-        where: {
-          role: 'ADMIN',
-          profile: { path: ['status'], not: 'deleted' },
-        },
+      const allAdmins = await prisma.users.findMany({
+        where: { role: 'ADMIN' },
+        select: { id: true, profile: true },
       })
-      if (adminCount <= 1) {
+      const activeAdminCount = allAdmins.filter((admin) => {
+        const profile = admin.profile as any
+        return profile?.status !== 'deleted'
+      }).length
+      if (activeAdminCount <= 1) {
         return NextResponse.json(
           { success: false, error: 'Cannot delete the last admin user' },
           { status: 400 }
