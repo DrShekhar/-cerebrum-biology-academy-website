@@ -184,23 +184,17 @@ export default function DashboardPage() {
   const router = useRouter()
   const [loadingTimedOut, setLoadingTimedOut] = useState(false)
 
-  // Debug logging for authentication state
+  // SECURITY (2026-01-28): Debug logging only in development to prevent info leakage
   useEffect(() => {
-    console.log('[Dashboard] Auth state:', {
-      isLoading,
-      isAuthenticated,
-      sessionChecked,
-      hasUser: !!user,
-      userId: user?.id,
-      userName: user?.name,
-      userRole: user?.role,
-      error: error?.message,
-      cookies: document.cookie ? 'present' : 'empty',
-      cookieList: document.cookie
-        .split(';')
-        .map((c) => c.trim().split('=')[0])
-        .filter(Boolean),
-    })
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[Dashboard] Auth state:', {
+        isLoading,
+        isAuthenticated,
+        sessionChecked,
+        hasUser: !!user,
+        error: error?.message,
+      })
+    }
   }, [isLoading, isAuthenticated, sessionChecked, user, error])
 
   // Loading timeout handler
@@ -219,15 +213,15 @@ export default function DashboardPage() {
 
   useEffect(() => {
     // Check if user is the owner by phone number - redirect to role selection
+    // SECURITY (2026-01-28): Centralized phone normalization to avoid hardcoded variants
     if (!isLoading && user) {
       const userPhone = user.phone || ''
-      const normalizedPhone = userPhone.replace(/[\s\-\(\)]/g, '')
+      // Normalize by removing +, spaces, dashes, parentheses for consistent comparison
+      const normalizePhone = (phone: string) => phone.replace(/[\+\s\-\(\)]/g, '')
+      const normalizedUserPhone = normalizePhone(userPhone)
+      const normalizedOwnerPhone = normalizePhone(OWNER_PHONE)
 
-      if (
-        normalizedPhone === OWNER_PHONE ||
-        normalizedPhone === '919999744334' ||
-        normalizedPhone === '+919999744334'
-      ) {
+      if (normalizedUserPhone === normalizedOwnerPhone) {
         router.push('/select-role')
         return
       }

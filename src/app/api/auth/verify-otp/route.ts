@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { SessionManager, CookieManager, addSecurityHeaders } from '@/lib/auth/config'
+import { SessionManager, CookieManager, addSecurityHeaders, AuthRateLimit } from '@/lib/auth/config'
 import { z } from 'zod'
 
 // Validation schema for OTP verification
@@ -32,7 +32,32 @@ const verifyOtpSchema = z.object({
 })
 
 export async function POST(request: NextRequest) {
+  // SECURITY (2026-01-28): Rate limit OTP verification to prevent brute force
+  const forwardedFor = request.headers.get('x-forwarded-for')
+  const clientIP = forwardedFor
+    ? forwardedFor.split(',')[0].trim()
+    : request.headers.get('x-real-ip') || 'unknown'
+
   try {
+    // Check rate limiting before processing
+    const rateLimitCheck = await AuthRateLimit.checkRateLimit(`otp-verify:${clientIP}`)
+    if (!rateLimitCheck.allowed) {
+      console.warn(
+        `[SECURITY] OTP verification rate limited for IP: ${clientIP} at ${new Date().toISOString()}`
+      )
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Too many verification attempts',
+            message: 'Please wait before trying again',
+            lockoutEndsAt: rateLimitCheck.lockoutEndsAt,
+            remainingAttempts: 0,
+          },
+          { status: 429 }
+        )
+      )
+    }
+
     const body = await request.json()
 
     // Validate input

@@ -227,7 +227,9 @@ const ROLE_PERMISSIONS: Record<UserRole, string[]> = {
     'demo:book',
     'community:participate',
   ],
-  PARENT: ['student:monitor', 'progress:view', 'payment:make', 'demo:book', 'reports:view'],
+  // SECURITY (2026-01-28): Parent can view payments but making payments requires student action
+  // This prevents unauthorized payment actions by parent accounts
+  PARENT: ['student:monitor', 'progress:view', 'payment:view', 'payment:history', 'demo:book', 'reports:view'],
   TEACHER: [
     'test:create',
     'test:edit',
@@ -736,25 +738,28 @@ export class AuthRateLimit {
 /**
  * Cookie management utilities
  * Handles auth token cookies for session persistence
+ *
+ * SECURITY (2026-01-28): Using SameSite='strict' for auth cookies
+ * This prevents CSRF attacks by not sending cookies on cross-site requests
  */
 export class CookieManager {
   static setAuthCookies(response: NextResponse, accessToken: string, refreshToken: string) {
     const isProduction = process.env.NODE_ENV === 'production'
 
-    // Set access token cookie (httpOnly, secure)
+    // Set access token cookie (httpOnly, secure, strict same-site)
     response.cookies.set('auth-token', accessToken, {
       httpOnly: true,
       secure: isProduction,
-      sameSite: 'lax',
+      sameSite: 'strict', // Changed from 'lax' for better CSRF protection
       maxAge: 15 * 60, // 15 minutes
       path: '/',
     })
 
-    // Set refresh token cookie (httpOnly, secure)
+    // Set refresh token cookie (httpOnly, secure, strict same-site)
     response.cookies.set('refresh-token', refreshToken, {
       httpOnly: true,
       secure: isProduction,
-      sameSite: 'lax',
+      sameSite: 'strict', // Changed from 'lax' for better CSRF protection
       maxAge: 7 * 24 * 60 * 60, // 7 days
       path: '/',
     })

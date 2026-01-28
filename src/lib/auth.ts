@@ -230,7 +230,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   events: {
     async signIn(message) {
       const user = message.user
-      console.log('User signed in:', user.email, 'Role:', user.role)
+      // SECURITY (2026-01-28): Log auth events only in dev, redact in prod
+      if (process.env.NODE_ENV === 'development') {
+        console.log('User signed in:', user.email, 'Role:', user.role)
+      }
 
       // Log successful login to audit system
       if (user.email && user.role) {
@@ -243,7 +246,10 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       if ('session' in message && message.session) {
         userEmail = (message.session as any).user?.email
       }
-      console.log('User signed out:', userEmail)
+      // SECURITY (2026-01-28): Log auth events only in dev
+      if (process.env.NODE_ENV === 'development') {
+        console.log('User signed out:', userEmail)
+      }
 
       // Note: Logout events could be added to audit logger if needed
     },
@@ -289,12 +295,17 @@ export async function requireAdminAuth() {
   try {
     const session = await requireAdmin()
 
-    // Additional security: Log admin access attempts
-    console.log(`Admin access granted: ${session.user.email} at ${new Date().toISOString()}`)
+    // SECURITY (2026-01-28): Log admin access only in dev to prevent info leakage
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`Admin access granted: ${session.user.email} at ${new Date().toISOString()}`)
+    }
 
     return session
   } catch (error) {
-    console.warn(`Admin authentication failed at ${new Date().toISOString()}:`, error)
+    // SECURITY: Don't expose error details in production
+    if (process.env.NODE_ENV === 'development') {
+      console.warn(`Admin authentication failed at ${new Date().toISOString()}:`, error)
+    }
     throw new Error('Admin authentication required')
   }
 }

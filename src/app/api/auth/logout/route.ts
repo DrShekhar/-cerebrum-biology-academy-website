@@ -55,11 +55,21 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Create response
+    // Create response with cache-busting headers
+    // SECURITY (2026-01-28): Prevent client-side caching of auth state
     const response = NextResponse.json({
       success: true,
       message: 'Logged out successfully',
+      // Include timestamp to ensure client knows session is terminated
+      loggedOutAt: new Date().toISOString(),
     })
+
+    // Prevent any caching of logout response
+    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
+    response.headers.set('Pragma', 'no-cache')
+    response.headers.set('Expires', '0')
+    // Clear Vary header to prevent conditional caching
+    response.headers.set('Vary', '*')
 
     // Clear all auth cookies
     CookieManager.clearAuthCookies(response)
@@ -73,7 +83,13 @@ export async function POST(request: NextRequest) {
     const response = NextResponse.json({
       success: true,
       message: 'Logged out successfully',
+      loggedOutAt: new Date().toISOString(),
     })
+
+    // Prevent caching even on error
+    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
+    response.headers.set('Pragma', 'no-cache')
+    response.headers.set('Expires', '0')
 
     CookieManager.clearAuthCookies(response)
     return addSecurityHeaders(response)

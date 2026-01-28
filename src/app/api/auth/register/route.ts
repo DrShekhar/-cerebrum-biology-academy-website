@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { adminDb as db } from '@/lib/db-admin'
 import { hashPassword } from '@/lib/auth'
+import { PasswordUtils } from '@/lib/auth/config'
 import { z } from 'zod'
 
 // Validation schema for registration
+// SECURITY (2026-01-28): Password strength validation added via PasswordUtils
 const registerSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
   email: z.string().email('Invalid email format'),
@@ -33,6 +35,18 @@ export async function POST(request: NextRequest) {
 
     const { name, email, password, phone, role, currentClass, parentEmail, referralCode } =
       validationResult.data
+
+    // SECURITY: Enforce strong password requirements
+    const passwordValidation = PasswordUtils.validatePassword(password)
+    if (!passwordValidation.valid) {
+      return NextResponse.json(
+        {
+          error: 'Password does not meet security requirements',
+          details: passwordValidation.errors,
+        },
+        { status: 400 }
+      )
+    }
 
     // Check if user already exists
     const existingUsers = await db.query({
