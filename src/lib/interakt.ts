@@ -144,6 +144,14 @@ async function makeInteraktRequest(
  * Send a WhatsApp message via Interakt (template or text)
  */
 export async function sendWhatsAppMessage(params: SendMessageParams): Promise<InteraktResponse> {
+  // Early return if not configured
+  if (!isInteraktConfigured()) {
+    return {
+      success: false,
+      error: 'WhatsApp not configured. Please set INTERAKT_API_KEY environment variable.',
+    }
+  }
+
   try {
     const {
       phone,
@@ -245,6 +253,14 @@ export async function sendWhatsAppMessage(params: SendMessageParams): Promise<In
  * Send a template message with typed parameters
  */
 export async function sendTemplateMessage(params: SendTemplateParams): Promise<InteraktResponse> {
+  // Early return if not configured
+  if (!isInteraktConfigured()) {
+    return {
+      success: false,
+      error: 'WhatsApp not configured. Please set INTERAKT_API_KEY environment variable.',
+    }
+  }
+
   const { phone, templateName, bodyValues, headerValues, buttonValues, callbackData } = params
 
   const { countryCode, phoneNumber } = formatPhoneNumber(phone)

@@ -5,6 +5,116 @@ import { requireAdminAuth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
 import type { LeadSource, Priority, LeadStage } from '@/generated/prisma'
 
+/**
+ * GET /api/admin/leads
+ * Fetch leads with pagination, filtering, and search
+ */
+export async function GET(request: NextRequest) {
+  try {
+    await requireAdminAuth()
+
+    const { searchParams } = new URL(request.url)
+
+    // Pagination
+    const page = parseInt(searchParams.get('page') || '1', 10)
+    const limit = parseInt(searchParams.get('limit') || '20', 10)
+
+    // Filters
+    const stage = searchParams.get('stage') as LeadStage | null
+    const priority = searchParams.get('priority') as Priority | null
+    const source = searchParams.get('source') as LeadSource | null
+    const assignedToId = searchParams.get('assignedToId')
+    const search = searchParams.get('search')
+    const dateFrom = searchParams.get('dateFrom')
+    const dateTo = searchParams.get('dateTo')
+
+    // Build where clause
+    const where: Record<string, unknown> = {}
+
+    if (stage) where.stage = stage
+    if (priority) where.priority = priority
+    if (source) where.source = source
+    if (assignedToId) where.assignedToId = assignedToId
+
+    // Multi-field search
+    if (search) {
+      where.OR = [
+        { studentName: { contains: search, mode: 'insensitive' } },
+        { phone: { contains: search } },
+        { email: { contains: search, mode: 'insensitive' } },
+        { courseInterest: { contains: search, mode: 'insensitive' } },
+      ]
+    }
+
+    // Date range filter
+    if (dateFrom || dateTo) {
+      where.createdAt = {}
+      if (dateFrom) (where.createdAt as Record<string, Date>).gte = new Date(dateFrom)
+      if (dateTo) (where.createdAt as Record<string, Date>).lte = new Date(dateTo)
+    }
+
+    // Parallel queries for data + count
+    const [leads, total] = await Promise.all([
+      prisma.leads.findMany({
+        where,
+        skip: (page - 1) * limit,
+        take: limit,
+        orderBy: { createdAt: 'desc' },
+        include: {
+          users: {
+            select: { id: true, name: true, email: true },
+          },
+          _count: {
+            select: {
+              activities: true,
+              notes: true,
+              crm_communications: true,
+            },
+          },
+        },
+      }),
+      prisma.leads.count({ where }),
+    ])
+
+    // Get stage counts for stats
+    const stageCounts = await prisma.leads.groupBy({
+      by: ['stage'],
+      _count: { id: true },
+    })
+
+    const stats = {
+      total,
+      byStage: stageCounts.reduce(
+        (acc, item) => {
+          acc[item.stage] = item._count.id
+          return acc
+        },
+        {} as Record<string, number>
+      ),
+    }
+
+    return NextResponse.json({
+      success: true,
+      data: leads,
+      pagination: {
+        page,
+        limit,
+        total,
+        totalPages: Math.ceil(total / limit),
+      },
+      stats,
+    })
+  } catch (error) {
+    console.error('Get leads error:', error)
+
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+
+    return NextResponse.json({ success: false, error: 'Failed to fetch leads' }, { status: 500 })
+  }
+}
+
 const createLeadSchema = z.object({
   studentName: z.string().min(2, 'Name must be at least 2 characters').max(100),
   email: z.string().email('Invalid email address').optional().or(z.literal('')),

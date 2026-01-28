@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   Users,
@@ -24,152 +24,108 @@ import {
   Send,
   Filter,
   ArrowRight,
+  Loader2,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddLeadForm } from '@/components/admin/AddLeadForm'
 import { EditLeadForm } from '@/components/admin/EditLeadForm'
+import { toast } from 'sonner'
 
+// API Lead type (matches database schema)
+interface APILead {
+  id: string
+  studentName: string
+  email: string | null
+  phone: string
+  courseInterest: string
+  source: string
+  stage: string
+  priority: string
+  assignedToId: string | null
+  nextFollowUpAt: string | null
+  lastContactedAt: string | null
+  lostReason: string | null
+  score: number | null
+  createdAt: string
+  updatedAt: string
+  users?: { id: string; name: string; email: string } | null
+  _count?: { activities: number; notes: number; crm_communications: number }
+}
+
+// UI Lead type for display
 interface Lead {
   id: string
   name: string
   email: string
   phone: string
-  whatsappNumber?: string
-  dateOfBirth?: string
-  class: string
-  school?: string
-  city: string
-  state: string
-  leadSource: 'website' | 'referral' | 'social_media' | 'advertisement' | 'direct'
   courseInterest: string[]
-  leadStage:
-    | 'new'
-    | 'contacted'
-    | 'qualified'
-    | 'demo_scheduled'
-    | 'demo_completed'
-    | 'negotiation'
-    | 'converted'
-    | 'lost'
-  priority: 'hot' | 'warm' | 'cold'
+  leadSource: string
+  leadStage: string
+  priority: string
   assignedCounselor?: string
+  assignedToId?: string
   createdAt: string
   lastContactDate?: string
   nextFollowUp?: string
-  parentName?: string
-  parentPhone?: string
-  notes?: string
-  interactions: LeadInteraction[]
-  conversionProbability: number
-  expectedValue: number
   lostReason?: string
+  score?: number
+  activitiesCount?: number
+  notesCount?: number
 }
 
-interface LeadInteraction {
+interface Counselor {
   id: string
-  type: 'call' | 'email' | 'whatsapp' | 'demo' | 'meeting'
-  date: string
-  duration?: number
-  outcome: 'positive' | 'neutral' | 'negative'
-  notes: string
-  nextAction?: string
+  name: string
+  email: string
+  role: string
+  leadCount: number
 }
 
-const mockLeads: Lead[] = [
-  {
-    id: '1',
-    name: 'Amit Patel',
-    email: 'amit.patel@email.com',
-    phone: '+91 9876543214',
-    whatsappNumber: '+91 9876543214',
-    dateOfBirth: '2005-08-10',
-    class: 'Dropper',
-    school: "St. Xavier's School",
-    city: 'Ahmedabad',
-    state: 'Gujarat',
-    leadSource: 'social_media',
-    courseInterest: ['NEET Biology Dropper'],
-    leadStage: 'demo_scheduled',
-    priority: 'hot',
-    assignedCounselor: 'Dr. Priya Sharma',
-    createdAt: '2025-01-10T09:15:00Z',
-    lastContactDate: '2025-01-14T15:30:00Z',
-    nextFollowUp: '2025-01-18T10:00:00Z',
-    parentName: 'Kiran Patel',
-    parentPhone: '+91 9876543215',
-    notes: 'Very motivated student, scored 580 in NEET. Looking for intensive coaching.',
-    conversionProbability: 85,
-    expectedValue: 65000,
-    interactions: [
-      {
-        id: '1',
-        type: 'call',
-        date: '2025-01-14T15:30:00Z',
-        duration: 25,
-        outcome: 'positive',
-        notes: 'Interested in dropper program. Demo scheduled for Jan 18.',
-        nextAction: 'Conduct demo class',
-      },
-    ],
-  },
-  {
-    id: '2',
-    name: 'Kavya Sharma',
-    email: 'kavya.sharma@email.com',
-    phone: '+91 9876543217',
-    class: '11th',
-    school: 'Ryan International School',
-    city: 'Bangalore',
-    state: 'Karnataka',
-    leadSource: 'website',
-    courseInterest: ['NEET Biology Class 11', 'Foundation Biology'],
-    leadStage: 'qualified',
-    priority: 'warm',
-    assignedCounselor: 'Dr. Rajesh Kumar',
-    createdAt: '2025-01-12T14:20:00Z',
-    lastContactDate: '2025-01-15T11:45:00Z',
-    nextFollowUp: '2025-01-17T16:00:00Z',
-    parentName: 'Manoj Sharma',
-    parentPhone: '+91 9876543218',
-    notes: 'Strong academic background. Parents are comparing with other institutes.',
-    conversionProbability: 65,
-    expectedValue: 35000,
-    interactions: [
-      {
-        id: '1',
-        type: 'email',
-        date: '2025-01-15T11:45:00Z',
-        outcome: 'neutral',
-        notes: 'Sent course details and fee structure. Awaiting response.',
-        nextAction: 'Follow up call in 2 days',
-      },
-    ],
-  },
-  {
-    id: '3',
-    name: 'Rohan Gupta',
-    email: 'rohan.gupta@email.com',
-    phone: '+91 9876543219',
-    class: '12th',
-    city: 'Pune',
-    state: 'Maharashtra',
-    leadSource: 'referral',
-    courseInterest: ['NEET Biology Class 12'],
-    leadStage: 'new',
-    priority: 'cold',
-    createdAt: '2025-01-16T08:30:00Z',
-    notes: 'Initial inquiry through referral. Need to contact.',
-    conversionProbability: 30,
-    expectedValue: 40000,
-    interactions: [],
-  },
-]
+interface Pagination {
+  page: number
+  limit: number
+  total: number
+  totalPages: number
+}
+
+interface Stats {
+  total: number
+  byStage: Record<string, number>
+}
+
+// Transform API lead to UI lead
+function transformLead(apiLead: APILead): Lead {
+  return {
+    id: apiLead.id,
+    name: apiLead.studentName,
+    email: apiLead.email || '',
+    phone: apiLead.phone,
+    courseInterest: apiLead.courseInterest ? [apiLead.courseInterest] : [],
+    leadSource: apiLead.source.toLowerCase(),
+    leadStage: apiLead.stage.toLowerCase().replace('_', '_'),
+    priority: apiLead.priority.toLowerCase(),
+    assignedCounselor: apiLead.users?.name,
+    assignedToId: apiLead.assignedToId || undefined,
+    createdAt: apiLead.createdAt,
+    lastContactDate: apiLead.lastContactedAt || undefined,
+    nextFollowUp: apiLead.nextFollowUpAt || undefined,
+    lostReason: apiLead.lostReason || undefined,
+    score: apiLead.score || undefined,
+    activitiesCount: apiLead._count?.activities,
+    notesCount: apiLead._count?.notes,
+  }
+}
 
 export default function LeadsPage() {
-  const [leads, setLeads] = useState<Lead[]>(mockLeads)
-  const [filteredLeads, setFilteredLeads] = useState<Lead[]>(mockLeads)
+  const [leads, setLeads] = useState<Lead[]>([])
+  const [filteredLeads, setFilteredLeads] = useState<Lead[]>([])
+  const [counselors, setCounselors] = useState<Counselor[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
+  const [pagination, setPagination] = useState<Pagination>({ page: 1, limit: 20, total: 0, totalPages: 0 })
+  const [stats, setStats] = useState<Stats>({ total: 0, byStage: {} })
   const [searchTerm, setSearchTerm] = useState('')
   const [stageFilter, setStageFilter] = useState<string>('all')
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
@@ -178,33 +134,76 @@ export default function LeadsPage() {
   const [isEditLeadModalOpen, setIsEditLeadModalOpen] = useState(false)
   const [selectedLead, setSelectedLead] = useState<Lead | null>(null)
 
+  // Fetch leads from API
+  const fetchLeads = useCallback(async () => {
+    try {
+      setLoading(true)
+      setError(null)
+
+      const params = new URLSearchParams()
+      params.set('page', pagination.page.toString())
+      params.set('limit', pagination.limit.toString())
+      if (stageFilter !== 'all') params.set('stage', stageFilter.toUpperCase().replace(' ', '_'))
+      if (priorityFilter !== 'all') params.set('priority', priorityFilter.toUpperCase())
+      if (searchTerm) params.set('search', searchTerm)
+
+      const response = await fetch(`/api/admin/leads?${params.toString()}`)
+      if (!response.ok) {
+        throw new Error('Failed to fetch leads')
+      }
+
+      const data = await response.json()
+      if (data.success) {
+        const transformedLeads = data.data.map(transformLead)
+        setLeads(transformedLeads)
+        setFilteredLeads(transformedLeads)
+        setPagination(data.pagination)
+        setStats(data.stats)
+      } else {
+        throw new Error(data.error || 'Failed to fetch leads')
+      }
+    } catch (err) {
+      console.error('Error fetching leads:', err)
+      setError(err instanceof Error ? err.message : 'Failed to load leads')
+      toast.error('Failed to load leads')
+    } finally {
+      setLoading(false)
+    }
+  }, [pagination.page, pagination.limit, stageFilter, priorityFilter, searchTerm])
+
+  // Fetch counselors from API
+  const fetchCounselors = useCallback(async () => {
+    try {
+      const response = await fetch('/api/admin/counselors')
+      if (!response.ok) {
+        throw new Error('Failed to fetch counselors')
+      }
+
+      const data = await response.json()
+      if (data.success) {
+        setCounselors(data.data)
+      }
+    } catch (err) {
+      console.error('Error fetching counselors:', err)
+    }
+  }, [])
+
+  // Initial load
+  useEffect(() => {
+    fetchLeads()
+    fetchCounselors()
+  }, [fetchLeads, fetchCounselors])
+
+  // Client-side filtering for source (not in API)
   useEffect(() => {
     let filtered = leads
-
-    if (searchTerm) {
-      filtered = filtered.filter(
-        (lead) =>
-          lead.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          lead.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          lead.phone.includes(searchTerm) ||
-          lead.city.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-    }
-
-    if (stageFilter !== 'all') {
-      filtered = filtered.filter((lead) => lead.leadStage === stageFilter)
-    }
-
-    if (priorityFilter !== 'all') {
-      filtered = filtered.filter((lead) => lead.priority === priorityFilter)
-    }
 
     if (sourceFilter !== 'all') {
       filtered = filtered.filter((lead) => lead.leadSource === sourceFilter)
     }
 
     setFilteredLeads(filtered)
-  }, [leads, searchTerm, stageFilter, priorityFilter, sourceFilter])
+  }, [leads, sourceFilter])
 
   const getStageColor = (stage: string) => {
     switch (stage) {
@@ -262,33 +261,55 @@ export default function LeadsPage() {
   const statsData = [
     {
       label: 'Total Leads',
-      value: leads.length,
+      value: stats.total,
       icon: UserPlus,
       color: 'bg-blue-100 text-blue-600',
-      trend: '+15%',
     },
     {
       label: 'Hot Leads',
       value: leads.filter((l) => l.priority === 'hot').length,
       icon: Star,
       color: 'bg-red-100 text-red-600',
-      trend: '+8%',
     },
     {
-      label: 'Conversion Rate',
-      value: '24.5%',
+      label: 'Demo Scheduled',
+      value: stats.byStage?.DEMO_SCHEDULED || 0,
       icon: TrendingUp,
       color: 'bg-green-100 text-green-600',
-      trend: '+3.2%',
     },
     {
-      label: 'Expected Value',
-      value: `₹${(leads.reduce((acc, l) => acc + l.expectedValue, 0) / 1000).toFixed(0)}K`,
+      label: 'New Leads',
+      value: stats.byStage?.NEW_LEAD || 0,
       icon: Target,
       color: 'bg-purple-100 text-purple-600',
-      trend: '+12%',
     },
   ]
+
+  // Show loading state
+  if (loading && leads.length === 0) {
+    return (
+      <AdminLayout>
+        <div className="flex items-center justify-center h-96">
+          <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+          <span className="ml-2 text-gray-600">Loading leads...</span>
+        </div>
+      </AdminLayout>
+    )
+  }
+
+  // Show error state
+  if (error && leads.length === 0) {
+    return (
+      <AdminLayout>
+        <div className="flex flex-col items-center justify-center h-96">
+          <AlertCircle className="w-12 h-12 text-red-500 mb-4" />
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">Failed to load leads</h2>
+          <p className="text-gray-600 mb-4">{error}</p>
+          <Button onClick={() => fetchLeads()}>Try Again</Button>
+        </div>
+      </AdminLayout>
+    )
+  }
 
   return (
     <AdminLayout>
@@ -329,7 +350,7 @@ export default function LeadsPage() {
                 <div>
                   <p className="text-sm font-medium text-gray-600">{stat.label}</p>
                   <p className="text-2xl font-bold text-gray-900">{stat.value}</p>
-                  <p className="text-xs text-green-600 mt-1">{stat.trend} from last month</p>
+                  {loading && <Loader2 className="w-3 h-3 animate-spin text-gray-400 mt-1" />}
                 </div>
                 <div
                   className={`h-12 w-12 rounded-lg flex items-center justify-center ${stat.color}`}
@@ -561,9 +582,11 @@ export default function LeadsPage() {
         size="lg"
       >
         <AddLeadForm
+          counselors={counselors.map(c => ({ id: c.id, name: c.name }))}
           onSuccess={() => {
             setIsAddLeadModalOpen(false)
-            window.location.reload()
+            fetchLeads()
+            toast.success('Lead added successfully')
           }}
           onCancel={() => setIsAddLeadModalOpen(false)}
         />
@@ -585,21 +608,18 @@ export default function LeadsPage() {
               phone: selectedLead.phone,
               courseInterest: selectedLead.courseInterest.join(', '),
               source: selectedLead.leadSource.toUpperCase().replace(' ', '_'),
-              stage: selectedLead.leadStage.toUpperCase().replace(' ', '_'),
+              stage: selectedLead.leadStage.toUpperCase().replace('_', '_'),
               priority: selectedLead.priority.toUpperCase(),
-              assignedToId: 'admin-1',
+              assignedToId: selectedLead.assignedToId || counselors[0]?.id || '',
               nextFollowUpAt: selectedLead.nextFollowUp,
               lostReason: selectedLead.lostReason,
             }}
-            counselors={[
-              { id: 'admin-1', name: 'Dr. Priya Sharma' },
-              { id: 'admin-2', name: 'Dr. Rajesh Kumar' },
-              { id: 'admin-3', name: 'Dr. Ananya Patel' },
-            ]}
+            counselors={counselors.map(c => ({ id: c.id, name: c.name }))}
             onSuccess={() => {
               setIsEditLeadModalOpen(false)
               setSelectedLead(null)
-              window.location.reload()
+              fetchLeads()
+              toast.success('Lead updated successfully')
             }}
             onCancel={() => {
               setIsEditLeadModalOpen(false)

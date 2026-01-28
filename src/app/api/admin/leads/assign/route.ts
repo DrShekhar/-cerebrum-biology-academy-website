@@ -7,6 +7,7 @@ import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import type { LeadStage } from '@/generated/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
+import { notifyCounselorOfNewLead, isInteraktConfigured } from '@/lib/interakt'
 
 const assignLeadSchema = z.object({
   leadIds: z
@@ -137,8 +138,34 @@ async function handlePOST(request: NextRequest, session: ValidatedSession) {
       console.error('Failed to dispatch lead.assigned webhooks:', webhookError)
     }
 
-    // TODO: Send notification to counselor if notifyCounselor is true
-    // This would integrate with email/WhatsApp notification service
+    // Send WhatsApp notification to counselor if notifyCounselor is true
+    if (validatedData.notifyCounselor && isInteraktConfigured()) {
+      try {
+        // Get counselor's phone from users table
+        const counselorWithPhone = await prisma.users.findUnique({
+          where: { id: validatedData.counselorId },
+          select: { phone: true },
+        })
+
+        if (counselorWithPhone?.phone) {
+          // Notify for first reassigned lead (to avoid spam)
+          const firstLead = reassignments[0] || leads[0]
+          if (firstLead) {
+            await notifyCounselorOfNewLead({
+              counselorPhone: counselorWithPhone.phone,
+              leadName: firstLead.studentName,
+              leadPhone: firstLead.phone,
+              courseInterest: firstLead.courseInterest,
+              initialMessage: `${leads.length} lead(s) assigned to you`,
+              source: 'CRM Assignment',
+            })
+          }
+        }
+      } catch (notifyError) {
+        console.error('Failed to send counselor notification:', notifyError)
+        // Don't fail the request if notification fails
+      }
+    }
 
     return NextResponse.json({
       success: true,

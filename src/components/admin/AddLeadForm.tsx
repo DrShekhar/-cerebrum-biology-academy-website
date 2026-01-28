@@ -36,7 +36,13 @@ const addLeadSchema = z.object({
 
 type AddLeadFormData = z.infer<typeof addLeadSchema>
 
+interface Counselor {
+  id: string
+  name: string
+}
+
 interface AddLeadFormProps {
+  counselors?: Counselor[]
   onSuccess: () => void
   onCancel: () => void
 }
@@ -61,13 +67,10 @@ const PRIORITY_LEVELS = [
   { value: 'COLD', label: 'Cold - Low Priority' },
 ]
 
-const COUNSELORS = [
-  { id: 'counselor-1', name: 'Dr. Priya Sharma' },
-  { id: 'counselor-2', name: 'Dr. Rajesh Kumar' },
-  { id: 'counselor-3', name: 'Dr. Anjali Verma' },
-]
+// Fallback counselors (used only if no counselors prop provided)
+const DEFAULT_COUNSELORS: Counselor[] = []
 
-export function AddLeadForm({ onSuccess, onCancel }: AddLeadFormProps) {
+export function AddLeadForm({ counselors = DEFAULT_COUNSELORS, onSuccess, onCancel }: AddLeadFormProps) {
   const {
     register,
     handleSubmit,
@@ -216,7 +219,7 @@ export function AddLeadForm({ onSuccess, onCancel }: AddLeadFormProps) {
               className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="">Select counselor</option>
-              {COUNSELORS.map((counselor) => (
+              {counselors.map((counselor) => (
                 <option key={counselor.id} value={counselor.id}>
                   {counselor.name}
                 </option>

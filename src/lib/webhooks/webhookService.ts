@@ -265,28 +265,104 @@ export class WebhookService {
 
     // Calculate exponential backoff
     const delay = retryDelayMs * Math.pow(2, attemptNumber - 1)
+    const nextRetryAt = new Date(Date.now() + delay)
 
     // Log retry scheduling (debug info)
     if (process.env.NODE_ENV === 'development') {
-      console.warn(`Scheduling retry ${attemptNumber} for webhook ${webhook.id} in ${delay}ms`)
+      console.warn(`Scheduling retry ${attemptNumber} for webhook ${webhook.id} at ${nextRetryAt.toISOString()}`)
     }
 
-    // In production, this should use a proper job queue (e.g., BullMQ, Vercel Cron)
-    // For now, use setTimeout as a simple implementation
-    setTimeout(async () => {
+    // Store retry in database for cron-based processing (more reliable than setTimeout in serverless)
+    try {
+      await prisma.webhook_deliveries.update({
+        where: { id: deliveryId },
+        data: {
+          status: 'PENDING_RETRY',
+          attemptCount: attemptNumber,
+          nextRetryAt,
+          metadata: {
+            webhookId: webhook.id,
+            webhookUrl: webhook.url,
+            payload: payload,
+            maxRetries,
+            retryDelayMs,
+          },
+        },
+      })
+    } catch (dbError) {
+      console.error('Failed to schedule webhook retry in database:', dbError)
+      // Fallback to setTimeout for non-serverless environments
+      setTimeout(async () => {
+        const result = await this.sendWebhook(
+          webhook,
+          payload,
+          false,
+          attemptNumber,
+          deliveryId,
+          maxRetries
+        )
+
+        if (!result.success && attemptNumber < maxRetries) {
+          await this.scheduleRetry(webhook, payload, attemptNumber + 1, deliveryId)
+        }
+      }, delay)
+    }
+  }
+
+  /**
+   * Process pending webhook retries (called by cron job)
+   */
+  static async processPendingRetries(): Promise<{ processed: number; succeeded: number; failed: number }> {
+    const pendingRetries = await prisma.webhook_deliveries.findMany({
+      where: {
+        status: 'PENDING_RETRY',
+        nextRetryAt: { lte: new Date() },
+      },
+      take: 50, // Process in batches
+      orderBy: { nextRetryAt: 'asc' },
+    })
+
+    let processed = 0
+    let succeeded = 0
+    let failed = 0
+
+    for (const delivery of pendingRetries) {
+      processed++
+      const metadata = delivery.metadata as Record<string, unknown> | null
+      if (!metadata?.webhookId || !metadata?.webhookUrl || !metadata?.payload) {
+        console.warn(`Skipping invalid retry delivery ${delivery.id}`)
+        failed++
+        continue
+      }
+
+      const webhookConfig: WebhookConfig = {
+        id: String(metadata.webhookId),
+        url: String(metadata.webhookUrl),
+        events: [],
+        secret: '', // Will be retrieved from original webhook
+        retryPolicy: {
+          maxRetries: Number(metadata.maxRetries) || 3,
+          retryDelayMs: Number(metadata.retryDelayMs) || 5000,
+        },
+      }
+
       const result = await this.sendWebhook(
-        webhook,
-        payload,
+        webhookConfig,
+        metadata.payload as WebhookPayload,
         false,
-        attemptNumber,
-        deliveryId,
-        maxRetries
+        delivery.attemptCount + 1,
+        delivery.id,
+        webhookConfig.retryPolicy?.maxRetries || 3
       )
 
-      if (!result.success && attemptNumber < maxRetries) {
-        await this.scheduleRetry(webhook, payload, attemptNumber + 1, deliveryId)
+      if (result.success) {
+        succeeded++
+      } else {
+        failed++
       }
-    }, delay)
+    }
+
+    return { processed, succeeded, failed }
   }
 
   // Convenience methods for common events
