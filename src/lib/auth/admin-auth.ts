@@ -7,9 +7,26 @@
  * - Added: Timing-safe comparison for admin key
  * - Added: IP logging for admin access attempts
  * - Added: Proper session validation against database
+ *
+ * KEY ROTATION SUPPORT (2026-01-28):
+ * - Support for multiple admin keys with version tracking
+ * - Rolling rotation: add new key, then remove old key
+ * - Audit logging includes key version used
+ *
+ * Environment variable formats:
+ * - Single key: ADMIN_ACCESS_KEY=your-secret-key
+ * - Multiple keys (comma-separated): ADMIN_ACCESS_KEYS=key1:v1,key2:v2
+ * - JSON format: ADMIN_ACCESS_KEYS_JSON=[{"key":"secret","version":"v1","name":"primary"}]
  */
 import { NextRequest } from 'next/server'
 import crypto from 'crypto'
+
+export interface AdminKey {
+  key: string
+  version: string
+  name?: string
+  expiresAt?: Date
+}
 
 export interface AdminSession {
   valid: boolean
@@ -17,6 +34,8 @@ export interface AdminSession {
   role?: 'admin' | 'super_admin'
   expiresAt?: Date
   email?: string
+  keyVersion?: string // Track which key was used for audit
+  keyName?: string
 }
 
 /**
@@ -31,6 +50,110 @@ function secureCompare(a: string, b: string): boolean {
   } catch {
     return false
   }
+}
+
+// Cache parsed admin keys to avoid re-parsing on every request
+let cachedAdminKeys: AdminKey[] | null = null
+let lastKeyParse = 0
+const KEY_CACHE_TTL = 60000 // Re-parse every 60 seconds to pick up env changes
+
+/**
+ * Parse admin keys from environment variables
+ * Supports three formats:
+ * 1. Single key: ADMIN_ACCESS_KEY=secret
+ * 2. Multiple keys (comma-separated): ADMIN_ACCESS_KEYS=key1:v1,key2:v2
+ * 3. JSON format: ADMIN_ACCESS_KEYS_JSON=[{"key":"secret","version":"v1"}]
+ */
+function getAdminKeys(): AdminKey[] {
+  const now = Date.now()
+
+  // Return cached keys if still valid
+  if (cachedAdminKeys && now - lastKeyParse < KEY_CACHE_TTL) {
+    return cachedAdminKeys
+  }
+
+  const keys: AdminKey[] = []
+
+  // Try JSON format first (most flexible)
+  if (process.env.ADMIN_ACCESS_KEYS_JSON) {
+    try {
+      const jsonKeys = JSON.parse(process.env.ADMIN_ACCESS_KEYS_JSON)
+      if (Array.isArray(jsonKeys)) {
+        for (const k of jsonKeys) {
+          if (k.key && k.version) {
+            keys.push({
+              key: k.key,
+              version: k.version,
+              name: k.name,
+              expiresAt: k.expiresAt ? new Date(k.expiresAt) : undefined,
+            })
+          }
+        }
+      }
+    } catch (e) {
+      console.error('[ADMIN AUTH] Failed to parse ADMIN_ACCESS_KEYS_JSON:', e)
+    }
+  }
+
+  // Try comma-separated format: key1:v1,key2:v2
+  if (keys.length === 0 && process.env.ADMIN_ACCESS_KEYS) {
+    const keyPairs = process.env.ADMIN_ACCESS_KEYS.split(',')
+    for (let i = 0; i < keyPairs.length; i++) {
+      const pair = keyPairs[i].trim()
+      const [key, version] = pair.split(':')
+      if (key) {
+        keys.push({
+          key: key.trim(),
+          version: version?.trim() || `v${i + 1}`,
+          name: `key-${i + 1}`,
+        })
+      }
+    }
+  }
+
+  // Fallback to single key format
+  if (keys.length === 0 && process.env.ADMIN_ACCESS_KEY) {
+    keys.push({
+      key: process.env.ADMIN_ACCESS_KEY,
+      version: 'v1',
+      name: 'primary',
+    })
+  }
+
+  // Cache the parsed keys
+  cachedAdminKeys = keys
+  lastKeyParse = now
+
+  return keys
+}
+
+/**
+ * Validate an admin key against all configured keys
+ * Returns matching key info if valid, null otherwise
+ */
+function validateAdminKey(providedKey: string): AdminKey | null {
+  const adminKeys = getAdminKeys()
+
+  if (adminKeys.length === 0) {
+    console.error('[SECURITY] No admin keys configured')
+    return null
+  }
+
+  const now = new Date()
+
+  for (const adminKey of adminKeys) {
+    // Check if key has expired
+    if (adminKey.expiresAt && adminKey.expiresAt < now) {
+      continue
+    }
+
+    // Use timing-safe comparison
+    if (secureCompare(providedKey, adminKey.key)) {
+      return adminKey
+    }
+  }
+
+  return null
 }
 
 /**
@@ -53,26 +176,30 @@ export async function validateAdminSession(request: NextRequest): Promise<AdminS
     // For local development, use a real admin account in the database
     // This prevents accidental bypass if env vars are misconfigured
 
-    const adminKey =
+    const providedKey =
       request.headers.get('x-admin-key') || request.cookies.get('admin-session')?.value
 
-    // Require both ADMIN_ACCESS_KEY to be configured and a key to be provided
-    if (!process.env.ADMIN_ACCESS_KEY) {
-      console.error('[SECURITY] ADMIN_ACCESS_KEY not configured')
+    // Check if any admin keys are configured
+    const adminKeys = getAdminKeys()
+    if (adminKeys.length === 0) {
+      console.error('[SECURITY] No admin keys configured (ADMIN_ACCESS_KEY, ADMIN_ACCESS_KEYS, or ADMIN_ACCESS_KEYS_JSON)')
       return { valid: false }
     }
 
-    if (!adminKey) {
+    if (!providedKey) {
       return { valid: false }
     }
 
-    // SECURITY FIX: Use timing-safe comparison and ONLY accept exact match
-    // Removed: insecure adminKey.startsWith('session_') check that allowed bypass
-    if (secureCompare(adminKey, process.env.ADMIN_ACCESS_KEY)) {
-      // Log successful admin authentication
+    // Validate the provided key against all configured keys
+    const matchedKey = validateAdminKey(providedKey)
+
+    if (matchedKey) {
+      // Log successful admin authentication with key version for audit
       if (process.env.NODE_ENV === 'production') {
         console.log(
-          `[ADMIN AUTH] Successful authentication from IP: ${clientIP} at ${new Date().toISOString()}`
+          `[ADMIN AUTH] Successful authentication from IP: ${clientIP} ` +
+            `using key version: ${matchedKey.version} (${matchedKey.name || 'unnamed'}) ` +
+            `at ${new Date().toISOString()}`
         )
       }
 
@@ -81,6 +208,8 @@ export async function validateAdminSession(request: NextRequest): Promise<AdminS
         userId: 'admin',
         role: 'admin',
         expiresAt: new Date(Date.now() + 3600000), // 1 hour
+        keyVersion: matchedKey.version,
+        keyName: matchedKey.name,
       }
     }
 
@@ -94,6 +223,27 @@ export async function validateAdminSession(request: NextRequest): Promise<AdminS
     console.error('Admin authentication error:', error)
     return { valid: false }
   }
+}
+
+/**
+ * Get information about configured admin keys (for admin dashboard)
+ * Does NOT return actual key values, only metadata
+ */
+export function getAdminKeyInfo(): Array<{
+  version: string
+  name?: string
+  expiresAt?: Date
+  isExpired: boolean
+}> {
+  const keys = getAdminKeys()
+  const now = new Date()
+
+  return keys.map((k) => ({
+    version: k.version,
+    name: k.name,
+    expiresAt: k.expiresAt,
+    isExpired: k.expiresAt ? k.expiresAt < now : false,
+  }))
 }
 
 /**
