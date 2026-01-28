@@ -10,6 +10,17 @@ import { logger } from '@/lib/utils/logger'
 import { Prisma } from '@/generated/prisma'
 import { normalizePhone, validatePhone } from '@/lib/utils/phone'
 
+/**
+ * @deprecated This endpoint is deprecated. Use /api/demo-booking instead.
+ * This endpoint will be removed in a future version.
+ */
+const DEPRECATION_HEADERS = {
+  'X-Deprecated': 'true',
+  'X-Deprecated-Message': 'This endpoint is deprecated. Use /api/demo-booking instead.',
+  'Deprecation': 'true',
+  'Sunset': '2026-06-01',
+}
+
 // Use centralized phone validation from utils
 function validatePhoneNumber(phone: string): boolean {
   return validatePhone(phone)
@@ -540,19 +551,29 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    return NextResponse.json({
-      success: true,
-      message: 'Demo class booked successfully! Our counselor will contact you shortly.',
-      booking: {
-        id: demoBooking.id,
-        leadId: lead.id,
-        meetingId: meetingResponse.id,
-        scheduledTime: meetingResponse.start_time,
-        joinUrl: meetingResponse.join_url,
-        password: meetingResponse.password,
-        assignedCounselor: assignedCounselor.name,
-      },
+    // Log deprecation warning
+    logger.warn('Deprecated API /api/demo/book used', {
+      studentEmail: body.email,
+      clientIp
     })
+
+    return NextResponse.json(
+      {
+        success: true,
+        message: 'Demo class booked successfully! Our counselor will contact you shortly.',
+        booking: {
+          id: demoBooking.id,
+          leadId: lead.id,
+          meetingId: meetingResponse.id,
+          scheduledTime: meetingResponse.start_time,
+          joinUrl: meetingResponse.join_url,
+          password: meetingResponse.password,
+          assignedCounselor: assignedCounselor.name,
+        },
+        _deprecated: 'This endpoint is deprecated. Please use /api/demo-booking instead.',
+      },
+      { headers: DEPRECATION_HEADERS }
+    )
   } catch (error) {
     logger.error('Demo booking error', { error })
     return NextResponse.json(
@@ -615,14 +636,19 @@ export async function GET(request: NextRequest) {
     ]
     const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
 
+    // Log deprecation warning
+    logger.warn('Deprecated API /api/demo/book (GET) used', { clientIp, date })
+
     return NextResponse.json(
       {
         success: true,
         availableSlots,
         date: selectedDate.toISOString(),
+        _deprecated: 'This endpoint is deprecated. Please use /api/demo-booking instead.',
       },
       {
         headers: {
+          ...DEPRECATION_HEADERS,
           'Access-Control-Allow-Origin': corsOrigin,
           'Access-Control-Allow-Methods': 'GET, OPTIONS',
           'Access-Control-Allow-Headers': 'Content-Type',

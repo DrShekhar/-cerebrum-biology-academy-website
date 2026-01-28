@@ -183,6 +183,14 @@
     {
       "path": "/api/cron/seo-trend-monitor",
       "schedule": "30 3,9,15 * * *"
+    },
+    {
+      "path": "/api/cron/demo-reminders",
+      "schedule": "*/15 * * * *"
+    },
+    {
+      "path": "/api/cron/webhook-retries",
+      "schedule": "*/5 * * * *"
     }
   ]
 }
