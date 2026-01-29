@@ -48,6 +48,9 @@ jobs:
           # JWT Secrets (placeholders for build - not used at build time)
           JWT_SECRET: placeholder-build-secret-change-in-production
           JWT_REFRESH_SECRET: placeholder-build-refresh-secret-change-in-production
+          # Auth Secrets (placeholders for build - not used at build time)
+          AUTH_SECRET: placeholder-build-auth-secret
+          NEXTAUTH_SECRET: placeholder-build-nextauth-secret
           # Note: Firebase env vars intentionally not set - code handles missing config gracefully
 
       - name: ✅ Build successful
