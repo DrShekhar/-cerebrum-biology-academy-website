@@ -108,12 +108,7 @@ export default function Home() {
         <EEATSignals variant="compact" className="bg-gray-50" />
       </section>
 
-      {/* 6. Trust Signals Full Section */}
-      <section className="content-visibility-auto">
-        <TrustSignalsBanner variant="full" showVerificationBadges={true} />
-      </section>
-
-      {/* 7. Student Testimonials - Unified Section */}
+      {/* 6. Student Testimonials - Unified Section */}
       <section className="content-visibility-auto-lg">
         <RealStudentTestimonials
           testimonials={realTestimonials}
