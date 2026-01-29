@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Star, Quote, ThumbsUp, TrendingUp, ExternalLink, MapPin } from 'lucide-react'
 
 interface GoogleReview {
@@ -55,6 +54,31 @@ interface GoogleReviewsWidgetProps {
   className?: string
 }
 
+// CSS-based star rating to reduce DOM nodes
+function StarRating({ rating, size = 'md' }: { rating: number; size?: 'sm' | 'md' | 'lg' }) {
+  const sizeClasses = {
+    sm: 'w-3 h-3',
+    md: 'w-4 h-4',
+    lg: 'w-6 h-6',
+  }
+  return (
+    <div className="flex items-center space-x-0.5">
+      {[1, 2, 3, 4, 5].map((star) => (
+        <Star
+          key={star}
+          className={`${sizeClasses[size]} ${
+            star <= Math.floor(rating)
+              ? 'fill-yellow-400 text-yellow-400'
+              : star === Math.ceil(rating) && rating % 1 !== 0
+                ? 'fill-yellow-200 text-yellow-400'
+                : 'text-gray-300'
+          }`}
+        />
+      ))}
+    </div>
+  )
+}
+
 export function GoogleReviewsWidget({
   variant = 'full',
   showAll = false,
@@ -93,18 +117,7 @@ export function GoogleReviewsWidget({
               </div>
               <div>
                 <div className="flex items-center space-x-1 mb-1">
-                  {[1, 2, 3, 4, 5].map((star) => (
-                    <Star
-                      key={star}
-                      className={`w-5 h-5 ${
-                        star <= Math.floor(overallRating)
-                          ? 'fill-yellow-400 text-yellow-400'
-                          : star === Math.ceil(overallRating)
-                            ? 'fill-yellow-200 text-yellow-400'
-                            : 'text-gray-300'
-                      }`}
-                    />
-                  ))}
+                  <StarRating rating={overallRating} size="md" />
                 </div>
                 <p className="text-sm text-gray-700">
                   <span className="font-bold text-gray-900">{overallRating}/5</span> on Google •{' '}
@@ -144,16 +157,7 @@ export function GoogleReviewsWidget({
             <div>
               <div className="font-bold text-gray-900">Google Reviews</div>
               <div className="flex items-center space-x-1">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className={`w-4 h-4 ${
-                      star <= Math.floor(overallRating)
-                        ? 'fill-yellow-400 text-yellow-400'
-                        : 'text-gray-300'
-                    }`}
-                  />
-                ))}
+                <StarRating rating={overallRating} size="sm" />
                 <span className="text-sm text-gray-600 ml-2">
                   {overallRating} ({totalReviews}+)
                 </span>
@@ -171,18 +175,7 @@ export function GoogleReviewsWidget({
                 </div>
                 <div className="flex-1">
                   <div className="font-semibold text-sm text-gray-900">{review.authorName}</div>
-                  <div className="flex items-center space-x-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star
-                        key={star}
-                        className={`w-3 h-3 ${
-                          star <= review.rating
-                            ? 'fill-yellow-400 text-yellow-400'
-                            : 'text-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
+                  <StarRating rating={review.rating} size="sm" />
                 </div>
               </div>
               <p className="text-sm text-gray-600 line-clamp-2">{review.text}</p>
@@ -206,13 +199,7 @@ export function GoogleReviewsWidget({
     <section className={`py-16 bg-gray-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-12 animate-fade-in-up">
           <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <Star className="w-4 h-4 mr-2 fill-yellow-600" />
             Verified Google Reviews
@@ -221,37 +208,21 @@ export function GoogleReviewsWidget({
             What Our Students Say
           </h2>
           <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="flex items-center space-x-1">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <Star
-                  key={star}
-                  className={`w-6 h-6 ${
-                    star <= Math.floor(overallRating)
-                      ? 'fill-yellow-400 text-yellow-400'
-                      : star === Math.ceil(overallRating)
-                        ? 'fill-yellow-200 text-yellow-400'
-                        : 'text-gray-300'
-                  }`}
-                />
-              ))}
-            </div>
+            <StarRating rating={overallRating} size="lg" />
             <span className="text-2xl font-bold text-gray-900">{overallRating}/5</span>
           </div>
           <p className="text-lg text-gray-600">
             Based on <span className="font-semibold">{totalReviews}+ verified Google reviews</span>
           </p>
-        </motion.div>
+        </div>
 
         {/* Reviews Grid */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           {displayReviews.map((review, index) => (
-            <motion.div
+            <div
               key={review.id}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-gray-100 animate-fade-in-up"
+              style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="flex items-start space-x-4 mb-4">
                 <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
@@ -267,19 +238,8 @@ export function GoogleReviewsWidget({
                       </div>
                     )}
                   </div>
-                  <div className="flex items-center space-x-1 mb-1">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star
-                        key={star}
-                        className={`w-4 h-4 ${
-                          star <= review.rating
-                            ? 'fill-yellow-400 text-yellow-400'
-                            : 'text-gray-300'
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <p className="text-xs text-gray-500">{review.date}</p>
+                  <StarRating rating={review.rating} size="sm" />
+                  <p className="text-xs text-gray-500 mt-1">{review.date}</p>
                 </div>
               </div>
 
@@ -287,18 +247,12 @@ export function GoogleReviewsWidget({
                 <Quote className="w-8 h-8 text-blue-100 absolute -top-2 -left-2" />
                 <p className="text-gray-700 leading-relaxed pl-6">{review.text}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center animate-fade-in-up" style={{ animationDelay: '400ms' }}>
           <a
             href="https://www.google.com/maps/place/Cerebrum+Biology+Academy"
             target="_blank"
@@ -319,7 +273,7 @@ export function GoogleReviewsWidget({
               <span>3 Locations in Delhi-NCR</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
