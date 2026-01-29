@@ -2,6 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/Button'
 import {
   Users,
   DollarSign,
@@ -15,6 +18,8 @@ import {
   Calendar,
   Target,
   Activity,
+  ShieldX,
+  Loader2,
 } from 'lucide-react'
 
 interface DashboardData {
@@ -87,14 +92,79 @@ const statusColors: Record<string, { bg: string; text: string; dot: string }> = 
   LOST: { bg: 'bg-red-100', text: 'text-red-700', dot: 'bg-red-500' },
 }
 
+// SECURITY (2026-01-29): Unauthorized access component for non-consultants
+function UnauthorizedAccess({ userRole }: { userRole?: string }) {
+  const router = useRouter()
+
+  const getRedirectPath = () => {
+    switch (userRole?.toUpperCase()) {
+      case 'ADMIN': return '/dashboard/admin'
+      case 'TEACHER': return '/dashboard/teacher'
+      case 'STUDENT': return '/student/dashboard'
+      case 'PARENT': return '/parent/dashboard'
+      default: return '/dashboard'
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 flex items-center justify-center p-6">
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <ShieldX className="w-8 h-8 text-red-600" />
+        </div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
+        <p className="text-gray-600 mb-6">
+          You don&apos;t have permission to access the Consultant Dashboard.
+          This area is restricted to consultants only.
+        </p>
+        <div className="space-y-3">
+          <Button
+            onClick={() => router.push(getRedirectPath())}
+            className="w-full bg-teal-600 hover:bg-teal-700"
+          >
+            Go to Your Dashboard
+          </Button>
+          <Button
+            onClick={() => router.push('/')}
+            variant="outline"
+            className="w-full"
+          >
+            Return to Home
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// Loading component for auth check
+function AuthLoadingState() {
+  return (
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <Loader2 className="w-8 h-8 animate-spin text-teal-600 mx-auto mb-4" />
+        <p className="text-gray-600">Verifying access...</p>
+      </div>
+    </div>
+  )
+}
+
 export default function ConsultantDashboard() {
+  const { user, isLoading: authLoading } = useAuth()
+  const router = useRouter()
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetchDashboardData()
-  }, [])
+    // Only fetch data if user is authenticated and has correct role
+    if (!authLoading && user) {
+      const userRole = user?.role?.toUpperCase()
+      if (userRole === 'CONSULTANT' || userRole === 'ADMIN') {
+        fetchDashboardData()
+      }
+    }
+  }, [authLoading, user])
 
   const fetchDashboardData = async () => {
     try {
@@ -112,6 +182,40 @@ export default function ConsultantDashboard() {
     } finally {
       setLoading(false)
     }
+  }
+
+  // SECURITY (2026-01-29): Check authentication first
+  if (authLoading) {
+    return <AuthLoadingState />
+  }
+
+  // SECURITY (2026-01-29): Redirect unauthenticated users
+  if (!user) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-blue-50 flex items-center justify-center p-6">
+        <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+          <div className="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Users className="w-8 h-8 text-teal-600" />
+          </div>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Sign In Required</h1>
+          <p className="text-gray-600 mb-6">
+            Please sign in to access the Consultant Dashboard.
+          </p>
+          <Button
+            onClick={() => router.push('/auth/sign-in?redirect=/consultant/dashboard')}
+            className="w-full bg-teal-600 hover:bg-teal-700"
+          >
+            Sign In
+          </Button>
+        </div>
+      </div>
+    )
+  }
+
+  // SECURITY (2026-01-29): Verify user has CONSULTANT role
+  const userRole = user?.role?.toUpperCase()
+  if (userRole !== 'CONSULTANT' && userRole !== 'ADMIN') {
+    return <UnauthorizedAccess userRole={userRole} />
   }
 
   if (loading) {

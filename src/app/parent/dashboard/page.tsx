@@ -4,7 +4,9 @@ export const dynamic = 'force-dynamic'
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useUserFlow } from '@/hooks/useUserFlow'
+import { Button } from '@/components/ui/Button'
 import {
   TrendingUp,
   Calendar,
@@ -23,6 +25,7 @@ import {
   GraduationCap,
   FileText,
   RefreshCw,
+  ShieldX,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -148,8 +151,54 @@ const alertIconColors = {
   error: 'text-red-500',
 }
 
+// SECURITY (2026-01-29): Unauthorized access component for non-parents
+function UnauthorizedAccess({ userRole }: { userRole?: string }) {
+  const router = useRouter()
+
+  const getRedirectPath = () => {
+    switch (userRole?.toUpperCase()) {
+      case 'ADMIN': return '/dashboard/admin'
+      case 'TEACHER': return '/dashboard/teacher'
+      case 'STUDENT': return '/student/dashboard'
+      case 'CONSULTANT': return '/consultant/dashboard'
+      default: return '/dashboard'
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 flex items-center justify-center p-6">
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <ShieldX className="w-8 h-8 text-red-600" />
+        </div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
+        <p className="text-gray-600 mb-6">
+          You don&apos;t have permission to access the Parent Dashboard.
+          This area is restricted to parents only.
+        </p>
+        <div className="space-y-3">
+          <Button
+            onClick={() => router.push(getRedirectPath())}
+            className="w-full bg-blue-600 hover:bg-blue-700"
+          >
+            Go to Your Dashboard
+          </Button>
+          <Button
+            onClick={() => router.push('/')}
+            variant="outline"
+            className="w-full"
+          >
+            Return to Home
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function ParentDashboard() {
   const { user, isAuthenticated, isLoading: authLoading } = useUserFlow()
+  const router = useRouter()
   const [loading, setLoading] = useState(true)
   const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState('')
@@ -200,6 +249,15 @@ export default function ParentDashboard() {
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
       </div>
     )
+  }
+
+  // SECURITY (2026-01-29): Verify user has PARENT role
+  // This is client-side enforcement; API endpoints must also verify role
+  if (isAuthenticated && user) {
+    const userRole = user?.role?.toUpperCase()
+    if (userRole !== 'PARENT' && userRole !== 'ADMIN') {
+      return <UnauthorizedAccess userRole={userRole} />
+    }
   }
 
   if (error) {

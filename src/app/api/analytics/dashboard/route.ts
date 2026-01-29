@@ -7,6 +7,48 @@ import {
   AdminAnalytics,
 } from '@/lib/types/analytics'
 import { prisma as db } from '@/lib/database'
+import { auth } from '@/lib/auth'
+
+// SECURITY (2026-01-29): Helper to check authentication and role
+async function checkAuthAndRole(
+  requiredRoles: string[],
+  userId?: string | null
+): Promise<{ authorized: boolean; session: any; error?: string; status?: number }> {
+  const session = await auth()
+
+  if (!session?.user) {
+    return {
+      authorized: false,
+      session: null,
+      error: 'Authentication required',
+      status: 401,
+    }
+  }
+
+  const userRole = (session.user as any).role?.toUpperCase()
+
+  // If specific roles are required, check them
+  if (requiredRoles.length > 0 && !requiredRoles.includes(userRole)) {
+    return {
+      authorized: false,
+      session,
+      error: `Access denied. Required role: ${requiredRoles.join(' or ')}`,
+      status: 403,
+    }
+  }
+
+  // For student dashboard, verify the user is accessing their own data or is admin/teacher
+  if (userId && userRole === 'STUDENT' && session.user.id !== userId) {
+    return {
+      authorized: false,
+      session,
+      error: 'Students can only access their own analytics',
+      status: 403,
+    }
+  }
+
+  return { authorized: true, session }
+}
 
 // Mock data for demonstration - in production, this would come from your database
 const generateMockDashboardData = (): AnalyticsDashboard => {
@@ -149,48 +191,90 @@ export async function GET(request: NextRequest) {
     const grade = searchParams.get('grade')
     const dateRange = searchParams.get('dateRange') || '30d'
 
+    // SECURITY (2026-01-29): Role-based access control for all dashboard types
     switch (dashboardType) {
-      case 'student':
+      case 'student': {
         if (!userId) {
           return NextResponse.json(
             { error: 'User ID is required for student dashboard' },
             { status: 400 }
           )
         }
+        // Students can view their own data, teachers/admins can view any student
+        const authCheck = await checkAuthAndRole(['STUDENT', 'TEACHER', 'ADMIN'], userId)
+        if (!authCheck.authorized) {
+          return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
+        }
         const studentMetrics = await getStudentDashboardMetrics(userId)
         return NextResponse.json({ success: true, data: studentMetrics })
+      }
 
-      case 'teacher':
+      case 'teacher': {
         if (!grade) {
           return NextResponse.json(
             { error: 'Grade is required for teacher dashboard' },
             { status: 400 }
           )
         }
+        // Only teachers and admins can access teacher analytics
+        const authCheck = await checkAuthAndRole(['TEACHER', 'ADMIN'])
+        if (!authCheck.authorized) {
+          return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
+        }
         const teacherMetrics = await getTeacherDashboardMetrics(grade)
         return NextResponse.json({ success: true, data: teacherMetrics })
+      }
 
-      case 'admin':
+      case 'admin': {
+        // Only admins can access admin analytics
+        const authCheck = await checkAuthAndRole(['ADMIN'])
+        if (!authCheck.authorized) {
+          return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
+        }
         const adminMetrics = await getAdminDashboardMetrics()
         return NextResponse.json({ success: true, data: adminMetrics })
+      }
 
-      case 'realtime':
+      case 'realtime': {
+        // Only admins can view real-time metrics
+        const authCheck = await checkAuthAndRole(['ADMIN'])
+        if (!authCheck.authorized) {
+          return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
+        }
         const realTimeData = generateMockRealTimeData()
         return NextResponse.json(realTimeData)
+      }
 
-      case 'dashboard':
+      case 'dashboard': {
+        // General dashboard requires at least teacher or admin access
+        const authCheck = await checkAuthAndRole(['TEACHER', 'ADMIN'])
+        if (!authCheck.authorized) {
+          return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
+        }
         const dashboardData = generateMockDashboardData()
         return NextResponse.json(dashboardData)
+      }
 
       case 'general':
-      default:
+      default: {
+        // General analytics requires authentication
+        const authCheck = await checkAuthAndRole(['TEACHER', 'ADMIN'])
+        if (!authCheck.authorized) {
+          return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
+        }
         if (searchParams.get('realtime') === 'true') {
+          // Realtime requires admin
+          const realtimeCheck = await checkAuthAndRole(['ADMIN'])
+          if (!realtimeCheck.authorized) {
+            return NextResponse.json({ error: realtimeCheck.error }, { status: realtimeCheck.status })
+          }
           const realTimeDataLegacy = generateMockRealTimeData()
           return NextResponse.json(realTimeDataLegacy)
         }
 
         const dashboardDataDefault = generateMockDashboardData()
         return NextResponse.json(dashboardDataDefault)
+      }
     }
   } catch (error) {
     console.error('Analytics dashboard error:', error)
@@ -200,6 +284,12 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY (2026-01-29): POST endpoint requires admin access
+    const authCheck = await checkAuthAndRole(['ADMIN'])
+    if (!authCheck.authorized) {
+      return NextResponse.json({ error: authCheck.error }, { status: authCheck.status })
+    }
+
     const body = await request.json()
     const { filters, dateRange, metrics } = body
 

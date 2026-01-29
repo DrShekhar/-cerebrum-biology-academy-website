@@ -5,6 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
+import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -18,11 +19,58 @@ import {
   Search,
   BarChart3,
   Activity,
+  ShieldX,
 } from 'lucide-react'
 import type { TeacherAnalytics } from '@/lib/types/analytics'
 
+// SECURITY (2026-01-29): Unauthorized access component for non-teachers
+function UnauthorizedAccess({ userRole }: { userRole?: string }) {
+  const router = useRouter()
+
+  const getRedirectPath = () => {
+    switch (userRole?.toUpperCase()) {
+      case 'ADMIN': return '/dashboard/admin'
+      case 'STUDENT': return '/student/dashboard'
+      case 'PARENT': return '/parent/dashboard'
+      case 'CONSULTANT': return '/consultant/dashboard'
+      default: return '/dashboard'
+    }
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50 flex items-center justify-center p-6">
+      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 text-center">
+        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+          <ShieldX className="w-8 h-8 text-red-600" />
+        </div>
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
+        <p className="text-gray-600 mb-6">
+          You don&apos;t have permission to access the Teacher Dashboard.
+          This area is restricted to teachers only.
+        </p>
+        <div className="space-y-3">
+          <Button
+            onClick={() => router.push(getRedirectPath())}
+            className="w-full bg-green-600 hover:bg-green-700"
+          >
+            Go to Your Dashboard
+          </Button>
+          <Button
+            onClick={() => router.push('/')}
+            variant="outline"
+            className="w-full"
+          >
+            Return to Home
+          </Button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function TeacherDashboard() {
   const { user, isLoading } = useAuth()
+  const router = useRouter()
   const [analytics, setAnalytics] = useState<TeacherAnalytics | null>(null)
   const [isLoadingData, setIsLoadingData] = useState(true)
   const [selectedGrade, setSelectedGrade] = useState('CLASS_12')
@@ -108,6 +156,13 @@ export default function TeacherDashboard() {
 
   if (isLoading || !user) {
     return <LoadingDashboard />
+  }
+
+  // SECURITY (2026-01-29): Verify user has TEACHER role
+  // This is client-side enforcement; API endpoints must also verify role
+  const userRole = user?.role?.toUpperCase()
+  if (userRole !== 'TEACHER' && userRole !== 'ADMIN') {
+    return <UnauthorizedAccess userRole={userRole} />
   }
 
   return (
