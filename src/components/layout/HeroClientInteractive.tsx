@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useRef, memo } from 'react'
+import { useEffect, useState, memo } from 'react'
 import { Star, Clock, Sparkles, GraduationCap, MessageCircle } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
@@ -79,49 +79,25 @@ function useCountdown(targetTime: number): TimeLeft {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 }
   })
 
-  const rafIdRef = useRef<number | null>(null)
-  const lastUpdateRef = useRef<number>(0)
-
+  // PERFORMANCE: Use setInterval instead of requestAnimationFrame
+  // RAF runs at 60fps which is overkill for a 1-second countdown
   useEffect(() => {
-    const updateCountdown = (timestamp: number) => {
-      if (timestamp - lastUpdateRef.current >= 1000 || lastUpdateRef.current === 0) {
-        lastUpdateRef.current = timestamp
+    const updateCountdown = () => {
+      const now = Date.now()
+      const difference = targetTime - now
 
-        const now = Date.now()
-        const difference = targetTime - now
-
-        if (difference > 0) {
-          const newTimeLeft = {
-            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-            minutes: Math.floor((difference / 1000 / 60) % 60),
-            seconds: Math.floor((difference / 1000) % 60),
-          }
-
-          setTimeLeft((prev) => {
-            if (
-              prev.days !== newTimeLeft.days ||
-              prev.hours !== newTimeLeft.hours ||
-              prev.minutes !== newTimeLeft.minutes ||
-              prev.seconds !== newTimeLeft.seconds
-            ) {
-              return newTimeLeft
-            }
-            return prev
-          })
-        }
-      }
-
-      rafIdRef.current = requestAnimationFrame(updateCountdown)
-    }
-
-    rafIdRef.current = requestAnimationFrame(updateCountdown)
-
-    return () => {
-      if (rafIdRef.current) {
-        cancelAnimationFrame(rafIdRef.current)
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        })
       }
     }
+
+    const intervalId = setInterval(updateCountdown, 1000)
+    return () => clearInterval(intervalId)
   }, [targetTime])
 
   return timeLeft
@@ -187,22 +163,22 @@ export function HeroClientInteractive() {
         className="grid grid-cols-3 gap-3 xs:gap-4 sm:gap-6 max-w-2xl mb-6 xs:mb-8 animate-fade-in-up"
         style={{ animationDelay: '0.4s' }}
       >
-        <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10 hover:bg-white/10 hover:border-green-400/30 hover:-translate-y-1 transition-all duration-300 group cursor-default">
-          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-green-400 group-hover:scale-110 transition-transform">
+        <div className="text-center bg-white/5 rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
+          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-green-400">
             695
           </div>
           <div className="text-xs sm:text-sm text-blue-200 mt-1">{t('sadhnasScore')}</div>
           <div className="text-xs text-green-300 mt-0.5">{t('percentile100')}</div>
         </div>
-        <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10 hover:bg-white/10 hover:border-yellow-400/30 hover:-translate-y-1 transition-all duration-300 group cursor-default">
-          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 group-hover:scale-110 transition-transform">
+        <div className="text-center bg-white/5 rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
+          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400">
             98%
           </div>
           <div className="text-xs sm:text-sm text-blue-200 mt-1">{t('successRate')}</div>
           <div className="text-xs text-yellow-300 mt-0.5">{t('neetQualified')}</div>
         </div>
-        <div className="text-center bg-white/5 backdrop-blur-sm rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10 hover:bg-white/10 hover:border-purple-400/30 hover:-translate-y-1 transition-all duration-300 group cursor-default">
-          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400 group-hover:scale-110 transition-transform">
+        <div className="text-center bg-white/5 rounded-lg xs:rounded-xl p-3 xs:p-4 border border-white/10">
+          <div className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold text-purple-400">
             2500+
           </div>
           <div className="text-xs sm:text-sm text-blue-200 mt-1">{t('students')}</div>
@@ -211,7 +187,7 @@ export function HeroClientInteractive() {
       </div>
 
       <div
-        className="inline-flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3 bg-red-500/20 backdrop-blur-sm border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up animate-pulse-slow"
+        className="inline-flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-3 bg-red-500/20 border border-red-300/30 px-3 xs:px-4 py-2 xs:py-3 rounded-lg animate-fade-in-up"
         style={{ animationDelay: '0.5s' }}
       >
         <div className="flex items-center">
@@ -221,9 +197,7 @@ export function HeroClientInteractive() {
           </span>
         </div>
         <CountdownDisplay timeLeft={timeLeft} />
-        <span className="text-yellow-300 font-bold text-xs xs:text-sm animate-pulse">
-          • Only 12 seats left!
-        </span>
+        <span className="text-yellow-300 font-bold text-xs xs:text-sm">• Only 12 seats left!</span>
       </div>
 
       <div
@@ -231,7 +205,7 @@ export function HeroClientInteractive() {
         style={{ animationDelay: '0.6s' }}
       >
         <div className="flex items-center space-x-2 text-yellow-200">
-          <Sparkles className="w-4 xs:w-5 h-4 xs:h-5 animate-pulse" />
+          <Sparkles className="w-4 xs:w-5 h-4 xs:h-5" />
           <span className="text-xs xs:text-sm sm:text-base">
             {t('earlyBirdDiscount').replace('{days}', timeLeft.days.toString())}
           </span>

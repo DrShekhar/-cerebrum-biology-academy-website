@@ -5,31 +5,6 @@ interface HeroSectionProps {
   className?: string
 }
 
-function FloatingParticle({
-  size,
-  left,
-  top,
-  delay,
-}: {
-  delay: number
-  size: number
-  left: string
-  top: string
-}) {
-  return (
-    <div
-      className="absolute rounded-full bg-white/20 animate-float"
-      style={{
-        width: size,
-        height: size,
-        left,
-        top,
-        animationDelay: `${delay}s`,
-      }}
-    />
-  )
-}
-
 export function HeroSection({ className = '' }: HeroSectionProps) {
   return (
     <div
@@ -42,21 +17,12 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
       }}
     >
       {/* Background - CSS only, no external image for faster LCP */}
-      {/* PERFORMANCE: contain: strict isolates this layer from affecting LCP */}
-      <div className="absolute inset-0 contain-strict" aria-hidden="true">
-        {/* CSS gradient orbs - no JS animation for performance */}
-        <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-pulse-slow" />
-        <div
-          className="hidden md:block absolute bottom-1/4 right-[16%] w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl animate-pulse-slow"
-          style={{ animationDelay: '2s' }}
-        />
+      {/* PERFORMANCE: Static gradients, no animations for better performance */}
+      <div className="absolute inset-0 contain-strict pointer-events-none" aria-hidden="true">
+        {/* CSS gradient orbs - STATIC for performance */}
+        <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl" />
+        <div className="hidden md:block absolute bottom-1/4 right-[16%] w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/5 rounded-full blur-3xl" />
-
-        {/* Floating Particles - CSS animation only */}
-        <FloatingParticle delay={0} size={6} left="10%" top="20%" />
-        <FloatingParticle delay={0.5} size={4} left="20%" top="60%" />
-        <FloatingParticle delay={1} size={8} left="80%" top="30%" />
-        <FloatingParticle delay={1.5} size={5} left="70%" top="70%" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-28 pb-20 flex items-center min-h-screen">
