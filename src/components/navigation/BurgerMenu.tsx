@@ -22,9 +22,11 @@ import {
   FileText,
 } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { navigationConfig } from '@/data/navigationConfig'
-import { useAuth } from '@/hooks/useAuth'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
+import { signOut } from '@/lib/firebase/phone-auth'
 
 interface BurgerMenuProps {
   isOpen: boolean
@@ -46,7 +48,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const [expandedSection, setExpandedSection] = useState<string | null>(null)
   const [isMobile, setIsMobile] = useState(false)
   const [mounted, setMounted] = useState(false)
-  const { user, isAuthenticated } = useAuth()
+  const [isSigningOut, setIsSigningOut] = useState(false)
+  const { user, isAuthenticated } = useFirebaseSession()
+  const router = useRouter()
 
   // Focus trap for accessibility - keeps focus within modal when open
   const focusTrapRef = useFocusTrap(isOpen)
@@ -55,7 +59,10 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const getDashboardInfo = () => {
     if (!isAuthenticated || !user) return null
 
-    switch (user.role) {
+    // Role can be lowercase (from session API) or uppercase
+    const normalizedRole = user.role?.toUpperCase()
+
+    switch (normalizedRole) {
       case 'ADMIN':
         return { href: '/admin', label: 'Admin Dashboard', icon: Settings }
       case 'COUNSELOR':
@@ -63,7 +70,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
       case 'TEACHER':
         return { href: '/teacher/assignments', label: 'Teacher Dashboard', icon: Users }
       default:
-        return { href: '/student/dashboard', label: 'My Dashboard', icon: LayoutDashboard }
+        return { href: '/dashboard', label: 'My Dashboard', icon: LayoutDashboard }
     }
   }
 
@@ -99,6 +106,20 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
 
   const handleLinkClick = () => {
     onClose()
+  }
+
+  const handleSignOut = async () => {
+    try {
+      setIsSigningOut(true)
+      await signOut()
+      onClose()
+      router.push('/')
+      router.refresh()
+    } catch (error) {
+      console.error('Sign out error:', error)
+    } finally {
+      setIsSigningOut(false)
+    }
   }
 
   const menuVariants = {
@@ -201,9 +222,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
               </button>
             </div>
 
-            {/* Dashboard Link (if authenticated) */}
+            {/* Dashboard Link and Sign Out (if authenticated) */}
             {dashboardInfo && (
-              <div className="px-6 pt-4 relative z-0 bg-white">
+              <div className="px-6 pt-4 relative z-0 bg-white space-y-2">
                 <Link
                   href={dashboardInfo.href}
                   onClick={handleLinkClick}
@@ -215,6 +236,13 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                   </div>
                   <ChevronRight className="w-5 h-5" />
                 </Link>
+                <button
+                  onClick={handleSignOut}
+                  disabled={isSigningOut}
+                  className="w-full flex items-center justify-center p-3 bg-red-50 text-red-600 rounded-xl hover:bg-red-100 transition-all duration-300 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSigningOut ? 'Signing Out...' : 'Sign Out'}
+                </button>
               </div>
             )}
 
