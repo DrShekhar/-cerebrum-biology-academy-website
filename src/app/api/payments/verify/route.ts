@@ -4,6 +4,7 @@ import { z } from 'zod'
 import { rateLimit } from '@/lib/rateLimit'
 import { prisma } from '@/lib/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
+import { validateUserSession } from '@/lib/auth/config'
 
 const paymentVerificationSchema = z.object({
   order_id: z.string().optional(),
@@ -280,6 +281,15 @@ export async function POST(request: NextRequest) {
 // GET endpoint for checking payment status
 export async function GET(request: NextRequest) {
   try {
+    // SECURITY: Validate user session before returning payment details
+    const session = await validateUserSession(request)
+    if (!session.valid || !session.userId) {
+      return NextResponse.json(
+        { error: 'Authentication required to check payment status' },
+        { status: 401 }
+      )
+    }
+
     const rateLimitResult = await rateLimit(request, { maxRequests: 50, windowMs: 60 * 60 * 1000 })
     if (!rateLimitResult.success) {
       return NextResponse.json(
@@ -315,6 +325,15 @@ export async function GET(request: NextRequest) {
 
     if (!payment) {
       return NextResponse.json({ error: 'Payment not found' }, { status: 404 })
+    }
+
+    // SECURITY: Verify ownership - user can only check their own payment status
+    // Admins can check any payment
+    if (payment.userId !== session.userId && session.role !== 'ADMIN') {
+      return NextResponse.json(
+        { error: 'You are not authorized to view this payment' },
+        { status: 403 }
+      )
     }
 
     return NextResponse.json({
