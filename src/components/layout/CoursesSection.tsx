@@ -207,7 +207,7 @@ export function CoursesSection() {
                   What&apos;s Included:
                 </h4>
                 <ul className="space-y-2 xs:space-y-3 mb-6 xs:mb-8">
-                  {course.features.map((feature, featureIndex) => (
+                  {course.features.slice(0, 5).map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
                       className="flex items-start text-sm xs:text-base text-gray-600"
@@ -216,6 +216,11 @@ export function CoursesSection() {
                       <span>{feature}</span>
                     </li>
                   ))}
+                  {course.features.length > 5 && (
+                    <li className="text-sm text-blue-600 font-medium">
+                      + {course.features.length - 5} more features
+                    </li>
+                  )}
                 </ul>
 
                 {/* Action Buttons */}
