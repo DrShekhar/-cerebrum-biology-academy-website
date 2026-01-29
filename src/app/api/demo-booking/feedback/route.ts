@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 import { withRateLimit } from '@/lib/middleware/rateLimit'
-import { withAdmin } from '@/lib/auth/middleware'
+import { withAdmin, UserSession } from '@/lib/auth/middleware'
 import { logger } from '@/lib/utils/logger'
 import * as crypto from 'crypto'
 
@@ -172,7 +172,7 @@ export async function POST(request: NextRequest) {
 }
 
 // GET: Generate feedback link for a booking (admin use only)
-async function handleGetFeedbackLink(request: NextRequest) {
+async function handleGetFeedbackLink(request: NextRequest, _session: UserSession) {
   try {
     const { searchParams } = new URL(request.url)
     const bookingId = searchParams.get('id')
