@@ -24,6 +24,7 @@ import {
 import Link from 'next/link'
 import { navigationConfig } from '@/data/navigationConfig'
 import { useAuth } from '@/hooks/useAuth'
+import { useFocusTrap } from '@/hooks/useFocusTrap'
 
 interface BurgerMenuProps {
   isOpen: boolean
@@ -46,6 +47,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const [isMobile, setIsMobile] = useState(false)
   const [mounted, setMounted] = useState(false)
   const { user, isAuthenticated } = useAuth()
+
+  // Focus trap for accessibility - keeps focus within modal when open
+  const focusTrapRef = useFocusTrap(isOpen)
 
   // Get dashboard link based on user role
   const getDashboardInfo = () => {
@@ -171,8 +175,10 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            ref={focusTrapRef}
             id="burger-menu-panel"
             role="dialog"
+            aria-modal="true"
             aria-label="Navigation menu"
             variants={menuVariants}
             initial="closed"

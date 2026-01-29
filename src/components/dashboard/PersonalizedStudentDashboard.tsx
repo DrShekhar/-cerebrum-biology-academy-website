@@ -6,7 +6,7 @@ import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3 } from
 import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
-import { BottomNavigation } from '@/components/mobile/MobileNavigation'
+import { BottomNavigation } from '@/components/mobile/MobileFullscreenMenu'
 import { useBottomSheet } from '@/components/mobile/BottomSheet'
 import { usePathname } from 'next/navigation'
 import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'

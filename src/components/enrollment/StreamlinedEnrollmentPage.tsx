@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle2,
@@ -15,10 +15,21 @@ import {
   Star,
   Trophy,
   Flame,
+  ArrowLeft,
+  Loader2,
 } from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { EnrollmentProgress } from '@/components/ui/ProgressIndicators'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
+import { useFormValidation } from '@/hooks/useFormValidation'
+import { addDays, format, startOfTomorrow } from 'date-fns'
+import { razorpayService } from '@/lib/payments/razorpay'
+
+declare global {
+  interface Window {
+    Razorpay: any
+  }
+}
 
 interface StreamlinedEnrollmentPageProps {
   onEnrollmentComplete?: (data: any) => void
@@ -61,12 +72,44 @@ export function StreamlinedEnrollmentPage({
   onCallNow,
 }: StreamlinedEnrollmentPageProps) {
   const [currentStep, setCurrentStep] = useState(0)
-  const [formData, setFormData] = useState<any>({})
+  const [formData, setFormData] = useState({
+    fullName: '',
+    mobile: '',
+    email: '',
+    previousScore: '',
+    targetColleges: '',
+    parentName: '',
+    parentMobile: '',
+  })
   const [assessmentResult, setAssessmentResult] = useState<AssessmentResult | null>(null)
   const [selectedSlot, setSelectedSlot] = useState<CounselingSlot | null>(null)
   const [selectedPlan, setSelectedPlan] = useState<PlanOption | null>(null)
   const [urgencyTimer, setUrgencyTimer] = useState(86400) // 24 hours in seconds
   const [enrollmentStats, setEnrollmentStats] = useState({ thisMonth: 2847, seatsLeft: 12 })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [paymentError, setPaymentError] = useState<string | null>(null)
+
+  // Load Razorpay script
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+    script.async = true
+    document.body.appendChild(script)
+
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
+
+  // Assessment form state
+  const [assessmentAnswers, setAssessmentAnswers] = useState({
+    currentScore: '' as string,
+    challengingTopics: [] as string[],
+    studyHours: '' as string,
+  })
+
+  // Form validation hook
+  const { validationStates, validateField, formatPhone, capitalizeName } = useFormValidation()
 
   const steps = [
     { id: 0, title: 'Assessment', icon: GraduationCap, iconSolid: GraduationCap },
@@ -106,37 +149,36 @@ export function StreamlinedEnrollmentPage({
     },
   ]
 
-  // Mock counseling slots
-  const counselingSlots: CounselingSlot[] = [
-    {
-      date: '2024-12-20',
-      time: '10:00 AM',
-      mode: 'online',
-      available: true,
-      counselor: 'Dr. Priya Sharma',
-    },
-    {
-      date: '2024-12-20',
-      time: '2:00 PM',
-      mode: 'offline',
-      available: true,
-      counselor: 'Dr. Raj Kumar',
-    },
-    {
-      date: '2024-12-21',
-      time: '11:00 AM',
-      mode: 'home',
-      available: true,
-      counselor: 'Dr. Anjali Singh',
-    },
-    {
-      date: '2024-12-21',
-      time: '4:00 PM',
-      mode: 'online',
-      available: false,
-      counselor: 'Dr. Priya Sharma',
-    },
-  ]
+  // Generate dynamic counseling slots for the next 7 days
+  const counselingSlots: CounselingSlot[] = useMemo(() => {
+    const counselors = [
+      'Dr. Priya Sharma',
+      'Dr. Raj Kumar',
+      'Dr. Anjali Singh',
+      'Dr. Vikram Patel',
+    ]
+    const timeSlots = ['10:00 AM', '11:00 AM', '2:00 PM', '4:00 PM']
+    const modes: ('online' | 'offline' | 'home')[] = ['online', 'offline', 'home', 'online']
+    const slots: CounselingSlot[] = []
+
+    const tomorrow = startOfTomorrow()
+
+    for (let dayOffset = 0; dayOffset < 4; dayOffset++) {
+      const date = addDays(tomorrow, dayOffset)
+      const formattedDate = format(date, 'yyyy-MM-dd')
+      const displayDate = format(date, 'EEEE, MMM d')
+
+      slots.push({
+        date: displayDate,
+        time: timeSlots[dayOffset % timeSlots.length],
+        mode: modes[dayOffset % modes.length],
+        available: dayOffset !== 3, // Last slot shown as booked for urgency
+        counselor: counselors[dayOffset % counselors.length],
+      })
+    }
+
+    return slots
+  }, [])
 
   // Plan options
   const planOptions: PlanOption[] = [
@@ -198,18 +240,74 @@ export function StreamlinedEnrollmentPage({
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`
   }
 
-  const handleAssessmentSubmit = () => {
-    // Mock assessment result calculation
-    const mockResult: AssessmentResult = {
-      currentScore: 180,
-      targetScore: 340,
-      improvement: 160,
-      strengths: ['Cell Biology', 'Genetics'],
-      weaknesses: ['Ecology', 'Plant Physiology'],
-      timeToTarget: '8-10 months',
+  // Calculate assessment result based on user input
+  const calculateAssessmentResult = (): AssessmentResult => {
+    const score = parseInt(assessmentAnswers.currentScore) || 0
+    const targetScore = 340 // Target for medical colleges
+    const improvement = Math.max(0, targetScore - score)
+
+    // All topics
+    const allTopics = [
+      'Ecology',
+      'Genetics',
+      'Plant Physiology',
+      'Human Physiology',
+      'Molecular Biology',
+      'Cell Biology',
+    ]
+
+    // Weaknesses are the topics user selected as challenging
+    const weaknesses =
+      assessmentAnswers.challengingTopics.length > 0
+        ? assessmentAnswers.challengingTopics.slice(0, 3)
+        : ['Ecology', 'Plant Physiology']
+
+    // Strengths are the remaining topics
+    const strengths = allTopics.filter((t) => !weaknesses.includes(t)).slice(0, 2)
+
+    // Calculate time to target based on current score and study hours
+    let timeToTarget = '10-12 months'
+    if (score >= 280) {
+      timeToTarget = '4-6 months'
+    } else if (score >= 220) {
+      timeToTarget = '6-8 months'
+    } else if (score >= 160) {
+      timeToTarget = '8-10 months'
     }
-    setAssessmentResult(mockResult)
+
+    // Adjust based on study hours
+    if (assessmentAnswers.studyHours === 'More than 6 hours') {
+      timeToTarget = timeToTarget.replace(/(\d+)-(\d+)/, (_, min, max) => `${Math.max(3, parseInt(min) - 2)}-${parseInt(max) - 2}`)
+    } else if (assessmentAnswers.studyHours === 'Less than 2 hours') {
+      timeToTarget = timeToTarget.replace(/(\d+)-(\d+)/, (_, min, max) => `${parseInt(min) + 2}-${parseInt(max) + 2}`)
+    }
+
+    return {
+      currentScore: score,
+      targetScore,
+      improvement,
+      strengths,
+      weaknesses,
+      timeToTarget,
+    }
+  }
+
+  const handleAssessmentSubmit = () => {
+    // Validate assessment has at least score filled
+    if (!assessmentAnswers.currentScore) {
+      return // Could add validation error state here
+    }
+
+    const result = calculateAssessmentResult()
+    setAssessmentResult(result)
     setCurrentStep(1)
+  }
+
+  // Navigate to previous step
+  const handlePrevStep = () => {
+    if (currentStep > 0 && currentStep < 4) {
+      setCurrentStep(currentStep - 1)
+    }
   }
 
   const handleSlotSelection = (slot: CounselingSlot) => {
@@ -222,14 +320,94 @@ export function StreamlinedEnrollmentPage({
     setCurrentStep(3)
   }
 
-  const handleEnrollmentSubmit = () => {
-    setCurrentStep(4)
-    onEnrollmentComplete?.({
-      assessment: assessmentResult,
-      counseling: selectedSlot,
-      plan: selectedPlan,
-      formData,
-    })
+  const handleEnrollmentSubmit = async () => {
+    if (!selectedPlan) return
+
+    setIsSubmitting(true)
+    setPaymentError(null)
+
+    try {
+      // Create order via Razorpay service
+      const result = await razorpayService.processEnrollment({
+        studentName: formData.fullName,
+        email: formData.email,
+        phone: formData.mobile.replace(/\D/g, ''),
+        courseId: selectedPlan.id,
+        courseName: selectedPlan.name,
+        amount: selectedPlan.price,
+        installmentPlan: 'full',
+      })
+
+      if (!result.success) {
+        setPaymentError(result.error || 'Failed to create payment order')
+        setIsSubmitting(false)
+        return
+      }
+
+      // Open Razorpay checkout
+      const options = {
+        key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+        amount: result.amount,
+        currency: result.currency || 'INR',
+        name: 'Cerebrum Biology Academy',
+        description: `${selectedPlan.name} - ${selectedPlan.duration}`,
+        order_id: result.orderId,
+        handler: async function (response: any) {
+          // Verify payment
+          const verified = await razorpayService.verifyPayment(
+            response.razorpay_order_id,
+            response.razorpay_payment_id,
+            response.razorpay_signature
+          )
+
+          if (verified) {
+            setCurrentStep(4)
+            onEnrollmentComplete?.({
+              assessment: assessmentResult,
+              counseling: selectedSlot,
+              plan: selectedPlan,
+              formData,
+              payment: {
+                orderId: response.razorpay_order_id,
+                paymentId: response.razorpay_payment_id,
+              },
+            })
+          } else {
+            setPaymentError('Payment verification failed. Please contact support.')
+          }
+          setIsSubmitting(false)
+        },
+        prefill: {
+          name: formData.fullName,
+          email: formData.email,
+          contact: formData.mobile.replace(/\D/g, ''),
+        },
+        notes: {
+          course: selectedPlan.name,
+          parentName: formData.parentName,
+          parentPhone: formData.parentMobile.replace(/\D/g, ''),
+        },
+        theme: {
+          color: '#4f46e5', // Indigo to match branding
+        },
+        modal: {
+          ondismiss: function () {
+            setIsSubmitting(false)
+          },
+        },
+      }
+
+      const razorpay = new window.Razorpay(options)
+      razorpay.on('payment.failed', function (response: any) {
+        setPaymentError(response.error.description || 'Payment failed. Please try again.')
+        setIsSubmitting(false)
+      })
+      razorpay.open()
+    } catch (error) {
+      console.error('Enrollment error:', error)
+      setPaymentError('An unexpected error occurred. Please try again.')
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -296,47 +474,86 @@ export function StreamlinedEnrollmentPage({
                 </div>
 
                 <div className="space-y-6 mb-8">
-                  {assessmentQuestions.map((question, index) => (
-                    <div key={question.id} className="space-y-3">
-                      <label className="block text-lg font-medium text-gray-900">
-                        {index + 1}. {question.question}
-                      </label>
+                  {/* Question 1: Biology Score */}
+                  <div className="space-y-3">
+                    <label htmlFor="current-score" className="block text-lg font-medium text-gray-900">
+                      1. {assessmentQuestions[0].question} <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      id="current-score"
+                      type="number"
+                      min="0"
+                      max="360"
+                      placeholder={assessmentQuestions[0].placeholder}
+                      value={assessmentAnswers.currentScore}
+                      onChange={(e) =>
+                        setAssessmentAnswers((prev) => ({
+                          ...prev,
+                          currentScore: e.target.value,
+                        }))
+                      }
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      aria-required="true"
+                      aria-describedby={!assessmentAnswers.currentScore ? 'score-hint' : undefined}
+                    />
+                    {!assessmentAnswers.currentScore && (
+                      <p id="score-hint" className="text-sm text-gray-500">
+                        Enter your NEET Biology score (out of 360)
+                      </p>
+                    )}
+                  </div>
 
-                      {question.type === 'number' && (
-                        <input
-                          type="number"
-                          placeholder={question.placeholder}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                          required={question.required}
-                        />
-                      )}
-
-                      {question.type === 'select' && (
-                        <select className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                          <option value="">Select an option</option>
-                          {question.options?.map((option, idx) => (
-                            <option key={idx} value={option}>
-                              {option}
-                            </option>
-                          ))}
-                        </select>
-                      )}
-
-                      {question.type === 'multiselect' && (
-                        <div className="grid grid-cols-2 gap-3">
-                          {question.options?.map((option, idx) => (
-                            <label key={idx} className="flex items-center space-x-2 cursor-pointer">
-                              <input
-                                type="checkbox"
-                                className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-                              />
-                              <span className="text-gray-700">{option}</span>
-                            </label>
-                          ))}
-                        </div>
-                      )}
+                  {/* Question 2: Challenging Topics */}
+                  <div className="space-y-3">
+                    <label className="block text-lg font-medium text-gray-900">
+                      2. {assessmentQuestions[1].question}
+                    </label>
+                    <div className="grid grid-cols-2 gap-3" role="group" aria-label="Select challenging topics">
+                      {assessmentQuestions[1].options?.map((option, idx) => (
+                        <label key={idx} className="flex items-center space-x-2 cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={assessmentAnswers.challengingTopics.includes(option)}
+                            onChange={(e) => {
+                              setAssessmentAnswers((prev) => ({
+                                ...prev,
+                                challengingTopics: e.target.checked
+                                  ? [...prev.challengingTopics, option]
+                                  : prev.challengingTopics.filter((t) => t !== option),
+                              }))
+                            }}
+                            className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                          />
+                          <span className="text-gray-700">{option}</span>
+                        </label>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Question 3: Study Hours */}
+                  <div className="space-y-3">
+                    <label htmlFor="study-hours" className="block text-lg font-medium text-gray-900">
+                      3. {assessmentQuestions[2].question}
+                    </label>
+                    <select
+                      id="study-hours"
+                      value={assessmentAnswers.studyHours}
+                      onChange={(e) =>
+                        setAssessmentAnswers((prev) => ({
+                          ...prev,
+                          studyHours: e.target.value,
+                        }))
+                      }
+                      className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    >
+                      <option value="">Select an option</option>
+                      {assessmentQuestions[2].options?.map((option, idx) => (
+                        <option key={idx} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
                 <div className="text-center">
@@ -489,6 +706,18 @@ export function StreamlinedEnrollmentPage({
                     </PremiumButton>
                   </div>
                 </div>
+
+                {/* Back Button */}
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <button
+                    onClick={handlePrevStep}
+                    className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+                    type="button"
+                  >
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Back to Assessment
+                  </button>
+                </div>
               </PremiumCard>
             </motion.div>
           )}
@@ -581,7 +810,7 @@ export function StreamlinedEnrollmentPage({
                         Only {enrollmentStats.seatsLeft} seats left!
                       </div>
                       <div className="text-red-600 text-sm">
-                        In next batch starting January 15th
+                        In next batch starting {format(addDays(new Date(), 14), 'MMMM do')}
                       </div>
                     </div>
                   </div>
@@ -604,6 +833,18 @@ export function StreamlinedEnrollmentPage({
                     </div>
                   </div>
                 </PremiumCard>
+              </div>
+
+              {/* Back Button */}
+              <div className="mt-6">
+                <button
+                  onClick={handlePrevStep}
+                  className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+                  type="button"
+                >
+                  <ArrowLeft className="w-4 h-4 mr-2" />
+                  Back to Counseling
+                </button>
               </div>
             </motion.div>
           )}
@@ -628,6 +869,25 @@ export function StreamlinedEnrollmentPage({
                   </p>
                 </div>
 
+                {/* Payment Error Alert */}
+                {paymentError && (
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-4 mb-6 flex items-start gap-3" role="alert">
+                    <AlertTriangle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-red-800 font-medium">Payment Error</p>
+                      <p className="text-red-700 text-sm">{paymentError}</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setPaymentError(null)}
+                      className="ml-auto text-red-500 hover:text-red-700"
+                      aria-label="Dismiss error"
+                    >
+                      ×
+                    </button>
+                  </div>
+                )}
+
                 {/* Selected Plan Summary */}
                 {selectedPlan && (
                   <div className="bg-blue-50 border border-blue-200 rounded-xl p-6 mb-8">
@@ -651,50 +911,135 @@ export function StreamlinedEnrollmentPage({
                 )}
 
                 {/* Enrollment Form */}
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Full Name *
+                      <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
+                        Full Name <span className="text-red-500">*</span>
                       </label>
                       <input
+                        id="fullName"
                         type="text"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        value={formData.fullName}
+                        onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
+                        onBlur={(e) => {
+                          const capitalized = capitalizeName(e.target.value)
+                          setFormData({ ...formData, fullName: capitalized })
+                          validateField('fullName', capitalized, 'name')
+                        }}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                          validationStates.fullName?.error
+                            ? 'border-red-300 bg-red-50'
+                            : validationStates.fullName?.isValid
+                              ? 'border-green-300 bg-green-50'
+                              : 'border-gray-300'
+                        }`}
                         placeholder="Enter your full name"
+                        aria-required="true"
+                        aria-invalid={!!validationStates.fullName?.error}
+                        aria-describedby={validationStates.fullName?.error ? 'fullName-error' : undefined}
                       />
+                      {validationStates.fullName?.error && (
+                        <p id="fullName-error" className="mt-1 text-xs text-red-600">
+                          {validationStates.fullName.error}
+                        </p>
+                      )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Mobile Number *
+                      <label htmlFor="mobile" className="block text-sm font-medium text-gray-700 mb-2">
+                        Mobile Number <span className="text-red-500">*</span>
                       </label>
                       <input
+                        id="mobile"
                         type="tel"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        value={formData.mobile}
+                        onChange={(e) => {
+                          const formatted = formatPhone(e.target.value)
+                          setFormData({ ...formData, mobile: formatted })
+                        }}
+                        onBlur={() => validateField('mobile', formData.mobile, 'phone')}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                          validationStates.mobile?.error
+                            ? 'border-red-300 bg-red-50'
+                            : validationStates.mobile?.isValid
+                              ? 'border-green-300 bg-green-50'
+                              : 'border-gray-300'
+                        }`}
                         placeholder="Enter mobile number"
+                        aria-required="true"
+                        aria-invalid={!!validationStates.mobile?.error}
+                        aria-describedby={validationStates.mobile?.error ? 'mobile-error' : undefined}
                       />
+                      {validationStates.mobile?.error && (
+                        <p id="mobile-error" className="mt-1 text-xs text-red-600">
+                          {validationStates.mobile.error}
+                        </p>
+                      )}
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Email Address *
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address <span className="text-red-500">*</span>
                       </label>
                       <input
+                        id="email"
                         type="email"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        onBlur={() => validateField('email', formData.email, 'email')}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                          validationStates.email?.error
+                            ? 'border-red-300 bg-red-50'
+                            : validationStates.email?.isValid
+                              ? 'border-green-300 bg-green-50'
+                              : 'border-gray-300'
+                        }`}
                         placeholder="Enter email address"
+                        aria-required="true"
+                        aria-invalid={!!validationStates.email?.error}
+                        aria-describedby={
+                          validationStates.email?.error
+                            ? 'email-error'
+                            : validationStates.email?.suggestion
+                              ? 'email-suggestion'
+                              : undefined
+                        }
                       />
+                      {validationStates.email?.error && (
+                        <p id="email-error" className="mt-1 text-xs text-red-600">
+                          {validationStates.email.error}
+                        </p>
+                      )}
+                      {validationStates.email?.suggestion && (
+                        <p id="email-suggestion" className="mt-1 text-xs text-amber-600">
+                          Did you mean{' '}
+                          <button
+                            type="button"
+                            className="underline font-medium"
+                            onClick={() => {
+                              setFormData({ ...formData, email: validationStates.email?.suggestion || '' })
+                              validateField('email', validationStates.email?.suggestion || '', 'email')
+                            }}
+                          >
+                            {validationStates.email.suggestion}
+                          </button>
+                          ?
+                        </p>
+                      )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label htmlFor="previousScore" className="block text-sm font-medium text-gray-700 mb-2">
                         Previous NEET Score
                       </label>
                       <input
+                        id="previousScore"
                         type="number"
+                        min="0"
+                        max="720"
+                        value={formData.previousScore}
+                        onChange={(e) => setFormData({ ...formData, previousScore: e.target.value })}
                         className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Enter previous NEET score"
                       />
@@ -702,10 +1047,13 @@ export function StreamlinedEnrollmentPage({
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="targetColleges" className="block text-sm font-medium text-gray-700 mb-2">
                       Target Medical Colleges
                     </label>
                     <textarea
+                      id="targetColleges"
+                      value={formData.targetColleges}
+                      onChange={(e) => setFormData({ ...formData, targetColleges: e.target.value })}
                       className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       rows={3}
                       placeholder="List your target medical colleges"
@@ -714,26 +1062,67 @@ export function StreamlinedEnrollmentPage({
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Parent/Guardian Name *
+                      <label htmlFor="parentName" className="block text-sm font-medium text-gray-700 mb-2">
+                        Parent/Guardian Name <span className="text-red-500">*</span>
                       </label>
                       <input
+                        id="parentName"
                         type="text"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        value={formData.parentName}
+                        onChange={(e) => setFormData({ ...formData, parentName: e.target.value })}
+                        onBlur={(e) => {
+                          const capitalized = capitalizeName(e.target.value)
+                          setFormData({ ...formData, parentName: capitalized })
+                          validateField('parentName', capitalized, 'name')
+                        }}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                          validationStates.parentName?.error
+                            ? 'border-red-300 bg-red-50'
+                            : validationStates.parentName?.isValid
+                              ? 'border-green-300 bg-green-50'
+                              : 'border-gray-300'
+                        }`}
                         placeholder="Enter parent/guardian name"
+                        aria-required="true"
+                        aria-invalid={!!validationStates.parentName?.error}
+                        aria-describedby={validationStates.parentName?.error ? 'parentName-error' : undefined}
                       />
+                      {validationStates.parentName?.error && (
+                        <p id="parentName-error" className="mt-1 text-xs text-red-600">
+                          {validationStates.parentName.error}
+                        </p>
+                      )}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
-                        Parent Mobile Number *
+                      <label htmlFor="parentMobile" className="block text-sm font-medium text-gray-700 mb-2">
+                        Parent Mobile Number <span className="text-red-500">*</span>
                       </label>
                       <input
+                        id="parentMobile"
                         type="tel"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        value={formData.parentMobile}
+                        onChange={(e) => {
+                          const formatted = formatPhone(e.target.value)
+                          setFormData({ ...formData, parentMobile: formatted })
+                        }}
+                        onBlur={() => validateField('parentMobile', formData.parentMobile, 'phone')}
+                        className={`w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                          validationStates.parentMobile?.error
+                            ? 'border-red-300 bg-red-50'
+                            : validationStates.parentMobile?.isValid
+                              ? 'border-green-300 bg-green-50'
+                              : 'border-gray-300'
+                        }`}
                         placeholder="Enter parent mobile number"
+                        aria-required="true"
+                        aria-invalid={!!validationStates.parentMobile?.error}
+                        aria-describedby={validationStates.parentMobile?.error ? 'parentMobile-error' : undefined}
                       />
+                      {validationStates.parentMobile?.error && (
+                        <p id="parentMobile-error" className="mt-1 text-xs text-red-600">
+                          {validationStates.parentMobile.error}
+                        </p>
+                      )}
                     </div>
                   </div>
 
@@ -762,20 +1151,51 @@ export function StreamlinedEnrollmentPage({
                     </div>
                   </div>
 
-                  <div className="text-center">
+                  <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <button
+                      onClick={handlePrevStep}
+                      className="flex items-center text-gray-600 hover:text-gray-900 transition-colors order-2 sm:order-1"
+                      type="button"
+                    >
+                      <ArrowLeft className="w-4 h-4 mr-2" />
+                      Back to Plan Selection
+                    </button>
+
                     <PremiumButton
                       onClick={handleEnrollmentSubmit}
                       variant="medical"
                       size="lg"
-                      className="px-12 py-4"
+                      className="px-12 py-4 order-1 sm:order-2"
+                      disabled={
+                        isSubmitting ||
+                        !formData.fullName ||
+                        !formData.mobile ||
+                        !formData.email ||
+                        !formData.parentName ||
+                        !formData.parentMobile ||
+                        validationStates.fullName?.error ||
+                        validationStates.mobile?.error ||
+                        validationStates.email?.error ||
+                        validationStates.parentName?.error ||
+                        validationStates.parentMobile?.error
+                      }
                     >
-                      <ShieldCheck className="w-6 h-6 mr-3" />
-                      Secure Enrollment & Payment
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-6 h-6 mr-3 animate-spin" />
+                          Processing...
+                        </>
+                      ) : (
+                        <>
+                          <ShieldCheck className="w-6 h-6 mr-3" />
+                          Secure Enrollment & Payment
+                        </>
+                      )}
                     </PremiumButton>
-                    <p className="text-sm text-gray-500 mt-3">
-                      🔒 SSL Secured • 💳 RazorPay Protected • 📞 24/7 Support
-                    </p>
                   </div>
+                  <p className="text-sm text-gray-500 mt-3 text-center">
+                    🔒 SSL Secured • 💳 RazorPay Protected • 📞 24/7 Support
+                  </p>
                 </form>
               </PremiumCard>
             </motion.div>

@@ -74,6 +74,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
   const [error, setError] = useState('')
   const [showRefresh, setShowRefresh] = useState(false)
   const [resendCountdown, setResendCountdown] = useState(0)
+  const [verifyingSession, setVerifyingSession] = useState(false)
 
   // Signup form state (for new users)
   const [firstName, setFirstName] = useState('')
@@ -299,7 +300,10 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
         throw new Error(data.error || 'Failed to create session')
       }
 
+      // Show loading overlay during session verification
+      setVerifyingSession(true)
       const isVerified = await verifySessionWithRetry()
+      setVerifyingSession(false)
 
       if (!isVerified) {
         throw new Error('Session verification failed. Please try again.')
@@ -349,6 +353,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
       const error = err as Error
       console.error('[PhoneSignIn] Session creation error:', error)
       setError(error.message || 'Failed to complete sign-in')
+      setVerifyingSession(false)
       setStep('phone')
     }
   }
@@ -460,7 +465,27 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 relative">
+      {/* Session Verification Loading Overlay */}
+      {verifyingSession && (
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="verifying-session-label"
+        >
+          <div className="bg-white rounded-xl p-6 text-center shadow-2xl max-w-sm mx-4">
+            <Loader2 className="w-10 h-10 text-green-600 animate-spin mx-auto mb-4" />
+            <p id="verifying-session-label" className="text-lg font-medium text-gray-900 mb-1">
+              Verifying Session
+            </p>
+            <p className="text-sm text-gray-600">
+              Please wait while we secure your login...
+            </p>
+          </div>
+        </div>
+      )}
+
       <div className="text-center">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <Phone className="w-8 h-8 text-green-600" />

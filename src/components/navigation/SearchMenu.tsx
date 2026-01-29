@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react'
 import { createPortal } from 'react-dom'
 import { useScrollLock } from '@/lib/hooks/useScrollLock'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -27,10 +27,57 @@ import {
   DollarSign,
   Flame,
   Eye,
+  Mic,
+  MicOff,
 } from 'lucide-react'
 import Link from 'next/link'
 import Fuse from 'fuse.js'
 import { searchableContent } from '@/data/navigationConfig'
+import { useFocusTrap } from '@/hooks/useFocusTrap'
+
+// Web Speech API types
+interface SpeechRecognitionEvent extends Event {
+  results: SpeechRecognitionResultList
+  resultIndex: number
+}
+
+interface SpeechRecognitionResultList {
+  length: number
+  item(index: number): SpeechRecognitionResult
+  [index: number]: SpeechRecognitionResult
+}
+
+interface SpeechRecognitionResult {
+  length: number
+  item(index: number): SpeechRecognitionAlternative
+  [index: number]: SpeechRecognitionAlternative
+  isFinal: boolean
+}
+
+interface SpeechRecognitionAlternative {
+  transcript: string
+  confidence: number
+}
+
+interface SpeechRecognition extends EventTarget {
+  continuous: boolean
+  interimResults: boolean
+  lang: string
+  start(): void
+  stop(): void
+  abort(): void
+  onstart: ((this: SpeechRecognition, ev: Event) => any) | null
+  onend: ((this: SpeechRecognition, ev: Event) => any) | null
+  onerror: ((this: SpeechRecognition, ev: Event) => any) | null
+  onresult: ((this: SpeechRecognition, ev: SpeechRecognitionEvent) => any) | null
+}
+
+declare global {
+  interface Window {
+    SpeechRecognition: new () => SpeechRecognition
+    webkitSpeechRecognition: new () => SpeechRecognition
+  }
+}
 
 interface SearchResult {
   item: {
@@ -55,12 +102,131 @@ interface SearchMenuProps {
 export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   const [query, setQuery] = useState('')
   const [results, setResults] = useState<SearchResult[]>([])
+  const [allResults, setAllResults] = useState<SearchResult[]>([]) // All search results
+  const [displayCount, setDisplayCount] = useState(8) // Number of results to display
   const [recentSearches, setRecentSearches] = useState<string[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(-1) // For keyboard navigation
+  const [isListening, setIsListening] = useState(false)
+  const [speechSupported, setSpeechSupported] = useState(false)
+  const recognitionRef = useRef<SpeechRecognition | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const fuse = useRef<Fuse<(typeof searchableContent)[number]> | null>(null)
   const router = useRouter()
+  const searchParams = useSearchParams()
+
+  // Focus trap for accessibility - keeps focus within modal when open
+  const focusTrapRef = useFocusTrap(isOpen)
+
+  // Initialize query from URL search params
+  useEffect(() => {
+    const urlQuery = searchParams.get('q')
+    if (urlQuery && !query) {
+      setQuery(urlQuery)
+    }
+  }, [searchParams]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Update URL when search query changes (debounced)
+  useEffect(() => {
+    if (!isOpen) return
+
+    const timeoutId = setTimeout(() => {
+      const currentParams = new URLSearchParams(window.location.search)
+      if (query.trim()) {
+        currentParams.set('q', query.trim())
+      } else {
+        currentParams.delete('q')
+      }
+
+      const newUrl = currentParams.toString()
+        ? `${window.location.pathname}?${currentParams.toString()}`
+        : window.location.pathname
+
+      // Use replaceState to avoid polluting history
+      window.history.replaceState({}, '', newUrl)
+    }, 300)
+
+    return () => clearTimeout(timeoutId)
+  }, [query, isOpen])
+
+  // Initialize Web Speech API
+  useEffect(() => {
+    const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition
+    if (SpeechRecognitionAPI) {
+      setSpeechSupported(true)
+      const recognition = new SpeechRecognitionAPI()
+      recognition.continuous = false
+      recognition.interimResults = true
+      recognition.lang = 'en-IN' // Support Indian English
+
+      recognition.onstart = () => {
+        setIsListening(true)
+      }
+
+      recognition.onend = () => {
+        setIsListening(false)
+      }
+
+      recognition.onerror = (event: Event) => {
+        console.error('Speech recognition error:', event)
+        setIsListening(false)
+      }
+
+      recognition.onresult = (event: SpeechRecognitionEvent) => {
+        const transcript = event.results[event.resultIndex][0].transcript
+        setQuery(transcript)
+
+        // If this is a final result, trigger search
+        if (event.results[event.resultIndex].isFinal) {
+          handleSearch(transcript)
+        }
+      }
+
+      recognitionRef.current = recognition
+    }
+
+    return () => {
+      if (recognitionRef.current) {
+        recognitionRef.current.abort()
+      }
+    }
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Stop listening when modal closes
+  useEffect(() => {
+    if (!isOpen && isListening && recognitionRef.current) {
+      recognitionRef.current.stop()
+    }
+  }, [isOpen, isListening])
+
+  // Toggle voice search
+  const toggleVoiceSearch = () => {
+    if (!recognitionRef.current) return
+
+    if (isListening) {
+      recognitionRef.current.stop()
+    } else {
+      try {
+        recognitionRef.current.start()
+        triggerHaptic()
+      } catch (err) {
+        console.error('Failed to start speech recognition:', err)
+      }
+    }
+  }
+
+  // Clear URL query param when closing
+  const handleClose = () => {
+    const currentParams = new URLSearchParams(window.location.search)
+    if (currentParams.has('q')) {
+      currentParams.delete('q')
+      const newUrl = currentParams.toString()
+        ? `${window.location.pathname}?${currentParams.toString()}`
+        : window.location.pathname
+      window.history.replaceState({}, '', newUrl)
+    }
+    handleClose()
+  }
 
   // Use shared scroll lock to prevent race conditions with other modals
   useScrollLock(isOpen)
@@ -104,22 +270,38 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   useEffect(() => {
     if (!query.trim()) {
       setResults([])
+      setAllResults([])
+      setDisplayCount(8) // Reset display count
       return
     }
 
     setIsLoading(true)
+    setDisplayCount(8) // Reset display count on new search
 
     // Debounce search
     const timeoutId = setTimeout(() => {
       if (fuse.current) {
         const searchResults = fuse.current.search(query.trim())
-        setResults(searchResults.slice(0, 8)) // Limit to 8 results
+        setAllResults(searchResults) // Store all results
+        setResults(searchResults.slice(0, 8)) // Show first 8
       }
       setIsLoading(false)
     }, 150)
 
     return () => clearTimeout(timeoutId)
   }, [query])
+
+  // Update displayed results when displayCount changes
+  useEffect(() => {
+    if (allResults.length > 0) {
+      setResults(allResults.slice(0, displayCount))
+    }
+  }, [displayCount, allResults])
+
+  // Load more results handler
+  const handleShowMore = () => {
+    setDisplayCount((prev) => prev + 8)
+  }
 
   // Handle escape key and keyboard navigation
   useEffect(() => {
@@ -128,7 +310,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
       switch (e.key) {
         case 'Escape':
-          onClose()
+          handleClose()
           break
         case 'ArrowDown':
           if (results.length > 0) {
@@ -147,7 +329,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
             e.preventDefault()
             handleSearch(query)
             router.push(results[selectedIndex].item.href)
-            onClose()
+            handleClose()
           }
           break
       }
@@ -401,7 +583,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
     // Must be more vertical than horizontal to prevent accidental closes during scrolling
     if (deltaY > deltaX && (deltaY > 100 || (deltaY > 50 && swipeVelocity > 0.5))) {
       triggerHaptic()
-      onClose()
+      handleClose()
     }
   }
 
@@ -415,9 +597,13 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
           animate="open"
           exit="closed"
           className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
-          onClick={onClose}
+          onClick={handleClose}
         >
           <motion.div
+            ref={focusTrapRef}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Search dialog"
             variants={modalVariants}
             initial="closed"
             animate="open"
@@ -440,7 +626,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-lg font-bold text-gray-900">Search</h2>
                 <button
-                  onClick={onClose}
+                  onClick={handleClose}
                   className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-gray-100 transition-colors duration-200 touch-manipulation"
                   aria-label="Close search menu"
                 >
@@ -452,7 +638,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                 <input
                   ref={inputRef}
                   type="text"
-                  placeholder="Search courses, services..."
+                  placeholder={isListening ? 'Listening...' : 'Search courses, services...'}
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   onKeyDown={(e) => {
@@ -460,17 +646,45 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                       handleSearch(query)
                     }
                   }}
-                  className="w-full pl-12 pr-12 py-3 sm:py-4 text-base sm:text-lg border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className={`w-full pl-12 ${speechSupported ? 'pr-24' : 'pr-12'} py-3 sm:py-4 text-base sm:text-lg border rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                    isListening ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                  }`}
+                  aria-describedby={isListening ? 'voice-search-status' : undefined}
                 />
-                {query && (
-                  <button
-                    onClick={() => setQuery('')}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-gray-100 touch-manipulation"
-                    aria-label="Clear search"
-                  >
-                    <X className="w-4 h-4 text-gray-400" />
-                  </button>
+                {isListening && (
+                  <span id="voice-search-status" className="sr-only">
+                    Voice search is active. Speak now.
+                  </span>
                 )}
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex items-center gap-1">
+                  {query && (
+                    <button
+                      onClick={() => setQuery('')}
+                      className="p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full hover:bg-gray-100 touch-manipulation"
+                      aria-label="Clear search"
+                    >
+                      <X className="w-4 h-4 text-gray-400" />
+                    </button>
+                  )}
+                  {speechSupported && (
+                    <button
+                      onClick={toggleVoiceSearch}
+                      className={`p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full transition-colors touch-manipulation ${
+                        isListening
+                          ? 'bg-red-100 text-red-600 animate-pulse'
+                          : 'hover:bg-gray-100 text-gray-400 hover:text-blue-600'
+                      }`}
+                      aria-label={isListening ? 'Stop voice search' : 'Start voice search'}
+                      aria-pressed={isListening}
+                    >
+                      {isListening ? (
+                        <MicOff className="w-5 h-5" />
+                      ) : (
+                        <Mic className="w-5 h-5" />
+                      )}
+                    </button>
+                  )}
+                </div>
               </div>
             </div>
 
@@ -482,7 +696,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
               {query && results.length > 0 && (
                 <div className="p-4 sm:p-6">
                   <h3 className="text-xs sm:text-sm font-semibold text-gray-500 uppercase tracking-wide mb-3 sm:mb-4">
-                    Search Results ({results.length})
+                    Search Results ({results.length}{allResults.length > results.length ? ` of ${allResults.length}` : ''})
                   </h3>
                   <div className="space-y-2">
                     {results.map(({ item }, index) => (
@@ -491,7 +705,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                         href={item.href}
                         onClick={() => {
                           handleSearch(query)
-                          onClose()
+                          handleClose()
                         }}
                         className={`group flex items-center justify-between p-3 sm:p-4 rounded-xl transition-all duration-200 min-h-[44px] touch-manipulation ${
                           selectedIndex === index
@@ -526,6 +740,17 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                       </Link>
                     ))}
                   </div>
+
+                  {/* Show More Button */}
+                  {allResults.length > displayCount && (
+                    <button
+                      onClick={handleShowMore}
+                      className="w-full mt-4 py-3 px-4 bg-blue-50 hover:bg-blue-100 text-blue-600 font-medium rounded-xl transition-colors duration-200 flex items-center justify-center gap-2 min-h-[44px] touch-manipulation"
+                    >
+                      Show more results ({allResults.length - displayCount} remaining)
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  )}
                 </div>
               )}
 
@@ -651,7 +876,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                               key={index}
                               href={rec.href}
                               onClick={() => {
-                                onClose()
+                                handleClose()
                                 triggerHaptic()
                               }}
                               className="group flex items-center justify-between p-3 bg-white/80 backdrop-blur-sm border border-purple-200 rounded-xl hover:bg-white hover:shadow-md transition-all duration-200 min-h-[44px]"
@@ -687,7 +912,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                             <button
                               key={index}
                               onClick={async () => {
-                                onClose()
+                                handleClose()
                                 triggerHaptic()
                                 await trackAndOpenWhatsApp({
                                   source: 'search-menu-quick-action',
@@ -716,7 +941,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                             key={index}
                             href={action.href}
                             onClick={() => {
-                              onClose()
+                              handleClose()
                               triggerHaptic()
                             }}
                             className={`group flex flex-col items-center justify-center gap-1.5 sm:gap-2 p-3 sm:p-4 bg-gradient-to-br ${action.bgGradient} border border-gray-200 rounded-xl ${action.hoverBg} hover:border-opacity-50 hover:shadow-xl hover:scale-[1.02] active:scale-95 transition-all duration-200 min-h-[88px] sm:min-h-[100px] touch-manipulation`}

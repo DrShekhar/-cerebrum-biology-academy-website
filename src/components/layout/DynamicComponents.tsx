@@ -119,10 +119,10 @@ export function SalesAgentWidget() {
   )
 }
 
-// PERFORMANCE: Lazy-load mobile navigation (only needed on mobile, defers lucide-react icons)
+// PERFORMANCE: Lazy-load mobile bottom navigation (only needed on mobile, defers lucide-react icons)
 // Note: Removed ssr: false - component handles mounted state internally for auth-dependent UI
 export const DynamicMobileNavigation = dynamic(
-  () => import('@/components/navigation/MobileNavigation').then((mod) => mod.MobileNavigation),
+  () => import('@/components/navigation/MobileBottomNav').then((mod) => mod.MobileNavigation),
   { loading: () => null }
 )
 
