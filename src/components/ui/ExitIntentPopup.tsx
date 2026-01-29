@@ -525,7 +525,7 @@ export function useExitIntent() {
     let scrollUpCount = 0
     let rafId: number | null = null
     let lastScrollTime = 0
-    let cleanupFunctions: (() => void)[] = []
+    const cleanupFunctions: (() => void)[] = []
 
     const setupListeners = () => {
       setIsInitialized(true)

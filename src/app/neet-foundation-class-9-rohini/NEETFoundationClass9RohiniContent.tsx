@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import {
-  BookOpen, CheckCircle, Clock, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
-  Award, Users, Target, GraduationCap, TrendingUp, Star, Train, Calculator, Building2, Brain,
+import { CheckCircle, Clock, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
+  Award, Users, Target, GraduationCap, Star, Train, Calculator, Building2, Brain,
   Sparkles, Trophy, ArrowRight, MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

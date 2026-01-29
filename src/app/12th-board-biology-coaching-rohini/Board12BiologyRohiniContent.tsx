@@ -16,7 +16,6 @@ import {
   Users,
   Target,
   GraduationCap,
-  Star,
   FileText,
   Microscope,
   Dna,
@@ -24,10 +23,7 @@ import {
   Leaf,
   Train,
   Beaker,
-  Clock,
   TrendingUp,
-  Calculator,
-  Video,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'

@@ -8,7 +8,6 @@ import {
   Clock,
   Award,
   Users,
-  BookOpen,
   CheckCircle,
   Star,
   Train,
@@ -17,14 +16,12 @@ import {
   ExternalLink,
   ThumbsUp,
   MessageCircle,
-  MapPinned,
   Building2,
   ArrowRight,
   Globe,
   Monitor,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 const structuredData = {
   '@context': 'https://schema.org',

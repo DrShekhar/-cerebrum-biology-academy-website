@@ -16,7 +16,6 @@ import {
   Users,
   Target,
   GraduationCap,
-  Star,
   FileText,
   Microscope,
   Dna,

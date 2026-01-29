@@ -6,26 +6,21 @@ import {
   MapPin,
   Train,
   Building2,
-  GraduationCap,
   School,
   Users,
   Trophy,
   Star,
   CheckCircle,
-  Phone,
   ArrowRight,
   Clock,
-  BookOpen,
   Award,
   Play,
-  ExternalLink,
   TrendingUp,
   Monitor,
   MessageCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { LocalBusinessSchema, FAQSchema, BreadcrumbSchema, SpeakableSchema } from '@/components/seo/StructuredData'
-import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { LocalBusinessSchema, BreadcrumbSchema, SpeakableSchema } from '@/components/seo/StructuredData'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 
 const nearbyAreas = [

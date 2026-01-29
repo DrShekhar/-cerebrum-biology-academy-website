@@ -18,7 +18,7 @@ import {
   GraduationCap,
   Briefcase,
 } from 'lucide-react'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 

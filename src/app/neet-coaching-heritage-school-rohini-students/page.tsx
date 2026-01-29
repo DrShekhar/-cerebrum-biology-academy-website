@@ -21,7 +21,7 @@ import {
   FileQuestion,
 } from 'lucide-react'
 import { getSchoolPageData } from '@/data/school-seo/school-pages-data'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 
 const pageData = getSchoolPageData('neet-coaching-heritage-school-rohini-students')!
 

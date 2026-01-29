@@ -5,7 +5,6 @@ import Link from 'next/link'
 import {
   Phone,
   MapPin,
-  Clock,
   Award,
   Users,
   CheckCircle,
@@ -13,16 +12,12 @@ import {
   Train,
   GraduationCap,
   Play,
-  ExternalLink,
-  ThumbsUp,
   MessageCircle,
   Building2,
-  ArrowRight,
   Globe,
   Monitor,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 const structuredData = {
   '@context': 'https://schema.org',

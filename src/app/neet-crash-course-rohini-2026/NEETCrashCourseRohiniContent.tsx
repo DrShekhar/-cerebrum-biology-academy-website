@@ -15,7 +15,6 @@ import {
   Users,
   Target,
   TrendingUp,
-  Star,
   Clock,
   Calendar,
   Zap,

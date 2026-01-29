@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import BotanicalGardenMetroContent from './BotanicalGardenMetroContent'
 
 const metroData = {

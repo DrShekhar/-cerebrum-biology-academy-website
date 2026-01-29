@@ -15,7 +15,6 @@ import {
   Star,
   Zap,
   GraduationCap,
-  BookOpen,
 } from 'lucide-react'
 import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'

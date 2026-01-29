@@ -4,8 +4,6 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
-  MapPin,
-  Clock,
   Award,
   Users,
   CheckCircle,
@@ -13,7 +11,6 @@ import {
   Train,
   GraduationCap,
   Play,
-  ExternalLink,
   MessageCircle,
   Building2,
   Globe,
@@ -21,7 +18,6 @@ import {
   Plane,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 const structuredData = {
   '@context': 'https://schema.org',

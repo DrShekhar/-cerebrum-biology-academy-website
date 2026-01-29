@@ -17,7 +17,6 @@ import {
   Calendar,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface SubjectScores {
   correct: string
