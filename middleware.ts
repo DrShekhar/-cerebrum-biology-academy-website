@@ -37,6 +37,8 @@ const publicRoutes = [
   '/study-with-me', // Public study session page and OBS overlay
   '/sign-in',
   '/sign-up',
+  '/sign-out',
+  '/unauthorized',
   '/auth',
   '/api/auth',
   '/api/public',
@@ -174,6 +176,11 @@ export default async function middleware(req: NextRequest) {
 
   // Auth routes redirect to dashboard if already logged in
   if (pathname.startsWith('/auth/') && userId) {
+    return NextResponse.redirect(new URL('/dashboard', req.url))
+  }
+
+  // Sign-in/sign-up pages redirect to dashboard if already logged in
+  if ((pathname.startsWith('/sign-in') || pathname.startsWith('/sign-up')) && userId) {
     return NextResponse.redirect(new URL('/dashboard', req.url))
   }
 
