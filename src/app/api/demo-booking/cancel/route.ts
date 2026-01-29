@@ -222,6 +222,25 @@ async function sendCancellationNotification(
 // GET endpoint to view cancellation page info
 export async function GET(request: NextRequest) {
   try {
+    // Rate limiting to prevent token enumeration
+    const forwardedFor = request.headers.get('x-forwarded-for')
+    const clientIp = forwardedFor?.split(',')[0].trim() || 'unknown'
+
+    const rateLimitResult = await withRateLimit(request, {
+      identifier: `cancel-get:${clientIp}`,
+      limit: 20,
+      window: 15 * 60 * 1000, // 20 requests per 15 minutes
+      keyPrefix: 'demo-cancel-get',
+      failClosed: true,
+    })
+
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests' },
+        { status: 429 }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const bookingId = searchParams.get('id')
     const token = searchParams.get('token')
