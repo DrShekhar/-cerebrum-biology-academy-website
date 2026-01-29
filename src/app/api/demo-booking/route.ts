@@ -157,6 +157,9 @@ async function getDefaultCounselorId(tx: typeof prisma): Promise<string> {
 // Database is now imported from db-admin.ts
 
 export async function POST(request: NextRequest) {
+  // Declare rawData outside try block so it's accessible in catch for failure notifications
+  let rawData: any = null
+
   try {
     // Get client IP (parse first IP from x-forwarded-for to prevent spoofing)
     const forwardedFor = request.headers.get('x-forwarded-for')
@@ -203,7 +206,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const rawData = await request.json()
+    rawData = await request.json()
 
     // Honeypot check - if 'website' field is filled, it's a bot
     if (rawData.website && rawData.website.length > 0) {
@@ -499,6 +502,21 @@ export async function POST(request: NextRequest) {
         error: dbError instanceof Error ? dbError.message : 'Unknown error',
       })
 
+      // CRITICAL: Notify admin about the failed booking so no lead is lost!
+      await notifyAdminBookingFailure(
+        {
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          courseInterest: data.courseInterest,
+          preferredDate: data.preferredDate,
+          preferredTime: data.preferredTime,
+          message: data.message,
+        },
+        'Database Error',
+        dbError instanceof Error ? dbError.message : 'Unknown database error'
+      )
+
       // Return user-friendly error - NEVER expose internal details to client
       // Details are logged server-side only for debugging
       return NextResponse.json(
@@ -640,6 +658,27 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     // Log error securely (don't expose internal details)
     console.error('Demo booking error:', error instanceof Error ? error.message : 'Unknown error')
+
+    // CRITICAL: Notify admin about the failed booking so no lead is lost!
+    // Use rawData as fallback if data validation failed
+    try {
+      const leadInfo = {
+        name: rawData?.name || 'Unknown',
+        email: rawData?.email || 'Unknown',
+        phone: rawData?.phone || 'Unknown',
+        courseInterest: rawData?.courseInterest || ['Unknown'],
+        preferredDate: rawData?.preferredDate,
+        preferredTime: rawData?.preferredTime,
+        message: rawData?.message,
+      }
+      await notifyAdminBookingFailure(
+        leadInfo,
+        'General Error',
+        error instanceof Error ? error.message : 'Unknown error occurred'
+      )
+    } catch (notifyErr) {
+      console.error('Failed to send failure notification:', notifyErr)
+    }
 
     // Return generic error message
     return NextResponse.json(
@@ -926,6 +965,63 @@ function generateDemoConfirmationEmail(bookingData: any): string {
 // Admin notification phone number - configured via env var
 const ADMIN_PHONE = process.env.ADMIN_PHONE_NUMBER || '9311946297'
 const SUPPORT_PHONE = process.env.SUPPORT_PHONE_NUMBER || '+91 93119 46297'
+
+// Notify admin when a demo booking fails - so no lead is lost!
+async function notifyAdminBookingFailure(leadData: {
+  name: string
+  email: string
+  phone: string
+  courseInterest: string[]
+  preferredDate?: string
+  preferredTime?: string
+  message?: string
+}, errorType: string, errorMessage: string) {
+  if (!process.env.INTERAKT_API_KEY) {
+    console.warn('[Demo Booking] Cannot send failure notification - INTERAKT_API_KEY not configured')
+    return
+  }
+
+  const timestamp = new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })
+  const coursesList = leadData.courseInterest?.join(', ') || 'Not specified'
+
+  const alertMessage = `🚨 DEMO BOOKING FAILED - FOLLOW UP NEEDED!
+
+❌ Error: ${errorType}
+
+👤 Student: ${(leadData.name || 'Unknown').slice(0, 50)}
+📞 Phone: ${(leadData.phone || 'Not provided').slice(0, 15)}
+📧 Email: ${(leadData.email || 'Not provided').slice(0, 100)}
+📅 Date: ${(leadData.preferredDate || 'Not specified').slice(0, 20)}
+🕐 Time: ${(leadData.preferredTime || 'Not specified').slice(0, 30)}
+📚 Course: ${coursesList.slice(0, 100)}
+
+⏰ Time: ${timestamp}
+
+⚠️ ACTION: Call/WhatsApp this student immediately to recover the lead!
+
+📝 Error Details: ${errorMessage.slice(0, 200)}`
+
+  try {
+    await fetch('https://api.interakt.ai/v1/public/message/', {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(process.env.INTERAKT_API_KEY + ':').toString('base64')}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        countryCode: '+91',
+        phoneNumber: ADMIN_PHONE,
+        type: 'Text',
+        data: {
+          message: alertMessage,
+        },
+      }),
+    })
+    console.log('[Demo Booking] Failure notification sent to admin for lead:', leadData.phone)
+  } catch (notifyError) {
+    console.error('❌ Failed to send booking failure notification:', notifyError)
+  }
+}
 
 // Notify admin team
 async function notifyAdminTeam(bookingData: any) {
