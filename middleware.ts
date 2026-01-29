@@ -41,6 +41,31 @@ const publicRoutes = [
   '/api/auth',
   '/api/public',
   '/api/webhooks',
+  // Olympiad coaching pages (public SEO pages)
+  '/usabo-coaching',
+  '/biology-olympiad-coaching',
+  '/olympiad-preparation',
+  '/campbell-biology',
+  '/inbo-coaching',
+  '/nseb-coaching',
+  // SEO landing pages (all public)
+  '/neet-coaching',
+  '/neet-biology',
+  '/best-biology',
+  '/biology-tuition',
+  '/biology-coaching',
+  '/biology-tutor',
+  '/biology-classes',
+  '/boards',
+  '/services',
+  '/company',
+  '/support',
+  '/success-stories',
+  '/wall-of-achievers',
+  '/free-resources',
+  '/mock-tests',
+  '/study-materials',
+  '/school-career-seminar',
 ]
 
 // Check if path matches public routes
