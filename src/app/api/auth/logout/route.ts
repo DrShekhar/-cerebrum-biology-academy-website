@@ -23,13 +23,16 @@ export async function POST(request: NextRequest) {
       request.headers.get('authorization')?.replace('Bearer ', '') ||
       request.cookies.get('auth-token')?.value
 
-    // If we have a valid session, terminate it
-    if (session.valid) {
-      // Get session ID from access token
+    // Terminate session - try multiple methods to ensure cleanup
+    if (session.valid && session.userId) {
+      // Method 1: Try to get sessionId from access token
       const payload = TokenUtils.verifyAccessToken(accessToken || '')
       if (payload?.sessionId) {
         await SessionManager.terminateSession(payload.sessionId)
       }
+      // Method 2: Also terminate all sessions for this user to be thorough
+      // This ensures cleanup even if token is expired/invalid
+      await SessionManager.terminateAllUserSessions(session.userId)
 
       // Track logout event
       try {
@@ -79,10 +82,13 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Logout error:', error)
 
-    // Even if there's an error, we should clear cookies
+    // Even if there's an error, we should clear cookies to ensure client-side logout
+    // But we indicate the error so client can handle appropriately
     const response = NextResponse.json({
-      success: true,
-      message: 'Logged out successfully',
+      success: false,
+      partialLogout: true, // Indicates cookies cleared but server cleanup may have failed
+      message: 'Logged out with errors - please sign in again if issues persist',
+      error: error instanceof Error ? error.message : 'Unknown error during logout',
       loggedOutAt: new Date().toISOString(),
     })
 

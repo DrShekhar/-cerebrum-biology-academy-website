@@ -379,7 +379,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
   const logout = async () => {
     try {
-      // Clear refresh timeout
+      // Clear refresh timeout first to prevent any pending refreshes
       if (refreshTimeoutRef.current) {
         clearTimeout(refreshTimeoutRef.current)
         refreshTimeoutRef.current = null
@@ -389,15 +389,30 @@ export function AuthProvider({ children }: AuthProviderProps) {
       lastRefreshRef.current = 0
 
       // Call logout API to clear server-side session
-      await fetch('/api/auth/logout', {
-        method: 'POST',
-        credentials: 'include',
-      }).catch(() => {})
+      // We proceed with client-side cleanup regardless of API response
+      try {
+        const response = await fetch('/api/auth/logout', {
+          method: 'POST',
+          credentials: 'include',
+        })
+        const data = await response.json()
+        if (!data.success) {
+          console.warn('Server logout incomplete:', data.error || 'Unknown error')
+        }
+      } catch (fetchError) {
+        console.warn('Logout API call failed:', fetchError)
+      }
 
-      await firebaseSignOut()
+      // Always attempt Firebase signout
+      try {
+        await firebaseSignOut()
+      } catch (firebaseError) {
+        console.warn('Firebase signout failed:', firebaseError)
+      }
     } catch (error) {
       console.error('Logout error:', error)
     } finally {
+      // Always clear client state regardless of API success
       setUser(null)
       setPermissions([])
       router.push('/')

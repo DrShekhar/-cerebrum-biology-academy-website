@@ -769,10 +769,12 @@ export class CookieManager {
     const isProduction = process.env.NODE_ENV === 'production'
 
     // Cookie options must match how they were set for deletion to work
+    // IMPORTANT: sameSite must match how cookies were set ('strict') for deletion to work
     const cookieOptions = {
       path: '/',
       secure: isProduction,
-      sameSite: 'lax' as const,
+      sameSite: 'strict' as const, // Must match setAuthCookies for proper deletion
+      httpOnly: true,
       maxAge: 0, // Expire immediately
     }
 
@@ -782,10 +784,15 @@ export class CookieManager {
     response.cookies.set('refresh-token', '', cookieOptions)
 
     // Clear all possible session token variants (both secure and non-secure)
-    response.cookies.set('authjs.session-token', '', { ...cookieOptions, secure: false })
-    response.cookies.set('__Secure-authjs.session-token', '', { ...cookieOptions, secure: true })
-    response.cookies.set('next-auth.session-token', '', { ...cookieOptions, secure: false })
-    response.cookies.set('__Secure-next-auth.session-token', '', { ...cookieOptions, secure: true })
+    // NextAuth cookies may use 'lax' sameSite, so we clear with both options
+    const nextAuthOptions = { path: '/', maxAge: 0, httpOnly: true }
+    response.cookies.set('authjs.session-token', '', { ...nextAuthOptions, secure: false, sameSite: 'lax' as const })
+    response.cookies.set('__Secure-authjs.session-token', '', { ...nextAuthOptions, secure: true, sameSite: 'lax' as const })
+    response.cookies.set('next-auth.session-token', '', { ...nextAuthOptions, secure: false, sameSite: 'lax' as const })
+    response.cookies.set('__Secure-next-auth.session-token', '', { ...nextAuthOptions, secure: true, sameSite: 'lax' as const })
+    // Also try strict sameSite in case they were set that way
+    response.cookies.set('authjs.session-token', '', { ...nextAuthOptions, secure: isProduction, sameSite: 'strict' as const })
+    response.cookies.set('next-auth.session-token', '', { ...nextAuthOptions, secure: isProduction, sameSite: 'strict' as const })
 
     // Also use delete as a fallback for older implementations
     response.cookies.delete('auth-token')
