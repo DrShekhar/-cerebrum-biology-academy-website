@@ -780,6 +780,201 @@ export const schoolPagesData: Record<string, SchoolPageData> = {
       phone: '+91-88264-44334',
     },
   },
+
+  'neet-coaching-heritage-school-rohini-students': {
+    slug: 'neet-coaching-heritage-school-rohini-students',
+    schoolName: 'Heritage School Rohini',
+    locality: 'Sector 23, Rohini',
+    nearestCenter: 'Rohini Center',
+    distance: '1-2 km',
+    metaTitle: 'NEET Coaching for Heritage School Rohini Students | Biology Classes',
+    metaDescription:
+      'Best NEET coaching for Heritage School Rohini students. DC Chauk center very close to campus. 1:17 teacher-student ratio, experiential learning approach. After-school batches, free NEET tools.',
+    heroTitle: 'NEET Coaching for Heritage School Rohini Students',
+    heroSubtitle:
+      'Our Rohini DC Chauk center is very close to Heritage School campus. Join 35+ Heritage School students preparing for NEET with personalized 1:17 teacher-student ratio.',
+    schoolHighlights: [
+      '35+ Heritage School Rohini students enrolled',
+      'Very close to Heritage School Sector 23 campus',
+      '1:17 teacher-student ratio for personalized attention',
+      'Experiential learning approach matching Heritage pedagogy',
+      '15+ Heritage School alumni in top medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Very Close to Campus',
+        description:
+          'Our DC Chauk center is just 1-2 km from Heritage School - walk or reach in under 5 minutes by car.',
+      },
+      {
+        title: '1:17 Teacher-Student Ratio',
+        description:
+          'Small batch sizes ensure every student gets personalized attention and doubt resolution.',
+      },
+      {
+        title: 'Experiential Learning',
+        description:
+          'Our teaching methodology complements Heritage School\'s experiential learning philosophy with hands-on biology practicals.',
+      },
+      {
+        title: 'Free NEET Tools',
+        description:
+          'Access free NEET preparation tools including practice tests, study materials, and performance analytics.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Riya Malhotra',
+        batch: 'Heritage School Rohini, Class of 2024',
+        result: 'NEET Score: 672',
+        quote:
+          'The 1:17 ratio meant I could ask questions freely. The teachers knew my strengths and weaknesses personally.',
+      },
+      {
+        name: 'Arjun Kapoor',
+        batch: 'Heritage School Rohini, Class of 2023',
+        result: 'UCMS Delhi - MBBS',
+        quote:
+          'Being so close to school made daily attendance easy. The experiential learning approach helped me understand biology conceptually.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to Heritage School Rohini?',
+        answer:
+          'Our Rohini center at DC Chauk is just 1-2 km from Heritage School Sector 23 campus. Students can walk in 5-7 minutes or reach by car in under 5 minutes. We are one of the closest NEET coaching centers to Heritage School.',
+      },
+      {
+        question: 'What is the teacher-student ratio at Cerebrum?',
+        answer:
+          'We maintain a 1:17 teacher-student ratio to ensure every Heritage School student gets personalized attention. This allows for individual doubt sessions and customized learning paths.',
+      },
+      {
+        question: 'How does experiential learning work for NEET preparation?',
+        answer:
+          'Similar to Heritage School\'s pedagogy, we use hands-on biology practicals, 3D models, virtual dissections, and real-world case studies. This experiential approach helps students understand concepts deeply rather than just memorizing.',
+      },
+      {
+        question: 'What free NEET tools do you provide?',
+        answer:
+          'All Heritage School students get access to our free NEET preparation toolkit including: chapter-wise practice tests, previous year question banks, video lectures for revision, performance analytics dashboard, and doubt resolution via WhatsApp.',
+      },
+      {
+        question: 'What batch timings suit Heritage School students?',
+        answer:
+          'Our 3 PM and 4 PM batches are popular among Heritage School students. Weekend intensive batches are also available for comprehensive NEET preparation.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'DPS Rohini', url: '/neet-coaching-dps-rohini-students' },
+      { name: 'Bal Bharati Rohini', url: '/neet-coaching-bal-bharati-rohini-students' },
+      { name: 'Venkateshwar Rohini', url: '/neet-coaching-venkateshwar-rohini-students' },
+      { name: 'GD Goenka Rohini', url: '/neet-coaching-gd-goenka-rohini-students' },
+    ],
+    centerDetails: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
+
+'neet-coaching-gd-goenka-rohini-students': {
+    slug: 'neet-coaching-gd-goenka-rohini-students',
+    schoolName: 'GD Goenka Public School Rohini',
+    locality: 'Sector 22, Rohini',
+    nearestCenter: 'Rohini Center',
+    distance: '2-3 km',
+    metaTitle: 'NEET Coaching for GD Goenka Rohini Students | Biology Classes',
+    metaDescription:
+      'Best NEET coaching for GD Goenka Public School Rohini (Sector 22) students. DC Chauk center just 10 mins away. Ranked #1 Most Elite School North Zone 2023. After-school batches, AIIMS faculty.',
+    heroTitle: 'NEET Coaching for GD Goenka Rohini Students',
+    heroSubtitle:
+      'Our Rohini DC Chauk center is the perfect choice for GD Goenka Public School students. Join 45+ GD Goenka students preparing for NEET with AIIMS-quality teaching.',
+    schoolHighlights: [
+      '45+ GD Goenka Rohini students enrolled',
+      '#1 Most Elite School North Zone 2023 students trust us',
+      'Just 2-3 km from GD Goenka Sector 22 campus',
+      'After-school batches starting 3:30 PM',
+      '18+ GD Goenka alumni in top medical colleges',
+    ],
+    whyStudentsChoose: [
+      {
+        title: 'Very Close Location',
+        description:
+          'Our DC Chauk center is just 10 minutes from GD Goenka Sector 22 campus - one of the closest NEET coaching options.',
+      },
+      {
+        title: 'Elite School Standards',
+        description:
+          'Teaching quality that matches the academic excellence GD Goenka is known for - ranked #1 Most Elite School North Zone 2023.',
+      },
+      {
+        title: 'Strong GD Goenka Community',
+        description:
+          '45+ GD Goenka students creates a familiar and competitive learning environment.',
+      },
+      {
+        title: 'Flexible Timing',
+        description:
+          'Multiple batch options including 3:30 PM, 4:30 PM evening and weekend batches to suit your schedule.',
+      },
+    ],
+    successStories: [
+      {
+        name: 'Ananya Khanna',
+        batch: 'GD Goenka Rohini, Class of 2024',
+        result: 'NEET Score: 688',
+        quote:
+          'Being from the #1 Elite School, I needed coaching that matched our standards. Cerebrum exceeded expectations.',
+      },
+      {
+        name: 'Vikram Sethi',
+        batch: 'GD Goenka Rohini, Class of 2023',
+        result: 'MAMC Delhi - MBBS',
+        quote:
+          'The proximity to school made it so convenient. I could reach Cerebrum in just 10 minutes after school.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How close is Cerebrum to GD Goenka Public School Rohini?',
+        answer:
+          'Our Rohini center at DC Chauk is just 2-3 km from GD Goenka Public School Sector 22 campus. Students typically reach in 10 minutes by car or auto.',
+      },
+      {
+        question: 'What batch timings suit GD Goenka students best?',
+        answer:
+          'Our 3:30 PM and 4:30 PM batches are most popular among GD Goenka students. Weekend intensive batches are also available for comprehensive preparation.',
+      },
+      {
+        question: 'How many GD Goenka students are currently enrolled at Cerebrum?',
+        answer:
+          'We have 45+ students from GD Goenka Public School Rohini across various batches. This strong peer group creates healthy competition and mutual support.',
+      },
+      {
+        question: 'Do you coordinate with GD Goenka exam schedule?',
+        answer:
+          'Yes! We are aware of GD Goenka academic calendar and adjust our test schedules accordingly. During school exams, coaching tests are postponed or made optional.',
+      },
+      {
+        question: 'What makes Cerebrum the best choice for GD Goenka students?',
+        answer:
+          'As the #1 Most Elite School North Zone 2023, GD Goenka students need coaching that matches their academic standards. Our AIIMS faculty, proximity to school, and proven track record with 18+ GD Goenka alumni in top medical colleges makes us the ideal choice.',
+      },
+    ],
+    relatedSchools: [
+      { name: 'DPS Rohini', url: '/neet-coaching-dps-rohini-students' },
+      { name: 'Bal Bharati Rohini', url: '/neet-coaching-bal-bharati-rohini-students' },
+      { name: 'Venkateshwar Rohini', url: '/neet-coaching-venkateshwar-rohini-students' },
+    ],
+    centerDetails: {
+      name: 'Rohini Center',
+      address: 'DC Chauk, Sector 9, Rohini, New Delhi 110085',
+      timing: '8 AM - 8 PM',
+      phone: '+91-88264-44334',
+    },
+  },
 }
 
 export function getSchoolPageData(slug: string): SchoolPageData | undefined {

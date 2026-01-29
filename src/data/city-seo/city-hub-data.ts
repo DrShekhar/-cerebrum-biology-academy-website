@@ -1938,6 +1938,68 @@ export const cityHubData: Record<string, CityHubData> = {
     },
   },
 
+  'prashant-vihar': {
+    slug: 'prashant-vihar',
+    cityName: 'Prashant Vihar',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching Prashant Vihar | Biology Classes Rohini | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching for Prashant Vihar students. Near Rohini DC Chauk center. AIIMS faculty, 98% success. WhatsApp 88264-44334',
+    heroTitle: 'Best NEET Coaching in Prashant Vihar',
+    heroSubtitle:
+      'Just 10 minutes from our Rohini DC Chauk center! Premium NEET biology coaching for Prashant Vihar students.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      distance: '5-10 km from Prashant Vihar',
+    },
+    localities: [
+      { name: 'Prashant Vihar', url: '/neet-coaching-prashant-vihar' },
+      { name: 'Rohini Sector 14', url: '/neet-coaching-rohini-sector-14' },
+      { name: 'Rohini Sector 15', url: '/neet-coaching-rohini-sector-15' },
+      { name: 'Shalimar Bagh', url: '/biology-classes-shalimar-bagh' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'Shalimar Bagh', url: '/biology-classes-shalimar-bagh' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+    ],
+    faqs: [
+      {
+        question: 'Where is the nearest NEET coaching center from Prashant Vihar?',
+        answer:
+          'Our Rohini center at DC Chauk is just 5-10 km from Prashant Vihar, easily accessible via metro. Many Prashant Vihar students attend our flagship Rohini center. Call 88264-44334 for directions.',
+      },
+      {
+        question: 'What are the batch timings for Prashant Vihar students?',
+        answer:
+          'At our Rohini center, we have morning (8-10 AM), afternoon (2-4 PM), and evening (6-8 PM) batches. Weekend batches also available. Choose timing that suits you best!',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Prashant Vihar students?',
+        answer:
+          'Biology coaching at Rohini center is Rs 45,000 to Rs 75,000 per year. Online option is Rs 35,000 to Rs 60,000. Both include complete study material and test series. Call 88264-44334.',
+      },
+      {
+        question: 'Why should Prashant Vihar students choose Cerebrum Academy?',
+        answer:
+          'With AIIMS-trained faculty, 98% success rate, and proximity to DC Chauk Rohini center, Cerebrum is the best choice for Prashant Vihar students. Our small batch sizes ensure personal attention.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '280+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.7125',
+      lng: '77.1438',
+    },
+  },
+
   'karol-bagh': {
     slug: 'karol-bagh',
     cityName: 'Karol Bagh',
@@ -10825,6 +10887,79 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: {
       lat: '28.5732',
       lng: '77.2189',
+    },
+  },
+
+  'netaji-subhash-place': {
+    slug: 'netaji-subhash-place',
+    cityName: 'Netaji Subhash Place',
+    stateName: 'Delhi',
+    metaTitle: 'NEET Coaching Netaji Subhash Place | Biology Classes NSP Delhi | Cerebrum Academy',
+    metaDescription:
+      'Best NEET coaching near Netaji Subhash Place (NSP) Delhi. 15-20 min from Rohini center via metro. AIIMS faculty, 98% success rate. WhatsApp 88264-44334!',
+    heroTitle: 'Best NEET Coaching near Netaji Subhash Place',
+    heroSubtitle:
+      'Top-rated NEET biology coaching for NSP students. Just 15-20 minutes from our Rohini DC Chauk center via Red Line Metro.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Rohini Center',
+      address: '211 Vikas Surya Tower, DC Chauk, Rohini',
+      distance: '15-20 min via metro from NSP',
+    },
+    localities: [
+      { name: 'Wazirpur', url: '/biology-classes-wazirpur' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Shalimar Bagh', url: '/biology-classes-shalimar-bagh' },
+      { name: 'Ashok Vihar', url: '/biology-classes-ashok-vihar' },
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Model Town', url: '/neet-coaching-model-town' },
+    ],
+    relatedCities: [
+      { name: 'Rohini', url: '/biology-classes-rohini' },
+      { name: 'Pitampura', url: '/biology-classes-pitampura' },
+      { name: 'Delhi', url: '/biology-classes-delhi' },
+      { name: 'North Delhi', url: '/neet-coaching-north-delhi' },
+    ],
+    faqs: [
+      {
+        question: 'Where is the nearest NEET coaching from Netaji Subhash Place?',
+        answer:
+          'Our Rohini center at DC Chauk is just 15-20 minutes from NSP via Red Line Metro. Take the metro from NSP to Rohini West station, and our center is a short walk from there. Call 88264-44334 for directions.',
+      },
+      {
+        question: 'Do you offer NEET coaching for students near NSP metro station?',
+        answer:
+          'Yes! Students from Netaji Subhash Place area can easily reach our Rohini DC Chauk center via Red Line Metro. We also offer online live classes with the same AIIMS-trained faculty. WhatsApp 88264-44334 for batch timings.',
+      },
+      {
+        question: 'What courses are available for NSP area students?',
+        answer:
+          'We offer Class 11, Class 12, NEET Dropper, and Foundation courses for students from Netaji Subhash Place. All courses taught by AIIMS-trained faculty with comprehensive NCERT-focused study material. Call 88264-44334 for details.',
+      },
+      {
+        question: 'Is online NEET coaching available for students near NSP?',
+        answer:
+          'Yes! Our live online classes are perfect for NSP students. Same AIIMS faculty, same curriculum, interactive doubt sessions. Many students prefer hybrid mode - attend online during weekdays and visit Rohini center on weekends. WhatsApp 88264-44334.',
+      },
+      {
+        question: 'What is the fee for NEET biology coaching for NSP students?',
+        answer:
+          'Our NEET biology coaching fees range from Rs 35,000 to Rs 60,000 per year for online classes. Offline classes at Rohini center are Rs 45,000 to Rs 75,000. This includes study material, test series, and doubt support. EMI options available. Call 88264-44334.',
+      },
+      {
+        question: 'Why should NSP students choose Cerebrum over local coaching?',
+        answer:
+          'AIIMS-trained faculty (not just graduates), 98% success rate, small batches of 15-20 students, NCERT-focused curriculum, and easy metro connectivity from NSP. Our results speak for themselves - 150+ students from North Delhi cracked NEET last year.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '98%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '28.6896',
+      lng: '77.1538',
     },
   },
 }
