@@ -22,6 +22,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { ScheduleDemoForm } from '@/components/admin/ScheduleDemoForm'
+import { showToast } from '@/lib/toast'
 
 interface DemoBooking {
   id: string
@@ -170,7 +171,7 @@ export default function DemoBookingsPage() {
       }
     } catch (err) {
       console.error('Error updating booking:', err)
-      alert('Failed to update booking status. Please try again.')
+      showToast.error('Failed to update booking status. Please try again.')
     }
   }
 

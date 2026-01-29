@@ -5,6 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import { useState, useEffect } from 'react'
 import { TaskCard } from '@/components/counselor/TaskCard'
+import { showToast } from '@/lib/toast'
 
 type TaskStatus = 'TODO' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELLED'
 type TaskPriority = 'LOW' | 'MEDIUM' | 'HIGH' | 'URGENT'
@@ -120,7 +121,7 @@ export default function TasksPage() {
       setTasks((prev) => prev.map((t) => (t.id === taskId ? { ...t, ...updates } : t)))
     } catch (error) {
       console.error('Error updating task:', error)
-      alert('Failed to update task')
+      showToast.error('Failed to update task')
     }
   }
 
@@ -139,7 +140,7 @@ export default function TasksPage() {
       setTasks((prev) => prev.filter((t) => t.id !== taskId))
     } catch (error) {
       console.error('Error deleting task:', error)
-      alert('Failed to delete task')
+      showToast.error('Failed to delete task')
     }
   }
 
@@ -160,14 +161,14 @@ export default function TasksPage() {
         throw new Error(data.error || 'Failed to run automation')
       }
 
-      alert(
-        `Automation complete!\n${data.data.paymentReminders} payment reminders\n${data.data.offerExpiries} offer expiry tasks\nTotal: ${data.data.total} new tasks created`
+      showToast.success(
+        `Automation complete! ${data.data.total} new tasks created`
       )
 
       fetchTasks()
     } catch (error) {
       console.error('Error running automation:', error)
-      alert('Failed to run automation')
+      showToast.error('Failed to run automation')
     } finally {
       setAutomating(false)
     }

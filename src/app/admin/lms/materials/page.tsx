@@ -11,6 +11,7 @@ export const dynamic = 'force-dynamic'
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { showToast } from '@/lib/toast'
 
 interface Material {
   id: string
@@ -90,11 +91,11 @@ export default function MaterialsListPage() {
         fetchMaterials()
         setDeleteId(null)
       } else {
-        alert('Failed to delete material: ' + data.error)
+        showToast.error('Failed to delete material: ' + data.error)
       }
     } catch (error) {
       console.error('Delete failed:', error)
-      alert('Failed to delete material')
+      showToast.error('Failed to delete material')
     } finally {
       setDeleting(false)
     }

@@ -28,6 +28,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddStudentForm } from '@/components/admin/AddStudentForm'
+import { showToast } from '@/lib/toast'
 import { EditStudentForm } from '@/components/admin/EditStudentForm'
 
 interface Student {
@@ -247,7 +248,7 @@ export default function StudentsPage() {
             <Button
               variant="outline"
               className="text-gray-700 border-gray-300"
-              onClick={() => alert('Import functionality coming soon!')}
+              onClick={() => showToast.info('Import functionality coming soon!')}
             >
               <Upload className="w-4 h-4 mr-2" />
               Import
@@ -255,7 +256,7 @@ export default function StudentsPage() {
             <Button
               variant="outline"
               className="text-gray-700 border-gray-300"
-              onClick={() => alert('Export functionality coming soon!')}
+              onClick={() => showToast.info('Export functionality coming soon!')}
             >
               <Download className="w-4 h-4 mr-2" />
               Export

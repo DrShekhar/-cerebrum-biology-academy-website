@@ -5,6 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { showToast } from '@/lib/toast'
 
 type QueueStatus = 'PENDING' | 'PROCESSING' | 'COMPLETED' | 'FAILED' | 'SKIPPED' | 'CANCELLED'
 type ActionType = 'EMAIL' | 'WHATSAPP' | 'SMS' | 'CALL_TASK' | 'NOTIFICATION' | 'TASK'
@@ -108,11 +109,11 @@ export default function FollowupQueuePage() {
 
       if (!response.ok) throw new Error('Failed to execute follow-up')
 
-      alert('Follow-up executed successfully')
+      showToast.success('Follow-up executed successfully')
       fetchQueue()
     } catch (err) {
       console.error('Error executing follow-up:', err)
-      alert('Failed to execute follow-up')
+      showToast.error('Failed to execute follow-up')
     }
   }
 
@@ -129,11 +130,11 @@ export default function FollowupQueuePage() {
 
       if (!response.ok) throw new Error('Failed to cancel follow-up')
 
-      alert('Follow-up cancelled successfully')
+      showToast.success('Follow-up cancelled successfully')
       fetchQueue()
     } catch (err) {
       console.error('Error cancelling follow-up:', err)
-      alert('Failed to cancel follow-up')
+      showToast.error('Failed to cancel follow-up')
     }
   }
 
@@ -150,11 +151,11 @@ export default function FollowupQueuePage() {
 
       if (!response.ok) throw new Error('Failed to skip follow-up')
 
-      alert('Follow-up skipped successfully')
+      showToast.success('Follow-up skipped successfully')
       fetchQueue()
     } catch (err) {
       console.error('Error skipping follow-up:', err)
-      alert('Failed to skip follow-up')
+      showToast.error('Failed to skip follow-up')
     }
   }
 

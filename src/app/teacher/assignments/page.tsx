@@ -13,6 +13,7 @@ import { FileText, Plus, Search, Edit, Trash2, Users, CheckCircle, Clock, Eye } 
 import { format } from 'date-fns'
 import { cn } from '@/lib/utils'
 import { Assignment, AssignmentStatus, AssignmentStats } from '@/types/assignment'
+import { showToast } from '@/lib/toast'
 
 export default function TeacherAssignmentsPage() {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
@@ -86,11 +87,11 @@ export default function TeacherAssignmentsPage() {
         setAssignments((prev) => prev.filter((a) => a.id !== assignmentId))
       } else {
         const data = await response.json()
-        alert(data.error || 'Failed to delete assignment')
+        showToast.error(data.error || 'Failed to delete assignment')
       }
     } catch (error) {
       console.error('Error deleting assignment:', error)
-      alert('Failed to delete assignment')
+      showToast.error('Failed to delete assignment')
     }
   }
 

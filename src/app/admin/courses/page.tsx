@@ -28,6 +28,7 @@ import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { CreateCourseForm } from '@/components/admin/CreateCourseForm'
 import { EditCourseForm } from '@/components/admin/EditCourseForm'
+import { showToast } from '@/lib/toast'
 
 interface Course {
   id: string
@@ -225,7 +226,7 @@ export default function CoursesPage() {
             <Button
               variant="outline"
               className="text-gray-700 border-gray-300"
-              onClick={() => alert('Advanced filtering coming soon!')}
+              onClick={() => showToast.info('Advanced filtering coming soon!')}
             >
               <Filter className="w-4 h-4 mr-2" />
               Advanced Filter

@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
+import { showToast } from '@/lib/toast'
 
 interface NotificationChannel {
   id: string
@@ -421,7 +422,7 @@ export default function NotificationsSettingsPage() {
           <Button
             variant="outline"
             className="text-blue-700 border-blue-300"
-            onClick={() => alert('Test notification sent to admin email!')}
+            onClick={() => showToast.success('Test notification sent to admin email!')}
           >
             <Bell className="w-4 h-4 mr-2" />
             Send Test Notification

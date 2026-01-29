@@ -5,6 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { showToast } from '@/lib/toast'
 
 type TriggerType =
   | 'STAGE_CHANGE'
@@ -127,7 +128,7 @@ export default function FollowupRulesPage() {
       fetchRules()
     } catch (err) {
       console.error('Error deleting rule:', err)
-      alert('Failed to delete rule. It may be in use.')
+      showToast.error('Failed to delete rule. It may be in use.')
     }
   }
 

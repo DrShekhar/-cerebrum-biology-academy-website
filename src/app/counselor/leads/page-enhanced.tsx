@@ -283,7 +283,7 @@ export default function LeadsPageEnhanced() {
     const toastId = showToast.loading(`Deleting ${selectedLeads.size} leads...`)
 
     try {
-      await Promise.all(
+      const results = await Promise.allSettled(
         Array.from(selectedLeads).map((id) =>
           fetch(`/api/counselor/leads/${id}`, {
             method: 'DELETE',
@@ -292,8 +292,19 @@ export default function LeadsPageEnhanced() {
         )
       )
 
+      const succeeded = results.filter((r) => r.status === 'fulfilled').length
+      const failed = results.filter((r) => r.status === 'rejected').length
+
       showToast.dismiss(toastId)
-      showToast.success(`Deleted ${selectedLeads.size} leads successfully`)
+
+      if (failed === 0) {
+        showToast.success(`Deleted ${succeeded} leads successfully`)
+      } else if (succeeded > 0) {
+        showToast.warning(`Deleted ${succeeded} leads, ${failed} failed`)
+      } else {
+        showToast.error('Failed to delete leads')
+      }
+
       setSelectedLeads(new Set())
       fetchLeads()
     } catch (error) {

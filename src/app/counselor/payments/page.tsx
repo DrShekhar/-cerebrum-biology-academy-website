@@ -21,6 +21,7 @@ import {
   AlertCircle,
 } from 'lucide-react'
 import { format } from 'date-fns'
+import { showToast } from '@/lib/toast'
 
 export default function PaymentsPage() {
   const router = useRouter()
@@ -70,7 +71,7 @@ export default function PaymentsPage() {
 
   const handleMarkAsPaid = async (payment: PaymentInstallment) => {
     if (payment.status === 'PAID') {
-      alert('Payment is already marked as paid')
+      showToast.info('Payment is already marked as paid')
       return
     }
 
@@ -95,10 +96,10 @@ export default function PaymentsPage() {
 
       if (!response.ok) throw new Error('Failed to mark payment as paid')
 
-      alert('Payment marked as paid successfully!')
+      showToast.success('Payment marked as paid successfully!')
       fetchPayments()
     } catch (error) {
-      alert(
+      showToast.error(
         'Failed to mark payment as paid: ' +
           (error instanceof Error ? error.message : 'Unknown error')
       )
@@ -109,7 +110,7 @@ export default function PaymentsPage() {
 
   const handleSendReminder = async (payment: PaymentInstallment) => {
     if (payment.status === 'PAID') {
-      alert('Cannot send reminder for paid payment')
+      showToast.info('Cannot send reminder for paid payment')
       return
     }
 
@@ -131,10 +132,10 @@ export default function PaymentsPage() {
 
       if (!response.ok) throw new Error('Failed to send reminder')
 
-      alert('Payment reminder sent successfully!')
+      showToast.success('Payment reminder sent successfully!')
       fetchPayments()
     } catch (error) {
-      alert(
+      showToast.error(
         'Failed to send reminder: ' + (error instanceof Error ? error.message : 'Unknown error')
       )
     } finally {

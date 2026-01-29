@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import type { CommunityQuestion } from '@/lib/mcq/types'
+import { showToast } from '@/lib/toast'
 
 type StatusFilter = 'PENDING' | 'APPROVED' | 'REJECTED' | 'ALL'
 
@@ -48,7 +49,7 @@ export default function ModerationPage() {
     if (!selectedQuestion) return
 
     if (action === 'reject' && !rejectionReason) {
-      alert('Please provide a rejection reason')
+      showToast.warning('Please provide a rejection reason')
       return
     }
 
@@ -73,11 +74,11 @@ export default function ModerationPage() {
         fetchQuestions()
       } else {
         const data = await response.json()
-        alert(data.error || 'Action failed')
+        showToast.error(data.error || 'Action failed')
       }
     } catch (error) {
       console.error('Action error:', error)
-      alert('Action failed')
+      showToast.error('Action failed')
     } finally {
       setActionState('idle')
     }

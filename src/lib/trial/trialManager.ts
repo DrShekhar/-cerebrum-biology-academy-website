@@ -51,7 +51,9 @@ const MAX_TRIAL_TESTS = 50
 const MASTER_TRIAL_DURATION_DAYS = 7
 
 export async function generateDeviceId(): Promise<string> {
-  return `device_${Date.now()}_${Math.random().toString(36).substring(7)}`
+  const crypto = require('crypto')
+  const randomPart = crypto.randomBytes(8).toString('hex')
+  return `device_${Date.now()}_${randomPart}`
 }
 
 export function calculateTrialExpiry(startDate: Date): Date {

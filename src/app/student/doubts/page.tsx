@@ -86,24 +86,36 @@ export default function StudentDoubtsPage() {
       if (priorityFilter) params.append('priority', priorityFilter)
       if (searchQuery) params.append('search', searchQuery)
 
-      const [doubtsRes, statsRes] = await Promise.all([
+      const [doubtsResult, statsResult] = await Promise.allSettled([
         fetch(`/api/student/doubts?${params.toString()}`),
         fetch('/api/student/doubts/stats'),
       ])
 
-      const doubtsData = await doubtsRes.json()
-      const statsData = await statsRes.json()
-
-      if (!doubtsRes.ok) {
-        throw new Error(doubtsData.error || 'Failed to fetch doubts')
+      if (doubtsResult.status === 'fulfilled') {
+        const doubtsData = await doubtsResult.value.json()
+        if (doubtsResult.value.ok) {
+          setDoubts(doubtsData.doubts || [])
+        } else {
+          console.error('Failed to fetch doubts:', doubtsData.error)
+        }
+      } else {
+        console.error('Doubts fetch failed:', doubtsResult.reason)
       }
 
-      if (!statsRes.ok) {
-        throw new Error(statsData.error || 'Failed to fetch stats')
+      if (statsResult.status === 'fulfilled') {
+        const statsData = await statsResult.value.json()
+        if (statsResult.value.ok) {
+          setStats(statsData.stats || null)
+        } else {
+          console.error('Failed to fetch stats:', statsData.error)
+        }
+      } else {
+        console.error('Stats fetch failed:', statsResult.reason)
       }
 
-      setDoubts(doubtsData.doubts || [])
-      setStats(statsData.stats || null)
+      if (doubtsResult.status === 'rejected' && statsResult.status === 'rejected') {
+        throw new Error('Failed to load data')
+      }
     } catch (err) {
       console.error('Error fetching data:', err)
       setError(err instanceof Error ? err.message : 'Failed to load doubts')

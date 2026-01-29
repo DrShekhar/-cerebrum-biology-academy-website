@@ -19,6 +19,7 @@ import {
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { showToast } from '@/lib/toast'
 
 interface SettingsCard {
   id: string
@@ -90,7 +91,7 @@ export default function SettingsPage() {
     // Simulate save
     await new Promise((resolve) => setTimeout(resolve, 1000))
     setIsSaving(false)
-    alert('Settings saved successfully!')
+    showToast.success('Settings saved successfully!')
   }
 
   return (

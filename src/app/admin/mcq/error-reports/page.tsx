@@ -6,6 +6,7 @@ export const dynamic = 'force-dynamic'
 import { useState, useEffect } from 'react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import type { ErrorReportRecord } from '@/lib/mcq/types'
+import { showToast } from '@/lib/toast'
 
 type StatusFilter = 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'ALL'
 
@@ -83,11 +84,11 @@ export default function ErrorReportsPage() {
         fetchReports()
       } else {
         const data = await response.json()
-        alert(data.error || 'Action failed')
+        showToast.error(data.error || 'Action failed')
       }
     } catch (error) {
       console.error('Action error:', error)
-      alert('Action failed')
+      showToast.error('Action failed')
     } finally {
       setActionState('idle')
     }

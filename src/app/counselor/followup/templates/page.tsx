@@ -5,6 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
+import { showToast } from '@/lib/toast'
 
 type Channel = 'EMAIL' | 'WHATSAPP' | 'SMS' | 'CALL_TASK' | 'NOTIFICATION' | 'TASK'
 
@@ -106,7 +107,7 @@ export default function FollowupTemplatesPage() {
       fetchTemplates()
     } catch (err) {
       console.error('Error deleting template:', err)
-      alert('Failed to delete template. It may be in use by active rules.')
+      showToast.error('Failed to delete template. It may be in use by active rules.')
     }
   }
 

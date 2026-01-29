@@ -27,6 +27,7 @@ import {
 } from 'lucide-react'
 import { format } from 'date-fns'
 import { cn } from '@/lib/utils'
+import { showToast } from '@/lib/toast'
 
 type TestAssignmentStatus = 'DRAFT' | 'PUBLISHED' | 'ACTIVE' | 'COMPLETED' | 'ARCHIVED'
 
@@ -253,11 +254,11 @@ export default function TeacherTestAssignmentPage() {
         setTestAssignments((prev) => prev.filter((t) => t.id !== testId))
       } else {
         const data = await response.json()
-        alert(data.error || 'Failed to delete test assignment')
+        showToast.error(data.error || 'Failed to delete test assignment')
       }
     } catch (error) {
       console.error('Error deleting test assignment:', error)
-      alert('Failed to delete test assignment')
+      showToast.error('Failed to delete test assignment')
     }
   }
 

@@ -294,26 +294,34 @@ export default function StudentWallOfAchieversPage() {
       if (selectedCategory) params.set('category', selectedCategory)
       if (selectedPeriod) params.set('period', selectedPeriod)
 
-      const [achieversRes, nominationsRes] = await Promise.all([
+      const [achieversResult, nominationsResult] = await Promise.allSettled([
         fetch(`/api/wall-of-achievers?${params.toString()}`),
         fetch('/api/wall-of-achievers/nominate'),
       ])
 
-      const achieversData = await achieversRes.json()
-      const nominationsData = await nominationsRes.json()
-
-      if (achieversData.success) {
-        setAchievers(achieversData.data.achievers)
-        setFilters(achieversData.data.filters)
+      if (achieversResult.status === 'fulfilled') {
+        const achieversData = await achieversResult.value.json()
+        if (achieversData.success) {
+          setAchievers(achieversData.data.achievers)
+          setFilters(achieversData.data.filters)
+        } else {
+          setError(achieversData.error || 'Failed to fetch achievers')
+        }
       } else {
-        setError(achieversData.error || 'Failed to fetch achievers')
+        console.error('Achievers fetch failed:', achieversResult.reason)
+        setError('Failed to fetch achievers')
       }
 
-      if (nominationsData.success) {
-        const nominatedIds = new Set<string>(
-          nominationsData.data.map((n: Nomination) => n.achieverId)
-        )
-        setMyNominations(nominatedIds)
+      if (nominationsResult.status === 'fulfilled') {
+        const nominationsData = await nominationsResult.value.json()
+        if (nominationsData.success) {
+          const nominatedIds = new Set<string>(
+            nominationsData.data.map((n: Nomination) => n.achieverId)
+          )
+          setMyNominations(nominatedIds)
+        }
+      } else {
+        console.error('Nominations fetch failed:', nominationsResult.reason)
       }
     } catch (err) {
       console.error('Error fetching data:', err)

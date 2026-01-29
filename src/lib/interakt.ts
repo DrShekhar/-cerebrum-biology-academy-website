@@ -832,10 +832,13 @@ export async function trackEvent(params: {
 // ============================================
 
 /**
- * Generate a 6-digit OTP
+ * Generate a cryptographically secure 6-digit OTP
  */
 export function generateOTP(): string {
-  return Math.floor(100000 + Math.random() * 900000).toString()
+  const crypto = require('crypto')
+  const randomBytes = crypto.randomBytes(4)
+  const randomNumber = randomBytes.readUInt32BE(0)
+  return (100000 + (randomNumber % 900000)).toString()
 }
 
 /**

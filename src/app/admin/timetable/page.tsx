@@ -19,6 +19,7 @@ import {
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
+import { showToast } from '@/lib/toast'
 
 interface Batch {
   id: string
@@ -125,11 +126,11 @@ export default function TimetableAdminPage() {
         resetForm()
         fetchBatches()
       } else {
-        alert(result.error || 'Failed to create batch')
+        showToast.error(result.error || 'Failed to create batch')
       }
     } catch (error) {
       console.error('Error creating batch:', error)
-      alert('Failed to create batch')
+      showToast.error('Failed to create batch')
     } finally {
       setSaving(false)
     }
@@ -151,11 +152,11 @@ export default function TimetableAdminPage() {
         resetForm()
         fetchBatches()
       } else {
-        alert(result.error || 'Failed to update batch')
+        showToast.error(result.error || 'Failed to update batch')
       }
     } catch (error) {
       console.error('Error updating batch:', error)
-      alert('Failed to update batch')
+      showToast.error('Failed to update batch')
     } finally {
       setSaving(false)
     }
@@ -174,11 +175,11 @@ export default function TimetableAdminPage() {
         setSelectedBatch(null)
         fetchBatches()
       } else {
-        alert(result.error || 'Failed to delete batch')
+        showToast.error(result.error || 'Failed to delete batch')
       }
     } catch (error) {
       console.error('Error deleting batch:', error)
-      alert('Failed to delete batch')
+      showToast.error('Failed to delete batch')
     } finally {
       setSaving(false)
     }
