@@ -211,10 +211,8 @@ export function FacultySection() {
             Our Teaching <span className="text-blue-600">Methodology</span>
           </h3>
           <p className="text-base xs:text-lg text-gray-600 max-w-3xl mx-auto">
-            At Cerebrum Biology Academy, we combine traditional teaching excellence with modern
-            pedagogical approaches. Our AIIMS Trained faculty employs proven methods that ensure
-            deep conceptual understanding, exam readiness, and long-term retention of biological
-            concepts for NEET success.
+            AIIMS-trained faculty combining traditional excellence with modern methods for deep
+            conceptual understanding and NEET success.
           </p>
         </div>
 
@@ -232,11 +230,8 @@ export function FacultySection() {
               Conceptual Teaching
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              We emphasize deep understanding through concept-based learning, real-world examples,
-              and clinical case studies rather than rote memorization. Our faculty connects
-              biological concepts to practical applications, making complex topics like Genetics,
-              Physiology, and Ecology easy to understand and remember. Interactive discussions and
-              doubt-clearing sessions ensure every student grasps fundamental principles thoroughly.
+              Deep conceptual understanding through real-world examples and clinical case studies.
+              Focus on understanding, not memorization.
             </p>
           </div>
 
@@ -248,12 +243,8 @@ export function FacultySection() {
               NEET Focused Strategy
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              Our strategic approach aligns perfectly with NEET exam patterns, focusing on
-              high-yield topics and frequently asked concepts. Weekly assessments mirror the actual
-              NEET paper structure with detailed performance analysis and improvement strategies. We
-              provide extensive practice with previous year questions, topic-wise tests, and
-              full-length mock exams to build speed, accuracy, and exam temperament for NEET
-              success.
+              Curriculum aligned with NEET patterns. Weekly mock tests, previous year analysis, and
+              focus on high-yield topics for maximum scores.
             </p>
           </div>
 
@@ -265,12 +256,8 @@ export function FacultySection() {
               Personal Mentoring
             </h3>
             <p className="text-sm xs:text-base text-gray-600">
-              With small batch sizes of maximum 15 students, we ensure individual attention and
-              personalized guidance for every student. Our faculty tracks each student's progress
-              through regular assessments, identifies weak areas, and provides customized
-              improvement plans. One-on-one doubt sessions, parent-teacher meetings, and
-              motivational counseling create a supportive environment where every student can
-              achieve their full potential and realize their NEET dreams.
+              Maximum 15 students per batch. Individual progress tracking, customized improvement
+              plans, and one-on-one doubt sessions.
             </p>
           </div>
         </div>

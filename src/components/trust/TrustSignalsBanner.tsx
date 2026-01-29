@@ -28,8 +28,7 @@ const trustSignals: TrustSignal[] = [
     id: 'experience',
     value: '14+',
     label: 'Years',
-    sublabel:
-      'Excellence in NEET Biology coaching since 2009. Over a decade of proven track record helping thousands of students achieve their medical college dreams through expert teaching and personalized mentorship.',
+    sublabel: 'Proven excellence since 2009',
     icon: Calendar,
     color: 'bg-[#4285f4]',
     verified: true,
@@ -38,8 +37,7 @@ const trustSignals: TrustSignal[] = [
     id: 'success-rate',
     value: '98%',
     label: 'Success Rate',
-    sublabel:
-      'NEET Qualification rate for 2023-24 batch. 500+ students qualified NEET with our coaching, with many securing ranks under 1000 AIR and admissions to AIIMS, JIPMER, and top government medical colleges across India.',
+    sublabel: 'NEET 2023-24 qualification rate',
     icon: Trophy,
     color: 'bg-[#34a853]',
     verified: true,
@@ -48,8 +46,7 @@ const trustSignals: TrustSignal[] = [
     id: 'top-score',
     value: '695',
     label: 'Top Score',
-    sublabel:
-      'Sadhna Sirin NEET 2023 (100 percentile in Biology). Our star achiever scored 695/720 marks with perfect Biology score, demonstrating the effectiveness of our AIIMS Trained faculty teaching methods and comprehensive preparation strategy.',
+    sublabel: 'Sadhna Sirin, NEET 2023 (100%ile Biology)',
     icon: Star,
     color: 'bg-[#fbbc04]',
     verified: true,
@@ -58,8 +55,7 @@ const trustSignals: TrustSignal[] = [
     id: 'students',
     value: '2,500+',
     label: 'Students',
-    sublabel:
-      'Medical college admissions achieved by Cerebrum students in last 5 years. Our alumni study at prestigious institutions including AIIMS Delhi, AFMC Pune, BHU, KGMU, and top private medical colleges nationwide.',
+    sublabel: 'Medical admissions in last 5 years',
     icon: Users,
     color: 'bg-[#3d4d3d]',
     verified: true,
@@ -68,8 +64,7 @@ const trustSignals: TrustSignal[] = [
     id: 'faculty',
     value: 'AIIMS',
     label: 'Faculty',
-    sublabel:
-      'Dr. Shekhar C Singh (AIIMS New Delhi Alumnus) leads our team of AIIMS Trained and top medical college faculty. 15+ years of NEET coaching experience with deep understanding of exam patterns and high-yield topics.',
+    sublabel: 'Led by Dr. Shekhar C Singh, AIIMS Alumnus',
     icon: GraduationCap,
     color: 'bg-teal-700',
     verified: true,
@@ -78,8 +73,7 @@ const trustSignals: TrustSignal[] = [
     id: 'rating',
     value: '4.9/5',
     label: 'Google Rating',
-    sublabel:
-      'Based on 500+ verified student and parent reviews on Google. Students consistently praise our teaching quality, study material, doubt resolution support, and personalized attention that helped them achieve their NEET goals.',
+    sublabel: '500+ verified reviews',
     icon: Star,
     color: 'bg-orange-600',
     verified: false,
