@@ -73,6 +73,12 @@ interface Lead {
   score?: number
   activitiesCount?: number
   notesCount?: number
+  class?: string
+  school?: string
+  city?: string
+  state?: string
+  conversionProbability?: number
+  expectedValue?: number
 }
 
 interface Counselor {
@@ -462,7 +468,7 @@ export default function LeadsPage() {
                         <div className="ml-4">
                           <div className="text-sm font-medium text-gray-900">{lead.name}</div>
                           <div className="text-sm text-gray-500">
-                            {lead.class} • {lead.school || 'School not provided'}
+                            {lead.class || 'N/A'} • {lead.school || 'School not provided'}
                           </div>
                           <div className="text-xs text-gray-400">
                             Created: {new Date(lead.createdAt).toLocaleDateString()}
@@ -482,7 +488,7 @@ export default function LeadsPage() {
                         </div>
                         <div className="text-sm text-gray-500 flex items-center">
                           <MapPin className="w-3 h-3 mr-2 text-gray-400" />
-                          {lead.city}, {lead.state}
+                          {lead.city || 'N/A'}, {lead.state || 'N/A'}
                         </div>
                       </div>
                     </td>
@@ -521,10 +527,10 @@ export default function LeadsPage() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="space-y-1">
                         <div className="text-sm font-medium text-gray-900">
-                          {lead.conversionProbability}%
+                          {lead.conversionProbability ?? 0}%
                         </div>
                         <div className="text-xs text-gray-500">
-                          ₹{lead.expectedValue.toLocaleString()}
+                          ₹{(lead.expectedValue ?? 0).toLocaleString()}
                         </div>
                         {lead.nextFollowUp && (
                           <div className="text-xs text-blue-600 flex items-center">

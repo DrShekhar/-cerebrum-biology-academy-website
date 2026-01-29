@@ -337,9 +337,12 @@ export class WebhookService {
 
       const webhookConfig: WebhookConfig = {
         id: String(metadata.webhookId),
+        name: 'retry-webhook',
         url: String(metadata.webhookUrl),
         events: [],
-        secret: '', // Will be retrieved from original webhook
+        secret: null, // Will be retrieved from original webhook
+        headers: null,
+        isActive: true,
         retryPolicy: {
           maxRetries: Number(metadata.maxRetries) || 3,
           retryDelayMs: Number(metadata.retryDelayMs) || 5000,

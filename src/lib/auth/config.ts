@@ -225,9 +225,13 @@ export class TokenUtils {
   }
 
   static generateSessionId(): string {
-    // Use cryptographically secure random bytes instead of Math.random()
-    const randomBytes = crypto.randomBytes(16).toString('hex')
-    return `session_${Date.now()}_${randomBytes}`
+    // Use Web Crypto API for cross-platform compatibility
+    const array = new Uint8Array(16)
+    if (typeof globalThis.crypto !== 'undefined' && globalThis.crypto.getRandomValues) {
+      globalThis.crypto.getRandomValues(array)
+    }
+    const randomHex = Array.from(array, (b) => b.toString(16).padStart(2, '0')).join('')
+    return `session_${Date.now()}_${randomHex}`
   }
 }
 
@@ -828,9 +832,13 @@ export class CookieManager {
  * Used in development/testing environments
  */
 export function createDemoToken(): string {
-  // Use cryptographically secure random bytes
-  const randomBytes = crypto.randomBytes(8).toString('hex')
-  return `demo_${Date.now()}_${randomBytes}`
+  // Use Web Crypto API for cross-platform compatibility
+  const array = new Uint8Array(8)
+  if (typeof globalThis.crypto !== 'undefined' && globalThis.crypto.getRandomValues) {
+    globalThis.crypto.getRandomValues(array)
+  }
+  const randomHex = Array.from(array, (b) => b.toString(16).padStart(2, '0')).join('')
+  return `demo_${Date.now()}_${randomHex}`
 }
 
 /**

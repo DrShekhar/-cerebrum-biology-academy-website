@@ -25,11 +25,7 @@ import { useFormValidation } from '@/hooks/useFormValidation'
 import { addDays, format, startOfTomorrow } from 'date-fns'
 import { razorpayService } from '@/lib/payments/razorpay'
 
-declare global {
-  interface Window {
-    Razorpay: any
-  }
-}
+// Razorpay types are declared in src/types/globals.d.ts
 
 interface StreamlinedEnrollmentPageProps {
   onEnrollmentComplete?: (data: any) => void
@@ -1173,11 +1169,11 @@ export function StreamlinedEnrollmentPage({
                         !formData.email ||
                         !formData.parentName ||
                         !formData.parentMobile ||
-                        validationStates.fullName?.error ||
-                        validationStates.mobile?.error ||
-                        validationStates.email?.error ||
-                        validationStates.parentName?.error ||
-                        validationStates.parentMobile?.error
+                        !!validationStates.fullName?.error ||
+                        !!validationStates.mobile?.error ||
+                        !!validationStates.email?.error ||
+                        !!validationStates.parentName?.error ||
+                        !!validationStates.parentMobile?.error
                       }
                     >
                       {isSubmitting ? (

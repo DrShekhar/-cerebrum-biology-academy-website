@@ -160,7 +160,8 @@ export async function getRetryDueNotifications(): Promise<NotificationPayload[]>
 
   if (redis) {
     // Get all notifications with score <= now
-    const data = await redis.zrangebyscore('notification:retry', 0, now)
+    // Using zrange with BYSCORE for Upstash Redis compatibility
+    const data = await redis.zrange('notification:retry', 0, now, { byScore: true })
 
     if (data.length > 0) {
       // Remove them from retry queue
