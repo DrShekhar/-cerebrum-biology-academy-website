@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { AuthModal } from '@/components/auth/AuthModal'
 import FocusTrap from 'focus-trap-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import toast from 'react-hot-toast'
 
 interface DemoBookingModalProps {
   isOpen: boolean
@@ -92,7 +93,7 @@ export function DemoBookingModal({
       setIsSubmitted(true)
     } catch (error) {
       console.error('Demo booking error:', error)
-      alert('Failed to book demo. Please try again.')
+      toast.error('Failed to book demo. Please try again.')
     } finally {
       setIsLoading(false)
     }

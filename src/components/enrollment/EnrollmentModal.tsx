@@ -21,6 +21,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import FocusTrap from 'focus-trap-react'
 import { AuthModal } from '@/components/auth/AuthModal'
 import { RazorpayPayment } from '@/components/payment/RazorpayPayment'
+import toast from 'react-hot-toast'
 
 interface EnrollmentModalProps {
   isOpen: boolean
@@ -95,7 +96,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
       setCurrentStep('success')
     } catch (error) {
       console.error('Enrollment error:', error)
-      alert('Enrollment failed after payment. Please contact support.')
+      toast.error('Enrollment failed after payment. Please contact support.')
     } finally {
       setIsLoading(false)
     }
@@ -107,7 +108,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
     description?: string
   }) => {
     console.error('Payment error:', error)
-    alert('Payment failed. Please try again or contact support.')
+    toast.error('Payment failed. Please try again or contact support.')
   }
 
   const handleClose = () => {

@@ -3,9 +3,19 @@ import { prisma } from '@/lib/prisma'
 import { renderToBuffer } from '@react-pdf/renderer'
 import React from 'react'
 import { ReceiptPDF, ReceiptData } from '@/lib/pdf/ReceiptPDF'
+import { validateUserSession } from '@/lib/auth/config'
 
 export async function GET(request: NextRequest, { params }: { params: { orderId: string } }) {
   try {
+    // SECURITY: Validate user session before returning receipt
+    const session = await validateUserSession(request)
+    if (!session.valid || !session.userId) {
+      return NextResponse.json(
+        { error: 'Authentication required to access receipts' },
+        { status: 401 }
+      )
+    }
+
     const { orderId } = params
 
     if (!orderId) {
@@ -27,6 +37,15 @@ export async function GET(request: NextRequest, { params }: { params: { orderId:
 
     if (!payment) {
       return NextResponse.json({ error: 'Payment not found' }, { status: 404 })
+    }
+
+    // SECURITY: Verify ownership - user can only access their own receipts
+    // Admins can access any receipt
+    if (payment.userId !== session.userId && session.role !== 'ADMIN') {
+      return NextResponse.json(
+        { error: 'You are not authorized to access this receipt' },
+        { status: 403 }
+      )
     }
 
     if (payment.status !== 'COMPLETED') {

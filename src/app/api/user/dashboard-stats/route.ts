@@ -55,8 +55,8 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
     const oneWeekAgo = new Date()
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
 
-    // Single aggregated query for all stats (replaces 3 separate queries)
-    const [overallStats, thisWeekStats, recentTests, upcomingTestSessions] = await Promise.all([
+    // Use Promise.allSettled for graceful error handling - one failing query won't break the dashboard
+    const results = await Promise.allSettled([
       // Overall statistics using aggregation
       prisma.testAttempt.aggregate({
         where: {
@@ -119,6 +119,19 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
         },
       }),
     ])
+
+    // Extract values with defaults for failed queries
+    const overallStats = results[0].status === 'fulfilled' ? results[0].value : { _count: { id: 0 }, _avg: { percentage: 0 }, _sum: { questionCount: 0, totalMarks: 0, score: 0, timeSpent: 0 } }
+    const thisWeekStats = results[1].status === 'fulfilled' ? results[1].value : { _count: { id: 0 }, _sum: { questionCount: 0, timeSpent: 0 } }
+    const recentTests = results[2].status === 'fulfilled' ? results[2].value : []
+    const upcomingTestSessions = results[3].status === 'fulfilled' ? results[3].value : []
+
+    // Log any failed queries for debugging
+    results.forEach((result, index) => {
+      if (result.status === 'rejected') {
+        console.error(`Dashboard query ${index} failed:`, result.reason)
+      }
+    })
 
     // Return default data if no tests found
     const totalTests = overallStats._count.id
@@ -231,7 +244,8 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
     const oneWeekAgo = new Date()
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7)
 
-    const [lastWeekStats, thisWeekStats] = await Promise.all([
+    // Use Promise.allSettled for graceful error handling
+    const weeklyResults = await Promise.allSettled([
       // Last week's average using aggregation
       prisma.testAttempt.aggregate({
         where: {
@@ -260,8 +274,12 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
       }),
     ])
 
-    const lastWeekAvg = lastWeekStats._avg.percentage || 0
-    const thisWeekAvg = thisWeekStats._avg.percentage || 0
+    // Extract values with defaults for failed queries
+    const lastWeekStatsResult = weeklyResults[0].status === 'fulfilled' ? weeklyResults[0].value : { _avg: { percentage: 0 }, _count: { id: 0 } }
+    const thisWeekStatsResult = weeklyResults[1].status === 'fulfilled' ? weeklyResults[1].value : { _avg: { percentage: 0 }, _count: { id: 0 } }
+
+    const lastWeekAvg = lastWeekStatsResult._avg.percentage || 0
+    const thisWeekAvg = thisWeekStatsResult._avg.percentage || 0
 
     const weekOverWeekChange =
       lastWeekAvg > 0 ? ((thisWeekAvg - lastWeekAvg) / lastWeekAvg) * 100 : 0
@@ -272,7 +290,7 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
         data: {
           ...stats,
           weekOverWeek: {
-            testsChange: thisWeekStats._count.id - lastWeekStats._count.id,
+            testsChange: thisWeekStatsResult._count.id - lastWeekStatsResult._count.id,
             scoreChange: Math.round((thisWeekAvg - lastWeekAvg) * 10) / 10,
             percentageChange: Math.round(weekOverWeekChange * 10) / 10,
           },

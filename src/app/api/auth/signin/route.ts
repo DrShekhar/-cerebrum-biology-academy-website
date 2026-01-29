@@ -168,7 +168,7 @@ export async function POST(request: NextRequest) {
     // Log successful login to audit trail
     logLogin(user.email, user.role, clientIP, userAgent)
 
-    // Create response with tokens
+    // Create response WITHOUT accessToken in body (security: only use httpOnly cookies)
     const response = NextResponse.json({
       success: true,
       message: 'Signed in successfully',
@@ -180,7 +180,6 @@ export async function POST(request: NextRequest) {
         emailVerified: user.emailVerified,
         profile: user.profile,
       },
-      accessToken, // For client-side usage if needed
       expiresIn: 15 * 60, // 15 minutes in seconds
     })
 

@@ -8,6 +8,7 @@ import { ContactForm } from '@/types'
 import { Calendar, Phone, Mail, User, BookOpen, MessageSquare, Clock } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import toast from 'react-hot-toast'
 
 interface BookingFormProps {
   type?: 'demo' | 'inquiry' | 'callback'
@@ -129,10 +130,10 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
         preferredDate: '',
       })
 
-      alert('Thank you! Your demo class has been booked. We will contact you soon.')
+      toast.success('Thank you! Your demo class has been booked. We will contact you soon.')
     } catch (error) {
       console.error('Form submission error:', error)
-      alert(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
+      toast.error(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
     } finally {
       setIsSubmitting(false)
     }

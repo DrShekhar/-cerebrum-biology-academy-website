@@ -225,7 +225,9 @@ export class TokenUtils {
   }
 
   static generateSessionId(): string {
-    return `session_${Date.now()}_${Math.random().toString(36).substring(2)}`
+    // Use cryptographically secure random bytes instead of Math.random()
+    const randomBytes = crypto.randomBytes(16).toString('hex')
+    return `session_${Date.now()}_${randomBytes}`
   }
 }
 
@@ -826,7 +828,9 @@ export class CookieManager {
  * Used in development/testing environments
  */
 export function createDemoToken(): string {
-  return `demo_${Date.now()}_${Math.random().toString(36).substring(7)}`
+  // Use cryptographically secure random bytes
+  const randomBytes = crypto.randomBytes(8).toString('hex')
+  return `demo_${Date.now()}_${randomBytes}`
 }
 
 /**

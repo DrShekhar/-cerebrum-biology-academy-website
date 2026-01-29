@@ -3,6 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { addSecurityHeaders } from '@/lib/auth/config'
 import { z } from 'zod'
 import axios from 'axios'
+import crypto from 'crypto'
 
 // Validation schema for OTP request
 const sendOtpSchema = z.object({
@@ -14,9 +15,10 @@ const sendOtpSchema = z.object({
     .optional(),
 })
 
-// Generate 6-digit OTP
+// Generate cryptographically secure 6-digit OTP
 function generateOTP(): string {
-  return Math.floor(100000 + Math.random() * 900000).toString()
+  // Use crypto.randomInt for secure random number in range [100000, 999999]
+  return crypto.randomInt(100000, 1000000).toString()
 }
 
 // Rate limiting: Max 5 OTPs per mobile per hour, with progressive delays

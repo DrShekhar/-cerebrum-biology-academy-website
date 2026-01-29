@@ -1,13 +1,41 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { SessionManager, CookieManager, addSecurityHeaders, TokenUtils } from '@/lib/auth/config'
+import {
+  SessionManager,
+  CookieManager,
+  addSecurityHeaders,
+  TokenUtils,
+  AuthRateLimit,
+} from '@/lib/auth/config'
 
 /**
  * POST /api/auth/refresh
- * Token refresh mechanism
+ * Token refresh mechanism with rate limiting
  */
 export async function POST(request: NextRequest) {
+  // Parse first IP from x-forwarded-for to prevent IP spoofing attacks
+  const forwardedFor = request.headers.get('x-forwarded-for')
+  const clientIP = forwardedFor
+    ? forwardedFor.split(',')[0].trim()
+    : request.headers.get('x-real-ip') || 'unknown'
+
   try {
+    // SECURITY: Rate limit refresh requests to prevent DoS attacks
+    // Limit by IP to prevent attackers from exhausting server resources
+    const rateLimitCheck = await AuthRateLimit.checkRateLimit(`refresh:${clientIP}`)
+    if (!rateLimitCheck.allowed) {
+      return addSecurityHeaders(
+        NextResponse.json(
+          {
+            error: 'Too many refresh attempts',
+            message: 'Please try again later',
+            lockoutEndsAt: rateLimitCheck.lockoutEndsAt,
+          },
+          { status: 429 }
+        )
+      )
+    }
+
     // Get refresh token from cookies or body
     const refreshToken =
       request.cookies.get('refresh-token')?.value ||
@@ -84,12 +112,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Create response with new tokens
+    // Create response WITHOUT accessToken in body (security: only use httpOnly cookies)
     const response = NextResponse.json({
       success: true,
       message: 'Tokens refreshed successfully',
       user,
-      accessToken,
       expiresIn: 15 * 60, // 15 minutes in seconds
     })
 

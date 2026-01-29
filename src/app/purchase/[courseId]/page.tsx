@@ -7,6 +7,7 @@ import { useParams, useRouter } from 'next/navigation'
 import { PricingSelector, PricingPlan } from '@/components/purchase/PricingSelector'
 import { ArrowLeft, Shield, Clock, BookOpen } from 'lucide-react'
 import Script from 'next/script'
+import toast from 'react-hot-toast'
 
 // Course pricing configuration
 const COURSE_PRICING = {
@@ -147,12 +148,12 @@ export default function PurchasePage() {
 
   const handleProceedToPayment = async () => {
     if (!selectedPlan) {
-      alert('Please select a pricing plan')
+      toast.error('Please select a pricing plan')
       return
     }
 
     if (!razorpayLoaded) {
-      alert('Payment system is loading. Please wait a moment.')
+      toast('Payment system is loading. Please wait a moment.', { icon: '⏳' })
       return
     }
 
@@ -162,12 +163,12 @@ export default function PurchasePage() {
 
   const handleGuestCheckout = async () => {
     if (!guestDetails.name || !guestDetails.email || !guestDetails.phone) {
-      alert('Please fill in all details')
+      toast.error('Please fill in all details')
       return
     }
 
     if (!selectedPlan) {
-      alert('Please select a pricing plan')
+      toast.error('Please select a pricing plan')
       return
     }
 
@@ -246,7 +247,7 @@ export default function PurchasePage() {
             )
           } catch (error) {
             console.error('Payment verification error:', error)
-            alert('Payment verification failed. Please contact support.')
+            toast.error('Payment verification failed. Please contact support.')
           }
         },
         modal: {
@@ -260,7 +261,7 @@ export default function PurchasePage() {
       rzp.open()
     } catch (error) {
       console.error('Purchase error:', error)
-      alert(error instanceof Error ? error.message : 'Purchase failed. Please try again.')
+      toast.error(error instanceof Error ? error.message : 'Purchase failed. Please try again.')
       setLoading(false)
     }
   }

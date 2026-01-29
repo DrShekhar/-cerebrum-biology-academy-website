@@ -18,6 +18,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
+import toast from 'react-hot-toast'
 
 interface OrderDetails {
   orderId: string
@@ -157,7 +158,7 @@ function PurchaseSuccessContent() {
       window.open(`/api/payments/receipt/${orderId}`, '_blank')
     } catch (error) {
       console.error('Receipt error:', error)
-      alert('Failed to open receipt. Please contact support.')
+      toast.error('Failed to open receipt. Please contact support.')
     }
   }
 

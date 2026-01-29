@@ -25,17 +25,8 @@ export async function GET(request: NextRequest) {
     const weekAgo = new Date(today)
     weekAgo.setDate(weekAgo.getDate() - 7)
 
-    // Fetch all data in parallel for better performance
-    const [
-      totalAssignments,
-      pendingSubmissions,
-      studentDoubts,
-      activeStudents,
-      recentSubmissions,
-      recentDoubts,
-      upcomingSessions,
-      gradedSubmissions,
-    ] = await Promise.all([
+    // Use Promise.allSettled for graceful error handling - one failing query won't break the dashboard
+    const results = await Promise.allSettled([
       // Total assignments created by teacher
       prisma.assignment.count({
         where: { teacherId },
@@ -121,6 +112,23 @@ export async function GET(request: NextRequest) {
         _avg: { grade: true },
       }),
     ])
+
+    // Extract values with defaults for failed queries
+    const totalAssignments = results[0].status === 'fulfilled' ? results[0].value : 0
+    const pendingSubmissions = results[1].status === 'fulfilled' ? results[1].value : 0
+    const studentDoubts = results[2].status === 'fulfilled' ? results[2].value : 0
+    const activeStudents = results[3].status === 'fulfilled' ? results[3].value : 0
+    const recentSubmissions = results[4].status === 'fulfilled' ? results[4].value : []
+    const recentDoubts = results[5].status === 'fulfilled' ? results[5].value : []
+    const upcomingSessions = results[6].status === 'fulfilled' ? results[6].value : []
+    const gradedSubmissions = results[7].status === 'fulfilled' ? results[7].value : { _avg: { grade: null } }
+
+    // Log any failed queries for debugging
+    results.forEach((result, index) => {
+      if (result.status === 'rejected') {
+        console.error(`Teacher dashboard query ${index} failed:`, result.reason)
+      }
+    })
 
     // Format recent activities
     const recentActivities = [

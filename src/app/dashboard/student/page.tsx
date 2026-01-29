@@ -129,8 +129,8 @@ export default function StudentDashboard() {
 
     setIsLoadingData(true)
     try {
-      // Fetch performance data
-      const [performanceRes, metricsRes, comparativeRes, leaderboardRes] = await Promise.all([
+      // Use Promise.allSettled for graceful error handling - one failing request won't break the dashboard
+      const fetchResults = await Promise.allSettled([
         fetch(`/api/analytics/performance`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -147,17 +147,33 @@ export default function StudentDashboard() {
         fetch(`/api/analytics/leaderboard?type=global&period=weekly&userId=${user.id}`),
       ])
 
-      const [performanceData, metricsData, comparativeData, leaderboardData] = await Promise.all([
-        performanceRes.json(),
-        metricsRes.json(),
-        comparativeRes.json(),
-        leaderboardRes.json(),
-      ])
+      // Extract successful responses
+      const responses = fetchResults.map((result) =>
+        result.status === 'fulfilled' ? result.value : null
+      )
 
-      if (performanceData.success) setPerformanceData(performanceData.data)
-      if (metricsData.success) setMetrics(metricsData.data)
-      if (comparativeData.success) setComparative(comparativeData.data)
-      if (leaderboardData.success) setLeaderboard(leaderboardData.data)
+      // Parse JSON with Promise.allSettled for graceful error handling
+      const jsonResults = await Promise.allSettled(
+        responses.map((res) => (res && res.ok ? res.json() : Promise.resolve(null)))
+      )
+
+      const performanceData = jsonResults[0].status === 'fulfilled' ? jsonResults[0].value : null
+      const metricsData = jsonResults[1].status === 'fulfilled' ? jsonResults[1].value : null
+      const comparativeData = jsonResults[2].status === 'fulfilled' ? jsonResults[2].value : null
+      const leaderboardData = jsonResults[3].status === 'fulfilled' ? jsonResults[3].value : null
+
+      // Update state only for successful responses
+      if (performanceData?.success) setPerformanceData(performanceData.data)
+      if (metricsData?.success) setMetrics(metricsData.data)
+      if (comparativeData?.success) setComparative(comparativeData.data)
+      if (leaderboardData?.success) setLeaderboard(leaderboardData.data)
+
+      // Log failures for debugging
+      fetchResults.forEach((result, index) => {
+        if (result.status === 'rejected') {
+          console.error(`Analytics fetch ${index} failed:`, result.reason)
+        }
+      })
     } catch (error) {
       console.error('Error fetching analytics data:', error)
     } finally {
