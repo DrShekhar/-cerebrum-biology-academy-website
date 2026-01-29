@@ -4669,6 +4669,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/neet-coaching-model-town`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-punjabi-bagh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-ashok-vihar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-prashant-vihar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet-crash-course-rohini-2026`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/12th-board-biology-coaching-rohini`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/class-9-biology-tuition-rohini`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/class-10-biology-tuition-rohini`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/neet-foundation-class-9-rohini`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
+    {
       url: `${baseUrl}/neet-coaching-presidium-school`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
@@ -5696,6 +5750,236 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.91, // AIIMS Nagpur - Central India
+    },
+    // Rohini Area SEO Pages - Gated Societies & Premium Localities (Jan 2026)
+    {
+      url: `${baseUrl}/neet-coaching-saraswati-vihar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94, // Largest colony in Pitampura
+    },
+    {
+      url: `${baseUrl}/neet-coaching-pushpanjali-enclave`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Co-op Housing Society Pitampura
+    },
+    {
+      url: `${baseUrl}/neet-coaching-meera-bagh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94, // Ultra-premium Paschim Vihar
+    },
+    {
+      url: `${baseUrl}/neet-coaching-civil-lines-delhi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95, // Ultra-premium Delhi
+    },
+    {
+      url: `${baseUrl}/neet-coaching-vikas-puri`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // West Delhi hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-tagore-garden`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // West Delhi
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dwarka-sector-10`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Dwarka premium sector
+    },
+    {
+      url: `${baseUrl}/neet-coaching-wazirpur`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // Near Rohini
+    },
+    {
+      url: `${baseUrl}/neet-coaching-netaji-subhash-place`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // NSP Metro area
+    },
+    // School-Specific SEO Pages - Rohini Area (Jan 2026)
+    {
+      url: `${baseUrl}/neet-coaching-mount-abu-school-students`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Top Rohini school
+    },
+    {
+      url: `${baseUrl}/neet-coaching-gd-goenka-rohini-students`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // #1 Elite School North Zone
+    },
+    {
+      url: `${baseUrl}/neet-coaching-heritage-school-rohini-students`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // Premium school
+    },
+    // Comparison Pages - AEO/GEO Optimized (Jan 2026)
+    {
+      url: `${baseUrl}/cerebrum-vs-allen-neet-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // High-intent comparison
+    },
+    {
+      url: `${baseUrl}/cerebrum-vs-aakash-neet-coaching`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // High-intent comparison
+    },
+    // MCQ Chapter Pages (Jan 2026 - Week 1 Priority)
+    {
+      url: `${baseUrl}/neet-biology-mcq/cell-unit-of-life`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/biomolecules`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/principles-inheritance`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/molecular-inheritance`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/plant-kingdom`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/animal-kingdom`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/biological-classification`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/human-health-disease`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/biotechnology-principles`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/neet-biology-mcq/human-reproduction`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    // NEET Score Calculator Tool
+    {
+      url: `${baseUrl}/neet-score-calculator`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    // Dwarka Coaching Hub + Sector Pages
+    {
+      url: `${baseUrl}/neet-coaching-dwarka`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.94,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dwarka-sector-4`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dwarka-sector-6`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dwarka-sector-12`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dwarka-sector-21`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dwarka-sector-22`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91,
+    },
+    // University Area Page
+    {
+      url: `${baseUrl}/neet-coaching-du-north-campus`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93,
+    },
+    // Metro Station Pages
+    {
+      url: `${baseUrl}/neet-coaching-rajiv-chowk-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-hauz-khas-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-kashmere-gate-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-botanical-garden-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-huda-city-centre-metro`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
     },
   ]
 

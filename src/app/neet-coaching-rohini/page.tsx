@@ -20,6 +20,7 @@ import {
   MapPinned,
 } from 'lucide-react'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 
 const structuredData = {
   '@context': 'https://schema.org',
@@ -360,6 +361,13 @@ export default function NEETCoachingRohiniPage() {
             </div>
           </div>
         </section>
+
+        {/* Free NEET Tools Section */}
+        <NEETToolsWidget
+          title="Free NEET Tools for Rohini Students"
+          subtitle="Boost your NEET preparation with our AI-powered tools - 100% Free"
+          compact={false}
+        />
 
         {/* Success Stories */}
         <section className="py-16 bg-gray-50">
