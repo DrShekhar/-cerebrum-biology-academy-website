@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef, memo } from 'react'
 import { Star, Clock, Sparkles, GraduationCap, MessageCircle } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
@@ -20,45 +20,116 @@ function useI18nLazy() {
   return { t }
 }
 
-export function HeroClientInteractive() {
-  const { t } = useI18nLazy()
+const TARGET_DATE = new Date('2026-05-04T00:00:00').getTime()
 
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+interface TimeLeft {
+  days: number
+  hours: number
+  minutes: number
+  seconds: number
+}
+
+const CountdownDisplay = memo(function CountdownDisplay({ timeLeft }: { timeLeft: TimeLeft }) {
+  return (
+    <div
+      className="flex items-center space-x-1 xs:space-x-2 font-mono"
+      style={{ willChange: 'contents' }}
+    >
+      <div className="bg-white/20 px-2 py-1 rounded text-center">
+        <span className="text-white font-bold text-sm xs:text-base">{timeLeft.days}</span>
+        <span className="text-red-200 text-xs ml-0.5">d</span>
+      </div>
+      <span className="text-red-200">:</span>
+      <div className="bg-white/20 px-2 py-1 rounded text-center">
+        <span className="text-white font-bold text-sm xs:text-base">
+          {String(timeLeft.hours).padStart(2, '0')}
+        </span>
+        <span className="text-red-200 text-xs ml-0.5">h</span>
+      </div>
+      <span className="text-red-200">:</span>
+      <div className="bg-white/20 px-2 py-1 rounded text-center">
+        <span className="text-white font-bold text-sm xs:text-base">
+          {String(timeLeft.minutes).padStart(2, '0')}
+        </span>
+        <span className="text-red-200 text-xs ml-0.5">m</span>
+      </div>
+      <span className="text-red-200">:</span>
+      <div className="bg-white/20 px-2 py-1 rounded text-center min-w-[40px]">
+        <span className="text-white font-bold text-sm xs:text-base">
+          {String(timeLeft.seconds).padStart(2, '0')}
+        </span>
+        <span className="text-red-200 text-xs ml-0.5">s</span>
+      </div>
+    </div>
+  )
+})
+
+function useCountdown(targetTime: number): TimeLeft {
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>(() => {
+    const now = Date.now()
+    const difference = targetTime - now
+    if (difference > 0) {
+      return {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+      }
+    }
+    return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+  })
+
+  const rafIdRef = useRef<number | null>(null)
+  const lastUpdateRef = useRef<number>(0)
 
   useEffect(() => {
-    const targetDate = new Date('2026-05-04T00:00:00')
+    const updateCountdown = (timestamp: number) => {
+      if (timestamp - lastUpdateRef.current >= 1000 || lastUpdateRef.current === 0) {
+        lastUpdateRef.current = timestamp
 
-    const calculateTimeLeft = () => {
-      const now = new Date()
-      const difference = targetDate.getTime() - now.getTime()
+        const now = Date.now()
+        const difference = targetTime - now
 
-      if (difference > 0) {
-        return {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
+        if (difference > 0) {
+          const newTimeLeft = {
+            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((difference / 1000 / 60) % 60),
+            seconds: Math.floor((difference / 1000) % 60),
+          }
+
+          setTimeLeft((prev) => {
+            if (
+              prev.days !== newTimeLeft.days ||
+              prev.hours !== newTimeLeft.hours ||
+              prev.minutes !== newTimeLeft.minutes ||
+              prev.seconds !== newTimeLeft.seconds
+            ) {
+              return newTimeLeft
+            }
+            return prev
+          })
         }
       }
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+
+      rafIdRef.current = requestAnimationFrame(updateCountdown)
     }
 
-    setTimeLeft(calculateTimeLeft())
-
-    let interval: NodeJS.Timeout
-    const startInterval = () => {
-      interval = setInterval(() => {
-        setTimeLeft(calculateTimeLeft())
-      }, 1000)
-    }
-
-    const delayId = setTimeout(startInterval, 100)
+    rafIdRef.current = requestAnimationFrame(updateCountdown)
 
     return () => {
-      clearTimeout(delayId)
-      if (interval) clearInterval(interval)
+      if (rafIdRef.current) {
+        cancelAnimationFrame(rafIdRef.current)
+      }
     }
-  }, [])
+  }, [targetTime])
+
+  return timeLeft
+}
+
+export function HeroClientInteractive() {
+  const { t } = useI18nLazy()
+  const timeLeft = useCountdown(TARGET_DATE)
 
   return (
     <>
@@ -149,33 +220,7 @@ export function HeroClientInteractive() {
             {t('nextBatchStarting')}:
           </span>
         </div>
-        <div className="flex items-center space-x-1 xs:space-x-2 font-mono">
-          <div className="bg-white/20 px-2 py-1 rounded text-center">
-            <span className="text-white font-bold text-sm xs:text-base">{timeLeft.days}</span>
-            <span className="text-red-200 text-xs ml-0.5">d</span>
-          </div>
-          <span className="text-red-200">:</span>
-          <div className="bg-white/20 px-2 py-1 rounded text-center">
-            <span className="text-white font-bold text-sm xs:text-base">
-              {String(timeLeft.hours).padStart(2, '0')}
-            </span>
-            <span className="text-red-200 text-xs ml-0.5">h</span>
-          </div>
-          <span className="text-red-200">:</span>
-          <div className="bg-white/20 px-2 py-1 rounded text-center">
-            <span className="text-white font-bold text-sm xs:text-base">
-              {String(timeLeft.minutes).padStart(2, '0')}
-            </span>
-            <span className="text-red-200 text-xs ml-0.5">m</span>
-          </div>
-          <span className="text-red-200">:</span>
-          <div className="bg-white/20 px-2 py-1 rounded text-center min-w-[40px]">
-            <span className="text-white font-bold text-sm xs:text-base">
-              {String(timeLeft.seconds).padStart(2, '0')}
-            </span>
-            <span className="text-red-200 text-xs ml-0.5">s</span>
-          </div>
-        </div>
+        <CountdownDisplay timeLeft={timeLeft} />
         <span className="text-yellow-300 font-bold text-xs xs:text-sm animate-pulse">
           • Only 12 seats left!
         </span>

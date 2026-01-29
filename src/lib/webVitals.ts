@@ -13,6 +13,10 @@ type ReportHandler = (metric: WebVitalsMetric) => void
 
 const vitalsUrl = 'https://vitals.vercel-analytics.com/v1/vitals'
 
+const metricsQueue: Metric[] = []
+let flushScheduled = false
+let isLCPReported = false
+
 function getConnectionSpeed(): string {
   if (typeof navigator === 'undefined') return ''
   const nav = navigator as Navigator & {
@@ -23,29 +27,13 @@ function getConnectionSpeed(): string {
   return nav.connection?.effectiveType || ''
 }
 
-function sendToAnalytics(metric: Metric, options: { path: string; analyticsId?: string }) {
-  const body: Record<string, string> = {
-    dsn: options.analyticsId || process.env.NEXT_PUBLIC_ANALYTICS_ID || '',
-    id: metric.id,
-    page: options.path,
-    href: window.location.href,
-    event_name: metric.name,
-    value: metric.value.toString(),
-    speed: getConnectionSpeed(),
-  }
+function flushMetrics(path: string, analyticsId?: string) {
+  if (metricsQueue.length === 0) return
 
-  if (options.analyticsId) {
-    const blob = new Blob([new URLSearchParams(body).toString()], {
-      type: 'application/x-www-form-urlencoded',
-    })
-    if (navigator.sendBeacon) {
-      navigator.sendBeacon(vitalsUrl, blob)
-    }
-  }
-}
+  const metrics = [...metricsQueue]
+  metricsQueue.length = 0
 
-function sendToDatabase(metric: Metric, path: string) {
-  const body = JSON.stringify({
+  const batchBody = metrics.map((metric) => ({
     name: metric.name,
     value: metric.value,
     rating: metric.rating,
@@ -53,17 +41,58 @@ function sendToDatabase(metric: Metric, path: string) {
     id: metric.id,
     delta: metric.delta,
     connection: getConnectionSpeed(),
-  })
+  }))
 
   if (navigator.sendBeacon) {
-    navigator.sendBeacon('/api/vitals', body)
+    navigator.sendBeacon('/api/vitals', JSON.stringify(batchBody))
   } else {
     fetch('/api/vitals', {
       method: 'POST',
-      body,
+      body: JSON.stringify(batchBody),
       headers: { 'Content-Type': 'application/json' },
       keepalive: true,
     }).catch(() => {})
+  }
+
+  if (analyticsId) {
+    metrics.forEach((metric) => {
+      const body: Record<string, string> = {
+        dsn: analyticsId,
+        id: metric.id,
+        page: path,
+        href: window.location.href,
+        event_name: metric.name,
+        value: metric.value.toString(),
+        speed: getConnectionSpeed(),
+      }
+      const blob = new Blob([new URLSearchParams(body).toString()], {
+        type: 'application/x-www-form-urlencoded',
+      })
+      navigator.sendBeacon?.(vitalsUrl, blob)
+    })
+  }
+
+  metrics.forEach((metric) => sendToGoogleAnalytics(metric))
+}
+
+function scheduleFlush(path: string, analyticsId?: string) {
+  if (flushScheduled) return
+
+  flushScheduled = true
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(
+      () => {
+        flushMetrics(path, analyticsId)
+        flushScheduled = false
+      },
+      { timeout: 3000 }
+    )
+  } else {
+    setTimeout(() => {
+      flushMetrics(path, analyticsId)
+      flushScheduled = false
+    }, 2000)
   }
 }
 
@@ -96,15 +125,19 @@ function sendToConsole(metric: Metric) {
 
 export function reportWebVitals(onReport?: ReportHandler) {
   const path = typeof window !== 'undefined' ? window.location.pathname : ''
+  const analyticsId = process.env.NEXT_PUBLIC_ANALYTICS_ID
 
   const handleMetric = (metric: Metric) => {
     sendToConsole(metric)
 
-    sendToGoogleAnalytics(metric)
+    metricsQueue.push(metric)
 
-    sendToAnalytics(metric, { path })
-
-    sendToDatabase(metric, path)
+    if (metric.name === 'LCP') {
+      isLCPReported = true
+      scheduleFlush(path, analyticsId)
+    } else if (isLCPReported) {
+      scheduleFlush(path, analyticsId)
+    }
 
     if (onReport) {
       onReport({
@@ -118,14 +151,22 @@ export function reportWebVitals(onReport?: ReportHandler) {
     }
   }
 
-  try {
-    onCLS(handleMetric)
-    onFCP(handleMetric)
-    onINP(handleMetric)
-    onLCP(handleMetric)
-    onTTFB(handleMetric)
-  } catch (error) {
-    console.error('Error initializing web-vitals:', error)
+  const initWebVitals = () => {
+    try {
+      onCLS(handleMetric)
+      onFCP(handleMetric)
+      onINP(handleMetric)
+      onLCP(handleMetric)
+      onTTFB(handleMetric)
+    } catch (error) {
+      console.error('Error initializing web-vitals:', error)
+    }
+  }
+
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(initWebVitals, { timeout: 5000 })
+  } else {
+    setTimeout(initWebVitals, 1000)
   }
 }
 

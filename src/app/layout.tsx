@@ -34,9 +34,10 @@ import './globals.css'
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-  display: 'optional', // PERFORMANCE: 'optional' prevents font-swap flash, shows fallback immediately if font not cached
+  display: 'swap', // PERFORMANCE: 'swap' shows text immediately with fallback, then swaps to custom font for better LCP
   preload: true, // Preload critical font
   adjustFontFallback: true, // Reduce CLS by adjusting fallback font metrics
+  weight: ['400', '500', '600', '700'], // Only load weights we actually use
 })
 
 const geistMono = Geist_Mono({
@@ -215,115 +216,10 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon-32x32.png" />
 
-        {/* Critical CSS for instant LCP - header and hero above-the-fold styles */}
+        {/* Critical CSS for instant LCP - minimal above-the-fold styles (~4KB) */}
         <style
           dangerouslySetInnerHTML={{
-            __html: `
-              /* Critical render path - inline essential styles */
-              *,::before,::after{box-sizing:border-box}
-              html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif}
-              body{margin:0;line-height:inherit;overflow-x:hidden;max-width:100vw}
-              /* Header critical styles */
-              header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}
-              .text-slate-900{color:#0f172a}
-              .text-slate-600{color:#475569}
-              .text-2xl{font-size:1.5rem;line-height:2rem}
-              .text-xl{font-size:1.25rem;line-height:1.75rem}
-              .text-lg{font-size:1.125rem;line-height:1.75rem}
-              .text-base{font-size:1rem;line-height:1.5rem}
-              .text-sm{font-size:.875rem;line-height:1.25rem}
-              .text-xs{font-size:.75rem;line-height:1rem}
-              .leading-none{line-height:1}
-              .leading-tight{line-height:1.25}
-              .tracking-wide{letter-spacing:.025em}
-              .antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-              /* Layout critical */
-              .flex{display:flex}
-              .items-center{align-items:center}
-              .justify-between{justify-content:space-between}
-              .justify-center{justify-content:center}
-              .max-w-7xl{max-width:80rem}
-              .mx-auto{margin-left:auto;margin-right:auto}
-              .px-4{padding-left:1rem;padding-right:1rem}
-              .py-2{padding-top:.5rem;padding-bottom:.5rem}
-              .py-4{padding-top:1rem;padding-bottom:1rem}
-              .mb-4{margin-bottom:1rem}
-              .mb-6{margin-bottom:1.5rem}
-              .gap-2{gap:.5rem}
-              .gap-4{gap:1rem}
-              /* Hero critical styles - LCP OPTIMIZATION */
-              .min-h-screen{min-height:100vh}
-              .relative{position:relative}
-              .absolute{position:absolute}
-              .inset-0{inset:0}
-              .overflow-hidden{overflow:hidden}
-              .bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}
-              .from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}
-              .to-blue-900{--tw-gradient-to:#1e3a8a}
-              .bg-indigo-600{background-color:#4f46e5}
-              .text-yellow-300{color:#fcd34d}
-              .text-yellow-200{color:#fef08a}
-              .text-green-300{color:#86efac}
-              .text-green-100{color:#dcfce7}
-              .text-blue-100{color:#dbeafe}
-              .text-white{color:#fff}
-              /* LCP text sizing - clamp for responsive without media query delay */
-              .lcp-critical h1{font-size:clamp(1.25rem,5vw,3.75rem);line-height:1.1;font-weight:700}
-              .lcp-critical h2{font-size:clamp(1.125rem,3vw,1.875rem);font-weight:600}
-              .font-bold{font-weight:700}
-              .font-semibold{font-weight:600}
-              .font-medium{font-weight:500}
-              .rounded-full{border-radius:9999px}
-              .rounded-lg{border-radius:.5rem}
-              .bg-green-600\\/20{background-color:rgb(34 197 94/.2)}
-              .border{border-width:1px}
-              .border-green-300\\/30{border-color:rgb(134 239 172/.3)}
-              .w-5{width:1.25rem}
-              .h-5{height:1.25rem}
-              .mr-2{margin-right:.5rem}
-              /* Button critical */
-              .bg-yellow-400{background-color:#facc15}
-              .bg-white{background-color:#fff}
-              .text-blue-900{color:#1e3a8a}
-              .hover\\:bg-yellow-300:hover{background-color:#fde047}
-              .px-6{padding-left:1.5rem;padding-right:1.5rem}
-              .px-8{padding-left:2rem;padding-right:2rem}
-              .py-3{padding-top:.75rem;padding-bottom:.75rem}
-              .py-4{padding-top:1rem;padding-bottom:1rem}
-              /* Animation - starts mostly visible to avoid LCP delay */
-              @keyframes fade-in-up{from{opacity:.7;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-              .animate-fade-in-up{animation:fade-in-up .4s ease-out forwards}
-              @keyframes pulse{50%{opacity:.5}}
-              .animate-pulse{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
-              /* Visibility utilities - CRITICAL for header responsiveness */
-              .hidden{display:none!important}
-              .block{display:block}
-              /* Screen reader only - CRITICAL for skip links */
-              .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-              .flex-shrink-0{flex-shrink:0}
-              .min-w-0{min-width:0}
-              .truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-              /* iOS Safari text sizing fix */
-              .text-lg{font-size:1.125rem;line-height:1.75rem}
-              .text-\\[10px\\]{font-size:10px;line-height:1.2}
-              /* Responsive - with !important for iOS Safari */
-              @media(min-width:640px){
-                .sm\\:hidden{display:none!important}
-                .sm\\:block{display:block!important}
-                .sm\\:flex{display:flex!important}
-                .sm\\:text-2xl{font-size:1.5rem!important;line-height:2rem!important}
-                .sm\\:text-3xl{font-size:1.875rem;line-height:2.25rem}
-                .sm\\:text-sm{font-size:.875rem!important;line-height:1.25rem!important}
-                .sm\\:text-lg{font-size:1.125rem}
-                .sm\\:w-12{width:3rem!important}
-                .sm\\:h-12{height:3rem!important}
-                .sm\\:w-10{width:2.5rem!important}
-                .sm\\:h-10{height:2.5rem!important}
-              }
-              @media(min-width:768px){.md\\:hidden{display:none!important}.md\\:block{display:block!important}.md\\:flex{display:flex!important}.md\\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\\:text-xl{font-size:1.25rem}.md\\:pb-0{padding-bottom:0}}
-              @media(min-width:1024px){.lg\\:hidden{display:none!important}.lg\\:block{display:block!important}.lg\\:flex{display:flex!important}.lg\\:text-5xl{font-size:3rem;line-height:1}.lg\\:-mt-20{margin-top:-5rem}}
-              @media(min-width:1280px){.xl\\:text-6xl{font-size:3.75rem;line-height:1}}
-            `,
+            __html: `*,::before,::after{box-sizing:border-box}html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif}body{margin:0;overflow-x:hidden}header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.flex{display:flex}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.max-w-7xl{max-width:80rem}.mx-auto{margin-left:auto;margin-right:auto}.px-4{padding-left:1rem;padding-right:1rem}.min-h-screen{min-height:100vh}.relative{position:relative}.absolute{position:absolute}.inset-0{inset:0}.overflow-hidden{overflow:hidden}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}.text-white{color:#fff}.text-yellow-300{color:#fcd34d}.text-green-300{color:#86efac}.text-blue-100{color:#dbeafe}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-2xl{font-size:1.5rem;line-height:2rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.hidden{display:none!important}.block{display:block}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}@keyframes fade-in-up{from{opacity:.7;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.animate-fade-in-up{animation:fade-in-up .4s ease-out forwards}@media(min-width:640px){.sm\\:hidden{display:none!important}.sm\\:block{display:block!important}.sm\\:flex{display:flex!important}}@media(min-width:768px){.md\\:hidden{display:none!important}.md\\:block{display:block!important}.md\\:flex{display:flex!important}.md\\:pb-0{padding-bottom:0}}@media(min-width:1024px){.lg\\:hidden{display:none!important}.lg\\:block{display:block!important}.lg\\:flex{display:flex!important}}`,
           }}
         />
 
