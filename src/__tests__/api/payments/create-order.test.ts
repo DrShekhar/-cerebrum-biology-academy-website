@@ -12,6 +12,13 @@ jest.mock('@/lib/prisma', () => ({
     payments: {
       create: jest.fn(),
     },
+    enrollment: {
+      findUnique: jest.fn(),
+      update: jest.fn(),
+    },
+    coupons: {
+      findUnique: jest.fn(),
+    },
   },
 }))
 
@@ -127,6 +134,15 @@ describe('POST /api/payments/create-order', () => {
     })
 
     it('should create payment record when enrollmentId provided', async () => {
+      // Mock enrollment lookup - pendingAmount should match request amount
+      // Request sends 42000, so enrollment pendingAmount should be 42000
+      ;(prisma.enrollment.findUnique as jest.Mock).mockResolvedValue({
+        id: 'enroll_123',
+        userId: 'test-user-123',
+        pendingAmount: 42000,
+        course: { price: 42000 },
+      })
+
       const mockCreate = jest.fn().mockResolvedValue({
         id: 'payment_123',
         userId: 'test-user-123',
@@ -444,6 +460,14 @@ describe('POST /api/payments/create-order', () => {
 
   describe('Enrollment ID Linking', () => {
     it('should link payment to enrollment', async () => {
+      // Mock enrollment lookup - pendingAmount should match request amount
+      ;(prisma.enrollment.findUnique as jest.Mock).mockResolvedValue({
+        id: 'enroll_abc123',
+        userId: 'test-user-123',
+        pendingAmount: 42000,
+        course: { price: 42000 },
+      })
+
       const mockCreate = jest.fn()
       ;(prisma.payments.create as jest.Mock) = mockCreate
 
