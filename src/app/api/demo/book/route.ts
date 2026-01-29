@@ -600,6 +600,7 @@ export async function GET(request: NextRequest) {
       limit: 30, // 30 requests per 15 minutes for slot checks
       window: 15 * 60 * 1000,
       keyPrefix: 'demo-book-slots',
+      failClosed: true, // Block requests if rate limit check fails
     })
 
     if (!rateLimitResult.success) {
