@@ -155,7 +155,7 @@ async function verifyWebhookSignature(
       case 'stripe':
         return verifyStripeSignature(body, signature)
       case 'paypal':
-        return verifyPayPalSignature(body, signature)
+        return await verifyPayPalSignature(body, signature)
       default:
         return false
     }
@@ -194,29 +194,83 @@ function verifyStripeSignature(body: string, signature: string): boolean {
   return crypto.timingSafeEqual(Buffer.from(signatureHash), Buffer.from(expectedSignature))
 }
 
-function verifyPayPalSignature(body: string, signature: string): boolean {
-  // SECURITY: PayPal webhook verification
-  // PayPal uses a more complex verification involving certificate chains
-  // For now, we validate the webhook ID and require proper configuration
+async function verifyPayPalSignature(body: string, signature: string): Promise<boolean> {
+  // SECURITY: PayPal webhook verification using verify-webhook-signature API
   const webhookId = process.env.PAYPAL_WEBHOOK_ID
-  if (!webhookId) {
-    console.error('CRITICAL: PAYPAL_WEBHOOK_ID is not configured')
+  const clientId = process.env.PAYPAL_CLIENT_ID
+  const clientSecret = process.env.PAYPAL_CLIENT_SECRET
+
+  if (!webhookId || !clientId || !clientSecret) {
+    console.error('CRITICAL: PayPal credentials not configured (PAYPAL_WEBHOOK_ID, PAYPAL_CLIENT_ID, PAYPAL_CLIENT_SECRET)')
     return false
   }
 
-  // In production, use PayPal's verify-webhook-signature API
-  // For now, validate that signature exists and has correct format
   if (!signature || signature.length < 32) {
     console.error('PayPal webhook: Invalid signature format')
     return false
   }
 
-  // Log warning that full PayPal verification should be implemented
-  console.warn(
-    'PayPal webhook: Using basic signature validation. Implement full API verification for production.'
-  )
+  try {
+    // Get OAuth token for PayPal API
+    const isProduction = process.env.NODE_ENV === 'production'
+    const baseUrl = isProduction
+      ? 'https://api-m.paypal.com'
+      : 'https://api-m.sandbox.paypal.com'
 
-  return true // TODO: Implement full PayPal webhook verification API call
+    const authResponse = await fetch(`${baseUrl}/v1/oauth2/token`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+      },
+      body: 'grant_type=client_credentials',
+    })
+
+    if (!authResponse.ok) {
+      console.error('PayPal OAuth failed:', await authResponse.text())
+      return false
+    }
+
+    const { access_token } = await authResponse.json()
+
+    // Parse the webhook event to get required fields
+    const webhookEvent = JSON.parse(body)
+
+    // Verify webhook signature using PayPal API
+    const verifyResponse = await fetch(`${baseUrl}/v1/notifications/verify-webhook-signature`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${access_token}`,
+      },
+      body: JSON.stringify({
+        auth_algo: 'SHA256withRSA',
+        cert_url: webhookEvent.cert_url || '',
+        transmission_id: webhookEvent.transmission_id || '',
+        transmission_sig: signature,
+        transmission_time: webhookEvent.transmission_time || '',
+        webhook_id: webhookId,
+        webhook_event: webhookEvent,
+      }),
+    })
+
+    if (!verifyResponse.ok) {
+      console.error('PayPal webhook verification failed:', await verifyResponse.text())
+      return false
+    }
+
+    const verifyResult = await verifyResponse.json()
+    const isValid = verifyResult.verification_status === 'SUCCESS'
+
+    if (!isValid) {
+      console.error('PayPal webhook signature invalid:', verifyResult.verification_status)
+    }
+
+    return isValid
+  } catch (error) {
+    console.error('PayPal webhook verification error:', error)
+    return false
+  }
 }
 
 /**

@@ -12,6 +12,7 @@ import React, {
 import { useRouter } from 'next/navigation'
 import type { UserRole } from '@/generated/prisma'
 import { signOut as firebaseSignOut } from '@/lib/firebase/phone-auth'
+import { ROLE_PERMISSIONS } from '@/lib/auth/config'
 
 // Token expiry configuration
 const TOKEN_EXPIRY_MS = 15 * 60 * 1000 // 15 minutes
@@ -504,42 +505,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
 }
 
 // Helper function to get permissions based on role
+// IMPORTANT: Uses ROLE_PERMISSIONS from @/lib/auth/config.ts (single source of truth)
 function getUserPermissions(role: UserRole): string[] {
-  const ROLE_PERMISSIONS: Record<UserRole, string[]> = {
-    STUDENT: [
-      'test:take',
-      'notes:view',
-      'profile:edit',
-      'enrollment:view',
-      'payment:make',
-      'demo:book',
-      'community:participate',
-    ],
-    PARENT: ['student:monitor', 'progress:view', 'payment:make', 'demo:book', 'reports:view'],
-    TEACHER: [
-      'test:create',
-      'test:edit',
-      'notes:create',
-      'notes:edit',
-      'student:view',
-      'progress:view',
-      'class:manage',
-      'assignment:create',
-    ],
-    COUNSELOR: [
-      'student:view',
-      'progress:view',
-      'demo:book',
-      'enrollment:view',
-      'reports:view',
-      'student:communicate',
-      'counseling:provide',
-    ],
-    ADMIN: [
-      '*', // All permissions
-    ],
-  }
-
   return ROLE_PERMISSIONS[role] || []
 }
 

@@ -1,17 +1,51 @@
 // Google Ads Conversion Tracking for Cerebrum Biology Academy
 // Tracking ID: AW-11121440988
+//
+// SETUP INSTRUCTIONS:
+// 1. Create conversion actions in Google Ads console
+// 2. Set the following environment variables in .env.local:
+//    - NEXT_PUBLIC_GOOGLE_ADS_ID (e.g., AW-11121440988)
+//    - NEXT_PUBLIC_GADS_COURSE_ENROLLMENT_LABEL
+//    - NEXT_PUBLIC_GADS_DEMO_BOOKING_LABEL
+//    - NEXT_PUBLIC_GADS_WHATSAPP_LEAD_LABEL
+//    - NEXT_PUBLIC_GADS_FORM_SUBMISSION_LABEL
+//    - NEXT_PUBLIC_GADS_PHONE_CALL_LABEL
 
 export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-11121440988'
+
+// Conversion labels from environment variables
+// These must be configured in Google Ads and set as env vars
+const CONVERSION_LABELS = {
+  courseEnrollment: process.env.NEXT_PUBLIC_GADS_COURSE_ENROLLMENT_LABEL || '',
+  demoBooking: process.env.NEXT_PUBLIC_GADS_DEMO_BOOKING_LABEL || '',
+  whatsAppLead: process.env.NEXT_PUBLIC_GADS_WHATSAPP_LEAD_LABEL || '',
+  formSubmission: process.env.NEXT_PUBLIC_GADS_FORM_SUBMISSION_LABEL || '',
+  phoneCall: process.env.NEXT_PUBLIC_GADS_PHONE_CALL_LABEL || '',
+}
+
+// Track if we've logged warnings to avoid spam
+const warnedLabels = new Set<string>()
 
 // Helper function to send conversion events to Google Ads
 const gtagReportConversion = (
   conversionLabel: string,
+  conversionType: string,
   value?: number,
   currency: string = 'INR',
   transactionId?: string
 ) => {
   if (typeof window === 'undefined' || !window.gtag) {
     console.warn('Google Ads gtag not loaded')
+    return false
+  }
+
+  // Check if conversion label is configured
+  if (!conversionLabel) {
+    if (!warnedLabels.has(conversionType)) {
+      console.warn(`[Google Ads] Conversion label not configured for: ${conversionType}. Set NEXT_PUBLIC_GADS_${conversionType.toUpperCase()}_LABEL in environment variables.`)
+      warnedLabels.add(conversionType)
+    }
+    // Still track as GA4 event even without Google Ads label
     return false
   }
 
@@ -39,11 +73,7 @@ export const trackCourseEnrollment = (
   value: number,
   transactionId?: string
 ) => {
-  // Replace 'XXXXXXXXX' with your actual conversion label from Google Ads
-  // You'll get this label when you set up a conversion action in Google Ads
-  const conversionLabel = 'COURSE_ENROLLMENT_LABEL' // TODO: Replace with actual label
-
-  gtagReportConversion(conversionLabel, value, 'INR', transactionId)
+  gtagReportConversion(CONVERSION_LABELS.courseEnrollment, 'COURSE_ENROLLMENT', value, 'INR', transactionId)
 
   // Also track as enhanced conversion for better attribution
   if (typeof window !== 'undefined' && window.gtag) {
@@ -73,9 +103,7 @@ export const trackDemoBooking = (
   courseInterest: string,
   value: number = 0
 ) => {
-  const conversionLabel = 'DEMO_BOOKING_LABEL' // TODO: Replace with actual label
-
-  gtagReportConversion(conversionLabel, value, 'INR')
+  gtagReportConversion(CONVERSION_LABELS.demoBooking, 'DEMO_BOOKING', value, 'INR')
 
   // Track as lead generation
   if (typeof window !== 'undefined' && window.gtag) {
@@ -93,9 +121,7 @@ export const trackDemoBooking = (
  * Call this when a user clicks WhatsApp CTA
  */
 export const trackWhatsAppLead = (source: string, value: number = 0) => {
-  const conversionLabel = 'WHATSAPP_LEAD_LABEL' // TODO: Replace with actual label
-
-  gtagReportConversion(conversionLabel, value, 'INR')
+  gtagReportConversion(CONVERSION_LABELS.whatsAppLead, 'WHATSAPP_LEAD', value, 'INR')
 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'generate_lead', {
@@ -113,9 +139,7 @@ export const trackWhatsAppLead = (source: string, value: number = 0) => {
  * Call this when a contact form is submitted
  */
 export const trackFormSubmission = (formType: string, value: number = 0) => {
-  const conversionLabel = 'FORM_SUBMISSION_LABEL' // TODO: Replace with actual label
-
-  gtagReportConversion(conversionLabel, value, 'INR')
+  gtagReportConversion(CONVERSION_LABELS.formSubmission, 'FORM_SUBMISSION', value, 'INR')
 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'generate_lead', {
@@ -132,9 +156,7 @@ export const trackFormSubmission = (formType: string, value: number = 0) => {
  * Call this when a user clicks phone number CTA
  */
 export const trackPhoneCall = (source: string, value: number = 0) => {
-  const conversionLabel = 'PHONE_CALL_LABEL' // TODO: Replace with actual label
-
-  gtagReportConversion(conversionLabel, value, 'INR')
+  gtagReportConversion(CONVERSION_LABELS.phoneCall, 'PHONE_CALL', value, 'INR')
 
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'generate_lead', {

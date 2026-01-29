@@ -1,22 +1,37 @@
 /**
- * Auth configuration for the application
+ * Auth configuration for the application - CANONICAL AUTH SYSTEM
+ * ==============================================================
  *
- * Authentication: Firebase Auth (Primary)
- * =======================================
- * The application uses Firebase Authentication as the primary auth provider.
- * See: /src/lib/firebase/auth-context.tsx for Firebase auth context
- * See: /src/hooks/useFirebaseSession.ts for session management
+ * IMPORTANT (2026-01-29): This is the SINGLE SOURCE OF TRUTH for authentication.
+ *
+ * CANONICAL AUTH SYSTEM: NextAuth v5 + Custom JWT
+ * ===============================================
+ * - Web users: NextAuth sessions (cookie-based)
+ * - API clients: Custom JWT tokens (Bearer auth)
+ * - Server-side: validateUserSession() validates both
+ *
+ * DEPRECATED (do NOT use in new code):
+ * - Firebase Auth (@/lib/firebase/auth-context.tsx)
+ *
+ * AUTH HIERARCHY (validation order in validateUserSession):
+ * 1. NextAuth sessions (via auth() helper)
+ * 2. NextAuth JWT cookies (manual parse fallback)
+ * 3. Custom JWT tokens (Authorization header or auth-token cookie)
+ * 4. Prisma sessions table (database lookup)
  *
  * ACTIVE UTILITIES:
- * - PasswordUtils - Used for admin/legacy password validation
+ * - PasswordUtils - Password hashing/validation
  * - TokenUtils - JWT token generation for API authentication
  * - SessionManager - Server-side session management
  * - CookieManager - Auth cookie handling
  * - validateUserSession - Session validation for API routes
- * - ROLE_PERMISSIONS - Role-based access control
+ * - ROLE_PERMISSIONS - Role-based access control (SINGLE SOURCE - do not duplicate!)
  * - addSecurityHeaders - Security headers utility
  * - ALLOWED_ORIGINS - CORS configuration
  * - AuthRateLimit - Rate limiting for auth endpoints
+ *
+ * For client-side auth: Use useAuth() from @/contexts/AuthContext
+ * For server-side auth: Use validateUserSession() from this file
  */
 import { NextRequest, NextResponse } from 'next/server'
 import jwt from 'jsonwebtoken'
@@ -215,9 +230,11 @@ export class TokenUtils {
 }
 
 /**
- * Role-based permissions
+ * Role-based permissions - SINGLE SOURCE OF TRUTH
+ * IMPORTANT: Do not duplicate this elsewhere. Import from this file.
+ * SECURITY (2026-01-29): Consolidated to prevent permission inconsistencies
  */
-const ROLE_PERMISSIONS: Record<UserRole, string[]> = {
+export const ROLE_PERMISSIONS: Record<UserRole, string[]> = {
   STUDENT: [
     'test:take',
     'notes:view',
