@@ -833,12 +833,17 @@ export async function trackEvent(params: {
 
 /**
  * Generate a cryptographically secure 6-digit OTP
+ * Uses Web Crypto API for cross-platform compatibility (browser & Node.js)
  */
 export function generateOTP(): string {
-  const crypto = require('crypto')
-  const randomBytes = crypto.randomBytes(4)
-  const randomNumber = randomBytes.readUInt32BE(0)
-  return (100000 + (randomNumber % 900000)).toString()
+  const array = new Uint32Array(1)
+  if (typeof globalThis.crypto !== 'undefined' && globalThis.crypto.getRandomValues) {
+    globalThis.crypto.getRandomValues(array)
+  } else {
+    // Fallback for older environments
+    array[0] = Math.floor(Math.random() * 0xffffffff)
+  }
+  return (100000 + (array[0] % 900000)).toString()
 }
 
 /**
