@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Razorpay from 'razorpay'
+import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { validateUserSession } from '@/lib/auth/config'
 
@@ -251,7 +252,7 @@ export async function POST(request: NextRequest) {
     if (enrollmentId && authenticatedUserId) {
       await prisma.payments.create({
         data: {
-          id: `pay_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          id: `pay_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`,
           userId: authenticatedUserId,
           enrollmentId,
           amount: amountInSmallestUnit,
@@ -274,7 +275,7 @@ export async function POST(request: NextRequest) {
           // Create redemption record
           prisma.coupon_redemptions.create({
             data: {
-              id: `redemption_${Date.now()}_${Math.random().toString(36).substring(7)}`,
+              id: `redemption_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`,
               couponId,
               userId: authenticatedUserId,
               orderId: order.id,

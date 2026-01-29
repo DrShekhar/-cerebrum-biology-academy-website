@@ -4,6 +4,7 @@
  */
 
 import { NextRequest, NextResponse } from 'next/server'
+import crypto from 'crypto'
 import { z } from 'zod'
 import { auth } from '@/lib/auth/config'
 import { rateLimit } from '@/lib/rateLimit'
@@ -501,7 +502,7 @@ async function createAffiliateAccount(data: AffiliateAccountData) {
     success: true,
     action: 'create_affiliate_account',
     result: {
-      affiliateId: `aff_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      affiliateId: `aff_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`,
       userId: data.userId,
       commissionStructure: {
         baseCommission: 25,
@@ -620,7 +621,7 @@ async function setupPaymentMethod(data: PaymentMethodData) {
     success: true,
     action: 'setup_payment_method',
     result: {
-      paymentMethodId: `pm_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      paymentMethodId: `pm_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`,
       type: data.type,
       details: {
         lastFour: data.type === 'card' ? '****1234' : undefined,
@@ -653,7 +654,7 @@ async function processOneTimePayment(data: OneTimePaymentData) {
     success: true,
     action: 'process_one_time_payment',
     result: {
-      paymentId: `pay_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      paymentId: `pay_${Date.now()}_${crypto.randomBytes(6).toString('hex')}`,
       amount: data.amount,
       currency: data.currency || 'INR',
       status: 'completed',

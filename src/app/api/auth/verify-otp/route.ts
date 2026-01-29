@@ -293,12 +293,12 @@ export async function POST(request: NextRequest) {
       console.error('Analytics tracking error:', analyticsError)
     }
 
+    // Create response WITHOUT accessToken in body (security: only use httpOnly cookies)
     const response = NextResponse.json(
       {
         success: true,
         message: `${purpose === 'registration' ? 'Registration' : 'Login'} successful`,
         user: safeUser,
-        accessToken,
         expiresIn: 15 * 60, // 15 minutes in seconds
       },
       { status: 200 }

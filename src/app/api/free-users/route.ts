@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 
 export const dynamic = 'force-dynamic'
@@ -200,6 +201,6 @@ export async function GET(request: NextRequest) {
 
 function generateUserId(): string {
   const timestamp = Date.now().toString(36)
-  const randomPart = Math.random().toString(36).substring(2, 10)
+  const randomPart = crypto.randomBytes(6).toString('hex')
   return `fu_${timestamp}_${randomPart}`
 }

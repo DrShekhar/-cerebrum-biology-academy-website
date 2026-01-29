@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import crypto from 'crypto'
 import { z } from 'zod'
 import { withRateLimit, checkSpamPattern, recordSpamViolation } from '@/lib/middleware/rateLimit'
 import { zoomService } from '@/lib/zoom/zoomService'
@@ -178,7 +179,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({
         success: true,
         booking: {
-          id: 'demo_' + Math.random().toString(36).substring(7),
+          id: 'demo_' + crypto.randomBytes(6).toString('hex'),
           message: 'Demo class booked successfully!',
         },
       })
