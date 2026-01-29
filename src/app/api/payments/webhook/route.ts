@@ -1,17 +1,59 @@
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
+import { Redis } from '@upstash/redis'
 
-// SECURITY: In-memory store for webhook event deduplication (use Redis in production)
-const processedEvents = new Map<string, number>()
-const EVENT_EXPIRY_MS = 24 * 60 * 60 * 1000 // 24 hours
+// SECURITY: Redis-backed webhook event deduplication for multi-instance deployments
+const EVENT_EXPIRY_SECONDS = 24 * 60 * 60 // 24 hours
 
-// Clean up old events periodically
-function cleanupProcessedEvents() {
-  const now = Date.now()
-  for (const [eventId, timestamp] of processedEvents.entries()) {
-    if (now - timestamp > EVENT_EXPIRY_MS) {
-      processedEvents.delete(eventId)
+// Create Upstash Redis client for distributed deduplication
+const upstashRedis =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Redis({
+        url: process.env.UPSTASH_REDIS_REST_URL,
+        token: process.env.UPSTASH_REDIS_REST_TOKEN,
+      })
+    : null
+
+// Fallback in-memory store (only for development without Redis)
+const processedEventsFallback = new Map<string, number>()
+
+// Check if event was already processed (idempotency check)
+async function isEventProcessed(eventId: string): Promise<boolean> {
+  if (upstashRedis) {
+    try {
+      const exists = await upstashRedis.exists(`webhook:payment:${eventId}`)
+      return exists === 1
+    } catch (error) {
+      console.error('Redis event check error:', error)
+      // Fall through to in-memory
+    }
+  }
+  return processedEventsFallback.has(eventId)
+}
+
+// Mark event as processed
+async function markEventProcessed(eventId: string): Promise<void> {
+  if (upstashRedis) {
+    try {
+      await upstashRedis.set(`webhook:payment:${eventId}`, Date.now(), {
+        ex: EVENT_EXPIRY_SECONDS,
+      })
+      return
+    } catch (error) {
+      console.error('Redis event mark error:', error)
+      // Fall through to in-memory
+    }
+  }
+  processedEventsFallback.set(eventId, Date.now())
+
+  // Clean up old entries in fallback
+  if (processedEventsFallback.size > 1000) {
+    const now = Date.now()
+    for (const [id, timestamp] of processedEventsFallback.entries()) {
+      if (now - timestamp > EVENT_EXPIRY_SECONDS * 1000) {
+        processedEventsFallback.delete(id)
+      }
     }
   }
 }
@@ -66,19 +108,14 @@ export async function POST(request: NextRequest) {
       event.payload?.order?.entity?.id ||
       `${eventType}_${Date.now()}`
 
-    // SECURITY: Replay attack prevention - check if event was already processed
-    if (processedEvents.has(eventId)) {
+    // SECURITY: Replay attack prevention - check if event was already processed (Redis-backed)
+    if (await isEventProcessed(eventId)) {
       console.log('Webhook: Duplicate event ignored:', eventId)
       return NextResponse.json({ success: true, message: 'Event already processed' })
     }
 
-    // Mark event as processed
-    processedEvents.set(eventId, Date.now())
-
-    // Periodically clean up old events
-    if (processedEvents.size > 1000) {
-      cleanupProcessedEvents()
-    }
+    // Mark event as processed in Redis (with TTL for automatic cleanup)
+    await markEventProcessed(eventId)
 
     console.log('Webhook received:', eventType, eventId)
 

@@ -285,33 +285,112 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
       day: 'numeric',
     })
 
-    // TODO: Implement actual notification sending via WhatsApp/Email
-    console.log('Rescheduling notifications:', {
+    console.log('Sending reschedule notifications:', {
       bookingId: booking.id,
       studentName: booking.studentName,
       from: `${formattedOldDate} at ${oldTime}`,
       to: `${formattedNewDate} at ${booking.preferredTime}`,
     })
 
-    // Send WhatsApp notification if configured
+    const notificationPromises: Promise<any>[] = []
+
+    // 1. Send WhatsApp notification to student
     if (process.env.INTERAKT_API_KEY && booking.phone) {
       const phone = normalizePhone(booking.phone)
-      await fetch('https://api.interakt.ai/v1/public/message/', {
-        method: 'POST',
-        headers: {
-          Authorization: `Basic ${Buffer.from(process.env.INTERAKT_API_KEY + ':').toString('base64')}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          countryCode: '+91',
-          phoneNumber: phone,
-          type: 'Text',
-          data: {
-            message: `Hi ${booking.studentName}! Your demo class has been rescheduled from ${formattedOldDate} to ${formattedNewDate} at ${booking.preferredTime}. We look forward to seeing you!`,
+      notificationPromises.push(
+        fetch('https://api.interakt.ai/v1/public/message/', {
+          method: 'POST',
+          headers: {
+            Authorization: `Basic ${Buffer.from(process.env.INTERAKT_API_KEY + ':').toString('base64')}`,
+            'Content-Type': 'application/json',
           },
-        }),
-      })
+          body: JSON.stringify({
+            countryCode: '+91',
+            phoneNumber: phone,
+            type: 'Text',
+            data: {
+              message: `Hi ${booking.studentName}! Your NEET Biology demo class has been rescheduled.\n\nPrevious: ${formattedOldDate} at ${oldTime}\nNew: ${formattedNewDate} at ${booking.preferredTime}\n\nA new Zoom link will be sent 30 mins before the class. Questions? Call ${SUPPORT_PHONE}`,
+            },
+          }),
+        }).catch((err) => console.error('WhatsApp student notification failed:', err))
+      )
     }
+
+    // 2. Send Email notification to student
+    if (process.env.RESEND_API_KEY && booking.email) {
+      notificationPromises.push(
+        fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            from: 'Cerebrum Biology Academy <noreply@cerebrumbiologyacademy.com>',
+            to: booking.email,
+            subject: `Demo Class Rescheduled - ${formattedNewDate}`,
+            html: `
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <div style="background: linear-gradient(135deg, #2563eb, #9333ea); padding: 20px; text-align: center;">
+                  <h1 style="color: white; margin: 0;">Demo Class Rescheduled</h1>
+                </div>
+                <div style="padding: 30px; background: #f9fafb;">
+                  <p>Hi ${booking.studentName},</p>
+                  <p>Your NEET Biology demo class has been rescheduled.</p>
+                  <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <p style="color: #666; margin-bottom: 10px;">
+                      <strong>Previous:</strong> ${formattedOldDate} at ${oldTime}
+                    </p>
+                    <p style="color: #2563eb; font-size: 18px; margin: 0;">
+                      <strong>New Date:</strong> ${formattedNewDate} at ${booking.preferredTime}
+                    </p>
+                  </div>
+                  <p>A new Zoom link will be sent 30 minutes before your class.</p>
+                  <p style="color: #666; font-size: 14px;">
+                    Need help? Contact us at ${SUPPORT_PHONE} or reply to this email.
+                  </p>
+                </div>
+                <div style="background: #1f2937; padding: 20px; text-align: center;">
+                  <p style="color: #9ca3af; margin: 0; font-size: 12px;">
+                    © ${new Date().getFullYear()} Cerebrum Biology Academy
+                  </p>
+                </div>
+              </div>
+            `,
+          }),
+        }).catch((err) => console.error('Email student notification failed:', err))
+      )
+    }
+
+    // 3. Notify admin team via WhatsApp
+    const adminPhone = process.env.ADMIN_PHONE_NUMBER || '9311946297'
+    if (process.env.INTERAKT_API_KEY) {
+      notificationPromises.push(
+        fetch('https://api.interakt.ai/v1/public/message/', {
+          method: 'POST',
+          headers: {
+            Authorization: `Basic ${Buffer.from(process.env.INTERAKT_API_KEY + ':').toString('base64')}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            countryCode: '+91',
+            phoneNumber: adminPhone,
+            type: 'Text',
+            data: {
+              message: `📅 Demo RESCHEDULED\n\n👤 ${booking.studentName}\n📞 ${booking.phone}\nPrev: ${formattedOldDate} ${oldTime}\nNew: ${formattedNewDate} ${booking.preferredTime}`,
+            },
+          }),
+        }).catch((err) => console.error('WhatsApp admin notification failed:', err))
+      )
+    }
+
+    // Wait for all notifications (with timeout)
+    await Promise.race([
+      Promise.allSettled(notificationPromises),
+      new Promise((resolve) => setTimeout(resolve, 5000)), // 5 second timeout
+    ])
+
+    console.log('Reschedule notifications sent successfully')
   } catch (error) {
     console.error('Failed to send reschedule notifications:', error)
   }

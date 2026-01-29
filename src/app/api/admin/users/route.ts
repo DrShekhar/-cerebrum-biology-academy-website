@@ -24,7 +24,7 @@ const createUserSchema = z.object({
 })
 
 const updateUserSchema = z.object({
-  id: z.string().uuid('Invalid user ID'),
+  id: z.string().min(1, 'User ID is required'),
   name: z.string().min(2, 'Name must be at least 2 characters').max(100).optional(),
   phone: z
     .string()
@@ -38,7 +38,7 @@ const updateUserSchema = z.object({
 })
 
 const deleteUserSchema = z.object({
-  id: z.string().uuid('Invalid user ID'),
+  id: z.string().min(1, 'User ID is required'),
 })
 
 export async function POST(request: NextRequest) {

@@ -562,7 +562,18 @@ export async function POST(request: NextRequest) {
         previousKnowledge: '', // Optional
       })
 
-      // Zoom meeting created successfully
+      // Update booking with Zoom meeting details
+      if (zoomMeeting) {
+        await prisma.demoBooking.update({
+          where: { id: demoBooking.id },
+          data: {
+            zoomMeetingId: String(zoomMeeting.id),
+            zoomJoinUrl: zoomMeeting.join_url,
+            zoomStartUrl: zoomMeeting.start_url,
+            zoomPassword: zoomMeeting.password,
+          },
+        })
+      }
     } catch (zoomError) {
       // Log but don't fail the booking if Zoom creation fails
       console.error('Failed to create Zoom meeting (non-blocking):', zoomError)

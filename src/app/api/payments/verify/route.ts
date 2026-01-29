@@ -89,7 +89,15 @@ export async function POST(request: NextRequest) {
 
     const expectedSignature = crypto.createHmac('sha256', secret).update(body).digest('hex')
 
-    const verified = expectedSignature === paymentSignature
+    // Use timing-safe comparison to prevent timing attacks
+    // Both signatures should be hex strings of equal length (64 chars for SHA-256)
+    let verified = false
+    if (expectedSignature.length === paymentSignature.length) {
+      verified = crypto.timingSafeEqual(
+        Buffer.from(expectedSignature, 'hex'),
+        Buffer.from(paymentSignature, 'hex')
+      )
+    }
 
     if (verified) {
       try {

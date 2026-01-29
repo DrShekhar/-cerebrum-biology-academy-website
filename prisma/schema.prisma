@@ -400,6 +400,46 @@ model chapters {
   @@index([courseId, orderIndex])
 }
 
+model coupons {
+  id                  String               @id @default(cuid())
+  code                String               @unique
+  description         String?
+  discountPercent     Int                  // Percentage discount (0-100)
+  discountAmount      Int?                 // Fixed amount discount (alternative to percent)
+  isActive            Boolean              @default(true)
+  startsAt            DateTime?
+  expiresAt           DateTime?
+  maxUses             Int?                 // Total max uses
+  maxUsesPerUser      Int?                 // Max uses per user
+  usedCount           Int                  @default(0)
+  minOrderAmount      Int?                 // Minimum order amount for coupon to apply
+  applicableCourseIds String[]             // List of course IDs this coupon applies to (empty = all)
+  createdBy           String?
+  createdAt           DateTime             @default(now())
+  updatedAt           DateTime             @updatedAt
+  redemptions         coupon_redemptions[]
+
+  @@index([code])
+  @@index([isActive, expiresAt])
+}
+
+model coupon_redemptions {
+  id             String   @id @default(cuid())
+  couponId       String
+  userId         String
+  orderId        String?
+  originalAmount Int
+  discountAmount Int
+  finalAmount    Int
+  createdAt      DateTime @default(now())
+  coupon         coupons  @relation(fields: [couponId], references: [id], onDelete: Cascade)
+  user           users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([couponId])
+  @@index([userId])
+  @@index([orderId])
+}
+
 model chat_history {
   id              String   @id
   userId          String?
@@ -1944,6 +1984,9 @@ model payments {
   razorpaySignature String?
   transactionId     String?
   failureReason     String?
+  refundAmount      Int?          // Amount refunded (partial or full)
+  refundReason      String?       // Reason for refund
+  refundedAt        DateTime?     // When refund was processed
   installmentNumber Int?
   totalInstallments Int?
   createdAt         DateTime      @default(now())
@@ -2948,6 +2991,7 @@ model users {
   whatsapp_conversations                                                whatsapp_conversations[]
   whatsapp_messages                                                     whatsapp_messages[]
   webhooks                                                              webhooks[]
+  coupon_redemptions                                                    coupon_redemptions[]
 
   @@index([coachingTier])
   @@index([emailVerified])
