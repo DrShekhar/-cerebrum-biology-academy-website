@@ -164,6 +164,12 @@ export const cityPages = {
     region: 'Uttar Pradesh',
     students: '3,200+',
   },
+  prayagraj: {
+    name: 'Prayagraj',
+    href: '/neet-coaching-prayagraj',
+    region: 'Uttar Pradesh',
+    students: '2,800+',
+  },
 }
 
 type CityKey = keyof typeof cityPages
@@ -204,8 +210,9 @@ const relatedCitiesMap: Record<CityKey, CityKey[]> = {
   // Western India
   ahmedabad: ['mumbai', 'pune', 'jaipur', 'kota', 'bangalore'],
   // Northern India
-  lucknow: ['kanpur', 'patna', 'kota', 'delhiNCR', 'noida'],
-  kanpur: ['lucknow', 'patna', 'noida', 'delhiNCR', 'kota'],
+  lucknow: ['kanpur', 'prayagraj', 'patna', 'kota', 'delhiNCR'],
+  kanpur: ['lucknow', 'prayagraj', 'patna', 'noida', 'delhiNCR'],
+  prayagraj: ['lucknow', 'kanpur', 'patna', 'kota', 'delhiNCR'],
 }
 
 export function RelatedCityLinks({
@@ -364,7 +371,7 @@ export function CityQuickLinks() {
     'faridabad',
     'ghaziabad',
   ]
-  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur']
+  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur', 'prayagraj']
 
   return (
     <div className="space-y-6">
