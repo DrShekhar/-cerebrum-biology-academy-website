@@ -9640,6 +9640,401 @@ export const localities: Locality[] = [
       },
     ],
   },
+  {
+    id: 'ghz-08',
+    name: 'Sahibabad',
+    slug: 'sahibabad',
+    displayName: 'Sahibabad',
+    city: 'Ghaziabad',
+    citySlug: 'ghaziabad',
+    region: 'Ghaziabad',
+    state: 'Uttar Pradesh',
+    pincode: ['201005'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sahibabad | Red Line Metro | Expert Faculty',
+      description:
+        'Best NEET Biology coaching in Sahibabad Ghaziabad. Near Red Line metro, affordable fees. Expert AIIMS faculty. Book free demo!',
+      keywords: ['neet coaching sahibabad', 'biology coaching sahibabad', 'sahibabad ghaziabad coaching'],
+      localKeywords: ['sahibabad industrial area', 'dilshad garden', 'shyam park', 'gt road'],
+      h1: 'Best NEET Biology Coaching in Sahibabad Ghaziabad',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.6804, lng: 77.3421 },
+    centerAddress: 'Online live classes with personalized Sahibabad support',
+    nearbyLandmarks: ['Sahibabad Industrial Area', 'Dilshad Garden Border', 'GT Road', 'Shyam Park Metro'],
+    transportLinks: {
+      metros: ['Sahibabad Metro', 'Shyam Park Metro', 'Dilshad Garden Metro'],
+      buses: ['Ghaziabad local buses', 'DTC buses'],
+      accessibility: 'Red Line metro connected, direct to Delhi',
+    },
+
+    demographics: {
+      primarySchools: ['Local Sahibabad schools', 'Delhi schools accessible'],
+      popularColleges: ['Delhi colleges via metro'],
+      coachingHubs: ['Sahibabad coaching centers', 'students go to Delhi'],
+      populationType: 'commercial',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Limited NEET coaching', 'students travel to Delhi'],
+      avgFees: 95000,
+      ourAdvantage: ['No travel needed', 'Online convenience', 'Same quality as Delhi'],
+      marketGap: 'Sahibabad students travel to Delhi for coaching. Online saves commute.',
+    },
+
+    content: {
+      heroTitle: "Sahibabad's Premier NEET Biology Coaching",
+      heroSubtitle: 'Expert Biology coaching for Sahibabad medical aspirants',
+      valueProposition: 'Quality NEET coaching without traveling to Delhi',
+      urgencyMessage: 'Limited seats for Sahibabad batch!',
+      localChallenge: 'Sahibabad students cross to Delhi spending hours daily. Online serves better.',
+      successMetric: '85% of Sahibabad students scored 330+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 60,
+      topScore: 345,
+      testimonialIds: ['sab-001'],
+      successStories: [
+        'Ravi from Sahibabad scored 345 in Biology',
+        'Pooja improved from 270 to 335 with online classes',
+      ],
+    },
+
+    nearbyLocalities: ['mohan-nagar', 'kaushambi', 'dilshad-garden'],
+
+    faqs: [
+      {
+        question: 'How is online coaching for Sahibabad students?',
+        answer:
+          'Our live interactive classes via Zoom work perfectly for Sahibabad students. No travel to Delhi needed - same expert faculty teaching from your home.',
+      },
+      {
+        question: 'What is the fee structure?',
+        answer:
+          'Fees range from Rs 45,000 to Rs 1,56,000 per year. EMI options available making it affordable for Sahibabad families.',
+      },
+    ],
+  },
+  {
+    id: 'ghz-09',
+    name: 'Wave City',
+    slug: 'wave-city',
+    displayName: 'Wave City',
+    city: 'Ghaziabad',
+    citySlug: 'ghaziabad',
+    region: 'Ghaziabad',
+    state: 'Uttar Pradesh',
+    pincode: ['201015'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Wave City Ghaziabad | NH-24 | Expert Faculty',
+      description:
+        'Best NEET Biology coaching for Wave City Ghaziabad residents. Integrated township on NH-24. Expert AIIMS faculty. Book free demo!',
+      keywords: ['neet coaching wave city', 'biology coaching wave city nh24', 'wave city ghaziabad coaching'],
+      localKeywords: ['wave gardens', 'wave boulevard', 'wave city golf', 'nh24 township'],
+      h1: 'Best NEET Biology Coaching in Wave City Ghaziabad',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5900, lng: 77.4500 },
+    centerAddress: 'Online live classes for Wave City residents',
+    nearbyLandmarks: ['Wave Gardens', 'Wave Boulevard', 'Wave Golf Course', 'NH-24 Entry'],
+    transportLinks: {
+      metros: ['Proposed metro extension', 'Vaishali Metro via NH-24'],
+      buses: ['Township buses', 'NH-24 buses'],
+      accessibility: 'NH-24 connected, proposed metro extension',
+    },
+
+    demographics: {
+      primarySchools: ['Wave City School', 'Nearby schools'],
+      popularColleges: ['Noida colleges accessible', 'Greater Noida universities'],
+      coachingHubs: ['Limited coaching in township'],
+      populationType: 'residential',
+      economicProfile: 'upper-middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Very few NEET coaching', 'students travel outside'],
+      avgFees: 120000,
+      ourAdvantage: ['No travel from township', 'Online convenience', 'Premium quality'],
+      marketGap: 'Wave City residents travel 30+ minutes for coaching. Online saves this.',
+    },
+
+    content: {
+      heroTitle: 'Wave City NEET Biology Coaching',
+      heroSubtitle: 'Expert Biology coaching for Wave City residents',
+      valueProposition: 'Premium NEET coaching without leaving Wave City',
+      urgencyMessage: 'Wave City batch enrolling now!',
+      localChallenge: 'Wave City residents travel to Noida or Delhi. Online coaching is ideal.',
+      successMetric: '82% of Wave City students scored 325+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 80,
+      topScore: 348,
+      testimonialIds: ['wc-001'],
+      successStories: [
+        'Aryan from Wave Gardens scored 348 in Biology',
+        'Township students save 2 hours daily with online classes',
+      ],
+    },
+
+    nearbyLocalities: ['crossing-republik', 'vasundhara', 'noida-extension'],
+
+    faqs: [
+      {
+        question: 'How do Wave City students attend coaching?',
+        answer:
+          'All our classes are live online via Zoom. Wave City students can attend from home without traveling outside the township.',
+      },
+      {
+        question: 'Is online coaching effective for Wave City students?',
+        answer:
+          'Yes! Our Wave City students have 82% scoring 325+ in Biology. Online classes work perfectly for township residents.',
+      },
+    ],
+  },
+  {
+    id: 'ghz-10',
+    name: 'Loni',
+    slug: 'loni',
+    displayName: 'Loni',
+    city: 'Ghaziabad',
+    citySlug: 'ghaziabad',
+    region: 'Ghaziabad',
+    state: 'Uttar Pradesh',
+    pincode: ['201102'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Loni Ghaziabad | Affordable | Expert Faculty',
+      description:
+        'Best NEET Biology coaching for Loni Ghaziabad students. Near Delhi border. Affordable fees, expert faculty. Book free demo!',
+      keywords: ['neet coaching loni', 'biology coaching loni ghaziabad', 'loni border coaching'],
+      localKeywords: ['loni border', 'trans hindon', 'loni road', 'gokulpuri'],
+      h1: 'Best NEET Biology Coaching in Loni Ghaziabad',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.7500, lng: 77.2800 },
+    centerAddress: 'Online live classes for Loni students',
+    nearbyLandmarks: ['Loni Border', 'Delhi Border', 'Trans-Hindon area', 'Gokulpuri nearby'],
+    transportLinks: {
+      metros: ['Gokulpuri Metro (Delhi)', 'Proposed Loni extension'],
+      buses: ['DTC buses', 'Local autos'],
+      accessibility: 'Delhi border area with bus connectivity',
+    },
+
+    demographics: {
+      primarySchools: ['Loni schools', 'Delhi schools nearby'],
+      popularColleges: ['Delhi colleges accessible'],
+      coachingHubs: ['Limited coaching', 'students travel to Delhi'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Very limited NEET coaching'],
+      avgFees: 85000,
+      ourAdvantage: ['Affordable online option', 'No travel to Delhi', 'Quality teaching'],
+      marketGap: 'Loni students have limited local options. Online coaching fills this gap.',
+    },
+
+    content: {
+      heroTitle: 'Loni NEET Biology Coaching',
+      heroSubtitle: 'Affordable Biology coaching for Loni students',
+      valueProposition: 'Quality NEET coaching at affordable fees for Loni students',
+      urgencyMessage: 'Loni batch starting soon!',
+      localChallenge: 'Loni students have few local coaching options. Online solves this.',
+      successMetric: '80% of Loni students scored 320+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 30,
+      topScore: 338,
+      testimonialIds: ['loni-001'],
+      successStories: [
+        'Amit from Loni scored 338 in Biology',
+        'First medical college admission from Loni area',
+      ],
+    },
+
+    nearbyLocalities: ['govindpuram', 'shalimar-garden'],
+
+    faqs: [
+      {
+        question: 'Is online coaching affordable for Loni students?',
+        answer:
+          'Yes! Our fees start from Rs 45,000/year with EMI options. Very affordable for Loni families compared to Delhi coaching centers.',
+      },
+      {
+        question: 'Do you have students from Loni?',
+        answer:
+          'Yes! We have 30+ students from Loni area. Online classes work perfectly for border area residents.',
+      },
+    ],
+  },
+  {
+    id: 'ghz-11',
+    name: 'Shalimar Garden',
+    slug: 'shalimar-garden',
+    displayName: 'Shalimar Garden',
+    city: 'Ghaziabad',
+    citySlug: 'ghaziabad',
+    region: 'Ghaziabad',
+    state: 'Uttar Pradesh',
+    pincode: ['201005'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Shalimar Garden | Near Sahibabad | Expert Faculty',
+      description:
+        'Best NEET Biology coaching for Shalimar Garden Ghaziabad students. Near Sahibabad metro. Expert AIIMS faculty. Book free demo!',
+      keywords: ['neet coaching shalimar garden', 'biology coaching shalimar garden', 'sahibabad area coaching'],
+      localKeywords: ['shalimar garden extension', 'sahibabad', 'dilshad garden nearby'],
+      h1: 'Best NEET Biology Coaching in Shalimar Garden Ghaziabad',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.6750, lng: 77.3350 },
+    centerAddress: 'Online live classes for Shalimar Garden students',
+    nearbyLandmarks: ['Shalimar Garden Main Road', 'Sahibabad Border', 'Industrial Area nearby'],
+    transportLinks: {
+      metros: ['Sahibabad Metro', 'Mohan Nagar Metro'],
+      buses: ['Local buses', 'DTC via Sahibabad'],
+      accessibility: 'Red Line metro accessible via Sahibabad',
+    },
+
+    demographics: {
+      primarySchools: ['Shalimar Garden schools', 'Sahibabad schools'],
+      popularColleges: ['Delhi colleges via metro'],
+      coachingHubs: ['Limited coaching', 'students travel to Delhi'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Limited NEET coaching options'],
+      avgFees: 90000,
+      ourAdvantage: ['No travel to Delhi', 'Online convenience', 'Affordable'],
+      marketGap: 'Shalimar Garden students travel to Delhi. Online coaching is the solution.',
+    },
+
+    content: {
+      heroTitle: 'Shalimar Garden NEET Biology Coaching',
+      heroSubtitle: 'Expert Biology coaching for Shalimar Garden students',
+      valueProposition: 'Quality NEET coaching without traveling to Delhi',
+      urgencyMessage: 'Shalimar Garden batch filling fast!',
+      localChallenge: 'Shalimar Garden students commute to Delhi. Online saves time and money.',
+      successMetric: '83% of Shalimar Garden students scored 325+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 55,
+      topScore: 342,
+      testimonialIds: ['sg-001'],
+      successStories: [
+        'Neha from Shalimar Garden scored 342 in Biology',
+        'Extension area students save 2 hours daily',
+      ],
+    },
+
+    nearbyLocalities: ['sahibabad', 'mohan-nagar', 'loni'],
+
+    faqs: [
+      {
+        question: 'How can Shalimar Garden students join your coaching?',
+        answer:
+          'Simply enroll online and attend live classes from home. No need to travel to Sahibabad or Delhi for coaching.',
+      },
+      {
+        question: 'What is the success rate for Shalimar Garden students?',
+        answer:
+          '83% of our Shalimar Garden students scored 325+ in NEET Biology. Our online format works well for this area.',
+      },
+    ],
+  },
+  {
+    id: 'ghz-12',
+    name: 'Govindpuram',
+    slug: 'govindpuram',
+    displayName: 'Govindpuram',
+    city: 'Ghaziabad',
+    citySlug: 'ghaziabad',
+    region: 'Ghaziabad',
+    state: 'Uttar Pradesh',
+    pincode: ['201013'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Govindpuram | Trans-Hindon | Expert Faculty',
+      description:
+        'Best NEET Biology coaching for Govindpuram Ghaziabad students. Trans-Hindon area. Expert AIIMS faculty. Book free demo!',
+      keywords: ['neet coaching govindpuram', 'biology coaching govindpuram', 'trans hindon coaching'],
+      localKeywords: ['govindpuram market', 'gt road', 'hindon river', 'nh58 nearby'],
+      h1: 'Best NEET Biology Coaching in Govindpuram Ghaziabad',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.7100, lng: 77.3900 },
+    centerAddress: 'Online live classes for Govindpuram students',
+    nearbyLandmarks: ['Govindpuram Market', 'GT Road', 'Hindon River Bridge', 'NH-58 nearby'],
+    transportLinks: {
+      metros: ['Hindon River Metro', 'Shaheed Sthal Metro'],
+      buses: ['Local buses', 'GT Road buses'],
+      accessibility: 'Red Line metro accessible, GT Road connected',
+    },
+
+    demographics: {
+      primarySchools: ['Local Govindpuram schools', 'Nearby area schools'],
+      popularColleges: ['Ghaziabad colleges', 'Delhi accessible'],
+      coachingHubs: ['Limited coaching options'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Very limited NEET coaching'],
+      avgFees: 85000,
+      ourAdvantage: ['Affordable online option', 'Expert faculty', 'No commute'],
+      marketGap: 'Govindpuram has limited coaching options. Online fills this gap perfectly.',
+    },
+
+    content: {
+      heroTitle: 'Govindpuram NEET Biology Coaching',
+      heroSubtitle: 'Expert Biology coaching for Govindpuram students',
+      valueProposition: 'Quality NEET coaching for Trans-Hindon students',
+      urgencyMessage: 'Govindpuram batch enrolling now!',
+      localChallenge: 'Govindpuram students have few local options. Online coaching is ideal.',
+      successMetric: '78% of Govindpuram students scored 315+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 40,
+      topScore: 335,
+      testimonialIds: ['gp-001'],
+      successStories: [
+        'Rahul from Govindpuram scored 335 in Biology',
+        'Trans-Hindon students finding success with online classes',
+      ],
+    },
+
+    nearbyLocalities: ['raj-nagar-extension', 'shaheed-sthal', 'shalimar-garden'],
+
+    faqs: [
+      {
+        question: 'Is online coaching suitable for Govindpuram students?',
+        answer:
+          'Yes! Online coaching is perfect for Govindpuram students who otherwise have limited local options. Same quality as physical coaching.',
+      },
+      {
+        question: 'How many Govindpuram students have enrolled?',
+        answer:
+          'We have 40+ students from Govindpuram and nearby Trans-Hindon areas. Growing community of successful students.',
+      },
+    ],
+  },
 
   // BAHADURGARH - 3 localities
   {
