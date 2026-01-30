@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET coaching for Karnal students. 94.2% success rate. Online classes from AIIMS faculty. Serving Model Town, Sector 12, NDRI Area, Kunjpura. Join 350+ successful students.',
   keywords:
-    'NEET coaching Karnal, best NEET coaching Karnal Haryana, NEET preparation Karnal, NEET classes KCGMC Karnal, biology coaching Karnal, medical entrance Karnal, NEET 2026 Karnal, online NEET coaching Haryana',
+    'NEET coaching Karnal, best NEET coaching Karnal Haryana, NEET preparation Karnal, NEET classes KCGMC Karnal, biology coaching Karnal, medical entrance Karnal, NEET 2026 Karnal, online NEET coaching Haryana, biology tuition Karnal, biology classes Karnal, online biology coaching Karnal, NEET biology Karnal, biology teacher Karnal',
   openGraph: {
     title: 'Best NEET Coaching in Karnal 2026 | Cerebrum Biology Academy',
     description:

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET coaching for Jalandhar students. 94.2% success rate. Online classes from AIIMS faculty. Serving Model Town, Urban Estate, Maqsudan, Nakodar Road. Join 600+ successful students.',
   keywords:
-    'NEET coaching Jalandhar, best NEET coaching Jalandhar Punjab, NEET preparation Jalandhar, NEET classes Model Town Jalandhar, biology coaching Jalandhar, medical entrance Jalandhar, NEET 2026 Jalandhar, online NEET coaching Doaba',
+    'NEET coaching Jalandhar, best NEET coaching Jalandhar Punjab, NEET preparation Jalandhar, NEET classes Model Town Jalandhar, biology coaching Jalandhar, medical entrance Jalandhar, NEET 2026 Jalandhar, online NEET coaching Doaba, biology tuition Jalandhar, biology classes Jalandhar, online biology coaching Jalandhar, NEET biology Jalandhar, biology teacher Jalandhar',
   openGraph: {
     title: 'Best NEET Coaching in Jalandhar 2026 | Cerebrum Biology Academy',
     description:

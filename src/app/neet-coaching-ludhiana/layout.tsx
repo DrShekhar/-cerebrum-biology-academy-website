@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Top NEET coaching for Ludhiana students. 94.2% success rate. Online classes from AIIMS faculty. Serving Model Town, Civil Lines, Sarabha Nagar, Dugri. Join 800+ successful Punjab students.',
   keywords:
-    'NEET coaching Ludhiana, best NEET coaching Ludhiana Punjab, NEET preparation Ludhiana, NEET classes Model Town Ludhiana, biology coaching Ludhiana, medical entrance Ludhiana, NEET 2026 Ludhiana, online NEET coaching Punjab',
+    'NEET coaching Ludhiana, best NEET coaching Ludhiana Punjab, NEET preparation Ludhiana, NEET classes Model Town Ludhiana, biology coaching Ludhiana, medical entrance Ludhiana, NEET 2026 Ludhiana, online NEET coaching Punjab, biology tuition Ludhiana, biology classes Ludhiana, online biology coaching Ludhiana, NEET biology Ludhiana, biology teacher Ludhiana',
   openGraph: {
     title: 'Best NEET Coaching in Ludhiana 2026 | Cerebrum Biology Academy',
     description:
