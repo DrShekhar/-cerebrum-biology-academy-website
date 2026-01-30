@@ -10962,6 +10962,469 @@ export const cityHubData: Record<string, CityHubData> = {
       lng: '77.1538',
     },
   },
+
+  // ===== CHANDIGARH TRICITY & PUNJAB REGION =====
+
+  'chandigarh': {
+    slug: 'chandigarh',
+    cityName: 'Chandigarh',
+    stateName: 'Chandigarh',
+    metaTitle: 'Best NEET Coaching in Chandigarh 2026 | Biology Classes Tricity | Cerebrum Academy',
+    metaDescription:
+      'Top NEET Biology coaching in Chandigarh with 94.2% success rate. AIIMS faculty, online classes for Tricity. Target PGIMER, GMCH. 780+ students. Book free demo!',
+    heroTitle: 'Best NEET Coaching in Chandigarh',
+    heroSubtitle:
+      'Premium online biology coaching for Chandigarh Tricity. AIIMS-trained faculty, 94.2% success rate. Target PGIMER & GMCH Chandigarh.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online Live Classes',
+      address: 'Live interactive classes from anywhere in Tricity',
+      distance: 'No commute needed',
+    },
+    localities: [
+      { name: 'Sector 17', url: '/neet-coaching-chandigarh-sector-17' },
+      { name: 'Sector 22', url: '/neet-coaching-chandigarh-sector-22' },
+      { name: 'Sector 34', url: '/neet-coaching-chandigarh-sector-34' },
+      { name: 'Sector 35', url: '/neet-coaching-chandigarh-sector-35' },
+      { name: 'Sector 44', url: '/neet-coaching-chandigarh-sector-44' },
+      { name: 'Manimajra', url: '/neet-coaching-manimajra-chandigarh' },
+    ],
+    relatedCities: [
+      { name: 'Mohali', url: '/neet-coaching-mohali-punjab' },
+      { name: 'Panchkula', url: '/neet-coaching-panchkula-haryana' },
+      { name: 'Zirakpur', url: '/neet-coaching-zirakpur-punjab' },
+      { name: 'Ludhiana', url: '/neet-coaching-ludhiana-punjab' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Chandigarh for Biology?',
+        answer:
+          'Cerebrum Biology Academy is the top-rated NEET biology coaching for Chandigarh students. With AIIMS-trained faculty, 94.2% success rate, and 780+ Tricity students, we specialize in biology preparation. Unlike crowded Sector 34 centers with 50-100 students, our online batches have only 10-15 students for personalized attention.',
+      },
+      {
+        question: 'How is online coaching better than Sector 34 coaching centers?',
+        answer:
+          'Sector 34 coaching centers typically have 50-100+ students per batch. Our live online classes limit to 10-15 students ensuring personalized attention. Plus, save 1-2 hours daily commute from Panchkula/Mohali. Same quality, better attention, no travel hassle.',
+      },
+      {
+        question: 'What is the fee for NEET coaching in Chandigarh?',
+        answer:
+          'Our comprehensive NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. This is comparable to Chandigarh coaching centers but with smaller batches (10-15 vs 50-100). Includes live classes, study material, test series, doubt support. EMI available.',
+      },
+      {
+        question: 'Which medical colleges can Chandigarh students target?',
+        answer:
+          'With strong NEET scores, Tricity students can target: PGIMER Chandigarh (top choice), GMCH Chandigarh (150 seats), AIIMS Bathinda, GMC Patiala, DMC Ludhiana, plus all-India institutes like AIIMS Delhi, Maulana Azad, and state quota seats in Punjab/Haryana.',
+      },
+      {
+        question: 'Do you serve Panchkula and Mohali students?',
+        answer:
+          'Yes! Our online live classes serve entire Chandigarh Tricity - Chandigarh (all sectors), Panchkula (all sectors), Mohali (Phase 1-11, IT City), Zirakpur, Kharar, and surrounding areas. Same quality, no commute needed.',
+      },
+      {
+        question: 'How is Cerebrum different from Allen/Aakash in Chandigarh?',
+        answer:
+          'Unlike Allen/Aakash with 100+ students per batch, we keep batches of 10-15 only. Our faculty is exclusively from AIIMS (not just MBBS graduates). Online format offers flexibility, saves commute, and allows doubt clearing anytime via WhatsApp. 94.2% success rate speaks for itself.',
+      },
+      {
+        question: 'What are the batch timings for Chandigarh students?',
+        answer:
+          'We offer flexible batch timings: Morning (7-9 AM for early risers), Afternoon (2-4 PM post school), Evening (6-8 PM most popular), and Weekend batches. Students can choose based on their school schedule. All batches are live interactive, not recorded.',
+      },
+      {
+        question: 'Is Cerebrum good for NEET droppers in Chandigarh?',
+        answer:
+          'Absolutely! Our dropper batch is specially designed with intensive 6-8 hours daily coverage. Previous year droppers from Chandigarh improved by 80-120 marks on average. Dedicated doubt sessions, weekly tests, and mentor support included. WhatsApp 88264-44334 for dropper batch details.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '780+',
+      successRate: '94.2%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '30.7333',
+      lng: '76.7794',
+    },
+  },
+
+  'mohali': {
+    slug: 'mohali',
+    cityName: 'Mohali',
+    stateName: 'Punjab',
+    metaTitle: 'Best NEET Coaching in Mohali 2026 | Biology Classes SAS Nagar | Cerebrum Academy',
+    metaDescription:
+      'Top NEET Biology coaching in Mohali (SAS Nagar) with AIIMS faculty. Online classes for Phase 1-11, IT City, Aerocity. 180+ students. Target PGIMER. Book demo!',
+    heroTitle: 'Best NEET Coaching in Mohali',
+    heroSubtitle:
+      'Premium online biology coaching for Mohali students. AIIMS-trained faculty, personalized attention. Target PGIMER & Punjab medical colleges.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online Live Classes',
+      address: 'Live interactive classes for all Mohali areas',
+      distance: 'No commute to Sector 34 needed',
+    },
+    localities: [
+      { name: 'Phase 1-5', url: '/neet-coaching-mohali-phase-1' },
+      { name: 'Phase 6-8', url: '/neet-coaching-mohali-phase-6' },
+      { name: 'Phase 9-11', url: '/neet-coaching-mohali-phase-9' },
+      { name: 'IT City (Sector 82-83)', url: '/neet-coaching-mohali-it-city' },
+      { name: 'Aerocity', url: '/neet-coaching-mohali-aerocity' },
+      { name: 'Kharar Road', url: '/neet-coaching-kharar-mohali' },
+    ],
+    relatedCities: [
+      { name: 'Chandigarh', url: '/neet-coaching-chandigarh' },
+      { name: 'Panchkula', url: '/neet-coaching-panchkula-haryana' },
+      { name: 'Zirakpur', url: '/neet-coaching-zirakpur-punjab' },
+      { name: 'Kharar', url: '/neet-coaching-kharar-punjab' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Mohali?',
+        answer:
+          'Cerebrum Biology Academy is the top choice for Mohali students with 180+ enrolled from SAS Nagar. Our online live classes eliminate the need to commute to Chandigarh Sector 34. AIIMS-trained faculty, small batches of 10-15, and 94.2% success rate.',
+      },
+      {
+        question: 'Do I need to travel to Chandigarh for NEET coaching?',
+        answer:
+          'No! Our live online classes bring AIIMS-quality coaching to your home in Mohali. Same faculty, same curriculum, same results - without spending 1-2 hours daily commuting to Sector 34. Join from Phase 1-11, IT City, Aerocity, or anywhere.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Mohali students?',
+        answer:
+          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. This is often less than Sector 34 centers when you factor in commute costs. Plus you get smaller batches (10-15 students) vs their 50-100. EMI options available.',
+      },
+      {
+        question: 'Which schools in Mohali do your students come from?',
+        answer:
+          'We have students from all major Mohali schools: DPS Mohali, Oakridge International, Gillco International, Manav Mangal School, Learning Paths School, Saupin\'s School, and St. Soldier School. Our flexible timings work with all school schedules.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '180+',
+      successRate: '94%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '30.7046',
+      lng: '76.7179',
+    },
+  },
+
+  'panchkula': {
+    slug: 'panchkula',
+    cityName: 'Panchkula',
+    stateName: 'Haryana',
+    metaTitle: 'Best NEET Coaching in Panchkula 2026 | Biology Classes Haryana | Cerebrum Academy',
+    metaDescription:
+      'Top NEET Biology coaching in Panchkula with AIIMS faculty. Online classes for all sectors. 150+ students. Target Haryana quota seats. Book free demo!',
+    heroTitle: 'Best NEET Coaching in Panchkula',
+    heroSubtitle:
+      'Premium online biology coaching for Panchkula students. AIIMS-trained faculty. Target Haryana state quota medical colleges.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online Live Classes',
+      address: 'Live interactive classes for all Panchkula sectors',
+      distance: 'No commute to Chandigarh needed',
+    },
+    localities: [
+      { name: 'Sector 1-10', url: '/neet-coaching-panchkula-sector-1' },
+      { name: 'Sector 11-20', url: '/neet-coaching-panchkula-sector-11' },
+      { name: 'Sector 21-27', url: '/neet-coaching-panchkula-sector-21' },
+      { name: 'Industrial Area', url: '/neet-coaching-panchkula-industrial' },
+      { name: 'Pinjore', url: '/neet-coaching-pinjore-panchkula' },
+      { name: 'Kalka', url: '/neet-coaching-kalka-panchkula' },
+    ],
+    relatedCities: [
+      { name: 'Chandigarh', url: '/neet-coaching-chandigarh' },
+      { name: 'Mohali', url: '/neet-coaching-mohali-punjab' },
+      { name: 'Ambala', url: '/neet-coaching-ambala-haryana' },
+      { name: 'Yamunanagar', url: '/neet-coaching-yamunanagar' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Panchkula?',
+        answer:
+          'Cerebrum Biology Academy is the top choice for Panchkula students with 150+ enrolled. Our online live classes eliminate commute to Chandigarh. AIIMS faculty, small batches, 94% success rate. Perfect for targeting Haryana state quota seats.',
+      },
+      {
+        question: 'Can Panchkula students get Haryana state quota seats?',
+        answer:
+          'Yes! Panchkula being in Haryana, students are eligible for Haryana state quota in PGIMS Rohtak, BPS GMC Khanpur Kalan, SGT Medical College, and other Haryana medical colleges. Our coaching specifically covers Haryana counselling process.',
+      },
+      {
+        question: 'What is the fee for NEET coaching in Panchkula?',
+        answer:
+          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. Save on commute costs to Chandigarh Sector 34. Smaller batches (10-15 students) ensure personalized attention. EMI options available.',
+      },
+      {
+        question: 'Which schools in Panchkula do your students come from?',
+        answer:
+          'Students from all major Panchkula schools: Bhavan Vidyalaya, St. Mary\'s Convent, Satluj Public School, AKSIPS, Mount Carmel, and Shivalik Public School trust us. Our timings are flexible to accommodate school schedules.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '150+',
+      successRate: '94%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '30.6942',
+      lng: '76.8606',
+    },
+  },
+
+  'ludhiana': {
+    slug: 'ludhiana',
+    cityName: 'Ludhiana',
+    stateName: 'Punjab',
+    metaTitle: 'Best NEET Coaching in Ludhiana 2026 | Online Biology Classes Punjab | Cerebrum Academy',
+    metaDescription:
+      'Top NEET Biology coaching in Ludhiana with AIIMS faculty. Online classes for Model Town, Sarabha Nagar, Civil Lines. Target DMC Ludhiana. Book free demo!',
+    heroTitle: 'Best NEET Coaching in Ludhiana',
+    heroSubtitle:
+      'Premium online biology coaching for Ludhiana students. AIIMS-trained faculty. Target DMC Ludhiana & Punjab medical colleges.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online Live Classes',
+      address: 'Live interactive classes - no need to go to Chandigarh/Kota',
+      distance: 'Learn from home',
+    },
+    localities: [
+      { name: 'Model Town', url: '/neet-coaching-ludhiana-model-town' },
+      { name: 'Sarabha Nagar', url: '/neet-coaching-ludhiana-sarabha-nagar' },
+      { name: 'Civil Lines', url: '/neet-coaching-ludhiana-civil-lines' },
+      { name: 'BRS Nagar', url: '/neet-coaching-ludhiana-brs-nagar' },
+      { name: 'Pakhowal Road', url: '/neet-coaching-ludhiana-pakhowal-road' },
+      { name: 'Dugri', url: '/neet-coaching-ludhiana-dugri' },
+    ],
+    relatedCities: [
+      { name: 'Chandigarh', url: '/neet-coaching-chandigarh' },
+      { name: 'Jalandhar', url: '/neet-coaching-jalandhar-punjab' },
+      { name: 'Patiala', url: '/neet-coaching-patiala-punjab' },
+      { name: 'Amritsar', url: '/neet-coaching-amritsar-punjab' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Ludhiana?',
+        answer:
+          'Cerebrum Biology Academy offers the best online NEET biology coaching for Ludhiana students. AIIMS-trained faculty, small batches of 10-15, and 94% success rate. No need to relocate to Chandigarh or Kota - same quality from home.',
+      },
+      {
+        question: 'Is online coaching as effective as Chandigarh coaching centers?',
+        answer:
+          'Absolutely! Our live interactive classes match Chandigarh coaching quality. Plus you save ₹1-2 lakhs on hostel/PG in Chandigarh. Small batches (10-15 students vs 50-100), instant doubt resolution, and WhatsApp support.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Ludhiana students?',
+        answer:
+          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. Compare this to relocating to Chandigarh (₹3-4 lakhs including hostel). Same AIIMS faculty quality, significant cost savings. EMI available.',
+      },
+      {
+        question: 'Can I target DMC Ludhiana from your coaching?',
+        answer:
+          'Yes! Dayanand Medical College Ludhiana is a top target for our Punjab students. We cover Punjab state quota counselling, cutoff analysis, and specific preparation strategy. Several of our students are now at DMC.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '250+',
+      successRate: '93%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '30.9010',
+      lng: '75.8573',
+    },
+  },
+
+  'jalandhar': {
+    slug: 'jalandhar',
+    cityName: 'Jalandhar',
+    stateName: 'Punjab',
+    metaTitle: 'Best NEET Coaching in Jalandhar 2026 | Online Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Top NEET Biology coaching in Jalandhar with AIIMS faculty. Online classes for Model Town, Defence Colony, Maqsudan. Target Punjab medical colleges. Book demo!',
+    heroTitle: 'Best NEET Coaching in Jalandhar',
+    heroSubtitle:
+      'Premium online biology coaching for Jalandhar students. AIIMS-trained faculty. Target Punjab medical colleges.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online Live Classes',
+      address: 'Live interactive classes - no need to relocate',
+      distance: 'Learn from home',
+    },
+    localities: [
+      { name: 'Model Town', url: '/neet-coaching-jalandhar-model-town' },
+      { name: 'Defence Colony', url: '/neet-coaching-jalandhar-defence-colony' },
+      { name: 'Maqsudan', url: '/neet-coaching-jalandhar-maqsudan' },
+      { name: 'Green Model Town', url: '/neet-coaching-jalandhar-green-model-town' },
+      { name: 'Urban Estate', url: '/neet-coaching-jalandhar-urban-estate' },
+      { name: 'Lajpat Nagar', url: '/neet-coaching-jalandhar-lajpat-nagar' },
+    ],
+    relatedCities: [
+      { name: 'Chandigarh', url: '/neet-coaching-chandigarh' },
+      { name: 'Ludhiana', url: '/neet-coaching-ludhiana-punjab' },
+      { name: 'Amritsar', url: '/neet-coaching-amritsar-punjab' },
+      { name: 'Phagwara', url: '/neet-coaching-phagwara-punjab' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Jalandhar?',
+        answer:
+          'Cerebrum Biology Academy offers top online NEET biology coaching for Jalandhar students. AIIMS-trained faculty, small batches of 10-15 students, and 93% success rate. No need to go to Chandigarh or Kota.',
+      },
+      {
+        question: 'Do I need to relocate for good NEET coaching?',
+        answer:
+          'No! Our online live classes bring Kota/Chandigarh quality coaching to Jalandhar. Same AIIMS faculty, same curriculum, same results. Save ₹2-3 lakhs on relocation and hostel costs.',
+      },
+      {
+        question: 'What is the fee for NEET coaching in Jalandhar?',
+        answer:
+          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. This is a fraction of what you\'d spend relocating to Chandigarh (₹3-4 lakhs). Same quality, better economics. EMI available.',
+      },
+      {
+        question: 'Which schools in Jalandhar do your students come from?',
+        answer:
+          'Students from DPS Jalandhar, Police DAV, Innocent Hearts, St. Soldier, MGN Public School, and DAV College trust us. Our flexible timings work with all school schedules.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '120+',
+      successRate: '93%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '31.3260',
+      lng: '75.5762',
+    },
+  },
+
+  'amritsar': {
+    slug: 'amritsar',
+    cityName: 'Amritsar',
+    stateName: 'Punjab',
+    metaTitle: 'Best NEET Coaching in Amritsar 2026 | Online Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Top NEET Biology coaching in Amritsar with AIIMS faculty. Online classes for Lawrence Road, Mall Road, Ranjit Avenue. Target GMC Amritsar. Book demo!',
+    heroTitle: 'Best NEET Coaching in Amritsar',
+    heroSubtitle:
+      'Premium online biology coaching for Amritsar students. AIIMS-trained faculty. Target GMC Amritsar & Punjab medical colleges.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online Live Classes',
+      address: 'Live interactive classes - study from home',
+      distance: 'No relocation needed',
+    },
+    localities: [
+      { name: 'Lawrence Road', url: '/neet-coaching-amritsar-lawrence-road' },
+      { name: 'Mall Road', url: '/neet-coaching-amritsar-mall-road' },
+      { name: 'Ranjit Avenue', url: '/neet-coaching-amritsar-ranjit-avenue' },
+      { name: 'GT Road', url: '/neet-coaching-amritsar-gt-road' },
+      { name: 'Court Road', url: '/neet-coaching-amritsar-court-road' },
+      { name: 'Majitha Road', url: '/neet-coaching-amritsar-majitha-road' },
+    ],
+    relatedCities: [
+      { name: 'Chandigarh', url: '/neet-coaching-chandigarh' },
+      { name: 'Jalandhar', url: '/neet-coaching-jalandhar-punjab' },
+      { name: 'Ludhiana', url: '/neet-coaching-ludhiana-punjab' },
+      { name: 'Pathankot', url: '/neet-coaching-pathankot-punjab' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Amritsar?',
+        answer:
+          'Cerebrum Biology Academy offers top online NEET biology coaching for Amritsar students. AIIMS-trained faculty, small batches, 92% success rate. No need to relocate to Chandigarh or Kota.',
+      },
+      {
+        question: 'Can I target GMC Amritsar through your coaching?',
+        answer:
+          'Yes! Government Medical College Amritsar is a prime target for our students. We cover Punjab state quota, cutoff analysis, and specific strategy for GMC Amritsar. Several alumni are now studying there.',
+      },
+      {
+        question: 'Is online coaching reliable for NEET?',
+        answer:
+          'Absolutely! Our live interactive classes have the same quality as top Chandigarh coaching. Small batches (10-15 students), instant doubt resolution, WhatsApp support, and recorded sessions for revision.',
+      },
+      {
+        question: 'What is the fee for NEET coaching for Amritsar students?',
+        answer:
+          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. Compare to ₹3-4 lakhs for relocating to Chandigarh (including hostel). Same quality, better value. EMI options available.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '90+',
+      successRate: '92%',
+      rating: '4.8',
+    },
+    geoCoordinates: {
+      lat: '31.6340',
+      lng: '74.8723',
+    },
+  },
+
+  'zirakpur': {
+    slug: 'zirakpur',
+    cityName: 'Zirakpur',
+    stateName: 'Punjab',
+    metaTitle: 'Best NEET Coaching in Zirakpur 2026 | Biology Classes | Cerebrum Academy',
+    metaDescription:
+      'Top NEET Biology coaching in Zirakpur with AIIMS faculty. Online classes for VIP Road, Patiala Road, Baltana. Save commute to Chandigarh. Book demo!',
+    heroTitle: 'Best NEET Coaching in Zirakpur',
+    heroSubtitle:
+      'Premium online biology coaching for Zirakpur students. AIIMS-trained faculty. No commute to Chandigarh needed.',
+    hasOfflineCenter: false,
+    nearestCenter: {
+      name: 'Online Live Classes',
+      address: 'Live interactive classes for Zirakpur area',
+      distance: 'No commute to Sector 34',
+    },
+    localities: [
+      { name: 'VIP Road', url: '/neet-coaching-zirakpur-vip-road' },
+      { name: 'Patiala Road', url: '/neet-coaching-zirakpur-patiala-road' },
+      { name: 'Baltana', url: '/neet-coaching-baltana-zirakpur' },
+      { name: 'Dhakoli', url: '/neet-coaching-dhakoli-zirakpur' },
+      { name: 'Peer Muchalla', url: '/neet-coaching-peer-muchalla-zirakpur' },
+      { name: 'Gazipur', url: '/neet-coaching-gazipur-zirakpur' },
+    ],
+    relatedCities: [
+      { name: 'Chandigarh', url: '/neet-coaching-chandigarh' },
+      { name: 'Mohali', url: '/neet-coaching-mohali-punjab' },
+      { name: 'Panchkula', url: '/neet-coaching-panchkula-haryana' },
+      { name: 'Patiala', url: '/neet-coaching-patiala-punjab' },
+    ],
+    faqs: [
+      {
+        question: 'Which is the best NEET coaching in Zirakpur?',
+        answer:
+          'Cerebrum Biology Academy offers top online NEET biology coaching for Zirakpur students. AIIMS-trained faculty, small batches, 94% success rate. No daily commute to Chandigarh Sector 34 needed.',
+      },
+      {
+        question: 'How much time can I save with online coaching?',
+        answer:
+          'Zirakpur to Sector 34 Chandigarh takes 30-45 minutes one way (1-1.5 hours daily). Our online classes save this commute time for extra study. Plus no traffic stress on NH-22.',
+      },
+      {
+        question: 'What is the fee for NEET coaching in Zirakpur?',
+        answer:
+          'Our NEET Biology coaching ranges from ₹24,000 to ₹68,000 per year. Save on daily commute costs (₹100-200/day = ₹25,000-50,000/year). Better value, better attention.',
+      },
+      {
+        question: 'Which areas in Zirakpur do you serve?',
+        answer:
+          'We serve all Zirakpur areas: VIP Road, Patiala Road, Baltana, Dhakoli, Peer Muchalla, Gazipur, Lohgarh, and surroundings. Online classes mean location doesn\'t matter.',
+      },
+    ],
+    stats: {
+      studentsFromCity: '90+',
+      successRate: '94%',
+      rating: '4.9',
+    },
+    geoCoordinates: {
+      lat: '30.6430',
+      lng: '76.8174',
+    },
+  },
 }
 
 export const getAllCitySlugs = (): string[] => {

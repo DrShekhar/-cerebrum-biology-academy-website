@@ -83,34 +83,94 @@ const successMetrics = [
 
 const faqs = [
   {
-    question: 'Why choose online NEET coaching over Chandigarh coaching centers?',
+    question: 'Which is the best NEET coaching in Chandigarh for Biology?',
     answer:
-      'Chandigarh coaching centers in Sector 34 or 35 typically have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save 1-2 hours daily commute from Panchkula/Mohali. Same 94.2% success rate, better attention.',
+      'Cerebrum Biology Academy is rated the best NEET biology coaching in Chandigarh with 94.2% success rate. Unlike Sector 34 coaching centers with 50-100 students per batch, we offer small batches of 10-15 students with AIIMS-trained faculty. Our 780+ Tricity students and 15+ PGIMER selections make us the top choice.',
   },
   {
-    question: 'Which areas in Chandigarh Tricity do you serve?',
+    question: 'Why choose online NEET coaching over Chandigarh Sector 34 centers?',
     answer:
-      'We serve all Chandigarh sectors (15, 17, 22, 35, 44 etc.), Panchkula (all sectors), Mohali (Phase 1-11, IT City), Zirakpur, Kharar, and surrounding areas. Online live classes mean you can join from anywhere in Tricity.',
+      'Sector 34 coaching centers like Allen and Aakash have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save 1-2 hours daily commute from Panchkula/Mohali. Same 94.2% success rate, better attention, no traffic stress.',
+  },
+  {
+    question: 'What areas in Chandigarh Tricity do you serve for NEET coaching?',
+    answer:
+      'We serve entire Chandigarh Tricity: Chandigarh (Sectors 15, 17, 22, 34, 35, 44, Manimajra), Panchkula (all sectors including Pinjore, Kalka), Mohali (Phase 1-11, IT City, Aerocity), Zirakpur, Kharar, and Derabassi. Online live classes mean you can join from anywhere.',
   },
   {
     question: 'What is the fee for NEET coaching in Chandigarh?',
     answer:
-      'Our comprehensive NEET Biology coaching ranges from Rs 24,000 to Rs 68,000 per year depending on the program. This is comparable to Chandigarh coaching centers but with much smaller batches and personalized attention. EMI available.',
+      'Our NEET Biology coaching ranges from Rs 24,000 to Rs 68,000 per year. Compare this to Sector 34 centers (Rs 1-3.5 lakhs) with 50-100 students per batch. You get AIIMS faculty, smaller batches (10-15), and personalized attention. EMI options available. Call 88264-44334.',
   },
   {
-    question: 'Which medical colleges can Chandigarh students target?',
+    question: 'Which medical colleges can Chandigarh students target after NEET?',
     answer:
-      'With strong NEET scores, Tricity students can target: PGIMER Chandigarh (top choice!), Government Medical College Chandigarh, GMCH Patiala, DMC Ludhiana, plus AIIMS Delhi/Bathinda, and other all-India institutes.',
+      'With strong NEET scores, Tricity students can target: PGIMER Chandigarh (top choice, 150 seats), GMCH Chandigarh (150 seats), AIIMS Bathinda, GMC Patiala, DMC Ludhiana, AIIMS Delhi, Maulana Azad MC Delhi, plus Punjab and Haryana state quota seats.',
   },
   {
-    question: 'Do you prepare for both CBSE boards and NEET?',
+    question: 'How do I prepare for PGIMER Chandigarh admission?',
     answer:
-      'Yes! Most Chandigarh students follow CBSE curriculum which aligns well with NEET. We cover both board exam preparation and NEET-specific training. Score 95+ in boards while preparing for NEET simultaneously.',
+      'PGIMER Chandigarh requires top NEET scores (typically 680+ marks for general category). Our coaching specifically covers PGIMER cutoff trends, counselling process, and seat matrix. 15+ students from Cerebrum have secured PGIMER admission. We provide dedicated PGIMER strategy sessions.',
   },
   {
-    question: 'How is your coaching different from Aakash/Allen in Chandigarh?',
+    question: 'Do you prepare for both CBSE boards and NEET simultaneously?',
     answer:
-      'Unlike large coaching chains with 100+ students per batch, we keep batches of 10-15 only. Our online format offers flexibility and saves commute time. AIIMS faculty, personalized attention, and 94.2% success rate make us the smart choice.',
+      'Yes! Most Chandigarh students follow CBSE curriculum which aligns 80% with NEET. We cover both board exam preparation and NEET-specific MCQ training. Students typically score 95+ in boards while preparing for NEET. Integrated approach saves time.',
+  },
+  {
+    question: 'How is Cerebrum different from Allen Chandigarh?',
+    answer:
+      'Allen Chandigarh has large batches (50-100+ students) and fees of Rs 1.5-2.5 lakhs. Cerebrum offers small batches (10-15 students), AIIMS-trained faculty (not just MBBS graduates), flexible online format saving commute time, and fees of Rs 24K-68K. Our 94.2% success rate competes with Allen\'s results.',
+  },
+  {
+    question: 'How is Cerebrum different from Aakash Chandigarh?',
+    answer:
+      'Aakash Chandigarh operates 7 centers with 100+ students per batch and fees of Rs 1-3.5 lakhs. Cerebrum offers personalized attention with 10-15 students per batch, faculty exclusively from AIIMS (not mixed), online format with no commute, and significantly lower fees. Same quality, better attention.',
+  },
+  {
+    question: 'Is online NEET coaching effective for Chandigarh students?',
+    answer:
+      'Absolutely! Our online coaching has 94.2% success rate - same as top Sector 34 centers. Live interactive classes (not recorded), instant doubt resolution, WhatsApp support, recorded sessions for revision. 780+ Tricity students enrolled. Many prefer it over crowded offline centers.',
+  },
+  {
+    question: 'What are the batch timings for Chandigarh NEET students?',
+    answer:
+      'We offer flexible batch timings: Morning (7-9 AM), Afternoon (2-4 PM post school), Evening (6-8 PM most popular), and Weekend batches. All batches are live interactive, not recorded. Choose timing based on your school schedule. Call 88264-44334 for current availability.',
+  },
+  {
+    question: 'Is Cerebrum good for NEET droppers in Chandigarh?',
+    answer:
+      'Yes! Our dropper batch is intensive with 6-8 hours daily coverage. Previous year Chandigarh droppers improved by 80-120 marks on average. Dedicated doubt sessions, weekly tests, mentor support, and personalized study plans included. WhatsApp 88264-44334 for dropper batch details.',
+  },
+  {
+    question: 'Which schools in Chandigarh trust Cerebrum for NEET coaching?',
+    answer:
+      'Students from top Chandigarh schools choose us: DPS Chandigarh, Bhavan Vidyalaya, St. John\'s High School, Carmel Convent, AKSIPS, Vivek High School, DAV Schools, St. Kabir, Saupin\'s, and Strawberry Fields. Our flexible online timings work with all school schedules.',
+  },
+  {
+    question: 'Do Panchkula students need to come to Chandigarh for coaching?',
+    answer:
+      'No! Our online live classes eliminate the need to commute from Panchkula to Chandigarh. Same AIIMS faculty, same curriculum, same results - from the comfort of your home. 150+ Panchkula students enrolled. Save 1-2 hours daily commute time for extra study.',
+  },
+  {
+    question: 'Do Mohali students need to travel to Sector 34 for NEET coaching?',
+    answer:
+      'Not anymore! Our online classes bring Sector 34 quality coaching to Mohali. 180+ students from Mohali (Phase 1-11, IT City, Aerocity) enrolled. No commute stress, same AIIMS faculty, better attention with 10-15 students vs 50-100 in offline centers.',
+  },
+  {
+    question: 'What study material do you provide for NEET Biology?',
+    answer:
+      'Complete NCERT-focused study material including: Chapter-wise notes, 15,000+ MCQ bank, previous year papers (2015-2025), topic tests, full-length mock tests, quick revision sheets, and mnemonics. All material is updated for NEET 2026 pattern. Included in course fee.',
+  },
+  {
+    question: 'How can I book a free demo class for NEET coaching?',
+    answer:
+      'Book your free demo class by: 1) WhatsApp 88264-44334, 2) Call 88264-44334, or 3) Click "Book Free Demo" on this page. Demo classes are live interactive sessions with actual faculty. No payment required. Experience our teaching before enrolling.',
+  },
+  {
+    question: 'What is the refund policy if I don\'t like the coaching?',
+    answer:
+      'We offer a 7-day trial period. If you\'re not satisfied within the first week of joining, get a full refund (minus payment gateway charges). We\'re confident in our quality - 95% students continue after trial. No questions asked refund policy.',
   },
 ]
 
