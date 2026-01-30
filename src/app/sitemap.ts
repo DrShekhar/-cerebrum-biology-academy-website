@@ -5788,6 +5788,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.88, // Comparison page - Aakash
     },
+    // ===== CHANDIGARH TRICITY EXPANSION PHASE 2 (Jan 2026) =====
+    {
+      url: `${baseUrl}/neet-coaching-mohali`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // Mohali dedicated page - IT City, Phases
+    },
+    {
+      url: `${baseUrl}/neet-coaching-panchkula`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Panchkula dedicated page - Haryana
+    },
+    {
+      url: `${baseUrl}/neet-coaching-zirakpur`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Zirakpur dedicated page - VIP Road
+    },
+    {
+      url: `${baseUrl}/neet-coaching-chandigarh-sector-17`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89, // Sector 17 - City Center
+    },
+    {
+      url: `${baseUrl}/neet-coaching-chandigarh-sector-22`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88, // Sector 22 - Commercial Hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-manimajra`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87, // Manimajra - Growing area
+    },
+    {
+      url: `${baseUrl}/neet-coaching-kharar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87, // Kharar - Untapped market near Mohali
+    },
     {
       url: `${baseUrl}/neet-coaching-bhopal`,
       lastModified: lastUpdated,
