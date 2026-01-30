@@ -45,6 +45,7 @@ interface FirebaseSessionPayload {
   name?: string
   role: string
   phone?: string
+  grade?: string
   sub: string
   iat?: number
   exp?: number
@@ -64,18 +65,41 @@ export async function GET(request: NextRequest) {
       cookieNames: allCookies.map((c) => c.name),
       hasSecureCookie: allCookies.some((c) => c.name === '__Secure-authjs.session-token'),
       hasNonSecureCookie: allCookies.some((c) => c.name === 'authjs.session-token'),
+      hasSecureNextAuthCookie: allCookies.some(
+        (c) => c.name === '__Secure-next-auth.session-token'
+      ),
+      hasNextAuthCookie: allCookies.some((c) => c.name === 'next-auth.session-token'),
+      hasCustomJwtCookie: allCookies.some((c) => c.name === 'auth-token'),
     })
 
-    // Check for our Firebase auth session token
-    // SECURITY: Check __Secure- prefixed cookie first (production)
+    // Check for session token - check all cookie variants for consistency
+    // Priority: Secure prefixed (production) > standard (development) > legacy NextAuth > custom JWT
     const secureToken = cookieStore.get('__Secure-authjs.session-token')?.value
     const nonSecureToken = cookieStore.get('authjs.session-token')?.value
-    const sessionToken = secureToken || nonSecureToken
+    const secureNextAuthToken = cookieStore.get('__Secure-next-auth.session-token')?.value
+    const nextAuthToken = cookieStore.get('next-auth.session-token')?.value
+    const customJwtToken = cookieStore.get('auth-token')?.value
+
+    const sessionToken =
+      secureToken || nonSecureToken || secureNextAuthToken || nextAuthToken || customJwtToken
 
     console.log(`[Session API][${requestId}] Token status:`, {
       hasSecureToken: !!secureToken,
       hasNonSecureToken: !!nonSecureToken,
-      usingToken: secureToken ? 'secure' : nonSecureToken ? 'non-secure' : 'none',
+      hasSecureNextAuthToken: !!secureNextAuthToken,
+      hasNextAuthToken: !!nextAuthToken,
+      hasCustomJwtToken: !!customJwtToken,
+      usingToken: secureToken
+        ? 'secure'
+        : nonSecureToken
+          ? 'non-secure'
+          : secureNextAuthToken
+            ? 'secure-nextauth'
+            : nextAuthToken
+              ? 'nextauth'
+              : customJwtToken
+                ? 'custom-jwt'
+                : 'none',
       tokenLength: sessionToken?.length || 0,
     })
 
@@ -120,6 +144,7 @@ export async function GET(request: NextRequest) {
         name: decoded.name,
         role: decoded.role,
         phone: decoded.phone,
+        grade: decoded.grade,
       },
     })
   } catch (error) {

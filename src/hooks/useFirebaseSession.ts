@@ -9,9 +9,12 @@ interface SessionUser {
   fullName?: string
   role: string
   phone?: string
+  grade?: string
   coachingTier?: string
   isTrialActive?: boolean
   trialDaysRemaining?: number
+  profile?: Record<string, unknown>
+  enrollments?: unknown[]
 }
 
 interface SessionState {

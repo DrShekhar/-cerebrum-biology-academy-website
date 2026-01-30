@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
 import dynamicImport from 'next/dynamic'
-import { useAuth } from '@/hooks/useAuth'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 import { DashboardErrorBoundary } from '@/components/errors/DashboardErrorBoundary'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -110,7 +110,7 @@ const AchievementsBadge = dynamicImport(
 )
 
 export default function StudentDashboard() {
-  const { user, isLoading } = useAuth()
+  const { user, isLoading } = useFirebaseSession()
   const [performanceData, setPerformanceData] = useState<UserPerformanceData | null>(null)
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [comparative, setComparative] = useState<ComparativeAnalytics | null>(null)

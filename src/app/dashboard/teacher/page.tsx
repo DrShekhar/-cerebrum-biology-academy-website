@@ -4,7 +4,7 @@
 export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
-import { useAuth } from '@/hooks/useAuth'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -29,11 +29,16 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
 
   const getRedirectPath = () => {
     switch (userRole?.toUpperCase()) {
-      case 'ADMIN': return '/dashboard/admin'
-      case 'STUDENT': return '/student/dashboard'
-      case 'PARENT': return '/parent/dashboard'
-      case 'CONSULTANT': return '/consultant/dashboard'
-      default: return '/dashboard'
+      case 'ADMIN':
+        return '/dashboard/admin'
+      case 'STUDENT':
+        return '/student/dashboard'
+      case 'PARENT':
+        return '/parent/dashboard'
+      case 'CONSULTANT':
+        return '/consultant/dashboard'
+      default:
+        return '/dashboard'
     }
   }
 
@@ -45,8 +50,8 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
         <p className="text-gray-600 mb-6">
-          You don&apos;t have permission to access the Teacher Dashboard.
-          This area is restricted to teachers only.
+          You don&apos;t have permission to access the Teacher Dashboard. This area is restricted to
+          teachers only.
         </p>
         <div className="space-y-3">
           <Button
@@ -55,11 +60,7 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
           >
             Go to Your Dashboard
           </Button>
-          <Button
-            onClick={() => router.push('/')}
-            variant="outline"
-            className="w-full"
-          >
+          <Button onClick={() => router.push('/')} variant="outline" className="w-full">
             Return to Home
           </Button>
         </div>
@@ -69,7 +70,7 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
 }
 
 export default function TeacherDashboard() {
-  const { user, isLoading } = useAuth()
+  const { user, isLoading } = useFirebaseSession()
   const router = useRouter()
   const [analytics, setAnalytics] = useState<TeacherAnalytics | null>(null)
   const [isLoadingData, setIsLoadingData] = useState(true)

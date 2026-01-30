@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useAuth } from '@/hooks/useAuth'
+import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 import { Button } from '@/components/ui/Button'
 import {
   Users,
@@ -98,11 +98,16 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
 
   const getRedirectPath = () => {
     switch (userRole?.toUpperCase()) {
-      case 'ADMIN': return '/dashboard/admin'
-      case 'TEACHER': return '/dashboard/teacher'
-      case 'STUDENT': return '/student/dashboard'
-      case 'PARENT': return '/parent/dashboard'
-      default: return '/dashboard'
+      case 'ADMIN':
+        return '/dashboard/admin'
+      case 'TEACHER':
+        return '/dashboard/teacher'
+      case 'STUDENT':
+        return '/student/dashboard'
+      case 'PARENT':
+        return '/parent/dashboard'
+      default:
+        return '/dashboard'
     }
   }
 
@@ -114,8 +119,8 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Access Denied</h1>
         <p className="text-gray-600 mb-6">
-          You don&apos;t have permission to access the Consultant Dashboard.
-          This area is restricted to consultants only.
+          You don&apos;t have permission to access the Consultant Dashboard. This area is restricted
+          to consultants only.
         </p>
         <div className="space-y-3">
           <Button
@@ -124,11 +129,7 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
           >
             Go to Your Dashboard
           </Button>
-          <Button
-            onClick={() => router.push('/')}
-            variant="outline"
-            className="w-full"
-          >
+          <Button onClick={() => router.push('/')} variant="outline" className="w-full">
             Return to Home
           </Button>
         </div>
@@ -150,7 +151,7 @@ function AuthLoadingState() {
 }
 
 export default function ConsultantDashboard() {
-  const { user, isLoading: authLoading } = useAuth()
+  const { user, isLoading: authLoading } = useFirebaseSession()
   const router = useRouter()
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -198,9 +199,7 @@ export default function ConsultantDashboard() {
             <Users className="w-8 h-8 text-teal-600" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Sign In Required</h1>
-          <p className="text-gray-600 mb-6">
-            Please sign in to access the Consultant Dashboard.
-          </p>
+          <p className="text-gray-600 mb-6">Please sign in to access the Consultant Dashboard.</p>
           <Button
             onClick={() => router.push('/auth/sign-in?redirect=/consultant/dashboard')}
             className="w-full bg-teal-600 hover:bg-teal-700"

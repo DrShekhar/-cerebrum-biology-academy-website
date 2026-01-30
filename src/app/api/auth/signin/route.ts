@@ -13,7 +13,7 @@ import { logLogin, logFailedLogin } from '@/lib/security/auditLogger'
 // Request validation schema
 const SignInSchema = z.object({
   email: z.string().email('Invalid email address'),
-  password: z.string().min(1, 'Password is required'),
+  password: z.string().min(8, 'Password must be at least 8 characters'),
   rememberMe: z.boolean().optional().default(false),
 })
 
@@ -150,7 +150,8 @@ export async function POST(request: NextRequest) {
         NextResponse.json(
           {
             error: 'Email not verified',
-            message: 'Please verify your email address before signing in. Check your inbox for a verification link.',
+            message:
+              'Please verify your email address before signing in. Check your inbox for a verification link.',
             requiresVerification: true,
             email: email, // Return email so frontend can offer to resend verification
           },

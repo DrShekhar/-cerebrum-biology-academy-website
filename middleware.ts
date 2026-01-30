@@ -115,10 +115,14 @@ interface FirebaseSessionPayload {
 // Uses jsonwebtoken library (same as firebase-session route) for consistency
 function getUserFromToken(req: NextRequest): { userId: string; role: string } | null {
   try {
-    // Check for our Firebase auth session token - check both cookie variants
+    // Check for session token - check all cookie variants for consistency
+    // Priority: Secure prefixed (production) > standard (development) > legacy NextAuth
     const sessionToken =
       req.cookies.get('__Secure-authjs.session-token')?.value ||
-      req.cookies.get('authjs.session-token')?.value
+      req.cookies.get('authjs.session-token')?.value ||
+      req.cookies.get('__Secure-next-auth.session-token')?.value ||
+      req.cookies.get('next-auth.session-token')?.value ||
+      req.cookies.get('auth-token')?.value // Custom JWT token from SessionManager
 
     if (!sessionToken) {
       if (process.env.NODE_ENV !== 'production') {
@@ -196,38 +200,51 @@ export default async function middleware(req: NextRequest) {
     return addSecurityHeaders(NextResponse.next())
   }
 
-  // Protected admin routes - require admin role
-  // Note: Role checking happens in AdminLayout component for better UX
-  // Middleware just ensures user is authenticated
+  // Protected teacher routes - require TEACHER or ADMIN role
+  if (pathname.startsWith('/teacher/')) {
+    if (!userId) {
+      return NextResponse.redirect(
+        new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
+      )
+    }
+    if (userRole !== 'TEACHER' && userRole !== 'ADMIN') {
+      // Redirect non-teachers to their appropriate dashboard
+      return NextResponse.redirect(new URL('/dashboard', req.url))
+    }
+  }
+
+  // Protected counselor routes - require COUNSELOR or ADMIN role
+  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc') {
+    if (!userId) {
+      const loginUrl = new URL('/sign-in', req.url)
+      loginUrl.searchParams.set('redirect_url', pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+    if (userRole !== 'COUNSELOR' && userRole !== 'ADMIN') {
+      // Redirect non-counselors to their appropriate dashboard
+      return NextResponse.redirect(new URL('/dashboard', req.url))
+    }
+  }
+
+  // Protected admin routes - require ADMIN role
   if (isAdminRoute(pathname) && pathname !== '/admin/login') {
     if (!userId) {
       const loginUrl = new URL('/admin/login', req.url)
       loginUrl.searchParams.set('callbackUrl', pathname)
       return NextResponse.redirect(loginUrl)
     }
-
-    // Log admin access
+    if (userRole !== 'ADMIN') {
+      // Redirect non-admins to their appropriate dashboard
+      return NextResponse.redirect(new URL('/dashboard', req.url))
+    }
+    // Log admin access for security audit
     if (process.env.NODE_ENV === 'production') {
       const clientIP =
         req.headers.get('x-forwarded-for') || req.headers.get('x-real-ip') || 'unknown'
       console.log(
-        `Admin access: userId=${userId} accessed ${pathname} from ${clientIP} at ${new Date().toISOString()}`
+        `Admin access: userId=${userId} role=${userRole} accessed ${pathname} from ${clientIP} at ${new Date().toISOString()}`
       )
     }
-  }
-
-  // Protected teacher routes
-  if (pathname.startsWith('/teacher/') && !userId) {
-    return NextResponse.redirect(
-      new URL('/sign-in?redirect_url=' + encodeURIComponent(pathname), req.url)
-    )
-  }
-
-  // Protected counselor routes
-  if (pathname.startsWith('/counselor') && pathname !== '/counselor-poc' && !userId) {
-    const loginUrl = new URL('/sign-in', req.url)
-    loginUrl.searchParams.set('redirect_url', pathname)
-    return NextResponse.redirect(loginUrl)
   }
 
   // Protected general routes
