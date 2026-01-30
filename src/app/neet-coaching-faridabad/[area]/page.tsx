@@ -1,853 +1,725 @@
-'use client'
-
-import { useParams } from 'next/navigation'
-import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import {
-  MapPin,
-  Train,
-  Building2,
-  School,
-  Users,
-  Trophy,
-  Star,
-  Phone,
-  ArrowRight,
-  ArrowLeft,
-  Clock,
-  BookOpen,
-  Award,
-  Play,
-  MessageCircle,
-} from 'lucide-react'
-import { Button } from '@/components/ui/Button'
-import { TrackedWhatsAppButton } from '@/components/common/TrackedWhatsAppButton'
+  getAllFaridabadAreaSlugs,
+  getFaridabadAreaBySlug,
+} from '@/data/faridabad-areas'
+import {
+  CEREBRUM_METRICS,
+  FARIDABAD_AREA_COORDINATES,
+  FARIDABAD_CENTER_METRICS,
+} from '@/lib/constants/metrics'
+import AreaPageContent from './AreaPageContent'
 
-interface AreaData {
-  name: string
-  fullName: string
-  description: string
-  highlights: string[]
-  nearbyMetro: string[]
-  societies: string[]
-  schools: string[]
-  landmarks: string[]
-  studentCount: string
-  successStories: { name: string; score: string; quote: string }[]
+interface PageProps {
+  params: Promise<{ area: string }>
 }
 
-const areaData: Record<string, AreaData> = {
-  'greater-faridabad': {
-    name: 'Greater Faridabad',
-    fullName: 'Greater Faridabad, Haryana',
-    description:
-      'Greater Faridabad is the premium residential hub comprising Sectors 81-89. Home to BPTP Parklands, Crown Greens, and other luxury townships, it attracts IT professionals and business families seeking quality NEET coaching.',
-    highlights: [
-      'Premium residential hub',
-      'Sectors 81-89',
-      'BPTP & Crown Townships',
-      'Growing infrastructure',
-    ],
-    nearbyMetro: ['Escorts Mujesar Metro', 'Ballabgarh Metro (upcoming)'],
-    societies: [
-      'BPTP Parklands',
-      'Crown Greens',
-      'BPTP Princess Park',
-      'SRS Residency',
-      'Omaxe Heights',
-      'Eldeco Eternia',
-      'RPS Savana',
-      'Godrej Aria',
-    ],
-    schools: ['KR Mangalam', 'Shriram School', 'DPS Greater Faridabad', 'Ryan International'],
-    landmarks: ['Sector 81 Market', 'BPTP Township', 'Crown Interiorz Mall', 'Sector 86 Market'],
-    studentCount: '280+',
-    successStories: [
-      {
-        name: 'Aditya Sharma',
-        score: 'AIR 1,123',
-        quote: 'From BPTP Parklands to AIIMS! Best decision to join Cerebrum.',
-      },
-      {
-        name: 'Priya Verma',
-        score: '690/720',
-        quote: 'Crown Greens resident. Online classes were perfect for preparation.',
-      },
-      {
-        name: 'Rahul Singh',
-        score: 'AIR 1,456',
-        quote: 'Sector 86 to medical college. Cerebrum made it possible!',
-      },
-    ],
-  },
-  'sector-21': {
-    name: 'Sector 21',
-    fullName: 'Sector 21, Faridabad',
-    description:
-      'Sector 21 is a major commercial and residential hub in Faridabad with excellent metro connectivity. Close to Crown Interiorz Mall and NHPC Chowk metro, it is home to many coaching aspirants.',
-    highlights: [
-      'Commercial hub',
-      'Excellent metro connectivity',
-      'Near Crown Mall',
-      'Central location',
-    ],
-    nearbyMetro: ['NHPC Chowk Metro', 'Badkhal Mor Metro'],
-    societies: ['SRS Tower', 'Vatika City', 'Park View City', 'Omaxe Residency'],
-    schools: ['DPS Faridabad', 'Modern School', 'St. Josephs School'],
-    landmarks: ['Crown Interiorz Mall', 'NHPC Chowk', 'Sector 21 Market', 'Faridabad Bus Stand'],
-    studentCount: '150+',
-    successStories: [
-      {
-        name: 'Sneha Agarwal',
-        score: 'AIR 1,890',
-        quote: 'Sector 21 resident. Metro commute made classes convenient!',
-      },
-      {
-        name: 'Vikram Kumar',
-        score: '675/720',
-        quote: 'Best coaching near Crown Mall. Highly recommend Cerebrum!',
-      },
-    ],
-  },
-  'nit-faridabad': {
-    name: 'NIT Faridabad',
-    fullName: 'NIT, Faridabad',
-    description:
-      'NIT (New Industrial Township) is an established residential area near YMCA University. With good schools and proximity to educational institutions, it is a preferred location for NEET aspirants.',
-    highlights: [
-      'Educational hub',
-      'Near YMCA University',
-      'Established area',
-      'Good connectivity',
-    ],
-    nearbyMetro: ['Badkhal Mor Metro', 'Old Faridabad Metro'],
-    societies: ['Omaxe Celebration', 'NIT Flats', 'DAV Society', 'Government Quarters'],
-    schools: ['DAV Public School NIT', 'St. Marys School', 'NIT Public School'],
-    landmarks: ['YMCA University', 'NIT Market', 'Badkhal Lake', 'NIT Stadium'],
-    studentCount: '120+',
-    successStories: [
-      {
-        name: 'Ankit Sharma',
-        score: 'AIR 2,100',
-        quote: 'NIT student here. Online classes with AIIMS faculty changed everything!',
-      },
-      {
-        name: 'Kavita Singh',
-        score: '660/720',
-        quote: 'From NIT to MBBS. Grateful to Cerebrum team!',
-      },
-    ],
-  },
-  ballabgarh: {
-    name: 'Ballabgarh',
-    fullName: 'Ballabgarh, Faridabad',
-    description:
-      'Ballabgarh is a major industrial town and sub-district in Faridabad. With upcoming metro connectivity and proximity to Palwal, it serves students from a wide catchment area.',
-    highlights: [
-      'Industrial town',
-      'Metro connectivity (upcoming)',
-      'Wide catchment area',
-      'Growing education hub',
-    ],
-    nearbyMetro: ['Escorts Mujesar Metro', 'Ballabgarh Metro (upcoming)'],
-    societies: ['Ballabgarh Old Town', 'Saran Complex', 'Aggarwal Colony', 'Model Town'],
-    schools: ['DAV Ballabgarh', 'St. Josephs Ballabgarh', 'Greenland Public School'],
-    landmarks: ['Ballabgarh Railway Station', 'Old Faridabad Road', 'Industrial Area', 'Bus Stand'],
-    studentCount: '180+',
-    successStories: [
-      {
-        name: 'Rajesh Kumar',
-        score: 'AIR 1,567',
-        quote: 'Ballabgarh to MBBS journey. Cerebrum made the difference!',
-      },
-      {
-        name: 'Sunita Yadav',
-        score: '665/720',
-        quote: 'Best online coaching for Ballabgarh students. No travel hassles!',
-      },
-    ],
-  },
-  'sector-15': {
-    name: 'Sector 15',
-    fullName: 'Sector 15, Faridabad',
-    description:
-      'Sector 15 is an established residential area with excellent metro connectivity via Neelam Chowk station. Known for its markets and proximity to Sector 16, it has many NEET aspirants.',
-    highlights: ['Established area', 'Neelam Chowk Metro', 'Good markets', 'Central location'],
-    nearbyMetro: ['Neelam Chowk Metro', 'Old Faridabad Metro'],
-    societies: ['Sector 15 RWA', 'Kothi Area', 'Builder Floors', 'Apartments'],
-    schools: ['Apeejay School', 'DAV Sector 14', 'Little Flowers School'],
-    landmarks: ['Neelam Chowk', 'Sector 15 Market', 'Faridabad Courts', 'MC Office'],
-    studentCount: '95+',
-    successStories: [
-      {
-        name: 'Meera Gupta',
-        score: 'AIR 2,345',
-        quote: 'Sector 15 to medical college. Thank you Cerebrum!',
-      },
-    ],
-  },
-  neharpar: {
-    name: 'Neharpar',
-    fullName: 'Neharpar (Greater Faridabad)',
-    description:
-      'Neharpar is the beyond-canal area of Greater Faridabad including premium townships like BPTP and Omaxe. This mega residential zone is home to thousands of families seeking quality NEET coaching.',
-    highlights: [
-      'Mega township area',
-      'Premium societies',
-      'Growing infrastructure',
-      'Large student population',
-    ],
-    nearbyMetro: ['Sector 28 Metro', 'Mewla Maharajpur Metro (nearby)'],
-    societies: [
-      'BPTP Parklands',
-      'Omaxe Heights',
-      'SRS Residency',
-      'RPS Green Valley',
-      'Eldeco Eternia',
-      'Park View Spa',
-    ],
-    schools: ['DPS Neharpar', 'Ryan International', 'Manav Rachna School'],
-    landmarks: ['Surajkund Road', 'Sector 88 Market', 'BPTP Township', 'Omaxe Mall'],
-    studentCount: '200+',
-    successStories: [
-      {
-        name: 'Arjun Malik',
-        score: 'AIR 1,234',
-        quote: 'From BPTP to AIIMS! Cerebrum online classes are the best.',
-      },
-      {
-        name: 'Ishita Sharma',
-        score: '685/720',
-        quote: 'Neharpar resident. Perfect coaching for working parents!',
-      },
-    ],
-  },
-  'sector-86': {
-    name: 'Sector 86',
-    fullName: 'Sector 86, Greater Faridabad',
-    description:
-      'Sector 86 is a premium sector in Greater Faridabad with BPTP Princess Park and other luxury societies. Close to Surajkund and Sector 88, it attracts families seeking quality education.',
-    highlights: ['Premium sector', 'BPTP Princess Park', 'Near Surajkund', 'Luxury living'],
-    nearbyMetro: ['Escorts Mujesar Metro (nearby)'],
-    societies: ['BPTP Princess Park', 'Omaxe The Lake', 'SRS Pearl Heights', 'Eldeco Eternia'],
-    schools: ['KR Mangalam', 'Shriram Millennium', 'Ryan International'],
-    landmarks: ['Surajkund', 'Sector 86 Market', 'BPTP Township', 'Badkhal Lake'],
-    studentCount: '110+',
-    successStories: [
-      {
-        name: 'Aakash Verma',
-        score: 'AIR 1,678',
-        quote: 'BPTP Princess Park to medical college. Cerebrum is the best!',
-      },
-    ],
-  },
-  'old-faridabad': {
-    name: 'Old Faridabad',
-    fullName: 'Old Faridabad, Haryana',
-    description:
-      'Old Faridabad is the heritage area with excellent metro connectivity. Home to established families and close to industrial areas, it has a strong tradition of academic excellence.',
-    highlights: ['Heritage area', 'Excellent metro', 'Established locality', 'Academic tradition'],
-    nearbyMetro: ['Old Faridabad Metro', 'Neelam Chowk Metro'],
-    societies: ['Old Faridabad Colony', 'Ashoka Enclave', 'Sector 9 RWA', 'Kothi Area'],
-    schools: ['St. Josephs School', 'DAV Old Faridabad', 'Little Flowers'],
-    landmarks: ['Old Faridabad Metro Station', 'Sarai Khawaja', 'Industrial Area', 'Bus Stand'],
-    studentCount: '90+',
-    successStories: [
-      {
-        name: 'Pooja Singh',
-        score: 'AIR 2,456',
-        quote: 'Old Faridabad to MBBS. Online coaching made it possible!',
-      },
-    ],
-  },
+export async function generateStaticParams() {
+  return getAllFaridabadAreaSlugs().map((area) => ({
+    area,
+  }))
 }
 
-export default function FaridabadAreaPage() {
-  const params = useParams()
-  const areaSlug = params.area as string
-  const area = areaData[areaSlug]
+function getMetaDescriptionByType(area: ReturnType<typeof getFaridabadAreaBySlug>): string {
+  if (!area) return ''
 
-  if (!area) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Area not found</h1>
-          <Link href="/neet-coaching-faridabad" className="text-orange-600 hover:underline">
-            Back to Faridabad Coaching
-          </Link>
-        </div>
-      </div>
-    )
+  const schoolsText = area.schools.slice(0, 2).join(', ')
+  const societiesText = area.societies.slice(0, 2).join(', ')
+  const metroText = area.nearbyMetro[0] || ''
+
+  switch (area.type) {
+    case 'premium':
+      return `Premium NEET Biology coaching for ${area.name} families. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${schoolsText}. Near ${metroText}. Personalized ${CEREBRUM_METRICS.batchSizeText} batches. Book free demo!`
+
+    case 'greater-faridabad':
+      return `Best NEET coaching for ${area.name} residents. ${CEREBRUM_METRICS.successRateText} success rate. Students from ${societiesText}. Expert AIIMS faculty, small batches. Book free demo!`
+
+    case 'old-city':
+      return `Quality NEET Biology coaching near ${area.name}. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. Near ${metroText}. Book free demo!`
+
+    case 'residential':
+      return `Best NEET Biology coaching near ${area.name}, Faridabad. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. ${area.distanceFromCenter} from our center. Book free demo!`
+
+    case 'commercial':
+      return `NEET coaching near ${area.name} for Faridabad families. ${CEREBRUM_METRICS.successRateText} success rate. Convenient location. Students from ${schoolsText}. Flexible timings!`
+
+    case 'industrial':
+      return `Affordable NEET Biology coaching for ${area.name} families. ${CEREBRUM_METRICS.successRateText} success rate, experienced faculty. Students from ${schoolsText}. EMI options available!`
+
+    default:
+      return `Best NEET Biology coaching near ${area.name}. ${CEREBRUM_METRICS.successRateText} success rate, AIIMS faculty. Students from ${schoolsText}. Small batches, personal mentorship. Book free demo!`
+  }
+}
+
+function getTitleByType(area: ReturnType<typeof getFaridabadAreaBySlug>): string {
+  if (!area) return 'NEET Coaching Faridabad | Cerebrum Biology Academy'
+
+  const typePrefix: Record<string, string> = {
+    premium: 'Premium',
+    'greater-faridabad': 'Best',
+    'old-city': 'Quality',
+    residential: 'Top',
+    commercial: 'Convenient',
+    industrial: 'Affordable',
   }
 
-  const handleDemoBooking = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      ;(window as any).gtag('event', `demo_booking_${areaSlug}`, {
-        event_category: 'conversion',
-        event_label: `faridabad_${areaSlug}_page`,
-        value: 1,
-      })
+  const prefix = typePrefix[area.type] || 'Best'
+  return `${prefix} NEET Coaching in ${area.name} | ${CEREBRUM_METRICS.successRateText} Success | Cerebrum Academy`
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { area: areaSlug } = await params
+  const area = getFaridabadAreaBySlug(areaSlug)
+
+  if (!area) {
+    return {
+      title: 'Area Not Found | Cerebrum Biology Academy',
     }
   }
 
+  const title = getTitleByType(area)
+  const description = getMetaDescriptionByType(area)
+
+  const typeKeywords: Record<string, string[]> = {
+    premium: [
+      'premium NEET coaching Faridabad',
+      'best NEET institute Faridabad',
+      'private school students NEET',
+    ],
+    'greater-faridabad': [
+      'Greater Faridabad NEET coaching',
+      'BPTP NEET coaching',
+      'Omaxe NEET classes',
+      'township NEET prep',
+    ],
+    'old-city': ['Old Faridabad NEET coaching', 'Ballabgarh NEET classes', 'local NEET coaching'],
+    residential: ['residential area NEET coaching', 'sector NEET classes', 'local NEET coaching'],
+    commercial: [
+      'Sector 17 NEET coaching',
+      'central Faridabad NEET',
+      'convenient NEET coaching',
+    ],
+    industrial: [
+      'NIT Faridabad NEET coaching',
+      'affordable NEET classes',
+      'industrial area NEET',
+    ],
+  }
+
+  return {
+    title,
+    description,
+    keywords: [
+      `NEET coaching ${area.name}`,
+      `NEET coaching near ${area.name}`,
+      `Best NEET coaching ${area.fullName}`,
+      `Biology coaching ${area.name} Faridabad`,
+      `NEET preparation ${area.name}`,
+      `Medical coaching ${area.name}`,
+      ...area.schools.map((school) => `NEET coaching for ${school} students`),
+      ...area.nearbyMetro.map((metro) => `NEET coaching near ${metro}`),
+      ...area.societies.slice(0, 2).map((society) => `NEET coaching for ${society} residents`),
+      ...(typeKeywords[area.type] || []),
+    ],
+    openGraph: {
+      title,
+      description,
+      url: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
+      siteName: 'Cerebrum Biology Academy',
+      locale: 'en_IN',
+      type: 'website',
+      images: [
+        {
+          url: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: `NEET Coaching in ${area.name}, Faridabad`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
+    alternates: {
+      canonical: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  }
+}
+
+export default async function FaridabadAreaPage({ params }: PageProps) {
+  const { area: areaSlug } = await params
+  const area = getFaridabadAreaBySlug(areaSlug)
+
+  if (!area) {
+    notFound()
+  }
+
+  const organizationId = 'https://cerebrumbiologyacademy.com/#organization'
+  const localBusinessId = `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}#localbusiness`
+
+  const areaCoords = FARIDABAD_AREA_COORDINATES[areaSlug] || {
+    lat: FARIDABAD_CENTER_METRICS.coordinates.latitude,
+    lng: FARIDABAD_CENTER_METRICS.coordinates.longitude,
+  }
+
+  const getAreaReviews = () => {
+    const baseReviews = [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Parent from ' + area.name },
+        datePublished: '2025-11-15',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: `Excellent NEET coaching! My child from ${area.schools[0] || area.name} improved from 480 to 650+ marks. The small batch size at their ${FARIDABAD_CENTER_METRICS.address} center made all the difference.`,
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Student from ' + (area.societies[0] || area.name) },
+        datePublished: '2025-10-20',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: `Best Biology coaching in ${area.name}. Dr. Shekhar Sir's teaching methodology made complex topics easy. The ${area.nearbyMetro[0] || 'location'} connectivity makes it convenient from ${area.societies[0] || area.name}.`,
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'NEET 2025 Qualifier' },
+        datePublished: '2025-09-10',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: `I'm from ${area.name} and joined Cerebrum for my dropper year. The focused approach and regular tests helped me score ${CEREBRUM_METRICS.topScoreText} in Biology. Highly recommend!`,
+      },
+    ]
+    return baseReviews
+  }
+
+  const educationalOrgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    '@id': organizationId,
+    name: 'Cerebrum Biology Academy',
+    alternateName: `Cerebrum Biology Academy - ${area.name}, Faridabad`,
+    description: `Best NEET coaching in ${area.name}, Faridabad. ${area.description}`,
+    url: 'https://cerebrumbiologyacademy.com',
+    telephone: CEREBRUM_METRICS.phone,
+    email: CEREBRUM_METRICS.email,
+    foundingDate: '2010',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: FARIDABAD_CENTER_METRICS.address,
+      addressLocality: 'Faridabad',
+      addressRegion: 'Haryana',
+      postalCode: FARIDABAD_CENTER_METRICS.pincode,
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: FARIDABAD_CENTER_METRICS.coordinates.latitude,
+      longitude: FARIDABAD_CENTER_METRICS.coordinates.longitude,
+    },
+    areaServed: [
+      { '@type': 'City', name: area.name },
+      { '@type': 'City', name: 'Faridabad' },
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: CEREBRUM_METRICS.rating.toString(),
+      reviewCount: CEREBRUM_METRICS.reviewCount.toString(),
+      bestRating: '5',
+      worstRating: '1',
+    },
+  }
+
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': ['LocalBusiness', 'EducationalOrganization'],
+    '@id': localBusinessId,
+    name: `Cerebrum Biology Academy - NEET Coaching ${area.name}`,
+    description: area.heroDescription,
+    url: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
+    telephone: CEREBRUM_METRICS.phone,
+    email: CEREBRUM_METRICS.email,
+    priceRange: '₹₹',
+    image: 'https://cerebrumbiologyacademy.com/logo.png',
+    parentOrganization: { '@id': organizationId },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: FARIDABAD_CENTER_METRICS.address,
+      addressLocality: area.name,
+      addressRegion: 'Haryana',
+      postalCode: area.pincode,
+      addressCountry: 'IN',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: areaCoords.lat.toString(),
+      longitude: areaCoords.lng.toString(),
+    },
+    areaServed: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: areaCoords.lat.toString(),
+        longitude: areaCoords.lng.toString(),
+      },
+      geoRadius: '5000',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        opens: '08:00',
+        closes: '20:00',
+      },
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: 'Sunday',
+        opens: '10:00',
+        closes: '18:00',
+      },
+    ],
+    sameAs: [
+      'https://www.facebook.com/cerebrumbiologyacademy',
+      'https://www.instagram.com/cerebrumbiologyacademy',
+      'https://www.youtube.com/@cerebrumbiologyacademy',
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: CEREBRUM_METRICS.rating.toString(),
+      reviewCount: CEREBRUM_METRICS.reviewCount.toString(),
+      bestRating: '5',
+      worstRating: '1',
+    },
+    review: getAreaReviews(),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'NEET Biology Courses',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          priceCurrency: 'INR',
+          price: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+          availability: 'https://schema.org/InStock',
+          validFrom: '2025-01-01',
+          itemOffered: {
+            '@type': 'Course',
+            name: 'Class 11+12 Comprehensive NEET Biology',
+            description:
+              'Complete 2-year NEET Biology preparation program with NCERT mastery and advanced problem solving',
+            provider: { '@id': organizationId },
+            educationalLevel: 'Class 11-12',
+            timeRequired: 'P2Y',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['onsite', 'online', 'blended'],
+              courseSchedule: {
+                '@type': 'Schedule',
+                repeatFrequency: 'P1W',
+                repeatCount: 104,
+              },
+            },
+          },
+        },
+        {
+          '@type': 'Offer',
+          priceCurrency: 'INR',
+          price: CEREBRUM_METRICS.feeClass12,
+          availability: 'https://schema.org/InStock',
+          validFrom: '2025-01-01',
+          itemOffered: {
+            '@type': 'Course',
+            name: 'Class 12 Intensive NEET Biology',
+            description:
+              '1-year intensive NEET Biology course with focus on board + NEET integration',
+            provider: { '@id': organizationId },
+            educationalLevel: 'Class 12',
+            timeRequired: 'P1Y',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['onsite', 'online', 'blended'],
+              courseSchedule: {
+                '@type': 'Schedule',
+                repeatFrequency: 'P1W',
+                repeatCount: 52,
+              },
+            },
+          },
+        },
+        {
+          '@type': 'Offer',
+          priceCurrency: 'INR',
+          price: CEREBRUM_METRICS.feeDropper,
+          availability: 'https://schema.org/InStock',
+          validFrom: '2025-01-01',
+          itemOffered: {
+            '@type': 'Course',
+            name: 'Dropper Batch NEET Biology',
+            description:
+              '1-year comprehensive revision course for NEET repeaters with daily tests and personal mentoring',
+            provider: { '@id': organizationId },
+            educationalLevel: '12th Pass / Dropper',
+            timeRequired: 'P1Y',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['onsite', 'online', 'blended'],
+              courseSchedule: {
+                '@type': 'Schedule',
+                repeatFrequency: 'P1W',
+                repeatCount: 52,
+              },
+            },
+          },
+        },
+      ],
+    },
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://cerebrumbiologyacademy.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'NEET Coaching Faridabad',
+        item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: `NEET Coaching ${area.name}`,
+        item: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
+      },
+    ],
+  }
+
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: `How to Enroll in NEET Coaching in ${area.name}, Faridabad`,
+    description: `Step-by-step guide to enroll in Cerebrum Biology Academy's NEET coaching program for students from ${area.name}, Faridabad.`,
+    totalTime: 'P3D',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'INR',
+      value: CEREBRUM_METRICS.feeClass12,
+    },
+    supply: [
+      { '@type': 'HowToSupply', name: 'School ID Card or Marksheet' },
+      { '@type': 'HowToSupply', name: 'Address Proof (Aadhar/Passport)' },
+      { '@type': 'HowToSupply', name: 'Passport Size Photographs (2)' },
+      { '@type': 'HowToSupply', name: 'Parent/Guardian Contact Details' },
+    ],
+    step: [
+      {
+        '@type': 'HowToStep',
+        position: 1,
+        name: 'Book Free Demo Class',
+        text: `Book a free demo class via WhatsApp at ${CEREBRUM_METRICS.phoneDisplay} or fill the online form. Mention you're from ${area.name}.`,
+        url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 2,
+        name: 'Visit Our Center',
+        text: `Visit our center at ${FARIDABAD_CENTER_METRICS.address}, Faridabad (${FARIDABAD_CENTER_METRICS.nearbyLandmark}). Just ${area.distanceFromCenter} from ${area.name}.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 3,
+        name: 'Attend Demo Session',
+        text: 'Attend a 1-hour demo class with Dr. Shekhar Suman. Experience our teaching methodology and small batch environment.',
+      },
+      {
+        '@type': 'HowToStep',
+        position: 4,
+        name: 'Choose Your Batch',
+        text: `Select batch timing suitable for your school schedule. We offer morning (8-10 AM), afternoon (2-4 PM), and evening (6-8 PM) batches for ${area.name} students.`,
+      },
+      {
+        '@type': 'HowToStep',
+        position: 5,
+        name: 'Complete Payment',
+        text: `Pay fees via UPI, bank transfer, or opt for EMI (30/60/90 days). Scholarship up to 50% available for deserving students from ${area.name}.`,
+      },
+    ],
+  }
+
+  const getAreaFAQs = () => {
+    const baseFAQs = [
+      {
+        question: `What is the fee for NEET coaching for ${area.name} students?`,
+        answer: `Our NEET Biology coaching fee for students from ${area.name} is ₹${CEREBRUM_METRICS.feeClass12.toLocaleString()}/year for Class 12 and ₹${CEREBRUM_METRICS.feeClass11.toLocaleString()}/year for Class 11. EMI options and scholarships up to 50% are available.`,
+      },
+      {
+        question: `How far is Cerebrum Biology Academy from ${area.name}?`,
+        answer: `Our center at ${FARIDABAD_CENTER_METRICS.address}, Faridabad is approximately ${area.distanceFromCenter} from ${area.name}. Students can reach us via ${area.nearbyMetro[0] || 'road'} connectivity.`,
+      },
+      {
+        question: `Which schools from ${area.name} have students at Cerebrum?`,
+        answer: `We have students from ${area.schools.join(', ')} and other schools near ${area.name}. Our batch timings are designed to complement school schedules.`,
+      },
+      {
+        question: `Is online NEET coaching available for ${area.name} students?`,
+        answer: `Yes! We offer online, offline, and hybrid modes for students from ${area.name}. Live interactive classes, recorded lectures, doubt sessions - all accessible from home.`,
+      },
+      {
+        question: `What is the batch size for NEET coaching at Cerebrum Faridabad?`,
+        answer: `We maintain small batches of ${CEREBRUM_METRICS.batchSizeText} for personalized attention. This has helped us achieve ${CEREBRUM_METRICS.successRateText} success rate.`,
+      },
+    ]
+
+    if (area.type === 'premium' || area.type === 'greater-faridabad') {
+      baseFAQs.push({
+        question: `Do you offer personalized coaching for ${area.name} students?`,
+        answer: `Yes, our small batch of ${CEREBRUM_METRICS.batchSizeText} ensures personalized attention. For premium support, we offer 1-on-1 doubt sessions and customized study plans for students from areas like ${area.name}.`,
+      })
+    } else if (area.type === 'industrial') {
+      baseFAQs.push({
+        question: `Is there affordable NEET coaching for ${area.name} families?`,
+        answer: `We offer competitive fees with EMI options for ${area.name} families. Scholarships up to 50% available for deserving students. Quality coaching doesn't have to be expensive!`,
+      })
+    } else if (area.type === 'old-city') {
+      baseFAQs.push({
+        question: `Do you provide coaching for students from ${area.societies[0] || area.name}?`,
+        answer: `Absolutely! Many students from ${area.societies.slice(0, 2).join(' and ')} attend our classes. Our flexible timings work well for students from all backgrounds.`,
+      })
+    }
+
+    return baseFAQs
+  }
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: getAreaFAQs().map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
+  const eventSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: `Free NEET Biology Demo Class - ${area.name}, Faridabad`,
+    description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from ${area.name}. Meet Dr. Shekhar Suman at our Sector 17 center.`,
+    startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/MixedEventAttendanceMode',
+    location: [
+      {
+        '@type': 'Place',
+        name: 'Cerebrum Biology Academy - Faridabad',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: FARIDABAD_CENTER_METRICS.address,
+          addressLocality: 'Faridabad',
+          addressRegion: 'Haryana',
+          postalCode: FARIDABAD_CENTER_METRICS.pincode,
+          addressCountry: 'IN',
+        },
+      },
+      {
+        '@type': 'VirtualLocation',
+        url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      },
+    ],
+    performer: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar Suman',
+      jobTitle: 'Founder & Lead Faculty',
+    },
+    organizer: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'INR',
+      availability: 'https://schema.org/InStock',
+      url: 'https://cerebrumbiologyacademy.com/demo-booking',
+      validFrom: new Date().toISOString().split('T')[0],
+    },
+    image: 'https://cerebrumbiologyacademy.com/logo.png',
+  }
+
+  const imageObjectSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}#primaryimage`,
+    url: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+    contentUrl: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+    width: '1200',
+    height: '630',
+    caption: `NEET Biology Coaching in ${area.name}, Faridabad - Cerebrum Biology Academy`,
+    representativeOfPage: true,
+    inLanguage: 'en-IN',
+  }
+
+  const aggregateOfferSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateOffer',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}#offers`,
+    priceCurrency: 'INR',
+    lowPrice: CEREBRUM_METRICS.feeCrashCourse,
+    highPrice: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+    offerCount: 4,
+    offers: [
+      {
+        '@type': 'Offer',
+        name: 'Class 11+12 Two-Year Program',
+        price: CEREBRUM_METRICS.feeClass11 + CEREBRUM_METRICS.feeClass12,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Class 12 One-Year Intensive',
+        price: CEREBRUM_METRICS.feeClass12,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Dropper Batch',
+        price: CEREBRUM_METRICS.feeDropper,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+      {
+        '@type': 'Offer',
+        name: 'Crash Course',
+        price: CEREBRUM_METRICS.feeCrashCourse,
+        priceCurrency: 'INR',
+        availability: 'https://schema.org/InStock',
+        priceValidUntil: `${new Date().getFullYear() + 1}-03-31`,
+      },
+    ],
+  }
+
+  const speakableSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}#webpage`,
+    url: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
+    name: `NEET Coaching in ${area.name}, Faridabad | Cerebrum Biology Academy`,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.hero-title', '.hero-description', '.quick-answers'],
+      xpath: [
+        "//*[@class='hero-title']",
+        "//*[@class='hero-description']",
+        "//*[@class='quick-answers']",
+      ],
+    },
+    mainEntity: { '@id': localBusinessId },
+    primaryImageOfPage: {
+      '@id': `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}#primaryimage`,
+    },
+  }
+
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://cerebrumbiologyacademy.com/#website',
+    url: 'https://cerebrumbiologyacademy.com',
+    name: 'Cerebrum Biology Academy',
+    description: 'Best NEET Biology Coaching in Faridabad with 94% success rate',
+    publisher: { '@id': organizationId },
+    inLanguage: 'en-IN',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://cerebrumbiologyacademy.com/search?q={search_term_string}',
+      },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-orange-900 via-red-800 to-rose-900 text-white py-16 md:py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
+    <>
+      <AreaPageContent area={area} areaSlug={areaSlug} />
 
-        <div className="relative max-w-7xl mx-auto px-4">
-          <Link
-            href="/neet-coaching-faridabad"
-            className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Faridabad Coaching
-          </Link>
-
-          <motion.div
-            className="max-w-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-4">
-              <MapPin className="w-4 h-4 mr-2 text-yellow-300" />
-              {area.studentCount} Students from {area.name}
-            </div>
-
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">
-              Best NEET Coaching in <span className="text-yellow-300">{area.name}, Faridabad</span>
-            </h1>
-
-            <p className="text-lg md:text-xl opacity-90 mb-6">{area.description}</p>
-
-            <div className="flex flex-wrap gap-3 mb-8">
-              {area.highlights.map((highlight) => (
-                <span
-                  key={highlight}
-                  className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm"
-                >
-                  {highlight}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/demo-booking">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  onClick={handleDemoBooking}
-                  className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold"
-                >
-                  <Play className="w-5 h-5 mr-2" />
-                  Book Free Demo Class
-                </Button>
-              </Link>
-
-              <a href="tel:+918826444334">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-orange-900"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call Now
-                </Button>
-              </a>
-
-              <TrackedWhatsAppButton
-                source={`faridabad-${areaSlug}-hero`}
-                message={`Hi! I'm from ${area.name}, Faridabad. I want to join NEET Biology coaching. What batches are available?`}
-                buttonText="WhatsApp Now"
-                variant="primary"
-                size="lg"
-                className="bg-green-500 hover:bg-green-400 text-white font-bold"
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-12 bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Users, label: `${area.name} Students`, value: area.studentCount },
-              { icon: Trophy, label: 'Success Rate', value: '98%' },
-              { icon: Star, label: 'Google Rating', value: '4.9' },
-              { icon: Award, label: 'NEET Selections', value: '850+' },
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <stat.icon className="w-8 h-8 mx-auto mb-2 text-orange-600" />
-                <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Societies Section */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Students from {area.name} Societies
-            </h2>
-            <p className="text-gray-600">Trusted by families from premium residential complexes</p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {area.societies.map((society, index) => (
-              <motion.div
-                key={society}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-4 shadow-sm border border-gray-100"
-              >
-                <Building2 className="w-5 h-5 text-orange-600 mb-2" />
-                <div className="font-semibold text-gray-900 text-sm">{society}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Schools Section */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              NEET Coaching Near {area.name} Schools
-            </h2>
-            <p className="text-gray-600">Perfect for students from nearby schools</p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {area.schools.map((school, index) => (
-              <motion.div
-                key={school}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-orange-50 rounded-xl p-4 border border-orange-100"
-              >
-                <School className="w-5 h-5 text-orange-600 mb-2" />
-                <div className="font-semibold text-gray-900 text-sm">{school}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Metro Section */}
-      {area.nearbyMetro.length > 0 && (
-        <section className="py-12 md:py-16 bg-purple-50">
-          <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-                Nearby Metro Stations
-              </h2>
-              <p className="text-gray-600">Excellent connectivity for online coaching</p>
-            </motion.div>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              {area.nearbyMetro.map((metro, index) => (
-                <motion.div
-                  key={metro}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl px-6 py-4 shadow-sm flex items-center"
-                >
-                  <Train className="w-5 h-5 text-purple-600 mr-3" />
-                  <span className="font-semibold text-gray-900">{metro}</span>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Success Stories */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
-              Success Stories from {area.name}
-            </h2>
-            <p className="text-gray-600">Our students achieving their MBBS dreams</p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {area.successStories.map((story, index) => (
-              <motion.div
-                key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-rose-50 rounded-xl p-6 border border-orange-100"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-orange-200 rounded-full flex items-center justify-center text-orange-700 font-bold text-lg">
-                    {story.name.charAt(0)}
-                  </div>
-                  <div className="ml-3">
-                    <div className="font-bold text-gray-900">{story.name}</div>
-                    <div className="text-orange-600 font-semibold">{story.score}</div>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">&quot;{story.quote}&quot;</p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* WhatsApp CTA Strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-10 bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-6 md:p-8 text-center"
-          >
-            <p className="text-white/90 text-lg mb-2">Want to achieve similar results?</p>
-            <p className="text-white text-xl md:text-2xl font-bold mb-4">
-              Talk to our {area.name} counselor now
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <TrackedWhatsAppButton
-                source={`faridabad-${areaSlug}-testimonial`}
-                message={`Hi! I saw the success stories from ${area.name}. How can I achieve similar NEET scores?`}
-                buttonText="Chat on WhatsApp"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-green-700 hover:bg-green-50 font-bold"
-              />
-              <Link href="/demo-booking">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-green-700"
-                >
-                  Book Demo Class
-                </Button>
-              </Link>
-            </div>
-            <p className="mt-4 text-white/70 text-sm">
-              <MessageCircle className="w-4 h-4 inline mr-1" />
-              Average response time: 2 minutes
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Why Choose Section */}
-      <section className="py-12 md:py-16 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              Why {area.name} Students Choose Us
-            </h2>
-          </motion.div>
-
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { icon: Award, title: 'AIIMS Faculty', desc: '15+ years experience' },
-              { icon: Users, title: 'Small Batches', desc: '15-20 students only' },
-              { icon: Clock, title: '24/7 Support', desc: 'Doubt clearing anytime' },
-              { icon: BookOpen, title: 'Complete Material', desc: 'Notes, tests, PYQs' },
-            ].map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-5 text-center"
-              >
-                <feature.icon className="w-8 h-8 mx-auto mb-3 text-yellow-400" />
-                <h3 className="font-bold mb-1">{feature.title}</h3>
-                <p className="text-gray-300 text-sm">{feature.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-orange-600 via-red-600 to-rose-600 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Start Your NEET Journey from {area.name}
-            </h2>
-            <p className="text-lg mb-6 opacity-90">
-              Join {area.studentCount} students from {area.name}. Book your free demo today!
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/demo-booking">
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  onClick={handleDemoBooking}
-                  className="bg-yellow-500 text-black hover:bg-yellow-400 font-bold"
-                >
-                  <Play className="w-5 h-5 mr-2" />
-                  Book Free Demo
-                </Button>
-              </Link>
-
-              <TrackedWhatsAppButton
-                source={`faridabad-${areaSlug}-footer-cta`}
-                message={`Hi! I'm from ${area.name}, Faridabad. I want to enroll for NEET coaching. Please share batch details and fees.`}
-                buttonText="WhatsApp Counselor"
-                variant="primary"
-                size="xl"
-                className="bg-green-500 hover:bg-green-400 text-white font-bold"
-              />
-
-              <Link href="/courses">
-                <Button
-                  variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-orange-700"
-                >
-                  <ArrowRight className="w-5 h-5 mr-2" />
-                  View Courses
-                </Button>
-              </Link>
-            </div>
-            <p className="mt-6 text-white/70 text-sm">
-              <MessageCircle className="w-4 h-4 inline mr-1" />
-              Average response time: 2 minutes
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Comprehensive Schema Markup for AI/LLM Discovery */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'EducationalOrganization',
-            '@id': 'https://cerebrumbiologyacademy.com/#organization',
-            name: `Cerebrum Biology Academy - NEET Coaching ${area.name}`,
-            alternateName: ['Cerebrum Academy', 'Cerebrum NEET Coaching'],
-            description: `Best NEET Biology coaching in ${area.name}, Faridabad. ${area.studentCount} students, 98% success rate.`,
-            url: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
-            telephone: '+91-8826444334',
-            email: 'info@cerebrumbiologyacademy.com',
-            areaServed: {
-              '@type': 'City',
-              name: 'Faridabad',
-              containsPlace: [
-                { '@type': 'Place', name: area.name },
-                { '@type': 'Place', name: 'Haryana' },
-              ],
-            },
-            aggregateRating: {
-              '@type': 'AggregateRating',
-              ratingValue: '4.9',
-              bestRating: '5',
-              ratingCount: area.studentCount.replace('+', ''),
-              reviewCount: area.studentCount.replace('+', ''),
-            },
-            hasCredential: [
-              {
-                '@type': 'EducationalOccupationalCredential',
-                name: '98% Success Rate in NEET',
-              },
-              {
-                '@type': 'EducationalOccupationalCredential',
-                name: 'AIIMS-Qualified Faculty',
-              },
-            ],
-          }),
+          __html: JSON.stringify(educationalOrgSchema),
         }}
       />
-      {/* FAQPage Schema for Voice Search */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: [
-              {
-                '@type': 'Question',
-                name: `What is the best NEET coaching in ${area.name}, Faridabad?`,
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: `Cerebrum Biology Academy is rated the best NEET coaching serving ${area.name}, Faridabad with 98% success rate and ${area.studentCount} successful students. We offer both online and offline classes with AIIMS-qualified faculty.`,
-                },
-              },
-              {
-                '@type': 'Question',
-                name: `Is there online NEET coaching for ${area.name} students?`,
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: `Yes, Cerebrum Biology Academy offers excellent online NEET coaching for ${area.name}, Faridabad students. Live interactive classes, recorded lectures, weekly tests, and unlimited doubt sessions - all from home.`,
-                },
-              },
-              {
-                '@type': 'Question',
-                name: `How to reach Cerebrum from ${area.name}?`,
-                acceptedAnswer: {
-                  '@type': 'Answer',
-                  text: `Students from ${area.name} can join our online batch for convenience or travel to our South Delhi center via metro. ${area.nearbyMetro[0]} connects to Violet Line for easy commute.`,
-                },
-              },
-            ],
-          }),
+          __html: JSON.stringify(localBusinessSchema),
         }}
       />
-      {/* CourseList Schema for AI Discovery */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            name: `NEET Biology Courses for ${area.name} Students`,
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                item: {
-                  '@type': 'Course',
-                  name: 'NEET Foundation (Class 11+12)',
-                  description: `2-year NEET Biology program for ${area.name} students with complete syllabus coverage`,
-                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
-                  offers: { '@type': 'Offer', price: '120000', priceCurrency: 'INR' },
-                },
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                item: {
-                  '@type': 'Course',
-                  name: 'NEET Intensive (Class 12)',
-                  description: `1-year intensive NEET Biology program for ${area.name} Class 12 students`,
-                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
-                  offers: { '@type': 'Offer', price: '75000', priceCurrency: 'INR' },
-                },
-              },
-              {
-                '@type': 'ListItem',
-                position: 3,
-                item: {
-                  '@type': 'Course',
-                  name: 'NEET Dropper Batch',
-                  description: `Specialized dropper program for ${area.name} NEET repeaters`,
-                  provider: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
-                  offers: { '@type': 'Offer', price: '85000', priceCurrency: 'INR' },
-                },
-              },
-            ],
-          }),
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
-      {/* BreadcrumbList Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'BreadcrumbList',
-            itemListElement: [
-              {
-                '@type': 'ListItem',
-                position: 1,
-                name: 'Home',
-                item: 'https://cerebrumbiologyacademy.com',
-              },
-              {
-                '@type': 'ListItem',
-                position: 2,
-                name: 'Faridabad',
-                item: 'https://cerebrumbiologyacademy.com/neet-coaching-faridabad',
-              },
-              {
-                '@type': 'ListItem',
-                position: 3,
-                name: area.name,
-                item: `https://cerebrumbiologyacademy.com/neet-coaching-faridabad/${areaSlug}`,
-              },
-            ],
-          }),
+          __html: JSON.stringify(howToSchema),
         }}
       />
-      {/* WebPage with Speakable for Voice Search */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebPage',
-            name: `Best NEET Coaching in ${area.name}, Faridabad | Cerebrum Biology Academy`,
-            description: area.description,
-            speakable: {
-              '@type': 'SpeakableSpecification',
-              cssSelector: ['h1', 'h2', '.area-description'],
-            },
-            mainEntity: { '@id': 'https://cerebrumbiologyacademy.com/#organization' },
-          }),
+          __html: JSON.stringify(faqSchema),
         }}
       />
-    </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(eventSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(imageObjectSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aggregateOfferSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(speakableSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema),
+        }}
+      />
+    </>
   )
 }

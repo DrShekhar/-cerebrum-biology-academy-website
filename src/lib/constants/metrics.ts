@@ -188,6 +188,75 @@ export const GURUGRAM_AREA_COORDINATES: Record<string, { lat: number; lng: numbe
 }
 
 /**
+ * Faridabad Area Coordinates
+ * Center: Sector 17, Faridabad
+ * Coverage: 15km radius
+ */
+export const FARIDABAD_AREA_COORDINATES: Record<string, { lat: number; lng: number }> = {
+  // Central Faridabad (Premium Sectors)
+  'sector-15': { lat: 28.4108, lng: 77.3148 },
+  'sector-16': { lat: 28.4069, lng: 77.3158 },
+  'sector-17': { lat: 28.4089, lng: 77.3178 }, // Center location
+  'sector-21': { lat: 28.4028, lng: 77.3118 },
+  'sector-28': { lat: 28.4467, lng: 77.3133 },
+  'sector-29': { lat: 28.4428, lng: 77.3108 },
+  'sector-31': { lat: 28.4789, lng: 77.3067 },
+  'sector-37': { lat: 28.4633, lng: 77.3050 },
+
+  // NIT & Old Faridabad
+  'nit-faridabad': { lat: 28.4050, lng: 77.3150 },
+  'old-faridabad': { lat: 28.4200, lng: 77.3200 },
+  'ballabgarh': { lat: 28.3933, lng: 77.3117 },
+  ajronda: { lat: 28.4089, lng: 77.3178 },
+
+  // Greater Faridabad (Sectors 75-89)
+  'sector-75': { lat: 28.3850, lng: 77.3050 },
+  'sector-76': { lat: 28.3820, lng: 77.3030 },
+  'sector-77': { lat: 28.3790, lng: 77.3010 },
+  'sector-78': { lat: 28.3760, lng: 77.2990 },
+  'sector-79': { lat: 28.3730, lng: 77.2970 },
+  'sector-84': { lat: 28.3670, lng: 77.2910 },
+  'sector-85': { lat: 28.3640, lng: 77.2890 },
+  'sector-86': { lat: 28.3610, lng: 77.2870 },
+  'sector-87': { lat: 28.3580, lng: 77.2850 },
+  'sector-88': { lat: 28.3550, lng: 77.2830 },
+  'sector-89': { lat: 28.3520, lng: 77.2810 },
+
+  // Premium Townships
+  'bptp-parklands': { lat: 28.3850, lng: 77.3050 },
+  'omaxe-heights': { lat: 28.3790, lng: 77.3010 },
+  'rps-palms': { lat: 28.3820, lng: 77.3030 },
+  'srs-residency': { lat: 28.3730, lng: 77.2970 },
+  'eldeco-area': { lat: 28.3760, lng: 77.2990 },
+  'crown-interiorz-faridabad': { lat: 28.3610, lng: 77.2870 },
+
+  // Other Areas
+  surajkund: { lat: 28.4333, lng: 77.2867 },
+  badkhal: { lat: 28.4333, lng: 77.3167 },
+  'bata-chowk-area': { lat: 28.4050, lng: 77.3150 },
+  'neelam-chowk-area': { lat: 28.4089, lng: 77.3178 },
+  'mewala-maharajpur-area': { lat: 28.4611, lng: 77.3100 },
+}
+
+/**
+ * Faridabad Center Specific Metrics
+ * Sector 17, Faridabad
+ */
+export const FARIDABAD_CENTER_METRICS = {
+  address: 'Sector 17',
+  locality: 'Faridabad',
+  region: 'Haryana',
+  pincode: '121002',
+  coordinates: {
+    latitude: 28.4089,
+    longitude: 77.3178,
+  },
+  coverageRadiusKm: 15,
+  nearbyLandmark: 'Near Bata Chowk Metro (5 min walk)',
+  metroAccess: 'Bata Chowk Metro (5 min walk)',
+} as const
+
+/**
  * Gurugram Center Specific Metrics
  * M2K Corporate Park, Sector 51, Gurugram
  */
