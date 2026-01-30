@@ -5893,6 +5893,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.90, // Solan - MMMC 150 seats, gateway to HP, near Chandigarh
     },
+    // ===== MAHARASHTRA EXPANSION (Jan 2026) =====
+    {
+      url: `${baseUrl}/neet-coaching-mumbai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // Mumbai - Financial capital, Seth GS/KEM, Grant Medical, 5125 MH MBBS seats
+    },
     {
       url: `${baseUrl}/neet-coaching-bhopal`,
       lastModified: lastUpdated,
