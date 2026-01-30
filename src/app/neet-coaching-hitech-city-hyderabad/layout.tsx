@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Hitech City IT corridor, Hyderabad. 94.2% success rate, AIIMS faculty. Madhapur, Kukatpally, KPHB, Miyapur, Raidurgam. IT families. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Hitech City, NEET biology coaching Madhapur, best NEET coaching Kukatpally, NEET classes KPHB, biology coaching Miyapur, NEET tuition Raidurgam, NEET coaching IT corridor Hyderabad, premium NEET coaching tech families, DPS Hitech City NEET coaching, Oakridge NEET prep, Chirec NEET preparation',
+    'NEET coaching Hitech City, NEET biology coaching Madhapur, best NEET coaching Kukatpally, NEET classes KPHB, biology coaching Miyapur, NEET tuition Raidurgam, NEET coaching IT corridor Hyderabad, premium NEET coaching tech families, DPS Hitech City NEET coaching, Oakridge NEET prep, Chirec NEET preparation, biology tuition Hitech City, biology classes Hitech City Hyderabad, online biology coaching Hitech City, biology teacher Hitech City, NEET biology Hitech City',
   openGraph: {
     title: 'Best NEET Coaching in Hitech City Hyderabad | IT Corridor | Cerebrum Academy',
     description:

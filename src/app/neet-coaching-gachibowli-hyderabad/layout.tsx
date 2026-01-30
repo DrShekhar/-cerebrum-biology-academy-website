@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Gachibowli IT Hub, Hyderabad. 94.2% success rate, AIIMS faculty. Financial District, Kondapur, Nanakramguda, Manikonda. IT families. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Gachibowli, NEET biology coaching Financial District, best NEET coaching Kondapur, NEET classes Nanakramguda, biology coaching Manikonda, NEET tuition IT corridor Hyderabad, premium NEET coaching Hyderabad IT, NEET prep tech families, Oakridge NEET coaching, DPS Gachibowli NEET, Meridian NEET prep',
+    'NEET coaching Gachibowli, NEET biology coaching Financial District, best NEET coaching Kondapur, NEET classes Nanakramguda, biology coaching Manikonda, NEET tuition IT corridor Hyderabad, premium NEET coaching Hyderabad IT, NEET prep tech families, Oakridge NEET coaching, DPS Gachibowli NEET, Meridian NEET prep, biology tuition Gachibowli, biology classes Gachibowli Hyderabad, online biology coaching Gachibowli, biology teacher Gachibowli, NEET biology Gachibowli',
   openGraph: {
     title: 'Best NEET Coaching in Gachibowli Hyderabad | IT Hub | Cerebrum Academy',
     description:
