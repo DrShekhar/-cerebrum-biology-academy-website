@@ -170,6 +170,12 @@ export const cityPages = {
     region: 'Uttar Pradesh',
     students: '2,800+',
   },
+  varanasi: {
+    name: 'Varanasi',
+    href: '/neet-coaching-varanasi',
+    region: 'Uttar Pradesh',
+    students: '3,500+',
+  },
 }
 
 type CityKey = keyof typeof cityPages
@@ -210,9 +216,10 @@ const relatedCitiesMap: Record<CityKey, CityKey[]> = {
   // Western India
   ahmedabad: ['mumbai', 'pune', 'jaipur', 'kota', 'bangalore'],
   // Northern India
-  lucknow: ['kanpur', 'prayagraj', 'patna', 'kota', 'delhiNCR'],
-  kanpur: ['lucknow', 'prayagraj', 'patna', 'noida', 'delhiNCR'],
-  prayagraj: ['lucknow', 'kanpur', 'patna', 'kota', 'delhiNCR'],
+  lucknow: ['kanpur', 'varanasi', 'prayagraj', 'patna', 'kota'],
+  kanpur: ['lucknow', 'prayagraj', 'varanasi', 'patna', 'noida'],
+  prayagraj: ['varanasi', 'lucknow', 'kanpur', 'patna', 'kota'],
+  varanasi: ['prayagraj', 'lucknow', 'patna', 'kanpur', 'kolkata'],
 }
 
 export function RelatedCityLinks({
@@ -371,7 +378,7 @@ export function CityQuickLinks() {
     'faridabad',
     'ghaziabad',
   ]
-  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur', 'prayagraj']
+  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur', 'prayagraj', 'varanasi']
 
   return (
     <div className="space-y-6">
