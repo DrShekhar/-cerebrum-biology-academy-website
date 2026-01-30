@@ -5727,6 +5727,67 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.92, // Union Territory - high income
     },
+    // ===== CHANDIGARH TRICITY & PUNJAB EXPANSION (Jan 2026) =====
+    {
+      url: `${baseUrl}/neet-coaching-chandigarh-sector-34`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Main coaching hub of Chandigarh
+    },
+    {
+      url: `${baseUrl}/neet-coaching-punjab`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92, // Punjab state hub page
+    },
+    {
+      url: `${baseUrl}/neet-coaching-mohali-punjab`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // IT City, near Chandigarh
+    },
+    {
+      url: `${baseUrl}/neet-coaching-panchkula-haryana`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Haryana extension of Tricity
+    },
+    {
+      url: `${baseUrl}/neet-coaching-ludhiana-punjab`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Largest Punjab city
+    },
+    {
+      url: `${baseUrl}/neet-coaching-jalandhar-punjab`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Punjab education hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-amritsar-punjab`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Holy city, GMC Amritsar
+    },
+    {
+      url: `${baseUrl}/neet-coaching-zirakpur-punjab`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89, // Growing Chandigarh suburb
+    },
+    {
+      url: `${baseUrl}/cerebrum-vs-allen-chandigarh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88, // Comparison page - Allen
+    },
+    {
+      url: `${baseUrl}/cerebrum-vs-aakash-chandigarh`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88, // Comparison page - Aakash
+    },
     {
       url: `${baseUrl}/neet-coaching-bhopal`,
       lastModified: lastUpdated,
