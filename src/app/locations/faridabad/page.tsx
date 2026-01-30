@@ -15,6 +15,13 @@ import {
   Train,
   Car,
   Building2,
+  Play,
+  Calculator,
+  BookOpen,
+  FileText,
+  Award,
+  TrendingUp,
+  ExternalLink,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -292,6 +299,150 @@ export default function FaridabadLocationPage() {
                 <p className="text-gray-600 text-sm">{feature.description}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Video Testimonials Section */}
+      <div className="py-12 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
+            Success Stories from <span className="text-yellow-400">Faridabad Students</span>
+          </h2>
+          <p className="text-gray-300 text-center mb-8 max-w-2xl mx-auto">
+            Hear from our students who achieved their medical dreams with Cerebrum Biology Academy
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                name: 'Arjun Verma',
+                area: 'BPTP Parklands',
+                score: '680/720',
+                college: 'MAMC Delhi',
+                quote: 'Online classes from home were incredibly convenient. Same quality as Delhi coaching!',
+              },
+              {
+                name: 'Nidhi Sharma',
+                area: 'Sector 21',
+                score: '667/720',
+                college: 'UCMS Delhi',
+                quote: 'Small batches meant personal attention. Dr. Singh helped me improve Biology by 120 marks!',
+              },
+              {
+                name: 'Kabir Mehta',
+                area: 'NIT Faridabad',
+                score: '654/720',
+                college: 'LHMC Delhi',
+                quote: 'No need to travel to Delhi daily. Best NEET coaching right here in Faridabad!',
+              },
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20"
+              >
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
+                    <Play className="w-5 h-5 text-slate-900" />
+                  </div>
+                  <div>
+                    <p className="font-semibold">{testimonial.name}</p>
+                    <p className="text-sm text-gray-400">{testimonial.area}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm mb-4 italic">&ldquo;{testimonial.quote}&rdquo;</p>
+                <div className="flex justify-between items-center pt-4 border-t border-white/20">
+                  <div>
+                    <p className="text-yellow-400 font-bold text-lg">{testimonial.score}</p>
+                    <p className="text-xs text-gray-400">NEET Score</p>
+                  </div>
+                  <div className="text-right">
+                    <p className="text-green-400 font-semibold text-sm">{testimonial.college}</p>
+                    <p className="text-xs text-gray-400">Admitted</p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="/testimonials"
+              className="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-medium"
+            >
+              View All Success Stories
+              <ExternalLink className="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* NEET Tools Widget */}
+      <div className="py-12 bg-green-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            Free NEET Preparation Tools
+          </h2>
+          <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            Access our free tools to boost your NEET preparation. Available for all Faridabad students!
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              {
+                icon: Calculator,
+                title: 'NEET Rank Predictor',
+                description: 'Predict your rank based on expected score',
+                href: '/neet-rank-predictor',
+                color: 'blue',
+              },
+              {
+                icon: TrendingUp,
+                title: 'College Predictor',
+                description: 'Find colleges based on your rank',
+                href: '/neet-college-predictor',
+                color: 'green',
+              },
+              {
+                icon: FileText,
+                title: 'Previous Year Papers',
+                description: '15 years of solved NEET papers',
+                href: '/neet-previous-year-papers',
+                color: 'purple',
+              },
+              {
+                icon: BookOpen,
+                title: 'NCERT Solutions',
+                description: 'Chapter-wise NCERT Biology solutions',
+                href: '/ncert-solutions',
+                color: 'orange',
+              },
+            ].map((tool, index) => (
+              <a
+                key={index}
+                href={tool.href}
+                className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 hover:shadow-lg hover:border-green-300 transition-all group"
+              >
+                <div className={`w-10 h-10 bg-${tool.color}-100 rounded-lg flex items-center justify-center mb-3 group-hover:scale-110 transition-transform`}>
+                  <tool.icon className={`w-5 h-5 text-${tool.color}-600`} />
+                </div>
+                <h3 className="font-semibold text-gray-900 text-sm mb-1">{tool.title}</h3>
+                <p className="text-xs text-gray-500">{tool.description}</p>
+              </a>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="/neet-tools"
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
+            >
+              <Award className="w-5 h-5 mr-2" />
+              Explore All NEET Tools
+            </a>
           </div>
         </div>
       </div>
