@@ -5831,6 +5831,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.87, // Kharar - Untapped market near Mohali
     },
+    // ===== PUNJAB-HARYANA REGIONAL EXPANSION PHASE 3 (Jan 2026) =====
+    {
+      url: `${baseUrl}/neet-coaching-ambala`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Ambala - Haryana gateway, Cantonment area
+    },
+    {
+      url: `${baseUrl}/neet-coaching-ludhiana`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.93, // Ludhiana - Punjab largest city, industrial hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-jalandhar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Jalandhar - Doaba region education center
+    },
+    {
+      url: `${baseUrl}/neet-coaching-patiala`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Patiala - Royal city, GMC Patiala hometown
+    },
+    {
+      url: `${baseUrl}/neet-coaching-karnal`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Karnal - KCGMC hometown, Haryana education hub
+    },
     {
       url: `${baseUrl}/neet-coaching-bhopal`,
       lastModified: lastUpdated,
