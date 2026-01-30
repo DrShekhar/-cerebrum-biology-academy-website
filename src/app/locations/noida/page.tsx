@@ -15,6 +15,7 @@ import {
   Train,
   Car,
   Building2,
+  ArrowRight,
 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -25,6 +26,8 @@ import {
 } from '@/lib/analytics/googleAdsConversions'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import Link from 'next/link'
+import { getAllNoidaAreaSlugs, getNoidaAreaBySlug, getNoidaAreasByMetroLine } from '@/data/noida-areas'
 
 export default function NoidaLocationPage() {
   useEffect(() => {
@@ -296,26 +299,70 @@ export default function NoidaLocationPage() {
         </div>
       </div>
 
-      {/* Areas We Serve */}
+      {/* Areas We Serve - Enhanced with Links */}
       <div className="py-12 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
             Areas We Serve from Noida
           </h2>
           <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
-            Students from Noida, Greater Noida, and Ghaziabad join our NEET Biology coaching
-            program. We are easily accessible from:
+            Students from {getAllNoidaAreaSlugs().length}+ areas join our NEET Biology coaching.
+            Click on your area to see local coaching information:
           </p>
 
-          <div className="flex flex-wrap justify-center gap-3">
-            {nearbyAreas.map((area, index) => (
-              <span
-                key={index}
-                className="px-4 py-2 bg-white rounded-full text-gray-700 text-sm font-medium shadow-sm border border-gray-200"
-              >
-                {area}
-              </span>
-            ))}
+          {/* Blue Line Metro Areas */}
+          <div className="mb-6">
+            <h3 className="text-sm font-semibold text-blue-800 mb-3 flex items-center justify-center">
+              <Train className="w-4 h-4 mr-1" /> Blue Line Metro Areas
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {getNoidaAreasByMetroLine('Blue').map((slug) => {
+                const area = getNoidaAreaBySlug(slug)
+                if (!area) return null
+                return (
+                  <Link
+                    key={slug}
+                    href={`/neet-coaching-noida/${slug}`}
+                    className="px-3 py-1 bg-white rounded-full text-blue-700 text-sm font-medium shadow-sm border border-blue-200 hover:bg-blue-50 transition-colors"
+                  >
+                    {area.name}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Aqua Line Metro Areas */}
+          <div className="mb-6">
+            <h3 className="text-sm font-semibold text-cyan-800 mb-3 flex items-center justify-center">
+              <Train className="w-4 h-4 mr-1" /> Aqua Line Metro Areas
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {getNoidaAreasByMetroLine('Aqua').map((slug) => {
+                const area = getNoidaAreaBySlug(slug)
+                if (!area) return null
+                return (
+                  <Link
+                    key={slug}
+                    href={`/neet-coaching-noida/${slug}`}
+                    className="px-3 py-1 bg-white rounded-full text-cyan-700 text-sm font-medium shadow-sm border border-cyan-200 hover:bg-cyan-50 transition-colors"
+                  >
+                    {area.name}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* View All Areas Link */}
+          <div className="text-center mt-6">
+            <Link
+              href="/neet-coaching-noida"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              View All {getAllNoidaAreaSlugs().length}+ Noida Areas
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </div>
         </div>
       </div>
