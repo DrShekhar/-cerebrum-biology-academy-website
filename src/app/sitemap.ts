@@ -5862,6 +5862,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.90, // Karnal - KCGMC hometown, Haryana education hub
     },
+    // ===== HIMACHAL PRADESH EXPANSION (Jan 2026) =====
+    {
+      url: `${baseUrl}/neet-coaching-shimla`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Shimla - HP capital, IGMC Shimla, hill station
+    },
     {
       url: `${baseUrl}/neet-coaching-bhopal`,
       lastModified: lastUpdated,
