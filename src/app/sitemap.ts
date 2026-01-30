@@ -5870,6 +5870,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.91, // Shimla - HP capital, IGMC Shimla, hill station
     },
     {
+      url: `${baseUrl}/neet-coaching-dharamshala`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Dharamshala - Kangra district, RPGMC Tanda nearby, tourist hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-mandi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Mandi - SLBSGMC Nerchowk in district, Sadar region
+    },
+    {
+      url: `${baseUrl}/neet-coaching-hamirpur`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Hamirpur - HP education hub, 59+ coaching institutes, AIIMS Bilaspur nearby
+    },
+    {
+      url: `${baseUrl}/neet-coaching-solan`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Solan - MMMC 150 seats, gateway to HP, near Chandigarh
+    },
+    {
       url: `${baseUrl}/neet-coaching-bhopal`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
