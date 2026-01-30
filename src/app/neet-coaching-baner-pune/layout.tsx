@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Baner, Pune IT corridor. 94.2% success rate, AIIMS faculty. Baner, Balewadi, Aundh, Hinjewadi, Wakad, Pashan. IT families. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Baner, NEET biology coaching Baner Pune, best NEET coaching Hinjewadi, NEET classes Aundh, biology coaching Balewadi, NEET tuition Wakad, NEET coaching IT corridor Pune, premium NEET coaching tech families, Indus International NEET coaching, VIBGYOR High NEET prep, DPS Pune NEET preparation',
+    'NEET coaching Baner, NEET biology coaching Baner Pune, best NEET coaching Hinjewadi, NEET classes Aundh, biology coaching Balewadi, NEET tuition Wakad, NEET coaching IT corridor Pune, premium NEET coaching tech families, Indus International NEET coaching, VIBGYOR High NEET prep, DPS Pune NEET preparation, biology tuition Baner, biology classes Baner Pune, online biology coaching Baner, biology teacher Baner, NEET biology Baner',
   openGraph: {
     title: 'Best NEET Coaching in Baner Pune | IT Corridor | Cerebrum Academy',
     description:
