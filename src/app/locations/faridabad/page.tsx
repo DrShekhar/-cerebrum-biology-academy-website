@@ -317,6 +317,60 @@ export default function FaridabadLocationPage() {
               </span>
             ))}
           </div>
+
+          <div className="mt-8 text-center">
+            <a
+              href="/neet-coaching-faridabad"
+              className="inline-flex items-center px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-medium transition-colors"
+            >
+              <MapPin className="w-5 h-5 mr-2" />
+              Explore All 30+ Faridabad Areas
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Metro Connectivity Section */}
+      <div className="py-12 bg-purple-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">
+            Metro Connectivity (Violet Line)
+          </h2>
+          <p className="text-gray-600 text-center mb-8 max-w-2xl mx-auto">
+            Our Sector 17 center is just 5 minutes walk from Bata Chowk Metro Station.
+            Students from across the Violet Line corridor can easily reach us.
+          </p>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {[
+              { name: 'Bata Chowk', time: '5 min walk', highlight: true },
+              { name: 'Neelam Chowk Ajronda', time: '8 min' },
+              { name: 'Old Faridabad', time: '12 min' },
+              { name: 'Badkhal Mor', time: '15 min' },
+              { name: 'Sector 28', time: '20 min' },
+              { name: 'NHPC Chowk', time: '30 min' },
+              { name: 'Mewala Maharajpur', time: '25 min' },
+              { name: 'Escorts Mujesar', time: '15 min' },
+              { name: 'Badarpur Border', time: '35 min' },
+            ].map((metro, index) => (
+              <div
+                key={index}
+                className={`p-4 rounded-lg text-center ${
+                  metro.highlight
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-white border border-purple-200'
+                }`}
+              >
+                <Train className={`w-6 h-6 mx-auto mb-2 ${metro.highlight ? 'text-white' : 'text-purple-600'}`} />
+                <p className={`font-medium text-sm ${metro.highlight ? 'text-white' : 'text-gray-900'}`}>
+                  {metro.name}
+                </p>
+                <p className={`text-xs ${metro.highlight ? 'text-purple-100' : 'text-gray-500'}`}>
+                  {metro.time}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
