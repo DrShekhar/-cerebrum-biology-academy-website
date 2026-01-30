@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Anna Nagar, North Chennai. 94.2% success rate, AIIMS faculty. Anna Nagar East, West, Thirumangalam, Mogappair. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Anna Nagar, NEET biology coaching Anna Nagar Chennai, best NEET coaching Anna Nagar East, NEET classes Thirumangalam, biology coaching Mogappair, NEET tuition Shenoy Nagar, NEET coaching North Chennai, premium NEET coaching Chennai, DAV NEET coaching, Velammal NEET prep, Chinmaya NEET preparation',
+    'NEET coaching Anna Nagar, NEET biology coaching Anna Nagar Chennai, best NEET coaching Anna Nagar East, NEET classes Thirumangalam, biology coaching Mogappair, NEET tuition Shenoy Nagar, NEET coaching North Chennai, premium NEET coaching Chennai, DAV NEET coaching, Velammal NEET prep, Chinmaya NEET preparation, biology tuition Anna Nagar, biology classes Anna Nagar Chennai, online biology coaching Anna Nagar, biology teacher Anna Nagar, NEET biology Anna Nagar',
   openGraph: {
     title: 'Best NEET Coaching in Anna Nagar Chennai | Premium Hub | Cerebrum Academy',
     description:

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in OMR IT Corridor, Chennai. 94.2% success rate, AIIMS faculty. Perungudi, Thoraipakkam, Sholinganallur, Navalur, Siruseri. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching OMR, NEET biology coaching OMR Chennai, best NEET coaching Sholinganallur, NEET classes Perungudi, biology coaching Thoraipakkam, NEET tuition Navalur, NEET coaching IT corridor Chennai, premium NEET coaching tech families, DPS OMR NEET coaching, SBOA NEET prep, Velammal NEET preparation',
+    'NEET coaching OMR, NEET biology coaching OMR Chennai, best NEET coaching Sholinganallur, NEET classes Perungudi, biology coaching Thoraipakkam, NEET tuition Navalur, NEET coaching IT corridor Chennai, premium NEET coaching tech families, DPS OMR NEET coaching, SBOA NEET prep, Velammal NEET preparation, biology tuition OMR, biology classes OMR Chennai, online biology coaching OMR, biology teacher OMR, NEET biology OMR',
   openGraph: {
     title: 'Best NEET Coaching in OMR Chennai | IT Corridor | Cerebrum Academy',
     description:
