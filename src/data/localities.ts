@@ -3150,6 +3150,941 @@ export const localities: Locality[] = [
       },
     ],
   },
+  {
+    id: 'noi-09',
+    name: 'Sector 15 Noida',
+    slug: 'sector-15-noida',
+    displayName: 'Sector 15, Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Old Noida',
+    state: 'Uttar Pradesh',
+    pincode: ['201301'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 15 Noida | Blue Line Metro | Top Faculty',
+      description:
+        'Best NEET Biology coaching in Sector 15 Noida. Near Sector 15 Metro (Blue Line), AIIMS faculty, small batches. Trusted by Old Noida families.',
+      keywords: [
+        'neet coaching sector 15 noida',
+        'biology coaching old noida',
+        'neet tuition sector 15',
+      ],
+      localKeywords: ['sector 15 metro', 'old noida', 'film city road', 'st xaviers noida'],
+      h1: 'Top NEET Biology Coaching in Sector 15 Noida',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5850, lng: 77.3100 },
+    centerAddress: 'Sector 62, Noida - 20 min via Blue Line Metro',
+    nearbyLandmarks: ['Sector 15 Metro', 'Film City Road', 'Sector 15 Market'],
+    transportLinks: {
+      metros: ['Sector 15 Metro (Blue Line)', 'Sector 16 Metro'],
+      buses: ['DTC buses', 'Noida local buses'],
+      accessibility: 'Direct Blue Line connectivity to our Sector 62 center',
+    },
+
+    demographics: {
+      primarySchools: ['St. Xavier\'s Noida', 'Mayoor School', 'Cambridge School'],
+      popularColleges: ['Amity University nearby'],
+      coachingHubs: ['Limited local options'],
+      populationType: 'residential',
+      economicProfile: 'upper-middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Few local centers'],
+      avgFees: 110000,
+      ourAdvantage: [
+        'Direct Blue Line metro access',
+        'Biology specialization',
+        'AIIMS faculty',
+      ],
+      marketGap: 'Old Noida students need quality NEET coaching without Delhi travel',
+    },
+
+    content: {
+      heroTitle: "Old Noida's Trusted NEET Biology Coaching",
+      heroSubtitle: 'Expert Biology coaching for Sector 15 students',
+      valueProposition: 'Quality NEET Biology coaching for Old Noida families',
+      urgencyMessage: 'New batch starting! Direct metro access from Sector 15.',
+      localChallenge:
+        'Sector 15 families want quality coaching without traveling to Delhi.',
+      successMetric: '90% of Sector 15 students scored 320+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 85,
+      topScore: 352,
+      testimonialIds: ['s15-001'],
+      successStories: [
+        'Aanya from Sector 15 scored 352 in Biology',
+        'Direct Blue Line made daily travel easy',
+      ],
+    },
+
+    nearbyLocalities: ['sector-16-noida', 'sector-18-noida', 'botanical-garden'],
+
+    faqs: [
+      {
+        question: 'How do Sector 15 students reach your center?',
+        answer:
+          'Take Blue Line metro from Sector 15 Metro to Sector 62 Metro - just 20 minutes direct journey. Our center is 5 minutes walk from Sector 62 station.',
+      },
+      {
+        question: 'Do you offer online classes for Sector 15 students?',
+        answer:
+          'Yes! Live interactive online classes available. Many Sector 15 students prefer online for convenience while getting same quality teaching.',
+      },
+    ],
+  },
+  {
+    id: 'noi-10',
+    name: 'Sector 16 Noida',
+    slug: 'sector-16-noida',
+    displayName: 'Sector 16, Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Old Noida',
+    state: 'Uttar Pradesh',
+    pincode: ['201301'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 16 Noida | Metro Access | AIIMS Faculty',
+      description:
+        'Best NEET Biology coaching in Sector 16 Noida. Blue Line Metro access, AIIMS-trained faculty, small batches of 15 students.',
+      keywords: [
+        'neet coaching sector 16 noida',
+        'biology coaching sector 16',
+        'neet tuition old noida',
+      ],
+      localKeywords: ['sector 16 metro', 'film city', 'cambridge school noida'],
+      h1: 'NEET Biology Coaching in Sector 16 Noida',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5780, lng: 77.3150 },
+    centerAddress: 'Sector 62, Noida - 18 min via Blue Line Metro',
+    nearbyLandmarks: ['Sector 16 Metro', 'Film City', 'Sector 16 Market'],
+    transportLinks: {
+      metros: ['Sector 16 Metro (Blue Line)', 'Sector 15 Metro'],
+      buses: ['Noida local buses'],
+      accessibility: 'Direct Blue Line connectivity',
+    },
+
+    demographics: {
+      primarySchools: ['Cambridge School', 'Apeejay School', 'St. Joseph\'s'],
+      popularColleges: ['Local colleges'],
+      coachingHubs: ['Limited options'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Few local centers'],
+      avgFees: 105000,
+      ourAdvantage: ['Metro connectivity', 'Specialized Biology coaching'],
+      marketGap: 'Quality NEET coaching needed in Sector 16 area',
+    },
+
+    content: {
+      heroTitle: 'Quality NEET Biology Coaching for Sector 16',
+      heroSubtitle: 'Expert coaching with direct metro access',
+      valueProposition: 'Specialized Biology coaching for Sector 16 families',
+      urgencyMessage: 'Limited seats! Enroll now for next batch.',
+      localChallenge: 'Sector 16 lacks specialized NEET Biology coaching.',
+      successMetric: '88% of Sector 16 students improved by 100+ marks',
+    },
+
+    socialProof: {
+      studentCount: 65,
+      topScore: 345,
+      testimonialIds: ['s16-001'],
+      successStories: ['Rohan from Sector 16 scored 345 in Biology'],
+    },
+
+    nearbyLocalities: ['sector-15-noida', 'sector-18-noida', 'sector-17'],
+
+    faqs: [
+      {
+        question: 'How far is your center from Sector 16?',
+        answer:
+          'Just 18 minutes via Blue Line Metro. Take metro from Sector 16 to Sector 62 station.',
+      },
+    ],
+  },
+  {
+    id: 'noi-11',
+    name: 'Sector 93 Noida',
+    slug: 'sector-93-noida',
+    displayName: 'Sector 93, Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Noida Expressway',
+    state: 'Uttar Pradesh',
+    pincode: ['201304'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 93 Noida | Expressway | Top Faculty',
+      description:
+        'Best NEET Biology coaching in Sector 93 Noida. Expressway location, AIIMS faculty, small batches. Serving working professional families.',
+      keywords: [
+        'neet coaching sector 93 noida',
+        'biology coaching noida expressway',
+        'neet tuition sector 93',
+      ],
+      localKeywords: ['noida expressway', 'sector 93', 'it park noida'],
+      h1: 'NEET Biology Coaching in Sector 93 Noida',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5500, lng: 77.3800 },
+    centerAddress: 'Sector 62, Noida - Aqua Line connected',
+    nearbyLandmarks: ['Noida Expressway', 'IT Parks', 'Commercial Hub'],
+    transportLinks: {
+      metros: ['Sector 93 Metro (Aqua Line)'],
+      buses: ['Noida buses'],
+      accessibility: 'Aqua Line metro connectivity',
+    },
+
+    demographics: {
+      primarySchools: ['Amity International', 'DPS Noida', 'Shriram Millennium'],
+      popularColleges: ['IT companies nearby'],
+      coachingHubs: ['Few options'],
+      populationType: 'commercial',
+      economicProfile: 'upper-middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Limited local centers'],
+      avgFees: 120000,
+      ourAdvantage: ['Expressway convenience', 'Flexible timings for IT families'],
+      marketGap: 'IT professionals need flexible NEET coaching for children',
+    },
+
+    content: {
+      heroTitle: 'NEET Biology Coaching for Sector 93 Families',
+      heroSubtitle: 'Flexible timings for working professional families',
+      valueProposition: 'Quality coaching with evening and weekend batches',
+      urgencyMessage: 'Evening batch ideal for Sector 93 families!',
+      localChallenge: 'Working families need flexible coaching schedules.',
+      successMetric: '85% success rate among Sector 93 students',
+    },
+
+    socialProof: {
+      studentCount: 55,
+      topScore: 340,
+      testimonialIds: ['s93-001'],
+      successStories: ['Priya from Sector 93 balanced school and coaching perfectly'],
+    },
+
+    nearbyLocalities: ['sector-104-noida', 'sector-100', 'noida-expressway'],
+
+    faqs: [
+      {
+        question: 'Do you have evening batches for Sector 93 students?',
+        answer:
+          'Yes! We offer evening (6 PM) and weekend batches specifically for families with working parents.',
+      },
+    ],
+  },
+  {
+    id: 'noi-12',
+    name: 'Sector 104 Noida',
+    slug: 'sector-104-noida',
+    displayName: 'Sector 104, Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Noida Expressway',
+    state: 'Uttar Pradesh',
+    pincode: ['201304'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 104 Noida | ATS Pristine | AIIMS Faculty',
+      description:
+        'Best NEET Biology coaching for Sector 104 Noida. Serving ATS, Supertech, Mahagun residents. AIIMS faculty, small batches.',
+      keywords: [
+        'neet coaching sector 104 noida',
+        'neet coaching ats pristine',
+        'biology coaching supertech supernova',
+      ],
+      localKeywords: ['ats pristine', 'supertech supernova', 'mahagun moderne', 'sector 104'],
+      h1: 'NEET Biology Coaching for Sector 104 Premium Societies',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5300, lng: 77.4000 },
+    centerAddress: 'Sector 62, Noida - 15 min via Aqua Line',
+    nearbyLandmarks: ['ATS Pristine', 'Supertech Supernova', 'Mahagun Moderne'],
+    transportLinks: {
+      metros: ['Noida City Centre Metro', 'Sector 101 Metro'],
+      buses: ['Noida buses'],
+      accessibility: 'Aqua Line connected',
+    },
+
+    demographics: {
+      primarySchools: ['DPS Greater Noida', 'Amity Global', 'Ryan International'],
+      popularColleges: ['Premium schools'],
+      coachingHubs: ['Limited premium options'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: ['Few premium coaching options'],
+      avgFees: 140000,
+      ourAdvantage: ['Premium service', 'Small batches', 'Personal attention'],
+      marketGap: 'Premium society residents need quality coaching matching their expectations',
+    },
+
+    content: {
+      heroTitle: 'Premium NEET Biology Coaching for Sector 104',
+      heroSubtitle: 'Serving ATS, Supertech, and Mahagun families',
+      valueProposition: 'Quality coaching matching premium lifestyle expectations',
+      urgencyMessage: 'Limited seats for Sector 104 residents!',
+      localChallenge: 'Premium families expect personalized attention.',
+      successMetric: '92% of Sector 104 students qualified NEET',
+    },
+
+    socialProof: {
+      studentCount: 75,
+      topScore: 358,
+      testimonialIds: ['s104-001'],
+      successStories: [
+        'Arjun from ATS Pristine scored 358 in Biology',
+        'Kavya from Supertech got into AIIMS',
+      ],
+    },
+
+    nearbyLocalities: ['sector-137-noida', 'sector-117-noida', 'ats-pristine'],
+
+    faqs: [
+      {
+        question: 'Do you offer pickup service for ATS Pristine students?',
+        answer:
+          'We don\'t offer pickup, but our online live classes provide the same quality from home. Many ATS families prefer this convenience.',
+      },
+    ],
+  },
+  {
+    id: 'noi-13',
+    name: 'Sector 120 Noida',
+    slug: 'sector-120-noida',
+    displayName: 'Sector 120, Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Noida Expressway',
+    state: 'Uttar Pradesh',
+    pincode: ['201304'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 120 Noida | Jaypee Greens | Top Faculty',
+      description:
+        'Best NEET Biology coaching for Sector 120 Noida. Serving Jaypee Greens, Wishtown residents. AIIMS faculty, small batches.',
+      keywords: [
+        'neet coaching sector 120 noida',
+        'neet coaching jaypee greens',
+        'biology coaching jaypee wishtown',
+      ],
+      localKeywords: ['jaypee greens', 'jaypee wishtown', 'jaypee kosmos', 'sector 120'],
+      h1: 'NEET Biology Coaching for Jaypee Greens Residents',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5100, lng: 77.4200 },
+    centerAddress: 'Sector 62, Noida - Online and Offline options',
+    nearbyLandmarks: ['Jaypee Greens', 'Jaypee Wishtown', 'Golf Course'],
+    transportLinks: {
+      metros: ['Sector 120 Metro (Aqua Line)'],
+      buses: ['Noida buses'],
+      accessibility: 'Aqua Line metro access',
+    },
+
+    demographics: {
+      primarySchools: ['Jaypee Public School', 'DPS Greater Noida', 'Ryan International'],
+      popularColleges: ['Premium schools'],
+      coachingHubs: ['Very limited options'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: ['Almost no local options'],
+      avgFees: 150000,
+      ourAdvantage: ['Only quality option nearby', 'Online convenience'],
+      marketGap: 'Jaypee residents have no quality NEET coaching locally',
+    },
+
+    content: {
+      heroTitle: 'NEET Biology Coaching for Jaypee Greens Families',
+      heroSubtitle: 'Expert coaching for premium township residents',
+      valueProposition: 'Quality coaching for Jaypee families without long travel',
+      urgencyMessage: 'Jaypee batch starting soon! Limited seats.',
+      localChallenge: 'Jaypee residents travel far for quality coaching.',
+      successMetric: '88% of Jaypee students scored 330+ in Biology',
+    },
+
+    socialProof: {
+      studentCount: 60,
+      topScore: 355,
+      testimonialIds: ['s120-001'],
+      successStories: ['Ishaan from Jaypee Wishtown scored 355 in Biology'],
+    },
+
+    nearbyLocalities: ['sector-128-noida', 'jaypee-greens', 'sector-137-noida'],
+
+    faqs: [
+      {
+        question: 'Is online coaching good for Jaypee students?',
+        answer:
+          'Absolutely! Many Jaypee families prefer our online coaching - same quality, no travel time. Weekend offline batches also available.',
+      },
+    ],
+  },
+  {
+    id: 'noi-14',
+    name: 'Sector 137 Noida',
+    slug: 'sector-137-noida',
+    displayName: 'Sector 137, Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Noida Expressway',
+    state: 'Uttar Pradesh',
+    pincode: ['201305'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 137 Noida | ATS Destinaire | Premium',
+      description:
+        'Best NEET Biology coaching for Sector 137 Noida. Serving ATS Destinaire, Le Grandiose, Supertech residents. Metro connected.',
+      keywords: [
+        'neet coaching sector 137 noida',
+        'neet coaching ats destinaire',
+        'biology coaching sector 137',
+      ],
+      localKeywords: ['ats destinaire', 'ats le grandiose', 'supertech', 'sector 137 metro'],
+      h1: 'Premium NEET Biology Coaching in Sector 137 Noida',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4800, lng: 77.4300 },
+    centerAddress: 'Sector 62, Noida - 30 min via Aqua Line',
+    nearbyLandmarks: ['ATS Destinaire', 'ATS Le Grandiose', 'Sector 137 Metro'],
+    transportLinks: {
+      metros: ['Sector 137 Metro (Aqua Line)'],
+      buses: ['Noida buses'],
+      accessibility: 'Direct Aqua Line metro to Sector 62',
+    },
+
+    demographics: {
+      primarySchools: ['DPS Greater Noida', 'Shiv Nadar', 'Ryan International', 'Amity'],
+      popularColleges: ['Premium schools'],
+      coachingHubs: ['Very limited'],
+      populationType: 'residential',
+      economicProfile: 'premium',
+    },
+
+    competition: {
+      majorInstitutes: ['Almost no quality options'],
+      avgFees: 145000,
+      ourAdvantage: ['Metro connected', 'Premium service', 'Online option'],
+      marketGap: 'Premium sector with no quality local NEET coaching',
+    },
+
+    content: {
+      heroTitle: 'NEET Biology Coaching for Sector 137 Elite',
+      heroSubtitle: 'Serving ATS, Supertech, Mahagun premium residents',
+      valueProposition: 'Premium coaching experience for premium families',
+      urgencyMessage: 'Sector 137 exclusive batch starting!',
+      localChallenge: 'Premium residents need matching quality coaching.',
+      successMetric: '90% of Sector 137 students qualified NEET',
+    },
+
+    socialProof: {
+      studentCount: 95,
+      topScore: 362,
+      testimonialIds: ['s137-001'],
+      successStories: [
+        'Aditya from ATS Destinaire scored 362 in Biology',
+        'Sneha from Le Grandiose got AIIMS Delhi',
+      ],
+    },
+
+    nearbyLocalities: ['sector-143-noida', 'sector-120-noida', 'noida-extension'],
+
+    faqs: [
+      {
+        question: 'How do Sector 137 students reach your center?',
+        answer:
+          'Direct Aqua Line metro from Sector 137 station. Alternatively, our online classes are very popular with Sector 137 families.',
+      },
+    ],
+  },
+  {
+    id: 'noi-15',
+    name: 'Sector 135 Noida',
+    slug: 'sector-135-noida',
+    displayName: 'Sector 135, Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Noida Tech Hub',
+    state: 'Uttar Pradesh',
+    pincode: ['201304'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Sector 135 Noida | IT Hub | Flexible Timings',
+      description:
+        'Best NEET Biology coaching in Sector 135 Noida IT hub. Evening and weekend batches for IT professional families.',
+      keywords: [
+        'neet coaching sector 135 noida',
+        'biology coaching noida it hub',
+        'neet tuition tech park noida',
+      ],
+      localKeywords: ['sector 135', 'noida it hub', 'tech companies noida'],
+      h1: 'NEET Biology Coaching in Sector 135 IT Hub',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.5000, lng: 77.4150 },
+    centerAddress: 'Sector 62, Noida - Fellow IT hub location',
+    nearbyLandmarks: ['IT Park', 'Tech Companies', 'Noida Expressway'],
+    transportLinks: {
+      metros: ['Nearby Aqua Line stations'],
+      buses: ['Noida buses'],
+      accessibility: 'Good connectivity via expressway',
+    },
+
+    demographics: {
+      primarySchools: ['Tech School', 'Amity International', 'DPS Noida'],
+      popularColleges: ['IT companies'],
+      coachingHubs: ['Very limited'],
+      populationType: 'commercial',
+      economicProfile: 'upper-middle',
+    },
+
+    competition: {
+      majorInstitutes: ['No local options'],
+      avgFees: 125000,
+      ourAdvantage: ['Fellow IT hub', 'Flexible timings', 'Online option'],
+      marketGap: 'IT families need flexible coaching schedules',
+    },
+
+    content: {
+      heroTitle: 'NEET Coaching for Sector 135 Tech Families',
+      heroSubtitle: 'Flexible timings for IT professional families',
+      valueProposition: 'Evening and weekend batches for busy families',
+      urgencyMessage: 'Weekend batch perfect for IT families!',
+      localChallenge: 'IT families have demanding schedules.',
+      successMetric: '85% of Sector 135 students improved significantly',
+    },
+
+    socialProof: {
+      studentCount: 45,
+      topScore: 348,
+      testimonialIds: ['s135-001'],
+      successStories: ['Vikram from Sector 135 balanced school and coaching'],
+    },
+
+    nearbyLocalities: ['sector-137-noida', 'sector-128-noida', 'sector-93-noida'],
+
+    faqs: [
+      {
+        question: 'Do you have weekend batches?',
+        answer:
+          'Yes! Saturday-Sunday batches (9 AM-1 PM or 2 PM-6 PM) are very popular with Sector 135 IT families.',
+      },
+    ],
+  },
+  {
+    id: 'noi-16',
+    name: 'Gaur City Noida Extension',
+    slug: 'gaur-city-noida',
+    displayName: 'Gaur City, Noida Extension',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Noida Extension',
+    state: 'Uttar Pradesh',
+    pincode: ['201306'],
+
+    seo: {
+      title: 'NEET Biology Coaching for Gaur City Noida Extension | 50K+ Families',
+      description:
+        'Best NEET Biology coaching for Gaur City Noida Extension. Serving 50,000+ families. Online and weekend batches. AIIMS faculty.',
+      keywords: [
+        'neet coaching gaur city',
+        'biology coaching noida extension',
+        'neet tuition greater noida west',
+      ],
+      localKeywords: ['gaur city 1', 'gaur city 2', 'gaur city mall', 'noida extension'],
+      h1: 'NEET Biology Coaching for Gaur City Families',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.4100, lng: 77.5000 },
+    centerAddress: 'Sector 62, Noida - Online classes popular; Weekend offline',
+    nearbyLandmarks: ['Gaur City Mall', 'Gaur City 1', 'Gaur City 2'],
+    transportLinks: {
+      metros: ['Sector 147 Metro (Aqua Line) - nearest'],
+      buses: ['Noida Extension buses'],
+      accessibility: 'Aqua Line extension provides metro access',
+    },
+
+    demographics: {
+      primarySchools: ['DPS Greater Noida', 'Somerville', 'Shriram Millennium', 'Ryan'],
+      popularColleges: ['Local schools'],
+      coachingHubs: ['Very limited quality options'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Few local centers', 'quality gap exists'],
+      avgFees: 95000,
+      ourAdvantage: ['Online convenience', 'Quality teaching', 'Weekend offline option'],
+      marketGap: '50K+ families, very limited quality NEET coaching',
+    },
+
+    content: {
+      heroTitle: 'Quality NEET Coaching for Gaur City Families',
+      heroSubtitle: 'Serving 50,000+ Gaur City families',
+      valueProposition: 'Premium coaching accessible to Noida Extension',
+      urgencyMessage: 'Gaur City batch filling fast! 150+ students already enrolled.',
+      localChallenge: 'Gaur City lacks quality NEET coaching options.',
+      successMetric: '150+ Gaur City students trust our coaching',
+    },
+
+    socialProof: {
+      studentCount: 155,
+      topScore: 350,
+      testimonialIds: ['gc-001'],
+      successStories: [
+        'Rahul from Gaur City 1 scored 350 in Biology',
+        'Online coaching saved 2 hours daily travel',
+      ],
+    },
+
+    nearbyLocalities: ['ace-city-noida', 'supertech-ecovillage', 'noida-extension'],
+
+    faqs: [
+      {
+        question: 'Is online coaching effective for Gaur City students?',
+        answer:
+          'Absolutely! 80% of our Gaur City students prefer online - same quality, no travel. Weekend offline batches also available.',
+      },
+      {
+        question: 'What is the fee for Gaur City students?',
+        answer:
+          'Same as all locations: Rs 48,000-1,56,000/year depending on program. EMI options available.',
+      },
+    ],
+  },
+  {
+    id: 'noi-17',
+    name: 'Knowledge Park Greater Noida',
+    slug: 'knowledge-park-greater-noida',
+    displayName: 'Knowledge Park, Greater Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Greater Noida',
+    state: 'Uttar Pradesh',
+    pincode: ['201310'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Knowledge Park Greater Noida | Universities',
+      description:
+        'Best NEET Biology coaching in Knowledge Park Greater Noida. Serving Galgotias, Sharda university families. AIIMS faculty.',
+      keywords: [
+        'neet coaching knowledge park',
+        'biology coaching greater noida',
+        'neet tuition galgotias area',
+      ],
+      localKeywords: ['knowledge park', 'galgotias university', 'sharda university', 'greater noida'],
+      h1: 'NEET Biology Coaching in Knowledge Park Greater Noida',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.3800, lng: 77.5200 },
+    centerAddress: 'Sector 62, Noida - Online popular; Aqua Line metro access',
+    nearbyLandmarks: ['Galgotias University', 'Sharda University', 'IT Companies'],
+    transportLinks: {
+      metros: ['Knowledge Park II Metro (Aqua Line)'],
+      buses: ['Greater Noida buses'],
+      accessibility: 'Aqua Line metro to Noida',
+    },
+
+    demographics: {
+      primarySchools: ['DPS Greater Noida', 'University Schools', 'International Schools'],
+      popularColleges: ['Galgotias', 'Sharda', 'Bennett'],
+      coachingHubs: ['Limited quality options'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Few local centers'],
+      avgFees: 100000,
+      ourAdvantage: ['Educational hub affinity', 'Online convenience'],
+      marketGap: 'University area families need quality NEET coaching',
+    },
+
+    content: {
+      heroTitle: 'NEET Coaching for Knowledge Park Families',
+      heroSubtitle: 'Serving the educational hub of Greater Noida',
+      valueProposition: 'Quality coaching in the heart of education',
+      urgencyMessage: 'Knowledge Park batch starting!',
+      localChallenge: 'Despite universities, NEET coaching options limited.',
+      successMetric: '82% success rate among Knowledge Park students',
+    },
+
+    socialProof: {
+      studentCount: 65,
+      topScore: 342,
+      testimonialIds: ['kp-001'],
+      successStories: ['Students from university families excel with us'],
+    },
+
+    nearbyLocalities: ['pari-chowk-greater-noida', 'alpha-greater-noida', 'greater-noida'],
+
+    faqs: [
+      {
+        question: 'Do you have students from university families?',
+        answer:
+          'Yes! Many students whose parents work at Galgotias, Sharda, and other universities attend our coaching.',
+      },
+    ],
+  },
+  {
+    id: 'noi-18',
+    name: 'Pari Chowk Greater Noida',
+    slug: 'pari-chowk-greater-noida',
+    displayName: 'Pari Chowk, Greater Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Greater Noida',
+    state: 'Uttar Pradesh',
+    pincode: ['201310'],
+
+    seo: {
+      title: 'NEET Biology Coaching near Pari Chowk Greater Noida | Metro Connected',
+      description:
+        'Best NEET Biology coaching near Pari Chowk Greater Noida. Aqua Line metro connected. AIIMS faculty, small batches.',
+      keywords: [
+        'neet coaching pari chowk',
+        'biology coaching greater noida center',
+        'neet tuition pari chowk',
+      ],
+      localKeywords: ['pari chowk', 'greater noida center', 'commercial hub'],
+      h1: 'NEET Biology Coaching near Pari Chowk Greater Noida',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.3700, lng: 77.5300 },
+    centerAddress: 'Sector 62, Noida - Aqua Line metro connected',
+    nearbyLandmarks: ['Pari Chowk Roundabout', 'Commercial Center', 'Shopping Hub'],
+    transportLinks: {
+      metros: ['Pari Chowk Metro (Aqua Line)'],
+      buses: ['Greater Noida buses'],
+      accessibility: 'Direct Aqua Line to Noida',
+    },
+
+    demographics: {
+      primarySchools: ['DPS Greater Noida', 'Ryan International', 'Local Schools'],
+      popularColleges: ['Local colleges'],
+      coachingHubs: ['Limited options'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Few local centers'],
+      avgFees: 95000,
+      ourAdvantage: ['Metro connected', 'Quality coaching'],
+      marketGap: 'Commercial hub families need quality coaching nearby',
+    },
+
+    content: {
+      heroTitle: 'NEET Coaching for Pari Chowk Families',
+      heroSubtitle: 'Metro connected quality coaching',
+      valueProposition: 'Accessible coaching for Greater Noida center',
+      urgencyMessage: 'Pari Chowk area batch starting!',
+      localChallenge: 'Commercial area lacks specialized coaching.',
+      successMetric: '80% success rate among Pari Chowk students',
+    },
+
+    socialProof: {
+      studentCount: 45,
+      topScore: 338,
+      testimonialIds: ['pc-001'],
+      successStories: ['Direct metro makes commute easy for GN students'],
+    },
+
+    nearbyLocalities: ['alpha-greater-noida', 'knowledge-park-greater-noida', 'delta-1'],
+
+    faqs: [
+      {
+        question: 'How long does it take from Pari Chowk to your center?',
+        answer:
+          'About 58 minutes via Aqua Line metro. Many students prefer our online classes for convenience.',
+      },
+    ],
+  },
+  {
+    id: 'noi-19',
+    name: 'Alpha Greater Noida',
+    slug: 'alpha-greater-noida',
+    displayName: 'Alpha 1 & 2, Greater Noida',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Greater Noida',
+    state: 'Uttar Pradesh',
+    pincode: ['201310'],
+
+    seo: {
+      title: 'NEET Biology Coaching in Alpha Greater Noida | Established Sectors',
+      description:
+        'Best NEET Biology coaching in Alpha Greater Noida. Serving Alpha 1, Alpha 2 residents. Metro connected.',
+      keywords: [
+        'neet coaching alpha greater noida',
+        'biology coaching alpha 1 alpha 2',
+        'neet tuition greater noida',
+      ],
+      localKeywords: ['alpha 1', 'alpha 2', 'alpha commercial', 'greater noida sectors'],
+      h1: 'NEET Biology Coaching in Alpha Greater Noida',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.3600, lng: 77.5400 },
+    centerAddress: 'Sector 62, Noida - Online and Aqua Line metro options',
+    nearbyLandmarks: ['Alpha 1 Market', 'Alpha Commercial Belt', 'Metro Stations'],
+    transportLinks: {
+      metros: ['Alpha 1 Metro', 'Alpha 2 Metro (Aqua Line)'],
+      buses: ['Greater Noida buses'],
+      accessibility: 'Aqua Line metro connected',
+    },
+
+    demographics: {
+      primarySchools: ['DPS Greater Noida', 'St. Xavier\'s GN', 'Local Schools'],
+      popularColleges: ['Local colleges'],
+      coachingHubs: ['Limited options'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Few local centers'],
+      avgFees: 90000,
+      ourAdvantage: ['Established reputation', 'Metro access'],
+      marketGap: 'Established sectors need quality NEET coaching',
+    },
+
+    content: {
+      heroTitle: 'NEET Coaching for Alpha Greater Noida Families',
+      heroSubtitle: 'Serving established Greater Noida sectors',
+      valueProposition: 'Quality coaching for GN families',
+      urgencyMessage: 'Alpha area batch starting soon!',
+      localChallenge: 'Established families need trusted coaching.',
+      successMetric: '78% success rate among Alpha students',
+    },
+
+    socialProof: {
+      studentCount: 55,
+      topScore: 335,
+      testimonialIds: ['alpha-001'],
+      successStories: ['Multiple Alpha families trust our coaching'],
+    },
+
+    nearbyLocalities: ['pari-chowk-greater-noida', 'delta-1', 'knowledge-park-greater-noida'],
+
+    faqs: [
+      {
+        question: 'Do many Greater Noida students attend your coaching?',
+        answer:
+          'Yes! We have 100+ students from various Greater Noida sectors including Alpha, Beta, and Knowledge Park.',
+      },
+    ],
+  },
+  {
+    id: 'noi-20',
+    name: 'Crossing Republik',
+    slug: 'crossing-republik-noida',
+    displayName: 'Crossing Republik, Ghaziabad',
+    city: 'Noida',
+    citySlug: 'noida',
+    region: 'Noida-Ghaziabad Border',
+    state: 'Uttar Pradesh',
+    pincode: ['201016'],
+
+    seo: {
+      title: 'NEET Biology Coaching for Crossing Republik | Lakhs of Families',
+      description:
+        'Best NEET Biology coaching for Crossing Republik. Serving lakhs of families. Online coaching popular. AIIMS faculty.',
+      keywords: [
+        'neet coaching crossing republik',
+        'biology coaching crossing republik ghaziabad',
+        'neet tuition nh24',
+      ],
+      localKeywords: ['crossing republik', 'nh24', 'ghaziabad border', 'affordable housing'],
+      h1: 'NEET Biology Coaching for Crossing Republik Families',
+      metaRobots: 'index,follow',
+    },
+
+    coordinates: { lat: 28.6200, lng: 77.4500 },
+    centerAddress: 'Sector 62, Noida - Online coaching most popular',
+    nearbyLandmarks: ['Crossing Republik Mall', 'Main Gate', 'NH-24'],
+    transportLinks: {
+      metros: ['Proposed Metro'],
+      buses: ['UP Roadways', 'Private buses'],
+      accessibility: 'Road connectivity via NH-24',
+    },
+
+    demographics: {
+      primarySchools: ['DPS Crossing Republik', 'Ryan International', 'Local Schools'],
+      popularColleges: ['Local colleges'],
+      coachingHubs: ['Very limited quality options'],
+      populationType: 'residential',
+      economicProfile: 'middle',
+    },
+
+    competition: {
+      majorInstitutes: ['Few local centers', 'quality gap'],
+      avgFees: 85000,
+      ourAdvantage: ['Online convenience', 'Quality teaching', 'Affordable'],
+      marketGap: 'Lakhs of families, very limited quality NEET coaching',
+    },
+
+    content: {
+      heroTitle: 'Quality NEET Coaching for Crossing Republik',
+      heroSubtitle: 'Serving lakhs of Crossing Republik families',
+      valueProposition: 'Premium coaching accessible online',
+      urgencyMessage: '80+ students from Crossing Republik already enrolled!',
+      localChallenge: 'Large population, limited quality coaching.',
+      successMetric: '80+ Crossing Republik students trust our coaching',
+    },
+
+    socialProof: {
+      studentCount: 85,
+      topScore: 340,
+      testimonialIds: ['cr-001'],
+      successStories: [
+        'Ankit from Crossing Republik scored 340 in Biology',
+        'Online coaching perfect for this distance',
+      ],
+    },
+
+    nearbyLocalities: ['noida-extension', 'gaur-city-noida', 'indirapuram'],
+
+    faqs: [
+      {
+        question: 'Why is online coaching best for Crossing Republik students?',
+        answer:
+          'Crossing Republik is 20 km from our center. Online coaching saves 2+ hours daily travel while providing same quality teaching and personal attention.',
+      },
+      {
+        question: 'Do you offer scholarships?',
+        answer:
+          'Yes! Merit-based scholarships up to 50% available. EMI options (Rs 5,000-8,000/month) also available for Crossing Republik families.',
+      },
+    ],
+  },
 
   // GURUGRAM - 10 localities
   {
