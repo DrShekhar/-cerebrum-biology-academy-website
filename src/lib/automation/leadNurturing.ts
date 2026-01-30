@@ -898,7 +898,7 @@ export async function processScheduledNurturing(): Promise<{
         scheduledFor: { lte: new Date() },
       },
       include: {
-        lead: true,
+        leads: true,
       },
       take: 50, // Process in batches
     })
@@ -919,7 +919,7 @@ export async function processScheduledNurturing(): Promise<{
         })
 
         const metadata = item.metadata as any
-        const lead = leadNurturingService['mapToLead'](item.lead)
+        const lead = leadNurturingService['mapToLead'](item.leads)
 
         // Check if condition still applies
         const workflow = NURTURING_WORKFLOWS[lead.stage]

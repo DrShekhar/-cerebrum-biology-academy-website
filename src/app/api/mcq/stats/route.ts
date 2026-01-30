@@ -164,6 +164,7 @@ export async function POST(request: NextRequest) {
     try {
       const session = await prisma.mcq_practice_sessions.create({
         data: {
+          id: crypto.randomUUID(),
           freeUserId: freeUserId || null,
           sessionToken,
           topic: topic || null,

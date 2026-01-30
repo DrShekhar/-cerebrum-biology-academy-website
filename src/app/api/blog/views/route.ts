@@ -42,6 +42,7 @@ export async function POST(request: NextRequest) {
         views: { increment: 1 },
       },
       create: {
+        id: crypto.randomUUID(),
         slug,
         views: 1,
       },

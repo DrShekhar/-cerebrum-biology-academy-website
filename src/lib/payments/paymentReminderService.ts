@@ -154,7 +154,7 @@ class PaymentReminderService {
     }
 
     console.log(
-      `🚨 Sending OVERDUE reminder for ${installment.fee_plans.lead.studentName} - Installment ${installment.installmentNumber} (${daysOverdue} days overdue)`
+      `🚨 Sending OVERDUE reminder for ${installment.fee_plans.leads.studentName} - Installment ${installment.installmentNumber} (${daysOverdue} days overdue)`
     )
 
     const lead = installment.fee_plans.lead
@@ -220,7 +220,7 @@ class PaymentReminderService {
     }
 
     console.log(
-      `⏰ Sending ${daysUntilDue}-day reminder for ${installment.fee_plans.lead.studentName} - Installment ${installment.installmentNumber}`
+      `⏰ Sending ${daysUntilDue}-day reminder for ${installment.fee_plans.leads.studentName} - Installment ${installment.installmentNumber}`
     )
 
     const lead = installment.fee_plans.lead
@@ -356,7 +356,7 @@ Action Required:
         include: {
           fee_plans: {
             include: {
-              lead: true,
+              leads: true,
             },
           },
         },
@@ -455,7 +455,7 @@ Action Required:
             fee_plans: {
               include: {
                 installments: true,
-                lead: true,
+                leads: true,
               },
             },
           },
@@ -490,7 +490,7 @@ Action Required:
           (inst) => inst.status === 'PAID' || inst.id === installmentId
         )
 
-        if (allPaid && installment.fee_plans.lead.stage !== 'ENROLLED') {
+        if (allPaid && installment.fee_plans.leads.stage !== 'ENROLLED') {
           await tx.lead.update({
             where: { id: installment.fee_plans.leadId },
             data: {
@@ -513,7 +513,7 @@ Action Required:
           })
 
           console.log(
-            `🎉 Lead ${installment.fee_plans.lead.studentName} ENROLLED - All payments completed!`
+            `🎉 Lead ${installment.fee_plans.leads.studentName} ENROLLED - All payments completed!`
           )
         }
 
@@ -561,7 +561,7 @@ Action Required:
       include: {
         fee_plans: {
           include: {
-            lead: true,
+            leads: true,
           },
         },
       },
@@ -608,7 +608,7 @@ Action Required:
       include: {
         fee_plans: {
           include: {
-            lead: true,
+            leads: true,
           },
         },
       },

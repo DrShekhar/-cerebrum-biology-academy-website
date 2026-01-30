@@ -798,7 +798,7 @@ export class WhatsAppDripService {
           scheduledFor: { lte: new Date() },
         },
         include: {
-          lead: true,
+          leads: true,
         },
         take: 50,
       })
@@ -1047,7 +1047,7 @@ export class WhatsAppDripService {
           status: { in: ['CONFIRMED', 'PENDING'] },
         },
         include: {
-          lead: true,
+          leads: true,
         },
       })
 
