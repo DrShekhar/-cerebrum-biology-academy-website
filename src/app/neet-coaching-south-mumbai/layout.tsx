@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Ultra-premium NEET biology coaching in South Mumbai for elite schools. 94.2% success rate, AIIMS faculty. Colaba, Cuffe Parade, Malabar Hill, Breach Candy, Pedder Road, Worli. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching South Mumbai, NEET biology coaching Colaba, best NEET coaching Malabar Hill, NEET classes Cuffe Parade, biology coaching Breach Candy, NEET tuition Pedder Road, NEET coaching Worli, premium NEET coaching SoBo, international school NEET prep, IB biology NEET, IGCSE NEET preparation, Cathedral School NEET coaching, Campion School NEET prep, JBCN NEET preparation',
+    'NEET coaching South Mumbai, NEET biology coaching Colaba, best NEET coaching Malabar Hill, NEET classes Cuffe Parade, biology coaching Breach Candy, NEET tuition Pedder Road, NEET coaching Worli, premium NEET coaching SoBo, international school NEET prep, IB biology NEET, IGCSE NEET preparation, Cathedral School NEET coaching, Campion School NEET prep, JBCN NEET preparation, biology tuition South Mumbai, biology classes South Mumbai, online biology coaching South Mumbai, biology teacher South Mumbai, NEET biology South Mumbai',
   openGraph: {
     title: 'Best NEET Coaching in South Mumbai | Elite Education | Cerebrum Academy',
     description:

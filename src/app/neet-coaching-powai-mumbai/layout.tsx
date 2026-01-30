@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Powai, Mumbai for tech families. 94.2% success rate, AIIMS faculty. Hiranandani Gardens, Powai Lake, JVLR, Chandivali. IIT Bombay area. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Powai, NEET biology coaching Hiranandani, best NEET coaching Powai Mumbai, NEET classes JVLR, biology coaching Chandivali, NEET tuition Powai Lake, NEET coaching IIT Bombay area, premium NEET coaching Mumbai, tech family NEET prep, IB biology NEET, IGCSE NEET preparation, Hiranandani Foundation School NEET, Ryan International Powai NEET',
+    'NEET coaching Powai, NEET biology coaching Hiranandani, best NEET coaching Powai Mumbai, NEET classes JVLR, biology coaching Chandivali, NEET tuition Powai Lake, NEET coaching IIT Bombay area, premium NEET coaching Mumbai, tech family NEET prep, IB biology NEET, IGCSE NEET preparation, Hiranandani Foundation School NEET, Ryan International Powai NEET, biology tuition Powai, biology classes Powai Mumbai, online biology coaching Powai, biology teacher Powai, NEET biology Powai',
   openGraph: {
     title: 'Best NEET Coaching in Powai Mumbai | Tech Hub | Cerebrum Academy',
     description:

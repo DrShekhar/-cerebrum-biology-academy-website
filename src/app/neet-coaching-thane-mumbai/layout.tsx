@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Best NEET biology coaching in Thane Mumbai. 94.2% success rate. AIIMS faculty. Thane West, Ghodbunder Road, Hiranandani, Majiwada. Online live classes. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Thane, best NEET biology coaching Thane Mumbai, biology tuition Thane West, NEET classes Ghodbunder Road, biology coaching Hiranandani Thane, NEET preparation Mumbai, Thane NEET coaching online, Maharashtra HSC NEET coaching',
+    'NEET coaching Thane, best NEET biology coaching Thane Mumbai, biology tuition Thane West, NEET classes Ghodbunder Road, biology coaching Hiranandani Thane, NEET preparation Mumbai, Thane NEET coaching online, Maharashtra HSC NEET coaching, biology tuition Thane, biology classes Thane Mumbai, online biology coaching Thane, biology teacher Thane, NEET biology Thane',
   openGraph: {
     title: 'Best NEET Coaching in Thane Mumbai | Biology Classes | Cerebrum Academy',
     description:

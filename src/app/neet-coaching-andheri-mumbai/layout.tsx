@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Andheri, Mumbai. 94.2% success rate, AIIMS faculty. Lokhandwala, Versova, DN Nagar, Four Bungalows. 850+ students. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Andheri, NEET biology coaching Lokhandwala, best NEET coaching Andheri Mumbai, NEET classes Versova, biology coaching DN Nagar, NEET tuition Four Bungalows, NEET coaching Andheri West, NEET coaching Andheri East, online NEET coaching Mumbai, Mithibai NEET coaching, NM College NEET prep, Podar NEET preparation',
+    'NEET coaching Andheri, NEET biology coaching Lokhandwala, best NEET coaching Andheri Mumbai, NEET classes Versova, biology coaching DN Nagar, NEET tuition Four Bungalows, NEET coaching Andheri West, NEET coaching Andheri East, online NEET coaching Mumbai, Mithibai NEET coaching, NM College NEET prep, Podar NEET preparation, biology tuition Andheri, biology classes Andheri Mumbai, online biology coaching Andheri, biology teacher Andheri, NEET biology Andheri',
   openGraph: {
     title: 'Best NEET Coaching in Andheri Mumbai | Commercial Hub | Cerebrum Academy',
     description:
