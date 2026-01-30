@@ -22,6 +22,19 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { LocalBusinessSchema, FAQSchema } from '@/components/seo/StructuredData'
+import {
+  getAllGhaziabadAreaSlugs,
+  getGhaziabadAreaBySlug,
+  getGhaziabadAreasByType,
+  getGhaziabadAreasByMetroLine,
+} from '@/data/ghaziabad-areas'
+
+// Get all areas from centralized data
+const allAreaSlugs = getAllGhaziabadAreaSlugs()
+const blueLineAreas = getGhaziabadAreasByMetroLine('Blue')
+const redLineAreas = getGhaziabadAreasByMetroLine('Red')
+const premiumAreasData = getGhaziabadAreasByType('premium')
+const townshipAreasData = getGhaziabadAreasByType('township')
 
 const ghaziabadAreas = [
   {
@@ -651,6 +664,117 @@ export default function NeetCoachingGhaziabadPage() {
               )}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* All Areas Section - Using Centralized Data */}
+      <section className="py-16 md:py-20 bg-red-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              All {allAreaSlugs.length}+ Areas We Serve in Ghaziabad
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Click on your area to view dedicated NEET coaching information and local success stories
+            </p>
+          </motion.div>
+
+          {/* Blue Line Metro Areas */}
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-blue-900 mb-4 flex items-center">
+              <Train className="w-5 h-5 mr-2 text-blue-600" />
+              Blue Line Metro Areas
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {blueLineAreas.map((slug) => {
+                const area = getGhaziabadAreaBySlug(slug)
+                if (!area) return null
+                return (
+                  <Link
+                    key={slug}
+                    href={`/neet-coaching-ghaziabad/${slug}`}
+                    className="px-4 py-2 bg-white text-blue-700 rounded-full text-sm hover:bg-blue-100 transition-colors shadow-sm"
+                  >
+                    {area.name}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Red Line Metro Areas */}
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-red-900 mb-4 flex items-center">
+              <Train className="w-5 h-5 mr-2 text-red-600" />
+              Red Line Metro Areas
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {redLineAreas.map((slug) => {
+                const area = getGhaziabadAreaBySlug(slug)
+                if (!area) return null
+                return (
+                  <Link
+                    key={slug}
+                    href={`/neet-coaching-ghaziabad/${slug}`}
+                    className="px-4 py-2 bg-white text-red-700 rounded-full text-sm hover:bg-red-100 transition-colors shadow-sm"
+                  >
+                    {area.name}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Premium & Townships */}
+          <div className="mb-8">
+            <h3 className="text-xl font-bold text-orange-900 mb-4 flex items-center">
+              <Building2 className="w-5 h-5 mr-2 text-orange-600" />
+              Premium Areas & Townships
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {[...premiumAreasData, ...townshipAreasData].map((slug) => {
+                const area = getGhaziabadAreaBySlug(slug)
+                if (!area) return null
+                return (
+                  <Link
+                    key={slug}
+                    href={`/neet-coaching-ghaziabad/${slug}`}
+                    className="px-4 py-2 bg-white text-orange-700 rounded-full text-sm hover:bg-orange-100 transition-colors shadow-sm"
+                  >
+                    {area.name}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* All Areas Cloud */}
+          <div className="mt-12 pt-8 border-t border-red-200">
+            <h3 className="text-lg font-semibold text-gray-700 mb-4 text-center">
+              Browse All Areas
+            </h3>
+            <div className="flex flex-wrap justify-center gap-2">
+              {allAreaSlugs.map((slug) => {
+                const area = getGhaziabadAreaBySlug(slug)
+                if (!area) return null
+                return (
+                  <Link
+                    key={slug}
+                    href={`/neet-coaching-ghaziabad/${slug}`}
+                    className="px-3 py-1 bg-white text-gray-600 rounded-full text-sm hover:bg-gray-100 hover:text-red-600 transition-colors"
+                  >
+                    {area.name}
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
