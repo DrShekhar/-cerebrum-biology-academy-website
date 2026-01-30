@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Koramangala, Bangalore startup hub. 94.2% success rate, AIIMS faculty. All Koramangala blocks, BTM Layout, Madiwala, Ejipura. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Koramangala, NEET biology coaching Koramangala Bangalore, best NEET coaching BTM Layout, NEET classes Koramangala 4th block, biology coaching Ejipura, NEET tuition Madiwala, NEET coaching startup hub Bangalore, premium NEET coaching Bangalore, NPS NEET coaching, DPS South NEET prep, Inventure Academy NEET',
+    'NEET coaching Koramangala, NEET biology coaching Koramangala Bangalore, best NEET coaching BTM Layout, NEET classes Koramangala 4th block, biology coaching Ejipura, NEET tuition Madiwala, NEET coaching startup hub Bangalore, premium NEET coaching Bangalore, NPS NEET coaching, DPS South NEET prep, Inventure Academy NEET, biology tuition Koramangala, biology classes Koramangala Bangalore, online biology coaching Koramangala, biology teacher Koramangala, NEET biology Koramangala',
   openGraph: {
     title: 'Best NEET Coaching in Koramangala Bangalore | Startup Hub | Cerebrum Academy',
     description:

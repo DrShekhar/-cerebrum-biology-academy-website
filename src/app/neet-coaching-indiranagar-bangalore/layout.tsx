@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in Indiranagar, East Bangalore. 94.2% success rate, AIIMS faculty. 100 Feet Road, 12th Main, HAL Stage, CMH Road, Domlur. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching Indiranagar, NEET biology coaching Indiranagar Bangalore, best NEET coaching 100 Feet Road, NEET classes HAL Stage, biology coaching CMH Road, NEET tuition Domlur, NEET coaching East Bangalore, premium NEET coaching Bangalore, Bishop Cotton NEET coaching, St Josephs NEET prep, Harvest International NEET',
+    'NEET coaching Indiranagar, NEET biology coaching Indiranagar Bangalore, best NEET coaching 100 Feet Road, NEET classes HAL Stage, biology coaching CMH Road, NEET tuition Domlur, NEET coaching East Bangalore, premium NEET coaching Bangalore, Bishop Cotton NEET coaching, St Josephs NEET prep, Harvest International NEET, biology tuition Indiranagar, biology classes Indiranagar Bangalore, online biology coaching Indiranagar, biology teacher Indiranagar, NEET biology Indiranagar',
   openGraph: {
     title: 'Best NEET Coaching in Indiranagar Bangalore | East Premium | Cerebrum Academy',
     description:

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'Premium NEET biology coaching in HSR Layout, South Bangalore. 94.2% success rate, AIIMS faculty. All sectors, Bommanahalli, Agara, 27th Main. IT families. Fee ₹24,000+. Book free demo!',
   keywords:
-    'NEET coaching HSR Layout, NEET biology coaching HSR Bangalore, best NEET coaching HSR Sector 1, NEET classes Bommanahalli, biology coaching Agara, NEET tuition 27th Main, NEET coaching South Bangalore, premium NEET coaching IT families, Ryan International HSR NEET, Vibgyor High NEET prep, DPS Electronic City NEET',
+    'NEET coaching HSR Layout, NEET biology coaching HSR Bangalore, best NEET coaching HSR Sector 1, NEET classes Bommanahalli, biology coaching Agara, NEET tuition 27th Main, NEET coaching South Bangalore, premium NEET coaching IT families, Ryan International HSR NEET, Vibgyor High NEET prep, DPS Electronic City NEET, biology tuition HSR Layout, biology classes HSR Bangalore, online biology coaching HSR Layout, biology teacher HSR Layout, NEET biology HSR Layout',
   openGraph: {
     title: 'Best NEET Coaching in HSR Layout Bangalore | Tech Hub | Cerebrum Academy',
     description:
