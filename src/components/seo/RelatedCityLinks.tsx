@@ -158,6 +158,12 @@ export const cityPages = {
     region: 'Uttar Pradesh',
     students: '4,500+',
   },
+  kanpur: {
+    name: 'Kanpur',
+    href: '/neet-coaching-kanpur',
+    region: 'Uttar Pradesh',
+    students: '3,200+',
+  },
 }
 
 type CityKey = keyof typeof cityPages
@@ -198,7 +204,8 @@ const relatedCitiesMap: Record<CityKey, CityKey[]> = {
   // Western India
   ahmedabad: ['mumbai', 'pune', 'jaipur', 'kota', 'bangalore'],
   // Northern India
-  lucknow: ['patna', 'kota', 'delhiNCR', 'noida', 'jaipur'],
+  lucknow: ['kanpur', 'patna', 'kota', 'delhiNCR', 'noida'],
+  kanpur: ['lucknow', 'patna', 'noida', 'delhiNCR', 'kota'],
 }
 
 export function RelatedCityLinks({
@@ -357,7 +364,7 @@ export function CityQuickLinks() {
     'faridabad',
     'ghaziabad',
   ]
-  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow']
+  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur']
 
   return (
     <div className="space-y-6">
