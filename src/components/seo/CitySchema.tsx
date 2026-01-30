@@ -1,34 +1,44 @@
 // Server Component - no client-side interactivity needed
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
-interface CitySchemaProps {
+export interface CitySchemaProps {
   cityName: string
-  citySlug: string
-  state: string
-  localities: string[]
-  faqs: Array<{ question: string; answer: string }>
+  citySlug?: string
+  state?: string
+  stateName?: string // Alias for state
+  localities?: string[]
+  faqs?: Array<{ question: string; answer: string }>
   studentCount?: string
   coordinates?: { lat: string; lng: string }
+  description?: string
+  url?: string
 }
 
 export function CitySchema({
   cityName,
   citySlug,
   state,
-  localities,
-  faqs,
+  stateName,
+  localities = [],
+  faqs = [],
   studentCount = '2000',
-  coordinates = { lat: '19.0760', lng: '72.8777' },
+  coordinates = { lat: '28.6139', lng: '77.2090' },
+  description,
+  url,
 }: CitySchemaProps) {
+  // Support both 'state' and 'stateName' props
+  const stateValue = state || stateName || 'India'
+  // Generate citySlug from cityName if not provided
+  const slug = citySlug || cityName.toLowerCase().replace(/\s+/g, '-')
   const baseUrl = 'https://cerebrumbiologyacademy.com'
-  const pageUrl = `${baseUrl}/neet-coaching-${citySlug}`
+  const pageUrl = url || `${baseUrl}/neet-coaching-${slug}`
 
   const educationalOrgSchema = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOrganization',
     '@id': `${pageUrl}#organization`,
     name: `Cerebrum Biology Academy - ${cityName}`,
-    description: `Best NEET Biology Coaching in ${cityName}, ${state}. Expert AIIMS faculty, 98% success rate, personalized attention for ${cityName} students.`,
+    description: description || `Best NEET Biology Coaching in ${cityName}, ${stateValue}. Expert AIIMS faculty, 98% success rate, personalized attention for ${cityName} students.`,
     url: pageUrl,
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
@@ -44,7 +54,7 @@ export function CitySchema({
     address: {
       '@type': 'PostalAddress',
       addressLocality: cityName,
-      addressRegion: state,
+      addressRegion: stateValue,
       addressCountry: 'IN',
     },
     geo: {
@@ -52,10 +62,9 @@ export function CitySchema({
       latitude: coordinates.lat,
       longitude: coordinates.lng,
     },
-    areaServed: localities.map((locality) => ({
-      '@type': 'City',
-      name: locality,
-    })),
+    areaServed: localities.length > 0
+      ? localities.map((locality) => ({ '@type': 'City', name: locality }))
+      : [{ '@type': 'City', name: cityName }],
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
@@ -181,10 +190,12 @@ export function CitySchema({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

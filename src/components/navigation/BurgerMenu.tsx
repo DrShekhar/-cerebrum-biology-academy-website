@@ -20,6 +20,8 @@ import {
   Settings,
   Calculator,
   FileText,
+  Trophy,
+  Image,
 } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
@@ -42,6 +44,8 @@ const iconMap = {
   HelpCircle,
   Calculator,
   FileText,
+  Trophy,
+  Image,
 }
 
 export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
@@ -109,17 +113,18 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   }
 
   const handleSignOut = async () => {
+    setIsSigningOut(true)
     try {
-      setIsSigningOut(true)
       await signOut()
-      onClose()
-      router.push('/')
-      router.refresh()
     } catch (error) {
       console.error('Sign out error:', error)
-    } finally {
-      setIsSigningOut(false)
+      // Continue with navigation even if signOut fails
     }
+    // Always close menu and navigate, regardless of errors
+    onClose()
+    setIsSigningOut(false)
+    // Use window.location for a full page refresh to clear all state
+    window.location.href = '/'
   }
 
   const menuVariants = {
