@@ -56,6 +56,9 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
   }, [])
 
   useEffect(() => {
+    // Only modify document after component is mounted (prevents hydration issues)
+    if (!mounted) return
+
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden'
     } else {
@@ -65,7 +68,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     return () => {
       document.body.style.overflow = 'unset'
     }
-  }, [isMenuOpen])
+  }, [isMenuOpen, mounted])
 
   useEffect(() => {
     setIsMenuOpen(false)

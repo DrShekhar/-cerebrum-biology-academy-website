@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { HomeIcon, BookOpen, Trophy, Phone, Play } from 'lucide-react'
@@ -20,6 +20,17 @@ interface NavItem {
 
 export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
   const pathname = usePathname()
+  const [mounted, setMounted] = useState(false)
+
+  // Prevent hydration mismatch - only render after mount
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  // Don't render on server to prevent hydration issues with fixed positioning
+  if (!mounted) {
+    return null
+  }
 
   const navItems: NavItem[] = [
     {
@@ -95,11 +106,11 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
             <Link
               key={item.href}
               href={item.href}
-              className={`nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect haptic-feedback ${
+              className={`nav-item relative flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect haptic-feedback ${
                 active
                   ? 'text-blue-600 bg-blue-50 border-t-4 border-blue-600'
                   : item.highlight
-                    ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl scale-105 shadow-lg'
+                    ? 'text-green-600 bg-green-50 border-t-4 border-green-600 rounded-t-xl shadow-md'
                     : 'text-gray-600 hover:text-gray-800 border-t-4 border-transparent hover:bg-gray-50'
               } py-2.5 xs:py-3 px-2 xs:px-3 min-h-[60px] xs:min-h-[64px] transition-all duration-200`}
               aria-label={`${item.label} - Navigate to ${item.label} page`}

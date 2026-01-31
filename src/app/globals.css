@@ -928,16 +928,12 @@ button,
 
   /* Mobile hero optimizations - iOS Safari fix: use dvh for dynamic viewport */
   .mobile-hero {
+    /* Fallback for older browsers first */
+    min-height: calc(100vh - 60px);
+    /* Modern browsers will use dvh (dynamic viewport height) which adjusts for iOS Safari address bar */
     min-height: calc(100dvh - 60px);
-    min-height: calc(100vh - 60px); /* Fallback for older browsers */
     padding-top: 80px;
     padding-bottom: 40px;
-  }
-
-  @supports (min-height: 100dvh) {
-    .mobile-hero {
-      min-height: calc(100dvh - 60px);
-    }
   }
 
   /* Mobile section spacing */
@@ -1864,16 +1860,11 @@ body.auth-page > div > footer {
 }
 
 body.auth-page main#main-content {
+  /* Fallback first, then dvh for modern browsers (CSS cascade applies last value) */
+  min-height: 100vh !important;
   min-height: 100dvh !important;
-  min-height: 100vh !important; /* Fallback */
   padding-bottom: 0 !important;
   padding-top: 0 !important;
-}
-
-@supports (min-height: 100dvh) {
-  body.auth-page main#main-content {
-    min-height: 100dvh !important;
-  }
 }
 
 body.auth-page {
@@ -1908,14 +1899,9 @@ body.obs-overlay-mode [role='navigation'] {
 body.obs-overlay-mode main {
   padding: 0 !important;
   margin: 0 !important;
+  /* Fallback first, then dvh for modern browsers */
+  min-height: 100vh !important;
   min-height: 100dvh !important;
-  min-height: 100vh !important; /* Fallback */
-}
-
-@supports (min-height: 100dvh) {
-  body.obs-overlay-mode main {
-    min-height: 100dvh !important;
-  }
 }
 
 body.obs-overlay-mode {

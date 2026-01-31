@@ -67,11 +67,17 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   const [selectedIndex, setSelectedIndex] = useState(-1) // For keyboard navigation
   const [isListening, setIsListening] = useState(false)
   const [speechSupported, setSpeechSupported] = useState(false)
+  const [mounted, setMounted] = useState(false) // Prevent hydration mismatch
   const recognitionRef = useRef<SpeechRecognition | null>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const fuse = useRef<Fuse<(typeof searchableContent)[number]> | null>(null)
   const router = useRouter()
   const searchParams = useSearchParams()
+
+  // Set mounted state to prevent hydration mismatches
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // Focus trap for accessibility - keeps focus within modal when open
   const focusTrapRef = useFocusTrap(isOpen)
@@ -86,7 +92,8 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
   // Update URL when search query changes (debounced)
   useEffect(() => {
-    if (!isOpen) return
+    // Only access window after component is mounted (prevents hydration mismatch)
+    if (!isOpen || !mounted) return
 
     const timeoutId = setTimeout(() => {
       const currentParams = new URLSearchParams(window.location.search)
@@ -105,10 +112,13 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
     }, 300)
 
     return () => clearTimeout(timeoutId)
-  }, [query, isOpen])
+  }, [query, isOpen, mounted])
 
   // Initialize Web Speech API
   useEffect(() => {
+    // Only access window APIs after mounting (prevents hydration mismatch)
+    if (!mounted) return
+
     const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition
     if (SpeechRecognitionAPI) {
       setSpeechSupported(true)
@@ -148,7 +158,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
         recognitionRef.current.abort()
       }
     }
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+  }, [mounted]) // eslint-disable-line react-hooks/exhaustive-deps
 
   // Stop listening when modal closes
   useEffect(() => {
@@ -174,16 +184,19 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   }
 
   // Clear URL query param when closing
-  const handleClose = () => {
-    const currentParams = new URLSearchParams(window.location.search)
-    if (currentParams.has('q')) {
-      currentParams.delete('q')
-      const newUrl = currentParams.toString()
-        ? `${window.location.pathname}?${currentParams.toString()}`
-        : window.location.pathname
-      window.history.replaceState({}, '', newUrl)
+  const handleCloseWithCleanup = () => {
+    // Only access window if mounted
+    if (mounted && typeof window !== 'undefined') {
+      const currentParams = new URLSearchParams(window.location.search)
+      if (currentParams.has('q')) {
+        currentParams.delete('q')
+        const newUrl = currentParams.toString()
+          ? `${window.location.pathname}?${currentParams.toString()}`
+          : window.location.pathname
+        window.history.replaceState({}, '', newUrl)
+      }
     }
-    handleClose()
+    onClose()
   }
 
   // Use shared scroll lock to prevent race conditions with other modals

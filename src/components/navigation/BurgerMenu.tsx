@@ -88,6 +88,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   }, [])
 
   useEffect(() => {
+    // Only access window after component is mounted (prevents hydration mismatch)
+    if (!mounted) return
+
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 1024)
     }
@@ -95,7 +98,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
-  }, [])
+  }, [mounted])
 
   // Reset expanded section when menu closes
   useEffect(() => {
