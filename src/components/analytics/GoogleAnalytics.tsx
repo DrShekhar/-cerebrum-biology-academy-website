@@ -6,7 +6,7 @@ import { GA_MEASUREMENT_ID } from '@/lib/analytics/googleAnalytics'
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || ''
 
 export default function GoogleAnalytics() {
-  if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === 'G-XXXXXXXXXX') {
+  if (!GA_MEASUREMENT_ID) {
     return null
   }
 

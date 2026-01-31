@@ -2,7 +2,7 @@
 // Types are declared in src/types/globals.d.ts
 // Google Ads conversion tracking: see src/lib/ads/googleAdsConversion.ts
 
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-XXXXXXXXXX'
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-HKSK6PEW2T'
 export const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || 'AW-11121440988'
 
 // Initialize Google Analytics
