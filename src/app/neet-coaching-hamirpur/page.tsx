@@ -22,8 +22,8 @@ import {
   IndianRupee,
   School,
 } from 'lucide-react'
-import VideoTestimonialsSection from '@/components/VideoTestimonialsSection'
-import { CitySchema } from '@/components/CitySchema'
+import VideoTestimonialsSection from '@/components/testimonials/VideoTestimonialsSection'
+import { CitySchema } from '@/components/seo/CitySchema'
 
 export default function NEETCoachingHamirpur() {
   const nearbyAreas = [

@@ -22,8 +22,8 @@ import {
   IndianRupee,
   Mountain,
 } from 'lucide-react'
-import VideoTestimonialsSection from '@/components/VideoTestimonialsSection'
-import { CitySchema } from '@/components/CitySchema'
+import VideoTestimonialsSection from '@/components/testimonials/VideoTestimonialsSection'
+import { CitySchema } from '@/components/seo/CitySchema'
 
 export default function NEETCoachingMandi() {
   const nearbyAreas = [
