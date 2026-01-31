@@ -22,7 +22,7 @@ import {
   IndianRupee,
   School,
 } from 'lucide-react'
-import VideoTestimonialsSection from '@/components/testimonials/VideoTestimonialsSection'
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { CitySchema } from '@/components/seo/CitySchema'
 
 export default function NEETCoachingHamirpur() {
