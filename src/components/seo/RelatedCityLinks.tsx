@@ -188,6 +188,87 @@ export const cityPages = {
     region: 'Uttar Pradesh',
     students: '2,200+',
   },
+  // Uttarakhand
+  dehradun: {
+    name: 'Dehradun',
+    href: '/neet-coaching-dehradun',
+    region: 'Uttarakhand',
+    students: '1,800+',
+  },
+  mussoorie: {
+    name: 'Mussoorie',
+    href: '/neet-coaching-mussoorie',
+    region: 'Uttarakhand',
+    students: '500+',
+  },
+  // J&K
+  jammu: {
+    name: 'Jammu',
+    href: '/neet-coaching-jammu',
+    region: 'Jammu & Kashmir',
+    students: '1,200+',
+  },
+  srinagar: {
+    name: 'Srinagar',
+    href: '/neet-coaching-srinagar',
+    region: 'Jammu & Kashmir',
+    students: '800+',
+  },
+  // Gujarat
+  vadodara: {
+    name: 'Vadodara',
+    href: '/neet-coaching-vadodara',
+    region: 'Gujarat',
+    students: '2,200+',
+  },
+  // Rajasthan
+  jodhpur: {
+    name: 'Jodhpur',
+    href: '/neet-coaching-jodhpur',
+    region: 'Rajasthan',
+    students: '1,800+',
+  },
+  udaipur: {
+    name: 'Udaipur',
+    href: '/neet-coaching-udaipur',
+    region: 'Rajasthan',
+    students: '1,600+',
+  },
+  // Madhya Pradesh
+  gwalior: {
+    name: 'Gwalior',
+    href: '/neet-coaching-gwalior',
+    region: 'Madhya Pradesh',
+    students: '1,500+',
+  },
+  // Jharkhand
+  ranchi: {
+    name: 'Ranchi',
+    href: '/neet-coaching-ranchi',
+    region: 'Jharkhand',
+    students: '2,000+',
+  },
+  // Punjab
+  amritsar: {
+    name: 'Amritsar',
+    href: '/neet-coaching-amritsar',
+    region: 'Punjab',
+    students: '2,400+',
+  },
+  // Haryana
+  mahendragarh: {
+    name: 'Mahendragarh',
+    href: '/neet-coaching-mahendragarh',
+    region: 'Haryana',
+    students: '800+',
+  },
+  // Himachal Pradesh
+  manali: {
+    name: 'Manali',
+    href: '/neet-coaching-manali',
+    region: 'Himachal Pradesh',
+    students: '400+',
+  },
 }
 
 type CityKey = keyof typeof cityPages
@@ -234,6 +315,27 @@ const relatedCitiesMap: Record<CityKey, CityKey[]> = {
   varanasi: ['prayagraj', 'lucknow', 'patna', 'kanpur', 'kolkata'],
   agra: ['meerut', 'lucknow', 'kanpur', 'jaipur', 'delhiNCR'],
   meerut: ['agra', 'noida', 'ghaziabad', 'delhiNCR', 'lucknow'],
+  // Uttarakhand
+  dehradun: ['mussoorie', 'noida', 'delhiNCR', 'lucknow', 'meerut'],
+  mussoorie: ['dehradun', 'noida', 'delhiNCR', 'meerut', 'lucknow'],
+  // J&K
+  jammu: ['srinagar', 'amritsar', 'delhiNCR', 'lucknow', 'dehradun'],
+  srinagar: ['jammu', 'amritsar', 'delhiNCR', 'dehradun', 'lucknow'],
+  // Gujarat
+  vadodara: ['ahmedabad', 'mumbai', 'pune', 'jaipur', 'bangalore'],
+  // Rajasthan
+  jodhpur: ['jaipur', 'kota', 'udaipur', 'ahmedabad', 'delhiNCR'],
+  udaipur: ['jaipur', 'kota', 'jodhpur', 'ahmedabad', 'mumbai'],
+  // Madhya Pradesh
+  gwalior: ['jaipur', 'agra', 'lucknow', 'delhiNCR', 'kanpur'],
+  // Jharkhand
+  ranchi: ['patna', 'kolkata', 'varanasi', 'lucknow', 'delhiNCR'],
+  // Punjab
+  amritsar: ['jammu', 'delhiNCR', 'lucknow', 'jaipur', 'dehradun'],
+  // Haryana
+  mahendragarh: ['gurgaon', 'faridabad', 'jaipur', 'delhiNCR', 'agra'],
+  // Himachal Pradesh
+  manali: ['dehradun', 'amritsar', 'delhiNCR', 'lucknow', 'jammu'],
 }
 
 export function RelatedCityLinks({
@@ -392,7 +494,7 @@ export function CityQuickLinks() {
     'faridabad',
     'ghaziabad',
   ]
-  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur', 'prayagraj', 'varanasi', 'agra', 'meerut']
+  const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur', 'prayagraj', 'varanasi', 'agra', 'meerut', 'dehradun', 'jammu', 'srinagar', 'vadodara', 'jodhpur', 'gwalior', 'mussoorie', 'udaipur', 'ranchi', 'amritsar', 'mahendragarh', 'manali']
 
   return (
     <div className="space-y-6">
