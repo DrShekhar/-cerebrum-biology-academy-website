@@ -184,7 +184,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
   }
 
   // Clear URL query param when closing
-  const handleCloseWithCleanup = () => {
+  const handleClose = () => {
     // Only access window if mounted
     if (mounted && typeof window !== 'undefined') {
       const currentParams = new URLSearchParams(window.location.search)

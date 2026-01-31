@@ -7,6 +7,7 @@ export interface CitySchemaProps {
   state?: string
   stateName?: string // Alias for state
   localities?: string[]
+  areaServed?: string[] // Alias for localities
   faqs?: Array<{ question: string; answer: string }>
   studentCount?: string
   coordinates?: { lat: string; lng: string }
@@ -20,6 +21,7 @@ export function CitySchema({
   state,
   stateName,
   localities = [],
+  areaServed,
   faqs = [],
   studentCount = '2000',
   coordinates = { lat: '28.6139', lng: '77.2090' },
@@ -28,6 +30,8 @@ export function CitySchema({
 }: CitySchemaProps) {
   // Support both 'state' and 'stateName' props
   const stateValue = state || stateName || 'India'
+  // Support both 'localities' and 'areaServed' props
+  const localitiesValue = areaServed || localities
   // Generate citySlug from cityName if not provided
   const slug = citySlug || cityName.toLowerCase().replace(/\s+/g, '-')
   const baseUrl = 'https://cerebrumbiologyacademy.com'
@@ -62,8 +66,8 @@ export function CitySchema({
       latitude: coordinates.lat,
       longitude: coordinates.lng,
     },
-    areaServed: localities.length > 0
-      ? localities.map((locality) => ({ '@type': 'City', name: locality }))
+    areaServed: localitiesValue.length > 0
+      ? localitiesValue.map((locality) => ({ '@type': 'City', name: locality }))
       : [{ '@type': 'City', name: cityName }],
     aggregateRating: {
       '@type': 'AggregateRating',
