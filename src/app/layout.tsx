@@ -155,6 +155,15 @@ export default function RootLayout({
         {/* CRITICAL: Preload main CSS to reduce render-blocking time */}
         <link rel="preload" as="style" href="/_next/static/css/app/layout.css" />
 
+        {/* PERFORMANCE: Preload LCP font to reduce render delay on mobile */}
+        <link
+          rel="preload"
+          href="https://fonts.gstatic.com/s/geist/v1/gyByhwU-HdjnYOVuqmc.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
         {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
         {/* Google Fonts - CRITICAL for reducing render blocking */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

@@ -14,6 +14,8 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
         minHeight: '100vh',
         position: 'relative',
         overflow: 'hidden',
+        // PERFORMANCE: Contain layout to prevent reflows affecting LCP
+        contain: 'layout style',
       }}
     >
       {/* Background - CSS only, no external image for faster LCP */}

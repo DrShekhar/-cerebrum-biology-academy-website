@@ -1831,14 +1831,20 @@ const nextConfig = {
           ...securityHeaders,
         ],
       },
-      // HTML pages - Short cache to prevent stale CSS references (FOUC fix)
-      // Reduced from 3600s to 60s to ensure fresh HTML with correct CSS chunk names
+      // HTML pages - Optimized for mobile LCP while preventing stale CSS
+      // PERFORMANCE: Increased edge cache (s-maxage) for faster TTFB on mobile
+      // Browser cache kept short to ensure fresh content
       {
         source: '/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=60, s-maxage=3600, stale-while-revalidate=60',
+            value: 'public, max-age=60, s-maxage=7200, stale-while-revalidate=300',
+          },
+          // PERFORMANCE: Early hints for faster resource loading
+          {
+            key: 'Link',
+            value: '</fonts/geist-latin-400-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin',
           },
           ...securityHeaders,
         ],
