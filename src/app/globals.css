@@ -778,6 +778,9 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Mobile bottom nav height - used for main content padding */
+  --mobile-nav-height: 64px;
+  --mobile-nav-safe-height: calc(64px + env(safe-area-inset-bottom, 0px));
 }
 
 html,

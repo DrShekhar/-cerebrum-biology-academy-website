@@ -114,9 +114,10 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     {
       icon: User,
       label: 'Profile',
-      // Use mounted check to prevent hydration mismatch (auth state differs server vs client)
-      href: mounted && isAuthenticated ? '/profile' : '/sign-in',
-      ariaLabel: mounted && isAuthenticated ? 'View your profile' : 'Sign in to view profile',
+      // Always render /profile to avoid hydration mismatch - auth redirect handled by middleware
+      href: '/profile',
+      ariaLabel: 'View your profile',
+      requiresAuth: true,
     },
   ]
 

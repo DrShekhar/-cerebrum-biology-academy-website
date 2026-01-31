@@ -135,7 +135,7 @@ export default function RootLayout({
         />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
         />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -241,8 +241,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden`}
-        suppressHydrationWarning
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* PERFORMANCE: Analytics moved after main content for better LCP */}
         {/* These scripts use lazyOnload strategy but still benefit from being after content */}
@@ -275,7 +274,7 @@ export default function RootLayout({
                         <ConditionalHeaderFooter>
                           <DynamicTrialBanner />
                         </ConditionalHeaderFooter>
-                        <main id="main-content" role="main" className="min-h-screen pb-16 md:pb-0">
+                        <main id="main-content" role="main" className="min-h-screen pb-[var(--mobile-nav-safe-height)] md:pb-0">
                           {children}
                         </main>
                         <ConditionalHeaderFooter>
