@@ -15,7 +15,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'admin' && session.user.role !== 'teacher') {
+    if (session.user.role !== 'ADMIN' && session.user.role !== 'TEACHER') {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 

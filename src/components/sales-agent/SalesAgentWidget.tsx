@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageCircle,

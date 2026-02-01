@@ -25,7 +25,7 @@ const MAX_FILE_SIZE = 10 * 1024 * 1024
 export async function POST(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'student' && session.user.role !== 'teacher')) {
+    if (!session || (session.user.role !== 'STUDENT' && session.user.role !== 'TEACHER')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

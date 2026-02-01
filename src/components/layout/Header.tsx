@@ -16,7 +16,7 @@ import {
   GraduationCap,
 } from 'lucide-react'
 import Image from 'next/image'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { useI18n } from '@/contexts/I18nContext'
 
 // Import BurgerMenu directly for reliable navigation (critical UI)

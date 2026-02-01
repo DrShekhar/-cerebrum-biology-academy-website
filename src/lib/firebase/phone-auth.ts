@@ -26,7 +26,9 @@ function resetRecaptchaVerifier(): void {
   }
 
   // Also remove any lingering reCAPTCHA DOM elements
-  const recaptchaContainers = document.querySelectorAll('.grecaptcha-badge, [id^="recaptcha"]')
+  const recaptchaContainers = document.querySelectorAll(
+    '.grecaptcha-badge, [id^="recaptcha"], iframe[src*="recaptcha"]'
+  )
   recaptchaContainers.forEach((el) => {
     try {
       el.remove()
@@ -34,6 +36,18 @@ function resetRecaptchaVerifier(): void {
       // Ignore removal errors
     }
   })
+
+  // Clear any global reCAPTCHA state that might be cached
+  if (typeof window !== 'undefined') {
+    try {
+      const grecaptcha = (window as { grecaptcha?: { reset?: () => void } }).grecaptcha
+      if (grecaptcha?.reset) {
+        grecaptcha.reset()
+      }
+    } catch (e) {
+      // Ignore if grecaptcha is not available
+    }
+  }
 }
 
 /**
@@ -117,13 +131,20 @@ export async function sendOTP(
   console.log('[OTP] Sending to:', formattedPhone)
 
   // Helper to attempt OTP send
-  const attemptSend = async (): Promise<{
+  const attemptSend = async (
+    isRetry: boolean = false
+  ): Promise<{
     success: boolean
     error?: string
     shouldRetry?: boolean
     shouldRefresh?: boolean
   }> => {
     try {
+      // On retry, add a small delay to allow cleanup to complete
+      if (isRetry) {
+        await new Promise((resolve) => setTimeout(resolve, 500))
+      }
+
       // Always reinitialize recaptcha for fresh token
       // This helps avoid stale Enterprise verification issues
       initRecaptcha(buttonId)
@@ -131,6 +152,9 @@ export async function sendOTP(
       if (!recaptchaVerifier) {
         return { success: false, error: 'reCAPTCHA initialization failed', shouldRetry: false }
       }
+
+      // Wait a brief moment for reCAPTCHA to fully initialize
+      await new Promise((resolve) => setTimeout(resolve, 100))
 
       // Send OTP via Firebase
       console.log('[OTP] Calling signInWithPhoneNumber...')
@@ -205,6 +229,27 @@ export async function sendOTP(
           }
           break
 
+        case 'auth/invalid-app-credential':
+          // This error occurs when:
+          // 1. reCAPTCHA verification failed on Firebase's side
+          // 2. The domain is not authorized in Firebase Console
+          // 3. App Check is blocking the request
+          // 4. The reCAPTCHA token is invalid or expired
+          console.error('[OTP] Invalid app credential - reCAPTCHA verification failed on server')
+          resetRecaptchaVerifier()
+          initAttempts++
+          if (initAttempts < MAX_INIT_ATTEMPTS) {
+            shouldRetry = true
+            console.log(
+              `[OTP] Invalid app credential, will retry with fresh reCAPTCHA (attempt ${initAttempts}/${MAX_INIT_ATTEMPTS})`
+            )
+          } else {
+            errorMessage =
+              'Security verification failed. Please ensure you are using a supported browser, disable any ad blockers, and try again. If the issue persists, please refresh the page.'
+            shouldRefresh = true
+          }
+          break
+
         default:
           if (firebaseError.code) {
             errorMessage = `Authentication error: ${firebaseError.code}`
@@ -218,14 +263,14 @@ export async function sendOTP(
   }
 
   // First attempt
-  let result = await attemptSend()
+  let result = await attemptSend(false)
 
   // Automatic retry on reCAPTCHA failures (up to MAX_INIT_ATTEMPTS)
   while (result.shouldRetry && initAttempts < MAX_INIT_ATTEMPTS) {
     console.log(`[OTP] Retrying after delay...`)
     // Small delay before retry
     await new Promise((resolve) => setTimeout(resolve, 1000))
-    result = await attemptSend()
+    result = await attemptSend(true)
   }
 
   return {

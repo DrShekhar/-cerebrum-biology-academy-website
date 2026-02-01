@@ -10,7 +10,7 @@ import { SettingsPanel } from './SettingsPanel'
 import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
 import { ProgressCardSkeleton } from './skeletons/ProgressCardSkeleton'
 import { MetricCardSkeleton } from './skeletons/MetricsSkeleton'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { EmptyState } from '@/components/ui/EmptyState'
 import {
   Brain,

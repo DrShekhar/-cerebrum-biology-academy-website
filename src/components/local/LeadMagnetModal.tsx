@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { X, Download, CheckCircle } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { LeadMagnet } from '@/data/leadMagnets'
@@ -23,7 +23,7 @@ export function LeadMagnetModal({ isOpen, onClose, leadMagnet, area }: LeadMagne
   const [formData, setFormData] = useState({
     name: user?.name || '',
     email: user?.email || '',
-    phone: user?.phone || '',
+    phone: user?.profile?.phoneNumber || '',
     studentClass: '',
     currentSchool: '',
     targetScore: '',
@@ -64,7 +64,7 @@ export function LeadMagnetModal({ isOpen, onClose, leadMagnet, area }: LeadMagne
     setFormData({
       name: user?.name || '',
       email: user?.email || '',
-      phone: user?.phone || '',
+      phone: user?.profile?.phoneNumber || '',
       studentClass: '',
       currentSchool: '',
       targetScore: '',

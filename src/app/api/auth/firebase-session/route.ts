@@ -258,6 +258,11 @@ export async function POST(request: NextRequest) {
         : 0
 
       // Create JWT token for NextAuth session
+      const authSecret = getAuthSecret()
+      console.log(`[Firebase Session][${requestId}] Creating JWT with secret:`, {
+        secretLength: authSecret.length,
+        secretPrefix: authSecret.substring(0, 4) + '...',
+      })
       const sessionToken = jwt.sign(
         {
           id: user.id,
@@ -270,7 +275,7 @@ export async function POST(request: NextRequest) {
           trialEndDate: user.trialEndDate?.toISOString(),
           sub: user.id,
         },
-        getAuthSecret(),
+        authSecret,
         { expiresIn: '7d' }
       )
 

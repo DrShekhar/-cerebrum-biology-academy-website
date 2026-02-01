@@ -142,11 +142,78 @@ These 6 colors are the **preferred accent colors** for CTAs, badges, highlights,
 | Slate 900 to 800     | `bg-gradient-to-br from-slate-900 to-slate-800`  | Dark hero     |
 | Blue to Purple       | `bg-gradient-to-r from-blue-600 to-purple-600`   | CTAs, badges  |
 
-### Authentication
+### Authentication Architecture (CANONICAL REFERENCE)
 
-- NextAuth config: `src/lib/auth/config.ts`
-- Use `auth()` server-side, `useSession()` client-side
-- Check roles: `session.user.role` (admin, counselor, student)
+**⚠️ IMPORTANT: The auth system has been standardized. Follow this guide strictly.**
+
+#### Auth Systems Hierarchy
+
+| System | Location | Purpose | Status |
+|--------|----------|---------|--------|
+| **NextAuth v5** | `src/lib/auth.ts` | Admin/teacher sessions via `auth()` | ✅ PRIMARY |
+| **Custom JWT** | `src/lib/auth/config.ts` | API clients, token validation | ✅ ACTIVE |
+| **AuthContext** | `src/contexts/AuthContext.tsx` | Client-side state, `useAuth()` hook | ✅ PRIMARY |
+| **InstantDB Hook** | `src/hooks/useAuth.ts` | Magic link/OTP ONLY | ⚠️ LEGACY |
+
+#### Which useAuth to Use
+
+```typescript
+// ✅ CORRECT - For ALL components (except magic link forms)
+import { useAuth } from '@/contexts/AuthContext'
+
+// ❌ WRONG - Only for AuthModal magic link functionality
+import { useAuth } from '@/hooks/useAuth'
+```
+
+#### Role Values (UPPERCASE ONLY)
+
+```typescript
+// ✅ CORRECT
+if (session.user.role === 'STUDENT') { ... }
+if (session.user.role === 'ADMIN') { ... }
+
+// ❌ WRONG - lowercase roles are deprecated
+if (session.user.role === 'student') { ... }
+```
+
+**Valid Roles:** `'STUDENT'`, `'PARENT'`, `'TEACHER'`, `'ADMIN'`, `'COUNSELOR'`
+
+#### Server-Side Auth
+
+```typescript
+// In API routes
+import { auth } from '@/lib/auth'
+const session = await auth()
+if (session?.user?.role !== 'ADMIN') {
+  return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+}
+
+// In middleware
+import { validateUserSession } from '@/lib/auth/config'
+const session = await validateUserSession(request)
+```
+
+#### Client-Side Auth
+
+```typescript
+'use client'
+import { useAuth } from '@/contexts/AuthContext'
+
+function MyComponent() {
+  const { user, isAuthenticated, hasRole } = useAuth()
+
+  if (!isAuthenticated) return <LoginPrompt />
+  if (hasRole('ADMIN')) return <AdminView />
+  return <UserView />
+}
+```
+
+#### Key Files
+
+- `src/lib/auth.ts` - NextAuth v5 configuration
+- `src/lib/auth/config.ts` - Token utilities, ROLE_PERMISSIONS, SessionManager
+- `src/contexts/AuthContext.tsx` - React context (imports ROLE_PERMISSIONS from config)
+- `middleware.ts` - Route protection (validates JWT cookies)
 
 ### Testing
 

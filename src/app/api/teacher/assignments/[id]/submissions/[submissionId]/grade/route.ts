@@ -14,7 +14,7 @@ export async function POST(
 ) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'teacher') {
+    if (!session || session.user.role !== 'TEACHER') {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 

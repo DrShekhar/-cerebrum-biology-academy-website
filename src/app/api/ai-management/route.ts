@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
     const authenticatedData = { ...data, authenticatedUserId: session.user.id }
 
     // For actions that specify a userId, verify it matches session (or admin)
-    if (data?.userId && data.userId !== session.user.id && session.user.role !== 'admin') {
+    if (data?.userId && data.userId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json({ error: 'Cannot access other user data' }, { status: 403 })
     }
 
@@ -95,7 +95,7 @@ export async function GET(request: NextRequest) {
 
     // Use session user's ID by default, or validate requested userId
     const userId = requestedUserId || session.user.id
-    if (requestedUserId && requestedUserId !== session.user.id && session.user.role !== 'admin') {
+    if (requestedUserId && requestedUserId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json({ error: 'Cannot access other user data' }, { status: 403 })
     }
 

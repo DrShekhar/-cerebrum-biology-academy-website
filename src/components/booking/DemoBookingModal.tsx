@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Button } from '@/components/ui/Button'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { useDemoBooking } from '@/hooks/useDemoBooking'
 import { X, Calendar, Clock, User, Phone, Mail, MessageCircle } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -34,7 +34,7 @@ export function DemoBookingModal({
   const [formData, setFormData] = useState({
     studentName: user?.name || '',
     email: user?.email || '',
-    phone: user?.phone || '',
+    phone: user?.profile?.phoneNumber || '',
     preferredDate: '',
     preferredTime: '',
     message: '',
@@ -103,7 +103,7 @@ export function DemoBookingModal({
     setFormData({
       studentName: user?.name || '',
       email: user?.email || '',
-      phone: user?.phone || '',
+      phone: user?.profile?.phoneNumber || '',
       preferredDate: '',
       preferredTime: '',
       message: '',

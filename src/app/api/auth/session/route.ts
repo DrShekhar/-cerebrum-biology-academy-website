@@ -83,24 +83,27 @@ export async function GET(request: NextRequest) {
     const sessionToken =
       secureToken || nonSecureToken || secureNextAuthToken || nextAuthToken || customJwtToken
 
+    const tokenType = secureToken
+      ? 'secure'
+      : nonSecureToken
+        ? 'non-secure'
+        : secureNextAuthToken
+          ? 'secure-nextauth'
+          : nextAuthToken
+            ? 'nextauth'
+            : customJwtToken
+              ? 'custom-jwt'
+              : 'none'
+
     console.log(`[Session API][${requestId}] Token status:`, {
       hasSecureToken: !!secureToken,
       hasNonSecureToken: !!nonSecureToken,
       hasSecureNextAuthToken: !!secureNextAuthToken,
       hasNextAuthToken: !!nextAuthToken,
       hasCustomJwtToken: !!customJwtToken,
-      usingToken: secureToken
-        ? 'secure'
-        : nonSecureToken
-          ? 'non-secure'
-          : secureNextAuthToken
-            ? 'secure-nextauth'
-            : nextAuthToken
-              ? 'nextauth'
-              : customJwtToken
-                ? 'custom-jwt'
-                : 'none',
+      usingToken: tokenType,
       tokenLength: sessionToken?.length || 0,
+      tokenPreview: sessionToken ? `${sessionToken.substring(0, 20)}...` : 'none',
     })
 
     if (!sessionToken) {
@@ -116,8 +119,12 @@ export async function GET(request: NextRequest) {
     }
 
     // Verify and decode the JWT
-    console.log(`[Session API][${requestId}] Verifying JWT token...`)
-    const decoded = jwt.verify(sessionToken, getAuthSecret()) as FirebaseSessionPayload
+    const authSecret = getAuthSecret()
+    console.log(`[Session API][${requestId}] Verifying JWT token...`, {
+      secretLength: authSecret.length,
+      secretPrefix: authSecret.substring(0, 4) + '...',
+    })
+    const decoded = jwt.verify(sessionToken, authSecret) as FirebaseSessionPayload
 
     if (!decoded || !decoded.id) {
       console.warn(`[Session API][${requestId}] Token decoded but missing user ID`)
@@ -151,19 +158,30 @@ export async function GET(request: NextRequest) {
     const elapsed = Date.now() - startTime
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
 
+    // Determine specific error type
+    let reason = 'verification_failed'
+    if (errorMessage.includes('expired')) {
+      reason = 'token_expired'
+    } else if (errorMessage.includes('invalid signature')) {
+      reason = 'invalid_signature'
+    } else if (errorMessage.includes('malformed')) {
+      reason = 'token_malformed'
+    } else if (errorMessage.includes('jwt must be provided')) {
+      reason = 'no_token'
+    }
+
     // Always log session errors for debugging
     console.error(`[Session API][${requestId}] Session verification failed:`, {
       error: errorMessage,
+      reason,
       elapsed: `${elapsed}ms`,
-      isExpired: errorMessage.includes('expired'),
-      isInvalid: errorMessage.includes('invalid') || errorMessage.includes('malformed'),
     })
 
     return NextResponse.json({
       authenticated: false,
       user: null,
       debug: {
-        reason: errorMessage.includes('expired') ? 'token_expired' : 'verification_failed',
+        reason,
         error: process.env.NODE_ENV !== 'production' ? errorMessage : undefined,
       },
     })

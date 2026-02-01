@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import dynamic from 'next/dynamic'
 
 // Note: Removed ssr: false - the shouldLoad pattern already prevents SSR rendering

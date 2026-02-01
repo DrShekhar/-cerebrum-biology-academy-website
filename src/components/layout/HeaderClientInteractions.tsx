@@ -3,7 +3,7 @@
 import { useState, useEffect, memo } from 'react'
 import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 
 // Direct import for BurgerMenu - critical UI that must always render
 // This ensures navigation works even if chunk loading fails

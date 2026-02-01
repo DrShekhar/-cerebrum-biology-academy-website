@@ -61,7 +61,7 @@ export default async function CertificateDetailPage({ params }: PageProps) {
     redirect('/login')
   }
 
-  if (session.user.role !== 'student') {
+  if (session.user.role !== 'STUDENT') {
     redirect('/unauthorized')
   }
 

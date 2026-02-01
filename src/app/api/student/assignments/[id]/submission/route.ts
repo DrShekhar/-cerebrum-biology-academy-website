@@ -12,7 +12,7 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'student') {
+    if (!session || session.user.role !== 'STUDENT') {
       return NextResponse.json({ error: 'Unauthorized. Student access required.' }, { status: 401 })
     }
 
@@ -64,7 +64,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'student') {
+    if (!session || session.user.role !== 'STUDENT') {
       return NextResponse.json({ error: 'Unauthorized. Student access required.' }, { status: 401 })
     }
 

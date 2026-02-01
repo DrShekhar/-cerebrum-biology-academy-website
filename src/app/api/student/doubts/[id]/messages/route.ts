@@ -39,8 +39,8 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
     if (
       doubt.studentId !== userId &&
       doubt.instructorId !== userId &&
-      session.user.role !== 'teacher' &&
-      session.user.role !== 'admin'
+      session.user.role !== 'TEACHER' &&
+      session.user.role !== 'ADMIN'
     ) {
       return NextResponse.json(
         { success: false, error: 'You do not have permission to reply to this doubt' },

@@ -16,7 +16,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'counselor' && session.user.role !== 'admin') {
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Counselor access only' },
         { status: 403 }

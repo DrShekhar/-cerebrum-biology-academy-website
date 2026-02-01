@@ -26,7 +26,7 @@ import {
   type LearningPath,
   type StudySession,
 } from '@/lib/learning/PersonalizedLearningEngine'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 
 export function PersonalizedLearningPath() {

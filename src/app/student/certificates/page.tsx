@@ -46,7 +46,7 @@ export default async function StudentCertificatesPage() {
     redirect('/login')
   }
 
-  if (session.user.role !== 'student') {
+  if (session.user.role !== 'STUDENT') {
     redirect('/unauthorized')
   }
 

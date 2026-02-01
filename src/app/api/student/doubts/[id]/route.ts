@@ -80,8 +80,8 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 
     if (
       doubt.studentId !== userId &&
-      session.user.role !== 'teacher' &&
-      session.user.role !== 'admin'
+      session.user.role !== 'TEACHER' &&
+      session.user.role !== 'ADMIN'
     ) {
       return NextResponse.json(
         { success: false, error: 'You do not have permission to view this doubt' },

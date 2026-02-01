@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'student') {
+    if (session.user.role !== 'STUDENT') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Student access only' },
         { status: 403 }

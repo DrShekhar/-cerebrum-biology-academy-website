@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { useEnrollment } from '@/hooks/useEnrollment'
 import { Course } from '@/types'
 import {
@@ -40,7 +40,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
   const [formData, setFormData] = useState({
     studentName: user?.name || '',
     email: user?.email || '',
-    phone: user?.phone || '',
+    phone: user?.profile?.phoneNumber || '',
     class: '',
     school: '',
     previousExperience: '',
@@ -116,7 +116,7 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
     setFormData({
       studentName: user?.name || '',
       email: user?.email || '',
-      phone: user?.phone || '',
+      phone: user?.profile?.phoneNumber || '',
       class: '',
       school: '',
       previousExperience: '',

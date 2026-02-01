@@ -11,7 +11,7 @@ declare module 'next-auth' {
     id: string
     email: string
     name: string
-    role: 'student' | 'parent' | 'teacher' | 'admin' | 'counselor'
+    role: 'STUDENT' | 'PARENT' | 'TEACHER' | 'ADMIN' | 'COUNSELOR'
     profile?: {
       phone?: string
       currentClass?: '10th' | '11th' | '12th' | 'Dropper'
@@ -92,12 +92,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             id: user.id,
             email: user.email,
             name: user.name,
-            role: user.role.toLowerCase() as
-              | 'student'
-              | 'parent'
-              | 'teacher'
-              | 'admin'
-              | 'counselor',
+            role: user.role.toUpperCase() as
+              | 'STUDENT'
+              | 'PARENT'
+              | 'TEACHER'
+              | 'ADMIN'
+              | 'COUNSELOR',
             profile: user.profile as any,
           }
         } catch (error) {
@@ -172,12 +172,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
             id: user.id,
             email: user.email,
             name: user.name,
-            role: user.role.toLowerCase() as
-              | 'student'
-              | 'parent'
-              | 'teacher'
-              | 'admin'
-              | 'counselor',
+            role: user.role.toUpperCase() as
+              | 'STUDENT'
+              | 'PARENT'
+              | 'TEACHER'
+              | 'ADMIN'
+              | 'COUNSELOR',
             profile: user.profile as any,
           }
         } catch (error) {
@@ -212,7 +212,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       // Send properties to client
       if (token) {
         session.user.id = token.id as string
-        session.user.role = token.role as 'student' | 'parent' | 'teacher' | 'admin' | 'counselor'
+        session.user.role = token.role as 'STUDENT' | 'PARENT' | 'TEACHER' | 'ADMIN' | 'COUNSELOR'
         session.user.profile = token.profile as typeof session.user.profile
       }
       return session

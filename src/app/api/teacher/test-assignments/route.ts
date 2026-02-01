@@ -12,7 +12,7 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'teacher' && session.user.role !== 'admin')) {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
@@ -168,7 +168,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'teacher' && session.user.role !== 'admin')) {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 

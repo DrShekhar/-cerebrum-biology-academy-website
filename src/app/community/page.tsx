@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import { Suspense } from 'react'
 import { StudentCommunity } from '@/components/student/StudentCommunity'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import { useAnalytics } from '@/hooks/useAnalytics'
 import { useEffect } from 'react'
 

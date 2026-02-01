@@ -41,7 +41,7 @@ export async function GET(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'counselor' && session.user.role !== 'admin') {
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Counselor access only' },
         { status: 403 }
@@ -53,7 +53,7 @@ export async function GET(req: NextRequest) {
     const status = searchParams.get('status')
     const counselorId = searchParams.get('counselorId') || session.user.id
 
-    if (session.user.role === 'counselor' && counselorId !== session.user.id) {
+    if (session.user.role === 'COUNSELOR' && counselorId !== session.user.id) {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Can only view own goals' },
         { status: 403 }
@@ -220,7 +220,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'counselor' && session.user.role !== 'admin') {
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Counselor access only' },
         { status: 403 }
@@ -304,7 +304,7 @@ export async function PUT(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'counselor' && session.user.role !== 'admin') {
+    if (session.user.role !== 'COUNSELOR' && session.user.role !== 'ADMIN') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Counselor access only' },
         { status: 403 }
@@ -322,7 +322,7 @@ export async function PUT(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'Goal not found' }, { status: 404 })
     }
 
-    if (session.user.role === 'counselor' && existingGoal.counselorId !== session.user.id) {
+    if (session.user.role === 'COUNSELOR' && existingGoal.counselorId !== session.user.id) {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Can only update own goals' },
         { status: 403 }

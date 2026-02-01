@@ -13,7 +13,7 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'teacher' && session.user.role !== 'admin')) {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
@@ -77,7 +77,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       return NextResponse.json({ error: 'Test assignment not found' }, { status: 404 })
     }
 
-    if (assignment.teacherId !== session.user.id && session.user.role !== 'admin') {
+    if (assignment.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized to view this assignment' }, { status: 403 })
     }
 
@@ -101,7 +101,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
 export async function PUT(request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'teacher' && session.user.role !== 'admin')) {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
@@ -117,7 +117,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
       return NextResponse.json({ error: 'Test assignment not found' }, { status: 404 })
     }
 
-    if (existing.teacherId !== session.user.id && session.user.role !== 'admin') {
+    if (existing.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized to update this assignment' }, { status: 403 })
     }
 
@@ -270,7 +270,7 @@ export async function DELETE(
 ) {
   try {
     const session = await auth()
-    if (!session || (session.user.role !== 'teacher' && session.user.role !== 'admin')) {
+    if (!session || (session.user.role !== 'TEACHER' && session.user.role !== 'ADMIN')) {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
@@ -285,7 +285,7 @@ export async function DELETE(
       return NextResponse.json({ error: 'Test assignment not found' }, { status: 404 })
     }
 
-    if (existing.teacherId !== session.user.id && session.user.role !== 'admin') {
+    if (existing.teacherId !== session.user.id && session.user.role !== 'ADMIN') {
       return NextResponse.json({ error: 'Unauthorized to delete this assignment' }, { status: 403 })
     }
 

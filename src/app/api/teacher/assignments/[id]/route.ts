@@ -13,7 +13,7 @@ import { auth } from '@/lib/auth'
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'teacher') {
+    if (!session || session.user.role !== 'TEACHER') {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
@@ -108,7 +108,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'teacher') {
+    if (!session || session.user.role !== 'TEACHER') {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 
@@ -241,7 +241,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
 export async function DELETE(request: NextRequest, { params }: { params: { id: string } }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'teacher') {
+    if (!session || session.user.role !== 'TEACHER') {
       return NextResponse.json({ error: 'Unauthorized. Teacher access required.' }, { status: 401 })
     }
 

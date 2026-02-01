@@ -12,11 +12,11 @@
 import React from 'react'
 import { render, screen, waitFor, fireEvent, act } from '@testing-library/react'
 import { PersonalizedStudentDashboard } from '@/components/dashboard/PersonalizedStudentDashboard'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import '@testing-library/jest-dom'
 
 // Mock dependencies
-jest.mock('@/hooks/useAuth')
+jest.mock('@/contexts/AuthContext')
 jest.mock('framer-motion', () => ({
   motion: {
     div: ({ children, ...props }: any) => <div {...props}>{children}</div>,

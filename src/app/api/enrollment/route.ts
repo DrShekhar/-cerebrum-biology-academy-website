@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     let userId = session.user.id
     if (validatedData.userId && validatedData.userId !== session.user.id) {
       // Only admin can create enrollment for other users
-      if (session.user.role !== 'admin') {
+      if (session.user.role !== 'ADMIN') {
         return NextResponse.json(
           { error: 'Cannot create enrollment for another user' },
           { status: 403 }
@@ -128,7 +128,7 @@ export async function GET(request: NextRequest) {
       }
 
       // Users can only see their own enrollment unless admin
-      if (enrollment.userId !== session.user.id && session.user.role !== 'admin') {
+      if (enrollment.userId !== session.user.id && session.user.role !== 'ADMIN') {
         return NextResponse.json({ error: 'Access denied' }, { status: 403 })
       }
 

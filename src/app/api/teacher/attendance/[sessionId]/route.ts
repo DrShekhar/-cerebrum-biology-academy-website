@@ -30,7 +30,7 @@ export async function GET(req: NextRequest, { params }: { params: { sessionId: s
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'teacher') {
+    if (session.user.role !== 'TEACHER') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -135,7 +135,7 @@ export async function POST(req: NextRequest, { params }: { params: { sessionId: 
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'teacher') {
+    if (session.user.role !== 'TEACHER') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }
@@ -234,7 +234,7 @@ export async function PUT(req: NextRequest, { params }: { params: { sessionId: s
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
-    if (session.user.role !== 'teacher') {
+    if (session.user.role !== 'TEACHER') {
       return NextResponse.json(
         { success: false, error: 'Forbidden - Teacher access only' },
         { status: 403 }

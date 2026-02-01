@@ -27,7 +27,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 export async function PUT(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role !== 'ADMIN') {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -74,7 +74,7 @@ export async function PUT(request: Request, { params }: { params: Promise<{ id: 
 export async function DELETE(request: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role !== 'ADMIN') {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 

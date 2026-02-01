@@ -4,7 +4,7 @@
 export const dynamic = 'force-dynamic'
 
 import dynamicImport from 'next/dynamic'
-import { useAuth } from '@/hooks/useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { LogIn, UserPlus, Brain } from 'lucide-react'

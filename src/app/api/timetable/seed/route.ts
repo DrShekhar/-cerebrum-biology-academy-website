@@ -185,7 +185,7 @@ const initialTestSchedules = [
 export async function POST(request: Request) {
   try {
     const session = await auth()
-    if (!session || session.user.role !== 'admin') {
+    if (!session || session.user.role !== 'ADMIN') {
       return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
     }
 
