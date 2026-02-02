@@ -35,7 +35,7 @@ export function DashboardEmptyState({ userName }: DashboardEmptyStateProps) {
           animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-2xl sm:rounded-3xl shadow-xl p-6 sm:p-12 text-center"
         >
-          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-green-600 to-navy-700 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
             <Target className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
@@ -48,14 +48,14 @@ export function DashboardEmptyState({ userName }: DashboardEmptyStateProps) {
           <div className="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
             <Link
               href="/practice"
-              className="inline-flex items-center justify-center space-x-2 bg-gradient-to-r from-green-600 to-navy-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:shadow-lg transition-all min-h-[48px] touch-action-manipulation active:scale-95 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              className="inline-flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:shadow-lg transition-all min-h-[48px] touch-action-manipulation active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <Play className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="text-sm sm:text-base font-semibold">Start Practice Test</span>
             </Link>
             <Link
               href="/courses"
-              className="inline-flex items-center justify-center space-x-2 bg-white border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:border-green-600 hover:text-green-600 transition-all min-h-[48px] touch-action-manipulation active:scale-95 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+              className="inline-flex items-center justify-center space-x-2 bg-white border-2 border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all min-h-[48px] touch-action-manipulation active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="text-sm sm:text-base font-semibold">Browse Courses</span>
