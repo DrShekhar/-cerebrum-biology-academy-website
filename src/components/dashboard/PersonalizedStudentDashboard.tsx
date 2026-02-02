@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { AnimatePresence } from 'framer-motion'
 import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3 } from 'lucide-react'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
 import { BottomNavigation } from '@/components/mobile/MobileFullscreenMenu'
@@ -29,7 +29,7 @@ import {
 } from './tabs'
 
 export function PersonalizedStudentDashboard() {
-  const { user, isAuthenticated } = useFirebaseSession()
+  const { user, isAuthenticated } = useAuth()
   const pathname = usePathname()
   const { showToast } = useToast()
   const [activeTab, setActiveTab] = useState('overview')

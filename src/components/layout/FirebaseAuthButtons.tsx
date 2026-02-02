@@ -1,24 +1,32 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { useFirebaseSession } from '@/hooks/useFirebaseSession'
-import { useRouter } from 'next/navigation'
 import { signOut } from '@/lib/firebase/phone-auth'
 
 export function FirebaseAuthButtons() {
   const { isLoading, isAuthenticated, user } = useFirebaseSession()
-  const router = useRouter()
+  const [isSigningOut, setIsSigningOut] = useState(false)
 
   const handleSignOut = async () => {
+    // Prevent multiple clicks
+    if (isSigningOut) return
+
+    setIsSigningOut(true)
+    console.log('[FirebaseAuthButtons] Starting sign out...')
+
     try {
       await signOut()
-      // Force a hard refresh to clear all client-side state
-      // router.refresh() only refreshes server components, not client state
-      window.location.href = '/'
+      console.log('[FirebaseAuthButtons] Sign out successful, redirecting...')
     } catch (error) {
-      console.error('Sign out error:', error)
-      // Even on error, redirect to home and force refresh
-      window.location.href = '/'
+      console.error('[FirebaseAuthButtons] Sign out error:', error)
+    } finally {
+      // Always redirect to home with hard refresh to clear all client-side state
+      // Use setTimeout to ensure state updates are flushed
+      setTimeout(() => {
+        window.location.href = '/'
+      }, 100)
     }
   }
 
@@ -39,9 +47,10 @@ export function FirebaseAuthButtons() {
         </Link>
         <button
           onClick={handleSignOut}
-          className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+          disabled={isSigningOut}
+          className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          Sign Out
+          {isSigningOut ? 'Signing Out...' : 'Sign Out'}
         </button>
       </div>
     )
