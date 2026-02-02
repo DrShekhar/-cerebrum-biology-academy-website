@@ -11,8 +11,11 @@ import React, {
 } from 'react'
 import { useRouter } from 'next/navigation'
 import type { UserRole } from '@/generated/prisma'
-import { signOut as firebaseSignOut } from '@/lib/firebase/phone-auth'
 import { ROLE_PERMISSIONS } from '@/lib/auth/config'
+
+// PERFORMANCE: Lazy-load Firebase signout to defer ~200KB Firebase SDK until logout is needed
+// Most users never log out during a session, so this is a significant optimization
+const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
 
 // Token expiry configuration
 const TOKEN_EXPIRY_MS = 15 * 60 * 1000 // 15 minutes
@@ -404,8 +407,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
         console.warn('Logout API call failed:', fetchError)
       }
 
-      // Always attempt Firebase signout
+      // Always attempt Firebase signout (lazy-loaded to defer Firebase SDK)
       try {
+        const firebaseSignOut = await getFirebaseSignOut()
         await firebaseSignOut()
       } catch (firebaseError) {
         console.warn('Firebase signout failed:', firebaseError)

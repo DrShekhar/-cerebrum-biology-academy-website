@@ -1,5 +1,24 @@
-import { Trophy, Play } from 'lucide-react'
-import { HeroClientInteractive } from './HeroClientInteractive'
+import dynamic from 'next/dynamic'
+
+// PERFORMANCE: Lazy-load client interactive elements to defer lucide-react icons (~50KB)
+// These elements have animation delays anyway, so deferring doesn't hurt UX
+const HeroClientInteractive = dynamic(
+  () => import('./HeroClientInteractive').then((mod) => mod.HeroClientInteractive),
+  { loading: () => null }
+)
+
+// PERFORMANCE: Inline SVGs instead of lucide-react to eliminate icon library from critical path
+const TrophyIcon = () => (
+  <svg className="w-5 h-5 mr-2 text-green-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 9V2h12v7a6 6 0 01-12 0zm6 13v-4m-4 4h8M4 4h2m12 0h2M4 4a2 2 0 00-2 2v1a2 2 0 002 2m16-5a2 2 0 012 2v1a2 2 0 01-2 2" />
+  </svg>
+)
+
+const PlayIcon = () => (
+  <svg className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" style={{ width: '1.25rem', height: '1.25rem' }}>
+    <path d="M8 5v14l11-7z" />
+  </svg>
+)
 
 interface HeroSectionProps {
   className?: string
@@ -37,7 +56,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             className="inline-flex items-center bg-green-600/20 backdrop-blur-sm border border-green-300/30 px-4 py-2 rounded-full mb-6 animate-fade-in-up"
             style={{ animationDelay: '0.1s' }}
           >
-            <Trophy className="w-5 h-5 mr-2 text-green-300" />
+            <TrophyIcon />
             <span className="text-green-100 font-medium text-xs xs:text-sm md:text-base">
               #1 NEET Biology Coaching • 98% Success Rate
             </span>
@@ -97,10 +116,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
                 gap: '0.5rem',
               }}
             >
-              <Play
-                className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0"
-                style={{ width: '1.25rem', height: '1.25rem' }}
-              />
+              <PlayIcon />
               BOOK FREE DEMO
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-900 opacity-75"></span>
