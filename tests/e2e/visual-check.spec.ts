@@ -53,21 +53,23 @@ test.describe('Visual Component Tests', () => {
     await page.setViewportSize({ width: 768, height: 1024 }) // iPad
     await page.goto('http://localhost:3000')
 
+    // Wait for hydration
+    await page.waitForTimeout(1000)
+
     // Check burger menu button exists
     const burgerButton = page.locator('button[aria-label="Open menu"]')
-    await expect(burgerButton).toBeVisible()
+    await expect(burgerButton).toBeVisible({ timeout: 5000 })
 
     // Click burger menu
     await burgerButton.click()
-    await page.waitForTimeout(500)
+
+    // Wait for menu panel to appear first
+    const menuPanel = page.locator('#burger-menu-panel')
+    await expect(menuPanel).toBeVisible({ timeout: 5000 })
 
     // Check if X button is visible in the panel
     const closeButton = page.locator('button[aria-label="Close navigation menu"]')
-    await expect(closeButton).toBeVisible()
-
-    // Check if menu panel is visible
-    const menuPanel = page.locator('#burger-menu-panel')
-    await expect(menuPanel).toBeVisible()
+    await expect(closeButton).toBeVisible({ timeout: 5000 })
 
     // Close menu
     await closeButton.click()
