@@ -34,12 +34,12 @@ export function FloatingCTA() {
   const [shouldLoad, setShouldLoad] = useState(false)
 
   useEffect(() => {
-    // PERFORMANCE: Use requestIdleCallback for non-critical UI to avoid blocking LCP
+    // PERFORMANCE: Increased delay from 4s to 6s for better mobile LCP
     if ('requestIdleCallback' in window) {
-      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 4000 })
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 6000 })
       return () => cancelIdleCallback(idleId)
     } else {
-      const timerId = setTimeout(() => setShouldLoad(true), 3000)
+      const timerId = setTimeout(() => setShouldLoad(true), 5000)
       return () => clearTimeout(timerId)
     }
   }, [])
@@ -52,11 +52,12 @@ export function GlobalExitIntent() {
   const [shouldLoad, setShouldLoad] = useState(false)
 
   useEffect(() => {
+    // PERFORMANCE: Increased delay from 6s to 10s - exit intent is very low priority
     if ('requestIdleCallback' in window) {
-      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 6000 })
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 10000 })
       return () => cancelIdleCallback(idleId)
     } else {
-      const timerId = setTimeout(() => setShouldLoad(true), 4000)
+      const timerId = setTimeout(() => setShouldLoad(true), 8000)
       return () => clearTimeout(timerId)
     }
   }, [])
@@ -75,12 +76,13 @@ export function SalesAgentWidget() {
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    // PERFORMANCE: Delay sales agent to prioritize LCP and core interactivity
+    // PERFORMANCE: Delay sales agent even more to prioritize LCP and core interactivity
+    // Changed from 5s to 8s timeout for better mobile performance
     if ('requestIdleCallback' in window) {
-      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 5000 })
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 8000 })
       return () => cancelIdleCallback(idleId)
     } else {
-      const timerId = setTimeout(() => setShouldLoad(true), 4000)
+      const timerId = setTimeout(() => setShouldLoad(true), 6000)
       return () => clearTimeout(timerId)
     }
   }, [])
