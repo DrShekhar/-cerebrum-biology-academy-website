@@ -9,7 +9,7 @@ test.describe('Visual Component Tests', () => {
     await page.goto('http://localhost:3000')
 
     // Check burger menu button exists
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
     await expect(burgerButton).toBeVisible()
 
     // Click burger menu
@@ -54,7 +54,7 @@ test.describe('Visual Component Tests', () => {
     await page.goto('http://localhost:3000')
 
     // Check burger menu button exists
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
     await expect(burgerButton).toBeVisible()
 
     // Click burger menu

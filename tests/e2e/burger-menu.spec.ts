@@ -32,12 +32,14 @@ test.describe('Burger Menu Navigation', () => {
   })
 
   test('should display burger menu button', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    // Note: The header uses "Open menu" aria-label (HeaderClientInteractions.tsx)
+    // The BurgerMenu component has "Toggle navigation menu" but it's lazy-loaded
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
     await expect(burgerButton).toBeVisible()
   })
 
   test('should be clickable and not obscured by other elements', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
 
     // Check if button is visible
     await expect(burgerButton).toBeVisible()
@@ -64,7 +66,7 @@ test.describe('Burger Menu Navigation', () => {
   })
 
   test('should open menu panel when clicked', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
     const menuPanel = page.locator('#burger-menu-panel')
 
     // Click burger button
@@ -88,7 +90,7 @@ test.describe('Burger Menu Navigation', () => {
   })
 
   test('should display navigation sections in menu', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
 
     // Open menu
     await burgerButton.click()
@@ -106,7 +108,7 @@ test.describe('Burger Menu Navigation', () => {
   })
 
   test('should expand navigation sections when clicked', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
 
     // Open menu
     await burgerButton.click()
@@ -129,7 +131,7 @@ test.describe('Burger Menu Navigation', () => {
   })
 
   test('should close menu when clicking overlay', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
     const menuPanel = page.locator('#burger-menu-panel')
 
     // Open menu
@@ -149,7 +151,7 @@ test.describe('Burger Menu Navigation', () => {
   })
 
   test('should close menu when clicking close button', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
     const menuPanel = page.locator('#burger-menu-panel')
 
     // Open menu
@@ -169,7 +171,7 @@ test.describe('Burger Menu Navigation', () => {
   })
 
   test('should verify z-index hierarchy is correct', async ({ page }) => {
-    const burgerButton = page.locator('button[aria-label="Toggle navigation menu"]')
+    const burgerButton = page.locator('button[aria-label="Open menu"]')
 
     // Check burger button z-index
     const buttonZIndex = await burgerButton.evaluate((el) => window.getComputedStyle(el).zIndex)
