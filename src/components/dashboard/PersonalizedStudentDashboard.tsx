@@ -92,7 +92,12 @@ export function PersonalizedStudentDashboard() {
         setError(null)
 
         const userId = user?.id || freeUserId
-        if (!userId) return
+        if (!userId) {
+          // No user ID available yet - stop loading and wait for auth to complete
+          console.log('[Dashboard] No userId available, waiting for auth...')
+          setIsLoading(false)
+          return
+        }
 
         // Parallel fetch for performance with retry logic
         const [attemptsResponse, dashboardStatsResponse] = await Promise.allSettled([

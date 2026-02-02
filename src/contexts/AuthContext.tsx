@@ -247,15 +247,50 @@ export function AuthProvider({ children }: AuthProviderProps) {
     try {
       setIsLoading(true)
 
-      // Check if we have valid tokens
-      const response = await fetch('/api/auth/refresh', {
+      // IMPORTANT: Check BOTH session endpoints to support all login flows:
+      // 1. /api/auth/session - Works with Firebase phone OTP (authjs.session-token cookie)
+      // 2. /api/auth/refresh - Works with email/password login (refresh-token cookie)
+
+      // First, try the session endpoint (for Firebase phone OTP login)
+      try {
+        const sessionResponse = await fetch('/api/auth/session', {
+          method: 'GET',
+          credentials: 'include',
+          headers: { 'Cache-Control': 'no-cache' },
+        })
+
+        if (sessionResponse.ok) {
+          const sessionData = await sessionResponse.json()
+          if (sessionData.authenticated && sessionData.user) {
+            console.log('[AuthContext] Session found via /api/auth/session:', sessionData.user.id)
+            setUser({
+              id: sessionData.user.id,
+              email: sessionData.user.email || '',
+              name: sessionData.user.name || '',
+              role: sessionData.user.role,
+              emailVerified: null,
+              profile: sessionData.user.profile || null,
+            })
+            setPermissions(getUserPermissions(sessionData.user.role))
+            updateTokenExpiry()
+            lastRefreshRef.current = Date.now()
+            return // Successfully authenticated via session endpoint
+          }
+        }
+      } catch (sessionError) {
+        console.log('[AuthContext] Session check failed, trying refresh endpoint:', sessionError)
+      }
+
+      // Second, try the refresh endpoint (for email/password login)
+      const refreshResponse = await fetch('/api/auth/refresh', {
         method: 'GET',
         credentials: 'include',
       })
 
-      if (response.ok) {
-        const data = await response.json()
+      if (refreshResponse.ok) {
+        const data = await refreshResponse.json()
         if (data.valid && data.user) {
+          console.log('[AuthContext] Session found via /api/auth/refresh:', data.user.id)
           setUser(data.user)
           setPermissions(getUserPermissions(data.user.role))
           // Set expiry based on response or default

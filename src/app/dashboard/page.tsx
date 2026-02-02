@@ -3,43 +3,58 @@
 // Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import dynamicImport from 'next/dynamic'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
-import { useUserFlow } from '@/hooks/useUserFlow'
+import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Component, ReactNode } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { BookOpen, LogIn, UserPlus, RefreshCw, AlertCircle } from 'lucide-react'
+import { BookOpen, LogIn, UserPlus, RefreshCw, AlertCircle, Brain } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
-import { DashboardAccessControl } from '@/components/DashboardAccessControl'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 // Owner phone number - only this number gets multi-role access
 const OWNER_PHONE = CONTACT_INFO.phone.owner
 
-// Loading timeout - show error after 15 seconds
-const LOADING_TIMEOUT = 15000
+// Directly import the dashboard component (no dynamic import issues)
+import { PersonalizedStudentDashboard } from '@/components/dashboard/PersonalizedStudentDashboard'
 
-const PersonalizedStudentDashboard = dynamicImport(
-  () =>
-    import('@/components/dashboard/PersonalizedStudentDashboard').then((mod) => ({
-      default: mod.PersonalizedStudentDashboard,
-    })),
-  {
-    loading: () => (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
-            <div className="w-8 h-8 bg-white rounded-full" />
-          </div>
-          <p className="text-gray-600">Loading Your Personalized Dashboard...</p>
-        </div>
-      </div>
-    ),
-    ssr: false,
+// Error Boundary for catching dashboard render errors
+interface ErrorBoundaryProps {
+  children: ReactNode
+  fallback: (error: Error, reset: () => void) => ReactNode
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean
+  error: Error | null
+}
+
+class DashboardErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+    this.state = { hasError: false, error: null }
   }
-)
+
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
+    return { hasError: true, error }
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('[Dashboard Error Boundary] Caught error:', error)
+    console.error('[Dashboard Error Boundary] Error info:', errorInfo)
+  }
+
+  reset = () => {
+    this.setState({ hasError: false, error: null })
+  }
+
+  render() {
+    if (this.state.hasError && this.state.error) {
+      return this.props.fallback(this.state.error, this.reset)
+    }
+    return this.props.children
+  }
+}
 
 function AuthRequiredMessage() {
   return (
@@ -89,7 +104,21 @@ function AuthRequiredMessage() {
   )
 }
 
-function SessionErrorMessage({ error, onRetry }: { error: Error | null; onRetry: () => void }) {
+function LoadingState() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="text-center">
+        <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
+          <Brain className="w-8 h-8 text-white" />
+        </div>
+        <p className="text-gray-600">Loading your dashboard...</p>
+        <p className="text-xs text-gray-400 mt-2">Please wait...</p>
+      </div>
+    </div>
+  )
+}
+
+function ErrorFallback({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <motion.div
@@ -100,78 +129,24 @@ function SessionErrorMessage({ error, onRetry }: { error: Error | null; onRetry:
         <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <AlertCircle className="w-10 h-10 text-red-500" />
         </div>
-
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Session Error</h1>
-
-        <p className="text-gray-600 mb-4">
-          We couldn&apos;t verify your session. This might be due to:
+        <h1 className="text-2xl font-bold text-gray-900 mb-2">Dashboard Error</h1>
+        <p className="text-gray-600 mb-4">There was an error loading your dashboard.</p>
+        <p className="text-xs text-red-500 bg-red-50 p-2 rounded mb-6 text-left overflow-auto max-h-32">
+          {error.message}
         </p>
-
-        <ul className="text-left text-gray-500 text-sm mb-6 space-y-2">
-          <li>• Your session may have expired</li>
-          <li>• Network connectivity issues</li>
-          <li>• Browser cookies may be blocked</li>
-        </ul>
-
-        {error && (
-          <p className="text-xs text-red-500 bg-red-50 p-2 rounded mb-6">Error: {error.message}</p>
-        )}
-
         <div className="space-y-4">
-          <Button variant="primary" size="lg" className="w-full" onClick={onRetry}>
+          <Button variant="primary" size="lg" className="w-full" onClick={reset}>
             <RefreshCw className="w-5 h-5 mr-2" />
             Try Again
           </Button>
-
-          <Link href="/sign-in">
-            <Button variant="outline" size="lg" className="w-full">
-              <LogIn className="w-5 h-5 mr-2" />
-              Sign In Again
-            </Button>
-          </Link>
-        </div>
-
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <p className="text-xs text-gray-400">
-            If the problem persists, try clearing your browser cookies and signing in again.
-          </p>
-        </div>
-      </motion.div>
-    </div>
-  )
-}
-
-function LoadingTimeout({ onRetry }: { onRetry: () => void }) {
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center"
-      >
-        <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
-          <RefreshCw className="w-10 h-10 text-yellow-600" />
-        </div>
-
-        <h1 className="text-2xl font-bold text-gray-900 mb-2">Taking Longer Than Expected</h1>
-
-        <p className="text-gray-600 mb-6">
-          The session check is taking longer than usual. This might be due to slow network
-          connection.
-        </p>
-
-        <div className="space-y-4">
-          <Button variant="primary" size="lg" className="w-full" onClick={onRetry}>
-            <RefreshCw className="w-5 h-5 mr-2" />
-            Retry
+          <Button
+            variant="outline"
+            size="lg"
+            className="w-full"
+            onClick={() => window.location.reload()}
+          >
+            Reload Page
           </Button>
-
-          <Link href="/sign-in">
-            <Button variant="outline" size="lg" className="w-full">
-              <LogIn className="w-5 h-5 mr-2" />
-              Sign In Again
-            </Button>
-          </Link>
         </div>
       </motion.div>
     </div>
@@ -179,44 +154,32 @@ function LoadingTimeout({ onRetry }: { onRetry: () => void }) {
 }
 
 export default function DashboardPage() {
-  const { user, isLoading, isAuthenticated, error, sessionChecked, refresh } = useFirebaseSession()
-  const { isDevMode } = useUserFlow()
+  // Use AuthContext - same as header for consistency
+  const { user, isAuthenticated, isLoading } = useAuth()
   const router = useRouter()
-  const [loadingTimedOut, setLoadingTimedOut] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
-  // SECURITY (2026-01-28): Debug logging only in development to prevent info leakage
+  // Ensure we're mounted before checking auth (prevent hydration issues)
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development') {
-      console.log('[Dashboard] Auth state:', {
+    setMounted(true)
+  }, [])
+
+  // Debug logging
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development' && mounted) {
+      console.log('[Dashboard] Auth state from useAuth:', {
         isLoading,
         isAuthenticated,
-        sessionChecked,
         hasUser: !!user,
-        error: error?.message,
+        userId: user?.id,
       })
     }
-  }, [isLoading, isAuthenticated, sessionChecked, user, error])
+  }, [isLoading, isAuthenticated, user, mounted])
 
-  // Loading timeout handler
+  // Owner phone check - redirect to role selection
   useEffect(() => {
-    if (isLoading) {
-      const timeout = setTimeout(() => {
-        console.warn('[Dashboard] Loading timed out after', LOADING_TIMEOUT, 'ms')
-        setLoadingTimedOut(true)
-      }, LOADING_TIMEOUT)
-
-      return () => clearTimeout(timeout)
-    } else {
-      setLoadingTimedOut(false)
-    }
-  }, [isLoading])
-
-  useEffect(() => {
-    // Check if user is the owner by phone number - redirect to role selection
-    // SECURITY (2026-01-28): Centralized phone normalization to avoid hardcoded variants
-    if (!isLoading && user) {
+    if (!isLoading && user && mounted) {
       const userPhone = user.phone || ''
-      // Normalize by removing +, spaces, dashes, parentheses for consistent comparison
       const normalizePhone = (phone: string) => phone.replace(/[\+\s\-\(\)]/g, '')
       const normalizedUserPhone = normalizePhone(userPhone)
       const normalizedOwnerPhone = normalizePhone(OWNER_PHONE)
@@ -226,50 +189,29 @@ export default function DashboardPage() {
         return
       }
     }
-  }, [isLoading, user, router])
+  }, [isLoading, user, router, mounted])
 
-  // Handle retry
-  const handleRetry = () => {
-    setLoadingTimedOut(false)
-    refresh()
-  }
-
-  // Show timeout message if loading takes too long
-  if (loadingTimedOut && isLoading) {
-    return <LoadingTimeout onRetry={handleRetry} />
-  }
-
-  // Show error message if session check failed
-  if (error && sessionChecked) {
-    return <SessionErrorMessage error={error} onRetry={handleRetry} />
+  // Don't render until mounted (prevents hydration mismatch)
+  if (!mounted) {
+    return <LoadingState />
   }
 
   // Show loading while checking authentication
   if (isLoading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4 mx-auto animate-pulse">
-            <div className="w-8 h-8 bg-white rounded-full" />
-          </div>
-          <p className="text-gray-600">Checking authentication...</p>
-          <p className="text-xs text-gray-400 mt-2">Please wait...</p>
-        </div>
-      </div>
-    )
+    return <LoadingState />
   }
 
-  // Show authentication required message if not signed in (unless dev mode)
-  if (!isDevMode && (!isAuthenticated || !user)) {
+  // Show authentication required if not signed in
+  if (!isAuthenticated || !user) {
     return <AuthRequiredMessage />
   }
 
-  // Show dashboard for authenticated users with access control
+  // User is authenticated - show the dashboard
   return (
-    <DashboardAccessControl dashboardType="NEET_PREP" fallbackRoute="/student/dashboard">
-      <main className="min-h-screen">
+    <main className="min-h-screen">
+      <DashboardErrorBoundary fallback={(error, reset) => <ErrorFallback error={error} reset={reset} />}>
         <PersonalizedStudentDashboard />
-      </main>
-    </DashboardAccessControl>
+      </DashboardErrorBoundary>
+    </main>
   )
 }

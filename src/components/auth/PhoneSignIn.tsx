@@ -22,20 +22,19 @@ type Step = 'phone' | 'otp' | 'signup' | 'success'
 const isFirebaseConfigured = Boolean(process.env.NEXT_PUBLIC_FIREBASE_API_KEY)
 
 // Get role-based dashboard redirect URL
+// IMPORTANT: Roles in the system are UPPERCASE (STUDENT, ADMIN, etc.)
 function getRoleDashboardUrl(role: string | undefined): string {
-  const normalizedRole = (role || 'student').toLowerCase()
+  const normalizedRole = (role || 'STUDENT').toUpperCase()
   switch (normalizedRole) {
-    case 'admin':
+    case 'ADMIN':
       return '/admin/dashboard'
-    case 'teacher':
+    case 'TEACHER':
       return '/teacher/dashboard'
-    case 'counselor':
+    case 'COUNSELOR':
       return '/counselor/dashboard'
-    case 'consultant':
-      return '/consultant/dashboard'
-    case 'parent':
+    case 'PARENT':
       return '/parent/dashboard'
-    case 'student':
+    case 'STUDENT':
     default:
       return '/dashboard'
   }

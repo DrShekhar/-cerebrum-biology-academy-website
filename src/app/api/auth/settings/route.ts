@@ -77,7 +77,8 @@ export const GET = withAuth(async (request: NextRequest, session) => {
     }
 
     // Get active sessions
-    const activeSessions = await prisma.session.findMany({
+    // NOTE: Model name is 'sessions' (plural) in Prisma schema
+    const activeSessions = await prisma.sessions.findMany({
       where: {
         userId: session.userId,
         expires: { gt: new Date() },
