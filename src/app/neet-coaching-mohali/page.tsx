@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import {
-  MapPin,
   Users,
   Trophy,
   Star,
@@ -20,9 +19,7 @@ import {
   Target,
   Car,
   TrendingUp,
-  CheckCircle,
   Laptop,
-  Train,
   School,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'

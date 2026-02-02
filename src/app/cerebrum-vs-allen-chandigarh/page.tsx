@@ -14,18 +14,14 @@ import {
   Users,
   Award,
   BookOpen,
-  Zap,
   Star,
   ArrowRight,
   MessageCircle,
   TrendingUp,
-  GraduationCap,
   IndianRupee,
   MapPin,
   Calculator,
   Clock,
-  Target,
-  Shield,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'

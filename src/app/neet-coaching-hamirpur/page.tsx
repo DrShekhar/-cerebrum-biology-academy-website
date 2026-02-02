@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
-  Clock,
   Users,
   Award,
   BookOpen,
@@ -13,10 +12,8 @@ import {
   MessageCircle,
   Phone,
   CheckCircle,
-  Star,
   TrendingUp,
   Target,
-  Zap,
   GraduationCap,
   Building2,
   IndianRupee,

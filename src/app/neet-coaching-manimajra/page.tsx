@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Users, Trophy, Star, Award, Video, MessageCircle, ArrowRight, GraduationCap, Phone, Target, School, BookOpen, Clock } from 'lucide-react'
+import { Users, Trophy, Star, Award, Video, MessageCircle, ArrowRight, GraduationCap, Phone, Target, BookOpen, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'

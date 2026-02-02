@@ -7,7 +7,6 @@ import {
   Trophy,
   Star,
   Award,
-  BookOpen,
   Clock,
   Shield,
   Video,

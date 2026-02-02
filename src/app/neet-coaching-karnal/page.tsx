@@ -8,7 +8,6 @@ import {
   Star,
   Award,
   BookOpen,
-  Clock,
   Shield,
   Video,
   MessageCircle,

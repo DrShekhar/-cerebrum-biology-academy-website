@@ -9,7 +9,6 @@ import {
   Award,
   BookOpen,
   Video,
-  FileText,
   MessageCircle,
   Phone,
   CheckCircle,

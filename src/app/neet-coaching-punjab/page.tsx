@@ -7,19 +7,15 @@ import {
   Trophy,
   Star,
   Award,
-  BookOpen,
-  Clock,
   Video,
   MessageCircle,
   Play,
   ArrowRight,
   GraduationCap,
-  Building,
   Phone,
   IndianRupee,
   Home,
   Wifi,
-  CheckCircle,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'

@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion'
 import {
-  MapPin,
   Users,
   Trophy,
   Star,
@@ -20,7 +19,6 @@ import {
   Target,
   Car,
   TrendingUp,
-  CheckCircle,
   Laptop,
   School,
 } from 'lucide-react'

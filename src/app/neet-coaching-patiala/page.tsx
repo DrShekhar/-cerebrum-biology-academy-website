@@ -2,14 +2,12 @@
 
 import { motion } from 'framer-motion'
 import {
-  MapPin,
   Users,
   Trophy,
   Star,
   Award,
   BookOpen,
   Clock,
-  Shield,
   Video,
   MessageCircle,
   ArrowRight,
