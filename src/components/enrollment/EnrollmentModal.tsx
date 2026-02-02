@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/contexts/AuthContext'
 import { useEnrollment } from '@/hooks/useEnrollment'
+import { useRouter } from 'next/navigation'
 import { Course } from '@/types'
 import {
   X,
@@ -19,7 +20,6 @@ import {
 } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import FocusTrap from 'focus-trap-react'
-import { AuthModal } from '@/components/auth/AuthModal'
 import { RazorpayPayment } from '@/components/payment/RazorpayPayment'
 import toast from 'react-hot-toast'
 
@@ -32,9 +32,9 @@ interface EnrollmentModalProps {
 export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProps) {
   const { user, isAuthenticated } = useAuth()
   const { enrollInCourse } = useEnrollment()
+  const router = useRouter()
 
   const [currentStep, setCurrentStep] = useState<'details' | 'payment' | 'success'>('details')
-  const [showAuthModal, setShowAuthModal] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
   const [formData, setFormData] = useState({
@@ -68,7 +68,9 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
     e.preventDefault()
 
     if (!isAuthenticated) {
-      setShowAuthModal(true)
+      // Redirect to sign-in with return URL
+      onClose()
+      router.push(`/sign-in?redirect=${encodeURIComponent(window.location.pathname)}`)
       return
     }
 
@@ -633,13 +635,6 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
           </motion.div>
         </motion.div>
       </FocusTrap>
-
-      <AuthModal
-        isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
-        title="Sign in to enroll"
-        subtitle="Create your account to complete the enrollment process"
-      />
     </AnimatePresence>
   )
 }

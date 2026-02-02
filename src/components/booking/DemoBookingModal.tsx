@@ -6,7 +6,7 @@ import { useAuth } from '@/contexts/AuthContext'
 import { useDemoBooking } from '@/hooks/useDemoBooking'
 import { X, Calendar, Clock, User, Phone, Mail, MessageCircle } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { AuthModal } from '@/components/auth/AuthModal'
+import { useRouter } from 'next/navigation'
 import FocusTrap from 'focus-trap-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import toast from 'react-hot-toast'
@@ -26,8 +26,8 @@ export function DemoBookingModal({
 }: DemoBookingModalProps) {
   const { user, isAuthenticated } = useAuth()
   const { bookDemo } = useDemoBooking()
+  const router = useRouter()
 
-  const [showAuthModal, setShowAuthModal] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -42,11 +42,11 @@ export function DemoBookingModal({
 
   const handleEscapeKey = useCallback(
     (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && !showAuthModal) {
+      if (e.key === 'Escape') {
         onClose()
       }
     },
-    [onClose, showAuthModal]
+    [onClose]
   )
 
   useEffect(() => {
@@ -73,7 +73,9 @@ export function DemoBookingModal({
     e.preventDefault()
 
     if (!isAuthenticated) {
-      setShowAuthModal(true)
+      // Redirect to sign-in with return URL
+      onClose()
+      router.push(`/sign-in?redirect=${encodeURIComponent(window.location.pathname)}`)
       return
     }
 
@@ -317,13 +319,6 @@ export function DemoBookingModal({
           </FocusTrap>
         </motion.div>
       </AnimatePresence>
-
-      <AuthModal
-        isOpen={showAuthModal}
-        onClose={() => setShowAuthModal(false)}
-        title="Sign in to book demo"
-        subtitle="Create your account to book a free demo class"
-      />
     </>
   )
 }

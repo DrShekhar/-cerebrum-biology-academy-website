@@ -69,6 +69,7 @@ export interface User {
   id: string
   email: string
   name: string
+  phone?: string
   role: UserRole
   emailVerified: Date | null
   profile: UserProfile | null
@@ -267,6 +268,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
               id: sessionData.user.id,
               email: sessionData.user.email || '',
               name: sessionData.user.name || '',
+              phone: sessionData.user.phone || '',
               role: sessionData.user.role,
               emailVerified: null,
               profile: sessionData.user.profile || null,

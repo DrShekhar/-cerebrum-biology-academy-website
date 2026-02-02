@@ -7,7 +7,7 @@ import {
   type LearningPath,
   type StudySession,
 } from '@/lib/learning/PersonalizedLearningEngine'
-import { useAuth } from './useAuth'
+import { useAuth } from '@/contexts/AuthContext'
 
 interface UseLearningPathReturn {
   learningPath: LearningPath | null
