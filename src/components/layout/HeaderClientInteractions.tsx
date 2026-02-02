@@ -5,9 +5,12 @@ import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 import { useAuth } from '@/contexts/AuthContext'
 
-// Direct import for BurgerMenu - critical UI that must always render
-// This ensures navigation works even if chunk loading fails
-import { BurgerMenu } from '@/components/navigation/BurgerMenu'
+// PERFORMANCE: Lazy load BurgerMenu to defer framer-motion (~1MB) until interaction
+// The burger icon itself is rendered with CSS - framer-motion only loads when menu opens
+const BurgerMenu = dynamic(
+  () => import('@/components/navigation/BurgerMenu').then((mod) => mod.BurgerMenu),
+  { loading: () => null }
+)
 
 // Lazy load search menu (less critical)
 // Note: Removed ssr: false to prevent SSR bailout
@@ -44,15 +47,39 @@ export const HeaderClientInteractions = memo(function HeaderClientInteractions({
     setIsSearchOpen(false)
   }, [pathname])
 
-  // Burger menu must render immediately - critical for mobile navigation
-  // Check burger section BEFORE mount check to ensure it's always accessible
+  // PERFORMANCE: Render lightweight CSS burger icon, lazy-load full menu on click
+  // This defers ~1MB framer-motion bundle until user interacts with menu
   if (section === 'burger') {
     return (
-      <BurgerMenu
-        isOpen={isBurgerMenuOpen}
-        onToggle={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
-        onClose={() => setIsBurgerMenuOpen(false)}
-      />
+      <>
+        {/* CSS-only burger icon for instant render */}
+        <button
+          onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
+          className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          aria-label={isBurgerMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isBurgerMenuOpen}
+        >
+          <div className="relative w-6 h-5 flex flex-col justify-between">
+            <span
+              className={`block h-0.5 w-6 bg-gray-700 transition-all duration-300 ${isBurgerMenuOpen ? 'rotate-45 translate-y-2' : ''}`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-gray-700 transition-all duration-300 ${isBurgerMenuOpen ? 'opacity-0' : ''}`}
+            />
+            <span
+              className={`block h-0.5 w-6 bg-gray-700 transition-all duration-300 ${isBurgerMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+            />
+          </div>
+        </button>
+        {/* Full menu loads only when opened */}
+        {isBurgerMenuOpen && (
+          <BurgerMenu
+            isOpen={isBurgerMenuOpen}
+            onToggle={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
+            onClose={() => setIsBurgerMenuOpen(false)}
+          />
+        )}
+      </>
     )
   }
 
