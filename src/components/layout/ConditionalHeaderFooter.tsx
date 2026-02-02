@@ -32,23 +32,10 @@ export function ConditionalHeaderFooter({ children }: ConditionalHeaderFooterPro
 
   useEffect(() => {
     setMounted(true)
-    console.log('[ConditionalHeaderFooter] Mounted, pathname:', pathname)
-  }, [pathname])
+  }, [])
 
   // Check if current route should hide header/footer
   const shouldHide = pathname ? HIDDEN_ROUTES.some((route) => pathname.startsWith(route)) : false
-
-  // Debug logging
-  if (typeof window !== 'undefined') {
-    console.log(
-      '[ConditionalHeaderFooter] pathname:',
-      pathname,
-      'shouldHide:',
-      shouldHide,
-      'mounted:',
-      mounted
-    )
-  }
 
   // During SSR and initial render, show children but hidden via CSS if on hidden route
   // This prevents hydration mismatch while still hiding content quickly

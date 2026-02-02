@@ -48,23 +48,67 @@ interface TrustProviderProps {
   enableRealTimeUpdates?: boolean
 }
 
+// PERFORMANCE: Default static metrics - avoid useState when features are disabled
+const DEFAULT_METRICS: TrustMetrics = {
+  totalStudents: 10247,
+  successRate: 94.2,
+  averageRating: 4.9,
+  verifiedReviews: 2847,
+  facultyCount: 25,
+  yearsEstablished: 5,
+  aimsQualified: 1289,
+  liveStudents: 3456,
+}
+
+// PERFORMANCE: Static context value for when features are disabled
+const DISABLED_CONTEXT_VALUE: TrustContextType = {
+  metrics: DEFAULT_METRICS,
+  showSocialProof: false,
+  showTrustBadges: false,
+  enableRealTimeUpdates: false,
+  trustLevel: 'high',
+  updateMetrics: () => {},
+  toggleSocialProof: () => {},
+}
+
 export function TrustProvider({
   children,
   enableSocialProof = true,
   enableTrustBadges = true,
   enableRealTimeUpdates = true,
 }: TrustProviderProps) {
-  const [metrics, setMetrics] = useState<TrustMetrics>({
-    totalStudents: 10247,
-    successRate: 94.2,
-    averageRating: 4.9,
-    verifiedReviews: 2847,
-    facultyCount: 25,
-    yearsEstablished: 5,
-    aimsQualified: 1289,
-    liveStudents: 3456,
-  })
+  // PERFORMANCE: When all features are disabled, skip all state and effects
+  // This significantly reduces hydration overhead in the critical path
+  const allDisabled = !enableSocialProof && !enableTrustBadges && !enableRealTimeUpdates
 
+  if (allDisabled) {
+    return (
+      <TrustContext.Provider value={DISABLED_CONTEXT_VALUE}>
+        {children}
+      </TrustContext.Provider>
+    )
+  }
+
+  // Full provider implementation when features are enabled
+  return (
+    <TrustProviderFull
+      enableSocialProof={enableSocialProof}
+      enableTrustBadges={enableTrustBadges}
+      enableRealTimeUpdates={enableRealTimeUpdates}
+    >
+      {children}
+    </TrustProviderFull>
+  )
+}
+
+// Full implementation - only used when features are enabled
+function TrustProviderFull({
+  children,
+  enableSocialProof,
+  enableTrustBadges,
+  enableRealTimeUpdates,
+}: TrustProviderProps) {
+  const [metrics, setMetrics] = useState<TrustMetrics>(DEFAULT_METRICS)
   const [showSocialProof, setShowSocialProof] = useState(enableSocialProof)
   const [showTrustBadges, setShowTrustBadges] = useState(enableTrustBadges)
   const [trustLevel, setTrustLevel] = useState<'high' | 'medium' | 'low'>('high')
@@ -97,7 +141,7 @@ export function TrustProvider({
         liveStudents: prev.liveStudents + Math.floor(Math.random() * 5) - 2,
         verifiedReviews: prev.verifiedReviews + (Math.random() > 0.7 ? 1 : 0),
       }))
-    }, 30000) // Update every 30 seconds
+    }, 30000)
 
     return () => clearInterval(interval)
   }, [enableRealTimeUpdates])
@@ -114,7 +158,7 @@ export function TrustProvider({
     metrics,
     showSocialProof,
     showTrustBadges,
-    enableRealTimeUpdates,
+    enableRealTimeUpdates: enableRealTimeUpdates ?? false,
     trustLevel,
     updateMetrics,
     toggleSocialProof,
