@@ -22,8 +22,9 @@ function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
     }
 
     // Check if user has admin role
-    const userRole = user?.role?.toLowerCase()
-    const hasAdminAccess = userRole === 'admin' || userRole === 'owner'
+    // Note: OWNER is not a valid role - it's checked via phone number matching
+    const userRole = user?.role
+    const hasAdminAccess = userRole === 'ADMIN'
     setIsAdmin(hasAdminAccess)
     setIsCheckingRole(false)
 

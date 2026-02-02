@@ -54,8 +54,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const { isOwner, isCheckingOwner } = useOwnerAccess()
 
   // Check if user has admin role
-  const userRole = user?.role?.toLowerCase()
-  const isAdmin = userRole === 'admin' || userRole === 'owner'
+  // Note: OWNER is not a role - owner status is checked via useOwnerAccess hook
+  const userRole = user?.role
+  const isAdmin = userRole === 'ADMIN' || isOwner
 
   // Show loading state while checking auth
   if (isLoading || isCheckingOwner) {

@@ -259,7 +259,7 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
 // Helper functions for role-based access
 export async function requireAuth(
-  allowedRoles: string[] = ['student', 'parent', 'teacher', 'admin', 'counselor']
+  allowedRoles: string[] = ['STUDENT', 'PARENT', 'TEACHER', 'ADMIN', 'COUNSELOR']
 ) {
   const session = await auth()
 
@@ -275,19 +275,19 @@ export async function requireAuth(
 }
 
 export async function requireStudent() {
-  return await requireAuth(['student'])
+  return await requireAuth(['STUDENT'])
 }
 
 export async function requireTeacher() {
-  return await requireAuth(['teacher', 'admin'])
+  return await requireAuth(['TEACHER', 'ADMIN'])
 }
 
 export async function requireCounselor() {
-  return await requireAuth(['counselor', 'admin'])
+  return await requireAuth(['COUNSELOR', 'ADMIN'])
 }
 
 export async function requireAdmin() {
-  return await requireAuth(['admin'])
+  return await requireAuth(['ADMIN'])
 }
 
 // Middleware for protecting admin routes

@@ -268,7 +268,7 @@ export async function POST(request: NextRequest) {
           id: user.id,
           email: user.email || `${normalizedPhone.replace('+', '')}@phone.local`,
           name: user.name,
-          role: user.role.toLowerCase(),
+          role: user.role.toUpperCase(),
           phone: normalizedPhone,
           coachingTier: user.coachingTier,
           isTrialActive: isTrialActive,
@@ -301,7 +301,7 @@ export async function POST(request: NextRequest) {
         user: {
           id: user.id,
           name: user.name,
-          role: user.role.toLowerCase(),
+          role: user.role.toUpperCase(),
           phone: normalizedPhone,
           coachingTier: user.coachingTier,
           isTrialActive: isTrialActive,

@@ -23,11 +23,12 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (user) {
-      const userRole = user.role?.toLowerCase()
-      setIsCounselor(userRole === 'counselor')
-      setIsAdmin(userRole === 'admin' || userRole === 'owner')
+      const userRole = user.role
+      setIsCounselor(userRole === 'COUNSELOR')
+      // Note: OWNER is not a role - owner status is checked via useOwnerAccess hook
+      setIsAdmin(userRole === 'ADMIN' || isOwner)
     }
-  }, [user])
+  }, [user, isOwner])
 
   // Allow access if owner OR counselor/admin role
   const hasCounselorAccess = isOwner || isCounselor || isAdmin

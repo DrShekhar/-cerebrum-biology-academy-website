@@ -23,8 +23,10 @@ function ConsultantAuthWrapper({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     if (session?.user) {
-      const userRole = session.user.role?.toLowerCase()
-      setIsConsultant(userRole === 'consultant' || userRole === 'admin' || userRole === 'owner')
+      const userRole = session.user.role
+      // CONSULTANT role doesn't exist in schema - consultants are tracked via isConsultant field
+      // For now, only ADMIN can access consultant panel
+      setIsConsultant(userRole === 'ADMIN')
     }
   }, [session])
 

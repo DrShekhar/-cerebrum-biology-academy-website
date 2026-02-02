@@ -859,7 +859,7 @@ export const authOptions = {
           id: 'demo_user',
           email: 'demo@cerebrumbiologyacademy.com',
           name: 'Demo Student',
-          role: 'student',
+          role: 'STUDENT',
         }
       },
     },
@@ -870,7 +870,7 @@ export const authOptions = {
   callbacks: {
     async jwt({ token, user }: any) {
       if (user) {
-        token.role = user.role || 'student'
+        token.role = user.role || 'STUDENT'
         token.userId = user.id
       }
       return token

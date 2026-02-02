@@ -215,7 +215,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized. Authentication required.' }, { status: 401 })
     }
 
-    if (!['admin', 'teacher'].includes(session.user.role)) {
+    if (!['ADMIN', 'TEACHER'].includes(session.user.role)) {
       return NextResponse.json({ error: 'Forbidden. Insufficient permissions.' }, { status: 403 })
     }
 
@@ -298,7 +298,7 @@ export async function PUT(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized. Authentication required.' }, { status: 401 })
     }
 
-    if (!['admin', 'teacher'].includes(session.user.role)) {
+    if (!['ADMIN', 'TEACHER'].includes(session.user.role)) {
       return NextResponse.json({ error: 'Forbidden. Insufficient permissions.' }, { status: 403 })
     }
 
@@ -356,7 +356,7 @@ export async function DELETE(request: NextRequest) {
       return NextResponse.json({ error: 'Unauthorized. Authentication required.' }, { status: 401 })
     }
 
-    if (!['admin'].includes(session.user.role)) {
+    if (!['ADMIN'].includes(session.user.role)) {
       return NextResponse.json(
         { error: 'Forbidden. Only admins can delete availability.' },
         { status: 403 }
