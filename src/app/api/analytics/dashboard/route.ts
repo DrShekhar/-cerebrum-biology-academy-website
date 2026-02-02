@@ -183,7 +183,7 @@ export async function GET(request: NextRequest) {
       (searchParams.get('type') as
         | 'student'
         | 'teacher'
-        | 'admin'
+        | 'ADMIN'
         | 'general'
         | 'dashboard'
         | 'realtime') || 'general'
@@ -225,7 +225,7 @@ export async function GET(request: NextRequest) {
         return NextResponse.json({ success: true, data: teacherMetrics })
       }
 
-      case 'admin': {
+      case 'ADMIN': {
         // Only admins can access admin analytics
         const authCheck = await checkAuthAndRole(['ADMIN'])
         if (!authCheck.authorized) {

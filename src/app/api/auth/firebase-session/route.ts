@@ -46,7 +46,7 @@ interface FirebaseSessionRequest {
   phoneNumber: string
   firstName?: string
   lastName?: string
-  role?: 'student' | 'parent'
+  role?: 'STUDENT' | 'PARENT'
   action: 'check' | 'signup' | 'login'
 }
 
@@ -173,7 +173,7 @@ export async function POST(request: NextRequest) {
           name: [firstName, lastName].filter(Boolean).join(' '),
           phone: normalizedPhone,
           firebaseUid: uid,
-          role: role === 'parent' ? 'PARENT' : 'STUDENT',
+          role: role === 'PARENT' ? 'PARENT' : 'STUDENT',
           coachingTier: 'FREE',
           trialStartDate: trialStartDate,
           trialEndDate: trialEndDate,

@@ -11,7 +11,7 @@ const registerSchema = z.object({
   email: z.string().email('Invalid email format'),
   password: z.string().min(8, 'Password must be at least 8 characters'),
   phone: z.string().min(10, 'Phone number must be at least 10 digits'),
-  role: z.enum(['student', 'parent', 'teacher']),
+  role: z.enum(['STUDENT', 'PARENT', 'TEACHER']),
   currentClass: z.enum(['10th', '11th', '12th', 'Dropper']).optional(),
   parentEmail: z.string().email().optional(),
   referralCode: z.string().optional(),
@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
       enrolledCourses: [],
     }
 
-    if (role === 'student') {
+    if (role === 'STUDENT') {
       profile.currentClass = currentClass
       profile.parentEmail = parentEmail
       profile.targetScore = 650 // Default NEET target

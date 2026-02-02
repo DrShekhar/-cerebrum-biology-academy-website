@@ -635,7 +635,7 @@ export class RBACSecurityEngine {
   private async getUserRole(userId: string): Promise<SecurityRole | null> {
     // In production, fetch from database
     // For now, return a default role
-    return NEETCoachingRoles.find((role) => role.id === 'student') || null
+    return NEETCoachingRoles.find((role) => role.id === 'STUDENT') || null
   }
 
   private async validateSession(userId: string): Promise<boolean> {

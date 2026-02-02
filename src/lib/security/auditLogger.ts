@@ -234,7 +234,7 @@ export class SecurityAuditLogger {
 
     // Admin access from new IPs
     const adminAccess = recentEvents.filter(
-      (event) => event.eventType === 'admin_access' && event.userRole === 'admin'
+      (event) => event.eventType === 'admin_access' && event.userRole === 'ADMIN'
     )
     const adminAccessFromNewIP = this.identifyNewIPLogins(adminAccess)
 

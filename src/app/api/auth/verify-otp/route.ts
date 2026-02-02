@@ -17,7 +17,7 @@ const verifyOtpSchema = z.object({
     .string()
     .regex(/^[6-9]\d{9}$/, 'Invalid WhatsApp number')
     .optional(),
-  role: z.enum(['student', 'parent']).optional(),
+  role: z.enum(['STUDENT', 'PARENT']).optional(),
   currentClass: z.enum(['10th', '11th', '12th', 'Dropper']).optional(),
   parentMobile: z
     .string()
@@ -195,14 +195,14 @@ export async function POST(request: NextRequest) {
           name,
           email: email || `${mobile}@temp.cerebrumbiologyacademy.com`,
           phone: mobile,
-          role: role === 'student' ? 'STUDENT' : 'PARENT',
+          role: role === 'STUDENT' ? 'STUDENT' : 'PARENT',
           phoneVerified: new Date(),
           profile: {
             whatsappNumber: whatsapp || mobile,
             isWhatsappSame: !whatsapp || whatsapp === mobile,
             communicationPreference: whatsappConsent ? 'whatsapp' : 'sms',
-            currentClass: role === 'student' ? currentClass : undefined,
-            parentMobile: role === 'student' ? parentMobile : undefined,
+            currentClass: role === 'STUDENT' ? currentClass : undefined,
+            parentMobile: role === 'STUDENT' ? parentMobile : undefined,
             referralCode,
             marketingConsent,
             whatsappConsent,
