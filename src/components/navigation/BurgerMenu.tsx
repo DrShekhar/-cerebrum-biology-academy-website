@@ -117,17 +117,41 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
 
   const handleSignOut = async () => {
     setIsSigningOut(true)
+    console.log('[BurgerMenu] Starting sign out...')
+
     try {
+      // Step 1: Call server logout to clear httpOnly cookies
+      const response = await fetch('/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Cache-Control': 'no-cache',
+        },
+      })
+      const data = await response.json()
+      console.log('[BurgerMenu] Logout API response:', data)
+
+      // Step 2: Clear any client-accessible cookies
+      document.cookie.split(';').forEach((c) => {
+        const cookieName = c.trim().split('=')[0]
+        if (cookieName) {
+          document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`
+        }
+      })
+
+      // Step 3: Clear localStorage items related to auth
+      localStorage.removeItem('freeUserId')
+
+      // Step 4: Sign out from Firebase client
       await signOut()
+      console.log('[BurgerMenu] Firebase sign out complete')
     } catch (error) {
-      console.error('Sign out error:', error)
-      // Continue with navigation even if signOut fails
+      console.error('[BurgerMenu] Sign out error:', error)
     }
-    // Always close menu and navigate, regardless of errors
+
+    // Always close menu and redirect with cache-busting
     onClose()
-    setIsSigningOut(false)
-    // Use window.location for a full page refresh to clear all state
-    window.location.href = '/'
+    window.location.href = '/?_logout=' + Date.now()
   }
 
   const menuVariants = {

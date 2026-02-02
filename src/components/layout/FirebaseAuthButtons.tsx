@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { useFirebaseSession } from '@/hooks/useFirebaseSession'
-import { signOut } from '@/lib/firebase/phone-auth'
 
 export function FirebaseAuthButtons() {
   const { isLoading, isAuthenticated, user } = useFirebaseSession()
@@ -17,16 +16,45 @@ export function FirebaseAuthButtons() {
     console.log('[FirebaseAuthButtons] Starting sign out...')
 
     try {
-      await signOut()
-      console.log('[FirebaseAuthButtons] Sign out successful, redirecting...')
+      // Step 1: Call server logout to clear httpOnly cookies
+      const response = await fetch('/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include',
+        headers: {
+          'Cache-Control': 'no-cache',
+        },
+      })
+
+      const data = await response.json()
+      console.log('[FirebaseAuthButtons] Logout API response:', data)
+
+      // Step 2: Clear any client-accessible cookies
+      document.cookie.split(';').forEach((c) => {
+        const cookieName = c.trim().split('=')[0]
+        if (cookieName) {
+          document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`
+          document.cookie = `${cookieName}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${window.location.hostname}`
+        }
+      })
+
+      // Step 3: Clear localStorage items related to auth
+      localStorage.removeItem('freeUserId')
+
+      // Step 4: Sign out from Firebase client (lazy loaded)
+      try {
+        const { signOut: firebaseSignOut } = await import('@/lib/firebase/phone-auth')
+        await firebaseSignOut()
+        console.log('[FirebaseAuthButtons] Firebase sign out successful')
+      } catch (fbError) {
+        console.warn('[FirebaseAuthButtons] Firebase sign out failed (may not be configured):', fbError)
+      }
+
+      console.log('[FirebaseAuthButtons] Sign out complete, redirecting...')
     } catch (error) {
       console.error('[FirebaseAuthButtons] Sign out error:', error)
     } finally {
-      // Always redirect to home with hard refresh to clear all client-side state
-      // Use setTimeout to ensure state updates are flushed
-      setTimeout(() => {
-        window.location.href = '/'
-      }, 100)
+      // Force hard refresh with cache-busting query param
+      window.location.href = '/?_logout=' + Date.now()
     }
   }
 
