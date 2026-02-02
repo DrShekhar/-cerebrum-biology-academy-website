@@ -46,6 +46,9 @@ interface FirebaseSessionPayload {
   role: string
   phone?: string
   grade?: string
+  coachingTier?: string
+  isTrialActive?: boolean
+  trialEndDate?: string
   sub: string
   iat?: number
   exp?: number
@@ -143,6 +146,16 @@ export async function GET(request: NextRequest) {
       tokenExp: decoded.exp ? new Date(decoded.exp * 1000).toISOString() : 'unknown',
     })
 
+    // Calculate trial days remaining if trial is active
+    const trialDaysRemaining = decoded.trialEndDate
+      ? Math.max(
+          0,
+          Math.ceil(
+            (new Date(decoded.trialEndDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
+          )
+        )
+      : 0
+
     return NextResponse.json({
       authenticated: true,
       user: {
@@ -152,6 +165,10 @@ export async function GET(request: NextRequest) {
         role: decoded.role,
         phone: decoded.phone,
         grade: decoded.grade,
+        coachingTier: decoded.coachingTier || 'FREE',
+        isTrialActive: decoded.isTrialActive || false,
+        trialEndDate: decoded.trialEndDate,
+        trialDaysRemaining,
       },
     })
   } catch (error) {
