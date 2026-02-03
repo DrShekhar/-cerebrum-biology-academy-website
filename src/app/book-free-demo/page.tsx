@@ -7,7 +7,7 @@ import Link from 'next/link'
 const WHATSAPP_DEMO_URL =
   'https://wa.me/918826444334?text=Hi!%20I%20want%20to%20book%20a%20FREE%20Demo%20Class%20for%20NEET%20Biology.%0A%0AMy%20details%3A%0A%E2%80%A2%20Name%3A%20%0A%E2%80%A2%20Class%3A%20(11th%2F12th%2FDropper)%0A%E2%80%A2%20Preferred%20Day%3A%20%0A%E2%80%A2%20Preferred%20Time%3A%20%0A%0APlease%20confirm%20my%20demo%20slot!'
 
-export default function DemoPage() {
+export default function BookFreeDemoPage() {
   const [countdown, setCountdown] = useState(3)
   const [redirected, setRedirected] = useState(false)
 
