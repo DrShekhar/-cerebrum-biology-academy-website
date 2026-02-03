@@ -20,6 +20,12 @@ const PlayIcon = () => (
   </svg>
 )
 
+const PhoneIcon = () => (
+  <svg className="h-5 xs:h-6 w-5 xs:w-6 group-hover:scale-110 transition-transform flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} style={{ width: '1.25rem', height: '1.25rem' }}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  </svg>
+)
+
 interface HeroSectionProps {
   className?: string
 }
@@ -102,25 +108,25 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             500+ Medical Selections
           </p>
 
-          {/* PRIMARY CTA - Server-rendered for instant LCP paint */}
+          {/* PRIMARY CTA - Call Now Button */}
           <div className="mb-4">
             <a
-              href="/demo-booking"
-              className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-slate-900 font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-yellow-400/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-yellow-300 hover:scale-[1.02] active:scale-[0.98] group"
+              href="tel:+918826444334"
+              className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-400 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl shadow-xl hover:shadow-green-500/40 transition-all duration-300 text-sm xs:text-base md:text-lg border border-green-400 hover:scale-[1.02] active:scale-[0.98] group"
               style={{
-                backgroundColor: '#facc15',
-                color: '#0f172a',
+                backgroundColor: '#22c55e',
+                color: '#ffffff',
                 fontWeight: 700,
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
               }}
             >
-              <PlayIcon />
-              BOOK FREE DEMO
+              <PhoneIcon />
+              CALL NOW
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-900 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-slate-900"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
               </span>
             </a>
           </div>
