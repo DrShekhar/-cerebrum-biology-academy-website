@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { TrialStatus } from './trialManager'
 import { trackTrialEvent, TrialEvents } from './analytics'
 
@@ -9,6 +9,9 @@ export function useTrialIntegration(isAuthenticated: boolean) {
   const [trialStatus, setTrialStatus] = useState<TrialStatus | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [showTrialExpiredModal, setShowTrialExpiredModal] = useState(false)
+  // Track consecutive errors to implement backoff and stop polling on persistent 404
+  const errorCountRef = useRef(0)
+  const pollingDisabledRef = useRef(false)
 
   const initializeGuestUser = useCallback(async () => {
     if (isAuthenticated) {
@@ -45,13 +48,15 @@ export function useTrialIntegration(isAuthenticated: boolean) {
   }, [isAuthenticated])
 
   const fetchTrialStatus = useCallback(async () => {
-    if (!freeUserId || isAuthenticated) return
+    // Don't poll if disabled due to persistent errors
+    if (!freeUserId || isAuthenticated || pollingDisabledRef.current) return
 
     try {
       const response = await fetch(`/api/trial/status?freeUserId=${freeUserId}`)
       if (response.ok) {
         const data = await response.json()
         setTrialStatus(data.trialStatus)
+        errorCountRef.current = 0 // Reset error count on success
 
         if (data.trialStatus.isExpired && !localStorage.getItem('trial-expired-shown')) {
           setShowTrialExpiredModal(true)
@@ -62,9 +67,25 @@ export function useTrialIntegration(isAuthenticated: boolean) {
             properties: { reason: 'expired' },
           })
         }
+      } else if (response.status === 404) {
+        // Trial not found - likely invalid freeUserId, stop polling
+        errorCountRef.current++
+        if (errorCountRef.current >= 3) {
+          console.log('[useTrialIntegration] Trial not found after 3 attempts, stopping polling')
+          pollingDisabledRef.current = true
+          // Clear invalid freeUserId from localStorage
+          localStorage.removeItem('freeUserId')
+          setFreeUserId(null)
+        }
       }
     } catch (error) {
       console.error('Failed to fetch trial status:', error)
+      errorCountRef.current++
+      // After 5 consecutive errors, disable polling
+      if (errorCountRef.current >= 5) {
+        console.log('[useTrialIntegration] Too many errors, disabling polling')
+        pollingDisabledRef.current = true
+      }
     }
   }, [freeUserId, isAuthenticated])
 
@@ -72,15 +93,25 @@ export function useTrialIntegration(isAuthenticated: boolean) {
     initializeGuestUser()
   }, [initializeGuestUser])
 
-  useEffect(() => {
-    if (freeUserId && !isAuthenticated) {
-      fetchTrialStatus()
+  // Store fetchTrialStatus in a ref to avoid dependency issues
+  const fetchTrialStatusRef = useRef(fetchTrialStatus)
+  fetchTrialStatusRef.current = fetchTrialStatus
 
-      const interval = setInterval(fetchTrialStatus, 60000)
+  useEffect(() => {
+    if (freeUserId && !isAuthenticated && !pollingDisabledRef.current) {
+      // Initial fetch
+      fetchTrialStatusRef.current()
+
+      // Poll every 60 seconds - use ref to avoid recreating interval
+      const interval = setInterval(() => {
+        if (!pollingDisabledRef.current) {
+          fetchTrialStatusRef.current()
+        }
+      }, 60000)
 
       return () => clearInterval(interval)
     }
-  }, [freeUserId, isAuthenticated, fetchTrialStatus])
+  }, [freeUserId, isAuthenticated]) // Remove fetchTrialStatus from deps
 
   const handleUpgrade = useCallback(() => {
     if (freeUserId) {

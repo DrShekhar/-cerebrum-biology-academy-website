@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
@@ -208,6 +208,8 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
 export function useTrialBanner(freeUserId: string | null) {
   const [trialStatus, setTrialStatus] = useState<TrialStatus | null>(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [pollingDisabled, setPollingDisabled] = useState(false)
+  const errorCountRef = useRef(0)
 
   useEffect(() => {
     if (!freeUserId) {
@@ -215,15 +217,31 @@ export function useTrialBanner(freeUserId: string | null) {
       return
     }
 
+    let intervalId: NodeJS.Timeout | null = null
+
     async function fetchTrialStatus() {
       try {
         const response = await fetch(`/api/trial/status?freeUserId=${freeUserId}`)
         if (response.ok) {
           const data = await response.json()
           setTrialStatus(data.trialStatus)
+          errorCountRef.current = 0 // Reset on success
+        } else if (response.status === 404) {
+          // Trial not found - stop polling after a few attempts
+          errorCountRef.current++
+          if (errorCountRef.current >= 3) {
+            console.log('[useTrialBanner] Trial not found, stopping polling')
+            setPollingDisabled(true)
+            if (intervalId) clearInterval(intervalId)
+          }
         }
       } catch (error) {
         console.error('Failed to fetch trial status:', error)
+        errorCountRef.current++
+        if (errorCountRef.current >= 5) {
+          setPollingDisabled(true)
+          if (intervalId) clearInterval(intervalId)
+        }
       } finally {
         setIsLoading(false)
       }
@@ -231,10 +249,15 @@ export function useTrialBanner(freeUserId: string | null) {
 
     fetchTrialStatus()
 
-    const interval = setInterval(fetchTrialStatus, 60000)
+    // Only start polling if not disabled
+    if (!pollingDisabled) {
+      intervalId = setInterval(fetchTrialStatus, 60000)
+    }
 
-    return () => clearInterval(interval)
-  }, [freeUserId])
+    return () => {
+      if (intervalId) clearInterval(intervalId)
+    }
+  }, [freeUserId, pollingDisabled])
 
   return { trialStatus, isLoading }
 }
