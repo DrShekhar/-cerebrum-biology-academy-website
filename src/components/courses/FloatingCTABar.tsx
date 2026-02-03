@@ -5,8 +5,9 @@ import { CourseProgram } from '@/types/courseSystem'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { DemoClassModal } from './DemoClassModal'
-import { Phone, Play, CreditCard, X, Clock, Users } from 'lucide-react'
+import { Phone, Play, MessageCircle, X, Clock, Users } from 'lucide-react'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface FloatingCTABarProps {
   course: CourseProgram
@@ -101,24 +102,31 @@ export function FloatingCTABar({ course }: FloatingCTABarProps) {
             </Button>
 
             <a href={getPhoneLink()}>
-              <Button size="sm" variant="outline" className="flex items-center gap-2">
+              <Button size="sm" variant="outline" className="hidden md:flex items-center gap-2">
                 <Phone className="h-4 w-4" />
-                <span className="hidden sm:inline">Call Now</span>
-                <span className="sm:hidden">Call</span>
+                Call
               </Button>
             </a>
 
-            <Button
-              size="sm"
-              className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
-              onClick={() => {
-                window.location.href = `/checkout?course=${encodeURIComponent(course.id)}`
-              }}
+            <button
+              onClick={() =>
+                trackAndOpenWhatsApp({
+                  source: `floating-cta-${course.id}`,
+                  message: `Hi! I want to enroll in ${course.name}.
+
+Please share:
+• Fee structure
+• Available batches
+• Enrollment process`,
+                  campaign: 'floating-cta',
+                })
+              }
+              className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-green-500/30 transition-all duration-300"
             >
-              <CreditCard className="h-4 w-4" />
-              <span className="hidden sm:inline">Enroll Now</span>
-              <span className="sm:hidden">Enroll</span>
-            </Button>
+              <MessageCircle className="h-4 w-4" />
+              <span className="hidden sm:inline">Enroll via WhatsApp</span>
+              <span className="sm:hidden">WhatsApp</span>
+            </button>
           </div>
 
           {/* Dismiss Button */}

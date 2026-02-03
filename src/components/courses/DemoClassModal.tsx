@@ -14,7 +14,8 @@ import {
   SelectValue,
 } from '@/components/ui/Select'
 import { Textarea } from '@/components/ui/Textarea'
-import { X, Calendar, Clock, User, Phone, Mail, CheckCircle } from 'lucide-react'
+import { X, Calendar, Clock, User, Phone, Mail, CheckCircle, MessageCircle } from 'lucide-react'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 interface DemoClassModalProps {
   course: CourseProgram
@@ -233,21 +234,54 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
               </ul>
             </Card>
 
-            {/* Submit Button */}
-            <div className="flex gap-3 pt-4">
-              <Button type="submit" className="flex-1" disabled={isSubmitting}>
-                {isSubmitting ? 'Booking Demo...' : 'Book Free Demo Class'}
-              </Button>
-              <Button type="button" variant="outline" onClick={onClose} disabled={isSubmitting}>
-                Cancel
-              </Button>
+            {/* Submit Buttons */}
+            <div className="space-y-3 pt-4">
+              {/* WhatsApp - Primary CTA */}
+              <button
+                type="button"
+                onClick={() => {
+                  const message = `Hi! I want to book a FREE Demo Class for ${course.name}.
+
+My details:
+• Name: ${formData.name || '[Your Name]'}
+• Class: ${formData.currentClass || '[Your Class]'}
+• Phone: ${formData.phone || '[Your Phone]'}
+• Preferred Time: ${formData.preferredTime || '[Any Time]'}
+
+Please confirm my demo slot!`
+                  trackAndOpenWhatsApp({
+                    source: `demo-modal-${course.id}`,
+                    message,
+                    campaign: 'demo-booking',
+                  })
+                }}
+                className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
+              >
+                <MessageCircle className="h-5 w-5" />
+                Book Demo via WhatsApp (Instant Response)
+              </button>
+
+              <div className="flex items-center gap-3">
+                <div className="flex-1 border-t border-gray-200"></div>
+                <span className="text-xs text-gray-400">or submit form</span>
+                <div className="flex-1 border-t border-gray-200"></div>
+              </div>
+
+              <div className="flex gap-3">
+                <Button type="submit" variant="outline" className="flex-1" disabled={isSubmitting}>
+                  {isSubmitting ? 'Booking Demo...' : 'Submit Form'}
+                </Button>
+                <Button type="button" variant="ghost" onClick={onClose} disabled={isSubmitting}>
+                  Cancel
+                </Button>
+              </div>
             </div>
           </form>
 
           {/* Footer Note */}
           <p className="text-xs text-gray-500 mt-4 text-center">
             By booking a demo class, you agree to our terms and conditions. No payment required for
-            demo session.
+            demo session. WhatsApp is the fastest way to confirm your slot!
           </p>
         </div>
       </Card>

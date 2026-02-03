@@ -13,9 +13,10 @@ import {
   BookOpen,
   Download,
   Play,
-  Phone,
+  MessageCircle,
   TrendingUp,
 } from 'lucide-react'
+import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { useState } from 'react'
 import { DemoClassModal } from './DemoClassModal'
 import { SyllabusDownloadModal } from './SyllabusDownloadModal'
@@ -149,14 +150,26 @@ export function CourseHeroSection({ course }: CourseHeroSectionProps) {
                 <Download className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
                 Download Syllabus
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-gray-900 min-h-[44px] w-full sm:w-auto text-sm sm:text-base"
+              <button
+                onClick={() =>
+                  trackAndOpenWhatsApp({
+                    source: `course-hero-${course.id}`,
+                    message: `Hi! I'm interested in ${course.name} (Class ${course.targetClass}).
+
+I'd like to know more about:
+• Fee structure & payment options
+• Batch timings
+• Course curriculum
+
+Please share the details!`,
+                    campaign: 'course-page',
+                  })
+                }
+                className="flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold py-2.5 px-5 rounded-lg min-h-[44px] w-full sm:w-auto text-sm sm:text-base shadow-lg hover:shadow-green-500/30 transition-all duration-300 hover:scale-[1.02]"
               >
-                <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                Talk to Counselor
-              </Button>
+                <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5" />
+                Chat on WhatsApp
+              </button>
             </div>
           </div>
 
