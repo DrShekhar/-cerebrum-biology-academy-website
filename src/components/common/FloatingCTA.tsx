@@ -6,6 +6,7 @@ import { Phone, MessageCircle, X, ChevronUp, Clock, Users } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
+import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
 
 // High-converting CTA copy with social proof
 const CTA_COPY = {
@@ -108,6 +109,10 @@ export const FloatingCTA = memo(function FloatingCTA() {
         event_category: 'engagement',
         event_label: action,
       })
+    }
+    // Track phone call conversions
+    if (action === 'call') {
+      handlePhoneClickTracking('floating-cta-call', 'primary', 100)
     }
     setIsExpanded(false)
   }

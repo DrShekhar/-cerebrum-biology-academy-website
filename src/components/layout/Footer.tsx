@@ -19,6 +19,7 @@ import { LanguageSwitcher } from '@/components/i18n/LanguageSwitcher'
 import { useI18n } from '@/contexts/I18nContext'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
 
 export const Footer = memo(function Footer() {
   const currentYear = new Date().getFullYear()
@@ -252,6 +253,7 @@ export const Footer = memo(function Footer() {
                 <div>
                   <a
                     href={getPhoneLink()}
+                    onClick={() => handlePhoneClickTracking('footer-contact', 'primary', 100)}
                     className="hover:text-white transition-colors"
                     aria-label={`Call us at ${getDisplayPhone()}`}
                   >

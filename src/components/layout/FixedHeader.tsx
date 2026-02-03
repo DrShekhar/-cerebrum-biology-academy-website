@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X } from 'lucide-react'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
+import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
 
 interface FixedHeaderProps {
   className?: string
@@ -22,6 +23,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
   }
 
   const handleCall = () => {
+    handlePhoneClickTracking('header-call-button', 'primary', 100)
     window.open(getPhoneLink(), '_self')
   }
 

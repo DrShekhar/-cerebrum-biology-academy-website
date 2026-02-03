@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { HomeIcon, BookOpen, Trophy, Phone, Play } from 'lucide-react'
 import { getPhoneLink, getFormattedPhone } from '@/lib/constants/contactInfo'
+import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
 
 interface MobileBottomNavProps {
   className?: string
@@ -93,6 +94,7 @@ export function MobileBottomNav({ className = '' }: MobileBottomNavProps) {
               <a
                 key={item.href}
                 href={item.href}
+                onClick={() => handlePhoneClickTracking('mobile-bottom-nav', 'primary', 100)}
                 className="nav-item flex flex-col items-center justify-center touch-target-large mobile-focus ripple-effect haptic-feedback text-green-600 bg-green-50 border-t-4 border-green-600 py-2.5 xs:py-3 px-2 xs:px-3 min-h-[60px] xs:min-h-[64px] transition-all duration-200 animate-pulse"
                 aria-label={`Call us now at ${getFormattedPhone('primary')}`}
               >
