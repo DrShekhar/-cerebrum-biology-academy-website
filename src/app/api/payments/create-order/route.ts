@@ -3,6 +3,7 @@ import Razorpay from 'razorpay'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { validateUserSession } from '@/lib/auth/config'
+import { rateLimit } from '@/lib/rateLimit'
 
 const SUPPORTED_CURRENCIES = ['INR', 'USD', 'EUR', 'GBP', 'AUD', 'CAD', 'AED', 'SGD'] as const
 type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number]
@@ -34,6 +35,25 @@ const MAX_COUPON_DISCOUNT_PERCENT = 50
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Rate limit order creation to prevent abuse (10 orders per hour per IP)
+    const rateLimitResult = await rateLimit(request, { maxRequests: 10, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        {
+          success: false,
+          error: 'Too many order creation requests. Please try again later.',
+        },
+        {
+          status: 429,
+          headers: {
+            'X-RateLimit-Limit': rateLimitResult.limit.toString(),
+            'X-RateLimit-Remaining': rateLimitResult.remaining.toString(),
+            'X-RateLimit-Reset': new Date(rateLimitResult.reset).toISOString(),
+          },
+        }
+      )
+    }
+
     // SECURITY: Validate user session before creating payment orders
     const session = await validateUserSession(request)
     if (!session.valid) {

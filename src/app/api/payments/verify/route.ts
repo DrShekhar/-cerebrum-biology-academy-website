@@ -253,11 +253,13 @@ export async function POST(request: NextRequest) {
         )
       }
     } else {
-      console.warn('Payment verification failed', {
+      // SECURITY: Log failure without exposing full signatures (only first 8 chars for debugging)
+      console.warn('[SECURITY] Payment verification failed', {
         orderId,
         paymentId,
-        expected: expectedSignature,
-        received: paymentSignature,
+        signatureMismatch: true,
+        expectedPrefix: expectedSignature.slice(0, 8) + '...',
+        receivedPrefix: paymentSignature.slice(0, 8) + '...',
       })
     }
 

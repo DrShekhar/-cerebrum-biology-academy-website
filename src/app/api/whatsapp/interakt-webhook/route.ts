@@ -21,8 +21,15 @@ const INTERAKT_WEBHOOK_SECRET = process.env.INTERAKT_WEBHOOK_SECRET
  */
 function verifyWebhookSignature(payload: string, signature: string | null): boolean {
   if (!INTERAKT_WEBHOOK_SECRET) {
-    // In development or if secret not configured, log warning but allow
-    logger.warn('INTERAKT_WEBHOOK_SECRET not configured - skipping signature verification', {
+    // SECURITY: In production, reject requests if secret is not configured
+    // In development, allow with warning for easier testing
+    if (process.env.NODE_ENV === 'production') {
+      logger.error('CRITICAL: INTERAKT_WEBHOOK_SECRET not configured in production', {
+        service: 'interakt-webhook',
+      })
+      return false
+    }
+    logger.warn('INTERAKT_WEBHOOK_SECRET not configured - allowing in development only', {
       service: 'interakt-webhook',
     })
     return true

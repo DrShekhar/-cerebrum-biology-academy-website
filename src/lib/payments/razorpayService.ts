@@ -85,6 +85,7 @@ export class RazorpayService {
 
   /**
    * Verify payment signature for security
+   * Uses timing-safe comparison to prevent timing attacks
    */
   static verifyPaymentSignature(payment: RazorpayPayment): boolean {
     try {
@@ -96,7 +97,15 @@ export class RazorpayService {
         .update(body.toString())
         .digest('hex')
 
-      return expectedSignature === razorpay_signature
+      // SECURITY: Use timing-safe comparison to prevent timing attacks
+      const expectedBuffer = Buffer.from(expectedSignature, 'utf8')
+      const signatureBuffer = Buffer.from(razorpay_signature, 'utf8')
+
+      if (expectedBuffer.length !== signatureBuffer.length) {
+        return false
+      }
+
+      return crypto.timingSafeEqual(expectedBuffer, signatureBuffer)
     } catch (error) {
       console.error('Error verifying payment signature:', error)
       return false
@@ -320,6 +329,7 @@ export class RazorpayService {
 
   /**
    * Verify webhook signature
+   * Uses timing-safe comparison to prevent timing attacks
    */
   static verifyWebhookSignature(payload: string, signature: string): boolean {
     try {
@@ -328,7 +338,15 @@ export class RazorpayService {
         .update(payload)
         .digest('hex')
 
-      return expectedSignature === signature
+      // SECURITY: Use timing-safe comparison to prevent timing attacks
+      const expectedBuffer = Buffer.from(expectedSignature, 'utf8')
+      const signatureBuffer = Buffer.from(signature, 'utf8')
+
+      if (expectedBuffer.length !== signatureBuffer.length) {
+        return false
+      }
+
+      return crypto.timingSafeEqual(expectedBuffer, signatureBuffer)
     } catch (error) {
       console.error('Error verifying webhook signature:', error)
       return false
