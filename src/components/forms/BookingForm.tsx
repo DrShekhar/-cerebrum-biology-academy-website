@@ -5,10 +5,30 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import { ContactForm } from '@/types'
-import { Calendar, Phone, Mail, User, BookOpen, MessageSquare, Clock } from 'lucide-react'
+import {
+  Calendar,
+  Phone,
+  Mail,
+  User,
+  BookOpen,
+  MessageSquare,
+  Clock,
+  PhoneCall,
+} from 'lucide-react'
 import { motion } from 'framer-motion'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import toast from 'react-hot-toast'
+import { getTrackingDataForAPI } from '@/lib/tracking/utm'
+import {
+  trackDemoBooking,
+  trackPhoneCall,
+  trackEnhancedConversion,
+  GOOGLE_ADS_ID,
+} from '@/lib/ads/googleAdsConversion'
+
+// Primary contact number for Google Ads conversion tracking
+const PRIMARY_CALL_NUMBER = '9311946297'
+const PRIMARY_CALL_LINK = 'tel:+919311946297'
 
 interface BookingFormProps {
   type?: 'demo' | 'inquiry' | 'callback'
@@ -91,6 +111,9 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
     setIsSubmitting(true)
 
     try {
+      // Get UTM/GCLID tracking data for attribution
+      const trackingData = getTrackingDataForAPI()
+
       const apiPayload = {
         name: formData.name,
         email: formData.email,
@@ -99,6 +122,8 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
         preferredDate: formData.preferredDate || new Date().toISOString().split('T')[0],
         preferredTime: mapPreferredTimeToApiFormat(formData.preferredTime || 'flexible'),
         message: formData.message || '',
+        // Include tracking data for Google Ads attribution
+        ...trackingData,
       }
 
       const response = await fetch('/api/demo-booking', {
@@ -117,6 +142,14 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
 
       console.log('Booking created:', result)
 
+      // Fire Google Ads conversion tracking (client-side for real-time bidding)
+      trackDemoBooking(formData.name, formData.course, 0)
+
+      // Fire enhanced conversion with user data for better attribution
+      if (typeof window !== 'undefined' && window.gtag && GOOGLE_ADS_ID) {
+        trackEnhancedConversion('demo_booking', 0, formData.email, formData.phone)
+      }
+
       if (onSubmit) {
         onSubmit(formData)
       }
@@ -133,9 +166,26 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
       toast.success('Thank you! Your demo class has been booked. We will contact you soon.')
     } catch (error) {
       console.error('Form submission error:', error)
-      toast.error(error instanceof Error ? error.message : 'Something went wrong. Please try again.')
+      toast.error(
+        error instanceof Error ? error.message : 'Something went wrong. Please try again.'
+      )
     } finally {
       setIsSubmitting(false)
+    }
+  }
+
+  // Track phone call clicks for Google Ads
+  const handleCallClick = () => {
+    trackPhoneCall('booking-form-cta', 0)
+    // Also fire as primary conversion
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'conversion', {
+        send_to: GOOGLE_ADS_ID,
+        event_category: 'engagement',
+        event_label: 'phone_call_click',
+        value: 100, // Estimated value of a call lead
+        currency: 'INR',
+      })
     }
   }
 
@@ -379,20 +429,40 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
           )}
         </Button>
 
-        {/* Contact Info */}
-        <div className="text-center pt-4 border-t border-gray-100">
-          <p className="text-sm text-gray-500 mb-2">Or contact us directly:</p>
+        {/* Call Now CTA - Primary Google Ads Conversion */}
+        <div className="pt-6 border-t border-gray-100">
+          <p className="text-center text-sm text-gray-600 mb-3">Want to talk to an expert now?</p>
+          <a
+            href={PRIMARY_CALL_LINK}
+            onClick={handleCallClick}
+            className="flex items-center justify-center gap-3 w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 group"
+          >
+            <div className="bg-white/20 p-2 rounded-full group-hover:bg-white/30 transition-colors">
+              <PhoneCall className="w-5 h-5" />
+            </div>
+            <div className="text-left">
+              <span className="block text-lg">Call Now: {PRIMARY_CALL_NUMBER}</span>
+              <span className="block text-xs text-green-100">
+                Speak to NEET Expert • Mon-Sat 9AM-8PM
+              </span>
+            </div>
+          </a>
+        </div>
+
+        {/* Secondary Contact Info */}
+        <div className="text-center pt-4">
+          <p className="text-xs text-gray-400 mb-2">Other ways to reach us:</p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
             <a
               href={getPhoneLink()}
-              className="flex items-center text-blue-600 hover:text-blue-700"
+              className="flex items-center text-gray-500 hover:text-blue-600 transition-colors"
             >
               <Phone className="w-4 h-4 mr-1" />
               {getDisplayPhone()}
             </a>
             <a
               href="mailto:info@cerebrumbiologyacademy.com"
-              className="flex items-center text-blue-600 hover:text-blue-700"
+              className="flex items-center text-gray-500 hover:text-blue-600 transition-colors"
             >
               <Mail className="w-4 h-4 mr-1" />
               info@cerebrumbiologyacademy.com
