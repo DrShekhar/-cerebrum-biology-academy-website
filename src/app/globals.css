@@ -801,14 +801,43 @@ body {
    iOS Safari Global Fixes
    ======================================== */
 
+/* CRITICAL: Prevent iOS Safari flexbox rendering bugs that cause element duplication */
+/* This is a known iOS Safari bug where flex items can be visually duplicated */
+@supports (-webkit-touch-callout: none) {
+  /* Target iOS Safari specifically */
+  header,
+  nav,
+  .sticky {
+    /* Force GPU layer to prevent rendering artifacts */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Prevent potential stacking context issues */
+    isolation: isolate;
+  }
+
+  /* Fix for flex containers in header */
+  header .flex,
+  header [class*='flex'] {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  /* Ensure text doesn't get duplicated in flex layouts */
+  header span,
+  header a {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
 /* Remove tap highlight on all interactive elements */
 a,
 button,
 input,
 select,
 textarea,
-[role="button"],
-[tabindex]:not([tabindex="-1"]) {
+[role='button'],
+[tabindex]:not([tabindex='-1']) {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
 }
@@ -821,14 +850,14 @@ textarea,
 /* Enhanced touch feedback for buttons */
 button:active,
 a:active,
-[role="button"]:active {
+[role='button']:active {
   transform: scale(0.98);
   opacity: 0.9;
 }
 
 /* Prevent text selection on buttons during tap */
 button,
-[role="button"] {
+[role='button'] {
   -webkit-user-select: none;
   user-select: none;
 }

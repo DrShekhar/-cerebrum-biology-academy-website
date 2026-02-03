@@ -38,7 +38,6 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
         position: 'sticky',
         top: 0,
         zIndex: 50,
-        contain: 'layout style',
       }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
@@ -73,8 +72,19 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
             </Suspense>
 
             {/* Logo - Server rendered for instant LCP */}
-            <Link href="/" className="flex items-center gap-2 sm:gap-3 group overflow-hidden max-w-[200px] sm:max-w-none">
-              <div className="relative flex-shrink-0">
+            {/* iOS Safari fix: explicit flex properties and transform3d to prevent duplicate rendering */}
+            <Link
+              href="/"
+              className="flex items-center gap-2 sm:gap-3 group"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                maxWidth: '200px',
+                WebkitTransform: 'translateZ(0)',
+                transform: 'translateZ(0)',
+              }}
+            >
+              <div className="relative" style={{ flexShrink: 0 }}>
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
                     src="/brain-logo.png"
@@ -88,8 +98,17 @@ export const HeaderHybrid = memo(function HeaderHybrid() {
                 </div>
               </div>
 
-              {/* Responsive brand text - iOS Safari fix: use overflow-hidden and explicit widths */}
-              <div className="flex flex-col justify-center min-w-0 overflow-hidden flex-shrink">
+              {/* Responsive brand text - iOS Safari fix: explicit styles prevent duplicate rendering */}
+              <div
+                className="flex flex-col justify-center"
+                style={{
+                  minWidth: 0,
+                  overflow: 'hidden',
+                  flexShrink: 1,
+                  WebkitTransform: 'translateZ(0)',
+                  transform: 'translateZ(0)',
+                }}
+              >
                 <span className="text-lg sm:text-2xl font-bold text-slate-900 leading-none tracking-[-0.02em] whitespace-nowrap overflow-hidden text-ellipsis">
                   Cerebrum
                 </span>
