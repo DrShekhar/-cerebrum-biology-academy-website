@@ -453,11 +453,15 @@ In the meantime, would you like to:
 
   return (
     <>
-      {/* Floating Button */}
+      {/* Floating Button - ARIA branded */}
       <motion.button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? 'Close ARIA Sales Agent Chat' : 'Open ARIA Sales Agent Chat'}
-        className="fixed bottom-20 left-4 md:bottom-6 md:left-6 z-[80] bg-green-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl hover:bg-green-600 transition-all"
+        className="fixed bottom-20 left-4 md:bottom-6 md:left-6 z-[80] bg-gradient-to-br from-blue-600 to-purple-600 text-white shadow-lg hover:shadow-xl hover:from-blue-700 hover:to-purple-700 transition-all"
+        style={{
+          borderRadius: isOpen ? '50%' : '16px',
+          padding: isOpen ? '16px' : '12px 16px',
+        }}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 50 }}
@@ -467,15 +471,24 @@ In the meantime, would you like to:
         {isOpen ? (
           <X className="w-6 h-6" />
         ) : (
-          <>
-            <MessageCircle className="w-6 h-6" />
+          <div className="flex items-center gap-2">
+            {/* ARIA Logo/Badge */}
+            <div className="relative">
+              <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                <span className="text-xs font-bold tracking-tight">ARIA</span>
+              </div>
+              {/* AI sparkle indicator */}
+              <Sparkles className="w-3 h-3 absolute -top-1 -right-1 text-yellow-300" />
+            </div>
+            {/* Label on desktop */}
+            <span className="hidden md:inline text-sm font-medium">Ask AI</span>
             {/* Unread badge */}
             {unreadCount > 0 && (
-              <span className="absolute -top-2 -left-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
                 {unreadCount}
               </span>
             )}
-          </>
+          </div>
         )}
       </motion.button>
 
