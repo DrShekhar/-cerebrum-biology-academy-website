@@ -16,14 +16,9 @@ const HeaderClientInteractions = dynamic(
   }
 )
 
-// Lazy load Firebase auth buttons
-// Note: Removed ssr: false - component handles browser-only APIs internally
-const FirebaseAuthButtons = dynamic(
-  () => import('./FirebaseAuthButtons').then((mod) => mod.FirebaseAuthButtons),
-  {
-    loading: () => <div className="w-16 h-8 bg-slate-100 animate-pulse rounded" />,
-  }
-)
+// Import FirebaseAuthButtons directly to ensure proper hydration
+// Dynamic import was causing click handlers to not attach properly
+import { FirebaseAuthButtons } from './FirebaseAuthButtons'
 
 /**
  * Hybrid Header - Server-rendered shell with lazy-loaded interactivity
