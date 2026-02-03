@@ -142,8 +142,8 @@ export async function trackWhatsAppClick(
 export async function trackAndOpenWhatsApp(params: WhatsAppTrackingParams): Promise<void> {
   const result = await trackWhatsAppClick(params)
 
-  // Fire Google Ads conversion for WhatsApp clicks (secondary conversion)
-  trackWhatsAppLead(params.source, 50) // Estimated lead value ₹50
+  // Fire Google Ads conversion for WhatsApp clicks (SECONDARY conversion - lower priority than calls)
+  trackWhatsAppLead(params.source, 50) // Lower priority than phone calls (100)
 
   // Also fire gtag event for real-time tracking
   if (typeof window !== 'undefined' && window.gtag && GOOGLE_ADS_ID) {
