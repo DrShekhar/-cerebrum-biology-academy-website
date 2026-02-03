@@ -1976,6 +1976,24 @@ model email_verification_tokens {
   @@index([expiresAt])
 }
 
+// Password reset tokens for forgot password flow
+model password_reset_tokens {
+  id        String   @id @default(uuid())
+  userId    String
+  email     String
+  token     String   @unique
+  expiresAt DateTime
+  used      Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  user users @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([token])
+  @@index([userId])
+  @@index([email])
+  @@index([expiresAt])
+}
+
 model parent_child_relationships {
   id                                               String   @id
   parentId                                         String
@@ -3011,6 +3029,7 @@ model users {
   webhooks                                                              webhooks[]
   coupon_redemptions                                                    coupon_redemptions[]
   email_verification_tokens                                             email_verification_tokens[]
+  password_reset_tokens                                                 password_reset_tokens[]
 
   @@index([coachingTier])
   @@index([emailVerified])

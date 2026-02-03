@@ -44,6 +44,14 @@ export default function SignInPage() {
 
           {/* Footer */}
           <div className="px-6 py-4 bg-slate-50 border-t border-slate-100">
+            <p className="text-center text-sm text-slate-600 mb-2">
+              <Link
+                href="/auth/forgot-password"
+                className="font-medium text-[#4a5d4a] hover:text-[#3d4d3d] hover:underline"
+              >
+                Forgot your password?
+              </Link>
+            </p>
             <p className="text-center text-sm text-slate-600">
               Don&apos;t have an account?{' '}
               <Link
