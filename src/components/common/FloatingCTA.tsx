@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
-import { Phone, MessageCircle, X, ChevronUp, Clock, Users } from 'lucide-react'
+import { Phone, MessageCircle, X, ChevronUp, Clock, Users, Minimize2, Maximize2 } from 'lucide-react'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
@@ -24,6 +24,7 @@ const CTA_COPY = {
 export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
   const [isExpanded, setIsExpanded] = useState(false)
+  const [isMinimized, setIsMinimized] = useState(false) // Desktop minimize state
   const [scrollProgress, setScrollProgress] = useState(0)
   const [showScrollTop, setShowScrollTop] = useState(false)
 
@@ -206,77 +207,67 @@ export const FloatingCTA = memo(function FloatingCTA() {
         </div>
       </div>
 
-      {/* ===== DESKTOP: Sticky WhatsApp Button ===== */}
+      {/* ===== DESKTOP: Collapsible WhatsApp Button ===== */}
       {/* Always visible on desktop - bottom right corner */}
       <div className="hidden lg:flex fixed bottom-8 right-8 z-[70] flex-col items-end gap-3">
-        {/* Secondary Actions - shown when expanded */}
-        {isExpanded && (
-          <div className="flex flex-col gap-2 animate-fadeInUp">
-            {secondaryActions.map((action, index) => {
-              const Icon = action.icon
-              return (
-                <Link
-                  key={action.action}
-                  href={action.href}
-                  onClick={() => handleSecondaryClick(action.action)}
-                  className={`flex items-center gap-3 px-5 py-3 rounded-full text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl ${action.color}`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <Icon className="w-5 h-5" />
-                  <span>{action.label}</span>
-                </Link>
-              )
-            })}
-          </div>
-        )}
+        {/* Main Desktop WhatsApp Button - Collapsible */}
+        <div className="flex items-center gap-2">
+          {/* Minimize/Maximize toggle */}
+          <button
+            onClick={() => setIsMinimized(!isMinimized)}
+            className="w-8 h-8 bg-gray-600/80 hover:bg-gray-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300"
+            aria-label={isMinimized ? 'Expand WhatsApp button' : 'Minimize WhatsApp button'}
+          >
+            {isMinimized ? (
+              <Maximize2 className="w-4 h-4" />
+            ) : (
+              <Minimize2 className="w-4 h-4" />
+            )}
+          </button>
 
-        {/* Main Desktop WhatsApp Button with Label */}
-        <div className="flex items-center gap-3">
-          {/* Expand toggle */}
-          {isExpanded ? (
+          {/* WhatsApp Button - Full or Minimized */}
+          {isMinimized ? (
+            /* Minimized: Just icon */
             <button
-              onClick={() => setIsExpanded(false)}
-              className="w-12 h-12 bg-gray-600 hover:bg-gray-700 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300"
-              aria-label="Close menu"
+              onClick={(e) => handleWhatsAppClick(e, 'desktop-floating-cta-minimized')}
+              className="w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-xl flex items-center justify-center text-white transition-all duration-300 transform hover:scale-105"
+              aria-label="Chat on WhatsApp"
             >
-              <X className="w-5 h-5" />
+              <MessageCircle className="w-7 h-7" />
+              {/* Notification dot */}
+              <span className="absolute -top-1 -right-1 flex h-4 w-4">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 items-center justify-center text-[10px] font-bold">1</span>
+              </span>
             </button>
           ) : (
+            /* Expanded: Full button with text */
             <button
-              onClick={() => setIsExpanded(true)}
-              className="px-4 py-2 bg-gray-600 hover:bg-gray-700 rounded-full shadow-lg text-white text-sm font-medium transition-all duration-300"
-              aria-label="More options"
+              onClick={(e) => handleWhatsAppClick(e, 'desktop-floating-cta')}
+              className="group flex items-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20BD5A] rounded-2xl shadow-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+              aria-label={`${CTA_COPY.desktop.primary} on WhatsApp`}
             >
-              More
+              <div className="flex flex-col items-start">
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  <span className="whitespace-nowrap font-bold">{CTA_COPY.desktop.primary}</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs opacity-90 mt-0.5">
+                  <Clock className="w-3 h-3" />
+                  <span>{CTA_COPY.desktop.secondary}</span>
+                  <span className="mx-1">•</span>
+                  <Users className="w-3 h-3" />
+                  <span>{CTA_COPY.desktop.badge}</span>
+                </div>
+              </div>
+
+              {/* Notification indicator */}
+              <span className="relative flex h-3 w-3 ml-1">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+              </span>
             </button>
           )}
-
-          {/* Primary WhatsApp CTA - Enhanced with social proof */}
-          <button
-            onClick={(e) => handleWhatsAppClick(e, 'desktop-floating-cta')}
-            className="group flex items-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20BD5A] rounded-2xl shadow-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-            aria-label={`${CTA_COPY.desktop.primary} on WhatsApp`}
-          >
-            <div className="flex flex-col items-start">
-              <div className="flex items-center gap-2">
-                <MessageCircle className="w-5 h-5" />
-                <span className="whitespace-nowrap font-bold">{CTA_COPY.desktop.primary}</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs opacity-90 mt-0.5">
-                <Clock className="w-3 h-3" />
-                <span>{CTA_COPY.desktop.secondary}</span>
-                <span className="mx-1">•</span>
-                <Users className="w-3 h-3" />
-                <span>{CTA_COPY.desktop.badge}</span>
-              </div>
-            </div>
-
-            {/* Notification indicator */}
-            <span className="relative flex h-3 w-3 ml-1">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
-            </span>
-          </button>
         </div>
       </div>
 
