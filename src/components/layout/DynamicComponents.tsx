@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import dynamic from 'next/dynamic'
-import { useAuth } from '@/contexts/AuthContext'
 import { AriaErrorBoundary, AriaLoadingFallback } from '@/components/sales-agent/AriaErrorBoundary'
 
 // Note: Removed ssr: false to prevent BAILOUT_TO_CLIENT_SIDE_RENDERING error in Next.js 15
@@ -66,25 +65,18 @@ export function GlobalExitIntent() {
   return <GlobalExitIntentComponent />
 }
 
-// ARIA Sales Agent - Delays load for 3 seconds for better LCP
+// ARIA Sales Agent - Quick load for better engagement
 // Wrapped with AriaErrorBoundary to catch component crashes
-// CONDITIONAL DISPLAY: Only shown on public pages (non-authenticated users)
+// DISPLAY: Shown for ALL users (authenticated and public)
 export function SalesAgentWidget() {
-  const { user, isLoading: authLoading } = useAuth()
   const [shouldLoad, setShouldLoad] = useState(false)
   const [loadError, setLoadError] = useState(false)
   const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
-    // PERFORMANCE: Delay sales agent even more to prioritize LCP and core interactivity
-    // Changed from 5s to 8s timeout for better mobile performance
-    if ('requestIdleCallback' in window) {
-      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 8000 })
-      return () => cancelIdleCallback(idleId)
-    } else {
-      const timerId = setTimeout(() => setShouldLoad(true), 6000)
-      return () => clearTimeout(timerId)
-    }
+    // Load ARIA after 2 seconds - quick enough for engagement, but after LCP
+    const timerId = setTimeout(() => setShouldLoad(true), 2000)
+    return () => clearTimeout(timerId)
   }, [])
 
   const handleClose = useCallback(() => {
@@ -99,12 +91,6 @@ export function SalesAgentWidget() {
   const handleError = useCallback(() => {
     console.error('[ARIA] Component error caught by boundary')
   }, [])
-
-  // Don't render while checking authentication
-  if (authLoading) return null
-
-  // Hide Aria if user is authenticated (show only on public pages)
-  if (user) return null
 
   if (!isVisible) return null
   if (!shouldLoad) return null
