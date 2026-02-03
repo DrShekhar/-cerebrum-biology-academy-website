@@ -150,9 +150,7 @@ export async function GET(request: NextRequest) {
     const trialDaysRemaining = decoded.trialEndDate
       ? Math.max(
           0,
-          Math.ceil(
-            (new Date(decoded.trialEndDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24)
-          )
+          Math.ceil((new Date(decoded.trialEndDate).getTime() - Date.now()) / (1000 * 60 * 60 * 24))
         )
       : 0
 

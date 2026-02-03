@@ -2469,11 +2469,21 @@ model seo_content_sources {
 }
 
 model sessions {
-  id           String   @id
-  sessionToken String   @unique
-  userId       String
-  expires      DateTime
-  users        users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id               String   @id
+  sessionToken     String   @unique
+  userId           String
+  expires          DateTime
+  // Refresh token rotation: stores hash of current valid refresh token
+  // When a refresh occurs, this is updated. If an old token is used, session is invalidated.
+  refreshTokenHash String?
+  // Track token version for easier rotation management
+  tokenVersion     Int      @default(1)
+  createdAt        DateTime @default(now())
+  lastRefreshedAt  DateTime @default(now())
+  users            users    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expires])
 }
 
 model student_attendance {

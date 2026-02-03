@@ -55,7 +55,7 @@ export const HeaderClientInteractions = memo(function HeaderClientInteractions({
         {/* CSS-only burger icon for instant render */}
         <button
           onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
-          className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
           aria-label={isBurgerMenuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isBurgerMenuOpen}
         >

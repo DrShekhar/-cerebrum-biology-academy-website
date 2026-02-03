@@ -36,6 +36,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
+import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import type { UserRole as PrismaUserRole } from '@/generated/prisma'
 
@@ -58,7 +59,12 @@ const isBuildTime = (): boolean => {
   return process.env.NEXT_PHASE === 'phase-production-build'
 }
 
-const getJWTSecret = (): string => {
+/**
+ * Get JWT secret for token signing/verification
+ * IMPORTANT: This is the single source of truth for JWT secrets
+ * Used by both config.ts (token creation) and middleware.ts (token verification)
+ */
+export const getJWTSecret = (): string => {
   if (_jwtSecret) return _jwtSecret
 
   const secret = process.env.JWT_SECRET
@@ -233,6 +239,27 @@ export class TokenUtils {
     const randomHex = Array.from(array, (b) => b.toString(16).padStart(2, '0')).join('')
     return `session_${Date.now()}_${randomHex}`
   }
+
+  /**
+   * Hash a refresh token for secure storage
+   * Uses SHA-256 to create a one-way hash that can be compared on refresh
+   */
+  static hashRefreshToken(token: string): string {
+    return crypto.createHash('sha256').update(token).digest('hex')
+  }
+
+  /**
+   * Verify a refresh token against its stored hash
+   */
+  static verifyRefreshTokenHash(token: string, storedHash: string): boolean {
+    const tokenHash = this.hashRefreshToken(token)
+    // Use timing-safe comparison to prevent timing attacks
+    try {
+      return crypto.timingSafeEqual(Buffer.from(tokenHash), Buffer.from(storedHash))
+    } catch {
+      return false
+    }
+  }
 }
 
 /**
@@ -252,7 +279,14 @@ export const ROLE_PERMISSIONS: Record<UserRole, string[]> = {
   ],
   // SECURITY (2026-01-28): Parent can view payments but making payments requires student action
   // This prevents unauthorized payment actions by parent accounts
-  PARENT: ['student:monitor', 'progress:view', 'payment:view', 'payment:history', 'demo:book', 'reports:view'],
+  PARENT: [
+    'student:monitor',
+    'progress:view',
+    'payment:view',
+    'payment:history',
+    'demo:book',
+    'reports:view',
+  ],
   TEACHER: [
     'test:create',
     'test:edit',
@@ -472,17 +506,7 @@ export class SessionManager {
   }): Promise<{ accessToken: string; refreshToken: string; sessionId: string }> {
     const sessionId = TokenUtils.generateSessionId()
 
-    // Create session in database
-    const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) // 7 days
-    await prisma.sessions.create({
-      data: {
-        sessionToken: sessionId,
-        userId: user.id,
-        expires: expiresAt,
-      },
-    })
-
-    // Generate tokens
+    // Generate tokens first so we can hash the refresh token
     const accessToken = TokenUtils.generateAccessToken({
       userId: user.id,
       email: user.email,
@@ -496,14 +520,40 @@ export class SessionManager {
       sessionId,
     })
 
+    // Hash the refresh token for secure storage (token rotation)
+    const refreshTokenHash = TokenUtils.hashRefreshToken(refreshToken)
+
+    // Create session in database with refresh token hash
+    const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000) // 7 days
+    await prisma.sessions.create({
+      data: {
+        id: sessionId, // Use sessionId as the primary key
+        sessionToken: sessionId,
+        userId: user.id,
+        expires: expiresAt,
+        refreshTokenHash,
+        tokenVersion: 1,
+      },
+    })
+
+    console.log(`[Session] Created session ${sessionId} for user ${user.id}`)
+
     return { accessToken, refreshToken, sessionId }
   }
 
+  /**
+   * Refresh a session with token rotation
+   * SECURITY: Implements refresh token rotation to detect token theft
+   * - Verifies the incoming refresh token hash matches the stored hash
+   * - If hash doesn't match, session is invalidated (potential token theft)
+   * - After successful refresh, stores new token hash
+   */
   static async refreshSession(
     refreshToken: string
   ): Promise<{ accessToken: string; refreshToken: string } | null> {
     const payload = TokenUtils.verifyRefreshToken(refreshToken)
     if (!payload) {
+      console.warn('[Session] Refresh token verification failed')
       return null
     }
 
@@ -520,7 +570,22 @@ export class SessionManager {
     })
 
     if (!session || !session.user) {
+      console.warn(`[Session] Session not found or expired: ${payload.sessionId}`)
       return null
+    }
+
+    // SECURITY: Verify refresh token hash matches (token rotation)
+    // If the hash doesn't match, this could be a stolen token replay attack
+    if (session.refreshTokenHash) {
+      const hashMatches = TokenUtils.verifyRefreshTokenHash(refreshToken, session.refreshTokenHash)
+      if (!hashMatches) {
+        console.warn(
+          `[Session] SECURITY: Refresh token hash mismatch for session ${payload.sessionId}. Possible token theft - invalidating session.`
+        )
+        // Invalidate the session immediately - potential token theft
+        await this.terminateSession(payload.sessionId)
+        return null
+      }
     }
 
     // Generate new tokens
@@ -536,6 +601,22 @@ export class SessionManager {
       userId: session.user.id,
       sessionId: payload.sessionId,
     })
+
+    // Hash the new refresh token and update the session (rotation)
+    const newRefreshTokenHash = TokenUtils.hashRefreshToken(newRefreshToken)
+
+    await prisma.sessions.update({
+      where: { sessionToken: payload.sessionId },
+      data: {
+        refreshTokenHash: newRefreshTokenHash,
+        tokenVersion: { increment: 1 },
+        lastRefreshedAt: new Date(),
+      },
+    })
+
+    console.log(
+      `[Session] Refreshed session ${payload.sessionId}, token version: ${(session.tokenVersion || 1) + 1}`
+    )
 
     return { accessToken: newAccessToken, refreshToken: newRefreshToken }
   }
@@ -576,6 +657,9 @@ export class AuthRateLimit {
   private static hasLoggedProductionWarning = false
   private static redisFailureCount = 0
   private static readonly MAX_REDIS_FAILURES_BEFORE_ALERT = 5
+  private static lastCleanup = Date.now()
+  private static readonly CLEANUP_INTERVAL_MS = 5 * 60 * 1000 // Cleanup every 5 minutes
+  private static readonly MAX_ENTRIES = 10000 // Maximum entries before forced cleanup
 
   /**
    * Check rate limit using Upstash Redis (production) or in-memory (development)
@@ -694,6 +778,9 @@ export class AuthRateLimit {
     remainingAttempts?: number
     lockoutEndsAt?: Date
   } {
+    // Periodically cleanup expired entries to prevent memory leaks
+    this.cleanupExpiredEntries()
+
     const now = Date.now()
     const record = this.attempts.get(identifier)
     const lockoutMs = this.LOCKOUT_DURATION_SECONDS * 1000
@@ -756,6 +843,39 @@ export class AuthRateLimit {
       inMemoryTrackedIdentifiers: this.attempts.size,
     }
   }
+
+  /**
+   * Cleanup expired entries from in-memory rate limit tracking
+   * Prevents memory leaks in long-running instances
+   */
+  private static cleanupExpiredEntries(): void {
+    const now = Date.now()
+
+    // Only cleanup if enough time has passed or we have too many entries
+    const timeSinceLastCleanup = now - this.lastCleanup
+    const shouldCleanup =
+      timeSinceLastCleanup > this.CLEANUP_INTERVAL_MS || this.attempts.size > this.MAX_ENTRIES
+
+    if (!shouldCleanup) {
+      return
+    }
+
+    this.lastCleanup = now
+    const lockoutMs = this.LOCKOUT_DURATION_SECONDS * 1000
+    let cleaned = 0
+
+    // Remove entries that have expired (past lockout period)
+    for (const [identifier, record] of this.attempts.entries()) {
+      if (now - record.lastAttempt > lockoutMs) {
+        this.attempts.delete(identifier)
+        cleaned++
+      }
+    }
+
+    if (cleaned > 0) {
+      console.log(`[AuthRateLimit] Cleaned up ${cleaned} expired entries. Current size: ${this.attempts.size}`)
+    }
+  }
 }
 
 /**
@@ -791,39 +911,87 @@ export class CookieManager {
   static clearAuthCookies(response: NextResponse) {
     const isProduction = process.env.NODE_ENV === 'production'
 
-    // Cookie options must match how they were set for deletion to work
-    // IMPORTANT: sameSite must match how cookies were set ('strict') for deletion to work
-    const cookieOptions = {
-      path: '/',
-      secure: isProduction,
-      sameSite: 'strict' as const, // Must match setAuthCookies for proper deletion
-      httpOnly: true,
-      maxAge: 0, // Expire immediately
+    // All cookies that need to be cleared on logout
+    // Each cookie is cleared with options matching how it was set
+    const cookiesToClear = [
+      // Custom JWT auth cookies (set with sameSite: 'strict')
+      { name: 'auth-token', secure: isProduction, sameSite: 'strict' as const, httpOnly: true },
+      { name: 'refresh-token', secure: isProduction, sameSite: 'strict' as const, httpOnly: true },
+
+      // NextAuth v5 cookies (authjs prefix) - development (non-secure, lax)
+      { name: 'authjs.session-token', secure: false, sameSite: 'lax' as const, httpOnly: true },
+      { name: 'authjs.csrf-token', secure: false, sameSite: 'lax' as const, httpOnly: false },
+      { name: 'authjs.callback-url', secure: false, sameSite: 'lax' as const, httpOnly: false },
+
+      // NextAuth v5 cookies (authjs prefix) - production (secure prefix)
+      {
+        name: '__Secure-authjs.session-token',
+        secure: true,
+        sameSite: 'lax' as const,
+        httpOnly: true,
+      },
+      {
+        name: '__Secure-authjs.csrf-token',
+        secure: true,
+        sameSite: 'lax' as const,
+        httpOnly: false,
+      },
+      {
+        name: '__Secure-authjs.callback-url',
+        secure: true,
+        sameSite: 'lax' as const,
+        httpOnly: false,
+      },
+
+      // NextAuth v4 cookies (next-auth prefix) - for backwards compatibility
+      { name: 'next-auth.session-token', secure: false, sameSite: 'lax' as const, httpOnly: true },
+      { name: 'next-auth.csrf-token', secure: false, sameSite: 'lax' as const, httpOnly: false },
+      { name: 'next-auth.callback-url', secure: false, sameSite: 'lax' as const, httpOnly: false },
+      {
+        name: '__Secure-next-auth.session-token',
+        secure: true,
+        sameSite: 'lax' as const,
+        httpOnly: true,
+      },
+      {
+        name: '__Secure-next-auth.csrf-token',
+        secure: true,
+        sameSite: 'lax' as const,
+        httpOnly: false,
+      },
+      {
+        name: '__Secure-next-auth.callback-url',
+        secure: true,
+        sameSite: 'lax' as const,
+        httpOnly: false,
+      },
+
+      // Firebase auth cookies (if any remain from deprecated system)
+      {
+        name: 'firebase-auth-token',
+        secure: isProduction,
+        sameSite: 'strict' as const,
+        httpOnly: true,
+      },
+    ]
+
+    // Clear each cookie by setting empty value with maxAge: 0
+    // This is more reliable than delete() across browsers
+    for (const cookie of cookiesToClear) {
+      response.cookies.set(cookie.name, '', {
+        path: '/',
+        secure: cookie.secure,
+        sameSite: cookie.sameSite,
+        httpOnly: cookie.httpOnly,
+        maxAge: 0,
+        expires: new Date(0), // Belt and suspenders: also set expires to past
+      })
     }
 
-    // Clear auth tokens by setting empty value with maxAge: 0
-    // This is more reliable than delete() across different browsers
-    response.cookies.set('auth-token', '', cookieOptions)
-    response.cookies.set('refresh-token', '', cookieOptions)
-
-    // Clear all possible session token variants (both secure and non-secure)
-    // NextAuth cookies may use 'lax' sameSite, so we clear with both options
-    const nextAuthOptions = { path: '/', maxAge: 0, httpOnly: true }
-    response.cookies.set('authjs.session-token', '', { ...nextAuthOptions, secure: false, sameSite: 'lax' as const })
-    response.cookies.set('__Secure-authjs.session-token', '', { ...nextAuthOptions, secure: true, sameSite: 'lax' as const })
-    response.cookies.set('next-auth.session-token', '', { ...nextAuthOptions, secure: false, sameSite: 'lax' as const })
-    response.cookies.set('__Secure-next-auth.session-token', '', { ...nextAuthOptions, secure: true, sameSite: 'lax' as const })
-    // Also try strict sameSite in case they were set that way
-    response.cookies.set('authjs.session-token', '', { ...nextAuthOptions, secure: isProduction, sameSite: 'strict' as const })
-    response.cookies.set('next-auth.session-token', '', { ...nextAuthOptions, secure: isProduction, sameSite: 'strict' as const })
-
-    // Also use delete as a fallback for older implementations
-    response.cookies.delete('auth-token')
-    response.cookies.delete('refresh-token')
-    response.cookies.delete('authjs.session-token')
-    response.cookies.delete('__Secure-authjs.session-token')
-    response.cookies.delete('next-auth.session-token')
-    response.cookies.delete('__Secure-next-auth.session-token')
+    // Log cleared cookies in development for debugging
+    if (process.env.NODE_ENV === 'development') {
+      console.log('[Auth] Cleared cookies:', cookiesToClear.map((c) => c.name).join(', '))
+    }
   }
 }
 

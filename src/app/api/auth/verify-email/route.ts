@@ -33,10 +33,7 @@ export async function GET(request: NextRequest) {
 
     if (!token) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'Verification token is required' },
-          { status: 400 }
-        )
+        NextResponse.json({ error: 'Verification token is required' }, { status: 400 })
       )
     }
 
@@ -93,12 +90,12 @@ export async function GET(request: NextRequest) {
     // Use constant-time comparison to prevent timing attacks
     const tokenBuffer = Buffer.from(token)
     const storedBuffer = Buffer.from(verificationToken.token)
-    if (tokenBuffer.length !== storedBuffer.length || !crypto.timingSafeEqual(tokenBuffer, storedBuffer)) {
+    if (
+      tokenBuffer.length !== storedBuffer.length ||
+      !crypto.timingSafeEqual(tokenBuffer, storedBuffer)
+    ) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'Invalid verification token' },
-          { status: 400 }
-        )
+        NextResponse.json({ error: 'Invalid verification token' }, { status: 400 })
       )
     }
 
@@ -133,10 +130,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error('Email verification error:', error)
     return addSecurityHeaders(
-      NextResponse.json(
-        { error: 'Failed to verify email. Please try again.' },
-        { status: 500 }
-      )
+      NextResponse.json({ error: 'Failed to verify email. Please try again.' }, { status: 500 })
     )
   }
 }
@@ -172,10 +166,7 @@ export async function POST(request: NextRequest) {
 
     if (!token) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'Verification token is required' },
-          { status: 400 }
-        )
+        NextResponse.json({ error: 'Verification token is required' }, { status: 400 })
       )
     }
 
@@ -232,12 +223,12 @@ export async function POST(request: NextRequest) {
     // Use constant-time comparison to prevent timing attacks
     const tokenBuffer = Buffer.from(token)
     const storedBuffer = Buffer.from(verificationToken.token)
-    if (tokenBuffer.length !== storedBuffer.length || !crypto.timingSafeEqual(tokenBuffer, storedBuffer)) {
+    if (
+      tokenBuffer.length !== storedBuffer.length ||
+      !crypto.timingSafeEqual(tokenBuffer, storedBuffer)
+    ) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'Invalid verification token' },
-          { status: 400 }
-        )
+        NextResponse.json({ error: 'Invalid verification token' }, { status: 400 })
       )
     }
 
@@ -271,10 +262,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Email verification error:', error)
     return addSecurityHeaders(
-      NextResponse.json(
-        { error: 'Failed to verify email. Please try again.' },
-        { status: 500 }
-      )
+      NextResponse.json({ error: 'Failed to verify email. Please try again.' }, { status: 500 })
     )
   }
 }

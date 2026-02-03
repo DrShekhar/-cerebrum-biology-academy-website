@@ -21,10 +21,7 @@ export async function POST(request: NextRequest) {
     const session = await validateUserSession(request)
     if (!session.valid || !session.userId) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'Authentication required to complete signup' },
-          { status: 401 }
-        )
+        NextResponse.json({ error: 'Authentication required to complete signup' }, { status: 401 })
       )
     }
 
@@ -36,14 +33,9 @@ export async function POST(request: NextRequest) {
     // SECURITY: Prevent IDOR - verify userId matches authenticated session
     // Users can only complete their own signup, not modify other accounts
     if (userId !== session.userId) {
-      console.warn(
-        `[SECURITY] IDOR attempt: User ${session.userId} tried to modify user ${userId}`
-      )
+      console.warn(`[SECURITY] IDOR attempt: User ${session.userId} tried to modify user ${userId}`)
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'You can only complete your own signup' },
-          { status: 403 }
-        )
+        NextResponse.json({ error: 'You can only complete your own signup' }, { status: 403 })
       )
     }
 

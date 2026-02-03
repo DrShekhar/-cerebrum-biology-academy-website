@@ -6,6 +6,8 @@ import {
   CookieManager,
   addSecurityHeaders,
   AuthRateLimit,
+  ALLOWED_ORIGINS,
+  getCorsOrigin,
 } from '@/lib/auth/config'
 import { z } from 'zod'
 import { logLogin, logFailedLogin } from '@/lib/security/auditLogger'
@@ -17,27 +19,19 @@ const SignInSchema = z.object({
   rememberMe: z.boolean().optional().default(false),
 })
 
-// CSRF validation helper
+// CSRF validation helper - uses centralized ALLOWED_ORIGINS
 function validateCSRF(request: NextRequest): boolean {
-  // Skip CSRF for same-origin requests (checked via referer/origin)
   const origin = request.headers.get('origin')
   const referer = request.headers.get('referer')
 
-  const allowedOrigins = [
-    'https://cerebrumbiologyacademy.com',
-    'https://www.cerebrumbiologyacademy.com',
-    process.env.NEXT_PUBLIC_APP_URL,
-    process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '',
-  ].filter(Boolean)
-
   // Origin header is more reliable than referer
   if (origin) {
-    return allowedOrigins.some((allowed) => origin.startsWith(allowed || ''))
+    return ALLOWED_ORIGINS.some((allowed) => origin.startsWith(allowed))
   }
 
   // Fall back to referer if origin not present
   if (referer) {
-    return allowedOrigins.some((allowed) => referer.startsWith(allowed || ''))
+    return ALLOWED_ORIGINS.some((allowed) => referer.startsWith(allowed))
   }
 
   // Reject if no origin/referer (could be direct API call from attacker)
@@ -138,14 +132,21 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // SECURITY (2026-01-28): Email verification is REQUIRED by default
-    // Set SKIP_EMAIL_VERIFICATION=true only in development to bypass this check
-    const skipEmailVerification = process.env.SKIP_EMAIL_VERIFICATION === 'true'
+    // SECURITY: Email verification is REQUIRED in production
+    // SKIP_EMAIL_VERIFICATION is ONLY allowed in development/test environments
+    const isProduction = process.env.NODE_ENV === 'production'
+    const skipEmailVerification = !isProduction && process.env.SKIP_EMAIL_VERIFICATION === 'true'
+
     if (!user.emailVerified && !skipEmailVerification) {
-      // Log attempt to sign in with unverified email
-      console.warn(
-        `[SECURITY] Sign-in attempt with unverified email: ${email.slice(0, 3)}***@${email.split('@')[1]} from IP: ${clientIP}`
-      )
+      // Log attempt to sign in with unverified email (don't log actual email in production)
+      if (isProduction) {
+        console.warn(`[SECURITY] Sign-in attempt with unverified email from IP: ${clientIP}`)
+      } else {
+        console.warn(
+          `[SECURITY] Sign-in attempt with unverified email: ${user.id} from IP: ${clientIP}`
+        )
+      }
+
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -153,7 +154,8 @@ export async function POST(request: NextRequest) {
             message:
               'Please verify your email address before signing in. Check your inbox for a verification link.',
             requiresVerification: true,
-            email: email, // Return email so frontend can offer to resend verification
+            // SECURITY: Don't return the email - prevents email enumeration attacks
+            // Frontend already knows the email from the login form
           },
           { status: 403 }
         )
@@ -224,20 +226,11 @@ export async function GET() {
 
 // OPTIONS for CORS preflight
 export async function OPTIONS(request: NextRequest) {
-  const origin = request.headers.get('origin') || ''
-  const allowedOrigins = [
-    'https://cerebrumbiologyacademy.com',
-    'https://www.cerebrumbiologyacademy.com',
-    process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : '',
-  ].filter(Boolean)
-
-  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
-
   return addSecurityHeaders(
     new NextResponse(null, {
       status: 200,
       headers: {
-        'Access-Control-Allow-Origin': corsOrigin,
+        'Access-Control-Allow-Origin': getCorsOrigin(request),
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
         'Access-Control-Allow-Credentials': 'true',

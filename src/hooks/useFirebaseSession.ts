@@ -1,5 +1,22 @@
 'use client'
 
+/**
+ * @deprecated DEPRECATED (2026-02-03): Use `useAuth` from `@/contexts/AuthContext` instead.
+ * This hook is maintained only for backwards compatibility with legacy components.
+ *
+ * Migration guide:
+ * - Replace `import { useFirebaseSession } from '@/hooks/useFirebaseSession'`
+ * - With `import { useAuth } from '@/contexts/AuthContext'`
+ *
+ * The AuthContext provides the same functionality plus:
+ * - Token refresh handling
+ * - Session expiry detection
+ * - Unified logout across all auth systems
+ * - Permission checking
+ *
+ * @see AuthContext for the canonical auth implementation
+ */
+
 import { useState, useEffect, useCallback, useRef } from 'react'
 
 interface SessionUser {

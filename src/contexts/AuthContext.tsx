@@ -85,7 +85,10 @@ export interface ProfileUpdateData {
 export interface AuthContextType {
   user: User | null
   isLoading: boolean
+  isLoggingOut: boolean
   isAuthenticated: boolean
+  sessionExpired: boolean
+  clearSessionExpired: () => void
   login: (
     email: string,
     password: string,
@@ -132,8 +135,15 @@ interface AuthProviderProps {
 export function AuthProvider({ children }: AuthProviderProps) {
   const [user, setUser] = useState<User | null>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [isLoggingOut, setIsLoggingOut] = useState(false)
+  const [sessionExpired, setSessionExpired] = useState(false)
   const [permissions, setPermissions] = useState<string[]>([])
   const router = useRouter()
+
+  // Clear session expired notification (user dismisses it or logs in again)
+  const clearSessionExpired = useCallback(() => {
+    setSessionExpired(false)
+  }, [])
 
   // Track token expiry and refresh state
   const tokenExpiryRef = useRef<number>(0)
@@ -141,10 +151,35 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const refreshTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const isRefreshingRef = useRef<boolean>(false)
 
-  // Update token expiry time
-  const updateTokenExpiry = useCallback((expiresInSeconds?: number) => {
-    const expiryMs = expiresInSeconds ? expiresInSeconds * 1000 : TOKEN_EXPIRY_MS
-    tokenExpiryRef.current = Date.now() + expiryMs
+  /**
+   * Update token expiry time
+   * @param expiresInOrAt - Either seconds until expiry (number < 10000000000) or absolute timestamp/ISO string
+   */
+  const updateTokenExpiry = useCallback((expiresInOrAt?: number | string) => {
+    if (!expiresInOrAt) {
+      // Default: 15 minutes from now
+      tokenExpiryRef.current = Date.now() + TOKEN_EXPIRY_MS
+      return
+    }
+
+    if (typeof expiresInOrAt === 'string') {
+      // ISO date string (expiresAt format)
+      tokenExpiryRef.current = new Date(expiresInOrAt).getTime()
+    } else if (expiresInOrAt > 10000000000) {
+      // Already a timestamp in milliseconds (expiresAt format)
+      tokenExpiryRef.current = expiresInOrAt
+    } else {
+      // Seconds until expiry (expiresIn format)
+      tokenExpiryRef.current = Date.now() + expiresInOrAt * 1000
+    }
+
+    // Sanity check: if expiry is in the past or too far in future, use default
+    const now = Date.now()
+    const maxExpiry = now + 30 * 24 * 60 * 60 * 1000 // 30 days max
+    if (tokenExpiryRef.current <= now || tokenExpiryRef.current > maxExpiry) {
+      console.warn('[AuthContext] Invalid token expiry, using default')
+      tokenExpiryRef.current = now + TOKEN_EXPIRY_MS
+    }
   }, [])
 
   // Check if token needs refresh
@@ -169,10 +204,21 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
 
     const now = Date.now()
-    const timeUntilRefresh = Math.max(
-      tokenExpiryRef.current - now - REFRESH_BUFFER_MS,
-      MIN_REFRESH_INTERVAL_MS
-    )
+    const timeUntilExpiry = tokenExpiryRef.current - now
+
+    // If token is already expired or will expire very soon, refresh immediately
+    if (timeUntilExpiry <= REFRESH_BUFFER_MS) {
+      console.log('[AuthContext] Token expired or expiring soon, refreshing immediately')
+      if (user && !isRefreshingRef.current) {
+        refreshTokenInternal()
+      }
+      return
+    }
+
+    // Schedule refresh before expiry (with buffer)
+    const timeUntilRefresh = Math.max(timeUntilExpiry - REFRESH_BUFFER_MS, MIN_REFRESH_INTERVAL_MS)
+
+    console.log(`[AuthContext] Scheduling refresh in ${Math.round(timeUntilRefresh / 1000)}s`)
 
     refreshTimeoutRef.current = setTimeout(() => {
       if (user && !isRefreshingRef.current) {
@@ -296,11 +342,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
           setUser(data.user)
           setPermissions(getUserPermissions(data.user.role))
           // Set expiry based on response or default
-          if (data.expiresAt) {
-            tokenExpiryRef.current = new Date(data.expiresAt).getTime()
-          } else {
-            updateTokenExpiry()
-          }
+          // updateTokenExpiry handles both expiresAt (timestamp) and expiresIn (seconds)
+          updateTokenExpiry(data.expiresAt || data.expiresIn)
           lastRefreshRef.current = Date.now()
         }
       }
@@ -319,6 +362,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }
 
     isRefreshingRef.current = true
+    const hadUser = !!user // Track if user was logged in before refresh attempt
 
     try {
       const response = await fetch('/api/auth/refresh', {
@@ -334,22 +378,33 @@ export function AuthProvider({ children }: AuthProviderProps) {
           // Update expiry from response
           updateTokenExpiry(data.expiresIn)
           lastRefreshRef.current = Date.now()
+          // Clear any previous session expired state
+          setSessionExpired(false)
           // Schedule next refresh
           scheduleRefresh()
           return true
         }
       }
 
-      // If refresh fails, clear auth state
+      // If refresh fails, clear auth state and notify user
+      console.warn('[AuthContext] Session refresh failed - session expired')
       setUser(null)
       setPermissions([])
       tokenExpiryRef.current = 0
+      // Only show session expired notification if user was previously logged in
+      if (hadUser) {
+        setSessionExpired(true)
+      }
       return false
     } catch (error) {
       console.error('Token refresh error:', error)
       setUser(null)
       setPermissions([])
       tokenExpiryRef.current = 0
+      // Only show session expired notification if user was previously logged in
+      if (hadUser) {
+        setSessionExpired(true)
+      }
       return false
     } finally {
       isRefreshingRef.current = false
@@ -372,6 +427,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
       if (response.ok && data.success) {
         setUser(data.user)
         setPermissions(getUserPermissions(data.user.role))
+        // Clear any session expired state on successful login
+        setSessionExpired(false)
         // Set token expiry
         updateTokenExpiry(data.expiresIn)
         lastRefreshRef.current = Date.now()
@@ -419,46 +476,107 @@ export function AuthProvider({ children }: AuthProviderProps) {
   }
 
   const logout = async () => {
-    try {
-      // Clear refresh timeout first to prevent any pending refreshes
-      if (refreshTimeoutRef.current) {
-        clearTimeout(refreshTimeoutRef.current)
-        refreshTimeoutRef.current = null
-      }
-      // Clear token expiry
-      tokenExpiryRef.current = 0
-      lastRefreshRef.current = 0
-
-      // Call logout API to clear server-side session
-      // We proceed with client-side cleanup regardless of API response
-      try {
-        const response = await fetch('/api/auth/logout', {
-          method: 'POST',
-          credentials: 'include',
-        })
-        const data = await response.json()
-        if (!data.success) {
-          console.warn('Server logout incomplete:', data.error || 'Unknown error')
-        }
-      } catch (fetchError) {
-        console.warn('Logout API call failed:', fetchError)
-      }
-
-      // Always attempt Firebase signout (lazy-loaded to defer Firebase SDK)
-      try {
-        const firebaseSignOut = await getFirebaseSignOut()
-        await firebaseSignOut()
-      } catch (firebaseError) {
-        console.warn('Firebase signout failed:', firebaseError)
-      }
-    } catch (error) {
-      console.error('Logout error:', error)
-    } finally {
-      // Always clear client state regardless of API success
-      setUser(null)
-      setPermissions([])
-      router.push('/')
+    // Prevent multiple logout attempts
+    if (isLoggingOut) {
+      console.warn('[Auth] Logout already in progress')
+      return
     }
+
+    setIsLoggingOut(true)
+
+    // Clear refresh timeout first to prevent any pending refreshes during logout
+    if (refreshTimeoutRef.current) {
+      clearTimeout(refreshTimeoutRef.current)
+      refreshTimeoutRef.current = null
+    }
+
+    // Clear token tracking immediately to prevent refresh attempts during logout
+    tokenExpiryRef.current = 0
+    lastRefreshRef.current = 0
+
+    let serverLogoutSuccess = false
+    let serverLogoutError: string | null = null
+
+    // Step 1: Call server logout API and WAIT for response
+    try {
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10000) // 10 second timeout
+
+      const response = await fetch('/api/auth/logout', {
+        method: 'POST',
+        credentials: 'include',
+        signal: controller.signal,
+      })
+
+      clearTimeout(timeoutId)
+
+      if (response.ok) {
+        const data = await response.json()
+        serverLogoutSuccess = data.success === true
+        if (!serverLogoutSuccess) {
+          serverLogoutError = data.error || 'Server reported logout failure'
+          console.warn('[Auth] Server logout incomplete:', serverLogoutError)
+        } else {
+          console.log('[Auth] Server logout successful')
+        }
+      } else {
+        serverLogoutError = `Server returned ${response.status}`
+        console.warn('[Auth] Server logout failed:', serverLogoutError)
+      }
+    } catch (fetchError) {
+      if (fetchError instanceof Error && fetchError.name === 'AbortError') {
+        serverLogoutError = 'Logout request timed out'
+      } else {
+        serverLogoutError = fetchError instanceof Error ? fetchError.message : 'Network error'
+      }
+      console.warn('[Auth] Logout API call failed:', serverLogoutError)
+    }
+
+    // Step 2: Attempt Firebase signout (lazy-loaded to defer Firebase SDK)
+    try {
+      const firebaseSignOut = await getFirebaseSignOut()
+      await firebaseSignOut()
+      console.log('[Auth] Firebase signout successful')
+    } catch (firebaseError) {
+      // Don't block logout for Firebase errors - it may not be in use
+      console.warn('[Auth] Firebase signout failed (may not be in use):', firebaseError)
+    }
+
+    // Step 3: Clear client state
+    // We clear client state even if server logout failed for security
+    // (better to have user re-login than leave them in a bad state)
+    setUser(null)
+    setPermissions([])
+
+    // Step 4: Clear any localStorage auth-related data
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.removeItem('freeUserId')
+        localStorage.removeItem('user-session')
+        localStorage.removeItem('admin-state')
+        localStorage.removeItem('auth-redirect')
+        // Clear session storage too
+        sessionStorage.removeItem('auth-state')
+        sessionStorage.removeItem('login-redirect')
+      } catch (storageError) {
+        console.warn('[Auth] Failed to clear storage:', storageError)
+      }
+    }
+
+    // Step 5: Navigate to home
+    // Use replace to prevent back button returning to protected page
+    router.replace('/')
+
+    // Log final status
+    if (serverLogoutSuccess) {
+      console.log('[Auth] Logout completed successfully')
+    } else {
+      console.warn('[Auth] Logout completed with server-side issues:', serverLogoutError)
+      // Note: Cookies should still be cleared by the server response
+      // If not, middleware will reject next request and force re-login
+    }
+
+    setIsLoggingOut(false)
   }
 
   // Public refresh function (delegates to internal)
@@ -485,6 +603,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
           // Retry the original request
           response = await fetch(input, fetchInit)
         }
+        // Note: refreshTokenInternal already sets sessionExpired if refresh fails
       }
 
       return response
@@ -530,7 +649,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const value: AuthContextType = {
     user,
     isLoading,
+    isLoggingOut,
     isAuthenticated: !!user,
+    sessionExpired,
+    clearSessionExpired,
     login,
     signup,
     logout,

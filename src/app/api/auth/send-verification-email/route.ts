@@ -50,10 +50,7 @@ export async function POST(request: NextRequest) {
         email = user.email
         if (user.emailVerified) {
           return addSecurityHeaders(
-            NextResponse.json(
-              { error: 'Email already verified' },
-              { status: 400 }
-            )
+            NextResponse.json({ error: 'Email already verified' }, { status: 400 })
           )
         }
       }
@@ -68,10 +65,7 @@ export async function POST(request: NextRequest) {
         email = user.email
         if (user.emailVerified) {
           return addSecurityHeaders(
-            NextResponse.json(
-              { error: 'Email already verified' },
-              { status: 400 }
-            )
+            NextResponse.json({ error: 'Email already verified' }, { status: 400 })
           )
         }
       }
@@ -79,10 +73,7 @@ export async function POST(request: NextRequest) {
 
     if (!userId || !email) {
       return addSecurityHeaders(
-        NextResponse.json(
-          { error: 'User not found or email not provided' },
-          { status: 400 }
-        )
+        NextResponse.json({ error: 'User not found or email not provided' }, { status: 400 })
       )
     }
 
@@ -193,10 +184,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Send verification email error:', error)
     return addSecurityHeaders(
-      NextResponse.json(
-        { error: 'Failed to send verification email' },
-        { status: 500 }
-      )
+      NextResponse.json({ error: 'Failed to send verification email' }, { status: 500 })
     )
   }
 }

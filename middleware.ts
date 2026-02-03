@@ -1,22 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { addSecurityHeaders } from '@/lib/auth/config'
+import { addSecurityHeaders, getJWTSecret } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
 import * as jwt from 'jsonwebtoken'
 
-// Auth secret for verifying Firebase session tokens
-// SECURITY: No fallback in production - secrets are required
-const getAuthSecret = (): string => {
-  const secret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET
-  if (!secret) {
-    if (process.env.NODE_ENV === 'production') {
-      throw new Error('CRITICAL: AUTH_SECRET or NEXTAUTH_SECRET is required in production')
-    }
-    console.warn('[DEV] AUTH_SECRET not set - using development fallback')
-    return 'dev-only-secret-not-for-production-use'
-  }
-  return secret
-}
+// SECURITY: JWT secret is now imported from @/lib/auth/config (single source of truth)
+// This ensures tokens created with TokenUtils are verified with the same secret
 
 // Define public routes that don't require authentication
 const publicRoutes = [
@@ -131,8 +120,8 @@ function getUserFromToken(req: NextRequest): { userId: string; role: string } | 
       return null
     }
 
-    // Use jsonwebtoken for verification (same library as token creation)
-    const decoded = jwt.verify(sessionToken, getAuthSecret()) as FirebaseSessionPayload
+    // Use jsonwebtoken for verification (same library and secret as token creation)
+    const decoded = jwt.verify(sessionToken, getJWTSecret()) as FirebaseSessionPayload
 
     if (decoded && decoded.id) {
       if (process.env.NODE_ENV !== 'production') {

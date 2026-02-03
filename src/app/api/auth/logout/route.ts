@@ -6,6 +6,7 @@ import {
   CookieManager,
   addSecurityHeaders,
   TokenUtils,
+  getCorsOrigin,
 } from '@/lib/auth/config'
 
 /**
@@ -25,6 +26,12 @@ export async function POST(request: NextRequest) {
 
     // Terminate session - try multiple methods to ensure cleanup
     if (session.valid && session.userId) {
+      // Update lastActiveAt before terminating session (for audit trail)
+      await prisma.users.update({
+        where: { id: session.userId },
+        data: { lastActiveAt: new Date() },
+      })
+
       // Method 1: Try to get sessionId from access token
       const payload = TokenUtils.verifyAccessToken(accessToken || '')
       if (payload?.sessionId) {
@@ -68,7 +75,10 @@ export async function POST(request: NextRequest) {
     })
 
     // Prevent any caching of logout response
-    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
+    response.headers.set(
+      'Cache-Control',
+      'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
+    )
     response.headers.set('Pragma', 'no-cache')
     response.headers.set('Expires', '0')
     // Clear Vary header to prevent conditional caching
@@ -93,7 +103,10 @@ export async function POST(request: NextRequest) {
     })
 
     // Prevent caching even on error
-    response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0')
+    response.headers.set(
+      'Cache-Control',
+      'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0'
+    )
     response.headers.set('Pragma', 'no-cache')
     response.headers.set('Expires', '0')
 
@@ -122,6 +135,12 @@ export async function DELETE(request: NextRequest) {
         )
       )
     }
+
+    // Update lastActiveAt before terminating sessions (for audit trail)
+    await prisma.users.update({
+      where: { id: session.userId },
+      data: { lastActiveAt: new Date() },
+    })
 
     // Terminate all user sessions
     await SessionManager.terminateAllUserSessions(session.userId)
@@ -201,19 +220,11 @@ export async function GET() {
 
 // OPTIONS for CORS preflight
 export async function OPTIONS(request: NextRequest) {
-  const origin = request.headers.get('origin') || ''
-  const allowedOrigins = [
-    'https://cerebrumbiologyacademy.com',
-    'https://www.cerebrumbiologyacademy.com',
-    ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
-  ]
-  const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]
-
   return addSecurityHeaders(
     new NextResponse(null, {
       status: 200,
       headers: {
-        'Access-Control-Allow-Origin': corsOrigin,
+        'Access-Control-Allow-Origin': getCorsOrigin(request),
         'Access-Control-Allow-Methods': 'GET, POST, DELETE, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type, Authorization',
         'Access-Control-Allow-Credentials': 'true',
