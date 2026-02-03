@@ -74,9 +74,15 @@ export function FirebaseAuthButtons() {
           Dashboard
         </Link>
         <button
-          onClick={handleSignOut}
+          type="button"
+          onClick={(e) => {
+            e.preventDefault()
+            e.stopPropagation()
+            console.log('[FirebaseAuthButtons] Sign Out button clicked!')
+            handleSignOut()
+          }}
           disabled={isSigningOut}
-          className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-3 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
         >
           {isSigningOut ? 'Signing Out...' : 'Sign Out'}
         </button>
