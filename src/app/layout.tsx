@@ -18,6 +18,8 @@ import { MotionProvider } from '@/components/providers/MotionProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import { ConditionalHeaderFooter } from '@/components/layout/ConditionalHeaderFooter'
+import { Suspense } from 'react'
+import { RouteChangeIndicator } from '@/components/navigation/RouteChangeIndicator'
 import {
   FloatingCTA,
   GlobalExitIntent,
@@ -268,6 +270,10 @@ export default function RootLayout({
                   <PersonalizationProvider>
                     <MotionProvider>
                       <PageErrorBoundary>
+                        {/* Navigation progress indicator - prevents FOUC during page transitions */}
+                        <Suspense fallback={null}>
+                          <RouteChangeIndicator />
+                        </Suspense>
                         <ConditionalHeaderFooter>
                           <SkipToContent />
                         </ConditionalHeaderFooter>
