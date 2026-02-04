@@ -1,18 +1,33 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Script from 'next/script'
 import { GA_MEASUREMENT_ID } from '@/lib/analytics/googleAnalytics'
 
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || ''
 
 export default function GoogleAnalytics() {
-  if (!GA_MEASUREMENT_ID) {
+  const [shouldLoad, setShouldLoad] = useState(false)
+
+  useEffect(() => {
+    // PERFORMANCE: Defer GA loading until browser is idle (after LCP)
+    // This removes 166KB from the critical render path
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 5000 })
+      return () => cancelIdleCallback(idleId)
+    } else {
+      const timerId = setTimeout(() => setShouldLoad(true), 3000)
+      return () => clearTimeout(timerId)
+    }
+  }, [])
+
+  if (!GA_MEASUREMENT_ID || !shouldLoad) {
     return null
   }
 
   return (
     <>
-      {/* PERFORMANCE: Changed to lazyOnload for better LCP - analytics not critical for initial render */}
+      {/* PERFORMANCE: Deferred until after LCP via requestIdleCallback */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="lazyOnload"

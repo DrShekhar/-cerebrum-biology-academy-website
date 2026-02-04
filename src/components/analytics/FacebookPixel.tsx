@@ -1,11 +1,25 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Script from 'next/script'
 
 const FB_PIXEL_ID = process.env.NEXT_PUBLIC_FACEBOOK_PIXEL_ID || ''
 
 export default function FacebookPixel() {
-  if (!FB_PIXEL_ID || FB_PIXEL_ID === 'XXXXXXXXXXXXXXXXX') {
+  const [shouldLoad, setShouldLoad] = useState(false)
+
+  useEffect(() => {
+    // PERFORMANCE: Defer FB Pixel until browser is idle (after LCP)
+    if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 6000 })
+      return () => cancelIdleCallback(idleId)
+    } else {
+      const timerId = setTimeout(() => setShouldLoad(true), 4000)
+      return () => clearTimeout(timerId)
+    }
+  }, [])
+
+  if (!FB_PIXEL_ID || FB_PIXEL_ID === 'XXXXXXXXXXXXXXXXX' || !shouldLoad) {
     return null
   }
 
