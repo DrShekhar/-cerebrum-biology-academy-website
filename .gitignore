@@ -67,3 +67,6 @@ resources/
 
 # Lighthouse reports
 lighthouse-report.*
+
+lighthouse*.json
+lighthouse*.html
