@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { MessageCircle, Phone, GraduationCap, CheckCircle, Users, Trophy } from 'lucide-react'
+import { MessageCircle, GraduationCap, CheckCircle, Users, Trophy } from 'lucide-react'
 import Link from 'next/link'
 
 const WHATSAPP_ENROLL_URL =

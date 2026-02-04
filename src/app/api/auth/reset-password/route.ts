@@ -3,7 +3,6 @@ import { prisma } from '@/lib/prisma'
 import {
   addSecurityHeaders,
   PasswordUtils,
-  SessionManager,
   AuthRateLimit,
   getCorsOrigin,
 } from '@/lib/auth/config'

@@ -16,7 +16,7 @@ import {
   MessageCircle,
   TrendingUp,
 } from 'lucide-react'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { useState } from 'react'
 import { DemoClassModal } from './DemoClassModal'
 import { SyllabusDownloadModal } from './SyllabusDownloadModal'
