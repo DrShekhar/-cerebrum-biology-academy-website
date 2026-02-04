@@ -7,6 +7,7 @@ import React, {
   useState,
   useCallback,
   useRef,
+  useMemo,
   ReactNode,
 } from 'react'
 import { useRouter } from 'next/navigation'
@@ -641,23 +642,43 @@ export function AuthProvider({ children }: AuthProviderProps) {
     return roles.includes(user.role)
   }
 
-  const value: AuthContextType = {
-    user,
-    isLoading,
-    isLoggingOut,
-    isAuthenticated: !!user,
-    sessionExpired,
-    clearSessionExpired,
-    login,
-    signup,
-    logout,
-    refreshToken,
-    updateProfile,
-    permissions,
-    hasPermission,
-    hasRole,
-    authFetch,
-  }
+  // PERFORMANCE: Memoize context value to prevent unnecessary re-renders of consumers
+  // Only updates when actual auth state changes, not on every provider render
+  const value: AuthContextType = useMemo(
+    () => ({
+      user,
+      isLoading,
+      isLoggingOut,
+      isAuthenticated: !!user,
+      sessionExpired,
+      clearSessionExpired,
+      login,
+      signup,
+      logout,
+      refreshToken,
+      updateProfile,
+      permissions,
+      hasPermission,
+      hasRole,
+      authFetch,
+    }),
+    [
+      user,
+      isLoading,
+      isLoggingOut,
+      sessionExpired,
+      clearSessionExpired,
+      login,
+      signup,
+      logout,
+      refreshToken,
+      updateProfile,
+      permissions,
+      hasPermission,
+      hasRole,
+      authFetch,
+    ]
+  )
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
