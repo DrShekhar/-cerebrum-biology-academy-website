@@ -302,12 +302,12 @@ const nextConfig = {
       },
       {
         source: '/blog/online-vs-offline-neet-coaching-data-comparison',
-        destination: '/blog/kota-vs-online-neet-coaching-2025',
+        destination: '/blog/kota-vs-online-neet-coaching-2026',
         permanent: true,
       },
       {
         source: '/blog/mumbai-best-neet-biology-coaching-2025',
-        destination: '/blog/top-10-neet-biology-coaching-delhi-ncr-2025',
+        destination: '/blog/top-10-neet-biology-coaching-delhi-ncr-2026',
         permanent: true,
       },
       {
@@ -317,12 +317,12 @@ const nextConfig = {
       },
       {
         source: '/blog/neet-repeater-success-stories',
-        destination: '/courses/neet-repeater',
+        destination: '/dropper',
         permanent: true,
       },
       {
         source: '/blog/how-to-overcome-neet-failure',
-        destination: '/courses/neet-repeater',
+        destination: '/dropper',
         permanent: true,
       },
       // Old location pages redirecting to main location pages
@@ -856,11 +856,8 @@ const nextConfig = {
         destination: '/blog/neet-2026-complete-guide-exam-pattern-syllabus-dates',
         permanent: true,
       },
-      {
-        source: '/blog/how-to-score-700-plus-in-neet',
-        destination: '/blog/neet-preparation-guide-best-strategies',
-        permanent: true,
-      },
+      // REMOVED: Broken redirect - blog post exists and should serve directly
+      // Previously redirected to non-existent /blog/neet-preparation-guide-best-strategies
 
       // ============================================
       // GSC 404 Fixes - January 13, 2026
