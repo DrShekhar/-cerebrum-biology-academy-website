@@ -7,10 +7,14 @@ import { Anthropic } from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth/config'
 
-// Initialize Anthropic client
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
-})
+// Lazy initialize Anthropic client for better tree-shaking
+let _anthropic: Anthropic | null = null
+function getAnthropicClient(): Anthropic {
+  if (!_anthropic) {
+    _anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || '' })
+  }
+  return _anthropic
+}
 
 interface TutorRequest {
   question: string
@@ -81,7 +85,7 @@ Always:
 
     const createMessageWithRetry = async (attempt = 1, maxRetries = 3): Promise<any> => {
       try {
-        return await anthropic.messages.create({
+        return await getAnthropicClient().messages.create({
           model: 'claude-sonnet-4-20250514',
           max_tokens: 2048,
           system: systemPrompt,
