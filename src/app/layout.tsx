@@ -36,10 +36,10 @@ import './globals.css'
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-  display: 'swap', // PERFORMANCE: 'swap' shows text immediately with fallback, then swaps to custom font for better LCP
+  display: 'optional', // PERFORMANCE: 'optional' = use font if cached, otherwise skip swap - faster LCP
   preload: true, // Preload critical font
   adjustFontFallback: true, // Reduce CLS by adjusting fallback font metrics
-  weight: ['400', '500', '600', '700'], // Only load weights we actually use
+  weight: ['400', '600', '700'], // Reduced from 4 to 3 weights for faster load
 })
 
 const geistMono = Geist_Mono({
@@ -146,25 +146,8 @@ export default function RootLayout({
         <meta name="apple-touch-fullscreen" content="yes" />
         <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width, Save-Data" />
 
-        {/* PERFORMANCE: Preload critical chunks to reduce LCP render delay */}
-        {/* Priority hints for LCP optimization */}
-        <link
-          rel="preload"
-          href="/_next/static/chunks/webpack.js"
-          as="script"
-          crossOrigin="anonymous"
-        />
-        {/* CRITICAL: Preload main CSS to reduce render-blocking time */}
-        <link rel="preload" as="style" href="/_next/static/css/app/layout.css" />
-
-        {/* PERFORMANCE: Preload LCP font to reduce render delay on mobile */}
-        <link
-          rel="preload"
-          href="https://fonts.gstatic.com/s/geist/v1/gyByhwU-HdjnYOVuqmc.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+        {/* PERFORMANCE: Next.js handles chunk preloading automatically - removed invalid static paths */}
+        {/* Using modulepreload for modern browsers on actual chunks is handled by Next.js */}
 
         {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
         {/* Google Fonts - CRITICAL for reducing render blocking */}
@@ -227,29 +210,17 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="shortcut icon" href="/favicon-32x32.png" />
 
-        {/* Critical CSS for instant LCP - minimal above-the-fold styles (~4KB) */}
+        {/* Critical CSS for instant LCP - minimal above-the-fold styles (~2KB) */}
+        {/* OPTIMIZED: Removed animations from critical CSS - they load from main CSS after LCP */}
         <style
           dangerouslySetInnerHTML={{
-            __html: `*,::before,::after{box-sizing:border-box}html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif}body{margin:0;overflow-x:hidden}header{background:rgba(255,255,255,.95);position:sticky;top:0;z-index:50;backdrop-filter:blur(8px)}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.flex{display:flex}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.max-w-7xl{max-width:80rem}.mx-auto{margin-left:auto;margin-right:auto}.px-4{padding-left:1rem;padding-right:1rem}.min-h-screen{min-height:100vh}.relative{position:relative}.absolute{position:absolute}.inset-0{inset:0}.overflow-hidden{overflow:hidden}.bg-gradient-to-br{background-image:linear-gradient(to bottom right,var(--tw-gradient-stops))}.from-blue-900{--tw-gradient-from:#1e3a8a;--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to,#1e3a8a00)}.text-white{color:#fff}.text-yellow-300{color:#fcd34d}.text-green-300{color:#86efac}.text-blue-100{color:#dbeafe}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-2xl{font-size:1.5rem;line-height:2rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xs{font-size:.75rem;line-height:1rem}.hidden{display:none!important}.block{display:block}.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}@keyframes fade-in-up{from{opacity:.7;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.animate-fade-in-up{animation:fade-in-up .4s ease-out forwards}@media(min-width:640px){.sm\\:hidden{display:none!important}.sm\\:block{display:block!important}.sm\\:flex{display:flex!important}}@media(min-width:768px){.md\\:hidden{display:none!important}.md\\:block{display:block!important}.md\\:flex{display:flex!important}.md\\:pb-0{padding-bottom:0}}@media(min-width:1024px){.lg\\:hidden{display:none!important}.lg\\:block{display:block!important}.lg\\:flex{display:flex!important}}`,
+            __html: `*,::before,::after{box-sizing:border-box}html{line-height:1.5;-webkit-text-size-adjust:100%;font-family:system-ui,-apple-system,sans-serif}body{margin:0;overflow-x:hidden}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.min-h-screen{min-height:100vh}.relative{position:relative}.absolute{position:absolute}.inset-0{inset:0}.overflow-hidden{overflow:hidden}.text-white{color:#fff}.text-yellow-300{color:#fcd34d}.text-green-300{color:#86efac}.font-bold{font-weight:700}.font-semibold{font-weight:600}.hidden{display:none!important}.block{display:block}@media(min-width:640px){.sm\\:hidden{display:none!important}.sm\\:block{display:block!important}}@media(min-width:768px){.md\\:hidden{display:none!important}.md\\:block{display:block!important}.md\\:pb-0{padding-bottom:0}}@media(min-width:1024px){.lg\\:hidden{display:none!important}.lg\\:block{display:block!important}}`,
           }}
         />
 
-        {/* CSS Script Bug Error Suppression (Next.js bug #75656)
-            NOTE: FOUC prevention via opacity:0 was REMOVED because it causes LCP = 0
-            The critical CSS inline styles above + font-display:swap handle visual stability */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var o=window.onerror;window.onerror=function(m,u,l,c,e){if(m&&typeof m==='string'&&m.indexOf('MIME type')!==-1&&m.indexOf('.css')!==-1)return true;return o?o.apply(this,arguments):false};var c=console.error;console.error=function(){var a=Array.prototype.slice.call(arguments);if(a.join(' ').indexOf('MIME type')!==-1&&a.join(' ').indexOf('.css')!==-1)return;return c.apply(console,a)}})();`,
-          }}
-        />
-
-        {/* PERFORMANCE: Yield to main thread for better LCP/TBT
-            This script breaks up long tasks by yielding control back to the browser */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){if(typeof window!=='undefined'){window.__scheduleTask=function(fn,priority){if('scheduler'in window&&'postTask'in window.scheduler){return window.scheduler.postTask(fn,{priority:priority||'background'})}else if('requestIdleCallback'in window){return requestIdleCallback(fn)}else{return setTimeout(fn,0)}};}})();`,
-          }}
-        />
+        {/* PERFORMANCE: Removed inline scripts that were blocking parsing
+            - CSS MIME error suppression moved to error boundary
+            - Task scheduler now handled by browser native APIs */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
