@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { BookOpen } from 'lucide-react'
 
 interface LoadingSpinnerProps {
@@ -10,7 +9,8 @@ interface LoadingSpinnerProps {
   className?: string
 }
 
-// Simple loading spinner
+// PERFORMANCE: Converted from framer-motion to CSS animations
+// Simple loading spinner using CSS animation
 export function LoadingSpinner({
   size = 'md',
   variant = 'cerebrum',
@@ -25,10 +25,8 @@ export function LoadingSpinner({
 
   return (
     <div className={`flex items-center justify-center ${className}`}>
-      <motion.div
-        className={`${sizeClasses[size]} border-4 border-purple-600 border-t-transparent rounded-full`}
-        animate={{ rotate: 360 }}
-        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+      <div
+        className={`${sizeClasses[size]} border-4 border-purple-600 border-t-transparent rounded-full animate-spin`}
       />
     </div>
   )
@@ -39,7 +37,8 @@ export function Skeleton({ className = '' }: { className?: string }) {
   return <div className={`bg-gray-200 animate-pulse rounded ${className}`} />
 }
 
-// Simple progress bar
+// PERFORMANCE: Converted from framer-motion to CSS transitions
+// Simple progress bar using CSS transition
 export function ProgressBar({
   progress,
   className = '',
@@ -47,32 +46,29 @@ export function ProgressBar({
   progress: number
   className?: string
 }) {
+  const clampedProgress = Math.min(Math.max(progress, 0), 100)
+
   return (
     <div className={`w-full ${className}`}>
       <div className="w-full h-2 bg-purple-50 rounded-full overflow-hidden">
-        <motion.div
-          className="h-full bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: `${Math.min(Math.max(progress, 0), 100)}%` }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+        <div
+          className="h-full bg-gradient-to-r from-purple-600 to-indigo-600 rounded-full transition-all duration-700 ease-out"
+          style={{ width: `${clampedProgress}%` }}
         />
       </div>
     </div>
   )
 }
 
+// PERFORMANCE: Converted from framer-motion to CSS animations
 // SIMPLIFIED page loader - NO TIMEOUT TRAPS
 export function CerebrumPageLoader({ message = 'Loading...' }: { message?: string }) {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
       <div className="text-center">
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="w-20 h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-2xl mx-auto mb-6"
-        >
+        <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-2xl mx-auto mb-6 animate-fade-in">
           <BookOpen className="w-10 h-10 text-white" />
-        </motion.div>
+        </div>
 
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Cerebrum Biology Academy</h1>
         <p className="text-gray-600 mb-4">{message}</p>

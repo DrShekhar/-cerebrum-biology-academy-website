@@ -3,7 +3,6 @@
 import React from 'react'
 import { LucideIcon } from 'lucide-react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
 
@@ -28,6 +27,7 @@ export interface EmptyStateProps {
   animate?: boolean
 }
 
+// PERFORMANCE: Converted from framer-motion to CSS animations
 export function EmptyState({
   icon: Icon,
   title,
@@ -85,110 +85,72 @@ export function EmptyState({
 
   const styles = variantStyles[variant]
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.4,
-        ease: 'easeOut' as const,
-      },
-    },
-  }
-
-  const iconVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: {
-      scale: 1,
-      opacity: 1,
-      transition: {
-        duration: 0.3,
-        delay: 0.1,
-      },
-    },
-  }
-
-  const EmptyStateContent = (
-    <div
-      className={cn(
-        'flex flex-col items-center justify-center text-center',
-        sizeClasses[size],
-        className
-      )}
-    >
-      <motion.div
+  return (
+    <div className={cn('w-full', animate && 'animate-fade-in-up')}>
+      <div
         className={cn(
-          'inline-flex items-center justify-center rounded-full mb-4',
-          styles.bg,
-          iconContainerSizeClasses[size]
+          'flex flex-col items-center justify-center text-center',
+          sizeClasses[size],
+          className
         )}
-        variants={animate ? iconVariants : undefined}
-        initial={animate ? 'hidden' : undefined}
-        animate={animate ? 'visible' : undefined}
       >
-        <Icon className={cn(styles.iconColor, iconSizeClasses[size])} />
-      </motion.div>
+        <div
+          className={cn(
+            'inline-flex items-center justify-center rounded-full mb-4',
+            styles.bg,
+            iconContainerSizeClasses[size],
+            animate && 'animate-scale-in'
+          )}
+          style={animate ? { animationDelay: '0.1s' } : undefined}
+        >
+          <Icon className={cn(styles.iconColor, iconSizeClasses[size])} />
+        </div>
 
-      <h3 className={cn('font-semibold text-gray-900 mb-2', titleSizeClasses[size])}>{title}</h3>
+        <h3 className={cn('font-semibold text-gray-900 mb-2', titleSizeClasses[size])}>{title}</h3>
 
-      <p className="text-gray-600 mb-6 max-w-md text-sm md:text-base">{description}</p>
+        <p className="text-gray-600 mb-6 max-w-md text-sm md:text-base">{description}</p>
 
-      {(primaryAction || secondaryAction) && (
-        <div className="flex flex-col sm:flex-row gap-3 items-center">
-          {primaryAction && (
-            <>
-              {primaryAction.href ? (
-                <Link href={primaryAction.href}>
-                  <Button variant="primary" size="lg" animate={false}>
+        {(primaryAction || secondaryAction) && (
+          <div className="flex flex-col sm:flex-row gap-3 items-center">
+            {primaryAction && (
+              <>
+                {primaryAction.href ? (
+                  <Link href={primaryAction.href}>
+                    <Button variant="primary" size="lg" animate={false}>
+                      {primaryAction.label}
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button variant="primary" size="lg" onClick={primaryAction.onClick} animate={false}>
                     {primaryAction.label}
                   </Button>
-                </Link>
-              ) : (
-                <Button variant="primary" size="lg" onClick={primaryAction.onClick} animate={false}>
-                  {primaryAction.label}
-                </Button>
-              )}
-            </>
-          )}
+                )}
+              </>
+            )}
 
-          {secondaryAction && (
-            <>
-              {secondaryAction.href ? (
-                <Link href={secondaryAction.href}>
-                  <Button variant="secondary" size="lg" animate={false}>
+            {secondaryAction && (
+              <>
+                {secondaryAction.href ? (
+                  <Link href={secondaryAction.href}>
+                    <Button variant="secondary" size="lg" animate={false}>
+                      {secondaryAction.label}
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    onClick={secondaryAction.onClick}
+                    animate={false}
+                  >
                     {secondaryAction.label}
                   </Button>
-                </Link>
-              ) : (
-                <Button
-                  variant="secondary"
-                  size="lg"
-                  onClick={secondaryAction.onClick}
-                  animate={false}
-                >
-                  {secondaryAction.label}
-                </Button>
-              )}
-            </>
-          )}
-        </div>
-      )}
+                )}
+              </>
+            )}
+          </div>
+        )}
+      </div>
     </div>
   )
-
-  if (animate) {
-    return (
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="w-full"
-      >
-        {EmptyStateContent}
-      </motion.div>
-    )
-  }
-
-  return <div className="w-full">{EmptyStateContent}</div>
 }
