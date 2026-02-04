@@ -235,6 +235,10 @@ const nextConfig = {
   experimental: {
     optimizeCss: false, // DISABLED: Causes "Refused to execute script... MIME type ('text/css')" errors
     scrollRestoration: true,
+    // PERFORMANCE: Enable partial prerendering for faster initial load
+    ppr: false, // Requires canary Next.js
+    // PERFORMANCE: Optimize server components
+    serverMinification: true,
     // RE-ENABLED: Package optimization for smaller bundles (saves ~300-500KB)
     // Only import used exports from these large packages
     optimizePackageImports: [
@@ -250,12 +254,25 @@ const nextConfig = {
       '@radix-ui/react-popover',
       '@radix-ui/react-tooltip',
       '@radix-ui/react-accordion',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-label',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-progress',
       'react-hook-form',
       '@anthropic-ai/sdk',
       'openai',
       'recharts',
       'react-day-picker',
       '@sentry/nextjs',
+      'lodash',
+      'lodash-es',
+      'class-variance-authority',
+      'clsx',
+      'tailwind-merge',
     ],
   },
 
