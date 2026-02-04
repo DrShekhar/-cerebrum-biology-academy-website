@@ -17,7 +17,7 @@ import { PersonalizationProvider } from '@/components/providers/PersonalizationP
 import { MotionProvider } from '@/components/providers/MotionProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
-import { ConditionalHeaderFooter } from '@/components/layout/ConditionalHeaderFooter'
+import { ConditionalHeaderFooter, ConditionalHeaderFooterProvider } from '@/components/layout/ConditionalHeaderFooter'
 import { Suspense } from 'react'
 import { RouteChangeIndicator } from '@/components/navigation/RouteChangeIndicator'
 import {
@@ -274,6 +274,8 @@ export default function RootLayout({
                         <Suspense fallback={null}>
                           <RouteChangeIndicator />
                         </Suspense>
+                        {/* Single provider for all ConditionalHeaderFooter instances - prevents multiple pathname subscriptions */}
+                        <ConditionalHeaderFooterProvider>
                         <ConditionalHeaderFooter>
                           <SkipToContent />
                         </ConditionalHeaderFooter>
@@ -318,6 +320,7 @@ export default function RootLayout({
                         <ConditionalHeaderFooter>
                           <DynamicMaintenancePopup />
                         </ConditionalHeaderFooter>
+                        </ConditionalHeaderFooterProvider>
                         {/* PERFORMANCE: Analytics after main content for better LCP */}
                         <GoogleAnalytics />
                         <FacebookPixel />

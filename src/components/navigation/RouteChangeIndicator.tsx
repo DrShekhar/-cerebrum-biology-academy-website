@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 
 /**
@@ -10,7 +10,10 @@ import { usePathname, useSearchParams } from 'next/navigation'
  * 1. Showing a visual indicator that a page transition is in progress
  * 2. Giving the CSS time to load before the new page renders
  *
- * Performance: Uses CSS animations (GPU-accelerated) for smooth transitions
+ * Performance optimizations:
+ * - Uses refs to avoid re-attaching event listeners on every route change
+ * - Uses bubble phase instead of capture phase for better performance
+ * - Uses CSS animations (GPU-accelerated) for smooth transitions
  */
 export function RouteChangeIndicator() {
   const pathname = usePathname()
@@ -18,7 +21,11 @@ export function RouteChangeIndicator() {
   const [isNavigating, setIsNavigating] = useState(false)
   const [progress, setProgress] = useState(0)
 
-  // Track navigation start
+  // Use ref to track current pathname without causing effect re-runs
+  const pathnameRef = useRef(pathname)
+  pathnameRef.current = pathname
+
+  // Track navigation start - stable callback
   const handleNavigationStart = useCallback(() => {
     setIsNavigating(true)
     setProgress(0)
@@ -48,6 +55,7 @@ export function RouteChangeIndicator() {
   }, [pathname, searchParams])
 
   // Listen for link clicks to detect navigation start
+  // Uses ref for pathname to avoid re-attaching listener on every route change
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement
@@ -56,15 +64,16 @@ export function RouteChangeIndicator() {
       if (link) {
         const href = link.getAttribute('href')
         // Only trigger for internal navigation links (not external or anchor links)
-        if (href && href.startsWith('/') && !href.startsWith('/#') && href !== pathname) {
+        if (href && href.startsWith('/') && !href.startsWith('/#') && href !== pathnameRef.current) {
           handleNavigationStart()
         }
       }
     }
 
-    document.addEventListener('click', handleClick, true)
-    return () => document.removeEventListener('click', handleClick, true)
-  }, [pathname, handleNavigationStart])
+    // Use bubble phase (false) instead of capture phase for better performance
+    document.addEventListener('click', handleClick)
+    return () => document.removeEventListener('click', handleClick)
+  }, [handleNavigationStart]) // Only re-attach if handleNavigationStart changes (it won't due to empty deps)
 
   if (!isNavigating && progress === 0) {
     return null

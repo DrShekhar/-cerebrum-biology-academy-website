@@ -1,7 +1,7 @@
 'use client'
 
 import { usePathname } from 'next/navigation'
-import { ReactNode, useState, useEffect } from 'react'
+import { ReactNode, useState, useEffect, createContext, useContext, useMemo } from 'react'
 
 // Routes where header/footer should be hidden
 // These pages have their own self-contained layouts
@@ -13,20 +13,21 @@ const HIDDEN_ROUTES = [
   '/study-with-me',
 ]
 
-interface ConditionalHeaderFooterProps {
+// Context to share hide state across all ConditionalHeaderFooter instances
+const HideContext = createContext<{ shouldHide: boolean; mounted: boolean }>({
+  shouldHide: false,
+  mounted: false,
+})
+
+interface ConditionalHeaderFooterProviderProps {
   children: ReactNode
 }
 
 /**
- * Conditionally renders children (header/footer) based on current route.
- * Uses client-side pathname detection for reliability.
- * Hidden on auth routes and study-with-me page (which has its own layout).
- *
- * Uses mounted state to prevent hydration mismatch:
- * - Server and initial client render: show children (consistent)
- * - After hydration: apply route-based hiding
+ * Provider that manages the hide state once for all ConditionalHeaderFooter children.
+ * This prevents multiple pathname subscriptions and mounted state updates.
  */
-export function ConditionalHeaderFooter({ children }: ConditionalHeaderFooterProps) {
+export function ConditionalHeaderFooterProvider({ children }: ConditionalHeaderFooterProviderProps) {
   const pathname = usePathname()
   const [mounted, setMounted] = useState(false)
 
@@ -34,14 +35,28 @@ export function ConditionalHeaderFooter({ children }: ConditionalHeaderFooterPro
     setMounted(true)
   }, [])
 
-  // Check if current route should hide header/footer
-  const shouldHide = pathname ? HIDDEN_ROUTES.some((route) => pathname.startsWith(route)) : false
+  const value = useMemo(() => {
+    const shouldHide = pathname ? HIDDEN_ROUTES.some((route) => pathname.startsWith(route)) : false
+    return { shouldHide, mounted }
+  }, [pathname, mounted])
+
+  return <HideContext.Provider value={value}>{children}</HideContext.Provider>
+}
+
+interface ConditionalHeaderFooterProps {
+  children: ReactNode
+}
+
+/**
+ * Conditionally renders children (header/footer) based on current route.
+ * Uses shared context to avoid multiple pathname subscriptions.
+ * Hidden on auth routes and study-with-me page (which has its own layout).
+ */
+export function ConditionalHeaderFooter({ children }: ConditionalHeaderFooterProps) {
+  const { shouldHide, mounted } = useContext(HideContext)
 
   // During SSR and initial render, show children but hidden via CSS if on hidden route
-  // This prevents hydration mismatch while still hiding content quickly
   if (!mounted) {
-    // Use inline style to hide during initial render on hidden routes
-    // This avoids the flash while preventing hydration mismatch
     if (shouldHide) {
       return <div style={{ display: 'none' }}>{children}</div>
     }
