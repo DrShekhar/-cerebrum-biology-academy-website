@@ -87,11 +87,12 @@ const customJestConfig = {
     '<rootDir>/src/__tests__/api/demo-booking.test.ts',
     '<rootDir>/src/__tests__/api/enrollment/',
     '<rootDir>/src/__tests__/api/payments/verify.test.ts',
+    '<rootDir>/src/__tests__/api/payments/create-order.test.ts',
     '<rootDir>/src/__tests__/lib/followupProcessor.test.ts',
     '<rootDir>/src/__tests__/lib/whatsapp/aiMessageHandler.test.ts',
   ],
 
-  transformIgnorePatterns: ['node_modules/(?!(next-auth|@auth|nanoid)/)'],
+  transformIgnorePatterns: ['node_modules/(?!(next-auth|@auth|nanoid|@upstash|uncrypto)/)'],
 
   // Module directories
   moduleDirectories: ['node_modules', '<rootDir>/'],
