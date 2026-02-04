@@ -62,18 +62,10 @@ export async function GET(request: NextRequest) {
     const cookieStore = await cookies()
     const allCookies = cookieStore.getAll()
 
-    // Always log session checks for debugging auth issues
-    console.log(`[Session API][${requestId}] Checking session:`, {
-      cookieCount: allCookies.length,
-      cookieNames: allCookies.map((c) => c.name),
-      hasSecureCookie: allCookies.some((c) => c.name === '__Secure-authjs.session-token'),
-      hasNonSecureCookie: allCookies.some((c) => c.name === 'authjs.session-token'),
-      hasSecureNextAuthCookie: allCookies.some(
-        (c) => c.name === '__Secure-next-auth.session-token'
-      ),
-      hasNextAuthCookie: allCookies.some((c) => c.name === 'next-auth.session-token'),
-      hasCustomJwtCookie: allCookies.some((c) => c.name === 'auth-token'),
-    })
+    // Debug logging only in development
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`[Session API][${requestId}] Checking session, cookies: ${allCookies.length}`)
+    }
 
     // Check for session token - check all cookie variants for consistency
     // Priority: Secure prefixed (production) > standard (development) > legacy NextAuth > custom JWT
@@ -98,19 +90,11 @@ export async function GET(request: NextRequest) {
               ? 'custom-jwt'
               : 'none'
 
-    console.log(`[Session API][${requestId}] Token status:`, {
-      hasSecureToken: !!secureToken,
-      hasNonSecureToken: !!nonSecureToken,
-      hasSecureNextAuthToken: !!secureNextAuthToken,
-      hasNextAuthToken: !!nextAuthToken,
-      hasCustomJwtToken: !!customJwtToken,
-      usingToken: tokenType,
-      tokenLength: sessionToken?.length || 0,
-      tokenPreview: sessionToken ? `${sessionToken.substring(0, 20)}...` : 'none',
-    })
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`[Session API][${requestId}] Token type: ${tokenType}`)
+    }
 
     if (!sessionToken) {
-      console.log(`[Session API][${requestId}] No session token found - returning unauthenticated`)
       return NextResponse.json({
         authenticated: false,
         user: null,
@@ -123,10 +107,6 @@ export async function GET(request: NextRequest) {
 
     // Verify and decode the JWT
     const authSecret = getAuthSecret()
-    console.log(`[Session API][${requestId}] Verifying JWT token...`, {
-      secretLength: authSecret.length,
-      secretPrefix: authSecret.substring(0, 4) + '...',
-    })
     const decoded = jwt.verify(sessionToken, authSecret) as FirebaseSessionPayload
 
     if (!decoded || !decoded.id) {
@@ -139,12 +119,9 @@ export async function GET(request: NextRequest) {
     }
 
     const elapsed = Date.now() - startTime
-    console.log(`[Session API][${requestId}] Session verified successfully:`, {
-      userId: decoded.id,
-      role: decoded.role,
-      elapsed: `${elapsed}ms`,
-      tokenExp: decoded.exp ? new Date(decoded.exp * 1000).toISOString() : 'unknown',
-    })
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`[Session API][${requestId}] Verified: ${decoded.id} (${elapsed}ms)`)
+    }
 
     // Calculate trial days remaining if trial is active
     const trialDaysRemaining = decoded.trialEndDate

@@ -208,7 +208,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     // If token is already expired or will expire very soon, refresh immediately
     if (timeUntilExpiry <= REFRESH_BUFFER_MS) {
-      console.log('[AuthContext] Token expired or expiring soon, refreshing immediately')
       if (user && !isRefreshingRef.current) {
         refreshTokenInternal()
       }
@@ -217,8 +216,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
     // Schedule refresh before expiry (with buffer)
     const timeUntilRefresh = Math.max(timeUntilExpiry - REFRESH_BUFFER_MS, MIN_REFRESH_INTERVAL_MS)
-
-    console.log(`[AuthContext] Scheduling refresh in ${Math.round(timeUntilRefresh / 1000)}s`)
 
     refreshTimeoutRef.current = setTimeout(() => {
       if (user && !isRefreshingRef.current) {
@@ -309,7 +306,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
         if (sessionResponse.ok) {
           const sessionData = await sessionResponse.json()
           if (sessionData.authenticated && sessionData.user) {
-            console.log('[AuthContext] Session found via /api/auth/session:', sessionData.user.id)
             setUser({
               id: sessionData.user.id,
               email: sessionData.user.email || '',
@@ -325,8 +321,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
             return // Successfully authenticated via session endpoint
           }
         }
-      } catch (sessionError) {
-        console.log('[AuthContext] Session check failed, trying refresh endpoint:', sessionError)
+      } catch {
+        // Session check failed, try refresh endpoint
       }
 
       // Second, try the refresh endpoint (for email/password login)
@@ -338,7 +334,6 @@ export function AuthProvider({ children }: AuthProviderProps) {
       if (refreshResponse.ok) {
         const data = await refreshResponse.json()
         if (data.valid && data.user) {
-          console.log('[AuthContext] Session found via /api/auth/refresh:', data.user.id)
           setUser(data.user)
           setPermissions(getUserPermissions(data.user.role))
           // Set expiry based on response or default

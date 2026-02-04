@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
     const rateLimitKey = `firebase-session:${clientIP}:${phoneNumber}`
     const rateLimitCheck = await AuthRateLimit.checkRateLimit(rateLimitKey)
     if (!rateLimitCheck.allowed) {
-      console.warn(`[Firebase Session] Rate limit exceeded for ${rateLimitKey}`)
+      console.warn(`[Firebase Session] Rate limit exceeded for IP: ${clientIP}`)
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -259,10 +259,6 @@ export async function POST(request: NextRequest) {
 
       // Create JWT token for NextAuth session
       const authSecret = getAuthSecret()
-      console.log(`[Firebase Session][${requestId}] Creating JWT with secret:`, {
-        secretLength: authSecret.length,
-        secretPrefix: authSecret.substring(0, 4) + '...',
-      })
       const sessionToken = jwt.sign(
         {
           id: user.id,
@@ -337,19 +333,14 @@ export async function POST(request: NextRequest) {
 
       const elapsed = Date.now() - startTime
 
-      // Log cookie details for debugging
-      console.log(`[Firebase Session][${requestId}] Login successful:`, {
-        userId: user.id,
-        role: user.role,
-        cookieName,
-        isHttps,
-        isProduction,
-        useSecureCookie,
-        forwardedProto,
-        elapsed: `${elapsed}ms`,
-        cookiesSet: ['__Secure-authjs.session-token', 'authjs.session-token'],
-        tokenLength: sessionToken.length,
-      })
+      // Log login success (minimal info for production)
+      if (process.env.NODE_ENV !== 'production') {
+        console.log(`[Firebase Session][${requestId}] Login successful:`, {
+          userId: user.id,
+          role: user.role,
+          elapsed: `${elapsed}ms`,
+        })
+      }
 
       return addSecurityHeaders(response)
     }
