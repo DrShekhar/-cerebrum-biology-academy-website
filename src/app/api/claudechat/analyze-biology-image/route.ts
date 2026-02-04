@@ -8,9 +8,14 @@ import { Anthropic } from '@anthropic-ai/sdk'
 import { auth } from '@/lib/auth'
 import { rateLimit } from '@/lib/rateLimit'
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
-})
+// Lazy initialize Anthropic client for better tree-shaking
+let _anthropic: Anthropic | null = null
+function getAnthropicClient(): Anthropic {
+  if (!_anthropic) {
+    _anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || '' })
+  }
+  return _anthropic
+}
 
 interface BiologyAnalysis {
   concept: string
@@ -91,7 +96,7 @@ async function analyzeWithClaudeVision(
   mimeType: string
 ): Promise<BiologyAnalysis> {
   try {
-    const response = await anthropic.messages.create({
+    const response = await getAnthropicClient().messages.create({
       model: 'claude-3-sonnet-20240229',
       max_tokens: 1500,
       messages: [

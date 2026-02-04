@@ -6,9 +6,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Anthropic } from '@anthropic-ai/sdk'
 
-const anthropic = new Anthropic({
-  apiKey: process.env.ANTHROPIC_API_KEY || '',
-})
+// Lazy initialize Anthropic client for better tree-shaking
+let _anthropic: Anthropic | null = null
+function getAnthropicClient(): Anthropic {
+  if (!_anthropic) {
+    _anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY || '' })
+  }
+  return _anthropic
+}
 
 interface VoiceRequest {
   concept: string
@@ -46,7 +51,7 @@ export async function POST(request: NextRequest) {
 
 async function generateEducationalScript(request: VoiceRequest): Promise<string> {
   try {
-    const response = await anthropic.messages.create({
+    const response = await getAnthropicClient().messages.create({
       model: 'claude-3-sonnet-20240229',
       max_tokens: 800,
       messages: [
