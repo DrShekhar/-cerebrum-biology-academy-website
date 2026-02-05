@@ -84,3 +84,38 @@ export {
   OpeningHoursSchema,
   STANDARD_BATCHES,
 } from './ScheduleSchema'
+
+// People Also Ask component for AEO (Answer Engine Optimization)
+export {
+  PeopleAlsoAsk,
+  NEET_BIOLOGY_PAA_QUESTIONS,
+  NEET_COACHING_PAA_QUESTIONS,
+  generateLocationPAAQuestions,
+  type PAQuestion,
+} from './PeopleAlsoAsk'
+
+// QAPage schemas for blog posts and articles with Q&A content
+export {
+  QAPageSchema,
+  HowToSchema as HowToStepSchema,
+  ItemListSchema,
+  ComprehensiveAEOSchema,
+  DefinitionBox,
+} from './QAPageSchema'
+
+// Speakable schema for voice search optimization
+export {
+  SpeakableSchema,
+  VoiceSearchContent,
+  CourseSchemaWithSpeakable,
+  LocalBusinessSpeakable,
+  VoiceSearchFAQSchema,
+  generateSpeakableText,
+} from './SpeakableSchema'
+
+// Top 10 List component with ItemList schema for ranking pages
+export {
+  Top10List,
+  TOP_10_NEET_COACHING_GURUGRAM,
+  type RankedItem,
+} from './Top10ListSchema'
