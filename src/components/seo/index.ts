@@ -96,3 +96,14 @@ export {
 
 // State landing page component
 export { StateLandingPage } from './StateLandingPage'
+
+// Comparison schemas and components for competitive SEO
+export {
+  ComparisonSchema,
+  COMPETITORS,
+  CEREBRUM_DATA,
+  getComparisonData,
+  getAllCompetitors,
+  type CompetitorData,
+} from './ComparisonSchema'
+export { ComparisonLandingPage } from './ComparisonLandingPage'

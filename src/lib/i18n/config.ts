@@ -4,20 +4,23 @@
  * Supported Languages:
  * - English (en) - Default
  * - Hindi (hi) - Primary regional language
+ * - Tamil (ta) - South Indian regional language
  *
- * Future expansion: Tamil (ta), Bengali (bn), Marathi (mr), Telugu (te)
+ * Future expansion: Bengali (bn), Marathi (mr), Telugu (te)
  */
 
 export const i18nConfig = {
   defaultLocale: 'en',
-  locales: ['en', 'hi'] as const,
+  locales: ['en', 'hi', 'ta'] as const,
   localeNames: {
     en: 'English',
     hi: 'हिंदी',
+    ta: 'தமிழ்',
   } as const,
   localeFlags: {
     en: '🇬🇧',
     hi: '🇮🇳',
+    ta: '🇮🇳',
   } as const,
 }
 
@@ -31,4 +34,5 @@ export function isValidLocale(locale: string): locale is Locale {
 export const hreflangMap: Record<Locale, string> = {
   en: 'en-IN',
   hi: 'hi-IN',
+  ta: 'ta-IN',
 }
