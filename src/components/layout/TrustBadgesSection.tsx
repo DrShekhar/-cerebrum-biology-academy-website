@@ -117,10 +117,10 @@ export function TrustBadgesSection() {
       growth: '+31% YoY',
     },
     {
-      number: '94.2%',
+      number: '98%',
       label: 'NEET Success Rate',
       description: 'Above national average',
-      growth: '+2.1% YoY',
+      growth: '+3.8% YoY',
     },
     {
       number: '335+',

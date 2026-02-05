@@ -195,7 +195,7 @@ export function NEETToppersShowcase({
                 sublabel: 'Max Improvement',
                 color: 'text-red-600',
               },
-              { icon: Award, label: '94.2%', sublabel: 'Success Rate', color: 'text-green-600' },
+              { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-green-600' },
             ].map((metric, index) => (
               <motion.div
                 key={metric.label}
