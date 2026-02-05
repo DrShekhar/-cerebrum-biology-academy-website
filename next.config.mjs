@@ -284,6 +284,27 @@ const nextConfig = {
         destination: '/admin',
         permanent: true,
       },
+      // Fix 404 errors for common page variations
+      {
+        source: '/free-demo',
+        destination: '/book-free-demo',
+        permanent: true,
+      },
+      {
+        source: '/demo',
+        destination: '/book-free-demo',
+        permanent: true,
+      },
+      {
+        source: '/courses/neet-foundation',
+        destination: '/courses/foundation',
+        permanent: true,
+      },
+      {
+        source: '/neet-foundation',
+        destination: '/courses/foundation',
+        permanent: true,
+      },
       // Old blog slugs redirecting to relevant existing content
       {
         source: '/blog/neet-preparation-timeline-class-9-to-2028',

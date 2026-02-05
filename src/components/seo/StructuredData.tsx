@@ -163,7 +163,7 @@ export function OrganizationSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
-      reviewCount: '2500',
+      reviewCount: '500',
       bestRating: '5',
     },
   }
@@ -272,7 +272,7 @@ export function CourseSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
-      reviewCount: '2500',
+      reviewCount: '500',
       bestRating: '5',
       worstRating: '1',
     },
@@ -722,7 +722,7 @@ export function NationalServiceSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',
-      reviewCount: '2500',
+      reviewCount: '500',
       bestRating: '5',
     },
     hasOfferCatalog: {

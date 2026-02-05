@@ -1,0 +1,14 @@
+# Cerebrum Biology Academy - Authorized Digital Sellers (ads.txt)
+# https://cerebrumbiologyacademy.com/ads.txt
+#
+# This file declares authorized sellers of our digital advertising inventory.
+# For more information, see: https://iabtechlab.com/ads-txt/
+#
+# Format: <domain>, <publisher_id>, <relationship>, <certification_authority_id>
+
+# Google AdSense (if applicable - replace with actual publisher ID)
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Currently, Cerebrum Biology Academy does not participate in programmatic advertising.
+# This ads.txt file is provided for transparency purposes.
+# Contact: bobbyaiims@gmail.com for advertising inquiries.
