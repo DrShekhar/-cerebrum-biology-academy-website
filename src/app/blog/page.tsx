@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import nextDynamic from 'next/dynamic'
-import { getAllPosts, getAllCategories, getBlogStats } from '@/lib/blog/mdx'
+import { getAllPosts, getAllCategories, getBlogStats, getAllTags } from '@/lib/blog/mdx'
 import { BreadcrumbSchema } from '@/components/seo'
 
 // Force dynamic rendering to ensure searchParams work correctly
@@ -66,6 +66,8 @@ export default function BlogPage() {
   const posts = getAllPosts()
   const categories = getAllCategories()
   const stats = getBlogStats()
+  const tags = getAllTags()
+  const popularTags = tags.slice(0, 15)
 
   return (
     <>
@@ -75,7 +77,12 @@ export default function BlogPage() {
       </div>
       {/* Suspense boundary required for useSearchParams in BlogListingPage */}
       <Suspense fallback={<BlogLoadingSkeleton />}>
-        <BlogListingPage posts={posts} categories={categories} stats={stats} />
+        <BlogListingPage
+          posts={posts}
+          categories={categories}
+          stats={stats}
+          popularTags={popularTags}
+        />
       </Suspense>
     </>
   )
