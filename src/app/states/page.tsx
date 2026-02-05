@@ -6,11 +6,12 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 export const metadata: Metadata = {
   title: 'NEET Coaching by State | Best Biology Coaching in Your State | Cerebrum',
   description:
-    'Find the best NEET Biology coaching in your state. Cerebrum Biology Academy offers specialized coaching for students from UP, Bihar, Rajasthan, Haryana, MP, Punjab with state-board aligned preparation.',
+    'Find the best NEET Biology coaching in your state. Cerebrum Biology Academy offers specialized coaching for students from UP, Bihar, Jharkhand, Rajasthan, Haryana, MP, Punjab with state-board aligned preparation.',
   keywords: [
     'neet coaching by state',
     'neet coaching uttar pradesh',
     'neet coaching bihar',
+    'neet coaching jharkhand',
     'neet coaching rajasthan',
     'neet coaching haryana',
     'neet coaching madhya pradesh',
@@ -88,6 +89,16 @@ const states = [
     cities: ['Chandigarh', 'Ludhiana', 'Amritsar', 'Jalandhar', 'Patiala'],
     highlights: ['PSEB board alignment', 'Punjabi medium notes', 'Special medical college guidance'],
   },
+  {
+    name: 'Jharkhand',
+    slug: 'jharkhand',
+    shortName: 'Jharkhand',
+    students: '700+',
+    successRate: '96%',
+    toppers: 20,
+    cities: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Bokaro', 'Hazaribagh'],
+    highlights: ['JAC Board aligned preparation', 'RIMS Ranchi guidance', 'Online + Offline hybrid options'],
+  },
 ]
 
 export default function StatesPage() {
@@ -118,7 +129,7 @@ export default function StatesPage() {
                 98% Average Success Rate
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full flex items-center gap-2">
-                <MapPin className="w-4 h-4" />6 States Covered
+                <MapPin className="w-4 h-4" />7 States Covered
               </span>
             </div>
           </div>

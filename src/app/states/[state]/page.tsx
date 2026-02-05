@@ -365,6 +365,61 @@ const statesData: Record<string, StateData> = {
       },
     ],
   },
+  'jharkhand': {
+    name: 'Jharkhand',
+    slug: 'jharkhand',
+    shortName: 'Jharkhand',
+    students: '700+',
+    successRate: '96%',
+    toppers: 20,
+    cities: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Bokaro', 'Hazaribagh', 'Deoghar'],
+    board: 'JAC',
+    boardFullName: 'Jharkhand Academic Council',
+    highlights: [
+      'JAC Board aligned preparation',
+      'Hindi medium support available',
+      'RIMS Ranchi admission guidance',
+      'Online + Offline hybrid options',
+    ],
+    description:
+      'Jharkhand has emerged as a high NEET traffic state with dedicated medical aspirants from Ranchi, Jamshedpur, and Dhanbad. Cerebrum provides specialized coaching with JAC Board alignment and RIMS Ranchi focused preparation.',
+    whyChoose: [
+      'JAC Board to NCERT bridge program',
+      'Hindi medium study materials',
+      'RIMS Ranchi admission counseling',
+      'Online live classes for remote areas',
+      'Hostel facility available in Gurugram',
+      'State quota guidance for Jharkhand GMCs',
+    ],
+    testimonials: [
+      {
+        name: 'Ankit Kumar',
+        city: 'Ranchi',
+        rank: 'AIR 934',
+        quote: 'From JAC Board to RIMS Ranchi! Cerebrum online classes helped me crack NEET while staying at home.',
+      },
+      {
+        name: 'Priyanka Kumari',
+        city: 'Jamshedpur',
+        rank: 'AIR 1,567',
+        quote: 'The Hindi notes and weekend doubt sessions made Biology my strongest subject. Thank you Cerebrum!',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How is JAC Board preparation different from NCERT?',
+        answer: 'JAC Board covers about 65-70% of NEET Biology. Topics like Biotechnology, detailed Genetics, and Environmental Biology need additional focus. Our bridge course ensures complete NCERT coverage.',
+      },
+      {
+        question: 'Do you have students from Jharkhand who got into RIMS?',
+        answer: 'Yes, we have helped multiple Jharkhand students secure admission in RIMS Ranchi through state quota. We provide specific guidance for Jharkhand medical college admissions.',
+      },
+      {
+        question: 'Is online coaching effective for Jharkhand students?',
+        answer: 'Absolutely! Many of our Jharkhand toppers prepared through online mode. Live interactive classes, instant doubt resolution, and recorded lectures ensure the same quality as offline coaching.',
+      },
+    ],
+  },
 }
 
 type Props = {
