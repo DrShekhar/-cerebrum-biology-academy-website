@@ -6,7 +6,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 export const metadata: Metadata = {
   title: 'NEET Coaching by State | Best Biology Coaching in Your State | Cerebrum',
   description:
-    'Find the best NEET Biology coaching in your state. Cerebrum Biology Academy offers specialized coaching for students from UP, Bihar, Jharkhand, Rajasthan, Haryana, MP, Punjab with state-board aligned preparation.',
+    'Find the best NEET Biology coaching in your state. Cerebrum Biology Academy offers specialized coaching for students from UP, Bihar, Jharkhand, Rajasthan, Haryana, MP, Punjab, Delhi, Maharashtra, Gujarat with state-board aligned preparation.',
   keywords: [
     'neet coaching by state',
     'neet coaching uttar pradesh',
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'neet coaching haryana',
     'neet coaching madhya pradesh',
     'neet coaching punjab',
+    'neet coaching delhi',
+    'neet coaching maharashtra',
+    'neet coaching gujarat',
     'best neet biology coaching india',
   ],
   openGraph: {
@@ -99,6 +102,36 @@ const states = [
     cities: ['Ranchi', 'Jamshedpur', 'Dhanbad', 'Bokaro', 'Hazaribagh'],
     highlights: ['JAC Board aligned preparation', 'RIMS Ranchi guidance', 'Online + Offline hybrid options'],
   },
+  {
+    name: 'Delhi',
+    slug: 'delhi',
+    shortName: 'Delhi',
+    students: '1,500+',
+    successRate: '98%',
+    toppers: 42,
+    cities: ['South Delhi', 'North Delhi', 'West Delhi', 'East Delhi', 'Central Delhi'],
+    highlights: ['Multiple centers across Delhi', 'CBSE board expertise', 'Direct metro connectivity'],
+  },
+  {
+    name: 'Maharashtra',
+    slug: 'maharashtra',
+    shortName: 'MH',
+    students: '500+',
+    successRate: '95%',
+    toppers: 15,
+    cities: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Aurangabad'],
+    highlights: ['Maharashtra Board support', 'Online coaching popular', 'AIIMS Mumbai guidance'],
+  },
+  {
+    name: 'Gujarat',
+    slug: 'gujarat',
+    shortName: 'Gujarat',
+    students: '400+',
+    successRate: '94%',
+    toppers: 12,
+    cities: ['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Gandhinagar'],
+    highlights: ['GSEB board alignment', 'Gujarati medium support', 'BJ Medical College guidance'],
+  },
 ]
 
 export default function StatesPage() {
@@ -129,7 +162,7 @@ export default function StatesPage() {
                 98% Average Success Rate
               </span>
               <span className="bg-white/20 px-4 py-2 rounded-full flex items-center gap-2">
-                <MapPin className="w-4 h-4" />7 States Covered
+                <MapPin className="w-4 h-4" />10 States Covered
               </span>
             </div>
           </div>
