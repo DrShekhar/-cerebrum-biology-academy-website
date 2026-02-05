@@ -119,3 +119,21 @@ export {
   TOP_10_NEET_COACHING_GURUGRAM,
   type RankedItem,
 } from './Top10ListSchema'
+
+// Hinglish keywords for long-tail SEO targeting
+export {
+  HINGLISH_KEYWORDS,
+  HINGLISH_FAQS,
+  HinglishKeywordsSchema,
+  HinglishFAQSection,
+} from './HinglishKeywords'
+
+// Google My Business multi-location schema
+export {
+  GoogleMyBusinessSchema,
+  SingleLocationSchema,
+  LocationCardsSection,
+  CEREBRUM_LOCATIONS,
+  generateLocationSchema,
+  type LocationData,
+} from './GoogleMyBusinessSchema'
