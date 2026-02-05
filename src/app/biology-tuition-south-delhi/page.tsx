@@ -9,98 +9,82 @@ const areasList = [
   {
     slug: 'hauz-khas',
     name: 'Hauz Khas',
-    description: 'Near IIT Delhi, coaching hub',
-    type: 'coaching-hub',
+    metro: 'Hauz Khas Metro (Yellow Line)',
   },
   {
     slug: 'kalu-sarai',
     name: 'Kalu Sarai',
-    description: 'Delhi coaching capital',
-    type: 'coaching-hub',
+    metro: 'IIT Delhi Metro (Yellow Line)',
   },
   {
     slug: 'greater-kailash',
     name: 'Greater Kailash',
-    description: 'GK-1, GK-2 premium area',
-    type: 'posh',
+    metro: 'Greater Kailash Metro (Magenta Line)',
   },
   {
     slug: 'defence-colony',
     name: 'Defence Colony',
-    description: 'Prestigious residential area',
-    type: 'posh',
+    metro: 'Lajpat Nagar Metro (Violet Line)',
   },
   {
     slug: 'vasant-vihar',
     name: 'Vasant Vihar',
-    description: 'Embassy area, top schools',
-    type: 'posh',
+    metro: 'Vasant Vihar Metro (Magenta Line)',
   },
   {
     slug: 'rk-puram',
     name: 'RK Puram',
-    description: 'Govt officers colony',
-    type: 'govt-colony',
+    metro: 'RK Puram Metro (Magenta Line)',
   },
   {
     slug: 'sarojini-nagar',
     name: 'Sarojini Nagar',
-    description: 'Govt quarters, DDA flats',
-    type: 'govt-colony',
+    metro: 'Sarojini Nagar Metro (Yellow Line)',
   },
   {
     slug: 'lodhi-colony',
     name: 'Lodhi Colony',
-    description: 'IAS/IPS officers area',
-    type: 'govt-colony',
+    metro: 'Jor Bagh Metro (Yellow Line)',
   },
   {
     slug: 'saket',
     name: 'Saket',
-    description: 'Modern area, metro hub',
-    type: 'residential',
+    metro: 'Saket Metro (Yellow Line)',
   },
   {
     slug: 'malviya-nagar',
     name: 'Malviya Nagar',
-    description: 'Affordable, student area',
-    type: 'residential',
+    metro: 'Malviya Nagar Metro (Yellow Line)',
   },
   {
     slug: 'green-park',
     name: 'Green Park',
-    description: 'Central location',
-    type: 'residential',
+    metro: 'Green Park Metro (Yellow Line)',
   },
   {
     slug: 'cr-park',
     name: 'CR Park',
-    description: 'Academic community',
-    type: 'residential',
+    metro: 'Kalkaji Mandir Metro (Violet Line)',
   },
   {
     slug: 'munirka',
     name: 'Munirka',
-    description: 'Student hub near JNU',
-    type: 'student-hub',
+    metro: 'Munirka Metro (Magenta Line)',
   },
   {
     slug: 'lajpat-nagar',
     name: 'Lajpat Nagar',
-    description: 'Metro connected hub',
-    type: 'residential',
+    metro: 'Lajpat Nagar Metro (Violet Line)',
   },
   {
     slug: 'kalkaji',
     name: 'Kalkaji',
-    description: 'Near Nehru Place',
-    type: 'residential',
+    metro: 'Kalkaji Mandir Metro (Violet Line)',
   },
   {
     slug: 'east-of-kailash',
     name: 'East of Kailash',
-    description: 'DPS EOK area',
-    type: 'posh',
+    metro: 'Kailash Colony Metro (Violet Line)',
   },
 ]
 
@@ -291,7 +275,7 @@ export default function BiologyTuitionSouthDelhiPage() {
                     <div className="flex items-start justify-between">
                       <div>
                         <h3 className="font-semibold text-gray-900">{area.name}</h3>
-                        <p className="text-sm text-gray-500">{area.description}</p>
+                        <p className="text-sm text-gray-500">{area.metro}</p>
                       </div>
                       <ArrowRight className="w-5 h-5 text-green-600" />
                     </div>
