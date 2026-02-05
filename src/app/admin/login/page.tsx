@@ -5,15 +5,15 @@ export const dynamic = 'force-dynamic'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Loader2, Shield } from 'lucide-react'
-import { useAuth } from '@/lib/firebase/auth-context'
+import { useAuth } from '@/contexts/AuthContext'
 
 export default function AdminLogin() {
   const router = useRouter()
-  const { user, loading } = useAuth()
+  const { user, isLoading } = useAuth()
   const [redirecting, setRedirecting] = useState(false)
 
   useEffect(() => {
-    if (loading) return
+    if (isLoading) return
 
     // SECURITY: Auth bypass removed from client-side code
     // Server-side bypass (BYPASS_CRM_AUTH) only works in non-production environments
@@ -28,7 +28,7 @@ export default function AdminLogin() {
     // Redirect to Firebase sign-in with admin redirect
     setRedirecting(true)
     router.replace('/sign-in?redirect_url=/admin')
-  }, [router, loading, user])
+  }, [router, isLoading, user])
 
   return (
     <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
