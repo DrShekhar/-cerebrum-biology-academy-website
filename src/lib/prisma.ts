@@ -76,6 +76,74 @@ class MockPrismaClient {
       return null
     },
   }
+
+  // LMS Study Materials - required for /api/admin/lms/materials routes
+  studyMaterial = {
+    findUnique: async () => {
+      this.logWarning('studyMaterial.findUnique')
+      return null
+    },
+    findFirst: async () => {
+      this.logWarning('studyMaterial.findFirst')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('studyMaterial.findMany')
+      return []
+    },
+    create: async () => {
+      this.logWarning('studyMaterial.create')
+      return null
+    },
+    update: async () => {
+      this.logWarning('studyMaterial.update')
+      return null
+    },
+    delete: async () => {
+      this.logWarning('studyMaterial.delete')
+      return null
+    },
+    count: async () => {
+      this.logWarning('studyMaterial.count')
+      return 0
+    },
+  }
+
+  // LMS Courses
+  course = {
+    findUnique: async () => {
+      this.logWarning('course.findUnique')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('course.findMany')
+      return []
+    },
+  }
+
+  // LMS Chapters
+  chapter = {
+    findUnique: async () => {
+      this.logWarning('chapter.findUnique')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('chapter.findMany')
+      return []
+    },
+  }
+
+  // LMS Topics
+  topic = {
+    findUnique: async () => {
+      this.logWarning('topic.findUnique')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('topic.findMany')
+      return []
+    },
+  }
   $connect = async () => {
     this.logWarning('$connect')
     return Promise.resolve()
