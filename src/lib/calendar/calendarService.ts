@@ -12,6 +12,35 @@ interface BookingData {
   demoType?: 'FREE' | 'PREMIUM'
 }
 
+/**
+ * Sanitizes a string for use in filenames
+ * Removes special characters, smart quotes, emojis, and Unicode
+ * This fixes the "appendChild SyntaxError: Invalid or unexpected token" error
+ */
+function sanitizeFilename(str: string): string {
+  return str
+    // Replace smart/curly quotes with nothing
+    .replace(/[\u2018\u2019\u201C\u201D]/g, '')
+    // Remove emojis and other Unicode symbols
+    .replace(/[\u{1F000}-\u{1FFFF}]/gu, '')
+    // Remove zero-width characters
+    .replace(/[\u200B-\u200D\uFEFF]/g, '')
+    // Remove other problematic Unicode
+    .replace(/[^\x00-\x7F]/g, '')
+    // Replace spaces and multiple hyphens with single hyphen
+    .replace(/\s+/g, '-')
+    // Remove any remaining special characters (keep only alphanumeric and hyphen)
+    .replace(/[^a-zA-Z0-9-]/g, '')
+    // Remove multiple consecutive hyphens
+    .replace(/-+/g, '-')
+    // Remove leading/trailing hyphens
+    .replace(/^-+|-+$/g, '')
+    // Convert to lowercase
+    .toLowerCase()
+    // Fallback if empty
+    || 'student'
+}
+
 function parseTime(timeStr: string): { hour: number; minute: number } {
   const match = timeStr.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i)
   if (!match) {
@@ -45,6 +74,7 @@ export function downloadCalendarEvent(bookingData: BookingData): void {
     const isDemoTypePremium = bookingData.demoType === 'PREMIUM'
     const durationHours = isDemoTypePremium ? 1.5 : 1
 
+    // Sanitize description to remove problematic characters for ICS format
     const description = `Your ${isDemoTypePremium ? 'Premium' : 'Free'} NEET Biology Demo Class with Cerebrum Academy
 
 Join URL: ${bookingData.zoomJoinUrl || 'Will be shared 30 minutes before the session'}
@@ -105,7 +135,13 @@ Email: support@cerebrumbiologyacademy.com`
       })
       const link = document.createElement('a')
       link.href = URL.createObjectURL(blob)
-      link.download = `cerebrum-demo-${bookingData.studentName.replace(/\s+/g, '-').toLowerCase()}-${bookingData.preferredDate}.ics`
+
+      // FIX: Properly sanitize the filename to prevent appendChild SyntaxError
+      // Original line caused error when studentName contained special characters
+      const sanitizedName = sanitizeFilename(bookingData.studentName)
+      const sanitizedDate = bookingData.preferredDate.replace(/[^0-9-]/g, '')
+      link.download = `cerebrum-demo-${sanitizedName}-${sanitizedDate}.ics`
+
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
@@ -133,6 +169,7 @@ Book your free demo: https://cerebrumbiologyacademy.com/demo-booking`
 }
 
 export function shareCalendarViaWhatsApp(bookingData: BookingData): string {
+  // Note: Emojis are safe here because encodeURIComponent handles them
   const message = encodeURIComponent(
     `I've booked a ${bookingData.demoType === 'PREMIUM' ? 'Premium ' : ''}NEET Biology Demo Class with Cerebrum Academy!
 
