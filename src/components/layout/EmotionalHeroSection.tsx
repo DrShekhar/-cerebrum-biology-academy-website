@@ -81,7 +81,7 @@ export function EmotionalHeroSection({
   const successStats = [
     { value: 1247, label: 'MBBS Seats Secured', icon: GraduationCap },
     { value: 342, label: 'Government Colleges', icon: Trophy },
-    { value: 94.2, suffix: '%', label: 'NEET Success Rate', icon: Heart },
+    { value: 98, suffix: '%', label: 'NEET Success Rate', icon: Heart },
     {
       value: 5000,
       prefix: '',

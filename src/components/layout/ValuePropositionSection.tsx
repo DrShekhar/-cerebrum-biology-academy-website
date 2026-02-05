@@ -51,8 +51,8 @@ export function ValuePropositionSection() {
     {
       metric: 'Success Rate',
       traditional: '23%',
-      cerebrum: '94.2%',
-      improvement: '+309% higher',
+      cerebrum: '98%',
+      improvement: '+326% higher',
     },
     {
       metric: 'Medical College Admissions',
@@ -65,7 +65,7 @@ export function ValuePropositionSection() {
   const guarantees = [
     {
       icon: Trophy,
-      title: '94.2% Success Guarantee',
+      title: '98% Success Guarantee',
       description: 'Or get 100% refund + additional coaching until you succeed',
     },
     {
