@@ -305,6 +305,62 @@ const nextConfig = {
         destination: '/courses/foundation',
         permanent: true,
       },
+      // More common URL variations to prevent 404s
+      {
+        source: '/register',
+        destination: '/enrollment',
+        permanent: true,
+      },
+      {
+        source: '/signup',
+        destination: '/enrollment',
+        permanent: true,
+      },
+      {
+        source: '/enroll',
+        destination: '/enrollment',
+        permanent: true,
+      },
+      {
+        source: '/admission',
+        destination: '/enrollment',
+        permanent: true,
+      },
+      {
+        source: '/admissions',
+        destination: '/enrollment',
+        permanent: true,
+      },
+      {
+        source: '/contact-us',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/enquiry',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/inquiry',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/fees',
+        destination: '/neet-coaching-fee-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/fee-structure',
+        destination: '/neet-coaching-fee-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/pricing',
+        destination: '/neet-coaching-fee-gurugram',
+        permanent: true,
+      },
       // Old blog slugs redirecting to relevant existing content
       {
         source: '/blog/neet-preparation-timeline-class-9-to-2028',

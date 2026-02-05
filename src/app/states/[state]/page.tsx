@@ -420,6 +420,171 @@ const statesData: Record<string, StateData> = {
       },
     ],
   },
+  'delhi': {
+    name: 'Delhi',
+    slug: 'delhi',
+    shortName: 'Delhi',
+    students: '1,500+',
+    successRate: '98%',
+    toppers: 42,
+    cities: ['South Delhi', 'North Delhi', 'West Delhi', 'East Delhi', 'Central Delhi', 'Dwarka', 'Rohini'],
+    board: 'CBSE',
+    boardFullName: 'Central Board of Secondary Education',
+    highlights: [
+      'Multiple centers across Delhi NCR',
+      'CBSE board expertise',
+      'Direct metro connectivity',
+      'AIIMS Delhi focused preparation',
+    ],
+    description:
+      'Delhi students have excellent access to Cerebrum with centers in South Extension and Rohini. With AIIMS Delhi as the top target, we provide specialized preparation for Delhi students.',
+    whyChoose: [
+      'Centers in South Extension & Rohini',
+      'Metro-accessible locations',
+      'CBSE-NCERT perfect alignment',
+      'Multiple batch timings',
+      'AIIMS Delhi admission counseling',
+      'Personal mentorship programs',
+    ],
+    testimonials: [
+      {
+        name: 'Aanya Sharma',
+        city: 'South Delhi',
+        rank: 'AIR 156',
+        quote: 'Got into AIIMS Delhi! The personalized attention and Biology-focused coaching made all the difference.',
+      },
+      {
+        name: 'Rohan Mehta',
+        city: 'Dwarka',
+        rank: 'AIR 678',
+        quote: 'Juggling school and coaching was easy with flexible batch timings. Scored 350+ in Biology!',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Which Delhi center is best for me?',
+        answer: 'We have centers in South Extension (South/Central Delhi) and Rohini (North/West Delhi). Choose based on your location for minimum travel time.',
+      },
+      {
+        question: 'How competitive is Delhi for NEET?',
+        answer: 'Delhi has high competition with excellent coaching options. Cerebrum Biology specialization helps you score 340+ in Biology, giving you an edge over peers.',
+      },
+      {
+        question: 'Do you provide AIIMS Delhi specific preparation?',
+        answer: 'Yes, we have special modules for AIIMS-level Biology questions. Many of our Delhi toppers have secured AIIMS Delhi.',
+      },
+    ],
+  },
+  'maharashtra': {
+    name: 'Maharashtra',
+    slug: 'maharashtra',
+    shortName: 'MH',
+    students: '500+',
+    successRate: '95%',
+    toppers: 15,
+    cities: ['Mumbai', 'Pune', 'Nagpur', 'Nashik', 'Aurangabad', 'Thane', 'Navi Mumbai'],
+    board: 'MSBSHSE',
+    boardFullName: 'Maharashtra State Board of Secondary and Higher Secondary Education',
+    highlights: [
+      'Maharashtra Board support',
+      'Online coaching popular',
+      'AIIMS Mumbai guidance',
+      'Marathi medium notes available',
+    ],
+    description:
+      'Maharashtra students primarily join through our comprehensive online program. With strong medical colleges like Grant Medical and AIIMS Mumbai, we provide targeted state quota guidance.',
+    whyChoose: [
+      'Strong online coaching infrastructure',
+      'Maharashtra Board to NCERT bridge',
+      'Marathi medium support available',
+      'AIIMS Mumbai admission counseling',
+      'State quota guidance for GMCs',
+      'Weekend intensive batches',
+    ],
+    testimonials: [
+      {
+        name: 'Sneha Patil',
+        city: 'Pune',
+        rank: 'AIR 1,123',
+        quote: 'Online classes from Pune worked perfectly. Got admission in Grant Medical College Mumbai!',
+      },
+      {
+        name: 'Amit Deshmukh',
+        city: 'Nagpur',
+        rank: 'AIR 2,345',
+        quote: 'The Maharashtra Board bridge course helped me understand NCERT depth. Biology became my strength!',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How does Maharashtra Board differ from NCERT for NEET?',
+        answer: 'Maharashtra Board covers about 70% of NEET Biology. Key gaps are in Biotechnology, Ecology depth, and certain Human Physiology topics. Our bridge course fills all gaps.',
+      },
+      {
+        question: 'Is online coaching effective from Maharashtra?',
+        answer: 'Yes! Our Maharashtra students achieve excellent results through online mode. Live classes, doubt sessions, and recorded lectures ensure comprehensive preparation.',
+      },
+      {
+        question: 'What are the best medical colleges in Maharashtra?',
+        answer: 'Top options include Grant Medical College Mumbai, BJ Medical Pune, GMC Nagpur, and AIIMS Mumbai. We provide detailed counseling for state quota admissions.',
+      },
+    ],
+  },
+  'gujarat': {
+    name: 'Gujarat',
+    slug: 'gujarat',
+    shortName: 'Gujarat',
+    students: '400+',
+    successRate: '94%',
+    toppers: 12,
+    cities: ['Ahmedabad', 'Surat', 'Vadodara', 'Rajkot', 'Gandhinagar', 'Bhavnagar'],
+    board: 'GSEB',
+    boardFullName: 'Gujarat Secondary and Higher Secondary Education Board',
+    highlights: [
+      'GSEB board alignment',
+      'Gujarati medium support',
+      'BJ Medical College guidance',
+      'Online + Weekend batches',
+    ],
+    description:
+      'Gujarat students join Cerebrum for specialized Biology coaching that complements their GSEB preparation. With BJ Medical College Ahmedabad as a prime target, we focus on state quota optimization.',
+    whyChoose: [
+      'GSEB to NCERT bridge program',
+      'Gujarati medium notes available',
+      'BJ Medical admission counseling',
+      'Online live classes',
+      'Weekend intensive programs',
+      'Gujarat GMC state quota guidance',
+    ],
+    testimonials: [
+      {
+        name: 'Priya Patel',
+        city: 'Ahmedabad',
+        rank: 'AIR 1,567',
+        quote: 'From GSEB to BJ Medical! The Gujarati notes for complex topics were incredibly helpful.',
+      },
+      {
+        name: 'Harsh Shah',
+        city: 'Surat',
+        rank: 'AIR 2,890',
+        quote: 'Weekend batches suited my school schedule perfectly. Got admission in GMC Surat!',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Is GSEB syllabus sufficient for NEET?',
+        answer: 'GSEB covers about 65% of NEET Biology. Topics like Biotechnology, detailed Genetics, and certain Ecology concepts need additional preparation through our bridge course.',
+      },
+      {
+        question: 'Do you provide study material in Gujarati?',
+        answer: 'Yes, we provide key concept notes and difficult topic explanations in Gujarati. Main study material is in English/Hindi with Gujarati supplements.',
+      },
+      {
+        question: 'What about BJ Medical College admission?',
+        answer: 'BJ Medical Ahmedabad is Gujarat\'s premier medical college. We provide specific guidance for state quota seats, expected cutoffs, and choice filling strategy.',
+      },
+    ],
+  },
 }
 
 type Props = {
