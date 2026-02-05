@@ -621,6 +621,11 @@ const nextConfig = {
         destination: '/demo',
         permanent: true,
       },
+      {
+        source: '/free-demo',
+        destination: '/demo',
+        permanent: true,
+      },
 
       // Biology tutor class variations
       {
@@ -752,6 +757,11 @@ const nextConfig = {
       },
       {
         source: '/neet-foundation-course',
+        destination: '/courses/foundation',
+        permanent: true,
+      },
+      {
+        source: '/courses/neet-foundation',
         destination: '/courses/foundation',
         permanent: true,
       },

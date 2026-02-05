@@ -62,3 +62,25 @@ export {
 
 // Intent landing page component with built-in SEO
 export { IntentLandingPage, type IntentPageData, type HowToStepData } from './IntentLandingPage'
+
+// Enhanced article schemas for blog posts (TechArticle, NewsArticle)
+export {
+  TechArticleSchema,
+  BlogListSchema,
+  type ArticleType,
+} from './TechArticleSchema'
+
+// Aggregate offer schemas for course pricing tiers
+export {
+  CourseOfferSchema,
+  CourseComparisonSchema,
+  FeatureComparisonSchema,
+} from './AggregateOfferSchema'
+
+// Schedule schemas for batch timings and demo classes
+export {
+  ScheduleSchema,
+  DemoClassScheduleSchema,
+  OpeningHoursSchema,
+  STANDARD_BATCHES,
+} from './ScheduleSchema'
