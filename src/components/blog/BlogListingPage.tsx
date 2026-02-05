@@ -19,6 +19,7 @@ import {
   Flame,
   Bookmark,
   ArrowUpDown,
+  Hash,
 } from 'lucide-react'
 import Link from 'next/link'
 import { DifficultyBadge } from './DifficultyBadge'
@@ -71,11 +72,12 @@ interface BlogListingPageProps {
     avgReadTime: number
     categories: number
   }
+  popularTags?: { tag: string; count: number }[]
 }
 
 const POSTS_PER_PAGE = 9
 
-export function BlogListingPage({ posts, categories, stats }: BlogListingPageProps) {
+export function BlogListingPage({ posts, categories, stats, popularTags }: BlogListingPageProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
   const initialPage = parseInt(searchParams.get('page') || '1', 10)
@@ -90,6 +92,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
   const [isSearching, setIsSearching] = useState(false)
   const [showSearchPreview, setShowSearchPreview] = useState(false)
   const [bookmarkedPosts, setBookmarkedPosts] = useState<string[]>([])
+  const [showBookmarksOnly, setShowBookmarksOnly] = useState(false)
   const searchRef = useRef<HTMLDivElement>(null)
   const prevSearchRef = useRef<string>('')
 
@@ -175,8 +178,14 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
         post.excerpt.toLowerCase().includes(searchLower) ||
         post.tags.some((tag) => tag.toLowerCase().includes(searchLower)) ||
         (post.neetChapter && post.neetChapter.toLowerCase().includes(searchLower))
+      const matchesBookmarks = !showBookmarksOnly || bookmarkedPosts.includes(post.slug)
       return (
-        matchesCategory && matchesDifficulty && matchesAuthor && matchesSearch && post.isPublished
+        matchesCategory &&
+        matchesDifficulty &&
+        matchesAuthor &&
+        matchesSearch &&
+        matchesBookmarks &&
+        post.isPublished
       )
     })
 
@@ -196,7 +205,16 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
     }
 
     return result
-  }, [posts, selectedCategory, selectedDifficulty, selectedAuthor, searchTerm, sortBy])
+  }, [
+    posts,
+    selectedCategory,
+    selectedDifficulty,
+    selectedAuthor,
+    searchTerm,
+    sortBy,
+    showBookmarksOnly,
+    bookmarkedPosts,
+  ])
 
   const totalPages = Math.ceil(filteredAndSortedPosts.length / POSTS_PER_PAGE)
 
@@ -250,6 +268,7 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
     setSelectedDifficulty('all')
     setSelectedAuthor('all')
     setSortBy('newest')
+    setShowBookmarksOnly(false)
     handleFilterChange()
   }
 
@@ -265,7 +284,8 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
     selectedCategory !== 'all' ||
     selectedDifficulty !== 'all' ||
     selectedAuthor !== 'all' ||
-    searchTerm !== ''
+    searchTerm !== '' ||
+    showBookmarksOnly
 
   const getCategoryInfo = (categorySlug: string) => {
     return (
@@ -537,6 +557,19 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
                       <X className="w-3 h-3" />
                     </button>
                   )}
+                  {showBookmarksOnly && (
+                    <button
+                      onClick={() => {
+                        setShowBookmarksOnly(false)
+                        handleFilterChange()
+                      }}
+                      className="flex items-center gap-1 px-3 py-1.5 bg-blue-100 text-blue-700 rounded-full text-sm hover:bg-blue-200 transition-colors"
+                    >
+                      <Bookmark className="w-3 h-3 fill-current" />
+                      Bookmarked
+                      <X className="w-3 h-3" />
+                    </button>
+                  )}
                   <button
                     onClick={clearAllFilters}
                     className="text-sm text-red-600 hover:text-red-700 font-medium"
@@ -573,6 +606,32 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
         </div>
       </section>
 
+      {/* Popular Topics */}
+      {popularTags && popularTags.length > 0 && (
+        <section className="pb-8">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-center gap-2 mb-4">
+              <Hash className="w-5 h-5 text-gray-500" />
+              <h2 className="text-lg font-semibold text-gray-900">Popular Topics</h2>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {popularTags.map(({ tag, count }) => (
+                <Link
+                  key={tag}
+                  href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 rounded-full text-sm text-gray-700 hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-colors shadow-sm"
+                >
+                  <span>#{tag}</span>
+                  <span className="text-xs text-gray-400 bg-gray-100 px-1.5 py-0.5 rounded-full">
+                    {count}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Blog Posts Grid */}
       <section className="pb-20">
         <div className="max-w-7xl mx-auto px-4">
@@ -583,9 +642,14 @@ export function BlogListingPage({ posts, categories, stats }: BlogListingPagePro
             </span>
             {bookmarkedPosts.length > 0 && (
               <button
-                className="flex items-center gap-2 text-sm text-blue-600 hover:text-blue-700"
+                className={`flex items-center gap-2 text-sm transition-colors ${
+                  showBookmarksOnly
+                    ? 'bg-blue-600 text-white px-3 py-1.5 rounded-full'
+                    : 'text-blue-600 hover:text-blue-700'
+                }`}
                 onClick={() => {
-                  // TODO: Show bookmarked posts
+                  setShowBookmarksOnly(!showBookmarksOnly)
+                  handleFilterChange()
                 }}
               >
                 <Bookmark className="w-4 h-4 fill-current" />
