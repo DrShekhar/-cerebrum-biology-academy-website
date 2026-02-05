@@ -1,0 +1,22 @@
+# Cerebrum Biology Academy Security Policy
+# https://cerebrumbiologyacademy.com/.well-known/security.txt
+
+Contact: mailto:security@cerebrumbiologyacademy.com
+Contact: mailto:bobbyaiims@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Encryption: https://cerebrumbiologyacademy.com/pgp-key.txt
+Preferred-Languages: en, hi
+Canonical: https://cerebrumbiologyacademy.com/.well-known/security.txt
+
+# Policy
+# We take security seriously. If you discover a vulnerability,
+# please report it responsibly to the contacts above.
+# We appreciate your help in keeping our students' data safe.
+
+# Scope
+# This policy applies to:
+# - cerebrumbiologyacademy.com
+# - *.cerebrumbiologyacademy.com
+
+# Acknowledgments
+# We thank security researchers who help us improve our security.

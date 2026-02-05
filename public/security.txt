@@ -1,0 +1,8 @@
+# Cerebrum Biology Academy Security Policy
+# Canonical location: https://cerebrumbiologyacademy.com/.well-known/security.txt
+
+Contact: mailto:security@cerebrumbiologyacademy.com
+Contact: mailto:bobbyaiims@gmail.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, hi
+Canonical: https://cerebrumbiologyacademy.com/.well-known/security.txt
