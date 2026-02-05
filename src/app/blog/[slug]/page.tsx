@@ -74,10 +74,8 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <>
-      {/* Breadcrumb Navigation + Schema */}
-      <div className="mx-auto max-w-7xl px-4 py-4">
-        <BreadcrumbSchema items={COMMON_BREADCRUMBS.blog(meta.title)} />
-      </div>
+      {/* Breadcrumb Schema (SEO only, no visual — BlogCategoryNav handles navigation) */}
+      <BreadcrumbSchema items={COMMON_BREADCRUMBS.blog(meta.title)} showSchemaOnly />
       {/* Article Schema for E-E-A-T */}
       <ArticleSchema
         title={meta.title}

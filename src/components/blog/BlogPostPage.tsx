@@ -5,7 +5,6 @@ import {
   Clock,
   Eye,
   Calendar,
-  ArrowLeft,
   Facebook,
   Twitter,
   Linkedin,
@@ -18,7 +17,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { ReadingProgressBar } from './ReadingProgressBar'
 import { TableOfContents } from './TableOfContents'
 import { KeyTakeaways } from './KeyTakeaways'
@@ -95,14 +94,10 @@ interface BlogPostPageProps {
 export function BlogPostPage({ meta, content, toc, relatedPosts, category }: BlogPostPageProps) {
   const [copied, setCopied] = useState(false)
   const [showShareMenu, setShowShareMenu] = useState(false)
-  const [headerCollapsed, setHeaderCollapsed] = useState(false)
   const [leadPhone, setLeadPhone] = useState('')
   const [leadSubmitting, setLeadSubmitting] = useState(false)
   const [leadSubmitted, setLeadSubmitted] = useState(false)
   const [leadError, setLeadError] = useState('')
-  const lastScrollY = useRef(0)
-  const scrollThreshold = 100 // Increased threshold to prevent jitter
-  const scrollTimeout = useRef<NodeJS.Timeout | null>(null)
 
   // Track views (adds real-time views to viral base count)
   const { views: totalViews } = useBlogViews({
@@ -110,36 +105,6 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
     initialViews: meta.views || 0,
     trackOnMount: true,
   })
-
-  // Scroll direction detection for collapsible header with debouncing
-  const handleScroll = useCallback(() => {
-    // Clear any pending scroll updates
-    if (scrollTimeout.current) {
-      clearTimeout(scrollTimeout.current)
-    }
-
-    scrollTimeout.current = setTimeout(() => {
-      const currentScrollY = window.scrollY
-      const scrollDiff = currentScrollY - lastScrollY.current
-
-      // Only trigger if scrolled more than threshold
-      if (Math.abs(scrollDiff) > scrollThreshold) {
-        if (scrollDiff > 0 && currentScrollY > 300) {
-          // Scrolling DOWN and past hero area - collapse header
-          setHeaderCollapsed(true)
-        } else if (scrollDiff < -scrollThreshold && currentScrollY < 200) {
-          // Scrolling UP significantly and near top - expand header
-          setHeaderCollapsed(false)
-        }
-        lastScrollY.current = currentScrollY
-      }
-    }, 50) // 50ms debounce
-  }, [])
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [handleScroll])
 
   // Extract FAQs from content and generate topic-specific FAQs
   const extractedFaqs = extractFAQsFromContent(content)
@@ -253,47 +218,18 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
       <ReadingProgressBar showPercentage showTimeRemaining readTime={meta.readTime} />
 
       <div className="min-h-screen bg-white">
-        {/* Back Button */}
-        <div className="bg-gray-50 border-b">
-          <div className="max-w-7xl mx-auto px-4 py-4">
-            <Link
-              href="/blog"
-              className="inline-flex items-center text-gray-600 hover:text-blue-600 transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Blog
-            </Link>
-          </div>
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* Main Content */}
             <article className="flex-1 min-w-0 max-w-4xl">
-              {/* Article Header - Collapsible on scroll */}
-              <div
-                className={`mb-12 transition-all duration-500 ease-out overflow-hidden ${
-                  headerCollapsed ? 'max-h-0 opacity-0 mb-0' : 'max-h-[800px] opacity-100'
-                }`}
-              >
+              {/* Article Header */}
+              <div className="mb-10">
                 <div className="animate-fade-in-up">
-                  {/* Badges Row */}
-                  <div className="flex flex-wrap gap-3 mb-6">
-                    {category && (
-                      <span
-                        className={`px-4 py-2 rounded-full text-sm font-medium ${category.color}`}
-                      >
-                        {category.name}
-                      </span>
-                    )}
+                  {/* Badges Row — simplified: category shown in nav, only show metadata badges */}
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {meta.difficulty && <DifficultyBadge difficulty={meta.difficulty} />}
-                    {meta.neetChapter && (
+                    {meta.neetChapter && meta.neetChapter !== 'General' && (
                       <NEETTopicBadge chapter={meta.neetChapter} weightage={meta.neetWeightage} />
-                    )}
-                    {meta.targetAudience && meta.targetAudience !== 'Both' && (
-                      <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                        For {meta.targetAudience}s
-                      </span>
                     )}
                   </div>
 
@@ -334,7 +270,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                           {parseReadTime(meta.readTime)} min read
                         </div>
                         <div className="flex items-center text-orange-600 font-medium">
-                          <Eye className="w-4 h-4 mr-1 animate-pulse" />
+                          <Eye className="w-4 h-4 mr-1" />
                           <AnimatedViewCount target={totalViews} /> views
                         </div>
                       </div>
@@ -395,33 +331,8 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 </div>
               </div>
 
-              {/* Compact Header - Shows when main header is collapsed */}
-              <div
-                className={`sticky top-0 z-40 -mx-4 px-4 py-3 bg-white/95 backdrop-blur-sm border-b border-gray-200 shadow-sm transition-all duration-300 ${
-                  headerCollapsed
-                    ? 'opacity-100 translate-y-0'
-                    : 'opacity-0 -translate-y-full pointer-events-none'
-                }`}
-              >
-                <div className="flex items-center justify-between max-w-4xl">
-                  <div className="flex items-center space-x-3 min-w-0">
-                    <h2 className="text-lg font-semibold text-gray-900 truncate">{meta.title}</h2>
-                  </div>
-                  <div className="flex items-center space-x-4 text-sm text-gray-500 flex-shrink-0">
-                    <span className="hidden sm:flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {parseReadTime(meta.readTime)} min
-                    </span>
-                    <span className="flex items-center text-orange-600 font-medium">
-                      <Eye className="w-4 h-4 mr-1" />
-                      {totalViews.toLocaleString()}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
               {/* Featured Image - Dynamically loaded for performance */}
-              <div className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl mb-12 overflow-hidden shadow-lg shadow-blue-100/50 animate-fade-in">
+              <div className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 rounded-2xl md:rounded-3xl mb-8 overflow-hidden shadow-lg shadow-blue-100/50 animate-fade-in">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.08),transparent_50%)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_80%,rgba(139,92,246,0.06),transparent_50%)]" />
                 <div className="absolute inset-0 p-6 md:p-10 lg:p-12 flex items-center justify-center">
@@ -442,7 +353,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
               )}
 
               {/* Article Content */}
-              <div className="prose prose-lg max-w-none prose-headings:scroll-mt-20 animate-fade-in-up">
+              <div className="prose prose-lg max-w-none prose-headings:scroll-mt-24 animate-fade-in-up">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw]}
@@ -701,7 +612,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                   )}
                 </div>
               ) : (
-                <div className="mt-16 p-8 bg-indigo-600 rounded-3xl text-white text-center animate-fade-in-up">
+                <div className="mt-16 p-8 bg-[#3d4d3d] rounded-3xl text-white text-center animate-fade-in-up">
                   <h3 className="text-2xl font-bold mb-4">Ready to Master NEET Biology?</h3>
                   <p className="text-lg mb-6 opacity-90">
                     Get personalized guidance from AIIMS experts and achieve your medical college
@@ -710,8 +621,8 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
                   {/* Lead Capture Form */}
                   {leadSubmitted ? (
-                    <div className="p-4 bg-purple-500/20 rounded-xl">
-                      <div className="flex items-center justify-center gap-3 text-purple-100">
+                    <div className="p-4 bg-green-500/20 rounded-xl">
+                      <div className="flex items-center justify-center gap-3 text-green-100">
                         <CheckCircle className="w-6 h-6" />
                         <div>
                           <p className="font-bold">Thank you for your interest!</p>
@@ -787,7 +698,7 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
 
             {/* Sidebar with TOC */}
             <aside className="hidden lg:block w-72 lg:w-80 flex-shrink-0 relative">
-              <div className="sticky top-24 space-y-6 z-10 max-h-[calc(100vh-8rem)] overflow-y-auto">
+              <div className="sticky top-16 space-y-6 z-10 max-h-[calc(100vh-5rem)] overflow-y-auto">
                 <TableOfContents items={toc} />
                 {/* Removed redundant "Need Expert Guidance?" CTA - already have header CTAs and floating buttons */}
               </div>
