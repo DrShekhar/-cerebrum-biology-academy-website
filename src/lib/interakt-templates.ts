@@ -96,7 +96,7 @@ export const MARKETING_TEMPLATES = {
     description: 'Welcome message for new leads/students',
     bodyText: `Hi {{1}}! Welcome to Cerebrum Biology Academy!
 
-We're India's leading NEET Biology coaching with 94.2% success rate.
+We're India's leading NEET Biology coaching with 98% success rate.
 
 What we offer:
 - Live interactive classes by AIIMS/JIPMER faculty

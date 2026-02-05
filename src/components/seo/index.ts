@@ -84,3 +84,15 @@ export {
   OpeningHoursSchema,
   STANDARD_BATCHES,
 } from './ScheduleSchema'
+
+// State-specific schemas for regional SEO
+export {
+  StateSchema,
+  INDIAN_STATES,
+  generateStateFAQs,
+  getAllStates,
+  type StateData,
+} from './StateSchema'
+
+// State landing page component
+export { StateLandingPage } from './StateLandingPage'
