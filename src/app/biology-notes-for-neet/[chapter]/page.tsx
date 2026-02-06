@@ -61,6 +61,33 @@ const CHAPTERS_MAP: Record<string, Chapter> = {
     difficulty: "Moderate",
     description: "Organisms and populations, population interactions, ecosystem structure, ecological pyramids, nutrient cycling, biodiversity and conservation for NEET Biology",
   },
+  "cell-the-unit-of-life": {
+    name: "Cell: The Unit of Life",
+    slug: "cell-the-unit-of-life",
+    class: 11,
+    unit: "Cell Structure & Function",
+    weightage: 4,
+    difficulty: "Moderate",
+    description: "Cell theory, prokaryotic vs eukaryotic cells, cell organelles, endomembrane system, fluid mosaic model, and membrane transport for NEET Biology",
+  },
+  "biomolecules": {
+    name: "Biomolecules",
+    slug: "biomolecules",
+    class: 11,
+    unit: "Cell Structure & Function",
+    weightage: 4,
+    difficulty: "Hard",
+    description: "Carbohydrates, proteins, amino acids, enzymes, lipids, nucleic acids, DNA vs RNA, enzyme classification, and metabolic basis of living for NEET Biology",
+  },
+  "cell-cycle-and-cell-division": {
+    name: "Cell Cycle and Cell Division",
+    slug: "cell-cycle-and-cell-division",
+    class: 11,
+    unit: "Cell Structure & Function",
+    weightage: 4,
+    difficulty: "Moderate",
+    description: "Cell cycle phases, mitosis, meiosis, prophase I substages, crossing over, mitosis vs meiosis comparison, and significance of cell division for NEET Biology",
+  },
 }
 
 /* ─────────────── Generate Static Params ─────────────── */

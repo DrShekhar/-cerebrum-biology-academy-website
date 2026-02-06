@@ -142,7 +142,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Moderate',
     keyTopics: ['Cell theory', 'Prokaryotic vs Eukaryotic', 'Cell organelles', 'Endomembrane system'],
     icon: <Microscope className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Biomolecules',
@@ -154,7 +154,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Hard',
     keyTopics: ['Proteins', 'Enzymes', 'Carbohydrates', 'Lipids', 'Nucleic acids', 'Enzyme classification'],
     icon: <FlaskConical className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Cell Cycle and Cell Division',
@@ -166,7 +166,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Moderate',
     keyTopics: ['Mitosis', 'Meiosis', 'Cell cycle phases', 'Significance of meiosis'],
     icon: <Dna className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Photosynthesis in Higher Plants',
