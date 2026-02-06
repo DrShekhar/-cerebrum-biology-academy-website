@@ -2,7 +2,7 @@
 
 > **Goal:** 3-5x organic traffic in 6 months, increase WhatsApp/call inquiries for enrollment
 > **Date:** February 6, 2026
-> **Status:** ACTIVE — Week 1-3 in progress (6/8 items done)
+> **Status:** ACTIVE — Week 1-3 complete (8/8 items done), Pillar 3 in progress
 
 ---
 
@@ -28,11 +28,11 @@
 ### Pillar 3: Convert Traffic to Enrollments
 | Action | Scope | Priority | Status |
 |--------|-------|----------|--------|
-| Sticky WhatsApp CTA bar (mobile) | All pages | HIGH | TODO |
+| Sticky WhatsApp CTA bar (mobile) | All pages | HIGH | DONE |
 | Exit-intent lead magnet on blog pages | Blog pages | HIGH | TODO |
 | Social proof sections on landing pages | Landing pages | MEDIUM | TODO |
 | "Book Free Demo" form above fold on course pages | Course pages | MEDIUM | TODO |
-| WhatsApp click tracking in GA4 | All pages | HIGH | TODO |
+| WhatsApp click tracking in GA4 | All pages | HIGH | DONE |
 
 ---
 

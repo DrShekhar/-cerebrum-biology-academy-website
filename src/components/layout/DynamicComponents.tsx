@@ -33,12 +33,13 @@ export function FloatingCTA() {
   const [shouldLoad, setShouldLoad] = useState(false)
 
   useEffect(() => {
-    // PERFORMANCE: Increased delay from 4s to 6s for better mobile LCP
+    // PERFORMANCE: Load sticky CTA bar after 3s — conversion-critical element
+    // (Reduced from 6s to appear sooner for better conversion while still protecting LCP)
     if ('requestIdleCallback' in window) {
-      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 6000 })
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 3000 })
       return () => cancelIdleCallback(idleId)
     } else {
-      const timerId = setTimeout(() => setShouldLoad(true), 5000)
+      const timerId = setTimeout(() => setShouldLoad(true), 3000)
       return () => clearTimeout(timerId)
     }
   }, [])

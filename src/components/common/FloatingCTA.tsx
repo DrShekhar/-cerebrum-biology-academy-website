@@ -2,11 +2,15 @@
 
 import { useState, useEffect, useRef, useCallback, memo } from 'react'
 import { usePathname } from 'next/navigation'
-import { Phone, MessageCircle, X, ChevronUp, Clock, Users, Minimize2, Maximize2 } from 'lucide-react'
-import Link from 'next/link'
+import { Phone, MessageCircle, ChevronUp, Clock, Users, Minimize2, Maximize2 } from 'lucide-react'
 import { trackAndOpenWhatsApp, getContextAwareMessage } from '@/lib/whatsapp/tracking'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
+import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
+import {
+  trackWhatsAppConversion,
+  trackPhoneCallConversion,
+} from '@/lib/analytics/googleAdsConversions'
 
 // High-converting CTA copy with social proof
 const CTA_COPY = {
@@ -16,16 +20,17 @@ const CTA_COPY = {
     badge: '500+ selections',
   },
   mobile: {
-    primary: 'Ask Dr. Shekhar',
-    badge: '2 min reply',
+    callLabel: 'Call Now',
+    whatsappLabel: 'WhatsApp',
   },
 }
 
+// Pages that already have their own MobilePhoneStickyBar — skip global bar
+const PAGES_WITH_LOCAL_STICKY = ['/locations/', '/courses/', '/compare/']
+
 export const FloatingCTA = memo(function FloatingCTA() {
   const pathname = usePathname()
-  const [isExpanded, setIsExpanded] = useState(false)
   const [isMinimized, setIsMinimized] = useState(false) // Desktop minimize state
-  const [scrollProgress, setScrollProgress] = useState(0)
   const [showScrollTop, setShowScrollTop] = useState(false)
 
   const rafRef = useRef<number | null>(null)
@@ -44,12 +49,6 @@ export const FloatingCTA = memo(function FloatingCTA() {
       lastScrollRef.current = scrollTop
 
       const windowHeight = window.innerHeight
-      const docHeight = document.documentElement.scrollHeight
-
-      const progress = scrollTop / (docHeight - windowHeight)
-      const newScrollProgress = Math.min(progress * 100, 100)
-
-      setScrollProgress(newScrollProgress)
       setShowScrollTop(scrollTop > windowHeight * 0.3)
 
       rafRef.current = null
@@ -67,36 +66,55 @@ export const FloatingCTA = memo(function FloatingCTA() {
     }
   }, [handleScroll])
 
-  useEffect(() => {
-    if (isExpanded) {
-      const timer = setTimeout(() => setIsExpanded(false), 10000)
-      return () => clearTimeout(timer)
+  // Hide on blog pages - they have their own BlogWhatsAppQuery component
+  const isBlogPage = pathname?.startsWith('/blog/')
+  if (isBlogPage) return null
+
+  // Check if current page already has a local MobilePhoneStickyBar
+  const hasLocalStickyBar = PAGES_WITH_LOCAL_STICKY.some((prefix) =>
+    pathname?.startsWith(prefix)
+  )
+
+  // Mobile sticky bar: Call + WhatsApp with full conversion tracking
+  const handleCallClick = () => {
+    ConversionTracker.trackPhoneCall()
+    trackPhoneCallConversion('+918826444334')
+    handlePhoneClickTracking('global-sticky-bar-call', 'primary', 100)
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      ;(window as any).gtag('event', 'sticky_cta_click', {
+        event_category: 'conversion',
+        event_label: 'call',
+        page_path: pathname,
+      })
     }
-  }, [isExpanded])
+  }
 
-  // Secondary actions for expanded menu
-  const secondaryActions = [
-    {
-      icon: Phone,
-      label: 'Call Now',
-      href: getPhoneLink(),
-      color: 'bg-blue-600 hover:bg-blue-700',
-      action: 'call',
-    },
-  ]
-
-  const handleWhatsAppClick = async (e: React.MouseEvent, source: string) => {
+  const handleMobileWhatsAppClick = async (e: React.MouseEvent) => {
     e.preventDefault()
+    ConversionTracker.trackWhatsAppClick()
+    trackWhatsAppConversion('global-sticky-bar')
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      ;(window as any).gtag('event', 'sticky_cta_click', {
+        event_category: 'conversion',
+        event_label: 'whatsapp',
+        page_path: pathname,
+      })
+    }
+    await trackAndOpenWhatsApp({
+      source: 'global-sticky-bar',
+      message: getContextAwareMessage(pathname || undefined),
+      campaign: 'global-sticky-bar',
+    })
+  }
 
-    // Track with gtag
+  const handleDesktopWhatsAppClick = async (e: React.MouseEvent, source: string) => {
+    e.preventDefault()
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'floating_cta_click', {
         event_category: 'engagement',
         event_label: 'whatsapp',
       })
     }
-
-    // Use context-aware message based on current page
     await trackAndOpenWhatsApp({
       source,
       message: getContextAwareMessage(pathname || undefined),
@@ -104,108 +122,47 @@ export const FloatingCTA = memo(function FloatingCTA() {
     })
   }
 
-  const handleSecondaryClick = (action: string) => {
+  const handleDesktopCallClick = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'floating_cta_click', {
         event_category: 'engagement',
-        event_label: action,
+        event_label: 'call',
       })
     }
-    // Track phone call conversions
-    if (action === 'call') {
-      handlePhoneClickTracking('floating-cta-call', 'primary', 100)
-    }
-    setIsExpanded(false)
+    handlePhoneClickTracking('floating-cta-call', 'primary', 100)
   }
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  // Hide on blog pages - they have their own BlogWhatsAppQuery component
-  const isBlogPage = pathname?.startsWith('/blog/')
-
-  if (isBlogPage) return null
-
   return (
     <>
-      {/* ===== MOBILE: Direct WhatsApp Button (Single Tap!) ===== */}
-      {/* Always visible, no scroll requirement, direct WhatsApp access */}
-      <div className="fixed bottom-20 sm:bottom-24 right-3 sm:right-4 z-[60] lg:hidden">
-        {/* Secondary Actions (Call, Book Demo) - only when expanded */}
-        {isExpanded && (
-          <div className="absolute bottom-16 left-0 space-y-3 animate-fadeInUp">
-            {secondaryActions.map((action, index) => {
-              const Icon = action.icon
-              return (
-                <div
-                  key={action.action}
-                  className="animate-fadeInRight"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <Link
-                    href={action.href}
-                    onClick={() => handleSecondaryClick(action.action)}
-                    className={`flex items-center justify-center gap-2 w-[140px] py-3 rounded-xl text-white font-medium shadow-lg transition-all duration-300 transform hover:scale-105 min-h-[48px] touch-manipulation ${action.color}`}
-                  >
-                    <Icon className="w-5 h-5 flex-shrink-0" />
-                    <span className="whitespace-nowrap text-sm">{action.label}</span>
-                  </Link>
-                </div>
-              )
-            })}
-          </div>
-        )}
-
-        {/* Main WhatsApp Button - DIRECT LINK (single tap!) */}
-        <div className="flex flex-col items-center gap-2">
-          {/* Expand/Collapse for secondary actions */}
-          {isExpanded && (
-            <button
-              onClick={() => setIsExpanded(false)}
-              className="w-10 h-10 bg-gray-600 rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:bg-gray-700"
-              aria-label="Close menu"
+      {/* ===== MOBILE: Full-width Sticky CTA Bar (Above MobileBottomNav) ===== */}
+      {/* Prominent Call + WhatsApp bar on all mobile pages (except pages with local MobilePhoneStickyBar) */}
+      {!hasLocalStickyBar && (
+        <div className="fixed bottom-16 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-100 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-[55] lg:hidden">
+          <div className="flex p-2 gap-2 max-w-lg mx-auto">
+            <a
+              href={getPhoneLink()}
+              onClick={handleCallClick}
+              className="flex-1 flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold text-sm transition-colors active:scale-95 touch-manipulation min-h-[48px]"
+              aria-label="Call Dr. Shekhar now"
             >
-              <X className="w-5 h-5" />
-            </button>
-          )}
-
-          {/* Primary WhatsApp Button - Enhanced with label */}
-          <div className="flex flex-col items-center">
+              <Phone className="w-4 h-4 flex-shrink-0" />
+              <span>{CTA_COPY.mobile.callLabel}</span>
+            </a>
             <button
-              onClick={(e) => handleWhatsAppClick(e, 'mobile-floating-cta')}
+              onClick={handleMobileWhatsAppClick}
+              className="flex-1 flex items-center justify-center gap-2 py-3 bg-[#25D366] hover:bg-[#20BD5A] text-white rounded-xl font-semibold text-sm transition-colors active:scale-95 touch-manipulation min-h-[48px]"
               aria-label="Chat on WhatsApp"
-              className="relative w-14 h-14 bg-[#25D366] rounded-full shadow-lg flex items-center justify-center text-white transition-all duration-300 hover:shadow-xl hover:scale-105 active:scale-95 min-h-[48px] min-w-[48px] touch-manipulation animate-bounce-subtle"
             >
-              {/* WhatsApp Icon */}
-              <MessageCircle className="w-7 h-7" />
-
-              {/* Notification dot - aria-hidden to exclude from accessible name */}
-              <span
-                className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center"
-                aria-hidden="true"
-              >
-                <span className="text-[10px] font-bold text-white">1</span>
-              </span>
+              <MessageCircle className="w-4 h-4 flex-shrink-0" />
+              <span>{CTA_COPY.mobile.whatsappLabel}</span>
             </button>
-            {/* CTA Label with social proof */}
-            <span className="mt-1 px-2 py-0.5 bg-white/95 rounded text-[10px] font-semibold text-gray-800 shadow-sm whitespace-nowrap">
-              {CTA_COPY.mobile.badge}
-            </span>
           </div>
-
-          {/* More Options Toggle */}
-          {!isExpanded && (
-            <button
-              onClick={() => setIsExpanded(true)}
-              className="w-8 h-8 bg-gray-500 rounded-full shadow-md flex items-center justify-center text-white text-xs font-medium transition-all duration-300 hover:bg-gray-600"
-              aria-label="+1 more contact option"
-            >
-              <span aria-hidden="true">+1</span>
-            </button>
-          )}
         </div>
-      </div>
+      )}
 
       {/* ===== DESKTOP: Collapsible WhatsApp Button ===== */}
       {/* Always visible on desktop - bottom right corner */}
@@ -229,7 +186,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
           {isMinimized ? (
             /* Minimized: Just icon */
             <button
-              onClick={(e) => handleWhatsAppClick(e, 'desktop-floating-cta-minimized')}
+              onClick={(e) => handleDesktopWhatsAppClick(e, 'desktop-floating-cta-minimized')}
               className="w-14 h-14 bg-[#25D366] hover:bg-[#20BD5A] rounded-full shadow-xl flex items-center justify-center text-white transition-all duration-300 transform hover:scale-105"
               aria-label="Chat on WhatsApp"
             >
@@ -243,7 +200,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
           ) : (
             /* Expanded: Full button with text */
             <button
-              onClick={(e) => handleWhatsAppClick(e, 'desktop-floating-cta')}
+              onClick={(e) => handleDesktopWhatsAppClick(e, 'desktop-floating-cta')}
               className="group flex items-center gap-3 px-6 py-4 bg-[#25D366] hover:bg-[#20BD5A] rounded-2xl shadow-xl text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               aria-label={`${CTA_COPY.desktop.primary} on WhatsApp`}
             >
