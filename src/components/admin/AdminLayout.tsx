@@ -133,6 +133,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           href: '/admin/students/active',
         },
         { id: 'leads', name: 'Leads', icon: Users, href: '/admin/students/leads' },
+        { id: 'parents', name: 'Parents', icon: Users, href: '/admin/parents' },
       ],
     },
     {
