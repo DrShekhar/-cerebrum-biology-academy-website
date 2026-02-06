@@ -8,6 +8,7 @@ import { AchievementsDisplay } from '@/components/gamification/AchievementsDispl
 import { XPProgressCard } from '@/components/gamification/XPProgressCard'
 import { StreakWidget } from '@/components/gamification/StreakWidget'
 import { NTAAnnouncementWidget } from '../NTAAnnouncementWidget'
+import { SpacedReviewWidget } from '../SpacedReviewWidget'
 import { WeakAreaItem } from './WeakAreaItem'
 
 interface StudySession {
@@ -260,6 +261,9 @@ export function OverviewTab({
 
       {/* NTA Announcements Widget */}
       <NTAAnnouncementWidget />
+
+      {/* Spaced Repetition Review */}
+      <SpacedReviewWidget />
 
       {/* Recent Sessions & Weak Areas - Mobile Optimized */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
