@@ -4,6 +4,7 @@ import React from 'react'
 import { TrendingUp, Target, Award, Clock, BarChart3, ArrowUp, ArrowDown } from 'lucide-react'
 import { XPProgressCard } from '@/components/gamification/XPProgressCard'
 import { MCQAnalyticsWidget } from '../MCQAnalyticsWidget'
+import { StudyHeatmap } from '../StudyHeatmap'
 
 interface StudySession {
   id: string
@@ -263,6 +264,9 @@ export function ProgressTab({
         </div>
         <ScoreTrendChart sessions={recentSessions} />
       </div>
+
+      {/* Study Activity Heatmap */}
+      <StudyHeatmap sessions={recentSessions} />
 
       {/* MCQ Analytics */}
       <MCQAnalyticsWidget />
