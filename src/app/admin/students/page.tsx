@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   Users,
@@ -23,14 +23,19 @@ import {
   MoreHorizontal,
   Clock,
   Award,
+  ArrowRightLeft,
+  Loader2,
+  RefreshCw,
 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddStudentForm } from '@/components/admin/AddStudentForm'
 import { CreateStudentAccountForm } from '@/components/admin/CreateStudentAccountForm'
+import { ConvertLeadForm } from '@/components/admin/ConvertLeadForm'
 import { showToast } from '@/lib/toast'
 import { EditStudentForm } from '@/components/admin/EditStudentForm'
+import toast from 'react-hot-toast'
 
 interface Student {
   id: string
@@ -145,6 +150,36 @@ export default function StudentsPage() {
   const [isCreateAccountModalOpen, setIsCreateAccountModalOpen] = useState(false)
   const [isEditStudentModalOpen, setIsEditStudentModalOpen] = useState(false)
   const [selectedStudent, setSelectedStudent] = useState<Student | null>(null)
+  const [activeTab, setActiveTab] = useState<'students' | 'leads'>('students')
+  const [leads, setLeads] = useState<any[]>([])
+  const [leadsLoading, setLeadsLoading] = useState(false)
+  const [leadSearch, setLeadSearch] = useState('')
+  const [isConvertModalOpen, setIsConvertModalOpen] = useState(false)
+  const [selectedLead, setSelectedLead] = useState<any>(null)
+
+  const fetchLeads = useCallback(async () => {
+    try {
+      setLeadsLoading(true)
+      const params = new URLSearchParams()
+      if (leadSearch) params.set('search', leadSearch)
+      params.set('limit', '50')
+      const res = await fetch(`/api/admin/leads?${params.toString()}`)
+      const data = await res.json()
+      if (data.success) {
+        setLeads(data.data)
+      }
+    } catch {
+      toast.error('Failed to load leads')
+    } finally {
+      setLeadsLoading(false)
+    }
+  }, [leadSearch])
+
+  useEffect(() => {
+    if (activeTab === 'leads') {
+      fetchLeads()
+    }
+  }, [activeTab, fetchLeads])
 
   useEffect(() => {
     let filtered = students
@@ -280,6 +315,172 @@ export default function StudentsPage() {
           </div>
         </div>
 
+        {/* Tabs */}
+        <div className="border-b border-gray-200">
+          <nav className="flex space-x-8">
+            <button
+              onClick={() => setActiveTab('students')}
+              className={`pb-3 px-1 text-sm font-medium border-b-2 transition-colors ${
+                activeTab === 'students'
+                  ? 'border-blue-600 text-blue-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              Students & Accounts
+            </button>
+            <button
+              onClick={() => setActiveTab('leads')}
+              className={`pb-3 px-1 text-sm font-medium border-b-2 transition-colors ${
+                activeTab === 'leads'
+                  ? 'border-blue-600 text-blue-600'
+                  : 'border-transparent text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              CRM Leads
+            </button>
+          </nav>
+        </div>
+
+        {activeTab === 'leads' ? (
+          <>
+            {/* Lead Search */}
+            <div className="bg-white p-4 rounded-xl border border-gray-200">
+              <div className="flex gap-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search leads by name, email, or phone..."
+                    value={leadSearch}
+                    onChange={(e) => setLeadSearch(e.target.value)}
+                    className="pl-10 pr-4 py-2 w-full border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                </div>
+                <Button variant="outline" onClick={fetchLeads}>
+                  <RefreshCw className="w-4 h-4" />
+                </Button>
+              </div>
+            </div>
+
+            {/* Leads Table */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+            >
+              {leadsLoading ? (
+                <div className="text-center py-12 text-gray-500">Loading leads...</div>
+              ) : (
+                <>
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full divide-y divide-gray-200">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Student Name
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Contact
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Course Interest
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Stage
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Priority
+                          </th>
+                          <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                            Actions
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg-white divide-y divide-gray-200">
+                        {leads.map((lead: any) => (
+                          <tr key={lead.id} className="hover:bg-gray-50">
+                            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+                              {lead.studentName}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                              <div>{lead.email || 'No email'}</div>
+                              <div className="text-gray-400">{lead.phone}</div>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
+                              {lead.courseInterest}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <span
+                                className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${
+                                  lead.stage === 'ACTIVE_STUDENT'
+                                    ? 'bg-green-100 text-green-800'
+                                    : lead.stage === 'LOST'
+                                      ? 'bg-red-100 text-red-800'
+                                      : lead.stage === 'ENROLLED'
+                                        ? 'bg-blue-100 text-blue-800'
+                                        : 'bg-yellow-100 text-yellow-800'
+                                }`}
+                              >
+                                {lead.stage?.replace(/_/g, ' ')}
+                              </span>
+                              {lead.convertedAt && (
+                                <span className="ml-1 inline-flex px-2 py-0.5 text-xs font-medium rounded-full bg-green-100 text-green-700">
+                                  Converted
+                                </span>
+                              )}
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <span
+                                className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${
+                                  lead.priority === 'HOT'
+                                    ? 'bg-red-100 text-red-800'
+                                    : lead.priority === 'WARM'
+                                      ? 'bg-yellow-100 text-yellow-800'
+                                      : 'bg-blue-100 text-blue-800'
+                                }`}
+                              >
+                                {lead.priority}
+                              </span>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              {!lead.convertedAt ? (
+                                <Button
+                                  size="sm"
+                                  className="bg-green-600 hover:bg-green-700 text-white text-xs"
+                                  onClick={() => {
+                                    setSelectedLead(lead)
+                                    setIsConvertModalOpen(true)
+                                  }}
+                                >
+                                  <ArrowRightLeft className="w-3 h-3 mr-1" />
+                                  Convert
+                                </Button>
+                              ) : (
+                                <span className="text-xs text-gray-400">
+                                  Converted {new Date(lead.convertedAt).toLocaleDateString()}
+                                </span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  {leads.length === 0 && !leadsLoading && (
+                    <div className="text-center py-12">
+                      <Users className="mx-auto h-12 w-12 text-gray-400" />
+                      <h3 className="mt-2 text-sm font-medium text-gray-900">No leads found</h3>
+                      <p className="mt-1 text-sm text-gray-500">
+                        Add leads via the CRM to see them here.
+                      </p>
+                    </div>
+                  )}
+                </>
+              )}
+            </motion.div>
+          </>
+        ) : (
+        <>
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {statsData.map((stat, index) => (
@@ -495,7 +696,33 @@ export default function StudentsPage() {
             </div>
           )}
         </motion.div>
+        </>
+        )}
       </div>
+
+      {/* Convert Lead Modal */}
+      {selectedLead && (
+        <Modal
+          open={isConvertModalOpen}
+          onOpenChange={setIsConvertModalOpen}
+          title="Convert Lead to Student Account"
+          description={`Create a student account for "${selectedLead.studentName}"`}
+          size="xl"
+        >
+          <ConvertLeadForm
+            lead={selectedLead}
+            onSuccess={() => {
+              setIsConvertModalOpen(false)
+              setSelectedLead(null)
+              fetchLeads()
+            }}
+            onCancel={() => {
+              setIsConvertModalOpen(false)
+              setSelectedLead(null)
+            }}
+          />
+        </Modal>
+      )}
 
       {/* Create Student Account Modal */}
       <Modal
