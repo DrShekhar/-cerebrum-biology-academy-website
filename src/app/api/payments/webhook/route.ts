@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { Redis } from '@upstash/redis'
+import { mapCourseToTier } from '@/lib/payments/tierMapping'
 
 // SECURITY: Redis-backed webhook event deduplication for multi-instance deployments
 const EVENT_EXPIRY_SECONDS = 24 * 60 * 60 // 24 hours
@@ -219,7 +220,19 @@ async function handlePaymentSuccess(event: any) {
           })
         }
 
-        console.log('Webhook: Enrollment activated:', paymentRecord.enrollmentId)
+        // Set coachingTier based on course/enrollment fees
+        const tierFromCourse = mapCourseToTier(
+          paymentRecord.enrollment.courseId,
+          paymentRecord.enrollment.totalFees
+        )
+        await tx.users.update({
+          where: { id: paymentRecord.userId },
+          data: { coachingTier: tierFromCourse },
+        })
+
+        console.log(
+          `Webhook: Enrollment activated: ${paymentRecord.enrollmentId}, tier set to: ${tierFromCourse}`
+        )
       }
     })
 

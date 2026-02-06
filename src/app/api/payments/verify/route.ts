@@ -5,6 +5,7 @@ import { rateLimit } from '@/lib/rateLimit'
 import { prisma } from '@/lib/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 import { validateUserSession } from '@/lib/auth/config'
+import { mapCourseToTier } from '@/lib/payments/tierMapping'
 
 const paymentVerificationSchema = z.object({
   order_id: z.string().optional(),
@@ -183,7 +184,19 @@ export async function POST(request: NextRequest) {
               )
             }
 
-            console.log(`Enrollment activated: ${payment.enrollmentId}`)
+            // Set coachingTier based on course/enrollment fees
+            const tierFromCourse = mapCourseToTier(
+              payment.enrollment.courseId,
+              payment.enrollment.totalFees
+            )
+            await tx.users.update({
+              where: { id: payment.userId },
+              data: { coachingTier: tierFromCourse },
+            })
+
+            console.log(
+              `Enrollment activated: ${payment.enrollmentId}, tier set to: ${tierFromCourse}`
+            )
           }
 
           console.log(`Payment verified and updated: ${orderId}`)
