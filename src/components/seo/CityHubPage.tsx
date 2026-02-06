@@ -537,6 +537,71 @@ export function CityHubPage({ data }: CityHubPageProps) {
           </div>
         </section>
 
+        {/* Area-Specific Content (unique per location) */}
+        {(data.localContext || data.areaSpecificContent || data.studentSuccessStory) && (
+          <section className="py-16">
+            <div className="container mx-auto px-4">
+              <div className="mx-auto max-w-4xl space-y-8">
+                {data.areaSpecificContent?.whyThisArea && (
+                  <div className="rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 p-8">
+                    <h2 className="mb-4 text-2xl font-bold text-gray-900">
+                      Why {data.cityName} Students Choose Cerebrum
+                    </h2>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      {data.areaSpecificContent.whyThisArea}
+                    </p>
+                  </div>
+                )}
+
+                {data.localContext && (
+                  <div className="grid gap-4 md:grid-cols-2">
+                    {data.localContext.nearbyLandmarks && (
+                      <div className="rounded-xl border border-gray-200 bg-white p-6">
+                        <div className="mb-3 flex items-center gap-2">
+                          <MapPin className="h-5 w-5 text-[#4a5d4a]" />
+                          <h3 className="font-semibold text-gray-900">Location</h3>
+                        </div>
+                        <p className="text-gray-600">{data.localContext.nearbyLandmarks}</p>
+                      </div>
+                    )}
+                    {data.localContext.transportOptions && (
+                      <div className="rounded-xl border border-gray-200 bg-white p-6">
+                        <div className="mb-3 flex items-center gap-2">
+                          <Navigation className="h-5 w-5 text-[#4a5d4a]" />
+                          <h3 className="font-semibold text-gray-900">How to Reach</h3>
+                        </div>
+                        <p className="text-gray-600">{data.localContext.transportOptions}</p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {data.studentSuccessStory && (
+                  <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 p-8">
+                    <div className="mb-4 flex items-center gap-2">
+                      <Star className="h-5 w-5 text-yellow-500" />
+                      <h3 className="font-semibold text-gray-900">Student Success Story</h3>
+                    </div>
+                    <blockquote className="mb-4 text-lg italic text-gray-700">
+                      &ldquo;{data.studentSuccessStory.quote}&rdquo;
+                    </blockquote>
+                    <div className="flex items-center gap-3">
+                      <div>
+                        <p className="font-semibold text-gray-900">
+                          {data.studentSuccessStory.name}
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          {data.studentSuccessStory.area} | {data.studentSuccessStory.achievement}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* How Cerebrum Helps You Get Into Medical College */}
         <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-20 text-white">
           <div className="container mx-auto px-4">

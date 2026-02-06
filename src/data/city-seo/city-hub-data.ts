@@ -64,6 +64,19 @@ export const cityHubData: Record<string, CityHubData> = {
       lat: '28.5355',
       lng: '77.3910',
     },
+    localContext: {
+      nearbyLandmarks: 'Serving students across Noida — Sectors 18, 50, 62, 137, and Greater Noida.',
+      transportOptions: 'Blue Line Metro to Noida Sector 18/City Centre. Our South Delhi center is 25 min via Noida-Greater Noida Expressway. Online classes available for all Noida students.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Noida has 1,200+ NEET aspirants but lacks dedicated Biology coaching. Most students commute to Delhi or settle for generic coaching. Our live online classes bring AIIMS-faculty teaching directly to Noida homes, saving 2+ hours of daily commute. Students can also attend our South Delhi center on weekends for practical sessions.',
+    },
+    studentSuccessStory: {
+      name: 'Aarav T.',
+      area: 'Sector 62, Noida',
+      achievement: 'NEET 2025 — 630/720, VMMC Delhi',
+      quote: 'Online classes from Cerebrum were better than the offline coaching I attended in Kota. The interactive sessions and WhatsApp doubt support made up for not being physically present.',
+    },
   },
 
   gurgaon: {
@@ -132,6 +145,23 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: {
       lat: '28.4595',
       lng: '77.0266',
+    },
+    localContext: {
+      nearbyLandmarks: 'M2K Corporate Park, Sector 51, opposite Unitech Cyber Park. Near Rapid Metro Sector 53-54 station.',
+      transportOptions: 'Rapid Metro to Sector 53-54, then 5 min auto. Delhi Metro Yellow Line to HUDA City Centre, then auto/cab (20 min). NH-48 expressway exit at Sector 51.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Gurgaon has the highest concentration of premium schools in Haryana — DPS, Pathways World School, Shri Ram School, GD Goenka. With 800+ students from across Gurgaon sectors, our M2K Corporate Park center is the only AIIMS-faculty biology coaching in the Millennium City. Students from Sector 14 to Sector 82, DLF Phase 1-5, and Sohna Road all attend here.',
+    },
+    studentSuccessStory: {
+      name: 'Riya M.',
+      area: 'DLF Phase 4',
+      achievement: 'NEET 2025 — 665/720, Maulana Azad Medical College',
+      quote: 'I switched from a big coaching chain to Cerebrum. The small batch size and Dr. Shekhar\'s direct mentoring made all the difference. Biology went from my weakest to my strongest subject.',
+    },
+    competitorComparison: {
+      localAlternatives: 'Aakash Gurgaon, Allen Gurgaon, FIITJEE Gurgaon, Narayana Gurgaon',
+      differentiator: 'Only dedicated Biology-only institute in Gurgaon. AIIMS-alumni faculty vs generic science teachers. 15-student batches vs 80+ at big chains. Direct WhatsApp access to faculty.',
     },
   },
 
@@ -1316,6 +1346,19 @@ export const cityHubData: Record<string, CityHubData> = {
       lat: '28.4089',
       lng: '77.3178',
     },
+    localContext: {
+      nearbyLandmarks: 'Serving all Faridabad sectors, Ballabhgarh, and NIT areas. Nearest center: South Delhi (Ring Road).',
+      transportOptions: 'Violet Line Metro to Badarpur Border, then auto to South Delhi center (30 min total). Online classes available for all Faridabad students.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Faridabad has 650+ NEET aspirants with limited quality Biology coaching options locally. Our hybrid model lets students attend online on weekdays and visit the South Delhi center for weekend doubt sessions. Many Faridabad students have topped NEET from our coaching — the Violet Line metro makes our center very accessible.',
+    },
+    studentSuccessStory: {
+      name: 'Kavya R.',
+      area: 'Sector 21C, Faridabad',
+      achievement: 'NEET 2025 — 610/720, Safdarjung Hospital',
+      quote: 'Faridabad doesn\'t have good Biology-specific coaching. Cerebrum\'s online classes + weekend offline sessions were perfect. I could study at home and still get that classroom interaction.',
+    },
   },
 
   ghaziabad: {
@@ -1728,6 +1771,23 @@ export const cityHubData: Record<string, CityHubData> = {
       lat: '28.5732',
       lng: '77.2189',
     },
+    localContext: {
+      nearbyLandmarks: 'Near Select Citywalk Mall, 5 min walk from South Extension Metro (Pink Line). Opposite Masjid Moth.',
+      transportOptions: 'Pink Line to South Extension Metro, then 5 min walk. Auto from AIIMS Metro (15 min). Bus routes 502, 522 stop at Ring Road.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'South Delhi is home to some of India\'s top schools — DPS RK Puram, Sanskriti School, Modern School, Sardar Patel Vidyalaya. Our Ring Road center serves 1,500+ students from GK, Lajpat Nagar, Defence Colony, and surrounding areas. The location was chosen specifically for its metro connectivity, making it accessible from Hauz Khas to Nehru Place.',
+    },
+    studentSuccessStory: {
+      name: 'Ananya S.',
+      area: 'Greater Kailash',
+      achievement: 'NEET 2025 — 680/720, AIIMS Delhi',
+      quote: 'The South Extension center was just 10 minutes from my home in GK. Dr. Shekhar Sir\'s teaching made Biology my strongest subject. I scored 360/360 in Biology!',
+    },
+    competitorComparison: {
+      localAlternatives: 'Aakash South Ex, Allen South Delhi, Physics Wallah offline center',
+      differentiator: 'Only AIIMS-alumni faculty in South Delhi. 15-20 student batches vs 60+ at Aakash/Allen. Personalized doubt resolution via WhatsApp, not just classroom hours.',
+    },
   },
 
   rohini: {
@@ -1791,6 +1851,23 @@ export const cityHubData: Record<string, CityHubData> = {
     geoCoordinates: {
       lat: '28.7143',
       lng: '77.1117',
+    },
+    localContext: {
+      nearbyLandmarks: 'Near DC Chowk, Sector 7 Rohini. Adjacent to Rohini West Metro Station (Red Line). Opposite Metro Pillar 397.',
+      transportOptions: 'Red Line to Rohini West Metro, then 2 min walk. Also accessible from Rithala Metro. Bus routes 871, 908 stop at DC Chowk.',
+    },
+    areaSpecificContent: {
+      whyThisArea: 'Rohini is North Delhi\'s largest planned residential area with 1,200+ NEET aspirants. Our DC Chowk center serves students from all 25 Rohini sectors, Pitampura, Model Town, Shalimar Bagh, and even Sonipat (via Red Line). The center is strategically located at the Red Line metro, making it the most accessible biology coaching in North-West Delhi.',
+    },
+    studentSuccessStory: {
+      name: 'Priya K.',
+      area: 'Sector 16, Rohini',
+      achievement: 'NEET 2025 — 645/720, Lady Hardinge Medical College',
+      quote: 'I used to travel to South Delhi for coaching but the 2-hour commute was draining. Cerebrum Rohini saved me 4 hours daily. Used that time for self-study and cracked NEET in first attempt!',
+    },
+    competitorComparison: {
+      localAlternatives: 'Aakash Rohini, Allen Pitampura, FIITJEE Rohini',
+      differentiator: 'Only Biology-specialist institute in North Delhi. AIIMS-trained Dr. Shekhar Sir teaches directly. Batches of 15 vs 100+ at Aakash/Allen Rohini. Weekend batches for school-going students.',
     },
   },
 

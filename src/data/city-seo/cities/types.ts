@@ -24,4 +24,21 @@ export interface CityHubData {
     lat: string
     lng: string
   }
+  localContext?: {
+    nearbyLandmarks?: string
+    transportOptions?: string
+  }
+  areaSpecificContent?: {
+    whyThisArea?: string
+  }
+  studentSuccessStory?: {
+    name: string
+    area: string
+    achievement: string
+    quote: string
+  }
+  competitorComparison?: {
+    localAlternatives: string
+    differentiator: string
+  }
 }
