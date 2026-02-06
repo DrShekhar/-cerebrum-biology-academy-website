@@ -20,6 +20,7 @@ import {
   ProgressTab,
   WeakAreasTab,
   PracticeTab,
+  ScheduleTab,
   WeakAreaBottomSheet,
   DashboardHeader,
   DashboardTabs,
@@ -465,6 +466,13 @@ export function PersonalizedStudentDashboard() {
           )}
 
           {activeTab === 'practice' && <PracticeTab />}
+
+          {activeTab === 'schedule' && (
+            <ScheduleTab
+              weakAreas={neetProgress.weakAreas}
+              studyStreak={gamificationData?.gamification?.studyStreak}
+            />
+          )}
         </AnimatePresence>
       </div>
 
