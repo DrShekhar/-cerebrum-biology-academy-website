@@ -384,7 +384,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Moderate',
     keyTopics: ['Origin of life', 'Evidences of evolution', 'Hardy-Weinberg', 'Adaptive radiation', 'Human evolution'],
     icon: <TrendingUp className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Human Health and Disease',
@@ -445,6 +445,18 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     keyTopics: ['Bt crops', 'Gene therapy', 'Transgenic animals', 'Biopiracy', 'Ethical issues'],
     icon: <FlaskConical className="w-5 h-5" />,
     available: false,
+  },
+  {
+    name: 'Ecology — Complete Unit Notes',
+    slug: 'ecology',
+    unit: 'Ecology',
+    class: 12,
+    weightage: 18,
+    questionsPerYear: '10-12',
+    difficulty: 'Moderate',
+    keyTopics: ['Population interactions', 'Ecosystem & energy flow', 'Ecological pyramids', 'Nutrient cycling', 'Biodiversity & conservation', 'Species-Area relationship'],
+    icon: <TreePine className="w-5 h-5" />,
+    available: true,
   },
   {
     name: 'Organisms and Populations',

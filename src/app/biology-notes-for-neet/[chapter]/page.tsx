@@ -43,6 +43,24 @@ const CHAPTERS_MAP: Record<string, Chapter> = {
     difficulty: "Hard",
     description: "Complete human physiology notes covering digestion, respiration, circulation, excretion, locomotion, neural control, and hormonal coordination for NEET Biology",
   },
+  "evolution": {
+    name: "Evolution",
+    slug: "evolution",
+    class: 12,
+    unit: "Genetics & Evolution",
+    weightage: 8,
+    difficulty: "Moderate",
+    description: "Origin of life, evidences for evolution, Darwin's natural selection, Hardy-Weinberg principle, genetic drift, gene flow, and human evolution timeline for NEET Biology",
+  },
+  "ecology": {
+    name: "Ecology",
+    slug: "ecology",
+    class: 12,
+    unit: "Ecology",
+    weightage: 18,
+    difficulty: "Moderate",
+    description: "Organisms and populations, population interactions, ecosystem structure, ecological pyramids, nutrient cycling, biodiversity and conservation for NEET Biology",
+  },
 }
 
 /* ─────────────── Generate Static Params ─────────────── */

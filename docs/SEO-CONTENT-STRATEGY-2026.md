@@ -21,7 +21,7 @@
 |--------|-----|----------|--------|
 | Biology Notes hub (pillar page) | /biology-notes-for-neet | HIGH | DONE |
 | How to Score 360 in NEET Biology guide | /blog/how-to-score-360-in-neet-biology | HIGH | DONE |
-| Chapter-wise notes (19 chapters) | /biology-notes/[chapter] | MEDIUM | TODO |
+| Chapter-wise notes (5/19 done: MBI, PIV, Human Phys, Evolution, Ecology) | /biology-notes-for-neet/[chapter] | MEDIUM | IN PROGRESS |
 | Previous Year Questions hub | /neet-previous-year-questions | MEDIUM | DONE |
 | Chapter-wise weightage cluster (10 articles) | /blog/neet-[chapter]-weightage | MEDIUM | TODO |
 

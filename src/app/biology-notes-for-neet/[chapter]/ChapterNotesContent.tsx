@@ -21,7 +21,7 @@ import { CONTACT_INFO } from "@/lib/constants/contactInfo"
 interface Chapter {
   name: string
   slug: string
-  class: 12
+  class: 11 | 12
   unit: string
   weightage: number
   difficulty: "Easy" | "Moderate" | "Hard"
@@ -1719,6 +1719,670 @@ export default function ChapterNotesContent({
     ],
   }
 
+  const evolutionContent = {
+    topics: [
+      {
+        title: "Origin of Life",
+        pyqFrequency: "Medium",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Oparin-Haldane Hypothesis</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>Proposed by:</strong> A.I. Oparin (1924) &amp; J.B.S. Haldane (1928)</p>
+                <p><strong>Theory:</strong> Life originated from non-living matter through chemical evolution</p>
+                <p><strong>Key Idea:</strong> Early Earth had reducing atmosphere with inorganic molecules that gradually formed organic compounds</p>
+              </div>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Miller-Urey Experiment (1953)</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>Objective:</strong> Simulate primitive Earth atmosphere in laboratory</p>
+                <p><strong>Setup:</strong> Flask containing CH₄ (methane), NH₃ (ammonia), H₂ (hydrogen), H₂O (water vapor)</p>
+                <p><strong>Conditions:</strong> Electric sparks &amp; heat to simulate lightning &amp; UV radiation</p>
+                <p><strong>Result:</strong> Synthesized amino acids (5 types initially), sugars, and other organic compounds</p>
+                <p><strong>Significance:</strong> Proved that organic molecules could form from inorganic precursors under early Earth conditions</p>
+              </div>
+              <p className="text-xs text-gray-600 mt-1 italic">PYQ Hint: Questions often ask about setup, raw materials, or what was synthesized</p>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Stages of Chemical Evolution</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>Stage 1:</strong> Formation of simple inorganic molecules (H₂O, CH₄, NH₃, H₂S)</p>
+                <p><strong>Stage 2:</strong> Formation of simple organic molecules (amino acids, nucleotides, sugars)</p>
+                <p><strong>Stage 3:</strong> Formation of complex molecules (proteins, nucleic acids)</p>
+                <p><strong>Stage 4:</strong> Formation of self-replicating molecules (RNA) &amp; protocells</p>
+                <p><strong>Stage 5:</strong> Origin of first cells (chemoheterotrophic prokaryotes)</p>
+              </div>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Evidences for Evolution",
+        pyqFrequency: "High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Homologous Organs vs Analogous Organs</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-blue-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Feature</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Homologous Organs</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Analogous Organs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Origin</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Same embryological origin</td>
+                    <td className="border border-gray-200 px-3 py-2">Different embryological origin</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Function</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Different functions</td>
+                    <td className="border border-gray-200 px-3 py-2">Similar/same functions</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Examples</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Human arm, whale flipper, bat wing</td>
+                    <td className="border border-gray-200 px-3 py-2">Butterfly wing &amp; bird wing</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Evolution</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Divergent evolution</td>
+                    <td className="border border-gray-200 px-3 py-2">Convergent evolution</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Identify whether given organs are homologous or analogous</p>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Vestigial Organs in Humans</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>Nictitating membrane (3rd eyelid):</strong> Vestigial in humans, functional in birds &amp; reptiles</p>
+                <p><strong>Wisdom teeth (3rd molars):</strong> Reduced in size, often impacted</p>
+                <p><strong>Vermiform appendix:</strong> Involved in cellulose digestion in herbivorous ancestors</p>
+                <p><strong>Coccyx (tailbone):</strong> Fused vertebrae; remnant of ancestral tail</p>
+              </div>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Embryological &amp; Biogeographical Evidence</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>Von Baer&apos;s Law:</strong> Embryos of different vertebrates are more similar at early stages; differences appear gradually</p>
+                <p><strong>Darwin&apos;s Finches:</strong> ~14 species evolved from single ancestor on Galapagos Islands with different beak shapes adapted to different food sources — classic example of adaptive radiation</p>
+                <p><strong>Marsupials in Australia:</strong> Isolated continent led to unique fauna; evolved independently from placental mammals</p>
+              </div>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Darwin's Theory & Natural Selection",
+        pyqFrequency: "Very High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Key Concepts of Darwinian Evolution</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>1. Variation:</strong> Individuals within a population show differences (genetic variation)</p>
+                <p><strong>2. Struggle for Existence:</strong> Competition for limited resources (food, space, mates)</p>
+                <p><strong>3. Survival of the Fittest:</strong> Organisms best adapted to environment survive &amp; reproduce</p>
+                <p><strong>4. Natural Selection:</strong> Differential reproductive success based on adaptation</p>
+                <p><strong>5. Speciation:</strong> Over time, isolated populations accumulate different traits forming new species</p>
+              </div>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Types of Natural Selection</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-blue-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Type</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Description</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Effect on Population</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Stabilizing</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Average phenotype favored; extremes eliminated</td>
+                    <td className="border border-gray-200 px-3 py-2">Reduces variation; maintains status quo</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Directional</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">One extreme phenotype favored</td>
+                    <td className="border border-gray-200 px-3 py-2">Shifts population in one direction</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Disruptive</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Both extremes favored; average eliminated</td>
+                    <td className="border border-gray-200 px-3 py-2">Increases variation at extremes</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Industrial Melanism: Biston betularia</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>Pre-Industrial:</strong> Light-colored moths dominant on lichen-covered bark</p>
+                <p><strong>Industrial Revolution:</strong> Pollution darkened bark with soot; dark moths survived better (directional selection)</p>
+                <p><strong>Result:</strong> Dark form increased from &lt;1% to &gt;90% in Manchester in 50 years</p>
+                <p><strong>After Clean Air Act:</strong> Pollution decreased, light moths increased again</p>
+                <p><strong>Significance:</strong> Direct evidence of natural selection in real-time</p>
+              </div>
+              <p className="text-xs text-gray-600 mt-1 italic">PYQ Hint: Explain this example to demonstrate natural selection driven by environmental change</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Mechanism of Evolution",
+        pyqFrequency: "Very High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Hardy-Weinberg Principle</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-3">
+                <p><strong>Definition:</strong> In absence of evolutionary forces, allele &amp; genotype frequencies remain constant across generations</p>
+                <p className="bg-gray-100 p-2 rounded font-mono text-xs font-semibold">
+                  Allele frequency: p + q = 1<br/>
+                  Genotype frequency: p² + 2pq + q² = 1
+                </p>
+                <p><strong>Where:</strong> p = frequency of dominant allele (A), q = frequency of recessive allele (a), p² = AA, 2pq = Aa, q² = aa</p>
+                <p><strong>Assumptions:</strong> No mutations, random mating, no gene flow, no genetic drift (large population), no natural selection</p>
+              </div>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Calculate allele/genotype frequencies; identify which factor violated H-W equilibrium</p>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">5 Factors Affecting Hardy-Weinberg Equilibrium</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-blue-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Factor</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Mechanism</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Effect</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Mutation</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Spontaneous DNA changes create new alleles</td>
+                    <td className="border border-gray-200 px-3 py-2">Introduces variation</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Gene Flow</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Migration of individuals between populations</td>
+                    <td className="border border-gray-200 px-3 py-2">Homogenizes populations</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Genetic Drift</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Random changes in small populations</td>
+                    <td className="border border-gray-200 px-3 py-2">Reduces variation; can fix/lose alleles</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Natural Selection</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Differential reproductive success</td>
+                    <td className="border border-gray-200 px-3 py-2">Changes allele frequencies toward adaptive alleles</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Non-random Mating</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Inbreeding, assortative mating</td>
+                    <td className="border border-gray-200 px-3 py-2">Changes genotype frequencies</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Genetic Drift</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>Founder Effect:</strong> Small group establishes new population; carries only subset of genetic variation from source. Example: Amish population in Pennsylvania</p>
+                <p><strong>Bottleneck Effect:</strong> Large population suddenly reduces in size; survivors carry fraction of genetic variation. Example: Northern elephant seal (hunted to ~20 individuals)</p>
+                <p><strong>Key Point:</strong> Drift is stronger in small populations; negligible in large populations</p>
+              </div>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Human Evolution",
+        pyqFrequency: "High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Timeline of Human Evolution</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-blue-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Species</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Time Period</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Brain (cc)</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Key Features</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Dryopithecus</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">25-20 MYA</td>
+                    <td className="border border-gray-200 px-3 py-2">~400</td>
+                    <td className="border border-gray-200 px-3 py-2">Ape-like; arboreal</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Ramapithecus</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">14-10 MYA</td>
+                    <td className="border border-gray-200 px-3 py-2">~400-500</td>
+                    <td className="border border-gray-200 px-3 py-2">Transitional; possibly bipedal</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Australopithecus</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">4-1 MYA</td>
+                    <td className="border border-gray-200 px-3 py-2">400-500</td>
+                    <td className="border border-gray-200 px-3 py-2">Bipedal; small brain; no tools</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Homo habilis</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">2.4-1.4 MYA</td>
+                    <td className="border border-gray-200 px-3 py-2">600-700</td>
+                    <td className="border border-gray-200 px-3 py-2">Tool maker; omnivorous</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Homo erectus</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">1.8-0.4 MYA</td>
+                    <td className="border border-gray-200 px-3 py-2">900-1100</td>
+                    <td className="border border-gray-200 px-3 py-2">Used fire; hand axes; migrated out of Africa</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Homo neanderthalensis</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">250K-40K YA</td>
+                    <td className="border border-gray-200 px-3 py-2">1200-1600</td>
+                    <td className="border border-gray-200 px-3 py-2">Stocky; burial of dead; ice age adapted</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Homo sapiens</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">200K-present</td>
+                    <td className="border border-gray-200 px-3 py-2">1300-1400</td>
+                    <td className="border border-gray-200 px-3 py-2">Language; culture; art; agriculture</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Arrange species chronologically; identify trends (bipedalism, brain size, tool use)</p>
+            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+              <h4 className="font-semibold mb-3 text-sm">Major Evolutionary Trends</h4>
+              <div className="bg-white p-3 rounded border border-blue-200 text-sm space-y-2">
+                <p><strong>1. Bipedalism:</strong> Earliest distinguishing feature (Australopithecus); freed hands for tool use; structural changes in spine, pelvis</p>
+                <p><strong>2. Brain Size Increase:</strong> 400 cc (Dryopithecus) → 1400 cc (Homo sapiens); enabled complex cognition, language</p>
+                <p><strong>3. Tool Development:</strong> Stone choppers (habilis) → hand axes/fire (erectus) → complex weapons (neanderthalensis) → sophisticated tools/art (sapiens)</p>
+                <p><strong>4. Facial Reduction:</strong> Smaller face, teeth, jaw from ape-like to modern human form</p>
+                <p><strong>5. Language:</strong> Proto-language (erectus) → limited vocal communication (neanderthalensis) → complex grammar &amp; abstract thought (sapiens)</p>
+              </div>
+            </div>
+            <div className="bg-yellow-50 border border-yellow-200 p-3 rounded mt-3">
+              <p className="text-sm"><strong>Mnemonic:</strong> DRAHHNS — Dryopithecus, Ramapithecus, Australopithecus, Habilis, (H.) erectus, Neanderthalensis, Sapiens</p>
+            </div>
+          </div>
+        ),
+      },
+    ],
+  }
+
+  const ecologyContent = {
+    topics: [
+      {
+        title: "Organisms and Populations",
+        pyqFrequency: "High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Responses to Abiotic Factors</h4>
+              <div className="bg-white p-3 rounded border border-green-200">
+                <ul className="text-sm space-y-2 text-gray-700">
+                  <li><strong>Regulate:</strong> Maintain constant internal conditions (homeostasis) — e.g., humans regulating body temperature</li>
+                  <li><strong>Conform:</strong> Internal conditions match external environment — e.g., cold-blooded reptiles</li>
+                  <li><strong>Migrate:</strong> Move to more favorable habitats — e.g., bird migration</li>
+                  <li><strong>Suspend:</strong> Reduce metabolic activity — Dormancy (seeds), Hibernation (winter), Aestivation (summer, e.g., lungfish)</li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Ecological Rules</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>Allen&apos;s Rule:</strong> Animals in colder climates have shorter limbs and ears to reduce heat loss</p>
+                <p><strong>Bergmann&apos;s Rule:</strong> Animals in colder regions are larger to reduce surface area-to-volume ratio and conserve heat</p>
+              </div>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Population Growth Models</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-green-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Model</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Equation</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Curve</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Features</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Exponential</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">dN/dt = rN</td>
+                    <td className="border border-gray-200 px-3 py-2">J-shaped</td>
+                    <td className="border border-gray-200 px-3 py-2">Unlimited resources; no constraints</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Logistic</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">dN/dt = rN(K-N)/K</td>
+                    <td className="border border-gray-200 px-3 py-2">S-shaped</td>
+                    <td className="border border-gray-200 px-3 py-2">Limited resources; slows at carrying capacity K</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm mt-2">
+                <p><strong>r</strong> = intrinsic rate of natural increase &nbsp;|&nbsp; <strong>K</strong> = carrying capacity &nbsp;|&nbsp; <strong>N</strong> = population size</p>
+              </div>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Compare curves and explain why real populations follow logistic model</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Population Interactions",
+        pyqFrequency: "Very High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Types of Population Interactions</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-green-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Interaction</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">A</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">B</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Mutualism</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">+</td>
+                    <td className="border border-gray-200 px-3 py-2">+</td>
+                    <td className="border border-gray-200 px-3 py-2">Lichen (algae + fungus), Mycorrhizae, Fig-wasp</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Competition</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">-</td>
+                    <td className="border border-gray-200 px-3 py-2">-</td>
+                    <td className="border border-gray-200 px-3 py-2">Gause&apos;s competitive exclusion (Paramecium)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Predation</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">+</td>
+                    <td className="border border-gray-200 px-3 py-2">-</td>
+                    <td className="border border-gray-200 px-3 py-2">Lion-zebra; controls prey population</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Parasitism</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">+</td>
+                    <td className="border border-gray-200 px-3 py-2">-</td>
+                    <td className="border border-gray-200 px-3 py-2">Tapeworm; Cuckoo brood parasitism</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Commensalism</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">+</td>
+                    <td className="border border-gray-200 px-3 py-2">0</td>
+                    <td className="border border-gray-200 px-3 py-2">Orchid on mango tree; Cattle egret</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Amensalism</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">-</td>
+                    <td className="border border-gray-200 px-3 py-2">0</td>
+                    <td className="border border-gray-200 px-3 py-2">Penicillium inhibiting bacteria</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Key Details</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>Gause&apos;s Competitive Exclusion:</strong> Two species competing for identical niche cannot coexist; one eliminates the other</p>
+                <p><strong>Ectoparasites vs Endoparasites:</strong> Ectoparasites live on surface (lice, ticks); endoparasites live inside host (tapeworm, malaria parasite)</p>
+                <p><strong>Brood Parasitism:</strong> Cuckoo lays eggs in other birds&apos; nests; host bird raises cuckoo chick at expense of own offspring</p>
+              </div>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Identify interaction type from given scenario; very frequently tested</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Ecosystem Structure & Function",
+        pyqFrequency: "Very High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Ecosystem Productivity</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>GPP (Gross Primary Productivity):</strong> Total carbon fixed by plants via photosynthesis</p>
+                <p><strong>NPP (Net Primary Productivity):</strong> GPP minus plant respiration; available for consumers. Formula: NPP = GPP - Respiration</p>
+                <p><strong>Secondary Productivity:</strong> Energy fixed by consumers (herbivores, carnivores)</p>
+                <p><strong>Global NPP:</strong> ~170 billion tons of organic matter/year</p>
+              </div>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Decomposition Process (5 Steps)</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>1. Fragmentation:</strong> Physical breakdown by detritivores (earthworms, termites)</p>
+                <p><strong>2. Leaching:</strong> Water-soluble substances wash out into soil</p>
+                <p><strong>3. Catabolism:</strong> Bacterial &amp; fungal enzymes break down organic compounds</p>
+                <p><strong>4. Humification:</strong> Partially decomposed matter forms humus (dark, stable compound)</p>
+                <p><strong>5. Mineralization:</strong> Release of inorganic nutrients available for plants</p>
+              </div>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Energy Flow &amp; Trophic Levels</h4>
+              <p className="text-sm text-gray-800 mb-2"><strong>Lindeman&apos;s 10% Law:</strong> Only ~10% of energy passes to next trophic level; 90% lost as heat</p>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-green-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Trophic Level</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Organisms</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Energy</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>T1</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Producers</td>
+                    <td className="border border-gray-200 px-3 py-2">100%</td>
+                    <td className="border border-gray-200 px-3 py-2">Grass, algae</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>T2</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Herbivores</td>
+                    <td className="border border-gray-200 px-3 py-2">10%</td>
+                    <td className="border border-gray-200 px-3 py-2">Rabbit, deer</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>T3</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Carnivores</td>
+                    <td className="border border-gray-200 px-3 py-2">1%</td>
+                    <td className="border border-gray-200 px-3 py-2">Frog, fox</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>T4</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Top carnivores</td>
+                    <td className="border border-gray-200 px-3 py-2">0.1%</td>
+                    <td className="border border-gray-200 px-3 py-2">Hawk, lion</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Explain why food chains rarely exceed 4-5 levels</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Ecological Pyramids",
+        pyqFrequency: "High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Comparison of Three Pyramids</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-green-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Feature</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Numbers</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Biomass</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Energy</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Terrestrial</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Upright</td>
+                    <td className="border border-gray-200 px-3 py-2">Upright</td>
+                    <td className="border border-gray-200 px-3 py-2">Upright</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Aquatic</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Often inverted</td>
+                    <td className="border border-gray-200 px-3 py-2">Inverted</td>
+                    <td className="border border-gray-200 px-3 py-2">Upright</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Can be inverted?</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Yes</td>
+                    <td className="border border-gray-200 px-3 py-2">Yes</td>
+                    <td className="border border-gray-200 px-3 py-2">NO (never)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Key Points</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>Pyramid of Numbers:</strong> Upright in grassland; inverted in tree ecosystem (one tree supports many insects)</p>
+                <p><strong>Pyramid of Biomass:</strong> Inverted in aquatic (phytoplankton biomass &lt; zooplankton due to fast turnover)</p>
+                <p><strong>Pyramid of Energy:</strong> ALWAYS upright — follows 2nd law of thermodynamics; energy lost as heat at each level</p>
+              </div>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Explain why pyramid of energy can never be inverted</p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Nutrient Cycling & Ecosystem Services",
+        pyqFrequency: "Medium",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Carbon vs Phosphorus Cycles</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-green-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Feature</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Carbon Cycle</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Phosphorus Cycle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Type</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Gaseous cycle</td>
+                    <td className="border border-gray-200 px-3 py-2">Sedimentary cycle</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Atmosphere?</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Yes (CO₂)</td>
+                    <td className="border border-gray-200 px-3 py-2">No gaseous phase</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>Reservoir</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Atmosphere &amp; oceans (71% dissolved)</td>
+                    <td className="border border-gray-200 px-3 py-2">Earth&apos;s crust (rocks)</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Key process</strong></td>
+                    <td className="border border-gray-200 px-3 py-2">Photosynthesis &amp; respiration</td>
+                    <td className="border border-gray-200 px-3 py-2">Weathering &amp; sedimentation</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Ecosystem Services</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p>Pollination, oxygen production, nutrient cycling, water purification, climate regulation, genetic resources for medicine</p>
+                <p><strong>Robert Costanza (1997):</strong> Global ecosystem services estimated at ~$33 trillion/year</p>
+              </div>
+            </div>
+          </div>
+        ),
+      },
+      {
+        title: "Biodiversity & Conservation",
+        pyqFrequency: "Very High",
+        content: (
+          <div className="space-y-4">
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Species Diversity &amp; Species-Area Relationship</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>Alpha (α):</strong> Diversity within a single community</p>
+                <p><strong>Beta (β):</strong> Diversity between communities (species turnover)</p>
+                <p><strong>Gamma (γ):</strong> Total regional diversity</p>
+                <p className="bg-gray-100 p-2 rounded font-mono text-xs font-semibold mt-2">
+                  Species-Area: log S = log C + Z log A
+                </p>
+                <p><strong>Z values:</strong> 0.1-0.2 (within continents) | 0.6-1.2 (islands — steeper slope)</p>
+              </div>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Latitudinal Gradient &amp; Causes of Loss</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>Pattern:</strong> Tropics have highest diversity (40% of species in 10% of area); richness decreases toward poles</p>
+                <p><strong>HIPPO — Causes of biodiversity loss:</strong></p>
+                <p><strong>H</strong>abitat loss (#1 threat) | <strong>I</strong>nvasive species | <strong>P</strong>ollution | <strong>P</strong>opulation growth | <strong>O</strong>verexploitation</p>
+              </div>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">Conservation: In-situ vs Ex-situ</h4>
+              <table className="w-full text-xs border-collapse">
+                <thead>
+                  <tr className="bg-green-100">
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Approach</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Methods</th>
+                    <th className="border border-gray-200 px-3 py-2 text-left font-semibold">Examples</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="border border-gray-200 px-3 py-2"><strong>In-situ</strong> (in natural habitat)</td>
+                    <td className="border border-gray-200 px-3 py-2">National parks, sanctuaries, biosphere reserves, sacred groves, hotspots</td>
+                    <td className="border border-gray-200 px-3 py-2">Jim Corbett, Kaziranga, Western Ghats</td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="border border-gray-200 px-3 py-2"><strong>Ex-situ</strong> (outside habitat)</td>
+                    <td className="border border-gray-200 px-3 py-2">Zoos, botanical gardens, seed banks, cryopreservation</td>
+                    <td className="border border-gray-200 px-3 py-2">IARI seed bank, captive breeding programs</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
+              <h4 className="font-semibold text-green-900 mb-3">India&apos;s Biodiversity</h4>
+              <div className="bg-white p-3 rounded border border-green-200 text-sm space-y-2">
+                <p><strong>Status:</strong> One of 12 mega-diversity nations (7-8% of world&apos;s species on 2% land)</p>
+                <p><strong>4 Biodiversity Hotspots:</strong> Western Ghats, Himalayas, Indo-Burma, Sundaland (Andaman/Nicobar)</p>
+              </div>
+              <p className="text-xs text-gray-600 mt-2 italic">PYQ Hint: Name conservation areas; explain HIPPO; species-area relationship calculations</p>
+            </div>
+          </div>
+        ),
+      },
+    ],
+  }
+
   const getContentForChapter = () => {
     if (slug === "molecular-basis-of-inheritance") {
       return molecularBasisContent
@@ -1726,6 +2390,10 @@ export default function ChapterNotesContent({
       return principlesInheritanceContent
     } else if (slug === "human-physiology") {
       return humanPhysiologyContent
+    } else if (slug === "evolution") {
+      return evolutionContent
+    } else if (slug === "ecology") {
+      return ecologyContent
     }
     return { topics: [] }
   }

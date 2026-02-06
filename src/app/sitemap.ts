@@ -105,6 +105,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.88,
     },
     {
+      url: `${baseUrl}/biology-notes-for-neet/evolution`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-notes-for-neet/ecology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.88,
+    },
+    {
       url: `${baseUrl}/neet-previous-year-questions`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
