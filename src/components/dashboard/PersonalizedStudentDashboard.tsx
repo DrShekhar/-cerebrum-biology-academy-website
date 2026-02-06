@@ -19,6 +19,7 @@ import {
   ToolsHubTab,
   ProgressTab,
   WeakAreasTab,
+  PracticeTab,
   WeakAreaBottomSheet,
   DashboardHeader,
   DashboardTabs,
@@ -462,6 +463,8 @@ export function PersonalizedStudentDashboard() {
               }}
             />
           )}
+
+          {activeTab === 'practice' && <PracticeTab />}
         </AnimatePresence>
       </div>
 
