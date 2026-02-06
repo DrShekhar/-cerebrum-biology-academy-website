@@ -2,16 +2,22 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Brain, Target, Play, BookOpen } from 'lucide-react'
+import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
+import { BottomNavigation } from '@/components/mobile/MobileFullscreenMenu'
 
 interface DashboardEmptyStateProps {
   userName?: string
 }
 
 export function DashboardEmptyState({ userName }: DashboardEmptyStateProps) {
+  const pathname = usePathname()
+  const { defaultActions } = useDashboardFAB()
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-navy-50 via-green-50 to-gold-50">
+    <div className="min-h-screen bg-gradient-to-br from-navy-50 via-green-50 to-gold-50 pb-20 md:pb-0">
       <div className="bg-white shadow-lg border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center space-x-3 sm:space-x-4">
@@ -63,6 +69,9 @@ export function DashboardEmptyState({ userName }: DashboardEmptyStateProps) {
           </div>
         </motion.div>
       </div>
+
+      <FloatingActionButton actions={defaultActions} />
+      <BottomNavigation currentPath={pathname || '/dashboard'} />
     </div>
   )
 }

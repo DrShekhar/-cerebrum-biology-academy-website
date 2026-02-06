@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { AnimatePresence } from 'framer-motion'
-import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3, Wrench } from 'lucide-react'
+import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3, Wrench, RefreshCw, XCircle } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
@@ -43,7 +43,7 @@ export function PersonalizedStudentDashboard() {
   const [currentSession, setCurrentSession] = useState<string>('')
   const [isLoading, setIsLoading] = useState(true)
   const [isRefreshing, setIsRefreshing] = useState(false)
-  const [_error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
   const [selectedWeakArea, setSelectedWeakArea] = useState<WeakArea | null>(null)
@@ -106,20 +106,12 @@ export function PersonalizedStudentDashboard() {
         }
 
         // Parallel fetch for performance with retry logic
-        const [attemptsResponse, dashboardStatsResponse] = await Promise.allSettled([
+        const [attemptsResponse] = await Promise.allSettled([
           fetchWithRetry(`/api/test-attempts?freeUserId=${userId}`, {
             retryOptions: {
               maxRetries: 3,
               onRetry: (attempt) => {
                 console.log(`Retrying attempts fetch (attempt ${attempt})`)
-              },
-            },
-          }),
-          fetchWithRetry(`/api/analytics/dashboard?type=student&userId=${userId}`, {
-            retryOptions: {
-              maxRetries: 2,
-              onRetry: (attempt) => {
-                console.log(`Retrying dashboard stats fetch (attempt ${attempt})`)
               },
             },
           }),
@@ -220,14 +212,6 @@ export function PersonalizedStudentDashboard() {
           showToast('error', 'Load Failed', 'Could not fetch your test history')
         }
 
-        // Process dashboard stats if available
-        if (dashboardStatsResponse.status === 'fulfilled' && dashboardStatsResponse.value.ok) {
-          const statsData = await dashboardStatsResponse.value.json()
-          if (statsData.success) {
-            console.log('Dashboard stats loaded:', statsData.data)
-          }
-        }
-
         // Fetch gamification data
         const gamificationUserId = freeUserId || user?.id
         if (gamificationUserId) {
@@ -283,6 +267,7 @@ export function PersonalizedStudentDashboard() {
   }, [user?.id, freeUserId, fetchDashboardData])
 
   const pullToRefresh = usePullToRefresh(() => fetchDashboardData(false), 80)
+  const { onTouchStart, onTouchMove, onTouchEnd } = pullToRefresh.handlers
 
   const goToPreviousTab = useCallback(() => {
     setActiveTab((current) => {
@@ -396,7 +381,9 @@ export function PersonalizedStudentDashboard() {
     <div
       ref={dashboardRef}
       className="min-h-screen bg-gradient-to-br from-navy-50 via-green-50 to-gold-50 pb-20 md:pb-0"
-      {...pullToRefresh}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
     >
       <DashboardHeader
         userName={user?.name}
@@ -404,6 +391,33 @@ export function PersonalizedStudentDashboard() {
         isRefreshing={isRefreshing}
         onRefresh={() => fetchDashboardData(false)}
       />
+
+      {error && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-3">
+          <div className="bg-red-50 border border-red-200 rounded-lg p-3 flex items-center justify-between gap-3">
+            <div className="flex items-center gap-2 min-w-0">
+              <XCircle className="w-4 h-4 text-red-500 flex-shrink-0" />
+              <span className="text-sm text-red-700 truncate">{error}</span>
+            </div>
+            <div className="flex items-center gap-2 flex-shrink-0">
+              <button
+                onClick={() => fetchDashboardData(false)}
+                className="flex items-center gap-1 px-3 py-1.5 bg-red-100 hover:bg-red-200 text-red-700 rounded-md text-xs font-medium transition-colors min-h-[32px]"
+              >
+                <RefreshCw className="w-3 h-3" />
+                Retry
+              </button>
+              <button
+                onClick={() => setError(null)}
+                className="p-1 hover:bg-red-100 rounded text-red-400 transition-colors"
+                aria-label="Dismiss error"
+              >
+                <XCircle className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <DashboardTabs
         tabs={tabs}

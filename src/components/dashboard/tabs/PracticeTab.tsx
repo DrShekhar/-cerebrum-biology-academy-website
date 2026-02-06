@@ -26,7 +26,7 @@ const quickPracticeItems = [
   {
     title: 'Mock Tests',
     description: 'Full-length NEET pattern',
-    href: '/neet-biology-mcq',
+    href: '/neet-biology-mcq?mode=mock',
     icon: ClipboardList,
     bg: 'bg-purple-100',
     iconColor: 'text-purple-600',
@@ -34,7 +34,7 @@ const quickPracticeItems = [
   {
     title: 'Adaptive Testing',
     description: 'AI adjusts to your level',
-    href: '/neet-biology-mcq',
+    href: '/adaptive-testing',
     icon: Brain,
     bg: 'bg-teal-100',
     iconColor: 'text-teal-600',
@@ -42,7 +42,7 @@ const quickPracticeItems = [
   {
     title: 'Free Mock Test',
     description: 'Take a full test for free',
-    href: '/neet-biology-mcq',
+    href: '/neet-biology-mcq?mode=free-mock',
     icon: Award,
     bg: 'bg-green-100',
     iconColor: 'text-green-600',
@@ -58,7 +58,7 @@ const quickPracticeItems = [
   {
     title: 'Online Test Series',
     description: 'Scheduled test series',
-    href: '/neet-biology-mcq',
+    href: '/neet-biology-mcq?mode=test-series',
     icon: Target,
     bg: 'bg-red-100',
     iconColor: 'text-red-600',
