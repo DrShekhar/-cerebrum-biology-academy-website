@@ -16,18 +16,23 @@ import {
   BarChart3,
   Calendar,
   Bell,
+  Trophy,
+  Send,
 } from 'lucide-react'
 import Link from 'next/link'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { useFirebaseSession } from '@/hooks/useFirebaseSession'
 
 const navItems = [
+  { href: '/counselor', label: 'Dashboard', icon: LayoutDashboard, shortcut: 'gd', exact: true },
   { href: '/counselor/leads', label: 'Pipeline', icon: Users, shortcut: 'gl' },
   { href: '/counselor/schedule', label: 'Schedule', icon: Calendar, shortcut: 'gs' },
   { href: '/counselor/tasks', label: 'Tasks', icon: ListTodo, shortcut: 'gt' },
   { href: '/counselor/messages', label: 'Messages', icon: MessageSquare, shortcut: 'gm' },
+  { href: '/counselor/bulk-whatsapp', label: 'Bulk WA', icon: Send, shortcut: 'gb' },
   { href: '/counselor/payments', label: 'Payments', icon: CreditCard, shortcut: 'gp' },
   { href: '/counselor/analytics', label: 'Analytics', icon: BarChart3, shortcut: 'ga' },
+  { href: '/counselor/leaderboard', label: 'Leaderboard', icon: Trophy, shortcut: 'gr' },
 ]
 
 function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
@@ -84,12 +89,15 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
         })
         nextKey.then((key) => {
           switch (key) {
+            case 'd': router.push('/counselor'); break
             case 'l': router.push('/counselor/leads'); break
             case 's': router.push('/counselor/schedule'); break
             case 't': router.push('/counselor/tasks'); break
             case 'p': router.push('/counselor/payments'); break
             case 'a': router.push('/counselor/analytics'); break
             case 'm': router.push('/counselor/messages'); break
+            case 'b': router.push('/counselor/bulk-whatsapp'); break
+            case 'r': router.push('/counselor/leaderboard'); break
           }
         })
       }
@@ -127,7 +135,7 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
           <div className="flex items-center justify-between h-16">
             {/* Left: Logo + Nav */}
             <div className="flex items-center gap-8">
-              <Link href="/counselor/leads" className="flex items-center gap-2">
+              <Link href="/counselor" className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <span className="text-white text-sm font-bold">C</span>
                 </div>
@@ -141,7 +149,9 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
               {/* Desktop Nav */}
               <div className="hidden lg:flex items-center gap-1">
                 {navItems.map((item) => {
-                  const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
+                  const isActive = item.exact
+                    ? pathname === item.href
+                    : pathname === item.href || pathname.startsWith(item.href + '/')
                   const Icon = item.icon
                   return (
                     <Link
@@ -208,7 +218,9 @@ function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
         {mobileMenuOpen && (
           <div className="lg:hidden border-t border-gray-200 bg-white pb-3 px-4">
             {navItems.map((item) => {
-              const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
+              const isActive = item.exact
+                ? pathname === item.href
+                : pathname === item.href || pathname.startsWith(item.href + '/')
               const Icon = item.icon
               return (
                 <Link
