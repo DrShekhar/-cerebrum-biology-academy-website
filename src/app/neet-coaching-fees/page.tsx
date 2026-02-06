@@ -206,7 +206,7 @@ const faqs = [
   {
     question: 'Is there a refund policy?',
     answer:
-      'We offer a 7-day money-back guarantee if you're not satisfied. After that, fees for completed months are non-refundable but can be adjusted toward future months.',
+      "We offer a 7-day money-back guarantee if you're not satisfied. After that, fees for completed months are non-refundable but can be adjusted toward future months.",
   },
   {
     question: 'How do fees compare to Allen and Aakash?',
