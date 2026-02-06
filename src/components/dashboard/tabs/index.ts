@@ -3,6 +3,7 @@
 
 export { OverviewTab } from './OverviewTab'
 export { StudySessionTab } from './StudySessionTab'
+export { ToolsHubTab } from './ToolsHubTab'
 export { WeakAreaItem } from './WeakAreaItem'
 export { WeakAreaBottomSheet } from './WeakAreaBottomSheet'
 export { DashboardHeader } from './DashboardHeader'

@@ -1,0 +1,209 @@
+export type ToolCategory =
+  | 'CALCULATOR'
+  | 'PRACTICE'
+  | 'STUDY_MATERIAL'
+  | 'PLANNING'
+  | 'ASSESSMENT'
+
+export interface NEETTool {
+  id: string
+  title: string
+  description: string
+  href: string
+  icon: string
+  category: ToolCategory
+  userCount: string
+  isNew: boolean
+}
+
+export const neetToolsRegistry: NEETTool[] = [
+  {
+    id: 'neet-score-calculator',
+    title: 'NEET Rank Predictor',
+    description: 'Predict your AIR from expected NEET score using historical data',
+    href: '/neet-rank-predictor',
+    icon: 'Calculator',
+    category: 'CALCULATOR',
+    userCount: '50K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-college-predictor',
+    title: 'College Predictor',
+    description: 'Find medical colleges matching your NEET rank and category',
+    href: '/neet-college-predictor',
+    icon: 'Building2',
+    category: 'CALCULATOR',
+    userCount: '35K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-mcq-practice',
+    title: 'MCQ Practice',
+    description: 'Chapter-wise NEET Biology MCQs with detailed explanations',
+    href: '/neet-biology-mcq',
+    icon: 'FileQuestion',
+    category: 'PRACTICE',
+    userCount: '40K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-mock-tests',
+    title: 'Mock Tests',
+    description: 'Full-length NEET Biology mock tests with real exam pattern',
+    href: '/neet-biology-mcq',
+    icon: 'ClipboardList',
+    category: 'ASSESSMENT',
+    userCount: '25K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-adaptive-testing',
+    title: 'Adaptive Testing',
+    description: 'AI-powered tests that adapt to your skill level in real-time',
+    href: '/neet-biology-mcq',
+    icon: 'Brain',
+    category: 'ASSESSMENT',
+    userCount: '10K+',
+    isNew: true,
+  },
+  {
+    id: 'neet-daily-challenge',
+    title: 'Daily Challenge',
+    description: 'Solve a new biology challenge every day and build your streak',
+    href: '/neet-biology-mcq/daily-challenge',
+    icon: 'Flame',
+    category: 'PRACTICE',
+    userCount: '15K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-biology-notes',
+    title: 'Biology Notes',
+    description: 'Comprehensive NCERT-based notes for all NEET Biology chapters',
+    href: '/biology-notes',
+    icon: 'BookOpen',
+    category: 'STUDY_MATERIAL',
+    userCount: '60K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-revision-notes',
+    title: 'Revision Notes',
+    description: 'Quick revision notes and last-minute summaries for all chapters',
+    href: '/biology-notes',
+    icon: 'NotebookPen',
+    category: 'STUDY_MATERIAL',
+    userCount: '30K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-formulas',
+    title: 'Biology Formulas',
+    description: 'All important Biology formulas and diagrams in one place',
+    href: '/biology-notes',
+    icon: 'FlaskConical',
+    category: 'STUDY_MATERIAL',
+    userCount: '20K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-study-plan',
+    title: 'Study Plan Generator',
+    description: 'Generate a personalized week-by-week NEET preparation schedule',
+    href: '/neet-study-plan-generator',
+    icon: 'Calendar',
+    category: 'PLANNING',
+    userCount: '25K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-exam-countdown',
+    title: 'Exam Countdown',
+    description: 'Track days left for NEET 2026 with study phase guidance',
+    href: '/neet-exam-countdown',
+    icon: 'Timer',
+    category: 'PLANNING',
+    userCount: '45K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-syllabus-botany',
+    title: 'Botany Syllabus',
+    description: 'Complete NEET Botany syllabus with chapter-wise weightage',
+    href: '/neet-biology-syllabus',
+    icon: 'Leaf',
+    category: 'STUDY_MATERIAL',
+    userCount: '18K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-syllabus-zoology',
+    title: 'Zoology Syllabus',
+    description: 'Complete NEET Zoology syllabus with chapter-wise weightage',
+    href: '/neet-biology-syllabus',
+    icon: 'Bug',
+    category: 'STUDY_MATERIAL',
+    userCount: '18K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-cutoff',
+    title: 'Cutoff Checker',
+    description: 'Check category-wise NEET cutoff scores for top medical colleges',
+    href: '/neet-college-predictor',
+    icon: 'TrendingUp',
+    category: 'CALCULATOR',
+    userCount: '22K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-free-mock',
+    title: 'Free Mock Test',
+    description: 'Take a free full-length NEET Biology test with instant results',
+    href: '/neet-biology-mcq',
+    icon: 'Award',
+    category: 'ASSESSMENT',
+    userCount: '35K+',
+    isNew: false,
+  },
+  {
+    id: 'neet-omr-checker',
+    title: 'OMR Evaluation',
+    description: 'Check answers against official key with section-wise analysis',
+    href: '/neet-tools/omr-checker',
+    icon: 'ClipboardCheck',
+    category: 'ASSESSMENT',
+    userCount: '8K+',
+    isNew: true,
+  },
+  {
+    id: 'neet-quiz-competition',
+    title: 'Quiz Competition',
+    description: 'Live team-based quizzes with real-time scores on all devices',
+    href: '/neet-tools/quiz-competition',
+    icon: 'Swords',
+    category: 'PRACTICE',
+    userCount: '5K+',
+    isNew: true,
+  },
+  {
+    id: 'neet-pyq-2024',
+    title: 'PYQ 2024',
+    description: 'Practice NEET 2024 previous year questions with solutions',
+    href: '/neet-biology-mcq/pyq-2024',
+    icon: 'History',
+    category: 'PRACTICE',
+    userCount: '28K+',
+    isNew: false,
+  },
+]
+
+export const toolCategories: { id: ToolCategory | 'ALL'; label: string }[] = [
+  { id: 'ALL', label: 'All Tools' },
+  { id: 'PRACTICE', label: 'Practice' },
+  { id: 'ASSESSMENT', label: 'Tests' },
+  { id: 'STUDY_MATERIAL', label: 'Study Material' },
+  { id: 'CALCULATOR', label: 'Calculators' },
+  { id: 'PLANNING', label: 'Planning' },
+]

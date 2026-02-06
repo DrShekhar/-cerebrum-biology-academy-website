@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { AnimatePresence } from 'framer-motion'
-import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3 } from 'lucide-react'
+import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3, Wrench } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
@@ -16,6 +16,7 @@ import { useToast } from '@/components/ui/Toast'
 import {
   OverviewTab,
   StudySessionTab,
+  ToolsHubTab,
   WeakAreaBottomSheet,
   DashboardHeader,
   DashboardTabs,
@@ -50,6 +51,7 @@ export function PersonalizedStudentDashboard() {
     { id: 'overview', label: 'Overview', icon: BarChart3 },
     { id: 'progress', label: 'Progress Tracking', icon: TrendingUp },
     { id: 'study', label: 'Study Session', icon: BookOpen },
+    { id: 'tools', label: 'NEET Tools', icon: Wrench },
     { id: 'weak-areas', label: 'Weak Areas', icon: AlertTriangle },
     { id: 'practice', label: 'Practice Tests', icon: Target },
     { id: 'schedule', label: 'Study Schedule', icon: Calendar },
@@ -422,6 +424,8 @@ export function PersonalizedStudentDashboard() {
               testsCompleted={testsCompleted}
             />
           )}
+
+          {activeTab === 'tools' && <ToolsHubTab />}
 
           {activeTab === 'study' && (
             <StudySessionTab
