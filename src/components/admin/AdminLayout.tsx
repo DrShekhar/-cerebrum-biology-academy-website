@@ -178,6 +178,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         },
         { id: 'failed', name: 'Failed', icon: CreditCard, href: '/admin/payments/failed' },
         { id: 'refunds', name: 'Refunds', icon: CreditCard, href: '/admin/payments/refunds' },
+        { id: 'coupons', name: 'Coupons', icon: CreditCard, href: '/admin/coupons' },
+        { id: 'fee-plans', name: 'Fee Plans', icon: CreditCard, href: '/admin/fee-plans' },
       ],
     },
     {
