@@ -17,6 +17,7 @@ import {
   OverviewTab,
   StudySessionTab,
   ToolsHubTab,
+  ProgressTab,
   WeakAreaBottomSheet,
   DashboardHeader,
   DashboardTabs,
@@ -426,6 +427,17 @@ export function PersonalizedStudentDashboard() {
           )}
 
           {activeTab === 'tools' && <ToolsHubTab />}
+
+          {activeTab === 'progress' && (
+            <ProgressTab
+              neetProgress={neetProgress}
+              recentSessions={recentSessions}
+              gamificationData={gamificationData}
+              totalStudyTime={totalStudyTime}
+              averageScore={averageScore}
+              testsCompleted={testsCompleted}
+            />
+          )}
 
           {activeTab === 'study' && (
             <StudySessionTab
