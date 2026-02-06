@@ -208,6 +208,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           href: '/admin/marketing/abandoned-carts',
           badge: 8,
         },
+        { id: 'alerts', name: 'Alerts', icon: Bell, href: '/admin/alerts' },
       ],
     },
     {
