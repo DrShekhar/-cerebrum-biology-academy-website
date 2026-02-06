@@ -456,7 +456,7 @@ In the meantime, would you like to:
       <motion.button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? 'Close ARIA Sales Agent Chat' : 'Open ARIA Sales Agent Chat'}
-        className="fixed bottom-20 left-4 md:bottom-8 md:left-8 z-[80] bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all"
+        className="fixed bottom-20 left-4 md:bottom-8 md:left-8 z-[45] bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all"
         style={{
           borderRadius: isOpen ? '50%' : '16px',
           padding: isOpen ? '16px' : '12px 16px',
@@ -499,7 +499,7 @@ In the meantime, would you like to:
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className={`fixed z-[80] flex flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl transition-all duration-300 ${
+            className={`fixed z-[45] flex flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl transition-all duration-300 ${
               isFullscreen
                 ? 'inset-0 rounded-none'
                 : 'bottom-36 left-4 w-[calc(100vw-2rem)] max-h-[55dvh] max-h-[55vh] rounded-2xl sm:bottom-24 sm:left-6 sm:w-[400px] sm:max-h-[70dvh] sm:max-h-[70vh] md:w-[420px] lg:max-h-[75dvh] lg:max-h-[75vh] xl:w-[480px]'

@@ -71,13 +71,13 @@ const FirebaseAuthButtons = dynamic(
 export const HeaderHybrid = memo(function HeaderHybrid() {
   return (
     <header
-      className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-100"
+      className="bg-white shadow-md sticky top-0 z-[999] border-b border-gray-100"
       role="banner"
       style={{
         backgroundColor: '#ffffff',
         position: 'sticky',
         top: 0,
-        zIndex: 50,
+        zIndex: 999,
       }}
     >
       <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
