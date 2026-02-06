@@ -234,13 +234,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     {
-      url: `${baseUrl}/locations/mumbai`,
+      url: `${baseUrl}/neet-coaching-west-india`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/locations/bangalore`,
+      url: `${baseUrl}/neet-coaching-south-india`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.9,

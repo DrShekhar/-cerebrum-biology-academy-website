@@ -280,6 +280,36 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/locations/mumbai',
+        destination: '/neet-coaching-west-india',
+        permanent: true,
+      },
+      {
+        source: '/locations/bangalore',
+        destination: '/neet-coaching-south-india',
+        permanent: true,
+      },
+      {
+        source: '/company',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/support',
+        destination: '/help',
+        permanent: true,
+      },
+      {
+        source: '/nseb-coaching',
+        destination: '/nseb-coaching-gurugram',
+        permanent: true,
+      },
+      {
+        source: '/best-biology',
+        destination: '/best-biology-books-for-neet',
+        permanent: true,
+      },
+      {
         source: '/admin-login',
         destination: '/admin',
         permanent: true,

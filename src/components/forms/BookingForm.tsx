@@ -27,8 +27,8 @@ import {
 } from '@/lib/ads/googleAdsConversion'
 
 // Primary contact number for Google Ads conversion tracking
-const PRIMARY_CALL_NUMBER = '9311946297'
-const PRIMARY_CALL_LINK = 'tel:+919311946297'
+const PRIMARY_CALL_NUMBER = '8826444334'
+const PRIMARY_CALL_LINK = 'tel:+918826444334'
 
 interface BookingFormProps {
   type?: 'demo' | 'inquiry' | 'callback'

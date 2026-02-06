@@ -141,16 +141,22 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
           },
         }
 
-        // For MVP, we'll simulate Razorpay (add actual Razorpay script in production)
-        // window.Razorpay(options).open()
-
-        // For demo purposes, simulate successful payment
-        setTimeout(() => {
-          setSuccess(true)
-          // Track successful enrollment for revenue analytics
-          trackCourseEnrollment(course.id, course.name, enrollmentData.amount)
-          onSuccess?.(enrollmentData)
-        }, 2000)
+        // Load and open Razorpay checkout
+        const script = document.createElement('script')
+        script.src = 'https://checkout.razorpay.com/v1/checkout.js'
+        script.onload = () => {
+          const rzp = new (window as any).Razorpay(options)
+          rzp.on('payment.failed', (response: any) => {
+            setError(response.error?.description || 'Payment failed. Please try again.')
+            setIsLoading(false)
+          })
+          rzp.open()
+        }
+        script.onerror = () => {
+          setError('Failed to load payment gateway. Please try again.')
+          setIsLoading(false)
+        }
+        document.body.appendChild(script)
       } else {
         setError(result.error || 'Failed to process enrollment')
         trackFormSubmission('enrollment', false, enrollmentData.amount)
