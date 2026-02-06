@@ -578,7 +578,7 @@ export default function FeesPage() {
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
               >
                 <Phone size={22} />
-                Call {CONTACT_INFO.phone}
+                Call {CONTACT_INFO.phone.display.primary}
               </a>
               <a
                 href="#"
