@@ -39,15 +39,19 @@ export function DashboardTabs({
         </button>
 
         <nav
+          role="tablist"
+          aria-label="Dashboard sections"
           className="flex space-x-2 sm:space-x-8 overflow-x-auto scrollbar-hide"
           {...swipeHandlers}
         >
           {tabs.map((tab) => (
             <button
               key={tab.id}
+              role="tab"
               onClick={() => onTabChange(tab.id)}
               aria-label={tab.label}
-              aria-current={activeTab === tab.id ? 'page' : undefined}
+              aria-selected={activeTab === tab.id}
+              tabIndex={activeTab === tab.id ? 0 : -1}
               className={`flex items-center space-x-1.5 sm:space-x-2 py-3 sm:py-4 px-3 sm:px-2 border-b-2 transition-all whitespace-nowrap flex-shrink-0 touch-action-manipulation min-h-[44px] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded-t-lg ${
                 activeTab === tab.id
                   ? 'border-blue-500 text-blue-600 bg-blue-50'

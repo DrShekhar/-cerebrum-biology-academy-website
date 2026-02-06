@@ -80,8 +80,15 @@ function ScoreTrendChart({ sessions }: { sessions: StudySession[] }) {
   const maxScore = Math.max(...scoreSessions.map((s) => s.score || 0), 100)
   const chartHeight = 160
 
+  const srText = scoreSessions
+    .map(
+      (s) =>
+        `${new Date(s.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}: ${s.score}%`
+    )
+    .join(', ')
+
   return (
-    <div className="relative">
+    <div className="relative" role="img" aria-label={`Score trend chart showing ${scoreSessions.length} test scores: ${srText}`}>
       <div className="flex items-end gap-1.5 sm:gap-2 justify-center" style={{ height: chartHeight }}>
         {scoreSessions.map((session, idx) => {
           const score = session.score || 0

@@ -429,7 +429,7 @@ export function PersonalizedStudentDashboard() {
       />
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
+      <div role="tabpanel" aria-label={tabs.find(t => t.id === activeTab)?.label} className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (
             <OverviewTab

@@ -28,6 +28,7 @@ import {
   Award,
   Users,
   Clock,
+  LayoutDashboard,
 } from 'lucide-react'
 import { useTranslations } from '@/lib/i18n/translations'
 import { QuickLanguageToggle } from './LanguageSwitcher'
@@ -308,8 +309,8 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
               <div className="text-center text-sm text-gray-600">
                 <p className="mb-2">
                   {language === 'hi'
-                    ? '© 2025 सेरेब्रम बायोलॉजी अकादमी'
-                    : '© 2025 Cerebrum Biology Academy'}
+                    ? '© 2026 सेरेब्रम बायोलॉजी अकादमी'
+                    : '© 2026 Cerebrum Biology Academy'}
                 </p>
                 <p>{language === 'hi' ? 'सभी अधिकार सुरक्षित हैं' : 'All rights reserved'}</p>
               </div>
@@ -451,12 +452,17 @@ export function BottomNavigation({ currentPath = '/' }: { currentPath?: string }
   const navItems = [
     { icon: Home, label: t('home'), href: '/', active: currentPath === '/' },
     {
+      icon: LayoutDashboard,
+      label: 'Dashboard',
+      href: '/dashboard',
+      active: currentPath.startsWith('/dashboard'),
+    },
+    {
       icon: BookOpen,
       label: t('courses'),
       href: '/courses',
       active: currentPath.startsWith('/courses'),
     },
-    { icon: Play, label: 'Demo', href: '/demo', active: currentPath === '/demo' },
     { icon: MessageCircle, label: 'Support', href: '/support', active: currentPath === '/support' },
     { icon: User, label: 'Account', href: '/account', active: currentPath.startsWith('/account') },
   ]
