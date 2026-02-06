@@ -2,7 +2,7 @@
 
 > **Goal:** 3-5x organic traffic in 6 months, increase WhatsApp/call inquiries for enrollment
 > **Date:** February 6, 2026
-> **Status:** ACTIVE — Week 1 starting
+> **Status:** ACTIVE — Week 1 in progress (4/6 items done)
 
 ---
 
@@ -11,16 +11,16 @@
 ### Pillar 1: Rank for Enrollment-Intent Keywords
 | Action | URL | Priority | Status |
 |--------|-----|----------|--------|
-| "Best NEET Biology Coaching" comparison page | /best-neet-biology-coaching | HIGH | TODO |
+| "Best NEET Biology Coaching" comparison page | /best-neet-biology-coaching | HIGH | DONE |
 | Optimize Gurugram location page (2000+ words) | /neet-coaching-gurugram | HIGH | TODO |
-| NEET Coaching Fees transparency page | /neet-coaching-fees | HIGH | TODO |
-| Online NEET Coaching landing page | /online-neet-biology-coaching | HIGH | TODO |
+| NEET Coaching Fees transparency page | /neet-coaching-fees | HIGH | DONE |
+| Online NEET Coaching landing page | /online-neet-biology-coaching | HIGH | DONE |
 
 ### Pillar 2: Authority Content for Traffic
 | Action | URL | Priority | Status |
 |--------|-----|----------|--------|
 | Biology Notes hub (pillar page) | /biology-notes-for-neet | HIGH | TODO |
-| How to Score 360 in NEET Biology guide | /blog/how-to-score-360-neet-biology | HIGH | TODO |
+| How to Score 360 in NEET Biology guide | /blog/how-to-score-360-in-neet-biology | HIGH | DONE |
 | Chapter-wise notes (19 chapters) | /biology-notes/[chapter] | MEDIUM | TODO |
 | Previous Year Questions hub | /neet-previous-year-questions | MEDIUM | TODO |
 | Chapter-wise weightage cluster (10 articles) | /blog/neet-[chapter]-weightage | MEDIUM | TODO |
