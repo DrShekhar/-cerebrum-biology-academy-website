@@ -336,7 +336,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Hard',
     keyTopics: ['Mendel laws', 'Incomplete dominance', 'Co-dominance', 'Linkage', 'Pedigree analysis', 'Chromosomal disorders'],
     icon: <Dna className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Molecular Basis of Inheritance',
@@ -348,7 +348,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Hard',
     keyTopics: ['DNA structure', 'Replication', 'Transcription', 'Translation', 'Lac operon', 'Human Genome Project'],
     icon: <Dna className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Evolution',
@@ -559,7 +559,7 @@ function ChapterCard({ chapter, index }: { chapter: Chapter; index: number }) {
       <div className="mt-4 pt-3 border-t border-gray-100">
         {chapter.available ? (
           <Link
-            href={`/biology-notes/${chapter.slug}`}
+            href={`/biology-notes-for-neet/${chapter.slug}`}
             className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-700"
           >
             Read Notes <ArrowRight className="w-4 h-4" />
