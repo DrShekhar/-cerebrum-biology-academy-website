@@ -151,6 +151,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const lastRefreshRef = useRef<number>(0)
   const refreshTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const isRefreshingRef = useRef<boolean>(false)
+  const refreshPromiseRef = useRef<Promise<boolean> | null>(null)
 
   /**
    * Update token expiry time
@@ -352,59 +353,65 @@ export function AuthProvider({ children }: AuthProviderProps) {
 
   // Internal refresh function with locking
   const refreshTokenInternal = async (): Promise<boolean> => {
-    // Prevent concurrent refreshes
-    if (isRefreshingRef.current) {
-      return false
+    // Deduplicate concurrent refresh calls — return the same promise
+    if (isRefreshingRef.current && refreshPromiseRef.current) {
+      return refreshPromiseRef.current
     }
 
     isRefreshingRef.current = true
     const hadUser = !!user // Track if user was logged in before refresh attempt
 
-    try {
-      const response = await fetch('/api/auth/refresh', {
-        method: 'POST',
-        credentials: 'include',
-      })
+    const doRefresh = async (): Promise<boolean> => {
+      try {
+        const response = await fetch('/api/auth/refresh', {
+          method: 'POST',
+          credentials: 'include',
+        })
 
-      if (response.ok) {
-        const data = await response.json()
-        if (data.success && data.user) {
-          setUser(data.user)
-          setPermissions(getUserPermissions(data.user.role))
-          // Update expiry from response
-          updateTokenExpiry(data.expiresIn)
-          lastRefreshRef.current = Date.now()
-          // Clear any previous session expired state
-          setSessionExpired(false)
-          // Schedule next refresh
-          scheduleRefresh()
-          return true
+        if (response.ok) {
+          const data = await response.json()
+          if (data.success && data.user) {
+            setUser(data.user)
+            setPermissions(getUserPermissions(data.user.role))
+            // Update expiry from response
+            updateTokenExpiry(data.expiresIn)
+            lastRefreshRef.current = Date.now()
+            // Clear any previous session expired state
+            setSessionExpired(false)
+            // Schedule next refresh
+            scheduleRefresh()
+            return true
+          }
         }
-      }
 
-      // If refresh fails, clear auth state and notify user
-      console.warn('[AuthContext] Session refresh failed - session expired')
-      setUser(null)
-      setPermissions([])
-      tokenExpiryRef.current = 0
-      // Only show session expired notification if user was previously logged in
-      if (hadUser) {
-        setSessionExpired(true)
+        // If refresh fails, clear auth state and notify user
+        console.warn('[AuthContext] Session refresh failed - session expired')
+        setUser(null)
+        setPermissions([])
+        tokenExpiryRef.current = 0
+        // Only show session expired notification if user was previously logged in
+        if (hadUser) {
+          setSessionExpired(true)
+        }
+        return false
+      } catch (error) {
+        console.error('Token refresh error:', error)
+        setUser(null)
+        setPermissions([])
+        tokenExpiryRef.current = 0
+        // Only show session expired notification if user was previously logged in
+        if (hadUser) {
+          setSessionExpired(true)
+        }
+        return false
+      } finally {
+        isRefreshingRef.current = false
+        refreshPromiseRef.current = null
       }
-      return false
-    } catch (error) {
-      console.error('Token refresh error:', error)
-      setUser(null)
-      setPermissions([])
-      tokenExpiryRef.current = 0
-      // Only show session expired notification if user was previously logged in
-      if (hadUser) {
-        setSessionExpired(true)
-      }
-      return false
-    } finally {
-      isRefreshingRef.current = false
     }
+
+    refreshPromiseRef.current = doRefresh()
+    return refreshPromiseRef.current
   }
 
   const login = async (email: string, password: string, rememberMe: boolean = false) => {

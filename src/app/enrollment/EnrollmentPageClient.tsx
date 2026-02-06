@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 // Dynamic import with SSR disabled to prevent hydration issues with payment components
 const StreamlinedEnrollmentPage = dynamic(
-  () => import('@/components/enrollment/StreamlinedEnrollmentPage'),
+  () => import('@/components/enrollment/StreamlinedEnrollmentPage').then(mod => ({ default: mod.StreamlinedEnrollmentPage })),
   {
     ssr: false,
     loading: () => <EnrollmentSkeleton />

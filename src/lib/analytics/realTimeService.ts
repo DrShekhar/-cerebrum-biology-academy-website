@@ -37,8 +37,8 @@ export class RealTimeAnalyticsService {
           updatedAt: new Date(),
         },
       })
-      .catch(() => {
-        // Handle error silently for real-time updates
+      .catch((error) => {
+        console.error('[RealTimeAnalytics] Failed to update session in database:', error)
       })
 
     // Broadcast updates

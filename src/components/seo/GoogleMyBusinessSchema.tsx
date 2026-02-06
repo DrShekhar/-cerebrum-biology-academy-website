@@ -48,7 +48,7 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
       longitude: 77.0266,
     },
     phone: CONTACT_INFO.phone.primary,
-    email: CONTACT_INFO.email.primary,
+    email: CONTACT_INFO.email.info,
     openingHours: ['Mo-Sa 07:00-21:00', 'Su 09:00-18:00'],
     priceRange: '₹₹',
     images: [
@@ -74,7 +74,7 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
       longitude: 77.2215,
     },
     phone: CONTACT_INFO.phone.primary,
-    email: CONTACT_INFO.email.primary,
+    email: CONTACT_INFO.email.info,
     openingHours: ['Mo-Sa 07:00-21:00', 'Su 09:00-18:00'],
     priceRange: '₹₹',
     images: [
@@ -99,7 +99,7 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
       longitude: 77.1025,
     },
     phone: CONTACT_INFO.phone.primary,
-    email: CONTACT_INFO.email.primary,
+    email: CONTACT_INFO.email.info,
     openingHours: ['Mo-Sa 07:00-21:00', 'Su 09:00-18:00'],
     priceRange: '₹₹',
     images: [

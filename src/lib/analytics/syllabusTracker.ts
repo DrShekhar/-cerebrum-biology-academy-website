@@ -399,44 +399,52 @@ export async function getChapterWiseProgress(
       'Molecular Basis of Inheritance',
     ]
 
+    // Batch query 1: Get all distinct topics across all chapters in one query
+    const allTopics = await prisma.question.findMany({
+      where: {
+        curriculum,
+        grade,
+        isActive: true,
+        OR: chapters.map(chapter => ({ topic: { contains: chapter } })),
+      },
+      select: {
+        topic: true,
+        subtopic: true,
+      },
+      distinct: ['topic', 'subtopic'],
+    })
+
+    // Batch query 2: Get all user progress in one query
+    const allProgress = await prisma.userProgress.findMany({
+      where: {
+        [userField]: userId,
+        curriculum,
+        grade,
+      },
+    })
+
+    // Index progress by topic+subtopic for O(1) lookup
+    const progressMap = new Map<string, typeof allProgress[0]>()
+    for (const p of allProgress) {
+      progressMap.set(`${p.topic}||${p.subtopic || ''}`, p)
+    }
+
+    // Group topics by chapter in memory
     const chapterProgressArray: ChapterProgress[] = []
 
     for (const chapter of chapters) {
-      // Get all topics in this chapter
-      const chapterTopics = await prisma.question.findMany({
-        where: {
-          curriculum,
-          grade,
-          topic: { contains: chapter },
-          isActive: true,
-        },
-        select: {
-          topic: true,
-          subtopic: true,
-        },
-        distinct: ['topic', 'subtopic'],
-      })
+      const chapterTopics = allTopics.filter(t => t.topic.includes(chapter))
 
       if (chapterTopics.length === 0) continue
 
       const totalTopics = chapterTopics.length
-
-      // Get user's progress for these topics
       const topicStatuses: TopicStatus[] = []
       let completedTopics = 0
       let totalAccuracy = 0
       let topicsWithProgress = 0
 
       for (const topicData of chapterTopics) {
-        const progress = await prisma.userProgress.findFirst({
-          where: {
-            [userField]: userId,
-            topic: topicData.topic,
-            subtopic: topicData.subtopic,
-            curriculum,
-            grade,
-          },
-        })
+        const progress = progressMap.get(`${topicData.topic}||${topicData.subtopic || ''}`)
 
         if (progress) {
           topicsWithProgress++

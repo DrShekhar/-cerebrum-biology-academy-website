@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic'
 // Dynamic import with SSR disabled to prevent hydration issues
 // This also prevents the calendar service from running on server
 const DemoBookingSystem = dynamic(
-  () => import('@/components/booking/DemoBookingSystem'),
+  () => import('@/components/booking/DemoBookingSystem').then(mod => ({ default: mod.DemoBookingSystem })),
   {
     ssr: false,
     loading: () => <DemoPageSkeleton />
