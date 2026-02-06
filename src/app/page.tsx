@@ -76,9 +76,6 @@ export const revalidate = 3600
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
-      {/* Client-side components (Exit Intent disabled on homepage) */}
-      <HomePageClient />
-
       {/* 1. Hero Section - Server rendered for instant LCP */}
       {/* LCP Critical: No content-visibility, inline styles for immediate paint */}
       <section
@@ -87,6 +84,9 @@ export default function Home() {
       >
         <HeroSection />
       </section>
+
+      {/* Client-side components (Exit Intent) - AFTER hero for better LCP */}
+      <HomePageClient />
 
       {/* 2. Trust Signals Banner - Compact Version */}
       <section className="content-visibility-auto-sm">

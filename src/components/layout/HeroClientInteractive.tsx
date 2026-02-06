@@ -1,7 +1,32 @@
 'use client'
 
 import { useEffect, useState, memo } from 'react'
-import { Star, Clock, Sparkles, GraduationCap, MessageCircle } from 'lucide-react'
+// PERFORMANCE: Inline SVGs instead of lucide-react to reduce JS bundle (~50KB)
+const StarIcon = () => (
+  <svg className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+  </svg>
+)
+const ClockIcon = ({ className }: { className?: string }) => (
+  <svg className={className || "w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0"} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+)
+const SparklesIcon = ({ className }: { className?: string }) => (
+  <svg className={className || "w-4 xs:w-5 h-4 xs:h-5"} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+  </svg>
+)
+const GraduationCapIcon = ({ className }: { className?: string }) => (
+  <svg className={className || "w-4 h-4"} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222" />
+  </svg>
+)
+const MessageCircleIcon = ({ className }: { className?: string }) => (
+  <svg className={className || "h-5 xs:h-6 w-5 xs:w-6 text-[#25D366] group-hover:scale-110 transition-transform flex-shrink-0"} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+  </svg>
+)
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 const STATIC_STRINGS = {
@@ -31,10 +56,7 @@ interface TimeLeft {
 
 const CountdownDisplay = memo(function CountdownDisplay({ timeLeft }: { timeLeft: TimeLeft }) {
   return (
-    <div
-      className="flex items-center space-x-1 xs:space-x-2 font-mono"
-      style={{ willChange: 'contents' }}
-    >
+    <div className="flex items-center space-x-1 xs:space-x-2 font-mono">
       <div className="bg-white/20 px-2 py-1 rounded text-center">
         <span className="text-white font-bold text-sm xs:text-base">{timeLeft.days}</span>
         <span className="text-red-200 text-xs ml-0.5">d</span>
@@ -52,13 +74,6 @@ const CountdownDisplay = memo(function CountdownDisplay({ timeLeft }: { timeLeft
           {String(timeLeft.minutes).padStart(2, '0')}
         </span>
         <span className="text-red-200 text-xs ml-0.5">m</span>
-      </div>
-      <span className="text-red-200">:</span>
-      <div className="bg-white/20 px-2 py-1 rounded text-center min-w-[40px]">
-        <span className="text-white font-bold text-sm xs:text-base">
-          {String(timeLeft.seconds).padStart(2, '0')}
-        </span>
-        <span className="text-red-200 text-xs ml-0.5">s</span>
       </div>
     </div>
   )
@@ -79,8 +94,8 @@ function useCountdown(targetTime: number): TimeLeft {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 }
   })
 
-  // PERFORMANCE: Use setInterval instead of requestAnimationFrame
-  // RAF runs at 60fps which is overkill for a 1-second countdown
+  // PERFORMANCE: Update every 60s instead of 1s to reduce re-renders and INP
+  // Seconds display removed — showing d:h:m is sufficient for a multi-day countdown
   useEffect(() => {
     const updateCountdown = () => {
       const now = Date.now()
@@ -91,12 +106,12 @@ function useCountdown(targetTime: number): TimeLeft {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
+          seconds: 0,
         })
       }
     }
 
-    const intervalId = setInterval(updateCountdown, 1000)
+    const intervalId = setInterval(updateCountdown, 60000)
     return () => clearInterval(intervalId)
   }, [targetTime])
 
@@ -123,7 +138,7 @@ export function HeroClientInteractive() {
           }
           className="inline-flex items-center justify-center gap-2 bg-transparent hover:bg-[#25D366]/20 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg border-2 border-[#25D366] hover:border-[#20BD5A] hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <MessageCircle className="h-5 xs:h-6 w-5 xs:w-6 text-[#25D366] group-hover:scale-110 transition-transform flex-shrink-0" />
+          <MessageCircleIcon className="h-5 xs:h-6 w-5 xs:w-6 text-[#25D366] group-hover:scale-110 transition-transform flex-shrink-0" />
           <span className="text-[#25D366]">Chat on WhatsApp</span>
         </button>
 
@@ -131,7 +146,7 @@ export function HeroClientInteractive() {
           href="/success-stories"
           className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold py-3 xs:py-4 px-5 xs:px-6 rounded-lg xs:rounded-xl transition-all duration-300 text-sm xs:text-base md:text-lg border border-white/30 hover:border-white/50 hover:scale-[1.02] active:scale-[0.98] group"
         >
-          <Star className="h-5 xs:h-6 w-5 xs:w-6 group-hover:text-yellow-300 transition-colors flex-shrink-0" />
+          <StarIcon />
           Success Stories
         </a>
       </div>
@@ -191,7 +206,7 @@ export function HeroClientInteractive() {
         style={{ animationDelay: '0.5s' }}
       >
         <div className="flex items-center">
-          <Clock className="w-4 xs:w-5 h-4 xs:h-5 mr-2 text-red-300 flex-shrink-0" />
+          <ClockIcon />
           <span className="text-red-100 text-xs xs:text-sm sm:text-base">
             {t('nextBatchStarting')}:
           </span>
@@ -205,7 +220,7 @@ export function HeroClientInteractive() {
         style={{ animationDelay: '0.6s' }}
       >
         <div className="flex items-center space-x-2 text-yellow-200">
-          <Sparkles className="w-4 xs:w-5 h-4 xs:h-5" />
+          <SparklesIcon className="w-4 xs:w-5 h-4 xs:h-5" />
           <span className="text-xs xs:text-sm sm:text-base">
             {t('earlyBirdDiscount').replace('{days}', timeLeft.days.toString())}
           </span>
@@ -214,7 +229,7 @@ export function HeroClientInteractive() {
           href="/neet-2026-preparation"
           className="inline-flex items-center gap-2 bg-orange-700 hover:bg-orange-800 text-white text-xs xs:text-sm font-bold px-4 py-2.5 min-h-[40px] rounded-full shadow-lg hover:shadow-orange-600/30 transition-all duration-300"
         >
-          <GraduationCap className="w-4 h-4" />
+          <GraduationCapIcon className="w-4 h-4" />
           NEET 2026
         </a>
       </div>
