@@ -175,8 +175,7 @@ export function useDashboardFAB() {
       label: 'Ask Doubt',
       icon: MessageCircle,
       onClick: () => {
-        const event = new CustomEvent('dashboard:ask-doubt')
-        window.dispatchEvent(event)
+        window.location.href = '/support'
       },
       color: 'bg-orange-100',
       ariaLabel: 'Ask a question or doubt',

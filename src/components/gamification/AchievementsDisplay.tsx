@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Trophy, CheckCircle } from 'lucide-react'
 
@@ -164,9 +165,12 @@ export function AchievementsDisplay({
 
       {/* View All Link (if needed) */}
       {achievements.length > 0 && totalAchievements > achievements.length && (
-        <button className="w-full mt-6 py-3 bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-lg font-medium text-yellow-700 hover:border-yellow-300 hover:shadow-md transition-all">
+        <Link
+          href="/dashboard?tab=progress"
+          className="block w-full mt-6 py-3 bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-lg font-medium text-yellow-700 hover:border-yellow-300 hover:shadow-md transition-all text-center"
+        >
           View All {totalAchievements} Achievements
-        </button>
+        </Link>
       )}
     </div>
   )

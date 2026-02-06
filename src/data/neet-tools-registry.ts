@@ -4,6 +4,7 @@ export type ToolCategory =
   | 'STUDY_MATERIAL'
   | 'PLANNING'
   | 'ASSESSMENT'
+  | 'COLLABORATION'
 
 export interface NEETTool {
   id: string
@@ -197,6 +198,26 @@ export const neetToolsRegistry: NEETTool[] = [
     userCount: '28K+',
     isNew: false,
   },
+  {
+    id: 'study-rooms',
+    title: 'Study Rooms',
+    description: 'Join virtual study rooms and collaborate with fellow NEET aspirants',
+    href: '/study-rooms',
+    icon: 'Users',
+    category: 'COLLABORATION',
+    userCount: '3K+',
+    isNew: true,
+  },
+  {
+    id: 'ncert-reference',
+    title: 'NCERT Reference',
+    description: 'Quick access to NCERT Biology chapters, diagrams, and key concepts',
+    href: '/biology-notes',
+    icon: 'BookOpen',
+    category: 'STUDY_MATERIAL',
+    userCount: '45K+',
+    isNew: true,
+  },
 ]
 
 export const toolCategories: { id: ToolCategory | 'ALL'; label: string }[] = [
@@ -206,4 +227,5 @@ export const toolCategories: { id: ToolCategory | 'ALL'; label: string }[] = [
   { id: 'STUDY_MATERIAL', label: 'Study Material' },
   { id: 'CALCULATOR', label: 'Calculators' },
   { id: 'PLANNING', label: 'Planning' },
+  { id: 'COLLABORATION', label: 'Collaborate' },
 ]

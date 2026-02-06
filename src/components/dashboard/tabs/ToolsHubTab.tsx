@@ -52,6 +52,7 @@ const iconMap: Record<string, LucideIcon> = {
   ClipboardCheck,
   Swords,
   History,
+  Users,
 }
 
 function ToolCard({ tool }: { tool: NEETTool }) {
