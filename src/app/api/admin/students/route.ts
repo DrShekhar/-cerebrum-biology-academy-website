@@ -3,6 +3,103 @@ import { z } from 'zod'
 import prisma from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 
+export async function GET(request: NextRequest) {
+  try {
+    await requireAdminAuth()
+
+    const { searchParams } = new URL(request.url)
+    const search = searchParams.get('search')
+    const role = searchParams.get('role')
+    const status = searchParams.get('status')
+    const page = parseInt(searchParams.get('page') || '1')
+    const limit = parseInt(searchParams.get('limit') || '50')
+    const offset = (page - 1) * limit
+
+    const where: Record<string, unknown> = {}
+
+    if (role && role !== 'all') {
+      where.role = role.toUpperCase()
+    } else {
+      where.role = { in: ['STUDENT', 'PARENT'] }
+    }
+
+    if (status === 'active') {
+      where.lastActiveAt = { gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) }
+    }
+
+    if (search) {
+      where.OR = [
+        { name: { contains: search, mode: 'insensitive' } },
+        { email: { contains: search, mode: 'insensitive' } },
+        { phone: { contains: search } },
+      ]
+    }
+
+    const [students, total] = await Promise.all([
+      prisma.users.findMany({
+        where,
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          phone: true,
+          role: true,
+          profile: true,
+          coachingTier: true,
+          createdAt: true,
+          lastActiveAt: true,
+          enrollments: {
+            select: {
+              id: true,
+              status: true,
+              courses: { select: { id: true, name: true } },
+            },
+          },
+        },
+        orderBy: { createdAt: 'desc' },
+        skip: offset,
+        take: limit,
+      }),
+      prisma.users.count({ where }),
+    ])
+
+    const roleCounts = await prisma.users.groupBy({
+      by: ['role'],
+      _count: true,
+      where: { role: { in: ['STUDENT', 'PARENT'] } },
+    })
+
+    const activeCount = await prisma.users.count({
+      where: {
+        role: { in: ['STUDENT', 'PARENT'] },
+        lastActiveAt: { gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) },
+      },
+    })
+
+    return NextResponse.json({
+      success: true,
+      data: {
+        students,
+        pagination: { page, limit, total, totalPages: Math.ceil(total / limit) },
+        stats: {
+          total: roleCounts.reduce((s, r) => s + r._count, 0),
+          active: activeCount,
+          roleCounts: roleCounts.reduce(
+            (acc, r) => ({ ...acc, [r.role]: r._count }),
+            {} as Record<string, number>
+          ),
+        },
+      },
+    })
+  } catch (error) {
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+    console.error('Fetch students error:', error)
+    return NextResponse.json({ success: false, error: 'Failed to fetch students' }, { status: 500 })
+  }
+}
+
 const addStudentSchema = z.object({
   studentName: z.string().min(2, 'Name must be at least 2 characters').max(100),
   email: z.string().email('Invalid email address'),
