@@ -1233,11 +1233,499 @@ export default function ChapterNotesContent({
     ],
   }
 
+  const humanPhysiologyContent = {
+    topics: [
+      {
+        title: "Digestion and Absorption",
+        pyqFrequency: "High",
+        content: (
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-blue-900">Alimentary Canal and Digestive Glands</h4>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-blue-900">Human Digestive System</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  The alimentary canal is a continuous muscular tube (~9 metres) running from the <strong>mouth to the anus</strong>. It includes the buccal cavity, pharynx, oesophagus, stomach, small intestine (duodenum, jejunum, ileum), large intestine (caecum, colon, rectum), and anal canal.
+                </p>
+              </div>
+              <div>
+                <h5 className="font-bold text-blue-900">Digestive Glands</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  <strong>Salivary glands</strong> (parotid, sublingual, submandibular) secrete saliva with <strong>salivary amylase</strong> (pH 6.8). <strong>Liver</strong> is the largest gland, secretes bile (no enzymes, emulsifies fats). <strong>Pancreas</strong> is a mixed gland secreting pancreatic juice with trypsinogen, chymotrypsinogen, lipase, amylase, and nucleases.
+                </p>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Digestion in Different Parts</h4>
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-xs border border-gray-200 rounded">
+                <thead className="bg-blue-100">
+                  <tr>
+                    <th className="px-3 py-2 text-left">Region</th>
+                    <th className="px-3 py-2 text-left">Enzyme</th>
+                    <th className="px-3 py-2 text-left">Substrate</th>
+                    <th className="px-3 py-2 text-left">Product</th>
+                    <th className="px-3 py-2 text-left">pH</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t"><td className="px-3 py-2">Mouth</td><td className="px-3 py-2">Salivary amylase</td><td className="px-3 py-2">Starch</td><td className="px-3 py-2">Maltose</td><td className="px-3 py-2">6.8</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-3 py-2">Stomach</td><td className="px-3 py-2">Pepsin</td><td className="px-3 py-2">Proteins</td><td className="px-3 py-2">Peptones</td><td className="px-3 py-2">1.8</td></tr>
+                  <tr className="border-t"><td className="px-3 py-2">Duodenum</td><td className="px-3 py-2">Trypsin</td><td className="px-3 py-2">Proteins</td><td className="px-3 py-2">Peptides</td><td className="px-3 py-2">7.8</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-3 py-2">Duodenum</td><td className="px-3 py-2">Pancreatic lipase</td><td className="px-3 py-2">Fats</td><td className="px-3 py-2">Fatty acids + Glycerol</td><td className="px-3 py-2">7.8</td></tr>
+                  <tr className="border-t"><td className="px-3 py-2">Intestine</td><td className="px-3 py-2">Maltase, Lactase, Sucrase</td><td className="px-3 py-2">Disaccharides</td><td className="px-3 py-2">Monosaccharides</td><td className="px-3 py-2">7.8</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div className="bg-green-50 border border-green-200 p-3 rounded text-sm mt-4">
+              <p className="font-bold text-green-900 mb-2">Absorption of Nutrients</p>
+              <ul className="text-gray-700 space-y-1 text-xs">
+                <li>&#8226; <strong>Small intestine</strong> is the principal site of absorption (villi and microvilli increase surface area)</li>
+                <li>&#8226; Glucose and amino acids: Active transport into blood capillaries</li>
+                <li>&#8226; Fatty acids and glycerol: Absorbed into lacteals as chylomicrons</li>
+                <li>&#8226; Water absorption: Mainly in large intestine (by osmosis)</li>
+              </ul>
+            </div>
+            <p className="text-xs text-gray-600 italic">
+              PYQ Pattern: Enzyme-substrate matching, absorption mechanisms, role of HCl in stomach
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "Breathing and Exchange of Gases",
+        pyqFrequency: "Moderate",
+        content: (
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-blue-900">Respiratory System and Mechanism of Breathing</h4>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-blue-900">Human Respiratory System</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  Consists of nostrils, nasal passages, pharynx, larynx, trachea, bronchi, bronchioles, and <strong>alveoli</strong> (about 300 million per lung). Lungs are covered by a double-layered <strong>pleural membrane</strong> with pleural fluid between them.
+                </p>
+              </div>
+              <div>
+                <h5 className="font-bold text-blue-900">Mechanism of Breathing</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  <strong>Inspiration</strong>: Diaphragm contracts (flattens) + external intercostal muscles contract → thoracic volume increases → intrapulmonary pressure decreases → air rushes in.
+                  <strong> Expiration</strong>: Diaphragm relaxes (dome-shaped) + internal intercostal muscles contract → thoracic volume decreases → air is expelled.
+                </p>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Lung Volumes and Capacities</h4>
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-xs border border-gray-200 rounded">
+                <thead className="bg-blue-100">
+                  <tr>
+                    <th className="px-3 py-2 text-left">Parameter</th>
+                    <th className="px-3 py-2 text-left">Value (approx.)</th>
+                    <th className="px-3 py-2 text-left">Definition</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t"><td className="px-3 py-2 font-bold">Tidal Volume (TV)</td><td className="px-3 py-2">500 mL</td><td className="px-3 py-2">Air inhaled/exhaled in normal breathing</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-3 py-2 font-bold">IRV</td><td className="px-3 py-2">2500-3000 mL</td><td className="px-3 py-2">Extra air inhaled after normal inspiration</td></tr>
+                  <tr className="border-t"><td className="px-3 py-2 font-bold">ERV</td><td className="px-3 py-2">1000-1100 mL</td><td className="px-3 py-2">Extra air exhaled after normal expiration</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-3 py-2 font-bold">Residual Volume (RV)</td><td className="px-3 py-2">1100-1200 mL</td><td className="px-3 py-2">Air remaining after forceful expiration</td></tr>
+                  <tr className="border-t"><td className="px-3 py-2 font-bold">Vital Capacity (VC)</td><td className="px-3 py-2">3400-4800 mL</td><td className="px-3 py-2">TV + IRV + ERV</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Transport of Gases</h4>
+            <div className="bg-yellow-50 border border-yellow-200 p-3 rounded text-sm">
+              <p className="font-bold text-yellow-900 mb-2">Oxygen Transport</p>
+              <ul className="text-gray-700 space-y-1 text-xs">
+                <li>&#8226; ~97% bound to <strong>haemoglobin</strong> as oxyhaemoglobin (HbO&#8322;)</li>
+                <li>&#8226; ~3% dissolved in plasma</li>
+                <li>&#8226; Each Hb binds 4 O&#8322; molecules (cooperative binding = sigmoidal curve)</li>
+                <li>&#8226; Factors shifting O&#8322; dissociation curve RIGHT: &#8593;pCO&#8322;, &#8593;H&#8314;, &#8593;temp (Bohr effect)</li>
+              </ul>
+              <p className="font-bold text-yellow-900 mb-2 mt-3">CO&#8322; Transport</p>
+              <ul className="text-gray-700 space-y-1 text-xs">
+                <li>&#8226; ~70% as bicarbonate ions (HCO&#8323;&#8315;) in plasma</li>
+                <li>&#8226; ~23% as carbaminohaemoglobin (HbCO&#8322;)</li>
+                <li>&#8226; ~7% dissolved in plasma</li>
+              </ul>
+            </div>
+
+            <div className="bg-purple-50 border border-purple-200 p-3 rounded text-sm mt-3">
+              <p className="font-bold text-purple-900">Mnemonic: "70-23-7" for CO&#8322; transport</p>
+              <p className="text-xs text-gray-700">70% bicarbonate, 23% carbaminohaemoglobin, 7% dissolved</p>
+            </div>
+            <p className="text-xs text-gray-600 italic">
+              PYQ Pattern: Lung volume calculations, O&#8322; dissociation curve, Bohr effect, chloride shift
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "Body Fluids and Circulation",
+        pyqFrequency: "Very High",
+        content: (
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-blue-900">Blood Composition and Formed Elements</h4>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-blue-900">Blood Components</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  Blood is a connective tissue (~5-5.5 litres in adults). It consists of <strong>plasma</strong> (~55%) and <strong>formed elements</strong> (~45%). Plasma contains water (90-92%), proteins (albumin, globulin, fibrinogen), and minerals.
+                </p>
+              </div>
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-xs border border-gray-200 rounded">
+                <thead className="bg-blue-100">
+                  <tr>
+                    <th className="px-3 py-2 text-left">Cell Type</th>
+                    <th className="px-3 py-2 text-left">Count</th>
+                    <th className="px-3 py-2 text-left">Function</th>
+                    <th className="px-3 py-2 text-left">Key Feature</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t"><td className="px-3 py-2 font-bold">RBCs</td><td className="px-3 py-2">5-5.5 million/mm&#179;</td><td className="px-3 py-2">O&#8322; transport</td><td className="px-3 py-2">Enucleated, biconcave, 120-day lifespan</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-3 py-2 font-bold">WBCs</td><td className="px-3 py-2">6000-8000/mm&#179;</td><td className="px-3 py-2">Defence and immunity</td><td className="px-3 py-2">Nucleated, 5 types (N,E,B,L,M)</td></tr>
+                  <tr className="border-t"><td className="px-3 py-2 font-bold">Platelets</td><td className="px-3 py-2">1.5-3.5 lakh/mm&#179;</td><td className="px-3 py-2">Blood clotting</td><td className="px-3 py-2">Cell fragments, no nucleus</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Human Heart and Cardiac Cycle</h4>
+            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-red-900">Heart Structure</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  Four-chambered heart (2 atria + 2 ventricles). <strong>Left ventricle</strong> has the thickest wall (pumps blood to the entire body). Valves prevent backflow: <strong>tricuspid</strong> (right AV), <strong>bicuspid/mitral</strong> (left AV), and two semilunar valves (pulmonary and aortic).
+                </p>
+              </div>
+              <div>
+                <h5 className="font-bold text-red-900">Cardiac Cycle (~0.8 seconds)</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  <strong>Atrial systole</strong> (0.1s) → <strong>Ventricular systole</strong> (0.3s) → <strong>Joint diastole</strong> (0.4s). Cardiac output = Stroke volume x Heart rate = ~70 mL x 72 = ~5040 mL/min (~5 litres/min).
+                </p>
+              </div>
+              <div>
+                <h5 className="font-bold text-red-900">Conduction System (SA Node → AV Node → Bundle of His → Purkinje Fibres)</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  <strong>SA node</strong> (pacemaker) generates ~72 impulses/min. Located in the right atrial wall. The heart is <strong>myogenic</strong> (impulse originates from muscle itself, not nerve).
+                </p>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Blood Groups and Coagulation</h4>
+            <div className="bg-green-50 border border-green-200 p-3 rounded text-sm">
+              <p className="font-bold text-green-900 mb-2">ABO Blood Grouping</p>
+              <div className="overflow-x-auto">
+                <table className="min-w-full text-xs border border-gray-200 rounded mt-1">
+                  <thead className="bg-green-100">
+                    <tr>
+                      <th className="px-2 py-1 text-left">Group</th>
+                      <th className="px-2 py-1 text-left">Antigen</th>
+                      <th className="px-2 py-1 text-left">Antibody</th>
+                      <th className="px-2 py-1 text-left">Can Donate To</th>
+                      <th className="px-2 py-1 text-left">Can Receive From</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t"><td className="px-2 py-1 font-bold">A</td><td className="px-2 py-1">A</td><td className="px-2 py-1">Anti-B</td><td className="px-2 py-1">A, AB</td><td className="px-2 py-1">A, O</td></tr>
+                    <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">B</td><td className="px-2 py-1">B</td><td className="px-2 py-1">Anti-A</td><td className="px-2 py-1">B, AB</td><td className="px-2 py-1">B, O</td></tr>
+                    <tr className="border-t"><td className="px-2 py-1 font-bold">AB</td><td className="px-2 py-1">A &amp; B</td><td className="px-2 py-1">None</td><td className="px-2 py-1">AB only</td><td className="px-2 py-1">All (universal acceptor)</td></tr>
+                    <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">O</td><td className="px-2 py-1">None</td><td className="px-2 py-1">Anti-A &amp; Anti-B</td><td className="px-2 py-1">All (universal donor)</td><td className="px-2 py-1">O only</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-gray-700 mt-2 text-xs">
+                <strong>Rh factor:</strong> Rh+ (antigen present) vs Rh- (absent). Erythroblastosis fetalis occurs when Rh- mother carries Rh+ foetus (second pregnancy onward).
+              </p>
+            </div>
+            <p className="text-xs text-gray-600 italic">
+              PYQ Pattern: Cardiac cycle timings, SA node function, blood group compatibility, ECG wave interpretation
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "Excretory Products and their Elimination",
+        pyqFrequency: "High",
+        content: (
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-blue-900">Kidney Structure and Nephron</h4>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-blue-900">Human Excretory System</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  Consists of a pair of <strong>kidneys</strong> (bean-shaped, ~11 cm), ureters, urinary bladder, and urethra. Each kidney has an outer <strong>cortex</strong> and inner <strong>medulla</strong> with renal pyramids. The functional unit is the <strong>nephron</strong> (about 1 million per kidney).
+                </p>
+              </div>
+              <div>
+                <h5 className="font-bold text-blue-900">Types of Nephrons</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  <strong>Cortical nephrons</strong> (~85%): Short loop of Henle, in cortex. <strong>Juxtamedullary nephrons</strong> (~15%): Long loop of Henle extending deep into medulla, essential for concentrating urine.
+                </p>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Urine Formation</h4>
+            <div className="bg-yellow-50 border border-yellow-200 p-3 rounded text-sm">
+              <p className="font-bold text-yellow-900 mb-2">Three Steps of Urine Formation</p>
+              <div className="space-y-2 text-xs text-gray-700">
+                <div className="bg-white p-2 rounded border border-yellow-100">
+                  <p><strong>1. Glomerular Filtration (Ultrafiltration)</strong></p>
+                  <p>Blood filtered in <strong>Bowman&#39;s capsule</strong> under high pressure. GFR = ~125 mL/min (~180 L/day). Filters all plasma components except proteins and blood cells.</p>
+                </div>
+                <div className="bg-white p-2 rounded border border-yellow-100">
+                  <p><strong>2. Tubular Reabsorption</strong></p>
+                  <p>~99% of filtrate reabsorbed. PCT: glucose, amino acids, Na&#8314;, HCO&#8323;&#8315; (obligatory reabsorption). Loop of Henle: countercurrent mechanism. DCT &amp; CD: facultative reabsorption (ADH-dependent).</p>
+                </div>
+                <div className="bg-white p-2 rounded border border-yellow-100">
+                  <p><strong>3. Tubular Secretion</strong></p>
+                  <p>H&#8314;, K&#8314;, urea, and certain drugs secreted from peritubular capillaries into tubular fluid. Helps maintain blood pH and ionic balance.</p>
+                </div>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Countercurrent Mechanism</h4>
+            <div className="bg-indigo-50 border border-indigo-200 p-3 rounded text-sm">
+              <p className="font-bold text-indigo-900 mb-2">Concentrating Urine</p>
+              <p className="text-xs text-gray-700">
+                The <strong>loop of Henle</strong> and <strong>vasa recta</strong> operate as a countercurrent system. The descending limb is permeable to water but not NaCl. The ascending limb is impermeable to water but actively transports NaCl out. This creates a hyperosmotic medullary interstitium (300 to 1200 mOsmol/L), allowing water reabsorption from collecting ducts under ADH influence.
+              </p>
+            </div>
+
+            <div className="bg-purple-50 border border-purple-200 p-3 rounded text-sm mt-3">
+              <p className="font-bold text-purple-900 mb-2">Hormonal Regulation of Kidney Function</p>
+              <ul className="text-gray-700 space-y-1 text-xs">
+                <li>&#8226; <strong>ADH (Vasopressin)</strong>: Increases water reabsorption in DCT and collecting duct</li>
+                <li>&#8226; <strong>Aldosterone</strong>: Increases Na&#8314; reabsorption in DCT (RAAS pathway)</li>
+                <li>&#8226; <strong>ANF (Atrial Natriuretic Factor)</strong>: Decreases Na&#8314; reabsorption → increases urine output</li>
+              </ul>
+            </div>
+            <p className="text-xs text-gray-600 italic">
+              PYQ Pattern: GFR values, countercurrent mechanism, ADH function, nephron structure
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "Locomotion and Movement",
+        pyqFrequency: "Moderate",
+        content: (
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-blue-900">Types of Muscles and Skeletal System</h4>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-blue-900">Types of Muscles</h5>
+                <div className="overflow-x-auto mt-2">
+                  <table className="min-w-full text-xs border border-gray-200 rounded">
+                    <thead className="bg-blue-100">
+                      <tr>
+                        <th className="px-2 py-1 text-left">Feature</th>
+                        <th className="px-2 py-1 text-left">Skeletal</th>
+                        <th className="px-2 py-1 text-left">Smooth</th>
+                        <th className="px-2 py-1 text-left">Cardiac</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-t"><td className="px-2 py-1">Striation</td><td className="px-2 py-1">Striated</td><td className="px-2 py-1">Non-striated</td><td className="px-2 py-1">Striated</td></tr>
+                      <tr className="border-t bg-gray-50"><td className="px-2 py-1">Control</td><td className="px-2 py-1">Voluntary</td><td className="px-2 py-1">Involuntary</td><td className="px-2 py-1">Involuntary</td></tr>
+                      <tr className="border-t"><td className="px-2 py-1">Nuclei</td><td className="px-2 py-1">Multinucleated</td><td className="px-2 py-1">Uninucleated</td><td className="px-2 py-1">Uninucleated</td></tr>
+                      <tr className="border-t bg-gray-50"><td className="px-2 py-1">Intercalated discs</td><td className="px-2 py-1">Absent</td><td className="px-2 py-1">Absent</td><td className="px-2 py-1">Present</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Sliding Filament Theory of Muscle Contraction</h4>
+            <div className="bg-yellow-50 border border-yellow-200 p-3 rounded text-sm">
+              <p className="font-bold text-yellow-900 mb-2">Steps of Muscle Contraction</p>
+              <ol className="text-gray-700 space-y-1 text-xs list-decimal list-inside">
+                <li>Neural signal releases <strong>acetylcholine</strong> at neuromuscular junction</li>
+                <li>Action potential spreads along sarcolemma and T-tubules</li>
+                <li>Ca&#178;&#8314; released from <strong>sarcoplasmic reticulum</strong></li>
+                <li>Ca&#178;&#8314; binds troponin → tropomyosin shifts → exposes actin binding sites</li>
+                <li>Myosin heads bind actin (cross-bridge formation) using ATP</li>
+                <li><strong>Power stroke</strong>: Myosin pulls actin towards centre (A-band stays same, I-band and H-zone narrow)</li>
+                <li>ATP binds myosin → cross-bridge detaches → cycle repeats</li>
+              </ol>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Human Skeletal System</h4>
+            <div className="bg-green-50 border border-green-200 p-3 rounded text-sm">
+              <p className="font-bold text-green-900 mb-2">Total bones: 206</p>
+              <ul className="text-gray-700 space-y-1 text-xs">
+                <li>&#8226; <strong>Axial skeleton</strong> (80 bones): Skull (22), Vertebral column (26), Sternum (1), Ribs (24), Hyoid (1), Ear ossicles (6)</li>
+                <li>&#8226; <strong>Appendicular skeleton</strong> (126 bones): Pectoral girdle (4), Upper limbs (60), Pelvic girdle (2), Lower limbs (60)</li>
+                <li>&#8226; Smallest bone: <strong>Stapes</strong> (middle ear)</li>
+                <li>&#8226; Longest bone: <strong>Femur</strong> (thigh)</li>
+              </ul>
+            </div>
+
+            <div className="bg-indigo-50 border border-indigo-200 p-3 rounded text-sm mt-3">
+              <p className="font-bold text-indigo-900 mb-2">Types of Joints</p>
+              <ul className="text-gray-700 space-y-1 text-xs">
+                <li>&#8226; <strong>Fibrous (immovable)</strong>: Skull sutures</li>
+                <li>&#8226; <strong>Cartilaginous (slightly movable)</strong>: Vertebrae, pubic symphysis</li>
+                <li>&#8226; <strong>Synovial (freely movable)</strong>: Ball-and-socket (hip, shoulder), Hinge (knee, elbow), Pivot (atlas-axis), Gliding (wrist), Saddle (thumb)</li>
+              </ul>
+            </div>
+            <p className="text-xs text-gray-600 italic">
+              PYQ Pattern: Sliding filament mechanism, sarcomere structure, types of joints, bone count
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "Neural Control and Coordination",
+        pyqFrequency: "Very High",
+        content: (
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-blue-900">Nervous System Overview</h4>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-blue-900">Neuron Structure</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  The structural and functional unit of the nervous system. Consists of <strong>cell body</strong> (cyton), <strong>dendrites</strong> (receive impulses), and <strong>axon</strong> (transmits impulses away from cell body). Axon is covered by <strong>myelin sheath</strong> (Schwann cells in PNS, oligodendrocytes in CNS) with gaps called <strong>Nodes of Ranvier</strong>.
+                </p>
+              </div>
+              <div>
+                <h5 className="font-bold text-blue-900">Nerve Impulse Transmission</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  <strong>Resting potential</strong>: -70 mV (inside negative due to Na&#8314;/K&#8314; ATPase pump: 3 Na&#8314; out, 2 K&#8314; in).
+                  <strong> Depolarisation</strong>: Na&#8314; channels open → Na&#8314; rushes in → inside becomes +30 mV.
+                  <strong> Repolarisation</strong>: K&#8314; channels open → K&#8314; moves out → membrane returns to -70 mV.
+                  <strong> Saltatory conduction</strong>: Impulse jumps between Nodes of Ranvier in myelinated neurons (faster).
+                </p>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Synapse and Neurotransmission</h4>
+            <div className="bg-yellow-50 border border-yellow-200 p-3 rounded text-sm">
+              <p className="font-bold text-yellow-900 mb-2">Chemical Synapse</p>
+              <p className="text-xs text-gray-700">
+                When action potential reaches the <strong>synaptic knob</strong>, Ca&#178;&#8314; enters → synaptic vesicles fuse with presynaptic membrane → <strong>neurotransmitter</strong> (e.g. acetylcholine) released into synaptic cleft → binds receptors on postsynaptic membrane → new action potential generated. Neurotransmitter is then broken down by enzymes (e.g. acetylcholinesterase).
+              </p>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Human Brain</h4>
+            <div className="bg-red-50 border border-red-200 p-3 rounded text-sm">
+              <p className="font-bold text-red-900 mb-2">Major Parts and Functions</p>
+              <div className="overflow-x-auto">
+                <table className="min-w-full text-xs border border-gray-200 rounded mt-1">
+                  <thead className="bg-red-100">
+                    <tr>
+                      <th className="px-2 py-1 text-left">Part</th>
+                      <th className="px-2 py-1 text-left">Location</th>
+                      <th className="px-2 py-1 text-left">Key Functions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-t"><td className="px-2 py-1 font-bold">Cerebrum</td><td className="px-2 py-1">Forebrain</td><td className="px-2 py-1">Intelligence, memory, speech, voluntary movements, sensory processing</td></tr>
+                    <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Thalamus</td><td className="px-2 py-1">Forebrain</td><td className="px-2 py-1">Relay station for sensory signals (except smell)</td></tr>
+                    <tr className="border-t"><td className="px-2 py-1 font-bold">Hypothalamus</td><td className="px-2 py-1">Forebrain</td><td className="px-2 py-1">Body temperature, hunger, thirst, circadian rhythms, pituitary control</td></tr>
+                    <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Cerebellum</td><td className="px-2 py-1">Hindbrain</td><td className="px-2 py-1">Balance, posture, coordination of voluntary movements</td></tr>
+                    <tr className="border-t"><td className="px-2 py-1 font-bold">Medulla oblongata</td><td className="px-2 py-1">Hindbrain</td><td className="px-2 py-1">Breathing, heart rate, blood pressure, vomiting, swallowing</td></tr>
+                    <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Pons</td><td className="px-2 py-1">Hindbrain</td><td className="px-2 py-1">Relay between cerebrum and cerebellum, sleep regulation</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-green-50 border border-green-200 p-3 rounded text-sm mt-3">
+              <p className="font-bold text-green-900 mb-2">Reflex Arc</p>
+              <p className="text-xs text-gray-700">
+                <strong>Receptor → Afferent (sensory) neuron → Integration centre (spinal cord) → Efferent (motor) neuron → Effector (muscle/gland)</strong>. Reflex actions are involuntary, automatic responses. Example: knee-jerk reflex (monosynaptic), withdrawal reflex (polysynaptic).
+              </p>
+            </div>
+            <p className="text-xs text-gray-600 italic">
+              PYQ Pattern: Action potential mechanism, synapse transmission, brain parts and functions, reflex arc, cranial nerves
+            </p>
+          </div>
+        ),
+      },
+      {
+        title: "Chemical Coordination and Integration",
+        pyqFrequency: "High",
+        content: (
+          <div className="space-y-4">
+            <h4 className="font-semibold text-lg text-blue-900">Endocrine Glands and Hormones</h4>
+            <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded space-y-3">
+              <div>
+                <h5 className="font-bold text-blue-900">Endocrine System</h5>
+                <p className="text-sm text-gray-700 mt-1">
+                  Endocrine glands are ductless glands that secrete <strong>hormones</strong> directly into the blood. Hormones act on specific <strong>target organs</strong> via receptors. They regulate metabolism, growth, reproduction, and homeostasis.
+                </p>
+              </div>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Major Endocrine Glands and Their Hormones</h4>
+            <div className="overflow-x-auto">
+              <table className="min-w-full text-xs border border-gray-200 rounded">
+                <thead className="bg-blue-100">
+                  <tr>
+                    <th className="px-2 py-1 text-left">Gland</th>
+                    <th className="px-2 py-1 text-left">Hormone</th>
+                    <th className="px-2 py-1 text-left">Function</th>
+                    <th className="px-2 py-1 text-left">Disorder</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-t"><td className="px-2 py-1 font-bold">Pituitary (anterior)</td><td className="px-2 py-1">GH</td><td className="px-2 py-1">Growth of bones and tissues</td><td className="px-2 py-1">Gigantism / Dwarfism / Acromegaly</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Pituitary (anterior)</td><td className="px-2 py-1">TSH, ACTH, FSH, LH, Prolactin</td><td className="px-2 py-1">Regulate other endocrine glands</td><td className="px-2 py-1">Various</td></tr>
+                  <tr className="border-t"><td className="px-2 py-1 font-bold">Pituitary (posterior)</td><td className="px-2 py-1">ADH (Vasopressin)</td><td className="px-2 py-1">Water reabsorption in kidneys</td><td className="px-2 py-1">Diabetes insipidus</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Pituitary (posterior)</td><td className="px-2 py-1">Oxytocin</td><td className="px-2 py-1">Uterine contractions, milk ejection</td><td className="px-2 py-1">-</td></tr>
+                  <tr className="border-t"><td className="px-2 py-1 font-bold">Thyroid</td><td className="px-2 py-1">T&#8323; and T&#8324;</td><td className="px-2 py-1">BMR regulation, growth</td><td className="px-2 py-1">Goitre / Cretinism / Myxoedema / Graves&apos;</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Thyroid</td><td className="px-2 py-1">Calcitonin (TCT)</td><td className="px-2 py-1">Lowers blood Ca&#178;&#8314;</td><td className="px-2 py-1">-</td></tr>
+                  <tr className="border-t"><td className="px-2 py-1 font-bold">Parathyroid</td><td className="px-2 py-1">PTH (Parathormone)</td><td className="px-2 py-1">Raises blood Ca&#178;&#8314;</td><td className="px-2 py-1">Osteoporosis (hypo)</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Adrenal cortex</td><td className="px-2 py-1">Cortisol, Aldosterone</td><td className="px-2 py-1">Stress response, Na&#8314;/K&#8314; balance</td><td className="px-2 py-1">Addison&apos;s / Cushing&apos;s / Conn&apos;s syndrome</td></tr>
+                  <tr className="border-t"><td className="px-2 py-1 font-bold">Adrenal medulla</td><td className="px-2 py-1">Adrenaline, Noradrenaline</td><td className="px-2 py-1">Fight-or-flight response</td><td className="px-2 py-1">-</td></tr>
+                  <tr className="border-t bg-gray-50"><td className="px-2 py-1 font-bold">Pancreas (Islets)</td><td className="px-2 py-1">Insulin (β-cells)</td><td className="px-2 py-1">Lowers blood glucose</td><td className="px-2 py-1">Diabetes mellitus (Type I)</td></tr>
+                  <tr className="border-t"><td className="px-2 py-1 font-bold">Pancreas (Islets)</td><td className="px-2 py-1">Glucagon (α-cells)</td><td className="px-2 py-1">Raises blood glucose</td><td className="px-2 py-1">-</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 className="font-semibold text-lg text-blue-900 mt-4">Mechanism of Hormone Action</h4>
+            <div className="bg-yellow-50 border border-yellow-200 p-3 rounded text-sm">
+              <div className="space-y-2 text-xs text-gray-700">
+                <div className="bg-white p-2 rounded border border-yellow-100">
+                  <p><strong>Peptide/Protein Hormones (Water-soluble)</strong></p>
+                  <p>Cannot enter cell. Bind to <strong>membrane receptors</strong> → activate secondary messengers (cAMP, IP&#8323;, Ca&#178;&#8314;) → cellular response. Examples: Insulin, GH, TSH, ADH.</p>
+                </div>
+                <div className="bg-white p-2 rounded border border-yellow-100">
+                  <p><strong>Steroid Hormones (Lipid-soluble)</strong></p>
+                  <p>Enter cell and bind <strong>intracellular receptors</strong> → hormone-receptor complex acts as transcription factor → gene expression changes. Examples: Cortisol, Aldosterone, Testosterone, Estrogen.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-purple-50 border border-purple-200 p-3 rounded text-sm mt-3">
+              <p className="font-bold text-purple-900">Mnemonic: Feedback Mechanisms</p>
+              <p className="text-xs text-gray-700">
+                Most hormones regulated by <strong>negative feedback</strong> (e.g. high T&#8323;/T&#8324; → inhibits TSH release from pituitary). <strong>Positive feedback</strong> is rare (e.g. oxytocin during labour, LH surge during ovulation).
+              </p>
+            </div>
+            <p className="text-xs text-gray-600 italic">
+              PYQ Pattern: Hormone-gland matching, disorders, mechanism of action (second messenger vs intracellular), feedback loops
+            </p>
+          </div>
+        ),
+      },
+    ],
+  }
+
   const getContentForChapter = () => {
     if (slug === "molecular-basis-of-inheritance") {
       return molecularBasisContent
     } else if (slug === "principles-of-inheritance-and-variation") {
       return principlesInheritanceContent
+    } else if (slug === "human-physiology") {
+      return humanPhysiologyContent
     }
     return { topics: [] }
   }

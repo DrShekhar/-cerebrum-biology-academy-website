@@ -87,6 +87,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.92,
     },
     {
+      url: `${baseUrl}/biology-notes-for-neet/molecular-basis-of-inheritance`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-notes-for-neet/principles-of-inheritance-and-variation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-notes-for-neet/human-physiology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.88,
+    },
+    {
       url: `${baseUrl}/pricing`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,

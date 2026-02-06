@@ -8,7 +8,7 @@ import ChapterNotesContent from "./ChapterNotesContent"
 interface Chapter {
   name: string
   slug: string
-  class: 12
+  class: 11 | 12
   unit: string
   weightage: number
   difficulty: "Easy" | "Moderate" | "Hard"
@@ -33,6 +33,15 @@ const CHAPTERS_MAP: Record<string, Chapter> = {
     weightage: 10,
     difficulty: "Moderate",
     description: "Mendel's laws, inheritance patterns, sex-linked traits, chromosomal disorders, and pedigree analysis for NEET Biology",
+  },
+  "human-physiology": {
+    name: "Human Physiology",
+    slug: "human-physiology",
+    class: 11,
+    unit: "Human Physiology",
+    weightage: 30,
+    difficulty: "Hard",
+    description: "Complete human physiology notes covering digestion, respiration, circulation, excretion, locomotion, neural control, and hormonal coordination for NEET Biology",
   },
 }
 
