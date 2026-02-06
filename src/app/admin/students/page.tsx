@@ -28,6 +28,7 @@ import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
 import { AddStudentForm } from '@/components/admin/AddStudentForm'
+import { CreateStudentAccountForm } from '@/components/admin/CreateStudentAccountForm'
 import { showToast } from '@/lib/toast'
 import { EditStudentForm } from '@/components/admin/EditStudentForm'
 
@@ -141,6 +142,7 @@ export default function StudentsPage() {
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
   const [selectedStudents, setSelectedStudents] = useState<string[]>([])
   const [isAddStudentModalOpen, setIsAddStudentModalOpen] = useState(false)
+  const [isCreateAccountModalOpen, setIsCreateAccountModalOpen] = useState(false)
   const [isEditStudentModalOpen, setIsEditStudentModalOpen] = useState(false)
   const [selectedStudent, setSelectedStudent] = useState<Student | null>(null)
 
@@ -262,11 +264,18 @@ export default function StudentsPage() {
               Export
             </Button>
             <Button
+              className="bg-green-600 hover:bg-green-700 text-white"
+              onClick={() => setIsCreateAccountModalOpen(true)}
+            >
+              <UserCheck className="w-4 h-4 mr-2" />
+              Create Student Account
+            </Button>
+            <Button
               className="bg-blue-600 hover:bg-blue-700 text-white"
               onClick={() => setIsAddStudentModalOpen(true)}
             >
               <UserPlus className="w-4 h-4 mr-2" />
-              Add Student
+              Add Student Lead
             </Button>
           </div>
         </div>
@@ -488,12 +497,29 @@ export default function StudentsPage() {
         </motion.div>
       </div>
 
-      {/* Add Student Modal */}
+      {/* Create Student Account Modal */}
+      <Modal
+        open={isCreateAccountModalOpen}
+        onOpenChange={setIsCreateAccountModalOpen}
+        title="Create Student Account"
+        description="Create a real student account with login credentials."
+        size="xl"
+      >
+        <CreateStudentAccountForm
+          onSuccess={() => {
+            setIsCreateAccountModalOpen(false)
+            window.location.reload()
+          }}
+          onCancel={() => setIsCreateAccountModalOpen(false)}
+        />
+      </Modal>
+
+      {/* Add Student Lead Modal */}
       <Modal
         open={isAddStudentModalOpen}
         onOpenChange={setIsAddStudentModalOpen}
-        title="Add New Student"
-        description="Fill in the details below to add a new student or lead to the system."
+        title="Add Student Lead (CRM)"
+        description="Fill in the details below to add a new student lead to the CRM system."
         size="xl"
       >
         <AddStudentForm
