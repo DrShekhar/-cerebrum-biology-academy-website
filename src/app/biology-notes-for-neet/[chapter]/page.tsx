@@ -88,6 +88,33 @@ const CHAPTERS_MAP: Record<string, Chapter> = {
     difficulty: "Moderate",
     description: "Cell cycle phases, mitosis, meiosis, prophase I substages, crossing over, mitosis vs meiosis comparison, and significance of cell division for NEET Biology",
   },
+  "reproduction": {
+    name: "Reproduction",
+    slug: "reproduction",
+    class: 12,
+    unit: "Reproduction",
+    weightage: 15,
+    difficulty: "Hard",
+    description: "Complete reproduction unit notes covering asexual & sexual reproduction, flowering plant reproduction, human reproductive systems, menstrual cycle, fertilisation, embryo development, and reproductive health for NEET Biology",
+  },
+  "biotechnology": {
+    name: "Biotechnology",
+    slug: "biotechnology",
+    class: 12,
+    unit: "Biotechnology",
+    weightage: 7,
+    difficulty: "Hard",
+    description: "Genetic engineering tools, restriction enzymes, rDNA technology, PCR, Bt crops, gene therapy, molecular diagnostics, bioethics and biopiracy for NEET Biology",
+  },
+  "biological-classification": {
+    name: "Biological Classification",
+    slug: "biological-classification",
+    class: 11,
+    unit: "Diversity in Living World",
+    weightage: 4,
+    difficulty: "Moderate",
+    description: "Whittaker's five kingdom classification, Monera, Protista, Fungi, viruses, viroids, prions, lichens, and mycorrhiza for NEET Biology",
+  },
 }
 
 /* ─────────────── Generate Static Params ─────────────── */

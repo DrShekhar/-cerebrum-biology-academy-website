@@ -70,7 +70,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Moderate',
     keyTopics: ['Five Kingdom Classification', 'Monera', 'Protista', 'Fungi', 'Viruses & Viroids'],
     icon: <Layers className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Plant Kingdom',
@@ -303,6 +303,18 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
 
   // ━━━ CLASS 12 — BOTANY & ZOOLOGY ━━━
   {
+    name: 'Reproduction — Complete Unit Notes',
+    slug: 'reproduction',
+    unit: 'Reproduction',
+    class: 12,
+    weightage: 15,
+    questionsPerYear: '8-10',
+    difficulty: 'Hard',
+    keyTopics: ['Asexual & sexual reproduction', 'Flowering plant reproduction', 'Male & female reproductive systems', 'Menstrual cycle', 'Fertilisation & embryo development', 'Reproductive health & ART'],
+    icon: <Baby className="w-5 h-5" />,
+    available: true,
+  },
+  {
     name: 'Reproduction in Organisms',
     slug: 'reproduction-in-organisms',
     unit: 'Reproduction',
@@ -421,6 +433,18 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     keyTopics: ['Household products', 'Industrial products', 'Sewage treatment', 'Biogas', 'Biocontrol agents'],
     icon: <Microscope className="w-5 h-5" />,
     available: false,
+  },
+  {
+    name: 'Biotechnology — Complete Unit Notes',
+    slug: 'biotechnology',
+    unit: 'Biotechnology',
+    class: 12,
+    weightage: 7,
+    questionsPerYear: '4-6',
+    difficulty: 'Hard',
+    keyTopics: ['Restriction enzymes & vectors', 'rDNA technology & PCR', 'Bt crops & RNAi', 'Gene therapy & diagnostics', 'Bioethics & biopiracy'],
+    icon: <FlaskConical className="w-5 h-5" />,
+    available: true,
   },
   {
     name: 'Biotechnology: Principles and Processes',

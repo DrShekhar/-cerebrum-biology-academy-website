@@ -135,6 +135,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/biology-notes-for-neet/reproduction`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/biology-notes-for-neet/biotechnology`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-notes-for-neet/biological-classification`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/neet-previous-year-questions`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
