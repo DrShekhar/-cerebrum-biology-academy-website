@@ -142,6 +142,42 @@ const CHAPTERS_MAP: Record<string, Chapter> = {
     difficulty: "Hard",
     description: "Non-chordata and chordata classification, Porifera to Mammalia, basis of classification, coelom, symmetry, vertebrate classes for NEET Biology",
   },
+  "morphology-of-flowering-plants": {
+    name: "Morphology of Flowering Plants",
+    slug: "morphology-of-flowering-plants",
+    class: 11,
+    unit: "Structural Organisation in Plants and Animals",
+    weightage: 4,
+    difficulty: "Moderate",
+    description: "Root system, stem modifications, leaf morphology, inflorescence types, flower structure, and comparison of families Fabaceae, Solanaceae, Liliaceae for NEET Biology",
+  },
+  "anatomy-of-flowering-plants": {
+    name: "Anatomy of Flowering Plants",
+    slug: "anatomy-of-flowering-plants",
+    class: 11,
+    unit: "Structural Organisation in Plants and Animals",
+    weightage: 4,
+    difficulty: "Hard",
+    description: "Meristematic and permanent tissues, dicot and monocot root and stem anatomy, secondary growth, and leaf internal structure for NEET Biology",
+  },
+  "structural-organisation-in-animals": {
+    name: "Structural Organisation in Animals",
+    slug: "structural-organisation-in-animals",
+    class: 11,
+    unit: "Structural Organisation in Plants and Animals",
+    weightage: 3,
+    difficulty: "Moderate",
+    description: "Epithelial, connective, muscle, and neural tissues, and cockroach morphology and anatomy for NEET Biology",
+  },
+  "plant-physiology": {
+    name: "Plant Physiology — Complete Unit Notes",
+    slug: "plant-physiology",
+    class: 11,
+    unit: "Plant Physiology",
+    weightage: 8,
+    difficulty: "Hard",
+    description: "Photosynthesis light and dark reactions, cellular respiration glycolysis and Krebs cycle, plant growth hormones, and photoperiodism for NEET Biology",
+  },
 }
 
 /* ─────────────── Generate Static Params ─────────────── */

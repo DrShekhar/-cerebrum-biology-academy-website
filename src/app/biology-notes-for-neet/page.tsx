@@ -106,7 +106,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Moderate',
     keyTopics: ['Root system', 'Stem modifications', 'Leaf venation', 'Flower parts', 'Fruit types'],
     icon: <Leaf className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Anatomy of Flowering Plants',
@@ -118,7 +118,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Moderate',
     keyTopics: ['Tissue systems', 'Dicot vs Monocot anatomy', 'Secondary growth', 'Vascular bundles'],
     icon: <Microscope className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Structural Organisation in Animals',
@@ -130,7 +130,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Easy',
     keyTopics: ['Epithelial tissue', 'Connective tissue', 'Muscle tissue', 'Neural tissue', 'Cockroach morphology'],
     icon: <Bug className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Cell: The Unit of Life',
@@ -203,6 +203,18 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     keyTopics: ['Growth phases', 'Plant hormones', 'Photoperiodism', 'Vernalisation'],
     icon: <TrendingUp className="w-5 h-5" />,
     available: false,
+  },
+  {
+    name: 'Plant Physiology — Complete Unit Notes',
+    slug: 'plant-physiology',
+    unit: 'Plant Physiology',
+    class: 11,
+    weightage: 8,
+    questionsPerYear: '8-10',
+    difficulty: 'Hard' as const,
+    keyTopics: ['Photosynthesis', 'Respiration', 'Plant Growth & Hormones', 'Photoperiodism'],
+    icon: <Leaf className="w-5 h-5" />,
+    available: true,
   },
   {
     name: 'Human Physiology — Complete Unit Notes',

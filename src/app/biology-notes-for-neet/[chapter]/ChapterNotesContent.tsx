@@ -2474,6 +2474,1633 @@ export default function ChapterNotesContent({
   ],
 }
 
+
+  const morphologyContent = {
+  topics: [
+    {
+      title: "Root System",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>
+            Roots are classified into two main types based on plant type: <span className="font-semibold text-green-800">Tap roots</span> (found in dicots like mustard and mango) develop from a single primary root, while <span className="font-semibold text-green-800">Fibrous roots</span> (found in monocots like wheat and rice) consist of many fine, thread-like roots of similar size.
+          </p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <strong>NEET TIP:</strong> Sweet potato is a modified <span className="font-semibold">ADVENTITIOUS root</span> (not tap root). Carrot and turnip are modified <span className="font-semibold">TAP roots</span>. Pneumatophores have lenticels for gas exchange.
+          </div>
+
+          <p><strong>Root Modifications:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Pneumatophores</span> (Rhizophora mangrove) - aerial roots that breathe through lenticels</li>
+            <li><span className="font-semibold text-green-800">Prop roots</span> (Banyan tree) - provide mechanical support</li>
+            <li><span className="font-semibold text-green-800">Stilt roots</span> (Maize, Sugarcane) - adventitious roots extending from stem for support</li>
+            <li><span className="font-semibold text-green-800">Storage roots</span> - conical (Carrot), napiform (Turnip), fusiform (Radish), tuberous/adventitious (Sweet potato)</li>
+          </ul>
+
+          <p><strong>Regions of Root (from apex to base):</strong></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Region</th>
+                <th className="border border-gray-300 p-2 text-left">Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Root cap</span></td>
+                <td className="border border-gray-300 p-2">Protects root apex from mechanical injury</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Meristematic zone</span></td>
+                <td className="border border-gray-300 p-2">Cell division and formation of new cells</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Elongation zone</span></td>
+                <td className="border border-gray-300 p-2">Cells elongate; root extends downward</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Maturation zone</span></td>
+                <td className="border border-gray-300 p-2">Root hairs develop; water &amp; nutrient absorption</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><strong>Root Modifications Table:</strong></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Modification Type</th>
+                <th className="border border-gray-300 p-2 text-left">Example</th>
+                <th className="border border-gray-300 p-2 text-left">Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Pneumatophore</td>
+                <td className="border border-gray-300 p-2">Rhizophora</td>
+                <td className="border border-gray-300 p-2">Aeration in waterlogged soil</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Prop root</td>
+                <td className="border border-gray-300 p-2">Banyan</td>
+                <td className="border border-gray-300 p-2">Support &amp; anchorage</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Stilt root</td>
+                <td className="border border-gray-300 p-2">Maize, Sugarcane</td>
+                <td className="border border-gray-300 p-2">Mechanical support</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Storage root (conical)</td>
+                <td className="border border-gray-300 p-2">Carrot</td>
+                <td className="border border-gray-300 p-2">Food storage</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Storage root (napiform)</td>
+                <td className="border border-gray-300 p-2">Turnip</td>
+                <td className="border border-gray-300 p-2">Food storage</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Storage root (tuberous)</td>
+                <td className="border border-gray-300 p-2">Sweet potato</td>
+                <td className="border border-gray-300 p-2">Food storage (adventitious root)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    {
+      title: "Stem Modifications",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>
+            <span className="font-semibold text-green-800">Stem modifications</span> are adaptations of stems to perform specialized functions like storage, support, or protection. They are classified based on their position relative to the ground.
+          </p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <strong>NEET TIP:</strong> Potato is a modified <span className="font-semibold">STEM</span> (has nodes/eyes/buds). Sweet potato is a modified <span className="font-semibold">ROOT</span> (no nodes). Thorn of Bougainvillea is an axillary bud modified as a thorn. Spine of cactus is a modified <span className="font-semibold">LEAF</span>.
+          </div>
+
+          <p><strong>Underground Stem Modifications:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Rhizome</span> (Ginger) - horizontal underground stem with nodes and internodes</li>
+            <li><span className="font-semibold text-green-800">Tuber</span> (Potato) - swollen underground stem; eyes are nodes containing buds</li>
+            <li><span className="font-semibold text-green-800">Bulb</span> (Onion) - underground stem surrounded by fleshy leaf bases</li>
+            <li><span className="font-semibold text-green-800">Corm</span> (Colocasia) - short, solid, underground stem</li>
+          </ul>
+
+          <p><strong>Aerial Stem Modifications:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Tendril</span> (Grape vine) - modified stem for climbing support</li>
+            <li><span className="font-semibold text-green-800">Thorn</span> (Bougainvillea) - axillary bud modified for protection</li>
+            <li><span className="font-semibold text-green-800">Phylloclade</span> (Opuntia) - flattened stem for photosynthesis; functions as leaf</li>
+          </ul>
+
+          <p><strong>Sub-aerial Stem Modifications (Runners &amp; Stolons):</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Runner</span> (Grass) - horizontal stem growing along ground with long internodes</li>
+            <li><span className="font-semibold text-green-800">Stolon</span> (Strawberry) - prostrate stem with short internodes, produces plantlets at nodes</li>
+            <li><span className="font-semibold text-green-800">Offset</span> (Water hyacinth/Eichhornia) - short lateral branch for vegetative reproduction</li>
+            <li><span className="font-semibold text-green-800">Sucker</span> (Mint) - underground lateral stem that produces adventitious roots and shoots</li>
+          </ul>
+
+          <p><strong>Stem Modifications Comparison Table:</strong></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Type</th>
+                <th className="border border-gray-300 p-2 text-left">Example</th>
+                <th className="border border-gray-300 p-2 text-left">Characteristics</th>
+                <th className="border border-gray-300 p-2 text-left">Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Rhizome</td>
+                <td className="border border-gray-300 p-2">Ginger</td>
+                <td className="border border-gray-300 p-2">Horizontal, underground, fleshy</td>
+                <td className="border border-gray-300 p-2">Storage &amp; vegetative reproduction</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Tuber</td>
+                <td className="border border-gray-300 p-2">Potato</td>
+                <td className="border border-gray-300 p-2">Swollen, eyes/nodes with buds</td>
+                <td className="border border-gray-300 p-2">Storage &amp; vegetative reproduction</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Bulb</td>
+                <td className="border border-gray-300 p-2">Onion</td>
+                <td className="border border-gray-300 p-2">Underground, fleshy leaf bases</td>
+                <td className="border border-gray-300 p-2">Storage &amp; survival during dormancy</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Corm</td>
+                <td className="border border-gray-300 p-2">Colocasia</td>
+                <td className="border border-gray-300 p-2">Short, solid, underground stem</td>
+                <td className="border border-gray-300 p-2">Storage &amp; vegetative reproduction</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Phylloclade</td>
+                <td className="border border-gray-300 p-2">Opuntia</td>
+                <td className="border border-gray-300 p-2">Flattened, green, aerial</td>
+                <td className="border border-gray-300 p-2">Photosynthesis in xerophytes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    {
+      title: "Leaf Morphology and Modifications",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>
+            <span className="font-semibold text-green-800">Leaves</span> are the primary photosynthetic organs. A typical leaf consists of a <span className="font-semibold text-green-800">lamina</span> (blade), <span className="font-semibold text-green-800">petiole</span> (stalk), and <span className="font-semibold text-green-800">leaf base</span>.
+          </p>
+
+          <p><strong>Venation Patterns:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Reticulate venation</span> - net-like vein pattern; found in dicots</li>
+            <li><span className="font-semibold text-green-800">Parallel venation</span> - parallel veins; found in monocots</li>
+          </ul>
+
+          <p><strong>Leaf Types:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Simple leaves</span> - single lamina (e.g., mango)</li>
+            <li><span className="font-semibold text-green-800">Compound leaves</span> - lamina divided into leaflets
+              <ul className="list-circle list-inside ml-4 space-y-1">
+                <li>Pinnately compound - leaflets arranged on central axis (Neem)</li>
+                <li>Palmately compound - leaflets arranged from single point (Silk cotton)</li>
+              </ul>
+            </li>
+          </ul>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <strong>NEET TIP:</strong> Spines of cactus are modified <span className="font-semibold">LEAVES</span>. Thorns of Bougainvillea are modified <span className="font-semibold">STEM</span> (axillary bud). Tendrils of pea are modified <span className="font-semibold">LEAF</span>. Tendrils of grape are modified <span className="font-semibold">STEM</span>. <span className="font-semibold">Very frequently confused in NEET!</span>
+          </div>
+
+          <p><strong>Phyllotaxy (Leaf Arrangement):</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Alternate</span> - one leaf per node on alternate sides (Sunflower)</li>
+            <li><span className="font-semibold text-green-800">Opposite</span> - two leaves per node on opposite sides (Calotropis)</li>
+            <li><span className="font-semibold text-green-800">Whorled</span> - three or more leaves per node (Alstonia)</li>
+          </ul>
+
+          <p><strong>Leaf Modifications:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Tendril</span> (Pea) - modified leaf for climbing; terminal leaflet becomes tendril</li>
+            <li><span className="font-semibold text-green-800">Spine</span> (Cactus) - modified leaf for protection; reduces transpiration in xerophytes</li>
+            <li><span className="font-semibold text-green-800">Storage leaves</span> (Onion) - fleshy leaves storing food &amp; water</li>
+            <li><span className="font-semibold text-green-800">Phyllode</span> (Australian Acacia) - petiole becomes flattened &amp; leaf-like; performs photosynthesis</li>
+            <li><span className="font-semibold text-green-800">Insectivorous leaves:</span>
+              <ul className="list-circle list-inside ml-4 space-y-1">
+                <li>Pitcher plant (Nepenthes) - pitcher-shaped leaf for insect trapping</li>
+                <li>Venus flytrap (Dionaea) - sensitive lobes that snap shut</li>
+                <li>Sundew (Drosera) - sticky glandular hairs trap insects</li>
+                <li>Bladderwort (Utricularia) - bladder-shaped traps with trigger hairs</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Leaf Modifications Comparison Table:</strong></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Modification</th>
+                <th className="border border-gray-300 p-2 text-left">Example</th>
+                <th className="border border-gray-300 p-2 text-left">Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Tendril</td>
+                <td className="border border-gray-300 p-2">Pea</td>
+                <td className="border border-gray-300 p-2">Climbing &amp; support</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Spine</td>
+                <td className="border border-gray-300 p-2">Cactus</td>
+                <td className="border border-gray-300 p-2">Protection &amp; reduce transpiration</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Storage leaf</td>
+                <td className="border border-gray-300 p-2">Onion</td>
+                <td className="border border-gray-300 p-2">Food &amp; water storage</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Phyllode</td>
+                <td className="border border-gray-300 p-2">Australian Acacia</td>
+                <td className="border border-gray-300 p-2">Photosynthesis (modified petiole)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Pitcher (insectivorous)</td>
+                <td className="border border-gray-300 p-2">Nepenthes</td>
+                <td className="border border-gray-300 p-2">Nutrient absorption from insects</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    {
+      title: "Inflorescence and Flower Structure",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>
+            <span className="font-semibold text-green-800">Inflorescence</span> is the arrangement of flowers on the main axis of the plant. <span className="font-semibold text-green-800">Flower</span> is the reproductive organ containing male &amp; female parts.
+          </p>
+
+          <p><strong>Types of Inflorescence:</strong></p>
+          <p><span className="font-semibold text-green-800">Racemose Inflorescence</span> (main axis shows unlimited growth):</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Raceme</span> - flowers on pedicels arising from main axis (mustard)</li>
+            <li><span className="font-semibold text-green-800">Spike</span> - flowers sessile on main axis (wheat)</li>
+            <li><span className="font-semibold text-green-800">Umbel</span> - pedicels arise from same point on axis (carrot, fennel)</li>
+            <li><span className="font-semibold text-green-800">Capitulum</span> - flat receptacle with many sessile flowers (Sunflower) - <span className="font-semibold">NOT a single flower</span></li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">Cymose Inflorescence</span> (main axis shows limited growth):</p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Monochasial cyme</span> - one lateral branch at each node</li>
+            <li><span className="font-semibold text-green-800">Dichasial cyme</span> - two lateral branches at each node</li>
+            <li><span className="font-semibold text-green-800">Polychasial cyme</span> - more than two lateral branches at each node</li>
+          </ul>
+
+          <p><strong>Parts of a Flower:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Calyx</span> - outermost whorl; consists of sepals (protective function)</li>
+            <li><span className="font-semibold text-green-800">Corolla</span> - second whorl; consists of petals (colorful, attracts pollinators)</li>
+            <li><span className="font-semibold text-green-800">Androecium</span> - third whorl; male reproductive organ consisting of stamens (filament + anther)</li>
+            <li><span className="font-semibold text-green-800">Gynoecium</span> - fourth whorl; female reproductive organ consisting of pistil (stigma + style + ovary)</li>
+          </ul>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <strong>NEET TIP:</strong> Capitulum is an <span className="font-semibold">INFLORESCENCE</span> of sunflower, not a single flower. Pea flower has <span className="font-semibold">vexillary aestivation</span> (papilionaceous). Placentation types are <span className="font-semibold">HIGH FREQUENCY</span>. Mustard = parietal, Pea = marginal, Lemon = axile.
+          </div>
+
+          <p><strong>Aestivation (Arrangement of Floral Parts in Bud):</strong></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Type</th>
+                <th className="border border-gray-300 p-2 text-left">Example</th>
+                <th className="border border-gray-300 p-2 text-left">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Valvate</span></td>
+                <td className="border border-gray-300 p-2">Calotropis</td>
+                <td className="border border-gray-300 p-2">Parts just touch at edges, do not overlap</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Twisted</span></td>
+                <td className="border border-gray-300 p-2">China rose</td>
+                <td className="border border-gray-300 p-2">Parts overlap in spiral manner</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Imbricate</span></td>
+                <td className="border border-gray-300 p-2">Cassia, Gulmohar</td>
+                <td className="border border-gray-300 p-2">Parts overlap like roof tiles</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Vexillary</span></td>
+                <td className="border border-gray-300 p-2">Pea (Papilionaceous)</td>
+                <td className="border border-gray-300 p-2">One large petal overlaps two lateral petals, which overlap keel petals</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><strong>Placentation Types (Position of Ovules in Ovary):</strong></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Type</th>
+                <th className="border border-gray-300 p-2 text-left">Example</th>
+                <th className="border border-gray-300 p-2 text-left">Position of Ovules</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Marginal</span></td>
+                <td className="border border-gray-300 p-2">Pea</td>
+                <td className="border border-gray-300 p-2">Along margin/ventral suture of unilocular carpel</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Axile</span></td>
+                <td className="border border-gray-300 p-2">China rose, Tomato, Lemon</td>
+                <td className="border border-gray-300 p-2">On placenta along central axis in multilocular ovary</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Parietal</span></td>
+                <td className="border border-gray-300 p-2">Mustard</td>
+                <td className="border border-gray-300 p-2">On inner wall of unilocular ovary; two placentae</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Free central</span></td>
+                <td className="border border-gray-300 p-2">Dianthus, Primrose</td>
+                <td className="border border-gray-300 p-2">On free central placenta in center of ovary</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Basal</span></td>
+                <td className="border border-gray-300 p-2">Sunflower, Marigold</td>
+                <td className="border border-gray-300 p-2">Single ovule at base of unilocular ovary</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ),
+    },
+    {
+      title: "Families: Fabaceae, Solanaceae, Liliaceae",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>
+            NEET frequently tests the <span className="font-semibold text-green-800">key characteristics, floral formulae, and economic importance</span> of these three major flowering plant families. All three family details are <span className="font-semibold">EXTREMELY HIGH frequency in NEET.</span>
+          </p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <strong>NEET TIP:</strong> Fabaceae has <span className="font-semibold">MARGINAL placentation + diadelphous (9+1) stamens</span>. Solanaceae has <span className="font-semibold">AXILE placentation + epipetalous stamens</span>. Liliaceae is <span className="font-semibold">TRIMEROUS (3-merous)</span>. Remember the distinguishing features for quick identification!
+          </div>
+
+          <p><strong>Comprehensive Family Comparison Table:</strong></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Character</th>
+                <th className="border border-gray-300 p-2 text-left">Fabaceae</th>
+                <th className="border border-gray-300 p-2 text-left">Solanaceae</th>
+                <th className="border border-gray-300 p-2 text-left">Liliaceae</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Examples</span></td>
+                <td className="border border-gray-300 p-2">Pea (Pisum), Gram (Cicer)</td>
+                <td className="border border-gray-300 p-2">Potato (Solanum), Tomato, Tobacco (Nicotiana)</td>
+                <td className="border border-gray-300 p-2">Lily, Onion (Allium), Garlic, Aloe</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Floral Formula</span></td>
+                <td className="border border-gray-300 p-2">K5 C5 A9+1 G1</td>
+                <td className="border border-gray-300 p-2">K(5) C(5) A5 G(2)</td>
+                <td className="border border-gray-300 p-2">P3+3 A3+3 G(3)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Leaf Venation</span></td>
+                <td className="border border-gray-300 p-2">Reticulate (dicot)</td>
+                <td className="border border-gray-300 p-2">Reticulate (dicot)</td>
+                <td className="border border-gray-300 p-2">Parallel (monocot)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Root Type</span></td>
+                <td className="border border-gray-300 p-2">Tap root system</td>
+                <td className="border border-gray-300 p-2">Tap root system</td>
+                <td className="border border-gray-300 p-2">Fibrous root system</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Flower Symmetry</span></td>
+                <td className="border border-gray-300 p-2">Zygomorphic</td>
+                <td className="border border-gray-300 p-2">Actinomorphic</td>
+                <td className="border border-gray-300 p-2">Actinomorphic/Trimerous</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Corolla Type</span></td>
+                <td className="border border-gray-300 p-2">Papilionaceous (2 petals + 2 lateral + 2 keel)</td>
+                <td className="border border-gray-300 p-2">Fused/Gamopetalous</td>
+                <td className="border border-gray-300 p-2">Perianth (tepals 6, not differentiated into calyx &amp; corolla)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Stamen Arrangement</span></td>
+                <td className="border border-gray-300 p-2">Diadelphous (9+1) - one separate, nine fused</td>
+                <td className="border border-gray-300 p-2">Epipetalous (attached to petals); free</td>
+                <td className="border border-gray-300 p-2">6 stamens (2 whorls of 3); hypogynous</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Anther Type</span></td>
+                <td className="border border-gray-300 p-2">Bithecous (2 chambers)</td>
+                <td className="border border-gray-300 p-2">Dithecous (2-lobed)</td>
+                <td className="border border-gray-300 p-2">Dithecous</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Placentation</span></td>
+                <td className="border border-gray-300 p-2">Marginal - ovules along margin of carpel</td>
+                <td className="border border-gray-300 p-2">Axile - ovules on central axis (multilocular)</td>
+                <td className="border border-gray-300 p-2">Axile - ovules on central axis</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Aestivation</span></td>
+                <td className="border border-gray-300 p-2">Vexillary (pea-like arrangement)</td>
+                <td className="border border-gray-300 p-2">Valvate</td>
+                <td className="border border-gray-300 p-2">Valvate</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Fruit Type</span></td>
+                <td className="border border-gray-300 p-2">Legume (pod)</td>
+                <td className="border border-gray-300 p-2">Berry</td>
+                <td className="border border-gray-300 p-2">Capsule</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Seed Type</span></td>
+                <td className="border border-gray-300 p-2">Dicotyledonous</td>
+                <td className="border border-gray-300 p-2">Dicotyledonous</td>
+                <td className="border border-gray-300 p-2">Monocotyledonous</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><strong>Economic Importance:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><span className="font-semibold text-green-800">Fabaceae:</span> Pulses (pea, gram, lentil), nitrogen fixation through root nodules, animal feed, edible oils (groundnut)</li>
+            <li><span className="font-semibold text-green-800">Solanaceae:</span> Food crops (potato, tomato, eggplant), condiments (chili, black pepper), medicinal plants (Belladonna), alkaloid production (tobacco)</li>
+            <li><span className="font-semibold text-green-800">Liliaceae:</span> Vegetables (onion, garlic), spices (asafoetida), medicinal uses (Aloe vera), ornamental flowers (lily, tulip)</li>
+          </ul>
+
+          <p><strong>Key Distinguishing Features for NEET:</strong></p>
+          <ul className="list-disc list-inside space-y-2">
+            <li><strong>Fabaceae vs Others:</strong> Diadelphous stamens (9+1) + Marginal placentation = unique to Fabaceae</li>
+            <li><strong>Solanaceae vs Liliaceae:</strong> Solanaceae is dicot (reticulate venation, tap root); Liliaceae is monocot (parallel venation, fibrous root)</li>
+            <li><strong>Solanaceae vs Fabaceae:</strong> Axile placentation (Solanaceae) vs Marginal placentation (Fabaceae); Epipetalous stamens (Solanaceae) vs Diadelphous stamens (Fabaceae)</li>
+            <li><strong>Liliaceae Feature:</strong> Trimerous flowers (3-merous) - 6 tepals, 6 stamens, 3 carpels (or multiples of 3)</li>
+          </ul>
+        </div>
+      ),
+    },
+  ],
+};
+  const anatomyContent = {
+  topics: [
+    {
+      title: "Meristematic and Permanent Tissues",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <div>
+            <p className="font-semibold text-green-800">Meristematic Tissues:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li><span className="font-semibold text-green-800">Apical meristem:</span> Root and shoot tips — primary growth</li>
+              <li><span className="font-semibold text-green-800">Lateral meristem:</span> Vascular cambium (secondary xylem/phloem) &amp; cork cambium</li>
+              <li><span className="font-semibold text-green-800">Intercalary meristem:</span> Base of internodes in grasses</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Simple Permanent Tissues:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li><span className="font-semibold text-green-800">Parenchyma:</span> Thin walls, living, storage &amp; photosynthesis</li>
+              <li><span className="font-semibold text-green-800">Collenchyma:</span> Corner thickening, flexible, below epidermis</li>
+              <li><span className="font-semibold text-green-800">Sclerenchyma:</span> Uniformly thick, lignified, dead (fibres &amp; sclereids)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Complex Permanent Tissues:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li><span className="font-semibold text-green-800">Xylem:</span> Tracheids, vessels, xylem parenchyma, xylem fibres — water transport</li>
+              <li><span className="font-semibold text-green-800">Phloem:</span> Sieve tubes, companion cells, phloem parenchyma, phloem fibres — food transport</li>
+            </ul>
+          </div>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Parenchyma</th>
+                <th className="border border-gray-300 p-2 text-left">Collenchyma</th>
+                <th className="border border-gray-300 p-2 text-left">Sclerenchyma</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Cell Wall</td>
+                <td className="border border-gray-300 p-2">Thin, cellulose</td>
+                <td className="border border-gray-300 p-2">Corner thickening</td>
+                <td className="border border-gray-300 p-2">Uniformly thick, lignified</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Living/Dead</td>
+                <td className="border border-gray-300 p-2">Living</td>
+                <td className="border border-gray-300 p-2">Living</td>
+                <td className="border border-gray-300 p-2">Dead</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Function</td>
+                <td className="border border-gray-300 p-2">Storage, photosynthesis</td>
+                <td className="border border-gray-300 p-2">Support, flexibility</td>
+                <td className="border border-gray-300 p-2">Mechanical strength</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Location</td>
+                <td className="border border-gray-300 p-2">Ground tissue</td>
+                <td className="border border-gray-300 p-2">Below epidermis</td>
+                <td className="border border-gray-300 p-2">Fibres, sclereids</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
+            <span className="font-semibold">NEET TIP:</span> Xylem = dead (except xylem parenchyma). Phloem = living (except phloem fibres). Vessels absent in gymnosperms (only tracheids). Companion cells UNIQUE to angiosperms.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Dicot and Monocot Root Anatomy",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <div>
+            <p className="font-semibold text-green-800">Dicot Root Transverse Section:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Epidermis (with root hairs) → Cortex (parenchyma) → Endodermis (Casparian strips) → Pericycle → Vascular bundles (radial, xylem 2–6 = diarch to hexarch) → Pith (small/absent)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Monocot Root Transverse Section:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Epidermis → Cortex → Endodermis (Casparian strips) → Pericycle → Vascular bundles (radial, xylem polyarch = many protoxylem points) → Pith (large)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Key Features:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li><span className="font-semibold text-green-800">Casparian strip:</span> Waterproof suberin barrier in endodermis, forces water through symplastic pathway</li>
+              <li><span className="font-semibold text-green-800">Passage cells:</span> Thin-walled endodermal cells opposite protoxylem for water passage</li>
+            </ul>
+          </div>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Dicot Root</th>
+                <th className="border border-gray-300 p-2 text-left">Monocot Root</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Xylem Arms</td>
+                <td className="border border-gray-300 p-2">2–6 (diarch-hexarch)</td>
+                <td className="border border-gray-300 p-2">Many (polyarch)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Pith</td>
+                <td className="border border-gray-300 p-2">Small/absent</td>
+                <td className="border border-gray-300 p-2">Large</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Secondary Growth</td>
+                <td className="border border-gray-300 p-2">Yes (vascular cambium)</td>
+                <td className="border border-gray-300 p-2">No</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Endodermis</td>
+                <td className="border border-gray-300 p-2">Casparian strips present</td>
+                <td className="border border-gray-300 p-2">Casparian strips present</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
+            <span className="font-semibold">NEET TIP:</span> Dicot root = 2–6 xylem arms (diarch-hexarch). Monocot = polyarch (many arms). Casparian strips force water into symplast. Secondary growth ONLY in dicot roots (vascular cambium).
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Dicot and Monocot Stem Anatomy",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <div>
+            <p className="font-semibold text-green-800">Dicot Stem Transverse Section:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Epidermis → Cortex (collenchyma + parenchyma) → Endodermis → Pericycle → Vascular bundles (conjoint, collateral, OPEN = cambium present, ring arrangement) → Pith (central)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Monocot Stem Transverse Section:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Epidermis → Hypodermis (sclerenchyma) → Ground tissue → Vascular bundles (conjoint, collateral, CLOSED = no cambium, SCATTERED, surrounded by sclerenchyma sheath) → No distinct pith</li>
+            </ul>
+          </div>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Dicot Stem</th>
+                <th className="border border-gray-300 p-2 text-left">Monocot Stem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Bundle Arrangement</td>
+                <td className="border border-gray-300 p-2">Ring arrangement</td>
+                <td className="border border-gray-300 p-2">Scattered throughout</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Bundle Type</td>
+                <td className="border border-gray-300 p-2">Open (cambium present)</td>
+                <td className="border border-gray-300 p-2">Closed (no cambium)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Cambium</td>
+                <td className="border border-gray-300 p-2">Present (intrafascicular &amp; interfascicular)</td>
+                <td className="border border-gray-300 p-2">Absent</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Secondary Growth</td>
+                <td className="border border-gray-300 p-2">Yes</td>
+                <td className="border border-gray-300 p-2">No</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Hypodermis</td>
+                <td className="border border-gray-300 p-2">Absent/parenchymatous</td>
+                <td className="border border-gray-300 p-2">Sclerenchymatous (strong)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Pith</td>
+                <td className="border border-gray-300 p-2">Central, large</td>
+                <td className="border border-gray-300 p-2">Not distinct</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
+            <span className="font-semibold">NEET TIP:</span> Dicot stem = OPEN bundles (cambium) + RING arrangement → secondary growth. Monocot = CLOSED bundles + SCATTERED → NO secondary growth. MOST asked anatomy topic.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Secondary Growth",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <div>
+            <p className="font-semibold text-green-800">Vascular Cambium Activity:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li><span className="font-semibold text-green-800">Intrafascicular cambium:</span> Within vascular bundles</li>
+              <li><span className="font-semibold text-green-800">Interfascicular cambium:</span> Between bundles → forms complete cambium ring</li>
+              <li>Produces secondary xylem (inward) + secondary phloem (outward). More xylem than phloem produced</li>
+              <li><span className="font-semibold text-green-800">Heartwood &amp; Sapwood:</span> Heartwood = dark, dead, filled with tannins/resins (central). Sapwood = light, living, functional (peripheral)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Cork Cambium (Phellogen):</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Forms from cortex (or elsewhere in old stems)</li>
+              <li>Produces phellem (cork, outer, dead) + phelloderm (secondary cortex, inner, living)</li>
+              <li>Together called <span className="font-semibold text-green-800">Periderm</span> (replaces epidermis)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Annual Rings:</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li><span className="font-semibold text-green-800">Spring wood:</span> Large vessels, light colour (rapid growth)</li>
+              <li><span className="font-semibold text-green-800">Autumn wood:</span> Small vessels, dark colour (slow growth)</li>
+              <li>One ring = one year</li>
+            </ul>
+          </div>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Heartwood</th>
+                <th className="border border-gray-300 p-2 text-left">Sapwood</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Colour</td>
+                <td className="border border-gray-300 p-2">Dark</td>
+                <td className="border border-gray-300 p-2">Light</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Living/Dead</td>
+                <td className="border border-gray-300 p-2">Dead</td>
+                <td className="border border-gray-300 p-2">Living</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Function</td>
+                <td className="border border-gray-300 p-2">Non-functional, support</td>
+                <td className="border border-gray-300 p-2">Functional (water transport)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Position</td>
+                <td className="border border-gray-300 p-2">Central</td>
+                <td className="border border-gray-300 p-2">Peripheral</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Durability</td>
+                <td className="border border-gray-300 p-2">Highly durable</td>
+                <td className="border border-gray-300 p-2">Prone to decay</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
+            <span className="font-semibold">NEET TIP:</span> Vascular cambium produces secondary xylem INWARD and secondary phloem OUTWARD. More xylem than phloem. Annual rings = spring wood + autumn wood. Heartwood = non-functional but durable. Bark = all tissues outside vascular cambium.
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Leaf Anatomy (Dorsiventral vs Isobilateral)",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <div>
+            <p className="font-semibold text-green-800">Dorsiventral Leaf (Dicot):</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Upper epidermis (few/no stomata) → <span className="font-semibold text-green-800">Palisade mesophyll</span> (elongated, tightly packed, more chloroplasts) → <span className="font-semibold text-green-800">Spongy mesophyll</span> (loosely packed, intercellular air spaces) → Lower epidermis (more stomata)</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Isobilateral Leaf (Monocot):</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Stomata on BOTH surfaces (amphistomatic)</li>
+              <li>Mesophyll NOT differentiated (palisade &amp; spongy not distinct)</li>
+              <li><span className="font-semibold text-green-800">Bulliform cells:</span> Large motor cells present, cause leaf rolling in drought</li>
+            </ul>
+          </div>
+
+          <div>
+            <p className="font-semibold text-green-800">Kranz Anatomy (C4 Plants):</p>
+            <ul className="list-disc list-inside ml-2 text-sm">
+              <li>Found in maize, sugarcane</li>
+              <li><span className="font-semibold text-green-800">Bundle sheath cells:</span> Large, contain chloroplasts</li>
+              <li>Mesophyll + bundle sheath = dimorphic (two-celled types)</li>
+              <li>Special feature for C4 photosynthetic pathway</li>
+            </ul>
+          </div>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead>
+              <tr className="bg-green-50">
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Dorsiventral (Dicot)</th>
+                <th className="border border-gray-300 p-2 text-left">Isobilateral (Monocot)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Stomata Distribution</td>
+                <td className="border border-gray-300 p-2">Mainly lower surface</td>
+                <td className="border border-gray-300 p-2">Both surfaces (amphistomatic)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Mesophyll</td>
+                <td className="border border-gray-300 p-2">Palisade &amp; spongy (differentiated)</td>
+                <td className="border border-gray-300 p-2">Not differentiated</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Palisade Cells</td>
+                <td className="border border-gray-300 p-2">Elongated, ordered</td>
+                <td className="border border-gray-300 p-2">Absent</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2 font-semibold">Bulliform Cells</td>
+                <td className="border border-gray-300 p-2">Absent</td>
+                <td className="border border-gray-300 p-2">Present (motor function)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2 font-semibold">Bundle Sheath</td>
+                <td className="border border-gray-300 p-2">Parenchymatous</td>
+                <td className="border border-gray-300 p-2">Sclerenchymatous sheath</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800 text-sm">
+            <span className="font-semibold">NEET TIP:</span> Dicot = dorsiventral (stomata mainly lower). Monocot = isobilateral (stomata both sides). Bulliform cells UNIQUE to monocots (leaf rolling in drought). Kranz anatomy = C4 plants ONLY.
+          </div>
+        </div>
+      ),
+    },
+  ],
+};
+  const structuralOrgContent = {
+  topics: [
+    {
+      title: "Epithelial Tissue",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>Epithelial tissues form protective, absorptive, and secretory surfaces throughout the body.</p>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Epithelial Type</th>
+                <th className="border border-gray-300 p-2 text-left">Location</th>
+                <th className="border border-gray-300 p-2 text-left">Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Simple Squamous</span></td>
+                <td className="border border-gray-300 p-2">Blood vessels (endothelium), body cavities (mesothelium), alveoli</td>
+                <td className="border border-gray-300 p-2">Diffusion, filtration</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Simple Cuboidal</span></td>
+                <td className="border border-gray-300 p-2">Kidney tubules, ducts</td>
+                <td className="border border-gray-300 p-2">Secretion, absorption</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Simple Columnar</span></td>
+                <td className="border border-gray-300 p-2">Intestine, stomach</td>
+                <td className="border border-gray-300 p-2">Absorption, secretion</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Ciliated Columnar</span></td>
+                <td className="border border-gray-300 p-2">Trachea, oviduct, bronchi</td>
+                <td className="border border-gray-300 p-2">Movement of particles</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Pseudostratified</span></td>
+                <td className="border border-gray-300 p-2">Trachea, nasal cavity</td>
+                <td className="border border-gray-300 p-2">Protection, secretion</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Stratified Squamous</span></td>
+                <td className="border border-gray-300 p-2">Skin, buccal cavity, oesophagus</td>
+                <td className="border border-gray-300 p-2">Protection</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Transitional</span></td>
+                <td className="border border-gray-300 p-2">Urinary bladder</td>
+                <td className="border border-gray-300 p-2">Stretching, protection</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Glandular Epithelium:</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Exocrine glands:</span> Have ducts, secrete to surface (sweat glands, salivary glands, sebaceous glands)</li>
+              <li><span className="font-semibold text-green-800">Endocrine glands:</span> Ductless, secrete hormones directly to blood (thyroid, pituitary, adrenal)</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Key Features:</span> Cells tightly packed with minimal intercellular matrix, rest on basement membrane, avascular (no blood vessels)</p>
+            <p><span className="font-semibold text-green-800">Functions:</span> Protection, secretion, absorption, filtration</p>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Simple squamous in blood vessels = ENDOTHELIUM; in body cavities = MESOTHELIUM. Transitional epithelium = stretches (urinary bladder). Compound epithelium = protection; Simple = secretion/absorption.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Connective Tissue",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>Connective tissues are the most abundant tissues, providing structural support with cells embedded in a matrix of ground substance and fibres.</p>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Type</th>
+                <th className="border border-gray-300 p-2 text-left">Characteristics</th>
+                <th className="border border-gray-300 p-2 text-left">Location/Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Areolar (Loose)</span></td>
+                <td className="border border-gray-300 p-2">Loosely packed fibres, abundant ground substance</td>
+                <td className="border border-gray-300 p-2">Under skin, around organs, binding tissues</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Adipose (Loose)</span></td>
+                <td className="border border-gray-300 p-2">Fat cells (lipocytes) with lipid droplets</td>
+                <td className="border border-gray-300 p-2">Fat storage, insulation, heat production</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Tendons (Dense)</span></td>
+                <td className="border border-gray-300 p-2">Tightly packed collagen fibres, inelastic</td>
+                <td className="border border-gray-300 p-2">Connect muscle to bone</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Ligaments (Dense)</span></td>
+                <td className="border border-gray-300 p-2">Dense, elastic fibres, flexible</td>
+                <td className="border border-gray-300 p-2">Connect bone to bone, support joints</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Cartilage</span></td>
+                <td className="border border-gray-300 p-2">Chondrocytes in chondrin matrix, avascular</td>
+                <td className="border border-gray-300 p-2">Support, reduce friction, shape maintenance</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Bone</span></td>
+                <td className="border border-gray-300 p-2">Osteocytes in lacunae, Haversian system, vascular</td>
+                <td className="border border-gray-300 p-2">Support, protection, movement</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Blood</span></td>
+                <td className="border border-gray-300 p-2">Plasma (55%) + RBCs, WBCs, Platelets</td>
+                <td className="border border-gray-300 p-2">Transport, immunity, clotting</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Blood Composition:</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Plasma (55%):</span> Water, proteins (albumin, globulins, fibrinogen), dissolved substances</li>
+              <li><span className="font-semibold text-green-800">RBCs (Erythrocytes):</span> No nucleus in mammals, biconcave disc, contain haemoglobin for O₂ transport</li>
+              <li><span className="font-semibold text-green-800">WBCs (Leukocytes):</span> Granulocytes (neutrophils, eosinophils, basophils) &amp; agranulocytes (lymphocytes, monocytes)</li>
+              <li><span className="font-semibold text-green-800">Platelets (Thrombocytes):</span> Cell fragments involved in blood clotting</li>
+            </ul>
+          </div>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Cartilage</th>
+                <th className="border border-gray-300 p-2 text-left">Bone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Cell type</td>
+                <td className="border border-gray-300 p-2">Chondrocytes</td>
+                <td className="border border-gray-300 p-2">Osteocytes</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Matrix</td>
+                <td className="border border-gray-300 p-2">Chondrin (flexible)</td>
+                <td className="border border-gray-300 p-2">Ossein + minerals (rigid)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Blood supply</td>
+                <td className="border border-gray-300 p-2">Avascular</td>
+                <td className="border border-gray-300 p-2">Vascular (Haversian canals)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Function</td>
+                <td className="border border-gray-300 p-2">Support, flexibility</td>
+                <td className="border border-gray-300 p-2">Support, protection, movement</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Tendon = muscle to bone (inelastic); Ligament = bone to bone (elastic). RBCs lack nucleus in mammals. Cartilage = avascular; Bone = vascular (Haversian canals). Adipose tissue stores fat in white (energy) &amp; brown (heat) forms.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Muscle Tissue",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>Muscle tissues are specialized for contraction, enabling movement and force generation.</p>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Skeletal</th>
+                <th className="border border-gray-300 p-2 text-left">Smooth</th>
+                <th className="border border-gray-300 p-2 text-left">Cardiac</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Appearance</td>
+                <td className="border border-gray-300 p-2">Striated</td>
+                <td className="border border-gray-300 p-2">Non-striated</td>
+                <td className="border border-gray-300 p-2">Striated</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Control</td>
+                <td className="border border-gray-300 p-2">Voluntary</td>
+                <td className="border border-gray-300 p-2">Involuntary</td>
+                <td className="border border-gray-300 p-2">Involuntary</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Nuclei</td>
+                <td className="border border-gray-300 p-2">Multinucleated</td>
+                <td className="border border-gray-300 p-2">Uninucleated</td>
+                <td className="border border-gray-300 p-2">Uninucleated</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Shape</td>
+                <td className="border border-gray-300 p-2">Elongated</td>
+                <td className="border border-gray-300 p-2">Spindle-shaped (fusiform)</td>
+                <td className="border border-gray-300 p-2">Branched with striations</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Location</td>
+                <td className="border border-gray-300 p-2">Attached to bones</td>
+                <td className="border border-gray-300 p-2">Viscera, blood vessels</td>
+                <td className="border border-gray-300 p-2">Heart</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Special feature</td>
+                <td className="border border-gray-300 p-2">—</td>
+                <td className="border border-gray-300 p-2">—</td>
+                <td className="border border-gray-300 p-2">Intercalated discs</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Sarcomere Structure (Basic Contractile Unit):</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Z-line (Z-disc):</span> Boundaries of sarcomere</li>
+              <li><span className="font-semibold text-green-800">A-band (Anisotropic):</span> Dark band containing thick myosin filaments &amp; partial thin actin filaments</li>
+              <li><span className="font-semibold text-green-800">I-band (Isotropic):</span> Light band containing only thin actin filaments</li>
+              <li><span className="font-semibold text-green-800">H-zone (Hensen's zone):</span> Central region of A-band with only myosin</li>
+              <li><span className="font-semibold text-green-800">M-line:</span> Centre of H-zone with thick filaments</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Intercalated Discs (Cardiac muscle only):</span> Specialized junctions containing gap junctions &amp; desmosomes that allow synchronized contraction between cardiac cells</p>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Cardiac muscle = striated BUT involuntary (unique combination). Intercalated discs = ONLY in cardiac muscle. Skeletal = only VOLUNTARY muscle. Smooth muscle = fusiform shape, spindle-shaped cells. Contraction: Thin (actin) &amp; thick (myosin) filaments slide over each other.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Neural Tissue",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>Neural tissue is specialized for electrical signaling and rapid communication throughout the body.</p>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Neuron Structure:</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Cell body (Soma/Cyton):</span> Contains nucleus, organelles, produces neurotransmitters</li>
+              <li><span className="font-semibold text-green-800">Dendrites:</span> Multiple, short, branched processes that receive impulses from other neurons</li>
+              <li><span className="font-semibold text-green-800">Axon:</span> Single, long process that transmits impulses away from cell body to other neurons/muscles</li>
+              <li><span className="font-semibold text-green-800">Myelin sheath:</span> Insulating layer formed by Schwann cells (PNS) or oligodendrocytes (CNS)</li>
+              <li><span className="font-semibold text-green-800">Nodes of Ranvier:</span> Gaps in myelin sheath between Schwann cells</li>
+              <li><span className="font-semibold text-green-800">Synaptic knob (Terminal):</span> Enlarged end of axon containing neurotransmitter vesicles</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Neuron Types by Function:</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Sensory neurons (Afferent):</span> Carry impulses from receptors to CNS</li>
+              <li><span className="font-semibold text-green-800">Motor neurons (Efferent):</span> Carry impulses from CNS to effectors (muscles/glands)</li>
+              <li><span className="font-semibold text-green-800">Interneurons (Association neurons):</span> Connect sensory &amp; motor neurons in CNS</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Neuron Types by Structure:</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Unipolar:</span> Single process from cell body (sensory neurons)</li>
+              <li><span className="font-semibold text-green-800">Bipolar:</span> Two processes, one dendrite &amp; one axon (retina, olfactory epithelium)</li>
+              <li><span className="font-semibold text-green-800">Multipolar:</span> Many dendrites &amp; one axon (most common, cerebral cortex, motor neurons)</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Neuroglia (Support cells, ~50% of CNS cells):</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Astrocytes:</span> Provide structural &amp; metabolic support, control extracellular K⁺</li>
+              <li><span className="font-semibold text-green-800">Oligodendrocytes:</span> Form myelin in CNS (one cell myelinates multiple axons)</li>
+              <li><span className="font-semibold text-green-800">Microglia:</span> Immune cells, phagocytose pathogens &amp; debris</li>
+              <li><span className="font-semibold text-green-800">Ependymal cells:</span> Produce cerebrospinal fluid</li>
+              <li><span className="font-semibold text-green-800">Schwann cells:</span> Form myelin in PNS (one cell for one segment)</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Synapse:</span> Junction between neurons allowing impulse transmission</p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Presynaptic membrane:</span> Axon terminal of transmitting neuron with neurotransmitter vesicles</li>
+              <li><span className="font-semibold text-green-800">Synaptic cleft:</span> 20 nm gap between neurons</li>
+              <li><span className="font-semibold text-green-800">Postsynaptic membrane:</span> Membrane of receiving neuron with receptors</li>
+              <li><span className="font-semibold text-green-800">Common neurotransmitters:</span> Acetylcholine (skeletal muscle), Dopamine (movement), GABA (inhibitory), Glutamate (excitatory)</li>
+            </ul>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Myelinated axons = faster conduction (saltatory conduction). Nodes of Ranvier = gaps in myelin sheath. Most neurons are multipolar. Schwann cells form myelin in PNS; oligodendrocytes in CNS (one oligodendrocyte myelinates multiple axons). Synapse is ONE-WAY transmission.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Cockroach Morphology &amp; Anatomy",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p>The cockroach is a commonly studied arthropod specimen representing insect external &amp; internal anatomy.</p>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">External Morphology:</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li><span className="font-semibold text-green-800">Head:</span> Compound eyes (facets for vision), pair of antennae (long, segmented, sensory), mouthparts (labrum, mandibles for cutting, maxillae with palps, labium)</li>
+              <li><span className="font-semibold text-green-800">Thorax:</span> 3 segments, each with pair of jointed legs, first 2 segments with wings (tegmina = leathery forewings, membranous hindwings)</li>
+              <li><span className="font-semibold text-green-800">Abdomen:</span> 10 visible segments, 11th segment reduced, anal cerci (paired posterior appendages), males have anal styles</li>
+            </ul>
+          </div>
+
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Organ System</th>
+                <th className="border border-gray-300 p-2 text-left">Components &amp; Functions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Digestive</span></td>
+                <td className="border border-gray-300 p-2">Foregut (mouth, oesophagus, crop) → Midgut (stomach) → Hindgut (rectum); Hepatic caeca (6-8, at foregut-midgut junction, absorb nutrients)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Circulatory</span></td>
+                <td className="border border-gray-300 p-2">Open system, haemolymph (colourless, NO respiratory pigment like haemoglobin); 13-chambered heart (dorsal, pumps haemolymph)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Respiratory</span></td>
+                <td className="border border-gray-300 p-2">Tracheal system (tube network throughout body), 10 pairs spiracles (2 thoracic + 8 abdominal) for air entry</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Excretory</span></td>
+                <td className="border border-gray-300 p-2">Malpighian tubules (blind tubes from hindgut junction, absorb water &amp; nitrogenous wastes), URICOTELIC (excretes uric acid)</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Nervous</span></td>
+                <td className="border border-gray-300 p-2">Supra-oesophageal ganglion (brain above oesophagus), ventral nerve cord with ganglia in each segment</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold text-green-800">Reproductive</span></td>
+                <td className="border border-gray-300 p-2">Males: testes with vas deferens, females: ovaries with oviducts; external genitalia dimorphic</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Haemolymph (Insect Blood):</span> Colourless fluid WITHOUT respiratory pigments (no haemoglobin), does NOT transport oxygen; oxygen transport via direct tracheae to tissues</p>
+          </div>
+
+          <div className="space-y-2">
+            <p><span className="font-semibold text-green-800">Distinguishing Features:</span></p>
+            <ul className="list-disc pl-5 space-y-1">
+              <li>Body covered with chitinous exoskeleton (rigid protection)</li>
+              <li>Open circulatory system with haemolymph bathing organs directly</li>
+              <li>Tracheal respiration for direct gas exchange with cells</li>
+              <li>Uricotelic excretion (conserves water, important for terrestrial life)</li>
+            </ul>
+          </div>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Cockroach is URICOTELIC (excretes uric acid). Blood = haemolymph (NO haemoglobin, NO O₂ transport). 10 pairs spiracles (2 thoracic + 8 abdominal). Malpighian tubules for excretion. Males have anal styles (females lack). Hepatic caeca = 6-8 at junction of foregut-midgut. Compound eyes, long antennae for sensory input. Tegmina + membranous wings on thorax.</p>
+          </div>
+        </div>
+      ),
+    },
+  ],
+}
+
+
+  const plantPhysiologyContent = {
+  topics: [
+    {
+      title: "Light Reactions of Photosynthesis",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p><span className="font-semibold text-green-800">Location:</span> Thylakoid membrane (grana lamellae) of chloroplasts.</p>
+
+          <p><span className="font-semibold text-green-800">Photosystems:</span> <span className="font-semibold text-green-800">Photosystem II (P680)</span> absorbs light at 680 nm wavelength. <span className="font-semibold text-green-800">Photosystem I (P700)</span> absorbs light at 700 nm wavelength. PS II is involved in photolysis of water &amp; occurs on the lumen side.</p>
+
+          <p><span className="font-semibold text-green-800">Photolysis of Water:</span> 2H<sub>2</sub>O → 4H<sup>+</sup> + 4e<sup>−</sup> + O<sub>2</sub>. Occurs at PS II through the <span className="font-semibold text-green-800">Oxygen Evolving Complex (OEC)</span>. O<sub>2</sub> is released as a byproduct (Hill proved O<sub>2</sub> comes from water, not CO<sub>2</sub>).</p>
+
+          <p><span className="font-semibold text-green-800">Electron Transport Chain:</span> PS II → Plastoquinone (PQ) → Cytochrome b<sub>6</sub>f complex → Plastocyanin (PC) → PS I → Ferredoxin (Fd) → NADP<sup>+</sup> reductase → NADPH formation.</p>
+
+          <p><span className="font-semibold text-green-800">Cyclic vs Non-cyclic Photophosphorylation:</span></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">Cyclic</th>
+                <th className="border border-gray-300 p-2 text-left">Non-cyclic</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Photosystems involved</td>
+                <td className="border border-gray-300 p-2">Only PS I</td>
+                <td className="border border-gray-300 p-2">PS II + PS I</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Products</td>
+                <td className="border border-gray-300 p-2">ATP only</td>
+                <td className="border border-gray-300 p-2">ATP + NADPH + O<sub>2</sub></td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Water photolysis</td>
+                <td className="border border-gray-300 p-2">No</td>
+                <td className="border border-gray-300 p-2">Yes</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Location in stroma</td>
+                <td className="border border-gray-300 p-2">Low light</td>
+                <td className="border border-gray-300 p-2">High light</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><span className="font-semibold text-green-800">Chemiosmosis &amp; ATP Synthesis:</span> H<sup>+</sup> ions accumulate in thylakoid lumen creating a proton gradient (electrochemical gradient). This gradient drives ATP synthase (CF<sub>0</sub>-CF<sub>1</sub>) to phosphorylate ADP into ATP. This process is called photophosphorylation.</p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> O<sub>2</sub> comes from WATER (not CO<sub>2</sub>) — proved by Hill &amp; Ruben. PS II has P680, PS I has P700. Cyclic photophosphorylation produces ONLY ATP, no NADPH, no O<sub>2</sub>. Non-cyclic produces both ATP &amp; NADPH. Photolysis occurs at PS II lumen side with the OEC. Photolysis: 2H<sub>2</sub>O → O<sub>2</sub> + 4e<sup>−</sup> + 4H<sup>+</sup>.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Calvin Cycle (C3 Pathway)",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p><span className="font-semibold text-green-800">Location &amp; Discovery:</span> Occurs in the stroma of chloroplasts. Discovered by <span className="font-semibold text-green-800">Melvin Calvin</span> (also called the Calvin-Benson cycle or reductive pentose phosphate cycle).</p>
+
+          <p><span className="font-semibold text-green-800">Three Phases of Calvin Cycle:</span></p>
+          <ul className="list-disc ml-5 space-y-2 text-sm">
+            <li><span className="font-semibold text-green-800">Carbon Fixation:</span> CO<sub>2</sub> combines with RuBP (ribulose-1,5-bisphosphate) via the enzyme <span className="font-semibold text-green-800">RuBisCO</span> to form 3-phosphoglycerate (3-PGA, 3C compound). Reaction: CO<sub>2</sub> + RuBP (5C) → 2 × 3-PGA (3C).</li>
+            <li><span className="font-semibold text-green-800">Reduction Phase:</span> 3-PGA is phosphorylated to 1,3-bisphosphoglycerate (ATP used) then reduced to glyceraldehyde-3-phosphate (G3P) using NADPH. Energy required: 2 ATP + 2 NADPH per 3-PGA.</li>
+            <li><span className="font-semibold text-green-800">Regeneration of RuBP:</span> 5 G3P molecules (15C) regenerate 3 RuBP molecules (15C) using ATP. For every 1 G3P that exits the cycle, 5 G3P must be regenerated.</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">ATP &amp; NADPH Consumption per Glucose:</span> To produce 1 glucose (6C), the cycle must turn 6 times, fixing 6 CO<sub>2</sub> molecules. This requires: <span className="font-semibold text-green-800">18 ATP + 12 NADPH</span>.</p>
+
+          <p><span className="font-semibold text-green-800">RuBisCO (Ribulose-1,5-bisphosphate carboxylase/oxygenase):</span> Most abundant enzyme on Earth. Has dual enzymatic activity: <span className="font-semibold text-green-800">carboxylase activity</span> (fixes CO<sub>2</sub> in Calvin cycle) &amp; <span className="font-semibold text-green-800">oxygenase activity</span> (uses O<sub>2</sub> instead, initiates photorespiration).</p>
+
+          <p><span className="font-semibold text-green-800">C3 vs C4 Pathway Comparison:</span></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Feature</th>
+                <th className="border border-gray-300 p-2 text-left">C3 Plants</th>
+                <th className="border border-gray-300 p-2 text-left">C4 Plants</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">First stable product</td>
+                <td className="border border-gray-300 p-2">3-PGA (3C)</td>
+                <td className="border border-gray-300 p-2">Oxaloacetate (OAA, 4C)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Photosynthetic pathway</td>
+                <td className="border border-gray-300 p-2">Only Calvin cycle</td>
+                <td className="border border-gray-300 p-2">Hatch-Slack + Calvin cycle</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Photorespiration</td>
+                <td className="border border-gray-300 p-2">High (inefficient)</td>
+                <td className="border border-gray-300 p-2">Low (very efficient)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Leaf anatomy</td>
+                <td className="border border-gray-300 p-2">No Kranz anatomy</td>
+                <td className="border border-gray-300 p-2">Kranz anatomy present</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Climate adaptation</td>
+                <td className="border border-gray-300 p-2">Temperate regions</td>
+                <td className="border border-gray-300 p-2">Tropical/hot, dry regions</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Examples</td>
+                <td className="border border-gray-300 p-2">Wheat, rice, pea, sunflower</td>
+                <td className="border border-gray-300 p-2">Maize, sugarcane, sorghum</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><span className="font-semibold text-green-800">C4 Mechanism:</span> CO<sub>2</sub> is first fixed in mesophyll cells via <span className="font-semibold text-green-800">PEP carboxylase</span> (more efficient than RuBisCO) to form OAA, then transported to bundle sheath cells where Calvin cycle operates. This concentrates CO<sub>2</sub> around RuBisCO, reducing oxygenase activity.</p>
+
+          <p><span className="font-semibold text-green-800">CAM Plants (Crassulacean Acid Metabolism):</span> Succulent plants like <span className="font-semibold text-green-800">Opuntia (prickly pear), pineapple, agave</span>. Stomata open at NIGHT to fix CO<sub>2</sub> into malic acid &amp; stored in vacuoles. Calvin cycle operates during the DAY using stored CO<sub>2</sub>. Adaptation to xeric (dry) conditions.</p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> RuBisCO = both carboxylase + oxygenase enzyme. C3 first product = 3-PGA (3-carbon compound). C4 first product = OAA (4-carbon oxaloacetate). C4 plants have special <span className="font-semibold">Kranz anatomy</span> with bundle sheath cells surrounding veins. Photorespiration = wasteful process using O<sub>2</sub>, releases CO<sub>2</sub>, consumes ATP, produces no useful products. C4 &amp; CAM plants minimize photorespiration. CAM = nocturnal stomatal opening.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Glycolysis and Fermentation",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <p><span className="font-semibold text-green-800">Location &amp; Universality:</span> Occurs in the cytoplasm/cytosol. Universal pathway common to ALL organisms (both aerobic &amp; anaerobic). Does NOT require oxygen.</p>
+
+          <p><span className="font-semibold text-green-800">Overall Reaction:</span> Glucose (C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>) → 2 Pyruvate (C<sub>3</sub>H<sub>4</sub>O<sub>3</sub>). Net yield: <span className="font-semibold text-green-800">2 ATP + 2 NADH</span> per glucose.</p>
+
+          <p><span className="font-semibold text-green-800">Key Steps &amp; Enzymes (10 reactions):</span></p>
+          <ul className="list-disc ml-5 space-y-2 text-sm">
+            <li><span className="font-semibold text-green-800">Glucose activation:</span> Glucose → Glucose-6-phosphate (enzyme: hexokinase, uses 1 ATP)</li>
+            <li><span className="font-semibold text-green-800">Isomerization:</span> Glucose-6-phosphate → Fructose-6-phosphate</li>
+            <li><span className="font-semibold text-green-800">Second phosphorylation:</span> Fructose-6-phosphate → Fructose-1,6-bisphosphate (enzyme: <span className="font-semibold text-green-800">phosphofructokinase (PFK)</span> — rate-limiting enzyme, uses 1 ATP)</li>
+            <li><span className="font-semibold text-green-800">Cleavage:</span> Fructose-1,6-bisphosphate → 2 × Glyceraldehyde-3-phosphate (G3P)</li>
+            <li><span className="font-semibold text-green-800">Oxidation &amp; phosphorylation:</span> 2 × G3P → 2 × 1,3-bisphosphoglycerate (uses NADH, produces 2 NADH)</li>
+            <li><span className="font-semibold text-green-800">First ATP formation:</span> 2 × 1,3-bisphosphoglycerate → 2 × 3-phosphoglycerate (produces 2 ATP)</li>
+            <li><span className="font-semibold text-green-800">Phosphoryl group shift:</span> 2 × 3-phosphoglycerate → 2 × 2-phosphoglycerate</li>
+            <li><span className="font-semibold text-green-800">Dehydration:</span> 2 × 2-phosphoglycerate → 2 × Phosphoenolpyruvate (PEP)</li>
+            <li><span className="font-semibold text-green-800">Second ATP formation:</span> 2 × PEP → 2 × Pyruvate (enzyme: pyruvate kinase, produces 2 ATP)</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">ATP Summary:</span> Investment phase = 2 ATP used. Payoff phase = 4 ATP produced. <span className="font-semibold text-green-800">Net ATP gain = 2 ATP per glucose</span>.</p>
+
+          <p><span className="font-semibold text-green-800">Fermentation (Anaerobic Respiration):</span> Process that regenerates NAD<sup>+</sup> from NADH to allow glycolysis to continue without oxygen.</p>
+          <ul className="list-disc ml-5 space-y-2 text-sm">
+            <li><span className="font-semibold text-green-800">Alcoholic Fermentation:</span> Occurs in yeast &amp; some bacteria. Pyruvate → Ethanol + CO<sub>2</sub>. Enzymes: pyruvate decarboxylase (removes CO<sub>2</sub>) &amp; alcohol dehydrogenase (reduces acetaldehyde to ethanol). Used in bread-making, beer &amp; wine production.</li>
+            <li><span className="font-semibold text-green-800">Lactic Acid Fermentation:</span> Occurs in muscle cells &amp; lactobacilli. Pyruvate → Lactic acid. Enzyme: lactate dehydrogenase. Occurs during intense exercise when O<sub>2</sub> is insufficient.</li>
+          </ul>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Glycolysis = 10 sequential steps, universally conserved. 2 ATP invested (priming phase), 4 ATP produced (payoff phase), NET = 2 ATP gain. <span className="font-semibold">PFK (phosphofructokinase)</span> is the rate-limiting/key regulatory enzyme. Fermentation = incomplete oxidation, occurs in cytoplasm WITHOUT oxygen. Alcoholic fermentation used in bread/beer making (produces CO<sub>2</sub>). Lactic acid fermentation causes muscle fatigue during intense exercise.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Krebs Cycle and Electron Transport Chain",
+      pyqFrequency: "Very High" as const,
+      content: (
+        <div className="space-y-4">
+          <p><span className="font-semibold text-green-800">Pyruvate Oxidation (Link Reaction):</span> Pyruvate (3C) enters mitochondrial matrix where enzyme <span className="font-semibold text-green-800">pyruvate dehydrogenase complex</span> converts it to Acetyl CoA (2C) + CO<sub>2</sub> + NADH. Produces 1 NADH per pyruvate. For 1 glucose: 2 Acetyl CoA formed.</p>
+
+          <p><span className="font-semibold text-green-800">Krebs Cycle (Citric Acid Cycle/TCA Cycle):</span> Occurs in mitochondrial matrix. Circular pathway where Acetyl CoA (2C) combines with Oxaloacetate (4C) to form Citrate (6C), which is progressively oxidized, releasing 2 CO<sub>2</sub> molecules, regenerating Oxaloacetate.</p>
+
+          <p><span className="font-semibold text-green-800">Krebs Cycle Steps:</span></p>
+          <ul className="list-disc ml-5 space-y-1 text-sm">
+            <li>Acetyl CoA + Oxaloacetate → Citrate (enzyme: citrate synthase)</li>
+            <li>Citrate → Isocitrate (enzyme: aconitase)</li>
+            <li>Isocitrate → α-Ketoglutarate + CO<sub>2</sub> + NADH (enzyme: isocitrate dehydrogenase)</li>
+            <li>α-Ketoglutarate → Succinyl CoA + CO<sub>2</sub> + NADH (enzyme: α-ketoglutarate dehydrogenase)</li>
+            <li>Succinyl CoA → Succinate + GTP (or ATP) (enzyme: succinyl CoA synthetase) — only substrate-level phosphorylation in Krebs</li>
+            <li>Succinate → Fumarate + FADH<sub>2</sub> (enzyme: succinate dehydrogenase)</li>
+            <li>Fumarate → Malate (enzyme: fumarase)</li>
+            <li>Malate → Oxaloacetate + NADH (enzyme: malate dehydrogenase)</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">Products per Acetyl CoA:</span> 3 NADH + 1 FADH<sub>2</sub> + 1 GTP (≈ATP) + 2 CO<sub>2</sub>. Per glucose (2 Acetyl CoA): 6 NADH + 2 FADH<sub>2</sub> + 2 GTP + 4 CO<sub>2</sub>.</p>
+
+          <p><span className="font-semibold text-green-800">Electron Transport Chain (ETC):</span> Located on inner mitochondrial membrane (cristae). Series of protein complexes transfer electrons &amp; pump H<sup>+</sup> ions.</p>
+
+          <p><span className="font-semibold text-green-800">ETC Complexes:</span></p>
+          <ul className="list-disc ml-5 space-y-1 text-sm">
+            <li><span className="font-semibold text-green-800">Complex I (NADH dehydrogenase):</span> NADH → Ubiquinone (UQ). Pumps 4 H<sup>+</sup></li>
+            <li><span className="font-semibold text-green-800">Complex II (Succinate dehydrogenase):</span> FADH<sub>2</sub> → Ubiquinone. Pumps 0 H<sup>+</sup> (only transfers electrons)</li>
+            <li><span className="font-semibold text-green-800">Complex III (Cytochrome bc<sub>1</sub>):</span> Ubiquinone → Cytochrome c. Pumps 4 H<sup>+</sup></li>
+            <li><span className="font-semibold text-green-800">Complex IV (Cytochrome c oxidase):</span> Cytochrome c → O<sub>2</sub>. Pumps 2 H<sup>+</sup>. O<sub>2</sub> is final electron acceptor forming H<sub>2</sub>O</li>
+            <li><span className="font-semibold text-green-800">Complex V (ATP synthase):</span> H<sup>+</sup> gradient → ATP synthesis via chemiosmosis</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">Electron Transport Sequence:</span> NADH → Complex I → UQ → Complex III → Cyt c → Complex IV → O<sub>2</sub> (forms H<sub>2</sub>O). FADH<sub>2</sub> enters at Complex II, bypassing Complex I (fewer H<sup>+</sup> pumped).</p>
+
+          <p><span className="font-semibold text-green-800">Oxidative Phosphorylation &amp; Chemiosmosis:</span> H<sup>+</sup> gradient (high in matrix, low in intermembrane space) created by electron transport drives ATP synthase to phosphorylate ADP + Pi → ATP. Gradient is dissipated through ATP synthase channel.</p>
+
+          <p><span className="font-semibold text-green-800">ATP Yield Summary (UPDATED):</span></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Stage</th>
+                <th className="border border-gray-300 p-2 text-left">Direct ATP</th>
+                <th className="border border-gray-300 p-2 text-left">NADH × 2.5</th>
+                <th className="border border-gray-300 p-2 text-left">FADH<sub>2</sub> × 1.5</th>
+                <th className="border border-gray-300 p-2 text-left">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Glycolysis</td>
+                <td className="border border-gray-300 p-2">2</td>
+                <td className="border border-gray-300 p-2">2 NADH = 5</td>
+                <td className="border border-gray-300 p-2">—</td>
+                <td className="border border-gray-300 p-2">7</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Link (Pyruvate oxidation)</td>
+                <td className="border border-gray-300 p-2">—</td>
+                <td className="border border-gray-300 p-2">2 NADH = 5</td>
+                <td className="border border-gray-300 p-2">—</td>
+                <td className="border border-gray-300 p-2">5</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2">Krebs Cycle</td>
+                <td className="border border-gray-300 p-2">2</td>
+                <td className="border border-gray-300 p-2">6 NADH = 15</td>
+                <td className="border border-gray-300 p-2">2 FADH<sub>2</sub> = 3</td>
+                <td className="border border-gray-300 p-2">20</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold">TOTAL per Glucose</span></td>
+                <td className="border border-gray-300 p-2"><span className="font-semibold">4</span></td>
+                <td className="border border-gray-300 p-2"><span className="font-semibold">10 NADH = 25</span></td>
+                <td className="border border-gray-300 p-2"><span className="font-semibold">2 FADH<sub>2</sub> = 3</span></td>
+                <td className="border border-gray-300 p-2"><span className="font-semibold">~30-32 ATP</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><span className="font-semibold text-green-800">Amphibolic Pathway:</span> Krebs cycle serves dual roles: <span className="font-semibold text-green-800">Catabolic</span> (breaks down carbon compounds for energy) &amp; <span className="font-semibold text-green-800">Anabolic</span> (intermediates used for synthesis of amino acids, nucleotides, fatty acids, chlorophyll).</p>
+
+          <p><span className="font-semibold text-green-800">Respiratory Quotient (RQ):</span> RQ = CO<sub>2</sub> released / O<sub>2</sub> consumed. For carbohydrates: RQ = 1. For fats: RQ &lt; 1 (≈0.7). For proteins: RQ ≈ 0.8-0.9.</p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Total ATP per glucose = <span className="font-semibold">~30-32 ATP</span> (NOT 36-38 — older calculation). O<sub>2</sub> is the final electron acceptor in ETC, producing H<sub>2</sub>O. Krebs cycle is <span className="font-semibold">AMPHIBOLIC</span> (both catabolic &amp; anabolic). Each NADH yields ~2.5 ATP, each FADH<sub>2</sub> yields ~1.5 ATP (accounting for P/O ratios &amp; transport costs). Complex I pumps most H<sup>+</sup> (4). Complex II enters at UQ, bypasses Complex I. ATP synthase needs ~3 H<sup>+</sup> per ATP.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Plant Growth and Hormones",
+      pyqFrequency: "High" as const,
+      content: (
+        <div className="space-y-4">
+          <p><span className="font-semibold text-green-800">Phases of Plant Growth:</span></p>
+          <ul className="list-disc ml-5 space-y-2 text-sm">
+            <li><span className="font-semibold text-green-800">Meristematic Phase:</span> Active cell division in meristems. Cells are small, isodiametric, with dense cytoplasm.</li>
+            <li><span className="font-semibold text-green-800">Elongation Phase:</span> Cells increase in size through vacuolation &amp; water uptake. Cell wall expands.</li>
+            <li><span className="font-semibold text-green-800">Maturation/Differentiation Phase:</span> Cells specialize &amp; develop specific structure &amp; function. Growth ceases.</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">Growth Rate Patterns:</span></p>
+          <ul className="list-disc ml-5 space-y-2 text-sm">
+            <li><span className="font-semibold text-green-800">Arithmetic Growth:</span> Constant/linear increase in size. Length = a + bt (straight line graph). Example: root elongation.</li>
+            <li><span className="font-semibold text-green-800">Geometric/Exponential Growth:</span> Doubling of size in equal time intervals. Length = ae<sup>rt</sup> (exponential curve). Example: bacterial population, fungal growth.</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">Plant Growth Regulators (Hormones):</span></p>
+          <table className="w-full border-collapse border border-gray-300 my-4 text-xs">
+            <thead className="bg-green-50">
+              <tr>
+                <th className="border border-gray-300 p-2 text-left">Hormone</th>
+                <th className="border border-gray-300 p-2 text-left">Source</th>
+                <th className="border border-gray-300 p-2 text-left">Key Functions</th>
+                <th className="border border-gray-300 p-2 text-left">Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold">Auxins (IAA)</span></td>
+                <td className="border border-gray-300 p-2">Shoot apex, young leaves</td>
+                <td className="border border-gray-300 p-2">Apical dominance, phototropism, cell elongation, promotes root initiation</td>
+                <td className="border border-gray-300 p-2">Indole-3-acetic acid (IAA)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold">Gibberellins (GA)</span></td>
+                <td className="border border-gray-300 p-2">Shoot apex, young leaves, roots, seeds</td>
+                <td className="border border-gray-300 p-2">Stem elongation, bolting, seed germination, flower initiation</td>
+                <td className="border border-gray-300 p-2">GA<sub>3</sub>, GA<sub>4</sub>, GA<sub>7</sub></td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold">Cytokinins</span></td>
+                <td className="border border-gray-300 p-2">Root tips, seeds</td>
+                <td className="border border-gray-300 p-2">Cell division, delay leaf senescence, apical dominance antagonism</td>
+                <td className="border border-gray-300 p-2">Kinetin, 6-benzylaminopurine (BAP)</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2"><span className="font-semibold">Abscisic Acid (ABA)</span></td>
+                <td className="border border-gray-300 p-2">All tissues (stress-induced)</td>
+                <td className="border border-gray-300 p-2">Stress responses, stomatal closure, seed dormancy, inhibits growth</td>
+                <td className="border border-gray-300 p-2">Dormin</td>
+              </tr>
+              <tr className="bg-gray-50">
+                <td className="border border-gray-300 p-2"><span className="font-semibold">Ethylene (C<sub>2</sub>H<sub>4</sub>)</span></td>
+                <td className="border border-gray-300 p-2">All tissues (especially ripening fruit)</td>
+                <td className="border border-gray-300 p-2">Fruit ripening, senescence, leaf abscission, triple response</td>
+                <td className="border border-gray-300 p-2">Gaseous hormone</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p><span className="font-semibold text-green-800">Auxin Details:</span> Indole-3-acetic acid (IAA) is primary natural auxin. Produced at shoot apex, transported basipetally (downward) in a polar manner. Promotes cell wall loosening via <span className="font-semibold text-green-800">acid growth theory</span> (H<sup>+</sup> efflux acidifies cell wall, activating expansins that loosen cellulose). <span className="font-semibold text-green-800">Low concentration promotes growth, high concentration inhibits growth</span>.</p>
+
+          <p><span className="font-semibold text-green-800">Gibberellin Function:</span> GA<sub>3</sub> (gibberellic acid) is most abundant. Promotes <span className="font-semibold text-green-800">bolting</span> in rosette plants (sudden elongation before flowering). Overcomes seed dormancy. Induces enzyme production for seed germination (α-amylase for starch breakdown).</p>
+
+          <p><span className="font-semibold text-green-800">Cytokinin Role:</span> Promotes cell division (cytokinesis). Delays leaf senescence (promotes chlorophyll synthesis). Antagonizes apical dominance (promotes lateral bud growth when applied).</p>
+
+          <p><span className="font-semibold text-green-800">ABA as Stress Hormone:</span> Accumulates during stress (drought, cold, salinity). Closes stomata by increasing turgor loss in guard cells (reduces water loss). Induces dormancy in seeds &amp; buds. Inhibits growth.</p>
+
+          <p><span className="font-semibold text-green-800">Ethylene Characteristics:</span> ONLY gaseous hormone (C<sub>2</sub>H<sub>4</sub>). Promotes fruit ripening (climacteric fruits like mango, banana). Triggers senescence &amp; leaf abscission (leaf fall in autumn). Shows <span className="font-semibold text-green-800">triple response</span> in seedlings: inhibition of elongation, radial swelling, horizontal growth.</p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> <span className="font-semibold">Auxins</span> = low concentration promotes, high inhibits. <span className="font-semibold">ABA</span> = "stress hormone," closes stomata in drought, maintains seed dormancy. <span className="font-semibold">Ethylene</span> = ONLY gaseous hormone, promotes ripening &amp; senescence. <span className="font-semibold">Gibberellins</span> cause bolting (sudden stem elongation in rosette plants). <span className="font-semibold">Cytokinins</span> delay leaf senescence, promote lateral bud growth. <span className="font-semibold">Apical dominance</span> = suppression of lateral growth by auxin from apex; broken by cytokinins.</p>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Photoperiodism and Vernalisation",
+      pyqFrequency: "Medium" as const,
+      content: (
+        <div className="space-y-4">
+          <p><span className="font-semibold text-green-800">Photoperiodism:</span> Physiological response of plants to the relative length of day &amp; night (photoperiod). Controls flowering, dormancy, growth form. <span className="font-semibold text-green-800">Photoreceptor:</span> <span className="font-semibold text-green-800">Phytochrome</span> (blue &amp; red light receptor).</p>
+
+          <p><span className="font-semibold text-green-800">Phytochrome &amp; Its Forms:</span> Reversible pigment with two interconvertible forms. <span className="font-semibold text-green-800">Pr (red-light absorbing form):</span> Inactive form. <span className="font-semibold text-green-800">Pfr (far-red light absorbing form):</span> Active form (Pfr is the physiologically active form). Red light converts Pr → Pfr (day). Far-red light converts Pfr → Pr (night/darkness). Pfr accumulates during day, decays in darkness.</p>
+
+          <p><span className="font-semibold text-green-800">Categories Based on Critical Photoperiod:</span></p>
+          <ul className="list-disc ml-5 space-y-2 text-sm">
+            <li><span className="font-semibold text-green-800">Short Day Plants (SDP):</span> Flower when day length is LESS than critical photoperiod (actually requires long night). Examples: rice, tobacco, chrysanthemum, soybean, cotton. Also called "long-night plants."</li>
+            <li><span className="font-semibold text-green-800">Long Day Plants (LDP):</span> Flower when day length is MORE than critical photoperiod (requires short night). Examples: wheat, barley, radish, spinach, lettuce. Temperate zone plants.</li>
+            <li><span className="font-semibold text-green-800">Day Neutral Plants:</span> Flowering independent of photoperiod (respond to other factors like age). Examples: tomato, cucumber, maize, sunflower.</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">Photoperiodic Response Mechanism:</span> Critical dark period is actually the determining factor (not day length). Interrupting long dark period with a brief light flash (red light creating Pfr) prevents SDP from flowering. This demonstrates Pfr is the active form monitoring night length.</p>
+
+          <p><span className="font-semibold text-green-800">Vernalisation:</span> Exposure to prolonged cold temperatures (low temperature for specific period, typically 4-10°C for weeks) required to induce/accelerate flowering. Breaking dormancy to allow flowering.</p>
+
+          <p><span className="font-semibold text-green-800">Vernalisation Examples &amp; Effect:</span></p>
+          <ul className="list-disc ml-5 space-y-2 text-sm">
+            <li><span className="font-semibold text-green-800">Winter wheat:</span> Requires cold (winter vernalisation) to flower. Biennial becomes annual after cold treatment.</li>
+            <li><span className="font-semibold text-green-800">Cabbage, carrot:</span> Root vegetables requiring cold for bolting (flowering). Prevents premature flowering in warm seasons.</li>
+            <li><span className="font-semibold text-green-800">Effect:</span> Cold induces formation of flowering hormone(s), increases Gibberellins levels, or causes epigenetic changes in FLC (FLOWERING LOCUS C) gene, allowing flowering genes to be expressed.</li>
+          </ul>
+
+          <p><span className="font-semibold text-green-800">Proposed Vernalisation Hormone:</span> <span className="font-semibold text-green-800">Vernalin</span> (still hypothetical) — proposed to be produced in cold-exposed leaves &amp; transported to shoot apex to trigger flowering.</p>
+
+          <p><span className="font-semibold text-green-800">Seed Dormancy:</span> State of metabolic inactivity &amp; arrested growth. <span className="font-semibold text-green-800">Maintenance:</span> ABA maintains dormancy (prevents germination). <span className="font-semibold text-green-800">Breaking dormancy:</span> Gibberellins (GA<sub>3</sub>) breaks dormancy. Stratification (cold moist treatment, mimics winter) overcomes dormancy. Some seeds require light (photoblastism).</p>
+
+          <p><span className="font-semibold text-green-800">Stratification:</span> Exposure of seeds to cold moist conditions (0-5°C for days/weeks) to break dormancy. Mimics natural winter conditions. Softens seed coat, activates enzymes for germination.</p>
+
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 my-3 text-yellow-800">
+            <p><span className="font-semibold">NEET TIP:</span> Critical <span className="font-semibold">photoperiod is determined by dark period length</span> (not day length). SDP = actually "long-night plants" (flower with long nights). Interrupting dark period with red light flash prevents SDP flowering (Pfr = active form). <span className="font-semibold">Phytochrome:</span> Pr (inactive) ↔ Pfr (active). Red light (day) → Pfr. Far-red light (night) → Pr. Pfr decays in darkness. Vernalisation = cold exposure induces flowering. <span className="font-semibold">ABA maintains dormancy, GA breaks it.</span> Stratification = cold moist treatment breaks seed dormancy. Winter wheat becomes capable of flowering after vernalisation.</p>
+          </div>
+        </div>
+      ),
+    },
+  ],
+}
+
   const getContentForChapter = () => {
     if (slug === "molecular-basis-of-inheritance") {
       return molecularBasisContent
@@ -2503,6 +4130,14 @@ export default function ChapterNotesContent({
       return plantKingdomContent
     } else if (slug === "animal-kingdom") {
       return animalKingdomContent
+    } else if (slug === "morphology-of-flowering-plants") {
+      return morphologyContent
+    } else if (slug === "anatomy-of-flowering-plants") {
+      return anatomyContent
+    } else if (slug === "structural-organisation-in-animals") {
+      return structuralOrgContent
+    } else if (slug === "plant-physiology") {
+      return plantPhysiologyContent
     }
     return { topics: [] }
   }
