@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   UserCog,
@@ -95,6 +95,49 @@ export default function FacultySettingsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [isAddFacultyModalOpen, setIsAddFacultyModalOpen] = useState(false)
+  const [loading, setLoading] = useState(true)
+
+  const fetchFaculty = useCallback(async () => {
+    try {
+      setLoading(true)
+      const params = new URLSearchParams()
+      if (searchTerm) params.set('search', searchTerm)
+      const res = await fetch(`/api/admin/faculty?${params}`)
+      const json = await res.json()
+      if (json.success && json.data.faculty.length > 0) {
+        setFaculty(
+          json.data.faculty.map((f: Record<string, unknown>) => {
+            const profile = (f.profile || {}) as Record<string, unknown>
+            return {
+              id: f.id,
+              name: f.name || '',
+              email: f.email || '',
+              phone: f.phone || '',
+              specialization: (profile.specialization as string) || 'Biology',
+              experience: (profile.experience as number) || 0,
+              qualification: (profile.qualification as string) || '',
+              joinedDate: f.createdAt
+                ? new Date(f.createdAt as string).toISOString().split('T')[0]
+                : '',
+              coursesAssigned: (profile.coursesAssigned as string[]) || [],
+              activeStudents: (profile.activeStudents as number) || 0,
+              rating: (profile.rating as number) || 0,
+              status: ((profile.status as string) || 'active') as 'active' | 'onLeave' | 'inactive',
+              availability: (profile.availability as string) || '',
+            }
+          })
+        )
+      }
+    } catch {
+      // Keep mock data on error
+    } finally {
+      setLoading(false)
+    }
+  }, [searchTerm])
+
+  useEffect(() => {
+    fetchFaculty()
+  }, [fetchFaculty])
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -368,7 +411,7 @@ export default function FacultySettingsPage() {
         <AddFacultyForm
           onSuccess={() => {
             setIsAddFacultyModalOpen(false)
-            window.location.reload()
+            fetchFaculty()
           }}
           onCancel={() => setIsAddFacultyModalOpen(false)}
         />

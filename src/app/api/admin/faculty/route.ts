@@ -5,6 +5,46 @@ import { requireAdminAuth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
 import bcrypt from 'bcryptjs'
 
+export async function GET(request: NextRequest) {
+  try {
+    await requireAdminAuth()
+
+    const { searchParams } = new URL(request.url)
+    const search = searchParams.get('search')
+
+    const where: Record<string, unknown> = { role: 'TEACHER' }
+
+    if (search) {
+      where.OR = [
+        { name: { contains: search, mode: 'insensitive' } },
+        { email: { contains: search, mode: 'insensitive' } },
+      ]
+    }
+
+    const faculty = await prisma.users.findMany({
+      where,
+      select: {
+        id: true,
+        name: true,
+        email: true,
+        phone: true,
+        profile: true,
+        createdAt: true,
+        lastActiveAt: true,
+      },
+      orderBy: { name: 'asc' },
+    })
+
+    return NextResponse.json({ success: true, data: { faculty } })
+  } catch (error) {
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+    console.error('Fetch faculty error:', error)
+    return NextResponse.json({ success: false, error: 'Failed to fetch faculty' }, { status: 500 })
+  }
+}
+
 const createFacultySchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters').max(100),
   email: z.string().email('Invalid email address'),
