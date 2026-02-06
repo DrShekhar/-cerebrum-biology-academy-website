@@ -269,13 +269,7 @@ export function CourseSchema() {
     },
     datePublished: '2014-01-01',
     dateModified: new Date().toISOString().split('T')[0],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // aggregateRating removed — OrganizationSchema already includes it globally
     hasCourseInstance: [
       {
         '@type': 'CourseInstance',
@@ -504,13 +498,7 @@ export function LocalBusinessSchema() {
         closes: CONTACT_INFO.hours.sunday.close,
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '247',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // aggregateRating removed — OrganizationSchema already includes it globally
     review: [
       {
         '@type': 'Review',

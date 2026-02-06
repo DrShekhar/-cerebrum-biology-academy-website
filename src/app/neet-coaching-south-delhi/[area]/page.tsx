@@ -206,13 +206,7 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
       { '@type': 'City', name: area.name },
       { '@type': 'City', name: 'South Delhi' },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: CEREBRUM_METRICS.rating.toString(),
-      reviewCount: CEREBRUM_METRICS.reviewCount.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // aggregateRating removed — localBusinessSchema below already includes it
   }
 
   const localBusinessSchema = {

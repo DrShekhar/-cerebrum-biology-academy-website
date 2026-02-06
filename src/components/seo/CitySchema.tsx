@@ -69,14 +69,8 @@ export function CitySchema({
     areaServed: localitiesValue.length > 0
       ? localitiesValue.map((locality) => ({ '@type': 'City', name: locality }))
       : [{ '@type': 'City', name: cityName }],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: studentCount,
-      reviewCount: Math.floor(parseInt(studentCount.replace(/,/g, '')) * 0.4).toString(),
-    },
+    // aggregateRating removed — global OrganizationSchema already includes it
+    // Prevents "Review has multiple aggregate ratings" GSC error
     review: [
       {
         '@type': 'Review',

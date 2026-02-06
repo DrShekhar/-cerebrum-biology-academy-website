@@ -224,13 +224,7 @@ export default async function GurugramAreaPage({ params }: PageProps) {
       { '@type': 'City', name: area.name },
       { '@type': 'City', name: 'Gurugram' },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: CEREBRUM_METRICS.rating.toString(),
-      reviewCount: CEREBRUM_METRICS.reviewCount.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // aggregateRating removed — localBusinessSchema below already includes it
   }
 
   const localBusinessSchema = {
