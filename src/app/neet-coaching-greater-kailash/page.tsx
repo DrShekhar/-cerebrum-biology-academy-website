@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
-import { getCityData } from '@/data/city-seo/city-hub-data'
+import { getCityData } from '@/data/city-seo/cities'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
 const locality = 'Greater Kailash'

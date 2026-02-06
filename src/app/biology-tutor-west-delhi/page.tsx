@@ -1,5 +1,5 @@
 import { CityHubPage } from '@/components/seo/CityHubPage'
-import { getCityData } from '@/data/city-seo/city-hub-data'
+import { getCityData } from '@/data/city-seo/cities'
 import { notFound } from 'next/navigation'
 
 export default function BiologyTutorWestDelhiPage() {

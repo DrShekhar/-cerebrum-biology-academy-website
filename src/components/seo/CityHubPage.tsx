@@ -29,7 +29,7 @@ import {
   TrendingUp,
   School,
 } from 'lucide-react'
-import type { CityHubData } from '@/data/city-seo/city-hub-data'
+import type { CityHubData } from '@/data/city-seo/cities'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
 import { CredibilityBar } from '@/components/seo/EEATSignals'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'

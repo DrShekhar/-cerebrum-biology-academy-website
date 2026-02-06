@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { CityHubPage } from '@/components/seo/CityHubPage'
-import { getCityData } from '@/data/city-seo/city-hub-data'
+import { getCityData } from '@/data/city-seo/cities'
 
 // ISR: Revalidate every 1 hour - SEO pages are relatively static
 export const revalidate = 3600

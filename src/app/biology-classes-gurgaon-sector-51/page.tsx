@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { CityHubPage } from '@/components/seo/CityHubPage'
-import { getCityData } from '@/data/city-seo/city-hub-data'
+import { getCityData } from '@/data/city-seo/cities'
 import { MapPin, Users, Building, Star, Phone, Clock, Award } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
