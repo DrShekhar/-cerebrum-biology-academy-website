@@ -4,6 +4,98 @@ import { prisma } from '@/lib/prisma'
 import { requireAdminAuth } from '@/lib/auth'
 import { v4 as uuidv4 } from 'uuid'
 
+export async function GET(request: NextRequest) {
+  try {
+    await requireAdminAuth()
+
+    const { searchParams } = new URL(request.url)
+    const status = searchParams.get('status')
+    const method = searchParams.get('method')
+    const search = searchParams.get('search')
+    const page = parseInt(searchParams.get('page') || '1')
+    const limit = parseInt(searchParams.get('limit') || '50')
+    const offset = (page - 1) * limit
+
+    const where: Record<string, unknown> = {}
+
+    if (status && status !== 'all') {
+      if (status === 'refunded') {
+        where.refundAmount = { gt: 0 }
+      } else {
+        where.status = status.toUpperCase()
+      }
+    }
+
+    if (method && method !== 'all') {
+      where.paymentMethod = method.toUpperCase()
+    }
+
+    if (search) {
+      where.OR = [
+        { transactionId: { contains: search, mode: 'insensitive' } },
+        { razorpayPaymentId: { contains: search, mode: 'insensitive' } },
+        { users: { name: { contains: search, mode: 'insensitive' } } },
+        { users: { email: { contains: search, mode: 'insensitive' } } },
+      ]
+    }
+
+    const [payments, total] = await Promise.all([
+      prisma.payments.findMany({
+        where,
+        include: {
+          users: { select: { id: true, name: true, email: true, phone: true } },
+          enrollments: {
+            select: { id: true, courses: { select: { id: true, name: true } } },
+          },
+        },
+        orderBy: { createdAt: 'desc' },
+        skip: offset,
+        take: limit,
+      }),
+      prisma.payments.count({ where }),
+    ])
+
+    const stats = await prisma.payments.aggregate({
+      _sum: { amount: true, refundAmount: true },
+      _count: true,
+    })
+
+    const statusCounts = await prisma.payments.groupBy({
+      by: ['status'],
+      _count: true,
+      _sum: { amount: true },
+    })
+
+    const refundedCount = await prisma.payments.count({
+      where: { refundAmount: { gt: 0 } },
+    })
+
+    return NextResponse.json({
+      success: true,
+      data: {
+        payments,
+        pagination: { page, limit, total, totalPages: Math.ceil(total / limit) },
+        stats: {
+          totalRevenue: stats._sum.amount || 0,
+          totalRefunded: stats._sum.refundAmount || 0,
+          totalCount: stats._count,
+          statusCounts: statusCounts.reduce(
+            (acc, s) => ({ ...acc, [s.status]: { count: s._count, amount: s._sum.amount || 0 } }),
+            {} as Record<string, { count: number; amount: number }>
+          ),
+          refundedCount,
+        },
+      },
+    })
+  } catch (error) {
+    if (error instanceof Error && error.message === 'Admin authentication required') {
+      return NextResponse.json({ success: false, error: 'Unauthorized' }, { status: 401 })
+    }
+    console.error('Fetch payments error:', error)
+    return NextResponse.json({ success: false, error: 'Failed to fetch payments' }, { status: 500 })
+  }
+}
+
 const createPaymentSchema = z.object({
   userId: z.string().min(1, 'User ID is required'),
   enrollmentId: z.string().optional(),
