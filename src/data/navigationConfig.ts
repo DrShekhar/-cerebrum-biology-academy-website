@@ -138,6 +138,15 @@ export const navigationConfig: NavigationSection[] = [
         keywords: ['syllabus', 'neet syllabus', 'biology topics', 'chapter wise'],
       },
       {
+        id: 'biology-notes',
+        title: 'Biology Notes for NEET',
+        href: '/biology-notes-for-neet',
+        description: 'Chapter-wise NEET Biology notes by AIIMS faculty',
+        keywords: ['biology notes', 'chapter notes', 'neet notes', 'study notes', 'ncert notes'],
+        isNew: true,
+        isPopular: true,
+      },
+      {
         id: 'mcq-practice',
         title: 'NEET Biology MCQ',
         href: '/neet-biology-mcq',
@@ -571,6 +580,16 @@ export const searchableContent = [
     }))
   ),
   // Add additional searchable content
+  {
+    id: 'biology-notes-search',
+    title: 'Biology Notes for NEET',
+    href: '/biology-notes-for-neet',
+    description: 'Chapter-wise NEET Biology notes with PYQ analysis by AIIMS faculty',
+    category: 'Resources',
+    keywords: ['biology notes', 'chapter notes', 'neet notes', 'study notes', 'ncert notes', 'chapter wise notes'],
+    isNew: true,
+    isPopular: true,
+  },
   {
     id: 'mock-tests',
     title: 'Mock Tests',

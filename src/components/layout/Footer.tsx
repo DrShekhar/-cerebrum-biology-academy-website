@@ -95,6 +95,7 @@ export const Footer = memo(function Footer() {
     { name: 'Book a Demo Class', href: '/demo-booking' },
     { name: 'NEET Mock Tests', href: '/mock-tests' },
     { name: 'Free Biology MCQ Practice', href: '/neet-biology-mcq' },
+    { name: 'Biology Notes for NEET', href: '/biology-notes-for-neet' },
     { name: 'Study Materials (LMS)', href: '/tests' },
     { name: 'Free Resources', href: '/free-resources' },
     { name: 'NEET Seminar for Schools', href: '/school-career-seminar' },
