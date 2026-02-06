@@ -8,12 +8,13 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: '18'
+  NODE_VERSION: '20'
 
 jobs:
   build:
     name: 🏗️ Build Application
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: 📥 Checkout code
@@ -51,6 +52,9 @@ jobs:
           # Auth Secrets (placeholders for build - not used at build time)
           AUTH_SECRET: placeholder-build-auth-secret
           NEXTAUTH_SECRET: placeholder-build-nextauth-secret
+          # Redis/Upstash (placeholders for build - not used at build time)
+          UPSTASH_REDIS_REST_URL: https://placeholder.upstash.io
+          UPSTASH_REDIS_REST_TOKEN: placeholder-build-only
           # Note: Firebase env vars intentionally not set - code handles missing config gracefully
 
       - name: ✅ Build successful
