@@ -10,6 +10,7 @@ import { StreakWidget } from '@/components/gamification/StreakWidget'
 import { NTAAnnouncementWidget } from '../NTAAnnouncementWidget'
 import { SpacedReviewWidget } from '../SpacedReviewWidget'
 import { NEETReadinessMeter } from '../NEETReadinessMeter'
+import { DailyChallengeCard } from '../DailyChallengeCard'
 import { WeakAreaItem } from './WeakAreaItem'
 
 interface StudySession {
@@ -265,6 +266,9 @@ export function OverviewTab({
 
       {/* NTA Announcements Widget */}
       <NTAAnnouncementWidget />
+
+      {/* Daily Challenge */}
+      <DailyChallengeCard />
 
       {/* Spaced Repetition Review */}
       <SpacedReviewWidget />
