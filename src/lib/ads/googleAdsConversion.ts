@@ -42,7 +42,7 @@ const gtagReportConversion = (
   // Check if conversion label is configured
   if (!conversionLabel) {
     if (!warnedLabels.has(conversionType)) {
-      console.warn(`[Google Ads] Conversion label not configured for: ${conversionType}. Set NEXT_PUBLIC_GADS_${conversionType.toUpperCase()}_LABEL in environment variables.`)
+      console.error(`[Google Ads] CONVERSION NOT TRACKING: Label missing for "${conversionType}". Set NEXT_PUBLIC_GADS_${conversionType.toUpperCase()}_LABEL in .env. Google Ads cannot optimize without conversion data.`)
       warnedLabels.add(conversionType)
     }
     // Still track as GA4 event even without Google Ads label

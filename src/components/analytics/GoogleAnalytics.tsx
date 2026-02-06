@@ -13,7 +13,7 @@ export default function GoogleAnalytics() {
     // PERFORMANCE: Defer GA loading until browser is idle (after LCP)
     // This removes 166KB from the critical render path
     if ('requestIdleCallback' in window) {
-      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 5000 })
+      const idleId = requestIdleCallback(() => setShouldLoad(true), { timeout: 2000 })
       return () => cancelIdleCallback(idleId)
     } else {
       const timerId = setTimeout(() => setShouldLoad(true), 3000)
