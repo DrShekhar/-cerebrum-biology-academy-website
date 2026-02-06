@@ -25,19 +25,25 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
   const [showAnimation, setShowAnimation] = useState(false)
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
     const dismissedKey = `trial-banner-dismissed-${trialStatus.freeUserId}`
-    const dismissedDate = localStorage.getItem(dismissedKey)
+    try {
+      const dismissedDate = localStorage.getItem(dismissedKey)
 
-    if (dismissedDate) {
-      const lastDismissed = new Date(dismissedDate)
-      const now = new Date()
-      const hoursSinceDismissed = (now.getTime() - lastDismissed.getTime()) / (1000 * 60 * 60)
+      if (dismissedDate) {
+        const lastDismissed = new Date(dismissedDate)
+        const now = new Date()
+        const hoursSinceDismissed = (now.getTime() - lastDismissed.getTime()) / (1000 * 60 * 60)
 
-      if (hoursSinceDismissed < 24) {
-        setIsDismissed(true)
-      } else {
-        localStorage.removeItem(dismissedKey)
+        if (hoursSinceDismissed < 24) {
+          setIsDismissed(true)
+        } else {
+          localStorage.removeItem(dismissedKey)
+        }
       }
+    } catch {
+      // localStorage may be unavailable
     }
 
     setShowAnimation(true)
@@ -46,7 +52,11 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
   const handleDismiss = () => {
     setIsDismissed(true)
     const dismissedKey = `trial-banner-dismissed-${trialStatus.freeUserId}`
-    localStorage.setItem(dismissedKey, new Date().toISOString())
+    try {
+      localStorage.setItem(dismissedKey, new Date().toISOString())
+    } catch {
+      // localStorage may be unavailable
+    }
     onDismiss?.()
   }
 

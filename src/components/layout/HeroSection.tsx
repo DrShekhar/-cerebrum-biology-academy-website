@@ -45,7 +45,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
     >
       {/* Background - CSS only, no external image for faster LCP */}
       {/* PERFORMANCE: Static gradients, no animations for better performance */}
-      <div className="absolute inset-0 contain-strict pointer-events-none" aria-hidden="true">
+      <div className="absolute inset-0 overflow-hidden contain-strict pointer-events-none" aria-hidden="true">
         {/* CSS gradient orbs - STATIC for performance */}
         <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl" />
         <div className="hidden md:block absolute bottom-1/4 right-[16%] w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl" />

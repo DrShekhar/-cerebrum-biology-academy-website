@@ -35,15 +35,40 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
     questions: '',
   })
 
+  const [submitError, setSubmitError] = useState('')
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitError('')
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const response = await fetch('/api/demo-booking', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          parentPhone: formData.parentPhone,
+          currentClass: formData.currentClass,
+          preferredTime: formData.preferredTime,
+          questions: formData.questions,
+          course: course.name,
+          source: 'demo-class-modal',
+        }),
+      })
 
-    setIsSubmitting(false)
-    setIsSuccess(true)
+      if (!response.ok) {
+        throw new Error('Failed to book demo class')
+      }
+
+      setIsSuccess(true)
+    } catch {
+      setSubmitError('Something went wrong. Please try WhatsApp booking or call us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleInputChange = (field: string, value: string) => {
@@ -233,6 +258,12 @@ export function DemoClassModal({ course, onClose }: DemoClassModalProps) {
                 <li>• Detailed study plan discussion</li>
               </ul>
             </Card>
+
+            {submitError && (
+              <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-sm text-red-700">
+                {submitError}
+              </div>
+            )}
 
             {/* Submit Buttons */}
             <div className="space-y-3 pt-4">

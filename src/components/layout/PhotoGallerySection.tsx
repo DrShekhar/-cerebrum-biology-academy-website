@@ -455,7 +455,7 @@ export function PhotoGallerySection({
 
         {/* Call to Action */}
         <motion.div
-          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
+          className="text-center bg-navy-900 rounded-3xl p-6 sm:p-8 md:p-12 text-white"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

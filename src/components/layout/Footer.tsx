@@ -209,7 +209,7 @@ export const Footer = memo(function Footer() {
     { name: 'Twitter', href: 'https://twitter.com/shekharsingh', icon: Twitter },
     {
       name: 'WhatsApp',
-      href: '#',
+      href: 'https://wa.me/918826444334',
       icon: MessageCircle,
       isWhatsApp: true,
     },

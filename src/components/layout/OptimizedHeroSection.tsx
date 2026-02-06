@@ -145,7 +145,7 @@ export function OptimizedHeroSection({
       )}
 
       {/* Background - CSS only, no external image for faster LCP */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 overflow-hidden">
         {/* CSS gradient orbs - no JS animation for performance */}
         <div className="hidden md:block absolute top-1/4 left-[16%] w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-pulse-slow" />
         <div

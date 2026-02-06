@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
@@ -30,6 +31,7 @@ export function EmotionalHeroSection({
   onCallNow,
   className = '',
 }: EmotionalHeroSectionProps) {
+  const router = useRouter()
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
   const [liveCounter, setLiveCounter] = useState(1247)
   const [timeLeft, setTimeLeft] = useState({
@@ -293,7 +295,7 @@ export function EmotionalHeroSection({
               <PremiumButton
                 variant="medical"
                 size="lg"
-                onClick={() => (window.location.href = '/quick-enroll')}
+                onClick={() => router.push('/quick-enroll')}
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-green-600/25 transition-all duration-300 group"
               >
                 <Sparkles className="h-6 w-6 group-hover:scale-110 transition-transform" />
@@ -306,7 +308,7 @@ export function EmotionalHeroSection({
               <PremiumButton
                 variant="luxury"
                 size="lg"
-                onClick={() => (window.location.href = '/explore-courses')}
+                onClick={() => router.push('/explore-courses')}
                 className="bg-transparent border-2 border-white/50 text-white hover:bg-white/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 <BookOpen className="h-6 w-6" />

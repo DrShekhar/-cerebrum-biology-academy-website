@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Shield, CreditCard, Loader2 } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
@@ -29,6 +29,13 @@ export function RazorpayPayment({
   onError,
 }: RazorpayPaymentProps) {
   const [isLoading, setIsLoading] = useState(false)
+  const mountedRef = useRef(true)
+
+  useEffect(() => {
+    return () => {
+      mountedRef.current = false
+    }
+  }, [])
 
   const loadRazorpay = () => {
     return new Promise((resolve) => {
@@ -104,13 +111,12 @@ export function RazorpayPayment({
           razorpay_order_id: string
           razorpay_signature: string
         }) {
-          // Payment successful
           onSuccess({
             razorpay_payment_id: response.razorpay_payment_id,
             razorpay_order_id: response.razorpay_order_id,
             razorpay_signature: response.razorpay_signature,
           })
-          setIsLoading(false)
+          if (mountedRef.current) setIsLoading(false)
         },
         prefill: {
           name: studentName,
@@ -126,7 +132,7 @@ export function RazorpayPayment({
         },
         modal: {
           ondismiss: function () {
-            setIsLoading(false)
+            if (mountedRef.current) setIsLoading(false)
           },
         },
       }
@@ -141,7 +147,7 @@ export function RazorpayPayment({
             reason: response.error.reason,
             description: response.error.description,
           })
-          setIsLoading(false)
+          if (mountedRef.current) setIsLoading(false)
         }
       )
 
@@ -149,7 +155,7 @@ export function RazorpayPayment({
     } catch (error) {
       console.error('Payment initiation error:', error)
       onError({ error })
-      setIsLoading(false)
+      if (mountedRef.current) setIsLoading(false)
     }
   }
 

@@ -839,7 +839,7 @@ export const socialLinks = [
   },
   {
     platform: 'YouTube',
-    href: 'https://youtube.com/cerebrumbiologyacademy',
+    href: 'https://www.youtube.com/@cerebrumbiologyacademy',
     icon: 'YouTube',
   },
   {

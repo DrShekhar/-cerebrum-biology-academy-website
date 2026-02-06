@@ -235,7 +235,7 @@ export class CitySpecificSEOService {
         'https://cerebrumbiologyacademy.com',
         'https://www.facebook.com/cerebrumbiologyacademy',
         'https://www.instagram.com/cerebrumbiologyacademy',
-        'https://www.youtube.com/cerebrumbiologyacademy',
+        'https://www.youtube.com/@cerebrumbiologyacademy',
       ],
       makesOffer: [
         {

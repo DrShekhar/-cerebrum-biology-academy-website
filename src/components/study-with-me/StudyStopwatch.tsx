@@ -181,15 +181,15 @@ export function StudyStopwatch({
       {/* Timer Display */}
       <div className="text-center mb-6">
         <div className="flex items-baseline justify-center space-x-1">
-          <span className="text-6xl font-mono font-bold text-[#3d4d3d] tracking-tight">
+          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {hours}
           </span>
-          <span className="text-6xl font-mono font-bold text-[#3d4d3d]">:</span>
-          <span className="text-6xl font-mono font-bold text-[#3d4d3d] tracking-tight">
+          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d]">:</span>
+          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {minutes}
           </span>
-          <span className="text-6xl font-mono font-bold text-[#3d4d3d]">:</span>
-          <span className="text-6xl font-mono font-bold text-green-500 tracking-tight">
+          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-[#3d4d3d]">:</span>
+          <span className="text-3xl sm:text-4xl md:text-6xl font-mono font-bold text-green-500 tracking-tight">
             {seconds}
           </span>
         </div>

@@ -100,7 +100,12 @@ export function getReviewRequestWhatsAppLink(data: ReviewRequestData): string {
 export function scheduleReviewRequest(data: ReviewRequestData): void {
   if (typeof window === 'undefined') return
 
-  const scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
+  let scheduledRequests: any[] = []
+  try {
+    scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
+  } catch {
+    scheduledRequests = []
+  }
 
   const delay =
     REVIEW_REQUEST_DELAYS[`AFTER_${data.eventType.toUpperCase()}`] ||
@@ -113,7 +118,11 @@ export function scheduleReviewRequest(data: ReviewRequestData): void {
     sent: false,
   })
 
-  localStorage.setItem('scheduledReviewRequests', JSON.stringify(scheduledRequests))
+  try {
+    localStorage.setItem('scheduledReviewRequests', JSON.stringify(scheduledRequests))
+  } catch {
+    // localStorage may be full or unavailable
+  }
 
   // Track scheduling
   if ((window as any).gtag) {
@@ -131,7 +140,12 @@ export function scheduleReviewRequest(data: ReviewRequestData): void {
 export function processPendingReviewRequests(): ReviewRequestData[] {
   if (typeof window === 'undefined') return []
 
-  const scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
+  let scheduledRequests: any[] = []
+  try {
+    scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
+  } catch {
+    return []
+  }
 
   const now = Date.now()
   const dueRequests: ReviewRequestData[] = []
@@ -144,7 +158,11 @@ export function processPendingReviewRequests(): ReviewRequestData[] {
     return request
   })
 
-  localStorage.setItem('scheduledReviewRequests', JSON.stringify(updatedRequests))
+  try {
+    localStorage.setItem('scheduledReviewRequests', JSON.stringify(updatedRequests))
+  } catch {
+    // localStorage may be full or unavailable
+  }
 
   return dueRequests
 }
@@ -172,12 +190,16 @@ export function trackReviewClick(source: string): void {
   }
 
   // Store locally for attribution
-  const reviewClicks = JSON.parse(localStorage.getItem('reviewClicks') || '[]')
-  reviewClicks.push({
-    source,
-    timestamp: Date.now(),
-  })
-  localStorage.setItem('reviewClicks', JSON.stringify(reviewClicks))
+  try {
+    const reviewClicks = JSON.parse(localStorage.getItem('reviewClicks') || '[]')
+    reviewClicks.push({
+      source,
+      timestamp: Date.now(),
+    })
+    localStorage.setItem('reviewClicks', JSON.stringify(reviewClicks))
+  } catch {
+    // localStorage may be unavailable or corrupted
+  }
 }
 
 /**
@@ -192,8 +214,14 @@ export function getReviewCollectionStats(): {
     return { scheduled: 0, sent: 0, clicked: 0 }
   }
 
-  const scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
-  const reviewClicks = JSON.parse(localStorage.getItem('reviewClicks') || '[]')
+  let scheduledRequests: any[] = []
+  let reviewClicks: any[] = []
+  try {
+    scheduledRequests = JSON.parse(localStorage.getItem('scheduledReviewRequests') || '[]')
+    reviewClicks = JSON.parse(localStorage.getItem('reviewClicks') || '[]')
+  } catch {
+    return { scheduled: 0, sent: 0, clicked: 0 }
+  }
 
   return {
     scheduled: scheduledRequests.filter((r: any) => !r.sent).length,
