@@ -1,7 +1,4 @@
-'use client'
-
 import Link from 'next/link'
-import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   MapPin,
@@ -36,6 +33,7 @@ import type { CityHubData } from '@/data/city-seo/city-hub-data'
 import { AIOptimizedSchema, AIContentBlock } from '@/components/seo/AIOptimizedSchema'
 import { CredibilityBar } from '@/components/seo/EEATSignals'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
+import { WhatsAppCTAButton } from '@/components/seo/WhatsAppCTAButton'
 
 interface CityHubPageProps {
   data: CityHubData
@@ -397,19 +395,13 @@ export function CityHubPage({ data }: CityHubPageProps) {
                   Book FREE Demo Class
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-                <button
-                  onClick={async () => {
-                    await trackAndOpenWhatsApp({
-                      source: `city-hub-hero-${data.slug}`,
-                      message: `Hi! I'm interested in NEET Biology coaching in ${data.cityName}`,
-                      campaign: 'city-hub',
-                    })
-                  }}
+                <WhatsAppCTAButton
+                  source={`city-hub-hero-${data.slug}`}
+                  message={`Hi! I'm interested in NEET Biology coaching in ${data.cityName}`}
+                  campaign="city-hub"
+                  label="WhatsApp Us"
                   className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-4 py-3 text-base font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
-                >
-                  <MessageCircle className="mr-2 h-5 w-5" />
-                  WhatsApp Us
-                </button>
+                />
               </div>
 
               {/* Quick Contact */}
@@ -695,19 +687,13 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 View All Courses & Fees
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <button
-                onClick={async () => {
-                  await trackAndOpenWhatsApp({
-                    source: `city-hub-courses-${data.slug}`,
-                    message: WHATSAPP_MESSAGES.courseEnquiry,
-                    campaign: 'city-hub-courses',
-                  })
-                }}
+              <WhatsAppCTAButton
+                source={`city-hub-courses-${data.slug}`}
+                message="Hi! I am interested in enrolling. Please share the course details."
+                campaign="city-hub-courses"
+                label="Ask About Courses"
                 className="inline-flex items-center justify-center rounded-lg border-2 border-green-500 px-4 py-3 text-base font-semibold text-green-600 transition hover:bg-green-50 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                Ask About Courses
-              </button>
+              />
             </div>
           </div>
         </section>
@@ -923,19 +909,13 @@ export function CityHubPage({ data }: CityHubPageProps) {
                 Book Free Demo Class
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <button
-                onClick={async () => {
-                  await trackAndOpenWhatsApp({
-                    source: `city-hub-cta-${data.slug}`,
-                    message: `Hi! I'm from ${data.cityName} and interested in NEET Biology coaching`,
-                    campaign: 'city-hub-cta',
-                  })
-                }}
+              <WhatsAppCTAButton
+                source={`city-hub-cta-${data.slug}`}
+                message={`Hi! I'm from ${data.cityName} and interested in NEET Biology coaching`}
+                campaign="city-hub-cta"
+                label="WhatsApp Us Now"
                 className="inline-flex items-center justify-center rounded-xl border-2 border-green-500 bg-green-500/10 px-4 py-3 text-base font-semibold text-green-400 transition hover:bg-green-500/20 cursor-pointer sm:px-8 sm:py-4 sm:text-lg"
-              >
-                <MessageCircle className="mr-2 h-5 w-5" />
-                WhatsApp Us Now
-              </button>
+              />
               <a
                 href={getPhoneLink()}
                 className="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-4 py-3 text-base font-semibold transition hover:bg-white/10 sm:px-8 sm:py-4 sm:text-lg"

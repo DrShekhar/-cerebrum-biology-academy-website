@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Calculator,
@@ -73,31 +70,23 @@ export function NEETToolsWidget({
   return (
     <section className="py-12 bg-gradient-to-br from-indigo-50 to-white">
       <div className="max-w-7xl mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-8"
-        >
+        <div className="text-center mb-8 animate-[fadeInUp_0.5s_ease-out_both]">
           <div className="inline-flex items-center gap-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
             <Sparkles className="w-4 h-4" />
             100% Free Tools
           </div>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{title}</h2>
           <p className="text-gray-600 mt-2">{subtitle}</p>
-        </motion.div>
+        </div>
 
         <div
           className={`grid gap-4 ${compact ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-5'}`}
         >
           {displayTools.map((tool, index) => (
-            <motion.div
+            <div
               key={tool.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="animate-[fadeInUp_0.4s_ease-out_both]"
+              style={{ animationDelay: `${index * 50}ms` }}
             >
               <Link
                 href={tool.href}
@@ -116,7 +105,7 @@ export function NEETToolsWidget({
                   Try Free <ArrowRight className="w-3 h-3" />
                 </span>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 
