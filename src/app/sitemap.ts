@@ -81,6 +81,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.91,
     },
     {
+      url: `${baseUrl}/biology-notes-for-neet`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    },
+    {
       url: `${baseUrl}/pricing`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
