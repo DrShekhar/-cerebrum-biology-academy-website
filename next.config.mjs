@@ -4,6 +4,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import bundleAnalyzer from '@next/bundle-analyzer'
+import { seoPageConsolidationRedirects } from './src/config/seo-redirects.mjs'
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -1870,6 +1871,12 @@ const nextConfig = {
 
       // Services main page redirect
       { source: '/services', destination: '/courses', permanent: true },
+
+      // ============================================
+      // SEO Page Consolidation - Thin/Doorway Pages
+      // ~178 pages redirected to hub pages
+      // ============================================
+      ...seoPageConsolidationRedirects,
     ]
   },
 
