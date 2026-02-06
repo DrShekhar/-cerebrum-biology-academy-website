@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { getServerSession } from '@/lib/auth'
+import { auth } from '@/lib/auth'
 
 export const dynamic = 'force-dynamic'
 
 // GET - List all drip sequences
 export async function GET(req: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     // For now, store sequences as JSON in a settings table or return from whatsapp_nurturing
@@ -32,7 +32,7 @@ export async function GET(req: NextRequest) {
 // POST - Create new drip sequence
 export async function POST(req: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const body = await req.json()
@@ -65,7 +65,7 @@ export async function POST(req: NextRequest) {
 // PATCH - Toggle sequence active/inactive
 export async function PATCH(req: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const body = await req.json()
@@ -80,7 +80,7 @@ export async function PATCH(req: NextRequest) {
 // DELETE - Remove a sequence
 export async function DELETE(req: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const { searchParams } = new URL(req.url)

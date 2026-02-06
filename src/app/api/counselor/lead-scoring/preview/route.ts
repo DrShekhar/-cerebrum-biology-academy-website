@@ -1,13 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { getServerSession } from '@/lib/auth'
+import { auth } from '@/lib/auth'
 
 export const dynamic = 'force-dynamic'
 
 // GET - Preview lead scores
 export async function GET(req: NextRequest) {
   try {
-    const session = await getServerSession()
+    const session = await auth()
     if (!session?.user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
 
     const leads = await prisma.leads.findMany({
