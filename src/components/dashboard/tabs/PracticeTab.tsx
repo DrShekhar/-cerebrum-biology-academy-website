@@ -1,6 +1,6 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
   Flame,
@@ -12,6 +12,8 @@ import {
   Sparkles,
   ArrowRight,
   Target,
+  Bookmark,
+  RotateCcw,
 } from 'lucide-react'
 
 const quickPracticeItems = [
@@ -82,9 +84,111 @@ const mcqTopics = [
   { label: 'Human Health & Disease', slug: 'human-health-disease' },
 ]
 
+interface BookmarkData {
+  total: number
+  latestQuestion?: string
+}
+
 export function PracticeTab() {
+  const [bookmarkData, setBookmarkData] = useState<BookmarkData>({ total: 0 })
+  const [reviewDueCount, setReviewDueCount] = useState(0)
+
+  useEffect(() => {
+    const freeUserId = localStorage.getItem('freeUserId')
+    if (!freeUserId) return
+
+    const fetchBookmarks = async () => {
+      try {
+        const res = await fetch(`/api/mcq/bookmarks?freeUserId=${freeUserId}&limit=1`)
+        if (!res.ok) return
+        const json = await res.json()
+        if (json.success && json.data) {
+          setBookmarkData({
+            total: json.data.total,
+            latestQuestion:
+              json.data.bookmarks?.[0]?.question?.question?.slice(0, 80) || undefined,
+          })
+        }
+      } catch {
+        // Non-critical
+      }
+    }
+
+    const fetchReviewCount = async () => {
+      try {
+        const res = await fetch(`/api/mcq/review?freeUserId=${freeUserId}&limit=1`)
+        if (!res.ok) return
+        const json = await res.json()
+        if (json.success && json.data?.stats) {
+          setReviewDueCount(json.data.stats.totalDue)
+        }
+      } catch {
+        // Non-critical
+      }
+    }
+
+    fetchBookmarks()
+    fetchReviewCount()
+  }, [])
+
   return (
     <div className="space-y-4 sm:space-y-6">
+      {/* Your Review Queue */}
+      {(bookmarkData.total > 0 || reviewDueCount > 0) && (
+        <div className="bg-white rounded-xl shadow-lg border border-slate-200 p-4 sm:p-6">
+          <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3">
+            Your Review Queue
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {bookmarkData.total > 0 && (
+              <Link
+                href="/neet-biology-mcq?mode=bookmarks"
+                className="flex items-center gap-3 p-3 bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg border border-blue-200 hover:shadow-md transition-all group min-h-[48px]"
+              >
+                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Bookmark className="w-5 h-5 text-blue-600" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-900">
+                      {bookmarkData.total} Bookmarked
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-blue-600 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                  {bookmarkData.latestQuestion && (
+                    <p className="text-xs text-gray-500 truncate mt-0.5">
+                      {bookmarkData.latestQuestion}...
+                    </p>
+                  )}
+                </div>
+              </Link>
+            )}
+
+            {reviewDueCount > 0 && (
+              <Link
+                href="/neet-biology-mcq?mode=review"
+                className="flex items-center gap-3 p-3 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-200 hover:shadow-md transition-all group min-h-[48px]"
+              >
+                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <RotateCcw className="w-5 h-5 text-purple-600" />
+                </div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm font-medium text-gray-900">
+                      {reviewDueCount} Due for Review
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-purple-600 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-0.5">
+                    Spaced repetition review
+                  </p>
+                </div>
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Daily Challenge - Featured */}
       <Link
         href="/neet-biology-mcq/daily-challenge"
