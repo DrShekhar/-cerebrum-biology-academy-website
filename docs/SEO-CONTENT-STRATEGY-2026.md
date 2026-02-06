@@ -23,7 +23,7 @@
 | How to Score 360 in NEET Biology guide | /blog/how-to-score-360-in-neet-biology | HIGH | DONE |
 | Chapter-wise notes (19/19: MBI, PIV, Human Phys, Evolution, Ecology, Cell Biology, Biomolecules, Cell Division, Reproduction, Biotechnology, Bio Classification, Living World, Plant Kingdom, Animal Kingdom, Morphology of Flowering Plants, Anatomy of Flowering Plants, Structural Organisation in Animals, Plant Physiology) | /biology-notes-for-neet/[chapter] | MEDIUM | COMPLETE |
 | Previous Year Questions hub | /neet-previous-year-questions | MEDIUM | DONE |
-| Chapter-wise weightage cluster (10 articles) | /blog/neet-[chapter]-weightage | MEDIUM | TODO |
+| Chapter-wise weightage cluster (11 articles: Human Physiology, Genetics, Ecology, Reproduction, Plant Physiology, Cell Biology, Biotechnology, Animal Kingdom, Evolution, Plant Morphology & Anatomy, Overview) | /blog/neet-[chapter]-weightage | MEDIUM | COMPLETE |
 
 ### Pillar 3: Convert Traffic to Enrollments
 | Action | Scope | Priority | Status |
