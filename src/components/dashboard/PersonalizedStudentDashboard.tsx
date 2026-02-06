@@ -18,6 +18,7 @@ import {
   StudySessionTab,
   ToolsHubTab,
   ProgressTab,
+  WeakAreasTab,
   WeakAreaBottomSheet,
   DashboardHeader,
   DashboardTabs,
@@ -449,6 +450,16 @@ export function PersonalizedStudentDashboard() {
               onPauseSession={pauseStudySession}
               onStopSession={stopStudySession}
               formatTime={formatTime}
+            />
+          )}
+
+          {activeTab === 'weak-areas' && (
+            <WeakAreasTab
+              weakAreas={neetProgress.weakAreas}
+              onStartStudy={(chapter) => {
+                startStudySession(chapter)
+                setActiveTab('study')
+              }}
             />
           )}
         </AnimatePresence>
