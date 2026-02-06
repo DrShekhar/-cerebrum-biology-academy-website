@@ -89,7 +89,6 @@ export const metadata: Metadata = {
     creator: '@cerebrumbiologyacademy',
   },
   alternates: {
-    canonical: 'https://cerebrumbiologyacademy.com',
     types: {
       'application/rss+xml': '/blog/feed.xml',
     },
@@ -98,21 +97,6 @@ export const metadata: Metadata = {
       'en-IN': 'https://cerebrumbiologyacademy.com',
       hi: 'https://cerebrumbiologyacademy.com/hi',
       'hi-IN': 'https://cerebrumbiologyacademy.com/hi',
-      bn: 'https://cerebrumbiologyacademy.com/bn',
-      ta: 'https://cerebrumbiologyacademy.com/ta',
-      te: 'https://cerebrumbiologyacademy.com/te',
-      mr: 'https://cerebrumbiologyacademy.com/mr',
-      kn: 'https://cerebrumbiologyacademy.com/kn',
-      ml: 'https://cerebrumbiologyacademy.com/ml',
-      de: 'https://cerebrumbiologyacademy.com/de',
-      es: 'https://cerebrumbiologyacademy.com/es',
-      fr: 'https://cerebrumbiologyacademy.com/fr',
-      it: 'https://cerebrumbiologyacademy.com/it',
-      ja: 'https://cerebrumbiologyacademy.com/ja',
-      nl: 'https://cerebrumbiologyacademy.com/nl',
-      pl: 'https://cerebrumbiologyacademy.com/pl',
-      pt: 'https://cerebrumbiologyacademy.com/pt',
-      ru: 'https://cerebrumbiologyacademy.com/ru',
       'x-default': 'https://cerebrumbiologyacademy.com',
     },
   },
@@ -173,26 +157,11 @@ export default function RootLayout({
         <meta httpEquiv="Content-Language" content="en-IN,hi-IN" />
         <meta name="language" content="English,Hindi" />
 
-        {/* Comprehensive hreflang tags for 17 languages + x-default */}
+        {/* hreflang tags — only languages with actual pages */}
         <link rel="alternate" hrefLang="en" href="https://cerebrumbiologyacademy.com" />
         <link rel="alternate" hrefLang="en-IN" href="https://cerebrumbiologyacademy.com" />
         <link rel="alternate" hrefLang="hi" href="https://cerebrumbiologyacademy.com/hi" />
         <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com/hi" />
-        <link rel="alternate" hrefLang="bn" href="https://cerebrumbiologyacademy.com/bn" />
-        <link rel="alternate" hrefLang="ta" href="https://cerebrumbiologyacademy.com/ta" />
-        <link rel="alternate" hrefLang="te" href="https://cerebrumbiologyacademy.com/te" />
-        <link rel="alternate" hrefLang="mr" href="https://cerebrumbiologyacademy.com/mr" />
-        <link rel="alternate" hrefLang="kn" href="https://cerebrumbiologyacademy.com/kn" />
-        <link rel="alternate" hrefLang="ml" href="https://cerebrumbiologyacademy.com/ml" />
-        <link rel="alternate" hrefLang="de" href="https://cerebrumbiologyacademy.com/de" />
-        <link rel="alternate" hrefLang="es" href="https://cerebrumbiologyacademy.com/es" />
-        <link rel="alternate" hrefLang="fr" href="https://cerebrumbiologyacademy.com/fr" />
-        <link rel="alternate" hrefLang="it" href="https://cerebrumbiologyacademy.com/it" />
-        <link rel="alternate" hrefLang="ja" href="https://cerebrumbiologyacademy.com/ja" />
-        <link rel="alternate" hrefLang="nl" href="https://cerebrumbiologyacademy.com/nl" />
-        <link rel="alternate" hrefLang="pl" href="https://cerebrumbiologyacademy.com/pl" />
-        <link rel="alternate" hrefLang="pt" href="https://cerebrumbiologyacademy.com/pt" />
-        <link rel="alternate" hrefLang="ru" href="https://cerebrumbiologyacademy.com/ru" />
         <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
         <meta name="theme-color" content="#2563eb" />
         <meta name="mobile-web-app-capable" content="yes" />
