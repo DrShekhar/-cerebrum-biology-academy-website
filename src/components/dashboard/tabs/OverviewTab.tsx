@@ -7,6 +7,7 @@ import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 import { AchievementsDisplay } from '@/components/gamification/AchievementsDisplay'
 import { XPProgressCard } from '@/components/gamification/XPProgressCard'
 import { StreakWidget } from '@/components/gamification/StreakWidget'
+import { NTAAnnouncementWidget } from '../NTAAnnouncementWidget'
 import { WeakAreaItem } from './WeakAreaItem'
 
 interface StudySession {
@@ -256,6 +257,9 @@ export function OverviewTab({
           />
         </div>
       )}
+
+      {/* NTA Announcements Widget */}
+      <NTAAnnouncementWidget />
 
       {/* Recent Sessions & Weak Areas - Mobile Optimized */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">
