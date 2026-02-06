@@ -27,6 +27,7 @@ import {
 } from 'lucide-react'
 import { Breadcrumbs, BreadcrumbContainer } from '@/components/ui/Breadcrumbs'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 
 export default function Class11BiologyPage() {
   const [activeSection, setActiveSection] = useState('hero')
@@ -409,6 +410,13 @@ export default function Class11BiologyPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Book Free Demo — Inline Form */}
+      <section className="py-8 bg-gradient-to-b from-[#3d4d3d] to-[#4a5d4a]">
+        <div className="max-w-md mx-auto px-4">
+          <BookFreeDemoCard courseName="Class 11 NEET Biology" source="class-11-hero-form" />
         </div>
       </section>
 

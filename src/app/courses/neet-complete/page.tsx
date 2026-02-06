@@ -16,6 +16,7 @@ import {
   Users,
   Trophy,
 } from 'lucide-react'
+import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 
 const NEETCompletePage = () => {
   const [activeTab, setActiveTab] = useState<
@@ -505,6 +506,13 @@ const NEETCompletePage = () => {
           </div>
         </div>
       </div>
+
+      {/* Book Free Demo — Inline Form */}
+      <section className="py-8 bg-gradient-to-b from-green-800 to-green-900">
+        <div className="max-w-md mx-auto px-4">
+          <BookFreeDemoCard courseName="NEET Complete Biology" source="neet-complete-hero-form" />
+        </div>
+      </section>
 
       {/* Content Sections */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

@@ -27,6 +27,7 @@ import {
   BadgeCheck,
 } from 'lucide-react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 
 export default function Class12BiologyPage() {
   const courseFeatures = [
@@ -360,6 +361,13 @@ export default function Class12BiologyPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Book Free Demo — Inline Form */}
+      <section className="py-8 bg-gradient-to-b from-[#3d4d3d] to-[#4a5d4a]">
+        <div className="max-w-md mx-auto px-4">
+          <BookFreeDemoCard courseName="Class 12 NEET Biology" source="class-12-hero-form" />
         </div>
       </section>
 

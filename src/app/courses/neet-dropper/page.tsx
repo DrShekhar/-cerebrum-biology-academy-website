@@ -27,6 +27,7 @@ import { Button } from '@/components/ui/Button'
 import { NEETToppersShowcase } from '@/components/layout/NEETToppersShowcase'
 import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonialsSection'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
+import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 
 export default function NEETDropperPage() {
   const [formData, setFormData] = useState({
@@ -538,6 +539,13 @@ export default function NEETDropperPage() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Book Free Demo — Inline Form */}
+      <section className="py-8 bg-gradient-to-b from-green-800 to-green-900">
+        <div className="max-w-md mx-auto px-4">
+          <BookFreeDemoCard courseName="NEET Dropper Batch" source="neet-dropper-hero-form" />
         </div>
       </section>
 
