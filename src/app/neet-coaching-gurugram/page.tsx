@@ -37,6 +37,7 @@ import {
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { UrgencyBanner } from '@/components/landing-pages/UrgencyBanner'
+import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
 const gurugramLocalities = [
   // ULTRA-PREMIUM LOCALITIES (Golf Course Road + DLF Phases)
@@ -409,6 +410,9 @@ export default function NeetCoachingGurugramPage() {
           </div>
         </div>
       </section>
+
+      {/* Trust Signals — Social Proof */}
+      <TrustSignalsBanner variant="compact" />
 
       {/* Gurugram Localities Section */}
       <section className="py-20 bg-gray-50">

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Check, MessageCircle, Phone, HelpCircle, TrendingDown, Award, BookOpen } from 'lucide-react'
 import { CONTACT_INFO, getWhatsAppLink, getPhoneLink } from '@/lib/constants/contactInfo'
+import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
 interface PricingTier {
   name: string
@@ -277,6 +278,9 @@ export default function FeesPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Trust Signals — Social Proof */}
+      <TrustSignalsBanner variant="compact" />
 
       {/* Fee Comparison vs Competition */}
       <section className="py-16 md:py-20 border-b border-slate-200">

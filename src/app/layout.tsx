@@ -204,7 +204,7 @@ export default function RootLayout({
               <ToastProvider>
                 <TrustProvider
                   enableSocialProof={false}
-                  enableTrustBadges={false}
+                  enableTrustBadges={true}
                   enableRealTimeUpdates={false}
                 >
                   <PersonalizationProvider>

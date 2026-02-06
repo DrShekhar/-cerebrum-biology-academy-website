@@ -14,6 +14,7 @@ import {
   CheckCircle,
 } from "lucide-react"
 import { CONTACT_INFO, getWhatsAppLink, getPhoneLink } from "@/lib/constants/contactInfo"
+import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
 const features = [
   {
@@ -205,6 +206,9 @@ export default function OnlineNEETBiologyCoachingPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Trust Signals — Social Proof */}
+      <TrustSignalsBanner variant="compact" />
 
       {/* Why Online with Cerebrum */}
       <section className="py-16 md:py-24 border-b border-slate-200">

@@ -30,7 +30,7 @@
 |--------|-------|----------|--------|
 | Sticky WhatsApp CTA bar (mobile) | All pages | HIGH | DONE |
 | Exit-intent lead magnet on blog pages | Blog pages | HIGH | DONE |
-| Social proof sections on landing pages | Landing pages | MEDIUM | TODO |
+| Social proof sections on landing pages | Landing pages | MEDIUM | DONE |
 | "Book Free Demo" form above fold on course pages | Course pages | MEDIUM | TODO |
 | WhatsApp click tracking in GA4 | All pages | HIGH | DONE |
 

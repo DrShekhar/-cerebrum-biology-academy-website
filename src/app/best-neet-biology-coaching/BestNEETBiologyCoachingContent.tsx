@@ -10,6 +10,7 @@ import {
 import { Button } from '@/components/ui/Button'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO, getWhatsAppLink, getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
 interface FAQ {
   question: string
@@ -222,6 +223,9 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
           </motion.div>
         </div>
       </section>
+
+      {/* Trust Signals — Social Proof */}
+      <TrustSignalsBanner variant="compact" />
 
       {/* Comparison Table Section */}
       <section className="py-16 md:py-20 bg-white">
