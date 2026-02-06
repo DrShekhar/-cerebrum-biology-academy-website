@@ -58,7 +58,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Easy',
     keyTopics: ['Taxonomic hierarchy', 'Nomenclature rules', 'Species concept', 'Taxonomic aids'],
     icon: <Microscope className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Biological Classification',
@@ -82,7 +82,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Moderate',
     keyTopics: ['Algae', 'Bryophytes', 'Pteridophytes', 'Gymnosperms', 'Angiosperms', 'Alternation of generations'],
     icon: <TreePine className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Animal Kingdom',
@@ -94,7 +94,7 @@ const BIOLOGY_CHAPTERS: Chapter[] = [
     difficulty: 'Hard',
     keyTopics: ['Phylum classification', 'Chordates vs Non-chordates', 'Basis of classification', 'Examples'],
     icon: <Bug className="w-5 h-5" />,
-    available: false,
+    available: true,
   },
   {
     name: 'Morphology of Flowering Plants',

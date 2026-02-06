@@ -115,6 +115,33 @@ const CHAPTERS_MAP: Record<string, Chapter> = {
     difficulty: "Moderate",
     description: "Whittaker's five kingdom classification, Monera, Protista, Fungi, viruses, viroids, prions, lichens, and mycorrhiza for NEET Biology",
   },
+  "the-living-world": {
+    name: "The Living World",
+    slug: "the-living-world",
+    class: 11,
+    unit: "Diversity in Living World",
+    weightage: 2,
+    difficulty: "Easy",
+    description: "Properties of living organisms, biodiversity, binomial nomenclature, taxonomic hierarchy, taxonomic aids, and systematics for NEET Biology",
+  },
+  "plant-kingdom": {
+    name: "Plant Kingdom",
+    slug: "plant-kingdom",
+    class: 11,
+    unit: "Diversity in Living World",
+    weightage: 3,
+    difficulty: "Moderate",
+    description: "Algae, bryophytes, pteridophytes, gymnosperms, angiosperms, alternation of generations, dicot vs monocot for NEET Biology",
+  },
+  "animal-kingdom": {
+    name: "Animal Kingdom",
+    slug: "animal-kingdom",
+    class: 11,
+    unit: "Diversity in Living World",
+    weightage: 5,
+    difficulty: "Hard",
+    description: "Non-chordata and chordata classification, Porifera to Mammalia, basis of classification, coelom, symmetry, vertebrate classes for NEET Biology",
+  },
 }
 
 /* ─────────────── Generate Static Params ─────────────── */

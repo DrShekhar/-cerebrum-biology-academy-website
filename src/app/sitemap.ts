@@ -153,6 +153,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      url: `${baseUrl}/biology-notes-for-neet/the-living-world`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.80,
+    },
+    {
+      url: `${baseUrl}/biology-notes-for-neet/plant-kingdom`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/biology-notes-for-neet/animal-kingdom`,
+      lastModified: lastUpdated,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
+    },
+    {
       url: `${baseUrl}/neet-previous-year-questions`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
