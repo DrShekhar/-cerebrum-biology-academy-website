@@ -9,6 +9,7 @@ import { XPProgressCard } from '@/components/gamification/XPProgressCard'
 import { StreakWidget } from '@/components/gamification/StreakWidget'
 import { NTAAnnouncementWidget } from '../NTAAnnouncementWidget'
 import { SpacedReviewWidget } from '../SpacedReviewWidget'
+import { NEETReadinessMeter } from '../NEETReadinessMeter'
 import { WeakAreaItem } from './WeakAreaItem'
 
 interface StudySession {
@@ -177,6 +178,9 @@ export function OverviewTab({
           </div>
         </div>
       </div>
+
+      {/* NEET Readiness Meter */}
+      <NEETReadinessMeter />
 
       {/* Quick Stats Grid - Mobile Optimized */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
