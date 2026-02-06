@@ -164,9 +164,31 @@ export const FloatingCTA = memo(function FloatingCTA() {
         </div>
       )}
 
-      {/* ===== DESKTOP: Collapsible WhatsApp Button ===== */}
+      {/* ===== FIXED CALL BUTTON (All pages, all breakpoints) ===== */}
+      {/* Mobile: floating circle above sticky bar. Desktop: stacked above WhatsApp */}
+      <a
+        href={getPhoneLink()}
+        onClick={handleDesktopCallClick}
+        className="fixed z-[70] flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 active:scale-95 rounded-full lg:hidden bottom-[7.5rem] right-4 w-12 h-12"
+        aria-label="Call Dr. Shekhar"
+      >
+        <Phone className="w-5 h-5" />
+      </a>
+
+      {/* ===== DESKTOP: Call + WhatsApp Buttons ===== */}
       {/* Always visible on desktop - bottom right corner */}
       <div className="hidden lg:flex fixed bottom-8 right-8 z-[70] flex-col items-end gap-3">
+        {/* Desktop Call Button - compact pill above WhatsApp */}
+        <a
+          href={getPhoneLink()}
+          onClick={handleDesktopCallClick}
+          className="flex items-center gap-2 px-4 py-3 bg-blue-600 hover:bg-blue-700 rounded-2xl shadow-lg text-white font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+          aria-label="Call Dr. Shekhar"
+        >
+          <Phone className="w-5 h-5" />
+          <span className="whitespace-nowrap text-sm">Call Now</span>
+        </a>
+
         {/* Main Desktop WhatsApp Button - Collapsible */}
         <div className="flex items-center gap-2">
           {/* Minimize/Maximize toggle */}
