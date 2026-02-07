@@ -211,8 +211,8 @@ export function NoidaLocalBusinessSchema({
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1200',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
       worstRating: '1',
     },
@@ -505,8 +505,8 @@ export function NoidaCourseSchema({
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
     },
   }

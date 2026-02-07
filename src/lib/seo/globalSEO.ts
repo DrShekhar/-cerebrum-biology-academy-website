@@ -257,8 +257,8 @@ export class GlobalSEOService {
       courseMode: 'online',
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '2847',
+        ratingValue: '5.0',
+        ratingCount: '32',
       },
       offers: {
         '@type': 'Offer',
@@ -300,8 +300,8 @@ export class GlobalSEOService {
       serviceType: 'Biology Coaching',
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '2847',
+        ratingValue: '5.0',
+        ratingCount: '32',
       },
     }
   }

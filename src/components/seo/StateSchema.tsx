@@ -175,8 +175,8 @@ export function StateSchema({ state, pageUrl }: StateSchemaProps) {
         },
         aggregateRating: {
           '@type': 'AggregateRating',
-          ratingValue: 4.9,
-          reviewCount: 850,
+          ratingValue: 5.0,
+          reviewCount: 32,
           bestRating: 5,
         },
       },

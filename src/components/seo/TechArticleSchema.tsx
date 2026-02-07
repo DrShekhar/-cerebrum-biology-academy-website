@@ -132,10 +132,10 @@ export function TechArticleSchema({
     // Aggregate rating if available
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
+      ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '150',
+      ratingCount: '32',
     },
   }
 

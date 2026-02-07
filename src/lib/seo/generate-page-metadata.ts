@@ -180,8 +180,8 @@ export function generateLocalBusinessSchema(params: {
     }),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '547',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
       worstRating: '1',
     },

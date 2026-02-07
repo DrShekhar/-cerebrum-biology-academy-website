@@ -224,8 +224,8 @@ export class CitySpecificSEOService {
       },
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '2847',
+        ratingValue: '5.0',
+        ratingCount: '32',
         bestRating: '5',
       },
       priceRange: '₹₹',
@@ -313,8 +313,8 @@ export class CitySpecificSEOService {
       ],
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '2847',
+        ratingValue: '5.0',
+        reviewCount: '32',
       },
     }))
   }

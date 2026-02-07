@@ -437,8 +437,8 @@ export class MetadataService {
       ],
       aggregateRating: {
         '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        ratingCount: '2847',
+        ratingValue: '5.0',
+        ratingCount: '32',
         bestRating: '5',
       },
     }

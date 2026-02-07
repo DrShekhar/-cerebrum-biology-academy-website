@@ -20,11 +20,11 @@ export const CEREBRUM_METRICS = {
   medicalSelections: 500,
   medicalSelectionsText: '500+',
 
-  // Reviews/Ratings
-  rating: 4.9,
-  ratingText: '4.9/5',
-  reviewCount: 847,
-  reviewCountText: '847+ reviews',
+  // Reviews/Ratings (actual Google reviews)
+  rating: 5.0,
+  ratingText: '5.0/5',
+  reviewCount: 32,
+  reviewCountText: '32 reviews',
 
   // Batch info
   batchSizeMin: 15,

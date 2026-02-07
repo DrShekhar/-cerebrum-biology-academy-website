@@ -298,19 +298,19 @@ export const CONTACT_INFO = {
     },
   },
 
-  // Operating Hours
+  // Operating Hours — 24/7 availability
   hours: {
     weekdays: {
       days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      open: '07:00',
-      close: '21:00',
+      open: '00:00',
+      close: '23:59',
     },
     sunday: {
       days: ['Sunday'],
-      open: '09:00',
-      close: '18:00',
+      open: '00:00',
+      close: '23:59',
     },
-    displayText: 'Mon-Sat: 7 AM - 9 PM | Sun: 9 AM - 6 PM',
+    displayText: 'Open 24 Hours, 7 Days a Week',
   },
 
   // Social media

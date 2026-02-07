@@ -220,15 +220,9 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Sunday',
-        opens: '10:00',
-        closes: '17:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     sameAs: [
@@ -251,11 +245,11 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
+      ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: location.studentCount,
-      reviewCount: Math.floor(parseInt(location.studentCount) * 0.35).toString(),
+      ratingCount: '32',
+      reviewCount: '32',
     },
     review: location.reviews.map((review) => ({
       '@type': 'Review',

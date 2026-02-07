@@ -280,8 +280,8 @@ export function EEATSignals({
               },
               aggregateRating: {
                 '@type': 'AggregateRating',
-                ratingValue: '4.8',
-                reviewCount: '200',
+                ratingValue: '5.0',
+                reviewCount: '32',
                 bestRating: '5',
                 worstRating: '1',
               },

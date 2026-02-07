@@ -151,10 +151,10 @@ export function generateLocalBusinessSchema(
     priceRange: '₹₹',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.8',
+      ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: locality.socialProof.studentCount.toString(),
+      ratingCount: '32',
     },
     review: locality.socialProof.successStories.slice(0, 3).map((story, index) => ({
       '@type': 'Review',

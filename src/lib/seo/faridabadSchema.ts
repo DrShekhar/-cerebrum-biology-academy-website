@@ -80,8 +80,8 @@ export function generateFaridabadLocalBusinessSchema(
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1200',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
       worstRating: '1',
     },
@@ -351,8 +351,8 @@ export function generateFaridabadCourseSchema() {
     teaches: ['Botany', 'Zoology', 'Human Physiology', 'Genetics', 'Ecology', 'Cell Biology'],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1200',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
     },
   }
@@ -392,8 +392,8 @@ export function generateFaridabadServiceSchema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1200',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
     },
     hasOfferCatalog: {

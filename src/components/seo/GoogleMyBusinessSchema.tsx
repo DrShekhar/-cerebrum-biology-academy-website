@@ -160,8 +160,8 @@ export function generateLocationSchema(location: LocationData) {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
       worstRating: '1',
     },

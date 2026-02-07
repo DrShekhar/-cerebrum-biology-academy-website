@@ -162,8 +162,8 @@ export function OrganizationSchema() {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
     },
   }
@@ -413,7 +413,7 @@ export function BreadcrumbSchema({ items }: { items: Array<{ name: string; url: 
 export function LocalBusinessSchema() {
   const localBusinessData = {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
+    '@type': 'LocalBusiness',
     '@id': 'https://cerebrumbiologyacademy.com/#localbusiness',
     name: 'Cerebrum Biology Academy',
     alternateName: [
@@ -709,8 +709,8 @@ export function NationalServiceSchema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '500',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
     },
     hasOfferCatalog: {
@@ -821,8 +821,8 @@ export function GurugramServiceSchema() {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '1800',
+      ratingValue: '5.0',
+      reviewCount: '32',
       bestRating: '5',
     },
     hasOfferCatalog: {

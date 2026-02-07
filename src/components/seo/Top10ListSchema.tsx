@@ -97,7 +97,7 @@ export function Top10List({
         ratingValue: item.rating,
         bestRating: 5,
         worstRating: 1,
-        ratingCount: 100,
+        ratingCount: 32,
       },
     }),
   }))
