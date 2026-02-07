@@ -1,25 +1,25 @@
 // Mock Prisma client for testing
 export const prisma = {
-  user: {
+  users: {
     findUnique: jest.fn(),
     create: jest.fn(),
     update: jest.fn(),
     delete: jest.fn(),
   },
-  demoBooking: {
+  demo_bookings: {
     create: jest.fn(),
     findMany: jest.fn(),
     update: jest.fn(),
   },
-  course: {
+  courses: {
     findMany: jest.fn(),
     findUnique: jest.fn(),
   },
-  enrollment: {
+  enrollments: {
     create: jest.fn(),
     findMany: jest.fn(),
   },
-  payment: {
+  payments: {
     create: jest.fn(),
     findMany: jest.fn(),
   },

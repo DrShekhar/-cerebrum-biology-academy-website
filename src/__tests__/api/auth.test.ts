@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 // Mock dependencies - define before jest.mock calls
 const prisma = {
-  user: {
+  users: {
     findUnique: jest.fn(),
     create: jest.fn(),
   },
@@ -64,7 +64,7 @@ async function POST(request: NextRequest): Promise<NextResponse> {
     }
 
     // Check for existing user
-    const existingUser = await prisma.user.findUnique({
+    const existingUser = await prisma.users.findUnique({
       where: { email: body.email },
     })
 
@@ -76,7 +76,7 @@ async function POST(request: NextRequest): Promise<NextResponse> {
     const hashedPassword = await hashPassword(body.password)
 
     // Create user
-    const user = await prisma.user.create({
+    const user = await prisma.users.create({
       data: {
         name: body.name,
         email: body.email,
@@ -116,9 +116,9 @@ describe('/api/auth/register', () => {
       passwordHash: hashedPassword,
     }
 
-    ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
+    ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
     ;(hashPassword as jest.Mock).mockResolvedValue(hashedPassword)
-    ;(prisma.user.create as jest.Mock).mockResolvedValue(mockUser)
+    ;(prisma.users.create as jest.Mock).mockResolvedValue(mockUser)
 
     const request = new NextRequest('http://localhost:3000/api/auth/register', {
       method: 'POST',
@@ -133,7 +133,7 @@ describe('/api/auth/register', () => {
     expect(data.success).toBe(true)
     expect(data.user.email).toBe('john@example.com')
     expect(data.user.passwordHash).toBeUndefined() // Should not return password hash
-    expect(prisma.user.create).toHaveBeenCalledWith({
+    expect(prisma.users.create).toHaveBeenCalledWith({
       data: expect.objectContaining({
         email: 'john@example.com',
         passwordHash: hashedPassword,
@@ -143,7 +143,7 @@ describe('/api/auth/register', () => {
   })
 
   it('should prevent duplicate email registration', async () => {
-    ;(prisma.user.findUnique as jest.Mock).mockResolvedValue({
+    ;(prisma.users.findUnique as jest.Mock).mockResolvedValue({
       id: 'existing-user',
       email: 'john@example.com',
     })
@@ -160,7 +160,7 @@ describe('/api/auth/register', () => {
     expect(response.status).toBe(400)
     expect(data.success).toBe(false)
     expect(data.error).toBe('User already exists')
-    expect(prisma.user.create).not.toHaveBeenCalled()
+    expect(prisma.users.create).not.toHaveBeenCalled()
   })
 
   it('should validate required fields', async () => {
@@ -232,9 +232,9 @@ describe('/api/auth/register', () => {
   })
 
   it('should handle database errors gracefully', async () => {
-    ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
+    ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
     ;(hashPassword as jest.Mock).mockResolvedValue('hashedpassword')
-    ;(prisma.user.create as jest.Mock).mockRejectedValue(new Error('Database connection failed'))
+    ;(prisma.users.create as jest.Mock).mockRejectedValue(new Error('Database connection failed'))
 
     const request = new NextRequest('http://localhost:3000/api/auth/register', {
       method: 'POST',
@@ -264,9 +264,9 @@ describe('/api/auth/register', () => {
       passwordHash: hashedPassword,
     }
 
-    ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
+    ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
     ;(hashPassword as jest.Mock).mockResolvedValue(hashedPassword)
-    ;(prisma.user.create as jest.Mock).mockResolvedValue(mockUser)
+    ;(prisma.users.create as jest.Mock).mockResolvedValue(mockUser)
 
     const request = new NextRequest('http://localhost:3000/api/auth/register', {
       method: 'POST',
@@ -277,7 +277,7 @@ describe('/api/auth/register', () => {
     const response = await POST(request)
 
     expect(response.status).toBe(201)
-    expect(prisma.user.create).toHaveBeenCalledWith({
+    expect(prisma.users.create).toHaveBeenCalledWith({
       data: expect.objectContaining({
         phone: '+919876543210', // Should be cleaned (spaces/dashes removed)
       }),

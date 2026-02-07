@@ -4,11 +4,11 @@ import { prisma } from '@/lib/prisma'
 
 jest.mock('@/lib/prisma', () => ({
   prisma: {
-    user: {
+    users: {
       findUnique: jest.fn(),
       create: jest.fn(),
     },
-    enrollment: {
+    enrollments: {
       create: jest.fn(),
       findUnique: jest.fn(),
       findMany: jest.fn(),
@@ -23,15 +23,15 @@ describe('POST /api/enrollment', () => {
 
   describe('Valid Enrollment Creation', () => {
     it('should create enrollment with new user', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({
         id: 'user_123',
         name: 'John Doe',
         email: 'john@example.com',
         phone: '+918826444334',
         role: 'STUDENT',
       })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         userId: 'user_123',
         courseId: 'course_123',
@@ -63,11 +63,11 @@ describe('POST /api/enrollment', () => {
     })
 
     it('should link enrollment to existing user', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue({
         id: 'existing_user_123',
         email: 'existing@example.com',
       })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_456',
         userId: 'existing_user_123',
         courseId: 'course_123',
@@ -88,11 +88,11 @@ describe('POST /api/enrollment', () => {
       const data = await response.json()
 
       expect(data.userId).toBe('existing_user_123')
-      expect(prisma.user.create).not.toHaveBeenCalled()
+      expect(prisma.users.create).not.toHaveBeenCalled()
     })
 
     it('should use provided userId if available', async () => {
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_789',
         userId: 'provided_user_123',
       })
@@ -111,7 +111,7 @@ describe('POST /api/enrollment', () => {
 
       await POST(request)
 
-      expect(prisma.user.findUnique).not.toHaveBeenCalled()
+      expect(prisma.users.findUnique).not.toHaveBeenCalled()
     })
   })
 
@@ -191,9 +191,9 @@ describe('POST /api/enrollment', () => {
 
   describe('Course ID Validation', () => {
     it('should accept valid course ID', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         courseId: 'valid_course_123',
       })
@@ -236,9 +236,9 @@ describe('POST /api/enrollment', () => {
 
   describe('Amount Validation', () => {
     it('should accept positive amount', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         totalFees: 5000000,
       })
@@ -296,9 +296,9 @@ describe('POST /api/enrollment', () => {
 
   describe('Payment Plan Selection', () => {
     it('should default to FULL payment plan', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         paymentPlan: 'FULL',
       })
@@ -316,7 +316,7 @@ describe('POST /api/enrollment', () => {
 
       const response = await POST(request)
 
-      expect(prisma.enrollment.create).toHaveBeenCalledWith({
+      expect(prisma.enrollments.create).toHaveBeenCalledWith({
         data: expect.objectContaining({
           paymentPlan: 'FULL',
         }),
@@ -324,9 +324,9 @@ describe('POST /api/enrollment', () => {
     })
 
     it('should accept QUARTERLY payment plan', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         paymentPlan: 'QUARTERLY',
       })
@@ -345,7 +345,7 @@ describe('POST /api/enrollment', () => {
 
       await POST(request)
 
-      expect(prisma.enrollment.create).toHaveBeenCalledWith({
+      expect(prisma.enrollments.create).toHaveBeenCalledWith({
         data: expect.objectContaining({
           paymentPlan: 'QUARTERLY',
         }),
@@ -353,9 +353,9 @@ describe('POST /api/enrollment', () => {
     })
 
     it('should accept MONTHLY payment plan', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         paymentPlan: 'MONTHLY',
       })
@@ -374,7 +374,7 @@ describe('POST /api/enrollment', () => {
 
       await POST(request)
 
-      expect(prisma.enrollment.create).toHaveBeenCalledWith({
+      expect(prisma.enrollments.create).toHaveBeenCalledWith({
         data: expect.objectContaining({
           paymentPlan: 'MONTHLY',
         }),
@@ -384,9 +384,9 @@ describe('POST /api/enrollment', () => {
 
   describe('Phone Number Validation', () => {
     it('should accept Indian phone with +91', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({ id: 'enroll_123' })
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({ id: 'enroll_123' })
 
       const request = new NextRequest('http://localhost:3000/api/enrollment', {
         method: 'POST',
@@ -405,9 +405,9 @@ describe('POST /api/enrollment', () => {
     })
 
     it('should accept phone with spaces', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({ id: 'enroll_123' })
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({ id: 'enroll_123' })
 
       const request = new NextRequest('http://localhost:3000/api/enrollment', {
         method: 'POST',
@@ -428,9 +428,9 @@ describe('POST /api/enrollment', () => {
 
   describe('Email Format Validation', () => {
     it('should accept valid email', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({ id: 'enroll_123' })
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({ id: 'enroll_123' })
 
       const request = new NextRequest('http://localhost:3000/api/enrollment', {
         method: 'POST',
@@ -468,11 +468,11 @@ describe('POST /api/enrollment', () => {
 
   describe('Duplicate Enrollment Prevention', () => {
     it('should allow multiple enrollments for same user', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue({
         id: 'user_123',
         email: 'john@example.com',
       })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_new',
       })
 
@@ -495,9 +495,9 @@ describe('POST /api/enrollment', () => {
 
   describe('Enrollment ID Generation', () => {
     it('should generate unique enrollment ID', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'unique_enroll_123',
       })
 
@@ -522,9 +522,9 @@ describe('POST /api/enrollment', () => {
 
   describe('Database Transaction Integrity', () => {
     it('should create user and enrollment atomically', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockResolvedValue({
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         userId: 'user_123',
       })
@@ -542,14 +542,14 @@ describe('POST /api/enrollment', () => {
 
       await POST(request)
 
-      expect(prisma.user.create).toHaveBeenCalled()
-      expect(prisma.enrollment.create).toHaveBeenCalled()
+      expect(prisma.users.create).toHaveBeenCalled()
+      expect(prisma.enrollments.create).toHaveBeenCalled()
     })
 
     it('should rollback on enrollment creation failure', async () => {
-      ;(prisma.user.findUnique as jest.Mock).mockResolvedValue(null)
-      ;(prisma.user.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
-      ;(prisma.enrollment.create as jest.Mock).mockRejectedValue(new Error('Database error'))
+      ;(prisma.users.findUnique as jest.Mock).mockResolvedValue(null)
+      ;(prisma.users.create as jest.Mock).mockResolvedValue({ id: 'user_123' })
+      ;(prisma.enrollments.create as jest.Mock).mockRejectedValue(new Error('Database error'))
 
       const request = new NextRequest('http://localhost:3000/api/enrollment', {
         method: 'POST',
@@ -590,7 +590,7 @@ describe('GET /api/enrollment', () => {
         email: 'john@example.com',
       },
     }
-    ;(prisma.enrollment.findUnique as jest.Mock).mockResolvedValue(mockEnrollment)
+    ;(prisma.enrollments.findUnique as jest.Mock).mockResolvedValue(mockEnrollment)
 
     const request = new NextRequest('http://localhost:3000/api/enrollment?id=enroll_123')
 
@@ -602,7 +602,7 @@ describe('GET /api/enrollment', () => {
   })
 
   it('should return 404 for non-existent enrollment', async () => {
-    ;(prisma.enrollment.findUnique as jest.Mock).mockResolvedValue(null)
+    ;(prisma.enrollments.findUnique as jest.Mock).mockResolvedValue(null)
 
     const request = new NextRequest('http://localhost:3000/api/enrollment?id=nonexistent')
 
@@ -618,7 +618,7 @@ describe('GET /api/enrollment', () => {
       { id: 'enroll_1', course: {}, user: {} },
       { id: 'enroll_2', course: {}, user: {} },
     ]
-    ;(prisma.enrollment.findMany as jest.Mock).mockResolvedValue(mockEnrollments)
+    ;(prisma.enrollments.findMany as jest.Mock).mockResolvedValue(mockEnrollments)
 
     const request = new NextRequest('http://localhost:3000/api/enrollment')
 

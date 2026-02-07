@@ -6,11 +6,11 @@ import crypto from 'crypto'
 jest.mock('@/lib/prisma', () => ({
   prisma: {
     $transaction: jest.fn(),
-    payment: {
+    payments: {
       findFirst: jest.fn(),
       updateMany: jest.fn(),
     },
-    enrollment: {
+    enrollments: {
       update: jest.fn(),
     },
   },
@@ -133,7 +133,7 @@ describe('POST /api/payments/verify', () => {
 
       const mockTransactionFn = jest.fn(async (callback) => {
         const mockTx = {
-          payment: {
+          payments: {
             findFirst: jest.fn().mockResolvedValue({
               id: 'payment_123',
               enrollmentId: 'enroll_123',
@@ -143,7 +143,7 @@ describe('POST /api/payments/verify', () => {
             }),
             updateMany: jest.fn().mockResolvedValue({ count: 1 }),
           },
-          enrollment: {
+          enrollments: {
             update: jest.fn().mockResolvedValue({
               id: 'enroll_123',
               status: 'ACTIVE',
@@ -175,7 +175,7 @@ describe('POST /api/payments/verify', () => {
 
       const mockTransactionFn = jest.fn(async (callback) => {
         const mockTx = {
-          payment: {
+          payments: {
             findFirst: jest.fn().mockResolvedValue({
               id: 'payment_123',
               enrollmentId: 'enroll_123',
@@ -216,7 +216,7 @@ describe('POST /api/payments/verify', () => {
 
       const mockTransactionFn = jest.fn(async (callback) => {
         const mockTx = {
-          payment: {
+          payments: {
             findFirst: jest.fn().mockResolvedValue({
               id: 'payment_123',
               enrollmentId: 'enroll_123',
@@ -256,7 +256,7 @@ describe('POST /api/payments/verify', () => {
       const mockUpdate = jest.fn()
       const mockTransactionFn = jest.fn(async (callback) => {
         const mockTx = {
-          payment: {
+          payments: {
             findFirst: jest.fn().mockResolvedValue({
               id: 'payment_123',
               enrollmentId: 'enroll_123',
@@ -266,7 +266,7 @@ describe('POST /api/payments/verify', () => {
             }),
             updateMany: jest.fn().mockResolvedValue({ count: 1 }),
           },
-          enrollment: {
+          enrollments: {
             update: mockUpdate,
           },
         }
@@ -305,7 +305,7 @@ describe('POST /api/payments/verify', () => {
       const mockUpdateMany = jest.fn()
       const mockTransactionFn = jest.fn(async (callback) => {
         const mockTx = {
-          payment: {
+          payments: {
             findFirst: jest.fn().mockResolvedValue({
               id: 'payment_123',
               enrollmentId: 'enroll_123',
@@ -315,7 +315,7 @@ describe('POST /api/payments/verify', () => {
             }),
             updateMany: mockUpdateMany,
           },
-          enrollment: {
+          enrollments: {
             update: jest.fn(),
           },
         }
@@ -426,7 +426,7 @@ describe('POST /api/payments/verify', () => {
 
       const mockTransactionFn = jest.fn(async (callback) => {
         const mockTx = {
-          payment: {
+          payments: {
             findFirst: jest.fn().mockResolvedValue({
               id: 'payment_123',
               enrollmentId: 'enroll_123',
@@ -436,7 +436,7 @@ describe('POST /api/payments/verify', () => {
             }),
             updateMany: jest.fn().mockResolvedValue({ count: 1 }),
           },
-          enrollment: {
+          enrollments: {
             update: jest.fn().mockResolvedValue({
               paidAmount: 4200000,
             }),
@@ -475,7 +475,7 @@ describe('GET /api/payments/verify', () => {
       razorpayPaymentId: 'pay_123',
       createdAt: new Date(),
       completedAt: new Date(),
-      enrollment: {
+      enrollments: {
         id: 'enroll_123',
         course: {
           id: 'course_123',
@@ -483,7 +483,7 @@ describe('GET /api/payments/verify', () => {
         },
       },
     }
-    ;(prisma.payment.findFirst as jest.Mock).mockResolvedValue(mockPayment)
+    ;(prisma.payments.findFirst as jest.Mock).mockResolvedValue(mockPayment)
 
     const request = new NextRequest(
       'http://localhost:3000/api/payments/verify?razorpay_order_id=order_123'
@@ -498,7 +498,7 @@ describe('GET /api/payments/verify', () => {
   })
 
   it('should return 404 for non-existent payment', async () => {
-    ;(prisma.payment.findFirst as jest.Mock).mockResolvedValue(null)
+    ;(prisma.payments.findFirst as jest.Mock).mockResolvedValue(null)
 
     const request = new NextRequest(
       'http://localhost:3000/api/payments/verify?razorpay_order_id=order_nonexistent'

@@ -6,13 +6,10 @@ import Razorpay from 'razorpay'
 jest.mock('razorpay')
 jest.mock('@/lib/prisma', () => ({
   prisma: {
-    payment: {
-      create: jest.fn(),
-    },
     payments: {
       create: jest.fn(),
     },
-    enrollment: {
+    enrollments: {
       findUnique: jest.fn(),
       update: jest.fn(),
     },
@@ -136,7 +133,7 @@ describe('POST /api/payments/create-order', () => {
     it('should create payment record when enrollmentId provided', async () => {
       // Mock enrollment lookup - pendingAmount should match request amount
       // Request sends 42000, so enrollment pendingAmount should be 42000
-      ;(prisma.enrollment.findUnique as jest.Mock).mockResolvedValue({
+      ;(prisma.enrollments.findUnique as jest.Mock).mockResolvedValue({
         id: 'enroll_123',
         userId: 'test-user-123',
         pendingAmount: 42000,
@@ -461,7 +458,7 @@ describe('POST /api/payments/create-order', () => {
   describe('Enrollment ID Linking', () => {
     it('should link payment to enrollment', async () => {
       // Mock enrollment lookup - pendingAmount should match request amount
-      ;(prisma.enrollment.findUnique as jest.Mock).mockResolvedValue({
+      ;(prisma.enrollments.findUnique as jest.Mock).mockResolvedValue({
         id: 'enroll_abc123',
         userId: 'test-user-123',
         pendingAmount: 42000,
