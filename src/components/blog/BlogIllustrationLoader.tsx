@@ -1,20 +1,9 @@
 'use client'
 
 import { useState, useEffect, memo } from 'react'
-import { BookOpen, GraduationCap, Brain, Dna, Heart, Microscope } from 'lucide-react'
+import { AutoIllustration } from './AutoIllustration'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
-
-// Category-based icons for immediate LCP render
-const categoryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  'exam-tips': GraduationCap,
-  'study-strategy': Brain,
-  'chapter-notes': Dna,
-  'human-physiology': Heart,
-  botany: Microscope,
-  zoology: Microscope,
-  default: BookOpen,
-}
 
 // Dynamic loaders for all blog illustrations - loaded on demand AFTER initial render
 const illustrationLoaders: Record<string, () => Promise<{ default: IllustrationComponent }>> = {
@@ -136,30 +125,15 @@ interface BlogIllustrationLoaderProps {
   slug: string
   neetChapter?: string
   category?: string
+  title?: string
   className?: string
-}
-
-// Static fallback - renders IMMEDIATELY for fast LCP
-// This is the LCP element - it renders during SSR/initial hydration
-function StaticFallback({ neetChapter, category }: { neetChapter?: string; category?: string }) {
-  const IconComponent = categoryIcons[category || 'default'] || categoryIcons.default
-  return (
-    <div className="flex flex-col items-center justify-center text-slate-500 w-full h-full min-h-[200px]">
-      <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white/90 shadow-xl flex items-center justify-center mb-4 backdrop-blur-sm border border-white/50">
-        <IconComponent className="w-12 h-12 md:w-16 md:h-16 text-blue-600" />
-      </div>
-      <span className="text-base md:text-lg font-semibold text-slate-600 text-center px-4">
-        {neetChapter || 'NEET Biology'}
-      </span>
-      <span className="text-sm text-slate-400 mt-1">Cerebrum Academy</span>
-    </div>
-  )
 }
 
 export const BlogIllustrationLoader = memo(function BlogIllustrationLoader({
   slug,
   neetChapter,
   category,
+  title,
   className = 'w-full h-full max-w-4xl drop-shadow-sm',
 }: BlogIllustrationLoaderProps) {
   const [Illustration, setIllustration] = useState<IllustrationComponent | null>(null)
@@ -203,7 +177,15 @@ export const BlogIllustrationLoader = memo(function BlogIllustrationLoader({
     )
   }
 
-  // CRITICAL: Render static fallback IMMEDIATELY (this is the LCP element)
-  // No loading state, no skeleton - just render content right away
-  return <StaticFallback neetChapter={neetChapter} category={category} />
+  // CRITICAL: Render AutoIllustration IMMEDIATELY for fast LCP
+  // Beautiful, unique SVG generated from blog metadata — zero network requests
+  return (
+    <AutoIllustration
+      slug={slug}
+      category={category}
+      neetChapter={neetChapter}
+      title={title}
+      className={className}
+    />
+  )
 })

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, memo } from 'react'
-import { BookOpen } from 'lucide-react'
+import { AutoIllustration } from './AutoIllustration'
 
 type IllustrationComponent = React.ComponentType<{ className?: string; animate?: boolean }>
 
@@ -127,16 +127,7 @@ interface BlogThumbnailProps {
   className?: string
   size?: 'sm' | 'md' | 'lg'
   category?: string
-}
-
-// Category-based fallback colors for visual variety
-const categoryColors: Record<string, string> = {
-  'neet-preparation': 'bg-slate-700',
-  'biology-concepts': 'bg-green-600',
-  'study-tips': 'bg-blue-600',
-  'chapter-guides': 'bg-indigo-600',
-  'exam-updates': 'bg-orange-500',
-  'success-stories': 'bg-purple-600',
+  neetChapter?: string
 }
 
 const sizeClasses = {
@@ -165,6 +156,7 @@ export const BlogThumbnail = memo(function BlogThumbnail({
   className = '',
   size = 'md',
   category,
+  neetChapter,
 }: BlogThumbnailProps) {
   const [Illustration, setIllustration] = useState<IllustrationComponent | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -208,19 +200,18 @@ export const BlogThumbnail = memo(function BlogThumbnail({
     )
   }
 
-  // Fallback with category-based color and icon
-  const fallbackColor = category ? categoryColors[category] || 'bg-slate-600' : 'bg-slate-600'
-
+  // AutoIllustration fallback - beautiful, unique SVG for every post
   return (
     <div
-      className={`relative w-full ${sizeClasses[size]} ${fallbackColor} rounded-xl overflow-hidden ${className}`}
+      className={`relative w-full ${sizeClasses[size]} rounded-xl overflow-hidden ${className}`}
     >
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white/80">
-        <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-2">
-          <BookOpen className="w-6 h-6" />
-        </div>
-        <span className="text-xs font-medium text-center px-2 line-clamp-2">{title}</span>
-      </div>
+      <AutoIllustration
+        slug={slug}
+        category={category}
+        neetChapter={neetChapter}
+        title={title}
+        className="w-full h-full"
+      />
     </div>
   )
 })
