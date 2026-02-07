@@ -41,7 +41,7 @@ async function getUserTopicPerformance(
   topics: string[]
 ) {
   try {
-    const userProgress = await prisma.userProgress.findMany({
+    const userProgress = await prisma.user_progress.findMany({
       where: {
         ...(freeUserId ? { freeUserId } : { userId }),
         topic: { in: topics },

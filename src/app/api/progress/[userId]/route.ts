@@ -93,7 +93,7 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
   }
 
   // Get user progress data
-  const userProgress = await prisma.userProgress.findMany({
+  const userProgress = await prisma.user_progress.findMany({
     where: baseWhere,
     orderBy: {
       [filters.sortBy]: filters.sortOrder,
@@ -128,7 +128,7 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
       ...(timeFrameDate && { answeredAt: { gte: timeFrameDate } }),
     },
     include: {
-      question: {
+      questions: {
         select: {
           topic: true,
           difficulty: true,
@@ -449,9 +449,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
         questionResponses: recentResponses.slice(0, 20).map((response) => ({
           questionId: response.questionId,
-          topic: response.question.topic,
-          difficulty: response.question.difficulty,
-          type: response.question.type,
+          topic: response.questions.topic,
+          difficulty: response.questions.difficulty,
+          type: response.questions.type,
           isCorrect: response.isCorrect,
           timeSpent: response.timeSpent,
           confidence: response.confidence,

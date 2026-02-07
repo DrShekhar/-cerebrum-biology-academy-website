@@ -15,9 +15,9 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const test = await prisma.test_templates.findUnique({
       where: { id: testId },
       include: {
-        testQuestions: {
+        question_bank_questions: {
           include: {
-            question: {
+            questions: {
               select: {
                 id: true,
                 type: true,
@@ -66,17 +66,17 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
       instructions: test.instructions || [],
       tags: test.tags || [],
       syllabus: test.syllabus || [],
-      questions: test.testQuestions.map((tq) => ({
-        id: tq.question.id,
-        type: tq.question.type,
-        difficulty: tq.question.difficulty,
-        question: tq.question.question,
-        options: tq.question.options,
-        topic: tq.question.topic,
-        subtopic: tq.question.subtopic,
+      questions: test.question_bank_questions.map((tq) => ({
+        id: tq.questions.id,
+        type: tq.questions.type,
+        difficulty: tq.questions.difficulty,
+        question: tq.questions.question,
+        options: tq.questions.options,
+        topic: tq.questions.topic,
+        subtopic: tq.questions.subtopic,
         marks: tq.marks,
-        timeLimit: tq.question.timeLimit,
-        questionImage: tq.question.questionImage,
+        timeLimit: tq.questions.timeLimit,
+        questionImage: tq.questions.questionImage,
         order: tq.order,
       })),
     }

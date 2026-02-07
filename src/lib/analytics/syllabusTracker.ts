@@ -89,7 +89,7 @@ export async function calculateSyllabusCompletion(
     const totalTopics = uniqueTopics.size
 
     // Get user's progress on these topics
-    const userProgress = await prisma.userProgress.findMany({
+    const userProgress = await prisma.user_progress.findMany({
       where: {
         [userField]: userId,
         curriculum,
@@ -183,7 +183,7 @@ export async function getMasteredTopics(
     if (curriculum) whereClause.curriculum = curriculum
     if (grade) whereClause.grade = grade
 
-    const masteredProgress = await prisma.userProgress.findMany({
+    const masteredProgress = await prisma.user_progress.findMany({
       where: whereClause,
       select: {
         topic: true,
@@ -241,7 +241,7 @@ export async function getInProgressTopics(
     if (curriculum) whereClause.curriculum = curriculum
     if (grade) whereClause.grade = grade
 
-    const inProgressData = await prisma.userProgress.findMany({
+    const inProgressData = await prisma.user_progress.findMany({
       where: whereClause,
       select: {
         topic: true,
@@ -318,7 +318,7 @@ export async function getUnstartedTopics(
     })
 
     // Get user's started topics
-    const startedProgress = await prisma.userProgress.findMany({
+    const startedProgress = await prisma.user_progress.findMany({
       where: {
         [userField]: userId,
         curriculum,
@@ -415,7 +415,7 @@ export async function getChapterWiseProgress(
     })
 
     // Batch query 2: Get all user progress in one query
-    const allProgress = await prisma.userProgress.findMany({
+    const allProgress = await prisma.user_progress.findMany({
       where: {
         [userField]: userId,
         curriculum,
@@ -638,7 +638,7 @@ export async function getCompletionTimeline(
     startDate.setDate(startDate.getDate() - days)
 
     // Get all progress records with timestamps
-    const progressHistory = await prisma.userProgress.findMany({
+    const progressHistory = await prisma.user_progress.findMany({
       where: {
         [userField]: userId,
         curriculum,

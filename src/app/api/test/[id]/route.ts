@@ -107,9 +107,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             },
           },
         },
-        responses: {
+        user_question_responses: {
           include: {
-            question: {
+            questions: {
               select: {
                 id: true,
                 correctAnswer: true,
@@ -123,7 +123,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             answeredAt: 'asc',
           },
         },
-        analytics: true,
+        test_analytics: true,
       },
     })
 
@@ -136,13 +136,13 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Calculate progress and analytics
     const totalQuestions = testSession.test_templates?.question_bank_questions?.length || 0
-    const answeredQuestions = testSession.responses.length
+    const answeredQuestions = testSession.user_question_responses.length
     const progress = totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0
 
     // Prepare questions with user responses
     const questionsWithResponses =
       testSession.test_templates?.question_bank_questions?.map((qbq, index) => {
-        const userResponse = testSession.responses.find((r) => r.questionId === qbq.questions.id)
+        const userResponse = testSession.user_question_responses.find((r) => r.questionId === qbq.questions.id)
 
         return {
           index: index + 1,
@@ -179,8 +179,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       }) || []
 
     // Calculate real-time statistics
-    const correctAnswers = testSession.responses.filter((r) => r.isCorrect).length
-    const currentScore = testSession.responses.reduce((sum, r) => sum + r.marksAwarded, 0)
+    const correctAnswers = testSession.user_question_responses.filter((r) => r.isCorrect).length
+    const currentScore = testSession.user_question_responses.reduce((sum, r) => sum + r.marksAwarded, 0)
     const totalMarks = testSession.test_templates?.totalMarks || 0
     const accuracy = answeredQuestions > 0 ? (correctAnswers / answeredQuestions) * 100 : 0
 
@@ -240,17 +240,17 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           timeElapsed,
           remainingTime: effectiveRemainingTime,
         },
-        analytics: testSession.analytics
+        analytics: testSession.test_analytics
           ? {
-              totalTime: testSession.analytics.totalTime,
-              averageTimePerQ: testSession.analytics.averageTimePerQ,
-              questionsAttempted: testSession.analytics.questionsAttempted,
-              questionsCorrect: testSession.analytics.questionsCorrect,
-              accuracy: testSession.analytics.accuracy,
-              topicPerformance: testSession.analytics.topicPerformance,
-              strengthTopics: testSession.analytics.strengthTopics,
-              weaknessTopics: testSession.analytics.weaknessTopics,
-              percentileRank: testSession.analytics.percentileRank,
+              totalTime: testSession.test_analytics.totalTime,
+              averageTimePerQ: testSession.test_analytics.averageTimePerQ,
+              questionsAttempted: testSession.test_analytics.questionsAttempted,
+              questionsCorrect: testSession.test_analytics.questionsCorrect,
+              accuracy: testSession.test_analytics.accuracy,
+              topicPerformance: testSession.test_analytics.topicPerformance,
+              strengthTopics: testSession.test_analytics.strengthTopics,
+              weaknessTopics: testSession.test_analytics.weaknessTopics,
+              percentileRank: testSession.test_analytics.percentileRank,
             }
           : null,
       },

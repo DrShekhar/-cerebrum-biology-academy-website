@@ -61,7 +61,7 @@ async function updateUserProgress(
     if (!question) return
 
     // Find or create user progress record
-    const existingProgress = await prisma.userProgress.findFirst({
+    const existingProgress = await prisma.user_progress.findFirst({
       where: {
         ...(freeUserId ? { freeUserId } : { userId }),
         topic: question.topic,
@@ -84,7 +84,7 @@ async function updateUserProgress(
         (existingProgress.averageTime || 0) * existingProgress.totalQuestions + timeSpent
       const newAverageTime = Math.round(totalTime / newTotal)
 
-      await prisma.userProgress.update({
+      await prisma.user_progress.update({
         where: { id: existingProgress.id },
         data: {
           totalQuestions: newTotal,
@@ -98,7 +98,7 @@ async function updateUserProgress(
       })
     } else {
       // Create new progress record
-      await prisma.userProgress.create({
+      await prisma.user_progress.create({
         data: {
           ...(freeUserId ? { freeUserId } : { userId }),
           topic: question.topic,
@@ -438,7 +438,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     const responses = await prisma.user_question_responses.findMany({
       where: { testSessionId },
       include: {
-        question: {
+        questions: {
           select: {
             id: true,
             topic: true,
@@ -460,7 +460,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Group responses by topic for analysis
     const topicStats = responses.reduce(
       (acc, response) => {
-        const topic = response.question.topic
+        const topic = response.questions.topic
         if (!acc[topic]) {
           acc[topic] = {
             total: 0,
@@ -499,10 +499,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           confidence: r.confidence,
           answeredAt: r.answeredAt,
           question: {
-            topic: r.question.topic,
-            type: r.question.type,
-            difficulty: r.question.difficulty,
-            marks: r.question.marks,
+            topic: r.questions.topic,
+            type: r.questions.type,
+            difficulty: r.questions.difficulty,
+            marks: r.questions.marks,
           },
         })),
         statistics: {

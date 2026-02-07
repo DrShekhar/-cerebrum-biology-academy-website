@@ -133,7 +133,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     }
 
     // Create test attempt record
-    const testAttempt = await prisma.testAttempt.create({
+    const testAttempt = await prisma.test_attempts.create({
       data: {
         freeUserId: session.userId, // Assuming both regular and free users
         testTemplateId,
@@ -153,7 +153,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
 
     // Create test question records for tracking individual responses
     for (let i = 0; i < questions.length; i++) {
-      await prisma.testQuestion.create({
+      await prisma.test_questions.create({
         data: {
           testAttemptId: testAttempt.id,
           questionId: questions[i].id,
@@ -165,7 +165,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
 
     // Track test session start event
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: session.userId,
           eventType: 'test',
@@ -263,10 +263,10 @@ export const GET = withAuth(async (request: NextRequest, session) => {
             totalMarks: true,
           },
         },
-        analytics: true,
+        test_analytics: true,
         _count: {
           select: {
-            responses: true,
+            user_question_responses: true,
           },
         },
       },
@@ -276,7 +276,7 @@ export const GET = withAuth(async (request: NextRequest, session) => {
     })
 
     // Get recent test attempts for progress tracking
-    const testAttempts = await prisma.testAttempt.findMany({
+    const testAttempts = await prisma.test_attempts.findMany({
       where: {
         freeUserId: session.userId,
       },
@@ -294,7 +294,7 @@ export const GET = withAuth(async (request: NextRequest, session) => {
     })
 
     // Get progress statistics
-    const progressStats = await prisma.userProgress.findMany({
+    const progressStats = await prisma.user_progress.findMany({
       where: {
         userId: session.userId,
       },

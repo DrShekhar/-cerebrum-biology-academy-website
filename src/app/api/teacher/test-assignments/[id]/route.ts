@@ -22,14 +22,14 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     const assignment = await prisma.test_assignments.findUnique({
       where: { id },
       include: {
-        teacher: {
+        users: {
           select: {
             id: true,
             name: true,
             email: true,
           },
         },
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,
@@ -37,9 +37,9 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
             category: true,
           },
         },
-        questions: {
+        test_assignment_questions: {
           include: {
-            question: {
+            questions: {
               select: {
                 id: true,
                 question: true,
@@ -56,9 +56,9 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
             orderIndex: 'asc',
           },
         },
-        submissions: {
+        test_assignment_submissions: {
           include: {
-            student: {
+            users: {
               select: {
                 id: true,
                 name: true,
@@ -184,7 +184,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
       where: { id },
       data: updateData,
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,

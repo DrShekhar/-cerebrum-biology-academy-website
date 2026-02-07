@@ -63,85 +63,9 @@ interface Student {
   assignedCounselor?: string
 }
 
-const mockStudents: Student[] = [
-  {
-    id: '1',
-    name: 'Rahul Kumar',
-    email: 'rahul.kumar@email.com',
-    phone: '+91 9876543210',
-    whatsappNumber: '+91 9876543210',
-    dateOfBirth: '2006-05-15',
-    class: '12th',
-    school: 'Delhi Public School',
-    city: 'Delhi',
-    state: 'Delhi',
-    status: 'enrolled',
-    leadSource: 'website',
-    coursesEnrolled: ['NEET Biology Class 12', 'Foundation Biology'],
-    joiningDate: '2024-01-15',
-    lastActivity: '2025-01-16T10:30:00Z',
-    totalPayments: 45000,
-    averageScore: 88.5,
-    parentName: 'Suresh Kumar',
-    parentPhone: '+91 9876543211',
-    notes: 'Excellent student, shows great interest in cell biology',
-    tags: ['high-performer', 'neet-aspirant'],
-    priority: 'high',
-    assignedCounselor: 'Dr. Priya Sharma',
-  },
-  {
-    id: '2',
-    name: 'Priya Singh',
-    email: 'priya.singh@email.com',
-    phone: '+91 9876543212',
-    dateOfBirth: '2007-03-22',
-    class: '11th',
-    school: 'Kendriya Vidyalaya',
-    city: 'Mumbai',
-    state: 'Maharashtra',
-    status: 'active',
-    leadSource: 'referral',
-    coursesEnrolled: ['NEET Biology Class 11'],
-    joiningDate: '2024-06-10',
-    lastActivity: '2025-01-15T14:20:00Z',
-    totalPayments: 25000,
-    averageScore: 92.3,
-    parentName: 'Rajesh Singh',
-    parentPhone: '+91 9876543213',
-    notes: 'Strong foundation, needs guidance on time management',
-    tags: ['promising', 'needs-attention'],
-    priority: 'medium',
-    assignedCounselor: 'Dr. Rajesh Kumar',
-  },
-  {
-    id: '3',
-    name: 'Amit Patel',
-    email: 'amit.patel@email.com',
-    phone: '+91 9876543214',
-    dateOfBirth: '2005-08-10',
-    class: 'Dropper',
-    school: "St. Xavier's School",
-    city: 'Ahmedabad',
-    state: 'Gujarat',
-    status: 'lead',
-    leadSource: 'social_media',
-    coursesEnrolled: [],
-    joiningDate: '',
-    lastActivity: '2025-01-14T09:15:00Z',
-    totalPayments: 0,
-    averageScore: 0,
-    parentName: 'Kiran Patel',
-    parentPhone: '+91 9876543215',
-    notes: 'Interested in dropper course, follow up required',
-    tags: ['hot-lead', 'dropper-interest'],
-    priority: 'high',
-    assignedCounselor: 'Dr. Priya Sharma',
-  },
-]
-
 export default function StudentsPage() {
-  const [students, setStudents] = useState<Student[]>(mockStudents)
-  const [filteredStudents, setFilteredStudents] = useState<Student[]>(mockStudents)
+  const [students, setStudents] = useState<Student[]>([])
+  const [filteredStudents, setFilteredStudents] = useState<Student[]>([])
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [priorityFilter, setPriorityFilter] = useState<string>('all')
@@ -174,6 +98,46 @@ export default function StudentsPage() {
       setLeadsLoading(false)
     }
   }, [leadSearch])
+
+  const fetchStudents = useCallback(async () => {
+    try {
+      const params = new URLSearchParams()
+      if (searchTerm) params.set('search', searchTerm)
+      params.set('limit', '100')
+      const res = await fetch(`/api/admin/students?${params.toString()}`)
+      const data = await res.json()
+      if (data.success && data.data?.students) {
+        const mapped: Student[] = data.data.students.map((s: any) => ({
+          id: s.id,
+          name: s.name || '',
+          email: s.email || '',
+          phone: s.phone || '',
+          whatsappNumber: s.phone || '',
+          dateOfBirth: '',
+          class: s.coachingTier || '',
+          school: '',
+          city: '',
+          state: '',
+          status: s.enrollments?.some((e: any) => e.status === 'ACTIVE') ? 'enrolled' : 'active',
+          leadSource: '',
+          coursesEnrolled: s.enrollments?.map((e: any) => e.courses?.name).filter(Boolean) || [],
+          joiningDate: s.createdAt || '',
+          lastActivity: s.lastActiveAt || '',
+          totalPayments: 0,
+          averageScore: 0,
+          tags: [],
+          priority: 'medium' as const,
+        }))
+        setStudents(mapped)
+      }
+    } catch {
+      console.error('Failed to fetch students')
+    }
+  }, [searchTerm])
+
+  useEffect(() => {
+    fetchStudents()
+  }, [fetchStudents])
 
   useEffect(() => {
     if (activeTab === 'leads') {

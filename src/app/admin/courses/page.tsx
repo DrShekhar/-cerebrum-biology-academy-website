@@ -3,7 +3,7 @@
 // Force dynamic rendering to prevent auth issues during static build
 export const dynamic = 'force-dynamic'
 
-import { useState } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   BookOpen,
@@ -50,108 +50,76 @@ interface Course {
   schedule: string
 }
 
-const mockCourses: Course[] = [
-  {
-    id: '1',
-    name: 'NEET Biology Class 12 - Complete Course',
-    type: 'class-12',
-    duration: '12 months',
-    totalLessons: 180,
-    enrolledStudents: 245,
-    maxCapacity: 300,
-    startDate: '2024-04-01',
-    endDate: '2025-03-31',
-    instructor: 'Dr. Priya Sharma',
-    status: 'active',
-    price: 45000,
-    rating: 4.8,
-    completionRate: 87,
-    description:
-      'Comprehensive NEET Biology preparation for Class 12 students covering all essential topics',
-    topics: [
-      'Human Physiology',
-      'Plant Physiology',
-      'Reproduction',
-      'Genetics',
-      'Evolution',
-      'Ecology',
-    ],
-    schedule: 'Mon, Wed, Fri - 4:00 PM to 6:00 PM',
-  },
-  {
-    id: '2',
-    name: 'NEET Biology Class 11 - Foundation',
-    type: 'class-11',
-    duration: '10 months',
-    totalLessons: 150,
-    enrolledStudents: 189,
-    maxCapacity: 250,
-    startDate: '2024-06-01',
-    endDate: '2025-03-31',
-    instructor: 'Dr. Rajesh Kumar',
-    status: 'active',
-    price: 35000,
-    rating: 4.7,
-    completionRate: 92,
-    description: 'Strong foundation building for NEET aspirants starting in Class 11',
-    topics: [
-      'Cell Biology',
-      'Plant Kingdom',
-      'Animal Kingdom',
-      'Structural Organization',
-      'Biomolecules',
-    ],
-    schedule: 'Tue, Thu, Sat - 3:00 PM to 5:00 PM',
-  },
-  {
-    id: '3',
-    name: 'NEET Biology Dropper Batch 2025',
-    type: 'dropper',
-    duration: '8 months',
-    totalLessons: 200,
-    enrolledStudents: 156,
-    maxCapacity: 200,
-    startDate: '2024-08-01',
-    endDate: '2025-04-30',
-    instructor: 'Dr. Priya Sharma',
-    status: 'active',
-    price: 65000,
-    rating: 4.9,
-    completionRate: 85,
-    description: 'Intensive crash course for dropper students targeting NEET 2026',
-    topics: ['Complete Syllabus', 'Mock Tests', 'Revision', 'Problem Solving', 'Exam Strategy'],
-    schedule: 'Daily - 9:00 AM to 1:00 PM',
-  },
-  {
-    id: '4',
-    name: 'Foundation Biology - Grade 9 & 10',
-    type: 'foundation',
-    duration: '2 years',
-    totalLessons: 120,
-    enrolledStudents: 98,
-    maxCapacity: 150,
-    startDate: '2024-04-01',
-    endDate: '2026-03-31',
-    instructor: 'Dr. Rajesh Kumar',
-    status: 'active',
-    price: 25000,
-    rating: 4.6,
-    completionRate: 95,
-    description: 'Early foundation building for future NEET aspirants',
-    topics: ['Basic Biology', 'Scientific Method', 'Life Processes', 'Diversity of Life'],
-    schedule: 'Sat, Sun - 10:00 AM to 12:00 PM',
-  },
-]
-
 export default function CoursesPage() {
-  const [courses, setCourses] = useState<Course[]>(mockCourses)
-  const [filteredCourses, setFilteredCourses] = useState<Course[]>(mockCourses)
+  const [courses, setCourses] = useState<Course[]>([])
+  const [filteredCourses, setFilteredCourses] = useState<Course[]>([])
   const [searchTerm, setSearchTerm] = useState('')
   const [typeFilter, setTypeFilter] = useState<string>('all')
   const [statusFilter, setStatusFilter] = useState<string>('all')
   const [isCreateCourseModalOpen, setIsCreateCourseModalOpen] = useState(false)
   const [isEditCourseModalOpen, setIsEditCourseModalOpen] = useState(false)
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null)
+
+  const fetchCourses = useCallback(async () => {
+    try {
+      const res = await fetch('/api/admin/courses?limit=100')
+      const data = await res.json()
+      if (data.success && data.data?.courses) {
+        const mapped: Course[] = data.data.courses.map((c: any) => ({
+          id: c.id,
+          name: c.name,
+          type: c.type?.toLowerCase().includes('11') ? 'class-11'
+            : c.type?.toLowerCase().includes('12') ? 'class-12'
+            : c.type?.toLowerCase().includes('dropper') ? 'dropper'
+            : 'foundation',
+          duration: `${c.duration} months`,
+          totalLessons: c._count?.chapters || 0,
+          enrolledStudents: c._count?.enrollments || 0,
+          maxCapacity: 300,
+          startDate: c.createdAt || '',
+          endDate: '',
+          instructor: '',
+          status: c.isActive ? 'active' : 'draft',
+          price: c.totalFees || 0,
+          rating: 0,
+          completionRate: 0,
+          description: c.description || '',
+          topics: Array.isArray(c.syllabus) ? c.syllabus : [],
+          schedule: '',
+        }))
+        setCourses(mapped)
+      }
+    } catch {
+      console.error('Failed to fetch courses')
+    }
+  }, [])
+
+  useEffect(() => {
+    fetchCourses()
+  }, [fetchCourses])
+
+  useEffect(() => {
+    let filtered = courses
+
+    if (searchTerm) {
+      filtered = filtered.filter(
+        (course) =>
+          course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          course.instructor.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          course.topics.some((t) => t.toLowerCase().includes(searchTerm.toLowerCase()))
+      )
+    }
+
+    if (typeFilter !== 'all') {
+      filtered = filtered.filter((course) => course.type === typeFilter)
+    }
+
+    if (statusFilter !== 'all') {
+      filtered = filtered.filter((course) => course.status === statusFilter)
+    }
+
+    setFilteredCourses(filtered)
+  }, [courses, searchTerm, typeFilter, statusFilter])
 
   const getStatusColor = (status: string) => {
     switch (status) {

@@ -61,7 +61,7 @@ export async function analyzeWeakAreas(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get user progress data
-    const progressData = await prisma.userProgress.findMany({
+    const progressData = await prisma.user_progress.findMany({
       where: {
         [userField]: userId,
         totalQuestions: { gte: minAttempts },
@@ -326,7 +326,7 @@ export async function getStrongAreas(
   try {
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
-    const progressData = await prisma.userProgress.findMany({
+    const progressData = await prisma.user_progress.findMany({
       where: {
         [userField]: userId,
         masteryScore: { gte: masteryThreshold },
@@ -531,7 +531,7 @@ export async function compareWithPeers(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get user's progress
-    const userProgress = await prisma.userProgress.findMany({
+    const userProgress = await prisma.user_progress.findMany({
       where: {
         [userField]: userId,
       },
@@ -544,7 +544,7 @@ export async function compareWithPeers(
     // Get peer averages for same topics
     const comparisons = await Promise.all(
       userProgress.map(async (progress) => {
-        const peerData = await prisma.userProgress.aggregate({
+        const peerData = await prisma.user_progress.aggregate({
           where: {
             topic: progress.topic,
             [userField]: { not: userId },

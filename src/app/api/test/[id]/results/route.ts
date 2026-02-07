@@ -292,9 +292,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             attemptCount: true,
           },
         },
-        responses: {
+        user_question_responses: {
           include: {
-            question: {
+            questions: {
               select: {
                 id: true,
                 topic: true,
@@ -317,7 +317,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           },
           orderBy: { answeredAt: 'asc' },
         },
-        analytics: true,
+        test_analytics: true,
       },
     })
 
@@ -337,9 +337,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Calculate basic performance metrics
-    const totalQuestions = testSession.responses.length
-    const correctAnswers = testSession.responses.filter((r) => r.isCorrect).length
-    const totalMarks = testSession.responses.reduce((sum, r) => sum + r.marksAwarded, 0)
+    const totalQuestions = testSession.user_question_responses.length
+    const correctAnswers = testSession.user_question_responses.filter((r) => r.isCorrect).length
+    const totalMarks = testSession.user_question_responses.reduce((sum, r) => sum + r.marksAwarded, 0)
     const maxPossibleMarks = testSession.testTemplate?.totalMarks || 0
     const accuracy = totalQuestions > 0 ? (correctAnswers / totalQuestions) * 100 : 0
     const percentage = maxPossibleMarks > 0 ? (totalMarks / maxPossibleMarks) * 100 : 0
@@ -354,7 +354,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         timeSpent: testSession.timeSpent,
         totalScore: testSession.totalScore || totalMarks,
         percentage: testSession.percentage || Math.round(percentage * 100) / 100,
-        percentileRank: testSession.analytics?.percentileRank,
+        percentileRank: testSession.test_analytics?.percentileRank,
         rank: testSession.rank,
       },
       testDetails: {
@@ -393,27 +393,27 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Add detailed question analysis if requested
     if (includeQuestions) {
-      resultData.questionAnalysis = await generateQuestionAnalysis(testSession.responses)
+      resultData.questionAnalysis = await generateQuestionAnalysis(testSession.user_question_responses)
     }
 
     // Add comprehensive analytics if requested and available
-    if (includeAnalytics && testSession.analytics) {
+    if (includeAnalytics && testSession.test_analytics) {
       const comprehensiveAnalytics = generateComprehensiveAnalytics(
-        testSession.responses,
-        testSession.analytics
+        testSession.user_question_responses,
+        testSession.test_analytics
       )
 
       resultData.analytics = {
         ...comprehensiveAnalytics,
-        percentileRank: testSession.analytics.percentileRank,
-        averageComparison: testSession.analytics.averageComparison,
-        predictedScore: testSession.analytics.predictedScore,
-        recommendedStudyTime: testSession.analytics.recommendedStudyTime,
+        percentileRank: testSession.test_analytics.percentileRank,
+        averageComparison: testSession.test_analytics.averageComparison,
+        predictedScore: testSession.test_analytics.predictedScore,
+        recommendedStudyTime: testSession.test_analytics.recommendedStudyTime,
       }
 
       // Generate personalized recommendations
       resultData.recommendations = generateRecommendations(
-        testSession.analytics,
+        testSession.test_analytics,
         resultData.performance
       )
     }
@@ -454,8 +454,8 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       newAchievements: [], // Would be populated based on performance milestones
       progress: {
         testsCompleted: 1, // This would come from user's total test count
-        topicsStrength: testSession.analytics?.strengthTopics?.length || 0,
-        improvementAreas: testSession.analytics?.weaknessTopics?.length || 0,
+        topicsStrength: testSession.test_analytics?.strengthTopics?.length || 0,
+        improvementAreas: testSession.test_analytics?.weaknessTopics?.length || 0,
       },
     }
 

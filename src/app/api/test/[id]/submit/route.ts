@@ -55,7 +55,7 @@ async function calculateTestAnalytics(testSessionId: string) {
     const responses = await prisma.user_question_responses.findMany({
       where: { testSessionId },
       include: {
-        question: {
+        questions: {
           select: {
             id: true,
             topic: true,
@@ -84,7 +84,7 @@ async function calculateTestAnalytics(testSessionId: string) {
     // Difficulty-wise analysis
     const difficultyStats = responses.reduce(
       (acc, r) => {
-        const diff = r.question.difficulty
+        const diff = r.questions.difficulty
         if (!acc[diff]) {
           acc[diff] = { total: 0, correct: 0, time: 0 }
         }
@@ -99,7 +99,7 @@ async function calculateTestAnalytics(testSessionId: string) {
     // Topic-wise performance
     const topicPerformance = responses.reduce(
       (acc, r) => {
-        const topic = r.question.topic
+        const topic = r.questions.topic
         if (!acc[topic]) {
           acc[topic] = {
             total: 0,
@@ -354,7 +354,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     const responses = await prisma.user_question_responses.findMany({
       where: { testSessionId },
       include: {
-        question: {
+        questions: {
           select: { marks: true, topic: true, difficulty: true },
         },
       },

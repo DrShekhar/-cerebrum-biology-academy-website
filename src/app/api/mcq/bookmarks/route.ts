@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
       skip: offset,
       orderBy: { createdAt: 'desc' },
       include: {
-        question: {
+        questions: {
           select: {
             id: true,
             question: true,
@@ -53,7 +53,7 @@ export async function GET(request: NextRequest) {
           questionId: b.questionId,
           note: b.note,
           createdAt: b.createdAt,
-          question: b.question,
+          question: b.questions,
         })),
         total,
         hasMore: offset + bookmarks.length < total,

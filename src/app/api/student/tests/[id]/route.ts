@@ -26,17 +26,17 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
         studentId,
       },
       include: {
-        testAssignment: {
+        test_assignments: {
           include: {
-            teacher: {
+            users: {
               select: {
                 id: true,
                 name: true,
               },
             },
-            questions: {
+            test_assignment_questions: {
               include: {
-                question: {
+                questions: {
                   select: {
                     id: true,
                     question: true,
@@ -62,7 +62,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       return NextResponse.json({ error: 'Test not found or not assigned to you' }, { status: 404 })
     }
 
-    const assignment = submission.testAssignment
+    const assignment = submission.test_assignments
     const now = new Date()
     const isAvailable = assignment.availableFrom ? new Date(assignment.availableFrom) <= now : true
     const isPastDue = new Date(assignment.dueDate) < now
@@ -71,25 +71,25 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
       submission.status === 'GRADED' ||
       (submission.status === 'SUBMITTED' && assignment.showResults === 'IMMEDIATELY')
 
-    let questions = assignment.questions.map((q) => {
+    let questions = assignment.test_assignment_questions.map((q) => {
       const base = {
         id: q.id,
         questionId: q.questionId,
         orderIndex: q.orderIndex,
         marks: q.marks,
         negativeMarks: q.negativeMarks,
-        question: q.question.question,
-        options: q.question.options,
-        type: q.question.type,
-        topic: q.question.topic,
-        difficulty: q.question.difficulty,
+        question: q.questions.question,
+        options: q.questions.options,
+        type: q.questions.type,
+        topic: q.questions.topic,
+        difficulty: q.questions.difficulty,
       }
 
       if (showAnswers) {
         return {
           ...base,
-          correctAnswer: q.question.correctAnswer,
-          explanation: q.question.explanation,
+          correctAnswer: q.questions.correctAnswer,
+          explanation: q.questions.explanation,
         }
       }
       return base
@@ -115,7 +115,7 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
         negativeMarkValue: assignment.negativeMarkValue,
         passingMarks: assignment.passingMarks,
         dueDate: assignment.dueDate,
-        teacher: assignment.teacher,
+        teacher: assignment.users,
         status: submission.status,
         startedAt: submission.startedAt,
         submittedAt: submission.submittedAt,
@@ -168,7 +168,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
         studentId,
       },
       include: {
-        testAssignment: true,
+        test_assignments: true,
       },
     })
 
@@ -181,7 +181,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     }
 
     const now = new Date()
-    const assignment = submission.testAssignment
+    const assignment = submission.test_assignments
 
     if (assignment.availableFrom && new Date(assignment.availableFrom) > now) {
       return NextResponse.json({ error: 'Test is not available yet' }, { status: 400 })
@@ -242,11 +242,11 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
         studentId,
       },
       include: {
-        testAssignment: {
+        test_assignments: {
           include: {
-            questions: {
+            test_assignment_questions: {
               include: {
-                question: {
+                questions: {
                   select: {
                     id: true,
                     correctAnswer: true,
@@ -279,8 +279,8 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
       updateData.status = 'SUBMITTED'
       updateData.submittedAt = new Date()
 
-      const assignment = submission.testAssignment
-      const questionsMap = new Map(assignment.questions.map((q) => [q.questionId, q]))
+      const assignment = submission.test_assignments
+      const questionsMap = new Map(assignment.test_assignment_questions.map((q) => [q.questionId, q]))
 
       let totalScore = 0
       let questionsAttempted = 0
@@ -290,7 +290,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
 
       const answersList = answers || submission.answers || []
 
-      for (const q of assignment.questions) {
+      for (const q of assignment.test_assignment_questions) {
         const answer = answersList.find((a: any) => a.questionId === q.questionId)
 
         if (!answer || answer.selectedAnswer === null || answer.selectedAnswer === undefined) {
@@ -299,7 +299,7 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
         }
 
         questionsAttempted++
-        const isCorrect = answer.selectedAnswer === q.question.correctAnswer
+        const isCorrect = answer.selectedAnswer === q.questions.correctAnswer
 
         if (isCorrect) {
           questionsCorrect++

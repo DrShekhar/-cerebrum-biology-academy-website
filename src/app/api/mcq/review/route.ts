@@ -32,7 +32,7 @@ export async function GET(request: NextRequest) {
         nextReviewAt: { lte: now },
       },
       include: {
-        question: {
+        questions: {
           select: {
             id: true,
             question: true,
@@ -74,7 +74,7 @@ export async function GET(request: NextRequest) {
     })
 
     // Get recommended review count
-    let newQuestions: (typeof dueReviews)[0]['question'][] = []
+    let newQuestions: (typeof dueReviews)[0]['questions'][] = []
 
     if (includeNew) {
       // Get questions the user hasn't reviewed yet
@@ -123,7 +123,7 @@ export async function GET(request: NextRequest) {
 
     // Format response
     const reviewQuestions = sortedReviews.slice(0, reviewCount).map((r) => ({
-      ...r.question,
+      ...r.questions,
       reviewData: {
         easeFactor: r.easeFactor,
         interval: r.interval,

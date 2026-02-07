@@ -45,9 +45,9 @@ export async function GET(
         },
         include: {
           test_templates: true,
-          responses: {
+          user_question_responses: {
             include: {
-              question: {
+              questions: {
                 select: {
                   id: true,
                   question: true,
@@ -63,7 +63,7 @@ export async function GET(
             },
             orderBy: { answeredAt: 'asc' },
           },
-          analytics: true,
+          test_analytics: true,
         },
       })
 
@@ -167,7 +167,7 @@ export async function PUT(
       // Track status change event
       if (updateData.status && updateData.status !== existingSession.status) {
         try {
-          await prisma.analyticsEvent.create({
+          await prisma.analytics_events.create({
             data: {
               userId: session.userId,
               eventType: 'test',
@@ -333,7 +333,7 @@ export async function POST(
           })
 
       // Update or create test question record
-      await prisma.testQuestion.updateMany({
+      await prisma.test_questions.updateMany({
         where: {
           testAttemptId: testSession.id, // You might need to link this properly
           questionId,
@@ -367,7 +367,7 @@ export async function POST(
 
       // Track answer submission event
       try {
-        await prisma.analyticsEvent.create({
+        await prisma.analytics_events.create({
           data: {
             userId: session.userId,
             eventType: 'test',
@@ -435,7 +435,7 @@ async function updateUserProgress(
   timeSpent: number
 ) {
   try {
-    const existingProgress = await prisma.userProgress.findFirst({
+    const existingProgress = await prisma.user_progress.findFirst({
       where: {
         userId,
         topic: question.topic,
@@ -458,7 +458,7 @@ async function updateUserProgress(
       // Calculate mastery score (accuracy weighted by consistency)
       const masteryScore = Math.min(100, newAccuracy * (1 + Math.min(newTotalQuestions / 50, 1)))
 
-      await prisma.userProgress.update({
+      await prisma.user_progress.update({
         where: { id: existingProgress.id },
         data: {
           totalQuestions: newTotalQuestions,
@@ -473,7 +473,7 @@ async function updateUserProgress(
       })
     } else {
       // Create new progress record
-      await prisma.userProgress.create({
+      await prisma.user_progress.create({
         data: {
           userId,
           topic: question.topic,
