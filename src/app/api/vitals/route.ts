@@ -1,5 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
+
+// Lazy import prisma to prevent crashes if DB is unavailable
+let prismaClient: any = null
+async function getPrisma() {
+  if (!prismaClient) {
+    try {
+      const mod = await import('@/lib/prisma')
+      prismaClient = mod.prisma
+    } catch {
+      return null
+    }
+  }
+  return prismaClient
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -7,7 +20,14 @@ export async function POST(request: NextRequest) {
     const { name, value, rating, page, id, delta, connection } = body
 
     if (!name || value === undefined) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+      // Non-critical: vitals tracking failure is not user-facing
+      return NextResponse.json({ success: false }, { status: 200 })
+    }
+
+    const prisma = await getPrisma()
+    if (!prisma) {
+      // DB unavailable — silently skip (vitals are non-critical)
+      return NextResponse.json({ success: false })
     }
 
     await prisma.webVital.create({
@@ -25,9 +45,14 @@ export async function POST(request: NextRequest) {
     })
 
     return NextResponse.json({ success: true })
-  } catch (error) {
-    console.error('Error saving web vital:', error)
-    return NextResponse.json({ error: 'Failed to save metric' }, { status: 500 })
+  } catch (error: any) {
+    // Gracefully handle missing table or connection issues
+    const errorCode = error?.code || ''
+    if (errorCode === 'P2021' || errorCode === 'P2010' || errorCode === 'P1001') {
+      return NextResponse.json({ success: false })
+    }
+    console.error('Error saving web vital:', error?.message || error)
+    return NextResponse.json({ success: false })
   }
 }
 
