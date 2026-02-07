@@ -1969,15 +1969,17 @@ const nextConfig = {
           ...securityHeaders,
         ],
       },
-      // HTML pages - Optimized for mobile LCP while preventing stale CSS
-      // PERFORMANCE: Increased edge cache (s-maxage) for faster TTFB on mobile
-      // Browser cache kept short to ensure fresh content
+      // HTML pages - Optimized for billing + mobile LCP
+      // BILLING FIX: Increased edge cache from 2h to 24h (reduces origin hits by 12x)
+      // With 2400+ pages, 2h edge cache = ~28,800 origin hits/day → 24h = ~2,400/day
+      // stale-while-revalidate=86400 means users always get instant response from edge
+      // while revalidation happens in background (no visible staleness)
       {
         source: '/:path*',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=60, s-maxage=7200, stale-while-revalidate=300',
+            value: 'public, max-age=60, s-maxage=86400, stale-while-revalidate=86400',
           },
           // PERFORMANCE: Early hints for faster resource loading
           {
@@ -2011,19 +2013,20 @@ export default withSentryConfig(withBundleAnalyzer(withMDX(nextConfig)), {
   // For all available options, see:
   // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
 
-  // Upload a larger set of source maps for prettier stack traces (increases build time)
-  widenClientFileUpload: true,
+  // BILLING FIX: Disabled - widenClientFileUpload increases build time and build minutes cost
+  // Stack traces work fine without it for most debugging scenarios
+  widenClientFileUpload: false,
 
   // Automatically annotate React components to show their full name in breadcrumbs and session replay
   reactComponentAnnotation: {
     enabled: true,
   },
 
-  // Route browser requests to Sentry through a Next.js rewrite to circumvent ad-blockers.
-  // This can increase your server load as well as your hosting bill.
-  // Note: Check that the configured route will not match with your Next.js middleware, otherwise reporting of client-
-  // side errors will fail.
-  tunnelRoute: '/monitoring',
+  // BILLING FIX: Sentry tunnel DISABLED - was routing every browser error report through
+  // a serverless function, causing extra function invocations + bandwidth charges.
+  // Sentry's own comment says: "This can increase your server load as well as your hosting bill."
+  // Direct Sentry reporting works fine; only ad-blocker users lose error reporting.
+  // tunnelRoute: '/monitoring',
 
   // Hides source maps from generated client bundles
   hideSourceMaps: true,
@@ -2037,9 +2040,7 @@ export default withSentryConfig(withBundleAnalyzer(withMDX(nextConfig)), {
   // Automatically tree-shake Sentry logger statements to reduce bundle size
   disableLogger: true,
 
-  // Enables automatic instrumentation of Vercel Cron Monitors. (Does not yet work with App Router route handlers.)
-  // See the following for more information:
-  // https://docs.sentry.io/product/crons/
-  // https://vercel.com/docs/cron-jobs
-  automaticVercelMonitors: true,
+  // BILLING FIX: Disabled - automatic cron monitoring adds overhead to every cron invocation
+  // Enable selectively if you need to debug specific cron jobs via Sentry
+  automaticVercelMonitors: false,
 })

@@ -15,7 +15,7 @@
   "functions": {
     "src/app/api/**/*.ts": {
       "maxDuration": 30,
-      "memory": 1024
+      "memory": 512
     },
     "src/app/api/ai/**/*.ts": {
       "maxDuration": 60,
@@ -26,6 +26,14 @@
       "memory": 1024
     },
     "src/app/api/cron/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 512
+    },
+    "src/app/api/cron/process-agents/**/*.ts": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "src/app/api/cron/seo-content-processor/**/*.ts": {
       "maxDuration": 60,
       "memory": 1024
     },
@@ -38,32 +46,6 @@
       "memory": 512
     }
   },
-  "images": {
-    "sizes": [320, 375, 420, 640, 750, 828, 1080, 1200],
-    "formats": ["image/webp", "image/avif"],
-    "minimumCacheTTL": 31536000,
-    "dangerouslyAllowSVG": false,
-    "remotePatterns": [
-      {
-        "protocol": "https",
-        "hostname": "**.cerebrumbiologyacademy.com"
-      },
-      {
-        "protocol": "https",
-        "hostname": "images.unsplash.com"
-      }
-    ]
-  },
-  "rewrites": [
-    {
-      "source": "/claudechat",
-      "destination": "/claudechat"
-    },
-    {
-      "source": "/api/health",
-      "destination": "/api/health"
-    }
-  ],
   "redirects": [
     {
       "source": "/",
@@ -88,73 +70,18 @@
       "permanent": true
     }
   ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
-        }
-      ]
-    },
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, s-maxage=60, stale-while-revalidate=300"
-        }
-      ]
-    },
-    {
-      "source": "/_next/static/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/images/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(favicon.ico|robots.txt|sitemap.xml)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600, s-maxage=3600"
-        }
-      ]
-    }
-  ],
   "crons": [
     {
-      "path": "/api/cron/cleanup",
-      "schedule": "0 2 * * *"
-    },
-    {
-      "path": "/api/cron/backup",
-      "schedule": "0 3 * * *"
-    },
-    {
       "path": "/api/cron/cleanup-otp",
-      "schedule": "0 */4 * * *"
+      "schedule": "0 */6 * * *"
     },
     {
       "path": "/api/cron/process-agents",
-      "schedule": "*/5 * * * *"
+      "schedule": "*/15 * * * *"
     },
     {
       "path": "/api/cron/nurturing",
-      "schedule": "*/15 * * * *"
+      "schedule": "0 * * * *"
     },
     {
       "path": "/api/cron/nurturing-sequence",
@@ -166,7 +93,7 @@
     },
     {
       "path": "/api/cron/seo-content-processor",
-      "schedule": "*/10 * * * *"
+      "schedule": "0 */2 * * *"
     },
     {
       "path": "/api/cron/seo-scheduled-blogs",
@@ -174,23 +101,23 @@
     },
     {
       "path": "/api/cron/seo-auto-publisher",
-      "schedule": "*/5 * * * *"
+      "schedule": "0 * * * *"
     },
     {
       "path": "/api/cron/seo-news-monitor",
-      "schedule": "0 */2 * * *"
+      "schedule": "0 */4 * * *"
     },
     {
       "path": "/api/cron/seo-trend-monitor",
-      "schedule": "30 3,9,15 * * *"
+      "schedule": "30 9 * * *"
     },
     {
       "path": "/api/cron/demo-reminders",
-      "schedule": "*/15 * * * *"
+      "schedule": "0 * * * *"
     },
     {
       "path": "/api/cron/webhook-retries",
-      "schedule": "*/5 * * * *"
+      "schedule": "*/15 * * * *"
     }
   ]
 }
