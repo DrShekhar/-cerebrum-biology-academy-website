@@ -1,11 +1,11 @@
 import { Metadata } from 'next'
 import { Suspense } from 'react'
 import nextDynamic from 'next/dynamic'
-import { getAllPosts, getAllCategories, getBlogStats, getAllTags } from '@/lib/blog/mdx'
+import { getAllPosts, getAllCategories } from '@/lib/blog/mdx'
 import { BreadcrumbSchema } from '@/components/seo'
 
-// Force dynamic rendering to ensure searchParams work correctly
-export const dynamic = 'force-dynamic'
+// Revalidate every hour — page is statically generated and cached at CDN edge
+export const revalidate = 3600
 
 // Loading skeleton component
 function BlogLoadingSkeleton() {
@@ -32,42 +32,48 @@ const BlogListingPage = nextDynamic(
   }
 )
 
-interface BlogPageProps {
-  searchParams: Promise<{ search?: string; category?: string; page?: string }>
-}
-
-export async function generateMetadata({ searchParams }: BlogPageProps): Promise<Metadata> {
-  const params = await searchParams
-  const hasQueryParams = params.search || params.category
-
-  return {
-    title: 'NEET Biology Blog | Study Tips & Preparation Strategies',
+export const metadata: Metadata = {
+  title: 'NEET Biology Blog | Study Tips & Preparation Strategies',
+  description:
+    'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty. Master biology concepts for medical entrance success.',
+  keywords:
+    'NEET biology blog, medical entrance preparation, biology study tips, NEET strategy, AIIMS faculty guidance',
+  openGraph: {
+    title: 'NEET Biology Blog | Expert Study Tips & Strategies',
     description:
-      'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty. Master biology concepts for medical entrance success.',
-    keywords:
-      'NEET biology blog, medical entrance preparation, biology study tips, NEET strategy, AIIMS faculty guidance',
-    openGraph: {
-      title: 'NEET Biology Blog | Expert Study Tips & Strategies',
-      description:
-        'Master NEET Biology with expert tips, preparation strategies, and study guides by AIIMS faculty.',
-      images: ['/blog/neet-biology-blog-og.jpg'],
+      'Master NEET Biology with expert tips, preparation strategies, and study guides by AIIMS faculty.',
+    images: ['/blog/neet-biology-blog-og.jpg'],
+  },
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/blog',
+    types: {
+      'application/rss+xml': '/blog/feed.xml',
     },
-    alternates: {
-      canonical: 'https://cerebrumbiologyacademy.com/blog',
-      types: {
-        'application/rss+xml': '/blog/feed.xml',
-      },
-    },
-    robots: hasQueryParams ? { index: false, follow: true } : { index: true, follow: true },
-  }
+  },
 }
 
 export default function BlogPage() {
   const posts = getAllPosts()
   const categories = getAllCategories()
-  const stats = getBlogStats()
-  const tags = getAllTags()
-  const popularTags = tags.slice(0, 15)
+
+  // Compute stats and tags from already-loaded posts (avoids re-reading all 111+ MDX files)
+  const totalReadTime = posts.reduce((sum, post) => {
+    const rt = typeof post.readTime === 'number' && !isNaN(post.readTime) ? post.readTime : 0
+    return sum + rt
+  }, 0)
+  const stats = {
+    totalPosts: posts.length,
+    totalViews: posts.reduce((sum, post) => sum + (post.views || 0), 0),
+    avgReadTime: posts.length > 0 ? Math.round(totalReadTime / posts.length) : 0,
+    categories: categories.length,
+  }
+
+  const tagCounts: Record<string, number> = {}
+  posts.forEach((post) => post.tags.forEach((tag) => { tagCounts[tag] = (tagCounts[tag] || 0) + 1 }))
+  const popularTags = Object.entries(tagCounts)
+    .map(([tag, count]) => ({ tag, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 15)
 
   return (
     <>
