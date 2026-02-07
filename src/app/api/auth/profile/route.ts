@@ -213,7 +213,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
 
     // Track profile update event
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: session.userId,
           eventType: 'profile',

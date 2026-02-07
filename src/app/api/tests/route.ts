@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
     if (difficulty) where.difficulty = difficulty
 
     // Fetch test templates from database
-    const tests = await prisma.testTemplate.findMany({
+    const tests = await prisma.test_templates.findMany({
       where,
       take: limit,
       orderBy: {

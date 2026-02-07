@@ -299,7 +299,7 @@ export async function GET(request: NextRequest) {
     // Get more questions than needed to allow for proper randomization
     const fetchCount = Math.min(params.count * 3, 300) // Fetch 3x the needed amount, max 300
 
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.questions.findMany({
       where: filters,
       select: {
         id: true,

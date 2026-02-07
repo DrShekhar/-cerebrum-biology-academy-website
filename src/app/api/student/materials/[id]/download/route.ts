@@ -23,7 +23,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     const userId = session.user.id
 
     // Verify material exists and is published
-    const material = await prisma.studyMaterial.findUnique({
+    const material = await prisma.study_materials.findUnique({
       where: { id: materialId },
       select: {
         id: true,
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
     }
 
     // Update material download count
-    await prisma.studyMaterial.update({
+    await prisma.study_materials.update({
       where: { id: materialId },
       data: {
         totalDownloads: { increment: 1 },
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest, { params }: { params: Promise<{
 
     // Create or update student progress
     try {
-      await prisma.materialProgress.upsert({
+      await prisma.material_progress.upsert({
         where: {
           materialId_userId: {
             materialId,

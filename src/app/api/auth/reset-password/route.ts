@@ -192,7 +192,7 @@ export async function POST(request: NextRequest) {
 
     // Track password reset event
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: resetToken.userId,
           eventType: 'security',

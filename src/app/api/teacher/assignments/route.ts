@@ -45,7 +45,7 @@ export async function GET(request: NextRequest) {
     }
 
     const [assignments, total] = await Promise.all([
-      prisma.assignment.findMany({
+      prisma.assignments.findMany({
         where,
         include: {
           course: {
@@ -81,10 +81,10 @@ export async function GET(request: NextRequest) {
         skip: (page - 1) * limit,
         take: limit,
       }),
-      prisma.assignment.count({ where }),
+      prisma.assignments.count({ where }),
     ])
 
-    const stats = await prisma.assignment.groupBy({
+    const stats = await prisma.assignments.groupBy({
       by: ['status'],
       where: { teacherId },
       _count: true,
@@ -191,7 +191,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const assignment = await prisma.assignment.create({
+    const assignment = await prisma.assignments.create({
       data: {
         teacherId,
         courseId: courseId || null,
@@ -232,7 +232,7 @@ export async function POST(request: NextRequest) {
     })
 
     if (status === 'PUBLISHED' && courseId) {
-      const enrolledStudents = await prisma.enrollment.findMany({
+      const enrolledStudents = await prisma.enrollments.findMany({
         where: {
           courseId,
           status: 'ACTIVE',
@@ -244,7 +244,7 @@ export async function POST(request: NextRequest) {
 
       await Promise.all(
         enrolledStudents.map((enrollment) =>
-          prisma.assignmentSubmission.create({
+          prisma.assignment_submissions.create({
             data: {
               assignmentId: assignment.id,
               studentId: enrollment.userId,

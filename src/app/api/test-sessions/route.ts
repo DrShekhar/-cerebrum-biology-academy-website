@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Verify test template exists
-    const testTemplate = await prisma.testTemplate.findUnique({
+    const testTemplate = await prisma.test_templates.findUnique({
       where: { id: testTemplateId },
     })
 
@@ -45,7 +45,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create test session
-    const testSession = await prisma.testSession.create({
+    const testSession = await prisma.test_sessions.create({
       data: {
         testTemplateId,
         userId,
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
         fullscreenExits: 0,
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
       success: true,
       data: {
         sessionId: testSession.id,
-        testTemplate: testSession.testTemplate,
+        testTemplate: testSession.test_templates,
         status: testSession.status,
         createdAt: testSession.createdAt.toISOString(),
       },
@@ -118,12 +118,12 @@ export async function GET(request: NextRequest) {
     }
 
     // Fetch test sessions
-    const testSessions = await prisma.testSession.findMany({
+    const testSessions = await prisma.test_sessions.findMany({
       where: {
         OR: [userId ? { userId } : {}, freeUserId ? { freeUserId } : {}],
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             title: true,
             type: true,
@@ -145,7 +145,7 @@ export async function GET(request: NextRequest) {
       data: {
         sessions: testSessions.map((ts) => ({
           id: ts.id,
-          testTemplate: ts.testTemplate,
+          testTemplate: ts.test_templates,
           status: ts.status,
           score: ts.score,
           percentage: ts.percentage,

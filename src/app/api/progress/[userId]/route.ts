@@ -101,14 +101,14 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
   })
 
   // Get recent test sessions for context
-  const recentTestSessions = await prisma.testSession.findMany({
+  const recentTestSessions = await prisma.test_sessions.findMany({
     where: {
       ...(freeUserId ? { freeUserId } : { userId }),
       status: 'COMPLETED',
       ...(timeFrameDate && { submittedAt: { gte: timeFrameDate } }),
     },
     include: {
-      testTemplate: {
+      test_templates: {
         select: {
           title: true,
           type: true,
@@ -122,7 +122,7 @@ async function calculateProgressMetrics(userId: string, freeUserId: string | nul
   })
 
   // Get recent question responses for detailed analysis
-  const recentResponses = await prisma.userQuestionResponse.findMany({
+  const recentResponses = await prisma.user_question_responses.findMany({
     where: {
       ...(freeUserId ? { freeUserId } : { userId }),
       ...(timeFrameDate && { answeredAt: { gte: timeFrameDate } }),
@@ -294,7 +294,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     const freeUser = targetUser
       ? null
-      : await prisma.freeUser.findUnique({
+      : await prisma.free_users.findUnique({
           where: { id: userId },
           select: { id: true, name: true, email: true, grade: true, curriculum: true },
         })
@@ -437,10 +437,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
       recentActivity: {
         testSessions: recentTestSessions.map((session) => ({
           id: session.id,
-          title: session.testTemplate?.title,
-          type: session.testTemplate?.type,
-          topics: session.testTemplate?.topics,
-          difficulty: session.testTemplate?.difficulty,
+          title: session.test_templates?.title,
+          type: session.test_templates?.type,
+          topics: session.test_templates?.topics,
+          difficulty: session.test_templates?.difficulty,
           score: session.totalScore,
           percentage: session.percentage,
           submittedAt: session.submittedAt,

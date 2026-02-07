@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url)
     const limit = parseInt(searchParams.get('limit') || '10')
 
-    const topUsers = await prisma.freeUser.findMany({
+    const topUsers = await prisma.free_users.findMany({
       where: {
         totalPoints: {
           gt: 0,
@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
       take: limit,
     })
 
-    const studyHours = await prisma.testSession.groupBy({
+    const studyHours = await prisma.test_sessions.groupBy({
       by: ['userId'],
       _sum: {
         timeSpent: true,
@@ -38,7 +38,7 @@ export async function GET(request: NextRequest) {
       studyHours.map((s) => [s.userId, Math.floor((s._sum.timeSpent || 0) / 3600)])
     )
 
-    const testsCompleted = await prisma.testSession.groupBy({
+    const testsCompleted = await prisma.test_sessions.groupBy({
       by: ['userId'],
       where: {
         status: 'COMPLETED',

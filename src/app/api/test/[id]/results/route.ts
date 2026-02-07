@@ -265,13 +265,13 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Fetch test session with comprehensive data
-    const testSession = await prisma.testSession.findUnique({
+    const testSession = await prisma.test_sessions.findUnique({
       where: {
         id: testSessionId,
         OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,
@@ -386,7 +386,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         averageTimePerQuestion:
           totalQuestions > 0 ? Math.round((testSession.timeSpent || 0) / totalQuestions) : 0,
         isPassed: testSession.testTemplate?.passingMarks
-          ? totalMarks >= testSession.testTemplate.passingMarks
+          ? totalMarks >= testSession.test_templates.passingMarks
           : percentage >= 40,
       },
     }
@@ -420,9 +420,9 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
 
     // Add comparison data if requested
     if (includeComparison && testSession.testTemplate) {
-      const comparisonData = await prisma.testSession.aggregate({
+      const comparisonData = await prisma.test_sessions.aggregate({
         where: {
-          testTemplateId: testSession.testTemplate.id,
+          testTemplateId: testSession.test_templates.id,
           status: 'COMPLETED',
           totalScore: { not: null },
         },

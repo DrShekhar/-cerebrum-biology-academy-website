@@ -29,7 +29,7 @@ export async function POST(
       return NextResponse.json({ error: 'Grade is required' }, { status: 400 })
     }
 
-    const assignment = await prisma.assignment.findFirst({
+    const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
         teacherId,
@@ -47,7 +47,7 @@ export async function POST(
       )
     }
 
-    const submission = await prisma.assignmentSubmission.findFirst({
+    const submission = await prisma.assignment_submissions.findFirst({
       where: {
         id: submissionId,
         assignmentId,
@@ -74,7 +74,7 @@ export async function POST(
       )
     }
 
-    const updatedSubmission = await prisma.assignmentSubmission.update({
+    const updatedSubmission = await prisma.assignment_submissions.update({
       where: {
         id: submissionId,
       },

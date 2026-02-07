@@ -79,7 +79,7 @@ export async function analyzeWeakAreas(
     })
 
     // Get question responses for additional analysis
-    const questionResponses = await prisma.userQuestionResponse.findMany({
+    const questionResponses = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
         question: {
@@ -385,7 +385,7 @@ export async function getImprovementTrend(
     startDate.setDate(startDate.getDate() - days)
 
     // Get question responses for this topic
-    const responses = await prisma.userQuestionResponse.findMany({
+    const responses = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
         question: {

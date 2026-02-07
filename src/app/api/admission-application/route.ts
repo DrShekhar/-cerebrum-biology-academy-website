@@ -110,7 +110,7 @@ export async function POST(request: NextRequest) {
     const batchName = batchNames[courseSelection.selectedBatch] || courseSelection.selectedBatch
 
     // Create pending enrollment
-    const enrollment = await prisma.enrollment.create({
+    const enrollment = await prisma.enrollments.create({
       data: {
         userId: user.id,
         courseId: courseSelection.selectedBatch,

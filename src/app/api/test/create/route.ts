@@ -61,7 +61,7 @@ async function generateTestQuestions(params: {
 
   try {
     // Fetch questions based on criteria
-    const questions = await prisma.question.findMany({
+    const questions = await prisma.questions.findMany({
       where: {
         topic: { in: topics },
         difficulty: difficulty as any,
@@ -79,7 +79,7 @@ async function generateTestQuestions(params: {
 
     if (questions.length < questionCount) {
       // If not enough questions, try with relaxed criteria
-      const additionalQuestions = await prisma.question.findMany({
+      const additionalQuestions = await prisma.questions.findMany({
         where: {
           topic: { in: topics },
           curriculum,
@@ -160,7 +160,7 @@ export async function POST(request: NextRequest) {
     let testTemplateId = validatedData.testTemplateId
 
     if (!testTemplateId) {
-      const testTemplate = await prisma.testTemplate.create({
+      const testTemplate = await prisma.test_templates.create({
         data: {
           title: `${validatedData.topics.join(', ')} Test - ${validatedData.difficulty}`,
           description: `Auto-generated test for topics: ${validatedData.topics.join(', ')}`,
@@ -186,7 +186,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Create test session
-    const testSession = await prisma.testSession.create({
+    const testSession = await prisma.test_sessions.create({
       data: {
         userId: user.id,
         testTemplateId,
@@ -200,7 +200,7 @@ export async function POST(request: NextRequest) {
         ipAddress: request.headers.get('x-forwarded-for') || 'unknown',
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,
@@ -220,7 +220,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Create question bank for this test session
-    const questionBank = await prisma.questionBank.create({
+    const questionBank = await prisma.question_banks.create({
       data: {
         name: `Test Session ${testSession.id} Questions`,
         description: `Questions for test session ${testSession.id}`,
@@ -238,7 +238,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Add questions to the question bank
-    await prisma.questionBankQuestion.createMany({
+    await prisma.question_bank_questions.createMany({
       data: questions.map((question, index) => ({
         questionBankId: questionBank.id,
         questionId: question.id,
@@ -258,7 +258,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Update test template attempt count
-    await prisma.testTemplate.update({
+    await prisma.test_templates.update({
       where: { id: testTemplateId },
       data: {
         attemptCount: { increment: 1 },
@@ -272,10 +272,10 @@ export async function POST(request: NextRequest) {
           id: testSession.id,
           sessionToken: testSession.sessionToken,
           status: testSession.status,
-          timeLimit: testSession.testTemplate?.timeLimit,
+          timeLimit: testSession.test_templates?.timeLimit,
           remainingTime: testSession.remainingTime,
           currentQuestionIndex: testSession.currentQuestionIndex,
-          testTemplate: testSession.testTemplate,
+          testTemplate: testSession.test_templates,
         },
         questionBank: {
           id: questionBank.id,
@@ -345,17 +345,17 @@ export async function GET(request: NextRequest) {
 
     // Get available topics, curricula, and other options
     const [topics, curricula, grades] = await Promise.all([
-      prisma.question.findMany({
+      prisma.questions.findMany({
         select: { topic: true },
         distinct: ['topic'],
         where: { isActive: true, isVerified: true },
       }),
-      prisma.question.findMany({
+      prisma.questions.findMany({
         select: { curriculum: true },
         distinct: ['curriculum'],
         where: { isActive: true, isVerified: true },
       }),
-      prisma.question.findMany({
+      prisma.questions.findMany({
         select: { grade: true },
         distinct: ['grade'],
         where: { isActive: true, isVerified: true },

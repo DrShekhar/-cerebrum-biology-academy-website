@@ -29,7 +29,7 @@ export async function GET(request: NextRequest) {
 
     const studentId = session.user.id
 
-    const enrollments = await prisma.enrollment.findMany({
+    const enrollments = await prisma.enrollments.findMany({
       where: {
         userId: studentId,
         status: 'ACTIVE',
@@ -89,7 +89,7 @@ export async function GET(request: NextRequest) {
     }
 
     const [assignments, total] = await Promise.all([
-      prisma.assignment.findMany({
+      prisma.assignments.findMany({
         where,
         include: {
           teacher: {
@@ -136,7 +136,7 @@ export async function GET(request: NextRequest) {
         skip: (page - 1) * limit,
         take: limit,
       }),
-      prisma.assignment.count({ where }),
+      prisma.assignments.count({ where }),
     ])
 
     const filteredAssignments = submissionStatus
@@ -149,7 +149,7 @@ export async function GET(request: NextRequest) {
         })
       : assignments
 
-    const allSubmissions = await prisma.assignmentSubmission.findMany({
+    const allSubmissions = await prisma.assignment_submissions.findMany({
       where: {
         studentId,
         assignment: {

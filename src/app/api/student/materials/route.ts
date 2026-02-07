@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
 
     // Get student's active enrollments and material access
     const [enrollments, materialAccess] = await Promise.all([
-      prisma.enrollment.findMany({
+      prisma.enrollments.findMany({
         where: {
           userId,
           status: 'ACTIVE',
@@ -43,7 +43,7 @@ export async function GET(request: NextRequest) {
           courseId: true,
         },
       }),
-      prisma.materialAccess.findMany({
+      prisma.material_access.findMany({
         where: {
           userId,
         },
@@ -100,22 +100,22 @@ export async function GET(request: NextRequest) {
 
     // PERFORMANCE: Fetch materials, count, and stats in parallel (33% faster)
     const [materials, total, stats] = await Promise.all([
-      prisma.studyMaterial.findMany({
+      prisma.study_materials.findMany({
         where,
         include: {
-          course: {
+          courses: {
             select: {
               id: true,
               name: true,
             },
           },
-          chapter: {
+          chapters: {
             select: {
               id: true,
               title: true,
             },
           },
-          topic: {
+          topics: {
             select: {
               id: true,
               title: true,
@@ -128,8 +128,8 @@ export async function GET(request: NextRequest) {
         skip: (page - 1) * limit,
         take: limit,
       }),
-      prisma.studyMaterial.count({ where }),
-      prisma.studyMaterial.aggregate({
+      prisma.study_materials.count({ where }),
+      prisma.study_materials.aggregate({
         where,
         _sum: {
           totalDownloads: true,
@@ -156,9 +156,9 @@ export async function GET(request: NextRequest) {
         totalDownloads: m.totalDownloads,
         totalViews: m.totalViews,
         avgRating: m.avgRating,
-        course: m.course,
-        chapter: m.chapter,
-        topic: m.topic,
+        course: m.courses,
+        chapter: m.chapters,
+        topic: m.topics,
         publishedAt: m.publishedAt,
         createdAt: m.createdAt,
       })),

@@ -20,17 +20,17 @@ export async function GET(request: NextRequest, context: RouteContext) {
 
     const { enrollmentId } = await context.params
 
-    const enrollment = await prisma.enrollment.findUnique({
+    const enrollment = await prisma.enrollments.findUnique({
       where: { id: enrollmentId },
       include: {
-        course: {
+        courses: {
           include: {
-            materials: {
+            study_materials: {
               where: { isPublished: true },
             },
             chapters: {
               include: {
-                materials: {
+                study_materials: {
                   where: { isPublished: true },
                 },
               },
@@ -51,17 +51,17 @@ export async function GET(request: NextRequest, context: RouteContext) {
     const courseId = enrollment.courseId
     const userId = session.userId
 
-    const totalMaterials = await prisma.studyMaterial.count({
+    const totalMaterials = await prisma.study_materials.count({
       where: {
         courseId,
         isPublished: true,
       },
     })
 
-    const materialsViewed = await prisma.materialProgress.count({
+    const materialsViewed = await prisma.material_progress.count({
       where: {
         userId,
-        material: {
+        study_materials: {
           courseId,
           isPublished: true,
         },
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
     })
 
     // Get the course to determine curriculum and grade
-    const course = await prisma.course.findUnique({
+    const course = await prisma.courses.findUnique({
       where: { id: courseId },
     })
 
@@ -93,11 +93,11 @@ export async function GET(request: NextRequest, context: RouteContext) {
     const grade = gradeMapping[course.class] || 'CLASS_12'
 
     // Count completed test sessions (use curriculum/grade matching since no direct courseId)
-    const testsCompleted = await prisma.testSession.count({
+    const testsCompleted = await prisma.test_sessions.count({
       where: {
         userId,
         status: 'COMPLETED',
-        testTemplate: {
+        test_templates: {
           curriculum: 'NEET', // Assuming NEET courses
           grade: grade,
           isActive: true,
@@ -106,7 +106,7 @@ export async function GET(request: NextRequest, context: RouteContext) {
       },
     })
 
-    const totalTests = await prisma.testTemplate.count({
+    const totalTests = await prisma.test_templates.count({
       where: {
         curriculum: 'NEET',
         grade: grade,
@@ -115,11 +115,11 @@ export async function GET(request: NextRequest, context: RouteContext) {
       },
     })
 
-    const studyTimeResult = await prisma.testSession.aggregate({
+    const studyTimeResult = await prisma.test_sessions.aggregate({
       where: {
         userId,
         status: 'COMPLETED',
-        testTemplate: {
+        test_templates: {
           curriculum: 'NEET',
           grade: grade,
         },

@@ -19,7 +19,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const assignmentId = params.id
     const studentId = session.user.id
 
-    const submission = await prisma.assignmentSubmission.findUnique({
+    const submission = await prisma.assignment_submissions.findUnique({
       where: {
         assignmentId_studentId: {
           assignmentId,
@@ -73,7 +73,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     const body = await request.json()
     const { submittedFiles, submittedText } = body
 
-    const submission = await prisma.assignmentSubmission.findUnique({
+    const submission = await prisma.assignment_submissions.findUnique({
       where: {
         assignmentId_studentId: {
           assignmentId,
@@ -104,7 +104,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       )
     }
 
-    const updatedSubmission = await prisma.assignmentSubmission.update({
+    const updatedSubmission = await prisma.assignment_submissions.update({
       where: {
         id: submission.id,
       },

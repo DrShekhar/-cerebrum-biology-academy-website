@@ -126,7 +126,7 @@ export async function POST(request: NextRequest) {
 
     // Track token refresh event
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: user.id,
           eventType: 'auth',

@@ -69,7 +69,7 @@ async function getRecentSessions(
     }
 
     // Fetch test attempts
-    const testAttempts = await prisma.testAttempt.findMany({
+    const testAttempts = await prisma.test_attempts.findMany({
       where: whereClause,
       orderBy: { submittedAt: 'desc' },
       take: limit,
@@ -196,7 +196,7 @@ export const GET = withAuth(async (request: NextRequest, session) => {
     const sessions = await getCachedSessions(userId, limit, offset, testType, startDate, endDate)
 
     // Get total count for pagination
-    const totalCount = await prisma.testAttempt.count({
+    const totalCount = await prisma.test_attempts.count({
       where: {
         freeUserId: userId,
         status: 'COMPLETED',

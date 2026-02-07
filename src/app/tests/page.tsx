@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic'
 
 async function getTestsFromDatabase() {
   try {
-    const tests = await prisma.testTemplate.findMany({
+    const tests = await prisma.test_templates.findMany({
       where: {
         isActive: true,
         isPublished: true,

@@ -70,7 +70,7 @@ export async function calculateSyllabusCompletion(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get all topics for this curriculum and grade
-    const allTopics = await prisma.question.findMany({
+    const allTopics = await prisma.questions.findMany({
       where: {
         curriculum,
         grade,
@@ -303,7 +303,7 @@ export async function getUnstartedTopics(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get all available topics
-    const allTopics = await prisma.question.findMany({
+    const allTopics = await prisma.questions.findMany({
       where: {
         curriculum,
         grade,
@@ -400,7 +400,7 @@ export async function getChapterWiseProgress(
     ]
 
     // Batch query 1: Get all distinct topics across all chapters in one query
-    const allTopics = await prisma.question.findMany({
+    const allTopics = await prisma.questions.findMany({
       where: {
         curriculum,
         grade,

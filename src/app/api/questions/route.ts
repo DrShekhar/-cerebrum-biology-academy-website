@@ -185,7 +185,7 @@ export async function GET(request: NextRequest) {
 
     // Get questions with count
     const [questions, totalCount] = await Promise.all([
-      prisma.question.findMany({
+      prisma.questions.findMany({
         where,
         select: {
           id: true,
@@ -225,7 +225,7 @@ export async function GET(request: NextRequest) {
           [filters.sortBy]: filters.sortOrder,
         },
       }),
-      prisma.question.count({ where }),
+      prisma.questions.count({ where }),
     ])
 
     // Calculate success rate for each question
@@ -252,17 +252,17 @@ export async function GET(request: NextRequest) {
 
     // Get filter options for frontend
     const filterOptions = await Promise.all([
-      prisma.question.findMany({
+      prisma.questions.findMany({
         select: { topic: true },
         distinct: ['topic'],
         where: { isActive: true },
       }),
-      prisma.question.findMany({
+      prisma.questions.findMany({
         select: { curriculum: true },
         distinct: ['curriculum'],
         where: { isActive: true },
       }),
-      prisma.question.findMany({
+      prisma.questions.findMany({
         select: { grade: true },
         distinct: ['grade'],
         where: { isActive: true },
@@ -308,14 +308,14 @@ export async function GET(request: NextRequest) {
           },
         },
         statistics: {
-          totalActive: await prisma.question.count({ where: { isActive: true } }),
-          totalVerified: await prisma.question.count({ where: { isVerified: true } }),
-          byDifficulty: await prisma.question.groupBy({
+          totalActive: await prisma.questions.count({ where: { isActive: true } }),
+          totalVerified: await prisma.questions.count({ where: { isVerified: true } }),
+          byDifficulty: await prisma.questions.groupBy({
             by: ['difficulty'],
             _count: { id: true },
             where: { isActive: true },
           }),
-          byType: await prisma.question.groupBy({
+          byType: await prisma.questions.groupBy({
             by: ['type'],
             _count: { id: true },
             where: { isActive: true },
@@ -424,7 +424,7 @@ export async function POST(request: NextRequest) {
     const slug = `${validatedData.topic.toLowerCase().replace(/\s+/g, '-')}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
 
     // Create the question
-    const question = await prisma.question.create({
+    const question = await prisma.questions.create({
       data: {
         ...validatedData,
         slug,

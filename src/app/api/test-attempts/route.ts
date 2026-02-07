@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
 
     // Update test session if provided
     if (testSessionId) {
-      await prisma.testSession.update({
+      await prisma.test_sessions.update({
         where: { id: testSessionId },
         data: {
           status: 'COMPLETED',
@@ -69,7 +69,7 @@ export async function POST(request: NextRequest) {
       .map(([topic]) => topic)
 
     // Create test attempt record
-    const testAttempt = await prisma.testAttempt.create({
+    const testAttempt = await prisma.test_attempts.create({
       data: {
         freeUserId: freeUserId || userId,
         testTemplateId,
@@ -85,12 +85,12 @@ export async function POST(request: NextRequest) {
 
     // Update free user statistics
     if (freeUserId) {
-      const existingUser = await prisma.freeUser.findUnique({
+      const existingUser = await prisma.free_users.findUnique({
         where: { id: freeUserId },
       })
 
       if (existingUser) {
-        await prisma.freeUser.update({
+        await prisma.free_users.update({
           where: { id: freeUserId },
           data: {
             totalTestsTaken: (existingUser.totalTestsTaken || 0) + 1,
@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
 
     // Create achievement if it's first test
     if (freeUserId) {
-      const attemptCount = await prisma.testAttempt.count({
+      const attemptCount = await prisma.test_attempts.count({
         where: { freeUserId },
       })
 
@@ -175,7 +175,7 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const attempts = await prisma.testAttempt.findMany({
+    const attempts = await prisma.test_attempts.findMany({
       where: {
         freeUserId: freeUserId || userId,
       },

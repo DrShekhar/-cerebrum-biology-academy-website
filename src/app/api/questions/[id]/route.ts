@@ -114,7 +114,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Fetch question with related data
-    const question = await prisma.question.findUnique({
+    const question = await prisma.questions.findUnique({
       where: { id },
       include: {
         testQuestions: {
@@ -307,7 +307,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Get existing question to check ownership
-    const existingQuestion = await prisma.question.findUnique({
+    const existingQuestion = await prisma.questions.findUnique({
       where: { id },
       select: { id: true, verifiedBy: true },
     })
@@ -385,7 +385,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Update the question
-    const updatedQuestion = await prisma.question.update({
+    const updatedQuestion = await prisma.questions.update({
       where: { id },
       data: updateData,
     })
@@ -471,7 +471,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     }
 
     // Get existing question to check ownership and usage
-    const existingQuestion = await prisma.question.findUnique({
+    const existingQuestion = await prisma.questions.findUnique({
       where: { id },
       select: {
         id: true,
@@ -522,7 +522,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
 
     // If question is in use but admin is deleting, soft delete
     if (isInUse) {
-      await prisma.question.update({
+      await prisma.questions.update({
         where: { id },
         data: {
           isActive: false,
@@ -545,7 +545,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     }
 
     // Hard delete if not in use
-    await prisma.question.delete({
+    await prisma.questions.delete({
       where: { id },
     })
 

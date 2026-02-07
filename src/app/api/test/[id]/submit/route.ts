@@ -52,7 +52,7 @@ const submitTestSchema = z.object({
 async function calculateTestAnalytics(testSessionId: string) {
   try {
     // Get all responses for this session
-    const responses = await prisma.userQuestionResponse.findMany({
+    const responses = await prisma.user_question_responses.findMany({
       where: { testSessionId },
       include: {
         question: {
@@ -186,7 +186,7 @@ async function calculatePercentileRank(
 ): Promise<number | null> {
   try {
     // Get all completed sessions for this test template
-    const completedSessions = await prisma.testSession.findMany({
+    const completedSessions = await prisma.test_sessions.findMany({
       where: {
         testTemplateId,
         status: 'COMPLETED',
@@ -242,13 +242,13 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     }
 
     // Verify test session exists and belongs to user
-    const testSession = await prisma.testSession.findUnique({
+    const testSession = await prisma.test_sessions.findUnique({
       where: {
         id: testSessionId,
         OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,
@@ -294,7 +294,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     if (validatedData.finalAnswers && validatedData.finalAnswers.length > 0) {
       for (const answer of validatedData.finalAnswers) {
         // Get question details
-        const question = await prisma.question.findUnique({
+        const question = await prisma.questions.findUnique({
           where: { id: answer.questionId },
           select: { correctAnswer: true, marks: true },
         })
@@ -303,12 +303,12 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
           const isCorrect = answer.selectedAnswer === question.correctAnswer
           const marksAwarded = isCorrect
             ? question.marks
-            : testSession.testTemplate?.negativeMarking
+            : testSession.test_templates?.negativeMarking
               ? -Math.floor(question.marks / 4)
               : 0
 
           // Check if response already exists
-          const existingResponse = await prisma.userQuestionResponse.findFirst({
+          const existingResponse = await prisma.user_question_responses.findFirst({
             where: {
               testSessionId,
               questionId: answer.questionId,
@@ -317,7 +317,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
 
           if (existingResponse) {
             // Update existing response
-            await prisma.userQuestionResponse.update({
+            await prisma.user_question_responses.update({
               where: { id: existingResponse.id },
               data: {
                 selectedAnswer: answer.selectedAnswer,
@@ -330,7 +330,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
             })
           } else {
             // Create new response
-            await prisma.userQuestionResponse.create({
+            await prisma.user_question_responses.create({
               data: {
                 ...(session.role === 'STUDENT'
                   ? { userId: session.userId }
@@ -351,7 +351,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     }
 
     // Calculate final scores and analytics
-    const responses = await prisma.userQuestionResponse.findMany({
+    const responses = await prisma.user_question_responses.findMany({
       where: { testSessionId },
       include: {
         question: {
@@ -361,12 +361,12 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     })
 
     const totalScore = responses.reduce((sum, r) => sum + r.marksAwarded, 0)
-    const maxPossibleScore = testSession.testTemplate?.totalMarks || 0
+    const maxPossibleScore = testSession.test_templates?.totalMarks || 0
     const percentage = maxPossibleScore > 0 ? (totalScore / maxPossibleScore) * 100 : 0
 
     // Calculate percentile rank
     const percentileRank = await calculatePercentileRank(
-      testSession.testTemplate?.id || '',
+      testSession.test_templates?.id || '',
       totalScore,
       maxPossibleScore
     )
@@ -377,7 +377,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     // Use transaction to update everything atomically
     const result = await prisma.$transaction(async (tx) => {
       // Update test session
-      const updatedSession = await tx.testSession.update({
+      const updatedSession = await tx.test_sessions.update({
         where: { id: testSessionId },
         data: {
           status: 'COMPLETED',
@@ -397,7 +397,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       // Create analytics record if we have data
       let analytics = null
       if (analyticsData) {
-        analytics = await tx.testAnalytics.create({
+        analytics = await tx.test_analytics.create({
           data: {
             testSessionId,
             ...analyticsData,
@@ -409,8 +409,8 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       }
 
       // Update test template statistics
-      await tx.testTemplate.update({
-        where: { id: testSession.testTemplate?.id },
+      await tx.test_templates.update({
+        where: { id: testSession.test_templates?.id },
         data: {
           attemptCount: { increment: 1 },
           // Update running averages (simplified calculation)
@@ -431,7 +431,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
     const rank = percentileRank ? Math.ceil((100 - percentileRank) / 10) : null
 
     // Update session with rank
-    await prisma.testSession.update({
+    await prisma.test_sessions.update({
       where: { id: testSessionId },
       data: { rank },
     })
@@ -443,7 +443,7 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
       totalScore,
       percentage: Math.round(percentage * 100) / 100,
       questionsAnswered: responses.length,
-      totalQuestions: testSession.testTemplate?.totalQuestions,
+      totalQuestions: testSession.test_templates?.totalQuestions,
       timeSpent: validatedData.sessionData?.totalTimeSpent,
     })
 
@@ -461,10 +461,10 @@ export async function POST(request: NextRequest, { params }: RouteParams) {
           percentileRank,
           rank,
           questionsAnswered: responses.length,
-          totalQuestions: testSession.testTemplate?.totalQuestions,
+          totalQuestions: testSession.test_templates?.totalQuestions,
           timeSpent: validatedData.sessionData?.totalTimeSpent || testSession.timeSpent,
-          isPassed: testSession.testTemplate?.passingMarks
-            ? totalScore >= testSession.testTemplate.passingMarks
+          isPassed: testSession.test_templates?.passingMarks
+            ? totalScore >= testSession.test_templates.passingMarks
             : percentage >= 40, // Default 40% passing
         },
         performance: {

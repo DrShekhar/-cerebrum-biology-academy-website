@@ -12,7 +12,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const testId = params.id
 
     // Fetch test template with questions
-    const test = await prisma.testTemplate.findUnique({
+    const test = await prisma.test_templates.findUnique({
       where: { id: testId },
       include: {
         testQuestions: {

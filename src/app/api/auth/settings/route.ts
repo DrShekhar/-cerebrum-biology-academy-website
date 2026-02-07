@@ -229,7 +229,7 @@ export const PUT = withAuth(async (request: NextRequest, session) => {
 
     // Track settings update event
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: session.userId,
           eventType: 'settings',
@@ -346,7 +346,7 @@ export const DELETE = withAuth(async (request: NextRequest, session) => {
 
     // Track account deletion event before deleting
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: session.userId,
           eventType: 'account',

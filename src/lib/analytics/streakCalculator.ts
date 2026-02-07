@@ -163,7 +163,7 @@ export async function getLastActiveDate(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Check test sessions
-    const latestTestSession = await prisma.testSession.findFirst({
+    const latestTestSession = await prisma.test_sessions.findFirst({
       where: {
         [userField]: userId,
         submittedAt: { not: null },
@@ -177,7 +177,7 @@ export async function getLastActiveDate(
     })
 
     // Check question responses
-    const latestQuestionResponse = await prisma.userQuestionResponse.findFirst({
+    const latestQuestionResponse = await prisma.user_question_responses.findFirst({
       where: {
         [userField]: userId,
       },
@@ -198,7 +198,7 @@ export async function getLastActiveDate(
       })
       lastActiveFromProfile = user?.lastActiveAt || null
     } else {
-      const freeUser = await prisma.freeUser.findUnique({
+      const freeUser = await prisma.free_users.findUnique({
         where: { id: userId },
         select: { lastActiveDate: true },
       })
@@ -244,7 +244,7 @@ export async function getActivityCalendar(
     startDate.setHours(0, 0, 0, 0)
 
     // Get test sessions
-    const testSessions = await prisma.testSession.findMany({
+    const testSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         submittedAt: { gte: startDate },
@@ -256,7 +256,7 @@ export async function getActivityCalendar(
     })
 
     // Get question responses
-    const questionResponses = await prisma.userQuestionResponse.findMany({
+    const questionResponses = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
         answeredAt: { gte: startDate },
@@ -374,7 +374,7 @@ async function getActivityDates(userId: string, userType: 'user' | 'freeUser'): 
   const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
   // Get test session dates
-  const testSessions = await prisma.testSession.findMany({
+  const testSessions = await prisma.test_sessions.findMany({
     where: {
       [userField]: userId,
       submittedAt: { not: null },
@@ -385,7 +385,7 @@ async function getActivityDates(userId: string, userType: 'user' | 'freeUser'): 
   })
 
   // Get question response dates
-  const questionResponses = await prisma.userQuestionResponse.findMany({
+  const questionResponses = await prisma.user_question_responses.findMany({
     where: {
       [userField]: userId,
     },

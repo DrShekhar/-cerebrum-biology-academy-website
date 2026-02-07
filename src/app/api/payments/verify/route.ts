@@ -111,9 +111,9 @@ export async function POST(request: NextRequest) {
           const payment = await tx.payments.findFirst({
             where: { razorpayOrderId: orderId },
             include: {
-              enrollment: {
+              enrollments: {
                 include: {
-                  course: true,
+                  courses: true,
                 },
               },
             },
@@ -138,9 +138,9 @@ export async function POST(request: NextRequest) {
             },
           })
 
-          if (payment.enrollmentId && payment.enrollment) {
+          if (payment.enrollmentId && payment.enrollments) {
             // Update enrollment status
-            await tx.enrollment.update({
+            await tx.enrollments.update({
               where: { id: payment.enrollmentId },
               data: {
                 status: 'ACTIVE',
@@ -153,12 +153,12 @@ export async function POST(request: NextRequest) {
             // Store IDs for post-transaction operations
             enrollmentId = payment.enrollmentId
             userId = payment.userId
-            courseId = payment.enrollment.courseId
+            courseId = payment.enrollments.courseId
 
             // Grant access to all course materials
-            const courseMaterials = await tx.studyMaterial.findMany({
+            const courseMaterials = await tx.study_materials.findMany({
               where: {
-                courseId: payment.enrollment.courseId,
+                courseId: payment.enrollments.courseId,
                 isPublished: true,
               },
               select: { id: true },
@@ -174,7 +174,7 @@ export async function POST(request: NextRequest) {
                 reason: 'Enrollment payment completed',
               }))
 
-              await tx.materialAccess.createMany({
+              await tx.material_access.createMany({
                 data: materialAccessRecords,
                 skipDuplicates: true,
               })
@@ -186,8 +186,8 @@ export async function POST(request: NextRequest) {
 
             // Set coachingTier based on course/enrollment fees
             const tierFromCourse = mapCourseToTier(
-              payment.enrollment.courseId,
-              payment.enrollment.totalFees
+              payment.enrollments.courseId,
+              payment.enrollments.totalFees
             )
             await tx.users.update({
               where: { id: payment.userId },
@@ -330,9 +330,9 @@ export async function GET(request: NextRequest) {
     const payment = await prisma.payments.findFirst({
       where: { razorpayOrderId: orderId },
       include: {
-        enrollment: {
+        enrollments: {
           include: {
-            course: true,
+            courses: true,
           },
         },
       },
@@ -360,7 +360,7 @@ export async function GET(request: NextRequest) {
         razorpayPaymentId: payment.razorpayPaymentId,
         createdAt: payment.createdAt,
         completedAt: payment.completedAt,
-        enrollment: payment.enrollment,
+        enrollment: payment.enrollments,
       },
     })
   } catch (error) {

@@ -56,22 +56,22 @@ export async function GET(request: NextRequest) {
 
     // Fetch materials with pagination
     const [materials, total] = await Promise.all([
-      prisma.studyMaterial.findMany({
+      prisma.study_materials.findMany({
         where,
         include: {
-          course: {
+          courses: {
             select: {
               id: true,
               name: true,
             },
           },
-          chapter: {
+          chapters: {
             select: {
               id: true,
               title: true,
             },
           },
-          topic: {
+          topics: {
             select: {
               id: true,
               title: true,
@@ -84,11 +84,11 @@ export async function GET(request: NextRequest) {
         skip: (page - 1) * limit,
         take: limit,
       }),
-      prisma.studyMaterial.count({ where }),
+      prisma.study_materials.count({ where }),
     ])
 
     // Get aggregate stats
-    const stats = await prisma.studyMaterial.aggregate({
+    const stats = await prisma.study_materials.aggregate({
       where,
       _sum: {
         totalDownloads: true,

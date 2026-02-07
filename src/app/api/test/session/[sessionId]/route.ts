@@ -38,13 +38,13 @@ export async function GET(
     try {
       const { sessionId } = await params
 
-      const testSession = await prisma.testSession.findUnique({
+      const testSession = await prisma.test_sessions.findUnique({
         where: {
           id: sessionId,
           userId: session.userId, // Ensure user owns this session
         },
         include: {
-          testTemplate: true,
+          test_templates: true,
           responses: {
             include: {
               question: {
@@ -129,7 +129,7 @@ export async function PUT(
       const updateData = result.data
 
       // Verify session ownership
-      const existingSession = await prisma.testSession.findUnique({
+      const existingSession = await prisma.test_sessions.findUnique({
         where: {
           id: sessionId,
           userId: session.userId,
@@ -149,7 +149,7 @@ export async function PUT(
       }
 
       // Update session
-      const updatedSession = await prisma.testSession.update({
+      const updatedSession = await prisma.test_sessions.update({
         where: { id: sessionId },
         data: {
           ...updateData,
@@ -241,7 +241,7 @@ export async function POST(
       const { questionId, selectedAnswer, timeSpent, isMarkedForReview, confidence } = result.data
 
       // Verify session ownership and get session details
-      const testSession = await prisma.testSession.findUnique({
+      const testSession = await prisma.test_sessions.findUnique({
         where: {
           id: sessionId,
           userId: session.userId,
@@ -274,7 +274,7 @@ export async function POST(
       }
 
       // Get question details to check correct answer
-      const question = await prisma.question.findUnique({
+      const question = await prisma.questions.findUnique({
         where: { id: questionId },
       })
 
@@ -295,7 +295,7 @@ export async function POST(
       const marksAwarded = isCorrect ? question.marks || 1 : 0
 
       // Check if response already exists
-      const existingResponse = await prisma.userQuestionResponse.findFirst({
+      const existingResponse = await prisma.user_question_responses.findFirst({
         where: {
           userId: session.userId,
           questionId,
@@ -305,7 +305,7 @@ export async function POST(
 
       // Create or update user question response
       const response = existingResponse
-        ? await prisma.userQuestionResponse.update({
+        ? await prisma.user_question_responses.update({
             where: { id: existingResponse.id },
             data: {
               selectedAnswer,
@@ -316,7 +316,7 @@ export async function POST(
               answeredAt: new Date(),
             },
           })
-        : await prisma.userQuestionResponse.create({
+        : await prisma.user_question_responses.create({
             data: {
               userId: session.userId,
               questionId,

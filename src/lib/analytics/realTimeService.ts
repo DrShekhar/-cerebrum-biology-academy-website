@@ -139,9 +139,9 @@ export class RealTimeAnalyticsService {
       where: { status: 'COMPLETED' },
     })
 
-    const totalUsers = await db.freeUser.count()
+    const totalUsers = await db.free_users.count()
 
-    const activeUsersLast7Days = await db.freeUser.count({
+    const activeUsersLast7Days = await db.free_users.count({
       where: {
         lastActiveDate: {
           gte: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
@@ -262,7 +262,7 @@ export class RealTimeAnalyticsService {
         status: 'COMPLETED',
       },
       include: {
-        freeUser: true,
+        free_users: true,
       },
       orderBy: {
         percentage: 'desc',
@@ -277,7 +277,7 @@ export class RealTimeAnalyticsService {
         : 0
 
     const topPerformers = todayCompletions.map((test) => ({
-      name: test.freeUser.name || 'Anonymous',
+      name: test.free_users.name || 'Anonymous',
       score: test.percentage,
     }))
 
@@ -321,8 +321,8 @@ export class RealTimeAnalyticsService {
           },
         },
         include: {
-          testTemplate: true,
-          freeUser: true,
+          test_templates: true,
+          free_users: true,
         },
       })
 
@@ -332,7 +332,7 @@ export class RealTimeAnalyticsService {
           userId: session.freeUserId || '',
           testId: session.testTemplateId,
           currentQuestion: session.currentQuestionIndex,
-          totalQuestions: session.testTemplate?.totalQuestions || 0,
+          totalQuestions: session.test_templates?.totalQuestions || 0,
           timeRemaining: session.remainingTime || 0,
           status: 'active',
           score: session.totalScore || 0,

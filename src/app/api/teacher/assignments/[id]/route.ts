@@ -20,7 +20,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const assignmentId = params.id
     const teacherId = session.user.id
 
-    const assignment = await prisma.assignment.findFirst({
+    const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
         teacherId,
@@ -116,7 +116,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     const teacherId = session.user.id
     const body = await request.json()
 
-    const assignment = await prisma.assignment.findFirst({
+    const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
         teacherId,
@@ -157,7 +157,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
     if (body.chapterId !== undefined) updateData.chapterId = body.chapterId || null
     if (body.topicId !== undefined) updateData.topicId = body.topicId || null
 
-    const updatedAssignment = await prisma.assignment.update({
+    const updatedAssignment = await prisma.assignments.update({
       where: {
         id: assignmentId,
       },
@@ -189,7 +189,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
       assignment.status === 'DRAFT' &&
       updatedAssignment.courseId
     ) {
-      const enrolledStudents = await prisma.enrollment.findMany({
+      const enrolledStudents = await prisma.enrollments.findMany({
         where: {
           courseId: updatedAssignment.courseId,
           status: 'ACTIVE',
@@ -201,7 +201,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
 
       await Promise.all(
         enrolledStudents.map((enrollment) =>
-          prisma.assignmentSubmission.upsert({
+          prisma.assignment_submissions.upsert({
             where: {
               assignmentId_studentId: {
                 assignmentId: updatedAssignment.id,
@@ -248,7 +248,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
     const assignmentId = params.id
     const teacherId = session.user.id
 
-    const assignment = await prisma.assignment.findFirst({
+    const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
         teacherId,
@@ -278,7 +278,7 @@ export async function DELETE(request: NextRequest, { params }: { params: { id: s
       )
     }
 
-    await prisma.assignment.delete({
+    await prisma.assignments.delete({
       where: {
         id: assignmentId,
       },

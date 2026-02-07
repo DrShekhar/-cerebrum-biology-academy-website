@@ -167,7 +167,7 @@ async function getPaidUserGamification(userId: string) {
  * Legacy gamification for free users
  */
 async function getFreeUserGamification(userIdToQuery: string) {
-  const user = await prisma.freeUser.findUnique({
+  const user = await prisma.free_users.findUnique({
     where: { id: userIdToQuery },
     select: {
       id: true,

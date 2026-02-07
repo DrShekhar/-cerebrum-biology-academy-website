@@ -72,7 +72,7 @@ export async function predictExamScore(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get recent test sessions with scores
-    const testSessions = await prisma.testSession.findMany({
+    const testSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         status: 'COMPLETED',
@@ -191,7 +191,7 @@ export async function calculateReadinessScore(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Factor 1: Score Consistency (30% weight)
-    const recentScores = await prisma.testSession.findMany({
+    const recentScores = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         status: 'COMPLETED',
@@ -208,7 +208,7 @@ export async function calculateReadinessScore(
         : 0
 
     // Factor 2: Accuracy Trend (25% weight)
-    const accuracyData = await prisma.userQuestionResponse.findMany({
+    const accuracyData = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
       },
@@ -231,7 +231,7 @@ export async function calculateReadinessScore(
     const studyFrequency = await calculateStudyFrequency(userId, userType)
 
     // Factor 5: Weak Areas Count (10% weight) - fewer is better
-    const weakAreasCount = await prisma.userProgress.count({
+    const weakAreasCount = await prisma.user_progress.count({
       where: {
         [userField]: userId,
         accuracy: { lt: 50 },
@@ -322,7 +322,7 @@ export async function calculateExpectedRank(
     const predictedScore = prediction.predictedScore
 
     // Get all users' scores for comparison
-    const allScores = await prisma.testSession.groupBy({
+    const allScores = await prisma.test_sessions.groupBy({
       by: ['userId', 'freeUserId'],
       where: {
         status: 'COMPLETED',
@@ -418,7 +418,7 @@ export async function prepareMLData(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get recent scores
-    const recentSessions = await prisma.testSession.findMany({
+    const recentSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         status: 'COMPLETED',
@@ -437,7 +437,7 @@ export async function prepareMLData(
     const recentScores = recentSessions.map((s) => s.totalScore || 0)
 
     // Get accuracy history
-    const responses = await prisma.userQuestionResponse.findMany({
+    const responses = await prisma.user_question_responses.findMany({
       where: { [userField]: userId },
       select: { isCorrect: true, timeSpent: true },
       orderBy: { answeredAt: 'desc' },
@@ -447,7 +447,7 @@ export async function prepareMLData(
     const accuracyHistory = calculateRollingAccuracy(responses)
 
     // Get topic mastery
-    const topicProgress = await prisma.userProgress.findMany({
+    const topicProgress = await prisma.user_progress.findMany({
       where: { [userField]: userId },
       select: {
         topic: true,
@@ -593,11 +593,11 @@ async function calculateSyllabusCompletionScore(
 ): Promise<number> {
   const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
-  const totalTopics = await prisma.userProgress.count({
+  const totalTopics = await prisma.user_progress.count({
     where: { [userField]: userId },
   })
 
-  const completedTopics = await prisma.userProgress.count({
+  const completedTopics = await prisma.user_progress.count({
     where: {
       [userField]: userId,
       masteryScore: { gte: 70 },
@@ -618,7 +618,7 @@ async function calculateStudyFrequency(
   const thirtyDaysAgo = new Date()
   thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
 
-  const activeDays = await prisma.testSession.findMany({
+  const activeDays = await prisma.test_sessions.findMany({
     where: {
       [userField]: userId,
       submittedAt: { gte: thirtyDaysAgo },
@@ -643,7 +643,7 @@ async function calculateDailyStudyTime(
   const startDate = new Date()
   startDate.setDate(startDate.getDate() - days)
 
-  const sessions = await prisma.testSession.findMany({
+  const sessions = await prisma.test_sessions.findMany({
     where: {
       [userField]: userId,
       submittedAt: { gte: startDate },

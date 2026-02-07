@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    const enrollment = await prisma.enrollment.create({
+    const enrollment = await prisma.enrollments.create({
       data: {
         userId,
         courseId: validatedData.courseId,
@@ -109,11 +109,11 @@ export async function GET(request: NextRequest) {
     const enrollmentId = searchParams.get('id')
 
     if (enrollmentId) {
-      const enrollment = await prisma.enrollment.findUnique({
+      const enrollment = await prisma.enrollments.findUnique({
         where: { id: enrollmentId },
         include: {
-          course: true,
-          user: {
+          courses: true,
+          users: {
             select: {
               id: true,
               name: true,
@@ -138,12 +138,12 @@ export async function GET(request: NextRequest) {
     // List enrollments - admin only
     await requireAdminAuth()
 
-    const enrollments = await prisma.enrollment.findMany({
+    const enrollments = await prisma.enrollments.findMany({
       take: 50,
       orderBy: { createdAt: 'desc' },
       include: {
-        course: true,
-        user: {
+        courses: true,
+        users: {
           select: {
             id: true,
             name: true,

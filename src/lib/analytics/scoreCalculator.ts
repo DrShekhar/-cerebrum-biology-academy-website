@@ -101,7 +101,7 @@ export async function calculateBiologyScore(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get completed test sessions
-    const testSessions = await prisma.testSession.findMany({
+    const testSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         status: 'COMPLETED',
@@ -111,7 +111,7 @@ export async function calculateBiologyScore(
         id: true,
         totalScore: true,
         percentage: true,
-        testTemplate: {
+        test_templates: {
           select: {
             subject: true,
             totalMarks: true,
@@ -361,7 +361,7 @@ export async function calculateImprovement(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get recent test sessions
-    const testSessions = await prisma.testSession.findMany({
+    const testSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         status: 'COMPLETED',
@@ -456,7 +456,7 @@ export async function getScoreByDifficulty(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get all question responses
-    const responses = await prisma.userQuestionResponse.findMany({
+    const responses = await prisma.user_question_responses.findMany({
       where: {
         [userField]: userId,
         question: {

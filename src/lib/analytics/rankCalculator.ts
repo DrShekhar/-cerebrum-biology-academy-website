@@ -45,7 +45,7 @@ export async function calculateUserRank(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get user's score
-    const userSessions = await prisma.testSession.findMany({
+    const userSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         status: 'COMPLETED',
@@ -71,7 +71,7 @@ export async function calculateUserRank(
       : userSessions[0].totalScore || 0
 
     // Count users with better scores
-    const usersAboveCount = await prisma.testSession.groupBy({
+    const usersAboveCount = await prisma.test_sessions.groupBy({
       by: [userField],
       where: {
         [userField]: { not: null },
@@ -90,7 +90,7 @@ export async function calculateUserRank(
     })
 
     // Count total users who have completed at least one test
-    const totalUsersData = await prisma.testSession.groupBy({
+    const totalUsersData = await prisma.test_sessions.groupBy({
       by: [userField],
       where: {
         [userField]: { not: null },
@@ -140,7 +140,7 @@ export async function calculateTestRank(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get test template details
-    const testTemplate = await prisma.testTemplate.findUnique({
+    const testTemplate = await prisma.test_templates.findUnique({
       where: { id: testTemplateId },
       select: { title: true, totalMarks: true },
     })
@@ -150,7 +150,7 @@ export async function calculateTestRank(
     }
 
     // Get user's score for this test
-    const userSessions = await prisma.testSession.findMany({
+    const userSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         testTemplateId,
@@ -171,7 +171,7 @@ export async function calculateTestRank(
     const userScore = userSessions[0].totalScore || 0
 
     // Get all completed sessions for this test
-    const allSessions = await prisma.testSession.findMany({
+    const allSessions = await prisma.test_sessions.findMany({
       where: {
         testTemplateId,
         status: 'COMPLETED',
@@ -293,7 +293,7 @@ export async function getTopPerformers(
     }
 
     // Get all completed test sessions
-    const sessions = await prisma.testSession.findMany({
+    const sessions = await prisma.test_sessions.findMany({
       where: whereClause,
       select: {
         userId: true,
@@ -302,7 +302,7 @@ export async function getTopPerformers(
         user: {
           select: { name: true },
         },
-        freeUser: {
+        free_users: {
           select: { name: true },
         },
       },
@@ -323,7 +323,7 @@ export async function getTopPerformers(
     for (const session of sessions) {
       const userId = session.userId || session.freeUserId
       const userType = session.userId ? 'user' : 'freeUser'
-      const userName = session.user?.name || session.freeUser?.name
+      const userName = session.user?.name || session.free_users?.name
 
       if (!userId) continue
 
@@ -397,7 +397,7 @@ export async function getRankHistory(
     const userField = userType === 'user' ? 'userId' : 'freeUserId'
 
     // Get user's recent completed tests
-    const userSessions = await prisma.testSession.findMany({
+    const userSessions = await prisma.test_sessions.findMany({
       where: {
         [userField]: userId,
         status: 'COMPLETED',
@@ -408,7 +408,7 @@ export async function getRankHistory(
         testTemplateId: true,
         totalScore: true,
         submittedAt: true,
-        testTemplate: {
+        test_templates: {
           select: { title: true },
         },
       },
@@ -425,7 +425,7 @@ export async function getRankHistory(
 
         return {
           testTemplateId: session.testTemplateId,
-          testTitle: session.testTemplate.title,
+          testTitle: session.test_templates.title,
           rank: rankResult?.rank || 0,
           percentile: rankResult?.percentile || 0,
           score: session.totalScore || 0,

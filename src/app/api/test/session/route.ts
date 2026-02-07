@@ -77,7 +77,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
       request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
 
     // Create test session in database
-    const testSession = await prisma.testSession.create({
+    const testSession = await prisma.test_sessions.create({
       data: {
         userId: session.userId,
         testTemplateId,
@@ -94,7 +94,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
     // If using a specific test template, get questions from it
     let questions = []
     if (testTemplateId) {
-      const template = await prisma.testTemplate.findUnique({
+      const template = await prisma.test_templates.findUnique({
         where: { id: testTemplateId },
         include: {
           questionBank: {
@@ -125,7 +125,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
         whereClause.difficulty = difficulty
       }
 
-      questions = await prisma.question.findMany({
+      questions = await prisma.questions.findMany({
         where: whereClause,
         take: questionCount,
         orderBy: { popularityScore: 'desc' },
@@ -248,10 +248,10 @@ export const GET = withAuth(async (request: NextRequest, session) => {
       whereClause.status = status
     }
 
-    const testSessions = await prisma.testSession.findMany({
+    const testSessions = await prisma.test_sessions.findMany({
       where: whereClause,
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,

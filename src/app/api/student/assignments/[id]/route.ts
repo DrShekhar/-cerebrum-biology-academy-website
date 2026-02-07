@@ -18,7 +18,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
     const assignmentId = params.id
     const studentId = session.user.id
 
-    const enrollments = await prisma.enrollment.findMany({
+    const enrollments = await prisma.enrollments.findMany({
       where: {
         userId: studentId,
         status: 'ACTIVE',
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 
     const enrolledCourseIds = enrollments.map((e) => e.courseId)
 
-    const assignment = await prisma.assignment.findFirst({
+    const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
         status: 'PUBLISHED',

@@ -155,7 +155,7 @@ export const POST = withAuth(async (request: NextRequest, session) => {
 
     // Track password change event
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: session.userId,
           eventType: 'security',

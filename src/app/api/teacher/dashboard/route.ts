@@ -28,12 +28,12 @@ export async function GET(request: NextRequest) {
     // Use Promise.allSettled for graceful error handling - one failing query won't break the dashboard
     const results = await Promise.allSettled([
       // Total assignments created by teacher
-      prisma.assignment.count({
+      prisma.assignments.count({
         where: { teacherId },
       }),
 
       // Pending submissions (submitted but not graded)
-      prisma.assignmentSubmission.count({
+      prisma.assignment_submissions.count({
         where: {
           assignment: { teacherId },
           status: 'SUBMITTED',
@@ -49,9 +49,9 @@ export async function GET(request: NextRequest) {
       }),
 
       // Count of unique students in teacher's courses
-      prisma.enrollment.count({
+      prisma.enrollments.count({
         where: {
-          course: {
+          courses: {
             teachers: {
               some: { id: teacherId },
             },
@@ -61,7 +61,7 @@ export async function GET(request: NextRequest) {
       }),
 
       // Recent submissions (last 7 days)
-      prisma.assignmentSubmission.findMany({
+      prisma.assignment_submissions.findMany({
         where: {
           assignment: { teacherId },
           submittedAt: { gte: weekAgo },
@@ -104,7 +104,7 @@ export async function GET(request: NextRequest) {
       }),
 
       // Calculate average score from graded submissions
-      prisma.assignmentSubmission.aggregate({
+      prisma.assignment_submissions.aggregate({
         where: {
           assignment: { teacherId },
           grade: { not: null },

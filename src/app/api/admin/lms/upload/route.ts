@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Create database record
-    const studyMaterial = await prisma.studyMaterial.create({
+    const studyMaterial = await prisma.study_materials.create({
       data: {
         title: metadata.title.trim(),
         description: metadata.description?.trim() || null,

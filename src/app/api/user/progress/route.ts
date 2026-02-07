@@ -127,7 +127,7 @@ function getDefaultProgressData(): UserProgressResponse {
 async function calculateUserProgress(userId: string): Promise<UserProgressResponse> {
   try {
     // Fetch user data
-    const user = await prisma.freeUser.findUnique({
+    const user = await prisma.free_users.findUnique({
       where: { id: userId },
       include: {
         testAttempts: {
@@ -170,8 +170,8 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
     const neetScoreTarget = 720
 
     // Calculate rank and percentile (mock - replace with actual calculation)
-    const totalStudents = await prisma.freeUser.count()
-    const betterPerformers = await prisma.freeUser.count({
+    const totalStudents = await prisma.free_users.count()
+    const betterPerformers = await prisma.free_users.count({
       where: {
         averageScore: { gt: user.averageScore || 0 },
       },
@@ -214,12 +214,12 @@ async function calculateUserProgress(userId: string): Promise<UserProgressRespon
     componentScores.chemistry = Math.round(componentScores.chemistry / testCount)
 
     // Syllabus progress
-    const totalTopics = await prisma.userProgress.count({
+    const totalTopics = await prisma.user_progress.count({
       where: {
         OR: [{ freeUserId: userId }, { userId: userId }],
       },
     })
-    const completedTopics = await prisma.userProgress.count({
+    const completedTopics = await prisma.user_progress.count({
       where: {
         OR: [{ freeUserId: userId }, { userId: userId }],
         masteryScore: { gte: 80 },

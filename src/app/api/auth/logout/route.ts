@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
 
       // Track logout event
       try {
-        await prisma.analyticsEvent.create({
+        await prisma.analytics_events.create({
           data: {
             userId: session.userId,
             eventType: 'auth',
@@ -147,7 +147,7 @@ export async function DELETE(request: NextRequest) {
 
     // Track logout all event
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: session.userId,
           eventType: 'auth',

@@ -24,11 +24,11 @@ export async function POST(request: NextRequest) {
     const validatedData = emailNotificationSchema.parse(body)
 
     // Get user and enrollment details
-    const enrollment = await prisma.enrollment.findUnique({
+    const enrollment = await prisma.enrollments.findUnique({
       where: { id: validatedData.enrollmentId },
       include: {
-        user: true,
-        course: true,
+        users: true,
+        courses: true,
       },
     })
 
@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
 
     switch (validatedData.type) {
       case 'enrollment_confirmation':
-        subject = `Welcome to ${enrollment.course.name} - Cerebrum Biology Academy`
+        subject = `Welcome to ${enrollment.courses.name} - Cerebrum Biology Academy`
         htmlContent = `
 <!DOCTYPE html>
 <html>
@@ -68,23 +68,23 @@ export async function POST(request: NextRequest) {
   </div>
 
   <div style="background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px;">
-    <p style="font-size: 16px;">Dear <strong>${enrollment.user.name}</strong>,</p>
+    <p style="font-size: 16px;">Dear <strong>${enrollment.users.name}</strong>,</p>
 
-    <p style="font-size: 16px;">Congratulations! Your enrollment in <strong>${enrollment.course.name}</strong> has been confirmed.</p>
+    <p style="font-size: 16px;">Congratulations! Your enrollment in <strong>${enrollment.courses.name}</strong> has been confirmed.</p>
 
     <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #16a34a;">
       <h3 style="margin-top: 0; color: #16a34a;">📚 Course Details</h3>
       <ul style="list-style: none; padding: 0;">
-        <li>✓ Course: ${enrollment.course.name}</li>
+        <li>✓ Course: ${enrollment.courses.name}</li>
         <li>✓ Enrollment ID: ${enrollment.id}</li>
         <li>✓ Status: <span style="color: #16a34a; font-weight: bold;">Active</span></li>
-        <li>✓ Duration: ${enrollment.course.duration} months</li>
+        <li>✓ Duration: ${enrollment.courses.duration} months</li>
       </ul>
     </div>
 
     <div style="background: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
       <h3 style="margin-top: 0; color: #16a34a;">🔐 Login Credentials</h3>
-      <p><strong>Email:</strong> ${enrollment.user.email}</p>
+      <p><strong>Email:</strong> ${enrollment.users.email}</p>
       <p><strong>Password:</strong> Check your email for your temporary password (or reset if needed)</p>
       <p style="margin-top: 15px;">
         <a href="${baseUrl}/login" style="display: inline-block; background: #16a34a; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;">Login to Your Account</a>
@@ -117,25 +117,25 @@ export async function POST(request: NextRequest) {
 
   <div style="text-align: center; margin-top: 20px; padding: 20px; font-size: 12px; color: #999;">
     <p>© ${new Date().getFullYear()} Cerebrum Biology Academy. All rights reserved.</p>
-    <p>This email was sent to ${enrollment.user.email} regarding your enrollment.</p>
+    <p>This email was sent to ${enrollment.users.email} regarding your enrollment.</p>
   </div>
 </body>
 </html>
 `
         textContent = `Welcome to Cerebrum Biology Academy!
 
-Dear ${enrollment.user.name},
+Dear ${enrollment.users.name},
 
-Congratulations! Your enrollment in ${enrollment.course.name} has been confirmed.
+Congratulations! Your enrollment in ${enrollment.courses.name} has been confirmed.
 
 Course Details:
-- Course: ${enrollment.course.name}
+- Course: ${enrollment.courses.name}
 - Enrollment ID: ${enrollment.id}
 - Status: Active
-- Duration: ${enrollment.course.duration} months
+- Duration: ${enrollment.courses.duration} months
 
 Login Credentials:
-Email: ${enrollment.user.email}
+Email: ${enrollment.users.email}
 (Check your email for your temporary password)
 
 Access Your Course:
@@ -159,8 +159,8 @@ Happy Learning!
 <html>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
   <h2 style="color: #16a34a;">✅ Payment Received</h2>
-  <p>Dear ${enrollment.user.name},</p>
-  <p>Your payment for <strong>${enrollment.course.name}</strong> has been successfully received.</p>
+  <p>Dear ${enrollment.users.name},</p>
+  <p>Your payment for <strong>${enrollment.courses.name}</strong> has been successfully received.</p>
 
   <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
     <h3>💰 Payment Details</h3>
@@ -179,9 +179,9 @@ Happy Learning!
 `
         textContent = `Payment Received
 
-Dear ${enrollment.user.name},
+Dear ${enrollment.users.name},
 
-Your payment for ${enrollment.course.name} has been successfully received.
+Your payment for ${enrollment.courses.name} has been successfully received.
 
 Payment Details:
 - Amount Paid: ₹${amountPaid.toLocaleString('en-IN')}
@@ -208,7 +208,7 @@ Thank you for choosing Cerebrum Biology Academy!
     // Send email via EmailService (with SendGrid primary and Resend fallback)
     try {
       const emailResult = await emailService.send({
-        to: enrollment.user.email,
+        to: enrollment.users.email,
         subject,
         html: htmlContent,
         text: textContent,
@@ -253,7 +253,7 @@ Thank you for choosing Cerebrum Biology Academy!
       })
 
       console.log('Email notification sent successfully:', {
-        to: enrollment.user.email,
+        to: enrollment.users.email,
         subject,
         messageId: emailResult.messageId,
         provider: emailResult.provider,

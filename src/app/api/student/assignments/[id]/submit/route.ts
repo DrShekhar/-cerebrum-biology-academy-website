@@ -24,7 +24,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       return NextResponse.json({ error: 'At least one file must be submitted' }, { status: 400 })
     }
 
-    const enrollments = await prisma.enrollment.findMany({
+    const enrollments = await prisma.enrollments.findMany({
       where: {
         userId: studentId,
         status: 'ACTIVE',
@@ -36,7 +36,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
 
     const enrolledCourseIds = enrollments.map((e) => e.courseId)
 
-    const assignment = await prisma.assignment.findFirst({
+    const assignment = await prisma.assignments.findFirst({
       where: {
         id: assignmentId,
         status: 'PUBLISHED',
@@ -59,7 +59,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       )
     }
 
-    const existingSubmission = await prisma.assignmentSubmission.findUnique({
+    const existingSubmission = await prisma.assignment_submissions.findUnique({
       where: {
         assignmentId_studentId: {
           assignmentId,
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
         )
       }
 
-      const updatedSubmission = await prisma.assignmentSubmission.update({
+      const updatedSubmission = await prisma.assignment_submissions.update({
         where: {
           id: existingSubmission.id,
         },
@@ -115,7 +115,7 @@ export async function POST(request: NextRequest, { params }: { params: { id: str
       })
     }
 
-    const submission = await prisma.assignmentSubmission.create({
+    const submission = await prisma.assignment_submissions.create({
       data: {
         assignmentId,
         studentId,

@@ -159,9 +159,9 @@ async function handlePaymentSuccess(event: any) {
       const paymentRecord = await tx.payments.findFirst({
         where: { razorpayOrderId: orderId },
         include: {
-          enrollment: {
+          enrollments: {
             include: {
-              course: true,
+              courses: true,
             },
           },
         },
@@ -186,8 +186,8 @@ async function handlePaymentSuccess(event: any) {
         },
       })
 
-      if (paymentRecord.enrollmentId && paymentRecord.enrollment) {
-        await tx.enrollment.update({
+      if (paymentRecord.enrollmentId && paymentRecord.enrollments) {
+        await tx.enrollments.update({
           where: { id: paymentRecord.enrollmentId },
           data: {
             status: 'ACTIVE',
@@ -197,9 +197,9 @@ async function handlePaymentSuccess(event: any) {
           },
         })
 
-        const courseMaterials = await tx.studyMaterial.findMany({
+        const courseMaterials = await tx.study_materials.findMany({
           where: {
-            courseId: paymentRecord.enrollment.courseId,
+            courseId: paymentRecord.enrollments.courseId,
             isPublished: true,
           },
           select: { id: true },
@@ -214,7 +214,7 @@ async function handlePaymentSuccess(event: any) {
             reason: 'Webhook: Payment completed',
           }))
 
-          await tx.materialAccess.createMany({
+          await tx.material_access.createMany({
             data: materialAccessRecords,
             skipDuplicates: true,
           })
@@ -222,8 +222,8 @@ async function handlePaymentSuccess(event: any) {
 
         // Set coachingTier based on course/enrollment fees
         const tierFromCourse = mapCourseToTier(
-          paymentRecord.enrollment.courseId,
-          paymentRecord.enrollment.totalFees
+          paymentRecord.enrollments.courseId,
+          paymentRecord.enrollments.totalFees
         )
         await tx.users.update({
           where: { id: paymentRecord.userId },
@@ -279,7 +279,7 @@ async function handleRefundCreated(event: any) {
   try {
     const payment = await prisma.payments.findFirst({
       where: { razorpayPaymentId: paymentId },
-      include: { enrollment: true },
+      include: { enrollments: true },
     })
 
     if (!payment) {
@@ -298,7 +298,7 @@ async function handleRefundCreated(event: any) {
       })
 
       if (payment.enrollmentId) {
-        await tx.enrollment.update({
+        await tx.enrollments.update({
           where: { id: payment.enrollmentId },
           data: {
             status: 'CANCELLED',

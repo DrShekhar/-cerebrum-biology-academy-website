@@ -142,7 +142,7 @@ function calculateReadinessScore(
 async function generatePredictions(userId: string): Promise<PredictionsResponse> {
   try {
     // Fetch user data
-    const user = await prisma.freeUser.findUnique({
+    const user = await prisma.free_users.findUnique({
       where: { id: userId },
       include: {
         testAttempts: {
@@ -202,8 +202,8 @@ async function generatePredictions(userId: string): Promise<PredictionsResponse>
     )
 
     // Calculate expected rank (mock calculation)
-    const totalStudents = await prisma.freeUser.count()
-    const betterPerformers = await prisma.freeUser.count({
+    const totalStudents = await prisma.free_users.count()
+    const betterPerformers = await prisma.free_users.count({
       where: {
         averageScore: { gt: biologyPrediction.predicted },
       },

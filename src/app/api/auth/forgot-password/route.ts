@@ -208,7 +208,7 @@ If you didn't request this password reset, please ignore this email.
 
     // Track password reset request (without revealing user existence)
     try {
-      await prisma.analyticsEvent.create({
+      await prisma.analytics_events.create({
         data: {
           userId: user.id,
           eventType: 'security',

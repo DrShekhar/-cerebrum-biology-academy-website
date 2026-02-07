@@ -31,7 +31,7 @@ export async function POST(request: NextRequest) {
     })
 
     // Log the interaction for analytics
-    await prisma.analyticsEvent.create({
+    await prisma.analytics_events.create({
       data: {
         eventType: 'BLOG_WHATSAPP_QUERY',
         eventData: {

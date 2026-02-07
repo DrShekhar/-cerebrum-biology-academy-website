@@ -71,7 +71,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Fetch test session with all related data
-    const testSession = await prisma.testSession.findUnique({
+    const testSession = await prisma.test_sessions.findUnique({
       where: {
         id,
         OR: [
@@ -80,33 +80,29 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
         ],
       },
       include: {
-        testTemplate: {
+        test_templates: {
           include: {
-            questionBank: {
+            question_bank_questions: {
               include: {
                 questions: {
-                  include: {
-                    question: {
-                      select: {
-                        id: true,
-                        topic: true,
-                        subtopic: true,
-                        type: true,
-                        difficulty: true,
-                        question: true,
-                        options: true,
-                        marks: true,
-                        timeLimit: true,
-                        questionImage: true,
-                        tags: true,
-                        relatedConcepts: true,
-                      },
-                    },
-                  },
-                  orderBy: {
-                    orderIndex: 'asc',
+                  select: {
+                    id: true,
+                    topic: true,
+                    subtopic: true,
+                    type: true,
+                    difficulty: true,
+                    question: true,
+                    options: true,
+                    marks: true,
+                    timeLimit: true,
+                    questionImage: true,
+                    tags: true,
+                    relatedConcepts: true,
                   },
                 },
+              },
+              orderBy: {
+                orderIndex: 'asc',
               },
             },
           },
@@ -139,29 +135,29 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Calculate progress and analytics
-    const totalQuestions = testSession.testTemplate?.questionBank?.[0]?.questions?.length || 0
+    const totalQuestions = testSession.test_templates?.question_bank_questions?.length || 0
     const answeredQuestions = testSession.responses.length
     const progress = totalQuestions > 0 ? (answeredQuestions / totalQuestions) * 100 : 0
 
     // Prepare questions with user responses
     const questionsWithResponses =
-      testSession.testTemplate?.questionBank?.[0]?.questions?.map((qbq, index) => {
-        const userResponse = testSession.responses.find((r) => r.questionId === qbq.question.id)
+      testSession.test_templates?.question_bank_questions?.map((qbq, index) => {
+        const userResponse = testSession.responses.find((r) => r.questionId === qbq.questions.id)
 
         return {
           index: index + 1,
-          id: qbq.question.id,
-          topic: qbq.question.topic,
-          subtopic: qbq.question.subtopic,
-          type: qbq.question.type,
-          difficulty: qbq.question.difficulty,
-          question: qbq.question.question,
-          options: qbq.question.options,
-          marks: qbq.question.marks,
-          timeLimit: qbq.question.timeLimit,
-          questionImage: qbq.question.questionImage,
-          tags: qbq.question.tags,
-          relatedConcepts: qbq.question.relatedConcepts,
+          id: qbq.questions.id,
+          topic: qbq.questions.topic,
+          subtopic: qbq.questions.subtopic,
+          type: qbq.questions.type,
+          difficulty: qbq.questions.difficulty,
+          question: qbq.questions.question,
+          options: qbq.questions.options,
+          marks: qbq.questions.marks,
+          timeLimit: qbq.questions.timeLimit,
+          questionImage: qbq.questions.questionImage,
+          tags: qbq.questions.tags,
+          relatedConcepts: qbq.questions.relatedConcepts,
           userResponse: userResponse
             ? {
                 selectedAnswer: userResponse.selectedAnswer,
@@ -174,10 +170,10 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
             : null,
           // Only show correct answer and explanation if test is completed or in review mode
           ...(testSession.status === 'COMPLETED' && {
-            correctAnswer: qbq.question.correctAnswer,
-            explanation: qbq.question.explanation,
-            explanationImage: qbq.question.explanationImage,
-            videoExplanation: qbq.question.videoExplanation,
+            correctAnswer: qbq.questions.correctAnswer,
+            explanation: qbq.questions.explanation,
+            explanationImage: qbq.questions.explanationImage,
+            videoExplanation: qbq.questions.videoExplanation,
           }),
         }
       }) || []
@@ -185,7 +181,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     // Calculate real-time statistics
     const correctAnswers = testSession.responses.filter((r) => r.isCorrect).length
     const currentScore = testSession.responses.reduce((sum, r) => sum + r.marksAwarded, 0)
-    const totalMarks = testSession.testTemplate?.totalMarks || 0
+    const totalMarks = testSession.test_templates?.totalMarks || 0
     const accuracy = answeredQuestions > 0 ? (correctAnswers / answeredQuestions) * 100 : 0
 
     // Time calculations
@@ -215,22 +211,22 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
           fullscreenExits: testSession.fullscreenExits,
           isProctored: testSession.isProctored,
         },
-        testTemplate: testSession.testTemplate
+        testTemplate: testSession.test_templates
           ? {
-              id: testSession.testTemplate.id,
-              title: testSession.testTemplate.title,
-              description: testSession.testTemplate.description,
-              type: testSession.testTemplate.type,
-              category: testSession.testTemplate.category,
-              difficulty: testSession.testTemplate.difficulty,
-              timeLimit: testSession.testTemplate.timeLimit,
-              totalQuestions: testSession.testTemplate.totalQuestions,
-              totalMarks: testSession.testTemplate.totalMarks,
-              passingMarks: testSession.testTemplate.passingMarks,
-              negativeMarking: testSession.testTemplate.negativeMarking,
-              topics: testSession.testTemplate.topics,
-              instructions: testSession.testTemplate.instructions,
-              isAdaptive: testSession.testTemplate.isAdaptive,
+              id: testSession.test_templates.id,
+              title: testSession.test_templates.title,
+              description: testSession.test_templates.description,
+              type: testSession.test_templates.type,
+              category: testSession.test_templates.category,
+              difficulty: testSession.test_templates.difficulty,
+              timeLimit: testSession.test_templates.timeLimit,
+              totalQuestions: testSession.test_templates.totalQuestions,
+              totalMarks: testSession.test_templates.totalMarks,
+              passingMarks: testSession.test_templates.passingMarks,
+              negativeMarking: testSession.test_templates.negativeMarking,
+              topics: testSession.test_templates.topics,
+              instructions: testSession.test_templates.instructions,
+              isAdaptive: testSession.test_templates.isAdaptive,
             }
           : null,
         questions: questionsWithResponses,
@@ -311,7 +307,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Check if test session exists and belongs to user
-    const existingSession = await prisma.testSession.findUnique({
+    const existingSession = await prisma.test_sessions.findUnique({
       where: {
         id,
         OR: [{ userId: session.userId }, { freeUserId: session.userId }],
@@ -381,11 +377,11 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Update test session
-    const updatedSession = await prisma.testSession.update({
+    const updatedSession = await prisma.test_sessions.update({
       where: { id },
       data: updateData,
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             id: true,
             title: true,
@@ -460,7 +456,7 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     }
 
     // Check if test session exists and belongs to user
-    const existingSession = await prisma.testSession.findUnique({
+    const existingSession = await prisma.test_sessions.findUnique({
       where: {
         id,
         OR: [{ userId: session.userId }, { freeUserId: session.userId }],
@@ -488,17 +484,17 @@ export async function DELETE(request: NextRequest, { params }: RouteParams) {
     // Delete test session and related data
     await prisma.$transaction(async (tx) => {
       // Delete user responses
-      await tx.userQuestionResponse.deleteMany({
+      await tx.user_question_responses.deleteMany({
         where: { testSessionId: id },
       })
 
       // Delete analytics
-      await tx.testAnalytics.deleteMany({
+      await tx.test_analytics.deleteMany({
         where: { testSessionId: id },
       })
 
       // Delete test session
-      await tx.testSession.delete({
+      await tx.test_sessions.delete({
         where: { id },
       })
     })

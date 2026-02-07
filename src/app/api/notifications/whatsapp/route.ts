@@ -23,11 +23,11 @@ export async function POST(request: NextRequest) {
     const validatedData = whatsappNotificationSchema.parse(body)
 
     // Get user and enrollment details
-    const enrollment = await prisma.enrollment.findUnique({
+    const enrollment = await prisma.enrollments.findUnique({
       where: { id: validatedData.enrollmentId },
       include: {
-        user: true,
-        course: true,
+        users: true,
+        courses: true,
       },
     })
 
@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user has a phone number
-    if (!enrollment.user.phone) {
+    if (!enrollment.users.phone) {
       console.log('User has no phone number, skipping WhatsApp notification')
       return NextResponse.json({
         success: false,
@@ -53,12 +53,12 @@ export async function POST(request: NextRequest) {
       case 'enrollment_confirmation':
         message = `🎉 Welcome to Cerebrum Biology Academy!
 
-Dear ${enrollment.user.name},
+Dear ${enrollment.users.name},
 
-Congratulations! Your enrollment in *${enrollment.course.name}* has been confirmed.
+Congratulations! Your enrollment in *${enrollment.courses.name}* has been confirmed.
 
 📚 Course Details:
-- Course: ${enrollment.course.name}
+- Course: ${enrollment.courses.name}
 - Enrollment ID: ${enrollment.id}
 - Status: Active
 
@@ -66,7 +66,7 @@ Congratulations! Your enrollment in *${enrollment.course.name}* has been confirm
 ${baseUrl}/student/courses/${enrollment.courseId}
 
 📧 Login Credentials:
-Email: ${enrollment.user.email}
+Email: ${enrollment.users.email}
 (Password has been sent to your email)
 
 📞 Need Help?
@@ -80,9 +80,9 @@ Happy Learning! 🚀
       case 'payment_confirmation':
         message = `✅ Payment Received
 
-Dear ${enrollment.user.name},
+Dear ${enrollment.users.name},
 
-Your payment for *${enrollment.course.name}* has been successfully received.
+Your payment for *${enrollment.courses.name}* has been successfully received.
 
 💰 Payment Details:
 - Amount: ₹${(enrollment.paidAmount / 100).toLocaleString('en-IN')}
@@ -97,9 +97,9 @@ Thank you for choosing Cerebrum Biology Academy!`
       case 'course_access':
         message = `🔓 Course Access Granted
 
-Dear ${enrollment.user.name},
+Dear ${enrollment.users.name},
 
-You now have full access to *${enrollment.course.name}*.
+You now have full access to *${enrollment.courses.name}*.
 
 🎯 Get Started:
 ${baseUrl}/student/courses/${enrollment.courseId}
@@ -123,7 +123,7 @@ Happy Learning! 📚`
       // Log notification but don't fail if WhatsApp is not configured
       console.log('WhatsApp API not configured, logging notification:')
       console.log({
-        to: enrollment.user.phone,
+        to: enrollment.users.phone,
         message,
         type: validatedData.type,
       })
@@ -150,7 +150,7 @@ Happy Learning! 📚`
     // Send WhatsApp message via WhatsApp Business API
     try {
       const whatsappResponse = await WhatsAppBusinessService.sendTextMessage(
-        enrollment.user.phone,
+        enrollment.users.phone,
         message
       )
 
@@ -168,7 +168,7 @@ Happy Learning! 📚`
       })
 
       console.log('WhatsApp notification sent successfully:', {
-        to: enrollment.user.phone,
+        to: enrollment.users.phone,
         messageId: whatsappResponse.messages?.[0]?.id,
       })
 

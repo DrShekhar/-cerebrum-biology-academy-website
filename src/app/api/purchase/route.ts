@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get course details
-    const course = await prisma.course.findUnique({
+    const course = await prisma.courses.findUnique({
       where: { id: validatedData.courseId },
     })
 
@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if user already has an active enrollment for this course
-    const existingEnrollment = await prisma.enrollment.findUnique({
+    const existingEnrollment = await prisma.enrollments.findUnique({
       where: {
         userId_courseId: {
           userId,
@@ -136,7 +136,7 @@ export async function POST(request: NextRequest) {
       let enrollment = existingEnrollment
 
       if (!enrollment) {
-        enrollment = await tx.enrollment.create({
+        enrollment = await tx.enrollments.create({
           data: {
             userId,
             courseId: validatedData.courseId,
@@ -150,7 +150,7 @@ export async function POST(request: NextRequest) {
         })
       } else {
         // Update existing enrollment if it was cancelled or suspended
-        enrollment = await tx.enrollment.update({
+        enrollment = await tx.enrollments.update({
           where: { id: enrollment.id },
           data: {
             status: 'PENDING',
@@ -271,7 +271,7 @@ export async function GET(request: NextRequest) {
     }
 
     // Check for existing enrollment
-    const enrollment = await prisma.enrollment.findUnique({
+    const enrollment = await prisma.enrollments.findUnique({
       where: {
         userId_courseId: {
           userId: session.user.id,
@@ -279,7 +279,7 @@ export async function GET(request: NextRequest) {
         },
       },
       include: {
-        course: true,
+        courses: true,
       },
     })
 
@@ -291,7 +291,7 @@ export async function GET(request: NextRequest) {
           id: enrollment.id,
           status: enrollment.status,
           enrollmentDate: enrollment.enrollmentDate,
-          courseName: enrollment.course.name,
+          courseName: enrollment.courses.name,
         },
       })
     }

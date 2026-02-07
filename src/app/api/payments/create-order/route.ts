@@ -84,9 +84,9 @@ export async function POST(request: NextRequest) {
     // SECURITY: Validate payment amount against enrollment's expected amount
     // This prevents clients from manipulating the payment amount
     if (enrollmentId) {
-      const enrollment = await prisma.enrollment.findUnique({
+      const enrollment = await prisma.enrollments.findUnique({
         where: { id: enrollmentId },
-        include: { course: true },
+        include: { courses: true },
       })
 
       if (!enrollment) {
@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
       // Calculate expected payment amount (pending amount or course price for new enrollments)
       const expectedAmount = enrollment.pendingAmount > 0
         ? enrollment.pendingAmount
-        : enrollment.course?.price || 0
+        : enrollment.courses?.totalFees || 0
 
       // Allow a small tolerance (1%) to account for rounding
       const tolerance = expectedAmount * 0.01

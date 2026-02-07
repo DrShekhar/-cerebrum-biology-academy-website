@@ -58,7 +58,7 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
     // Use Promise.allSettled for graceful error handling - one failing query won't break the dashboard
     const results = await Promise.allSettled([
       // Overall statistics using aggregation
-      prisma.testAttempt.aggregate({
+      prisma.test_attempts.aggregate({
         where: {
           freeUserId: userId,
           status: 'COMPLETED',
@@ -74,7 +74,7 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
       }),
 
       // This week's statistics using aggregation
-      prisma.testAttempt.aggregate({
+      prisma.test_attempts.aggregate({
         where: {
           freeUserId: userId,
           status: 'COMPLETED',
@@ -88,7 +88,7 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
       }),
 
       // Fetch only the 20 most recent tests for improvement calculation (not all tests)
-      prisma.testAttempt.findMany({
+      prisma.test_attempts.findMany({
         where: {
           freeUserId: userId,
           status: 'COMPLETED',
@@ -102,7 +102,7 @@ async function calculateDashboardStats(userId: string): Promise<DashboardStatsRe
       }),
 
       // Upcoming tests
-      prisma.testSession.findMany({
+      prisma.test_sessions.findMany({
         where: {
           freeUserId: userId,
           status: 'NOT_STARTED',
@@ -247,7 +247,7 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
     // Use Promise.allSettled for graceful error handling
     const weeklyResults = await Promise.allSettled([
       // Last week's average using aggregation
-      prisma.testAttempt.aggregate({
+      prisma.test_attempts.aggregate({
         where: {
           freeUserId: userId,
           status: 'COMPLETED',
@@ -261,7 +261,7 @@ export const GET = withOptionalAuth(async (request: NextRequest, session) => {
       }),
 
       // This week's average using aggregation
-      prisma.testAttempt.aggregate({
+      prisma.test_attempts.aggregate({
         where: {
           freeUserId: userId,
           status: 'COMPLETED',

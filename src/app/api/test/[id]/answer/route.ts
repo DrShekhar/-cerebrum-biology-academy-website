@@ -48,7 +48,7 @@ async function updateUserProgress(
 ) {
   try {
     // Get question details
-    const question = await prisma.question.findUnique({
+    const question = await prisma.questions.findUnique({
       where: { id: questionId },
       select: {
         topic: true,
@@ -152,13 +152,13 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Verify test session exists and belongs to user
-    const testSession = await prisma.testSession.findUnique({
+    const testSession = await prisma.test_sessions.findUnique({
       where: {
         id: testSessionId,
         OR: [{ userId: session.userId }, { freeUserId: session.userId }],
       },
       include: {
-        testTemplate: {
+        test_templates: {
           select: {
             negativeMarking: true,
             timeLimit: true,
@@ -187,14 +187,14 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
 
     // Check if time has expired
     const now = new Date()
-    const timeLimit = testSession.testTemplate?.timeLimit || 60 // Default 60 minutes
+    const timeLimit = testSession.test_templates?.timeLimit || 60 // Default 60 minutes
     const timeLimitMs = timeLimit * 60 * 1000
 
     if (testSession.startedAt) {
       const elapsedTime = now.getTime() - testSession.startedAt.getTime()
       if (elapsedTime > timeLimitMs) {
         // Auto-expire the session
-        await prisma.testSession.update({
+        await prisma.test_sessions.update({
           where: { id: testSessionId },
           data: { status: 'EXPIRED', submittedAt: now },
         })
@@ -210,7 +210,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Get question details
-    const question = await prisma.question.findUnique({
+    const question = await prisma.questions.findUnique({
       where: { id: validatedData.questionId },
       select: {
         id: true,
@@ -231,7 +231,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     }
 
     // Check if answer already exists for this question in this session
-    const existingResponse = await prisma.userQuestionResponse.findFirst({
+    const existingResponse = await prisma.user_question_responses.findFirst({
       where: {
         testSessionId,
         questionId: validatedData.questionId,
@@ -245,14 +245,14 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     const marksAwarded = calculateMarks(
       isCorrect,
       question.marks,
-      testSession.testTemplate?.negativeMarking || false
+      testSession.test_templates?.negativeMarking || false
     )
 
     let userResponse
 
     if (existingResponse) {
       // Update existing response
-      userResponse = await prisma.userQuestionResponse.update({
+      userResponse = await prisma.user_question_responses.update({
         where: { id: existingResponse.id },
         data: {
           selectedAnswer: validatedData.selectedAnswer,
@@ -267,7 +267,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       })
     } else {
       // Create new response
-      userResponse = await prisma.userQuestionResponse.create({
+      userResponse = await prisma.user_question_responses.create({
         data: {
           ...(session.role === 'STUDENT'
             ? { userId: session.userId }
@@ -285,7 +285,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
       })
 
       // Update test session question count
-      await prisma.testSession.update({
+      await prisma.test_sessions.update({
         where: { id: testSessionId },
         data: {
           questionsAnswered: { increment: 1 },
@@ -323,7 +323,7 @@ export async function PUT(request: NextRequest, { params }: RouteParams) {
     })
 
     // Calculate current session statistics
-    const sessionResponses = await prisma.userQuestionResponse.findMany({
+    const sessionResponses = await prisma.user_question_responses.findMany({
       where: { testSessionId },
       select: {
         isCorrect: true,
@@ -420,7 +420,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Verify test session exists and belongs to user
-    const testSession = await prisma.testSession.findUnique({
+    const testSession = await prisma.test_sessions.findUnique({
       where: {
         id: testSessionId,
         OR: [{ userId: session.userId }, { freeUserId: session.userId }],
@@ -435,7 +435,7 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     }
 
     // Get all responses for this session
-    const responses = await prisma.userQuestionResponse.findMany({
+    const responses = await prisma.user_question_responses.findMany({
       where: { testSessionId },
       include: {
         question: {

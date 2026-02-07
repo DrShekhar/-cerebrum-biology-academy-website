@@ -44,12 +44,12 @@ export async function GET(request: NextRequest, { params }: { params: Promise<{ 
     }
 
     const { id } = await params
-    const material = await prisma.studyMaterial.findUnique({
+    const material = await prisma.study_materials.findUnique({
       where: { id },
       include: {
-        course: true,
-        chapter: true,
-        topic: true,
+        courses: true,
+        chapters: true,
+        topics: true,
       },
     })
 
@@ -99,7 +99,7 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
     const body = await request.json()
 
     // Validate material exists
-    const existing = await prisma.studyMaterial.findUnique({
+    const existing = await prisma.study_materials.findUnique({
       where: { id },
     })
 
@@ -135,13 +135,13 @@ export async function PATCH(request: NextRequest, { params }: { params: Promise<
     }
 
     // Update material
-    const updated = await prisma.studyMaterial.update({
+    const updated = await prisma.study_materials.update({
       where: { id },
       data: updateData,
       include: {
-        course: true,
-        chapter: true,
-        topic: true,
+        courses: true,
+        chapters: true,
+        topics: true,
       },
     })
 
@@ -190,7 +190,7 @@ export async function DELETE(
     const { id } = await params
 
     // Fetch material to get file URL
-    const material = await prisma.studyMaterial.findUnique({
+    const material = await prisma.study_materials.findUnique({
       where: { id },
     })
 
@@ -199,7 +199,7 @@ export async function DELETE(
     }
 
     // Delete from database first
-    await prisma.studyMaterial.delete({
+    await prisma.study_materials.delete({
       where: { id },
     })
 
