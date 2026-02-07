@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 
 const navItems = [
   { href: '/counselor', label: 'Dashboard', icon: LayoutDashboard, shortcut: 'gd', exact: true },
@@ -36,7 +36,7 @@ const navItems = [
 ]
 
 function CounselorAuthWrapper({ children }: { children: React.ReactNode }) {
-  const { isLoading, isAuthenticated, user } = useFirebaseSession()
+  const { isLoading, isAuthenticated, user } = useAuth()
   const router = useRouter()
   const pathname = usePathname()
   const [showShortcuts, setShowShortcuts] = useState(false)

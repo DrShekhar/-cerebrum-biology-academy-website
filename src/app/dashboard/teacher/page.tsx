@@ -4,7 +4,7 @@
 export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
@@ -70,7 +70,7 @@ function UnauthorizedAccess({ userRole }: { userRole?: string }) {
 }
 
 export default function TeacherDashboard() {
-  const { user, isLoading } = useFirebaseSession()
+  const { user, isLoading } = useAuth()
   const router = useRouter()
   const [analytics, setAnalytics] = useState<TeacherAnalytics | null>(null)
   const [isLoadingData, setIsLoadingData] = useState(true)

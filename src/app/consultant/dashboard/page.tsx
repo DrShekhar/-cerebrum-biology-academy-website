@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/Button'
 import {
   Users,
@@ -151,7 +151,7 @@ function AuthLoadingState() {
 }
 
 export default function ConsultantDashboard() {
-  const { user, isLoading: authLoading } = useFirebaseSession()
+  const { user, isLoading: authLoading } = useAuth()
   const router = useRouter()
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)

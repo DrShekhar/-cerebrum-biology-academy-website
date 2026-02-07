@@ -1,6 +1,6 @@
 'use client'
 
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { useState, useEffect } from 'react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
@@ -8,7 +8,7 @@ import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 const OWNER_PHONE = CONTACT_INFO.phone.owner
 
 export function useOwnerAccess() {
-  const { user, isLoading } = useFirebaseSession()
+  const { user, isLoading } = useAuth()
   const [isOwner, setIsOwner] = useState(false)
   const [isCheckingOwner, setIsCheckingOwner] = useState(true)
 

@@ -5,7 +5,7 @@ export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -27,7 +27,7 @@ import {
 import type { AdminAnalytics } from '@/lib/types/analytics'
 
 export default function AdminDashboard() {
-  const { user, isLoading } = useFirebaseSession()
+  const { user, isLoading } = useAuth()
   const router = useRouter()
   const [analytics, setAnalytics] = useState<AdminAnalytics | null>(null)
   const [realTimeData, setRealTimeData] = useState<any>(null)

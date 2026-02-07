@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 import { signOut } from '@/lib/firebase/phone-auth'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -50,7 +50,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
   const [userMenuOpen, setUserMenuOpen] = useState(false)
   const pathname = usePathname()
   const router = useRouter()
-  const { isLoading, isAuthenticated, user } = useFirebaseSession()
+  const { isLoading, isAuthenticated, user } = useAuth()
   const { isOwner, isCheckingOwner } = useOwnerAccess()
 
   // Check if user has admin role

@@ -2,10 +2,10 @@
 
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 
 function AdminAuthWrapper({ children }: { children: React.ReactNode }) {
-  const { isLoading, isAuthenticated, user } = useFirebaseSession()
+  const { isLoading, isAuthenticated, user } = useAuth()
   const router = useRouter()
   const [isAdmin, setIsAdmin] = useState(false)
   const [isCheckingRole, setIsCheckingRole] = useState(true)

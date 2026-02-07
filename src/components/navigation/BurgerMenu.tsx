@@ -26,7 +26,7 @@ import {
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { navigationConfig } from '@/data/navigationConfig'
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
 import { signOut } from '@/lib/firebase/phone-auth'
 
@@ -53,7 +53,7 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const [isMobile, setIsMobile] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [isSigningOut, setIsSigningOut] = useState(false)
-  const { user, isAuthenticated } = useFirebaseSession()
+  const { user, isAuthenticated } = useAuth()
   const router = useRouter()
 
   // Focus trap for accessibility - keeps focus within modal when open

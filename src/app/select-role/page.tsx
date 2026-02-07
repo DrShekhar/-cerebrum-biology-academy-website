@@ -1,6 +1,6 @@
 'use client'
 
-import { useFirebaseSession } from '@/hooks/useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
@@ -103,7 +103,7 @@ const roles: RoleOption[] = [
 ]
 
 export default function SelectRolePage() {
-  const { user, isLoading, isAuthenticated } = useFirebaseSession()
+  const { user, isLoading, isAuthenticated } = useAuth()
   const router = useRouter()
   const [isOwner, setIsOwner] = useState(false)
 

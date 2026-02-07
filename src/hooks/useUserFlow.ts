@@ -2,7 +2,7 @@
 
 import { useMemo, useEffect, useState } from 'react'
 import { useRouter, usePathname } from 'next/navigation'
-import { useFirebaseSession } from './useFirebaseSession'
+import { useAuth } from '@/contexts/AuthContext'
 import {
   getDefaultDashboard,
   canAccessDashboard,
@@ -19,7 +19,7 @@ import {
  */
 export function useUserFlow() {
   // Use only Firebase session - InstantDB has been deprecated
-  const { user: firebaseUser, isAuthenticated, isLoading } = useFirebaseSession()
+  const { user: firebaseUser, isAuthenticated, isLoading } = useAuth()
 
   // Map Firebase user to the expected user format
   const user = firebaseUser
