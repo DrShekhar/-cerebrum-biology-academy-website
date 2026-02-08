@@ -392,7 +392,7 @@ export default function NEETBiologyPreparation3Months() {
 
             <h2 className="text-3xl font-bold text-gray-900 mt-10 mb-4">
               How Coaching Can Accelerate Your 3-Month Plan
-            </h3>
+            </h2>
 
             <p>
               If you join Cerebrum's accelerated 3-month program:
