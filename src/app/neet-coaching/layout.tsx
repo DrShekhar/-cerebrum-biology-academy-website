@@ -4,7 +4,7 @@ import { faqs } from '@/data/neetCoachingData'
 export const metadata: Metadata = {
   title: 'NEET Coaching 2026 | Best NEET Biology, Physics, Chemistry Classes | Cerebrum Academy',
   description:
-    'Top NEET coaching in Delhi-NCR for Class 11, 12 & Droppers. AIIMS, IITians faculty, small batches (10-18 students), 98% success rate. Physics, Chemistry & Biology. Online & offline classes at South Extension, Rohini, Gurugram, Faridabad.',
+    'Top NEET coaching in Delhi-NCR for Class 11, 12 & Droppers. AIIMS & IITians faculties, small batches (10-18 students), 98% success rate. Physics, Chemistry & Biology. Online & offline classes at South Extension, Rohini, Gurugram, Faridabad.',
   keywords: [
     'NEET coaching',
     'NEET 2026 coaching',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     'NEET dropper batch',
     'NEET coaching near me',
     'small batch NEET coaching',
-    'AIIMS faculty NEET coaching',
+    'AIIMS IITians faculty NEET coaching',
     'NEET online classes',
     'NEET coaching Delhi NCR',
     'NEET coaching Gurugram',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching 2026 | Physics, Chemistry, Biology | Cerebrum Academy',
     description:
-      'Expert AIIMS, IITians faculty. Small batches of 10-18 students. 98% success rate. Class 11, 12 & Dropper batches. Online & offline coaching in Delhi-NCR.',
+      'Expert AIIMS & IITians faculties. Small batches of 10-18 students. 98% success rate. Class 11, 12 & Dropper batches. Online & offline coaching in Delhi-NCR.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching',
     siteName: 'Cerebrum Biology Academy',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Coaching 2026 | Cerebrum Biology Academy',
     description:
-      'Expert AIIMS, IITians faculty. Small batches. 98% success rate. Class 11, 12 & Dropper. Online & offline.',
+      'Expert AIIMS & IITians faculties. Small batches. 98% success rate. Class 11, 12 & Dropper. Online & offline.',
     images: ['/og-neet-coaching.jpg'],
   },
 }
@@ -57,7 +57,7 @@ function generateJsonLd() {
     '@type': 'Course',
     name: 'NEET Coaching 2026 - Physics, Chemistry & Biology',
     description:
-      'Comprehensive NEET preparation covering Physics, Chemistry, and Biology for Class 11, 12 and Dropper students with AIIMS, IITians trained faculty.',
+      'Comprehensive NEET preparation covering Physics, Chemistry, and Biology for Class 11, 12 and Dropper students with AIIMS & IITians trained faculties.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',

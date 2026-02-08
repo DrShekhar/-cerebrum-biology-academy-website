@@ -214,12 +214,12 @@ export default function NEETCoachingPage() {
                 <span className="block text-yellow-400 mt-2">Physics | Chemistry | Biology</span>
               </h1>
               <p className="text-lg text-gray-300 mb-6">
-                Expert AIIMS, IITians Faculty | Small Batches | 98% Success Rate
+                Expert AIIMS & IITians Faculties | Small Batches | 98% Success Rate
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
                 {[
-                  'AIIMS & IIT-trained faculty for all 3 subjects',
+                  'AIIMS & IITians faculties for all 3 subjects',
                   'Small batches of 10-18 students only',
                   '695/720 top NEET score by our student',
                   'Online + Offline in 4 Delhi-NCR centers',
@@ -267,7 +267,7 @@ export default function NEETCoachingPage() {
                   },
                   {
                     icon: <HeartPulse className="w-5 h-5 text-green-400" />,
-                    title: 'AIIMS, IITians Faculty',
+                    title: 'AIIMS & IITians Faculties',
                     desc: 'Taught by doctors & engineers from top institutes',
                   },
                   {
@@ -347,7 +347,7 @@ export default function NEETCoachingPage() {
               All 3 Subjects, <span className="text-blue-600">One Academy</span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Physics, Chemistry, and Biology — taught by specialized AIIMS, IITians faculty with
+              Physics, Chemistry, and Biology — taught by specialized AIIMS & IITians faculties with
               subject-specific strategies for NEET 2026.
             </p>
           </motion.div>

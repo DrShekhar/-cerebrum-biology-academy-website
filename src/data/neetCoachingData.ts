@@ -219,7 +219,7 @@ export const subjects: SubjectCard[] = [
       'Plant Kingdom',
     ],
     whyItMatters:
-      'Scoring 340+ in Biology alone can secure a government medical seat. Our AIIMS, IITians faculty ensure you master every chapter.',
+      'Scoring 340+ in Biology alone can secure a government medical seat. Our AIIMS & IITians faculties ensure you master every chapter.',
   },
   {
     name: 'Physics',
@@ -277,7 +277,7 @@ export const comparisonData = {
   rows: [
     ['Batch Size', '10-18 students', '80-150 students', '60-120 students'],
     ['Price/Month', 'From Rs 4,000', 'Rs 8,000-15,000', 'Rs 7,000-12,000'],
-    ['Faculty', 'AIIMS, IITians', 'Mixed', 'Mixed'],
+    ['Faculty', 'AIIMS & IITians', 'Mixed', 'Mixed'],
     ['Success Rate', '98%', '~60%', '~55%'],
     ['Personal Attention', 'Guaranteed', 'Limited', 'Limited'],
     ['Doubt Resolution', 'Same Day', '2-3 Days', '2-3 Days'],
@@ -295,7 +295,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'What is the difference between Pinnacle, Ascent, and Pursuit tiers?',
     answer:
-      'The tiers differ in batch size and features. Pinnacle (10-12 students) includes personal mentorship from Dr. Shekhar, 1-on-1 doubt sessions, and money-back guarantee. Ascent (16-18 students) offers small-group learning with regular doubt sessions. Pursuit (30-40 students) provides quality AIIMS, IITians faculty teaching at affordable prices. All tiers cover the complete NEET syllabus.',
+      'The tiers differ in batch size and features. Pinnacle (10-12 students) includes personal mentorship from Dr. Shekhar, 1-on-1 doubt sessions, and money-back guarantee. Ascent (16-18 students) offers small-group learning with regular doubt sessions. Pursuit (30-40 students) provides quality teaching by AIIMS & IITians faculties at affordable prices. All tiers cover the complete NEET syllabus.',
   },
   {
     question: 'Do you have a special batch for NEET droppers/repeaters?',
@@ -330,7 +330,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'What subjects do you cover for NEET coaching?',
     answer:
-      'We cover all three NEET subjects: Biology (Botany + Zoology), Physics, and Chemistry. Biology gets special emphasis as it carries 50% weightage (90 out of 180 questions). Each subject is taught by specialized AIIMS, IITians faculty with subject-specific strategies.',
+      'We cover all three NEET subjects: Biology (Botany + Zoology), Physics, and Chemistry. Biology gets special emphasis as it carries 50% weightage (90 out of 180 questions). Each subject is taught by specialized AIIMS & IITians faculties with subject-specific strategies.',
   },
   {
     question: 'Where are your offline coaching centers located?',
