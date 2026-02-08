@@ -102,7 +102,7 @@ export const Footer = memo(function Footer() {
     { name: 'Ceri AI', href: '/ai-education-demo' },
     { name: 'AI Features', href: '/ai-features' },
     { name: 'Mobile App', href: '/mobile-app' },
-    { name: 'International Students', href: '/international/' },
+    { name: 'International Students', href: '/international' },
   ]
 
   const companyLinks = [
@@ -113,7 +113,7 @@ export const Footer = memo(function Footer() {
     { name: 'Results', href: '/results' },
     { name: 'Success Stories', href: '/testimonials' },
     { name: 'Photo Gallery', href: '/gallery' },
-    { name: 'Careers', href: '/contact' },
+    { name: 'Careers', href: '/company/careers' },
   ]
 
   const supportLinks = [
@@ -167,7 +167,7 @@ export const Footer = memo(function Footer() {
     { name: 'Biology Teacher', href: '/biology-teacher' },
     { name: 'Online Classes', href: '/online-biology-classes' },
     { name: 'Foundation & Olympiad', href: '/neet-foundation-class-9' },
-    { name: 'International Curriculum', href: '/international/' },
+    { name: 'International Curriculum', href: '/international' },
     { name: 'Best Biology Books', href: '/best-biology-books-for-neet' },
   ]
 

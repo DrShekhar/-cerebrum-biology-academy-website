@@ -267,11 +267,10 @@ export default function SettingsPage() {
 
                 <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                   <h4 className="font-medium text-blue-900 mb-2">
-                    🌏 Multi-language Support Coming Soon
+                    🌏 Multi-language Support
                   </h4>
                   <p className="text-sm text-blue-700">
-                    We're working on adding Hindi and regional language support for better
-                    accessibility.
+                    Hindi and regional language support is being developed for better accessibility.
                   </p>
                 </div>
               </CardContent>

@@ -1502,7 +1502,7 @@ export class StudyRoomEngine extends EventEmitter {
   }
 
   private async activateAIModerator(room: StudyRoom): Promise<void> {
-    const welcomeMessage = `Welcome to ${room.name}! I'm your AI study companion, ready to help you master ${room.topic}. Let's create an amazing learning experience together! 🧠✨`
+    const welcomeMessage = `Welcome to ${room.name}! This study room is focused on mastering ${room.topic}. Let's create an amazing learning experience together! 🧠✨`
 
     this.broadcastToRoom(room.roomId, {
       type: 'ai_moderator_message',

@@ -640,7 +640,7 @@ async function handleVoiceQuestion(
   await processor.sendTextMessage(
     from,
     phoneNumberId,
-    "🎤 I received your voice message! Voice transcription is coming soon. For now, please type your biology question and I'll help you right away! 📚"
+    "🎤 Voice message received! Voice transcription is not yet available. Please type your biology question and get help right away! 📚"
   )
 }
 
@@ -657,7 +657,7 @@ async function handleImageQuestion(
   await processor.sendTextMessage(
     from,
     phoneNumberId,
-    `📸 I can see you sent an image${caption ? ` with the question: "${caption}"` : ''}!\n\nImage analysis is coming soon. For now, please describe what you see in the image and ask your specific question. I\'ll help explain the biological concepts! 🧬`
+    `📸 Image received${caption ? ` with the question: "${caption}"` : ''}!\n\nImage analysis is not yet available. Please describe what you see in the image and ask your specific question for a detailed explanation! 🧬`
   )
 }
 
@@ -691,9 +691,9 @@ async function handleCommand(
       await processor.sendTextMessage(
         from,
         phoneNumberId,
-        `🤖 **Cerebrum Biology Bot - Advanced AI Tutor**
+        `🤖 **Cerebrum Biology Bot**
 
-📚 **What I can help with:**
+📚 **Topics Covered:**
 • Any biology question from Class 9-12 & NEET
 • Detailed explanations with examples
 • Study tips and exam preparation
@@ -830,9 +830,9 @@ async function sendWelcomeMessage(
   await processor.sendTextMessage(
     from,
     phoneNumberId,
-    `🤖 **Welcome to Cerebrum Biology AI Tutor!**
+    `🤖 **Welcome to Cerebrum Biology Tutor!**
 
-I'm your personal biology assistant, powered by advanced AI. I can help you with:
+Your study assistant for Biology and NEET preparation.
 
 📚 **Biology Topics:** From basic concepts to advanced NEET questions
 🧬 **All Levels:** Class 9th, 10th, 11th, 12th, NEET, and beyond

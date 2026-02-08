@@ -699,8 +699,8 @@ export function IntelligentChatbot() {
 
   const handleGeneralInquiry = (message: string) => {
     const response =
-      "I'm here to help you with any questions about our NEET Biology courses!\n\n" +
-      '🎯 **I can help you with:**\n' +
+      "Welcome to Cerebrum Biology Academy! Here's what you can explore:\n\n" +
+      '🎯 **Quick Links:**\n' +
       '• Course information and selection\n' +
       '• Fee details and payment options\n' +
       '• Demo class booking\n' +

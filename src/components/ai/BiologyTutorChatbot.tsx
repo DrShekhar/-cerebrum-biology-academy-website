@@ -190,7 +190,7 @@ export function BiologyTutorChatbot() {
     const welcomeMessage: ChatMessage = {
       id: `msg_${Date.now()}`,
       type: 'bot',
-      content: `🧬 Hello! I'm Dr. Bio, your AI Biology tutor. I specialize in ${chatState.studentProfile.curriculum} curriculum and I'm here to help you master Biology concepts 24/7.
+      content: `🧬 Welcome to Ceri Biology Tutor! Specializing in ${chatState.studentProfile.curriculum} curriculum to help you master Biology concepts.
 
 What would you like to explore today?`,
       timestamp: new Date(),

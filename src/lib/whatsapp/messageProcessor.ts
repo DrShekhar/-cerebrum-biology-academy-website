@@ -478,9 +478,9 @@ Guidelines:
     suggestion?: string
   ): Promise<void> {
     const message =
-      `🤖 *I'm your Biology Study Buddy!*\n\n` +
-      `I specialize in Biology and NEET preparation. ${suggestion || 'Please ask me biology-related questions!'}\n\n` +
-      `📚 Topics I can help with:\n` +
+      `🤖 *Cerebrum Biology Study Buddy*\n\n` +
+      `This bot specializes in Biology and NEET preparation. ${suggestion || 'Please ask biology-related questions!'}\n\n` +
+      `📚 Topics covered:\n` +
       `• Cell Biology & Genetics\n` +
       `• Plant & Animal Physiology\n` +
       `• Ecology & Environment\n` +

@@ -268,7 +268,7 @@ function parseEducationalResponseFromText(text: string) {
 
 function generateFallbackEducationalResponse(request: VoiceRequest) {
   return {
-    text: `Thank you for your question about "${request.transcript}". This is an important concept in Biology. Let me explain it clearly for your NEET preparation.`,
+    text: `Great question about "${request.transcript}". This is an important concept in Biology. Here's a clear explanation for your NEET preparation.`,
     explanation: 'This is a fundamental concept in Biology.',
     example: 'Let me provide a simple example to illustrate this.',
     neetRelevance: 'This topic is frequently asked in NEET examinations.',

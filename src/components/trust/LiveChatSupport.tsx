@@ -155,7 +155,7 @@ const LiveChatSupport: React.FC = () => {
     setTimeout(() => {
       const welcomeMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: `Hi! I'm ${availableAgent.name}, your ${availableAgent.role}. I'm here to help you with any questions about Cerebrum Biology Academy. How can I assist you today?`,
+        text: `Hi! This is ${availableAgent.name} from Cerebrum Biology Academy. How can we help you today?`,
         sender: 'agent',
         timestamp: new Date(),
         agentName: availableAgent.name,

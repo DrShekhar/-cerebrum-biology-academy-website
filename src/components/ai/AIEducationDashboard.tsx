@@ -348,7 +348,7 @@ export function AIEducationDashboard() {
       // Add welcome message from AI
       const welcomeMessage = {
         id: `msg_${Date.now()}`,
-        text: "Hello! I'm your enhanced Biology AI tutor. 🧬 I can help you with:\n\n📝 Text questions and explanations\n📸 Image analysis (diagrams, microscopy, specimens)\n🎤 Voice doubts and audio responses\n\nWhat would you like to learn about today?",
+        text: "Welcome to Ceri AI Biology Tutor! 🧬\n\n📝 Ask text questions for detailed explanations\n📸 Upload images of diagrams and specimens for analysis\n🎤 Send voice notes with your doubts\n\nWhat would you like to learn about today?",
         sender: 'ai' as const,
         timestamp: new Date(),
         type: 'text' as const,

@@ -121,7 +121,7 @@ function enhanceScriptForVoice(script: string, request: VoiceRequest): string {
       enhanced = `Great question! ${enhanced} You're doing excellent work in Biology!`
       break
     case 'explaining':
-      enhanced = `Let me explain this clearly. ${enhanced} Does this make sense?`
+      enhanced = `Here's a clear explanation. ${enhanced} Does this make sense?`
       break
     case 'celebrating':
       enhanced = `Fantastic! ${enhanced} You're mastering NEET Biology!`
@@ -213,7 +213,7 @@ function getTeachingStyle(voice: string): string {
 }
 
 function generateFallbackScript(request: VoiceRequest): string {
-  return `Let me explain ${request.concept} in a simple way. ${request.description} This is important for NEET because ${request.neetRelevance}. Keep practicing, and you'll master this concept!`
+  return `Here's a simple explanation of ${request.concept}. ${request.description} This is important for NEET because ${request.neetRelevance}. Keep practicing, and you'll master this concept!`
 }
 
 // Enhanced voice synthesis configurations

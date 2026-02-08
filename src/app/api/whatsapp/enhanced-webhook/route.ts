@@ -480,7 +480,7 @@ async function processDocumentMessage(
     return {
       response: `📄 I received your PDF: "${message.document.filename}"
 
-I can help you with specific questions about biology topics, but I can't read PDF files directly.
+This bot can help with specific biology questions, but cannot read PDF files directly.
 
 Please:
 • Ask specific questions about topics in the PDF
@@ -499,7 +499,7 @@ What would you like to know about biology? 🧬`,
 
   return {
     response:
-      'I can help with biology questions! Please send text messages, images of diagrams, or voice notes with your questions.',
+      'For biology help, please send text messages, images of diagrams, or voice notes with your questions.',
     creditsUsed: 0,
   }
 }

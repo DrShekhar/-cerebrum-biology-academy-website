@@ -154,15 +154,15 @@ export default function SalesAgentWidget() {
       const greeting: Message = {
         id: 'greeting',
         role: 'assistant',
-        content: `${ARIA_PERSONALITY.greeting(hour)} I'm **ARIA**, your NEET Biology expert at Cerebrum! 🧬
+        content: `${ARIA_PERSONALITY.greeting(hour)} Welcome to **Cerebrum Biology Academy**! 🧬
 
-I can help you with:
-- Understanding our courses & pricing
-- Booking a FREE demo class
-- Answering your NEET preparation questions
-- Clearing doubts about joining alongside your current coaching
+Here's what you can explore:
+- Courses & pricing details
+- Book a FREE demo class
+- NEET preparation guidance
+- Joining alongside your current coaching
 
-How can I help you today?`,
+What would you like to know?`,
         timestamp: new Date(),
         actions: STARTER_QUESTIONS,
       }
@@ -274,11 +274,9 @@ How can I help you today?`,
         console.error('[ARIA] API error:', error)
 
         // Fallback to helpful message
-        responseContent = `Thanks for your question! Let me help you with that.
+        responseContent = `Thanks for your question about "${content.substring(0, 50)}${content.length > 50 ? '...' : ''}".
 
-For detailed information about "${content.substring(0, 50)}${content.length > 50 ? '...' : ''}", I'd recommend speaking with our counselor who can give you personalized guidance.
-
-In the meantime, would you like to:
+For personalized guidance, our counselor team can help. In the meantime:
 - 📅 Book a FREE demo class to experience our teaching
 - 📞 Get a callback from our team
 - 💬 Ask about courses, pricing, or results`

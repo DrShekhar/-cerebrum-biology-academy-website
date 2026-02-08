@@ -86,11 +86,11 @@ export class CounselorWhatsAppService {
 
 Thank you for your interest in ${courseInterest} at Cerebrum Biology Academy!
 
-I'm your dedicated counselor, and I'm here to help you achieve your NEET dreams.
+Our counseling team is here to help you achieve your NEET dreams.
 
 Would you like to schedule a FREE demo class? 📚
 
-Reply "YES" or call me at +91-88264-44334`,
+Reply "YES" or call us at +91-88264-44334`,
 
       demo_followup: `Hi ${studentName}! 🎓
 
@@ -104,11 +104,11 @@ Let's discuss your NEET preparation strategy. When can we talk?`,
 
       negotiation_followup: `Hi ${studentName}! 💼
 
-I've reviewed your requirements for ${courseInterest}.
+We've reviewed your requirements for ${courseInterest}.
 
 We can create a customized fee plan that works for your budget! 💰
 
-Let me share some flexible payment options. Can we connect for 10 minutes?`,
+Here are some flexible payment options. Can we connect for 10 minutes?`,
 
       enrollment_confirmation: `🎉 Congratulations ${studentName}!
 
@@ -182,7 +182,7 @@ Our team is here to help! 📚✨`,
     const followupMessages: Partial<Record<LeadStage, string>> = {
       NEW_LEAD: `Hi ${studentName}! 👋
 
-Thanks for showing interest in ${courseInterest}! I'm your counselor at Cerebrum Biology Academy.
+Thanks for showing interest in ${courseInterest} at Cerebrum Biology Academy!
 
 Let's schedule a FREE demo class to show you our teaching methodology. 📚
 
