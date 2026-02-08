@@ -283,9 +283,10 @@ Required in `.env.local`:
 
 ### Before Making Changes
 
-1. Read related files first using Serena's `find_symbol`
-2. Check existing patterns in similar files
-3. Understand the data flow
+1. **ALWAYS `git pull` first** to sync with remote before starting any work
+2. Read related files first using Serena's `find_symbol`
+3. Check existing patterns in similar files
+4. Understand the data flow
 
 ### During Development
 
@@ -335,6 +336,12 @@ text-lg md:text-xl lg:text-2xl                      // Progressive text size
 // Flex direction: Stack on mobile
 flex flex-col md:flex-row                           // Vertical → Horizontal
 ```
+
+### After Completing Work
+
+1. Commit all changes with a detailed message
+2. `git push` to remote
+3. If on a feature branch, create a PR and merge to main
 
 ### Deployment
 
