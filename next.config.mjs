@@ -532,12 +532,6 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Generic NEET coaching redirect
-      {
-        source: '/neet-coaching',
-        destination: '/neet-coaching-institute',
-        permanent: true,
-      },
 
       // Biology topics subpages redirect to main topics page
       {
