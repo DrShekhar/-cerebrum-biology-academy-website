@@ -91,6 +91,7 @@ export const Footer = memo(function Footer() {
   ]
 
   const servicesLinks = [
+    { name: 'NEET Coaching', href: '/neet-coaching' },
     { name: 'Online Live Classes', href: '/courses' },
     { name: 'Book a Demo Class', href: '/demo-booking' },
     { name: 'NEET Mock Tests', href: '/mock-tests' },
