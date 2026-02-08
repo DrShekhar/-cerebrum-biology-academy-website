@@ -21,6 +21,19 @@ const locationData = {
     priceRange: '₹₹',
     nearbyLandmarks: ['DC Chauk Metro Station', 'Rohini Sector 9', 'Vikas Surya Mall'],
     studentCount: '850',
+    googleBusinessUrl: CONTACT_INFO.centers.rohini.googleBusinessUrl,
+    areaServed: [
+      'Rohini',
+      'Pitampura',
+      'Shalimar Bagh',
+      'Netaji Subhash Place',
+      'North Delhi',
+      'Ashok Vihar',
+      'Prashant Vihar',
+      'Paschim Vihar',
+      'Rajouri Garden',
+      'Punjabi Bagh',
+    ],
     reviews: [
       {
         author: 'Ananya Sharma',
@@ -56,6 +69,23 @@ const locationData = {
     priceRange: '₹₹',
     nearbyLandmarks: ['Sector 51 Gurugram', 'Golf Course Extension Road', 'Sohna Road'],
     studentCount: '620',
+    googleBusinessUrl: CONTACT_INFO.centers.gurugram.googleBusinessUrl,
+    areaServed: [
+      'Gurugram',
+      'DLF Phase 1',
+      'DLF Phase 4',
+      'Golf Course Road',
+      'Sushant Lok',
+      'Sector 14',
+      'Sector 43',
+      'Sector 51',
+      'Sector 56',
+      'Sector 57',
+      'South City',
+      'New Gurugram',
+      'Sohna Road',
+      'Manesar',
+    ],
     reviews: [
       {
         author: 'Ishita Malhotra',
@@ -91,6 +121,21 @@ const locationData = {
     priceRange: '₹₹',
     nearbyLandmarks: ['South Extension Market', 'AIIMS Delhi', 'Lajpat Nagar'],
     studentCount: '780',
+    googleBusinessUrl: CONTACT_INFO.centers.southExtension.googleBusinessUrl,
+    areaServed: [
+      'South Extension',
+      'South Delhi',
+      'Greater Kailash',
+      'Defence Colony',
+      'Lajpat Nagar',
+      'Saket',
+      'Malviya Nagar',
+      'Hauz Khas',
+      'New Friends Colony',
+      'Green Park',
+      'Safdarjung',
+      'Gulmohar Park',
+    ],
     reviews: [
       {
         author: 'Kavya Reddy',
@@ -114,11 +159,11 @@ const locationData = {
   },
   'green-park': {
     name: 'Cerebrum Biology Academy - Green Park',
-    address: 'Green Park Extension, New Delhi',
-    streetAddress: 'Green Park Extension',
+    address: 'B 113 FF Gulmohar Park, Green Park, New Delhi',
+    streetAddress: 'B 113 FF Gulmohar Park',
     addressLocality: 'Green Park',
     addressRegion: 'Delhi',
-    postalCode: '110016',
+    postalCode: '110049',
     geo: { lat: '28.5597', lng: '77.2089' },
     phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/biology-classes-green-park',
@@ -126,6 +171,23 @@ const locationData = {
     priceRange: '₹₹',
     nearbyLandmarks: ['Green Park Metro Station', 'IIT Delhi', 'Hauz Khas'],
     studentCount: '720',
+    googleBusinessUrl: CONTACT_INFO.centers.greenPark.googleBusinessUrl,
+    areaServed: [
+      'Green Park',
+      'Hauz Khas',
+      'South Delhi',
+      'Greater Kailash',
+      'Defence Colony',
+      'Lajpat Nagar',
+      'Noida',
+      'Greater Noida',
+      'Ghaziabad',
+      'Gulmohar Park',
+      'Panchsheel Park',
+      'Jor Bagh',
+      'Kalu Sarai',
+      'New Moti Bagh',
+    ],
     reviews: [
       {
         author: 'Nisha Sharma',
@@ -161,6 +223,17 @@ const locationData = {
     priceRange: '₹₹',
     nearbyLandmarks: ['Sector 17 Market', 'NHPC Chowk', 'Faridabad Railway Station'],
     studentCount: '550',
+    googleBusinessUrl: CONTACT_INFO.centers.faridabad.googleBusinessUrl,
+    areaServed: [
+      'Faridabad',
+      'Palwal',
+      'Ballabgarh',
+      'NIT Faridabad',
+      'Old Faridabad',
+      'Greater Faridabad',
+      'Sector 15-21',
+      'BPTP Parklands',
+    ],
     reviews: [
       {
         author: 'Rohan Yadav',
@@ -230,6 +303,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
       'https://www.linkedin.com/company/cerebrum-biology-academy',
+      location.googleBusinessUrl,
     ],
     founder: {
       '@type': 'Person',
@@ -266,15 +340,10 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       },
       reviewBody: review.body,
     })),
-    areaServed: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: location.geo.lat,
-        longitude: location.geo.lng,
-      },
-      geoRadius: '15000',
-    },
+    areaServed: location.areaServed.map((area: string) => ({
+      '@type': 'City',
+      name: area,
+    })),
     makesOffer: [
       {
         '@type': 'Offer',
@@ -410,7 +479,7 @@ export function AllLocationsSchema() {
     '@id': `${baseUrl}#organization`,
     name: 'Cerebrum Biology Academy',
     description:
-      'Best NEET Biology Coaching in Delhi NCR with 4 offline centers and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
+      'Best NEET Biology Coaching in Delhi NCR with 5 offline centers and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
     telephone: CONTACT_INFO.phone.primary,

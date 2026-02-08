@@ -37,7 +37,7 @@ const BUSINESS_INFO = {
     },
     {
       name: 'Cerebrum Biology Academy - Green Park',
-      address: 'Green Park Extension, New Delhi - 110016',
+      address: 'B 113 FF Gulmohar Park, Green Park, New Delhi - 110049',
       phone: CONTACT_INFO.phone.formatted.primary,
       geo: { lat: '28.5597', lng: '77.2089' },
     },
@@ -56,15 +56,16 @@ const BUSINESS_INFO = {
   ],
   openingHours: [
     {
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '08:00',
-      closes: '20:00',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59',
     },
   ],
   sameAs: [
     'https://www.facebook.com/cerebrumbiologyacademy',
     'https://www.instagram.com/cerebrumbiologyacademy',
     'https://www.youtube.com/@cerebrumbiologyacademy',
+    'https://www.linkedin.com/company/cerebrum-biology-academy',
     'https://g.co/kgs/cerebrum-biology-academy',
   ],
 }
@@ -95,6 +96,26 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
       closes: hours.closes,
     })),
     sameAs: BUSINESS_INFO.sameAs,
+    areaServed: [
+      'South Extension',
+      'South Delhi',
+      'Greater Kailash',
+      'Defence Colony',
+      'Lajpat Nagar',
+      'Rohini',
+      'Pitampura',
+      'Shalimar Bagh',
+      'North Delhi',
+      'Green Park',
+      'Hauz Khas',
+      'Gulmohar Park',
+      'Gurugram',
+      'DLF Phase 1',
+      'Sushant Lok',
+      'Faridabad',
+      'Ballabgarh',
+      'NIT Faridabad',
+    ].map((area) => ({ '@type': 'City' as const, name: area })),
     priceRange: '₹₹',
     currenciesAccepted: 'INR',
     paymentAccepted: 'Cash, UPI, Bank Transfer, EMI',
@@ -137,7 +158,7 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
           </a>
           <span className="flex items-center gap-1">
             <Clock className="h-4 w-4" />
-            Mon-Sat: 8 AM - 8 PM
+            Open 24/7
           </span>
           <span className="flex items-center gap-1">
             <MapPin className="h-4 w-4" />
@@ -188,7 +209,7 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
 
           <div className="flex items-center gap-3">
             <Clock className="h-5 w-5 flex-shrink-0 text-green-600" />
-            <span className="text-gray-700">Mon-Sat: 8:00 AM - 8:00 PM</span>
+            <span className="text-gray-700">Open 24/7</span>
           </div>
         </div>
 
@@ -203,7 +224,9 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
                   ? 'Instagram'
                   : url.includes('youtube')
                     ? 'YouTube'
-                    : 'Google'
+                    : url.includes('linkedin')
+                      ? 'LinkedIn'
+                      : 'Google'
               return (
                 <a
                   key={index}

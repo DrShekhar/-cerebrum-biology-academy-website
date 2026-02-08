@@ -64,11 +64,7 @@ export {
 export { IntentLandingPage, type IntentPageData, type HowToStepData } from './IntentLandingPage'
 
 // Enhanced article schemas for blog posts (TechArticle, NewsArticle)
-export {
-  TechArticleSchema,
-  BlogListSchema,
-  type ArticleType,
-} from './TechArticleSchema'
+export { TechArticleSchema, BlogListSchema, type ArticleType } from './TechArticleSchema'
 
 // Aggregate offer schemas for course pricing tiers
 export {
@@ -114,11 +110,7 @@ export {
 } from './SpeakableSchema'
 
 // Top 10 List component with ItemList schema for ranking pages
-export {
-  Top10List,
-  TOP_10_NEET_COACHING_GURUGRAM,
-  type RankedItem,
-} from './Top10ListSchema'
+export { Top10List, TOP_10_NEET_COACHING_GURUGRAM, type RankedItem } from './Top10ListSchema'
 
 // Hinglish keywords for long-tail SEO targeting
 export {
@@ -160,3 +152,6 @@ export {
   type CompetitorData,
 } from './ComparisonSchema'
 export { ComparisonLandingPage } from './ComparisonLandingPage'
+
+// Service schema for GMB keyword services per center
+export { ServiceSchema, AllServicesSchema, DEFAULT_SERVICES_BY_CENTER } from './ServiceSchema'

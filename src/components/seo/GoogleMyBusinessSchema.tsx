@@ -2,12 +2,6 @@
 
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
-/**
- * Google My Business Multi-Location Schema
- * Provides structured data for each physical location to improve local SEO
- * and Google Maps presence.
- */
-
 export interface LocationData {
   name: string
   slug: string
@@ -29,67 +23,53 @@ export interface LocationData {
   images: string[]
   description: string
   areaServed: string[]
+  googleBusinessUrl: string
 }
 
-// Physical location data for each center
 export const CEREBRUM_LOCATIONS: LocationData[] = [
   {
-    name: 'Cerebrum Biology Academy - Gurugram (Main Center)',
-    slug: 'gurugram',
-    address: {
-      streetAddress: 'Sector 14, Near HUDA City Centre Metro Station',
-      addressLocality: 'Gurugram',
-      addressRegion: 'Haryana',
-      postalCode: '122001',
-      addressCountry: 'IN',
-    },
-    geo: {
-      latitude: 28.4595,
-      longitude: 77.0266,
-    },
-    phone: CONTACT_INFO.phone.primary,
-    email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Sa 07:00-21:00', 'Su 09:00-18:00'],
-    priceRange: '₹₹',
-    images: [
-      'https://cerebrumbiologyacademy.com/images/center-gurugram.jpg',
-      'https://cerebrumbiologyacademy.com/images/classroom-gurugram.jpg',
-    ],
-    description:
-      'Main NEET Biology coaching center in Gurugram with AIIMS faculty. Specialized Biology coaching with 98% success rate.',
-    areaServed: ['Gurugram', 'Faridabad', 'Noida', 'Delhi NCR', 'Haryana'],
-  },
-  {
-    name: 'Cerebrum Biology Academy - South Extension, Delhi',
+    name: 'Cerebrum Biology Academy - South Extension (Flagship)',
     slug: 'south-extension',
     address: {
-      streetAddress: 'J-Block, South Extension Part II',
+      streetAddress: 'Block D, South Extension Part 2',
       addressLocality: 'New Delhi',
       addressRegion: 'Delhi',
       postalCode: '110049',
       addressCountry: 'IN',
     },
     geo: {
-      latitude: 28.5689,
-      longitude: 77.2215,
+      latitude: 28.5678,
+      longitude: 77.2234,
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Sa 07:00-21:00', 'Su 09:00-18:00'],
+    openingHours: ['Mo-Su 00:00-23:59'],
     priceRange: '₹₹',
-    images: [
-      'https://cerebrumbiologyacademy.com/images/center-south-extension.jpg',
-    ],
+    images: ['https://cerebrumbiologyacademy.com/images/center-south-extension.jpg'],
     description:
-      'Premium NEET Biology coaching in South Delhi. Small batch sizes with personalized attention.',
-    areaServed: ['South Delhi', 'Greater Kailash', 'Lajpat Nagar', 'Saket', 'Malviya Nagar'],
+      'Flagship NEET Biology coaching in South Delhi. Small batch sizes with personalized attention and expert AIIMS faculty.',
+    areaServed: [
+      'South Extension',
+      'South Delhi',
+      'Greater Kailash',
+      'Defence Colony',
+      'Lajpat Nagar',
+      'Saket',
+      'Malviya Nagar',
+      'Hauz Khas',
+      'New Friends Colony',
+      'Green Park',
+      'Safdarjung',
+      'Gulmohar Park',
+    ],
+    googleBusinessUrl: CONTACT_INFO.centers.southExtension.googleBusinessUrl,
   },
   {
     name: 'Cerebrum Biology Academy - Rohini, Delhi',
     slug: 'rohini',
     address: {
-      streetAddress: 'Sector 7, Near Rohini West Metro Station',
-      addressLocality: 'Rohini',
+      streetAddress: '211 Vikas Surya Tower, DC Chauk, Sector 9',
+      addressLocality: 'Rohini, Delhi',
       addressRegion: 'Delhi',
       postalCode: '110085',
       addressCountry: 'IN',
@@ -100,18 +80,141 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     },
     phone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,
-    openingHours: ['Mo-Sa 07:00-21:00', 'Su 09:00-18:00'],
+    openingHours: ['Mo-Su 00:00-23:59'],
     priceRange: '₹₹',
-    images: [
-      'https://cerebrumbiologyacademy.com/images/center-rohini.jpg',
-    ],
+    images: ['https://cerebrumbiologyacademy.com/images/center-rohini.jpg'],
     description:
       'NEET Biology coaching in North-West Delhi. Convenient location for Rohini, Pitampura, and Shalimar Bagh students.',
-    areaServed: ['Rohini', 'Pitampura', 'Shalimar Bagh', 'Netaji Subhash Place', 'North Delhi'],
+    areaServed: [
+      'Rohini',
+      'Pitampura',
+      'Shalimar Bagh',
+      'Netaji Subhash Place',
+      'North Delhi',
+      'Ashok Vihar',
+      'Prashant Vihar',
+      'Paschim Vihar',
+      'Rajouri Garden',
+      'Punjabi Bagh',
+    ],
+    googleBusinessUrl: CONTACT_INFO.centers.rohini.googleBusinessUrl,
+  },
+  {
+    name: 'Cerebrum Biology Academy - Green Park, Delhi',
+    slug: 'green-park',
+    address: {
+      streetAddress: 'B 113 FF Gulmohar Park',
+      addressLocality: 'Green Park, New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110049',
+      addressCountry: 'IN',
+    },
+    geo: {
+      latitude: 28.5597,
+      longitude: 77.2089,
+    },
+    phone: CONTACT_INFO.phone.primary,
+    email: CONTACT_INFO.email.info,
+    openingHours: ['Mo-Su 00:00-23:59'],
+    priceRange: '₹₹',
+    images: ['https://cerebrumbiologyacademy.com/images/center-green-park.jpg'],
+    description:
+      'NEET Biology coaching near Green Park Metro. Expert faculty for students from South Delhi, Noida, and Ghaziabad.',
+    areaServed: [
+      'Green Park',
+      'Hauz Khas',
+      'South Delhi',
+      'Greater Kailash',
+      'Defence Colony',
+      'Lajpat Nagar',
+      'Noida',
+      'Greater Noida',
+      'Ghaziabad',
+      'Gulmohar Park',
+      'Panchsheel Park',
+      'Jor Bagh',
+      'Kalu Sarai',
+      'New Moti Bagh',
+    ],
+    googleBusinessUrl: CONTACT_INFO.centers.greenPark.googleBusinessUrl,
+  },
+  {
+    name: 'Cerebrum Biology Academy - Gurugram',
+    slug: 'gurugram',
+    address: {
+      streetAddress: 'Unit 17, M2K Corporate Park, Mayfield Garden, Sector 51',
+      addressLocality: 'Gurugram',
+      addressRegion: 'Haryana',
+      postalCode: '122018',
+      addressCountry: 'IN',
+    },
+    geo: {
+      latitude: 28.4295,
+      longitude: 77.0426,
+    },
+    phone: CONTACT_INFO.phone.primary,
+    email: CONTACT_INFO.email.info,
+    openingHours: ['Mo-Su 00:00-23:59'],
+    priceRange: '₹₹',
+    images: [
+      'https://cerebrumbiologyacademy.com/images/center-gurugram.jpg',
+      'https://cerebrumbiologyacademy.com/images/classroom-gurugram.jpg',
+    ],
+    description:
+      'NEET Biology coaching center in Gurugram with AIIMS faculty. State-of-the-art digital classrooms and personalized attention.',
+    areaServed: [
+      'Gurugram',
+      'DLF Phase 1',
+      'DLF Phase 4',
+      'Golf Course Road',
+      'Sushant Lok',
+      'Sector 14',
+      'Sector 43',
+      'Sector 51',
+      'Sector 56',
+      'Sector 57',
+      'South City',
+      'New Gurugram',
+      'Sohna Road',
+      'Manesar',
+    ],
+    googleBusinessUrl: CONTACT_INFO.centers.gurugram.googleBusinessUrl,
+  },
+  {
+    name: 'Cerebrum Biology Academy - Faridabad',
+    slug: 'faridabad',
+    address: {
+      streetAddress: 'Sector 17',
+      addressLocality: 'Faridabad',
+      addressRegion: 'Haryana',
+      postalCode: '121002',
+      addressCountry: 'IN',
+    },
+    geo: {
+      latitude: 28.4089,
+      longitude: 77.3178,
+    },
+    phone: CONTACT_INFO.phone.primary,
+    email: CONTACT_INFO.email.info,
+    openingHours: ['Mo-Su 00:00-23:59'],
+    priceRange: '₹₹',
+    images: ['https://cerebrumbiologyacademy.com/images/center-faridabad.jpg'],
+    description:
+      'Quality NEET Biology coaching in Faridabad. No need to travel to Delhi - expert faculty right in your city.',
+    areaServed: [
+      'Faridabad',
+      'Palwal',
+      'Ballabgarh',
+      'NIT Faridabad',
+      'Old Faridabad',
+      'Greater Faridabad',
+      'Sector 15-21',
+      'BPTP Parklands',
+    ],
+    googleBusinessUrl: CONTACT_INFO.centers.faridabad.googleBusinessUrl,
   },
 ]
 
-// Generate LocalBusiness schema for a single location
 export function generateLocationSchema(location: LocationData) {
   return {
     '@context': 'https://schema.org',
@@ -137,18 +240,14 @@ export function generateLocationSchema(location: LocationData) {
       latitude: location.geo.latitude,
       longitude: location.geo.longitude,
     },
-    openingHoursSpecification: location.openingHours.map((hours) => {
-      const [days, time] = hours.split(' ')
-      const [open, close] = time.split('-')
-      return {
+    openingHoursSpecification: [
+      {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: days.includes('Mo')
-          ? ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-          : ['Sunday'],
-        opens: open,
-        closes: close,
-      }
-    }),
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
+      },
+    ],
     areaServed: location.areaServed.map((area) => ({
       '@type': 'City',
       name: area,
@@ -157,6 +256,8 @@ export function generateLocationSchema(location: LocationData) {
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.linkedin.com/company/cerebrum-biology-academy',
+      location.googleBusinessUrl,
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -198,7 +299,6 @@ export function generateLocationSchema(location: LocationData) {
   }
 }
 
-// Component that renders schema for all locations
 export function GoogleMyBusinessSchema() {
   const allLocationsSchema = CEREBRUM_LOCATIONS.map(generateLocationSchema)
 
@@ -215,7 +315,6 @@ export function GoogleMyBusinessSchema() {
   )
 }
 
-// Component for a single location page
 interface SingleLocationSchemaProps {
   locationSlug: string
 }
@@ -235,19 +334,16 @@ export function SingleLocationSchema({ locationSlug }: SingleLocationSchemaProps
   )
 }
 
-// Location Cards Display Component
 export function LocationCardsSection() {
   return (
     <section className="py-12 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">
-          Our Centers
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Our Centers</h2>
         <p className="text-gray-600 mb-8 text-center">
-          Visit us at any of our convenient locations across Delhi NCR
+          Visit us at any of our 5 convenient locations across Delhi NCR
         </p>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {CEREBRUM_LOCATIONS.map((location) => (
             <div
               key={location.slug}
@@ -258,7 +354,7 @@ export function LocationCardsSection() {
 
               <div className="space-y-2 text-sm">
                 <div className="flex items-start gap-2">
-                  <span className="text-blue-600">📍</span>
+                  <span className="text-blue-600 flex-shrink-0">📍</span>
                   <span className="text-gray-600">
                     {location.address.streetAddress}, {location.address.addressLocality},{' '}
                     {location.address.postalCode}
@@ -272,7 +368,7 @@ export function LocationCardsSection() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-blue-600">🕐</span>
-                  <span className="text-gray-600">Mon-Sat: 7AM-9PM, Sun: 9AM-6PM</span>
+                  <span className="text-gray-600">Open 24/7</span>
                 </div>
               </div>
 
@@ -280,13 +376,15 @@ export function LocationCardsSection() {
                 <p className="text-xs text-gray-500 mb-2">Areas Served:</p>
                 <div className="flex flex-wrap gap-1">
                   {location.areaServed.slice(0, 4).map((area) => (
-                    <span
-                      key={area}
-                      className="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded"
-                    >
+                    <span key={area} className="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">
                       {area}
                     </span>
                   ))}
+                  {location.areaServed.length > 4 && (
+                    <span className="text-xs text-gray-400">
+                      +{location.areaServed.length - 4} more
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
