@@ -1592,7 +1592,8 @@ const nextConfig = {
       },
       {
         key: 'Content-Security-Policy',
-        value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.instantdb.com;",
+        value:
+          "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.sentry.io https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.instantdb.com https://*.razorpay.com https://*.sentry.io;",
       },
     ]
 
@@ -1643,9 +1644,10 @@ const nextConfig = {
         source: '/api/:path*',
         headers: [
           { key: 'Cache-Control', value: 'no-store, must-revalidate' },
-          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Origin', value: 'https://www.cerebrumbiologyacademy.com' },
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
           ...securityHeaders,
         ],
       },
@@ -1664,7 +1666,8 @@ const nextConfig = {
           // PERFORMANCE: Early hints for faster resource loading
           {
             key: 'Link',
-            value: '</fonts/geist-latin-400-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin',
+            value:
+              '</fonts/geist-latin-400-normal.woff2>; rel=preload; as=font; type=font/woff2; crossorigin',
           },
           ...securityHeaders,
         ],

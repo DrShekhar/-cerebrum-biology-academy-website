@@ -443,9 +443,9 @@ export function addCSPHeaders(response: NextResponse): NextResponse {
 
   const cspDirectives = [
     "default-src 'self'",
-    // Scripts: Self + analytics + payment + auth + monitoring
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://vercel.live https://*.vercel.app https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.sentry.io https://browser.sentry-cdn.com https://*.firebaseapp.com",
-    // Styles: Self + fonts + inline for dynamic styling
+    // Scripts: Self + analytics + payment + auth + monitoring (no unsafe-inline/unsafe-eval)
+    `script-src 'self' https://vercel.live https://*.vercel.app https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.sentry.io https://browser.sentry-cdn.com https://*.firebaseapp.com${isDevelopment ? " 'unsafe-inline' 'unsafe-eval'" : ''}`,
+    // Styles: Self + fonts (unsafe-inline needed for Next.js style injection and Tailwind)
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     // Fonts: Google Fonts
     "font-src 'self' https://fonts.gstatic.com data:",

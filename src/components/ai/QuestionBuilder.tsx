@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useCallback } from 'react'
+import DOMPurify from 'dompurify'
 import Image from 'next/image'
 import {
   Bold,
@@ -753,7 +754,9 @@ export function QuestionBuilder({
                                 question: { ...prev.question, content: e.currentTarget.innerHTML },
                               }))
                             }
-                            dangerouslySetInnerHTML={{ __html: question.question.content }}
+                            dangerouslySetInnerHTML={{
+                              __html: DOMPurify.sanitize(question.question.content),
+                            }}
                           />
 
                           {/* Attached Media Display */}
@@ -894,7 +897,9 @@ export function QuestionBuilder({
                                 },
                               }))
                             }
-                            dangerouslySetInnerHTML={{ __html: question.explanation.content }}
+                            dangerouslySetInnerHTML={{
+                              __html: DOMPurify.sanitize(question.explanation.content),
+                            }}
                           />
                         </div>
                       )}
@@ -957,7 +962,9 @@ export function QuestionBuilder({
                     <h3 className="text-lg font-semibold mb-4">Question Preview</h3>
                     <div
                       className="prose max-w-none"
-                      dangerouslySetInnerHTML={{ __html: question.question.content }}
+                      dangerouslySetInnerHTML={{
+                        __html: DOMPurify.sanitize(question.question.content),
+                      }}
                     />
 
                     {question.question.images.map((img, index) => (
@@ -993,7 +1000,9 @@ export function QuestionBuilder({
                       <h3 className="text-lg font-semibold mb-4 text-blue-800">Explanation</h3>
                       <div
                         className="prose max-w-none text-blue-700"
-                        dangerouslySetInnerHTML={{ __html: question.explanation.content }}
+                        dangerouslySetInnerHTML={{
+                          __html: DOMPurify.sanitize(question.explanation.content),
+                        }}
                       />
                     </div>
                   )}
