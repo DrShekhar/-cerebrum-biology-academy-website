@@ -161,3 +161,21 @@ export { ServiceSchema, AllServicesSchema, DEFAULT_SERVICES_BY_CENTER } from './
 
 // Blog recap widget for internal cross-promotion
 export { BlogRecapWidget } from './BlogRecapWidget'
+
+// Internal linking widget for contextual link distribution across pages
+export { InternalLinkingWidget } from './InternalLinkingWidget'
+
+// SEO footer links component for site-wide crawlability boost
+export { SEOFooterLinks } from './SEOFooterLinks'
+
+// Press release schema for news articles and thought-leadership content
+export { PressReleaseSchema } from './PressReleaseSchema'
+
+// Sitelinks search box schema for enhanced Google search results
+export { SiteLinksSearchBoxSchema } from './SiteLinksSearchBoxSchema'
+
+// Educational credential schema for NEET and course qualifications
+export { CredentialSchema } from './CredentialSchema'
+
+// Video object schema for rich video snippets
+export { VideoObjectSchema, VideoObjectWithClipsSchema } from './VideoObjectSchema'
