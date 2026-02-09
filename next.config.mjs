@@ -827,22 +827,18 @@ const nextConfig = {
         destination: '/biology-classes-gurgaon',
         permanent: true,
       },
-      // DUPLICATE REMOVED: { source: '/biology-classes-greater-noida-west', destination: '/biology-classes-greater-noida', permanent: true },
 
       // Malformed biology-classes URLs (double prefix)
-      // DUPLICATE REMOVED: { source: '/biology-classes-biology-home-tuition-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
       {
         source: '/biology-classes-biology-classes-:school-gurgaon',
         destination: '/biology-classes-gurgaon',
         permanent: true,
       },
-      // DUPLICATE REMOVED: { source: '/biology-classes-biology-tutor-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
       {
         source: '/biology-classes-biology-class-:level-gurgaon',
         destination: '/biology-classes-gurgaon',
         permanent: true,
       },
-      // DUPLICATE REMOVED: { source: '/biology-classes-biology-tuition-ryan-international', destination: '/biology-classes-south-delhi', permanent: true },
       {
         source: '/biology-classes-neet-coaching-:location',
         destination: '/neet-coaching-gurgaon',
@@ -1102,7 +1098,6 @@ const nextConfig = {
         destination: '/neet-coaching-north-delhi',
         permanent: true,
       },
-      // DUPLICATE REMOVED: { source: '/biology-classes-rohini-west', destination: '/neet-coaching-north-delhi', permanent: true },
 
       // School-specific biology classes pages
       {
@@ -1515,7 +1510,6 @@ const nextConfig = {
       // /terms-of-service
 
       // Biology tuition location
-      // DUPLICATE REMOVED: { source: '/biology-tuition-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
 
       // Biology classes with sub-areas (specific ones from GSC)
       {

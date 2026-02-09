@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'About Cerebrum Biology Academy | AIIMS-Led NEET Excellence Since 2015',
     description:
       "Founded by AIIMS alumnus Dr. Shekhar C Singh. 2,847+ medical college selections, 98% success rate, 247+ Top 1000 AIR ranks. Meet the team behind India's most trusted NEET Biology coaching.",
-    images: ['/og-images/about-us.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/about',
     type: 'website',
     siteName: 'Cerebrum Biology Academy',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'About Cerebrum Biology Academy | AIIMS-Led Excellence',
     description:
       'Founded 2015. AIIMS alumnus-led. 2,847+ selections. 98% success rate. 247+ Top 1000 ranks.',
-    images: ['/og-images/about-us.jpg'],
+    images: ['/og-image.jpg'],
     creator: '@CerebrumAcademy',
     site: '@CerebrumAcademy',
   },

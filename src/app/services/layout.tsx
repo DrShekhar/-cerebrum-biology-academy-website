@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Complete NEET Biology Services | All-in-One Learning Platform',
     description:
       'From live classes to mock tests, we provide everything you need for NEET success. 98% success rate with comprehensive support system.',
-    images: ['/og-images/services.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/services',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Biology Services | Cerebrum Academy',
     description: 'Live classes, doubt resolution, mock tests, study material - everything you need',
-    images: ['/og-images/services.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/services',

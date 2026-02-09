@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Why Cerebrum Biology Academy | Compare & Choose the Best',
     description:
       'Detailed comparison: success rates, faculty, batch sizes, fees, support. See why 2,847+ students chose us over Allen, Resonance, Aakash.',
-    images: ['/og-images/comparison.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/compare',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Compare NEET Coaching Institutes | Cerebrum Academy',
     description: 'See detailed comparison: success rate, faculty, fees, batch size, support',
-    images: ['/og-images/comparison.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/compare',

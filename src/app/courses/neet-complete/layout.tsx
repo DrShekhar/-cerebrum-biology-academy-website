@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Best 2-Year NEET Biology Complete Program | 98% Success Rate',
     description:
       'Comprehensive NEET Biology coaching for Class 11 & 12. AIIMS expert faculty, proven curriculum, 2,847+ medical college selections. Start your journey today!',
-    images: ['/og-images/neet-complete-program.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
     type: 'website',
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: 'NEET Complete 2-Year Program | Cerebrum Biology Academy',
     description:
       '98% success rate, AIIMS faculty, complete NEET Biology preparation for Class 11-12',
-    images: ['/og-images/neet-complete-program.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/neet-complete',

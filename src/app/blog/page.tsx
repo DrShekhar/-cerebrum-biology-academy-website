@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'NEET Biology Blog | Expert Study Tips & Strategies',
     description:
       'Master NEET Biology with expert tips, preparation strategies, and study guides by AIIMS faculty.',
-    images: ['/blog/neet-biology-blog-og.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/blog',
@@ -69,7 +69,11 @@ export default function BlogPage() {
   }
 
   const tagCounts: Record<string, number> = {}
-  posts.forEach((post) => post.tags.forEach((tag) => { tagCounts[tag] = (tagCounts[tag] || 0) + 1 }))
+  posts.forEach((post) =>
+    post.tags.forEach((tag) => {
+      tagCounts[tag] = (tagCounts[tag] || 0) + 1
+    })
+  )
   const popularTags = Object.entries(tagCounts)
     .map(([tag, count]) => ({ tag, count }))
     .sort((a, b) => b.count - a.count)

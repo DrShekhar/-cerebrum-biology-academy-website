@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Free NEET Biology Demo Class | Experience Excellence',
     description:
       'Try our NEET Biology coaching for free! 60-minute demo with AIIMS faculty. See why 2,847+ students chose us. Book now!',
-    images: ['/og-images/demo-class.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/demo',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free NEET Biology Demo Class | Cerebrum Academy',
     description: 'Experience AIIMS faculty teaching, get curriculum overview, no obligation',
-    images: ['/og-images/demo-class.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/demo',

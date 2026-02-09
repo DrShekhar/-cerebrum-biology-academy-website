@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Meet Our AIIMS Expert Faculty | 15+ Years Experience',
     description:
       'Learn from the best! Our faculty includes AIIMS graduates, PhD holders, and experienced NEET mentors. Meet the teachers behind 98% success rate.',
-    images: ['/og-images/faculty.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/faculty',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Expert NEET Biology Faculty | Cerebrum Academy',
     description: 'AIIMS graduates, PhD holders, 15+ years experience, 2,847+ selections produced',
-    images: ['/og-images/faculty.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/faculty',

@@ -14,7 +14,7 @@ export const seoConfig = {
     'Best NEET Biology Coaching in Delhi NCR | Laxmi Nagar, Dwarka, Noida | Cerebrum Academy',
   defaultDescription:
     'Top NEET biology coaching in Delhi NCR - Laxmi Nagar, Dwarka, Noida, Gurgaon. Expert AIIMS faculty, 98% success rate, small batches. Best medical entrance preparation. Book free demo!',
-  defaultOgImage: '/images/og-default.jpg',
+  defaultOgImage: '/og-image.jpg',
   twitterHandle: '@CerebrumBio',
   locale: 'en_IN',
   type: 'website',

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Enroll Now | Cerebrum Biology Academy NEET Coaching',
     description:
       'Start your journey to medical college. Simple enrollment, flexible payments, instant access to classes. Limited seats for 2025 batch!',
-    images: ['/og-images/enrollment.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/enrollment',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Enroll in NEET Biology Coaching | Cerebrum Academy',
     description: 'Simple admission process, flexible EMI options, start immediately',
-    images: ['/og-images/enrollment.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/enrollment',

@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props) {
     openGraph: {
       title: `${story.studentName}'s NEET Success Story`,
       description: story.quote,
-      images: [story.thumbnailUrl || `/og-images/${story.id}.jpg`],
+      images: [story.thumbnailUrl || `/og-image.jpg
     },
   }
 }

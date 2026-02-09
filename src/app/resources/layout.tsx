@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Free NEET Biology Resources | Notes, Tests & Study Material',
     description:
       'Download free NEET Biology notes, previous year papers, mock tests, and study material. Comprehensive resources for Class 11, 12 & droppers.',
-    images: ['/og-images/resources.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/resources',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Free NEET Biology Resources | Cerebrum Academy',
     description: 'Free notes, previous papers, mock tests, study material - download now',
-    images: ['/og-images/resources.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/resources',

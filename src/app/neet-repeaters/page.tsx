@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'NEET Repeaters 2025 | Transform Failure into Success',
     description:
       '89% of our NEET repeaters qualify! Emotional support + focused Biology coaching + rank improvement strategies. Your second chance at medical college starts here.',
-    images: ['/og-images/neet-repeaters.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/neet-repeaters',
     type: 'website',
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Repeaters Success Program | Cerebrum Academy',
     description: '89% repeater success rate, emotional support, rank improvement guarantee',
-    images: ['/og-images/neet-repeaters.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-repeaters',

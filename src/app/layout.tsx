@@ -17,7 +17,10 @@ import { PersonalizationProvider } from '@/components/providers/PersonalizationP
 import { MotionProvider } from '@/components/providers/MotionProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
-import { ConditionalHeaderFooter, ConditionalHeaderFooterProvider } from '@/components/layout/ConditionalHeaderFooter'
+import {
+  ConditionalHeaderFooter,
+  ConditionalHeaderFooterProvider,
+} from '@/components/layout/ConditionalHeaderFooter'
 import { Suspense } from 'react'
 import { RouteChangeIndicator } from '@/components/navigation/RouteChangeIndicator'
 import {
@@ -95,10 +98,6 @@ export const metadata: Metadata = {
     languages: {
       en: 'https://cerebrumbiologyacademy.com',
       'en-IN': 'https://cerebrumbiologyacademy.com',
-      hi: 'https://cerebrumbiologyacademy.com/hi',
-      'hi-IN': 'https://cerebrumbiologyacademy.com/hi',
-      ta: 'https://cerebrumbiologyacademy.com/ta',
-      'ta-IN': 'https://cerebrumbiologyacademy.com/ta',
       'x-default': 'https://cerebrumbiologyacademy.com',
     },
   },
@@ -121,10 +120,7 @@ export default function RootLayout({
           name="google-site-verification"
           content="L6c1LAGqVg_qEAtFGDcbzqeMzqFdEwT7kKFDgfn2-Sc"
         />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, viewport-fit=cover"
-        />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -193,9 +189,7 @@ export default function RootLayout({
             - CSS MIME error suppression moved to error boundary
             - Task scheduler now handled by browser native APIs */}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* PERFORMANCE: Analytics moved after main content for better LCP */}
         {/* These scripts use lazyOnload strategy but still benefit from being after content */}
         <DynamicPWAProvider />
@@ -218,50 +212,54 @@ export default function RootLayout({
                         </Suspense>
                         {/* Single provider for all ConditionalHeaderFooter instances - prevents multiple pathname subscriptions */}
                         <ConditionalHeaderFooterProvider>
-                        <ConditionalHeaderFooter>
-                          <SkipToContent />
-                        </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <div
-                            data-section="navigation"
-                            className="priority-immediate"
-                            role="banner"
+                          <ConditionalHeaderFooter>
+                            <SkipToContent />
+                          </ConditionalHeaderFooter>
+                          <ConditionalHeaderFooter>
+                            <div
+                              data-section="navigation"
+                              className="priority-immediate"
+                              role="banner"
+                            >
+                              <HeaderHybrid />
+                            </div>
+                          </ConditionalHeaderFooter>
+                          <ConditionalHeaderFooter>
+                            <DynamicTrialBanner />
+                          </ConditionalHeaderFooter>
+                          <main
+                            id="main-content"
+                            role="main"
+                            className="min-h-screen pb-[var(--mobile-nav-safe-height)] md:pb-0"
                           >
-                            <HeaderHybrid />
-                          </div>
-                        </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <DynamicTrialBanner />
-                        </ConditionalHeaderFooter>
-                        <main id="main-content" role="main" className="min-h-screen pb-[var(--mobile-nav-safe-height)] md:pb-0">
-                          {children}
-                        </main>
-                        <ConditionalHeaderFooter>
-                          <div data-lazy="footer" className="priority-lazy" role="contentinfo">
-                            <DynamicFooter />
-                          </div>
-                        </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <div data-section="mobile-navigation" className="priority-deferred">
-                            <DynamicMobileNavigation />
-                          </div>
-                        </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <FloatingCTA />
-                        </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <GlobalExitIntent />
-                        </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <ChatbotWrapper />
-                        </ConditionalHeaderFooter>
-                        {/* ARIA Sales Agent - positioned on right side */}
-                        <ConditionalHeaderFooter>
-                          <SalesAgentWidget />
-                        </ConditionalHeaderFooter>
-                        <ConditionalHeaderFooter>
-                          <DynamicMaintenancePopup />
-                        </ConditionalHeaderFooter>
+                            {children}
+                          </main>
+                          <ConditionalHeaderFooter>
+                            <div data-lazy="footer" className="priority-lazy" role="contentinfo">
+                              <DynamicFooter />
+                            </div>
+                          </ConditionalHeaderFooter>
+                          <ConditionalHeaderFooter>
+                            <div data-section="mobile-navigation" className="priority-deferred">
+                              <DynamicMobileNavigation />
+                            </div>
+                          </ConditionalHeaderFooter>
+                          <ConditionalHeaderFooter>
+                            <FloatingCTA />
+                          </ConditionalHeaderFooter>
+                          <ConditionalHeaderFooter>
+                            <GlobalExitIntent />
+                          </ConditionalHeaderFooter>
+                          <ConditionalHeaderFooter>
+                            <ChatbotWrapper />
+                          </ConditionalHeaderFooter>
+                          {/* ARIA Sales Agent - positioned on right side */}
+                          <ConditionalHeaderFooter>
+                            <SalesAgentWidget />
+                          </ConditionalHeaderFooter>
+                          <ConditionalHeaderFooter>
+                            <DynamicMaintenancePopup />
+                          </ConditionalHeaderFooter>
                         </ConditionalHeaderFooterProvider>
                         {/* PERFORMANCE: Analytics after main content for better LCP */}
                         <GoogleAnalytics />

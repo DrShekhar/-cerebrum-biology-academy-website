@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'Contact Cerebrum Biology Academy | Get Free Counseling',
     description:
       'Reach us for NEET Biology coaching admission. Phone, WhatsApp, visit our Delhi center. Free career counseling available. We respond in 1 hour!',
-    images: ['/og-images/contact.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/contact',
     type: 'website',
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us | Cerebrum Biology Academy Delhi',
     description: 'Call +91-88264-44334, WhatsApp, visit center, get free counseling',
-    images: ['/og-images/contact.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/contact',

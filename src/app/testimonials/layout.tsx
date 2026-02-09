@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: 'NEET Success Stories | 2,847+ Medical College Selections',
     description:
       'Real students, real results. See how our NEET Biology coaching transformed lives. 98% success rate, 247+ in Top 1000 AIR.',
-    images: ['/og-images/testimonials.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/testimonials',
     type: 'website',
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: 'NEET Success Testimonials | Cerebrum Biology Academy',
     description:
       '2,847+ medical college selections, 98% success rate, student transformation stories',
-    images: ['/og-images/testimonials.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/testimonials',

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Class 11 Biology NEET Foundation | Build Strong Fundamentals',
     description:
       "Start your NEET journey with India's best Class 11 Biology coaching. AIIMS faculty, complete NCERT coverage, board + competitive exam preparation.",
-    images: ['/og-images/class-11-biology.jpg'],
+    images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/courses/class-11',
     type: 'website',
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Class 11 Biology NEET Foundation | Cerebrum Academy',
     description: 'AIIMS faculty, NCERT mastery, board + NEET preparation, 94% success rate',
-    images: ['/og-images/class-11-biology.jpg'],
+    images: ['/og-image.jpg'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/class-11',
