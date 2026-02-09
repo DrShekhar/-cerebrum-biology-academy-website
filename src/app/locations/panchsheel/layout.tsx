@@ -68,10 +68,62 @@ function PanchsheelSchema() {
   )
 }
 
+function PanchsheelLocalBusinessSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    'name': 'Cerebrum Biology Academy - Panchsheel',
+    'image': 'https://cerebrumbiologyacademy.com/images/cerebrum-logo.png',
+    'url': 'https://cerebrumbiologyacademy.com/locations/panchsheel',
+    'telephone': '+91-9870-424-442',
+    'email': 'cerebrumacademy@gmail.com',
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': 'Near South Extension',
+      'addressLocality': 'Panchsheel',
+      'addressRegion': 'Delhi',
+      'postalCode': '110049',
+      'addressCountry': 'IN',
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 28.5433,
+      'longitude': 77.2163,
+    },
+    'openingHoursSpecification': [
+      {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        'opens': '08:00',
+        'closes': '20:00',
+      },
+    ],
+    'priceRange': '₹45,000 - ₹1,80,000',
+    'aggregateRating': {
+      '@type': 'AggregateRating',
+      'ratingValue': '4.9',
+      'reviewCount': '485',
+      'bestRating': '5',
+    },
+    'sameAs': [
+      'https://www.youtube.com/@CerebrumBiologyAcademy',
+      'https://www.instagram.com/cerebrumbiologyacademy/',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function PanchsheelLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <PanchsheelSchema />
+      <PanchsheelLocalBusinessSchema />
       {children}
     </>
   )
