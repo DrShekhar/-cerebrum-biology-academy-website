@@ -248,7 +248,7 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'neet-preparation',
         title: 'NEET Preparation Tips',
-        href: '/blog/category/neet-preparation',
+        href: '/blog',
         description: 'Expert strategies for NEET success',
         keywords: ['preparation tips', 'study tips', 'neet strategy'],
         isPopular: true,
@@ -256,7 +256,7 @@ export const navigationConfig: NavigationSection[] = [
       {
         id: 'biology-concepts',
         title: 'Biology Concepts',
-        href: '/blog/category/biology-concepts',
+        href: '/blog',
         description: 'Deep dive into important biology topics',
         keywords: ['biology concepts', 'ncert biology', 'topic explanation'],
       },

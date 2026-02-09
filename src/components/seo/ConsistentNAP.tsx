@@ -16,10 +16,10 @@ const BUSINESS_INFO = {
   phone: CONTACT_INFO.phone.formatted.primary,
   email: 'info@cerebrumbiologyacademy.com',
   address: {
-    streetAddress: '211 Vikas Surya Tower, DC Chauk',
-    addressLocality: 'Rohini Sector 9',
+    streetAddress: 'Block D, South Extension Part 2',
+    addressLocality: 'New Delhi',
     addressRegion: 'Delhi',
-    postalCode: '110085',
+    postalCode: '110049',
     addressCountry: 'IN',
   },
   centers: [
@@ -86,8 +86,8 @@ export function ConsistentNAP({ variant = 'full', className = '' }: ConsistentNA
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: '28.6436',
-      longitude: '77.1266',
+      latitude: '28.5678',
+      longitude: '77.2234',
     },
     openingHoursSpecification: BUSINESS_INFO.openingHours.map((hours) => ({
       '@type': 'OpeningHoursSpecification',

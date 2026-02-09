@@ -26,10 +26,22 @@ export function PersonSchema({
     },
     knowsAbout: person.specialization,
     alumniOf: extractAlumniOf(person.qualification),
-    hasCredential: {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'degree',
-      name: person.qualification,
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'degree',
+        name: person.qualification,
+      },
+    ],
+    sameAs: [
+      'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.linkedin.com/company/cerebrum-biology-academy',
+      'https://www.instagram.com/cerebrumbiologyacademy',
+    ],
+    memberOf: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
     },
     award: person.achievements,
   }

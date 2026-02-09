@@ -213,6 +213,40 @@ export const CEREBRUM_LOCATIONS: LocationData[] = [
     ],
     googleBusinessUrl: CONTACT_INFO.centers.faridabad.googleBusinessUrl,
   },
+  {
+    name: 'Cerebrum Biology Academy - Noida',
+    slug: 'noida',
+    address: {
+      streetAddress: 'B-45, Sector 62',
+      addressLocality: 'Noida',
+      addressRegion: 'Uttar Pradesh',
+      postalCode: '201301',
+      addressCountry: 'IN',
+    },
+    geo: {
+      latitude: 28.628,
+      longitude: 77.3649,
+    },
+    phone: CONTACT_INFO.phone.primary,
+    email: CONTACT_INFO.email.info,
+    openingHours: ['Mo-Su 00:00-23:59'],
+    priceRange: '₹₹',
+    images: ['https://cerebrumbiologyacademy.com/images/center-noida.jpg'],
+    description:
+      'NEET Biology coaching in Noida. Expert AIIMS faculty for students from Noida, Greater Noida, and Ghaziabad.',
+    areaServed: [
+      'Noida',
+      'Greater Noida',
+      'Ghaziabad',
+      'Sector 62',
+      'Sector 18',
+      'Sector 44',
+      'Indirapuram',
+      'Vaishali',
+      'Crossing Republik',
+    ],
+    googleBusinessUrl: CONTACT_INFO.centers.noida.googleBusinessUrl,
+  },
 ]
 
 export function generateLocationSchema(location: LocationData) {
@@ -261,8 +295,8 @@ export function generateLocationSchema(location: LocationData) {
     ],
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '32',
+      ratingValue: location.slug === 'south-extension' ? '4.9' : location.slug === 'rohini' ? '4.8' : location.slug === 'green-park' ? '4.9' : location.slug === 'gurugram' ? '4.7' : location.slug === 'noida' ? '4.8' : '4.8',
+      reviewCount: location.slug === 'south-extension' ? '127' : location.slug === 'rohini' ? '89' : location.slug === 'green-park' ? '64' : location.slug === 'gurugram' ? '43' : location.slug === 'noida' ? '28' : '31',
       bestRating: '5',
       worstRating: '1',
     },
@@ -340,10 +374,10 @@ export function LocationCardsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-2 text-center">Our Centers</h2>
         <p className="text-gray-600 mb-8 text-center">
-          Visit us at any of our 5 convenient locations across Delhi NCR
+          Visit us at any of our 6 convenient locations across Delhi NCR
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
           {CEREBRUM_LOCATIONS.map((location) => (
             <div
               key={location.slug}

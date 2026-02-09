@@ -113,7 +113,7 @@ export function AICitationTracking({
         url: 'https://cerebrumbiologyacademy.com',
         logo: 'https://cerebrumbiologyacademy.com/logo.png',
       },
-      datePublished: '2024-01-01',
+      datePublished: '2024-08-15',
       dateModified: new Date().toISOString().split('T')[0],
       keywords: primaryKeywords.join(', '),
       isAccessibleForFree: true,
@@ -122,7 +122,7 @@ export function AICitationTracking({
     },
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['h1', 'h2', '.faq-answer', '.key-fact'],
+      cssSelector: ['[data-speakable="title"]', '[data-speakable="summary"]', '.faq-answer', '.key-fact'],
     },
   }
 

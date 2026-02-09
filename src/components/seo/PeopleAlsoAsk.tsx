@@ -199,6 +199,74 @@ export const NEET_BIOLOGY_PAA_QUESTIONS: PAQuestion[] = [
     question: 'Is coaching necessary for NEET Biology?',
     answer: 'While self-study is possible, coaching significantly improves NEET Biology scores through structured learning, expert guidance, regular testing, and peer motivation. Statistics show 85% of NEET toppers attend coaching. Cerebrum offers specialized Biology coaching with AIIMS faculty and 98% success rate.',
   },
+  {
+    question: 'What is the fee for NEET Biology coaching in Delhi?',
+    answer: 'NEET Biology coaching fees at Cerebrum Biology Academy range from Rs 40,000 to Rs 1,20,000 depending on the course duration and batch type. We offer EMI options and scholarships for meritorious students.',
+  },
+  {
+    question: 'Which topics carry the most weightage in NEET Biology?',
+    answer: 'The highest weightage topics in NEET Biology are: Human Physiology (20%), Genetics and Evolution (18%), Plant Physiology (14%), Cell Biology (12%), Ecology (12%), and Biotechnology (10%). Focus on these for maximum marks.',
+  },
+  {
+    question: 'What are the best Biology notes for NEET preparation?',
+    answer: 'The best Biology notes for NEET combine NCERT textbook content with coaching class notes. At Cerebrum, we provide chapter-wise notes with diagrams, mnemonics, and previous year question analysis integrated into each topic.',
+  },
+  {
+    question: 'Is Cerebrum Biology Academy good for NEET preparation?',
+    answer: 'Yes, Cerebrum Biology Academy is rated 4.9/5 by students. With AIIMS-trained faculty, 98% success rate, and 500+ medical college selections, it is one of the top-rated NEET Biology coaching institutes in Delhi NCR.',
+  },
+  {
+    question: 'How many students get selected from Cerebrum Biology Academy?',
+    answer: 'Over 500 students from Cerebrum Biology Academy have been selected into top medical colleges including AIIMS, JIPMER, and government medical colleges. Our 2024 batch achieved a 98% success rate with an average Biology score of 340+/360.',
+  },
+  {
+    question: 'Does Cerebrum offer online NEET Biology classes?',
+    answer: 'Yes, Cerebrum offers both online and offline NEET Biology classes. Online classes include live interactive sessions, recorded lectures, digital study material, and online test series. Students from across India can join.',
+  },
+  {
+    question: 'What is the best time to start NEET Biology preparation?',
+    answer: 'The ideal time to start NEET Biology preparation is in Class 11. Starting early gives you 2 full years to cover the syllabus thoroughly. However, focused 1-year programs for Class 12 and dropper batches are also highly effective.',
+  },
+  {
+    question: 'Who is the best Biology teacher for NEET in Delhi?',
+    answer: 'Dr. Shekhar C Singh, founder of Cerebrum Biology Academy, is widely recognized as one of the best NEET Biology teachers in Delhi. An AIIMS alumnus with 15+ years of experience, he has mentored 500+ students into top medical colleges.',
+  },
+  {
+    question: 'What is the difference between Botany and Zoology in NEET?',
+    answer: 'In NEET, Botany covers plant biology (morphology, anatomy, physiology, genetics, ecology) while Zoology covers animal biology (structural organization, human physiology, reproduction, evolution). Both carry 45 questions each totaling 180 marks.',
+  },
+  {
+    question: 'How to score 340+ in NEET Biology?',
+    answer: 'To score 340+ in NEET Biology: (1) Master NCERT line by line, (2) Practice 5000+ MCQs chapter-wise, (3) Focus on diagrams and labeling, (4) Revise regularly using spaced repetition, (5) Take weekly mock tests and analyze mistakes thoroughly.',
+  },
+  {
+    question: 'Does Cerebrum Biology Academy have centers in Noida?',
+    answer: 'Yes, Cerebrum Biology Academy has a center in Noida at B-45, Sector 62. It serves students from Noida, Greater Noida, Ghaziabad, and surrounding areas. The center offers all NEET Biology course options.',
+  },
+  {
+    question: 'What study material does Cerebrum provide for NEET Biology?',
+    answer: 'Cerebrum provides comprehensive NEET Biology study material including chapter-wise printed notes, 10,000+ practice MCQs with solutions, previous year papers (2015-2025), topic-wise test series, and digital access to recorded lectures.',
+  },
+  {
+    question: 'Is NEET Biology coaching available on weekends?',
+    answer: 'Yes, Cerebrum Biology Academy offers weekend batches for school-going students. Weekend batches run on Saturday and Sunday with 3-hour sessions covering the full NEET Biology syllabus over 12-15 months.',
+  },
+  {
+    question: 'How to prepare Human Physiology for NEET?',
+    answer: 'Human Physiology is the highest-weightage NEET Biology topic (20%). Focus on: (1) Digestive, respiratory, circulatory systems diagrams, (2) Neural control and hormonal regulation, (3) Excretory system processes, (4) Practice NCERT back questions and previous year MCQs.',
+  },
+  {
+    question: 'What is the success rate of Cerebrum Biology Academy?',
+    answer: 'Cerebrum Biology Academy has a 98% success rate in NEET Biology. In 2024, over 95% of our students scored 300+ in Biology, with the average Biology score being 340/360. Over 500 students have been selected into AIIMS, JIPMER, and top GMCs.',
+  },
+  {
+    question: 'Can dropper students join Cerebrum for NEET Biology?',
+    answer: 'Yes, Cerebrum offers dedicated dropper batches for NEET Biology. The 1-year intensive program includes daily classes, weekly tests, doubt sessions, and personalized mentoring. Many dropper students have improved their scores by 100-150 marks.',
+  },
+  {
+    question: 'What makes Cerebrum different from other NEET coaching?',
+    answer: 'Cerebrum stands out for: (1) AIIMS-trained faculty, (2) Biology-only specialization (not general coaching), (3) Small batch sizes (max 25), (4) 98% success rate, (5) 6 centers across Delhi NCR, (6) Comprehensive study material with 10,000+ MCQs.',
+  },
 ]
 
 /**

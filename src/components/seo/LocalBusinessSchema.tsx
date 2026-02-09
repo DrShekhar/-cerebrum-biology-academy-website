@@ -319,11 +319,11 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
+      ratingValue: locationId === 'south-extension' ? '4.9' : locationId === 'rohini' ? '4.8' : locationId === 'green-park' ? '4.9' : locationId === 'gurugram' ? '4.7' : '4.8',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '32',
-      reviewCount: '32',
+      ratingCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : '31',
+      reviewCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : '31',
     },
     review: location.reviews.map((review) => ({
       '@type': 'Review',

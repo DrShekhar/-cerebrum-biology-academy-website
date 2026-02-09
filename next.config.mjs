@@ -555,7 +555,7 @@ const nextConfig = {
       // Protected route - redirect to login
       {
         source: '/counselor/communications',
-        destination: '/auth/signin',
+        destination: '/sign-in',
         permanent: true,
       },
       // Old blog posts - redirect to relevant content
@@ -598,52 +598,52 @@ const nextConfig = {
       // Blog NEET topic complete guides - redirect to relevant existing posts
       {
         source: '/blog/molecular-biology-neet-complete-guide',
-        destination: '/blog/biomolecules-neet-biology-complete-guide',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/ecology-neet-complete-guide',
-        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/genetics-neet-complete-guide',
-        destination: '/blog/genetics-heredity-variation-neet',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/plant-physiology-neet-complete-guide',
-        destination: '/blog/photosynthesis-neet-biology-notes',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/biotechnology-neet-complete-guide',
-        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/cell-biology-neet-complete-guide',
-        destination: '/blog/cell-structure-function-neet-notes',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/human-physiology-neet-complete-guide',
-        destination: '/blog/human-physiology-neet-complete-notes',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/evolution-neet-complete-guide',
-        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/animal-kingdom-neet-complete-guide',
-        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
+        destination: '/blog',
         permanent: true,
       },
       {
         source: '/blog/human-reproduction-neet-complete-guide',
-        destination: '/blog/neet-biology-chapter-wise-weightage-2026',
+        destination: '/blog',
         permanent: true,
       },
       {
@@ -720,12 +720,7 @@ const nextConfig = {
       },
       {
         source: '/book-demo',
-        destination: '/demo',
-        permanent: true,
-      },
-      {
-        source: '/free-demo',
-        destination: '/demo',
+        destination: '/book-free-demo',
         permanent: true,
       },
 
@@ -1437,7 +1432,6 @@ const nextConfig = {
         destination: '/neet-biology-tutor-for-droppers',
         permanent: true,
       },
-      { source: '/fees', destination: '/pricing', permanent: true },
       { source: '/hr', destination: '/', permanent: true },
       { source: '/hour', destination: '/', permanent: true },
       {
@@ -1786,8 +1780,8 @@ const nextConfig = {
       { source: '/usabo-coaching/', destination: '/courses', permanent: true },
       { source: '/ibo-preparation', destination: '/courses', permanent: true },
       { source: '/ibo-preparation/', destination: '/courses', permanent: true },
-      { source: '/bbo-preparation', destination: '/bbo-coaching', permanent: true },
-      { source: '/bbo-preparation/', destination: '/bbo-coaching', permanent: true },
+      { source: '/bbo-preparation', destination: '/olympiad-coaching', permanent: true },
+      { source: '/bbo-preparation/', destination: '/olympiad-coaching', permanent: true },
       { source: '/biology-olympiad-preparation', destination: '/courses', permanent: true },
       { source: '/biology-olympiad-preparation/', destination: '/courses', permanent: true },
 
@@ -1826,9 +1820,6 @@ const nextConfig = {
       // Legal pages
       { source: '/terms-of-service', destination: '/privacy-policy', permanent: true },
 
-      // Book demo with query params (catch-all)
-      { source: '/book-demo', destination: '/demo', permanent: true },
-
       // Biology tuition location
       {
         source: '/biology-tuition-gurgaon',
@@ -1865,6 +1856,9 @@ const nextConfig = {
 
       // Services main page redirect
       { source: '/services', destination: '/courses', permanent: true },
+
+      // Book demo with query params (catch-all) - REMOVED duplicate
+      // Previously at line 1830: { source: '/book-demo', destination: '/demo', permanent: true },
 
       // ============================================
       // SEO Page Consolidation - Thin/Doorway Pages
@@ -1907,6 +1901,14 @@ const nextConfig = {
       {
         key: 'Permissions-Policy',
         value: 'camera=(), microphone=(), geolocation=()',
+      },
+      {
+        key: 'Strict-Transport-Security',
+        value: 'max-age=63072000; includeSubDomains; preload',
+      },
+      {
+        key: 'Content-Security-Policy',
+        value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.instantdb.com;",
       },
     ]
 

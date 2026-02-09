@@ -23,7 +23,7 @@ interface SpeakableSchemaProps {
 export function SpeakableSchema({
   headline,
   description,
-  cssSelectors = ['.speakable-intro', '.speakable-key-info'],
+  cssSelectors = ['[data-speakable="intro"]', '[data-speakable="key-info"]'],
   url,
   datePublished,
   dateModified,

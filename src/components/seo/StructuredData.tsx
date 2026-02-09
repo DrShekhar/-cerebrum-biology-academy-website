@@ -267,7 +267,7 @@ export function CourseSchema() {
       name: 'Cerebrum Biology Academy',
       sameAs: 'https://cerebrumbiologyacademy.com',
     },
-    datePublished: '2014-01-01',
+    datePublished: '2024-08-15',
     dateModified: new Date().toISOString().split('T')[0],
     // aggregateRating removed — OrganizationSchema already includes it globally
     hasCourseInstance: [
