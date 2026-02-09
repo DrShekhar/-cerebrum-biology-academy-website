@@ -80,7 +80,7 @@ interface YouTubeChannelProps {
 }
 
 export function YouTubeChannel({
-  channelId = 'UCxxxxxxxxxxxxx',
+  channelId = '',
   channelName = 'Cerebrum Biology Academy',
   channelUrl = 'https://www.youtube.com/@cerebrumbiologyacademy',
   subscriberCount = '50K+',

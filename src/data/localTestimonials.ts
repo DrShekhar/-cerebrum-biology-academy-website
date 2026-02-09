@@ -69,7 +69,7 @@ export const localTestimonials: LocalTestimonial[] = [
       'Made flashcards for biology diagrams during commute',
       'Formed study group with Gurgaon classmates',
     ],
-    videoTestimonial: 'https://youtube.com/watch?v=arjun-gurgaon-story',
+    videoTestimonial: '',
     localDetails: {
       transportUsed: 'DLF Cyber City Metro + Auto',
       studySpot: 'Cyber Hub CCD during breaks',

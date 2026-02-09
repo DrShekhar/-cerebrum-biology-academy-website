@@ -164,7 +164,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       course: 'Dropper Success Intensive',
       year: '2024',
       image: getPlaceholderAvatar('Arjun Patel', 120, '4F46E5', 'fff'),
-      videoUrl: 'https://youtube.com/watch?v=example1',
+      videoUrl: '',
       beforeScore: '245/360',
       improvement: '+113 points',
       story:
@@ -180,7 +180,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       course: 'Class 12 Final Sprint',
       year: '2024',
       image: getPlaceholderAvatar('Priya Sharma', 120, '059669', 'fff'),
-      videoUrl: 'https://youtube.com/watch?v=example2',
+      videoUrl: '',
       beforeScore: '280/360',
       improvement: '+62 points',
       story:
@@ -196,7 +196,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
       course: 'Class 11 NEET Mastery',
       year: '2024',
       image: getPlaceholderAvatar('Rohit Kumar', 120, '7C3AED', 'fff'),
-      videoUrl: 'https://youtube.com/watch?v=example3',
+      videoUrl: '',
       beforeScore: '190/360',
       improvement: '+165 points',
       story:

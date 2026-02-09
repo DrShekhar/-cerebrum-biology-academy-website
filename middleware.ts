@@ -57,6 +57,16 @@ const publicRoutes = [
   '/mock-tests',
   '/study-materials',
   '/school-career-seminar',
+  '/privacy-policy',
+  '/terms-of-service',
+  '/refund-policy',
+  '/international',
+  '/hi',
+  '/ta',
+  '/biology-notes',
+  '/biology-notes-for-neet',
+  '/checkout',
+  '/enrollments',
 ]
 
 // Check if path matches public routes

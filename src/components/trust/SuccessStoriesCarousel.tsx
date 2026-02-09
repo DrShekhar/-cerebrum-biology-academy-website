@@ -78,7 +78,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
     planType: 'A',
     testimonial:
       "Cerebrum's personalized mentoring and small batch size made all the difference. The faculty's individual attention helped me identify and strengthen my weak areas systematically.",
-    videoUrl: 'https://youtube.com/watch?v=example1',
+    videoUrl: '',
     achievements: {
       biologyScore: 358,
       totalScore: 695,
@@ -140,7 +140,7 @@ const SUCCESS_STORIES: SuccessStory[] = [
     planType: 'A',
     testimonial:
       "Being a dropper student, I was demotivated. Cerebrum's support system and personalized study plan helped me achieve my dream rank!",
-    videoUrl: 'https://youtube.com/watch?v=example2',
+    videoUrl: '',
     achievements: {
       biologyScore: 335,
       totalScore: 658,

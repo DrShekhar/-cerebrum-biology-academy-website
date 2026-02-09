@@ -41,7 +41,7 @@ const neetToppers: NEETTopper[] = [
     year: 2023,
     college: 'AIIMS Delhi',
     photoUrl: '/images/toppers/sadhna-sirin.jpg',
-    videoUrl: 'https://youtube.com/watch?v=example1',
+    videoUrl: '',
     quote:
       "Dr. Shekhar's teaching methodology transformed my understanding of Biology. The way he explains complex concepts with real-life examples made NEET preparation enjoyable.",
     achievement: 'NEET 2023 Topper - 695 Marks',
@@ -56,7 +56,7 @@ const neetToppers: NEETTopper[] = [
     year: 2024,
     college: 'AFMC Pune',
     photoUrl: '/images/toppers/abhisek-kumar.jpg',
-    videoUrl: 'https://youtube.com/watch?v=example2',
+    videoUrl: '',
     quote:
       "Cerebrum's disciplined approach and Dr. Shekhar's personal mentoring helped me crack AFMC. The study material and tests were perfectly aligned with exam patterns.",
     achievement: 'AFMC Selection 2024',
@@ -85,7 +85,7 @@ const neetToppers: NEETTopper[] = [
     year: 2023,
     college: 'KGMU Lucknow',
     photoUrl: '/images/toppers/rohit-patel.jpg',
-    videoUrl: 'https://youtube.com/watch?v=example4',
+    videoUrl: '',
     quote:
       "From struggling with basic concepts to scoring 641 in NEET - this transformation was possible only because of Cerebrum's structured approach.",
     achievement: 'KGMU Selection',
@@ -114,7 +114,7 @@ const neetToppers: NEETTopper[] = [
     year: 2023,
     college: 'CMC Vellore',
     photoUrl: '/images/toppers/vikash-singh.jpg',
-    videoUrl: 'https://youtube.com/watch?v=example6',
+    videoUrl: '',
     quote:
       "Cerebrum's faculty goes beyond teaching - they mentor and guide you through every challenge. Grateful for the complete transformation.",
     achievement: 'CMC Vellore Selection',
