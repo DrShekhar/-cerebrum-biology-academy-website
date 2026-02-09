@@ -155,6 +155,36 @@ export default async function middleware(req: NextRequest) {
     return NextResponse.redirect(newUrl, { status: 301 })
   }
 
+  // Block demo/test pages in production
+  const blockedPrefixes = [
+    '/demo',
+    '/color-palette',
+    '/ai-education-demo',
+    '/ceri-ai-demo',
+    '/claudechat-demo',
+    '/counselor-demo',
+    '/security-demo',
+    '/testing-demo',
+    '/toast-demo',
+    '/simple-test-gen',
+    '/test-voice',
+    '/test-learning',
+    '/test-platform',
+    '/onboarding/demo',
+    '/support/demo',
+    '/api/demo',
+    '/api/placeholder',
+    '/api/cache/demo',
+  ]
+  if (process.env.NODE_ENV === 'production') {
+    const isBlocked = blockedPrefixes.some(
+      (prefix) => pathname === prefix || pathname.startsWith(prefix + '/')
+    )
+    if (isBlocked) {
+      return NextResponse.redirect(new URL('/', req.url), { status: 302 })
+    }
+  }
+
   // Get auth state from our custom JWT token (synchronous with jsonwebtoken)
   const authResult = getUserFromToken(req)
   const userId = authResult?.userId || null
