@@ -51,7 +51,7 @@ export {
   HowToSchema,
   PersonSchema,
   DrShekharSinghSchema,
-  VideoSchema as VideoObjectSchema,
+  VideoSchema as StructuredDataVideoSchema,
   ReviewSchema,
   ReviewListSchema,
   StructuredData,

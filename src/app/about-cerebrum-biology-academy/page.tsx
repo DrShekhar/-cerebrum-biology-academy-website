@@ -1,6 +1,4 @@
-'use client'
-
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import {
   MapPin,
   Users,
@@ -46,7 +44,7 @@ const aboutFaqs = [
   },
 ]
 
-const metadata = {
+export const metadata: Metadata = {
   title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014 | Delhi NCR',
   description:
     "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ selections, 94% success rate, batches of 8-15 students.",
@@ -69,8 +67,6 @@ const metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/about-cerebrum-biology-academy',
   },
 }
-
-export { metadata }
 
 export default function AboutCerebrumPage() {
   const centers = [

@@ -1,6 +1,4 @@
-'use client'
-
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Phone, Mail, MessageCircle, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import { BreadcrumbSchema } from '@/components/seo/BreadcrumbSchema'
@@ -301,8 +299,7 @@ const allFaqs = [
   ...faqData.studyTips,
 ]
 
-// Note: Metadata needs to be exported separately for server component
-const metadata = {
+export const metadata: Metadata = {
   title:
     'NEET Coaching FAQ 2026: 50+ Questions Answered | Cerebrum Biology Academy',
   description:
@@ -328,8 +325,6 @@ const metadata = {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-faq',
   },
 }
-
-export { metadata }
 
 export default function NEETCoachingFAQPage() {
   return (
