@@ -12,6 +12,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Normalize URLs: strip trailing slashes to prevent duplicate crawling
+  trailingSlash: false,
+
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
 
   // CRITICAL FIX: Remove console.log from production builds
@@ -1137,17 +1140,16 @@ const nextConfig = {
       // GSC 404 Fixes - January 2026 (Phase 2)
       // ============================================
 
-      // Locale routes - redirect to homepage (i18n not implemented)
+      // Locale routes - redirect non-existent language pages to homepage
+      // NOTE: /hi and /ta have real landing pages — do NOT redirect them
       { source: '/de', destination: '/', permanent: true },
       { source: '/es', destination: '/', permanent: true },
       { source: '/fr', destination: '/', permanent: true },
-      { source: '/hi', destination: '/', permanent: true },
       { source: '/ja', destination: '/', permanent: true },
       { source: '/nl', destination: '/', permanent: true },
       { source: '/it', destination: '/', permanent: true },
       { source: '/ru', destination: '/', permanent: true },
       { source: '/pt', destination: '/', permanent: true },
-      { source: '/ta', destination: '/', permanent: true },
       { source: '/bn', destination: '/', permanent: true },
       { source: '/kn', destination: '/', permanent: true },
       { source: '/ml', destination: '/', permanent: true },
@@ -1169,13 +1171,10 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Olympiad pages
+      // Olympiad pages (trailing-slash variants removed — trailingSlash: false handles them)
       { source: '/cbo-preparation', destination: '/courses', permanent: true },
-      { source: '/cbo-preparation/', destination: '/courses', permanent: true },
       { source: '/jbo-preparation', destination: '/courses', permanent: true },
-      { source: '/jbo-preparation/', destination: '/courses', permanent: true },
       { source: '/german-biology-olympiad', destination: '/courses', permanent: true },
-      { source: '/german-biology-olympiad/', destination: '/courses', permanent: true },
 
       // Fix broken non-blog destinations
       { source: '/olympiad-coaching', destination: '/courses', permanent: true },
@@ -1400,12 +1399,10 @@ const nextConfig = {
       // ============================================
 
       // Olympiad preparation pages (redirect to coaching pages)
+      // Trailing-slash variants removed — trailingSlash: false handles them
       { source: '/cnbo-preparation', destination: '/cnbo-coaching', permanent: true },
-      { source: '/cnbo-preparation/', destination: '/cnbo-coaching', permanent: true },
       { source: '/sbo-preparation', destination: '/sbo-coaching', permanent: true },
-      { source: '/sbo-preparation/', destination: '/sbo-coaching', permanent: true },
       { source: '/asob-preparation', destination: '/asob-coaching', permanent: true },
-      { source: '/asob-preparation/', destination: '/asob-coaching', permanent: true },
 
       // Typos and URL variants
       {
@@ -1635,7 +1632,7 @@ const nextConfig = {
         destination: '/neet-coaching-west-india',
         permanent: true,
       },
-      { source: '/neet-coaching-pune', destination: '/neet-coaching-west-india', permanent: true },
+      // REMOVED: /neet-coaching-pune — page exists at src/app/neet-coaching-pune/
       {
         source: '/neet-coaching-chennai',
         destination: '/neet-coaching-south-india',
@@ -1661,7 +1658,7 @@ const nextConfig = {
         destination: '/neet-coaching-north-india',
         permanent: true,
       },
-      { source: '/neet-coaching-bhopal', destination: '/neet-coaching-centre', permanent: true },
+      // REMOVED: /neet-coaching-bhopal — page exists at src/app/neet-coaching-bhopal/
       {
         source: '/neet-coaching-nagpur',
         destination: '/neet-coaching-west-india',
@@ -1801,57 +1798,28 @@ const nextConfig = {
       // ============================================
 
       // Campbell Biology chapter pages (redirect to biology notes)
-      { source: '/campbell-biology', destination: '/biology-notes', permanent: true },
-      { source: '/campbell-biology/:slug', destination: '/biology-notes', permanent: true },
+      // REMOVED: campbell-biology redirects — these pages EXIST:
+      // /campbell-biology has page.tsx, [chapter] dynamic route, unit/ pages
+      // Redirecting them to /biology-notes was killing 50+ indexed Campbell Biology pages
 
-      // International exam preparation pages
-      { source: '/mcat-biology-preparation', destination: '/courses', permanent: true },
-      { source: '/mcat-biology-preparation/', destination: '/courses', permanent: true },
-      { source: '/inbo-coaching', destination: '/courses', permanent: true },
-      { source: '/inbo-coaching/', destination: '/courses', permanent: true },
-      { source: '/usabo-coaching', destination: '/courses', permanent: true },
-      { source: '/usabo-coaching/', destination: '/courses', permanent: true },
-      { source: '/ibo-preparation', destination: '/courses', permanent: true },
-      { source: '/ibo-preparation/', destination: '/courses', permanent: true },
-      { source: '/bbo-preparation', destination: '/courses', permanent: true },
-      { source: '/bbo-preparation/', destination: '/courses', permanent: true },
-      { source: '/biology-olympiad-preparation', destination: '/courses', permanent: true },
-      { source: '/biology-olympiad-preparation/', destination: '/courses', permanent: true },
+      // REMOVED: International exam preparation redirects
+      // These pages EXIST in src/app/ — redirects were incorrectly killing them:
+      // /mcat-biology-preparation, /inbo-coaching, /usabo-coaching,
+      // /ibo-preparation, /bbo-preparation, /biology-olympiad-preparation
 
-      // Tuition specialty pages
-      { source: '/dna-biology-tuition', destination: '/courses', permanent: true },
-      { source: '/live-biology-classes-neet', destination: '/courses', permanent: true },
-      { source: '/genetics-biology-tuition', destination: '/courses', permanent: true },
-
-      // Resource and tool pages
-      { source: '/mock-tests', destination: '/resources/mock-tests', permanent: true },
-      { source: '/neet-result-analysis', destination: '/resources', permanent: true },
-      { source: '/neet-biology-mcq-practice', destination: '/neet-biology-mcq', permanent: true },
-      { source: '/neet-rank-predictor', destination: '/resources', permanent: true },
-      { source: '/neet-registration-guide', destination: '/admissions', permanent: true },
-
-      // NCERT notes pages
-      { source: '/ncert-biology-notes-class-11', destination: '/biology-notes', permanent: true },
-      { source: '/ncert-based-neet-questions', destination: '/neet-biology-mcq', permanent: true },
-
-      // NEET preparation pages
-      { source: '/neet-biology-crash-course', destination: '/neet-crash-course', permanent: true },
-      { source: '/neet-preparation-guide', destination: '/courses', permanent: true },
-      { source: '/neet-2026-preparation', destination: '/courses', permanent: true },
-      { source: '/neet-exam-pattern-2025', destination: '/courses', permanent: true },
-      { source: '/neet-biology-notes-pdf', destination: '/biology-notes', permanent: true },
-
-      // Topic-specific notes
-      { source: '/reproduction-notes-neet', destination: '/biology-notes', permanent: true },
-      { source: '/plant-kingdom-notes-neet', destination: '/biology-notes', permanent: true },
-
-      // Services pages
-      { source: '/services/international', destination: '/international', permanent: true },
-      { source: '/services/classroom', destination: '/courses', permanent: true },
-      { source: '/services/online-classes', destination: '/courses', permanent: true },
-
-      // Legal pages
-      { source: '/terms-of-service', destination: '/privacy-policy', permanent: true },
+      // ============================================
+      // REMOVED: Redirects that were killing REAL existing pages
+      // All pages below have actual src/app/ directories with content
+      // ============================================
+      // /dna-biology-tuition, /live-biology-classes-neet, /genetics-biology-tuition
+      // /mock-tests, /neet-result-analysis, /neet-biology-mcq-practice
+      // /neet-rank-predictor, /neet-registration-guide
+      // /ncert-biology-notes-class-11, /ncert-based-neet-questions
+      // /neet-biology-crash-course, /neet-preparation-guide, /neet-2026-preparation
+      // /neet-exam-pattern-2025, /neet-biology-notes-pdf
+      // /reproduction-notes-neet, /plant-kingdom-notes-neet
+      // /services/international, /services/classroom, /services/online-classes
+      // /terms-of-service
 
       // Biology tuition location
       // DUPLICATE REMOVED: { source: '/biology-tuition-gurgaon', destination: '/neet-coaching-gurgaon', permanent: true },
@@ -1872,19 +1840,13 @@ const nextConfig = {
       // GSC "Alternate page with canonical" - Additional fixes
       // ============================================
 
-      // Location sub-pages (gurugram variations)
-      { source: '/locations/gurugram', destination: '/neet-coaching-gurgaon', permanent: true },
-      {
-        source: '/locations/gurugram/:area*',
-        destination: '/neet-coaching-gurgaon',
-        permanent: true,
-      },
+      // REMOVED: /locations/gurugram redirects — real page exists at src/app/locations/gurugram/
+      // Sub-area pages like /locations/gurugram/sector-109 served by [city]/[locality] dynamic route
 
       // www vs non-www (handled by DNS but adding for safety)
       // These pages exist but may have www/non-www canonical issues
 
-      // Services main page redirect
-      { source: '/services', destination: '/courses', permanent: true },
+      // REMOVED: /services redirect — page exists at src/app/services/
 
       // Book demo with query params (catch-all) - REMOVED duplicate
       // Previously at line 1830: { source: '/book-demo', destination: '/demo', permanent: true },
