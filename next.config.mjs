@@ -965,21 +965,13 @@ const nextConfig = {
       // Olympiad preparation → coaching redirects
       // DUPLICATE REMOVED: { source: '/cbo-preparation', destination: '/cbo-coaching', permanent: true },
       // DUPLICATE REMOVED: { source: '/jbo-preparation', destination: '/jbo-coaching', permanent: true },
-      {
-        source: '/sbo-preparation',
-        destination: '/sbo-coaching',
-        permanent: true,
-      },
+      // DUPLICATE REMOVED: { source: '/sbo-preparation', destination: '/sbo-coaching', permanent: true },
       {
         source: '/kbo-preparation',
         destination: '/kbo-coaching',
         permanent: true,
       },
-      {
-        source: '/cnbo-preparation',
-        destination: '/cnbo-coaching',
-        permanent: true,
-      },
+      // DUPLICATE REMOVED: { source: '/cnbo-preparation', destination: '/cnbo-coaching', permanent: true },
       // DUPLICATE REMOVED: { source: '/german-biology-olympiad', destination: '/olympiad-coaching', permanent: true },
 
       // Nested biology-classes sub-location redirects
@@ -1080,7 +1072,7 @@ const nextConfig = {
       },
       {
         source: '/courses/neet-biology',
-        destination: '/courses/intensive-neet-biology',
+        destination: '/courses/class-12',
         permanent: true,
       },
 
@@ -1173,7 +1165,7 @@ const nextConfig = {
       // Missing course pages
       {
         source: '/courses/45-day-course',
-        destination: '/courses/intensive-neet-biology',
+        destination: '/courses/class-12',
         permanent: true,
       },
 
