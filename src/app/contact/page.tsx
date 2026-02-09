@@ -26,6 +26,26 @@ import Link from 'next/link'
 import { FAQDisplay } from '@/components/seo/FAQSchema'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 
+// BreadcrumbList Schema for improved SERP display and CTR
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://cerebrumbiologyacademy.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Contact',
+      item: 'https://cerebrumbiologyacademy.com/contact',
+    },
+  ],
+}
+
 const contactFAQs = [
   {
     question: 'How can I book a free demo class at Cerebrum Academy?',
@@ -172,9 +192,11 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="bg-[#3d4d3d] text-white py-12 sm:py-16 md:py-20">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-[#3d4d3d] text-white py-12 sm:py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
@@ -570,6 +592,7 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

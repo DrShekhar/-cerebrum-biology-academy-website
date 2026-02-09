@@ -6,6 +6,26 @@ import { Star, ExternalLink, Heart, MessageSquare, Phone } from 'lucide-react'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 
+// BreadcrumbList Schema for improved SERP display and CTR
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://cerebrumbiologyacademy.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Reviews',
+      item: 'https://cerebrumbiologyacademy.com/reviews',
+    },
+  ],
+}
+
 export default function ReviewsPage() {
   // Google Business Profile review link - UPDATE THIS with your actual GBP review link
   const GOOGLE_REVIEW_LINK = 'https://g.page/r/cerebrum-biology-academy/review'
@@ -44,9 +64,11 @@ export default function ReviewsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -222,6 +244,7 @@ export default function ReviewsPage() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
