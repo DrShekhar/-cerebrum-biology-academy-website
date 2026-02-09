@@ -89,6 +89,9 @@ export {
   PeopleAlsoAsk,
   NEET_BIOLOGY_PAA_QUESTIONS,
   NEET_COACHING_PAA_QUESTIONS,
+  DELHI_NCR_PAA_QUESTIONS,
+  BIOLOGY_SUBJECT_PAA_QUESTIONS,
+  FEE_RESULTS_PAA_QUESTIONS,
   generateLocationPAAQuestions,
   type PAQuestion,
 } from './PeopleAlsoAsk'
