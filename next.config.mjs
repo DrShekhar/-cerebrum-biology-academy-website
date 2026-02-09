@@ -292,18 +292,7 @@ const nextConfig = {
         source: '/locations/bangalore',
         destination: '/neet-coaching-south-india',
         permanent: true,
-      },
-      {
-        source: '/company',
-        destination: '/about',
-        permanent: true,
-      },
-      {
-        source: '/support',
-        destination: '/help',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/nseb-coaching',
         destination: '/nseb-coaching-gurugram',
         permanent: true,
@@ -323,13 +312,7 @@ const nextConfig = {
         source: '/free-demo',
         destination: '/book-free-demo',
         permanent: true,
-      },
-      {
-        source: '/demo',
-        destination: '/book-free-demo',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/courses/neet-foundation',
         destination: '/courses/foundation',
         permanent: true,
@@ -359,13 +342,7 @@ const nextConfig = {
         source: '/admission',
         destination: '/enrollment',
         permanent: true,
-      },
-      {
-        source: '/admissions',
-        destination: '/enrollment',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/contact-us',
         destination: '/contact',
         permanent: true,
@@ -389,13 +366,7 @@ const nextConfig = {
         source: '/fee-structure',
         destination: '/neet-coaching-fee-gurugram',
         permanent: true,
-      },
-      {
-        source: '/pricing',
-        destination: '/neet-coaching-fee-gurugram',
-        permanent: true,
-      },
-      // Old blog slugs redirecting to relevant existing content
+      },      // Old blog slugs redirecting to relevant existing content
       {
         source: '/blog/neet-preparation-timeline-class-9-to-2028',
         destination: '/blog',
@@ -435,39 +406,7 @@ const nextConfig = {
         source: '/blog/how-to-overcome-neet-failure',
         destination: '/dropper',
         permanent: true,
-      },
-      // Old location pages redirecting to main location pages
-      {
-        source: '/neet-coaching-jaipur',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-agra',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-indore',
-        destination: '/neet-coaching-centre',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-ghaziabad',
-        destination: '/neet-coaching-noida',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-kota',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-kanpur',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/neet-coaching-raipur',
         destination: '/neet-coaching-centre',
         permanent: true,
@@ -494,13 +433,7 @@ const nextConfig = {
         source: '/biology-tuition-noida/:area*',
         destination: '/neet-coaching-noida',
         permanent: true,
-      },
-      {
-        source: '/biology-tuition-noida',
-        destination: '/neet-coaching-noida',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/biology-tuition-delhi/:area*',
         destination: '/biology-tuition-south-delhi',
         permanent: true,
@@ -535,7 +468,6 @@ const nextConfig = {
         permanent: true,
       },
 
-
       // Biology topics subpages redirect to main topics page
       {
         source: '/biology-topics/:topic',
@@ -548,14 +480,7 @@ const nextConfig = {
         source: '/biology-tutor-class-10',
         destination: '/biology-tuition-class-9-10',
         permanent: true,
-      },
-      // Boards page redirect
-      {
-        source: '/boards/state-boards',
-        destination: '/courses',
-        permanent: true,
-      },
-      // Protected route - redirect to login
+      },      // Protected route - redirect to login
       {
         source: '/counselor/communications',
         destination: '/',
@@ -592,12 +517,6 @@ const nextConfig = {
         destination: '/neet-coaching-east-delhi',
         permanent: true,
       },
-      {
-        source: '/neet-coaching-patna',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-
       // Blog NEET topic complete guides - redirect to relevant existing posts
       {
         source: '/blog/molecular-biology-neet-complete-guide',
@@ -721,12 +640,6 @@ const nextConfig = {
         destination: '/neet-biology-mcq',
         permanent: true,
       },
-      {
-        source: '/book-demo',
-        destination: '/book-free-demo',
-        permanent: true,
-      },
-
       // Biology tutor class variations
       {
         source: '/biology-tutor-class-10-cbse',
@@ -779,12 +692,6 @@ const nextConfig = {
         destination: '/',
         permanent: true,
       },
-      {
-        source: '/terms',
-        destination: '/privacy-policy',
-        permanent: true,
-      },
-
       // Font file - return 404 is fine, but let's redirect to avoid GSC errors
       {
         source: '/fonts/:file*',
@@ -804,119 +711,11 @@ const nextConfig = {
         source: '/career-options-after-12th-pcb',
         destination: '/blog',
         permanent: true,
-      },
-
-      // ============================================
-      // GSC 404 Fixes - January 2026
-      // ============================================
-
-      // Biology tutor location pages
-      {
-        source: '/biology-tutor-gurugram',
-        destination: '/neet-coaching-gurgaon',
-        permanent: true,
-      },
-      {
-        source: '/biology-tutor-ballabhgarh',
-        destination: '/neet-coaching-gurgaon',
-        permanent: true,
-      },
-      {
-        source: '/biology-tutor-noida-sector-18',
-        destination: '/neet-coaching-noida',
-        permanent: true,
-      },
-      {
-        source: '/online-biology-tutor-class-11',
-        destination: '/courses',
-        permanent: true,
-      },
-
-      // Faculty and About pages
-      {
-        source: '/dr-shekhar-singh',
-        destination: '/about',
-        permanent: true,
-      },
-      {
-        source: '/about/faculty',
-        destination: '/about',
-        permanent: true,
-      },
-
-      // Course and purchase pages
-      {
-        source: '/courses/dropper',
-        destination: '/courses/neet-dropper',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/purchase/neet-dropper',
         destination: '/courses/neet-dropper',
         permanent: true,
       },
-      {
-        source: '/neet-foundation-course',
-        destination: '/courses/foundation',
-        permanent: true,
-      },
-      // DUPLICATE REMOVED: { source: '/courses/neet-foundation', destination: '/courses/foundation', permanent: true },
-      // DUPLICATE REMOVED: { source: '/neet-2026-preparation', destination: '/neet-coaching-institute', permanent: true },
-
-      // Subject-specific tuition pages
-      {
-        source: '/cell-biology-tuition',
-        destination: '/courses',
-        permanent: true,
-      },
-      {
-        source: '/molecular-biology-tuition',
-        destination: '/courses',
-        permanent: true,
-      },
-      {
-        source: '/ecology-biology-tuition',
-        destination: '/courses',
-        permanent: true,
-      },
-
-      // Notes and PDF pages
-      {
-        source: '/biological-classification-notes-neet',
-        destination: '/biology-notes',
-        permanent: true,
-      },
-      {
-        source: '/genetics-notes-neet',
-        destination: '/biology-notes',
-        permanent: true,
-      },
-      {
-        source: '/ncert-biology-notes-class-12',
-        destination: '/biology-notes',
-        permanent: true,
-      },
-      {
-        source: '/cell-biology-notes-neet',
-        destination: '/biology-notes',
-        permanent: true,
-      },
-      {
-        source: '/ncert-exemplar-biology',
-        destination: '/neet-biology-mcq',
-        permanent: true,
-      },
-      {
-        source: '/neet-biology-notes-pdf',
-        destination: '/biology-notes',
-        permanent: true,
-      },
-      {
-        source: '/biodiversity-conservation-class-12',
-        destination: '/biology-notes',
-        permanent: true,
-      },
-
       // Blog post redirects
       {
         source: '/blog/neet-exam-centres-state-wise-2026',
@@ -1246,15 +1045,7 @@ const nextConfig = {
         source: '/biology-tuition-west-delhi',
         destination: '/neet-coaching-north-delhi',
         permanent: true,
-      },
-
-      // Gurgaon sector pages
-      {
-        source: '/neet-coaching-gurgaon-sector-57',
-        destination: '/neet-coaching-gurgaon',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/biology-classes-gurgaon-sector-31',
         destination: '/neet-coaching-gurgaon',
         permanent: true,
@@ -1364,29 +1155,6 @@ const nextConfig = {
         destination: '/neet-coaching-centre',
         permanent: true,
       },
-
-      // Books pages
-      {
-        source: '/ncert-fingertips-biology',
-        destination: '/best-biology-books-for-neet',
-        permanent: true,
-      },
-      {
-        source: '/ncert-biology-class-11',
-        destination: '/best-biology-books-for-neet',
-        permanent: true,
-      },
-      {
-        source: '/ncert-biology-class-12',
-        destination: '/best-biology-books-for-neet',
-        permanent: true,
-      },
-      {
-        source: '/trueman-biology-for-neet',
-        destination: '/best-biology-books-for-neet',
-        permanent: true,
-      },
-
       // Boards page
       { source: '/boards/state', destination: '/courses', permanent: true },
 
@@ -1426,12 +1194,6 @@ const nextConfig = {
         destination: '/neet-biology-weekend-batch',
         permanent: true,
       },
-      {
-        source: '/courses/intensive-neet-biology',
-        destination: '/courses/class-12',
-        permanent: true,
-      },
-
       // Resource pages redirects
       { source: '/resources/biomolecules-notes', destination: '/biology-notes', permanent: true },
       { source: '/resources/classification-notes', destination: '/biology-notes', permanent: true },
@@ -1624,52 +1386,12 @@ const nextConfig = {
         source: '/biology-classes-neet-coaching-nirvana-country-gurgaon',
         destination: '/neet-coaching-gurgaon',
         permanent: true,
-      },
-
-      // Missing NEET coaching city pages (redirect to regional hubs)
-      {
-        source: '/neet-coaching-mumbai',
-        destination: '/neet-coaching-west-india',
-        permanent: true,
-      },
-      // REMOVED: /neet-coaching-pune — page exists at src/app/neet-coaching-pune/
-      {
-        source: '/neet-coaching-chennai',
-        destination: '/neet-coaching-south-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-hyderabad',
-        destination: '/neet-coaching-south-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-ahmedabad',
-        destination: '/neet-coaching-west-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-lucknow',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-chandigarh',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      // REMOVED: /neet-coaching-bhopal — page exists at src/app/neet-coaching-bhopal/
+      },      // REMOVED: /neet-coaching-bhopal — page exists at src/app/neet-coaching-bhopal/
       {
         source: '/neet-coaching-nagpur',
         destination: '/neet-coaching-west-india',
         permanent: true,
-      },
-      {
-        source: '/neet-coaching-vadodara',
-        destination: '/neet-coaching-west-india',
-        permanent: true,
-      },
-      { source: '/neet-coaching-thane', destination: '/neet-coaching-west-india', permanent: true },
+      },      { source: '/neet-coaching-thane', destination: '/neet-coaching-west-india', permanent: true },
       {
         source: '/neet-coaching-navi-mumbai',
         destination: '/neet-coaching-west-india',
@@ -1684,39 +1406,16 @@ const nextConfig = {
         source: '/neet-coaching-madurai',
         destination: '/neet-coaching-south-india',
         permanent: true,
-      },
-      {
-        source: '/neet-coaching-ludhiana',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/neet-coaching-guwahati',
         destination: '/neet-coaching-east-india',
         permanent: true,
-      },
-      {
-        source: '/neet-coaching-ranchi',
-        destination: '/neet-coaching-east-india',
-        permanent: true,
-      },
-      {
+      },      {
         source: '/neet-coaching-dhanbad',
         destination: '/neet-coaching-east-india',
         permanent: true,
       },
-      { source: '/neet-coaching-jabalpur', destination: '/neet-coaching-centre', permanent: true },
-      {
-        source: '/neet-coaching-gwalior',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
-        source: '/neet-coaching-jodhpur',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      {
+      { source: '/neet-coaching-jabalpur', destination: '/neet-coaching-centre', permanent: true },      {
         source: '/neet-coaching-aurangabad',
         destination: '/neet-coaching-west-india',
         permanent: true,
@@ -1725,13 +1424,7 @@ const nextConfig = {
         source: '/neet-coaching-vasai-virar',
         destination: '/neet-coaching-west-india',
         permanent: true,
-      },
-      {
-        source: '/neet-coaching-meerut',
-        destination: '/neet-coaching-north-india',
-        permanent: true,
-      },
-      { source: '/neet-coaching-delhi', destination: '/neet-coaching-centre', permanent: true },
+      },      { source: '/neet-coaching-delhi', destination: '/neet-coaching-centre', permanent: true },
 
       // Blog management quota article
       {
