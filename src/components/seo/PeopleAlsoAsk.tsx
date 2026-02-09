@@ -224,8 +224,8 @@ export const NEET_BIOLOGY_PAA_QUESTIONS: PAQuestion[] = [
     answer: 'Yes, Cerebrum offers both online and offline NEET Biology classes. Online classes include live interactive sessions, recorded lectures, digital study material, and online test series. Students from across India can join.',
   },
   {
-    question: 'What is the best time to start NEET Biology preparation?',
-    answer: 'The ideal time to start NEET Biology preparation is in Class 11. Starting early gives you 2 full years to cover the syllabus thoroughly. However, focused 1-year programs for Class 12 and dropper batches are also highly effective.',
+    question: 'How many questions come from NCERT in NEET Biology?',
+    answer: 'Approximately 90-95% of NEET Biology questions are directly or indirectly from NCERT textbooks. This includes line-by-line factual questions, diagram-based questions, and conceptual MCQs. The remaining 5-10% require deeper understanding beyond NCERT, which Cerebrum covers in its NCERT+ module.',
   },
   {
     question: 'Who is the best Biology teacher for NEET in Delhi?',
@@ -386,6 +386,36 @@ export const FEE_RESULTS_PAA_QUESTIONS: PAQuestion[] = [
   {
     question: 'How long does it take to prepare for NEET Biology?',
     answer: 'Ideally 18-24 months of consistent preparation. Class 11 students should start early for a 2-year foundation. Class 12 students need 10-12 months of focused study. Droppers can prepare effectively in 8-10 months with intensive coaching at Cerebrum.',
+  },
+]
+
+/**
+ * Parent and Board Exam PAA Questions
+ */
+export const PARENT_BOARD_PAA_QUESTIONS: PAQuestion[] = [
+  {
+    question: 'Is NEET coaching needed along with school coaching?',
+    answer: 'Yes, school covers CBSE/ICSE Board syllabus but NEET requires deeper conceptual understanding, MCQ practice, and competitive exam strategy. Most NEET toppers attend separate coaching alongside school. Cerebrum offers flexible timings including evening and weekend batches that fit school schedules.',
+  },
+  {
+    question: 'How to balance NEET preparation with Board exams?',
+    answer: 'NCERT forms the foundation for both Boards and NEET. Focus on NCERT thoroughly for 85% overlap. Use separate time for NEET-specific MCQ practice. Cerebrum aligns its syllabus with school boards so students cover both simultaneously without extra burden.',
+  },
+  {
+    question: 'What should parents look for in NEET coaching?',
+    answer: 'Parents should evaluate: (1) Faculty credentials (medical background preferred), (2) Batch size (under 25 ideal), (3) Success track record with verifiable results, (4) Regular parent-teacher communication, (5) Test and progress reports, (6) Flexible fee payment options.',
+  },
+  {
+    question: 'At what age should NEET preparation start?',
+    answer: 'Ideally from Class 9-10 for foundation building. Class 11 is the optimal time for serious NEET preparation. Starting early reduces stress and allows deeper concept understanding. Cerebrum offers Class 9-10 foundation courses that build a strong base for NEET.',
+  },
+  {
+    question: 'Does Cerebrum provide progress reports to parents?',
+    answer: 'Yes, Cerebrum provides weekly test scores, monthly progress reports, and regular parent-teacher meetings. Parents get a dedicated WhatsApp group for updates, attendance tracking, and direct communication with faculty. Bi-monthly PTMs are held at all 6 centers.',
+  },
+  {
+    question: 'Can Biology Board exam marks help in NEET?',
+    answer: 'Board marks themselves are not counted in NEET, but the NCERT concepts tested in Boards directly apply to NEET. Students scoring 90+ in Board Biology typically score 300+ in NEET Biology because the foundational knowledge is the same.',
   },
 ]
 
