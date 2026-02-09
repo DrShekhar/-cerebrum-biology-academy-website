@@ -28,6 +28,26 @@ import { BreadcrumbSchema } from '@/components/seo'
 
 import { FAQDisplay } from '@/components/seo/FAQSchema'
 
+// BreadcrumbList Schema for improved SERP display and CTR
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://cerebrumbiologyacademy.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'About',
+      item: 'https://cerebrumbiologyacademy.com/about',
+    },
+  ],
+}
+
 const aboutFAQs = [
   {
     question: 'Who founded Cerebrum Biology Academy and what is their background?',
@@ -190,11 +210,13 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Breadcrumb Navigation + Schema */}
-      <div className="mx-auto max-w-7xl px-4 pt-4 bg-[#e8ede8]">
-        <BreadcrumbSchema items={[{ label: 'About Us', isCurrentPage: true }]} />
-      </div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="min-h-screen bg-gray-50">
+        {/* Breadcrumb Navigation + Schema */}
+        <div className="mx-auto max-w-7xl px-4 pt-4 bg-[#e8ede8]">
+          <BreadcrumbSchema items={[{ label: 'About Us', isCurrentPage: true }]} />
+        </div>
       {/* Hero Section - Cerebrum Light Theme */}
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 xl:py-40 bg-[#e8ede8] text-gray-900 overflow-hidden">
         {/* Subtle background pattern */}
@@ -906,6 +928,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }

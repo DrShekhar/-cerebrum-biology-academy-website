@@ -25,6 +25,26 @@ export const metadata: Metadata = {
     'NEET coaching services, online Biology classes, classroom teaching, international coaching, doubt resolution',
 }
 
+// BreadcrumbList Schema for improved SERP display and CTR
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://cerebrumbiologyacademy.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Services',
+      item: 'https://cerebrumbiologyacademy.com/services',
+    },
+  ],
+}
+
 export default function ServicesPage() {
   const services = [
     {

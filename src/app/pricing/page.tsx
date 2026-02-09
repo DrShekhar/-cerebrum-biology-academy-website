@@ -41,6 +41,26 @@ const PaymentOptionsDisplay = dynamic(
   { ssr: false }
 )
 
+// BreadcrumbList Schema for improved SERP display and CTR
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://cerebrumbiologyacademy.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Pricing',
+      item: 'https://cerebrumbiologyacademy.com/pricing',
+    },
+  ],
+}
+
 export default function PricingPage() {
   const [selectedClass, setSelectedClass] = useState<ClassLevel | 'all'>('all')
   const [courseType, setCourseType] = useState<CourseType>('neet')
@@ -392,9 +412,11 @@ export default function PricingPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
-      {/* Hero Section with enhanced gradient */}
-      <div className="relative bg-[#4a5d4a] text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-x-hidden">
+        {/* Hero Section with enhanced gradient */}
+        <div className="relative bg-[#4a5d4a] text-white py-8 sm:py-10 lg:py-12 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
@@ -1209,6 +1231,7 @@ export default function PricingPage() {
           </Link>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   )
 }

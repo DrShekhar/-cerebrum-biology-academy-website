@@ -30,6 +30,26 @@ import {
 } from 'lucide-react'
 import { VideoTestimonial } from '@/components/testimonials/VideoTestimonial'
 
+// BreadcrumbList Schema for improved SERP display and CTR
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://cerebrumbiologyacademy.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Results',
+      item: 'https://cerebrumbiologyacademy.com/results',
+    },
+  ],
+}
+
 const NEET_2024_RESULTS = {
   totalStudents: 582,
   aiims: 247,
@@ -189,9 +209,11 @@ export default function ResultsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="text-center mb-10 sm:mb-12 md:mb-16">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <div className="min-h-screen bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <div className="inline-flex items-center gap-2 bg-[#3d4d3d] text-white px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm">
             <Sparkles className="h-4 w-4 sm:h-5 sm:w-5" />
             <span className="font-semibold">NEET 2024 Results Announced</span>
@@ -558,6 +580,7 @@ export default function ResultsPage() {
           <p>Rated by 500+ students and parents</p>
         </section>
       </div>
-    </div>
+      </div>
+    </>
   )
 }
