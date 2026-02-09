@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
     // Mark event as processed in Redis (with TTL for automatic cleanup)
     await markEventProcessed(eventId)
 
-    logger.info('Webhook received:', eventType, eventId)
+    logger.info(`Webhook received: ${eventType} ${eventId}`)
 
     switch (eventType) {
       case 'payment.authorized':
@@ -258,7 +258,7 @@ async function handlePaymentFailed(event: any) {
       },
     })
 
-    logger.info('Webhook: Payment failure recorded:', orderId, reason)
+    logger.info(`Webhook: Payment failure recorded: ${orderId} ${reason}`)
   } catch (error) {
     logger.error('Webhook: Error handling payment failure:', error)
     throw error
@@ -309,7 +309,7 @@ async function handleRefundCreated(event: any) {
       }
     })
 
-    logger.info('Webhook: Refund processed:', refund.id, refundAmount)
+    logger.info(`Webhook: Refund processed: ${refund.id} ${refundAmount}`)
   } catch (error) {
     logger.error('Webhook: Error handling refund:', error)
     throw error

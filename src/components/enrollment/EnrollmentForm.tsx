@@ -253,7 +253,7 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
             Go to Dashboard
           </a>
           <a
-            href={`https://wa.me/${CONTACT_INFO.phone.whatsapp.replace(/[^0-9]/g, '')}?text=Hi, I just enrolled in ${encodeURIComponent(course.name)}. Order ID: ${paymentDetails.orderId}`}
+            href={`https://wa.me/${CONTACT_INFO.whatsapp.number}?text=Hi, I just enrolled in ${encodeURIComponent(course.name)}. Order ID: ${paymentDetails.orderId}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex-1 text-center bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
