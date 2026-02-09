@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { LocalBusinessSchema } from '@/components/seo/LocalBusinessSchema'
 
 export const metadata: Metadata = {
-  title: 'Best NEET Coaching in Gurugram | DLF, Golf Course Road, Sector 51 | Cerebrum Academy',
+  title: 'Best NEET Coaching in Gurugram 2026 | DLF, Golf Course Road, Sector 51 | Cerebrum Academy',
   description:
-    'Top NEET biology coaching in Gurugram. 98% success rate, AIIMS faculty. Best coaching in DLF Phase 1-5, Golf Course Road, Sector 51 (Mayfield Garden), Sohna Road. 620+ students. Book free demo!',
+    'Top NEET biology coaching in Gurugram 2026. 98% success rate, AIIMS faculty, 15-student batches. Best coaching near DLF Phase 1-5, Golf Course Road, Sector 51, Sohna Road. 680+ students selected. Book free demo class!',
   keywords:
     'NEET coaching Gurugram, NEET coaching Gurgaon, NEET classes DLF, biology coaching Golf Course Road, NEET tuition Sector 51, NEET coaching Sohna Road, NEET coaching MG Road, best NEET coaching Gurugram, NEET preparation Gurgaon, online NEET coaching Gurugram, medical coaching Gurugram',
   openGraph: {

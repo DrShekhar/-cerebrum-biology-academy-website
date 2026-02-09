@@ -53,6 +53,12 @@ const BUSINESS_INFO = {
       phone: CONTACT_INFO.phone.formatted.primary,
       geo: { lat: '28.3870', lng: '77.3070' },
     },
+    {
+      name: 'Cerebrum Biology Academy - Noida',
+      address: 'B-45, Sector 62, Noida - 201301',
+      phone: CONTACT_INFO.phone.formatted.primary,
+      geo: { lat: '28.6280', lng: '77.3649' },
+    },
   ],
   openingHours: [
     {

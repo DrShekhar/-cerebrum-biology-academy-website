@@ -1014,8 +1014,167 @@ export const neetRepeaters2026: SEOLandingContent = {
   },
 }
 
+// Page: /neet-dropper-batch/ (Central Hub)
+export const neetDropperBatch: SEOLandingContent = {
+  ...dropperBaseContent,
+  slug: 'neet-dropper-batch',
+
+  title: 'NEET Dropper Batch 2026 Delhi NCR | Online & Offline | Cerebrum Academy',
+  metaDescription:
+    'NEET dropper batch 2026 by Cerebrum Academy. Online & offline in Delhi NCR — South Extension, Gurugram, Noida. AIIMS faculty, 15-student batches, 92% success rate. 80-120 marks avg improvement. Join now!',
+  keywords: [
+    'NEET dropper batch 2026',
+    'NEET dropper batch Delhi',
+    'NEET dropper course Delhi NCR',
+    'NEET repeater batch 2026',
+    'best NEET dropper coaching Delhi',
+    'NEET drop year coaching',
+    'NEET dropper batch near me',
+    'NEET dropper batch online',
+    'NEET dropper batch offline Delhi',
+    'NEET second attempt coaching',
+    'NEET dropper batch Gurugram',
+    'NEET dropper batch Noida',
+  ],
+
+  hero: {
+    headline: 'NEET Dropper Batch 2026 — Your Comeback Starts Here',
+    subheadline:
+      'Turn your drop year into a medical seat. Choose online or attend in person at our Delhi NCR centers. AIIMS faculty, 15-student batches, and a proven 92% success rate.',
+    highlightedText: '80-120 Marks Average Improvement',
+    ctaText: 'Join 2026 Dropper Batch',
+    ctaLink: '/enrollment',
+    backgroundGradient: 'from-red-900 via-orange-900 to-amber-900',
+  },
+
+  painPoints: {
+    title: 'We Know What You Are Going Through',
+    points: [
+      {
+        icon: 'refresh-cw',
+        question: 'Scored below your potential in NEET?',
+        solution:
+          'Most AIIMS toppers took 2 attempts. Our structured dropper program identifies exactly where you fell short and fixes it methodically.',
+      },
+      {
+        icon: 'map-pin',
+        question: 'Confused between online and offline coaching?',
+        solution:
+          'Choose what works for you — attend live classes at our South Extension, Gurugram or Noida centers, or study from home with our online batch. Same faculty, same results.',
+      },
+      {
+        icon: 'users',
+        question: 'Worried about large crowded batches?',
+        solution:
+          'Only 10-15 students per batch. Every doubt gets answered. Every student gets personal attention from Dr. Shekhar and the AIIMS faculty team.',
+      },
+      {
+        icon: 'target',
+        question: 'Not sure if a drop year is worth it?',
+        solution:
+          '1,200+ Cerebrum droppers have cracked NEET. Average improvement: 80-120 marks. The numbers speak for themselves.',
+      },
+    ],
+  },
+
+  benefits: {
+    title: 'Why Cerebrum Dropper Batch Works',
+    subtitle: 'A focused year designed around how droppers actually need to study',
+    items: [
+      {
+        icon: 'search',
+        title: 'Diagnostic Gap Analysis',
+        description: 'Day-one assessment pinpoints weak chapters. Your study plan is built around YOUR gaps, not a generic syllabus.',
+      },
+      {
+        icon: 'map-pin',
+        title: 'Online + Offline Flexibility',
+        description: 'Attend classes at South Extension, Gurugram or Noida centers or join the online batch. Switch modes anytime.',
+      },
+      {
+        icon: 'calendar',
+        title: 'Intensive 6-Day Schedule',
+        description: 'Complete Class 11 + 12 revision in a structured year-long program. No school distractions — 100% NEET focus.',
+      },
+      {
+        icon: 'bar-chart',
+        title: '50+ Full-Length Mock Tests',
+        description: 'Weekly NEET-pattern tests with detailed analysis. Track your improvement every single week.',
+      },
+      {
+        icon: 'heart',
+        title: 'Mental Wellness Support',
+        description: 'Drop year stress is real. Weekly motivation sessions, peer groups, and one-on-one counseling keep you on track.',
+      },
+      {
+        icon: 'user-check',
+        title: 'Personal Mentorship by Dr. Shekhar',
+        description: 'AIIMS alumnus Dr. Shekhar personally mentors every dropper student. Strategy calls, doubt sessions, and career guidance.',
+      },
+    ],
+  },
+
+  faqs: [
+    {
+      question: 'What is the NEET dropper batch fee at Cerebrum Academy?',
+      answer:
+        'The NEET dropper batch fee is Rs 80,000 per year (MRP Rs 95,000). This includes 6-day weekly classes, complete study material, 50+ mock tests, mental wellness support, and personal mentorship. EMI option available at Rs 4,500 per month. This is significantly more affordable than Aakash (Rs 1.36 lakh+) or Allen while offering smaller batches.',
+    },
+    {
+      question: 'Is the dropper batch available online and offline both?',
+      answer:
+        'Yes. You can attend classes in person at our South Extension (Delhi), Gurugram, or Noida centers, or join the fully online batch from anywhere in India. Both modes have the same AIIMS faculty, same curriculum, and same test series. Many students start offline and switch to online closer to the exam.',
+    },
+    {
+      question: 'How much can I improve my NEET score in a drop year?',
+      answer:
+        'Our dropper students improve by 80-120 marks on average. Many improve by 150+ marks. Rohit Mehta improved from 520 to 642 (AIIMS Delhi), Anjali Verma scored 618 and got MAMC Delhi. The key is structured preparation with gap analysis, not just repeating the same syllabus.',
+    },
+    {
+      question: 'Is taking a drop year for NEET worth it in 2026?',
+      answer:
+        'Absolutely, if done with the right guidance. Statistics show that many AIIMS and top medical college selections come from second-attempt students. Our dropper batch has a 92% success rate. The drop year is an investment — one year now for a 40-year medical career.',
+    },
+    {
+      question: 'What is the batch size for droppers at Cerebrum?',
+      answer:
+        'Only 10-15 students per batch. This is our biggest advantage over large coaching centers that pack 100+ students in a room. Every dropper gets personal attention, doubt resolution within minutes, and direct access to Dr. Shekhar for strategy sessions.',
+    },
+    {
+      question: 'When does the NEET 2026 dropper batch start?',
+      answer:
+        'New batches start in June and July every year, right after NEET results. We also have mid-year joining options for students who decide later. Early joiners get the full 12-month program advantage. Contact us on WhatsApp at +91-88264-44334 for the latest batch schedule.',
+    },
+  ],
+
+  cta: {
+    title: 'Your Drop Year. Your Comeback.',
+    subtitle: 'Join 1,200+ droppers who turned their second chance into AIIMS, JIPMER, and top medical colleges.',
+    primaryButton: {
+      text: 'Enroll in 2026 Dropper Batch',
+      link: '/enrollment',
+    },
+    secondaryButton: {
+      text: 'Book Free Counseling Session',
+      link: '/book-free-demo',
+    },
+  },
+
+  schema: {
+    '@type': 'Course',
+    courseName: 'NEET Dropper Batch 2026 - Online & Offline',
+    provider: 'Cerebrum Biology Academy',
+    description:
+      'Intensive NEET dropper batch with online and offline options across Delhi NCR. AIIMS faculty, 15-student batches, 92% success rate.',
+    duration: 'P12M',
+    price: 80000,
+    priceCurrency: 'INR',
+  },
+}
+
 // Export all Dropper content
 export const dropperSEOPages = {
+  neetDropperBatch,
   neetDropperBatchOnline,
   neetRepeaterCourse2025,
   neetDropperBiologyCoaching,

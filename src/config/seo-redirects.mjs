@@ -846,4 +846,18 @@ export const seoPageConsolidationRedirects = [
     destination: '/neet-coaching-west-delhi',
     permanent: true,
   },
+
+  // ============================================
+  // Batch 10: SEO URL Aliases → Canonical Pages
+  // ============================================
+  {
+    source: '/neet-coaching-comparison',
+    destination: '/compare/neet-coaching-comparison',
+    permanent: true,
+  },
+  {
+    source: '/testimonials',
+    destination: '/results',
+    permanent: true,
+  },
 ]
