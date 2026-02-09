@@ -158,3 +158,6 @@ export { ComparisonLandingPage } from './ComparisonLandingPage'
 
 // Service schema for GMB keyword services per center
 export { ServiceSchema, AllServicesSchema, DEFAULT_SERVICES_BY_CENTER } from './ServiceSchema'
+
+// Blog recap widget for internal cross-promotion
+export { BlogRecapWidget } from './BlogRecapWidget'
