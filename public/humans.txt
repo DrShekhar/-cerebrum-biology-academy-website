@@ -1,30 +1,210 @@
 /* TEAM */
 
 Founder & Chief Academic Officer: Dr. Shekhar C Singh
-Role: Lead Biology Faculty, Curriculum Designer
-Education: AIIMS Delhi
-Experience: 15+ years NEET coaching
-Contact: info@cerebrumbiologyacademy.com
-Location: New Delhi, India
+Role: Head Faculty, NEET Biology Expert, Curriculum Designer
+Qualification: AIIMS Delhi (All India Institute of Medical Sciences, New Delhi)
+Specialization: NEET Biology, Human Physiology, Genetics, Cell Biology, Ecology
+Experience: 15+ years of dedicated NEET Biology coaching
+Teaching Methodology: Conceptual learning aligned with NEET question patterns
+Direct Mentoring: Yes - Personal mentoring for Pinnacle Series students
+Location: South Extension, New Delhi, India
+Email: info@cerebrumbiologyacademy.com
+Phone: +91-88264-44334
+
+/* ORGANIZATION */
+
+Name: Cerebrum Biology Academy
+Type: Educational Coaching Institute
+Founded: 2014 (12+ years of consistent excellence)
+Primary Focus: NEET-UG Biology Coaching
+Specialization: Biology-exclusive coaching (vs general subject chains)
+Headquarters: South Extension, Block D, South Extension Part 2, New Delhi 110049, India
+
+Physical Centers: 6 locations
+- South Extension, Delhi (Flagship)
+- Rohini, Delhi
+- Green Park, Delhi
+- Gurugram
+- Faridabad
+- Noida
+
+Service Areas: Delhi NCR (South Delhi, Central Delhi, West Delhi, North Delhi)
+Online Reach: Pan-India and International
+
+Learning Modes: Offline, Online, Hybrid
+Batch Size: Max 15-20 students (ensures personalized attention)
+Success Rate: 98% (students scoring 600+ in NEET-UG)
+Medical Admissions: 680+ into AIIMS Delhi, JIPMER, AFMC, state medical colleges
+Student Reviews: 485+ five-star reviews, 4.9/5 average rating
 
 /* SITE */
 
-Site: Cerebrum Biology Academy
+Name: Cerebrum Biology Academy Website
 URL: https://cerebrumbiologyacademy.com
-Description: India's premier NEET Biology coaching institute
-Standards: HTML5, CSS3, ES2024
-Framework: Next.js 15
-Hosting: Vercel (Mumbai region)
-Language: English, Hindi
-Last Updated: 2026-02-09
+Purpose: Educational information, course details, enrollment, results tracking
+Standards: HTML5, CSS3, JavaScript ES2024, Web Accessibility
+Framework: Next.js 15, React 19
+Build Tool: TypeScript, Tailwind CSS
+Hosting Platform: Vercel (Mumbai region)
+CDN: Vercel Edge Network
+Database: Serverless backend
+Analytics: Installed
+Performance: Optimized for mobile and desktop
 
-/* CONTENT CHANNELS */
+Languages: English, Hindi
+Target Audience: NEET aspirants, students, parents, educators
+Geographic Focus: India (Delhi NCR primary, Pan-India online reach)
 
-YouTube (Academy): https://www.youtube.com/@cerebrumbiologyacademy
-YouTube (Dr. Shekhar): https://www.youtube.com/@drshekharcsingh
+/* CONTENT & RESOURCES */
 
-/* THANKS */
+Main Content Types:
+- Course Information & Curriculum Details
+- Pricing & Fee Structure
+- Student Testimonials & Results
+- Faculty Profiles & Expertise
+- FAQ & Study Guides
+- Location Information & Center Details
+- Blog & Educational Articles
 
-Students: 680+ successful NEET selections since 2014
-Parents: For trusting us with their children's medical dreams
-Faculty: Our dedicated team of AIIMS-trained biology experts
+Video Channels:
+- YouTube (Academy Official): https://www.youtube.com/@cerebrumbiologyacademy
+- YouTube (Dr. Shekhar Personal): https://www.youtube.com/@drshekharcsingh
+
+Social Media:
+- Instagram: https://www.instagram.com/cerebrumbiologyacademy/
+- Blog: https://cerebrumbiologyacademy.com/blog
+
+Contact Channels:
+- Email: info@cerebrumbiologyacademy.com
+- Phone: +91-88264-44334
+- Contact Form: https://cerebrumbiologyacademy.com/contact
+
+/* COURSES OFFERED */
+
+Primary Focus: NEET-UG Biology Preparation
+
+Course Series:
+1. Pinnacle Series - Ultra-premium, max 12 students, highly personalized
+2. Ascent Series - Premium, 12-16 students, personalized approach
+3. Pursuit Series - Affordable quality, min 20 students, online-based
+4. Foundation Series - Classes IX-X, early NEET + board preparation
+5. Intensive Programs - Rigorous training for serious aspirants
+
+Price Range: ₹40,000 to ₹5.46 lakhs
+Payment Options: Single payment, 2-3 installments (0% interest), EMI available
+
+Exams Covered:
+- NEET-UG (National Eligibility cum Entrance Test)
+- CBSE Class XI-XII Boards
+- ICSE/ISC Boards
+- International Curricula (IB, IGCSE, A-Level, AP)
+- Biology Olympiads (NSO, IBO)
+
+Study Resources:
+- Live interactive classroom teaching
+- Recorded video lectures
+- Comprehensive test series
+- Previous year question papers (PYQ)
+- Printed study materials & notes
+- Digital resources
+- AI-powered doubt solving
+- Adaptive testing platform
+- Free demo classes
+
+/* KEY ACHIEVEMENTS */
+
+Success Metrics:
+- 98% success rate (600+ NEET scores)
+- 680+ medical college selections
+- 485+ five-star student reviews
+- 4.9/5 average rating
+- 12+ years of consistent results (since 2014)
+- AIIMS Delhi faculty leadership
+
+Recognition:
+- Top Biology coaching institute in Delhi NCR
+- AIIMS-trained faculty
+- Specialized Biology focus
+- Small batch sizes for personalized attention
+- Transparent pricing & ethical practices
+- Published student results & testimonials
+
+/* TECHNOLOGY STACK */
+
+Frontend: React 19, Next.js 15, TypeScript
+Styling: Tailwind CSS, CSS3
+Build: Modern JavaScript ES2024
+Animations: Framer Motion
+State Management: React Hooks, Context API
+Performance: Image optimization, Code splitting
+SEO: Next.js SEO, JSON-LD structured data
+Analytics: Tracking & monitoring
+Deployment: Vercel Edge Network
+
+/* STANDARDS & PRACTICES */
+
+Web Standards: HTML5, CSS3, ES2024 JavaScript
+Accessibility: WCAG compliance
+Performance: Core Web Vitals optimized
+SEO: Google SEO friendly, XML sitemaps
+Mobile First: Responsive design
+Security: HTTPS, secure data handling
+
+AI Optimization:
+- llms.txt: Comprehensive AI resource document
+- ai.txt: AI search engine guidelines
+- humans.txt: Human-readable team info (this file)
+- Structured data (JSON-LD) on all pages
+- Open Graph and Twitter Card meta tags
+- Canonical URLs for SEO
+
+/* POLICIES */
+
+Content: Original educational content
+Transparency: Published results, reviews, pricing
+Privacy: Student data protection
+Academic Integrity: Honest results reporting
+Student Focus: Small batches, personalized attention
+
+/* COMMUNITY */
+
+Students Served: 680+ medical college admissions
+Student Testimonials: https://cerebrumbiologyacademy.com/reviews
+Success Stories: https://cerebrumbiologyacademy.com/results
+YouTube Community: Active subscriber base
+Social Media Following: Growing engagement
+
+Partnerships:
+- Educational institutions
+- Student support platforms
+- Online learning partnerships
+
+/* CONTACT INFORMATION */
+
+Physical Address: Block D, South Extension Part 2, New Delhi 110049, India
+Phone: +91-88264-44334
+Email: info@cerebrumbiologyacademy.com
+Website: https://cerebrumbiologyacademy.com
+Book Free Demo: https://cerebrumbiologyacademy.com/book-free-demo
+
+/* GRATITUDE */
+
+We sincerely thank:
+
+Students: For choosing us and sharing their success stories. Your achievements inspire us to maintain excellence.
+
+Parents: For entrusting us with your children's medical dreams and providing continuous support.
+
+Faculty & Team: Our dedicated educators who commit themselves to quality NEET Biology coaching.
+
+Dr. Shekhar C Singh: For founding Cerebrum Biology Academy on principles of educational excellence and for directly mentoring our students.
+
+AIIMS Delhi: For shaping our founder's medical and educational expertise.
+
+Technology Partners: Vercel, Next.js, React communities for excellent tools and platforms.
+
+Built with passion for Biology education since 2014.
+Empowering NEET aspirants across India.
+Committed to excellence in medical entrance coaching.
+
+Last Updated: February 2026
