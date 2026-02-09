@@ -97,6 +97,8 @@ export const metadata: Metadata = {
       'en-IN': 'https://cerebrumbiologyacademy.com',
       hi: 'https://cerebrumbiologyacademy.com/hi',
       'hi-IN': 'https://cerebrumbiologyacademy.com/hi',
+      ta: 'https://cerebrumbiologyacademy.com/ta',
+      'ta-IN': 'https://cerebrumbiologyacademy.com/ta',
       'x-default': 'https://cerebrumbiologyacademy.com',
     },
   },
