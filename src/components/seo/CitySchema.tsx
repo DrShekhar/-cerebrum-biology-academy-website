@@ -42,13 +42,15 @@ export function CitySchema({
     '@type': 'EducationalOrganization',
     '@id': `${pageUrl}#organization`,
     name: `Cerebrum Biology Academy - ${cityName}`,
-    description: description || `Best NEET Biology Coaching in ${cityName}, ${stateValue}. Expert AIIMS faculty, 98% success rate, personalized attention for ${cityName} students.`,
+    description:
+      description ||
+      `Best NEET Biology Coaching in ${cityName}, ${stateValue}. Expert AIIMS faculty, 98% success rate, personalized attention for ${cityName} students.`,
     url: pageUrl,
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
     image: `${baseUrl}/og-image.png`,
-    foundingDate: '2014',
+    foundingDate: '2015',
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
@@ -67,9 +69,10 @@ export function CitySchema({
       latitude: coordinates.lat,
       longitude: coordinates.lng,
     },
-    areaServed: localitiesValue.length > 0
-      ? localitiesValue.map((locality) => ({ '@type': 'City', name: locality }))
-      : [{ '@type': 'City', name: cityName }],
+    areaServed:
+      localitiesValue.length > 0
+        ? localitiesValue.map((locality) => ({ '@type': 'City', name: locality }))
+        : [{ '@type': 'City', name: cityName }],
     // aggregateRating removed — global OrganizationSchema already includes it
     // Prevents "Review has multiple aggregate ratings" GSC error
     review: [

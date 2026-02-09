@@ -276,7 +276,7 @@ export default function BiologyClassesDelhiPage() {
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },
-    foundingDate: '2014',
+    foundingDate: '2015',
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',

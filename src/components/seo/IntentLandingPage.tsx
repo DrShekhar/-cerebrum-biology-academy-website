@@ -106,7 +106,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
       height: 512,
     },
     image: `${baseUrl}/og-image.jpg`,
-    foundingDate: '2014',
+    foundingDate: '2015',
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar Suman',

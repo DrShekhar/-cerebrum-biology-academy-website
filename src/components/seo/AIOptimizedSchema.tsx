@@ -26,7 +26,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
     image: `${BASE_URL}/og-image.jpg`,
     description: `Premier NEET Biology coaching institute in ${locality}, Delhi. Expert AIIMS faculty with 98% success rate and 695/720 top score.`,
     slogan: 'Where Biology Becomes Your Strength',
-    foundingDate: '2014',
+    foundingDate: '2015',
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',
@@ -92,7 +92,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+91-9310-380-203',
+      telephone: '+91-88264-44334',
       contactType: 'admissions',
       availableLanguage: ['English', 'Hindi'],
       areaServed: 'IN',
@@ -253,7 +253,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
         name: `Is there a free demo class available at ${locality}?`,
         acceptedAnswer: {
           '@type': 'Answer',
-          text: `Yes, Cerebrum Biology Academy offers free demo classes for students in ${locality}. You can book a free demo through WhatsApp at +91-9310-380-203 or by filling the contact form on the website.`,
+          text: `Yes, Cerebrum Biology Academy offers free demo classes for students in ${locality}. You can book a free demo through WhatsApp at +91-88264-44334 or by filling the contact form on the website.`,
         },
       },
     ],
@@ -279,7 +279,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
         '@type': 'HowToStep',
         position: 1,
         name: 'Book Free Demo',
-        text: 'Contact us via WhatsApp (+91-9310-380-203) or fill the form on our website to book a free demo class.',
+        text: 'Contact us via WhatsApp (+91-88264-44334) or fill the form on our website to book a free demo class.',
         url: `${pageUrl}#contact`,
       },
       {
@@ -358,7 +358,7 @@ export function AIContentBlock({ locality }: { locality: string }) {
         school students.
       </p>
       <p className="speakable-cta">
-        To join the best NEET biology coaching in {locality}, call us at 9310380203 or visit
+        To join the best NEET biology coaching in {locality}, call us at 8826444334 or visit
         cerebrumbiologyacademy.com. Book your free demo class today and take the first step towards
         your medical career.
       </p>

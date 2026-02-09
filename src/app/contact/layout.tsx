@@ -25,6 +25,48 @@ export const metadata: Metadata = {
   },
 }
 
+const contactPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOrganization',
+  name: 'Cerebrum Biology Academy',
+  url: 'https://cerebrumbiologyacademy.com',
+  telephone: '+91-88264-44334',
+  email: 'info@cerebrumbiologyacademy.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'M-3, South Extension Part 2',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi',
+    postalCode: '110049',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 28.5725,
+    longitude: 77.2217,
+  },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '00:00',
+    closes: '23:59',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+91-88264-44334',
+    contactType: 'admissions',
+    availableLanguage: ['English', 'Hindi'],
+  },
+}
+
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+      {children}
+    </>
+  )
 }

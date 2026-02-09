@@ -169,13 +169,13 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@cerebrum.academy', 'admissions@cerebrum.academy'],
+      details: ['info@cerebrumbiologyacademy.com', 'admissions@cerebrumbiologyacademy.com'],
       color: 'bg-[#5a6d5a]',
     },
     {
       icon: Clock,
       title: 'Office Hours',
-      details: ['Monday - Saturday: 8:00 AM - 8:00 PM', 'Sunday: 10:00 AM - 6:00 PM'],
+      details: ['Monday - Sunday: Open 24 Hours'],
       color: 'bg-[#3d4d3d]',
     },
   ]
@@ -494,9 +494,7 @@ export default function ContactPage() {
                       <h4 className="font-semibold text-gray-900 mb-1 text-sm sm:text-base">
                         Campus Hours
                       </h4>
-                      <p className="text-gray-600 text-sm sm:text-base">
-                        Mon-Sat: 8 AM - 8 PM | Sun: 10 AM - 6 PM
-                      </p>
+                      <p className="text-gray-600 text-sm sm:text-base">Open 24/7</p>
                     </div>
                   </div>
                 </div>
@@ -515,13 +513,13 @@ export default function ContactPage() {
 
               <div className="h-64 sm:h-80 md:h-96 lg:h-full w-full">
                 <LazyGoogleMap
-                  embedUrl="https://maps.google.com/maps?q=McDonald's,+South+Extension+Part+2,+New+Delhi,+India&t=&z=16&ie=UTF8&iwloc=&output=embed"
-                  title="NEET Coaching Center Location"
+                  embedUrl="https://maps.google.com/maps?q=Cerebrum+Biology+Academy,+South+Extension+Part+2,+New+Delhi,+India&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  title="Cerebrum Biology Academy - South Extension Center"
                   height="100%"
                   placeholder={{
-                    lat: 28.5697,
-                    lng: 77.2219,
-                    address: "South Extension, New Delhi"
+                    lat: 28.5725,
+                    lng: 77.2217,
+                    address: 'Cerebrum Biology Academy, South Extension Part 2, New Delhi',
                   }}
                 />
               </div>

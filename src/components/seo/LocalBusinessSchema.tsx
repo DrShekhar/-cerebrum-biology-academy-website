@@ -62,7 +62,7 @@ const locationData = {
     addressLocality: 'Sector 51, Gurugram',
     addressRegion: 'Haryana',
     postalCode: '122018',
-    geo: { lat: '28.4153', lng: '77.0499' },
+    geo: { lat: '28.4295', lng: '77.0426' },
     phone: CONTACT_INFO.phone.primary,
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-gurugram',
     image: 'https://cerebrumbiologyacademy.com/locations/gurugram-center.jpg',
@@ -359,7 +359,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       jobTitle: 'Founder & Chief Academic Officer',
       alumniOf: 'AIIMS Delhi',
     },
-    foundingDate: '2014',
+    foundingDate: '2015',
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
       minValue: 10,
@@ -367,11 +367,44 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: locationId === 'south-extension' ? '4.9' : locationId === 'rohini' ? '4.8' : locationId === 'green-park' ? '4.9' : locationId === 'gurugram' ? '4.7' : locationId === 'noida' ? '4.8' : '4.8',
+      ratingValue:
+        locationId === 'south-extension'
+          ? '4.9'
+          : locationId === 'rohini'
+            ? '4.8'
+            : locationId === 'green-park'
+              ? '4.9'
+              : locationId === 'gurugram'
+                ? '4.7'
+                : locationId === 'noida'
+                  ? '4.8'
+                  : '4.8',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : locationId === 'noida' ? '28' : '31',
-      reviewCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : locationId === 'noida' ? '28' : '31',
+      ratingCount:
+        locationId === 'south-extension'
+          ? '127'
+          : locationId === 'rohini'
+            ? '89'
+            : locationId === 'green-park'
+              ? '64'
+              : locationId === 'gurugram'
+                ? '43'
+                : locationId === 'noida'
+                  ? '28'
+                  : '31',
+      reviewCount:
+        locationId === 'south-extension'
+          ? '127'
+          : locationId === 'rohini'
+            ? '89'
+            : locationId === 'green-park'
+              ? '64'
+              : locationId === 'gurugram'
+                ? '43'
+                : locationId === 'noida'
+                  ? '28'
+                  : '31',
     },
     review: location.reviews.map((review) => ({
       '@type': 'Review',
@@ -532,7 +565,7 @@ export function AllLocationsSchema() {
     logo: `${baseUrl}/logo.png`,
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
-    foundingDate: '2014',
+    foundingDate: '2015',
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

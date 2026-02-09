@@ -127,7 +127,7 @@ function generateJsonLd() {
     logo: 'https://cerebrumbiologyacademy.com/logo.png',
     telephone: '+91-8826444334',
     email: 'support@cerebrumbiologyacademy.com',
-    foundingDate: '2014',
+    foundingDate: '2015',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.9',

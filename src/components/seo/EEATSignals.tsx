@@ -273,7 +273,7 @@ export function EEATSignals({
               name: 'Cerebrum Biology Academy',
               description:
                 'Premier NEET Biology coaching institute with 15+ years of experience and 98% success rate',
-              foundingDate: '2014',
+              foundingDate: '2015',
               numberOfEmployees: {
                 '@type': 'QuantitativeValue',
                 value: 25,
