@@ -4,6 +4,7 @@ import { generatePageMetadata } from '@/lib/seo/metadata'
 import { HeroSection } from '@/components/layout/HeroSection'
 import { realTestimonials } from '@/data/realTestimonials'
 import { HomePageClient } from '@/components/home/HomePageClient'
+import { SpeakableSchema } from '@/components/seo/SpeakableSchema'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
@@ -76,6 +77,18 @@ export const revalidate = 3600
 export default function Home() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      {/* Speakable Schema for Voice Search Optimization */}
+      <SpeakableSchema
+        headline="Best NEET Biology Coaching Delhi NCR | Cerebrum Academy"
+        description="Top NEET Biology coaching in Delhi NCR with AIIMS Trained faculty, 98% success rate, 500+ student selections. Get expert guidance for NEET preparation with personalized coaching."
+        cssSelectors={[
+          '[data-speakable="title"]',
+          '[data-speakable="summary"]',
+          '.faq-answer',
+        ]}
+        url="https://cerebrumbiologyacademy.com"
+      />
+
       {/* 1. Hero Section - Server rendered for instant LCP */}
       {/* LCP Critical: No content-visibility, inline styles for immediate paint */}
       <section
