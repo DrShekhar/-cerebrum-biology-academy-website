@@ -387,7 +387,7 @@ export const seoPageConsolidationRedirects = [
     permanent: true,
   },
   { source: '/neet-droppers-batch-gurgaon', destination: '/courses/neet-dropper', permanent: true },
-  { source: '/biology-tuition-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
+  // DUPLICATE REMOVED: { source: '/biology-tuition-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-tutor-gurgaon', destination: '/biology-classes-gurgaon', permanent: true },
   {
     source: '/biology-home-tuition-gurgaon',
