@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Trophy, Star, ArrowRight, Medal, Target, TrendingUp, Crown, Zap } from 'lucide-react'
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: 'Student Results & Success Stories | NEET Biology Achievements | Cerebrum Biology Academy',
@@ -179,8 +180,40 @@ export default function ResultsPage() {
     return colorMap[color as keyof typeof colorMap] || colorMap.blue
   }
 
+  // ItemList Schema for Student Achievements
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Outstanding Student Results and NEET Achievements',
+    description: 'Featured student achievements with AIIMS and JIPMER selections',
+    numberOfItems: topPerformers2024.length,
+    itemListElement: topPerformers2024.map((student, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: student.name,
+      description: `${student.name} from ${student.location} achieved AIR ${student.rank} with ${student.neetScore} total NEET score and ${student.biologyScore} in Biology. Selected for ${student.college}.`,
+      item: {
+        '@type': 'Person',
+        name: student.name,
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: student.location.split(',')[0],
+        },
+        award: `${student.rank} in NEET`,
+        knowsAbout: student.course,
+      },
+    })),
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* ItemList Schema for Voice Search and Featured Snippets */}
+      <Script
+        id="itemlist-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
