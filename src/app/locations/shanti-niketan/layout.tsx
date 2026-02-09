@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'NEET coaching Diplomatic Enclave',
     'Biology classes West Delhi premium',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/shanti-niketan',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Shanti Niketan | Cerebrum Academy',
     description:

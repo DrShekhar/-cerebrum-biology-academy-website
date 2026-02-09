@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     'NEET Biology coaching fees Delhi',
     'Affordable NEET coaching Delhi',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Malviya Nagar | Cerebrum Academy',
     description:

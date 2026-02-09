@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     'Elite NEET coaching Delhi',
     'NEET Biology coaching fees Delhi',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/golf-links',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Golf Links | Cerebrum Academy',
     description:

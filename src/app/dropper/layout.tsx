@@ -12,6 +12,9 @@ export const metadata: Metadata = {
     'NEET second attempt',
     'best coaching for NEET repeaters',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/dropper',
+  },
   openGraph: {
     title: 'NEET Dropper Course 2025 | Best Biology Coaching for Repeaters',
     description:
