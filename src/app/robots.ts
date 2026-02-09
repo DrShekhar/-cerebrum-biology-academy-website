@@ -21,6 +21,12 @@ export default function robots(): MetadataRoute.Robots {
           '/ai-features/',
           '/enrollments/',
           '/boards/',
+          '/portal/',
+          '/counselor/',
+          // Block query parameter crawl waste (search, filters, etc.)
+          '/blog?',
+          '/courses?',
+          '/tools/',
           // Block phantom locale paths that have no real pages (only /hi and /ta exist)
           '/de/',
           '/es/',
