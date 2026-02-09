@@ -23,6 +23,8 @@ export default function robots(): MetadataRoute.Robots {
           '/boards/',
           '/portal/',
           '/counselor/',
+          // Block CSS deployment files with ?dpl= hashes (150+ crawl waste URLs)
+          '/_next/static/css/',
           // Block query parameter crawl waste (search, filters, etc.)
           '/blog?',
           '/courses?',
@@ -47,12 +49,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/static/css/', '/blog?', '/courses?'],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/'],
+        disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/static/css/', '/blog?', '/courses?'],
       },
       // AI Search Engine Crawlers - Allow for GEO (Generative Engine Optimization)
       {

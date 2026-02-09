@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'NEET Biology coaching Central Delhi',
     'Premium NEET coaching Delhi',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/jor-bagh',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Jor Bagh | Cerebrum Academy',
     description:

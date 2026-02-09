@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     'Premium NEET coaching Delhi',
     'NEET coaching near India Gate',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/sundar-nagar',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Sundar Nagar | Cerebrum Academy',
     description:

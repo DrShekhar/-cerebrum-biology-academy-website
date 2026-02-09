@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     'NEET Biology coaching South Delhi',
     'Medical coaching Saket',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/saket',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Saket | Cerebrum Academy',
     description:

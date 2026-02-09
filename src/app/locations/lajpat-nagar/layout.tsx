@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     'NEET Biology coaching fees Delhi',
     'Best NEET coaching near me',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/lajpat-nagar',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Lajpat Nagar | Cerebrum Academy',
     description:

@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     'Biology tutor Anand Niketan',
     'NEET coaching Chanakyapuri area',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Anand Niketan | Cerebrum Academy',
     description:

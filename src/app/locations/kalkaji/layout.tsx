@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     'Biology classes Nehru Place',
     'NEET coaching Okhla',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/kalkaji',
+  },
   openGraph: {
     title: 'NEET Biology Coaching Kalkaji | Cerebrum Academy',
     description:

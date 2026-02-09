@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     'NEET coaching Alaknanda',
     'Biology classes Kalkaji',
   ],
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/locations/cr-park',
+  },
   openGraph: {
     title: 'NEET Biology Coaching CR Park | Cerebrum Academy',
     description:
