@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import {
   CheckCircle,
@@ -70,6 +70,73 @@ const subjectIcons: Record<string, React.ReactNode> = {
 }
 
 export default function NEETCoachingPage() {
+  // Add Course Schema via useEffect
+  useEffect(() => {
+    const courseSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      name: 'NEET Coaching 2026 | Physics, Chemistry, Biology | Expert AIIMS Faculty',
+      description:
+        'NEET coaching 2026 for Class 11, 12 & droppers. Expert AIIMS & IITians faculty. Small batches of 10-18 students. 98% success rate, 695/720 top score. Online + offline in Delhi NCR. Book free demo!',
+      url: 'https://cerebrumbiologyacademy.com/neet-coaching',
+      provider: {
+        '@type': 'EducationalOrganization',
+        name: 'Cerebrum Biology Academy',
+        url: 'https://cerebrumbiologyacademy.com',
+        sameAs: ['https://cerebrumbiologyacademy.com'],
+      },
+      instructor: {
+        '@type': 'Person',
+        name: 'Dr. Shekhar C Singh',
+        jobTitle: 'Founder & Head Faculty',
+        alumniOf: 'AIIMS Delhi',
+      },
+      inLanguage: ['en', 'hi'],
+      isAccessibleForFree: false,
+      hasCourseInstance: [
+        {
+          '@type': 'CourseInstance',
+          name: 'Class 11 NEET Coaching',
+          courseMode: ['onsite', 'online'],
+          instructor: {
+            '@type': 'Person',
+            name: 'Dr. Shekhar C Singh',
+          },
+          startDate: '2026-01-01',
+          endDate: '2026-12-31',
+        },
+        {
+          '@type': 'CourseInstance',
+          name: 'Class 12 NEET Coaching',
+          courseMode: ['onsite', 'online'],
+          instructor: {
+            '@type': 'Person',
+            name: 'Dr. Shekhar C Singh',
+          },
+          startDate: '2026-01-01',
+          endDate: '2026-12-31',
+        },
+      ],
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '485',
+        bestRating: '5',
+      },
+    }
+
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(courseSchema)
+    document.head.appendChild(script)
+
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script)
+      }
+    }
+  }, [])
+
   const [selectedClass, setSelectedClass] = useState<NeetClassOption>('class-12')
   const [selectedFocus, setSelectedFocus] = useState<FocusOption>('board-neet')
   const [selectedTier, setSelectedTier] = useState<TierOption>('ascent')

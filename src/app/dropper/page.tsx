@@ -1,5 +1,6 @@
 'use client'
 
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import {
   BookOpen,
@@ -26,6 +27,61 @@ import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonial
 import Link from 'next/link'
 
 export default function DropperPage() {
+  // Add Course Schema via useEffect
+  useEffect(() => {
+    const courseSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Course',
+      name: 'NEET Dropper Program | Second Attempt Success Coaching | Cerebrum Academy',
+      description:
+        'NEET Dropper program with 78.4% success rate. Transform your second attempt with 10-month strategic coaching. 1,800+ droppers helped achieve 156+ average score improvement. Expert AIIMS faculty.',
+      url: 'https://cerebrumbiologyacademy.com/dropper',
+      provider: {
+        '@type': 'EducationalOrganization',
+        name: 'Cerebrum Biology Academy',
+        url: 'https://cerebrumbiologyacademy.com',
+        sameAs: ['https://cerebrumbiologyacademy.com'],
+      },
+      instructor: {
+        '@type': 'Person',
+        name: 'Dr. Shekhar C Singh',
+        jobTitle: 'Founder & Head Faculty',
+        alumniOf: 'AIIMS Delhi',
+      },
+      inLanguage: ['en', 'hi'],
+      isAccessibleForFree: false,
+      hasCourseInstance: {
+        '@type': 'CourseInstance',
+        name: 'NEET Dropper Intensive Program',
+        courseMode: ['onsite', 'online'],
+        instructor: {
+          '@type': 'Person',
+          name: 'Dr. Shekhar C Singh',
+        },
+        startDate: '2026-01-01',
+        endDate: '2026-12-31',
+        duration: 'P10M',
+      },
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '485',
+        bestRating: '5',
+      },
+    }
+
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(courseSchema)
+    document.head.appendChild(script)
+
+    return () => {
+      if (script.parentNode) {
+        script.parentNode.removeChild(script)
+      }
+    }
+  }, [])
+
   const handleDemoBooking = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'demo_booking_dropper', {

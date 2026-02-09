@@ -45,8 +45,74 @@ export async function generateMetadata({ searchParams }: CoursesPageProps): Prom
 }
 
 export default function CoursesPage() {
+  const courseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'NEET Biology Courses Delhi NCR | Class 11, 12, Dropper Batches | Cerebrum Academy',
+    description:
+      'NEET biology courses 2026 in Delhi NCR — Class 11, Class 12 & Dropper batches. AIIMS faculty, 15-student batches, 98% success rate. Rs 45K–1.56L with EMI. 6 centers across Delhi NCR. Enroll now!',
+    url: 'https://cerebrumbiologyacademy.com/courses',
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+      sameAs: ['https://cerebrumbiologyacademy.com'],
+    },
+    instructor: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar C Singh',
+      jobTitle: 'Founder & Head Faculty',
+      alumniOf: 'AIIMS Delhi',
+    },
+    inLanguage: ['en', 'hi'],
+    isAccessibleForFree: false,
+    hasCourseInstance: [
+      {
+        '@type': 'CourseInstance',
+        name: 'Class 11 NEET Biology Course',
+        courseMode: ['onsite', 'online'],
+        instructor: {
+          '@type': 'Person',
+          name: 'Dr. Shekhar C Singh',
+        },
+        startDate: '2026-01-01',
+        endDate: '2026-12-31',
+      },
+      {
+        '@type': 'CourseInstance',
+        name: 'Class 12 NEET Biology Course',
+        courseMode: ['onsite', 'online'],
+        instructor: {
+          '@type': 'Person',
+          name: 'Dr. Shekhar C Singh',
+        },
+        startDate: '2026-01-01',
+        endDate: '2026-12-31',
+      },
+      {
+        '@type': 'CourseInstance',
+        name: 'NEET Dropper Program',
+        courseMode: ['onsite', 'online'],
+        instructor: {
+          '@type': 'Person',
+          name: 'Dr. Shekhar C Singh',
+        },
+        startDate: '2026-01-01',
+        endDate: '2026-12-31',
+      },
+    ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '485',
+      bestRating: '5',
+    },
+  }
+
   return (
     <>
+      {/* Course Schema - LD+JSON */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       {/* Breadcrumb Navigation + Schema */}
       <div className="mx-auto max-w-7xl px-4 pt-4">
         <BreadcrumbSchema items={[{ label: 'Courses', isCurrentPage: true }]} />
