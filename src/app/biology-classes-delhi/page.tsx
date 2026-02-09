@@ -609,7 +609,7 @@ export default function BiologyClassesDelhiPage() {
                 <div className="relative">
                   <div className="aspect-square overflow-hidden rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200">
                     <Image
-                      src="/faculty/dr-shekhar.jpg"
+                      src="/faculty/dr-shekhar-singh.jpg"
                       alt="Dr. Shekhar Singh - Best Biology Teacher in Delhi"
                       fill
                       className="object-cover"

@@ -1,5 +1,6 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 import { realTestimonials } from '@/data/realTestimonials'
+import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
 
 // Generate dynamic reviews from real testimonial data
 function getDynamicReviews() {
@@ -116,7 +117,7 @@ export function OrganizationSchema() {
               name: 'Cerebrum Biology Academy',
             },
           },
-          price: '75000',
+          price: String(CEREBRUM_METRICS.feeClass11),
           priceCurrency: 'INR',
         },
         {
@@ -130,7 +131,7 @@ export function OrganizationSchema() {
               name: 'Cerebrum Biology Academy',
             },
           },
-          price: '65000',
+          price: String(CEREBRUM_METRICS.feeClass12),
           priceCurrency: 'INR',
         },
       ],
