@@ -49,6 +49,7 @@ const organizationSchema = {
   ],
   sameAs: [
     'https://www.youtube.com/@cerebrumbiologyacademy',
+    'https://www.youtube.com/@drshekharcsingh',
     'https://www.instagram.com/cerebrumbiologyacademy',
   ],
 }

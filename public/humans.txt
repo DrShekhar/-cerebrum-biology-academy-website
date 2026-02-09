@@ -18,6 +18,11 @@ Hosting: Vercel (Mumbai region)
 Language: English, Hindi
 Last Updated: 2026-02-09
 
+/* CONTENT CHANNELS */
+
+YouTube (Academy): https://www.youtube.com/@cerebrumbiologyacademy
+YouTube (Dr. Shekhar): https://www.youtube.com/@drshekharcsingh
+
 /* THANKS */
 
 Students: 680+ successful NEET selections since 2014

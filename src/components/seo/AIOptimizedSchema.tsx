@@ -49,6 +49,7 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://maps.app.goo.gl/cerebrum-biology-academy',
     ],
     knowsAbout: [

@@ -70,6 +70,7 @@ export function generateLocalBusinessSchema(keyword: string, centers: NearMeCent
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

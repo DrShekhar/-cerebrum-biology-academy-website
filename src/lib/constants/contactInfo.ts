@@ -317,6 +317,7 @@ export const CONTACT_INFO = {
   social: {
     instagram: 'https://instagram.com/cerebrumbiologyacademy',
     youtube: 'https://youtube.com/@cerebrumbiologyacademy',
+    youtubePersonal: 'https://www.youtube.com/@drshekharcsingh',
     facebook: 'https://facebook.com/cerebrumbiologyacademy',
     twitter: 'https://twitter.com/cerebrumbiology',
   },

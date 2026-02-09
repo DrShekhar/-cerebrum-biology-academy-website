@@ -862,6 +862,11 @@ export const socialLinks = [
     icon: 'YouTube',
   },
   {
+    platform: 'YouTube (Dr. Shekhar)',
+    href: 'https://www.youtube.com/@drshekharcsingh',
+    icon: 'YouTube',
+  },
+  {
     platform: 'Facebook',
     href: 'https://facebook.com/cerebrumbiologyacademy',
     icon: 'Facebook',

@@ -349,6 +349,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://www.linkedin.com/company/cerebrum-biology-academy',
       location.googleBusinessUrl,
     ],
@@ -563,6 +564,7 @@ export function AllLocationsSchema() {
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://www.linkedin.com/company/cerebrum-biology-academy',
     ],
   }

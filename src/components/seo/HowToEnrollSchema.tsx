@@ -134,6 +134,7 @@ export function CourseWithHowToSchema({
       url: 'https://cerebrumbiologyacademy.com',
       sameAs: [
         'https://www.youtube.com/@cerebrumbiologyacademy',
+        'https://www.youtube.com/@drshekharcsingh',
         'https://www.instagram.com/cerebrumbiologyacademy',
       ],
     },

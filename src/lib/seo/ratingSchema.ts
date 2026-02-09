@@ -43,6 +43,7 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
     sameAs: [
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://www.linkedin.com/company/cerebrum-biology-academy',
       'https://twitter.com/CerebrumBio',
       'https://www.facebook.com/cerebrumbiologyacademy',
