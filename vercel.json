@@ -77,7 +77,7 @@
     },
     {
       "path": "/api/cron/process-agents",
-      "schedule": "*/15 * * * *"
+      "schedule": "5,20,35,50 * * * *"
     },
     {
       "path": "/api/cron/nurturing",
@@ -117,7 +117,7 @@
     },
     {
       "path": "/api/cron/webhook-retries",
-      "schedule": "*/15 * * * *"
+      "schedule": "10,25,40,55 * * * *"
     }
   ]
 }

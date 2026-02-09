@@ -300,6 +300,96 @@ export const NEET_COACHING_PAA_QUESTIONS: PAQuestion[] = [
 ]
 
 /**
+ * Delhi NCR Specific PAA Questions for Local SEO
+ */
+export const DELHI_NCR_PAA_QUESTIONS: PAQuestion[] = [
+  {
+    question: 'Which is the best NEET Biology coaching in South Delhi?',
+    answer: 'Cerebrum Biology Academy in South Extension is rated the best NEET Biology coaching in South Delhi. With AIIMS-trained faculty, 98% success rate, and small batches of 15-20 students, it serves students from Greater Kailash, Defence Colony, Lajpat Nagar, and surrounding areas.',
+  },
+  {
+    question: 'Is there NEET coaching in Rohini Delhi?',
+    answer: 'Yes, Cerebrum Biology Academy has a dedicated center in Rohini at 211 Vikas Surya Tower, DC Chauk, Sector 9. It serves students from Rohini, Pitampura, Shalimar Bagh, Ashok Vihar, and North Delhi with the same expert AIIMS faculty as the flagship South Extension branch.',
+  },
+  {
+    question: 'What is the best NEET coaching in Gurugram?',
+    answer: 'Cerebrum Biology Academy in Gurugram (Unit 17, M2K Corporate Park, Sector 51) is among the top NEET Biology coaching centers. It features AIIMS faculty, digital classrooms, and serves students from DLF, Sushant Lok, Golf Course Road, Sohna Road, and Manesar.',
+  },
+  {
+    question: 'Is NEET coaching available in Noida?',
+    answer: 'Yes, Cerebrum Biology Academy has a center at B-45, Sector 62, Noida. It caters to students from Noida, Greater Noida, Ghaziabad, Indirapuram, and Vaishali. Students get the same expert AIIMS faculty and comprehensive study material as other centers.',
+  },
+  {
+    question: 'How much does NEET Biology coaching cost in Delhi NCR?',
+    answer: 'NEET Biology coaching at Cerebrum costs between ₹45,000 to ₹1,80,000 depending on the course. The Pursuit batch starts at ₹45K, Ascent at ₹60K, and Pinnacle at ₹65K. EMI options and merit scholarships are available across all 6 Delhi NCR centers.',
+  },
+  {
+    question: 'Does Cerebrum have a center in Faridabad?',
+    answer: 'Yes, Cerebrum Biology Academy has a center in Sector 17, Faridabad. It serves students from Faridabad, Palwal, Ballabgarh, NIT Faridabad, and surrounding areas. Quality NEET Biology coaching is now accessible without traveling to Delhi.',
+  },
+  {
+    question: 'Which NEET coaching is near Green Park Metro?',
+    answer: 'Cerebrum Biology Academy Green Park center is located at B 113 FF Gulmohar Park, just minutes from Green Park Metro (Yellow Line). Convenient for students from Hauz Khas, IIT Delhi area, Safdarjung, Malviya Nagar, and Saket.',
+  },
+  {
+    question: 'Can I get NEET Biology coaching in East Delhi?',
+    answer: 'Yes, Cerebrum Biology Academy serves East Delhi students through live online classes and the nearest offline centers. Students from Laxmi Nagar, Preet Vihar, Mayur Vihar, and surrounding areas can join. Free demo classes are available.',
+  },
+]
+
+/**
+ * Subject-Specific PAA Questions for deeper AEO coverage
+ */
+export const BIOLOGY_SUBJECT_PAA_QUESTIONS: PAQuestion[] = [
+  {
+    question: 'How to study Genetics for NEET effectively?',
+    answer: 'For Genetics (8-10% weightage): Master Mendel laws and crosses, practice pedigree analysis daily, learn molecular genetics from DNA replication to protein synthesis step-by-step, solve 500+ genetics MCQs, and focus on Hardy-Weinberg and genetic disorders for extra marks.',
+  },
+  {
+    question: 'What are the most important diagrams for NEET Biology?',
+    answer: 'Must-know diagrams: heart structure (labeled), nephron, digestive system, neuron, DNA replication fork, Calvin cycle, Krebs cycle, human reproductive system, embryo development, and ecological pyramids. Practice drawing and labeling each at least 5 times.',
+  },
+  {
+    question: 'How to prepare Ecology for NEET Biology?',
+    answer: 'Ecology carries 6-8% in NEET. Focus on ecosystem components and energy flow, ecological succession, population interactions (mutualism, parasitism, competition), biodiversity hotspots, conservation strategies, and environmental issues. NCERT is 100% sufficient for Ecology.',
+  },
+  {
+    question: 'Is Botany harder than Zoology in NEET?',
+    answer: 'Botany is considered slightly harder due to plant anatomy, morphology, and biochemistry. Zoology has more to memorize (human physiology, animal diversity). Both carry equal marks (180 each). Focus more time on your weaker section for better overall scores.',
+  },
+  {
+    question: 'What are assertion-reason questions in NEET Biology?',
+    answer: 'Assertion-Reason questions present two statements where you determine if both are correct and if the Reason explains the Assertion. These test deep conceptual understanding. NEET typically has 5-8 such questions in Biology. Practice with previous year papers regularly.',
+  },
+  {
+    question: 'How to revise entire NEET Biology in 30 days?',
+    answer: 'For 30-day revision: Week 1 covers Human Physiology + Genetics (highest weightage), Week 2 covers Plant Physiology + Cell Biology, Week 3 covers Ecology + Biotechnology + Evolution, Week 4 focuses on mock tests + weak areas. Revise NCERT back questions daily.',
+  },
+]
+
+/**
+ * Fee and Results PAA Questions
+ */
+export const FEE_RESULTS_PAA_QUESTIONS: PAQuestion[] = [
+  {
+    question: 'What are NEET 2026 expected cutoff marks?',
+    answer: 'NEET 2026 expected cutoff for General category is around 720-137 (qualifying), with top medical colleges requiring 650+ marks. For Biology, aim for 340+ out of 360 for top colleges. Cerebrum students consistently achieve these scores with structured preparation.',
+  },
+  {
+    question: 'Is scholarship available for NEET coaching?',
+    answer: 'Yes, Cerebrum Biology Academy offers merit-based scholarships up to 50% for meritorious students based on screening test and academic performance. Flexible EMI payment options are also available to make quality coaching accessible to all students.',
+  },
+  {
+    question: 'What is the fee structure for NEET dropper batch?',
+    answer: 'The NEET dropper batch fee at Cerebrum ranges from ₹60,000 to ₹1,50,000 for the 1-year intensive program. This includes daily classes, weekly tests, doubt sessions, complete study material, and personalized mentoring. EMI options available.',
+  },
+  {
+    question: 'How long does it take to prepare for NEET Biology?',
+    answer: 'Ideally 18-24 months of consistent preparation. Class 11 students should start early for a 2-year foundation. Class 12 students need 10-12 months of focused study. Droppers can prepare effectively in 8-10 months with intensive coaching at Cerebrum.',
+  },
+]
+
+/**
  * Location-based PAA Questions Generator
  */
 export function generateLocationPAAQuestions(location: string): PAQuestion[] {

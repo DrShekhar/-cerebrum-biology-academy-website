@@ -825,7 +825,7 @@ const nextConfig = {
       },
       {
         source: '/online-biology-tutor-class-11',
-        destination: '/online-biology-tuition',
+        destination: '/courses',
         permanent: true,
       },
 
@@ -985,7 +985,7 @@ const nextConfig = {
       // Nested biology-classes sub-location redirects
       {
         source: '/biology-classes-laxmi-nagar/:area*',
-        destination: '/locations/rohini',
+        destination: '/neet-coaching-east-delhi',
         permanent: true,
       },
       {
@@ -1010,7 +1010,7 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-preet-vihar/:area*',
-        destination: '/locations/rohini',
+        destination: '/neet-coaching-east-delhi',
         permanent: true,
       },
       {
@@ -1233,12 +1233,12 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-laxmi-nagar',
-        destination: '/locations/rohini',
+        destination: '/neet-coaching-east-delhi',
         permanent: true,
       },
       {
         source: '/biology-classes-preet-vihar',
-        destination: '/locations/rohini',
+        destination: '/neet-coaching-east-delhi',
         permanent: true,
       },
       {

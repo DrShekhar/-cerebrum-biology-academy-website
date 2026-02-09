@@ -68,8 +68,8 @@ interface VoiceSearchContentProps {
 export function VoiceSearchContent({ intro, keyInfo, className = '' }: VoiceSearchContentProps) {
   return (
     <div className={className}>
-      <p className="speakable-intro sr-only">{intro}</p>
-      <div className="speakable-key-info sr-only">
+      <p data-speakable="intro" className="sr-only">{intro}</p>
+      <div data-speakable="key-info" className="sr-only">
         {keyInfo.map((info, index) => (
           <p key={index}>{info}</p>
         ))}
@@ -141,7 +141,7 @@ export function CourseSchemaWithSpeakable({
     },
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.course-summary', '.course-highlights'],
+      cssSelector: ['[data-speakable="course-summary"]', '[data-speakable="course-highlights"]'],
     },
     url: url,
   }
@@ -178,17 +178,19 @@ export function LocalBusinessSpeakable({
     description: description,
     url: url,
     telephone: CONTACT_INFO.phone.primary,
-    priceRange: '$$',
+    priceRange: '₹₹',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Greater Noida',
-      addressRegion: 'Uttar Pradesh',
+      streetAddress: 'Block D, South Extension Part 2',
+      addressLocality: 'New Delhi',
+      addressRegion: 'Delhi',
+      postalCode: '110049',
       addressCountry: 'IN',
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 28.4744,
-      longitude: 77.504,
+      latitude: 28.5678,
+      longitude: 77.2234,
     },
     areaServed: areaServed.map((area) => ({
       '@type': 'City',
@@ -197,14 +199,14 @@ export function LocalBusinessSpeakable({
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:00',
-        closes: '20:00',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
       },
     ],
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.business-intro', '.contact-info', '.areas-served'],
+      cssSelector: ['[data-speakable="business-intro"]', '[data-speakable="contact-info"]', '[data-speakable="areas-served"]'],
     },
   }
 
@@ -240,7 +242,7 @@ export function VoiceSearchFAQSchema({ faqs }: { faqs: { question: string; answe
     })),
     speakable: {
       '@type': 'SpeakableSpecification',
-      cssSelector: ['.faq-question', '.faq-answer'],
+      cssSelector: ['[data-speakable="faq-question"]', '[data-speakable="faq-answer"]'],
     },
   }
 

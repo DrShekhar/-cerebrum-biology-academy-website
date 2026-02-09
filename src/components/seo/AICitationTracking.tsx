@@ -113,7 +113,7 @@ export function AICitationTracking({
         url: 'https://cerebrumbiologyacademy.com',
         logo: 'https://cerebrumbiologyacademy.com/logo.png',
       },
-      datePublished: '2024-08-15',
+      datePublished: '2014-06-01',
       dateModified: new Date().toISOString().split('T')[0],
       keywords: primaryKeywords.join(', '),
       isAccessibleForFree: true,
