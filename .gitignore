@@ -57,6 +57,20 @@ next-env.d.ts
 /screenshots/*.png
 /test-screenshots/
 
+# Debug screenshots (root-level)
+burger-*.png
+mobile-*.png
+navigation-*.png
+pricing-*.png
+hero-*.png
+desktop-*.png
+
+# Test artifacts
+/test-results/
+/tests/screenshots/
+/playwright-report/
+/mcp-images/
+
 # Temporary analysis scripts
 analyze-homepage.js
 scripts/analyze-homepage.ts
@@ -66,7 +80,10 @@ resources/
 .archive
 
 # Lighthouse reports
+/lighthouse-reports/
 lighthouse-report.*
-
 lighthouse*.json
 lighthouse*.html
+
+# MCP server build artifacts
+mcp-servers/*/dist/
