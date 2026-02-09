@@ -1,10 +1,25 @@
 /* TEAM */
-Founder & Lead Faculty: Dr. Shekhar C Singh
-Site: https://cerebrumbiologyacademy.com
+
+Founder & Chief Academic Officer: Dr. Shekhar C Singh
+Role: Lead Biology Faculty, Curriculum Designer
+Education: AIIMS Delhi
+Experience: 15+ years NEET coaching
+Contact: info@cerebrumbiologyacademy.com
 Location: New Delhi, India
 
 /* SITE */
-Last update: 2026/02/09
-Standards: HTML5, CSS3, Next.js 15
-Software: Next.js, React, Vercel
+
+Site: Cerebrum Biology Academy
+URL: https://cerebrumbiologyacademy.com
+Description: India's premier NEET Biology coaching institute
+Standards: HTML5, CSS3, ES2024
+Framework: Next.js 15
+Hosting: Vercel (Mumbai region)
 Language: English, Hindi
+Last Updated: 2026-02-09
+
+/* THANKS */
+
+Students: 680+ successful NEET selections since 2014
+Parents: For trusting us with their children's medical dreams
+Faculty: Our dedicated team of AIIMS-trained biology experts
