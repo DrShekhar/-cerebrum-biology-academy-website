@@ -16,3 +16,10 @@ export {
   getFAQSchemaData,
   type FAQ,
 } from './neet-biology-faqs'
+
+export {
+  centerSpecificFAQs,
+  getCenterFAQs,
+  getAllCenterFAQsForSchema,
+  type CenterFAQ,
+} from './center-specific-faqs'

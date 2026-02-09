@@ -17,6 +17,7 @@ import {
   getLocationsByTier,
   getTopLocationsByAspirants,
 } from '@/data/locationData'
+import { centerSpecificFAQs } from '@/data/faqs/center-specific-faqs'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -443,6 +444,84 @@ export default function LocationsPage() {
           </div>
         </div>
       </section>
+
+      {/* Center-Specific FAQs with Schema */}
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 text-gray-900">
+              FAQs About Our Centers
+            </h2>
+            <p className="text-base sm:text-lg text-gray-600">
+              Common questions about our Delhi NCR coaching centers
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {centerSpecificFAQs.map((center) => (
+              <div key={center.centerId}>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 flex items-center">
+                  <MapPin className="w-5 h-5 mr-2 text-blue-600 flex-shrink-0" />
+                  {center.centerName} — {center.city}
+                </h3>
+                <div className="space-y-3">
+                  {center.faqs.slice(0, 4).map((faq, idx) => (
+                    <details
+                      key={`${center.centerId}-${idx}`}
+                      className="group bg-white border border-gray-200 rounded-lg overflow-hidden"
+                    >
+                      <summary className="flex items-center justify-between cursor-pointer p-4 hover:bg-gray-50 transition-colors">
+                        <span className="font-medium text-gray-900 pr-4 text-sm sm:text-base">
+                          {faq.question}
+                        </span>
+                        <span className="text-gray-500 group-open:rotate-180 transition-transform flex-shrink-0">
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M19 9l-7 7-7-7"
+                            />
+                          </svg>
+                        </span>
+                      </summary>
+                      <div className="p-4 pt-0 text-gray-600 text-sm border-t border-gray-100">
+                        {faq.answer}
+                      </div>
+                    </details>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQPage Schema for all center FAQs */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: centerSpecificFAQs.flatMap((center) =>
+              center.faqs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: faq.answer,
+                },
+              }))
+            ),
+          }),
+        }}
+      />
 
       {/* CTA Section */}
       <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6">
