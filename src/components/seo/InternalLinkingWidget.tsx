@@ -22,6 +22,24 @@ const INTERNAL_LINKS = {
     { title: 'Biology Coaching Defence Colony', slug: '/biology-coaching-defence-colony' },
     { title: 'NEET Coaching New Friends Colony', slug: '/neet-coaching-new-friends-colony' },
     { title: 'Biology Coaching Model Town', slug: '/biology-coaching-model-town' },
+    { title: 'NEET Coaching Noida', slug: '/neet-coaching-noida' },
+    { title: 'NEET Coaching Faridabad', slug: '/neet-coaching-faridabad' },
+    { title: 'NEET Coaching South Delhi', slug: '/neet-coaching-south-delhi' },
+    { title: 'NEET Coaching North Delhi', slug: '/neet-coaching-north-delhi' },
+    { title: 'NEET Coaching East Delhi', slug: '/neet-coaching-east-delhi' },
+    { title: 'NEET Coaching West Delhi', slug: '/neet-coaching-west-delhi' },
+    { title: 'NEET Coaching Gurugram', slug: '/neet-coaching-gurgaon' },
+    { title: 'Biology Coaching Pitampura', slug: '/biology-coaching-pitampura' },
+    { title: 'Biology Coaching Shalimar Bagh', slug: '/biology-coaching-shalimar-bagh' },
+    { title: 'Biology Coaching Lajpat Nagar', slug: '/biology-coaching-lajpat-nagar' },
+    { title: 'Biology Coaching Malviya Nagar', slug: '/biology-coaching-malviya-nagar' },
+    { title: 'Biology Coaching Rohini', slug: '/biology-classes-rohini' },
+    { title: 'Biology Coaching Indirapuram', slug: '/biology-coaching-indirapuram' },
+    { title: 'NEET Coaching Mayur Vihar', slug: '/neet-coaching-mayur-vihar' },
+    { title: 'Biology Coaching Panchsheel', slug: '/biology-coaching-panchsheel-park' },
+    { title: 'Biology Coaching Sector 62 Noida', slug: '/biology-coaching-sector-62-noida' },
+    { title: 'NEET Coaching Sohna Road', slug: '/neet-coaching-sohna-road-gurgaon' },
+    { title: 'Biology Classes South Delhi', slug: '/biology-classes-south-delhi' },
   ],
   course: [
     { title: 'All Courses', slug: '/courses' },
@@ -32,6 +50,13 @@ const INTERNAL_LINKS = {
     { title: 'NEET Preparation Roadmap', slug: '/neet-preparation-roadmap' },
     { title: 'NEET Coaching Comparison', slug: '/neet-coaching-comparison' },
     { title: 'FAQ', slug: '/faq' },
+    { title: 'Class 11 Foundation', slug: '/courses/foundation' },
+    { title: 'Class 12 Intensive', slug: '/courses/class-12' },
+    { title: 'NEET Crash Course', slug: '/neet-crash-course' },
+    { title: 'Weekend NEET Batch', slug: '/neet-biology-weekend-batch' },
+    { title: 'Online NEET Classes', slug: '/online-neet-coaching' },
+    { title: 'Scholarship Program', slug: '/scholarship' },
+    { title: 'Biology Notes', slug: '/biology-notes' },
   ],
   blog: [
     { title: 'Blog Home', slug: '/blog' },
@@ -42,6 +67,10 @@ const INTERNAL_LINKS = {
     { title: 'Photosynthesis: Complete NEET Guide', slug: '/blog/photosynthesis-complete-neet-guide' },
     { title: 'NEET Biology Chapter-Wise Weightage 2026', slug: '/blog/neet-biology-chapter-wise-weightage-2026-advanced' },
     { title: 'Best NEET Coaching Delhi NCR 2026', slug: '/blog/best-neet-coaching-delhi-ncr-2026-comparison' },
+    { title: 'NEET 2026 Biology Strategy', slug: '/blog/neet-2026-biology-strategy' },
+    { title: 'Ecology Complete Guide', slug: '/blog/ecology-complete-neet-guide' },
+    { title: 'Human Physiology Notes', slug: '/blog/human-physiology-neet-notes' },
+    { title: 'Cell Biology Masterclass', slug: '/blog/cell-biology-neet-masterclass' },
   ],
   resource: [
     { title: 'NEET Biology Resources', slug: '/neet-biology-resources' },
@@ -50,6 +79,12 @@ const INTERNAL_LINKS = {
     { title: 'Success Stories', slug: '/success-stories' },
     { title: 'Testimonials', slug: '/testimonials' },
     { title: 'Find Center', slug: '/find-center' },
+    { title: 'NEET Biology MCQ Practice', slug: '/neet-biology-mcq' },
+    { title: 'Wall of Achievers', slug: '/wall-of-achievers' },
+    { title: 'Gallery', slug: '/gallery' },
+    { title: 'Olympiad Coaching', slug: '/courses' },
+    { title: 'Compare NEET Coaching', slug: '/compare/neet-coaching-comparison' },
+    { title: 'Help Center', slug: '/help-center' },
   ],
 }
 
@@ -61,10 +96,17 @@ export function InternalLinkingWidget({
   // Get links for the selected category
   const categoryLinks = INTERNAL_LINKS[category] || []
 
-  // Filter out current page and limit results
-  const displayLinks = categoryLinks
-    .filter((link) => link.slug !== currentPage)
-    .slice(0, maxLinks)
+  // Filter out current page
+  const filtered = categoryLinks.filter((link) => link.slug !== currentPage)
+
+  // Deterministic selection based on current page
+  const hash = currentPage.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
+  const shuffled = [...filtered].sort((a, b) => {
+    const hashA = (hash + a.slug.length) % 100
+    const hashB = (hash + b.slug.length) % 100
+    return hashA - hashB
+  })
+  const displayLinks = shuffled.slice(0, maxLinks)
 
   if (displayLinks.length === 0) {
     return null
