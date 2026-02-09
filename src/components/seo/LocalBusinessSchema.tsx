@@ -2,7 +2,7 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface LocalBusinessSchemaProps {
-  locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'
+  locationId: 'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad' | 'noida'
 }
 
 // Detailed location data with geo coordinates
@@ -255,6 +255,53 @@ const locationData = {
       },
     ],
   },
+  noida: {
+    name: 'Cerebrum Biology Academy - Noida',
+    address: 'B-45, Sector 62, Noida',
+    streetAddress: 'B-45, Sector 62',
+    addressLocality: 'Noida',
+    addressRegion: 'Uttar Pradesh',
+    postalCode: '201301',
+    geo: { lat: '28.6280', lng: '77.3649' },
+    phone: CONTACT_INFO.phone.primary,
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',
+    image: 'https://cerebrumbiologyacademy.com/locations/noida-center.jpg',
+    priceRange: '₹₹',
+    nearbyLandmarks: ['Sector 62 Metro Station', 'Electronic City', 'Noida City Centre'],
+    studentCount: '480',
+    googleBusinessUrl: CONTACT_INFO.centers.noida.googleBusinessUrl,
+    areaServed: [
+      'Noida',
+      'Greater Noida',
+      'Ghaziabad',
+      'Sector 62',
+      'Sector 18',
+      'Sector 44',
+      'Indirapuram',
+      'Vaishali',
+      'Crossing Republik',
+    ],
+    reviews: [
+      {
+        author: 'Aarav Tiwari',
+        rating: 5,
+        date: '2024-09-20',
+        body: 'Best NEET biology coaching in Noida. Dr. Shekhar sir makes even the toughest chapters like Genetics and Molecular Biology easy to understand.',
+      },
+      {
+        author: 'Diya Saxena',
+        rating: 5,
+        date: '2024-08-25',
+        body: 'Joined Cerebrum Noida center after trying 2 other coaching institutes. The quality of teaching here is far superior. Scored 670 in NEET.',
+      },
+      {
+        author: 'Manish Kumar',
+        rating: 5,
+        date: '2024-07-12',
+        body: 'Great location near Sector 62 metro. The small batch size ensures every student gets personal attention. Highly recommend for NEET aspirants.',
+      },
+    ],
+  },
 }
 
 export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
@@ -319,11 +366,11 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: locationId === 'south-extension' ? '4.9' : locationId === 'rohini' ? '4.8' : locationId === 'green-park' ? '4.9' : locationId === 'gurugram' ? '4.7' : '4.8',
+      ratingValue: locationId === 'south-extension' ? '4.9' : locationId === 'rohini' ? '4.8' : locationId === 'green-park' ? '4.9' : locationId === 'gurugram' ? '4.7' : locationId === 'noida' ? '4.8' : '4.8',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : '31',
-      reviewCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : '31',
+      ratingCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : locationId === 'noida' ? '28' : '31',
+      reviewCount: locationId === 'south-extension' ? '127' : locationId === 'rohini' ? '89' : locationId === 'green-park' ? '64' : locationId === 'gurugram' ? '43' : locationId === 'noida' ? '28' : '31',
     },
     review: location.reviews.map((review) => ({
       '@type': 'Review',
@@ -470,8 +517,8 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
 export function AllLocationsSchema() {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
 
-  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad'> =
-    ['rohini', 'gurugram', 'south-extension', 'green-park', 'faridabad']
+  const locationIds: Array<'rohini' | 'gurugram' | 'south-extension' | 'green-park' | 'faridabad' | 'noida'> =
+    ['rohini', 'gurugram', 'south-extension', 'green-park', 'faridabad', 'noida']
 
   const organizationWithLocations = {
     '@context': 'https://schema.org',
@@ -479,7 +526,7 @@ export function AllLocationsSchema() {
     '@id': `${baseUrl}#organization`,
     name: 'Cerebrum Biology Academy',
     description:
-      'Best NEET Biology Coaching in Delhi NCR with 5 offline centers and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
+      'Best NEET Biology Coaching in Delhi NCR with 6 offline centers and pan-India online classes. Expert AIIMS faculty, 98% success rate.',
     url: baseUrl,
     logo: `${baseUrl}/logo.png`,
     telephone: CONTACT_INFO.phone.primary,

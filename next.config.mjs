@@ -1821,8 +1821,8 @@ const nextConfig = {
       { source: '/usabo-coaching/', destination: '/courses', permanent: true },
       { source: '/ibo-preparation', destination: '/courses', permanent: true },
       { source: '/ibo-preparation/', destination: '/courses', permanent: true },
-      { source: '/bbo-preparation', destination: '/olympiad-coaching', permanent: true },
-      { source: '/bbo-preparation/', destination: '/olympiad-coaching', permanent: true },
+      { source: '/bbo-preparation', destination: '/courses', permanent: true },
+      { source: '/bbo-preparation/', destination: '/courses', permanent: true },
       { source: '/biology-olympiad-preparation', destination: '/courses', permanent: true },
       { source: '/biology-olympiad-preparation/', destination: '/courses', permanent: true },
 
