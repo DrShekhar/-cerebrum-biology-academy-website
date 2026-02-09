@@ -25,7 +25,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     title:
       'Best NEET Biology Coaching in Delhi NCR | Laxmi Nagar, Dwarka, Noida, Gurgaon | Cerebrum Academy',
     description:
-      'Top NEET coaching in Delhi NCR - Laxmi Nagar, Dwarka, Noida, Gurgaon, Rohini, Pitampura. Expert AIIMS faculty, 98% success rate, small batches. Best biology coaching for Class 11, 12 & droppers. Book free demo!',
+      'Top NEET coaching in Delhi NCR 2026. AIIMS faculty, 98% success rate, 15-student batches, 680+ selections. 6 centers — South Extension, Green Park, Rohini, Gurugram, Noida, Faridabad. Class 11, 12 & droppers. Book free demo!',
     keywords: [
       'NEET coaching in Delhi',
       'NEET coaching Delhi NCR',
@@ -89,7 +89,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   courses: {
     title: 'NEET Biology Courses Delhi NCR | Class 11, 12, Dropper Batches | Cerebrum Academy',
     description:
-      'Complete NEET biology courses in Delhi NCR - Class 11, Class 12, Dropper batches. Expert AIIMS faculty in Laxmi Nagar, Dwarka, Noida, Gurgaon. Best NEET preparation with small batches. Enroll now!',
+      'NEET biology courses 2026 in Delhi NCR — Class 11, Class 12 & Dropper batches. AIIMS faculty, 15-student batches, 98% success rate. Rs 45K–1.56L with EMI. 6 centers across Delhi NCR. Enroll now!',
     keywords: [
       'NEET biology courses Delhi',
       'NEET biology syllabus',
@@ -144,7 +144,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   enrollment: {
     title: 'Enroll Now - NEET Biology Coaching Delhi NCR | Cerebrum Academy Admission',
     description:
-      'Enroll in best NEET biology coaching in Delhi NCR. Affordable fees, EMI options. Join students from Laxmi Nagar, Dwarka, Noida, Gurgaon. Limited seats for 2025-26 batch!',
+      'Enroll in best NEET biology coaching in Delhi NCR. Affordable fees, EMI options. Join students from Laxmi Nagar, Dwarka, Noida, Gurgaon. Limited seats for 2026-27 batch!',
     keywords: [
       'NEET enrollment Delhi',
       'biology course admission Delhi NCR',
@@ -157,19 +157,58 @@ export const pageMetadata: Record<string, PageMetadata> = {
     ],
     canonical: '/enrollment',
   },
-  pricing: {
-    title: 'NEET Coaching Fees Delhi NCR | Affordable Biology Coaching | Cerebrum Academy',
+  bookDemo: {
+    title: 'Book Free NEET Demo Class 2026 | WhatsApp Instant Booking | Cerebrum Academy Delhi NCR',
     description:
-      'Affordable NEET coaching fees in Delhi NCR. Compare pricing with Laxmi Nagar, Dwarka, Noida institutes. EMI options available. Best value NEET preparation.',
+      'Book your FREE NEET biology demo class at Cerebrum Academy. Experience 15-student batches, AIIMS faculty teaching. Instant WhatsApp confirmation. 6 centers across Delhi NCR — South Extension, Green Park, Rohini, Gurugram, Noida, Faridabad.',
+    keywords: [
+      'book free demo NEET coaching',
+      'free demo class biology Delhi',
+      'NEET coaching demo Delhi NCR',
+      'free trial class NEET',
+      'book NEET demo class',
+      'free biology class Delhi',
+      'try NEET coaching free',
+      'NEET demo class near me',
+      'free NEET coaching trial Delhi',
+      'Cerebrum Academy demo class',
+    ],
+    canonical: '/book-free-demo',
+  },
+  results: {
+    title: 'NEET Results 2026 | 98% Success Rate, 680+ Selections | Cerebrum Academy Delhi NCR',
+    description:
+      'Cerebrum Academy NEET results: 98% qualification rate, 680+ medical college selections, AIIMS & JIPMER toppers. Real student testimonials from Delhi, Noida, Gurugram. 15-student batches deliver results.',
+    keywords: [
+      'NEET results 2026 Cerebrum',
+      'NEET success stories Delhi',
+      'NEET toppers Delhi NCR',
+      '98 percent NEET success rate',
+      'AIIMS selections Delhi coaching',
+      'NEET coaching results',
+      'student testimonials NEET Delhi',
+      'best NEET results Delhi NCR',
+      'Cerebrum Academy results',
+    ],
+    canonical: '/results',
+  },
+  pricing: {
+    title: 'NEET Coaching Fees 2026 Delhi NCR | Rs 45K–1.56L | EMI Available | Cerebrum Academy',
+    description:
+      'NEET biology coaching fees starting Rs 45,000 in Delhi NCR. 15-student batches, AIIMS faculty, 98% success rate. Compare with Aakash & Allen. Flexible EMI options across 6 centers. Book free demo!',
     keywords: [
       'NEET course fees Delhi',
+      'NEET coaching fees 2026',
       'biology coaching cost Delhi NCR',
       'affordable NEET coaching Delhi',
       'NEET coaching fees comparison',
-      'cheap NEET coaching Delhi',
-      'EMI NEET course Delhi',
+      'NEET coaching EMI Delhi',
       'NEET fees Laxmi Nagar',
       'NEET fees Dwarka',
+      'NEET coaching fees Noida',
+      'NEET coaching fees Gurgaon',
+      'Cerebrum Academy fees',
+      'small batch NEET coaching fees',
     ],
     canonical: '/pricing',
   },
@@ -201,25 +240,28 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'online NEET test Delhi',
       'free mock test NEET Delhi',
       'NEET question paper practice',
-      'NEET test series 2025 Delhi',
+      'NEET test series 2026 Delhi',
     ],
     canonical: '/mock-tests',
   },
   testimonials: {
-    title: 'NEET Toppers Delhi NCR | Student Success Stories | Cerebrum Academy Results',
+    title: 'NEET Results 2026 | 98% Success Rate, 680+ Selections | Cerebrum Academy Delhi NCR',
     description:
-      'NEET toppers from Delhi NCR - Laxmi Nagar, Dwarka, Noida, Gurgaon students. 98% success rate. Read real testimonials from AIIMS, JIPMER selections.',
+      'Cerebrum Academy NEET results: 98% qualification rate, 680+ medical college selections, AIIMS & JIPMER toppers. Real student testimonials from Delhi, Noida, Gurugram. 15-student batches deliver results.',
     keywords: [
       'NEET success stories Delhi',
       'NEET toppers Delhi NCR',
+      'NEET results 2026',
       'student testimonials Delhi',
       'NEET results Delhi',
       'AIIMS selections Delhi',
       'NEET coaching results Delhi NCR',
       'student reviews Delhi',
       'NEET success rate Delhi',
+      'Cerebrum Academy results',
+      'NEET topper interviews',
     ],
-    canonical: '/testimonials',
+    canonical: '/results',
   },
   faculty: {
     title: 'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
@@ -310,7 +352,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-foundation-course',
   },
   kotaVsOnline: {
-    title: 'Kota vs Online NEET Coaching 2025: Complete Comparison | Save ₹2.5L',
+    title: 'Kota vs Online NEET Coaching 2026: Complete Comparison | Save ₹2.5L',
     description:
       'Kota vs Online NEET coaching comparison: 85% vs 60% success rate, ₹2.5L+ savings, stay home safely. Data-driven analysis every parent must read before choosing. Mental health matters.',
     keywords: [
@@ -351,7 +393,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   },
   // PAN-INDIA SEO PAGES
   onlineNeetCoachingIndia: {
-    title: 'Best Online NEET Coaching in India 2025 | Pan-India Live Classes | Cerebrum Academy',
+    title: 'Best Online NEET Coaching in India 2026 | Pan-India Live Classes | Cerebrum Academy',
     description:
       'Best online NEET coaching in India. Live interactive classes, AIIMS trained faculty, 98% success rate. Join students from all states - Rajasthan, UP, Maharashtra, Karnataka, Tamil Nadu, Gujarat, Kerala. Book free demo!',
     keywords: [
@@ -373,7 +415,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/online-neet-coaching-india',
   },
   bestNeetCoachingIndia: {
-    title: 'Best NEET Coaching in India 2025 [Compare Top 10] | 98% Success',
+    title: 'Best NEET Coaching in India 2026 [Compare Top 10] | 98% Success',
     description:
       "Honest comparison of India's top NEET coaching. AIIMS-trained faculty, 2500+ selections, 98% success rate. Compare fees, results vs Kota, Allen. Book FREE demo today!",
     keywords: [
@@ -385,7 +427,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'best biology coaching india',
       'neet coaching india ranking',
       'best neet preparation india',
-      'neet 2025 coaching india',
+      'neet 2026 coaching india',
       'neet 2026 coaching india',
       'affordable neet coaching india',
       'neet coaching fees india',
@@ -433,7 +475,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   // GURUGRAM SEO PAGES
   neetCoachingGurugram: {
     title:
-      'Best NEET Coaching in Gurugram 2025 | DLF, Golf Course Road, Sushant Lok | Cerebrum Academy',
+      'Best NEET Coaching in Gurugram 2026 | DLF, Golf Course Road, Sushant Lok | Cerebrum Academy',
     description:
       'Best NEET coaching in Gurugram - DLF Phase 1-4, Golf Course Road, Sushant Lok, Sector 14, 43, 51, 56, 57, South City. AIIMS trained faculties, 98% success rate. No Delhi travel needed. Online live classes from home. Book free demo!',
     keywords: [
@@ -460,14 +502,14 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'neet classes gurugram',
       'neet institute gurugram',
       'neet tuition gurugram',
-      'neet 2025 coaching gurugram',
+      'neet 2026 coaching gurugram',
       'neet 2026 coaching gurugram',
     ],
     canonical: '/neet-coaching-gurugram',
   },
   // COACHING HUB PAGES
   neetCoachingKaluSarai: {
-    title: 'Best NEET Coaching in Kalu Sarai 2025 | Near IIT Delhi | Cerebrum Academy',
+    title: 'Best NEET Coaching in Kalu Sarai 2026 | Near IIT Delhi | Cerebrum Academy',
     description:
       "Best NEET coaching in Kalu Sarai, Delhi's premier coaching hub near IIT Delhi. AIIMS trained faculty, 98% success rate, small batches. Near Hauz Khas Metro. Book free demo!",
     keywords: [
@@ -484,13 +526,13 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching kalu sarai',
       'neet preparation kalu sarai delhi',
       'best biology coaching kalu sarai',
-      'neet 2025 coaching kalu sarai',
+      'neet 2026 coaching kalu sarai',
     ],
     canonical: '/neet-coaching-kalu-sarai',
   },
   neetCoachingRajinderNagar: {
     title:
-      "Best NEET Coaching in Rajinder Nagar 2025 | India's Coaching Capital | Cerebrum Academy",
+      "Best NEET Coaching in Rajinder Nagar 2026 | India's Coaching Capital | Cerebrum Academy",
     description:
       "Best NEET coaching in Rajinder Nagar, India's most famous coaching destination. AIIMS trained faculty, 98% success rate. Near Rajiv Chowk & Karol Bagh Metro. Book free demo!",
     keywords: [
@@ -505,13 +547,13 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching rajinder nagar',
       'neet preparation rajinder nagar delhi',
       'best biology coaching rajinder nagar',
-      'neet 2025 coaching rajinder nagar',
+      'neet 2026 coaching rajinder nagar',
     ],
     canonical: '/neet-coaching-rajinder-nagar',
   },
   neetCoachingMukherjeeNagar: {
     title:
-      "Best NEET Coaching in Mukherjee Nagar 2025 | North Delhi's Coaching Hub | Cerebrum Academy",
+      "Best NEET Coaching in Mukherjee Nagar 2026 | North Delhi's Coaching Hub | Cerebrum Academy",
     description:
       "Best NEET coaching in Mukherjee Nagar, North Delhi's coaching capital. AIIMS trained faculty, 98% success rate. Near GTB Nagar Metro. Online + offline classes. Book free demo!",
     keywords: [
@@ -525,12 +567,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching mukherjee nagar',
       'neet preparation mukherjee nagar delhi',
       'best biology coaching mukherjee nagar',
-      'neet 2025 coaching mukherjee nagar',
+      'neet 2026 coaching mukherjee nagar',
     ],
     canonical: '/neet-coaching-mukherjee-nagar',
   },
   neetCoachingGtbNagar: {
-    title: 'Best NEET Coaching in GTB Nagar 2025 | Near Delhi University | Cerebrum Academy',
+    title: 'Best NEET Coaching in GTB Nagar 2026 | Near Delhi University | Cerebrum Academy',
     description:
       'Best NEET coaching in GTB Nagar, near Delhi University North Campus. AIIMS trained faculty, 98% success rate. Academic environment. Book free demo!',
     keywords: [
@@ -544,12 +586,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching gtb nagar',
       'neet preparation gtb nagar delhi',
       'best biology coaching gtb nagar',
-      'neet 2025 coaching gtb nagar',
+      'neet 2026 coaching gtb nagar',
     ],
     canonical: '/neet-coaching-gtb-nagar',
   },
   neetCoachingLajpatNagar: {
-    title: 'Best NEET Coaching in Lajpat Nagar 2025 | South Delhi Hub | Cerebrum Academy',
+    title: 'Best NEET Coaching in Lajpat Nagar 2026 | South Delhi Hub | Cerebrum Academy',
     description:
       'Best NEET coaching in Lajpat Nagar, South Delhi. AIIMS trained faculty, 98% success rate. Excellent metro connectivity. Online + offline classes. Book free demo!',
     keywords: [
@@ -563,12 +605,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching lajpat nagar',
       'neet preparation lajpat nagar delhi',
       'best biology coaching lajpat nagar',
-      'neet 2025 coaching lajpat nagar',
+      'neet 2026 coaching lajpat nagar',
     ],
     canonical: '/neet-coaching-lajpat-nagar',
   },
   neetCoachingJanakpuri: {
-    title: 'Best NEET Coaching in Janakpuri 2025 | West Delhi | Cerebrum Academy',
+    title: 'Best NEET Coaching in Janakpuri 2026 | West Delhi | Cerebrum Academy',
     description:
       'Best NEET coaching in Janakpuri, West Delhi. AIIMS trained faculty, 98% success rate. Near Janakpuri West Metro. Online + offline classes. Book free demo!',
     keywords: [
@@ -583,14 +625,14 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching janakpuri',
       'neet preparation janakpuri delhi',
       'best biology coaching janakpuri',
-      'neet 2025 coaching janakpuri',
+      'neet 2026 coaching janakpuri',
     ],
     canonical: '/neet-coaching-janakpuri',
   },
   // DELHI REGIONAL PAGES
   neetCoachingNorthDelhi: {
     title:
-      'Best NEET Coaching in North Delhi 2025 | Rohini, Pitampura, Model Town | Cerebrum Academy',
+      'Best NEET Coaching in North Delhi 2026 | Rohini, Pitampura, Model Town | Cerebrum Academy',
     description:
       'Best NEET coaching in North Delhi - Rohini, Pitampura, Model Town, GTB Nagar, Mukherjee Nagar. AIIMS trained faculty, 98% success rate. Book free demo!',
     keywords: [
@@ -606,12 +648,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching north delhi',
       'neet preparation north delhi',
       'best biology coaching north delhi',
-      'neet 2025 coaching north delhi',
+      'neet 2026 coaching north delhi',
     ],
     canonical: '/neet-coaching-north-delhi',
   },
   neetCoachingEastDelhi: {
-    title: 'Best NEET Coaching in East Delhi 2025 | Laxmi Nagar, Preet Vihar | Cerebrum Academy',
+    title: 'Best NEET Coaching in East Delhi 2026 | Laxmi Nagar, Preet Vihar | Cerebrum Academy',
     description:
       'Best NEET coaching in East Delhi - Laxmi Nagar, Preet Vihar, Mayur Vihar, IP Extension. AIIMS trained faculty, 98% success rate. Book free demo!',
     keywords: [
@@ -627,12 +669,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching east delhi',
       'neet preparation east delhi',
       'best biology coaching east delhi',
-      'neet 2025 coaching east delhi',
+      'neet 2026 coaching east delhi',
     ],
     canonical: '/neet-coaching-east-delhi',
   },
   neetCoachingWestDelhi: {
-    title: 'Best NEET Coaching in West Delhi 2025 | Dwarka, Janakpuri, Rajouri | Cerebrum Academy',
+    title: 'Best NEET Coaching in West Delhi 2026 | Dwarka, Janakpuri, Rajouri | Cerebrum Academy',
     description:
       'Best NEET coaching in West Delhi - Dwarka, Janakpuri, Rajouri Garden, Uttam Nagar. AIIMS trained faculty, 98% success rate. Book free demo!',
     keywords: [
@@ -648,12 +690,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching west delhi',
       'neet preparation west delhi',
       'best biology coaching west delhi',
-      'neet 2025 coaching west delhi',
+      'neet 2026 coaching west delhi',
     ],
     canonical: '/neet-coaching-west-delhi',
   },
   neetCoachingSouthDelhi: {
-    title: 'Best NEET Coaching in South Delhi 2025 | Kalu Sarai, Hauz Khas, GK | Cerebrum Academy',
+    title: 'Best NEET Coaching in South Delhi 2026 | Kalu Sarai, Hauz Khas, GK | Cerebrum Academy',
     description:
       'Best NEET coaching in South Delhi - Kalu Sarai, Hauz Khas, Greater Kailash, Saket. AIIMS trained faculty, 98% success rate. Book free demo!',
     keywords: [
@@ -669,13 +711,13 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching south delhi',
       'neet preparation south delhi',
       'best biology coaching south delhi',
-      'neet 2025 coaching south delhi',
+      'neet 2026 coaching south delhi',
     ],
     canonical: '/neet-coaching-south-delhi',
   },
   // NCR CITY PAGES
   neetCoachingNoida: {
-    title: 'Best NEET Coaching in Noida 2025 | Sector 18, 62, 63 | Cerebrum Academy',
+    title: 'Best NEET Coaching in Noida 2026 | Sector 18, 62, 63 | Cerebrum Academy',
     description:
       'Best NEET coaching in Noida - Sector 18, 62, 63, 15, 16. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -690,12 +732,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching noida',
       'neet preparation noida',
       'best biology coaching noida',
-      'neet 2025 coaching noida',
+      'neet 2026 coaching noida',
     ],
     canonical: '/neet-coaching-noida',
   },
   neetCoachingGhaziabad: {
-    title: 'Best NEET Coaching in Ghaziabad 2025 | Indirapuram, Vaishali | Cerebrum Academy',
+    title: 'Best NEET Coaching in Ghaziabad 2026 | Indirapuram, Vaishali | Cerebrum Academy',
     description:
       'Best NEET coaching in Ghaziabad - Indirapuram, Vaishali, Vasundhara, Kaushambi. AIIMS trained faculty, 98% success rate. Book free demo!',
     keywords: [
@@ -710,12 +752,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching ghaziabad',
       'neet preparation ghaziabad',
       'best biology coaching ghaziabad',
-      'neet 2025 coaching ghaziabad',
+      'neet 2026 coaching ghaziabad',
     ],
     canonical: '/neet-coaching-ghaziabad',
   },
   neetCoachingFaridabad: {
-    title: 'Best NEET Coaching in Faridabad 2025 | Sector 17 | Cerebrum Academy',
+    title: 'Best NEET Coaching in Faridabad 2026 | Sector 17 | Cerebrum Academy',
     description:
       'Best NEET coaching in Faridabad - Sector 17, NIT, Ballabhgarh. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -730,12 +772,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching faridabad',
       'neet preparation faridabad',
       'best biology coaching faridabad',
-      'neet 2025 coaching faridabad',
+      'neet 2026 coaching faridabad',
     ],
     canonical: '/neet-coaching-faridabad',
   },
   neetCoachingGurgaon: {
-    title: 'Best NEET Coaching in Gurgaon 2025 | DLF, Sector 14, 56 | Cerebrum Academy',
+    title: 'Best NEET Coaching in Gurgaon 2026 | DLF, Sector 14, 56 | Cerebrum Academy',
     description:
       'Best NEET coaching in Gurgaon - DLF, Sector 14, 56, 57, Golf Course Road. AIIMS trained faculty, 98% success rate. Book free demo!',
     keywords: [
@@ -750,12 +792,12 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching gurgaon',
       'neet preparation gurgaon',
       'best biology coaching gurgaon',
-      'neet 2025 coaching gurgaon',
+      'neet 2026 coaching gurgaon',
     ],
     canonical: '/neet-coaching-gurgaon',
   },
   neetCoachingGreaterNoidaWest: {
-    title: 'Best NEET Coaching in Greater Noida West 2025 | Noida Extension | Cerebrum Academy',
+    title: 'Best NEET Coaching in Greater Noida West 2026 | Noida Extension | Cerebrum Academy',
     description:
       'Best NEET coaching in Greater Noida West (Noida Extension). AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -768,13 +810,13 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching greater noida west',
       'neet preparation greater noida west',
       'best biology coaching noida extension',
-      'neet 2025 coaching greater noida west',
+      'neet 2026 coaching greater noida west',
     ],
     canonical: '/neet-coaching-greater-noida-west',
   },
   // TIER-1 CITY PAGES
   neetCoachingMumbai: {
-    title: 'Best NEET Coaching in Mumbai 2025 | Andheri, Dadar, Thane | Cerebrum Academy',
+    title: 'Best NEET Coaching in Mumbai 2026 | Andheri, Dadar, Thane | Cerebrum Academy',
     description:
       'Best NEET coaching in Mumbai - Andheri, Dadar, Borivali, Thane, Navi Mumbai. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -790,7 +832,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching mumbai',
       'neet preparation mumbai',
       'best biology coaching mumbai',
-      'neet 2025 coaching mumbai',
+      'neet 2026 coaching mumbai',
       'biology tuition mumbai',
       'online biology coaching mumbai',
       'biology classes mumbai',
@@ -800,7 +842,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-mumbai',
   },
   neetCoachingBangalore: {
-    title: 'Best NEET Coaching in Bangalore 2025 | Koramangala, HSR, Jayanagar | Cerebrum Academy',
+    title: 'Best NEET Coaching in Bangalore 2026 | Koramangala, HSR, Jayanagar | Cerebrum Academy',
     description:
       'Best NEET coaching in Bangalore - Koramangala, HSR Layout, Jayanagar, Indiranagar. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -815,7 +857,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching bangalore',
       'neet preparation bangalore',
       'best biology coaching bangalore',
-      'neet 2025 coaching bangalore',
+      'neet 2026 coaching bangalore',
       'biology tuition bangalore',
       'online biology coaching bangalore',
       'biology classes bangalore',
@@ -825,7 +867,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-bangalore',
   },
   neetCoachingHyderabad: {
-    title: 'Best NEET Coaching in Hyderabad 2025 | KPHB, Ameerpet, Dilsukhnagar | Cerebrum Academy',
+    title: 'Best NEET Coaching in Hyderabad 2026 | KPHB, Ameerpet, Dilsukhnagar | Cerebrum Academy',
     description:
       'Best NEET coaching in Hyderabad - KPHB, Ameerpet, Dilsukhnagar, Secunderabad. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -840,7 +882,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching hyderabad',
       'neet preparation hyderabad',
       'best biology coaching hyderabad',
-      'neet 2025 coaching hyderabad',
+      'neet 2026 coaching hyderabad',
       'biology tuition hyderabad',
       'online biology coaching hyderabad',
       'biology classes hyderabad',
@@ -850,7 +892,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-hyderabad',
   },
   neetCoachingChennai: {
-    title: 'Best NEET Coaching in Chennai 2025 | Anna Nagar, T Nagar, Velachery | Cerebrum Academy',
+    title: 'Best NEET Coaching in Chennai 2026 | Anna Nagar, T Nagar, Velachery | Cerebrum Academy',
     description:
       'Best NEET coaching in Chennai - Anna Nagar, T Nagar, Velachery, Tambaram. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -865,7 +907,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching chennai',
       'neet preparation chennai',
       'best biology coaching chennai',
-      'neet 2025 coaching chennai',
+      'neet 2026 coaching chennai',
       'biology tuition chennai',
       'online biology coaching chennai',
       'biology classes chennai',
@@ -875,7 +917,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     canonical: '/neet-coaching-chennai',
   },
   neetCoachingPune: {
-    title: 'Best NEET Coaching in Pune 2025 | Kothrud, Hinjewadi, FC Road | Cerebrum Academy',
+    title: 'Best NEET Coaching in Pune 2026 | Kothrud, Hinjewadi, FC Road | Cerebrum Academy',
     description:
       'Best NEET coaching in Pune - Kothrud, Hinjewadi, FC Road, Deccan. AIIMS trained faculty, 98% success rate. Online + offline classes. Book free demo!',
     keywords: [
@@ -890,7 +932,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
       'medical coaching pune',
       'neet preparation pune',
       'best biology coaching pune',
-      'neet 2025 coaching pune',
+      'neet 2026 coaching pune',
       'biology tuition pune',
       'online biology coaching pune',
       'biology classes pune',

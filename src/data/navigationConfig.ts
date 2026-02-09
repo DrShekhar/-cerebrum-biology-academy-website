@@ -202,10 +202,10 @@ export const navigationConfig: NavigationSection[] = [
     items: [
       {
         id: 'neet-results',
-        title: 'NEET Results 2025',
+        title: 'NEET Results 2026',
         href: '/company/results',
-        description: 'Our students\' NEET 2025 results and achievements',
-        keywords: ['neet results', 'results 2025', 'toppers', 'achievements'],
+        description: 'Our students\' NEET 2026 results and achievements',
+        keywords: ['neet results', 'results 2026', 'toppers', 'achievements'],
         isPopular: true,
       },
       {
