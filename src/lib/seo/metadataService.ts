@@ -105,7 +105,7 @@ export class MetadataService {
         siteName: 'Cerebrum Biology Academy',
         images: [
           {
-            url: `/og-image.jpg
+            url: `/og-image.jpg`,
             width: 1200,
             height: 630,
             alt: `Best Biology Coaching in ${locationData.city}`,
@@ -118,7 +118,7 @@ export class MetadataService {
         card: 'summary_large_image',
         title: cityData.title,
         description: cityData.description,
-        images: [`/og-image.jpg
+        images: [`/og-image.jpg`],
       },
       other: {
         'application-ld+json': JSON.stringify(cityData.customSchema),
@@ -140,7 +140,7 @@ export class MetadataService {
         siteName: 'Cerebrum Biology Academy',
         images: [
           {
-            url: `/og-image.jpg'-')}.jpg`,
+            url: `/og-image.jpg`,
             width: 1200,
             height: 630,
             alt: `${topicData.topic} - ${topicData.className} Biology`,
@@ -211,7 +211,7 @@ export class MetadataService {
         siteName: 'Cerebrum Biology Academy',
         images: [
           {
-            url: `/og-image.jpg
+            url: `/og-image.jpg`,
             width: 1200,
             height: 630,
             alt: info.title,

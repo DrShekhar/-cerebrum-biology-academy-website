@@ -130,7 +130,7 @@ export class GlobalSEOService {
       description,
       keywords,
       canonicalUrl: `${this.baseUrl}/courses/${courseId}`,
-      ogImage: `/og-image.jpg
+      ogImage: `/og-image.jpg`,
       schema,
       hreflang: {
         en: `${this.baseUrl}/courses/${courseId}`,
