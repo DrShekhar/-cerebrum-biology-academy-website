@@ -6,6 +6,7 @@ import { CourseDetailPage } from '@/components/courses/CourseDetailPage'
 import { EnhancedCourseDetailPage } from '@/components/courses/EnhancedCourseDetailPage'
 import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo'
 import { LearningResourceSchema } from '@/components/seo/ContentFreshness'
+import { CourseDetailSchema } from '@/components/seo/CourseDetailSchema'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -110,6 +111,16 @@ export default async function CoursePage({ params }: Props) {
           learningResourceType="Course"
           keywords={['NEET Biology', newCourse.targetClass, 'Medical Entrance']}
         />
+        <CourseDetailSchema
+          courseName={newCourse.name}
+          description={newCourse.description}
+          duration={newCourse.duration.includes('2') ? 'P2Y' : newCourse.duration.includes('6') ? 'P6M' : 'P1Y'}
+          price={newCourse.tiers.pinnacle.price}
+          batchSize={newCourse.tiers.pinnacle.batchSize}
+          targetClass={newCourse.targetClass}
+          slug={newCourse.id}
+          learningMode={newCourse.learningMode}
+        />
         <EnhancedCourseDetailPage course={newCourse} />
       </>
     )
@@ -134,6 +145,14 @@ export default async function CoursePage({ params }: Props) {
           educationalLevel={`${oldCourse.targetClass}, NEET`}
           learningResourceType="Course"
           keywords={['NEET Biology', oldCourse.targetClass, 'Medical Entrance']}
+        />
+        <CourseDetailSchema
+          courseName={oldCourse.title}
+          description={oldCourse.description}
+          duration={oldCourse.duration?.includes('2') ? 'P2Y' : oldCourse.duration?.includes('6') ? 'P6M' : 'P1Y'}
+          price={oldCourse.pricing?.amount || 85000}
+          targetClass={oldCourse.targetClass}
+          slug={oldCourse.slug}
         />
         <CourseDetailPage course={oldCourse} />
       </>

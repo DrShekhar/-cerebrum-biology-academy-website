@@ -36,6 +36,9 @@ export { VideoSchema, VideoListSchema, VideoDisplay } from './VideoSchema'
 // Event schema for webinars, demos, live classes
 export { EventSchema, EventListSchema, WebinarSchema } from './EventSchema'
 
+// Dynamic Course schema for individual course detail pages
+export { CourseDetailSchema } from './CourseDetailSchema'
+
 // Structured data schemas (Organization, Course, LocalBusiness, HowTo, Person, Video, Review)
 export {
   OrganizationSchema,
