@@ -279,6 +279,7 @@ export default async function GurugramAreaPage({ params }: PageProps) {
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
     ],
     aggregateRating: {
       '@type': 'AggregateRating',

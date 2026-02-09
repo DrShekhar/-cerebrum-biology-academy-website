@@ -32,5 +32,10 @@ User-agent: Applebot-Extended
 # Structured data available on all pages (JSON-LD):
 # Organization, LocalBusiness, Course, FAQ, Person, Event, Review, BreadcrumbList, Speakable
 
+# Social Media & Content Channels:
+# YouTube Channel (Personal): https://www.youtube.com/@drshekharcsingh
+# YouTube Channel (Academy): https://www.youtube.com/@cerebrumbiologyacademy
+# Dr. Shekhar's personal channel features NEET Biology lectures and educational content
+
 # For partnership or data inquiries:
 # Email: info@cerebrumbiologyacademy.com

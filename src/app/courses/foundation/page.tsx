@@ -1218,6 +1218,7 @@ export default function FoundationCoursePage() {
             sameAs: [
               'https://www.instagram.com/cerebrumbiologyacademy',
               'https://www.youtube.com/@cerebrumbiologyacademy',
+              'https://www.youtube.com/@drshekharcsingh',
             ],
           }),
         }}

@@ -415,6 +415,7 @@ export class MetadataService {
         'https://www.facebook.com/cerebrumbiologyacademy',
         'https://www.instagram.com/cerebrumbiologyacademy',
         'https://www.youtube.com/@cerebrumbiologyacademy',
+        'https://www.youtube.com/@drshekharcsingh',
         'https://twitter.com/cerebrumbiology',
         'https://www.linkedin.com/company/cerebrumbiologyacademy',
       ],

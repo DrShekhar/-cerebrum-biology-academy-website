@@ -88,6 +88,7 @@ function generateStructuredData(location: NEETCoachingLocation) {
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
     ],
   }
 

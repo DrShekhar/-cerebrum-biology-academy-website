@@ -35,6 +35,7 @@ export function PersonSchema({
     ],
     sameAs: [
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://www.linkedin.com/company/cerebrum-biology-academy',
       'https://www.instagram.com/cerebrumbiologyacademy',
     ],

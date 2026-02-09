@@ -33,6 +33,7 @@ export function OrganizationSchema() {
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://www.linkedin.com/company/cerebrumbiologyacademy',
       'https://twitter.com/cerebrumbiology',
       'https://g.page/cerebrumbiologyacademy',
@@ -42,7 +43,11 @@ export function OrganizationSchema() {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Lead Faculty',
-      sameAs: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+      sameAs: [
+        'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
+        'https://www.youtube.com/@drshekharcsingh',
+        'https://www.linkedin.com/in/drshekharsingh',
+      ],
     },
     numberOfEmployees: {
       '@type': 'QuantitativeValue',
@@ -550,6 +555,7 @@ export function LocalBusinessSchema() {
       'https://www.facebook.com/cerebrumbiologyacademy',
       'https://www.instagram.com/cerebrumbiologyacademy',
       'https://www.youtube.com/@cerebrumbiologyacademy',
+      'https://www.youtube.com/@drshekharcsingh',
       'https://www.linkedin.com/company/cerebrumbiologyacademy',
     ],
     founder: {
@@ -1141,6 +1147,8 @@ export function DrShekharSinghSchema() {
       sameAs={[
         'https://www.linkedin.com/in/drshekharsingh',
         'https://www.youtube.com/@cerebrumbiologyacademy',
+        'https://www.youtube.com/@drshekharcsingh',
+        'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
       ]}
       awards={[
         'Best Biology Teacher Award 2022 - Education Excellence Foundation',

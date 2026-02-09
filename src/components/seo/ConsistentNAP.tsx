@@ -71,6 +71,7 @@ const BUSINESS_INFO = {
     'https://www.facebook.com/cerebrumbiologyacademy',
     'https://www.instagram.com/cerebrumbiologyacademy',
     'https://www.youtube.com/@cerebrumbiologyacademy',
+    'https://www.youtube.com/@drshekharcsingh',
     'https://www.linkedin.com/company/cerebrum-biology-academy',
     'https://g.co/kgs/cerebrum-biology-academy',
   ],
