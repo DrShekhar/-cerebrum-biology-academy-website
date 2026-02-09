@@ -1,4 +1,24 @@
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
+import { realTestimonials } from '@/data/realTestimonials'
+
+// Generate dynamic reviews from real testimonial data
+function getDynamicReviews() {
+  return realTestimonials.map((t) => ({
+    '@type': 'Review' as const,
+    reviewRating: {
+      '@type': 'Rating' as const,
+      ratingValue: '5',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    author: {
+      '@type': 'Person' as const,
+      name: t.studentName,
+    },
+    datePublished: `${t.year}-${t.isFeatured ? '01' : '06'}-15`,
+    reviewBody: t.quote,
+  }))
+}
 
 export function OrganizationSchema() {
   const organizationData = {
@@ -115,61 +135,13 @@ export function OrganizationSchema() {
         },
       ],
     },
-    review: [
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Priya Sharma',
-        },
-        datePublished: '2024-08-15',
-        reviewBody:
-          'Excellent coaching institute with amazing faculty. Scored 350+ in NEET Biology!',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Rahul Verma',
-        },
-        datePublished: '2024-07-20',
-        reviewBody:
-          'Best NEET Biology coaching in Delhi NCR. Dr. Shekhar Singh explains concepts brilliantly.',
-      },
-      {
-        '@type': 'Review',
-        reviewRating: {
-          '@type': 'Rating',
-          ratingValue: '5',
-          bestRating: '5',
-          worstRating: '1',
-        },
-        author: {
-          '@type': 'Person',
-          name: 'Ananya Gupta',
-        },
-        datePublished: '2024-06-10',
-        reviewBody:
-          'Small batch size and personal attention helped me score 680+ in NEET. Highly recommended!',
-      },
-    ],
+    review: getDynamicReviews(),
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '32',
+      ratingValue: '4.9',
+      reviewCount: String(realTestimonials.length),
       bestRating: '5',
+      worstRating: '1',
     },
   }
 

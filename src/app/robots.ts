@@ -70,6 +70,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/'],
       },
     ],
-    sitemap: 'https://cerebrumbiologyacademy.com/sitemap.xml',
+    sitemap: [
+      'https://cerebrumbiologyacademy.com/sitemap.xml',
+      'https://cerebrumbiologyacademy.com/image-sitemap.xml',
+      'https://cerebrumbiologyacademy.com/video-sitemap.xml',
+    ],
   }
 }
