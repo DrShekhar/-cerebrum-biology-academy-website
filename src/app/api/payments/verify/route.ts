@@ -6,6 +6,7 @@ import { prisma } from '@/lib/prisma'
 import { WebhookService } from '@/lib/webhooks/webhookService'
 import { validateUserSession } from '@/lib/auth/config'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
+import { logger } from '@/lib/logger'
 
 const paymentVerificationSchema = z.object({
   order_id: z.string().optional(),
@@ -77,7 +78,7 @@ export async function POST(request: NextRequest) {
     const secret = process.env.RAZORPAY_KEY_SECRET
 
     if (!secret) {
-      console.error('RAZORPAY_KEY_SECRET not configured')
+      logger.error('RAZORPAY_KEY_SECRET not configured')
       return NextResponse.json(
         {
           verified: false,
@@ -124,7 +125,7 @@ export async function POST(request: NextRequest) {
           }
 
           if (payment.status === 'COMPLETED') {
-            console.log(`Payment already completed: ${orderId}`)
+            logger.info(`Payment already completed: ${orderId}`)
             return
           }
 
@@ -179,7 +180,7 @@ export async function POST(request: NextRequest) {
                 skipDuplicates: true,
               })
 
-              console.log(
+              logger.info(
                 `Granted access to ${courseMaterials.length} materials for user ${payment.userId}`
               )
             }
@@ -194,12 +195,12 @@ export async function POST(request: NextRequest) {
               data: { coachingTier: tierFromCourse },
             })
 
-            console.log(
+            logger.info(
               `Enrollment activated: ${payment.enrollmentId}, tier set to: ${tierFromCourse}`
             )
           }
 
-          console.log(`Payment verified and updated: ${orderId}`)
+          logger.info(`Payment verified and updated: ${orderId}`)
         })
 
         // Trigger notifications after successful transaction (fire-and-forget)
@@ -215,7 +216,7 @@ export async function POST(request: NextRequest) {
               courseId,
               type: 'enrollment_confirmation',
             }),
-          }).catch((err) => console.error('WhatsApp notification failed:', err))
+          }).catch((err) => logger.error('WhatsApp notification failed:', err))
 
           // Trigger email notification
           fetch(`${request.nextUrl.origin}/api/notifications/email`, {
@@ -228,9 +229,9 @@ export async function POST(request: NextRequest) {
               courseId,
               type: 'enrollment_confirmation',
             }),
-          }).catch((err) => console.error('Email notification failed:', err))
+          }).catch((err) => logger.error('Email notification failed:', err))
 
-          console.log('Triggered WhatsApp and Email notifications')
+          logger.info('Triggered WhatsApp and Email notifications')
 
           // Dispatch payment.received webhook for external CRM integration
           try {
@@ -249,11 +250,11 @@ export async function POST(request: NextRequest) {
               }
             )
           } catch (webhookError) {
-            console.error('Failed to dispatch payment.received webhook:', webhookError)
+            logger.error('Failed to dispatch payment.received webhook:', webhookError)
           }
         }
       } catch (dbError) {
-        console.error('Transaction error after payment verification:', dbError)
+        logger.error('Transaction error after payment verification:', dbError)
         return NextResponse.json(
           {
             verified: true,
@@ -267,7 +268,7 @@ export async function POST(request: NextRequest) {
       }
     } else {
       // SECURITY: Log failure without exposing full signatures (only first 8 chars for debugging)
-      console.warn('[SECURITY] Payment verification failed', {
+      logger.warn('[SECURITY] Payment verification failed', {
         orderId,
         paymentId,
         signatureMismatch: true,
@@ -282,7 +283,7 @@ export async function POST(request: NextRequest) {
       paymentId,
     })
   } catch (error) {
-    console.error('Payment verification error:', error)
+    logger.error('Payment verification error:', error)
     return NextResponse.json(
       {
         verified: false,
@@ -364,7 +365,7 @@ export async function GET(request: NextRequest) {
       },
     })
   } catch (error) {
-    console.error('Get payment status error:', error)
+    logger.error('Get payment status error:', error)
     return NextResponse.json({ error: 'Failed to fetch payment status' }, { status: 500 })
   }
 }

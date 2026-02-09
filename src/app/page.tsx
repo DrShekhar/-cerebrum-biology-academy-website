@@ -8,7 +8,7 @@ import { SpeakableSchema } from '@/components/seo/SpeakableSchema'
 
 // Loading skeleton component for consistent loading states
 const LoadingSkeleton = ({ height = 'h-96' }: { height?: string }) => (
-  <div className={`${height} bg-gray-100 animate-pulse`} />
+  <div className={`${height} bg-gray-100 animate-pulse`} style={{ minHeight: '384px' }} />
 )
 
 // PERFORMANCE: Lazy load ALL below-fold components to reduce initial bundle

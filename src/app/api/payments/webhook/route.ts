@@ -3,6 +3,7 @@ import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { Redis } from '@upstash/redis'
 import { mapCourseToTier } from '@/lib/payments/tierMapping'
+import { logger } from '@/lib/logger'
 
 // SECURITY: Redis-backed webhook event deduplication for multi-instance deployments
 const EVENT_EXPIRY_SECONDS = 24 * 60 * 60 // 24 hours
@@ -26,7 +27,7 @@ async function isEventProcessed(eventId: string): Promise<boolean> {
       const exists = await upstashRedis.exists(`webhook:payment:${eventId}`)
       return exists === 1
     } catch (error) {
-      console.error('Redis event check error:', error)
+      logger.error('Redis event check error:', error)
       // Fall through to in-memory
     }
   }
@@ -42,7 +43,7 @@ async function markEventProcessed(eventId: string): Promise<void> {
       })
       return
     } catch (error) {
-      console.error('Redis event mark error:', error)
+      logger.error('Redis event mark error:', error)
       // Fall through to in-memory
     }
   }
@@ -85,20 +86,20 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get('x-razorpay-signature')
 
     if (!signature) {
-      console.error('Webhook: Missing signature')
+      logger.error('Webhook: Missing signature')
       return NextResponse.json({ error: 'Missing signature' }, { status: 400 })
     }
 
     const webhookSecret = process.env.RAZORPAY_WEBHOOK_SECRET
 
     if (!webhookSecret) {
-      console.error('Webhook: RAZORPAY_WEBHOOK_SECRET not configured')
+      logger.error('Webhook: RAZORPAY_WEBHOOK_SECRET not configured')
       return NextResponse.json({ error: 'Webhook not configured' }, { status: 500 })
     }
 
     // SECURITY: Use timing-safe signature verification to prevent timing attacks
     if (!verifySignature(body, signature, webhookSecret)) {
-      console.error('Webhook: Invalid signature')
+      logger.error('Webhook: Invalid signature')
       return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
     }
 
@@ -111,14 +112,14 @@ export async function POST(request: NextRequest) {
 
     // SECURITY: Replay attack prevention - check if event was already processed (Redis-backed)
     if (await isEventProcessed(eventId)) {
-      console.log('Webhook: Duplicate event ignored:', eventId)
+      logger.info('Webhook: Duplicate event ignored:', eventId)
       return NextResponse.json({ success: true, message: 'Event already processed' })
     }
 
     // Mark event as processed in Redis (with TTL for automatic cleanup)
     await markEventProcessed(eventId)
 
-    console.log('Webhook received:', eventType, eventId)
+    logger.info('Webhook received:', eventType, eventId)
 
     switch (eventType) {
       case 'payment.authorized':
@@ -139,12 +140,12 @@ export async function POST(request: NextRequest) {
         break
 
       default:
-        console.log('Webhook: Unhandled event type:', eventType)
+        logger.info('Webhook: Unhandled event type:', eventType)
     }
 
     return NextResponse.json({ success: true })
   } catch (error) {
-    console.error('Webhook error:', error)
+    logger.error('Webhook error:', error)
     return NextResponse.json({ error: 'Webhook processing failed' }, { status: 500 })
   }
 }
@@ -168,12 +169,12 @@ async function handlePaymentSuccess(event: any) {
       })
 
       if (!paymentRecord) {
-        console.error('Webhook: Payment record not found for order:', orderId)
+        logger.error('Webhook: Payment record not found for order:', orderId)
         return
       }
 
       if (paymentRecord.status === 'COMPLETED') {
-        console.log('Webhook: Payment already completed:', orderId)
+        logger.info('Webhook: Payment already completed:', orderId)
         return
       }
 
@@ -230,15 +231,15 @@ async function handlePaymentSuccess(event: any) {
           data: { coachingTier: tierFromCourse },
         })
 
-        console.log(
+        logger.info(
           `Webhook: Enrollment activated: ${paymentRecord.enrollmentId}, tier set to: ${tierFromCourse}`
         )
       }
     })
 
-    console.log('Webhook: Payment success handled:', paymentId)
+    logger.info('Webhook: Payment success handled:', paymentId)
   } catch (error) {
-    console.error('Webhook: Error handling payment success:', error)
+    logger.error('Webhook: Error handling payment success:', error)
     throw error
   }
 }
@@ -257,9 +258,9 @@ async function handlePaymentFailed(event: any) {
       },
     })
 
-    console.log('Webhook: Payment failure recorded:', orderId, reason)
+    logger.info('Webhook: Payment failure recorded:', orderId, reason)
   } catch (error) {
-    console.error('Webhook: Error handling payment failure:', error)
+    logger.error('Webhook: Error handling payment failure:', error)
     throw error
   }
 }
@@ -268,7 +269,7 @@ async function handleOrderPaid(event: any) {
   const order = event.payload.order.entity
   const orderId = order.id
 
-  console.log('Webhook: Order paid:', orderId)
+  logger.info('Webhook: Order paid:', orderId)
 }
 
 async function handleRefundCreated(event: any) {
@@ -283,7 +284,7 @@ async function handleRefundCreated(event: any) {
     })
 
     if (!payment) {
-      console.error('Webhook: Payment not found for refund:', paymentId)
+      logger.error('Webhook: Payment not found for refund:', paymentId)
       return
     }
 
@@ -308,9 +309,9 @@ async function handleRefundCreated(event: any) {
       }
     })
 
-    console.log('Webhook: Refund processed:', refund.id, refundAmount)
+    logger.info('Webhook: Refund processed:', refund.id, refundAmount)
   } catch (error) {
-    console.error('Webhook: Error handling refund:', error)
+    logger.error('Webhook: Error handling refund:', error)
     throw error
   }
 }

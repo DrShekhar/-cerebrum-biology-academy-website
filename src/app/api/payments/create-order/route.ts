@@ -4,6 +4,7 @@ import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { validateUserSession } from '@/lib/auth/config'
 import { rateLimit } from '@/lib/rateLimit'
+import { logger } from '@/lib/logger'
 
 const SUPPORTED_CURRENCIES = ['INR', 'USD', 'EUR', 'GBP', 'AUD', 'CAD', 'AED', 'SGD'] as const
 type SupportedCurrency = (typeof SUPPORTED_CURRENCIES)[number]
@@ -64,7 +65,16 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { amount, currency = 'INR', receipt, notes, enrollmentId, userId, couponCode, courseId } = body
+    const {
+      amount,
+      currency = 'INR',
+      receipt,
+      notes,
+      enrollmentId,
+      userId,
+      couponCode,
+      courseId,
+    } = body
 
     // SECURITY: Verify the userId matches the authenticated user (prevent creating orders for others)
     if (userId && userId !== session.userId) {
@@ -90,10 +100,7 @@ export async function POST(request: NextRequest) {
       })
 
       if (!enrollment) {
-        return NextResponse.json(
-          { success: false, error: 'Enrollment not found' },
-          { status: 404 }
-        )
+        return NextResponse.json({ success: false, error: 'Enrollment not found' }, { status: 404 })
       }
 
       // Verify enrollment belongs to the authenticated user
@@ -105,16 +112,20 @@ export async function POST(request: NextRequest) {
       }
 
       // Calculate expected payment amount (pending amount or course price for new enrollments)
-      const expectedAmount = enrollment.pendingAmount > 0
-        ? enrollment.pendingAmount
-        : enrollment.courses?.totalFees || 0
+      const expectedAmount =
+        enrollment.pendingAmount > 0 ? enrollment.pendingAmount : enrollment.courses?.totalFees || 0
 
       // Allow a small tolerance (1%) to account for rounding
       const tolerance = expectedAmount * 0.01
       if (Math.abs(amount - expectedAmount) > tolerance && expectedAmount > 0) {
-        console.warn(`[Payment] Amount mismatch: received ${amount}, expected ${expectedAmount} for enrollment ${enrollmentId}`)
+        logger.warn(
+          `[Payment] Amount mismatch: received ${amount}, expected ${expectedAmount} for enrollment ${enrollmentId}`
+        )
         return NextResponse.json(
-          { success: false, error: 'Payment amount does not match expected amount. Please refresh and try again.' },
+          {
+            success: false,
+            error: 'Payment amount does not match expected amount. Please refresh and try again.',
+          },
           { status: 400 }
         )
       }
@@ -182,7 +193,10 @@ export async function POST(request: NextRequest) {
           })
           if (userUsageCount >= coupon.maxUsesPerUser) {
             return NextResponse.json(
-              { success: false, error: 'You have already used this coupon the maximum number of times' },
+              {
+                success: false,
+                error: 'You have already used this coupon the maximum number of times',
+              },
               { status: 400 }
             )
           }
@@ -191,7 +205,10 @@ export async function POST(request: NextRequest) {
         // Check minimum order amount
         if (coupon.minOrderAmount && amount < coupon.minOrderAmount) {
           return NextResponse.json(
-            { success: false, error: `Minimum order amount for this coupon is ₹${coupon.minOrderAmount}` },
+            {
+              success: false,
+              error: `Minimum order amount for this coupon is ₹${coupon.minOrderAmount}`,
+            },
             { status: 400 }
           )
         }
@@ -211,9 +228,9 @@ export async function POST(request: NextRequest) {
         validatedCouponCode = coupon.code
         couponId = coupon.id
 
-        console.log(`[Payment] Valid coupon: ${coupon.code}, discount: ${validatedDiscount}%`)
+        logger.info(`[Payment] Valid coupon: ${coupon.code}, discount: ${validatedDiscount}%`)
       } catch (couponError) {
-        console.error('[Payment] Coupon validation error:', couponError)
+        logger.error('[Payment] Coupon validation error:', couponError)
         return NextResponse.json(
           { success: false, error: 'Error validating coupon' },
           { status: 500 }
@@ -222,7 +239,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Apply discount to amount
-    const discountAmount = validatedDiscount > 0 ? Math.floor(amount * validatedDiscount / 100) : 0
+    const discountAmount =
+      validatedDiscount > 0 ? Math.floor((amount * validatedDiscount) / 100) : 0
     const finalAmount = amount - discountAmount
 
     const normalizedCurrency = currency.toUpperCase() as SupportedCurrency
@@ -240,7 +258,7 @@ export async function POST(request: NextRequest) {
     const razorpayKeySecret = process.env.RAZORPAY_KEY_SECRET
 
     if (!razorpayKeyId || !razorpayKeySecret) {
-      console.error('Razorpay credentials not configured')
+      logger.error('Razorpay credentials not configured')
       return NextResponse.json(
         { success: false, error: 'Payment gateway not configured' },
         { status: 500 }
@@ -308,7 +326,9 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    console.log(`Razorpay order created: ${order.id} (${normalizedCurrency} ${finalAmount}${validatedCouponCode ? ` with coupon ${validatedCouponCode}` : ''})`)
+    logger.info(
+      `Razorpay order created: ${order.id} (${normalizedCurrency} ${finalAmount}${validatedCouponCode ? ` with coupon ${validatedCouponCode}` : ''})`
+    )
 
     return NextResponse.json({
       success: true,
@@ -327,7 +347,7 @@ export async function POST(request: NextRequest) {
       created_at: order.created_at,
     })
   } catch (error) {
-    console.error('Error creating Razorpay order:', error)
+    logger.error('Error creating Razorpay order:', error)
     return NextResponse.json(
       {
         success: false,

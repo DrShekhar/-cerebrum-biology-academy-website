@@ -452,7 +452,7 @@ function AdaptiveLearningPathsComponent() {
 
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 mb-2">Selected Path: {selectedPath.name}</h4>
-          <div className="grid grid-cols-3 gap-4 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
             <div className="bg-blue-50 rounded-lg p-3">
               <div className="text-2xl font-bold text-blue-600">{studyPlan.weeklyHours}</div>
               <div className="text-sm text-gray-600">Hours/Week</div>
