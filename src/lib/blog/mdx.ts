@@ -149,21 +149,23 @@ export function getPostBySlug(slug: string): {
   const meta: BlogPostMeta = {
     title: data.title || '',
     slug: data.slug || slug,
-    excerpt: data.excerpt || '',
-    author: data.author || { name: 'Cerebrum Biology Academy', role: 'Editorial Team' },
+    excerpt: data.excerpt || data.description || '',
+    author: typeof data.author === 'string'
+      ? { name: data.author, role: 'Faculty' }
+      : data.author || { name: 'Cerebrum Biology Academy', role: 'Editorial Team' },
     category: data.category || 'neet-preparation',
     tags: data.tags || [],
-    featuredImage: data.featuredImage || '/blog/default-featured.jpg',
-    publishedAt: data.publishedAt || new Date().toISOString(),
-    updatedAt: data.updatedAt || data.publishedAt || new Date().toISOString(),
-    readTime: parseReadTime(data.readTime) || Math.ceil(stats.minutes),
+    featuredImage: data.featuredImage || data.image || '/blog/default-featured.jpg',
+    publishedAt: data.publishedAt || data.date || new Date().toISOString(),
+    updatedAt: data.updatedAt || data.publishedAt || data.date || new Date().toISOString(),
+    readTime: parseReadTime(data.readTime || data.readingTime) || Math.ceil(stats.minutes),
     isPublished: data.isPublished !== false,
     seoTitle: data.seoTitle || data.title,
-    seoDescription: data.seoDescription || data.excerpt,
+    seoDescription: data.seoDescription || data.excerpt || data.description || '',
     views: generateViralBaseViews(
       slug,
       data.category || 'neet-preparation',
-      data.publishedAt || new Date().toISOString()
+      data.publishedAt || data.date || new Date().toISOString()
     ),
     difficulty: data.difficulty,
     neetChapter: data.neetChapter,
