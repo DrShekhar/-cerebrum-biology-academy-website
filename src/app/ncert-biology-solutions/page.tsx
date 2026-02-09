@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'NCERT Biology Solutions Class 11 & 12 | Free PDF Download',
     description:
       'Chapter-wise NCERT Biology solutions with detailed explanations for NEET 2026. Free PDF download available.',
-    images: ['/og-ncert-solutions.jpg'],
+    images: ['/api/og?title=NCERT+Biology+Solutions&subtitle=Free+Chapter-wise+Solutions+for+Class+11+%26+12'],
     type: 'website',
   },
   alternates: {

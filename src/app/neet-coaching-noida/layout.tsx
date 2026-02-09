@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     images: [
       {
-        url: '/og-noida.jpg',
+        url: '/api/og?title=Best+NEET+Coaching+in+Noida&subtitle=98%25+Success+Rate+%E2%80%A2+AIIMS+Faculty&locality=Noida',
         width: 1200,
         height: 630,
         alt: 'Best NEET Coaching in Noida - Cerebrum Biology Academy',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Noida | Cerebrum Biology Academy',
     description:
       'Top NEET biology coaching in Noida. 98% success rate. All sectors covered - Sector 18, 62, 137, 150, Greater Noida West.',
-    images: ['/og-noida.jpg'],
+    images: ['/api/og?title=Best+NEET+Coaching+in+Noida&subtitle=98%25+Success+Rate&locality=Noida'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-noida',

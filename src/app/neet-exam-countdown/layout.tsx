@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/neet-exam-countdown',
     images: [
       {
-        url: 'https://cerebrumbiologyacademy.com/og-neet-countdown.png',
+        url: 'https://cerebrumbiologyacademy.com/api/og?title=NEET+2026+Exam+Countdown&subtitle=Track+Days+Left+for+NEET+UG+2026',
         width: 1200,
         height: 630,
         alt: 'NEET 2026 Exam Countdown Timer',

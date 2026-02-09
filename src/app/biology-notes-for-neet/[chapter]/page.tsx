@@ -231,7 +231,7 @@ export async function generateMetadata({
       siteName: "Cerebrum Biology Academy",
       images: [
         {
-          url: `${baseUrl}/og-biology-notes.jpg`,
+          url: `${baseUrl}/api/og?title=${encodeURIComponent(chapterData.name + ' Notes')}&subtitle=${encodeURIComponent('NEET Biology Study Material')}`,
           width: 1200,
           height: 630,
           alt: `${chapterData.name} Notes for NEET`,
@@ -242,7 +242,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: pageTitle,
       description: pageDescription,
-      images: [`${baseUrl}/og-biology-notes.jpg`],
+      images: [`${baseUrl}/api/og?title=${encodeURIComponent(chapterData.name + ' Notes')}&subtitle=${encodeURIComponent('NEET Biology Study Material')}`],
     },
     alternates: {
       canonical: canonicalUrl,
@@ -332,7 +332,7 @@ export default function ChapterPage({
         url: "https://cerebrumbiologyacademy.com/logo.png",
       },
     },
-    image: "https://cerebrumbiologyacademy.com/og-biology-notes.jpg",
+    image: "https://cerebrumbiologyacademy.com/og-image.jpg",
   }
 
   return (

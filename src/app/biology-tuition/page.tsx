@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://cerebrumbiologyacademy.com/og-biology-tuition.jpg',
+        url: 'https://cerebrumbiologyacademy.com/api/og?title=Best+Biology+Tuition&subtitle=Expert+Faculty+%E2%80%A2+98%25+Success+Rate',
         width: 1200,
         height: 630,
         alt: 'Cerebrum Biology Academy - Best Biology Tuition',

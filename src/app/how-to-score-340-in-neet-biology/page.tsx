@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     images: [
       {
-        url: `${BASE_URL}/og-image.png`,
+        url: `${BASE_URL}/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: 'How to Score 340+ in NEET Biology',
@@ -47,7 +47,7 @@ export default function HowToScore340InNEETBiology() {
     '@type': 'Article',
     headline: 'How to Score 340+ in NEET Biology | Complete Guide by AIIMS Faculty',
     description: 'Learn proven strategies to score 340+ in NEET Biology from AIIMS-trained faculty. Chapter priorities, study plan, common mistakes & tips from toppers.',
-    image: `${BASE_URL}/og-image.png`,
+    image: `${BASE_URL}/og-image.jpg`,
     url: articleUrl,
     author: {
       '@type': 'Person',

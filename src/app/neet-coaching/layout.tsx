@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     images: [
       {
-        url: '/og-neet-coaching.jpg',
+        url: '/api/og?title=NEET+Coaching+2026&subtitle=Expert+AIIMS+%26+IITians+Faculty',
         width: 1200,
         height: 630,
         alt: 'NEET Coaching 2026 - Cerebrum Biology Academy',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: 'NEET Coaching 2026 | Cerebrum Biology Academy',
     description:
       'Expert AIIMS & IITians faculties. Small batches. 98% success rate. Class 11, 12 & Dropper. Online & offline.',
-    images: ['/og-neet-coaching.jpg'],
+    images: ['/api/og?title=NEET+Coaching+2026&subtitle=Expert+AIIMS+%26+IITians+Faculty'],
   },
 }
 

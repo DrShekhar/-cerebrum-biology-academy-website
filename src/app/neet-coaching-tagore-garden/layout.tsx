@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     images: [
       {
-        url: '/og-tagore-garden.jpg',
+        url: '/api/og?title=NEET+Coaching+Tagore+Garden&subtitle=West+Delhi+%E2%80%A2+97%25+Success+Rate&locality=Tagore+Garden',
         width: 1200,
         height: 630,
         alt: 'Best NEET Coaching in Tagore Garden - Cerebrum Biology Academy',
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     title: 'NEET Coaching Tagore Garden | Cerebrum Biology Academy',
     description:
       'Top NEET biology coaching for Tagore Garden & West Delhi. 97% success rate. Rajouri Garden, Janakpuri, Punjabi Bagh covered.',
-    images: ['/og-tagore-garden.jpg'],
+    images: ['/api/og?title=NEET+Coaching+Tagore+Garden&subtitle=West+Delhi&locality=Tagore+Garden'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-tagore-garden',

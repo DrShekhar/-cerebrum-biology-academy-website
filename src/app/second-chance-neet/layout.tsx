@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     images: [
       {
-        url: '/images/second-chance-hero.jpg',
+        url: '/api/og?title=NEET+Second+Chance&subtitle=90%25+Success+Rate+in+Second+Attempt',
         width: 1200,
         height: 630,
         alt: 'NEET Second Chance - Transform Failure into Success',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Failed NEET 2024? 90% Success Rate in Second Attempt',
     description:
       'Transform your NEET failure into medical college success. Specialized coaching for repeaters with proven results.',
-    images: ['/images/second-chance-hero.jpg'],
+    images: ['/api/og?title=NEET+Second+Chance&subtitle=90%25+Success+Rate+in+Second+Attempt'],
   },
 }
 

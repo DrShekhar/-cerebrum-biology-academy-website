@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://cerebrumbiologyacademy.com/og-neet-coaching-meera-bagh.jpg',
+        url: 'https://cerebrumbiologyacademy.com/api/og?title=NEET+Coaching+Meera+Bagh&subtitle=Paschim+Vihar+%E2%80%A2+98%25+Success+Rate&locality=Meera+Bagh',
         width: 1200,
         height: 630,
         alt: 'NEET Coaching in Meera Bagh, Paschim Vihar',

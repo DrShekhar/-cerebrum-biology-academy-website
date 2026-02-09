@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     images: [
       {
-        url: '/images/demo-class-og.jpg',
+        url: '/api/og?title=Book+Free+Demo+Class&subtitle=Experience+Expert+NEET+Teaching',
         width: 1200,
         height: 630,
         alt: 'Free NEET Biology Demo Class at Cerebrum Biology Academy',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'Book Free NEET Biology Demo Class',
     description:
       'Experience our expert teaching with a free demo. 98% NEET success rate. Book now!',
-    images: ['/images/demo-class-og.jpg'],
+    images: ['/api/og?title=Book+Free+Demo+Class&subtitle=Experience+Expert+NEET+Teaching'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/support/demo',

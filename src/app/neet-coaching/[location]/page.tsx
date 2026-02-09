@@ -50,7 +50,7 @@ export async function generateMetadata({
       siteName: 'Cerebrum Biology Academy',
       images: [
         {
-          url: '/og-neet-coaching.jpg',
+          url: `/api/og?title=${encodeURIComponent('NEET Coaching ' + locationData.cityName)}&subtitle=${encodeURIComponent('98% Success Rate • AIIMS Faculty')}&locality=${encodeURIComponent(locationData.cityName)}`,
           width: 1200,
           height: 630,
           alt: `NEET Coaching in ${locationData.cityName}`,

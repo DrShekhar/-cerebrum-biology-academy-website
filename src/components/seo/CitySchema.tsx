@@ -49,7 +49,7 @@ export function CitySchema({
     telephone: CONTACT_INFO.phone.primary,
     email: 'info@cerebrumbiologyacademy.com',
     logo: `${baseUrl}/logo.png`,
-    image: `${baseUrl}/og-image.png`,
+    image: `${baseUrl}/og-image.jpg`,
     foundingDate: '2015',
     sameAs: [
       'https://www.facebook.com/cerebrumbiologyacademy',

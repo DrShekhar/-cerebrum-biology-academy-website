@@ -49,7 +49,7 @@ export async function generateMetadata({
       url: `https://cerebrumbiologyacademy.com/states/${state.slug}`,
       images: [
         {
-          url: 'https://cerebrumbiologyacademy.com/og-image-states.jpg',
+          url: `https://cerebrumbiologyacademy.com/api/og?title=${encodeURIComponent('NEET Biology Coaching in ' + state.name)}&subtitle=${encodeURIComponent('98% Success Rate • AIIMS Faculty')}&locality=${encodeURIComponent(state.name)}`,
           width: 1200,
           height: 630,
           alt: `NEET Biology Coaching in ${state.name}`,
@@ -60,7 +60,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://cerebrumbiologyacademy.com/og-image-states.jpg'],
+      images: [`https://cerebrumbiologyacademy.com/api/og?title=${encodeURIComponent('NEET Coaching ' + state.name)}&locality=${encodeURIComponent(state.name)}`],
     },
     alternates: {
       canonical: `https://cerebrumbiologyacademy.com/states/${state.slug}`,

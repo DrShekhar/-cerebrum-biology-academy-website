@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: 'Intensive NEET Biology Course - Elite Program | Cerebrum Biology Academy',
     description:
       "India's most exclusive NEET Biology course with 100% AIIMS selection rate. Limited seats, elite faculty, guaranteed results.",
-    images: ['/courses/intensive-neet-biology/hero-premium.jpg'],
+    images: ['/api/og?title=Intensive+NEET+Biology&subtitle=Elite+Program+%E2%80%A2+Limited+Seats'],
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/courses/intensive-neet-biology',
   },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: 'Intensive NEET Biology Course - Elite Program',
     description:
       "India's most exclusive NEET Biology course with 100% AIIMS selection rate. Limited seats, elite faculty, guaranteed results.",
-    images: ['/courses/intensive-neet-biology/hero-premium.jpg'],
+    images: ['/api/og?title=Intensive+NEET+Biology&subtitle=Elite+Program+%E2%80%A2+Limited+Seats'],
   },
   robots: {
     index: false, // Premium course - not indexed publicly

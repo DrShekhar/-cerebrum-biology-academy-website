@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/neet-biology-mcq-og.jpg',
+        url: '/api/og?title=NEET+Biology+MCQ+Practice&subtitle=7000%2B+Free+Questions+%E2%80%A2+NCERT+%26+PYQs',
         width: 1200,
         height: 630,
         alt: 'Free NEET Biology MCQ Practice - 7000+ Questions with NCERT & PYQs',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: 'Free NEET Biology MCQ Practice | 7000+ Questions',
     description:
       'Practice 7000+ free NEET Biology MCQs. NCERT-based, PYQs, diagram questions. Unlimited free practice!',
-    images: ['/images/neet-biology-mcq-og.jpg'],
+    images: ['/api/og?title=NEET+Biology+MCQ+Practice&subtitle=7000%2B+Free+Questions'],
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-mcq',

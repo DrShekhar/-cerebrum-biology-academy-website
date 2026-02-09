@@ -44,14 +44,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: `${newCourse.name} | Cerebrum Biology Academy`,
         description: newCourse.description,
-        images: ['/courses/course-og-image.jpg'],
+        images: [`/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`],
         type: 'website',
       },
       twitter: {
         card: 'summary_large_image',
         title: `${newCourse.name} | Cerebrum Biology Academy`,
         description: newCourse.description,
-        images: ['/courses/course-og-image.jpg'],
+        images: [`/api/og?title=${encodeURIComponent(newCourse.name)}&subtitle=${encodeURIComponent('NEET Biology Coaching')}`],
       },
     }
   }
@@ -70,14 +70,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       openGraph: {
         title: oldCourse.seoTitle || oldCourse.title,
         description: oldCourse.seoDescription || oldCourse.description,
-        images: [oldCourse.gallery[0] || '/courses/default-course-og.jpg'],
+        images: [oldCourse.gallery[0] || `/api/og?title=${encodeURIComponent(oldCourse.title)}&subtitle=${encodeURIComponent('Cerebrum Biology Academy')}`],
         type: 'website',
       },
       twitter: {
         card: 'summary_large_image',
         title: oldCourse.seoTitle || oldCourse.title,
         description: oldCourse.seoDescription || oldCourse.description,
-        images: [oldCourse.gallery[0] || '/courses/default-course-og.jpg'],
+        images: [oldCourse.gallery[0] || `/api/og?title=${encodeURIComponent(oldCourse.title)}&subtitle=${encodeURIComponent('Cerebrum Biology Academy')}`],
       },
     }
   }
