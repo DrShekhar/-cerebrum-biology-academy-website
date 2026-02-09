@@ -32,6 +32,7 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
   const [success, setSuccess] = useState(false)
+  const [paymentDetails, setPaymentDetails] = useState({ orderId: '', paymentId: '' })
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData((prev) => ({
@@ -115,8 +116,11 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
             )
 
             if (verified) {
+              setPaymentDetails({
+                orderId: response.razorpay_order_id,
+                paymentId: response.razorpay_payment_id,
+              })
               setSuccess(true)
-              // Track successful enrollment for revenue analytics
               trackCourseEnrollment(course.id, course.name, enrollmentData.amount)
               onSuccess?.(enrollmentData)
 
@@ -191,18 +195,71 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="text-center p-8 bg-green-50 rounded-xl border border-green-200"
+        className="p-8 bg-green-50 rounded-xl border border-green-200"
       >
-        <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-        <h3 className="text-2xl font-bold text-green-800 mb-2">Enrollment Successful! 🎉</h3>
-        <p className="text-green-700 mb-4">
-          Welcome to {course.name}! You'll receive login details on WhatsApp shortly.
-        </p>
-        <div className="bg-white p-4 rounded-lg border border-green-200">
-          <p className="text-sm text-gray-600">
-            📱 WhatsApp confirmation sent to: {formData.phone}
-          </p>
-          <p className="text-sm text-gray-600">📧 Email confirmation sent to: {formData.email}</p>
+        <div className="text-center mb-6">
+          <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
+          <h3 className="text-2xl font-bold text-green-800 mb-2">Enrollment Successful!</h3>
+          <p className="text-green-700">Welcome to {course.name}!</p>
+        </div>
+
+        <div className="bg-white p-5 rounded-lg border border-green-200 mb-4 space-y-3">
+          <h4 className="font-semibold text-gray-900">Enrollment Details</h4>
+          <div className="grid grid-cols-2 gap-3 text-sm">
+            <div>
+              <p className="text-gray-500">Course</p>
+              <p className="font-medium text-gray-900">{course.name}</p>
+            </div>
+            <div>
+              <p className="text-gray-500">Amount Paid</p>
+              <p className="font-medium text-gray-900">
+                ₹{calculateAmount().toLocaleString('en-IN')}
+              </p>
+            </div>
+            {paymentDetails.orderId && (
+              <div>
+                <p className="text-gray-500">Order ID</p>
+                <p className="font-medium text-gray-900 text-xs">{paymentDetails.orderId}</p>
+              </div>
+            )}
+            {paymentDetails.paymentId && (
+              <div>
+                <p className="text-gray-500">Payment ID</p>
+                <p className="font-medium text-gray-900 text-xs">{paymentDetails.paymentId}</p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="bg-white p-4 rounded-lg border border-green-200 mb-4">
+          <p className="text-sm text-gray-600">WhatsApp confirmation sent to: {formData.phone}</p>
+          <p className="text-sm text-gray-600">Email confirmation sent to: {formData.email}</p>
+        </div>
+
+        <div className="bg-blue-50 p-4 rounded-lg border border-blue-200 mb-4">
+          <h4 className="font-semibold text-blue-900 mb-2">What Happens Next?</h4>
+          <ol className="text-sm text-blue-800 space-y-1 list-decimal list-inside">
+            <li>You will receive login credentials on WhatsApp within 1 hour</li>
+            <li>Our counselor will call to confirm your batch timing</li>
+            <li>Access your student dashboard to start learning</li>
+          </ol>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-3">
+          <a
+            href="/dashboard"
+            className="flex-1 text-center bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            Go to Dashboard
+          </a>
+          <a
+            href={`https://wa.me/${CONTACT_INFO.phone.whatsapp.replace(/[^0-9]/g, '')}?text=Hi, I just enrolled in ${encodeURIComponent(course.name)}. Order ID: ${paymentDetails.orderId}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 text-center bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+          >
+            Chat on WhatsApp
+          </a>
         </div>
       </motion.div>
     )

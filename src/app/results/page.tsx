@@ -568,6 +568,30 @@ export default function ResultsPage() {
           </Card>
         </section>
 
+        <section className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-8 text-center text-white">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Ready to Write Your Success Story?
+          </h2>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Join 2,847+ students who cracked NEET with Cerebrum Biology Academy. Book a free demo
+            class today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/demo-booking"
+              className="inline-flex items-center justify-center bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-semibold py-3 px-8 rounded-lg transition-colors"
+            >
+              Book Free Demo Class
+            </a>
+            <a
+              href="/courses"
+              className="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-lg border border-white/20 transition-colors"
+            >
+              Explore Courses
+            </a>
+          </div>
+        </section>
+
         <section className="text-center text-sm text-gray-600">
           <div className="flex items-center justify-center gap-2 mb-2">
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
