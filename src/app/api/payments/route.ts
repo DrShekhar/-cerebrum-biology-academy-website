@@ -136,15 +136,21 @@ export async function POST(request: NextRequest) {
 
     const { action, data } = validationResult.data
 
-    // Auth check - required for all payment operations except demo
-    if (action !== 'demo_payment_system') {
-      const session = await auth()
-      if (!session?.user) {
-        return NextResponse.json(
-          { success: false, error: 'Authentication required' },
-          { status: 401 }
-        )
-      }
+    // Auth check - required for all payment operations
+    const session = await auth()
+    if (!session?.user) {
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
+    }
+
+    // Demo action only available in development
+    if (action === 'demo_payment_system' && process.env.NODE_ENV === 'production') {
+      return NextResponse.json(
+        { success: false, error: 'Demo not available in production' },
+        { status: 403 }
+      )
     }
 
     console.log(`💰 Payment API: ${action}`)
@@ -219,6 +225,14 @@ export async function POST(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   try {
+    const session = await auth()
+    if (!session?.user) {
+      return NextResponse.json(
+        { success: false, error: 'Authentication required' },
+        { status: 401 }
+      )
+    }
+
     const { searchParams } = new URL(request.url)
     const type = searchParams.get('type')
     const userId = searchParams.get('userId')

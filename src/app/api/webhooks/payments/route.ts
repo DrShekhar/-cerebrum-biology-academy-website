@@ -547,53 +547,62 @@ async function handleDispute(event: WebhookEvent): Promise<ProcessedEventResult>
   }
 }
 
-// Helper functions (mock implementations)
+// Helper functions — STUB implementations
+// TODO: Replace these with real database operations before going live with payments
+function warnStub(operation: string, id: string | undefined): void {
+  const msg = `[WEBHOOK STUB] ${operation} called for ${id} — no database update performed`
+  if (process.env.NODE_ENV === 'production') {
+    console.error(msg)
+  } else {
+    console.warn(msg)
+  }
+}
+
 async function updatePaymentStatus(paymentId: string | undefined, status: string): Promise<void> {
-  console.log(`💾 Updated payment ${paymentId} status to ${status}`)
+  warnStub('updatePaymentStatus', paymentId)
 }
 
 async function updateSubscriptionStatus(
   subscriptionId: string | undefined,
   status: string
 ): Promise<void> {
-  console.log(`💾 Updated subscription ${subscriptionId} status to ${status}`)
+  warnStub('updateSubscriptionStatus', subscriptionId)
 }
 
 async function updateSubscriptionBilling(subscriptionData: WebhookEventData): Promise<void> {
-  console.log(`💾 Updated subscription billing for ${subscriptionData.id}`)
+  warnStub('updateSubscriptionBilling', subscriptionData.id)
 }
 
 async function resetUsageLimits(customerId: string | undefined): Promise<void> {
-  console.log(`🔄 Reset usage limits for customer ${customerId}`)
+  warnStub('resetUsageLimits', customerId)
 }
 
 async function updateUserAccess(
   customerId: string | undefined,
   accessLevel: string
 ): Promise<void> {
-  console.log(`🔑 Updated user access for ${customerId} to ${accessLevel}`)
+  warnStub('updateUserAccess', customerId)
 }
 
 async function sendPaymentConfirmation(paymentData: WebhookEventData): Promise<void> {
-  console.log(`📧 Sent payment confirmation for ${paymentData.id}`)
+  warnStub('sendPaymentConfirmation', paymentData.id)
 }
 
 async function sendPaymentFailureNotification(paymentData: WebhookEventData): Promise<void> {
-  console.log(`📧 Sent payment failure notification for ${paymentData.id}`)
+  warnStub('sendPaymentFailureNotification', paymentData.id)
 }
 
 async function sendBillingConfirmation(subscriptionData: WebhookEventData): Promise<void> {
-  console.log(`📧 Sent billing confirmation for ${subscriptionData.id}`)
+  warnStub('sendBillingConfirmation', subscriptionData.id)
 }
 
 async function sendCancellationConfirmation(subscriptionData: WebhookEventData): Promise<void> {
-  console.log(`📧 Sent cancellation confirmation for ${subscriptionData.id}`)
+  warnStub('sendCancellationConfirmation', subscriptionData.id)
 }
 
 async function handleFailedSubscriptionPayment(subscriptionId: string | undefined): Promise<void> {
-  console.log(`🔄 Handling failed subscription payment for ${subscriptionId}`)
-
-  // Implement dunning management
+  warnStub('handleFailedSubscriptionPayment', subscriptionId)
+  // TODO: Implement dunning management
   // 1. Retry payment after 3 days
   // 2. Send payment reminder emails
   // 3. If still failed after 7 days, suspend access
@@ -601,60 +610,60 @@ async function handleFailedSubscriptionPayment(subscriptionId: string | undefine
 }
 
 async function scheduleAccessRevocation(subscriptionData: WebhookEventData): Promise<void> {
-  console.log(`⏰ Scheduled access revocation for ${subscriptionData.id}`)
+  warnStub('scheduleAccessRevocation', subscriptionData.id)
 }
 
 async function triggerRetentionCampaign(customerId: string | undefined): Promise<void> {
-  console.log(`🎯 Triggered retention campaign for ${customerId}`)
+  warnStub('triggerRetentionCampaign', customerId)
 }
 
 async function createDisputeRecord(disputeData: WebhookEventData): Promise<void> {
-  console.log(`📝 Created dispute record for ${disputeData.id}`)
+  warnStub('createDisputeRecord', disputeData.id)
 }
 
 async function gatherDisputeEvidence(disputeData: WebhookEventData): Promise<void> {
-  console.log(`📋 Gathering dispute evidence for ${disputeData.id}`)
+  warnStub('gatherDisputeEvidence', disputeData.id)
 }
 
 async function notifyFinanceTeam(disputeData: WebhookEventData): Promise<void> {
-  console.log(`📞 Notified finance team about dispute ${disputeData.id}`)
+  warnStub('notifyFinanceTeam', disputeData.id)
 }
 
 async function trackPaymentAnalytics(eventType: string, data: WebhookEventData): Promise<void> {
-  console.log(`📊 Tracked payment analytics: ${eventType}`)
+  warnStub('trackPaymentAnalytics', data.id)
 }
 
 async function updateSubscriptionAnalytics(data: WebhookEventData): Promise<void> {
-  console.log(`📊 Updated subscription analytics for ${data.id}`)
+  warnStub('updateSubscriptionAnalytics', data.id)
 }
 
 async function updateChurnAnalytics(data: WebhookEventData): Promise<void> {
-  console.log(`📊 Updated churn analytics for ${data.id}`)
+  warnStub('updateChurnAnalytics', data.id)
 }
 
 async function updateRiskMetrics(data: WebhookEventData): Promise<void> {
-  console.log(`⚠️ Updated risk metrics for dispute ${data.id}`)
+  warnStub('updateRiskMetrics', data.id)
 }
 
 async function processRefund(paymentData: WebhookEventData): Promise<void> {
-  console.log(`💸 Processing refund for ${paymentData.id}`)
+  warnStub('processRefund', paymentData.id)
 }
 
 async function sendRefundNotification(paymentData: WebhookEventData): Promise<void> {
-  console.log(`📧 Sent refund notification for ${paymentData.id}`)
+  warnStub('sendRefundNotification', paymentData.id)
 }
 
 async function handleCustomerCreated(event: WebhookEvent): Promise<ProcessedEventResult> {
-  console.log(`👤 New customer created: ${event.data.id}`)
+  warnStub('handleCustomerCreated', event.data.id)
   return { status: 'processed', action: 'customer_onboarded' }
 }
 
 async function handleCustomerUpdated(event: WebhookEvent): Promise<ProcessedEventResult> {
-  console.log(`👤 Customer updated: ${event.data.id}`)
+  warnStub('handleCustomerUpdated', event.data.id)
   return { status: 'processed', action: 'customer_updated' }
 }
 
 async function handleSubscriptionUpdate(event: WebhookEvent): Promise<ProcessedEventResult> {
-  console.log(`🔄 Subscription updated: ${event.data.id}`)
+  warnStub('handleSubscriptionUpdate', event.data.id)
   return { status: 'processed', action: 'subscription_updated' }
 }

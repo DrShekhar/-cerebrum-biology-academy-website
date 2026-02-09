@@ -10,7 +10,7 @@ export const testimonials: Testimonial[] = [
       "Sir, I never thought I could score 350+ in NEET! Your teaching methodology and conceptual clarity made all the difference. The way you explained photosynthesis and respiration with real-life examples was amazing. Thank you for believing in me when I didn't believe in myself.",
     image: '/testimonials/priya-sharma.jpg',
     result: 'NEET AIR 2,847 | Biology Score: 186/200',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube video ID
+    videoId: 'bk6wQCh6b9w',
     location: 'Delhi, India',
   },
   {
@@ -22,7 +22,7 @@ export const testimonials: Testimonial[] = [
       'I was a dropper and had lost all confidence after my first attempt. Cerebrum Biology Academy not only improved my biology score from 120 to 175 but also gave me the confidence to face NEET again. The revision strategy and test series were phenomenal.',
     image: '/testimonials/arjun-patel.jpg',
     result: 'NEET AIR 1,234 | Biology Score: 175/200',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube video ID
+    videoId: 'NfhkGqOQXzk',
     location: 'Mumbai, India',
   },
   {
@@ -34,7 +34,7 @@ export const testimonials: Testimonial[] = [
       'As an international student from Singapore, I was worried about NEET preparation. The online classes were perfectly timed for our timezone, and the faculty understood the unique challenges we face. The biology concepts were explained so clearly!',
     image: '/testimonials/sarah-mitchell.jpg',
     result: 'NEET 2024 Qualified | Biology Score: 168/200',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube video ID
+    videoId: 't5F8RBuHITM',
     location: 'Singapore',
   },
   {
@@ -100,7 +100,7 @@ export const videoTestimonials = [
     id: 'video-1',
     title: 'How I scored 186/200 in NEET Biology',
     studentName: 'Priya Sharma',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube video ID
+    videoId: 'bk6wQCh6b9w',
     thumbnail: '/video-thumbnails/priya-testimonial.jpg',
     duration: '5:23',
     views: '125K',
@@ -110,7 +110,7 @@ export const videoTestimonials = [
     id: 'video-2',
     title: 'From Dropper to NEET Success Story',
     studentName: 'Arjun Patel',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube video ID
+    videoId: 'NfhkGqOQXzk',
     thumbnail: '/video-thumbnails/arjun-testimonial.jpg',
     duration: '7:15',
     views: '89K',
@@ -120,7 +120,7 @@ export const videoTestimonials = [
     id: 'video-3',
     title: 'International Student NEET Journey',
     studentName: 'Sarah Mitchell',
-    videoId: 'dQw4w9WgXcQ', // Replace with actual YouTube video ID
+    videoId: 't5F8RBuHITM',
     thumbnail: '/video-thumbnails/sarah-testimonial.jpg',
     duration: '6:42',
     views: '67K',

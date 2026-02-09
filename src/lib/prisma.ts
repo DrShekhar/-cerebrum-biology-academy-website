@@ -10,7 +10,7 @@ const globalForPrisma = globalThis as unknown as {
 class MockPrismaClient {
   private logWarning(operation: string) {
     if (process.env.NODE_ENV === 'production') {
-      console.error(`[CRITICAL] MockPrismaClient used in production for operation: ${operation}`)
+      throw new Error(`[CRITICAL] MockPrismaClient used in production for operation: ${operation}. Database is unavailable.`)
     } else {
       console.warn(`[MockPrismaClient] Database operation attempted: ${operation}`)
     }

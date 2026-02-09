@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Razorpay from 'razorpay'
 import { prisma } from '@/lib/prisma'
 import { nanoid } from 'nanoid'
+import { rateLimit } from '@/lib/rateLimit'
 
 function getRazorpayInstance() {
   if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
@@ -31,6 +32,17 @@ interface EnrollmentOrderRequest {
 
 export async function POST(request: NextRequest) {
   try {
+    const rateLimitResult = await rateLimit(request, {
+      maxRequests: 10,
+      windowMs: 60 * 60 * 1000,
+    })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many enrollment attempts. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
     const body: EnrollmentOrderRequest = await request.json()
 
     const {
@@ -51,6 +63,20 @@ export async function POST(request: NextRequest) {
 
     if (!studentName || !email || !phone || !classLevel || !tier || !amount) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Invalid email format' }, { status: 400 })
+    }
+
+    const phoneRegex = /^[+]?[\d\s-]{10,15}$/
+    if (!phoneRegex.test(phone)) {
+      return NextResponse.json({ error: 'Invalid phone number' }, { status: 400 })
+    }
+
+    if (amount <= 0 || amount > 500000 || installmentAmount <= 0 || totalAmount <= 0) {
+      return NextResponse.json({ error: 'Invalid amount' }, { status: 400 })
     }
 
     if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
