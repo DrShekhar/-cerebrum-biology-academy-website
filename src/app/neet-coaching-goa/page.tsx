@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     'best NEET coaching Goa',
     'online NEET coaching Goa',
     'medical entrance Goa',
+    'NEET coaching Panaji Margao',
   ],
   openGraph: {
     title: 'Best NEET Coaching in Goa | Online Biology Classes | Cerebrum',

@@ -2,6 +2,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
@@ -22,6 +26,7 @@ export default function PageContent() {
 
   return (
     <div className="w-full">
+      <CityBreadcrumb cityName="Thiruvananthapuram" stateName="Kerala" stateSlug="kerala" />
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-indigo-50 overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -221,6 +226,9 @@ export default function PageContent() {
           <p className="text-blue-100 mt-8 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
+      <PricingSection cityName="Thiruvananthapuram" />
+      <CostComparisonSection cityName="Thiruvananthapuram" />
+      <RelatedCityLinks currentCity="thiruvananthapuram" variant="default" />
     </div>
   )
 }

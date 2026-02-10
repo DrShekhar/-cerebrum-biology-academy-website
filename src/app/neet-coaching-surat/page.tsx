@@ -15,7 +15,16 @@ const ogImageParams = new URLSearchParams({
 export const metadata: Metadata = {
   title: `Best NEET Coaching in ${locality} | 98% Success Rate | Cerebrum`,
   description: `Top NEET Biology coaching in ${locality}, Gujarat. AIIMS faculty, 98% success rate, 695/720 top score. Online + offline batches.`,
-  keywords: ['NEET coaching Surat', 'biology tuition Surat', 'best NEET classes Surat', 'NEET preparation Surat Gujarat'],
+  keywords: [
+    'NEET coaching Surat',
+    'online NEET classes Surat',
+    'biology tuition Surat',
+    'NEET preparation Surat Gujarat',
+    'best biology coaching Surat',
+    'NEET tutor Surat',
+    'medical entrance coaching Surat',
+    'NEET online classes Gujarat',
+  ],
   openGraph: {
     title: `Best NEET Coaching in ${locality} | Cerebrum`,
     description: `Top NEET Biology coaching in ${locality}. AIIMS faculty, 98% success rate.`,

@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -139,6 +143,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Madurai" stateName="Tamil Nadu" stateSlug="tamil-nadu" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -397,6 +402,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Madurai" />
+      <CostComparisonSection cityName="Madurai" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -423,6 +431,7 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+      <RelatedCityLinks currentCity="madurai" variant="default" />
     </div>
   )
 }

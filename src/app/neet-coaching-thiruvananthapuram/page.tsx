@@ -15,7 +15,16 @@ const ogImageParams = new URLSearchParams({
 export const metadata: Metadata = {
   title: `Best NEET Coaching in ${locality} | 98% Success Rate | Cerebrum`,
   description: `Top NEET Biology coaching in ${locality}, Kerala. AIIMS faculty, 98% success rate, 695/720 top score. Online + offline batches.`,
-  keywords: ['NEET coaching Thiruvananthapuram', 'biology tuition Thiruvananthapuram', 'best NEET classes Thiruvananthapuram', 'NEET preparation Thiruvananthapuram Kerala'],
+  keywords: [
+    'NEET coaching Thiruvananthapuram',
+    'online NEET classes Thiruvananthapuram',
+    'biology tuition Thiruvananthapuram',
+    'NEET preparation Thiruvananthapuram Kerala',
+    'best biology coaching Thiruvananthapuram',
+    'NEET tutor Thiruvananthapuram',
+    'medical entrance coaching Thiruvananthapuram',
+    'NEET online classes Kerala',
+  ],
   openGraph: {
     title: `Best NEET Coaching in ${locality} | Cerebrum`,
     description: `Top NEET Biology coaching in ${locality}. AIIMS faculty, 98% success rate.`,
