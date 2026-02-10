@@ -44,6 +44,17 @@ export function VideoSchema({
   subject = 'NEET Biology',
   isAccessibleForFree = false,
 }: VideoSchemaProps) {
+  // Auto-generate contentUrl from YouTube embedUrl if not provided
+  // Google requires contentUrl (watch URL) for proper video indexing
+  let finalContentUrl = contentUrl
+  if (!finalContentUrl && embedUrl) {
+    // Convert https://www.youtube.com/embed/VIDEO_ID to https://www.youtube.com/watch?v=VIDEO_ID
+    const youtubeEmbedMatch = embedUrl.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/)
+    if (youtubeEmbedMatch) {
+      finalContentUrl = `https://www.youtube.com/watch?v=${youtubeEmbedMatch[1]}`
+    }
+  }
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'VideoObject',
@@ -53,9 +64,9 @@ export function VideoSchema({
       ? thumbnailUrl
       : `https://cerebrumbiologyacademy.com${thumbnailUrl}`,
     uploadDate,
-    duration,
-    contentUrl,
-    embedUrl,
+    ...(duration && { duration }),
+    ...(finalContentUrl && { contentUrl: finalContentUrl }),
+    ...(embedUrl && { embedUrl }),
     publisher: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',
@@ -132,25 +143,37 @@ export function VideoListSchema({
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: listName,
-    itemListElement: videos.map((video, index) => ({
-      '@type': 'ListItem',
-      position: video.position || index + 1,
-      item: {
-        '@type': 'VideoObject',
-        name: video.name,
-        description: video.description,
-        thumbnailUrl: video.thumbnailUrl.startsWith('http')
-          ? video.thumbnailUrl
-          : `https://cerebrumbiologyacademy.com${video.thumbnailUrl}`,
-        uploadDate: video.uploadDate,
-        duration: video.duration,
-        embedUrl: video.embedUrl,
-        publisher: {
-          '@type': 'EducationalOrganization',
-          name: 'Cerebrum Biology Academy',
+    itemListElement: videos.map((video, index) => {
+      // Auto-generate contentUrl from YouTube embedUrl for proper video indexing
+      let contentUrl
+      if (video.embedUrl) {
+        const youtubeEmbedMatch = video.embedUrl.match(/youtube\.com\/embed\/([a-zA-Z0-9_-]+)/)
+        if (youtubeEmbedMatch) {
+          contentUrl = `https://www.youtube.com/watch?v=${youtubeEmbedMatch[1]}`
+        }
+      }
+
+      return {
+        '@type': 'ListItem',
+        position: video.position || index + 1,
+        item: {
+          '@type': 'VideoObject',
+          name: video.name,
+          description: video.description,
+          thumbnailUrl: video.thumbnailUrl.startsWith('http')
+            ? video.thumbnailUrl
+            : `https://cerebrumbiologyacademy.com${video.thumbnailUrl}`,
+          uploadDate: video.uploadDate,
+          ...(video.duration && { duration: video.duration }),
+          ...(contentUrl && { contentUrl }),
+          ...(video.embedUrl && { embedUrl: video.embedUrl }),
+          publisher: {
+            '@type': 'EducationalOrganization',
+            name: 'Cerebrum Biology Academy',
+          },
         },
-      },
-    })),
+      }
+    }),
     numberOfItems: videos.length,
     itemListOrder: 'ItemListOrderAscending',
   }
