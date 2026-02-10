@@ -21,6 +21,7 @@ import { centerSpecificFAQs } from '@/data/faqs/center-specific-faqs'
 import { Button } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Badge'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
+import { LocationsPageWebPageSchema } from '@/components/seo'
 
 export default function LocationsPage() {
   const tier1Cities = getLocationsByTier('tier1')
@@ -56,6 +57,8 @@ export default function LocationsPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* WebPage Schema with internal linking */}
+      <LocationsPageWebPageSchema />
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"

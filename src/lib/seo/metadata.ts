@@ -967,6 +967,42 @@ export const pageMetadata: Record<string, PageMetadata> = {
     ],
     canonical: '/ap-biology-tutor',
   },
+  gallery: {
+    title: 'Gallery | Student Achievements, Events & Centers | Cerebrum Biology Academy',
+    description:
+      'Explore Cerebrum Biology Academy student achievements gallery. View photos from NEET toppers, events, center tours, and success celebrations from Delhi NCR centers.',
+    keywords: [
+      'Cerebrum gallery',
+      'NEET toppers photo',
+      'student achievements',
+      'coaching center photos',
+      'student success stories',
+      'event photos',
+      'center tour',
+      'NEET celebration',
+      'biology students',
+      'academy gallery',
+    ],
+    canonical: '/gallery',
+  },
+  timetable: {
+    title: 'NEET Batch Timetable & Schedule | Class 11, 12, Dropper | Cerebrum Academy Delhi NCR',
+    description:
+      'View NEET Biology batch schedule and timetable across all Cerebrum centers. Class 11, 12, Dropper, Foundation batches with flexible timings in Delhi NCR.',
+    keywords: [
+      'batch schedule',
+      'NEET class timing',
+      'coaching timetable',
+      'batch timing Delhi',
+      'class schedule NEET',
+      'coaching timing',
+      'class 11 timing',
+      'class 12 timing',
+      'dropper batch timing',
+      'NEET batch schedule',
+    ],
+    canonical: '/timetable',
+  },
 }
 
 export function generateMetadata(pageKey: string): PageMetadata {
