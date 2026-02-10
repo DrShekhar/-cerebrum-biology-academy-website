@@ -12,7 +12,6 @@ import {
   GraduationCap,
   Target,
   Building,
-  Building,
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
