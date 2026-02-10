@@ -90,9 +90,6 @@ async function createStreamWithRetry(
       }
 
       const delayMs = initialDelay * Math.pow(2, attempt)
-      console.log(
-        `[ARIA] Stream creation failed (attempt ${attempt + 1}/${maxRetries}), retrying in ${delayMs}ms...`
-      )
       await delay(delayMs)
     }
   }

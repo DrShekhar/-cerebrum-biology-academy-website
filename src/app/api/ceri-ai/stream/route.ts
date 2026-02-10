@@ -122,7 +122,6 @@ export async function POST(req: NextRequest) {
       const cachedResponse = await upstashCache.get(cacheKey)
 
       if (cachedResponse) {
-        console.log('Cache hit for CERI AI response')
 
         // Return cached response as SSE stream
         const encoder = createSSEEncoder()
@@ -200,7 +199,6 @@ export async function POST(req: NextRequest) {
           if (useCache && fullResponse && preferUpstash() && upstashCache.isEnabled()) {
             const cacheKey = generateCacheKey(messages, userId)
             await upstashCache.set(cacheKey, fullResponse, 3600) // Cache for 1 hour
-            console.log('Cached CERI AI response')
           }
 
           controller.close()

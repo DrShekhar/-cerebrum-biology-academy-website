@@ -82,12 +82,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('✅ Enquiry captured:', {
-      id: enquiry.id,
-      name: enquiry.name,
-      phone: cleanPhone,
-      source: enquiry.source,
-    })
 
     // Send WhatsApp notification to admin
     await notifyAdmin(data, cleanPhone)
@@ -113,7 +107,6 @@ export async function POST(request: NextRequest) {
 // Notify admin via WhatsApp
 async function notifyAdmin(data: z.infer<typeof enquirySchema>, phone: string) {
   if (!process.env.INTERAKT_API_KEY) {
-    console.log('⚠️ Interakt not configured, skipping admin notification')
     return
   }
 
@@ -146,7 +139,6 @@ async function notifyAdmin(data: z.infer<typeof enquirySchema>, phone: string) {
       }),
     })
 
-    console.log('✅ Admin notified via WhatsApp')
   } catch (error) {
     console.error('❌ Admin notification failed:', error)
   }

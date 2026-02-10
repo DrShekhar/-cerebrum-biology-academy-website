@@ -59,7 +59,6 @@ export async function GET(request: NextRequest) {
         } catch (err) {
           // If user stats table doesn't exist, just proceed without completion info
           if (isTableNotExistError(err)) {
-            console.log('mcq_user_stats table not found for daily challenge check')
           } else {
             throw err
           }
@@ -86,7 +85,6 @@ export async function GET(request: NextRequest) {
     } catch (dbError) {
       // If daily_challenges table doesn't exist, return a mock challenge
       if (isTableNotExistError(dbError)) {
-        console.log('daily_challenges table not found, returning mock challenge')
 
         // Get random question IDs from official questions
         const questions = await prisma.questions.findMany({
@@ -227,7 +225,6 @@ export async function POST(request: NextRequest) {
       } catch (statsError) {
         // If stats table doesn't exist, just return the result without updating stats
         if (isTableNotExistError(statsError)) {
-          console.log('mcq_user_stats table not found, skipping stats update')
           const result: DailyChallengeResult = {
             challengeId,
             score,
@@ -244,7 +241,6 @@ export async function POST(request: NextRequest) {
     } catch (dbError) {
       // If daily_challenges table doesn't exist, return mock result
       if (isTableNotExistError(dbError)) {
-        console.log('daily_challenges table not found, returning mock result')
         const result: DailyChallengeResult = {
           challengeId,
           score,
@@ -298,7 +294,6 @@ async function createDailyChallenge(date: Date) {
     } catch (err) {
       // If community_questions table doesn't exist, just use what we have
       if (isTableNotExistError(err)) {
-        console.log('community_questions table not found for daily challenge')
       } else {
         throw err
       }

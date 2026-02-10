@@ -37,7 +37,6 @@ export async function POST(request: NextRequest) {
 
     // Check if user has a phone number
     if (!enrollment.users.phone) {
-      console.log('User has no phone number, skipping WhatsApp notification')
       return NextResponse.json({
         success: false,
         error: 'User has no phone number',
@@ -121,12 +120,6 @@ Happy Learning! 📚`
 
     if (!whatsappPhoneId || !whatsappToken) {
       // Log notification but don't fail if WhatsApp is not configured
-      console.log('WhatsApp API not configured, logging notification:')
-      console.log({
-        to: enrollment.users.phone,
-        message,
-        type: validatedData.type,
-      })
 
       // Create communication log
       await prisma.communicationLog.create({
@@ -167,10 +160,6 @@ Happy Learning! 📚`
         },
       })
 
-      console.log('WhatsApp notification sent successfully:', {
-        to: enrollment.users.phone,
-        messageId: whatsappResponse.messages?.[0]?.id,
-      })
 
       return NextResponse.json({
         success: true,

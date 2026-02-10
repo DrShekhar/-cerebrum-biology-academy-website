@@ -95,12 +95,6 @@ export async function POST(request: NextRequest) {
       throw new Error(result.message || `Interakt API error: ${response.status}`)
     }
 
-    console.log('✅ SMS/WhatsApp sent successfully via Interakt:', {
-      messageId: result.result?.message_id || result.id,
-      status: result.result?.status || 'sent',
-      to: formattedPhone,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,

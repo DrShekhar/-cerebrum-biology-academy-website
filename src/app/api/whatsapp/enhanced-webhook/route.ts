@@ -81,7 +81,6 @@ export async function GET(request: NextRequest) {
   const verifyToken = process.env.WHATSAPP_VERIFY_TOKEN
 
   if (mode === 'subscribe' && token === verifyToken) {
-    console.log('✅ WhatsApp webhook verified successfully')
     return new NextResponse(challenge)
   }
 
@@ -156,9 +155,6 @@ async function queueMessage(
   await redis.lpush('whatsapp:message_queue', JSON.stringify(queueItem))
   await redis.expire('whatsapp:message_queue', 3600) // 1 hour expiry
 
-  console.log(
-    `📥 Queued message ${message.id} with ${priority} priority (Queue size: ${messageQueue.length})`
-  )
 }
 
 /**
@@ -168,7 +164,6 @@ async function processMessageQueue(): Promise<void> {
   if (isProcessingQueue) return
 
   isProcessingQueue = true
-  console.log('🔄 Starting message queue processing...')
 
   while (messageQueue.length > 0) {
     // Process multiple messages concurrently (max 5)
@@ -186,7 +181,6 @@ async function processMessageQueue(): Promise<void> {
   }
 
   isProcessingQueue = false
-  console.log('✅ Message queue processing completed')
 }
 
 /**
@@ -197,7 +191,6 @@ async function processQueuedMessage(queueItem: MessageQueue): Promise<void> {
   const startTime = Date.now()
 
   try {
-    console.log(`🔍 Processing message ${message.id} from ${message.from}`)
 
     // Get or create conversation state
     const conversationState = await getConversationState(message.from)
@@ -266,7 +259,6 @@ async function processQueuedMessage(queueItem: MessageQueue): Promise<void> {
       await generateStudySessionSummary(message.from, conversationState)
     }
 
-    console.log(`✅ Message ${message.id} processed in ${Date.now() - startTime}ms`)
   } catch (error) {
     console.error(`❌ Failed to process message ${message.id}:`, error)
 
@@ -803,12 +795,9 @@ async function sendWhatsAppMessage(
   message: { type: string; content?: string; url?: string; caption?: string }
 ): Promise<void> {
   // Implementation would send message via WhatsApp Business API
-  console.log(`📤 Sending ${message.type} to ${to}: ${message.content || message.caption}`)
 }
 
 async function handleMessageStatuses(statuses: any[]): Promise<void> {
   // Handle delivery receipts, read receipts, etc.
-  for (const status of statuses) {
-    console.log(`📊 Message ${status.id} status: ${status.status}`)
-  }
+  // TODO: implement status handling
 }

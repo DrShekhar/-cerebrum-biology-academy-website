@@ -71,11 +71,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('Referral code generated:', {
-      code: referralCode.code,
-      email: email,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,

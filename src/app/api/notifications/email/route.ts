@@ -252,12 +252,6 @@ Thank you for choosing Cerebrum Biology Academy!
         },
       })
 
-      console.log('Email notification sent successfully:', {
-        to: enrollment.users.email,
-        subject,
-        messageId: emailResult.messageId,
-        provider: emailResult.provider,
-      })
 
       return NextResponse.json({
         success: true,

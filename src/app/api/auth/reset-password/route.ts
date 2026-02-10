@@ -91,7 +91,6 @@ export async function POST(request: NextRequest) {
     })
 
     if (!resetToken) {
-      console.log(`[SECURITY] Invalid password reset token attempted from IP: ${clientIP}`)
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -106,9 +105,6 @@ export async function POST(request: NextRequest) {
 
     // Check if token has been used
     if (resetToken.used) {
-      console.log(
-        `[SECURITY] Used password reset token attempted for user: ${resetToken.userId} from IP: ${clientIP}`
-      )
       return addSecurityHeaders(
         NextResponse.json(
           {
@@ -123,9 +119,6 @@ export async function POST(request: NextRequest) {
 
     // Check if token has expired
     if (resetToken.expiresAt < new Date()) {
-      console.log(
-        `[SECURITY] Expired password reset token attempted for user: ${resetToken.userId} from IP: ${clientIP}`
-      )
       // Mark token as used to prevent future attempts
       await prisma.password_reset_tokens.update({
         where: { id: resetToken.id },
@@ -209,7 +202,6 @@ export async function POST(request: NextRequest) {
       console.error('Analytics tracking error:', analyticsError)
     }
 
-    console.log(`✅ Password reset completed for user ${resetToken.userId}`)
 
     return addSecurityHeaders(
       NextResponse.json({

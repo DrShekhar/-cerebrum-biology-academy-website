@@ -37,7 +37,6 @@ export async function POST(request: NextRequest) {
     if (session?.user?.id) {
       // Use authenticated user
       userId = session.user.id
-      console.log('Purchase initiated by authenticated user:', userId)
     } else {
       // Guest checkout - require email, phone, and name
       if (!validatedData.email || !validatedData.phone || !validatedData.name) {
@@ -73,9 +72,6 @@ export async function POST(request: NextRequest) {
           },
         })
 
-        console.log('Created new user account for guest checkout:', user.id)
-      } else {
-        console.log('Found existing user for guest checkout:', user.id)
       }
 
       userId = user.id
@@ -189,11 +185,6 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      console.log('Created enrollment and payment:', {
-        enrollmentId: enrollment.id,
-        paymentId: payment.id,
-        razorpayOrderId: razorpayOrder.id,
-      })
 
       return {
         enrollment,

@@ -462,7 +462,6 @@ async function executeWhatsAppCampaign(
   targetUsers: UserRecord[]
 ): Promise<CampaignExecutionResult> {
   // WhatsApp API integration
-  console.log(`Executing WhatsApp campaign: ${campaign.name}`)
 
   // Mock execution results
   return {
@@ -477,7 +476,6 @@ async function executeSMSCampaign(
   targetUsers: UserRecord[]
 ): Promise<CampaignExecutionResult> {
   // SMS API integration
-  console.log(`Executing SMS campaign: ${campaign.name}`)
 
   return {
     sent: targetUsers.length,
@@ -491,7 +489,6 @@ async function executeEmailCampaign(
   targetUsers: UserRecord[]
 ): Promise<CampaignExecutionResult> {
   // Email API integration
-  console.log(`Executing Email campaign: ${campaign.name}`)
 
   return {
     sent: targetUsers.length,

@@ -43,10 +43,6 @@ export async function POST(request: NextRequest) {
             maxRetries: 3,
             initialDelayMs: 1000,
             onRetry: (attempt, error) => {
-              console.log(
-                `[Voice Transcription] Retry attempt ${attempt}/3:`,
-                error.message || error
-              )
             },
           },
         }
@@ -100,7 +96,6 @@ Format your response for text-to-speech conversion with natural pauses and empha
           maxRetries: 3,
           initialDelayMs: 1000,
           onRetry: (attempt, error) => {
-            console.log(`[Voice Chat] Retry attempt ${attempt}/3:`, error.message || error)
           },
         },
       })
@@ -136,7 +131,6 @@ Format your response for text-to-speech conversion with natural pauses and empha
             maxRetries: 3,
             initialDelayMs: 1000,
             onRetry: (attempt, error) => {
-              console.log(`[Voice TTS] Retry attempt ${attempt}/3:`, error.message || error)
             },
           },
         })

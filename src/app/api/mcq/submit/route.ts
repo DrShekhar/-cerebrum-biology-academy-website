@@ -34,7 +34,6 @@ async function safeDbOperation<T>(
     return await operation()
   } catch (error) {
     if (isTableNotExistError(error)) {
-      console.log(`${operationName}: table not found, skipping`)
       return null
     }
     throw error

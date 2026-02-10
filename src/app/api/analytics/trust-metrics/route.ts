@@ -30,10 +30,6 @@ export async function POST(request: Request) {
     const data = await request.json()
 
     // Log for monitoring (will be removed in production by compiler.removeConsole)
-    console.log('Trust metrics received:', {
-      trustLevel: data.trustLevel,
-      timestamp: data.timestamp,
-    })
 
     return NextResponse.json({
       success: true,

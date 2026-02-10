@@ -206,8 +206,8 @@ const nextConfig = {
   // Production optimizations
   compress: true,
   poweredByHeader: false,
-  // Enable standalone output for production (smaller deployments)
-  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
+  // Note: output: 'standalone' removed — not needed for Vercel deployment
+  // Vercel handles build output optimization automatically
 
   // CRITICAL FIX: Disable source maps in production to reduce build size
   // Build was 4.6GB, should be <200MB

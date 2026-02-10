@@ -70,9 +70,6 @@ export async function POST(request: NextRequest) {
 
     if (!user) {
       // Log for security monitoring but don't reveal to user
-      console.log(
-        `[SECURITY] Password reset requested for non-existent email: ${normalizedEmail.slice(0, 3)}***@${normalizedEmail.split('@')[1]} from IP: ${clientIP}`
-      )
       // Return same success message to prevent enumeration
       return addSecurityHeaders(NextResponse.json(successResponse))
     }
@@ -89,9 +86,6 @@ export async function POST(request: NextRequest) {
 
     // If token exists and was created less than 2 minutes ago, don't create new one
     if (existingToken && Date.now() - existingToken.createdAt.getTime() < 2 * 60 * 1000) {
-      console.log(
-        `[SECURITY] Password reset requested too soon for user: ${user.id} from IP: ${clientIP}`
-      )
       return addSecurityHeaders(NextResponse.json(successResponse))
     }
 
@@ -202,8 +196,6 @@ If you didn't request this password reset, please ignore this email.
     if (!emailResult.success) {
       console.error('Failed to send password reset email:', emailResult.error)
       // Still return success to prevent enumeration, but log the error
-    } else {
-      console.log(`✅ Password reset email sent to user ${user.id}`)
     }
 
     // Track password reset request (without revealing user existence)

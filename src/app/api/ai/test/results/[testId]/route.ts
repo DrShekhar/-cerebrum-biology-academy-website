@@ -392,7 +392,6 @@ export async function GET(
       },
     }
 
-    console.log(`📊 Results fetched for test: ${testId}`)
 
     return NextResponse.json(results)
   } catch (error) {

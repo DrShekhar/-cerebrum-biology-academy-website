@@ -31,7 +31,6 @@ async function safeCommunityQuery<T>(queryFn: () => Promise<T>, defaultValue: T)
       error.message.includes('community_questions') &&
       error.message.includes('does not exist')
     ) {
-      console.log('community_questions table not found, using official questions only')
       return defaultValue
     }
     throw error

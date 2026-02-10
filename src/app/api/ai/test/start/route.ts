@@ -42,7 +42,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log(`🚀 Test session started: ${testId} for student ${studentId}`)
 
     return NextResponse.json({
       success: true,

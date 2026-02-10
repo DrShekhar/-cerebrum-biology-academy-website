@@ -166,7 +166,6 @@ export async function GET(request: NextRequest) {
           })
         } catch (statsError) {
           if (isTableNotExistError(statsError)) {
-            console.log('mcq_user_stats table not found for leaderboard')
             // Return empty leaderboard
             return NextResponse.json(getEmptyLeaderboard(period, periodStart, periodEnd))
           }
@@ -241,7 +240,6 @@ export async function GET(request: NextRequest) {
           })
         } catch (sessionError) {
           if (isTableNotExistError(sessionError)) {
-            console.log('mcq_practice_sessions table not found for leaderboard')
             // Return empty leaderboard
             return NextResponse.json(getEmptyLeaderboard(period, periodStart, periodEnd))
           }
@@ -265,7 +263,6 @@ export async function GET(request: NextRequest) {
         })
       } catch (cacheError) {
         if (isTableNotExistError(cacheError)) {
-          console.log('mcq_leaderboard table not found, skipping cache')
         } else {
           // Log but don't fail the request
           console.error('Error caching leaderboard:', cacheError)
@@ -293,7 +290,6 @@ export async function GET(request: NextRequest) {
     } catch (dbError) {
       // If any required table doesn't exist, return empty leaderboard
       if (isTableNotExistError(dbError)) {
-        console.log('Required tables not found for leaderboard, returning empty')
         return NextResponse.json(getEmptyLeaderboard(period, periodStart, periodEnd))
       }
       throw dbError

@@ -54,7 +54,6 @@ export async function POST(request: NextRequest) {
     abTestEvents.push(event)
 
     // Log for monitoring (remove in production or use proper logging)
-    console.log(`[AB-TEST] ${event.testName} - ${event.variantId} - ${event.event}`)
 
     return NextResponse.json({
       success: true,

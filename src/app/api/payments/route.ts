@@ -153,7 +153,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    console.log(`💰 Payment API: ${action}`)
 
     switch (action) {
       case 'create_subscription':
@@ -749,7 +748,6 @@ async function getBillingHistory(data: BillingHistoryData) {
 }
 
 async function demonstratePaymentSystem(data: DemoData) {
-  console.log('💰 Demonstrating complete payment and monetization system...')
 
   const analytics = await paymentEngine.getSubscriptionAnalytics('month')
 

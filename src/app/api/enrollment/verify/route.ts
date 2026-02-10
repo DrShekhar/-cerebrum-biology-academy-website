@@ -94,15 +94,6 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    console.log('Enrollment payment verified:', {
-      paymentId: payment.id,
-      enrollmentId: payment.enrollmentId,
-      userId: payment.userId,
-      orderId: razorpay_order_id,
-      razorpayPaymentId: razorpay_payment_id,
-      amount: payment.amount,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,

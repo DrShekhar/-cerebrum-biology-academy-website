@@ -471,7 +471,6 @@ export async function POST(request: NextRequest) {
     const sourceHeader = request.headers.get('x-lead-source') || body.source || 'other'
     const source = sourceHeader.toLowerCase() as LeadSource
 
-    console.log(`📥 Webhook received from source: ${source}`)
 
     // Verify signature (if provided)
     const signature = request.headers.get('x-signature') || body.signature
@@ -486,17 +485,11 @@ export async function POST(request: NextRequest) {
     const parser = parsers[source] || parsers.other
     const leadData = parser(body)
 
-    console.log(`📋 Parsed lead data:`, {
-      name: leadData.studentName,
-      phone: leadData.phone,
-      source,
-    })
 
     // Check for duplicates
     const { isDuplicate, existingLead } = await checkDuplicate(leadData.phone, leadData.email)
 
     if (isDuplicate) {
-      console.log(`⚠️ Duplicate lead detected: ${leadData.phone}`)
 
       // Update existing lead with new information
       await prisma.leads.update({
@@ -596,7 +589,6 @@ export async function POST(request: NextRequest) {
         })
         .then((result) => {
           if (result.success) {
-            console.log(`📧 Welcome email sent to ${leadData.email} via ${result.provider}`)
           } else {
             console.error(`📧 Failed to send welcome email to ${leadData.email}:`, result.error)
           }
@@ -606,12 +598,6 @@ export async function POST(request: NextRequest) {
         })
     }
 
-    console.log(`✅ Lead created successfully:`, {
-      leadId: lead.id,
-      taskId: task.id,
-      counselor: counselor.name,
-      source,
-    })
 
     return NextResponse.json({
       success: true,

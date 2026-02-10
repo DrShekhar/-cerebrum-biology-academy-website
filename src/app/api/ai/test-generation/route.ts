@@ -616,12 +616,6 @@ export async function POST(request: NextRequest) {
       questionTypeCounts.mcq += difference // Add difference to MCQ as default
     }
 
-    console.log('🧪 Generating test with configuration:', {
-      topics: config.selectedTopics.length,
-      totalQuestions: config.totalQuestions,
-      difficultyDistribution: questionCounts,
-      questionTypeDistribution: questionTypeCounts,
-    })
 
     // Generate questions for each difficulty and type combination
     const allQuestions: GeneratedQuestion[] = []
@@ -702,12 +696,6 @@ export async function POST(request: NextRequest) {
       },
     }
 
-    console.log('✅ Test generated successfully:', {
-      id: generatedTest.id,
-      questionCount: allQuestions.length,
-      topics: uniqueTopics.length,
-      estimatedTime: generatedTest.metadata.estimatedTime,
-    })
 
     return NextResponse.json({
       success: true,

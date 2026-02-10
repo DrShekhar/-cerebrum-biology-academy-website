@@ -43,7 +43,6 @@ export async function POST(request: NextRequest) {
 
     // Check if Facebook credentials are configured
     if (!FB_PIXEL_ID || !FB_ACCESS_TOKEN) {
-      console.log('[Facebook Conversion API] Not configured, skipping')
       return NextResponse.json(
         { success: true, message: 'Facebook Conversion API not configured' },
         { status: 200 }
@@ -93,7 +92,6 @@ export async function POST(request: NextRequest) {
     }
 
     const result = await fbResponse.json()
-    console.log(`[Facebook Conversion API] Event sent: ${body.eventName}`, result)
 
     return NextResponse.json({
       success: true,
