@@ -60,7 +60,7 @@ const faqs = [
 {
     question: 'Why Nungambakkam families choose premium NEET coaching?',
     answer:
-      'Nungambakkam is Chennai's most prestigious residential area. Families here expect white-glove service, world-class faculty, and results. Our premium coaching with AIIMS faculty meets these expectations.',
+      "Nungambakkam is Chennai's most prestigious residential area. Families here expect white-glove service, world-class faculty, and results. Our premium coaching with AIIMS faculty meets these expectations.",
   },
   {
     question: 'How do you provide premium service?',
@@ -70,10 +70,10 @@ const faqs = [
   {
     question: 'What schools do Nungambakkam students attend?',
     answer:
-      'We have students from Chennai's most prestigious schools - Cathedral, Chettinad, PSBB, Padma Seshadri. Nungambakkam families choose the best schools and coaching.',
+      "We have students from Chennai's most prestigious schools - Cathedral, Chettinad, PSBB, Padma Seshadri. Nungambakkam families choose the best schools and coaching.",
   },
   {
-    question: 'How do you support Nungambakkam's prominent families?',
+    question: "How do you support Nungambakkam's prominent families?",
     answer:
       'Many Nungambakkam families are business leaders and prominent professionals. We understand their high expectations, provide exclusive service, and maintain confidentiality that they value.',
   }
