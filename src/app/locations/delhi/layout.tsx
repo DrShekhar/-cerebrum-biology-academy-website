@@ -182,11 +182,68 @@ function DelhiLocalBusinessSchema() {
   )
 }
 
+function DelhiFAQSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Where is Cerebrum Biology Academy located in Delhi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy is located at South Extension Part 2, New Delhi (main center). We also have another center in Rohini for students in North Delhi. Both centers are easily accessible by metro and have excellent connectivity throughout Delhi.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What makes Cerebrum the best NEET coaching center in Delhi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum is the best NEET coaching in Delhi because we have AIIMS Delhi trained faculty, small batches of maximum 15 students, 98% success rate, personalized teaching approach, and strategic center locations in South Extension and Rohini serving all parts of Delhi.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the batch timings for NEET coaching in Delhi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our centers in South Extension and Rohini are open Monday to Saturday from 8:00 AM to 8:00 PM. We offer morning, afternoon, and evening batches to accommodate students from different parts of Delhi. Call +91-9870-424-442 to know available timings.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How to reach Cerebrum Academy from different parts of Delhi?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'South Extension center is easily accessible by metro with nearby stations on multiple lines. Rohini center is also well-connected by the metro. Both locations are accessible by personal vehicles and public transport from all parts of Delhi. Visit cerebrumbiologyacademy.com for directions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the fees for NEET coaching at Cerebrum Delhi centers?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer EMI options for all Delhi students. Email cerebrumacademy@gmail.com or call +91-9870-424-442 for detailed fee information and special discounts.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function DelhiLocationLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <DelhiServiceSchema />
       <DelhiLocalBusinessSchema />
+      <DelhiFAQSchema />
       {children}
     </>
   )

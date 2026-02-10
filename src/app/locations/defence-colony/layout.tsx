@@ -119,11 +119,68 @@ function DefenceColonyLocalBusinessSchema() {
   )
 }
 
+function DefenceColonyFAQSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How close is Cerebrum Academy to Defence Colony?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy is located in South Extension Part 2, New Delhi, just 3 minutes away from Defence Colony. This makes it the most convenient NEET coaching center for Defence Colony students and residents of nearby Lajpat Nagar.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why choose Cerebrum for NEET coaching in Defence Colony?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Academy is the best choice for Defence Colony students because we have expert AIIMS Delhi trained faculty, small batch sizes of 15 students, personalized attention, 98% success rate, and a location just 3 minutes from your locality. Our proven track record makes us the preferred choice.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the class timings for Defence Colony students?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning, afternoon, and evening batches to suit Defence Colony students. Call +91-9870-424-442 for current batch schedules.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there metro access from Defence Colony to Cerebrum?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Defence Colony is near Lajpat Nagar Metro station on the Yellow and Pink Lines. Our South Extension center is easily accessible by metro, taking just 3-5 minutes. You can also reach by auto, cab, or personal vehicle. It is the most convenient location for Defence Colony students.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How much are the NEET coaching fees at Cerebrum?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy offers NEET coaching fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type and duration. We provide flexible EMI options for Defence Colony students. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed pricing.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function DefenceColonyLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <DefenceColonySchema />
       <DefenceColonyLocalBusinessSchema />
+      <DefenceColonyFAQSchema />
       {children}
     </>
   )

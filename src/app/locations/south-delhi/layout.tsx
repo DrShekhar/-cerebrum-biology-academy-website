@@ -215,6 +215,57 @@ export default function SouthDelhiLocationLayout({ children }: { children: React
     <>
       <SouthDelhiServiceSchema />
       <SouthDelhiLocalBusinessSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How accessible is Cerebrum Academy from South Delhi?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is located at our flagship center in South Extension Part 2, at the heart of South Delhi. It serves all major South Delhi localities including Greater Kailash, Lajpat Nagar, Defence Colony, Saket, Vasant Vihar, and many more within 5-20 minutes.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum Academy the best NEET coaching for South Delhi students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the premier choice for South Delhi with AIIMS Delhi trained faculty led by Dr. Shekhar, small personalized batches, 98% success rate, and state-of-the-art infrastructure. Our flagship center ensures the best quality education for South Delhi students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum Academy for South Delhi students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to suit South Delhi students flexible schedules. Contact +91-9870-424-442 to book your preferred batch time.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can South Delhi students reach Cerebrum Academy by metro?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center is very close to Lajpat Nagar Metro Station on the Pink and Yellow Lines. South Delhi students can easily take metro directly to Lajpat Nagar and reach our South Extension center by a short walk or auto ride. It is the most convenient metro-connected location in South Delhi.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the fee structure for NEET coaching at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options, scholarships, and customized packages for South Delhi students. Call cerebrumacademy@gmail.com or +91-9870-424-442 for detailed pricing.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

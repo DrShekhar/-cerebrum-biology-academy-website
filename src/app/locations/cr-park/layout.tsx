@@ -106,6 +106,57 @@ export default function CRParkLayout({ children }: { children: React.ReactNode }
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum from CR Park (Chittaranjan Park)?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy main center is in South Extension Part 2, New Delhi, just 15 minutes away from CR Park (Chittaranjan Park). The commute is convenient and accessible by metro, auto, and personal vehicles from CR Park.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why is Cerebrum the best NEET coaching for CR Park students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum is the best NEET coaching for CR Park students because we offer AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, and specialized teaching methods. We understand the unique needs of the Bengali community and provide personalized attention to every student.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum for CR Park students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our batch timings are Monday to Saturday from 8:00 AM to 8:00 PM. We offer multiple batches including morning, afternoon, and evening options to suit students from CR Park and surrounding areas like Alaknanda, Kalkaji, and Govindpuri. Contact us at +91-9870-424-442 for details.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How to reach Cerebrum Academy from CR Park using metro?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From CR Park, you can take the nearest metro station and reach South Extension within 15-20 minutes. Our center is well-connected by public transport and is easily accessible. Students from CR Park, Alaknanda, and Govindpuri metro stations can reach us conveniently.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees at Cerebrum for CR Park students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on the batch type and course duration. We offer flexible payment options and EMI facilities. Email us at cerebrumacademy@gmail.com or call +91-9870-424-442 for a detailed fee breakdown and discounts for CR Park students.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

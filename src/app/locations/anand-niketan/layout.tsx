@@ -101,6 +101,57 @@ export default function AnandNiketanLayout({ children }: { children: React.React
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Biology Academy from Anand Niketan?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy main center is located in South Extension Part 2, New Delhi, just 8-10 minutes away from Anand Niketan. Our location near South Extension provides easy access for students from Diplomatic Enclave, Chanakyapuri, and surrounding areas.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum the best NEET coaching for Anand Niketan students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy is the best NEET coaching for Anand Niketan students because we have AIIMS Delhi trained faculty, small batch sizes of 15 students maximum, a 98% success rate, and personalized attention to every student. Our premium coaching environment suits the high-achiever students from elite localities like Anand Niketan.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings for Anand Niketan students at Cerebrum?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We offer flexible batch timings Monday to Saturday from 8:00 AM to 8:00 PM to accommodate students from Anand Niketan and surrounding areas. We have morning batches, afternoon batches, and evening batches available. Contact us at +91-9870-424-442 for specific batch timings.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is there metro access to reach Cerebrum from Anand Niketan?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes, Cerebrum is well-connected by metro. From Anand Niketan, you can take the Blue Line or other metro options to reach South Extension area. Our center is also accessible by car, auto, and other modes of transport. It is a convenient location for students from Diplomatic Enclave and Chanakyapuri.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the fees for NEET coaching at Cerebrum Academy for Anand Niketan students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy offers NEET Biology coaching with fees ranging from Rs. 45,000 to Rs. 1,80,000 depending on the batch type, course duration, and study material provided. We offer flexible payment options including EMI. Contact us at cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee structure.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

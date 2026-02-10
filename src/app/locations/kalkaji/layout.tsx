@@ -105,6 +105,57 @@ export default function KalkajiLayout({ children }: { children: React.ReactNode 
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How close is Cerebrum Academy to Kalkaji?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy is located in South Extension Part 2, New Delhi, just 10-12 minutes away from Kalkaji. Our center is very convenient for students from Kalkaji, Nehru Place, Govindpuri, and Okhla areas, offering the most accessible premium NEET coaching in South Delhi.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why is Cerebrum the best NEET coaching for Kalkaji students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum is the best NEET coaching for Kalkaji students with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, personalized attention, and convenient location near Nehru Place. We specialize in coaching dedicated Kalkaji students targeting NEET success.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings for Kalkaji students at Cerebrum?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening batches suitable for Kalkaji students. Call +91-9870-424-442 to know current available batches for your schedule.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is there metro access from Kalkaji to reach Cerebrum?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes, from Kalkaji you can take the metro from Kalkaji Metro station to reach our South Extension center. The journey takes 10-12 minutes. Our center is also accessible by auto and personal vehicles. It is conveniently located near Nehru Place for Kalkaji students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees at Cerebrum for Kalkaji students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Kalkaji students. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee structure and special discounts.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

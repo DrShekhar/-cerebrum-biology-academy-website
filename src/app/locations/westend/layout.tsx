@@ -127,6 +127,57 @@ export default function WestendLayout({ children }: { children: React.ReactNode 
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How close is Cerebrum Academy to Westend?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is approximately 12-18 minutes from Westend. Our South Extension center is conveniently accessible from Westend and Vasant Vihar, serving this affluent diplomatic area with world-class NEET coaching.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why should Westend students choose Cerebrum Academy for NEET preparation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the best choice for Westend students with AIIMS Delhi trained faculty, premium learning environment, small personalized batches, 98% success rate, and individual mentoring. We provide excellence matching the expectations of Westend families.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum Academy for Westend students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Westend students can choose timings that suit their schedule. Call +91-9870-424-442 to book your preferred batch.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Westend students reach Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Westend, students can reach our South Extension center via personal vehicle (12-18 minutes) or auto-rickshaw. The nearest metro station is Lajpat Nagar, which provides good connectivity. The center is easily accessible for daily attendance from Westend.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the fee structure for NEET coaching at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Westend families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee information.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

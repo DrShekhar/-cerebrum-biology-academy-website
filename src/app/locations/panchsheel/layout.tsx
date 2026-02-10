@@ -124,6 +124,57 @@ export default function PanchsheelLayout({ children }: { children: React.ReactNo
     <>
       <PanchsheelSchema />
       <PanchsheelLocalBusinessSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Panchsheel Park and Enclave?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is just 5-8 minutes from Panchsheel Park and Panchsheel Enclave. Our South Extension center is very close to this affluent South Delhi locality, making it the most convenient choice for Panchsheel students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why is Cerebrum Academy the best for NEET preparation in Panchsheel?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy stands out for Panchsheel students with AIIMS Delhi trained faculty, premium learning environment, small personalized batches, 98% success rate, and individual mentoring. We provide world-class education matching the expectations of Panchsheel families.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What batch timings does Cerebrum Academy offer for Panchsheel students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options including morning, afternoon, and evening sessions. Panchsheel students can choose flexible timings that suit their schedule. Call +91-9870-424-442 to book your preferred batch.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Panchsheel students access Cerebrum Academy using public transport?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Panchsheel, students can easily reach our South Extension center via auto-rickshaw (5-10 minutes) or personal vehicle. Lajpat Nagar Metro Station is the nearest metro stop, from which our center is a short walk away. The location is highly accessible for Panchsheel residents.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees for Panchsheel students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Panchsheel families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee information.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

@@ -195,6 +195,57 @@ export function IntensiveNEETBiologyPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Schema.org structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'Intensive NEET Biology Course - Elite Program',
+            description:
+              "India's most exclusive NEET Biology course limited to 50 elite students. 100% AIIMS selection rate with personalized mentorship and advanced methodologies.",
+            provider: {
+              '@type': 'Organization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+            },
+            instructor: {
+              '@type': 'Person',
+              name: 'Dr. Shekhar C Singh',
+              jobTitle: 'Founder & Head Faculty',
+              alumniOf: 'AIIMS New Delhi',
+            },
+            courseCode: 'NEET-INTENSIVE',
+            educationalLevel: 'Advanced',
+            teaches: 'Intensive NEET Biology - Focused Preparation',
+            numberOfCredits: '6 months',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['online', 'onsite'],
+              courseWorkload: 'PT5H',
+              instructor: {
+                '@type': 'Person',
+                name: 'Dr. Shekhar C Singh',
+              },
+            },
+            offers: {
+              '@type': 'Offer',
+              category: 'NEET Biology Coaching',
+              priceCurrency: 'INR',
+              price: '85500',
+              availability: 'https://schema.org/InStock',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              reviewCount: '485',
+              bestRating: '5',
+            },
+          }),
+        }}
+      />
+
       {/* Premium Navigation Bar */}
       <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4">

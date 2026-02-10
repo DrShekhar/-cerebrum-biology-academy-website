@@ -127,6 +127,57 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Maharani Bagh?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy is located in South Extension Part 2, New Delhi, very close to Maharani Bagh. Students from Maharani Bagh, Sundar Nagar, Friends Colony, and Ashram area can reach our center within 12 minutes, making it the most convenient NEET coaching for premium central Delhi.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why is Cerebrum the best NEET coaching for Maharani Bagh students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum is the best NEET coaching for Maharani Bagh with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, personalized teaching, and elite learning environment suited for high-achiever families in premium Maharani Bagh and surrounding elite areas.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum for Maharani Bagh students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options. We offer morning, afternoon, and evening batches for Maharani Bagh students. Call +91-9870-424-442 to know current available batches and arrange timings.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How to reach Cerebrum from Maharani Bagh near Ashram?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our South Extension center is very close to Maharani Bagh and can be reached in 10-12 minutes by personal vehicle or auto. It is also accessible by metro and public transport. The convenient location near Ashram and Sundar Nagar makes it ideal for Maharani Bagh students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the fees for NEET coaching at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible payment options and EMI. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for customized pricing for Maharani Bagh families.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

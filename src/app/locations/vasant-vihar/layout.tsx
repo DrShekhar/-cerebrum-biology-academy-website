@@ -126,6 +126,57 @@ export default function VasantViharLayout({ children }: { children: React.ReactN
     <>
       <VasantViharSchema />
       <VasantViharLocalBusinessSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Vasant Vihar?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is approximately 10-15 minutes from Vasant Vihar. Our South Extension center is easily accessible from Vasant Vihar, making it a convenient choice for students in this diplomatic area of West-South Delhi.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum Academy the best NEET coaching for Vasant Vihar students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the premier choice for Vasant Vihar students with AIIMS Delhi trained faculty, small personalized batches, 98% success rate, and premium learning environment. We also offer IB and IGCSE Biology tutoring for international school students from Vasant Vihar.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What batch timings does Cerebrum Academy offer for Vasant Vihar students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Vasant Vihar students flexible schedules. Call +91-9870-424-442 to book your preferred batch time.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Vasant Vihar students reach our coaching center?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Vasant Vihar, students can reach our South Extension center via personal vehicle (10-15 minutes) or auto-rickshaw. The nearest metro station is Lajpat Nagar, which is accessible via connecting routes. The center is conveniently located for Vasant Vihar residents.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees for Vasant Vihar students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Vasant Vihar families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for personalized fee consultation.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

@@ -103,6 +103,57 @@ export default function SundarNagarLayout({ children }: { children: React.ReactN
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Sundar Nagar?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is approximately 8-12 minutes from Sundar Nagar. Our South Extension center is very close to this elite central Delhi locality near Khan Market and India Gate. It is one of the most convenient locations for Sundar Nagar students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why is Cerebrum Academy the best NEET coaching for Sundar Nagar?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the premier choice for Sundar Nagar students with AIIMS Delhi trained faculty, premium learning environment, small personalized batches, 98% success rate, and individual mentoring. We cater to the high standards expected by Sundar Nagar families.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum Academy for Sundar Nagar students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Sundar Nagar students can choose timings suitable for their schedule. Call +91-9870-424-442 for available batch timings.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Sundar Nagar students reach Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Sundar Nagar, students can reach our South Extension center via auto-rickshaw (8-12 minutes) or personal vehicle. The nearest metro station is Lajpat Nagar, which is a short walk from our center. The location is highly accessible for Sundar Nagar residents.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the NEET coaching fee structure at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Sundar Nagar students. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for personalized fee details.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

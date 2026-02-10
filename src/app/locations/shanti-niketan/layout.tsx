@@ -102,6 +102,57 @@ export default function ShantiNiketanLayout({ children }: { children: React.Reac
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Shanti Niketan?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is approximately 15-20 minutes from Shanti Niketan. Our South Extension center is conveniently accessible from this premium diplomatic area near Chanakyapuri. We serve Shanti Niketan and nearby affluent localities with world-class coaching.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why is Cerebrum Academy the best for NEET coaching in Shanti Niketan?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy stands out for Shanti Niketan students with AIIMS Delhi trained faculty, premium learning environment, small personalized batches, 98% success rate, and individual mentoring. We match the high expectations of Shanti Niketan families with excellence.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum Academy for Shanti Niketan students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Shanti Niketan students can choose timings that suit their schedule. Call +91-9870-424-442 to book your preferred batch.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Shanti Niketan students reach our coaching center?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Shanti Niketan, students can reach our South Extension center via personal vehicle (15-20 minutes) or auto-rickshaw. Lajpat Nagar Metro Station is the nearest metro stop. The center is highly accessible for daily attendance from Shanti Niketan and diplomatic area.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees for Shanti Niketan students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment options for Shanti Niketan families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for personalized fee consultation.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )
