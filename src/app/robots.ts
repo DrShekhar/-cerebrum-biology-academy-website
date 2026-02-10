@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/_next/static/'],
+        allow: ['/', '/_next/static/', '/ai-features/', '/ai-education-demo/'],
         disallow: [
           '/dashboard/',
           '/api/',
@@ -18,7 +18,6 @@ export default function robots(): MetadataRoute.Robots {
           '/test-platform/',
           '/simple-test-gen/',
           '/test-learning/',
-          '/ai-features/',
           '/enrollments/',
           '/boards/',
           '/portal/',
@@ -48,12 +47,12 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'Googlebot',
-        allow: '/',
+        allow: ['/', '/ai-features/', '/ai-education-demo/', '/adaptive-testing/'],
         disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/static/css/', '/blog?', '/courses?'],
       },
       {
         userAgent: 'Bingbot',
-        allow: '/',
+        allow: ['/', '/ai-features/', '/ai-education-demo/', '/adaptive-testing/'],
         disallow: ['/dashboard/', '/api/', '/auth/', '/admin/', '/student/', '/analytics/', '/_next/static/css/', '/blog?', '/courses?'],
       },
       // AI Search Engine Crawlers - Allow for GEO (Generative Engine Optimization)
