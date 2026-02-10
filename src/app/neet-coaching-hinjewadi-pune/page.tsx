@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function NEETCoachingHinjewadi PunePage() {
+export default function NEETCoachingHinjewadiPunePage() {
   return (
     <>
       <LocalitySchema
