@@ -1,5 +1,7 @@
-import { ReactNode } from 'react'
+import { generatePageMetadata } from '@/lib/seo/metadata'
 
-export default function GalleryLayout({ children }: { children: ReactNode }) {
+export const metadata = generatePageMetadata('gallery')
+
+export default function GalleryLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>
 }
