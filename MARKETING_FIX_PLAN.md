@@ -43,18 +43,13 @@ Each phase produces 1-3 PRs with atomic, focused commits.
 > Priority: CRITICAL | Impact: Very High (recovers ~300 leads/month) | Effort: 4-6 hrs
 > Files touched: 2-3 files
 
-- [ ] **PR #59**: Add desktop fallback form on /book-free-demo
-  - File: `src/app/book-free-demo/page.tsx`
-  - Add device detection (mobile vs desktop via screen width)
-  - Mobile: keep WhatsApp redirect (current behavior)
-  - Desktop: show inline form with Name, Phone, Class, Center fields
-  - On submit: send pre-filled WhatsApp message via wa.me/ link + store in DB
-  - Use existing DemoBookingSystem styling/components where possible
+- [x] **PR #60**: Add desktop fallback form on /book-free-demo
+  - Device detection: mobile → WhatsApp redirect, desktop → inline form
+  - Form: Name, Phone, Class, Center, Preferred Day → submits via WhatsApp
+  - Sidebar with benefits + direct WhatsApp/call buttons
 
-- [ ] **PR #59** (same PR): Consolidate duplicate demo pages
-  - File: `src/app/demo-booking/page.tsx`
-  - Change to redirect → /book-free-demo (canonical)
-  - Keep SEO redirect in next.config.mjs
+- [x] **PR #60** (same PR): Consolidate duplicate demo pages
+  - /demo-booking now redirects to /book-free-demo (canonical)
 
 ---
 
