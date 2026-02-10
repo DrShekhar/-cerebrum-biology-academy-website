@@ -37,7 +37,7 @@ export interface CountryConfig {
   }
 }
 
-// All 10 supported countries
+// All 15 supported countries
 export const SUPPORTED_COUNTRIES = [
   'us',
   'uk',
@@ -49,6 +49,11 @@ export const SUPPORTED_COUNTRIES = [
   'hk',
   'nz',
   'za',
+  'sa',
+  'bd',
+  'lk',
+  'eg',
+  'pk',
 ] as const
 
 export type CountryCode = (typeof SUPPORTED_COUNTRIES)[number]
@@ -278,6 +283,121 @@ export const COUNTRIES: Record<CountryCode, CountryConfig> = {
     trustBadges: ['CAPS Aligned', 'IEB Approved'],
     localTerms: { tutor: 'tutor', class: 'lesson' },
   },
+
+  sa: {
+    code: 'sa',
+    name: 'Saudi Arabia',
+    flag: '🇸🇦',
+    currency: { code: 'SAR', symbol: 'SAR ', rate: 3.75 },
+    pricing: { smallGroup: 150, oneOnOneMin: 265, oneOnOneMax: 450 },
+    timezone: 'Asia/Riyadh',
+    timezoneAbbr: 'AST',
+    examSystems: [
+      'CBSE Biology',
+      'IGCSE Biology',
+      'A-Level Biology',
+      'IB Biology',
+      'American Curriculum Biology',
+      'NEET Preparation',
+    ],
+    courseCategories: ['CBSE/ICSE', 'IGCSE/A-Level', 'IB Programme', 'NEET Prep'],
+    hreflang: 'en-SA',
+    phoneFormat: '+966 XX XXX XXXX',
+    trustBadges: ['CBSE Curriculum Expert', 'NEET Specialist'],
+    localTerms: { tutor: 'tutor', class: 'class' },
+  },
+
+  bd: {
+    code: 'bd',
+    name: 'Bangladesh',
+    flag: '🇧🇩',
+    currency: { code: 'BDT', symbol: '৳', rate: 109.5 },
+    pricing: { smallGroup: 4380, oneOnOneMin: 7665, oneOnOneMax: 13140 },
+    timezone: 'Asia/Dhaka',
+    timezoneAbbr: 'BST',
+    examSystems: [
+      'HSC Biology',
+      'Medical Admission Test',
+      'NEET Preparation',
+      'Cambridge O-Level Biology',
+      'Cambridge A-Level Biology',
+      'IB Biology',
+    ],
+    courseCategories: ['HSC', 'Medical Admission', 'Cambridge', 'NEET Prep'],
+    hreflang: 'en-BD',
+    phoneFormat: '+880 XXXX XXXXXX',
+    trustBadges: ['NCTB Syllabus Aligned', 'Medical Admission Expert'],
+    localTerms: { tutor: 'tutor', class: 'class' },
+  },
+
+  lk: {
+    code: 'lk',
+    name: 'Sri Lanka',
+    flag: '🇱🇰',
+    currency: { code: 'LKR', symbol: 'Rs ', rate: 323.0 },
+    pricing: { smallGroup: 12920, oneOnOneMin: 22610, oneOnOneMax: 38760 },
+    timezone: 'Asia/Colombo',
+    timezoneAbbr: 'IST',
+    examSystems: [
+      'GCE A/L Biology',
+      'GCE O/L Science',
+      'London A-Level Biology',
+      'IB Biology',
+      'NEET Preparation',
+      'Medical Faculty Entrance',
+    ],
+    courseCategories: ['Local A/L', 'London A-Level', 'IB', 'NEET/Medical'],
+    hreflang: 'en-LK',
+    phoneFormat: '+94 XX XXX XXXX',
+    trustBadges: ['NIE Syllabus Aligned', 'Medical Entrance Expert'],
+    localTerms: { tutor: 'tutor', class: 'class' },
+  },
+
+  eg: {
+    code: 'eg',
+    name: 'Egypt',
+    flag: '🇪🇬',
+    currency: { code: 'EGP', symbol: 'E£', rate: 30.9 },
+    pricing: { smallGroup: 1236, oneOnOneMin: 2163, oneOnOneMax: 3708 },
+    timezone: 'Africa/Cairo',
+    timezoneAbbr: 'EET',
+    examSystems: [
+      'Thanaweya Amma Biology',
+      'IGCSE Biology',
+      'A-Level Biology',
+      'IB Biology',
+      'American Diploma Biology',
+      'NEET Preparation',
+    ],
+    courseCategories: ['National System', 'IGCSE/A-Level', 'IB/American', 'NEET Prep'],
+    hreflang: 'en-EG',
+    phoneFormat: '+20 XX XXXX XXXX',
+    trustBadges: ['Cambridge Aligned', 'Medical Entry Specialist'],
+    localTerms: { tutor: 'tutor', class: 'class' },
+  },
+
+  pk: {
+    code: 'pk',
+    name: 'Pakistan',
+    flag: '🇵🇰',
+    currency: { code: 'PKR', symbol: 'Rs ', rate: 278.5 },
+    pricing: { smallGroup: 11140, oneOnOneMin: 19495, oneOnOneMax: 33420 },
+    timezone: 'Asia/Karachi',
+    timezoneAbbr: 'PKT',
+    examSystems: [
+      'FSc Biology (Pre-Medical)',
+      'MDCAT Preparation',
+      'Cambridge O-Level Biology',
+      'Cambridge A-Level Biology',
+      'IB Biology',
+      'NEET Preparation',
+    ],
+    courseCategories: ['FSc Pre-Medical', 'MDCAT', 'Cambridge', 'NEET Prep'],
+    hreflang: 'en-PK',
+    phoneFormat: '+92 XXX XXXXXXX',
+    trustBadges: ['Federal Board Aligned', 'MDCAT Specialist'],
+    localTerms: { tutor: 'tutor', class: 'class' },
+  },
 }
 
 /**
@@ -325,6 +445,7 @@ export function getCountriesByRegion(): Record<string, CountryConfig[]> {
     'North America': [COUNTRIES.us, COUNTRIES.ca],
     Europe: [COUNTRIES.uk, COUNTRIES.ie],
     'Asia Pacific': [COUNTRIES.au, COUNTRIES.sg, COUNTRIES.hk, COUNTRIES.nz],
-    'Middle East & Africa': [COUNTRIES.ae, COUNTRIES.za],
+    'South Asia': [COUNTRIES.bd, COUNTRIES.lk, COUNTRIES.pk],
+    'Middle East & Africa': [COUNTRIES.ae, COUNTRIES.sa, COUNTRIES.eg, COUNTRIES.za],
   }
 }
