@@ -2,8 +2,9 @@ import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPostSlugs, getRelatedPosts, getCategoryBySlug } from '@/lib/blog/mdx'
 import { BlogPostPage } from '@/components/blog/BlogPostPage'
-import { BreadcrumbSchema, COMMON_BREADCRUMBS } from '@/components/seo'
+import { BreadcrumbSchema, COMMON_BREADCRUMBS, HowToSchema } from '@/components/seo'
 import { TechArticleSchema } from '@/components/seo/TechArticleSchema'
+import { HOWTO_CONFIGS } from '@/data/howto-schemas'
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -99,6 +100,17 @@ export default async function BlogPost({ params }: Props) {
         learningResourceType="Blog Post"
         proficiencyLevel={meta.difficulty === 'beginner' ? 'Beginner' : meta.difficulty === 'advanced' ? 'Advanced' : 'Intermediate'}
       />
+      {/* HowTo Schema for preparation guide posts - Google rich snippet eligibility */}
+      {HOWTO_CONFIGS[slug] && (
+        <HowToSchema
+          name={HOWTO_CONFIGS[slug].name}
+          description={HOWTO_CONFIGS[slug].description}
+          steps={HOWTO_CONFIGS[slug].steps}
+          totalTime={HOWTO_CONFIGS[slug].totalTime}
+          image={meta.featuredImage}
+          url={`https://cerebrumbiologyacademy.com/blog/${slug}`}
+        />
+      )}
       <BlogPostPage
         meta={meta}
         content={postData.content}

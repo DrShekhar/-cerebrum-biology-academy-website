@@ -144,6 +144,28 @@ export default function NEETCrashCourseRohini2026Page() {
     ],
   }
 
+  // VideoObject schema for embedded student testimonial videos
+  const videoSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: 'NEET Success Stories - Student Testimonials',
+    description:
+      'Watch real success stories from our NEET crash course students at Rohini center. See how they improved their scores and got selected in top medical colleges.',
+    thumbnailUrl: 'https://img.youtube.com/vi/bk6wQCh6b9w/maxresdefault.jpg',
+    uploadDate: '2025-01-15',
+    contentUrl: 'https://www.youtube.com/watch?v=bk6wQCh6b9w',
+    embedUrl: 'https://www.youtube.com/embed/bk6wQCh6b9w',
+    duration: 'PT5M',
+    publisher: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+  }
+
   return (
     <>
       <script
@@ -157,6 +179,10 @@ export default function NEETCrashCourseRohini2026Page() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
       />
       <NEETCrashCourseRohiniContent faqs={faqs} />
     </>

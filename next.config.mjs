@@ -1023,27 +1023,27 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-laxmi-nagar',
-        destination: '/neet-coaching-east-delhi',
+        destination: '/biology-classes-east-delhi',
         permanent: true,
       },
       {
         source: '/biology-classes-preet-vihar',
-        destination: '/neet-coaching-east-delhi',
+        destination: '/biology-classes-east-delhi',
         permanent: true,
       },
       {
         source: '/biology-classes-model-town',
-        destination: '/neet-coaching-north-delhi',
+        destination: '/biology-classes-south-delhi',
         permanent: true,
       },
       {
         source: '/biology-classes-manesar',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-tuition-west-delhi',
-        destination: '/neet-coaching-north-delhi',
+        destination: '/locations/delhi',
         permanent: true,
       },      {
         source: '/biology-classes-gurgaon-sector-31',
