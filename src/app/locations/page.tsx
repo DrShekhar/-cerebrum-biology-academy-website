@@ -92,6 +92,30 @@ export default function LocationsPage() {
         }}
       />
 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://cerebrumbiologyacademy.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Locations',
+                item: 'https://cerebrumbiologyacademy.com/locations',
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-blue-600 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />

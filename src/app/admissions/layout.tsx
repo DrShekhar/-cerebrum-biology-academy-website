@@ -38,5 +38,38 @@ export const metadata: Metadata = {
 }
 
 export default function AdmissionsLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      { '@type': 'ListItem', position: 2, name: 'Admissions', item: 'https://cerebrumbiologyacademy.com/admissions' },
+    ],
+  }
+
+  const webPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'Admissions - Cerebrum Biology Academy',
+    description: 'Enroll in NEET Biology coaching programs at Cerebrum Biology Academy.',
+    url: 'https://cerebrumbiologyacademy.com/admissions',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    provider: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+  }
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      {children}
+    </>
+  )
 }
