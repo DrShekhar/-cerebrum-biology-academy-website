@@ -3,8 +3,8 @@ import PageContent from './PageContent'
 import { LocalitySchema } from '@/components/seo/LocalitySchema'
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
-const locality = 'Agra'
-const slug = 'neet-coaching-agra'
+const locality = 'Surat'
+const slug = 'neet-coaching-surat'
 
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
@@ -14,8 +14,8 @@ const ogImageParams = new URLSearchParams({
 
 export const metadata: Metadata = {
   title: `Best NEET Coaching in ${locality} | 98% Success Rate | Cerebrum`,
-  description: `Top NEET Biology coaching in ${locality}, Uttar Pradesh. AIIMS faculty, 98% success rate, 695/720 top score. Online + offline batches.`,
-  keywords: ['NEET coaching Agra', 'biology tuition Agra', 'best NEET classes Agra', 'NEET preparation Agra Uttar Pradesh'],
+  description: `Top NEET Biology coaching in ${locality}, Gujarat. AIIMS faculty, 98% success rate, 695/720 top score. Online + offline batches.`,
+  keywords: ['NEET coaching Surat', 'biology tuition Surat', 'best NEET classes Surat', 'NEET preparation Surat Gujarat'],
   openGraph: {
     title: `Best NEET Coaching in ${locality} | Cerebrum`,
     description: `Top NEET Biology coaching in ${locality}. AIIMS faculty, 98% success rate.`,
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   alternates: { canonical: `${BASE_URL}/${slug}` },
 }
 
-export default function NEETCoachingAgraPage() {
+export default function NEETCoachingSuratPage() {
   return (
     <>
-      <LocalitySchema locality="Agra" slug={slug} pageTitle="Best NEET Coaching in Agra" pageDescription="Top NEET Biology coaching in Agra, Uttar Pradesh with AIIMS faculty and 98% success rate." pageType="coaching" />
+      <LocalitySchema locality="Surat" slug={slug} pageTitle="Best NEET Coaching in Surat" pageDescription="Top NEET Biology coaching in Surat, Gujarat with AIIMS faculty and 98% success rate." pageType="coaching" />
       <PageContent />
     </>
   )
