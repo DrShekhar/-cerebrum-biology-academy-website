@@ -56,9 +56,9 @@ const indiranagarAreas = [
 const whyChooseUs = [
   {
     icon: Crown,
-    title: 'Indiranagar's Premium Premium Retail & Families',
+    title: "Indiranagar's Premium Premium Retail & Families",
     description:
-      'Trusted by affluent, tradition-conscious families in Indiranagar's gated communities and premium addresses.',
+      "Trusted by affluent, tradition-conscious families in Indiranagar's gated communities and premium addresses.",
   },
   {
     icon: Target,
@@ -84,7 +84,7 @@ const faqs = [
   {
     question: 'Why Indiranagar families prefer our online NEET coaching?',
     answer:
-      'Indiranagar is Bangalore's most established, premium residential district. Families here value quality, discipline, and results. Our online platform offers world-class AIIMS faculty coaching with traditional values and modern methods, perfect for urban professionals.',
+      "Indiranagar is Bangalore's most established, premium residential district. Families here value quality, discipline, and results. Our online platform offers world-class AIIMS faculty coaching with traditional values and modern methods, perfect for urban professionals.",
   },
   {
     question: 'How do you maintain values in coaching?',
@@ -97,7 +97,7 @@ const faqs = [
       'We have students from Bangalore International School, Vidyashilp Academy, National Public School, Bowenpally, and other premier institutions. Indiranagar attracts educated, values-driven families who choose these premium schools.',
   },
   {
-    question: 'How do you support Indiranagar's heritage community?',
+    question: "How do you support Indiranagar's heritage community?",
     answer:
       'Many Indiranagar families have legacy and heritage values. We respect this through our teaching philosophy - combining modern pedagogy with timeless values of hard work, dedication, and integrity that define Indiranagar families.',
   },
