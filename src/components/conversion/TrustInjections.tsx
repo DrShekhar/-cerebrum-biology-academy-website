@@ -11,6 +11,9 @@ import {
   Clock,
   Star,
   AlertTriangle,
+  Lock,
+  BadgeCheck,
+  Shield,
 } from 'lucide-react'
 
 // Trust Elements Configuration
@@ -122,7 +125,7 @@ function SocialProofNearCTA() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.3, delay: i * 0.1 }}
-              src={`/images/avatars/student-${i}.jpg`}
+              src={`/avatars/student-${i}.jpg`}
               alt="Student"
               className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
             />
@@ -287,25 +290,29 @@ function ExitIntentOffer() {
 // Security badges for trust
 function SecurityBadges() {
   const badges = [
-    { icon: '/icons/ssl-secure.svg', alt: 'SSL Secure' },
-    { icon: '/icons/data-protection.svg', alt: 'Data Protection' },
-    { icon: '/icons/verified.svg', alt: 'Verified' },
-    { icon: '/icons/trusted.svg', alt: 'Trusted' },
+    { label: 'SSL Secure', icon: ShieldCheck },
+    { label: 'Data Protected', icon: Lock },
+    { label: 'Verified', icon: BadgeCheck },
+    { label: 'Trusted', icon: Shield },
   ]
 
   return (
     <div className="flex items-center justify-center space-x-4 py-3 border-t border-slate-100">
-      {badges.map((badge, index) => (
-        <motion.div
-          key={index}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, delay: index * 0.1 }}
-          className="h-6 grayscale hover:grayscale-0 transition-all duration-200"
-        >
-          <Image src={badge.icon} alt={badge.alt} width={72} height={24} className="h-6 w-auto" />
-        </motion.div>
-      ))}
+      {badges.map((badge, index) => {
+        const Icon = badge.icon
+        return (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
+            className="flex items-center gap-1 text-slate-400 hover:text-green-600 transition-colors"
+          >
+            <Icon className="h-4 w-4" />
+            <span className="text-xs font-medium hidden sm:inline">{badge.label}</span>
+          </motion.div>
+        )
+      })}
     </div>
   )
 }
