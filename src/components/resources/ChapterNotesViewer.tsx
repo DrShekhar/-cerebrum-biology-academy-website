@@ -11,7 +11,8 @@ import {
   Clock,
   Download,
 } from 'lucide-react'
-import { Bookmark as BookmarkSolidIcon } from 'lucide-react'
+
+const BookmarkSolidIcon = Bookmark
 
 interface ChapterNote {
   id: string

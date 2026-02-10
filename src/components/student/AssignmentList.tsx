@@ -3,11 +3,10 @@
 import React, { useState } from 'react'
 import { AssignmentCard } from './AssignmentCard'
 import { Assignment, SubmissionStatus } from '@/types/assignment'
-import { Search } from 'lucide-react'
+import { Search, FileText } from 'lucide-react'
 import { Input } from '@/components/ui/Input'
 import { NativeSelect } from '@/components/ui/NativeSelect'
 import { EmptyState } from '@/components/ui/EmptyState'
-import { FileText } from 'lucide-react'
 
 interface AssignmentListProps {
   assignments: Array<

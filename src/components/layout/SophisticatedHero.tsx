@@ -18,9 +18,9 @@ import {
   FlaskConical,
   BarChart2,
   Globe,
+  Star,
 } from 'lucide-react'
 import { getPlaceholderAvatar } from '@/lib/images/imageUtils'
-import { Star } from 'lucide-react'
 
 interface SophisticatedHeroProps {
   onDemoBooking?: () => void
