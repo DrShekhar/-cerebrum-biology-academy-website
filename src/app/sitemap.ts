@@ -6056,6 +6056,91 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.91, // Gujarat diamond city
     },
+    // Tier-2/3 City NEET Coaching Pages - Full 30/30 SEO/GEO/AEO (Feb 2026)
+    {
+      url: `${baseUrl}/neet-coaching-nagpur`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // AIIMS Nagpur - Maharashtra
+    },
+    {
+      url: `${baseUrl}/neet-coaching-surat`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.91, // Gujarat - Diamond City
+    },
+    {
+      url: `${baseUrl}/neet-coaching-thiruvananthapuram`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Kerala capital
+    },
+    {
+      url: `${baseUrl}/neet-coaching-goa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Goa Medical College
+    },
+    {
+      url: `${baseUrl}/neet-coaching-kochi`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Kerala commercial hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-visakhapatnam`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Andhra Pradesh port city
+    },
+    {
+      url: `${baseUrl}/neet-coaching-coimbatore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Tamil Nadu education hub
+    },
+    {
+      url: `${baseUrl}/neet-coaching-madurai`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Tamil Nadu heritage city
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nashik`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Maharashtra wine capital
+    },
+    {
+      url: `${baseUrl}/neet-coaching-trivandrum`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Kerala - Trivandrum alias
+    },
+    {
+      url: `${baseUrl}/neet-coaching-bhubaneswar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Odisha capital - AIIMS Bhubaneswar
+    },
+    {
+      url: `${baseUrl}/neet-coaching-cuttack`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89, // Odisha SCB Medical
+    },
+    {
+      url: `${baseUrl}/neet-coaching-gandhinagar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89, // Gujarat capital
+    },
+    {
+      url: `${baseUrl}/neet-coaching-vadodara`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90, // Gujarat Cultural Capital
+    },
     {
       url: `${baseUrl}/biology-coaching-nagpur`,
       lastModified: lastUpdated,

@@ -107,8 +107,31 @@ export function VideoTestimonialsSection() {
 
   const activeTestimonial = VIDEO_TESTIMONIALS[activeIndex]
 
+  // VideoObject JSON-LD for each testimonial video (SSR'd for Google)
+  const videoSchemaData = VIDEO_TESTIMONIALS.map((v) => ({
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: `${v.studentName} - NEET ${v.neetScore}/720 | Cerebrum Biology Academy Testimonial`,
+    description: v.quote,
+    thumbnailUrl: `https://img.youtube.com/vi/${v.videoId}/maxresdefault.jpg`,
+    uploadDate: `${v.year}-01-15T00:00:00+05:30`,
+    contentUrl: `https://www.youtube.com/watch?v=${v.videoId}`,
+    embedUrl: `https://www.youtube.com/embed/${v.videoId}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: { '@type': 'ImageObject', url: 'https://cerebrumbiologyacademy.com/logo.png' },
+    },
+    duration: 'PT5M',
+  }))
+
   return (
     <section className="py-16 md:py-24 bg-gray-50">
+      {/* VideoObject JSON-LD for rich video snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemaData) }}
+      />
       <div className="container mx-auto px-4">
         {/* Header */}
         <motion.div

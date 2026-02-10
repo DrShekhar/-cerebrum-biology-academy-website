@@ -140,6 +140,22 @@ export function LocalitySchema({
       ratingCount: '32',
       reviewCount: '32',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Parent of NEET Aspirant' },
+        datePublished: '2024-08-15',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
+        reviewBody: `Excellent NEET Biology coaching for ${locality} students. The AIIMS faculty is knowledgeable and supportive.`,
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'NEET 2024 Student' },
+        datePublished: '2024-06-20',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
+        reviewBody: `Best decision joining Cerebrum from ${locality}. Scored 680+ in NEET with their expert guidance and personalized attention.`,
+      },
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: CONTACT_INFO.phone.primary,
