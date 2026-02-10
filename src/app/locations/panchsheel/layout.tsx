@@ -174,7 +174,21 @@ export default function PanchsheelLayout({ children }: { children: React.ReactNo
             ],
           }),
         }}
+      />      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({{
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+              { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
+              { '@type': 'ListItem', position: 3, name: 'Panchsheel', item: 'https://cerebrumbiologyacademy.com/locations/panchsheel' },
+            ],
+          }})
+        }}
       />
+
       {children}
     </>
   )
