@@ -177,7 +177,7 @@ export default function PanchsheelLayout({ children }: { children: React.ReactNo
       />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -185,7 +185,7 @@ export default function PanchsheelLayout({ children }: { children: React.ReactNo
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'Panchsheel', item: 'https://cerebrumbiologyacademy.com/locations/panchsheel' },
             ],
-          }})
+          })
         }}
       />
 

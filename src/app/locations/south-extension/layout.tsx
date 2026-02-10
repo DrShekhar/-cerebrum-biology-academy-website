@@ -170,7 +170,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
       />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -178,7 +178,7 @@ export default function SouthExtensionLayout({ children }: { children: React.Rea
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'South Extension', item: 'https://cerebrumbiologyacademy.com/locations/south-extension' },
             ],
-          }})
+          })
         }}
       />
 

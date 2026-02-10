@@ -268,7 +268,7 @@ export default function SouthDelhiLocationLayout({ children }: { children: React
       />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -276,7 +276,7 @@ export default function SouthDelhiLocationLayout({ children }: { children: React
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'South Delhi', item: 'https://cerebrumbiologyacademy.com/locations/south-delhi' },
             ],
-          }})
+          })
         }}
       />
 

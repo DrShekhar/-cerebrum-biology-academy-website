@@ -180,7 +180,7 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
       />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -188,7 +188,7 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'Safdarjung Enclave', item: 'https://cerebrumbiologyacademy.com/locations/safdarjung-enclave' },
             ],
-          }})
+          })
         }}
       />
 

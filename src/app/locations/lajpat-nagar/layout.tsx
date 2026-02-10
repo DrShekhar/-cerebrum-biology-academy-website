@@ -173,7 +173,7 @@ export default function LajpatNagarLayout({ children }: { children: React.ReactN
       />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -181,7 +181,7 @@ export default function LajpatNagarLayout({ children }: { children: React.ReactN
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'Lajpat Nagar', item: 'https://cerebrumbiologyacademy.com/locations/lajpat-nagar' },
             ],
-          }})
+          })
         }}
       />
 
