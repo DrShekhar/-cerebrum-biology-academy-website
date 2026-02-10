@@ -10,6 +10,9 @@ export const metadata: Metadata = {
     'Explore our Wall of Excellence - celebrating student achievements, faculty expertise, campus events, seminars, and memorable moments at Cerebrum Biology Academy.',
   keywords:
     'Cerebrum Biology Academy gallery, NEET toppers, student achievements, biology seminars, faculty photos, campus events, medical coaching gallery',
+  alternates: {
+    canonical: 'https://cerebrumbiologyacademy.com/gallery',
+  },
   openGraph: {
     title: 'Wall of Excellence | Cerebrum Biology Academy',
     description:
@@ -36,8 +39,43 @@ export const metadata: Metadata = {
 }
 
 export default function GalleryPage() {
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      { '@type': 'ListItem', position: 2, name: 'Gallery', item: 'https://cerebrumbiologyacademy.com/gallery' },
+    ],
+  }
+
+  const collectionPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Wall of Excellence | Cerebrum Biology Academy Gallery',
+    description: 'Celebrating student achievements, faculty expertise, campus events, seminars, and memorable moments at Cerebrum Biology Academy.',
+    url: 'https://cerebrumbiologyacademy.com/gallery',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    about: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      description: 'Premier NEET Biology coaching institute in Delhi NCR',
+    },
+    publisher: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+  }
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative bg-[#e8ede8] py-12 sm:py-16 md:py-20">
         <div className="absolute inset-0 overflow-hidden">
@@ -115,5 +153,6 @@ export default function GalleryPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }
