@@ -75,8 +75,73 @@ export default async function CityPage({ params }: CityPageProps) {
     cityLocalities.reduce((sum, loc) => sum + loc.socialProof.topScore, 0) / cityLocalities.length
   )
 
+  // Schema markup for city-level SEO
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://cerebrumbiologyacademy.com' },
+      { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
+      { '@type': 'ListItem', position: 3, name: cityName, item: `https://cerebrumbiologyacademy.com/locations/${resolvedParams.city}` },
+    ],
+  }
+
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: `NEET Biology Coaching Locations in ${cityName}`,
+    description: `Find expert NEET Biology coaching near you across ${cityLocalities.length} locations in ${cityName}`,
+    numberOfItems: cityLocalities.length,
+    itemListElement: cityLocalities
+      .sort((a, b) => b.socialProof.studentCount - a.socialProof.studentCount)
+      .slice(0, 20)
+      .map((locality, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: `NEET Biology Coaching in ${locality.displayName}`,
+        url: `https://cerebrumbiologyacademy.com/locations/${locality.citySlug}/${locality.slug}`,
+      })),
+  }
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOrganization',
+    name: `Cerebrum Biology Academy - ${cityName}`,
+    description: `Premier NEET Biology coaching across ${cityLocalities.length} locations in ${cityName}. AIIMS faculty, 98% success rate, small batches.`,
+    url: `https://cerebrumbiologyacademy.com/locations/${resolvedParams.city}`,
+    telephone: '+91-8826444334',
+    email: 'cerebrumacademy@gmail.com',
+    areaServed: {
+      '@type': 'City',
+      name: cityName,
+      containedInPlace: {
+        '@type': 'State',
+        name: stateName,
+      },
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: String(totalStudents),
+    },
+  }
+
   return (
     <div className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       {/* Hero Section */}
       <section className="bg-indigo-500 text-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
