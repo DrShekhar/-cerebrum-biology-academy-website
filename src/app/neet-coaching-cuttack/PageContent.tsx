@@ -448,7 +448,27 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Cuttack Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Christ College Cuttack', 'Stewart School Cuttack', 'Ravenshaw Collegiate School', 'St. Joseph's High School', 'DAV Public School Cuttack', 'Delhi Public School Cuttack', 'Prabhujee English Medium School', 'Kendriya Vidyalaya Cuttack'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
       <RelatedCityLinks currentCity="cuttack" variant="default" />
     </div>
   )

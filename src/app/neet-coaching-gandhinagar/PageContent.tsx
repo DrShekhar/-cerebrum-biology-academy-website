@@ -448,7 +448,27 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Gandhinagar Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['DPS Gandhinagar', 'Udgam School for Children', 'Calorx Olive International', 'Kendriya Vidyalaya Gandhinagar', 'Anand Niketan School', 'Nirma Vidyavihar School', 'St. Kabir School Gandhinagar', 'The Galaxy School'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
       <RelatedCityLinks currentCity="gandhinagar" variant="default" />
     </div>
   )

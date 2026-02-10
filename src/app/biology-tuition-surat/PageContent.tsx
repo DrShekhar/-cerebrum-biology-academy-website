@@ -24,6 +24,10 @@ import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
 import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection'
 import { CitySchema } from '@/components/seo/CitySchema'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 
 const WHATSAPP_NUMBER = '918826444334'
 const WHATSAPP_MESSAGE = encodeURIComponent(
@@ -112,6 +116,16 @@ const faqs = [
     answer:
       'Surat has a growing NEET aspirant community with many students traveling to Ahmedabad or Rajkot for coaching. Our online format brings quality AIIMS faculty to Surat without the travel hassle.',
   },
+  {
+    question: 'How do Surat students clear doubts in online coaching?',
+    answer:
+      'We provide unlimited doubt clearing via dedicated WhatsApp groups, live post-class sessions, one-on-one mentoring slots, and 24/7 access to recorded explanations. Most doubts from Surat students are resolved within 2 minutes on WhatsApp.',
+  },
+  {
+    question: 'Is there a free demo class for Surat students?',
+    answer:
+      'Yes, we offer a completely free demo class for Surat families. Book via WhatsApp at 8826444334 or through our website. No commitment required. Experience our AIIMS-trained faculty teaching methodology before enrolling.',
+  },
 ]
 
 const premiumSchools = [
@@ -145,6 +159,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Surat" stateName="Gujarat" stateSlug="neet-coaching-surat" />
       <CitySchema
         cityName="Surat"
         citySlug="surat"
@@ -370,6 +385,10 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+
+      <PricingSection cityName="Surat" />
+      <CostComparisonSection cityName="Surat" />
+      <RelatedCityLinks currentCity="Surat" currentSlug="biology-tuition-surat" />
 
       <section className="py-20 bg-gradient-to-r from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

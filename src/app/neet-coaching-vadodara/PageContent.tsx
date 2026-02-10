@@ -46,6 +46,26 @@ const faqs = [
   { question: 'Which areas in Vadodara do you serve?', answer: 'We serve Alkapuri, Sayajigunj, Fatehgunj, Manjalpur, Karelibaug, Gotri, and all Vadodara localities. Students from any Gujarat district can join.' },
   { question: 'What is the fee for NEET coaching in Vadodara?', answer: 'Our NEET Biology course ranges from Rs 24,000 to Rs 48,000 per year with EMI options and scholarships for Gujarat students.' },
   { question: 'Do you understand Gujarat board patterns?', answer: 'Yes! We have specialized batches for GSEB students with faculty who understand Gujarat exam patterns.' },
+  {
+    question: 'What is the fee for NEET coaching for Vadodara students?',
+    answer:
+      'Our NEET Biology coaching plans start from Rs 24,000/year for Foundation, Rs 36,000/year for Comprehensive, and Rs 48,000/year for Intensive. EMI options and scholarships available. More affordable than Ahmedabad coaching centers.',
+  },
+  {
+    question: 'Do you cover Gujarat GSEB board for NEET preparation?',
+    answer:
+      'Yes, our NCERT-focused curriculum covers 100% of NEET. Gujarat GSEB students benefit fully since NEET is entirely NCERT-based. We bridge any differences between GSEB and NEET requirements seamlessly.',
+  },
+  {
+    question: 'How do Vadodara students clear doubts in online coaching?',
+    answer:
+      'We offer unlimited doubt clearing via dedicated WhatsApp groups, live post-class sessions, one-on-one mentoring, and 24/7 recorded explanations. Most doubts are resolved within 2 minutes on WhatsApp.',
+  },
+  {
+    question: 'Is there a free demo class for Vadodara students?',
+    answer:
+      'Yes, we offer a completely free demo class. Book via WhatsApp at 8826444334 or through our website. Experience our AIIMS-trained faculty teaching quality with no commitment. Most Vadodara families enroll after the demo.',
+  },
 ]
 
 const premiumSchools = ['Delhi Public School', 'Navrachana School', 'Bright School', 'Baroda High School', 'St. Kabir School', 'Kendriya Vidyalaya', 'MS University Campus', 'St. Xaviers', 'Alembic School', 'Utkarsh Vidyalaya']
