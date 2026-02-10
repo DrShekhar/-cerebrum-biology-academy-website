@@ -89,6 +89,12 @@ export default async function LocalityPage({ params }: LocalityPageProps) {
           __html: JSON.stringify(schemas.breadcrumb),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schemas.course),
+        }}
+      />
 
       {/* Hero Section */}
       <LocalityHero locality={locality} />
