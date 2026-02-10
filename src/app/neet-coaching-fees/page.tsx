@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Check, MessageCircle, Phone, HelpCircle, TrendingDown, Award, BookOpen } from 'lucide-react'
+import { Check, MessageCircle, Phone, HelpCircle, TrendingDown, Award, BookOpen, Users, MapPin, Trophy } from 'lucide-react'
 import { CONTACT_INFO, getWhatsAppLink, getPhoneLink } from '@/lib/constants/contactInfo'
 import { TrustSignalsBanner } from '@/components/trust/TrustSignalsBanner'
 
@@ -173,6 +173,13 @@ const whatIncluded = [
   { icon: Check, title: 'Progress Reports', description: 'Detailed parent reports every month' },
 ]
 
+const successStats = [
+  { label: 'Selection Rate', value: '94%', icon: Trophy },
+  { label: 'Students Selected', value: '500+', icon: Users },
+  { label: 'Centers', value: '6 in Delhi NCR', icon: MapPin },
+  { label: 'Faculty', value: 'AIIMS Trained', icon: Award },
+]
+
 const faqs = [
   {
     question: 'What is the fee for NEET coaching at Cerebrum?',
@@ -275,6 +282,41 @@ export default function FeesPage() {
                 Call for Fee Details
               </a>
             </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Success Stats Banner */}
+      <section className="py-12 bg-gradient-to-r from-emerald-50 to-blue-50 border-b border-emerald-200">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          >
+            {successStats.map((stat, index) => {
+              const IconComponent = stat.icon
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 bg-white rounded-full shadow-sm">
+                      <IconComponent size={24} className="text-emerald-600" />
+                    </div>
+                  </div>
+                  <p className="text-2xl md:text-3xl font-bold text-slate-900 mb-1">{stat.value}</p>
+                  <p className="text-sm text-slate-600 font-medium">{stat.label}</p>
+                </motion.div>
+              )
+            })}
           </motion.div>
         </div>
       </section>
