@@ -102,6 +102,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          NODE_OPTIONS: '--max-old-space-size=4096'
 
       - name: Run E2E tests
         run: npm run test:e2e
@@ -216,6 +217,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
+          NODE_OPTIONS: '--max-old-space-size=4096'
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
