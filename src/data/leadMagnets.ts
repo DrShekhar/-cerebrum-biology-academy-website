@@ -16,14 +16,14 @@ export interface LeadMagnet {
 export const localLeadMagnets: LeadMagnet[] = [
   {
     id: 'neet-biology-chapterwise-weightage',
-    title: 'NEET Biology Chapter-wise Weightage Analysis 2025',
+    title: 'NEET Biology Chapter-wise Weightage Analysis 2026',
     description:
       'Get the exclusive chapter-wise analysis of last 10 years NEET Biology questions. Know exactly which topics to focus on for maximum marks.',
     type: 'pdf',
     value: '₹2,999 Value - FREE',
     ctaText: 'Download Free Analysis Report',
     downloadText: 'Get Your Free Weightage Analysis',
-    fileName: 'NEET_Biology_Weightage_Analysis_2025.pdf',
+    fileName: 'NEET_Biology_Weightage_2026.pdf',
     targetAreas: ['all'],
     targetStudents: ['class-11', 'class-12', 'dropper'],
     conversionBenefits: [
@@ -34,6 +34,27 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Previous year analysis of trends',
     ],
     socialProof: 'Downloaded by 5,000+ NEET aspirants in Delhi NCR',
+  },
+  {
+    id: 'neet-biology-pyq-collection',
+    title: 'NEET Biology Previous Year Questions (2020-2025)',
+    description:
+      'Chapter-wise collection of 60 important NEET Biology PYQs with detailed answers and explanations. Perfect for targeted revision.',
+    type: 'pdf',
+    value: '₹1,999 Value - FREE',
+    ctaText: 'Download Free PYQ Collection',
+    downloadText: 'Get Your PYQ Collection',
+    fileName: 'NEET_Biology_PYQ_2020_2025.pdf',
+    targetAreas: ['all'],
+    targetStudents: ['class-11', 'class-12', 'dropper'],
+    conversionBenefits: [
+      'Chapter-wise organized PYQs',
+      'Detailed answer explanations',
+      'Understand NEET exam patterns',
+      'Quick revision answer key',
+      'Expert tips from Dr. Shekhar',
+    ],
+    socialProof: 'Downloaded by 12,000+ NEET aspirants',
   },
   {
     id: 'local-neet-success-strategy',
@@ -58,23 +79,24 @@ export const localLeadMagnets: LeadMagnet[] = [
   },
   {
     id: 'biology-memory-techniques',
-    title: '15 Memory Techniques for Biology - Never Forget Again!',
+    title: 'Top 50 Biology Mnemonics for NEET 2026',
     description:
-      'Master biology with proven memory techniques used by AIIMS toppers. Includes mnemonics for anatomy, taxonomy, and biochemistry.',
-    type: 'video',
-    value: '₹4,999 Masterclass - FREE',
-    ctaText: 'Watch Free Memory Masterclass',
-    downloadText: 'Start Watching Now',
+      'Master biology with 50 proven mnemonics used by AIIMS toppers. Covers taxonomy, cell biology, genetics, physiology, ecology and reproduction.',
+    type: 'pdf',
+    value: '₹4,999 Value - FREE',
+    ctaText: 'Download Free Mnemonics PDF',
+    downloadText: 'Get Your Mnemonics Collection',
+    fileName: 'Biology_Mnemonics_NEET_2026.pdf',
     targetAreas: ['all'],
     targetStudents: ['class-11', 'class-12', 'dropper'],
     conversionBenefits: [
-      '15 proven memory techniques',
+      '50 proven biology mnemonics',
       'Remember complex diagrams easily',
       'Score 40+ more marks in biology',
       'Reduce revision time by 60%',
       'Confidence in biology section',
     ],
-    socialProof: 'Watched by 1,50,000+ NEET students with 95% improvement rate',
+    socialProof: 'Downloaded by 8,000+ NEET aspirants',
   },
   {
     id: 'free-neet-biology-assessment',
