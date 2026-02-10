@@ -182,3 +182,6 @@ export { CredentialSchema } from './CredentialSchema'
 
 // Video object schema for rich video snippets
 export { VideoObjectSchema, VideoObjectWithClipsSchema } from './VideoObjectSchema'
+
+// Related pages component for internal linking
+export { default as RelatedPages } from './RelatedPages'
