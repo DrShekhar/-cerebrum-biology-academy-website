@@ -40,10 +40,21 @@ export const metadata: Metadata = {
   alternates: { canonical: `${BASE_URL}/neet-coaching-riyadh-saudi-arabia` },
 }
 
+const faqs = [
+  { q: 'Is online NEET coaching effective for students in Riyadh?', a: 'Yes! Our online NEET coaching is specifically designed for Indian expat students. With 98% success rate and timezone-friendly classes, students in Riyadh achieve excellent results.' },
+  { q: 'What are the class timings for Riyadh students?', a: 'Classes are scheduled considering Saudi Arabia timezone (AST, UTC+3) to ensure students attend live sessions comfortably without conflicts with school hours.' },
+  { q: 'Do you provide WhatsApp support for doubt clearing?', a: 'Absolutely! Instant WhatsApp support is available 24/7 on 918826444334. Our faculty responds within minutes for biology and chemistry doubts.' },
+  { q: 'Which schools in Riyadh do you support?', a: 'We support students from International Indian School Riyadh, Indian School Riyadh, Indian Embassy School, DPS Riyadh, and all CBSE-affiliated institutions.' },
+  { q: 'What makes Cerebrum different from other NEET coaching?', a: 'AIIMS-qualified faculty, personalized attention, 695/720 top score, 98% success rate, and timezone-friendly online classes specifically for expat students.' },
+  { q: 'How does the fee compare with Kota coaching?', a: 'Cerebrum offers premium coaching at \u20b924,000-\u20b948,000/year. No relocation, no hostel fees—direct AIIMS faculty access from Riyadh.' },
+  { q: 'Do you cover both Class 11 and Class 12 NEET syllabus?', a: 'Yes, Foundation (Class 11), Comprehensive (Class 12), and Intensive (dropper) courses. All aligned with latest NTA NEET pattern.' },
+  { q: 'Can I attend a free demo class before enrolling?', a: 'Yes! WhatsApp us at 918826444334 to book your free demo class and experience our AIIMS faculty teaching methodology.' },
+]
+
 export default function NEETCoachingRiyadhPage() {
   return (
     <>
-      <LocalitySchema locality="Riyadh" slug="neet-coaching-riyadh-saudi-arabia" pageTitle="Best NEET Coaching in Riyadh" pageDescription="Expert NEET coaching for Indian students in Riyadh with 98% success rate and timezone-friendly online classes." pageType="coaching" />
+      <LocalitySchema locality="Riyadh" slug="neet-coaching-riyadh-saudi-arabia" pageTitle="Best NEET Coaching in Riyadh" pageDescription="Expert NEET coaching for Indian students in Riyadh with 98% success rate and timezone-friendly online classes." pageType="coaching" coordinates={{ lat: "24.7136", lng: "46.6753" }} faqs={faqs} />
       <PageContent />
     </>
   )

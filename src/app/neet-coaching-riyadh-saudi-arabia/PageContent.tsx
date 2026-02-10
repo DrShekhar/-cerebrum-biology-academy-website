@@ -2,6 +2,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle, Globe, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
@@ -24,7 +29,11 @@ export default function PageContent() {
     'International Indian School Riyadh',
     'Indian School Riyadh',
     'Indian Embassy School',
-    'CBSE Schools in Riyadh',
+    'DPS Riyadh',
+    'Riyadh Schools CBSE',
+    'Modern Indian School',
+    'Al Yasmin International',
+    'International Schools Group',
   ]
 
   const faqs = [

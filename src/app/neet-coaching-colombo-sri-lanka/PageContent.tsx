@@ -2,6 +2,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle, Globe, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
@@ -21,10 +26,14 @@ export default function PageContent() {
   const faqSection = useScrollAnimation()
 
   const schools = [
+    'Indian High Commission School Colombo',
     'Colombo International School',
-    'India School Colombo',
-    'St. Bridget\'s Convent',
-    'CBSE/ICSE Schools in Colombo',
+    'Royal College Colombo',
+    'Ladies College',
+    'S. Thomas' College',
+    'Gateway College',
+    'Lyceum International',
+    'Cambridge Schools Sri Lanka',
   ]
 
   const faqs = [
