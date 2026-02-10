@@ -35,11 +35,8 @@ jobs:
           DATABASE_URL: postgresql://placeholder
 
       - name: 🏗️ Build application
-        run: npm run build
+        run: npm run build:ci
         env:
-          # CI-optimized memory allocation (GitHub Actions runners have ~7GB total RAM)
-          # Using 4GB for Node heap leaves room for OS + other processes
-          NODE_OPTIONS: '--max-old-space-size=4096'
           # Provide minimal env vars for build
           NEXT_PUBLIC_SITE_URL: https://cerebrumbiologyacademy.com
           DATABASE_URL: postgresql://placeholder

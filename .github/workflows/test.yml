@@ -99,10 +99,9 @@ jobs:
         run: npx prisma generate
 
       - name: Build for E2E tests
-        run: npm run build
+        run: npm run build:ci
         env:
           NODE_ENV: production
-          NODE_OPTIONS: '--max-old-space-size=4096'
 
       - name: Run E2E tests
         run: npm run test:e2e
@@ -214,10 +213,9 @@ jobs:
         run: npx prisma generate
 
       - name: Build project
-        run: npm run build
+        run: npm run build:ci
         env:
           NODE_ENV: production
-          NODE_OPTIONS: '--max-old-space-size=4096'
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
