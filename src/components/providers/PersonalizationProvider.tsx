@@ -1,6 +1,6 @@
 'use client'
 
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useState, useMemo } from 'react'
 import {
   UserPreferences,
   type PersonalizationContext,
@@ -178,14 +178,18 @@ export function PersonalizationProvider({ children }: PersonalizationProviderPro
     }
   }
 
-  const value: PersonalizationContext = {
-    preferences,
-    updatePreferences,
-    resetPreferences,
-    getRecommendations,
-    getPersonalizedContent,
-    trackBehavior,
-  }
+  // Memoize context value to prevent unnecessary re-renders
+  const value: PersonalizationContext = useMemo(
+    () => ({
+      preferences,
+      updatePreferences,
+      resetPreferences,
+      getRecommendations,
+      getPersonalizedContent,
+      trackBehavior,
+    }),
+    [preferences]
+  )
 
   return (
     <PersonalizationContextInstance.Provider value={value}>

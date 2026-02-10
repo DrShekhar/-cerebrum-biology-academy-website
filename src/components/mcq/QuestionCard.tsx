@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect, useRef, useTransition } from 'react'
 import { Flag } from 'lucide-react'
 import type { MCQQuestion, AnswerResult } from '@/lib/mcq/types'
 import { DiagramQuestion } from './DiagramQuestion'
@@ -36,10 +36,11 @@ export function QuestionCard({
   const [timeElapsed, setTimeElapsed] = useState(0)
   const startTimeRef = useRef<number>(Date.now())
   const timerRef = useRef<NodeJS.Timeout | null>(null)
+  const [isPending, startTransition] = useTransition()
 
   // Handle option click
   const handleOptionClick = useCallback(
-    async (option: 'A' | 'B' | 'C' | 'D') => {
+    (option: 'A' | 'B' | 'C' | 'D') => {
       if (selectedAnswer || isSubmitting) return
 
       // Calculate actual time spent
@@ -50,18 +51,24 @@ export function QuestionCard({
         clearInterval(timerRef.current)
       }
 
+      // Update UI immediately for instant feedback (improves INP)
       setSelectedAnswer(option)
       setIsSubmitting(true)
 
-      try {
-        const answerResult = await onAnswer(option, actualTimeSpent)
-        setResult(answerResult)
-      } catch (error) {
-        console.error('Error submitting answer:', error)
-        setSelectedAnswer(null)
-      } finally {
-        setIsSubmitting(false)
-      }
+      // Defer heavy API call to avoid blocking paint
+      startTransition(() => {
+        onAnswer(option, actualTimeSpent)
+          .then((answerResult) => {
+            setResult(answerResult)
+          })
+          .catch((error) => {
+            console.error('Error submitting answer:', error)
+            setSelectedAnswer(null)
+          })
+          .finally(() => {
+            setIsSubmitting(false)
+          })
+      })
     },
     [selectedAnswer, isSubmitting, onAnswer]
   )

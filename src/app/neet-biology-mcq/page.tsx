@@ -120,11 +120,20 @@ export default function NEETBiologyMCQPage() {
   // Save answered IDs to localStorage
   const saveAnsweredIdsToStorage = useCallback(
     (ids: Set<string>) => {
-      try {
-        const key = getAnsweredIdsStorageKey()
-        localStorage.setItem(key, JSON.stringify(Array.from(ids)))
-      } catch (err) {
-        console.error('Failed to save answered IDs to storage:', err)
+      // Defer heavy JSON serialization and localStorage to avoid blocking INP
+      const saveTask = () => {
+        try {
+          const key = getAnsweredIdsStorageKey()
+          localStorage.setItem(key, JSON.stringify(Array.from(ids)))
+        } catch (err) {
+          console.error('Failed to save answered IDs to storage:', err)
+        }
+      }
+      // Use requestIdleCallback for better performance, fallback to setTimeout
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(saveTask, { timeout: 2000 })
+      } else {
+        setTimeout(saveTask, 0)
       }
     },
     [getAnsweredIdsStorageKey]

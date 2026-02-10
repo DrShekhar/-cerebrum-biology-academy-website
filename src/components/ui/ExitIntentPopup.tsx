@@ -330,12 +330,13 @@ export function ExitIntentPopup({
 
                       <button
                         type="button"
-                        onClick={async () => {
-                          await trackAndOpenWhatsApp({
+                        onClick={() => {
+                          // Fire tracking async without blocking UI (improves INP)
+                          trackAndOpenWhatsApp({
                             source: 'exit-intent-popup',
                             message: 'Hi! I saw the discount offer. Please help me claim 20% off.',
                             campaign: 'exit-intent-discount',
-                          })
+                          }).catch((err) => console.error('WhatsApp tracking error:', err))
                         }}
                         className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#166534] hover:bg-[#14532d] text-white font-semibold rounded-xl transition-colors min-h-[48px] touch-manipulation text-sm"
                       >

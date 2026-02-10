@@ -87,10 +87,20 @@ export function CountdownClient() {
   const markStudied = () => {
     const today = new Date().toDateString()
     const newStreak = streak + 1
+    // Update UI immediately for instant feedback
     setStreak(newStreak)
     setStudiedToday(true)
-    localStorage.setItem('neetStreak', newStreak.toString())
-    localStorage.setItem('neetLastStudyDate', today)
+    // Defer localStorage to avoid blocking INP
+    // Use requestIdleCallback for better performance, fallback to setTimeout
+    const saveToStorage = () => {
+      localStorage.setItem('neetStreak', newStreak.toString())
+      localStorage.setItem('neetLastStudyDate', today)
+    }
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(saveToStorage)
+    } else {
+      setTimeout(saveToStorage, 0)
+    }
   }
 
   const shareCountdown = () => {
