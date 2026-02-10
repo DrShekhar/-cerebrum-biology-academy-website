@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function NEETCoachingConnaught PlacePage() {
+export default function NEETCoachingConnaughtPlacePage() {
   return (
     <>
       <LocalitySchema
