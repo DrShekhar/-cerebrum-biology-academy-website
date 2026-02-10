@@ -162,9 +162,6 @@ export default function RootLayout({
         <link rel="alternate" hrefLang="hi-IN" href="https://cerebrumbiologyacademy.com/hi" />
         <link rel="alternate" hrefLang="x-default" href="https://cerebrumbiologyacademy.com" />
         <meta name="theme-color" content="#2563eb" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="Cerebrum Biology" />
         <meta name="application-name" content="Cerebrum Biology Academy" />
         <meta name="msapplication-TileColor" content="#2563eb" />
