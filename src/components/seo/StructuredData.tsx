@@ -92,6 +92,55 @@ export function OrganizationSchema() {
     ],
     areaServed: [
       {
+        '@type': 'City',
+        name: 'Gurugram',
+        alternateName: 'Gurgaon',
+        containedIn: {
+          '@type': 'State',
+          name: 'Haryana',
+          containedIn: {
+            '@type': 'Country',
+            name: 'India',
+          },
+        },
+      },
+      {
+        '@type': 'City',
+        name: 'Delhi',
+        containedIn: {
+          '@type': 'State',
+          name: 'Delhi',
+          containedIn: {
+            '@type': 'Country',
+            name: 'India',
+          },
+        },
+      },
+      {
+        '@type': 'City',
+        name: 'Noida',
+        containedIn: {
+          '@type': 'State',
+          name: 'Uttar Pradesh',
+          containedIn: {
+            '@type': 'Country',
+            name: 'India',
+          },
+        },
+      },
+      {
+        '@type': 'City',
+        name: 'Faridabad',
+        containedIn: {
+          '@type': 'State',
+          name: 'Haryana',
+          containedIn: {
+            '@type': 'Country',
+            name: 'India',
+          },
+        },
+      },
+      {
         '@type': 'Country',
         name: 'India',
       },
@@ -220,6 +269,38 @@ export function WebsiteSchema() {
       },
       'query-input': 'required name=search_term_string',
     },
+    hasPart: [
+      {
+        '@type': 'WebPage',
+        name: 'NEET Biology Courses',
+        url: 'https://cerebrumbiologyacademy.com/courses',
+        description: 'NEET Biology coaching programs for Class 11, 12, Dropper & Foundation',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'NEET Results & Success Stories',
+        url: 'https://cerebrumbiologyacademy.com/company/results',
+        description: 'Student achievements, AIIMS selections, and success stories',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'Biology Faculty & Teachers',
+        url: 'https://cerebrumbiologyacademy.com/faculty',
+        description: 'Meet our AIIMS-trained biology educators led by Dr. Shekhar C Singh',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'Coaching Locations',
+        url: 'https://cerebrumbiologyacademy.com/locations',
+        description: 'NEET Biology coaching centers across Delhi NCR and pan-India',
+      },
+      {
+        '@type': 'WebPage',
+        name: 'NEET Blog & Resources',
+        url: 'https://cerebrumbiologyacademy.com/blog',
+        description: 'NEET preparation tips, biology concepts, and study strategies',
+      },
+    ],
   }
 
   return (
@@ -1333,6 +1414,263 @@ export function SpeakableSchema({
       cssSelector: speakableSelectors,
     },
     url,
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * CoursesPageWebPageSchema - WebPage schema with relatedLink for course listing page
+ * Helps Google understand this page is a collection of courses with links to related resources
+ */
+export function CoursesPageWebPageSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://cerebrumbiologyacademy.com/courses#webpage',
+    name: 'NEET Biology Courses - Class 11, 12, Dropper Programs',
+    description:
+      'NEET biology courses in Delhi NCR — Class 11, Class 12 & Dropper batches. AIIMS faculty, 15-student batches, 98% success rate. Rs 45K–1.56L with EMI options.',
+    url: 'https://cerebrumbiologyacademy.com/courses',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': 'https://cerebrumbiologyacademy.com/#website',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    primaryImageOfPage: 'https://cerebrumbiologyacademy.com/courses-banner.jpg',
+    datePublished: '2014-06-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+    relatedLink: [
+      'https://cerebrumbiologyacademy.com/courses/class-11',
+      'https://cerebrumbiologyacademy.com/courses/class-12',
+      'https://cerebrumbiologyacademy.com/courses/dropper',
+      'https://cerebrumbiologyacademy.com/courses/foundation',
+    ],
+    significantLink: [
+      'https://cerebrumbiologyacademy.com/company/results',
+      'https://cerebrumbiologyacademy.com/faculty',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * ResultsPageWebPageSchema - WebPage schema with significantLink for results showcase page
+ * Highlights important conversions: demo booking and course enrollment
+ */
+export function ResultsPageWebPageSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://cerebrumbiologyacademy.com/company/results#webpage',
+    name: 'Student Results & Success Stories | NEET Biology Achievements',
+    description:
+      'Outstanding NEET Biology results from our students. See AIIMS, JIPMER selections, rank improvements, and success stories from across India.',
+    url: 'https://cerebrumbiologyacademy.com/company/results',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': 'https://cerebrumbiologyacademy.com/#website',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    primaryImageOfPage: 'https://cerebrumbiologyacademy.com/results-banner.jpg',
+    datePublished: '2020-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+    significantLink: [
+      'https://cerebrumbiologyacademy.com/courses',
+      'https://cerebrumbiologyacademy.com/enrollment',
+    ],
+    relatedLink: [
+      'https://cerebrumbiologyacademy.com/faculty',
+      'https://cerebrumbiologyacademy.com/blog',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * FacultyPageWebPageSchema - WebPage schema with mainEntityOfPage and significantLink
+ * Establishes authority and links to courses
+ */
+export function FacultyPageWebPageSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://cerebrumbiologyacademy.com/faculty#webpage',
+    name: 'NEET Biology Faculty - AIIMS Trained Teachers',
+    description:
+      'Meet our AIIMS-trained biology educators led by Dr. Shekhar C Singh. 15+ years of NEET coaching experience with 500+ AIIMS/JIPMER selections.',
+    url: 'https://cerebrumbiologyacademy.com/faculty',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': 'https://cerebrumbiologyacademy.com/#website',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    mainEntity: {
+      '@type': 'Organization',
+      '@id': 'https://cerebrumbiologyacademy.com/#organization',
+      name: 'Cerebrum Biology Academy',
+    },
+    datePublished: '2015-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+    significantLink: [
+      'https://cerebrumbiologyacademy.com/courses',
+      'https://cerebrumbiologyacademy.com/company/results',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * LocationsPageWebPageSchema - WebPage schema for locations page
+ * Links back to main courses and shows service areas
+ */
+export function LocationsPageWebPageSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://cerebrumbiologyacademy.com/locations#webpage',
+    name: 'NEET Biology Coaching Centers - Delhi NCR & Pan-India Locations',
+    description:
+      'Cerebrum Biology Academy coaching centers across Delhi NCR (Gurugram, Delhi, Noida, Faridabad) and online classes for students worldwide.',
+    url: 'https://cerebrumbiologyacademy.com/locations',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': 'https://cerebrumbiologyacademy.com/#website',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    datePublished: '2015-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+    relatedLink: [
+      'https://cerebrumbiologyacademy.com/courses',
+      'https://cerebrumbiologyacademy.com/faculty',
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+/**
+ * BlogPageWebPageSchema - WebPage schema for blog/resources page
+ * Links to courses and other content resources
+ */
+export function BlogPageWebPageSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://cerebrumbiologyacademy.com/blog#webpage',
+    name: 'NEET Biology Blog - Tips, Concepts & Study Strategies',
+    description:
+      'NEET preparation tips, biology concepts, study strategies, and expert advice from AIIMS faculty at Cerebrum Biology Academy.',
+    url: 'https://cerebrumbiologyacademy.com/blog',
+    isPartOf: {
+      '@type': 'WebSite',
+      '@id': 'https://cerebrumbiologyacademy.com/#website',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    datePublished: '2016-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+    relatedLink: [
+      'https://cerebrumbiologyacademy.com/courses',
+      'https://cerebrumbiologyacademy.com/faculty',
+    ],
   }
 
   return (
