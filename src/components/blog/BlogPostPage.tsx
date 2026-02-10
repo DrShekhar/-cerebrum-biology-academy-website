@@ -31,6 +31,7 @@ import { parseReadTime } from './utils'
 import { ArticleSchema, BreadcrumbSchema } from '@/components/seo/ArticleSchema'
 import { BlogExitIntentWrapper } from './BlogExitIntentWrapper'
 import { BlogWhatsAppQuery } from './BlogWhatsAppQuery'
+import { BlogNewsletterSignup } from './BlogNewsletterSignup'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
@@ -511,6 +512,12 @@ export function BlogPostPage({ meta, content, toc, relatedPosts, category }: Blo
                 category={meta.category}
                 neetChapter={meta.neetChapter}
                 tags={meta.tags}
+              />
+
+              {/* Newsletter Signup - Email-first capture */}
+              <BlogNewsletterSignup
+                articleSlug={meta.slug}
+                category={meta.category}
               />
 
               {/* Tags */}

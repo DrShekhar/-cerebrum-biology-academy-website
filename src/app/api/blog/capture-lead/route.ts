@@ -3,13 +3,26 @@ import { prisma } from '@/lib/prisma'
 import { z } from 'zod'
 
 const blogLeadSchema = z.object({
-  phone: z.string().regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number'),
+  phone: z
+    .string()
+    .regex(/^[6-9]\d{9}$/, 'Please enter a valid 10-digit Indian mobile number')
+    .optional()
+    .or(z.literal('')),
   email: z.string().email('Please enter a valid email').optional().or(z.literal('')),
   name: z.string().max(100).optional(),
-  source: z.enum(['blog_inline', 'blog_exit_intent', 'blog_sidebar', 'blog_whatsapp']),
+  source: z.enum([
+    'blog_inline',
+    'blog_exit_intent',
+    'blog_sidebar',
+    'blog_whatsapp',
+    'blog_newsletter',
+  ]),
   articleSlug: z.string().optional(),
   articleTitle: z.string().optional(),
-})
+}).refine(
+  (data) => (data.phone && data.phone.length > 0) || (data.email && data.email.length > 0),
+  { message: 'Either phone or email is required' }
+)
 
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
 
@@ -73,22 +86,35 @@ export async function POST(request: NextRequest) {
           ? 'Safari'
           : 'Other'
 
-    const existingLead = await prisma.content_leads.findFirst({
-      where: {
-        whatsappNumber: phone,
-        source: { startsWith: 'blog_' },
-        createdAt: {
-          gte: new Date(Date.now() - 24 * 60 * 60 * 1000),
-        },
-      },
-    })
+    // Check for duplicates by phone or email within last 24 hours
+    const duplicateWhere = phone
+      ? {
+          whatsappNumber: phone,
+          source: { startsWith: 'blog_' },
+          createdAt: { gte: new Date(Date.now() - 24 * 60 * 60 * 1000) },
+        }
+      : email
+        ? {
+            email,
+            source: { startsWith: 'blog_' },
+            createdAt: { gte: new Date(Date.now() - 24 * 60 * 60 * 1000) },
+          }
+        : null
 
-    if (existingLead) {
-      return NextResponse.json({
-        success: true,
-        message: 'We already have your details. Our team will reach out soon!',
-        duplicate: true,
+    if (duplicateWhere) {
+      const existingLead = await prisma.content_leads.findFirst({
+        where: duplicateWhere,
       })
+
+      if (existingLead) {
+        return NextResponse.json({
+          success: true,
+          message: source === 'blog_newsletter'
+            ? 'You are already subscribed! Check your inbox for weekly tips.'
+            : 'We already have your details. Our team will reach out soon!',
+          duplicate: true,
+        })
+      }
     }
 
     const leadId = `BL_${Date.now()}_${Math.random().toString(36).substr(2, 6)}`
@@ -96,7 +122,7 @@ export async function POST(request: NextRequest) {
     await prisma.content_leads.create({
       data: {
         id: leadId,
-        whatsappNumber: phone,
+        whatsappNumber: phone || '',
         email: email || null,
         name: name || null,
         source,
@@ -114,7 +140,9 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Thank you! We will send you the study materials on WhatsApp shortly.',
+      message: source === 'blog_newsletter'
+        ? 'You are now subscribed! Expect weekly NEET Biology tips in your inbox.'
+        : 'Thank you! We will send you the study materials on WhatsApp shortly.',
       leadId,
     })
   } catch (error) {
