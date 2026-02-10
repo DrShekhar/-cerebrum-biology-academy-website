@@ -220,49 +220,6 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
     mainEntity: { '@id': `${BASE_URL}/#organization` },
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `What is the best NEET coaching in ${locality}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Cerebrum Biology Academy is the best NEET coaching in ${locality} with 98% success rate, AIIMS-qualified faculty led by Dr. Shekhar Suman, and proven track record of 695/720 top score. Located conveniently in South Delhi, it offers personalized attention with small batch sizes.`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `How much does NEET coaching cost in ${locality}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `NEET coaching fees at Cerebrum Biology Academy in ${locality} range from ₹25,000 for crash courses to ₹75,000 for year-long programs. The academy offers flexible payment options and scholarship programs for meritorious students.`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Who is the faculty at Cerebrum Biology Academy?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Cerebrum Biology Academy is led by Dr. Shekhar Suman, an AIIMS alumnus with extensive experience in NEET preparation. The faculty includes experts specialized in Botany, Zoology, and Human Physiology, all with proven track records in producing top NEET scorers.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `Is there a free demo class available at ${locality}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Yes, Cerebrum Biology Academy offers free demo classes for students in ${locality}. You can book a free demo through WhatsApp at +91-88264-44334 or by filling the contact form on the website.`,
-        },
-      },
-    ],
-    speakable: {
-      '@type': 'SpeakableSpecification',
-      cssSelector: ['.faq-section'],
-    },
-  }
-
   const howToSchema = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -325,12 +282,6 @@ export function AIOptimizedSchema({ locality, slug, pageUrl }: AIOptimizedSchema
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
-      />
-      <Script
-        id="ai-faq-schema"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Script
         id="ai-howto-schema"

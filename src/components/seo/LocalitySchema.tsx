@@ -133,37 +133,6 @@ export function LocalitySchema({
     mainEntity: { '@id': `${BASE_URL}/#organization` },
   }
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: `What is the best NEET ${pageType} in ${locality}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Cerebrum Biology Academy is rated the best NEET ${pageType} in ${locality} with 98% success rate, AIIMS-qualified faculty led by Dr. Shekhar Suman, and proven track record of 695/720 top score. We offer personalized attention with small batch sizes of 25 students.`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `How much does NEET ${pageType} cost in ${locality}?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `NEET ${pageType} fees at Cerebrum Biology Academy serving ${locality} range from ₹25,000 for crash courses to ₹75,000 for year-long programs. We offer flexible EMI options and scholarships for meritorious students.`,
-        },
-      },
-      {
-        '@type': 'Question',
-        name: `Is there online NEET ${pageType} available for ${locality} students?`,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: `Yes, Cerebrum Biology Academy offers both online and offline NEET ${pageType} for ${locality} students. Our online program includes live interactive classes, recorded lectures, doubt sessions, weekly tests, and comprehensive study material.`,
-        },
-      },
-    ],
-  }
-
   const howToSchema = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -345,10 +314,6 @@ export function LocalitySchema({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"
