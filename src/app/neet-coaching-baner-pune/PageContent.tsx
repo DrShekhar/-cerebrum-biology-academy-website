@@ -58,7 +58,7 @@ const whyChooseUs = [
     icon: Gem,
     title: 'Premium Residential Specialist',
     description:
-      'Baner is Pune\'s premium residential area home to IT professionals and affluent families. We specialize in coaching for ambitious students from high-income households.',
+      "Baner is Pune's premium residential area home to IT professionals and affluent families. We specialize in coaching for ambitious students from high-income households.",
   },
   {
     icon: Target,
@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'How do you cater to premium Baner families?',
     answer:
-      'Baner represents Pune\'s premium lifestyle. We offer personalized attention, flexible schedules, detailed progress reports, and result-oriented teaching tailored for high-achieving families with busy schedules.',
+      "Baner represents Pune's premium lifestyle. We offer personalized attention, flexible schedules, detailed progress reports, and result-oriented teaching tailored for high-achieving families with busy schedules.",
   },
   {
     question: 'Which schools do your Baner students attend?',
@@ -154,10 +154,10 @@ export default function PageContent() {
               NEET Coaching in <span className="text-yellow-400">Baner</span>
             </h1>
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for Pune&apos;s Most Sought-After Locality
+              Premium Biology Coaching for Pune's Most Sought-After Locality
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Exclusive NEET coaching for Baner, Balewadi, and premium Pune families. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Baner&apos;s elite families.
+              Exclusive NEET coaching for Baner, Balewadi, and premium Pune families. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Baner's elite families.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking">
@@ -275,7 +275,7 @@ export default function PageContent() {
               Baner Students, Excel in NEET!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium NEET coaching for Pune&apos;s most premium families
+              Premium NEET coaching for Pune's most premium families
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/demo-booking">

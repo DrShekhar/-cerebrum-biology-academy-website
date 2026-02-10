@@ -58,7 +58,7 @@ const whyChooseUs = [
     icon: Gem,
     title: 'Planned City Expert',
     description:
-      'Navi Mumbai is India\'s most planned city with premium gated communities. We specialize in coaching for residents of Kharghar, Palm Beach Road, and premium Belapur.',
+      "Navi Mumbai is India's most planned city with premium gated communities. We specialize in coaching for residents of Kharghar, Palm Beach Road, and premium Belapur.",
   },
   {
     icon: Target,
@@ -168,12 +168,12 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for India&apos;s Most Planned Metropolitan City
+              Premium Biology Coaching for India's Most Planned Metropolitan City
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Exclusive NEET coaching for Navi Mumbai, Kharghar, Vashi, and Belapur. Learn from{' '}
-              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Navi Mumbai&apos;s
+              <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Navi Mumbai's
               premium families.
             </p>
 
@@ -351,7 +351,7 @@ export default function PageContent() {
               Navi Mumbai Students, Excel in NEET!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium NEET coaching for India&apos;s planned city residents
+              Premium NEET coaching for India's planned city residents
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

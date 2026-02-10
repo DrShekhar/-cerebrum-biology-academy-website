@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'How is your coaching suitable for Andhra Pradesh students?',
     answer:
-      'We understand AP\'s education system - Inter Board curriculum and CBSE parallels. Our coaching bridges AP board concepts with NEET CBSE requirements. Many Vizag students follow AP Inter; we help them excel in NEET while respecting their board foundation.',
+      "We understand AP's education system - Inter Board curriculum and CBSE parallels. Our coaching bridges AP board concepts with NEET CBSE requirements. Many Vizag students follow AP Inter; we help them excel in NEET while respecting their board foundation.",
   },
   {
     question: 'Which schools do your Visakhapatnam students come from?',

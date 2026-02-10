@@ -58,7 +58,7 @@ const whyChooseUs = [
     icon: Gem,
     title: 'Ultra-Premium Community',
     description:
-      'Lodha developments are India\'s most luxurious gated communities. We specialize in coaching for residents of premium properties with world-class amenities.',
+      "Lodha developments are India's most luxurious gated communities. We specialize in coaching for residents of premium properties with world-class amenities.",
   },
   {
     icon: Target,
@@ -168,12 +168,12 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for India&apos;s Most Luxurious Developments
+              Premium Biology Coaching for India's Most Luxurious Developments
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Exclusive NEET coaching for Lodha Park, Palava City, and premium gated communities.
-              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by India&apos;s
+              Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by India's
               most affluent families.
             </p>
 
@@ -351,7 +351,7 @@ export default function PageContent() {
               Lodha Premium Residents, Excel in NEET!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Ultra-premium NEET coaching for India&apos;s most exclusive communities
+              Ultra-premium NEET coaching for India's most exclusive communities
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

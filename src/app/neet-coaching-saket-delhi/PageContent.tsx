@@ -167,7 +167,7 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium NEET Preparation for South Delhi&apos;s Modern Hub
+              Premium NEET Preparation for South Delhi's Modern Hub
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -254,7 +254,7 @@ export default function PageContent() {
               Saket & Nearby Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for South Delhi&apos;s modern neighborhoods
+              Online NEET coaching for South Delhi's modern neighborhoods
             </p>
           </div>
 
@@ -350,7 +350,7 @@ export default function PageContent() {
               Saket Students, Crack NEET with Style!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Modern NEET coaching for South Delhi&apos;s progressive families
+              Modern NEET coaching for South Delhi's progressive families
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

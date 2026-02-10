@@ -69,7 +69,7 @@ const whyChooseUs = [
     icon: GraduationCap,
     title: 'AIIMS Faculty',
     description:
-      'Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching motivated IT professionals\' children.',
+      "Dr. Shekhar C Singh, AIIMS Alumnus with 15+ years experience coaching motivated IT professionals' children.",
   },
   {
     icon: Star,
@@ -152,7 +152,7 @@ export default function PageContent() {
               NEET Coaching in <span className="text-yellow-400">Hinjewadi</span>
             </h1>
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for Pune&apos;s IT Corridor
+              Premium Biology Coaching for Pune's IT Corridor
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Exclusive NEET coaching for Hinjewadi and Rajiv Gandhi IT Park residents. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by IT families.

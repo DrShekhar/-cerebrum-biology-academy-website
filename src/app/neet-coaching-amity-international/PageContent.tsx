@@ -78,11 +78,11 @@ export default function PageContent() {
   const faqs = [
     {
       question: 'How does Amity CBSE compare to other board students for NEET?',
-      answer: 'Amity CBSE students have strong advantage - CBSE is perfectly aligned with NEET. Combined with Amity\'s competitive environment, students are well-positioned for 650+ NEET scores with proper coaching.',
+      answer: "Amity CBSE students have strong advantage - CBSE is perfectly aligned with NEET. Combined with Amity\'s competitive environment, students are well-positioned for 650+ NEET scores with proper coaching.",
     },
     {
       question: 'Can I manage both Amity studies and NEET preparation?',
-      answer: 'Yes! Amity\'s CBSE curriculum and NEET have significant overlap. Our program coordinates with your Amity schedule, ensuring both board excellence and NEET success without over-stress.',
+      answer: "Yes! Amity\'s CBSE curriculum and NEET have significant overlap. Our program coordinates with your Amity schedule, ensuring both board excellence and NEET success without over-stress.",
     },
     {
       question: 'What is the NEET success rate for Amity students?',
@@ -93,7 +93,7 @@ export default function PageContent() {
       answer: 'Yes! We serve Amity students across all campuses - Delhi, Noida, Gurgaon, Bangalore, Mumbai and others. Localized support adapted to your campus while maintaining consistent excellence standards.',
     },
     {
-      question: 'How does Amity\'s competitive environment help NEET?',
+      question: "How does Amity\'s competitive environment help NEET?",
       answer: 'Amity students are inherently competitive and achievement-focused. This culture accelerates NEET preparation. Our coaching channels this competitive spirit into focused NEET excellence.',
     },
     {

@@ -52,7 +52,7 @@ export default function PageContent() {
   const faqAnim = useScrollAnimation()
 
   const laMartinieraAdvantages = [
-    { icon: Crown, title: 'Prestigious Colonial Heritage', description: 'La Martiniere\'s renowned excellence tradition creates strong academic foundation for NEET success' },
+    { icon: Crown, title: 'Prestigious Colonial Heritage', description: "La Martiniere's renowned excellence tradition creates strong academic foundation for NEET success" },
     { icon: BookOpen, title: 'ISC Curriculum Excellence', description: 'ISC provides rigorous science education with depth perfect for medical entrance preparation' },
     { icon: Users, title: 'Boys & Girls Excellence', description: 'La Martiniere Kolkata (boys/girls) and Lucknow campuses develop high-achieving NEET candidates' },
     { icon: Target, title: 'ISC-to-NEET Bridge', description: 'Custom mapping of ISC curriculum to NEET requirements filling any content gaps strategically' },
@@ -62,24 +62,24 @@ export default function PageContent() {
 
   const campuses = [
     { name: 'La Martiniere for Boys, Kolkata', heritage: '200+ years of excellence' },
-    { name: 'La Martiniere for Girls, Kolkata', heritage: 'Women\'s education pioneer' },
+    { name: 'La Martiniere for Girls, Kolkata', heritage: "Women's education pioneer" },
     { name: 'La Martiniere, Lucknow', heritage: 'Uttar Pradesh excellence hub' },
   ]
 
   const pricingPlans = [
     { name: 'Complete ISC-NEET Program', price: '₹37,999', description: '18-month comprehensive program bridging ISC to NEET with complete preparation' },
     { name: 'Intensive NEET Focus', price: '₹46,999', description: '12-month intensive program for La Martiniere students targeting medical entrance' },
-    { name: 'Premium 1:1 Coaching', price: '₹56,999', description: 'Personalized coaching for La Martiniere\'s high-achievers with ISC expertise' },
+    { name: 'Premium 1:1 Coaching', price: '₹56,999', description: "Personalized coaching for La Martiniere's high-achievers with ISC expertise" },
   ]
 
   const faqs = [
     {
       question: 'How does ISC prepare students for NEET differently than CBSE?',
-      answer: 'ISC offers excellent depth and rigor but has different chapter sequences and some content variations from NEET\'s NCERT basis. We provide comprehensive NCERT mapping for ISC students, leveraging your strong foundation while filling any gaps.',
+      answer: "ISC offers excellent depth and rigor but has different chapter sequences and some content variations from NEET's NCERT basis. We provide comprehensive NCERT mapping for ISC students, leveraging your strong foundation while filling any gaps.",
     },
     {
       question: 'What advantage does La Martiniere heritage give for NEET?',
-      answer: 'La Martiniere\'s 200+ year tradition of excellence develops disciplined, high-achieving students. This academic culture, combined with ISC rigor, creates excellent NEET foundation. We amplify this with specialized entrance exam preparation.',
+      answer: "La Martiniere's 200+ year tradition of excellence develops disciplined, high-achieving students. This academic culture, combined with ISC rigor, creates excellent NEET foundation. We amplify this with specialized entrance exam preparation.",
     },
     {
       question: 'Can La Martiniere students excel at both ISC and NEET?',
@@ -94,8 +94,8 @@ export default function PageContent() {
       answer: 'Yes! We serve La Martiniere students from all campuses - Kolkata boys, Kolkata girls, and Lucknow. Online platform ensures consistent excellence across locations.',
     },
     {
-      question: 'How do you address ISC\'s different curriculum for NEET?',
-      answer: 'We provide detailed ISC-to-NCERT mapping, ensuring you understand topics from both perspectives. This dual understanding deepens conceptual clarity crucial for NEET\'s application-based questions.',
+      question: "How do you address ISC's different curriculum for NEET?",
+      answer: "We provide detailed ISC-to-NCERT mapping, ensuring you understand topics from both perspectives. This dual understanding deepens conceptual clarity crucial for NEET's application-based questions.",
     },
   ]
 

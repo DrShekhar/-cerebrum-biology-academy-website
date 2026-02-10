@@ -58,7 +58,7 @@ const whyChooseUs = [
     icon: Heart,
     title: 'Tamil Nadu Medical Heritage',
     description:
-      'Madurai has 10,000+ NEET aspirants from premier medical families. Cerebrum understands Tamil Nadu\'s medical education culture and delivers specialized NEET preparation.',
+      "Madurai has 10,000+ NEET aspirants from premier medical families. Cerebrum understands Tamil Nadu's medical education culture and delivers specialized NEET preparation.",
   },
   {
     icon: Building,

@@ -64,7 +64,7 @@ const whyChooseUs = [
     icon: Target,
     title: '500+ NEET Selections',
     description:
-      'Proven success with students from Cathedral School, St. Xavier\'s, Bhawanipur Education Society, and top central Kolkata institutions.',
+      "Proven success with students from Cathedral School, St. Xavier's, Bhawanipur Education Society, and top central Kolkata institutions.",
   },
   {
     icon: GraduationCap,
@@ -94,7 +94,7 @@ const faqs = [
   {
     question: 'Which schools do your Park Street students come from?',
     answer:
-      'We coach students from Cathedral School, St. Xavier\'s Collegiate School, Bhawanipur Education Society, South Point School, and other premier central Kolkata educational institutions.',
+      "We coach students from Cathedral School, St. Xavier's Collegiate School, Bhawanipur Education Society, South Point School, and other premier central Kolkata educational institutions.",
   },
   {
     question: 'How long is the NEET coaching program?',

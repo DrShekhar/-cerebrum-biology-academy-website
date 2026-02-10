@@ -94,7 +94,7 @@ const faqs = [
   {
     question: 'How do business families benefit from your NEET coaching?',
     answer:
-      'Many Chandni Chowk families have business backgrounds and value education highly. Our structured approach, result-oriented teaching, and proven 98% success rate align perfectly with business families\' expectations.',
+      "Many Chandni Chowk families have business backgrounds and value education highly. Our structured approach, result-oriented teaching, and proven 98% success rate align perfectly with business families' expectations.",
   },
   {
     question: 'Can I study NEET from Old Delhi?',

@@ -185,3 +185,7 @@ export { VideoObjectSchema, VideoObjectWithClipsSchema } from './VideoObjectSche
 
 // Related pages component for internal linking
 export { default as RelatedPages } from './RelatedPages'
+
+// Generic landing page template for dynamically generated landing pages
+export { LandingPageTemplate } from './LandingPageTemplate'
+export type { LandingPageTemplateProps } from './LandingPageTemplate'

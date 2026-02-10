@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'What is the advantage of SCB Medical College proximity?',
     answer:
-      'Cuttack\'s location near SCB Medical College creates inspiration for NEET aspirants. Many of our students aspire to join this prestigious college. Our coaching helps Cuttack students prepare to secure SCB Medical and other top AIIMS/NLM colleges.',
+      "Cuttack's location near SCB Medical College creates inspiration for NEET aspirants. Many of our students aspire to join this prestigious college. Our coaching helps Cuttack students prepare to secure SCB Medical and other top AIIMS/NLM colleges.",
   },
   {
     question: 'What schools do your Cuttack students come from?',
@@ -99,7 +99,7 @@ const faqs = [
   {
     question: 'How does twin city with Bhubaneswar help?',
     answer:
-      'Cuttack and Bhubaneswar form Odisha\'s twin city - a combined education and cultural hub. Our online coaching serves both cities with unified curriculum and expertise, helping students from both areas compete nationally.',
+      "Cuttack and Bhubaneswar form Odisha's twin city - a combined education and cultural hub. Our online coaching serves both cities with unified curriculum and expertise, helping students from both areas compete nationally.",
   },
 ]
 

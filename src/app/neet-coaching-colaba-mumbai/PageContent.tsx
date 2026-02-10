@@ -87,7 +87,7 @@ const faqs = [
       'Our main center is in Greater Noida. For Colaba and South Mumbai residents, we offer exclusive live online NEET classes with personalized attention. Many affluent South Mumbai families prefer online coaching for convenience and security. Our comprehensive material and recorded lectures ensure uninterrupted preparation.',
   },
   {
-    question: 'How do you understand Navy families\' needs?',
+    question: "How do you understand Navy families\' needs?",
     answer:
       'Navy families in Colaba and Navy Nagar value discipline, structure, and excellence. We mirror these values through fixed schedules, rigorous testing, detailed progress reports, and result-oriented teaching. Our approach is tailored for military and naval families.',
   },

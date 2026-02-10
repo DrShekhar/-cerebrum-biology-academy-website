@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'Do you have classes in Bodakdev?',
     answer:
-      'Our NEET coaching is delivered through premium online live classes. This flexibility is ideal for Bodakdev\'s busy professional families. We offer recorded lectures, comprehensive study material, and regular assessments.',
+      "Our NEET coaching is delivered through premium online live classes. This flexibility is ideal for Bodakdev's busy professional families. We offer recorded lectures, comprehensive study material, and regular assessments.",
   },
   {
     question: 'Which schools do your Bodakdev students come from?',

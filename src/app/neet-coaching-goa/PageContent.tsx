@@ -58,7 +58,7 @@ const whyChooseUs = [
     icon: Globe,
     title: 'NRI & Expat Friendly',
     description:
-      'Perfect for Goa\'s high NRI and expat population. Flexible timings, international payment options, and timezone-friendly live classes for families abroad.',
+      "Perfect for Goa's high NRI and expat population. Flexible timings, international payment options, and timezone-friendly live classes for families abroad.",
   },
   {
     icon: Target,
@@ -76,7 +76,7 @@ const whyChooseUs = [
     icon: Star,
     title: 'High Per-Capita Income Region',
     description:
-      'Goa\'s high per-capita income families value quality education. Our premium coaching matches the expectations of affluent Goa households.',
+      "Goa's high per-capita income families value quality education. Our premium coaching matches the expectations of affluent Goa households.",
   },
 ]
 
@@ -84,7 +84,7 @@ const faqs = [
   {
     question: 'Do you have a physical coaching center in Goa?',
     answer:
-      'We offer premium live online NEET classes accessible across all of Goa - Panaji, Margao, Vasco, Mapusa, and beyond. Our online model suits Goa\'s unique demographic of NRI families and expats who value flexibility. Many students prefer online classes as they can continue learning even if they relocate.',
+      "We offer premium live online NEET classes accessible across all of Goa - Panaji, Margao, Vasco, Mapusa, and beyond. Our online model suits Goa's unique demographic of NRI families and expats who value flexibility. Many students prefer online classes as they can continue learning even if they relocate.",
   },
   {
     question: 'Is NEET coaching suitable for Goa students?',
@@ -94,12 +94,12 @@ const faqs = [
   {
     question: 'What schools do your Goa students come from?',
     answer:
-      'We have students from Sharada Mandir, People\'s High School, Mushtifund School, Sesa Goa School, and other premier Goan schools. Our coaching is suitable for students from both English and vernacular medium backgrounds.',
+      "We have students from Sharada Mandir, People's High School, Mushtifund School, Sesa Goa School, and other premier Goan schools. Our coaching is suitable for students from both English and vernacular medium backgrounds.",
   },
   {
     question: 'How does online coaching work for NRI families in Goa?',
     answer:
-      'Many NRI families in Goa choose our online NEET coaching for flexibility and global-standard teaching. Flexible batch timings accommodate different timezones, recorded sessions allow flexible learning, and you can continue your preparation even if you relocate. Perfect for Goa\'s expat-heavy population.',
+      "Many NRI families in Goa choose our online NEET coaching for flexibility and global-standard teaching. Flexible batch timings accommodate different timezones, recorded sessions allow flexible learning, and you can continue your preparation even if you relocate. Perfect for Goa's expat-heavy population.",
   },
 ]
 
@@ -168,7 +168,7 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for Goa&apos;s High Per-Capita Income Families
+              Premium Biology Coaching for Goa's High Per-Capita Income Families
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">

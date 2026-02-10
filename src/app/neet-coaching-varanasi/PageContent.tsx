@@ -172,7 +172,7 @@ export default function PageContent() {
               },
               {
                 q: 'What is special about BHU proximity?',
-                a: 'Direct exposure to India\'s top university. Academic environment, library access, and mentorship opportunities nearby.'
+                a: "Direct exposure to India's top university. Academic environment, library access, and mentorship opportunities nearby."
               },
               {
                 q: 'Do you have center in Lanka/Sigra area?',

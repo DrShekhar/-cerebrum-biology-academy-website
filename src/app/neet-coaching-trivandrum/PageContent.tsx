@@ -99,7 +99,7 @@ const faqs = [
   {
     question: 'What is the advantage of weak local competition?',
     answer:
-      'With limited structured NEET coaching in Trivandrum, students choosing Cerebrum benefit from expert guidance without intense local competition. This allows personalized attention and customized learning approaches suited to each student\'s needs.',
+      "With limited structured NEET coaching in Trivandrum, students choosing Cerebrum benefit from expert guidance without intense local competition. This allows personalized attention and customized learning approaches suited to each student's needs.",
   },
 ]
 

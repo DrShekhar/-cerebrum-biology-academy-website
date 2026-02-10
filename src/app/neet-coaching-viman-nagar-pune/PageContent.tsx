@@ -154,10 +154,10 @@ export default function PageContent() {
               NEET Coaching in <span className="text-yellow-400">Viman Nagar</span>
             </h1>
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Exclusive Biology Coaching for Pune&apos;s Most Upscale Locality
+              Exclusive Biology Coaching for Pune's Most Upscale Locality
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET coaching for Viman Nagar and Airport Road area residents. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Viman Nagar&apos;s elite families.
+              Premium NEET coaching for Viman Nagar and Airport Road area residents. Learn from <strong>Dr. Shekhar C Singh, AIIMS Alumnus</strong> - trusted by Viman Nagar's elite families.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking">
@@ -212,7 +212,7 @@ export default function PageContent() {
               Viman Nagar & Surrounding Areas
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Online NEET coaching for Pune&apos;s premium upscale communities
+              Online NEET coaching for Pune's premium upscale communities
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -275,7 +275,7 @@ export default function PageContent() {
               Viman Nagar Students, Crack NEET!
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Premium NEET coaching for Pune&apos;s most upscale locality
+              Premium NEET coaching for Pune's most upscale locality
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/demo-booking">

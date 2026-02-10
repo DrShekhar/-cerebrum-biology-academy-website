@@ -52,7 +52,7 @@ export default function PageContent() {
   const faqAnim = useScrollAnimation()
 
   const pathwaysAdvantages = [
-    { icon: Globe, title: 'IB World School Excellence', description: 'Pathways provides world-class international education - we bridge this to NEET\'s Indian medical entrance requirements' },
+    { icon: Globe, title: "IB World School Excellence", description: "Pathways provides world-class international education - we bridge this to NEET's Indian medical entrance requirements" },
     { icon: Target, title: 'Curriculum Bridge Program', description: 'Custom IB-to-NEET mapping ensuring international curriculum foundation translates to NEET success' },
     { icon: BookOpen, title: 'International Perspective', description: 'Unique coaching that respects IB rigor while building NEET-specific knowledge and exam strategies' },
     { icon: Users, title: 'Pathways Student Community', description: 'Specialized coaching for Pathways Noida and Gurgaon students who balance international curriculum with Indian medical entrance' },
@@ -75,16 +75,16 @@ export default function PageContent() {
 
   const faqs = [
     {
-      question: 'How does IB curriculum differ from CBSE for NEET preparation?',
-      answer: 'IB emphasizes conceptual understanding and critical thinking, which is excellent for NEET. However, IB doesn\'t follow NCERT. We provide comprehensive NCERT content mapping for IB students, filling any knowledge gaps while leveraging your strong IB foundation.',
+      question: "How does IB curriculum differ from CBSE for NEET preparation?",
+      answer: "IB emphasizes conceptual understanding and critical thinking, which is excellent for NEET. However, IB doesn't follow NCERT. We provide comprehensive NCERT content mapping for IB students, filling any knowledge gaps while leveraging your strong IB foundation.",
     },
     {
       question: 'Can I prepare for NEET while managing IB workload?',
       answer: 'Yes! Many Pathways students successfully manage both. Our program is designed with IB timeline consideration - we coordinate around IB assessment periods and exams. Strategic planning allows simultaneous IB and NEET excellence.',
     },
     {
-      question: 'What\'s the NEET success rate for IB World School students?',
-      answer: 'IB students show strong NEET performance with 85%+ qualification rate and 640+ average scores. The rigorous IB foundation translates exceptionally well to NEET when complemented with NEET-specific preparation.',
+      question: "What's the NEET success rate for IB World School students?",
+      answer: "IB students show strong NEET performance with 85%+ qualification rate and 640+ average scores. The rigorous IB foundation translates exceptionally well to NEET when complemented with NEET-specific preparation.",
     },
     {
       question: 'Do you teach NCERT since IB students don\'t follow it?',
