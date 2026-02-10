@@ -585,7 +585,7 @@ export default function FeesPage() {
                 Call {CONTACT_INFO.phone.display.primary}
               </a>
               <a
-                href="#"
+                href="/book-free-demo"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-slate-300 text-slate-700 rounded-lg font-semibold text-lg hover:border-slate-400 hover:bg-slate-50 transition-colors"
               >
                 Book Free Demo

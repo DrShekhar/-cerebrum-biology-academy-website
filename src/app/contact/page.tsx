@@ -169,7 +169,7 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@cerebrum.academy', 'admissions@cerebrum.academy'],
+      details: ['info@cerebrumbiologyacademy.com', 'admissions@cerebrumbiologyacademy.com'],
       color: 'bg-[#5a6d5a]',
     },
     {
@@ -183,8 +183,8 @@ export default function ContactPage() {
   const quickLinks = [
     { title: 'Book Free Demo Class', href: '/demo-booking', icon: BookOpen },
     {
-      title: 'Download Brochure',
-      href: '/brochure/cerebrum-biology-academy-brochure.pdf',
+      title: 'Request Brochure',
+      href: `https://wa.me/918826444334?text=${encodeURIComponent('Hi, I would like to receive the Cerebrum Biology Academy brochure. Please share it with me.')}`,
       icon: Target,
     },
     { title: 'Check Results', href: '/success-stories', icon: Award },
