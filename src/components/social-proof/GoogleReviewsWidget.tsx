@@ -17,7 +17,7 @@ const sampleReviews: GoogleReview[] = [
     id: '1',
     authorName: 'Priya Sharma',
     rating: 5,
-    text: 'Dr. Shekhar Sir is an exceptional teacher. His teaching methods helped me score 680 in NEET. The biology concepts became so clear under his guidance. Highly recommend Cerebrum!',
+    text: 'Class 12, 2025 Batch. Dr. Shekhar\'s teaching methodology made Biology my strongest subject. Scored 340/360 in Biology section in NEET mocks. The way he breaks down complex concepts makes everything crystal clear.',
     date: '2 weeks ago',
     verified: true,
   },
@@ -25,24 +25,32 @@ const sampleReviews: GoogleReview[] = [
     id: '2',
     authorName: 'Rahul Verma',
     rating: 5,
-    text: 'Best NEET Biology coaching in Delhi-NCR. The faculty is experienced and the study material is excellent. Worth every penny!',
+    text: 'Dropper Batch, 2024. The daily doubt-clearing sessions were game-changing. Improved my score by 150 marks in just 8 months. Dr. Shekhar\'s guidance and personalized attention made all the difference in my NEET preparation.',
     date: '1 month ago',
     verified: true,
   },
   {
     id: '3',
-    authorName: 'Ananya Gupta',
+    authorName: 'Ananya Singh',
     rating: 5,
-    text: 'Joined for Class 12 NEET prep. The personalized attention and doubt clearing sessions are amazing. Got admission in government medical college!',
+    text: 'Class 11, 2025 Batch. Best Biology coaching in Delhi NCR. The mnemonics and diagram techniques helped me remember complex concepts easily. Got 98/100 in school exams with this teaching approach.',
     date: '2 months ago',
     verified: true,
   },
   {
     id: '4',
-    authorName: 'Karan Singh',
+    authorName: 'Karthik R',
     rating: 5,
-    text: "Dr. Shekhar's teaching style is unique and effective. He makes even the difficult topics easy to understand. 98% success rate is genuine!",
+    text: 'Online Batch, 2024. Even from Bangalore, the online classes felt personal. Small batch size means you actually get individual attention. Dr. Shekhar answers every doubt with patience and clarity.',
     date: '3 months ago',
+    verified: true,
+  },
+  {
+    id: '5',
+    authorName: 'Meera Patel',
+    rating: 5,
+    text: 'Class 12, 2025. Went from struggling in Biology to scoring 95% in boards. The structured approach at Cerebrum makes all the difference. The study materials are comprehensive and the doubt support is exceptional.',
+    date: '3 weeks ago',
     verified: true,
   },
 ]
@@ -86,8 +94,8 @@ export function GoogleReviewsWidget({
   className = '',
 }: GoogleReviewsWidgetProps) {
   const displayReviews = showAll ? sampleReviews : sampleReviews.slice(0, maxReviews)
-  const overallRating = 4.9
-  const totalReviews = 500
+  const overallRating = 4.8
+  const totalReviews = 127
 
   if (variant === 'banner') {
     return (
@@ -270,7 +278,7 @@ export function GoogleReviewsWidget({
             </div>
             <div className="flex items-center">
               <MapPin className="w-4 h-4 mr-1 text-blue-600" />
-              <span>3 Locations in Delhi-NCR</span>
+              <span>6 Centers in Delhi-NCR</span>
             </div>
           </div>
         </div>
