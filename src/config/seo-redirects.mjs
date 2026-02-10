@@ -1,154 +1,8 @@
 /** @type {Array<{source: string, destination: string, permanent: true}>} */
 export const seoPageConsolidationRedirects = [
   // ============================================
-  // Batch 1: Gurgaon Sector Pages → /neet-coaching-gurgaon (or /biology-classes-gurgaon)
-  // These are thin doorway pages with only sector number swapped
+  // Batch 1 sector entries consolidated into wildcard patterns in next.config.mjs
   // ============================================
-  {
-    source: '/biology-classes-gurgaon-sector-49',
-    destination: '/biology-classes-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-gurgaon-sector-51',
-    destination: '/biology-classes-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-gurgaon-sector-55',
-    destination: '/biology-classes-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-gurgaon-sector-56',
-    destination: '/biology-classes-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-gurgaon-sector-57',
-    destination: '/biology-classes-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-gurgaon-sector-60',
-    destination: '/biology-classes-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-gurgaon-sector-73',
-    destination: '/biology-classes-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-14',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-15',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-17',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-18',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-40',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-42',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-43',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-44',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-45',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-46',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-47',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-48',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-49',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-50',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-51',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-52',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-53',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-54',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-56',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-58',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-61',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-gurgaon-sector-82',
-    destination: '/neet-coaching-gurgaon',
-    permanent: true,
-  },
 
   // ============================================
   // Batch 2: Gurgaon Locality Duplicates → /neet-coaching-gurgaon or /biology-classes-gurgaon
@@ -441,67 +295,12 @@ export const seoPageConsolidationRedirects = [
   // Batch 5: Rohini Sector Pages → /biology-classes-rohini or /neet-coaching-north-delhi
   // ============================================
   {
-    source: '/biology-classes-rohini-sector-11',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-rohini-sector-13',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-rohini-sector-16',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-rohini-sector-24',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
     source: '/biology-tuition-rohini-west',
     destination: '/biology-classes-rohini',
     permanent: true,
   },
   {
     source: '/neet-coaching-dc-chowk-rohini',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-rohini-sector-3',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-rohini-sector-5',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-rohini-sector-7',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-rohini-sector-8',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-rohini-sector-14',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-rohini-sector-15',
-    destination: '/biology-classes-rohini',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-rohini-sector-22',
     destination: '/biology-classes-rohini',
     permanent: true,
   },
@@ -676,11 +475,6 @@ export const seoPageConsolidationRedirects = [
   },
   { source: '/biology-classes-karol-bagh', destination: '/neet-coaching-centre', permanent: true },
   {
-    source: '/biology-classes-model-town',
-    destination: '/neet-coaching-north-delhi',
-    permanent: true,
-  },
-  {
     source: '/biology-classes-shalimar-bagh',
     destination: '/neet-coaching-north-delhi',
     permanent: true,
@@ -696,17 +490,7 @@ export const seoPageConsolidationRedirects = [
     permanent: true,
   },
   {
-    source: '/biology-classes-preet-vihar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
     source: '/biology-classes-mayur-vihar',
-    destination: '/neet-coaching-east-delhi',
-    permanent: true,
-  },
-  {
-    source: '/biology-classes-laxmi-nagar',
     destination: '/neet-coaching-east-delhi',
     permanent: true,
   },
@@ -722,12 +506,6 @@ export const seoPageConsolidationRedirects = [
     permanent: true,
   },
   { source: '/biology-classes-ghaziabad', destination: '/biology-classes-noida', permanent: true },
-  {
-    source: '/biology-classes-noida-sector-137',
-    destination: '/biology-classes-noida',
-    permanent: true,
-  },
-  { source: '/biology-classes-manesar', destination: '/biology-classes-gurgaon', permanent: true },
   { source: '/biology-classes-rewari', destination: '/biology-classes-gurgaon', permanent: true },
   {
     source: '/biology-classes-mahendragarh',
@@ -801,11 +579,6 @@ export const seoPageConsolidationRedirects = [
   },
   {
     source: '/neet-coaching-greater-noida-west',
-    destination: '/biology-classes-noida',
-    permanent: true,
-  },
-  {
-    source: '/neet-coaching-noida-sector-62',
     destination: '/biology-classes-noida',
     permanent: true,
   },
