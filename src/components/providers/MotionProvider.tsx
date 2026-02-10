@@ -33,6 +33,11 @@ const LazyMotionWrapper = dynamic(
  * - variants
  * - transition
  * - whileHover, whileTap, whileFocus, whileDrag, whileInView
+ *
+ * RECOMMENDED USAGE:
+ * - For new components, use OptimizedMotion components from @/components/motion/OptimizedMotion
+ * - These components automatically respect prefers-reduced-motion and prevent layout thrashing
+ * - Examples: OptimizedMotionDiv, FadeInUp, ScaleOnHover, StaggerContainer
  */
 export function MotionProvider({ children }: { children: ReactNode }) {
   const [shouldLoadMotion, setShouldLoadMotion] = useState(false)

@@ -98,7 +98,8 @@ export function QuestionCard({
   // Keyboard navigation (1-4 keys to select answers)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedAnswer || isSubmitting) return
+      // Ignore if already answered, submitting, or key held down (repeat)
+      if (selectedAnswer || isSubmitting || e.repeat) return
 
       const keyMap: Record<string, 'A' | 'B' | 'C' | 'D'> = {
         '1': 'A',
@@ -113,6 +114,8 @@ export function QuestionCard({
 
       const option = keyMap[e.key.toLowerCase()]
       if (option) {
+        // Prevent default browser behavior to avoid INP interference
+        e.preventDefault()
         handleOptionClick(option)
       }
     }
