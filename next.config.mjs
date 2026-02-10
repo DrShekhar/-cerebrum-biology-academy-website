@@ -1107,47 +1107,47 @@ const nextConfig = {
       // School-specific biology classes pages
       {
         source: '/biology-classes-biology-classes-amity-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-shri-ram-school-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-heritage-school-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-lotus-valley-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-scottish-high-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-blue-bells-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-dps-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-home-tuition-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-12th-boards-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
@@ -1292,12 +1292,12 @@ const nextConfig = {
       // More school-specific biology classes
       {
         source: '/biology-classes-biology-classes-rps-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-shikshanter-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
@@ -1322,7 +1322,7 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-biology-tutor-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
@@ -1332,32 +1332,32 @@ const nextConfig = {
       },
       {
         source: '/biology-classes-biology-classes-ryan-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-euro-international-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-manav-rachna-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-suncity-school-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-gd-goenka-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
       {
         source: '/biology-classes-biology-classes-dav-gurgaon',
-        destination: '/neet-coaching-gurgaon',
+        destination: '/biology-classes-gurgaon',
         permanent: true,
       },
 

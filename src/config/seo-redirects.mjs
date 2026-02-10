@@ -511,7 +511,7 @@ export const seoPageConsolidationRedirects = [
   // ============================================
   {
     source: '/biology-classes-bal-bharati-students',
-    destination: '/neet-coaching-centre',
+    destination: '/biology-classes-south-delhi',
     permanent: true,
   },
   {
