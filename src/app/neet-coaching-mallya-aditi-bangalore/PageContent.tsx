@@ -1,0 +1,246 @@
+'use client'
+import { useEffect, useRef, useState } from 'react'
+import { Trophy, Users, MessageCircle, Star, GraduationCap, Target, Shield, ArrowRight, BookOpen, CheckCircle, Building, MapPin } from 'lucide-react'
+import Button from '@/components/ui/Button'
+
+function useScrollAnimation() {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) setIsVisible(true)
+    }, { threshold: 0.1 })
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
+  return { ref, isVisible }
+}
+
+export default function PageContent() {
+  const whatsappLink = 'https://wa.me/918826444334'
+  const phone = '8826444334'
+  const website = 'cerebrumbiologyacademy.com'
+
+  const featureAnimation = useScrollAnimation()
+  const curriculumAnimation = useScrollAnimation()
+  const testimonialAnimation = useScrollAnimation()
+  const faqAnimation = useScrollAnimation()
+
+  return (
+    <div className="w-full">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-pink-900 via-pink-800 to-pink-700 pt-20">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 right-20 w-64 h-64 bg-pink-400 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-pink-500 rounded-full blur-3xl"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 text-center">
+          <div className="inline-block mb-6 px-4 py-2 bg-pink-200 text-pink-900 rounded-full text-sm font-semibold">
+            <Building className="inline w-4 h-4 mr-2" />
+            Mallya Aditi International School, Bangalore
+          </div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            NEET Coaching for Mallya Aditi Students
+          </h1>
+          <p className="text-xl text-pink-100 mb-8 max-w-2xl mx-auto">
+            Specialized NEET Biology coaching for IB/IGCSE international school students. Bridge global curriculum to NEET success.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Button variant="primary" className="px-8 py-3 text-lg">
+              Book Free Demo Class
+            </Button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary" className="px-8 py-3 text-lg">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp +91 88264 44334
+              </Button>
+            </a>
+          </div>
+          <div className="grid grid-cols-3 gap-4 mt-12 text-white text-sm">
+            <div><Trophy className="w-6 h-6 mx-auto mb-2 text-yellow-300" /><p>98% Success Rate</p></div>
+            <div><Users className="w-6 h-6 mx-auto mb-2 text-yellow-300" /><p>Personal Batches</p></div>
+            <div><Star className="w-6 h-6 mx-auto mb-2 text-yellow-300" /><p>Expert Faculty</p></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Mallya Aditi Students Choose Cerebrum */}
+      <section className="py-20 bg-gray-50 px-6">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Why Mallya Aditi Students Choose Cerebrum</h2>
+          <div ref={featureAnimation.ref} className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${featureAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+              <Target className="w-10 h-10 text-pink-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3">IGCSE/IB to NEET Bridge</h3>
+              <p className="text-gray-600">
+                Specialized expertise in converting international curriculum to NEET success. We bridge IGCSE/IB to Indian medical entrance requirements.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+              <GraduationCap className="w-10 h-10 text-pink-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3">International Standard Excellence</h3>
+              <p className="text-gray-600">
+                Premium coaching matching Mallya Aditi's international standards. NEET prep that's rigorous yet globally-aware.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+              <Shield className="w-10 h-10 text-pink-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3">Bangalore NEET Expertise</h3>
+              <p className="text-gray-600">
+                Deep understanding of Bangalore's competitive NEET landscape and international school student aspirations.
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+              <BookOpen className="w-10 h-10 text-pink-600 mb-4" />
+              <h3 className="text-xl font-bold mb-3">Global + Indian Perspective</h3>
+              <p className="text-gray-600">
+                Respect your international curriculum while ensuring complete NEET preparation for Indian medical schools.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Understanding Your Curriculum */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Understanding Your Curriculum</h2>
+          <div ref={curriculumAnimation.ref} className={`bg-gradient-to-r from-pink-50 to-pink-100 p-10 rounded-lg transition-all duration-700 ${curriculumAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">IGCSE/IB Global Curriculum → NEET Mastery</h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="font-bold text-lg mb-4 text-pink-900">Your School Advantage</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>IGCSE/IB curriculum builds strong conceptual foundation</span></li>
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Excellent laboratory and practical experience</span></li>
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Global educational perspective and critical thinking</span></li>
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Strong English and research skills</span></li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg mb-4 text-pink-900">NEET Bridge Strategy</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Map IGCSE/IB to NEET curriculum and requirements</span></li>
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Fill gaps in NEET-specific content areas</span></li>
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>MCQ strategy and Indian exam format training</span></li>
+                  <li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" /><span>Comprehensive NEET test series and mock exams</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Success Stories from Mallya Aditi Students</h2>
+          <div ref={testimonialAnimation.ref} className={`grid md:grid-cols-3 gap-8 transition-all duration-700 ${testimonialAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-pink-600 rounded-full mr-4"></div>
+                <div>
+                  <p className="font-bold text-gray-900">Aisha D.</p>
+                  <p className="text-sm text-gray-500">Mallya Aditi</p>
+                </div>
+              </div>
+              <p className="text-yellow-500 mb-3">★★★★★</p>
+              <p className="text-gray-600">
+                "IGCSE to NEET transition seemed complex. Cerebrum made it seamless. Got AIR 145! Highly recommend!"
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-pink-600 rounded-full mr-4"></div>
+                <div>
+                  <p className="font-bold text-gray-900">Ishaan K.</p>
+                  <p className="text-sm text-gray-500">Mallya Aditi</p>
+                </div>
+              </div>
+              <p className="text-yellow-500 mb-3">★★★★★</p>
+              <p className="text-gray-600">
+                "Faculty understood IGCSE curriculum deeply and mapped it perfectly to NEET. Great coaching approach!"
+              </p>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="flex items-center mb-4">
+                <div className="w-12 h-12 bg-pink-600 rounded-full mr-4"></div>
+                <div>
+                  <p className="font-bold text-gray-900">Zara M.</p>
+                  <p className="text-sm text-gray-500">Mallya Aditi</p>
+                </div>
+              </div>
+              <p className="text-yellow-500 mb-3">★★★★★</p>
+              <p className="text-gray-600">
+                "IB plus NEET was challenging. Cerebrum's integrated approach made it manageable. Excellent results!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
+          <div ref={faqAnimation.ref} className={`space-y-6 transition-all duration-700 ${faqAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">How do you bridge IGCSE curriculum to NEET?</h3>
+              <p className="text-gray-600">
+                IGCSE offers strong conceptual foundation. We map IGCSE topics to NEET, fill specific content gaps, and teach NEET-specific MCQ strategies while leveraging your deep understanding.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Can you support students doing both IB and NEET?</h3>
+              <p className="text-gray-600">
+                Absolutely. This is our specialty. We design coaching that supports IB curriculum while ensuring comprehensive NEET preparation without conflicts.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Are there Mallya Aditi-specific batches?</h3>
+              <p className="text-gray-600">
+                Yes, we create dedicated batches for Mallya Aditi students when enrollment allows. Peer group with similar international curriculum background and NEET goals.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">How do you handle IGCSE/IB format vs NEET MCQ?</h3>
+              <p className="text-gray-600">
+                IGCSE/IB's theoretical approach differs from NEET MCQ format. We teach both, ensuring you master NEET MCQs while maintaining conceptual depth that international curriculum builds.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">How can I book a free demo class?</h3>
+              <p className="text-gray-600">
+                WhatsApp us at +91 88264 44334 or call 8826444334. Visit cerebrumbiologyacademy.com. We'll arrange a personalized demo session.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-6 bg-gradient-to-r from-pink-600 to-pink-800">
+        <div className="max-w-4xl mx-auto text-center text-white">
+          <h2 className="text-4xl font-bold mb-6">Achieve NEET Excellence from Mallya Aditi</h2>
+          <p className="text-xl mb-8">Join Mallya Aditi students who've achieved 98%+ success rates with Cerebrum Biology Academy.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button variant="light" className="px-8 py-3 text-lg font-semibold">
+              Start Your Free Demo <ArrowRight className="w-5 h-5 ml-2 inline" />
+            </Button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary" className="px-8 py-3 text-lg">
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp Now
+              </Button>
+            </a>
+          </div>
+          <div className="mt-8 text-pink-100">
+            <p className="mb-2"><MapPin className="w-4 h-4 inline mr-2" />Yelahanka, Bangalore</p>
+            <p className="mb-2">Phone: {phone}</p>
+            <p>Website: {website}</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}
