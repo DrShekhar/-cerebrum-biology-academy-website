@@ -105,6 +105,26 @@ const faqs = [
     answer:
       'Bhubaneswar offers quality education infrastructure and moderate NEET competition compared to metros. Combined with our expert online coaching, Bhubaneswar students can prepare effectively and compete for top medical colleges nationwide.',
   },
+  {
+    question: 'What is the NEET coaching fee for Bhubaneswar students?',
+    answer:
+      'Our plans: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Intensive Rs 48,000/year. EMI and merit scholarships available. Save significantly compared to coaching institutes in Delhi or Kota.',
+  },
+  {
+    question: 'Which medical colleges can Bhubaneswar students target?',
+    answer:
+      'Bhubaneswar students can target AIIMS Bhubaneswar, SCB Medical College Cuttack, MKCG Medical College, IMS and SUM Hospital, and through strong NEET scores, AIIMS Delhi, JIPMER, and top national medical colleges.',
+  },
+  {
+    question: 'Do you cover Odisha state board for NEET preparation?',
+    answer:
+      'Yes, our NCERT-focused curriculum covers 100% of NEET. Odisha board students benefit fully since NEET is entirely NCERT-based. We bridge any differences between CHSE board and NEET requirements.',
+  },
+  {
+    question: 'Is there a free demo for Bhubaneswar students?',
+    answer:
+      'Yes, book a free demo class via WhatsApp at 8826444334. Experience our AIIMS-trained faculty teaching methodology. No commitment required. Most Bhubaneswar families decide after attending the demo.',
+  },
 ]
 
 const faqSchema = {

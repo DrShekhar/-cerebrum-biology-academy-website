@@ -62,8 +62,7 @@ export default function NEETCoachingMaduraiPage() {
         slug="neet-coaching-madurai"
         pageTitle="Best NEET Coaching in Madurai"
         pageDescription="Premium online NEET coaching in Madurai. 10,000+ aspirants, expert faculty, near Madurai Medical College & Meenakshi Mission. 98% success rate."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "9.9252", lng: "78.1198" }} />
       <PageContent />
     </>
   )

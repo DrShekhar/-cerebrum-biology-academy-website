@@ -15,6 +15,7 @@ interface LocalitySchemaProps {
   pageTitle: string
   pageDescription: string
   pageType?: 'tutor' | 'coaching' | 'tuition' | 'classes'
+  coordinates?: { lat: string; lng: string }
 }
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -25,8 +26,26 @@ export function LocalitySchema({
   pageTitle,
   pageDescription,
   pageType = 'coaching',
+  coordinates,
 }: LocalitySchemaProps) {
   const pageUrl = `${BASE_URL}/${slug}`
+
+  // GeoCoordinates schema for local search
+  const geoSchema = coordinates ? {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: `Cerebrum Biology Academy - ${locality}`,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: coordinates.lat,
+      longitude: coordinates.lng,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: locality,
+      addressCountry: 'IN',
+    },
+  } : null
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -91,12 +110,7 @@ export function LocalitySchema({
     ],
     areaServed: {
       '@type': 'City',
-      name: 'Delhi',
-      containsPlace: [
-        { '@type': 'Place', name: locality },
-        { '@type': 'Place', name: 'South Delhi' },
-        { '@type': 'Place', name: 'Delhi NCR' },
-      ],
+      name: locality,
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -327,6 +341,13 @@ export function LocalitySchema({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseListSchema) }}
       />
+
+      {geoSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(geoSchema) }}
+        />
+      )}
 
       {/* AI-Optimized Speakable Content for Voice Search & LLMs */}
       <div className="sr-only" aria-hidden="false">

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 export default function NEETCoachingNagpurPage() {
   return (
     <>
-      <LocalitySchema locality="Nagpur" slug={slug} pageTitle="Best NEET Coaching in Nagpur" pageDescription="Top NEET Biology coaching in Nagpur, Maharashtra with AIIMS faculty and 98% success rate." pageType="coaching" />
+      <LocalitySchema locality="Nagpur" slug={slug} pageTitle="Best NEET Coaching in Nagpur" pageDescription="Top NEET Biology coaching in Nagpur, Maharashtra with AIIMS faculty and 98% success rate." pageType="coaching" coordinates={{ lat: "21.1458", lng: "79.0882" }} />
       <PageContent />
     </>
   )

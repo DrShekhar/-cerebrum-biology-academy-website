@@ -105,6 +105,26 @@ const faqs = [
     answer:
       'Vizag\'s local coaching ecosystem is primarily tutor-based or unstructured. Cerebrum brings comprehensive curriculum, expert faculty, regular testing, progress tracking, and personalized mentorship - addressing the quality gap in Vizag NEET coaching.',
   },
+  {
+    question: 'What is the NEET coaching fee for Vizag students?',
+    answer:
+      'Our NEET Biology plans start from Rs 24,000/year (Foundation), Rs 36,000/year (Comprehensive), and Rs 48,000/year (Intensive). EMI options available. This is significantly cheaper than Hyderabad coaching centers that many Vizag students travel to.',
+  },
+  {
+    question: 'Which medical colleges can Visakhapatnam students target?',
+    answer:
+      'Vizag students can target Andhra Medical College (right in Vizag), NTR University of Health Sciences colleges, AIIMS Mangalagiri, and through strong NEET scores, AIIMS Delhi, JIPMER, and top national medical colleges.',
+  },
+  {
+    question: 'Do you cover Andhra Pradesh state board syllabus for NEET?',
+    answer:
+      'Our teaching is NCERT-focused which covers 100% of NEET syllabus. AP state board students benefit from our approach as NEET is entirely NCERT-based. We bridge any gaps between state board and NEET requirements.',
+  },
+  {
+    question: 'How do Vizag students attend doubt clearing sessions?',
+    answer:
+      'We offer unlimited doubt clearing via WhatsApp groups, live post-class sessions, scheduled one-on-one mentoring, and 24/7 recorded explanations. Most doubts are resolved within 2 minutes on WhatsApp.',
+  },
 ]
 
 const faqSchema = {

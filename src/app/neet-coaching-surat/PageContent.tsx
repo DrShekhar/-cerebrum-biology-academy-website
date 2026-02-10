@@ -190,7 +190,20 @@ export default function PageContent() {
               {
                 q: 'How is your NEET success rate in Surat?',
                 a: 'Consistent 98% success rate with 695/720 top score. Students from Surat consistently scoring 600+.'
-              }
+              },
+              {
+                q: 'Which top schools in Surat do your students come from?',
+                a: 'Our Surat students attend Delhi Public School, SGVP International School, Shree Swaminarayan Gurukul, Podar International, Vibgyor High, St. Xavier\'s High School, and other premier institutions.'
+              },
+              {
+                q: 'What medical colleges can Surat students aim for?',
+                a: 'Surat students can target Government Medical College Surat, B.J. Medical College Ahmedabad, AIIMS Rajkot, GMERS colleges across Gujarat, and through strong NEET scores, AIIMS Delhi and top national institutes.'
+              },
+              {
+                q: 'Do you offer crash courses for Surat students?',
+                a: 'Yes, we offer 3-month and 6-month crash courses for last-minute NEET preparation. Daily classes, intensive revision, mock tests, and personalized mentoring. Perfect for Surat students needing focused preparation.'
+              },
+            
             ].map((item, idx) => (
               <div key={idx} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                 <div className="flex items-start">
@@ -224,6 +237,27 @@ export default function PageContent() {
           </div>
           
           <p className="text-blue-100 mt-8 text-sm">Website: cerebrumbiologyacademy.com</p>
+        </div>
+      </section>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Students from These Surat Schools Trust Us
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {['Delhi Public School Surat', 'SGVP International School', 'Shree Swaminarayan Gurukul', 'Podar International Surat', 'Vibgyor High Surat', "St. Xavier's High School", 'The New Tulip International', 'Udgam School'].map((school) => (
+                <span
+                  key={school}
+                  className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"
+                >
+                  {school}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
       <PricingSection cityName="Surat" />

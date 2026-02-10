@@ -190,7 +190,20 @@ export default function PageContent() {
               {
                 q: 'Do you provide hostel support?',
                 a: 'We arrange trusted hostel referrals nearby. Most students opt for online classes from home.'
-              }
+              },
+              {
+                q: 'Which schools do students in Thiruvananthapuram attend?',
+                a: 'Our Thiruvananthapuram students come from Loyola School, Holy Angels ISC, Christ Nagar School, Arya Central School, Kendriya Vidyalaya SAP, and other premier institutions in the capital city.'
+              },
+              {
+                q: 'What medical colleges can Thiruvananthapuram students target?',
+                a: 'Students can target Government Medical College Thiruvananthapuram, SUT Academy of Medical Sciences, KUHS-affiliated colleges across Kerala, and through strong NEET scores, AIIMS, JIPMER, CMC Vellore nationwide.'
+              },
+              {
+                q: 'Do you cover Kerala SCERT board for NEET preparation?',
+                a: 'Yes, our NCERT-based curriculum covers 100% of NEET. Kerala board students benefit fully as NEET is entirely NCERT-focused. We bridge any curriculum differences between Kerala board and NEET seamlessly.'
+              },
+            
             ].map((item, idx) => (
               <div key={idx} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                 <div className="flex items-start">
@@ -224,6 +237,27 @@ export default function PageContent() {
           </div>
           
           <p className="text-blue-100 mt-8 text-sm">Website: cerebrumbiologyacademy.com</p>
+        </div>
+      </section>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Students from These Thiruvananthapuram Schools Trust Us
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {['Loyola School', 'Holy Angels ISC School', 'Christ Nagar School', 'Arya Central School', 'Kendriya Vidyalaya SAP', 'St. Thomas Central School', 'Chinmaya Vidyalaya', 'Mar Ivanios Vidyaniketan'].map((school) => (
+                <span
+                  key={school}
+                  className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"
+                >
+                  {school}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
       <PricingSection cityName="Thiruvananthapuram" />

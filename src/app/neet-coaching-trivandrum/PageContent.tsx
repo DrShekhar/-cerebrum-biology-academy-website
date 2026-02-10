@@ -105,6 +105,26 @@ const faqs = [
     answer:
       "With limited structured NEET coaching in Trivandrum, students choosing Cerebrum benefit from expert guidance without intense local competition. This allows personalized attention and customized learning approaches suited to each student's needs.",
   },
+  {
+    question: 'What is the NEET coaching fee for Trivandrum students?',
+    answer:
+      'Our plans start at Rs 24,000/year (Foundation), Rs 36,000/year (Comprehensive), and Rs 48,000/year (Intensive). EMI and scholarships available. Premium quality at fraction of the cost of traditional Trivandrum coaching centers.',
+  },
+  {
+    question: 'Which medical colleges can Trivandrum students target?',
+    answer:
+      'Trivandrum students can target Government Medical College Thiruvananthapuram, SUT Royal Hospital, KUHS-affiliated colleges across Kerala, and through strong NEET scores, AIIMS, JIPMER, and top national institutions.',
+  },
+  {
+    question: 'Do you cover Kerala state board syllabus for NEET?',
+    answer:
+      'Yes, our NCERT-based approach covers 100% of NEET syllabus. Kerala board students benefit fully as NEET is entirely NCERT-focused. We seamlessly bridge any curriculum gaps between Kerala board and NEET.',
+  },
+  {
+    question: 'How do NRI families in Trivandrum benefit from online coaching?',
+    answer:
+      'Many NRI families in Trivandrum choose our online NEET coaching for global flexibility. Flexible timings accommodate different schedules, recorded sessions allow revision, and preparation continues even during travel or relocation.',
+  },
 ]
 
 const faqSchema = {

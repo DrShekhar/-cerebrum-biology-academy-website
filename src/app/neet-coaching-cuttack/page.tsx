@@ -62,8 +62,7 @@ export default function NEETCoachingCuttackPage() {
         slug="neet-coaching-cuttack"
         pageTitle="Best NEET Coaching in Cuttack"
         pageDescription="Join #1 NEET coaching in Cuttack. Expert online classes for 5000+ aspirants. SCB Medical College proximity advantage."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "20.4625", lng: "85.8830" }} />
       <PageContent />
     </>
   )

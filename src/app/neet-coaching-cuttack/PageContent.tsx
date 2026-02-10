@@ -105,6 +105,26 @@ const faqs = [
     answer:
       "Cuttack and Bhubaneswar form Odisha's twin city - a combined education and cultural hub. Our online coaching serves both cities with unified curriculum and expertise, helping students from both areas compete nationally.",
   },
+  {
+    question: 'What is the NEET coaching fee for Cuttack students?',
+    answer:
+      'Our plans: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Intensive Rs 48,000/year. EMI and merit scholarships available. Premium coaching at much lower cost than relocating for preparation.',
+  },
+  {
+    question: 'Which medical colleges can Cuttack students target?',
+    answer:
+      'Cuttack students can target SCB Medical College (right in Cuttack), AIIMS Bhubaneswar, MKCG Medical College Berhampur, and through strong NEET scores, AIIMS Delhi, JIPMER, and top medical colleges nationwide.',
+  },
+  {
+    question: 'How is online NEET coaching better than Cuttack coaching centers?',
+    answer:
+      'Online offers AIIMS-trained faculty not available locally, small batches of 10-15 students, no commute, recorded lectures, personalized mentoring, and lower fees than premium coaching centers. 94.2% success rate speaks for itself.',
+  },
+  {
+    question: 'Do you cover Odisha CHSE board for NEET?',
+    answer:
+      'Yes, our NCERT-focused teaching covers 100% of NEET syllabus. CHSE board students benefit fully as NEET is entirely NCERT-based. We seamlessly bridge any curriculum differences between CHSE and NEET.',
+  },
 ]
 
 const faqSchema = {

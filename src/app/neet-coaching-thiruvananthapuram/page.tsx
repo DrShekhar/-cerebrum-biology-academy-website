@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 export default function NEETCoachingThiruvananthapuramPage() {
   return (
     <>
-      <LocalitySchema locality="Thiruvananthapuram" slug={slug} pageTitle="Best NEET Coaching in Thiruvananthapuram" pageDescription="Top NEET Biology coaching in Thiruvananthapuram, Kerala with AIIMS faculty and 98% success rate." pageType="coaching" />
+      <LocalitySchema locality="Thiruvananthapuram" slug={slug} pageTitle="Best NEET Coaching in Thiruvananthapuram" pageDescription="Top NEET Biology coaching in Thiruvananthapuram, Kerala with AIIMS faculty and 98% success rate." pageType="coaching" coordinates={{ lat: "8.5241", lng: "76.9366" }} />
       <PageContent />
     </>
   )

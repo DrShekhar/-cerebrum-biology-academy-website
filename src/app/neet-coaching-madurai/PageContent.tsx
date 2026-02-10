@@ -105,6 +105,26 @@ const faqs = [
     answer:
       'Being near Madurai Medical College and Meenakshi Mission, students have direct exposure to medical education environment. Our coaching bridges local medical college expectations with all-India NEET patterns, helping students succeed in both.',
   },
+  {
+    question: 'What is the NEET coaching fee for Madurai students?',
+    answer:
+      'Our NEET Biology coaching starts from Rs 24,000/year (Foundation), Rs 36,000/year (Comprehensive), and Rs 48,000/year (Intensive). EMI and scholarships available. Madurai students save significantly versus relocating to Chennai.',
+  },
+  {
+    question: 'Which medical colleges can Madurai students target?',
+    answer:
+      'Madurai students can target Madurai Medical College, AIIMS Madurai, Government Rajaji Hospital, and through strong NEET scores, Madras Medical College, CMC Vellore, JIPMER Puducherry, and AIIMS across India.',
+  },
+  {
+    question: 'Do you cover Tamil Nadu state board for NEET preparation?',
+    answer:
+      'Absolutely. Our NCERT-focused teaching covers 100% of NEET syllabus. TN state board students benefit fully since NEET is entirely NCERT-based. We seamlessly bridge any curriculum differences.',
+  },
+  {
+    question: 'How can Madurai students book a free demo?',
+    answer:
+      'Book a free demo class via WhatsApp at 8826444334 or through our website. Experience our AIIMS-trained faculty teaching methodology with no commitment. Most Madurai families enroll after the demo experience.',
+  },
 ]
 
 const faqSchema = {

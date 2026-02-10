@@ -105,6 +105,26 @@ const faqs = [
     answer:
       'GIFT City symbolizes Gandhinagar\'s emergence as a global financial hub. Families relocating to Gandhinagar for government/GIFT City positions value quality education. Our online coaching provides seamless learning continuity for such families, combining global standards with focused NEET preparation.',
   },
+  {
+    question: 'What is the NEET coaching fee for Gandhinagar students?',
+    answer:
+      'Our plans: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Intensive Rs 48,000/year. EMI and merit scholarships available. Capital city students get premium coaching without Ahmedabad commute.',
+  },
+  {
+    question: 'Which medical colleges can Gandhinagar students target?',
+    answer:
+      'Gandhinagar students can target GCS Medical College, B.J. Medical College Ahmedabad, GMERS colleges across Gujarat, and through strong NEET scores, AIIMS, JIPMER, and top national medical colleges.',
+  },
+  {
+    question: 'Do you cover Gujarat GSEB board for NEET preparation?',
+    answer:
+      'Yes, our NCERT-focused curriculum covers 100% of NEET. Gujarat board students benefit fully since NEET is entirely NCERT-based. We bridge any differences between GSEB and NEET requirements seamlessly.',
+  },
+  {
+    question: 'Is there a free demo class for Gandhinagar students?',
+    answer:
+      'Yes, book a free demo via WhatsApp at 8826444334 or our website. Experience AIIMS-trained faculty teaching quality. No commitment required. Capital city families value our evidence-based approach.',
+  },
 ]
 
 const faqSchema = {

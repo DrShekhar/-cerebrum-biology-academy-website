@@ -105,6 +105,26 @@ const faqs = [
     answer:
       "Many NRI families in Goa choose our online NEET coaching for flexibility and global-standard teaching. Flexible batch timings accommodate different timezones, recorded sessions allow flexible learning, and you can continue your preparation even if you relocate. Perfect for Goa's expat-heavy population.",
   },
+  {
+    question: 'What is the fee structure for NEET coaching for Goa students?',
+    answer:
+      'Our NEET Biology coaching plans start from Rs 24,000/year for the Foundation batch, Rs 36,000/year for Comprehensive, and Rs 48,000/year for Intensive. EMI options and scholarships are available. This is significantly more affordable than relocating to Kota or Pune for coaching.',
+  },
+  {
+    question: 'Can Goa students prepare for NEET while attending school?',
+    answer:
+      'Yes, our flexible batch timings are designed around school schedules. We offer morning, afternoon, and evening slots. Recorded lectures are available for revision. Many students from Panaji and Margao balance school and NEET preparation successfully with us.',
+  },
+  {
+    question: 'What medical colleges can Goa NEET aspirants target?',
+    answer:
+      'Goa students can target Goa Medical College Bambolim, AIIMS Goa (upcoming), and through strong NEET scores, any medical college in India including AIIMS Delhi, Maulana Azad Medical College, and all state quota seats across India.',
+  },
+  {
+    question: 'How do you handle doubt clearing for Goa students?',
+    answer:
+      'We provide unlimited doubt clearing through dedicated WhatsApp groups, live doubt sessions after each class, one-on-one mentoring slots, and 24/7 access to recorded explanations. Response time is under 2 minutes on WhatsApp.',
+  },
 ]
 
 const faqSchema = {
