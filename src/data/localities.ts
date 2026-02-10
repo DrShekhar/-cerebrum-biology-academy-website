@@ -82,7 +82,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'Best NEET Biology Coaching in South Delhi | Cerebrum Biology Academy',
       description:
-        "Top NEET Biology coaching in South Delhi with 650+ average score. Expert faculty, small batches, personalized attention. Join South Delhi's #1 Biology coaching for NEET 2025.",
+        "Top NEET Biology coaching in South Delhi with 650+ average score. Expert faculty, small batches, personalized attention. Join South Delhi's #1 Biology coaching for NEET 2026.",
       keywords: [
         'neet biology coaching south delhi',
         'best biology coaching delhi',
@@ -2275,7 +2275,7 @@ export const localities: Locality[] = [
         'biology tuition laxmi nagar',
         'neet coaching east delhi',
         'best biology coaching delhi',
-        'neet 2025 coaching laxmi nagar',
+        'neet 2026 coaching laxmi nagar',
       ],
       localKeywords: [
         'laxmi nagar metro',
@@ -2338,7 +2338,7 @@ export const localities: Locality[] = [
       valueProposition:
         'Expert AIIMS trained faculty, small batches, and proven strategies for East Delhi NEET aspirants',
       urgencyMessage:
-        'Only 12 seats left in January 2025 batch! Laxmi Nagar students enrolling fast.',
+        'Only 12 seats left in January 2026 batch! Laxmi Nagar students enrolling fast.',
       localChallenge:
         'Laxmi Nagar students often struggle with overcrowded coaching centers and generic teaching. Our specialized Biology-only focus ensures concept clarity and better NEET scores.',
       successMetric: '92% of our Laxmi Nagar students scored above 340 in NEET 2024 Biology',
@@ -5101,7 +5101,7 @@ export const localities: Locality[] = [
       valueProposition:
         'Only specialized Biology coaching in Sector 51 with physical presence. Choose Offline classes at our center, Online live classes from home, or Hybrid mode. 70% lower fees than big brands with better results.',
       urgencyMessage:
-        'Limited seats for 2025 NEET batch - Only 3 batches available! First 10 enrollments get ₹5000 scholarship',
+        'Limited seats for 2026 NEET batch - Only 3 batches available! First 10 enrollments get ₹5000 scholarship',
       localChallenge:
         'Students from Nirvana Country, Orchid Island and nearby societies travel 8-10 km to Sector 14 or South City for NEET coaching, wasting 2-3 hours daily in Gurugram traffic. Big institutes charge ₹1.5-2.4L with overcrowded batches of 50-100 students where individual attention is impossible.',
       successMetric: '87% of Sector 51 students scored 330+ in Biology (avg big institutes: 68%)',
@@ -10642,7 +10642,7 @@ export const localities: Locality[] = [
       heroSubtitle: 'Join 120+ Colaba students excelling in Biology from home',
       valueProposition:
         'Skip the Churchgate commute. Learn from NEET Biology experts through live online classes designed for South Mumbai students.',
-      urgencyMessage: 'Limited seats available! Colaba students enrolling for 2025 batch.',
+      urgencyMessage: 'Limited seats available! Colaba students enrolling for 2026 batch.',
       localChallenge:
         'Colaba students face long commutes to Churchgate coaching hubs. Our online platform provides superior learning without travel fatigue.',
       successMetric: '88% of our Colaba students scored above 330 in NEET 2024 Biology',

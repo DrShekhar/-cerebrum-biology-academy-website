@@ -239,7 +239,7 @@ export const COURSE_SERIES: Record<string, Series[]> = {
     {
       id: 'ascent',
       name: 'Ascent',
-      description: '⚡ NEET 2025 mission mode • Weekly assessments • Rank prediction accuracy 98%+',
+      description: '⚡ NEET 2026 mission mode • Weekly assessments • Rank prediction accuracy 98%+',
       icon: '🎯',
       color: 'green',
       batchSize: 20,

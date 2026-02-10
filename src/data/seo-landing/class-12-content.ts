@@ -664,29 +664,29 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
   ...class12BaseContent,
   slug: 'neet-2025-biology-coaching',
 
-  title: 'NEET 2025 Biology Coaching | Class 12 Batch Starting Now',
+  title: 'NEET 2026 Biology Coaching | Class 12 Batch Starting Now',
   metaDescription:
-    "Prepare for NEET 2025/2026 with India's top biology coaching. Class 12 intensive batch by AIIMS faculty. Early bird enrollment open. Limited seats!",
+    "Prepare for NEET 2026 with India's top biology coaching. Class 12 intensive batch by AIIMS faculty. Early bird enrollment open. Limited seats!",
   keywords: [
-    'NEET 2025 biology coaching',
+    'NEET 2026 biology coaching',
     'NEET 2026 preparation class 12',
-    'NEET biology coaching 2025',
-    'class 12 NEET 2025 batch',
-    'best NEET coaching 2025',
+    'NEET biology coaching 2026',
+    'class 12 NEET 2026 batch',
+    'best NEET coaching 2026',
   ],
 
   hero: {
-    headline: 'NEET 2025: Your Year to Become a Doctor',
+    headline: 'NEET 2026: Your Year to Become a Doctor',
     subheadline:
-      'Intensive Class 12 biology coaching designed specifically for NEET 2025. Start now, peak in May.',
-    highlightedText: 'Make Every Day Count Till NEET 2025',
-    ctaText: 'Join NEET 2025 Batch',
+      'Intensive Class 12 biology coaching designed specifically for NEET 2026. Start now, peak in May.',
+    highlightedText: 'Make Every Day Count Till NEET 2026',
+    ctaText: 'Join NEET 2026 Batch',
     ctaLink: '/class-12',
     backgroundGradient: 'from-rose-900 via-pink-900 to-fuchsia-900',
   },
 
   painPoints: {
-    title: 'Ready to Crack NEET 2025?',
+    title: 'Ready to Crack NEET 2026?',
     points: [
       {
         icon: 'calendar',
@@ -715,7 +715,7 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
   },
 
   benefits: {
-    title: 'NEET 2025 Preparation Roadmap',
+    title: 'NEET 2026 Preparation Roadmap',
     subtitle: 'Month-by-month plan to peak at the right time',
     items: [
       {
@@ -753,56 +753,56 @@ export const neet2025BiologyCoaching: SEOLandingContent = {
 
   faqs: [
     {
-      question: 'When does NEET 2025 preparation batch start?',
+      question: 'When does NEET 2026 preparation batch start?',
       answer:
-        'Our NEET 2025 batches start in April (regular) and June (late joiner batch). You can join anytime - we provide catch-up material for late joiners. The earlier you start, the more revision cycles you get.',
+        'Our NEET 2026 batches start in April (regular) and June (late joiner batch). You can join anytime - we provide catch-up material for late joiners. The earlier you start, the more revision cycles you get.',
     },
     {
-      question: 'How many months of preparation is ideal for NEET 2025?',
+      question: 'How many months of preparation is ideal for NEET 2026?',
       answer:
         '10-12 months is ideal for Class 12 students. This gives enough time for: complete syllabus coverage (5 months), Class 11 revision (2 months), intensive practice (3 months), and final revision (2 months). Our batch is designed for this timeline.',
     },
     {
-      question: 'Is NEET 2025 expected to be tougher?',
+      question: 'Is NEET 2026 expected to be tougher?',
       answer:
         'NEET pattern has stabilized with increased emphasis on conceptual questions. Whether "tougher" or not, our preparation ensures you\'re ready for any level of difficulty. We train for challenging questions, not just easy ones.',
     },
     {
-      question: 'What marks are needed in NEET 2025 for government medical colleges?',
+      question: 'What marks are needed in NEET 2026 for government medical colleges?',
       answer:
         'Typically, 600+ (out of 720) secures admission in good government colleges. Our target is to help you score 320+ in Biology (out of 360), which gives you a strong base. Combined with Physics and Chemistry, 650+ is achievable.',
     },
     {
-      question: 'Do you guarantee selection in NEET 2025?',
+      question: 'Do you guarantee selection in NEET 2026?',
       answer:
         'We guarantee quality teaching, personal attention, and comprehensive preparation. Our track record: 98% of students improve significantly, 85%+ score above 550, and we have 65+ AIIMS selections. Success depends on your effort combined with our guidance.',
     },
     {
-      question: 'How is NEET 2025 batch different from regular Class 12 batch?',
+      question: 'How is NEET 2026 batch different from regular Class 12 batch?',
       answer:
-        "It's the same intensive program, branded for clarity. Our Class 12 batch IS the NEET 2025 batch. Everything is designed around the NEET exam date - the schedule, tests, and revision all peak at the right time.",
+        "It's the same intensive program, branded for clarity. Our Class 12 batch IS the NEET 2026 batch. Everything is designed around the NEET exam date - the schedule, tests, and revision all peak at the right time.",
     },
   ],
 
   cta: {
-    title: 'NEET 2025: Start Your Journey Today',
+    title: 'NEET 2026: Start Your Journey Today',
     subtitle: 'Early starters have the advantage. Limited seats in each batch.',
     primaryButton: {
-      text: 'Enroll for NEET 2025',
+      text: 'Enroll for NEET 2026',
       link: '/class-12',
     },
     secondaryButton: {
-      text: 'Download NEET 2025 Roadmap',
+      text: 'Download NEET 2026 Roadmap',
       link: '/free-resources?type=neet-2025-roadmap',
     },
   },
 
   schema: {
     '@type': 'Course',
-    courseName: 'NEET 2025 Biology Coaching',
+    courseName: 'NEET 2026 Biology Coaching',
     provider: 'Cerebrum Biology Academy',
     description:
-      'Intensive NEET 2025 biology coaching for Class 12 students with complete preparation roadmap and expert guidance.',
+      'Intensive NEET 2026 biology coaching for Class 12 students with complete preparation roadmap and expert guidance.',
     duration: 'P1Y',
     price: 85000,
     priceCurrency: 'INR',
