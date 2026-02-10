@@ -8,7 +8,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
   // Use a stable date for static pages so Google can distinguish actual content updates
   // from mere redeployments. Update this date when site content meaningfully changes.
-  const lastUpdated = new Date('2026-02-06')
+  const lastUpdated = new Date('2026-02-10')
+
+  // Define change frequency and priority strategies for different page types
+  // Priority Scale: 1.0 (homepage) > 0.95 (core services) > 0.9 (high-value pages) > 0.8 (important pages) > 0.6-0.7 (secondary)
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
@@ -38,29 +41,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const routes: MetadataRoute.Sitemap = [
+    // HOMEPAGE & CORE SERVICES
     {
       url: baseUrl,
       lastModified: lastUpdated,
-      changeFrequency: 'daily' as const,
+      changeFrequency: 'weekly' as const,
       priority: 1.0,
     },
     {
       url: `${baseUrl}/ai-education-demo`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/courses`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/enrollment`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: `${baseUrl}/best-neet-biology-coaching`,
@@ -200,29 +204,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
+    // PRICING & CONVERSIONS
     {
       url: `${baseUrl}/pricing`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/mock-tests`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      priority: 0.88,
     },
+    // INFORMATION & CONTACT
     {
       url: `${baseUrl}/about`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/resources`,
@@ -248,19 +254,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     },
+    // RESULTS & FACULTY - SOCIAL PROOF
     {
       url: `${baseUrl}/faculty`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.85,
     },
+    // BLOG & CONTENT HUB
     {
       url: `${baseUrl}/blog`,
       lastModified: lastUpdated,
       changeFrequency: 'daily' as const,
-      priority: 0.8,
+      priority: 0.85,
     },
-    // Blog posts are dynamically generated above
+    // Blog posts are dynamically generated above (priority 0.7, changeFrequency monthly)
     ...blogRoutes,
     // SEO landing pages for keyword targeting
     ...seoLandingRoutes,
@@ -270,19 +278,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/gallery`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.6,
+      priority: 0.75,
     },
     {
       url: `${baseUrl}/results`,
       lastModified: lastUpdated,
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
+      changeFrequency: 'monthly' as const,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/success-stories`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.6,
+      priority: 0.85,
     },
     // Trust & Social Proof Pages - HIGH CONVERSION
     {
@@ -557,18 +565,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.85,
     },
+    // DEMO & LEAD GENERATION
+    {
+      url: `${baseUrl}/book-free-demo`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/demo-booking`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    },
     // Comparison Pages - AEO/GEO Optimized
     {
       url: `${baseUrl}/compare/neet-coaching-comparison`,
       lastModified: lastUpdated,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/demo-booking`,
-      lastModified: lastUpdated,
-      changeFrequency: 'monthly' as const,
-      priority: 0.5,
     },
     {
       url: `${baseUrl}/class-11`,
@@ -2919,7 +2934,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/adaptive-testing`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      priority: 0.92,
     },
     {
       url: `${baseUrl}/learning-path`,
@@ -5692,7 +5707,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/timetable`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
-      priority: 0.8,
+      priority: 0.88,
     },
     {
       url: `${baseUrl}/why-choose-cerebrum-academy`,
