@@ -7,7 +7,7 @@
     "dev": "next dev",
     "prebuild": "rm -rf .next/server && rm -rf .next/static",
     "build": "NODE_OPTIONS='--max-old-space-size=6144' next build",
-    "build:ci": "NODE_OPTIONS='--max-old-space-size=4096' next build",
+    "build:ci": "NODE_OPTIONS='--max-old-space-size=5120' next build",
     "build:fresh": "rm -rf .next && NODE_OPTIONS='--max-old-space-size=8192' next build",
     "start": "next start",
     "preview:prod": "npm run build && npm run start",
