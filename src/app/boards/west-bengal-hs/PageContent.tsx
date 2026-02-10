@@ -14,7 +14,7 @@ import {
   FileText,
   Microscope,
 } from 'lucide-react'
-import Button from '@/components/ui/Button'
+import { Button } from '@/components/ui/Button'
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
