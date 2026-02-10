@@ -12,7 +12,8 @@ import {
   Eye,
   FlaskConical,
 } from 'lucide-react'
-import { Bookmark as BookmarkSolidIcon } from 'lucide-react'
+
+const BookmarkSolidIcon = Bookmark
 
 interface Question {
   id: string
