@@ -72,16 +72,16 @@ export default function PageContent() {
       answer: 'ICSE/ISC students show strong NEET performance with 85%+ qualification and 630+ average scores. The rigorous curriculum provides excellent foundation. We bridge any content gaps while leveraging the strong conceptual understanding developed by ICSE/ISC.',
     },
     {
-      question: 'What advantage does Bishop\'s School Camp location provide?',
-      answer: 'Pune is a major medical education hub with strong coaching infrastructure. Camp area is Pune\'s premium educational district. This environment, combined with Bishop\'s academic excellence, creates ideal NEET preparation setting.',
+      question: "What advantage does Bishop\'s School Camp location provide?",
+      answer: "Pune is a major medical education hub with strong coaching infrastructure. Camp area is Pune\'s premium educational district. This environment, combined with Bishop\'s academic excellence, creates ideal NEET preparation setting.",
     },
     {
       question: 'Can I prepare for ICSE/ISC boards and NEET together?',
       answer: 'Yes! ICSE/ISC and NEET have significant science overlap. Our program ensures both board excellence (90+) and NEET strength (630+) through synchronized preparation that prevents redundant studying.',
     },
     {
-      question: 'What is the NEET success rate for Bishop\'s School students?',
-      answer: 'Bishop\'s School students show 85%+ NEET qualification with 630+ average scores. The school\'s academic culture and ICSE/ISC rigor provide strong platform for medical entrance success.',
+      question: "What is the NEET success rate for Bishop\'s School students?",
+      answer: "Bishop\'s School students show 85%+ NEET qualification with 630+ average scores. The school\'s academic culture and ICSE/ISC rigor provide strong platform for medical entrance success.",
     },
     {
       question: 'How do you handle ICSE vs ISC differences for NEET?',
@@ -89,7 +89,7 @@ export default function PageContent() {
     },
     {
       question: 'Is Pune location good for NEET preparation?',
-      answer: 'Pune is excellent for NEET preparation with strong coaching centers, medical colleges, and educational infrastructure. Bishop\'s School location in premium Camp area provides access to best resources while maintaining school focus.',
+      answer: "Pune is excellent for NEET preparation with strong coaching centers, medical colleges, and educational infrastructure. Bishop\'s School location in premium Camp area provides access to best resources while maintaining school focus.",
     },
   ]
 

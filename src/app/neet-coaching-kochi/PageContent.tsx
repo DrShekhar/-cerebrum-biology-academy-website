@@ -94,7 +94,7 @@ const faqs = [
   {
     question: 'Which schools do Kochi students attend?',
     answer:
-      'Our Kochi students come from Choice School, Rajagiri, Toc-H, Bhavan\'s Vidya Mandir, and other premier institutions. Many follow Kerala curriculum; some attend CBSE schools. We cover both pathways with equal expertise and depth.',
+      "Our Kochi students come from Choice School, Rajagiri, Toc-H, Bhavan's Vidya Mandir, and other premier institutions. Many follow Kerala curriculum; some attend CBSE schools. We cover both pathways with equal expertise and depth.",
   },
   {
     question: 'How does Cerebrum help with Kerala + CBSE students?',

@@ -61,7 +61,7 @@ const faqs = [
 {
     question: 'Why do Banjara Hills families prefer online NEET coaching?',
     answer:
-      'Banjara Hills families value premium quality and privacy. Online NEET coaching offers world-class AIIMS faculty without commute, perfect for government officials' busy schedules. High-speed connectivity and gated community infrastructure support seamless learning.',
+      "Banjara Hills families value premium quality and privacy. Online NEET coaching offers world-class AIIMS faculty without commute, perfect for government officials' busy schedules. High-speed connectivity and gated community infrastructure support seamless learning.",
   },
   {
     question: 'How do you support government official families?',

@@ -168,7 +168,7 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Best Biology Coaching for Andheri West&apos;s Premium Localities
+              Best Biology Coaching for Andheri West's Premium Localities
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">

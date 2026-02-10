@@ -64,7 +64,7 @@ const whyChooseUs = [
     icon: Target,
     title: 'Punjab Education Hub',
     description:
-      'Mohali is Punjab\'s premier education hub with top schools. Our online NEET coaching serves ambitious families in this highly competitive educational landscape.',
+      "Mohali is Punjab's premier education hub with top schools. Our online NEET coaching serves ambitious families in this highly competitive educational landscape.",
   },
   {
     icon: GraduationCap,

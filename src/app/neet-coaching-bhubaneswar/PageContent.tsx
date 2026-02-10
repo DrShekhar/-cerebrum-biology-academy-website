@@ -56,9 +56,9 @@ const bhubaneswarAreas = [
 const whyChooseUs = [
   {
     icon: BookOpen,
-    title: 'Odisha Education Hub',
+    title: "Odisha Education Hub",
     description:
-      'Bhubaneswar is Odisha\'s premier education hub. Our NEET coaching serves students from top schools like DAV Public, SAI International, and KIIT International.',
+      "Bhubaneswar is Odisha's premier education hub. Our NEET coaching serves students from top schools like DAV Public, SAI International, and KIIT International.",
   },
   {
     icon: Target,
@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'Is NEET coaching important for Bhubaneswar students?',
     answer:
-      'Yes! With 13000+ aspirants in Odisha and moderate competitive intensity, structured NEET coaching gives you a significant advantage. Bhubaneswar\'s position as an education hub makes it ideal for quality online coaching.',
+      "Yes! With 13000+ aspirants in Odisha and moderate competitive intensity, structured NEET coaching gives you a significant advantage. Bhubaneswar's position as an education hub makes it ideal for quality online coaching.",
   },
   {
     question: 'What schools do your Bhubaneswar students come from?',

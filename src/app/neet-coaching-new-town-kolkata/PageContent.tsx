@@ -70,7 +70,7 @@ const whyChooseUs = [
     icon: GraduationCap,
     title: 'Modern Medical Faculty',
     description:
-      'Expert NEET biology coaching by experienced medical professionals with 15+ years teaching background serving New Town\'s dynamic families.',
+      "Expert NEET biology coaching by experienced medical professionals with 15+ years teaching background serving New Town's dynamic families.",
   },
   {
     icon: Star,

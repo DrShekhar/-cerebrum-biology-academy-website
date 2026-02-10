@@ -52,24 +52,24 @@ export default function PageContent() {
   const faqAnim = useScrollAnimation()
 
   const modernTradition = [
-    { icon: Award, title: 'Premium Excellence Heritage', description: 'Modern School\'s strong science tradition provides exceptional NEET foundation for medical aspirants' },
-    { icon: BookOpen, title: 'CBSE Science Mastery', description: 'Modern School emphasizes rigorous CBSE science education - perfect alignment with NEET requirements' },
-    { icon: Users, title: 'Peer Excellence Culture', description: 'High-achieving peer group at Modern School creates competitive excellence environment for NEET' },
-    { icon: Target, title: 'Proven Medical Success', description: 'Modern School has consistent history of students pursuing medical education and NEET success' },
-    { icon: Zap, title: 'Academic Rigor', description: 'Modern School\'s rigorous curriculum develops the conceptual depth required for NEET excellence' },
-    { icon: Building, title: 'Delhi\'s Prestigious Institution', description: 'Modern School\'s reputation and facilities support comprehensive NEET preparation alongside school' },
+    { icon: Award, title: "Premium Excellence Heritage", description: "Modern School's strong science tradition provides exceptional NEET foundation for medical aspirants" },
+    { icon: BookOpen, title: "CBSE Science Mastery", description: "Modern School emphasizes rigorous CBSE science education - perfect alignment with NEET requirements" },
+    { icon: Users, title: "Peer Excellence Culture", description: "High-achieving peer group at Modern School creates competitive excellence environment for NEET" },
+    { icon: Target, title: "Proven Medical Success", description: "Modern School has consistent history of students pursuing medical education and NEET success" },
+    { icon: Zap, title: "Academic Rigor", description: "Modern School's rigorous curriculum develops the conceptual depth required for NEET excellence" },
+    { icon: Building, title: "Delhi's Prestigious Institution", description: "Modern School's reputation and facilities support comprehensive NEET preparation alongside school" },
   ]
 
   const pricingPlans = [
-    { name: 'Complete NEET Mastery', price: '₹35,999', description: '18-month comprehensive program leveraging Modern School CBSE foundation for NEET' },
-    { name: 'Intensive NEET Focus', price: '₹45,999', description: '12-month intensive program for Modern School students targeting 650+ NEET scores' },
-    { name: 'Premium 1:1 Coaching', price: '₹55,999', description: 'Personalized one-on-one coaching designed for Modern School\'s high-achievers' },
+    { name: "Complete NEET Mastery", price: "₹35,999", description: "18-month comprehensive program leveraging Modern School CBSE foundation for NEET" },
+    { name: "Intensive NEET Focus", price: "₹45,999", description: "12-month intensive program for Modern School students targeting 650+ NEET scores" },
+    { name: "Premium 1:1 Coaching", price: "₹55,999", description: "Personalized one-on-one coaching designed for Modern School's high-achievers" },
   ]
 
   const faqs = [
     {
       question: 'How does Modern School CBSE prepare students for NEET?',
-      answer: 'Modern School\'s rigorous CBSE curriculum and emphasis on science excellence create a strong foundation for NEET. Combined with our specialized NEET coaching, students achieve 650+ scores while maintaining board excellence.',
+      answer: "Modern School's rigorous CBSE curriculum and emphasis on science excellence create a strong foundation for NEET. Combined with our specialized NEET coaching, students achieve 650+ scores while maintaining board excellence.",
     },
     {
       question: 'What makes Modern School students successful in NEET?',
@@ -81,7 +81,7 @@ export default function PageContent() {
     },
     {
       question: 'What is the NEET success rate for Modern School students?',
-      answer: 'Modern School students show 90%+ NEET qualification with 640+ average scores. The school\'s academic culture and CBSE alignment provide excellent foundation for medical entrance success.',
+      answer: "Modern School students show 90%+ NEET qualification with 640+ average scores. The school's academic culture and CBSE alignment provide excellent foundation for medical entrance success.",
     },
     {
       question: 'How do Modern School teachers and coaching work together?',
@@ -89,7 +89,7 @@ export default function PageContent() {
     },
     {
       question: 'Is NEET coaching necessary for Modern School students?',
-      answer: 'While Modern School provides excellent foundation, specialized NEET coaching bridges the gap between board exams and medical entrance. We help convert excellent CBSE understanding into 650+ NEET scores.',
+      answer: "While Modern School provides excellent foundation, specialized NEET coaching bridges the gap between board exams and medical entrance. We help convert excellent CBSE understanding into 650+ NEET scores.",
     },
   ]
 

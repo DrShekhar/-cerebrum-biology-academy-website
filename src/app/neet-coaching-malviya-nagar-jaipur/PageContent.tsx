@@ -34,7 +34,7 @@ const areas = [
 ]
 
 const whyChooseUs = [
-  { icon: Building, title: 'Malviya Nagar Professional Families Trust Us', description: 'Top choice for Malviya Nagar professionals and academics. Trusted by doctors, engineers, and business families.' },
+  { icon: Building, title: "Malviya Nagar Professional Families Trust Us", description: "Top choice for Malviya Nagar professionals and academics. Trusted by doctors, engineers, and business families." },
   { icon: Target, title: '500+ NEET Selections', description: 'Proven success with students from premier Jaipur institutions.' },
   { icon: GraduationCap, title: 'Expert Medical Faculty', description: 'NEET biology coaching by experienced medical professionals with 15+ years expertise.' },
   { icon: Star, title: 'Top NEET Results', description: 'Malviya Nagar students achieve 685+ NEET scores consistently.' },

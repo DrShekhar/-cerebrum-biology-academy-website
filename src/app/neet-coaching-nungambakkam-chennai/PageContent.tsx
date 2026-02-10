@@ -118,11 +118,11 @@ export default function PageContent() {
     <div className="min-h-screen">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(faqSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={ { __html: JSON.stringify(localBusinessSchema) } }
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* Hero */}
@@ -239,7 +239,7 @@ export default function PageContent() {
               <div
                 key={area.name}
                 className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 animate-fade-in-up"
-                style={ { animationDelay: `${index * 50}ms` } }
+                style={{ animationDelay: `${index * 50}ms` }}
               >
                 <MapPin className="w-8 h-8 text-green-600 mb-4" />
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{area.name}</h3>
@@ -270,7 +270,7 @@ export default function PageContent() {
               <div
                 key={item.title}
                 className="text-center animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-slate-700 to-green-700 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <item.icon className="w-8 h-8 text-white" />
@@ -300,7 +300,7 @@ export default function PageContent() {
               <div
                 key={faq.question}
                 className="bg-white rounded-xl p-8 shadow-lg animate-fade-in-up"
-                style={ { animationDelay: `${index * 100}ms` } }
+                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-green-600 flex-shrink-0 mt-1" />

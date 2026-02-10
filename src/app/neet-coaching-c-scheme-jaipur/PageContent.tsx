@@ -94,7 +94,7 @@ const faqs = [
   {
     question: 'Which schools do your C-Scheme students attend?',
     answer:
-      'We coach students from Rajkiya Vidyapith, Maharaja College, D.A.V. Public School, St. Xavier\'s, and other premier Jaipur institutions.',
+      "We coach students from Rajkiya Vidyapith, Maharaja College, D.A.V. Public School, St. Xavier's, and other premier Jaipur institutions.",
   },
   {
     question: 'How is your coaching customized for C-Scheme students?',

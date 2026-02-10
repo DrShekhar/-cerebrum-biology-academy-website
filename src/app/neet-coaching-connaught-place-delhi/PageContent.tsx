@@ -92,7 +92,7 @@ const faqs = [
       'St. Columba\'s School, Modern School Barakhamba, Convent of Jesus & Mary, and several premium institutions serve the Connaught Place area. We have successfully coached students from all these schools.',
   },
   {
-    question: 'How do your classes cater to Central Delhi\'s premium students?',
+    question: "How do your classes cater to Central Delhi\'s premium students?",
     answer:
       'Students from premium schools already have strong fundamentals. Our coaching focuses on competitive advantage, advanced problem-solving, and achieving 680+ NEET scores for top college admission.',
   },

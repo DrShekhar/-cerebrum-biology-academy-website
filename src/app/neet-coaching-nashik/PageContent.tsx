@@ -58,7 +58,7 @@ const whyChooseUs = [
     icon: Flame,
     title: 'Wine Country Excellence',
     description:
-      'Nashik\'s wine country families value premium education. Our NEET coaching matches the expectations of affluent, education-focused families in Maharashtra\'s premier wine region.',
+      "Nashik's wine country families value premium education. Our NEET coaching matches the expectations of affluent, education-focused families in Maharashtra's premier wine region.",
   },
   {
     icon: Target,
@@ -99,7 +99,7 @@ const faqs = [
   {
     question: 'How do wine country families benefit from your coaching?',
     answer:
-      'Nashik\'s wine country families appreciate our structured, result-oriented approach. Fixed schedules, regular progress reports, and focus on top results align with values of educated, successful families. Online format allows flexibility without compromising on quality coaching.',
+      "Nashik's wine country families appreciate our structured, result-oriented approach. Fixed schedules, regular progress reports, and focus on top results align with values of educated, successful families. Online format allows flexibility without compromising on quality coaching.",
   },
 ]
 
@@ -168,7 +168,7 @@ export default function PageContent() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              Premium Biology Coaching for Maharashtra&apos;s Wine Country Families
+              Premium Biology Coaching for Maharashtra's Wine Country Families
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
