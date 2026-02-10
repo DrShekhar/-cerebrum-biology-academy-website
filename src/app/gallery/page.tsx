@@ -71,10 +71,30 @@ export default function GalleryPage() {
     },
   }
 
+  // VideoObject schema for video gallery content
+  const videoGallerySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: 'Cerebrum Biology Academy - Video Gallery',
+    description:
+      'Watch video content from Cerebrum Biology Academy - student testimonials, faculty insights, campus events, biology lectures, and educational seminars.',
+    thumbnailUrl: 'https://cerebrumbiologyacademy.com/og-image.jpg',
+    uploadDate: '2025-01-10',
+    publisher: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://cerebrumbiologyacademy.com/logo.png',
+      },
+    },
+  }
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoGallerySchema) }} />
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="relative bg-[#e8ede8] py-12 sm:py-16 md:py-20">
