@@ -75,8 +75,51 @@ export default function BlogPage() {
     .sort((a, b) => b.count - a.count)
     .slice(0, 15)
 
+  const blogCollectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'NEET Biology Blog | Study Tips & Preparation Strategies',
+    description: 'Expert NEET biology preparation tips, study strategies, and educational content by AIIMS faculty.',
+    url: 'https://cerebrumbiologyacademy.com/blog',
+    isPartOf: {
+      '@type': 'WebSite',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    about: {
+      '@type': 'Thing',
+      name: 'NEET Biology Preparation',
+    },
+    author: {
+      '@type': 'Person',
+      name: 'Dr. Shekhar C Singh',
+      jobTitle: 'Founder & Head Faculty',
+      alumniOf: 'AIIMS New Delhi',
+    },
+    publisher: {
+      '@type': 'EducationalOrganization',
+      name: 'Cerebrum Biology Academy',
+      url: 'https://cerebrumbiologyacademy.com',
+    },
+    numberOfItems: posts.length,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: Math.min(posts.length, 10),
+      itemListElement: posts.slice(0, 10).map((post, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        url: `https://cerebrumbiologyacademy.com/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogCollectionSchema) }}
+      />
       {/* Breadcrumb Navigation + Schema */}
       <div className="mx-auto max-w-7xl px-4 pt-4">
         <BreadcrumbSchema items={[{ label: 'Blog', isCurrentPage: true }]} />

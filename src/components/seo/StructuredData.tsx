@@ -1352,6 +1352,8 @@ export function StructuredData() {
       <WebsiteSchema />
       <CourseSchema />
       <LocalBusinessSchema />
+      <NationalServiceSchema />
+      <DrShekharSinghSchema />
     </>
   )
 }
