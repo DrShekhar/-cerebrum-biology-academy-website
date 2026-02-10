@@ -184,7 +184,7 @@ export default function GurugramLocationLayout({ children }: { children: React.R
       <GurugramEventSchema />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -192,7 +192,7 @@ export default function GurugramLocationLayout({ children }: { children: React.R
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'Gurugram', item: 'https://cerebrumbiologyacademy.com/locations/gurugram' },
             ],
-          }})
+          })
         }}
       />
 

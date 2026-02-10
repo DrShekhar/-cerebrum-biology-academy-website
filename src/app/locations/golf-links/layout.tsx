@@ -179,7 +179,7 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
       />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -187,7 +187,7 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'Golf Links', item: 'https://cerebrumbiologyacademy.com/locations/golf-links' },
             ],
-          }})
+          })
         }}
       />
 

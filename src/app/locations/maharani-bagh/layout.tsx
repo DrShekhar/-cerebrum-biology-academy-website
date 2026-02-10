@@ -180,7 +180,7 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
       />      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({{
+          __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'BreadcrumbList',
             itemListElement: [
@@ -188,7 +188,7 @@ export default function MaharaniBaghLayout({ children }: { children: React.React
               { '@type': 'ListItem', position: 2, name: 'Locations', item: 'https://cerebrumbiologyacademy.com/locations' },
               { '@type': 'ListItem', position: 3, name: 'Maharani Bagh', item: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh' },
             ],
-          }})
+          })
         }}
       />
 
