@@ -16,6 +16,7 @@ interface LocalitySchemaProps {
   pageDescription: string
   pageType?: 'tutor' | 'coaching' | 'tuition' | 'classes'
   coordinates?: { lat: string; lng: string }
+  faqs?: Array<{ q: string; a: string } | { question: string; answer: string }>
 }
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -27,8 +28,27 @@ export function LocalitySchema({
   pageDescription,
   pageType = 'coaching',
   coordinates,
+  faqs = [],
 }: LocalitySchemaProps) {
   const pageUrl = `${BASE_URL}/${slug}`
+
+  // FAQPage schema for Google rich results
+  const faqSchema = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => {
+      const question = 'question' in faq ? faq.question : faq.q
+      const answer = 'answer' in faq ? faq.answer : faq.a
+      return {
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: answer,
+        },
+      }
+    }),
+  } : null
 
   // GeoCoordinates schema for local search
   const geoSchema = coordinates ? {
@@ -346,6 +366,13 @@ export function LocalitySchema({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(geoSchema) }}
+        />
+      )}
+
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
 
