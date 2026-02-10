@@ -5,7 +5,8 @@
  * Manages agent configuration, registration, and retrieval.
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 import { productManagerConfig } from '../planning/ProductManagerAgent'
 import { architectureReviewConfig } from '../planning/ArchitectureReviewAgent'
 import { uiUxDeveloperConfig } from '../development/UIUXDeveloperAgent'

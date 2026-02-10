@@ -3,18 +3,19 @@
  * Tier 3: Code Quality, Unit Test, E2E Test, Security Audit
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 
 // Code Quality Agent
 export const codeQualityConfig: AgentConfig = {
   id: 'code-quality-001',
-  type: 'code_quality' as AgentType,
-  tier: 'quality' as AgentTier,
+  type: AgentType.CODE_QUALITY,
+  tier: AgentTier.QUALITY,
   name: 'Code Quality Agent',
   description: 'Ensures code meets quality standards',
   enabled: true,
   priority: 8,
-  dependencies: ['integration' as AgentType],
+  dependencies: [AgentType.INTEGRATION],
   capabilities: [
     'Run ESLint',
     'Run Prettier',
@@ -56,13 +57,13 @@ Return a report of issues found and fixes applied.`,
 // Unit Test Agent
 export const unitTestConfig: AgentConfig = {
   id: 'unit-test-001',
-  type: 'unit_test' as AgentType,
-  tier: 'quality' as AgentTier,
+  type: AgentType.UNIT_TEST,
+  tier: AgentTier.QUALITY,
   name: 'Unit Test Agent',
   description: 'Writes and runs unit tests',
   enabled: true,
   priority: 7,
-  dependencies: ['code_quality' as AgentType],
+  dependencies: [AgentType.CODE_QUALITY],
   capabilities: [
     'Generate Jest tests',
     'Test React components',
@@ -112,13 +113,13 @@ Generate complete test suites that ensure code quality.`,
 // E2E Test Agent
 export const e2eTestConfig: AgentConfig = {
   id: 'e2e-test-001',
-  type: 'e2e_test' as AgentType,
-  tier: 'quality' as AgentTier,
+  type: AgentType.E2E_TEST,
+  tier: AgentTier.QUALITY,
   name: 'E2E Test Agent',
   description: 'Tests complete user journeys',
   enabled: true,
   priority: 6,
-  dependencies: ['unit_test' as AgentType],
+  dependencies: [AgentType.UNIT_TEST],
   capabilities: [
     'Create Playwright tests',
     'Test user flows',
@@ -165,13 +166,13 @@ Generate Playwright tests that ensure features work as users expect.`,
 // Security Audit Agent
 export const securityAuditConfig: AgentConfig = {
   id: 'security-audit-001',
-  type: 'security_audit' as AgentType,
-  tier: 'quality' as AgentTier,
+  type: AgentType.SECURITY_AUDIT,
+  tier: AgentTier.QUALITY,
   name: 'Security Audit Agent',
   description: 'Finds security vulnerabilities',
   enabled: true,
   priority: 9,
-  dependencies: ['code_quality' as AgentType],
+  dependencies: [AgentType.CODE_QUALITY],
   capabilities: [
     'Scan for vulnerabilities',
     'Check authentication',

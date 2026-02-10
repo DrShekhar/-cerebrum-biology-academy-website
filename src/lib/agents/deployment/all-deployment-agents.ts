@@ -3,18 +3,19 @@
  * Tier 4: Build Validation, Git Operations, Deployment, Rollback
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 
 // Build Validation Agent - CRITICAL for preventing deployment failures
 export const buildValidationConfig: AgentConfig = {
   id: 'build-validation-001',
-  type: 'build_validation' as AgentType,
-  tier: 'deployment' as AgentTier,
+  type: AgentType.BUILD_VALIDATION,
+  tier: AgentTier.DEPLOYMENT,
   name: 'Build Validation Agent',
   description: 'Ensures successful builds before deployment',
   enabled: true,
   priority: 10,
-  dependencies: ['e2e_test' as AgentType, 'security_audit' as AgentType],
+  dependencies: [AgentType.E2E_TEST, AgentType.SECURITY_AUDIT],
   capabilities: [
     'Run production build',
     'Validate environment variables',
@@ -76,13 +77,13 @@ This agent PREVENTS 99% of deployment failures by catching issues early.`,
 // Git Operations Agent
 export const gitOperationsConfig: AgentConfig = {
   id: 'git-operations-001',
-  type: 'git_operations' as AgentType,
-  tier: 'deployment' as AgentTier,
+  type: AgentType.GIT_OPERATIONS,
+  tier: AgentTier.DEPLOYMENT,
   name: 'Git Operations Agent',
   description: 'Manages version control automatically',
   enabled: true,
   priority: 8,
-  dependencies: ['build_validation' as AgentType],
+  dependencies: [AgentType.BUILD_VALIDATION],
   capabilities: [
     'Study existing commits',
     'Create conventional commits',
@@ -140,13 +141,13 @@ Generate professional commits that maintain clean git history.`,
 // Deployment Agent
 export const deploymentConfig: AgentConfig = {
   id: 'deployment-001',
-  type: 'deployment' as AgentType,
-  tier: 'deployment' as AgentTier,
+  type: AgentType.DEPLOYMENT,
+  tier: AgentTier.DEPLOYMENT,
   name: 'Deployment Agent',
   description: 'Deploys to production safely',
   enabled: true,
   priority: 9,
-  dependencies: ['git_operations' as AgentType],
+  dependencies: [AgentType.GIT_OPERATIONS],
   capabilities: [
     'Deploy to Vercel',
     'Run pre-deployment checks',
@@ -202,8 +203,8 @@ Deployments should be fast (<2 min) and reliable (99.9% success rate).`,
 // Rollback Agent
 export const rollbackConfig: AgentConfig = {
   id: 'rollback-001',
-  type: 'rollback' as AgentType,
-  tier: 'deployment' as AgentTier,
+  type: AgentType.ROLLBACK,
+  tier: AgentTier.DEPLOYMENT,
   name: 'Rollback Agent',
   description: 'Handles deployment failures',
   enabled: true,

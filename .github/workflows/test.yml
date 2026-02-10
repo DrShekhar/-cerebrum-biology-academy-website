@@ -164,7 +164,7 @@ jobs:
 
       - name: Run TypeScript type check
         run: npm run type-check
-        # Note: 614+ existing TS errors tracked for Phase 2 cleanup
+        # Note: ~565 existing TS errors tracked in .ts-progress.json (Phase 1 in progress)
         # Build ignores TS errors via next.config.mjs ignoreBuildErrors
         continue-on-error: true
 

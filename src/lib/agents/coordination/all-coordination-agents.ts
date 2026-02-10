@@ -3,13 +3,14 @@
  * Tier 6: Learning, Documentation
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 
 // Learning Agent
 export const learningConfig: AgentConfig = {
   id: 'learning-001',
-  type: 'learning' as AgentType,
-  tier: 'coordination' as AgentTier,
+  type: AgentType.LEARNING,
+  tier: AgentTier.COORDINATION,
   name: 'Learning Agent',
   description: 'Learns from past development cycles',
   enabled: true,
@@ -98,8 +99,8 @@ The more features developed, the smarter the system becomes!`,
 // Documentation Agent
 export const documentationConfig: AgentConfig = {
   id: 'documentation-001',
-  type: 'documentation' as AgentType,
-  tier: 'coordination' as AgentTier,
+  type: AgentType.DOCUMENTATION,
+  tier: AgentTier.COORDINATION,
   name: 'Documentation Agent',
   description: 'Keeps documentation up to date',
   enabled: true,

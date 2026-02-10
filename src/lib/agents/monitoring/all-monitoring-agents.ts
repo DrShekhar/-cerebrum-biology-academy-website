@@ -3,13 +3,14 @@
  * Tier 5: Performance Monitor, Error Tracking, Analytics
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 
 // Performance Monitor Agent
 export const performanceMonitorConfig: AgentConfig = {
   id: 'performance-monitor-001',
-  type: 'performance_monitor' as AgentType,
-  tier: 'monitoring' as AgentTier,
+  type: AgentType.PERFORMANCE_MONITOR,
+  tier: AgentTier.MONITORING,
   name: 'Performance Monitor Agent',
   description: 'Tracks application performance',
   enabled: true,
@@ -68,8 +69,8 @@ Generate actionable performance reports with specific fix recommendations.`,
 // Error Tracking Agent
 export const errorTrackingConfig: AgentConfig = {
   id: 'error-tracking-001',
-  type: 'error_tracking' as AgentType,
-  tier: 'monitoring' as AgentTier,
+  type: AgentType.ERROR_TRACKING,
+  tier: AgentTier.MONITORING,
   name: 'Error Tracking Agent',
   description: 'Catches and reports runtime errors',
   enabled: true,
@@ -136,8 +137,8 @@ Proactive error tracking prevents user frustration and maintains app quality.`,
 // Analytics Agent
 export const analyticsConfig: AgentConfig = {
   id: 'analytics-001',
-  type: 'analytics' as AgentType,
-  tier: 'monitoring' as AgentTier,
+  type: AgentType.ANALYTICS,
+  tier: AgentTier.MONITORING,
   name: 'Analytics Agent',
   description: 'Tracks user behavior and business metrics',
   enabled: true,

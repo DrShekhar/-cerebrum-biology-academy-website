@@ -5,12 +5,13 @@
  * This is the first agent in the workflow - it interprets what the user wants.
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 
 export const productManagerConfig: AgentConfig = {
   id: 'product-manager-001',
-  type: 'product_manager' as AgentType,
-  tier: 'planning' as AgentTier,
+  type: AgentType.PRODUCT_MANAGER,
+  tier: AgentTier.PLANNING,
   name: 'Product Manager Agent',
   description: 'Translates user requests into technical requirements',
   enabled: true,

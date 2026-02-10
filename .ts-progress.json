@@ -7,12 +7,19 @@
       "message": "established",
       "reduction": 0,
       "percentComplete": "0.0"
+    },
+    {
+      "timestamp": "2026-02-10T00:00:00.000Z",
+      "errorCount": 565,
+      "message": "Fixed TS1361 import-type errors in MCP config (agents.ts, education.ts already fixed upstream), fixed TS2367 case-mismatch errors in admin LMS routes (already fixed upstream), replaced unsafe string-cast enum patterns with proper enum values in 8 agent config files",
+      "reduction": 59,
+      "percentComplete": "9.5"
     }
   ],
   "phases": {
     "phase1": {
       "target": 500,
-      "started": null,
+      "started": "2026-02-10T00:00:00.000Z",
       "completed": null
     },
     "phase2": {
@@ -25,5 +32,9 @@
       "started": null,
       "completed": null
     }
+  },
+  "notes": {
+    "staleReportCleanup": "easy-fixes-report.json was found to be stale on 2026-02-10. Many errors (TS2367 in admin LMS routes, TS1361 in MCP config files) had already been fixed in prior commits but the report was never updated.",
+    "agentConfigFixes": "8 files in src/lib/agents/ were using 'import type' for enums and string-cast patterns ('value' as EnumType). Fixed to use proper enum value imports (import { AgentType, AgentTier } from '../types') with enum member references (AgentType.UI_UX_DEVELOPER)."
   }
 }

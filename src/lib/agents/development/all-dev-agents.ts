@@ -3,18 +3,19 @@
  * Tier 2: UI/UX, Backend, Database Migration, Integration
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 
 // UI/UX Developer Agent
 export const uiUxDeveloperConfig: AgentConfig = {
   id: 'ui-ux-developer-001',
-  type: 'ui_ux_developer' as AgentType,
-  tier: 'development' as AgentTier,
+  type: AgentType.UI_UX_DEVELOPER,
+  tier: AgentTier.DEVELOPMENT,
   name: 'UI/UX Developer Agent',
   description: 'Creates beautiful, accessible React components',
   enabled: true,
   priority: 7,
-  dependencies: ['architecture_review' as AgentType],
+  dependencies: [AgentType.ARCHITECTURE_REVIEW],
   capabilities: [
     'Create React components',
     'Implement responsive designs',
@@ -58,13 +59,13 @@ Generate complete, working components that can be directly added to the codebase
 // Backend Developer Agent
 export const backendDeveloperConfig: AgentConfig = {
   id: 'backend-developer-001',
-  type: 'backend_developer' as AgentType,
-  tier: 'development' as AgentTier,
+  type: AgentType.BACKEND_DEVELOPER,
+  tier: AgentTier.DEVELOPMENT,
   name: 'Backend Developer Agent',
   description: 'Creates secure, scalable API endpoints',
   enabled: true,
   priority: 8,
-  dependencies: ['database_migration' as AgentType],
+  dependencies: [AgentType.DATABASE_MIGRATION],
   capabilities: [
     'Create Next.js API routes',
     'Implement business logic',
@@ -114,13 +115,13 @@ Generate complete, production-ready API endpoints.`,
 // Database Migration Agent
 export const databaseMigrationConfig: AgentConfig = {
   id: 'database-migration-001',
-  type: 'database_migration' as AgentType,
-  tier: 'development' as AgentTier,
+  type: AgentType.DATABASE_MIGRATION,
+  tier: AgentTier.DEVELOPMENT,
   name: 'Database Migration Agent',
   description: 'Manages database schema changes safely',
   enabled: true,
   priority: 9,
-  dependencies: ['architecture_review' as AgentType],
+  dependencies: [AgentType.ARCHITECTURE_REVIEW],
   capabilities: [
     'Create Prisma schema',
     'Generate migrations',
@@ -167,13 +168,13 @@ Generate Prisma schema additions that are safe and performant.`,
 // Integration Agent
 export const integrationConfig: AgentConfig = {
   id: 'integration-001',
-  type: 'integration' as AgentType,
-  tier: 'development' as AgentTier,
+  type: AgentType.INTEGRATION,
+  tier: AgentTier.DEVELOPMENT,
   name: 'Integration Agent',
   description: 'Connects frontend and backend seamlessly',
   enabled: true,
   priority: 6,
-  dependencies: ['ui_ux_developer' as AgentType, 'backend_developer' as AgentType],
+  dependencies: [AgentType.UI_UX_DEVELOPER, AgentType.BACKEND_DEVELOPER],
   capabilities: [
     'Create API client functions',
     'Implement React Query hooks',

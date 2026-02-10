@@ -5,17 +5,18 @@
  * are scalable, secure, and align with the existing codebase architecture.
  */
 
-import type { AgentConfig, AgentType, AgentTier } from '../types'
+import { AgentType, AgentTier } from '../types'
+import type { AgentConfig } from '../types'
 
 export const architectureReviewConfig: AgentConfig = {
   id: 'architecture-review-001',
-  type: 'architecture_review' as AgentType,
-  tier: 'planning' as AgentTier,
+  type: AgentType.ARCHITECTURE_REVIEW,
+  tier: AgentTier.PLANNING,
   name: 'Architecture Review Agent',
   description: 'Reviews and validates technical architecture decisions',
   enabled: true,
   priority: 9,
-  dependencies: ['product_manager' as AgentType],
+  dependencies: [AgentType.PRODUCT_MANAGER],
   capabilities: [
     'Validate technical decisions',
     'Ensure scalability',
