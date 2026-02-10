@@ -405,7 +405,6 @@ export async function POST(request: NextRequest) {
     const examPattern = config.examPattern || 'neet'
     const includeWeakAreas = config.includeWeakAreas !== false
 
-    console.log(`🧪 Generating ${testType} test for student ${studentId}`)
 
     // Fetch student data
     const [weakAreas, recentPerformance] = await Promise.all([
@@ -413,7 +412,6 @@ export async function POST(request: NextRequest) {
       getStudentPerformance(studentId),
     ])
 
-    console.log(`📊 Weak areas: ${weakAreas.length}, Recent tests: ${recentPerformance.length}`)
 
     // Calculate question distribution
     const distribution = calculateQuestionDistribution(totalQuestions, weakAreas, testType)
@@ -424,7 +422,6 @@ export async function POST(request: NextRequest) {
         ? config.topics
         : getBalancedTopics(config.topics, weakAreas)
 
-    console.log(`📚 Topics selected: ${topicList.length}`)
 
     // Fetch questions based on distribution
     const selectedQuestions: any[] = []
@@ -536,7 +533,6 @@ export async function POST(request: NextRequest) {
       createdAt: new Date().toISOString(),
     }
 
-    console.log(`✅ Test generated successfully: ${response.testId}`)
 
     return NextResponse.json(response)
   } catch (error) {

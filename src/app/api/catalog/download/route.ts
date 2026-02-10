@@ -137,9 +137,6 @@ export async function POST(request: NextRequest) {
     }
 
     // Log successful conversion
-    console.log(
-      `[CATALOG-DOWNLOAD] ${body.email} - ${body.source || 'direct'} - Lead ID: ${leadId}`
-    )
 
     // Send WhatsApp welcome + notify admin + schedule nurturing (non-blocking)
     processContentLead({

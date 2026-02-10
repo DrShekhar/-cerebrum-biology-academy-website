@@ -39,18 +39,18 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
   'neet-biology-crash-course': {
     slug: 'neet-biology-crash-course',
     classLevel: 'universal',
-    title: 'NEET Biology Crash Course 2025 | Last Minute Preparation Online',
+    title: 'NEET Biology Crash Course 2026 | Last Minute Preparation Online',
     metaDescription:
       'Intensive NEET Biology crash course for last-minute preparation. Complete syllabus revision in 45-60 days with expert faculty. Limited batch size for personal attention.',
     keywords: [
       'neet biology crash course',
-      'neet crash course 2025',
+      'neet crash course 2026',
       'neet biology last minute preparation',
       'neet revision course',
       'neet biology quick revision',
     ],
     hero: {
-      headline: 'NEET Biology Crash Course 2025',
+      headline: 'NEET Biology Crash Course 2026',
       subheadline:
         'Complete your NEET Biology syllabus revision in 45-60 days. Intensive crash course designed for last-minute preparation with expert AIIMS faculty.',
       highlightedText: '45-60 Days',
@@ -148,7 +148,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
       },
     ],
     courseSummary: {
-      title: 'NEET Biology Crash Course 2025',
+      title: 'NEET Biology Crash Course 2026',
       duration: '45-60 days',
       batchSize: '10-15 students',
       features: [
@@ -180,13 +180,13 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
     toolsCTA: crashCourseToolsCTA,
     contactButtons: defaultContactButtons,
     relatedPages: [
-      { title: 'NEET 2025 Preparation', link: '/neet-preparation-guide' },
+      { title: 'NEET 2026 Preparation', link: '/neet-preparation-guide' },
       { title: 'NEET Dropper Course', link: '/neet-dropper-batch-online' },
       { title: 'NEET Biology Notes', link: '/neet-biology-notes-pdf' },
     ],
     schema: {
       '@type': 'Course',
-      courseName: 'NEET Biology Crash Course 2025',
+      courseName: 'NEET Biology Crash Course 2026',
       provider: 'Cerebrum Biology Academy',
       description: 'Intensive NEET Biology crash course for last-minute preparation',
       duration: '45-60 days',

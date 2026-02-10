@@ -14,7 +14,6 @@ export async function GET(request: NextRequest) {
     const region = searchParams.get('region')
     const students = searchParams.get('students')
 
-    console.log(`📋 Subscription Tiers API: ${action}`)
 
     switch (action) {
       case 'get_all_tiers':
@@ -63,7 +62,6 @@ export async function POST(request: NextRequest) {
   try {
     const { action, data } = await request.json()
 
-    console.log(`📋 Subscription Tiers API POST: ${action}`)
 
     switch (action) {
       case 'get_upgrade_recommendations':

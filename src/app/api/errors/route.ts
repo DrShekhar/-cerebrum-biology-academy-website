@@ -120,12 +120,6 @@ async function storeErrorReport(errorReport: any, clientIP: string) {
       })
     }
 
-    console.log('Error report stored:', {
-      fingerprint,
-      severity: errorReport.severity,
-      clientIP,
-      isNew: !existingError,
-    })
   } catch (error) {
     console.error('Failed to store error report:', error)
   }

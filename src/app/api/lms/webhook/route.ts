@@ -43,10 +43,6 @@ export async function POST(request: NextRequest) {
 
     const payload = JSON.parse(body)
 
-    console.log('Cloudflare Stream webhook received:', {
-      videoId: payload.uid,
-      status: payload.status?.state,
-    })
 
     // Process the webhook
     await cloudflareStreamService.processWebhook(payload)

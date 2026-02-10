@@ -59,14 +59,6 @@ export async function POST(request: NextRequest) {
     const { uid, phoneNumber, firstName, lastName, role, action } = body
 
     // Log request details
-    console.log(`[Firebase Session][${requestId}] Request received:`, {
-      action,
-      hasUid: !!uid,
-      phoneLastDigits: phoneNumber ? phoneNumber.slice(-4) : 'none',
-      hasFirstName: !!firstName,
-      role,
-      timestamp: new Date().toISOString(),
-    })
 
     if (!uid || !phoneNumber) {
       console.error(`[Firebase Session][${requestId}] Missing required fields`)
@@ -188,11 +180,6 @@ export async function POST(request: NextRequest) {
 
       // Reset rate limit on successful signup
       AuthRateLimit.resetRateLimit(rateLimitKey)
-
-      if (process.env.NODE_ENV !== 'production') {
-        console.log(`[Firebase Session] New user created: ${newUser.id}`)
-      }
-
       return addSecurityHeaders(
         NextResponse.json({
           success: true,
@@ -207,9 +194,6 @@ export async function POST(request: NextRequest) {
 
     // Action: Create session (login)
     if (action === 'login') {
-      console.log(
-        `[Firebase Session][${requestId}] Processing login for phone: ***${normalizedPhone.slice(-4)}`
-      )
 
       // Find user by phone or Firebase UID
       let user = await prisma.users.findFirst({
@@ -218,11 +202,6 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      console.log(`[Firebase Session][${requestId}] User lookup result:`, {
-        found: !!user,
-        userId: user?.id,
-        userRole: user?.role,
-      })
 
       if (!user) {
         console.warn(
@@ -334,14 +313,6 @@ export async function POST(request: NextRequest) {
       const elapsed = Date.now() - startTime
 
       // Log login success (minimal info for production)
-      if (process.env.NODE_ENV !== 'production') {
-        console.log(`[Firebase Session][${requestId}] Login successful:`, {
-          userId: user.id,
-          role: user.role,
-          elapsed: `${elapsed}ms`,
-        })
-      }
-
       return addSecurityHeaders(response)
     }
 

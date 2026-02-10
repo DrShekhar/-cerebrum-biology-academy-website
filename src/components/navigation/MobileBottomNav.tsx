@@ -103,8 +103,8 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     {
       icon: BookOpen,
       label: 'Tests',
-      href: '/ai-education-demo',
-      ariaLabel: 'Navigate to tests page',
+      href: '/mock-tests',
+      ariaLabel: 'Navigate to mock tests page',
     },
     {
       icon: BarChart3,
@@ -116,8 +116,9 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     {
       icon: MessageCircle,
       label: 'Chat',
-      href: '/ai-education-demo#chat',
-      ariaLabel: 'Open AI chat',
+      href: '/student/ai-tutor',
+      requiresAuth: true,
+      ariaLabel: 'Open AI tutor chat',
     },
     {
       icon: User,

@@ -105,17 +105,10 @@ async function handlePOST(req: NextRequest, session: any) {
       customInstructions: customInstructions,
     }
 
-    console.log('🤖 Generating AI message:', {
-      leadId,
-      studentName: lead.studentName,
-      intent: messageIntent,
-      tone: options.tone,
-    })
 
     // Generate message using AI service
     const result = await generateWhatsAppMessage(leadContext, options)
 
-    console.log('✅ AI message generated successfully')
 
     return NextResponse.json({
       success: true,

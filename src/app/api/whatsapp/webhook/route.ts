@@ -92,17 +92,11 @@ export async function GET(request: NextRequest) {
     const token = searchParams.get('hub.verify_token')
     const challenge = searchParams.get('hub.challenge')
 
-    console.log('🔗 WhatsApp webhook verification:', {
-      mode,
-      token: token?.substring(0, 10) + '...',
-    })
 
     if (mode && token) {
       if (mode === 'subscribe' && token === VERIFY_TOKEN) {
-        console.log('✅ WhatsApp webhook verified successfully')
         return new NextResponse(challenge, { status: 200 })
       } else {
-        console.log('❌ Webhook verification failed - invalid token')
         return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
       }
     }
@@ -121,17 +115,11 @@ export async function POST(request: NextRequest) {
 
     // Verify webhook signature for security
     if (!verifyWebhookSignature(body, request.headers.get('x-hub-signature-256'))) {
-      console.log('❌ Invalid webhook signature')
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const payload: WhatsAppWebhookPayload = JSON.parse(body)
 
-    console.log('📱 WhatsApp webhook received:', {
-      object: payload.object,
-      entries: payload.entry?.length || 0,
-      timestamp: new Date().toISOString(),
-    })
 
     // Process webhook payload for biology education
     if (payload.object === 'whatsapp_business_account') {
@@ -156,7 +144,6 @@ export async function POST(request: NextRequest) {
 
 function verifyWebhookSignature(payload: string, signature: string | null): boolean {
   if (!signature || !WEBHOOK_SECRET) {
-    console.log('⚠️  Missing signature or webhook secret')
     return false
   }
 
@@ -251,11 +238,6 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
           const startTime = Date.now()
 
           try {
-            console.log(`📩 Processing enhanced biology question from ${message.from}:`, {
-              type: message.type,
-              id: message.id,
-              timestamp: message.timestamp,
-            })
 
             // Rate limiting check
             if (!checkRateLimit(message.from)) {
@@ -311,11 +293,6 @@ async function processWhatsAppEducationWebhook(payload: WhatsAppWebhookPayload) 
       // Process message status updates for analytics
       if (value.statuses && value.statuses.length > 0) {
         for (const status of value.statuses) {
-          console.log(`📊 Message delivery status:`, {
-            messageId: status.id,
-            status: status.status,
-            recipientId: status.recipient_id,
-          })
 
           await messageProcessor.trackMessageStatus({
             messageId: status.id,

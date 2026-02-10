@@ -62,12 +62,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('Razorpay order created:', {
-      orderId: order.id,
-      bookingId,
-      amount,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,

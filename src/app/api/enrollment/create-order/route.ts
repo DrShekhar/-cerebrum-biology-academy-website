@@ -217,13 +217,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('Enrollment order created:', {
-      orderId: order.id,
-      enrollmentId: enrollment.id,
-      userId: user.id,
-      amount: installmentAmount,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,

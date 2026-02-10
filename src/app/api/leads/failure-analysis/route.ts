@@ -66,7 +66,6 @@ export async function POST(request: NextRequest) {
     // 3. Trigger email notifications
     // 4. Send WhatsApp messages
 
-    console.log('New failure analysis lead:', leadData)
 
     // Simulate database save
     // await prisma.lead.create({ data: leadData })
@@ -105,7 +104,6 @@ async function sendWhatsAppAnalysis(data: FailureAnalysisLead) {
   }
 
   // In real implementation, integrate with WhatsApp Business API
-  console.log('WhatsApp analysis to be sent:', analysis)
 
   return true
 }
@@ -132,7 +130,6 @@ async function sendEmailConfirmation(data: FailureAnalysisLead) {
     `,
   }
 
-  console.log('Email confirmation to be sent:', emailContent)
   return true
 }
 
@@ -153,7 +150,7 @@ export async function OPTIONS(request: NextRequest) {
   const origin = request.headers.get('origin') || ''
   const allowedOrigins = [
     'https://cerebrumbiologyacademy.com',
-    'https://cerebrumbiologyacademy.com',
+    'https://www.cerebrumbiologyacademy.com',
     ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
   ]
   const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]

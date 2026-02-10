@@ -95,7 +95,6 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get('signature') || request.headers.get('x-signature')
     const provider = determineProvider(request)
 
-    console.log(`💳 Webhook received from ${provider}`)
 
     // Verify webhook signature
     const isValid = await verifyWebhookSignature(body, signature, provider)
@@ -109,7 +108,6 @@ export async function POST(request: NextRequest) {
     // Process webhook event
     const result = await processWebhookEvent(event)
 
-    console.log(`✅ Webhook processed: ${event.type}`)
 
     return NextResponse.json({
       success: true,
@@ -370,7 +368,6 @@ async function processWebhookEvent(event: WebhookEvent): Promise<ProcessedEventR
       return await handleDispute(event)
 
     default:
-      console.log(`Unhandled webhook event: ${event.type}`)
       return { status: 'ignored' }
   }
 }
@@ -381,7 +378,6 @@ async function processWebhookEvent(event: WebhookEvent): Promise<ProcessedEventR
 async function handlePaymentSuccess(event: WebhookEvent): Promise<ProcessedEventResult> {
   const paymentData = event.data
 
-  console.log(`✅ Payment successful: ${paymentData.id}`)
 
   // Update payment status in database
   await updatePaymentStatus(paymentData.id, 'captured')
@@ -413,7 +409,6 @@ async function handlePaymentSuccess(event: WebhookEvent): Promise<ProcessedEvent
 async function handlePaymentFailure(event: WebhookEvent): Promise<ProcessedEventResult> {
   const paymentData = event.data
 
-  console.log(`❌ Payment failed: ${paymentData.id}`)
 
   // Update payment status
   await updatePaymentStatus(paymentData.id, 'failed')
@@ -442,7 +437,6 @@ async function handlePaymentFailure(event: WebhookEvent): Promise<ProcessedEvent
 async function handleSubscriptionPayment(event: WebhookEvent): Promise<ProcessedEventResult> {
   const subscriptionData = event.data
 
-  console.log(`🔄 Subscription payment: ${subscriptionData.id}`)
 
   // Update subscription billing
   await updateSubscriptionBilling(subscriptionData)
@@ -469,7 +463,6 @@ async function handleSubscriptionPayment(event: WebhookEvent): Promise<Processed
 async function handleSubscriptionCancellation(event: WebhookEvent): Promise<ProcessedEventResult> {
   const subscriptionData = event.data
 
-  console.log(`❌ Subscription cancelled: ${subscriptionData.id}`)
 
   // Update subscription status
   await updateSubscriptionStatus(subscriptionData.id, 'cancelled')
@@ -499,7 +492,6 @@ async function handleSubscriptionCancellation(event: WebhookEvent): Promise<Proc
 async function handlePaymentRefundOrDispute(event: WebhookEvent): Promise<ProcessedEventResult> {
   const paymentData = event.data
 
-  console.log(`💰 Payment refund/dispute: ${paymentData.id}`)
 
   // Update payment status
   await updatePaymentStatus(paymentData.id, 'refunded')
@@ -526,7 +518,6 @@ async function handlePaymentRefundOrDispute(event: WebhookEvent): Promise<Proces
 async function handleDispute(event: WebhookEvent): Promise<ProcessedEventResult> {
   const disputeData = event.data
 
-  console.log(`⚠️ Dispute created: ${disputeData.id}`)
 
   // Create dispute record
   await createDisputeRecord(disputeData)

@@ -117,7 +117,6 @@ export async function GET(request: NextRequest) {
     // Reset rate limit on success
     AuthRateLimit.resetRateLimit(`verify-email-check:${clientIP}`)
 
-    console.log(`✅ Email verified for user ${verificationToken.userId}`)
 
     // Return success - the frontend will show a success message
     return addSecurityHeaders(
@@ -250,7 +249,6 @@ export async function POST(request: NextRequest) {
     // Reset rate limit on success
     AuthRateLimit.resetRateLimit(`verify-email-check:${clientIP}`)
 
-    console.log(`✅ Email verified for user ${verificationToken.userId}`)
 
     return addSecurityHeaders(
       NextResponse.json({

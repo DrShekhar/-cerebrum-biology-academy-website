@@ -76,7 +76,6 @@ export async function POST(request: NextRequest) {
     const payload: FirebaseWebhookPayload = JSON.parse(rawBody)
     const { event, uid, phoneNumber } = payload
 
-    console.log(`[Firebase Webhook] Received event: ${event} for uid: ${uid}`)
 
     switch (event) {
       case 'user.deleted': {
@@ -111,9 +110,6 @@ export async function POST(request: NextRequest) {
             },
           })
 
-          console.log(`[Firebase Webhook] Unlinked Firebase UID for user: ${user.id}`)
-        } else {
-          console.log(`[Firebase Webhook] No user found with Firebase UID: ${uid}`)
         }
 
         return addSecurityHeaders(
@@ -127,7 +123,6 @@ export async function POST(request: NextRequest) {
       case 'user.created': {
         // Optional: Handle new user creation from Firebase Console
         // This is useful if admins create users directly in Firebase
-        console.log(`[Firebase Webhook] User created in Firebase: ${uid}, phone: ${phoneNumber}`)
 
         return addSecurityHeaders(
           NextResponse.json({
@@ -154,7 +149,6 @@ export async function POST(request: NextRequest) {
               data: { phone: normalizedPhone },
             })
 
-            console.log(`[Firebase Webhook] Updated phone for user: ${user.id}`)
           }
         }
 
@@ -167,7 +161,6 @@ export async function POST(request: NextRequest) {
       }
 
       default:
-        console.log(`[Firebase Webhook] Unknown event type: ${event}`)
         return addSecurityHeaders(
           NextResponse.json({
             success: true,

@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
     course: 'NEET 2024 - Class 11th Foundation',
     rating: 5,
     comment:
-      "Starting early with Cerebrum was the best decision! The 2-year foundation program built my concepts from scratch. I went from struggling with basic biology to topping my school exams. Now I'm confident about NEET 2025!",
+      "Starting early with Cerebrum was the best decision! The 2-year foundation program built my concepts from scratch. I went from struggling with basic biology to topping my school exams. Now I'm confident about NEET 2026!",
     image: '/testimonials/rahul-kumar.jpg',
     result: 'School Topper | 95% in Biology Boards',
     location: 'Pune, India',

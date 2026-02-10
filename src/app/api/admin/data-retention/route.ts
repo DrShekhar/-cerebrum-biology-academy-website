@@ -29,17 +29,11 @@ async function handlePost(request: NextRequest, session: UserSession) {
       )
     }
 
-    console.log(`[DataRetention] Triggered by ${isAuthorizedCron ? 'cron' : `admin ${session.userId}`}`)
 
     const retentionService = new DataRetentionService(config, dryRun)
     const result = await retentionService.runRetention()
 
     // Log for audit trail
-    console.log('[DataRetention] Cleanup result:', {
-      triggeredBy: isAuthorizedCron ? 'cron' : session.userId,
-      dryRun,
-      result,
-    })
 
     return NextResponse.json({
       success: result.success,

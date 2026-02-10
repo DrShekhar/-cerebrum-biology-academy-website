@@ -113,7 +113,6 @@ export async function POST(request: NextRequest) {
       where: { id: otpRecord.id },
     })
 
-    console.log('Counselor WhatsApp authentication successful:', formattedPhone)
 
     return NextResponse.json({
       success: true,

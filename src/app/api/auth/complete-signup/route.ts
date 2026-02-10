@@ -53,7 +53,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('✅ User signup completed:', userId)
 
     return addSecurityHeaders(
       NextResponse.json({

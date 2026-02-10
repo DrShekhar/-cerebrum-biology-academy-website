@@ -327,12 +327,6 @@ export async function POST(request: NextRequest) {
     const finalQuestions = selectedQuestions.slice(0, config.totalQuestions)
 
     // Log analytics
-    console.log(`✅ Generated test: ${config.title}`)
-    console.log(`   Class: ${config.class}`)
-    console.log(`   Topics: ${config.topics?.join(', ') || 'All'}`)
-    console.log(`   Total Questions: ${finalQuestions.length}`)
-    console.log(`   Difficulty: ${config.difficulty}`)
-    console.log(`   Duration: ${config.duration} minutes`)
 
     // Return response
     return NextResponse.json({

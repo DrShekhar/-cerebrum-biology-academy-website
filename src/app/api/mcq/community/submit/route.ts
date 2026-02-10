@@ -246,7 +246,6 @@ async function triggerAIScreening(
       },
     })
 
-    console.log(`AI Screening complete for question ${questionId}: ${newStatus}`)
   } catch (error) {
     console.error(`AI Screening failed for question ${questionId}:`, error)
     await prisma.community_questions.update({

@@ -105,10 +105,6 @@ Always:
 
         if (isRetryable && attempt < maxRetries) {
           const delayMs = 1000 * Math.pow(2, attempt - 1)
-          console.log(
-            `[AI Tutor] Retry attempt ${attempt}/${maxRetries} after ${delayMs}ms, error:`,
-            error.message || error
-          )
           await new Promise((resolve) => setTimeout(resolve, delayMs))
           return createMessageWithRetry(attempt + 1, maxRetries)
         }

@@ -63,10 +63,6 @@ export async function GET(request: NextRequest) {
     const allCookies = cookieStore.getAll()
 
     // Debug logging only in development
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(`[Session API][${requestId}] Checking session, cookies: ${allCookies.length}`)
-    }
-
     // Check for session token - check all cookie variants for consistency
     // Priority: Secure prefixed (production) > standard (development) > legacy NextAuth > custom JWT
     const secureToken = cookieStore.get('__Secure-authjs.session-token')?.value
@@ -89,11 +85,6 @@ export async function GET(request: NextRequest) {
             : customJwtToken
               ? 'custom-jwt'
               : 'none'
-
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(`[Session API][${requestId}] Token type: ${tokenType}`)
-    }
-
     if (!sessionToken) {
       return NextResponse.json({
         authenticated: false,
@@ -119,10 +110,6 @@ export async function GET(request: NextRequest) {
     }
 
     const elapsed = Date.now() - startTime
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(`[Session API][${requestId}] Verified: ${decoded.id} (${elapsed}ms)`)
-    }
-
     // Calculate trial days remaining if trial is active
     const trialDaysRemaining = decoded.trialEndDate
       ? Math.max(

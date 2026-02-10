@@ -59,13 +59,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('Payment verified and booking updated:', {
-      bookingId: booking.id,
-      orderId: razorpay_order_id,
-      paymentId: razorpay_payment_id,
-      amount: booking.paymentAmount,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,

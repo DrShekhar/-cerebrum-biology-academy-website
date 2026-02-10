@@ -297,7 +297,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    console.log(`📝 Processing test submission: ${testId} for student ${studentId}`)
 
     // Calculate score
     const { score, totalMarks, results, topicWise } = await calculateScore(testId, answers)
@@ -349,9 +348,6 @@ export async function POST(request: NextRequest) {
       aiAnalysis,
     }
 
-    console.log(
-      `✅ Test submitted successfully: ${score}/${totalMarks} (${percentage.toFixed(1)}%)`
-    )
 
     return NextResponse.json(testResults)
   } catch (error) {

@@ -47,7 +47,6 @@ export async function POST(request: NextRequest): Promise<NextResponse<ProcessMe
       )
     }
 
-    console.log(`🔄 Processing manual WhatsApp message from ${body.phoneNumber}`)
 
     const messageProcessor = new WhatsAppMessageProcessor()
 

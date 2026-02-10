@@ -19,7 +19,6 @@ async function handlePOST(request: NextRequest, session: UserSession) {
       channels: body.channels || ['email', 'whatsapp', 'sms'],
     }
 
-    console.log('🚀 Running payment reminder automation with config:', config)
 
     const result = await paymentReminderService.runAutomation(config)
 

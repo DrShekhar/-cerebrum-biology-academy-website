@@ -183,12 +183,6 @@ export async function PUT(request: NextRequest) {
       }),
     ])
 
-    console.log('Referral code redeemed:', {
-      code: referralCode.code,
-      redeemedBy,
-      discount: referralCode.discount,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,

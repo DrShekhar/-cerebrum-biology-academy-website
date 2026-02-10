@@ -206,8 +206,8 @@ const nextConfig = {
   // Production optimizations
   compress: true,
   poweredByHeader: false,
-  // Enable standalone output for production (smaller deployments)
-  output: process.env.NODE_ENV === 'production' ? 'standalone' : undefined,
+  // Note: output: 'standalone' removed — not needed for Vercel deployment
+  // Vercel handles build output optimization automatically
 
   // CRITICAL FIX: Disable source maps in production to reduce build size
   // Build was 4.6GB, should be <200MB
@@ -217,7 +217,6 @@ const nextConfig = {
   // pino and thread-stream use worker threads that can't be bundled by Next.js
   serverExternalPackages: [
     '@modelcontextprotocol/sdk',
-    'bullmq',
     'ioredis',
     '@prisma/client',
     'prisma',
@@ -1587,7 +1586,7 @@ const nextConfig = {
       {
         key: 'Content-Security-Policy',
         value:
-          "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.sentry.io https://browser.sentry-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.instantdb.com https://*.razorpay.com https://*.sentry.io;",
+          "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.sentry.io https://browser.sentry-cdn.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.instantdb.com https://*.razorpay.com https://*.sentry.io https://connect.facebook.net; frame-ancestors 'self'; worker-src 'self' blob:; frame-src 'self' https://www.youtube.com https://player.vimeo.com https://checkout.razorpay.com;",
       },
     ]
 
@@ -1638,7 +1637,7 @@ const nextConfig = {
         source: '/api/:path*',
         headers: [
           { key: 'Cache-Control', value: 'no-store, must-revalidate' },
-          { key: 'Access-Control-Allow-Origin', value: 'https://www.cerebrumbiologyacademy.com' },
+          { key: 'Access-Control-Allow-Origin', value: 'https://cerebrumbiologyacademy.com' },
           { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, OPTIONS' },
           { key: 'Access-Control-Allow-Headers', value: 'Content-Type, Authorization' },
           { key: 'Access-Control-Allow-Credentials', value: 'true' },

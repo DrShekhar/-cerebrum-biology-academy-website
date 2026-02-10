@@ -39,9 +39,6 @@ export async function POST(request: NextRequest) {
     const validated = generateRequestSchema.parse(body)
 
     // Generate questions using Shekhar Sir
-    console.log(
-      `[Shekhar Sir] Generating ${validated.count} questions for Class ${validated.ncertClass} Chapter ${validated.ncertChapter}`
-    )
 
     const generationResult = await shekharSir.generateQuestions({
       ncertClass: validated.ncertClass,
@@ -57,7 +54,6 @@ export async function POST(request: NextRequest) {
 
     // Optionally verify questions using Archana Ma'am
     if (validated.includeVerification && generationResult.questions.length > 0) {
-      console.log(`[Archana Ma'am] Verifying ${generationResult.questions.length} questions`)
 
       verificationResult = await archanaMaam.verifyBatch(generationResult.questions)
     }

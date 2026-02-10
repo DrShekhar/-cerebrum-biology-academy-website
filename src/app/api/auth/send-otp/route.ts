@@ -122,9 +122,6 @@ async function sendSMSOTP(mobile: string, otp: string): Promise<boolean> {
     )
 
     if (response.data.type === 'success') {
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`📱 SMS OTP sent to ${mobile.slice(0, 3)}****${mobile.slice(-2)}`)
-      }
       return true
     }
 
@@ -196,9 +193,6 @@ async function sendWhatsAppOTP(whatsapp: string, otp: string, name?: string): Pr
     )
 
     if (response.data.type === 'success' || response.status === 200) {
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`💬 WhatsApp OTP sent to ${whatsapp.slice(0, 3)}****${whatsapp.slice(-2)}`)
-      }
       return true
     }
 

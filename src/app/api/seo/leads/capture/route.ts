@@ -130,7 +130,6 @@ export async function POST(request: NextRequest) {
           leadMagnetId: validatedData.leadMagnetId,
         })
 
-        console.log('✅ WhatsApp drip sequence started for lead:', lead.id)
       } catch (dripError) {
         console.error('Failed to start drip sequence (non-blocking):', dripError)
       }

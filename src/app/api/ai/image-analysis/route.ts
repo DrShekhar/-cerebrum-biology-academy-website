@@ -74,10 +74,6 @@ Be accurate, educational, and exam-focused.`,
         maxRetries: 3,
         initialDelayMs: 1000,
         onRetry: (attempt, error) => {
-          console.log(
-            `[Image Analysis] Retry attempt ${attempt}/3 after error:`,
-            error.message || error
-          )
         },
       },
     })

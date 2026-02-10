@@ -63,11 +63,6 @@ async function storeFeedback(feedback: z.infer<typeof feedbackSchema>, clientIP:
       },
     })
 
-    console.log('User feedback stored:', {
-      errorId: feedback.errorId,
-      hasEmail: !!feedback.feedback.email,
-      clientIP,
-    })
   } catch (error) {
     console.error('Failed to store feedback:', error)
     throw error
@@ -164,11 +159,6 @@ Action Required: Please investigate this error and respond to the user at ${feed
     })
 
     if (emailResult.success) {
-      console.log('Team notified of user feedback via email:', {
-        errorId: feedback.errorId,
-        provider: emailResult.provider,
-        messageId: emailResult.messageId,
-      })
     } else {
       console.error('Failed to send team notification email:', emailResult.error)
     }

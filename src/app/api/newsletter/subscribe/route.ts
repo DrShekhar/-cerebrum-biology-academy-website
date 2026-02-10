@@ -98,8 +98,6 @@ export async function POST(request: NextRequest) {
         },
       })
 
-      console.log('New newsletter subscriber:', normalizedEmail)
-
       return NextResponse.json({
         success: true,
         message: 'Thank you for subscribing! You will receive NEET updates and biology tips.',
@@ -113,17 +111,18 @@ export async function POST(request: NextRequest) {
         })
       }
 
-      console.log('Database not available, storing subscription request')
-      console.log('Newsletter subscription request:', normalizedEmail)
-
-      return NextResponse.json({
-        success: true,
-        message: 'Thank you for subscribing! You will receive NEET updates and biology tips.',
-      })
+      console.error('Newsletter subscribe DB error:', dbError)
+      return NextResponse.json(
+        { error: 'Unable to process subscription right now. Please try again later.' },
+        { status: 503 }
+      )
     }
   } catch (error) {
-    console.error('Error processing newsletter subscription:', error)
-    return NextResponse.json({ error: 'Failed to process subscription' }, { status: 500 })
+    console.error('Newsletter subscribe error:', error)
+    return NextResponse.json(
+      { error: 'Failed to process subscription. Please try again.' },
+      { status: 500 }
+    )
   }
 }
 
@@ -131,7 +130,7 @@ export async function OPTIONS(request: NextRequest) {
   const origin = request.headers.get('origin') || ''
   const allowedOrigins = [
     'https://cerebrumbiologyacademy.com',
-    'https://cerebrumbiologyacademy.com',
+    'https://www.cerebrumbiologyacademy.com',
     ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000'] : []),
   ]
   const corsOrigin = allowedOrigins.includes(origin) ? origin : allowedOrigins[0]

@@ -80,7 +80,6 @@ export async function GET(request: NextRequest) {
 async function demoStudentSession(data: any) {
   const { studentId, deviceInfo } = data
 
-  console.log(`🎯 Demo: Creating student session for ${studentId}`)
 
   // 1. Create new session
   const sessionId = await sessionManager.createSession(studentId, {
@@ -156,7 +155,6 @@ async function demoStudentSession(data: any) {
 async function demoQueryCaching(data: any) {
   const { queries } = data
 
-  console.log('🎯 Demo: Advanced query caching optimization')
 
   const results = []
 
@@ -254,7 +252,6 @@ async function demoQueryCaching(data: any) {
 async function demoRealTimeUpdates(data: any) {
   const { studentId } = data
 
-  console.log('🎯 Demo: Real-time updates and distributed cache')
 
   // 1. Cache different types of data
   const cacheOperations = []
@@ -346,7 +343,6 @@ async function demoRealTimeUpdates(data: any) {
 }
 
 async function demoBatchOperations(data: any) {
-  console.log('🎯 Demo: High-performance batch operations')
 
   // 1. Batch set operations
   const batchData = new Map()
@@ -414,7 +410,6 @@ async function demoBatchOperations(data: any) {
 async function demoStudyGroups(data: any) {
   const { studentId } = data
 
-  console.log('🎯 Demo: Study groups and collaborative features')
 
   // 1. Create study group
   const groupId = await sessionManager.createStudyGroup({

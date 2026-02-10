@@ -275,16 +275,7 @@ export async function POST(request: NextRequest) {
             validatedReferralCode = referralCodeRecord.code
             validatedReferralCodeId = referralCodeRecord.id
 
-            console.log(
-              `[Demo Booking] Valid referral code: ${referralCodeRecord.code}, discount: ${validatedReferralDiscount}%`
-            )
-          } else {
-            console.log(
-              `[Demo Booking] Referral code ${referralCodeUsed} is ${isExpired ? 'expired' : 'maxed out'}`
-            )
           }
-        } else {
-          console.log(`[Demo Booking] Invalid referral code attempted: ${referralCodeUsed}`)
         }
       } catch (referralError) {
         // Log error but don't fail the booking - just proceed without discount
@@ -483,10 +474,6 @@ export async function POST(request: NextRequest) {
     } catch (dbError) {
       // DEMO-005: Handle slot conflict error specifically
       if (dbError instanceof Error && dbError.message === 'SLOT_CONFLICT') {
-        console.log('[Demo Booking] Slot conflict detected:', {
-          date: data.preferredDate,
-          time: requestedTime,
-        })
         return NextResponse.json(
           {
             success: false,
@@ -1017,7 +1004,6 @@ async function notifyAdminBookingFailure(leadData: {
         },
       }),
     })
-    console.log('[Demo Booking] Failure notification sent to admin for lead:', leadData.phone)
   } catch (notifyError) {
     console.error('❌ Failed to send booking failure notification:', notifyError)
   }
@@ -1188,16 +1174,6 @@ async function handlePut(request: NextRequest, session: UserSession) {
     })
 
     // Log admin action for audit trail with before/after values
-    console.log(`[Demo Booking] Admin ${session.userId} updated booking ${bookingId}`, {
-      changes: Object.keys(validatedUpdates),
-      before: Object.fromEntries(
-        Object.keys(validatedUpdates).map((k) => [
-          k,
-          existingBooking[k as keyof typeof existingBooking],
-        ])
-      ),
-      after: validatedUpdates,
-    })
 
     return NextResponse.json({
       success: true,

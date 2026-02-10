@@ -179,14 +179,6 @@ export async function POST(request: NextRequest) {
       console.error('Failed to send reschedule notifications:', err)
     )
 
-    console.log('Booking rescheduled:', {
-      bookingId,
-      oldDate,
-      oldTime,
-      newDate,
-      newTime,
-      timestamp: new Date().toISOString(),
-    })
 
     return NextResponse.json({
       success: true,
@@ -285,12 +277,6 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
       day: 'numeric',
     })
 
-    console.log('Sending reschedule notifications:', {
-      bookingId: booking.id,
-      studentName: booking.studentName,
-      from: `${formattedOldDate} at ${oldTime}`,
-      to: `${formattedNewDate} at ${booking.preferredTime}`,
-    })
 
     const notificationPromises: Promise<any>[] = []
 
@@ -390,7 +376,6 @@ async function sendRescheduleNotifications(booking: any, oldDate: string, oldTim
       new Promise((resolve) => setTimeout(resolve, 5000)), // 5 second timeout
     ])
 
-    console.log('Reschedule notifications sent successfully')
   } catch (error) {
     console.error('Failed to send reschedule notifications:', error)
   }
@@ -446,9 +431,6 @@ async function handleGenerateRescheduleLink(request: NextRequest, session: UserS
     })
 
     // Log admin action
-    console.log(
-      `[Reschedule] Admin ${session.userId} generated reschedule link for booking ${bookingId}`
-    )
 
     const rescheduleUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/demo-booking/reschedule?id=${bookingId}&token=${token}`
 

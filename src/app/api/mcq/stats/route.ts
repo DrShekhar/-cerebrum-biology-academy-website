@@ -125,7 +125,6 @@ export async function GET(request: NextRequest) {
     } catch (dbError) {
       // If table doesn't exist, return default stats
       if (isTableNotExistError(dbError)) {
-        console.log('mcq_user_stats table not found, returning default stats')
         const defaultStats = getDefaultStats(freeUserId)
         const levelDetails = getLevelProgress(0)
         return NextResponse.json({
@@ -192,7 +191,6 @@ export async function POST(request: NextRequest) {
     } catch (dbError) {
       // If table doesn't exist, return a mock session (basic mode)
       if (isTableNotExistError(dbError)) {
-        console.log('mcq_practice_sessions table not found, using basic mode')
         return NextResponse.json({
           success: true,
           data: {

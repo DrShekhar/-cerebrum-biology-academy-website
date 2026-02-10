@@ -79,12 +79,6 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    console.log('Exit intent lead captured:', {
-      leadId: newLead.id,
-      email,
-      discountCode,
-      variant,
-    })
 
     // Send WhatsApp welcome + notify admin + schedule nurturing (non-blocking)
     processContentLead({

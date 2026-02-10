@@ -48,15 +48,12 @@ export async function GET(request: NextRequest) {
     const token = searchParams.get('hub.verify_token')
     const challenge = searchParams.get('hub.challenge')
 
-    console.log('📞 Webhook verification request:', { mode, token: token ? '***' : null })
 
     // Check if verification token matches
     if (mode === 'subscribe' && token === process.env.WHATSAPP_VERIFY_TOKEN) {
-      console.log('✅ Webhook verified successfully')
       return new Response(challenge, { status: 200 })
     }
 
-    console.log('❌ Webhook verification failed')
     return NextResponse.json({ error: 'Verification failed' }, { status: 403 })
   } catch (error) {
     console.error('❌ Webhook verification error:', error)
@@ -89,11 +86,9 @@ export async function POST(request: NextRequest) {
 
     const { from, text, messageId, name, phoneNumberId } = messageData
 
-    console.log(`📱 Received message from ${name} (${from}): "${text?.substring(0, 50)}..."`)
 
     // Check for duplicate messages
     if (isDuplicateMessage(messageId)) {
-      console.log(`⚠️ Duplicate message ignored: ${messageId}`)
       return NextResponse.json({ status: 'duplicate' }, { status: 200 })
     }
 
@@ -102,7 +97,6 @@ export async function POST(request: NextRequest) {
 
     // Rate limiting (10 messages per minute per user)
     if (!checkRateLimit(from)) {
-      console.log(`⚠️ Rate limit exceeded for ${from}`)
       const aiHandler = new AIMessageHandler()
       await aiHandler.sendRateLimitMessage(from, phoneNumberId)
       return NextResponse.json({ status: 'rate_limited' }, { status: 429 })

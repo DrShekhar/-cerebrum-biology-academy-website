@@ -173,7 +173,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    console.log(`✅ Verification email sent to ${email.slice(0, 3)}***@${email.split('@')[1]}`)
 
     return addSecurityHeaders(
       NextResponse.json({

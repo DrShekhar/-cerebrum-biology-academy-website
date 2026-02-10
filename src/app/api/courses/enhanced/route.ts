@@ -189,7 +189,6 @@ export async function POST(request: NextRequest) {
     const interaction = InteractionSchema.parse(body)
 
     // Simulate storing interaction data
-    console.log('Course interaction recorded:', interaction)
 
     // Return updated analytics
     return NextResponse.json({

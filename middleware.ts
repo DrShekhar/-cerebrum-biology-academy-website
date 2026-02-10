@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { addSecurityHeaders, getJWTSecret } from '@/lib/auth/config'
 import { addCSPHeaders } from '@/lib/auth/csrf'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
-import * as jwt from 'jsonwebtoken'
+import { jwtVerify } from 'jose'
 
 // SECURITY: JWT secret is now imported from @/lib/auth/config (single source of truth)
 // This ensures tokens created with TokenUtils are verified with the same secret
@@ -111,43 +111,32 @@ interface FirebaseSessionPayload {
 }
 
 // Try to get user from our custom JWT token
-// Uses jsonwebtoken library (same as firebase-session route) for consistency
-function getUserFromToken(req: NextRequest): { userId: string; role: string } | null {
+// Uses jose library for Edge runtime compatibility
+async function getUserFromToken(req: NextRequest): Promise<{ userId: string; role: string } | null> {
   try {
-    // Check for session token - check all cookie variants for consistency
-    // Priority: Secure prefixed (production) > standard (development) > legacy NextAuth
     const sessionToken =
       req.cookies.get('__Secure-authjs.session-token')?.value ||
       req.cookies.get('authjs.session-token')?.value ||
       req.cookies.get('__Secure-next-auth.session-token')?.value ||
       req.cookies.get('next-auth.session-token')?.value ||
-      req.cookies.get('auth-token')?.value // Custom JWT token from SessionManager
+      req.cookies.get('auth-token')?.value
 
     if (!sessionToken) {
-      if (process.env.NODE_ENV !== 'production') {
-        console.log('[Middleware] No session token found in cookies')
-      }
       return null
     }
 
-    // Use jsonwebtoken for verification (same library and secret as token creation)
-    const decoded = jwt.verify(sessionToken, getJWTSecret()) as FirebaseSessionPayload
+    const secret = new TextEncoder().encode(getJWTSecret())
+    const { payload } = await jwtVerify(sessionToken, secret)
+    const decoded = payload as unknown as FirebaseSessionPayload
 
     if (decoded && decoded.id) {
-      if (process.env.NODE_ENV !== 'production') {
-        console.log('[Middleware] Token verified successfully for user:', decoded.id)
-      }
       return {
         userId: decoded.id,
         role: (decoded.role || 'student').toUpperCase(),
       }
     }
     return null
-  } catch (error) {
-    // Token invalid or expired - log in development for debugging
-    if (process.env.NODE_ENV !== 'production') {
-      console.error('[Middleware] Token verification failed:', error)
-    }
+  } catch {
     return null
   }
 }
@@ -195,8 +184,7 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
-  // Get auth state from our custom JWT token (synchronous with jsonwebtoken)
-  const authResult = getUserFromToken(req)
+  const authResult = await getUserFromToken(req)
   const userId = authResult?.userId || null
   const userRole = authResult?.role || null
 

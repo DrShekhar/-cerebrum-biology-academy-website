@@ -20,7 +20,6 @@ export async function GET(request: NextRequest) {
   // SECURITY: Strict cron authentication
   const authResult = verifyCronAuth(request)
   if (!authResult.authorized) {
-    console.log('[CRON] Unauthorized request to process-agents')
     if (authResult.error?.includes('not set')) {
       return createCronConfigErrorResponse(authResult.error)
     }
@@ -28,13 +27,9 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    console.log('[CRON] Starting agent task processing...')
 
     const result = await processPendingAgentTasks()
 
-    console.log(
-      `[CRON] Complete: processed=${result.processed}, succeeded=${result.succeeded}, failed=${result.failed}`
-    )
 
     return NextResponse.json({
       success: true,
