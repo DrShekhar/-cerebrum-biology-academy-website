@@ -168,11 +168,68 @@ function FaridabadLocalBusinessSchema() {
   )
 }
 
+function FaridabadFAQSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How far is Cerebrum Academy from Faridabad?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy has centers in South Extension, New Delhi and Faridabad Sector 15 to serve students from Faridabad and nearby areas. The Faridabad center at SCO 23, Sector 15 is centrally located for easy access to students from all sectors of Faridabad.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why is Cerebrum the best NEET coaching center in Faridabad?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum is the best NEET coaching in Faridabad with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, personalized attention, and a dedicated Faridabad center in Sector 15 for convenient access to local students.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the coaching timings at Cerebrum Faridabad center?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Faridabad center operates 7 days a week with extended hours. Monday to Saturday: 8:00 AM to 8:00 PM, Sunday: 9:00 AM to 6:00 PM. Multiple batch timings are available for Faridabad students. Contact +91-9870-424-442 for specific batch schedules.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is the Faridabad center easily accessible by metro or road?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Cerebrum Faridabad center at Sector 15 is well-connected and easily accessible. You can reach via NH 44 or local roads. It is close to NIT Faridabad and other important landmarks. The location is convenient for students from all sectors of Faridabad and surrounding areas.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the NEET coaching fees at Cerebrum Faridabad?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options for Faridabad students. Contact cerebrumacademy@gmail.com or call +91-9870-424-442 for detailed fee structure and special Faridabad offers.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function FaridabadLocationLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <FaridabadServiceSchema />
       <FaridabadLocalBusinessSchema />
+      <FaridabadFAQSchema />
       {children}
     </>
   )

@@ -263,6 +263,57 @@ export default function Class11BiologyPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Schema.org structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'Class 11th Biology Course for NEET',
+            description:
+              'Foundation year NEET Biology course with Board + NEET dual preparation. 12-month intensive program with complete NCERT coverage.',
+            provider: {
+              '@type': 'Organization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+            },
+            instructor: {
+              '@type': 'Person',
+              name: 'Dr. Shekhar C Singh',
+              jobTitle: 'Founder & Head Faculty',
+              alumniOf: 'AIIMS New Delhi',
+            },
+            courseCode: 'NEET-11',
+            educationalLevel: 'Intermediate',
+            teaches: 'NEET Biology - Class 11 Botany and Zoology',
+            numberOfCredits: '12 months',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['online', 'onsite'],
+              courseWorkload: 'PT3H',
+              instructor: {
+                '@type': 'Person',
+                name: 'Dr. Shekhar C Singh',
+              },
+            },
+            offers: {
+              '@type': 'Offer',
+              category: 'NEET Biology Coaching',
+              priceCurrency: 'INR',
+              price: '75000',
+              availability: 'https://schema.org/InStock',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              reviewCount: '485',
+              bestRating: '5',
+            },
+          }),
+        }}
+      />
+
       {/* Breadcrumbs */}
       <BreadcrumbContainer className="pt-4">
         <Breadcrumbs />

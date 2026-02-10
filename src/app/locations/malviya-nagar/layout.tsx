@@ -120,6 +120,57 @@ export default function MalviyaNagarLayout({ children }: { children: React.React
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Malviya Nagar?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy has a center very close to Malviya Nagar in Green Park area near Yellow Line Metro. Students from Malviya Nagar, Saket, Hauz Khas, and IIT Delhi can reach our Green Park center within 10-15 minutes, making it the most accessible NEET coaching for South Delhi students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum the best NEET coaching for Malviya Nagar?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum is the best NEET coaching for Malviya Nagar students with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, personalized attention, nearby Green Park center, and affordable fees. We specialize in coaching high-density student population areas like Malviya Nagar.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum for Malviya Nagar students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM and Sunday from 9:00 AM to 6:00 PM. We offer multiple batch options including morning, afternoon, and evening batches. Call +91-9870-424-442 for specific available timings for Malviya Nagar students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How to reach Cerebrum from Malviya Nagar by metro?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our Green Park center is just 5 minutes from Green Park Metro station on the Yellow Line. From Malviya Nagar, you can reach via Saket Metro or take local transport to Green Park center. It is also accessible by personal vehicle and auto from Malviya Nagar.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees at Cerebrum for Malviya Nagar students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer affordable fees with flexible EMI options for Malviya Nagar students. Email cerebrumacademy@gmail.com or call +91-9870-424-442 for detailed fee structure.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

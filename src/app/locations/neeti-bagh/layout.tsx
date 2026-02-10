@@ -127,6 +127,57 @@ export default function NeetiBaghLayout({ children }: { children: React.ReactNod
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Neeti Bagh?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is just 5-10 minutes from Neeti Bagh. Our main center is located at South Extension Part 2, very close to Panchsheel Park and Andrews Ganj. It is easily accessible from Neeti Bagh via short distance travel.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum Academy the best NEET coaching for Neeti Bagh students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the best choice for Neeti Bagh students because of our AIIMS Delhi trained faculty led by Dr. Shekhar C Singh, small personalized batches of 15 students, 98% success rate, and premium learning environment. We focus on conceptual clarity and provide individualized attention to every student.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum Academy for Neeti Bagh students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our coaching center operates Monday to Saturday, 8:00 AM to 8:00 PM. We offer flexible batch timings in the morning, afternoon, and evening to suit students from Neeti Bagh and nearby areas. Contact us at +91-9870-424-442 to know the best timing for your schedule.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Neeti Bagh students reach Cerebrum Academy using public transport?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Neeti Bagh, students can easily reach our South Extension center via auto-rickshaw (5-10 minutes) or personal vehicle. The area is well-connected by the metro system. Lajpat Nagar Metro Station is the nearest metro stop, from which the center is just a short walk away.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees at Cerebrum Academy for Neeti Bagh students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on the course duration and batch type. We offer flexible payment options and scholarships for deserving students. Call us at +91-9870-424-442 for detailed fee structure and personalized guidance.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

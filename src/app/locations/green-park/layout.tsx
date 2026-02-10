@@ -93,10 +93,67 @@ export const metadata: Metadata = {
   },
 }
 
+function GreenParkFAQSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How far is Cerebrum Academy from Green Park?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy has a center in Green Park itself located near Hauz Khas and Yellow Line Metro. Our Green Park center is convenient for students from Green Park, Hauz Khas, Malviya Nagar, Saket, and IIT Delhi area. It provides easy access without long commutes.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What makes Cerebrum the best NEET coaching for Green Park students?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum is the best NEET coaching for Green Park students with AIIMS Delhi faculty, small batches of 15 students, 98% success rate, weekend batch options, and a Green Park center located in the heart of the locality. We specialize in coaching students from South Delhi premium areas.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the batch timings at Cerebrum Green Park center?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Green Park center operates 7 days a week with extended hours. Monday to Saturday: 8:00 AM to 8:00 PM, Sunday: 9:00 AM to 6:00 PM. We offer multiple batch options including weekend batches for working students. Call +91-9870-424-442 for specific timings.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How to reach Cerebrum from Green Park using metro?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our Green Park center is located near Green Park Metro Station (Yellow Line). You can reach us within 5 minutes from the metro station. It is also accessible by personal vehicles and auto. The location is very convenient for students from Hauz Khas, Malviya Nagar, and IIT Delhi.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the NEET coaching fees at Cerebrum Green Park center?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer flexible EMI options and special rates for Green Park students. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed pricing.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function GreenParkLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <GreenParkServiceSchema />
+      <GreenParkFAQSchema />
       {children}
     </>
   )

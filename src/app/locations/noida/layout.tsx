@@ -174,6 +174,57 @@ export default function NoidaLocationLayout({ children }: { children: React.Reac
     <>
       <NoidaServiceSchema />
       <NoidaLocalBusinessSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Noida Sector 62?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is approximately 20-25 minutes from Noida Sector 62 depending on traffic conditions. Our main center is located at South Extension Part 2, New Delhi. Noida students can reach us via the Delhi-Noida expressway which is well-connected.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum Academy the best NEET coaching choice for Noida students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the premier choice for Noida students because of our AIIMS Delhi trained faculty, small personalized batches, 98% success rate, and proven track record. Our structured curriculum and individual mentoring ensure every Noida student achieves their NEET goals.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum Academy for Noida students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM, with Sundays from 9:00 AM to 6:00 PM. We offer flexible batch schedules including morning, afternoon, and evening batches. Noida students can choose timings that suit their commute from Sector 62. Contact +91-9870-424-442 for details.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Noida students reach Cerebrum Academy from Sector 62?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Noida Sector 62, students can reach our South Extension center via the Delhi-Noida expressway (25 minutes drive). Alternatively, they can take the metro to Lajpat Nagar Station and reach our center by foot or auto. The location is easily accessible for regular coaching attendance.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees for Noida students at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer special packages for Noida students and flexible payment options. Call us at +91-9870-424-442 or email cerebrumacademy@gmail.com for personalized fee consultation.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

@@ -125,6 +125,57 @@ export default function NewFriendsColonyLayout({ children }: { children: React.R
     <>
       <NFCSchema />
       <NFCLocalBusinessSchema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How close is Cerebrum Academy to New Friends Colony?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is conveniently located just 10-15 minutes from New Friends Colony. Our South Extension center is easily accessible from NFC, Maharani Bagh, and Friends Colony via a short commute through well-connected roads.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why should New Friends Colony students choose Cerebrum Academy for NEET preparation?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy offers the best NEET coaching for New Friends Colony students with AIIMS Delhi trained faculty, small personalized batches, 98% success rate, and premium learning infrastructure. Our founder Dr. Shekhar C Singh ensures world-class education with individual attention to every student.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the available batch timings at Cerebrum Academy for NFC students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options - morning, afternoon, and evening. This allows New Friends Colony students to choose a timing that best fits their schedule. Call +91-9870-424-442 for batch details.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can New Friends Colony students reach our coaching center using metro?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From New Friends Colony, students can reach our South Extension center via Ashram Metro Station which is the nearest metro stop. From there, it is a short walk or auto ride to our center. The location is easily accessible for NFC students via metro or personal transport.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the fee structure for NEET coaching at Cerebrum Academy for NFC students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment plans and scholarships for deserving New Friends Colony students. Contact us at cerebrumacademy@gmail.com or +91-9870-424-442 for customized fee packages.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

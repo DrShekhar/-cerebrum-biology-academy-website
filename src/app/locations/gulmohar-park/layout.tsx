@@ -118,11 +118,68 @@ function GulmoharParkLocalBusinessSchema() {
   )
 }
 
+function GulmoharParkFAQSchema() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How far is Cerebrum Academy from Gulmohar Park?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Biology Academy is located in South Extension and has a Green Park center very close to Gulmohar Park. Students from Gulmohar Park can reach our Green Park center within 5-10 minutes, making it the most convenient NEET coaching for premium South Delhi students.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Why is Cerebrum the best NEET coaching for Gulmohar Park students?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum is the best NEET coaching for Gulmohar Park with AIIMS Delhi trained faculty, small batches of 15 students, 98% success rate, personalized attention, and nearby Green Park center. We specialize in coaching elite premium South Delhi students like those from Gulmohar Park.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the batch timings for Gulmohar Park students at Cerebrum?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. Sunday batches also available from 9:00 AM to 6:00 PM. We offer morning, afternoon, and evening batches for Gulmohar Park students. Contact +91-9870-424-442 for specific schedules.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How to reach Cerebrum from Gulmohar Park easily?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'From Gulmohar Park, you can reach our Green Park center within 5-10 minutes by car or auto. The Green Park center is near Yellow Line Metro. You can also reach our flagship South Extension center. Both locations are convenient for Gulmohar Park and surrounding premium areas.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What are the NEET coaching fees at Cerebrum for Gulmohar Park students?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Cerebrum Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and duration. We offer flexible EMI options for Gulmohar Park families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for customized pricing and special offers.',
+        },
+      },
+    ],
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default function GulmoharParkLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <GulmoharParkSchema />
       <GulmoharParkLocalBusinessSchema />
+      <GulmoharParkFAQSchema />
       {children}
     </>
   )

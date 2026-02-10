@@ -126,6 +126,57 @@ export default function GolfLinksLayout({ children }: { children: React.ReactNod
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Golf Links?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy is located in South Extension Part 2, New Delhi, very close to Golf Links area. Students from Golf Links, Khan Market, India Gate, and Lodhi Estate can reach our center within 10 minutes, making it the most convenient NEET coaching for elite central Delhi.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum the best premium NEET coaching for Golf Links?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum is the best premium NEET coaching for Golf Links families with AIIMS Delhi faculty, exclusive small batches of 15 students, personalized teaching, 98% success rate, and elite learning environment suitable for high-achiever students from ultra-premium Lutyens Delhi locations.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum for Golf Links students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM. We offer flexible batch timings including morning and evening batches suited for Golf Links students. Our personalized schedule accommodates busy families. Call +91-9870-424-442 for exclusive timing options.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How to reach Cerebrum from Golf Links, Khan Market, or India Gate area?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our South Extension center is very close to Golf Links and can be reached easily by personal vehicle in 5-10 minutes. It is also accessible by metro and other transport. The discrete location in South Extension is ideal for Golf Links and Lutyens Delhi residents.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the fees for NEET coaching at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for customized pricing and special arrangements for Golf Links families.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

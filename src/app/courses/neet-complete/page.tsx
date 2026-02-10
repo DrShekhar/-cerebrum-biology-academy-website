@@ -396,6 +396,57 @@ const NEETCompletePage = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Schema.org structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'NEET Complete Biology Course',
+            description:
+              'Comprehensive 2-year NEET Biology program covering both Class 11 and Class 12 with Harvard-level academic rigor, research-backed curriculum, and PhD-qualified faculty.',
+            provider: {
+              '@type': 'Organization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+            },
+            instructor: {
+              '@type': 'Person',
+              name: 'Dr. Shekhar C Singh',
+              jobTitle: 'Founder & Head Faculty',
+              alumniOf: 'AIIMS New Delhi',
+            },
+            courseCode: 'NEET-COMPLETE',
+            educationalLevel: 'Intermediate to Advanced',
+            teaches: 'Complete NEET Biology - Class 11 and 12',
+            numberOfCredits: '12 months',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['online', 'onsite'],
+              courseWorkload: 'PT4H',
+              instructor: {
+                '@type': 'Person',
+                name: 'Dr. Shekhar C Singh',
+              },
+            },
+            offers: {
+              '@type': 'Offer',
+              category: 'NEET Biology Coaching',
+              priceCurrency: 'INR',
+              price: '144400',
+              availability: 'https://schema.org/InStock',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              reviewCount: '485',
+              bestRating: '5',
+            },
+          }),
+        }}
+      />
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-green-800 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

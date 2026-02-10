@@ -106,6 +106,57 @@ export default function SaketLayout({ children }: { children: React.ReactNode })
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Saket?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is approximately 10-15 minutes from Saket. Our South Extension center is easily accessible from Saket residents via Saket Metro Station and nearby roads. It is very convenient for students from Saket and Select Citywalk area.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum Academy the best NEET coaching choice for Saket students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the premier choice for Saket students with AIIMS Delhi trained faculty, small personalized batches, 98% success rate, and premium learning infrastructure. We provide individual mentoring and structured curriculum ensuring every Saket student achieves their NEET goals.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What batch timings are available at Cerebrum Academy for Saket students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with multiple batch options. We offer morning, afternoon, and evening sessions to accommodate Saket students flexible schedules. Contact +91-9870-424-442 to book your preferred batch time.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Saket students reach Cerebrum Academy using metro?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Saket, students can take the metro to Saket Metro Station and reach our South Extension center in about 15 minutes via connecting auto or metro to Lajpat Nagar. Alternatively, personal vehicles and auto-rickshaws provide direct routes from Saket to our center.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the NEET coaching fee structure for Saket students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer flexible payment options and personalized packages for Saket students. Call cerebrumacademy@gmail.com or +91-9870-424-442 for detailed pricing information.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

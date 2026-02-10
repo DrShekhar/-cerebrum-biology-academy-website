@@ -187,6 +187,57 @@ export default function NEETCrashCoursePage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* Schema.org structured data - Course */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Course',
+            name: 'NEET Crash Course - 3 Month Intensive',
+            description:
+              'Intensive 3-month crash course for NEET Biology with 200+ live classes, 100+ mock tests, and focused revision. Perfect for final-stage NEET preparation.',
+            provider: {
+              '@type': 'Organization',
+              name: 'Cerebrum Biology Academy',
+              url: 'https://cerebrumbiologyacademy.com',
+            },
+            instructor: {
+              '@type': 'Person',
+              name: 'Dr. Shekhar C Singh',
+              jobTitle: 'Founder & Head Faculty',
+              alumniOf: 'AIIMS New Delhi',
+            },
+            courseCode: 'NEET-CRASH',
+            educationalLevel: 'Advanced',
+            teaches: 'NEET Biology - Quick Revision and Practice',
+            numberOfCredits: '3 months',
+            hasCourseInstance: {
+              '@type': 'CourseInstance',
+              courseMode: ['online', 'onsite'],
+              courseWorkload: 'PT5H',
+              instructor: {
+                '@type': 'Person',
+                name: 'Dr. Shekhar C Singh',
+              },
+            },
+            offers: {
+              '@type': 'Offer',
+              category: 'NEET Biology Coaching',
+              priceCurrency: 'INR',
+              price: '45000',
+              availability: 'https://schema.org/InStock',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              reviewCount: '485',
+              bestRating: '5',
+            },
+          }),
+        }}
+      />
+
       {/* Floating Contact Buttons */}
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col gap-2 sm:gap-3">
         <button

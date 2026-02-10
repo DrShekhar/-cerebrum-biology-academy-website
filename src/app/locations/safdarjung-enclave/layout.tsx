@@ -127,6 +127,57 @@ export default function SafdarjungEnclaveLayout({ children }: { children: React.
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Safdarjung Enclave?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is just 10-12 minutes from Safdarjung Enclave. Our South Extension center is very close to this premium locality near AIIMS Delhi and Green Park, making it the most convenient option for Safdarjung Enclave students.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why should Safdarjung Enclave students choose Cerebrum Academy for NEET?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Academy is the best choice for Safdarjung Enclave students with AIIMS Delhi trained faculty, personalized attention in small batches, 98% success rate, and premium learning environment. Our center near AIIMS ensures expert guidance from medical professionals.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings for Safdarjung Enclave students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We operate Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch options including morning, afternoon, and evening sessions. Safdarjung Enclave students can choose timings that work best for their schedule. Call +91-9870-424-442 for batch details.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How can Safdarjung Enclave students reach our coaching center?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'From Safdarjung Enclave, students can reach our South Extension center easily via auto-rickshaw (10-12 minutes) or personal vehicle. The nearest metro station is Lajpat Nagar, which is a short walk from our center. The location is highly accessible for Safdarjung residents.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the NEET coaching fees for Safdarjung Enclave students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our NEET Biology coaching fees range from ₹45,000 to ₹1,80,000 depending on course duration and batch type. We offer customized packages and flexible payment plans for Safdarjung Enclave families. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for detailed fee structure.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )

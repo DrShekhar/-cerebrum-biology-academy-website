@@ -103,6 +103,57 @@ export default function JorBaghLayout({ children }: { children: React.ReactNode 
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How far is Cerebrum Academy from Jor Bagh?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy is located in South Extension Part 2, New Delhi, very close to Jor Bagh. Students from Jor Bagh can reach our center within 10 minutes by personal vehicle or metro, making it the most convenient premium NEET coaching for ultra-elite central Delhi residents.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What makes Cerebrum the best NEET coaching for Jor Bagh students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum is the best premium NEET coaching for Jor Bagh with AIIMS Delhi faculty, exclusive small batches of 15 students, personalized teaching, 98% success rate, and an elite learning environment suited for high-achiever families in ultra-premium Lodhi Colony and Jor Bagh areas.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the batch timings at Cerebrum for Jor Bagh students?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our center operates Monday to Saturday from 8:00 AM to 8:00 PM with flexible batch timings. We customize schedules for Jor Bagh students with morning and evening options. Call +91-9870-424-442 to arrange exclusive timings for your family.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How to reach Cerebrum from Jor Bagh near Safdarjung and Lodhi Gardens?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our South Extension center is very close to Jor Bagh, Safdarjung, and Lodhi Gardens. You can reach in 5-10 minutes by personal vehicle. The discrete location near South Extension is ideal for Jor Bagh and Lutyens Delhi families preferring privacy and convenience.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are the fees for NEET coaching at Cerebrum Academy?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Cerebrum Biology Academy fees range from Rs. 45,000 to Rs. 1,80,000 based on batch type and course duration. We offer premium small batch options. Contact cerebrumacademy@gmail.com or +91-9870-424-442 for exclusive pricing and special arrangements for Jor Bagh families.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {children}
     </>
   )
