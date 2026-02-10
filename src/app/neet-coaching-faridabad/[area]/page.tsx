@@ -170,9 +170,16 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
   }
 
   const getAreaReviews = () => {
+    const itemReviewed = {
+      '@type': 'LocalBusiness',
+      '@id': localBusinessId,
+      name: `Cerebrum Biology Academy - ${area.name}`,
+    }
+
     const baseReviews = [
       {
         '@type': 'Review',
+        itemReviewed,
         author: { '@type': 'Person', name: 'Parent from ' + area.name },
         datePublished: '2025-11-15',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
@@ -180,6 +187,7 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
       },
       {
         '@type': 'Review',
+        itemReviewed,
         author: { '@type': 'Person', name: 'Student from ' + (area.societies[0] || area.name) },
         datePublished: '2025-10-20',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
@@ -187,6 +195,7 @@ export default async function FaridabadAreaPage({ params }: PageProps) {
       },
       {
         '@type': 'Review',
+        itemReviewed,
         author: { '@type': 'Person', name: 'NEET 2025 Qualifier' },
         datePublished: '2025-09-10',
         reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
