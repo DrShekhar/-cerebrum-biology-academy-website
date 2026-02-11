@@ -10,10 +10,10 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import SmartWhatsAppCTA from "@/components/conversion/SmartWhatsAppCTA";
-import VideoTestimonialsSection from "@/components/testimonials/VideoTestimonialsSection";
-import PricingSection from "@/components/city/PricingSection";
-import CostComparisonSection from "@/components/city/CostComparisonSection";
-import RelatedCityLinks from "@/components/seo/RelatedCityLinks";
+import { VideoTestimonialsSection } from "@/components/testimonials/VideoTestimonialsSection";
+import { PricingSection } from "@/components/city/PricingSection";
+import { CostComparisonSection } from "@/components/city/CostComparisonSection";
+import { RelatedCityLinks } from "@/components/seo/RelatedCityLinks";
 
 export default function PageContent() {
   const [expandedFaq, setExpandedFaq] = useState<string | null>(null);
