@@ -2,6 +2,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trophy, Users, MessageCircle, Star, GraduationCap, Target, Shield, ArrowRight, BookOpen, CheckCircle, Building, MapPin } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
@@ -241,6 +245,7 @@ export default function PageContent() {
           </div>
         </div>
       </section>
-    </div>
-  )
-}
+      <PricingSection cityName="Vasant Valley School" />
+      <CostComparisonSection cityName="Vasant Valley School" />
+      <RelatedCityLinks currentCity="vasant-valley-school" variant="default" />
+
