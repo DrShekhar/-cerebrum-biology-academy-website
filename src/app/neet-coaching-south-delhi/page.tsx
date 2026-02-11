@@ -271,7 +271,6 @@ const speakableSchema = {
   },
 }
 
-]
 
 export default function NEETCoachingSouthDelhiPage() {
   return (
