@@ -97,7 +97,7 @@ export default function NEETBiologyClass11Page() {
         h1="NEET Biology for Class 11 - Build Your Foundation"
         subheadline="Start your NEET journey early with expert guidance. Master Class 11 Biology concepts that form 50% of NEET questions."
         highlightedBadge="🎓 Class 11 Batch Starting Soon"
-        trustBadges={['NCERT + NEET Coverage', 'School-Friendly Schedule', '99% Results']}
+        trustBadges={['NCERT + NEET Coverage', 'School-Friendly Schedule', '98% Results']}
       />
 
       {/* Urgency Banner */}

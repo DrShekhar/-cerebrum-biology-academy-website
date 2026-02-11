@@ -146,7 +146,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '360', icon: Star },
   { label: 'Kota Students', value: '2,500+', icon: Users },
   { label: 'Biology Specialist', value: '100%', icon: Target },
@@ -161,7 +161,7 @@ const faqs = [
   {
     question: "How can online coaching compete with Kota's physical coaching institutes?",
     answer:
-      "Our online classes offer what Kota's 200+ student batches cannot - personalized attention. With just 10-15 students per batch, every doubt gets addressed. Plus, save 2-3 hours daily on commuting between hostels and coaching centers. Our 94.2% success rate proves online is equally effective.",
+      "Our online classes offer what Kota's 200+ student batches cannot - personalized attention. With just 10-15 students per batch, every doubt gets addressed. Plus, save 2-3 hours daily on commuting between hostels and coaching centers. Our 98% success rate proves online is equally effective.",
   },
   {
     question: 'Which areas in Kota do you serve?',
@@ -678,7 +678,7 @@ export default function NeetCoachingKotaPage() {
               Fill Your Biology Gap - Score 340+ in NEET
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS trained faculties, 2,500+ Kota students. Complement your
+              98% success rate, AIIMS trained faculties, 2,500+ Kota students. Complement your
               Kota coaching today!
             </p>
 

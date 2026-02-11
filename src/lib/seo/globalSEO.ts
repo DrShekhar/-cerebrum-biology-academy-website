@@ -108,7 +108,7 @@ export class GlobalSEOService {
     const { courseId, className, subject, level, targetExam } = courseData
 
     const title = `${className} ${subject} Online Classes | Best ${targetExam} Biology Coaching | Cerebrum Academy`
-    const description = `🏆 #1 ${className} ${subject} online coaching for ${targetExam}. Expert AIIMS faculty, 94.2% success rate, live classes. Join 10,000+ students. Free demo available!`
+    const description = `🏆 #1 ${className} ${subject} online coaching for ${targetExam}. Expert AIIMS faculty, 98% success rate, live classes. Join 10,000+ students. Free demo available!`
 
     const keywords = [
       `${className} ${subject.toLowerCase()} online classes`,
@@ -169,7 +169,7 @@ export class GlobalSEOService {
 
   generateLocationPageSEO(city: string, state: string): SEOData {
     const title = `Best Biology Coaching in ${city} | NEET Classes ${city} | Cerebrum Biology Academy`
-    const description = `🎯 Top Biology coaching institute in ${city}, ${state}. NEET preparation, expert faculty, 94.2% success rate. Online & offline classes available. Book free demo!`
+    const description = `🎯 Top Biology coaching institute in ${city}, ${state}. NEET preparation, expert faculty, 98% success rate. Online & offline classes available. Book free demo!`
 
     const keywords = [
       `biology coaching ${city.toLowerCase()}`,
@@ -195,7 +195,7 @@ export class GlobalSEOService {
 
   generateComparisonPageSEO(competitor: string): SEOData {
     const title = `Cerebrum vs ${competitor} | Which is Better for NEET Biology? | Detailed Comparison 2025`
-    const description = `🔥 Honest comparison: Cerebrum Biology Academy vs ${competitor}. Compare fees, success rate, faculty, features. See why 94.2% students choose Cerebrum!`
+    const description = `🔥 Honest comparison: Cerebrum Biology Academy vs ${competitor}. Compare fees, success rate, faculty, features. See why 98% students choose Cerebrum!`
 
     const keywords = [
       `cerebrum vs ${competitor.toLowerCase()}`,

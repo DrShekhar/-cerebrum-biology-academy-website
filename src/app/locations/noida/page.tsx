@@ -128,7 +128,7 @@ export default function NoidaLocationPage() {
 
               <p className="text-lg text-gray-300 leading-relaxed">
                 Premier NEET Biology coaching by AIIMS faculty in Noida&apos;s IT hub. Small batches
-                of 15 students, personalized attention, 90% success rate. Perfect for students from
+                of 15 students, personalized attention, 98% success rate. Perfect for students from
                 Noida, Greater Noida & Ghaziabad!
               </p>
 

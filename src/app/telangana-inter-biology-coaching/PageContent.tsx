@@ -77,7 +77,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Telangana Students', value: '1,600+', icon: Users },
   { label: 'Inter Toppers', value: '62+', icon: GraduationCap },
@@ -140,7 +140,7 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Inter Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty.
+              Expert Inter Biology coaching with NEET focus. 98% success rate, AIIMS faculty.
               Bridge the gap between TSBIE and NCERT syllabus. Join 1,600+ Telangana students!
             </p>
 
@@ -420,7 +420,7 @@ export default function PageContent() {
               {
                 question: 'What is the success rate for Telangana Inter students?',
                 answer:
-                  'Our success rate for Telangana Inter Biology students is 94.2% with an average score of 358/720 in NEET. We have 62+ Inter toppers in the last two years across all Telangana districts.',
+                  'Our success rate for Telangana Inter Biology students is 98% with an average score of 358/720 in NEET. We have 62+ Inter toppers in the last two years across all Telangana districts.',
               },
               {
                 question: 'Can I get a demo class before enrolling?',
@@ -469,7 +469,7 @@ export default function PageContent() {
               Ready to Excel in Inter Biology & NEET?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,600+ Telangana students. 94.2% success rate. AIIMS faculty. Start today!
+              Join 1,600+ Telangana students. 98% success rate. AIIMS faculty. Start today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

@@ -120,7 +120,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '361', icon: Star },
   { label: 'Anna Nagar Students', value: '720+', icon: Users },
   { label: 'Elite Schools', value: '18+', icon: GraduationCap },
@@ -239,7 +239,7 @@ export default function NeetCoachingAnnaNagarPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Anna Nagar&apos;s elite schools. 94.2% success rate,
+              Premium NEET Biology coaching for Anna Nagar&apos;s elite schools. 98% success rate,
               AIIMS faculty, zero traffic stress. Join 720+ students from DAV, Velammal, Chinmaya.
             </p>
 
@@ -482,7 +482,7 @@ export default function NeetCoachingAnnaNagarPage() {
               Join Anna Nagar&apos;s Top NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, premium small batches. Kilpauk Medical specialists!
+              98% success rate, AIIMS faculty, premium small batches. Kilpauk Medical specialists!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

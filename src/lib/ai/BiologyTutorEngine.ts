@@ -281,7 +281,7 @@ class BiologyTutorEngine {
 
     Your expertise:
     - 15+ years teaching Biology
-    - 94.2% NEET success rate
+    - 98% NEET success rate
     - Expert in visual learning and mnemonics
     - Known for making complex concepts simple
 

@@ -206,7 +206,7 @@ export function LocalitySchema({
         '@type': 'HowToStep',
         position: 2,
         name: 'Attend Demo Class',
-        text: 'Experience our teaching methodology and interact with Dr. Shekhar Suman during the demo session.',
+        text: 'Experience our teaching methodology and interact with Dr. Shekhar C Singh during the demo session.',
       },
       {
         '@type': 'HowToStep',
@@ -401,7 +401,7 @@ export function LocalitySchema({
           small batches of 25 students maximum.
         </p>
         <p className="speakable-features">
-          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar Suman, small batch
+          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small batch
           sizes of maximum 25 students, comprehensive study material aligned with NCERT, regular
           mock tests and performance tracking, unlimited doubt clearing sessions, and flexible batch
           timings for school students in {locality}.

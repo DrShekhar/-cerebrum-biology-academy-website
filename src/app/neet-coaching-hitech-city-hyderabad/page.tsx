@@ -121,7 +121,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '356', icon: Star },
   { label: 'Hitech Students', value: '780+', icon: Users },
   { label: 'IT Schools', value: '15+', icon: GraduationCap },
@@ -240,7 +240,7 @@ export default function NeetCoachingHitechCityPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Tech-forward NEET Biology coaching for Hitech City IT families. 94.2% success rate,
+              Tech-forward NEET Biology coaching for Hitech City IT families. 98% success rate,
               AIIMS faculty, zero traffic stress. Join 780+ students from DPS, Oakridge, Chirec.
             </p>
 
@@ -480,7 +480,7 @@ export default function NeetCoachingHitechCityPage() {
               Join Hitech City&apos;s Top NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, tech-forward platform. IT family specialists!
+              98% success rate, AIIMS faculty, tech-forward platform. IT family specialists!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

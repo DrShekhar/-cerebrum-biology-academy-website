@@ -400,7 +400,7 @@ export function LocalBusinessSchema() {
       'NEET Biology Coaching Gurgaon',
     ],
     description:
-      'Premier NEET Biology coaching in Gurugram with AIIMS Trained Faculty. 90% success rate, small batches of 15 students, personalized attention. Serving Gurugram, Delhi NCR.',
+      'Premier NEET Biology coaching in Gurugram with AIIMS Trained Faculty. 98% success rate, small batches of 15 students, personalized attention. Serving Gurugram, Delhi NCR.',
     url: 'https://cerebrumbiologyacademy.com',
     telephone: CONTACT_INFO.phone.primary,
     email: CONTACT_INFO.email.info,

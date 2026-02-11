@@ -28,7 +28,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score', value: '358/360', icon: Star },
   { label: 'Kharar Area', value: '45+', icon: Users },
   { label: 'Govt Medical', value: '10+', icon: GraduationCap },
@@ -43,7 +43,7 @@ const whyNotMohali = [
 const schools = ['Government School Kharar', 'DAV Public School', 'Sanskriti School', 'Guru Nanak Public School', 'Spring Dale School']
 
 const faqs = [
-  { question: 'Is there NEET coaching in Kharar?', answer: 'Kharar has limited NEET coaching options. Cerebrum provides premium online NEET coaching accessible from Kharar with AIIMS faculty, 94.2% success rate. 45+ students from Kharar area enrolled!' },
+  { question: 'Is there NEET coaching in Kharar?', answer: 'Kharar has limited NEET coaching options. Cerebrum provides premium online NEET coaching accessible from Kharar with AIIMS faculty, 98% success rate. 45+ students from Kharar area enrolled!' },
   { question: 'Should Kharar students go to Mohali for coaching?', answer: 'Not necessary! Save 20-30 min travel daily and Rs 2000-3000/month transport. Cerebrum offers same quality online from your Kharar home.' },
   { question: 'How much does NEET coaching cost for Kharar students?', answer: 'Cerebrum fees: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Dropper Rs 68,000/year. Much affordable than Mohali/Chandigarh centers!' },
   { question: 'What are batch timings for Kharar students?', answer: 'Multiple options: Morning (6-8 AM), After-school (4-6 PM), Evening (7-9 PM). Weekend batches available.' },
@@ -61,7 +61,7 @@ export default function KhararPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block px-4 py-2 bg-violet-500/20 text-violet-300 rounded-full text-sm font-medium mb-6">🎯 Untapped Market - 45+ Students Already Enrolled</span>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">NEET Coaching for <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-pink-400">Kharar Punjab</span></h1>
-            <p className="text-xl lg:text-2xl text-violet-100 mb-8">First quality NEET coaching for Kharar students. <strong>Online classes</strong> with AIIMS faculty, 94.2% success rate. No Mohali travel!</p>
+            <p className="text-xl lg:text-2xl text-violet-100 mb-8">First quality NEET coaching for Kharar students. <strong>Online classes</strong> with AIIMS faculty, 98% success rate. No Mohali travel!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}><Button size="lg" className="bg-green-500 hover:bg-green-600"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp Now</Button></Link>
               <Link href="/book-free-demo"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Book Free Demo<ArrowRight className="w-5 h-5 ml-2" /></Button></Link>

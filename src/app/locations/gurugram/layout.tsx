@@ -4,7 +4,7 @@ import { GurugramServiceSchema } from '@/components/seo/StructuredData'
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
   description:
-    'Best NEET Biology coaching in Gurugram by AIIMS faculty. Small batches of 15 students, 90% success rate. Located near HUDA City Centre. Call +91 88264 44334.',
+    'Best NEET Biology coaching in Gurugram by AIIMS faculty. Small batches of 15 students, 98% success rate. Located near HUDA City Centre. Call +91 88264 44334.',
   keywords: [
     'NEET coaching Gurugram',
     'NEET coaching Gurgaon',
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
     description:
-      'Best NEET Biology coaching in Gurugram. AIIMS faculty, small batches, 90% success rate. No need to travel to Delhi!',
+      'Best NEET Biology coaching in Gurugram. AIIMS faculty, small batches, 98% success rate. No need to travel to Delhi!',
     type: 'website',
     locale: 'en_IN',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching in Gurugram',
-    description: 'Best NEET Biology coaching by AIIMS faculty. 90% success rate.',
+    description: 'Best NEET Biology coaching by AIIMS faculty. 98% success rate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/gurugram',

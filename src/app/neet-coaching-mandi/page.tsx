@@ -38,7 +38,7 @@ export default function NEETCoachingMandi() {
     {
       question: 'Which is the best NEET coaching in Mandi for 2026 preparation?',
       answer:
-        'Cerebrum Biology Academy is the top-rated NEET coaching for Mandi students, offering online classes from AIIMS-trained faculty. With 94.2% success rate and flexible timings suitable for hill students, we provide comprehensive preparation including live classes, doubt sessions, and study materials specifically designed for HP Board students.',
+        'Cerebrum Biology Academy is the top-rated NEET coaching for Mandi students, offering online classes from AIIMS-trained faculty. With 98% success rate and flexible timings suitable for hill students, we provide comprehensive preparation including live classes, doubt sessions, and study materials specifically designed for HP Board students.',
     },
     {
       question: 'How can students from Sundernagar and Nerchowk join NEET coaching?',
@@ -115,7 +115,7 @@ export default function NEETCoachingMandi() {
         cityName="Mandi"
         stateName="Himachal Pradesh"
         url="https://cerebrumacademy.in/neet-coaching-mandi"
-        description="Best NEET coaching in Mandi, Himachal Pradesh. Online classes from AIIMS faculty for Mandi, Sundernagar, Nerchowk students. 94.2% success rate. Prepare for SLBSGMC from home."
+        description="Best NEET coaching in Mandi, Himachal Pradesh. Online classes from AIIMS faculty for Mandi, Sundernagar, Nerchowk students. 98% success rate. Prepare for SLBSGMC from home."
         areaServed={['Mandi', 'Sundernagar', 'Nerchowk', 'Pandoh', 'Jogindernagar', 'Karsog', 'Sarkaghat', 'Rewalsar']}
         faqs={faqs}
       />
@@ -176,7 +176,7 @@ export default function NEETCoachingMandi() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {[
-                  { number: '94.2%', label: 'Success Rate', icon: TrendingUp },
+                  { number: '98%', label: 'Success Rate', icon: TrendingUp },
                   { number: '200+', label: 'Mandi Students', icon: Users },
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '35+', label: 'HP Selections', icon: Award },

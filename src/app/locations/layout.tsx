@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching Centers in Delhi NCR | Cerebrum Biology Academy',
   description:
-    'Find the best NEET Biology coaching center near you. 5 locations across Delhi NCR - Gurugram, Delhi, South Delhi, Noida, Faridabad. AIIMS faculty, small batches, 90% success rate.',
+    'Find the best NEET Biology coaching center near you. 5 locations across Delhi NCR - Gurugram, Delhi, South Delhi, Noida, Faridabad. AIIMS faculty, small batches, 98% success rate.',
   keywords: [
     'NEET coaching centers Delhi NCR',
     'NEET coaching near me',

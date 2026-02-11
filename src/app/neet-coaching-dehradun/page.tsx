@@ -50,14 +50,14 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '342', icon: Star },
   { label: 'UK Students', value: '1,800+', icon: Users },
   { label: 'Areas Covered', value: '12+', icon: MapPin },
 ]
 
 const faqs = [
-  { question: 'Why choose online coaching for NEET preparation in Dehradun?', answer: 'Dehradun students often consider migrating to Kota, spending Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the beautiful Doon Valley with family, save money, and get personalized attention. Our 94.2% success rate proves online is equally effective.' },
+  { question: 'Why choose online coaching for NEET preparation in Dehradun?', answer: 'Dehradun students often consider migrating to Kota, spending Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the beautiful Doon Valley with family, save money, and get personalized attention. Our 98% success rate proves online is equally effective.' },
   { question: 'Which areas in Dehradun do you serve?', answer: 'We serve all major Dehradun localities including Rajpur Road, Clock Tower, Prem Nagar, Clement Town, Race Course, Ballupur, Dalanwala, and all surrounding areas including Mussoorie, Rishikesh. Students from any Uttarakhand district can join our online live classes.' },
   { question: 'What is the fee for NEET coaching in Dehradun?', answer: 'Our complete NEET Biology course ranges from Rs 24,000 to Rs 48,000 per year - a fraction of Kota migration costs. We offer EMI options and merit scholarships specifically for Uttarakhand students.' },
   { question: 'Do you understand Uttarakhand board patterns?', answer: 'Yes! We have specialized batches for Uttarakhand board students. Our faculty understands the UK Board syllabus, exam patterns, and how to balance board exams with NEET preparation.' },
@@ -88,7 +88,7 @@ export default function NeetCoachingDehradunPage() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Best <span className="text-yellow-300">NEET Coaching in Dehradun</span></h1>
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">Rajpur Road | Clock Tower | Prem Nagar | Clement Town</h2>
-            <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">Why migrate to Kota? Get AIIMS trained faculties, 94.2% success rate, and live interactive classes - all from Dehradun. Join 1,800+ Uttarakhand students achieving NEET success from home.</p>
+            <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">Why migrate to Kota? Get AIIMS trained faculties, 98% success rate, and live interactive classes - all from Dehradun. Join 1,800+ Uttarakhand students achieving NEET success from home.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo Class</Button></Link>
               <Link href="/courses"><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-teal-900"><BookOpen className="w-5 h-5 mr-2" />View Course Details</Button></Link>
@@ -171,7 +171,7 @@ export default function NeetCoachingDehradunPage() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey from the Doon Valley</h2>
-            <p className="text-xl md:text-2xl mb-8 opacity-90">94.2% success rate, AIIMS trained faculties, 1,800+ Uttarakhand students!</p>
+            <p className="text-xl md:text-2xl mb-8 opacity-90">98% success rate, AIIMS trained faculties, 1,800+ Uttarakhand students!</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link href="/demo-booking"><Button variant="secondary" size="xl" onClick={handleDemoBooking} className="bg-yellow-500 text-black hover:bg-yellow-400"><Play className="w-5 h-5 mr-2" />Book Free Demo Class</Button></Link>
               <Link href="/enrollment"><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-teal-600"><ArrowRight className="w-5 h-5 mr-2" />Enroll Now</Button></Link>

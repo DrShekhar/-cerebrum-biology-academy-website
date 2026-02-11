@@ -327,7 +327,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
       colleges: 'AIIMS/Top Medical',
     },
     ascent: {
-      successRate: 94.2,
+      successRate: 98,
       avgRank: 'Top 2000',
       students: '1,50,000+',
       colleges: 'Government Medical',

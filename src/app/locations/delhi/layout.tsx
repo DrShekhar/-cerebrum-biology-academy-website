@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Biology Coaching in Delhi | Cerebrum Biology Academy',
     description:
-      'Best NEET Biology coaching in Delhi. AIIMS faculty, small batches, 90% success rate.',
+      'Best NEET Biology coaching in Delhi. AIIMS faculty, small batches, 98% success rate.',
     type: 'website',
     locale: 'en_IN',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching in Delhi',
-    description: 'Best NEET Biology coaching by AIIMS faculty. 90% success rate.',
+    description: 'Best NEET Biology coaching by AIIMS faculty. 98% success rate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/delhi',

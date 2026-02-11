@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Varanasi | Lanka, Sigra, Bhelupur | Cerebrum Academy',
   description:
-    'Top NEET biology coaching in Varanasi (Banaras) for UP students. IMS BHU focused preparation! 94.2% success rate, AIIMS faculty. Lanka, Sigra, Bhelupur, Assi, Godowlia. 3,500+ students. Book free demo!',
+    'Top NEET biology coaching in Varanasi (Banaras) for UP students. IMS BHU focused preparation! 98% success rate, AIIMS faculty. Lanka, Sigra, Bhelupur, Assi, Godowlia. 3,500+ students. Book free demo!',
   keywords:
     'NEET coaching Varanasi, NEET biology coaching Varanasi, best NEET coaching Lanka, NEET classes Sigra, biology coaching Bhelupur, NEET tuition Assi, NEET coaching Godowlia, NEET preparation UP, online NEET coaching Varanasi, NEET coaching Banaras, NEET biology Varanasi, UP Board NEET prep, IMS BHU preparation, biology tuition Varanasi, biology classes Varanasi, online biology coaching Varanasi, biology teacher Varanasi, NEET biology Varanasi',
   openGraph: {
     title: 'Best NEET Coaching in Varanasi | Uttar Pradesh | Cerebrum Academy',
     description:
-      'Top NEET biology coaching in Varanasi with 94.2% success rate. IMS BHU focused preparation! AIIMS faculty, small batches. Join 3,500+ UP students from Lanka, Sigra, Bhelupur.',
+      'Top NEET biology coaching in Varanasi with 98% success rate. IMS BHU focused preparation! AIIMS faculty, small batches. Join 3,500+ UP students from Lanka, Sigra, Bhelupur.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-varanasi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Varanasi | Cerebrum Biology Academy',
     description:
-      'Top NEET biology coaching in Varanasi. IMS BHU focused! 94.2% success rate. Lanka, Sigra, Bhelupur, Assi, Godowlia.',
+      'Top NEET biology coaching in Varanasi. IMS BHU focused! 98% success rate. Lanka, Sigra, Bhelupur, Assi, Godowlia.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-varanasi',

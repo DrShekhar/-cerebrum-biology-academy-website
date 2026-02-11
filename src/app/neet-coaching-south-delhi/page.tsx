@@ -173,7 +173,7 @@ const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
   name: 'Free NEET Biology Demo Class - South Delhi',
-  description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from South Delhi. Meet Dr. Shekhar Suman.`,
+  description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from South Delhi. Meet Dr. Shekhar C Singh.`,
   startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
   endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
   eventStatus: 'https://schema.org/EventScheduled',
@@ -198,7 +198,7 @@ const eventSchema = {
   ],
   performer: {
     '@type': 'Person',
-    name: 'Dr. Shekhar Suman',
+    name: 'Dr. Shekhar C Singh',
     jobTitle: 'Founder & Lead Faculty',
   },
   organizer: {
@@ -241,7 +241,7 @@ const howToSchema = {
       '@type': 'HowToStep',
       position: 2,
       name: 'Attend Demo Session',
-      text: 'Attend a 1-hour demo class with Dr. Shekhar Suman. Experience our teaching methodology.',
+      text: 'Attend a 1-hour demo class with Dr. Shekhar C Singh. Experience our teaching methodology.',
     },
     {
       '@type': 'HowToStep',

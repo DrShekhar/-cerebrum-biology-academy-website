@@ -348,7 +348,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                   {
                     icon: GraduationCap,
                     title: 'AIIMS-Trained Faculty',
-                    desc: 'Dr. Shekhar Suman (Ex-AIIMS) personally teaches batches',
+                    desc: 'Dr. Shekhar C Singh (Ex-AIIMS) personally teaches batches',
                   },
                   {
                     icon: Users,

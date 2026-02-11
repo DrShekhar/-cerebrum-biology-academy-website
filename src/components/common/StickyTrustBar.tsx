@@ -11,7 +11,7 @@ export function StickyTrustBar() {
   const trustMetrics = [
     {
       icon: Trophy,
-      value: '94.2%',
+      value: '98%',
       label: 'NEET Success Rate',
       color: 'text-green-600 bg-green-50 border-green-200',
     },

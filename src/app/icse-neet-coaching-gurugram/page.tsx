@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'ICSE Board NEET Coaching in Gurugram | ICSE-to-NCERT Bridge',
-    description: 'NEET Biology coaching designed specifically for ICSE students. Bridge ICSE concepts to NCERT format with 95% success rate.',
+    description: 'NEET Biology coaching designed specifically for ICSE students. Bridge ICSE concepts to NCERT format with 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/icse-neet-coaching-gurugram',
   },
   alternates: {

@@ -39,7 +39,7 @@ export default function NEETCoachingMumbai() {
     {
       question: 'Which is the best NEET coaching in Mumbai for 2026 preparation?',
       answer:
-        "Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While Allen, Aakash, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 94.2% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!",
+        "Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While Allen, Aakash, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 98% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!",
     },
     {
       question: 'What medical colleges can Mumbai students target through NEET?',
@@ -116,7 +116,7 @@ export default function NEETCoachingMumbai() {
         cityName="Mumbai"
         stateName="Maharashtra"
         url="https://cerebrumacademy.in/neet-coaching-mumbai"
-        description="Best NEET coaching in Mumbai, Maharashtra. Online classes from AIIMS faculty for Andheri, Bandra, Borivali, Thane, Navi Mumbai students. 94.2% success rate. Prepare for Seth GS, Grant Medical, KEM from home."
+        description="Best NEET coaching in Mumbai, Maharashtra. Online classes from AIIMS faculty for Andheri, Bandra, Borivali, Thane, Navi Mumbai students. 98% success rate. Prepare for Seth GS, Grant Medical, KEM from home."
         areaServed={['Mumbai', 'Andheri', 'Bandra', 'Borivali', 'Thane', 'Navi Mumbai', 'Powai', 'Mulund', 'Dadar', 'Kalyan', 'Dombivli']}
         faqs={faqs}
       />
@@ -177,7 +177,7 @@ export default function NEETCoachingMumbai() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {[
-                  { number: '94.2%', label: 'Success Rate', icon: TrendingUp },
+                  { number: '98%', label: 'Success Rate', icon: TrendingUp },
                   { number: '2500+', label: 'Mumbai Students', icon: Users },
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '5125', label: 'MH MBBS Seats', icon: Award },

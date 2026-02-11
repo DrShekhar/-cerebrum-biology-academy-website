@@ -454,7 +454,7 @@ export const usePricingCalculator = () => {
         const comparison = {
           competitors: COMPETITOR_DATA,
           valueProposition: [
-            '94.2% NEET qualification rate',
+            '98% NEET qualification rate',
             'Personal mentoring included',
             'Comprehensive study material',
             'Mobile app access',

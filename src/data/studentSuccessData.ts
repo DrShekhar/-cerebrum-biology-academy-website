@@ -1037,7 +1037,7 @@ export const successStats = {
   governmentSeats: 2234,
   privateSeats: 613,
   averageScore: 628,
-  successRate: 94.2,
+  successRate: 98,
   studentsThisYear: 489,
   ongoingEnrollments: 1247,
 }

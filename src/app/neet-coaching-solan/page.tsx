@@ -38,7 +38,7 @@ export default function NEETCoachingSolan() {
     {
       question: 'Which is the best NEET coaching in Solan for 2026 preparation?',
       answer:
-        'Cerebrum Biology Academy is the top-rated NEET coaching for Solan students, offering online classes from AIIMS-trained faculty. With 94.2% success rate and specific focus on HP medical colleges including MMMC Solan (150 seats right in your city!), we provide comprehensive preparation with live classes, doubt sessions, and complete study materials.',
+        'Cerebrum Biology Academy is the top-rated NEET coaching for Solan students, offering online classes from AIIMS-trained faculty. With 98% success rate and specific focus on HP medical colleges including MMMC Solan (150 seats right in your city!), we provide comprehensive preparation with live classes, doubt sessions, and complete study materials.',
     },
     {
       question: 'Does Solan have its own medical college?',
@@ -63,7 +63,7 @@ export default function NEETCoachingSolan() {
     {
       question: 'Is online NEET coaching effective for students in industrial areas like Baddi?',
       answer:
-        "Absolutely! Students from Baddi, Parwanoo, and Nalagarh industrial areas have excelled with our online coaching. Good internet connectivity in these areas makes live classes seamless. Many working parents in pharma industry appreciate that children can study without relocating. 94.2% success rate validates effectiveness.",
+        "Absolutely! Students from Baddi, Parwanoo, and Nalagarh industrial areas have excelled with our online coaching. Good internet connectivity in these areas makes live classes seamless. Many working parents in pharma industry appreciate that children can study without relocating. 98% success rate validates effectiveness.",
     },
     {
       question: 'What study materials do you provide for HP Board students?',
@@ -115,7 +115,7 @@ export default function NEETCoachingSolan() {
         cityName="Solan"
         stateName="Himachal Pradesh"
         url="https://cerebrumacademy.in/neet-coaching-solan"
-        description="Best NEET coaching in Solan, Himachal Pradesh. Online classes from AIIMS faculty for Solan, Kasauli, Baddi, Parwanoo students. 94.2% success rate. MMMC Solan with 150 seats is in your city!"
+        description="Best NEET coaching in Solan, Himachal Pradesh. Online classes from AIIMS faculty for Solan, Kasauli, Baddi, Parwanoo students. 98% success rate. MMMC Solan with 150 seats is in your city!"
         areaServed={['Solan', 'Kasauli', 'Baddi', 'Nalagarh', 'Parwanoo', 'Arki', 'Kandaghat', 'Dharampur']}
         faqs={faqs}
       />
@@ -176,7 +176,7 @@ export default function NEETCoachingSolan() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {[
-                  { number: '94.2%', label: 'Success Rate', icon: TrendingUp },
+                  { number: '98%', label: 'Success Rate', icon: TrendingUp },
                   { number: '350+', label: 'Solan Students', icon: Users },
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '55+', label: 'HP Selections', icon: Award },

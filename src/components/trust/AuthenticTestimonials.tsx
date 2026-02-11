@@ -459,7 +459,7 @@ export function TestimonialStats() {
       color: 'text-yellow-600',
     },
     {
-      value: '94.2%',
+      value: '98%',
       label: language === 'hi' ? 'सफलता दर' : 'Success Rate',
       icon: Award,
       color: 'text-blue-600',

@@ -77,7 +77,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Karnataka Students', value: '1,400+', icon: Users },
   { label: 'PUC Toppers', value: '52+', icon: GraduationCap },
@@ -151,7 +151,7 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert PUC Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty. Bridge
+              Expert PUC Biology coaching with NEET focus. 98% success rate, AIIMS faculty. Bridge
               the gap between KSEEB and NCERT syllabus. Join 1,400+ Karnataka students!
             </p>
 
@@ -470,7 +470,7 @@ export default function PageContent() {
               {
                 question: 'What is the success rate for Karnataka PUC students?',
                 answer:
-                  'Our success rate for PUC Biology students is 94.2% with an average score of 358/720 in NEET. We have 52+ PUC toppers in the last two years across all Karnataka districts.',
+                  'Our success rate for PUC Biology students is 98% with an average score of 358/720 in NEET. We have 52+ PUC toppers in the last two years across all Karnataka districts.',
               },
               {
                 question: 'Can I join mid-year if I start coaching later?',
@@ -519,7 +519,7 @@ export default function PageContent() {
               Ready to Excel in PUC Biology & NEET?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,400+ Karnataka students. 94.2% success rate. AIIMS faculty. Start today!
+              Join 1,400+ Karnataka students. 98% success rate. AIIMS faculty. Start today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

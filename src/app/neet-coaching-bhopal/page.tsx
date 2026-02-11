@@ -75,7 +75,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Bhopal Students', value: '650+', icon: Users },
   { label: 'AIIMS Selections', value: '12+', icon: GraduationCap },
@@ -85,7 +85,7 @@ const faqs = [
   {
     question: 'Why choose online NEET coaching over Bhopal coaching centers?',
     answer:
-      'Bhopal coaching centers typically have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save commute time from different parts of Bhopal. Same 94.2% success rate, better attention.',
+      'Bhopal coaching centers typically have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save commute time from different parts of Bhopal. Same 98% success rate, better attention.',
   },
   {
     question: 'Which areas in Bhopal do you serve?',
@@ -174,7 +174,7 @@ export default function NEETCoachingBhopalPage() {
               MP Nagar | Arera Colony | Kolar Road | All Bhopal
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Bhopal students. 94.2% success rate, AIIMS faculty.
+              Premium NEET Biology coaching for Bhopal students. 98% success rate, AIIMS faculty.
               Target AIIMS Bhopal, GMC with expert guidance. Join 650+ Bhopal students!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -378,7 +378,7 @@ export default function NEETCoachingBhopalPage() {
               Ready to Crack NEET from Bhopal?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 650+ Bhopal students. Target AIIMS Bhopal, GMC. 94.2% success rate!
+              Join 650+ Bhopal students. Target AIIMS Bhopal, GMC. 98% success rate!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

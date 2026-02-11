@@ -121,7 +121,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'KP Students', value: '550+', icon: Users },
   { label: 'Elite Schools', value: '12+', icon: GraduationCap },
@@ -240,7 +240,7 @@ export default function NeetCoachingKoregaonParkPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Koregaon Park&apos;s elite schools. 94.2% success
+              Premium NEET Biology coaching for Koregaon Park&apos;s elite schools. 98% success
               rate, AIIMS faculty, zero traffic stress. Join 550+ students from Symbiosis, MBIS,
               Orchid School.
             </p>
@@ -482,7 +482,7 @@ export default function NeetCoachingKoregaonParkPage() {
               Join Koregaon Park&apos;s Elite NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, premium small batches. IB/IGCSE specialists!
+              98% success rate, AIIMS faculty, premium small batches. IB/IGCSE specialists!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

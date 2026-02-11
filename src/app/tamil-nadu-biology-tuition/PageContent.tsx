@@ -77,7 +77,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'TN Students', value: '1,500+', icon: Users },
   { label: 'TN Board Toppers', value: '58+', icon: GraduationCap },
@@ -140,7 +140,7 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert TN Board Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty.
+              Expert TN Board Biology coaching with NEET focus. 98% success rate, AIIMS faculty.
               Bridge the gap between Samacheer Kalvi and NCERT syllabus. Join 1,500+ Tamil Nadu
               students!
             </p>
@@ -442,7 +442,7 @@ export default function PageContent() {
               {
                 question: 'What is the success rate for Tamil Nadu students?',
                 answer:
-                  'Our success rate for TN Board Biology students is 94.2% with an average score of 358/720 in NEET. We have 58+ TN Board toppers in the last two years across all Tamil Nadu districts.',
+                  'Our success rate for TN Board Biology students is 98% with an average score of 358/720 in NEET. We have 58+ TN Board toppers in the last two years across all Tamil Nadu districts.',
               },
               {
                 question: 'How can I enroll or get more information?',
@@ -491,7 +491,7 @@ export default function PageContent() {
               Ready to Excel in TN Board Biology & NEET?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,500+ Tamil Nadu students. 94.2% success rate. AIIMS faculty. Start today!
+              Join 1,500+ Tamil Nadu students. 98% success rate. AIIMS faculty. Start today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

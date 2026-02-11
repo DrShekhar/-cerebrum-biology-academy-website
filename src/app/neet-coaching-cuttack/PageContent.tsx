@@ -118,7 +118,7 @@ const faqs = [
   {
     question: 'How is online NEET coaching better than Cuttack coaching centers?',
     answer:
-      'Online offers AIIMS-trained faculty not available locally, small batches of 10-15 students, no commute, recorded lectures, personalized mentoring, and lower fees than premium coaching centers. 94.2% success rate speaks for itself.',
+      'Online offers AIIMS-trained faculty not available locally, small batches of 10-15 students, no commute, recorded lectures, personalized mentoring, and lower fees than premium coaching centers. 98% success rate speaks for itself.',
   },
   {
     question: 'Do you cover Odisha CHSE board for NEET?',

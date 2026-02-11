@@ -415,7 +415,7 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
         '@type': 'HowToStep',
         position: 2,
         name: 'Attend Demo Session',
-        text: 'Attend a 1-hour demo class with Dr. Shekhar Suman. Experience our teaching methodology and small batch environment.',
+        text: 'Attend a 1-hour demo class with Dr. Shekhar C Singh. Experience our teaching methodology and small batch environment.',
       },
       {
         '@type': 'HowToStep',
@@ -502,7 +502,7 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
     '@context': 'https://schema.org',
     '@type': 'Event',
     name: `Free NEET Biology Demo Class - ${area.name}`,
-    description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from ${area.name}. Meet Dr. Shekhar Suman and understand our unique approach.`,
+    description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from ${area.name}. Meet Dr. Shekhar C Singh and understand our unique approach.`,
     startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
     endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
     eventStatus: 'https://schema.org/EventScheduled',
@@ -527,7 +527,7 @@ export default async function SouthDelhiAreaPage({ params }: PageProps) {
     ],
     performer: {
       '@type': 'Person',
-      name: 'Dr. Shekhar Suman',
+      name: 'Dr. Shekhar C Singh',
       jobTitle: 'Founder & Lead Faculty',
     },
     organizer: {

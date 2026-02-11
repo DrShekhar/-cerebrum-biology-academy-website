@@ -183,7 +183,7 @@ export function EnhancedCourseFinderQuiz({
           price: 60000,
           originalPrice: 63000,
           duration: '1 Year',
-          successRate: '94.2%',
+          successRate: '98%',
           features: [
             '16-18 students per batch',
             'AIIMS faculty teaching',
@@ -191,7 +191,7 @@ export function EnhancedCourseFinderQuiz({
             '3000+ practice questions',
             'Weekly group doubt sessions',
           ],
-          highlights: ['Most popular choice', '94.2% success rate', 'Complete study materials'],
+          highlights: ['Most popular choice', '98% success rate', 'Complete study materials'],
           match: 92,
         }
         alternatives = [

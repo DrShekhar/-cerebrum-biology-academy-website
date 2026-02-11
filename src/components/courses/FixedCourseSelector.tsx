@@ -133,7 +133,7 @@ function EnhancedSeriesCard({
             <div className="text-xs text-gray-600">Per Week</div>
           </div>
           <div className={`${theme.bgCard} rounded-lg p-3 text-center`}>
-            <div className={`text-lg font-bold text-green-600`}>94.2%</div>
+            <div className={`text-lg font-bold text-green-600`}>98%</div>
             <div className="text-xs text-gray-600">Success Rate</div>
           </div>
         </div>
@@ -347,7 +347,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
               className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
             >
               <Award className="w-8 h-8 text-yellow-300 mx-auto mb-2" />
-              <div className="text-3xl font-bold">94.2%</div>
+              <div className="text-3xl font-bold">98%</div>
               <div className="text-blue-100">NEET Success Rate</div>
             </motion.div>
             <motion.div

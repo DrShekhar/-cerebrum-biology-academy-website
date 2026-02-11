@@ -165,7 +165,7 @@ export class MetadataService {
       neet: {
         title: 'NEET Biology Coaching 2025 | Best NEET Biology Classes | Cerebrum Academy',
         description:
-          '🏆 #1 NEET Biology coaching with 94.2% success rate. Expert AIIMS faculty, comprehensive study material, live classes. Join 10,000+ NEET qualifiers!',
+          '🏆 #1 NEET Biology coaching with 98% success rate. Expert AIIMS faculty, comprehensive study material, live classes. Join 10,000+ NEET qualifiers!',
         keywords: [
           'NEET biology coaching',
           'NEET preparation',
@@ -177,7 +177,7 @@ export class MetadataService {
       aiims: {
         title: 'AIIMS Biology Preparation 2025 | Best AIIMS Coaching | Cerebrum Academy',
         description:
-          '🎯 Crack AIIMS with our specialized Biology coaching. Expert AIIMS faculty, previous year papers, mock tests. 94.2% success rate!',
+          '🎯 Crack AIIMS with our specialized Biology coaching. Expert AIIMS faculty, previous year papers, mock tests. 98% success rate!',
         keywords: [
           'AIIMS biology preparation',
           'AIIMS coaching',
@@ -279,7 +279,7 @@ export class MetadataService {
     return {
       title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Online | #1 Biology Classes',
       description:
-        "🏆 India's #1 Biology coaching for NEET. 94.2% success rate, AIIMS faculty, live classes, doubt solving. Join 10,000+ medical college students!",
+        "🏆 India's #1 Biology coaching for NEET. 98% success rate, AIIMS faculty, live classes, doubt solving. Join 10,000+ medical college students!",
       keywords: [
         'best biology coaching',
         'NEET biology preparation',
@@ -295,7 +295,7 @@ export class MetadataService {
       openGraph: {
         title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Online',
         description:
-          "🏆 India's #1 Biology coaching for NEET. 94.2% success rate, AIIMS faculty, live classes, doubt solving.",
+          "🏆 India's #1 Biology coaching for NEET. 98% success rate, AIIMS faculty, live classes, doubt solving.",
         url: this.baseUrl,
         siteName: 'Cerebrum Biology Academy',
         images: [
@@ -313,7 +313,7 @@ export class MetadataService {
         card: 'summary_large_image',
         title: 'Cerebrum Biology Academy | Best NEET Biology Coaching',
         description:
-          "🏆 India's #1 Biology coaching for NEET. 94.2% success rate, AIIMS faculty, live classes.",
+          "🏆 India's #1 Biology coaching for NEET. 98% success rate, AIIMS faculty, live classes.",
         images: ['/og-home.jpg'],
         creator: '@CerebrumBiology',
       },

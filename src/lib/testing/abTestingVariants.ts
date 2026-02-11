@@ -74,13 +74,13 @@ export const AB_TEST_DECISION_POINTS: ABTestDecisionPoint[] = [
       {
         id: 'hero-results-focused',
         name: 'Results-Focused Hero',
-        description: 'Emphasize 94.2% success rate and NEET ranks prominently',
+        description: 'Emphasize 98% success rate and NEET ranks prominently',
         changes: [
           {
             element: 'Hero headline',
             type: 'content',
             description: 'Change from generic to results-focused messaging',
-            implementation: '"94.2% Students Qualify NEET - Join 10,000+ Success Stories"',
+            implementation: '"98% Students Qualify NEET - Join 10,000+ Success Stories"',
           },
           {
             element: 'Hero visual',
@@ -740,7 +740,7 @@ export const AB_TEST_DECISION_POINTS: ABTestDecisionPoint[] = [
             element: 'Statistics presentation',
             type: 'design',
             description: 'Detailed statistics with context',
-            implementation: '"94.2% qualification rate (2,847 out of 3,020 students in 2023)"',
+            implementation: '"98% qualification rate (2,847 out of 3,020 students in 2023)"',
           },
           {
             element: 'Verification badges',

@@ -46,7 +46,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
       difficulty: 'Research-Level',
       duration: '12 weeks',
       topics: 47,
-      completionRate: 94.2,
+      completionRate: 98,
       neetWeight: 25,
       aimsWeight: 30,
       researchBased: true,
@@ -388,7 +388,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Proven Results</h4>
                   <p className="text-sm text-gray-700">
-                    94.2% success rate with 500+ AIIMS selections
+                    98% success rate with 500+ AIIMS selections
                   </p>
                 </div>
               </div>

@@ -78,7 +78,7 @@ export const EMAIL_TEMPLATES: EmailTemplate[] = [
           <div style="background-color: #f0fdf4; border-left: 4px solid #22c55e; padding: 20px; margin: 30px 0; border-radius: 5px;">
             <h3 style="color: #166534; margin: 0 0 15px 0; font-size: 18px;">Why continue with us?</h3>
             <ul style="color: #166534; margin: 0; padding-left: 20px;">
-              <li style="margin-bottom: 8px;">94.2% NEET qualification rate</li>
+              <li style="margin-bottom: 8px;">98% NEET qualification rate</li>
               <li style="margin-bottom: 8px;">Personalized study plans</li>
               <li style="margin-bottom: 8px;">Expert faculty from AIIMS & IITs</li>
               <li style="margin-bottom: 8px;">Free consultation worth ₹2000</li>
@@ -121,7 +121,7 @@ We noticed you were exploring our NEET Biology courses and got to step {{current
 Continue your selection: {{continueUrl}}
 
 Why continue with us?
-- 94.2% NEET qualification rate
+- 98% NEET qualification rate
 - Personalized study plans
 - Expert faculty from AIIMS & IITs
 - Free consultation worth ₹2000

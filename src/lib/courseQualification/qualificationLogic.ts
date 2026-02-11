@@ -482,7 +482,7 @@ export class CourseQualificationEngine {
       )
       reasoning.push('👑 Small batch sizes (10-15 students) ensure maximum individual attention')
     } else if (series === 'ascent') {
-      reasoning.push('⭐ Ascent Series is our most popular choice with 94.2% NEET success rate')
+      reasoning.push('⭐ Ascent Series is our most popular choice with 98% NEET success rate')
       reasoning.push('🎯 Perfect balance of comprehensive coverage and affordable pricing')
     } else {
       reasoning.push('💰 Pursuit Series offers excellent value with complete NEET coverage')

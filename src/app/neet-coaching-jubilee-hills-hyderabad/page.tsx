@@ -122,7 +122,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '362', icon: Star },
   { label: 'Hyderabad Students', value: '2,400+', icon: Users },
   { label: 'Premium Schools', value: '20+', icon: GraduationCap },
@@ -132,7 +132,7 @@ const faqs = [
   {
     question: 'Why do Jubilee Hills students choose online NEET coaching?',
     answer:
-      'Jubilee Hills is home to premium schools like Chirec, Oakridge, and Glendale. These schools have demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on Hyderabad traffic. Our 94.2% success rate proves online is equally effective.',
+      'Jubilee Hills is home to premium schools like Chirec, Oakridge, and Glendale. These schools have demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on Hyderabad traffic. Our 98% success rate proves online is equally effective.',
   },
   {
     question: 'Which areas in Jubilee Hills do you serve?',
@@ -242,7 +242,7 @@ export default function NeetCoachingJubileeHillsPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Hyderabad&apos;s elite schools. 94.2% success rate,
+              Premium NEET Biology coaching for Hyderabad&apos;s elite schools. 98% success rate,
               AIIMS faculty, zero traffic commute. Join students from Chirec, Oakridge, Glendale
               Academy.
             </p>
@@ -480,7 +480,7 @@ export default function NeetCoachingJubileeHillsPage() {
               Join Jubilee Hills&apos; Elite NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, premium small batches. International school
+              98% success rate, AIIMS faculty, premium small batches. International school
               specialists!
             </p>
 

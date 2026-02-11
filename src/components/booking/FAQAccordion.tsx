@@ -77,7 +77,7 @@ const faqs: FAQ[] = [
     id: 8,
     question: "What if I'm not satisfied?",
     answer:
-      "Your satisfaction is our priority! If you're not completely satisfied with the demo, we offer a 100% money-back guarantee on any course enrollment. But we're confident you'll love our teaching methodology - 94.2% of demo attendees enroll within 24 hours!",
+      "Your satisfaction is our priority! If you're not completely satisfied with the demo, we offer a 100% money-back guarantee on any course enrollment. But we're confident you'll love our teaching methodology - 98% of demo attendees enroll within 24 hours!",
     icon: <Shield className="w-4 h-4" />,
   },
 ]

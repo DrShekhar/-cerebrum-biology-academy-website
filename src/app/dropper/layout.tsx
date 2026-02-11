@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Dropper Course 2025 | Best Biology Coaching for Repeaters | Cerebrum Academy',
   description:
-    'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance. Small batches, personalized attention, proven 90% success rate.',
+    'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance. Small batches, personalized attention, proven 98% success rate.',
   keywords: [
     'NEET dropper course',
     'NEET repeater batch',

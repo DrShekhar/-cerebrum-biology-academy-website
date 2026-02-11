@@ -188,7 +188,7 @@ export function ProgressiveDisclosureQuiz({
             </div>
             <div className="text-xs text-gray-400 flex items-center gap-1">
               <GraduationCap className="h-3 w-3" />
-              <span>94.2% success rate • AIIMS faculty</span>
+              <span>98% success rate • AIIMS faculty</span>
             </div>
           </div>
 

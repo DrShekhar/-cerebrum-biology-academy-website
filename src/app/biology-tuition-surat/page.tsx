@@ -5,14 +5,14 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 const ogImageParams = new URLSearchParams({
   title: 'Biology Tuition',
-  subtitle: 'Premium biology tuition with 94.2% success rate',
+  subtitle: 'Premium biology tuition with 98% success rate',
   locality: 'Surat',
 })
 
 export const metadata: Metadata = {
-  title: 'Best Biology Tuition in Surat | 94.2% Success Rate | Cerebrum',
+  title: 'Best Biology Tuition in Surat | 98% Success Rate | Cerebrum',
   description:
-    'Premium Biology tuition & NEET coaching for Surat students. AIIMS faculty, 94.2% success rate. Adajan, Vesu, Athwa, City Light. Rs 24,000-68,000/year. Book free demo!',
+    'Premium Biology tuition & NEET coaching for Surat students. AIIMS faculty, 98% success rate. Adajan, Vesu, Athwa, City Light. Rs 24,000-68,000/year. Book free demo!',
   keywords: [
     'biology tuition Surat',
     'online biology classes Surat',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Biology Tuition in Surat | Cerebrum Biology Academy',
     description:
-      'Premium biology tuition in Surat. AIIMS trained faculty, 94.2% success rate, 680+ Surat students. Book free demo!',
+      'Premium biology tuition in Surat. AIIMS trained faculty, 98% success rate, 680+ Surat students. Book free demo!',
     url: `${BASE_URL}/biology-tuition-surat`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -42,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Biology Tuition in Surat | 94.2% Success Rate',
+    title: 'Best Biology Tuition in Surat | 98% Success Rate',
     description:
-      'Biology tuition in Surat for Gujarat students. AIIMS faculty, 94.2% success rate. Book free demo!',
+      'Biology tuition in Surat for Gujarat students. AIIMS faculty, 98% success rate. Book free demo!',
     images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
   alternates: {

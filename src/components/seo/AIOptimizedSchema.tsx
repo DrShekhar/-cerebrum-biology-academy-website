@@ -303,7 +303,7 @@ export function AIContentBlock({ locality }: { locality: string }) {
         small batches.
       </p>
       <p className="speakable-features">
-        Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar Suman, small batch
+        Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small batch
         sizes of maximum 25 students, comprehensive study material aligned with NCERT, regular mock
         tests and performance tracking, doubt clearing sessions, and flexible batch timings for
         school students.

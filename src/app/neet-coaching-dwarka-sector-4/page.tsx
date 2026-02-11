@@ -69,7 +69,7 @@ const faqStructuredData = {
       name: 'Is online NEET coaching available for Dwarka Sector 4 students?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! We offer comprehensive online NEET coaching for Dwarka Sector 4 students. Live interactive classes with Dr. Shekhar Suman, recorded lectures for revision, daily doubt sessions, weekly tests, and complete study material - all accessible from home.',
+        text: 'Yes! We offer comprehensive online NEET coaching for Dwarka Sector 4 students. Live interactive classes with Dr. Shekhar C Singh, recorded lectures for revision, daily doubt sessions, weekly tests, and complete study material - all accessible from home.',
       },
     },
     {

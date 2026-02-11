@@ -546,7 +546,7 @@ export const rohiniAreas: LocalArea[] = [
       'Premium biology coaching in Rohini Sector 11 for serious NEET aspirants. Intensive programs, experienced faculty, excellent results.',
     metaTitle: 'Biology Coaching Rohini Sector 11 | NEET Biology | Cerebrum Academy',
     metaDescription:
-      'Top-rated biology coaching in Rohini Sector 11. Expert NEET preparation with 95% success rate. Serving Sectors 11-15. Enroll now!',
+      'Top-rated biology coaching in Rohini Sector 11. Expert NEET preparation with 98% success rate. Serving Sectors 11-15. Enroll now!',
     keywords: [
       'biology coaching rohini sector 11',
       'neet biology sector 11',
@@ -1092,7 +1092,7 @@ export const microLocationAreas: LocalArea[] = [
       'Expert biology coaching in Vasundhara, Ghaziabad. Premium residential area, experienced faculty, comprehensive NEET preparation.',
     metaTitle: 'Biology Coaching Vasundhara Ghaziabad | NEET Classes | Cerebrum Academy',
     metaDescription:
-      'Top biology coaching in Vasundhara. Expert NEET preparation with 95% success rate. Serving Indirapuram. Book demo!',
+      'Top biology coaching in Vasundhara. Expert NEET preparation with 98% success rate. Serving Indirapuram. Book demo!',
     keywords: [
       'biology coaching vasundhara ghaziabad',
       'neet classes vasundhara',

@@ -323,7 +323,7 @@ const Analytics: React.FC = () => {
             testName: 'NEET Biology Mock 1',
             date: '2024-01-15',
             averageScore: 68.5,
-            completionRate: 94.2,
+            completionRate: 98,
             difficulty: 2.3,
             timeSpent: 155,
             topicScores: {
@@ -1529,7 +1529,7 @@ const Analytics: React.FC = () => {
                         <div>
                           <div className="flex justify-between items-center mb-1">
                             <span className="text-sm">Completion Rate</span>
-                            <span className="text-sm font-medium text-blue-600">94.2%</span>
+                            <span className="text-sm font-medium text-blue-600">98%</span>
                           </div>
                           <div className="w-full bg-gray-200 rounded-full h-2">
                             <div

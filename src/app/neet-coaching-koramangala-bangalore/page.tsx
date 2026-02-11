@@ -120,7 +120,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '354', icon: Star },
   { label: 'Koramangala Students', value: '680+', icon: Users },
   { label: 'Premium Schools', value: '12+', icon: GraduationCap },
@@ -239,7 +239,7 @@ export default function NeetCoachingKoramangalaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Startup-era NEET Biology coaching for Koramangala families. 94.2% success rate, AIIMS
+              Startup-era NEET Biology coaching for Koramangala families. 98% success rate, AIIMS
               faculty, zero traffic stress. Join 680+ students from NPS, DPS, Inventure Academy.
             </p>
 
@@ -480,7 +480,7 @@ export default function NeetCoachingKoramangalaPage() {
               Join Koramangala&apos;s Top NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, startup-era platform. Skip Silk Board traffic!
+              98% success rate, AIIMS faculty, startup-era platform. Skip Silk Board traffic!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

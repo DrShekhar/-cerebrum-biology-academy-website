@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Cerebrum vs Allen Chandigarh | NEET Biology Coaching Comparison 2026',
   description:
-    'Compare Cerebrum Biology Academy vs Allen Chandigarh for NEET preparation. Batch size (10-15 vs 60-100+), fees (Rs 24K-68K vs Rs 1.5-2.5 Lakhs), AIIMS faculty, 94.2% success rate. Sector 34A comparison.',
+    'Compare Cerebrum Biology Academy vs Allen Chandigarh for NEET preparation. Batch size (10-15 vs 60-100+), fees (Rs 24K-68K vs Rs 1.5-2.5 Lakhs), AIIMS faculty, 98% success rate. Sector 34A comparison.',
   keywords: [
     'cerebrum vs allen chandigarh',
     'allen chandigarh alternative',

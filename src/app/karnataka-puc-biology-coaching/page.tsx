@@ -6,13 +6,13 @@ const BASE_URL = 'https://cerebrumbiologyacademy.com'
 
 const ogImageParams = new URLSearchParams({
   title: 'Karnataka PUC Biology Coaching',
-  subtitle: 'Expert coaching with 94.2% success rate',
+  subtitle: 'Expert coaching with 98% success rate',
   locality: 'Bangalore',
 })
 
 export const metadata: Metadata = {
-  title: 'Best Karnataka PUC Biology Coaching Online | 94.2% Success Rate | Cerebrum',
-  description: 'Expert online biology coaching for Karnataka PUC students preparing for NEET. AIIMS faculty, 94.2% success rate, small batches (10-15). Join 1,400+ students across Karnataka cities like Bangalore, Mysore, Mangalore.',
+  title: 'Best Karnataka PUC Biology Coaching Online | 98% Success Rate | Cerebrum',
+  description: 'Expert online biology coaching for Karnataka PUC students preparing for NEET. AIIMS faculty, 98% success rate, small batches (10-15). Join 1,400+ students across Karnataka cities like Bangalore, Mysore, Mangalore.',
   keywords: [
     'Karnataka PUC biology coaching',
     'PUC biology tuition online',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     'NEET coaching for PUC students',
   ],
   openGraph: {
-    title: 'Best Karnataka PUC Biology Coaching Online | 94.2% Success Rate',
+    title: 'Best Karnataka PUC Biology Coaching Online | 98% Success Rate',
     description: 'Expert online biology coaching for Karnataka PUC students. AIIMS faculty, small batches, NEET focus. Join 1,400+ students!',
     url: `${BASE_URL}/karnataka-puc-biology-coaching`,
     siteName: 'Cerebrum Biology Academy',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Karnataka PUC Biology Coaching Online | 94.2% Success Rate',
+    title: 'Best Karnataka PUC Biology Coaching Online | 98% Success Rate',
     description: 'Expert online biology coaching for Karnataka PUC students preparing for NEET. AIIMS faculty. Book free demo!',
     images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
@@ -48,14 +48,14 @@ const faqs = [
   { q: 'How do you cover the gap between PUC and NEET syllabus?', a: 'We follow an integrated approach: Cover all PUC syllabus for board scoring while adding NCERT-specific topics. Special modules for Biotechnology Applications, detailed Ecology, and advanced Genetics ensure complete NEET preparation.' },
   { q: 'Which medical colleges can Karnataka students target?', a: 'With strong NEET scores, Karnataka students can target Bangalore Medical College, Mysore Medical College, Kasturba Medical College Manipal, St. Johns Medical College, plus AIIMS, JIPMER, and other all-India institutes.' },
   { q: 'Do you offer coaching in Kannada medium?', a: 'We focus on English medium students whose syllabus aligns with CBSE/NCERT. Our teaching is in English to ensure NEET readiness. Students from English medium PUC colleges benefit most from our program.' },
-  { q: 'What is the success rate for Karnataka PUC students?', a: 'Our success rate for PUC Biology students is 94.2% with an average score of 358/720 in NEET. We have 52+ PUC toppers in the last two years across all Karnataka districts.' },
+  { q: 'What is the success rate for Karnataka PUC students?', a: 'Our success rate for PUC Biology students is 98% with an average score of 358/720 in NEET. We have 52+ PUC toppers in the last two years across all Karnataka districts.' },
   { q: 'Can I join mid-year if I start coaching later?', a: 'Yes! We have batch starts every month. Our curriculum is designed to accommodate mid-year joiners with accelerated sessions to cover missed topics. Contact us to discuss your timeline.' },
 ]
 
 export default function KarnatakaPUCBiologyCoachingPage() {
   return (
     <>
-      <LocalitySchema locality="Bangalore" slug="karnataka-puc-biology-coaching" pageTitle="Best Karnataka PUC Biology Coaching Online" pageDescription="Expert online biology coaching for Karnataka PUC students preparing for NEET with AIIMS faculty and 94.2% success rate." pageType="coaching" coordinates={{ lat: "12.9716", lng: "77.5946" }} faqs={faqs} />
+      <LocalitySchema locality="Bangalore" slug="karnataka-puc-biology-coaching" pageTitle="Best Karnataka PUC Biology Coaching Online" pageDescription="Expert online biology coaching for Karnataka PUC students preparing for NEET with AIIMS faculty and 98% success rate." pageType="coaching" coordinates={{ lat: "12.9716", lng: "77.5946" }} faqs={faqs} />
       <PageContent />
     </>
   )

@@ -280,7 +280,7 @@ export function VideoTestimonialsSection() {
             { label: 'Students Placed', value: '500+', color: 'text-blue-600' },
             { label: 'AIIMS Selections', value: '45+', color: 'text-green-600' },
             { label: 'Average Score Increase', value: '+150', color: 'text-purple-600' },
-            { label: 'Success Rate', value: '94.2%', color: 'text-orange-600' },
+            { label: 'Success Rate', value: '98%', color: 'text-orange-600' },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <p className={`text-3xl md:text-4xl font-bold ${stat.color}`}>{stat.value}</p>

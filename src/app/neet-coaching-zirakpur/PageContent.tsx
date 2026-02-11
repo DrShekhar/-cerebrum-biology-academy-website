@@ -97,7 +97,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358/360', icon: Star },
   { label: 'Zirakpur Students', value: '90+', icon: Users },
   { label: 'PGIMER Selections', value: '15+', icon: GraduationCap },
@@ -132,7 +132,7 @@ const neetTools = [
 const faqs = [
   {
     question: 'Is there any good NEET coaching in Zirakpur?',
-    answer: 'Zirakpur lacks quality NEET coaching centers. Cerebrum Biology Academy provides online NEET coaching accessible from Zirakpur with AIIMS faculty, 94.2% success rate. 90+ Zirakpur students already enrolled. Better than traveling to Chandigarh daily!',
+    answer: 'Zirakpur lacks quality NEET coaching centers. Cerebrum Biology Academy provides online NEET coaching accessible from Zirakpur with AIIMS faculty, 98% success rate. 90+ Zirakpur students already enrolled. Better than traveling to Chandigarh daily!',
   },
   {
     question: 'How much does NEET coaching cost for Zirakpur students?',
@@ -152,7 +152,7 @@ const faqs = [
   },
   {
     question: 'Is online NEET coaching effective for Zirakpur students?',
-    answer: 'Yes! 94.2% success rate. Live interactive classes, small batches (10-15 students), instant WhatsApp doubt clearing, recorded sessions for revision. 90+ Zirakpur students achieving great results.',
+    answer: 'Yes! 98% success rate. Live interactive classes, small batches (10-15 students), instant WhatsApp doubt clearing, recorded sessions for revision. 90+ Zirakpur students achieving great results.',
   },
   {
     question: 'Which medical colleges can Zirakpur students target?',
@@ -160,7 +160,7 @@ const faqs = [
   },
   {
     question: 'How does Cerebrum compare to Chandigarh coaching?',
-    answer: 'Cerebrum advantages: (1) Batch 10-15 vs 60-120 at Allen/Aakash, (2) AIIMS faculty, (3) Fees Rs 24-68K vs Rs 1.5-3.5 Lakhs, (4) No Chandigarh commute from Zirakpur, (5) 94.2% success rate.',
+    answer: 'Cerebrum advantages: (1) Batch 10-15 vs 60-120 at Allen/Aakash, (2) AIIMS faculty, (3) Fees Rs 24-68K vs Rs 1.5-3.5 Lakhs, (4) No Chandigarh commute from Zirakpur, (5) 98% success rate.',
   },
   {
     question: 'Is NEET coaching available on VIP Road Zirakpur?',
@@ -188,7 +188,7 @@ const faqs = [
   },
   {
     question: 'What is the success rate for Zirakpur students?',
-    answer: '94.2% overall success rate. From Zirakpur specifically: 12+ students in government medical colleges in 2024, several in PGIMER/GMCH. Highest Biology score 358/360.',
+    answer: '98% overall success rate. From Zirakpur specifically: 12+ students in government medical colleges in 2024, several in PGIMER/GMCH. Highest Biology score 358/360.',
   },
 ]
 
@@ -227,7 +227,7 @@ export default function PageContent() {
               </h1>
               <p className="text-xl lg:text-2xl text-teal-100 mb-8 leading-relaxed">
                 Finally! Quality NEET coaching accessible from Zirakpur. <strong>No more VIP Road traffic</strong> to
-                Chandigarh. AIIMS faculty, 94.2% success rate, starting ₹24,000/year.
+                Chandigarh. AIIMS faculty, 98% success rate, starting ₹24,000/year.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>

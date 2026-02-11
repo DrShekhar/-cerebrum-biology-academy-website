@@ -298,7 +298,7 @@ export function TouchHomepageExample() {
       content: (
         <div>
           <p className="mb-2">See how our students cracked NEET</p>
-          <span className="text-purple-600 font-semibold">94.2% success rate</span>
+          <span className="text-purple-600 font-semibold">98% success rate</span>
         </div>
       ),
       action: () => {

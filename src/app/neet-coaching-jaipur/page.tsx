@@ -146,7 +146,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '360', icon: Star },
   { label: 'Rajasthan Students', value: '3,500+', icon: Users },
   { label: 'Areas Covered', value: '12+', icon: MapPin },
@@ -156,7 +156,7 @@ const faqs = [
   {
     question: 'Why should Jaipur students choose online coaching over Kota migration?',
     answer:
-      "Jaipur is just 200 km from Kota, but migration still costs Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the Pink City with family, save money, and get personalized attention that Kota's crowded classrooms cannot provide. Our 94.2% success rate equals Kota's top institutes.",
+      "Jaipur is just 200 km from Kota, but migration still costs Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the Pink City with family, save money, and get personalized attention that Kota's crowded classrooms cannot provide. Our 98% success rate equals Kota's top institutes.",
   },
   {
     question: 'Which areas in Jaipur do you serve?',
@@ -275,7 +275,7 @@ export default function NeetCoachingJaipurPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Why migrate to Kota when you can get same results from Jaipur? AIIMS trained
-              faculties, 94.2% success rate, live interactive classes. Join 3,500+ Rajasthan
+              faculties, 98% success rate, live interactive classes. Join 3,500+ Rajasthan
               students achieving NEET success from home.
             </p>
 
@@ -642,7 +642,7 @@ export default function NeetCoachingJaipurPage() {
               Start Your NEET Journey from the Pink City
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS trained faculties, 3,500+ Rajasthan students. Kota-level
+              98% success rate, AIIMS trained faculties, 3,500+ Rajasthan students. Kota-level
               results without migration!
             </p>
 

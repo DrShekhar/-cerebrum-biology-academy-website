@@ -109,7 +109,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
     foundingDate: '2015',
     founder: {
       '@type': 'Person',
-      name: 'Dr. Shekhar Suman',
+      name: 'Dr. Shekhar C Singh',
       honorificPrefix: 'Dr.',
       jobTitle: 'Founder & Head Faculty',
       alumniOf: {
@@ -272,7 +272,7 @@ export function IntentLandingPage({ data }: IntentLandingPageProps) {
           of 25 students maximum.
         </p>
         <p className="speakable-features">
-          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar Suman, small batch
+          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small batch
           sizes of maximum 25 students, comprehensive study material aligned with NCERT, regular
           mock tests and performance tracking, doubt clearing sessions, and flexible batch timings
           for school students.

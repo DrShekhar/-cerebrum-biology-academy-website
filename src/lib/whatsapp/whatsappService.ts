@@ -74,7 +74,7 @@ See you in class! 🌟`
     const message = `🎊 Congratulations ${studentName}! Welcome to Cerebrum Biology Academy!
 
 ✅ Course Enrolled: ${courseName}
-🎯 Success Rate: 94.2% NEET qualification
+🎯 Success Rate: 98% NEET qualification
 👨‍🎓 Faculty: AIIMS/JIPMER graduates
 
 🚀 Your Learning Journey Starts Now:
@@ -134,7 +134,7 @@ Keep going, future doctor! 🩺🌟`
       `💪 ${studentName}, your dedication today = white coat tomorrow! 🩺`,
       `🎯 ${studentName}, 540+ NEET score is just consistent effort away!`,
       `🚀 ${studentName}, you're one step closer to your medical college dream!`,
-      `⭐ ${studentName}, our 94.2% success rate includes students just like you!`,
+      `⭐ ${studentName}, our 98% success rate includes students just like you!`,
     ]
 
     const randomMessage =

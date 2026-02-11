@@ -72,7 +72,7 @@ class GlobalSEOService {
         alternateName: 'Cerebrum NEET Biology Coaching',
         url: `https://cerebrumbiologyacademy.com`,
         logo: `https://cerebrumbiologyacademy.com/images/logo.png`,
-        description: "India's leading NEET Biology coaching institute with 94.2% success rate",
+        description: "India's leading NEET Biology coaching institute with 98% success rate",
         address: {
           '@type': 'PostalAddress',
           addressCountry: 'IN',
@@ -414,7 +414,7 @@ class GlobalSEOService {
   ): string {
     const titleMap: Record<string, Record<string, string>> = {
       IN: {
-        home: 'NEET Biology Coaching India | #1 AIIMS Biology Academy | 94.2% Success Rate',
+        home: 'NEET Biology Coaching India | #1 AIIMS Biology Academy | 98% Success Rate',
         courses: 'NEET Biology Courses | Best Online & Offline Classes India | Cerebrum Academy',
         contact: 'Contact Cerebrum Biology Academy India | NEET Biology Coaching Admission',
         about: "About Cerebrum Biology Academy | India's Most Trusted NEET Biology Institute",
@@ -468,13 +468,13 @@ class GlobalSEOService {
   ): string {
     const descriptionMap: Record<string, Record<string, string>> = {
       IN: {
-        home: "India's #1 NEET Biology coaching with 94.2% success rate. Expert faculty, personalized teaching, and proven results. Join 10,000+ successful students across Delhi, Kota, Hyderabad & more.",
+        home: "India's #1 NEET Biology coaching with 98% success rate. Expert faculty, personalized teaching, and proven results. Join 10,000+ successful students across Delhi, Kota, Hyderabad & more.",
         courses:
           'Comprehensive NEET Biology courses for Class 11, 12 & Droppers. Live classes, recorded sessions, study materials & mock tests. Choose from foundation, intensive & crash courses.',
         contact:
           'Get in touch with Cerebrum Biology Academy for NEET Biology coaching admission. Call ${CONTACT_INFO.phone.display.hyphenated.primary} or visit our centers across India for course details.',
         about:
-          "Cerebrum Biology Academy is India's most trusted NEET Biology institute with 8 years of excellence, expert faculty, and 94.2% success rate in medical entrance exams.",
+          "Cerebrum Biology Academy is India's most trusted NEET Biology institute with 8 years of excellence, expert faculty, and 98% success rate in medical entrance exams.",
       },
       US: {
         home: 'Premier MCAT Biology preparation for US medical school aspirants. Expert Indian faculty, flexible timings, and comprehensive curriculum designed for American pre-med students.',

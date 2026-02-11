@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 }
 
 const faqs = [
-  { q: 'Is Surat good for NEET preparation?', a: 'Yes! With Cerebrum Biology Academy, Surat students access AIIMS-trained faculty, personalized batches of 10-15 students, and a 94.2% success rate online.' },
+  { q: 'Is Surat good for NEET preparation?', a: 'Yes! With Cerebrum Biology Academy, Surat students access AIIMS-trained faculty, personalized batches of 10-15 students, and a 98% success rate online.' },
   { q: 'Do you serve Adajan and Vesu areas?', a: 'We serve all Surat areas including Adajan, Vesu, Athwa, City Light, Piplod, Pal, Katargam, and Varachha through live online classes.' },
   { q: 'What is the fee for NEET coaching in Surat?', a: 'Plans start at Rs 24,000/year for Foundation, Rs 36,000 for Comprehensive, and Rs 48,000 for Intensive. EMI options available.' },
   { q: 'Which medical colleges can Surat students target?', a: 'GMC Surat, B.J. Medical College Ahmedabad, AIIMS, GMERS colleges across Gujarat, plus other all-India medical institutes.' },

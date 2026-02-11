@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Andheri Mumbai | Lokhandwala, Versova | Cerebrum Academy',
   description:
-    'Premium NEET biology coaching in Andheri, Mumbai. 94.2% success rate, AIIMS faculty. Lokhandwala, Versova, DN Nagar, Four Bungalows. 850+ students. Fee ₹24,000+. Book free demo!',
+    'Premium NEET biology coaching in Andheri, Mumbai. 98% success rate, AIIMS faculty. Lokhandwala, Versova, DN Nagar, Four Bungalows. 850+ students. Fee ₹24,000+. Book free demo!',
   keywords:
     'NEET coaching Andheri, NEET biology coaching Lokhandwala, best NEET coaching Andheri Mumbai, NEET classes Versova, biology coaching DN Nagar, NEET tuition Four Bungalows, NEET coaching Andheri West, NEET coaching Andheri East, online NEET coaching Mumbai, Mithibai NEET coaching, NM College NEET prep, Podar NEET preparation, biology tuition Andheri, biology classes Andheri Mumbai, online biology coaching Andheri, biology teacher Andheri, NEET biology Andheri',
   openGraph: {
     title: 'Best NEET Coaching in Andheri Mumbai | Commercial Hub | Cerebrum Academy',
     description:
-      'Premium NEET biology coaching in Andheri with 94.2% success rate. AIIMS faculty, small batches. Lokhandwala, Versova, DN Nagar students.',
+      'Premium NEET biology coaching in Andheri with 98% success rate. AIIMS faculty, small batches. Lokhandwala, Versova, DN Nagar students.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-andheri-mumbai',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Andheri Mumbai | Cerebrum Biology Academy',
     description:
-      'Premium NEET biology coaching in Andheri. 94.2% success rate. Lokhandwala, Versova, DN Nagar, Four Bungalows.',
+      'Premium NEET biology coaching in Andheri. 98% success rate. Lokhandwala, Versova, DN Nagar, Four Bungalows.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-andheri-mumbai',

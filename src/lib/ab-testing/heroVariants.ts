@@ -25,7 +25,7 @@ export const heroVariants: HeroVariant[] = [
       highlight2: 'Personal Attention. Proven Results.',
     },
     subtext:
-      '94.2% Success Rate with AIIMS Faculty. Join 2,847+ students who chose personal attention over mass coaching. Premium NEET Biology preparation with guaranteed results.',
+      '98% Success Rate with AIIMS Faculty. Join 2,847+ students who chose personal attention over mass coaching. Premium NEET Biology preparation with guaranteed results.',
     primaryCTA: 'Book Free NEET Biology Demo',
     secondaryCTA: 'Call Now: +91 88264 44334',
     weight: 40, // Primary content-optimized variant
@@ -36,7 +36,7 @@ export const heroVariants: HeroVariant[] = [
     headline: {
       main: '2,847 Medical Seats Secured',
       highlight1: 'with Personal Mentoring',
-      highlight2: '94.2% Success Rate',
+      highlight2: '98% Success Rate',
     },
     subtext:
       'Small batch sizes (12-25 students) vs mass coaching (100+ students). AIIMS faculty. Personalized attention. Real results. Your medical college admission awaits.',
@@ -50,7 +50,7 @@ export const heroVariants: HeroVariant[] = [
     headline: {
       main: 'Premium NEET Biology Coaching',
       highlight1: 'Small Batches. Big Results.',
-      highlight2: '94.2% Success Rate',
+      highlight2: '98% Success Rate',
     },
     subtext:
       'AIIMS faculty teaching 12-25 students (not 100+). Proven track record: 2,847 medical seats secured. Personal mentoring that actually works.',

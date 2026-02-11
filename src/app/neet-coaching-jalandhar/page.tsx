@@ -94,7 +94,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Jalandhar Students', value: '350+', icon: Users },
   { label: 'Avg Score Improvement', value: '+118', icon: TrendingUp },
   { label: 'GMC Selections', value: '55+', icon: Award },
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Jalandhar?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET coaching for Jalandhar students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 94.2% success rate, we bring Chandigarh-quality coaching to Doaba region. Students from Model Town, Urban Estate, Maqsudan join our live sessions.',
+      'Cerebrum Biology Academy offers the best NEET coaching for Jalandhar students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate, we bring Chandigarh-quality coaching to Doaba region. Students from Model Town, Urban Estate, Maqsudan join our live sessions.',
   },
   {
     question: 'Is there good NEET coaching available in Jalandhar city?',
@@ -181,7 +181,7 @@ export default function NEETCoachingJalandhar() {
       <CitySchema
         cityName="Jalandhar"
         stateName="Punjab"
-        description="Best NEET coaching for Jalandhar students. Online classes from AIIMS faculty. 94.2% success rate. Serving Model Town, Urban Estate, Maqsudan, Phagwara, Kapurthala."
+        description="Best NEET coaching for Jalandhar students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Urban Estate, Maqsudan, Phagwara, Kapurthala."
         url="https://cerebrumacademy.in/neet-coaching-jalandhar"
       />
 
@@ -221,7 +221,7 @@ export default function NEETCoachingJalandhar() {
 
                 <p className="mb-8 text-lg text-gray-600">
                   Online NEET coaching for students from Model Town, Urban Estate, Maqsudan,
-                  Phagwara, and Kapurthala. <strong>94.2% success rate</strong> with AIIMS faculty.
+                  Phagwara, and Kapurthala. <strong>98% success rate</strong> with AIIMS faculty.
                 </p>
 
                 <div className="mb-8 flex flex-wrap gap-4">

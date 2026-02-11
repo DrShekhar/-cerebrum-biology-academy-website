@@ -122,7 +122,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '362', icon: Star },
   { label: 'SoBo Students', value: '480+', icon: Users },
   { label: 'Elite Schools', value: '18+', icon: GraduationCap },
@@ -241,7 +241,7 @@ export default function NeetCoachingSouthMumbaiPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Ultra-premium NEET Biology coaching for South Mumbai&apos;s elite schools. 94.2%
+              Ultra-premium NEET Biology coaching for South Mumbai&apos;s elite schools. 98%
               success rate, AIIMS faculty, concierge service. Join 480+ students from Cathedral,
               Campion, JBCN.
             </p>
@@ -483,7 +483,7 @@ export default function NeetCoachingSouthMumbaiPage() {
               Join South Mumbai&apos;s Elite NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, concierge service. International school
+              98% success rate, AIIMS faculty, concierge service. International school
               specialists!
             </p>
 

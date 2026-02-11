@@ -95,7 +95,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Karnal Students', value: '220+', icon: Users },
   { label: 'Avg Score Improvement', value: '+115', icon: TrendingUp },
   { label: 'KCGMC Selections', value: '28+', icon: Award },
@@ -127,7 +127,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Karnal?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET coaching for Karnal students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 94.2% success rate, we provide superior preparation for KCGMC Karnal. Students from Model Town, Sector 12, NDRI Area trust us.',
+      'Cerebrum Biology Academy offers the best NEET coaching for Karnal students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate, we provide superior preparation for KCGMC Karnal. Students from Model Town, Sector 12, NDRI Area trust us.',
   },
   {
     question: 'Is there good NEET coaching in Karnal for KCGMC preparation?',
@@ -182,7 +182,7 @@ export default function NEETCoachingKarnal() {
       <CitySchema
         cityName="Karnal"
         stateName="Haryana"
-        description="Best NEET coaching for Karnal students. Online classes from AIIMS faculty. 94.2% success rate. Serving Model Town, Sector 12, NDRI Area, Kunjpura."
+        description="Best NEET coaching for Karnal students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Sector 12, NDRI Area, Kunjpura."
         url="https://cerebrumacademy.in/neet-coaching-karnal"
       />
 
@@ -220,7 +220,7 @@ export default function NEETCoachingKarnal() {
 
                 <p className="mb-8 text-lg text-gray-600">
                   Online NEET coaching for students from Model Town, Sector 12, NDRI Area, Kunjpura,
-                  and nearby areas. <strong>94.2% success rate</strong> with AIIMS faculty.
+                  and nearby areas. <strong>98% success rate</strong> with AIIMS faculty.
                 </p>
 
                 <div className="mb-8 flex flex-wrap gap-4">

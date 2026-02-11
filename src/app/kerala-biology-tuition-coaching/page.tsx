@@ -77,7 +77,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Kerala Students', value: '1,350+', icon: Users },
   { label: 'Plus Two Toppers', value: '48+', icon: GraduationCap },
@@ -192,7 +192,7 @@ export default function KeralaBiologyTuitionPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert Plus Two Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty.
+              Expert Plus Two Biology coaching with NEET focus. 98% success rate, AIIMS faculty.
               Kerala&apos;s NCERT-aligned syllabus advantage + our expertise = medical college
               success!
             </p>
@@ -481,7 +481,7 @@ export default function KeralaBiologyTuitionPage() {
               Ready to Excel in Plus Two Biology & NEET?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,350+ Kerala students. 94.2% success rate. AIIMS faculty. Start today!
+              Join 1,350+ Kerala students. 98% success rate. AIIMS faculty. Start today!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

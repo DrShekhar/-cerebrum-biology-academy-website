@@ -13,7 +13,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: "India's #1 NEET Biology Coaching",
-    heroSubtitle: '94.2% Success Rate • AIIMS Faculty • Live Classes',
+    heroSubtitle: '98% Success Rate • AIIMS Faculty • Live Classes',
     bookDemo: 'Book Free NEET Biology Demo',
     watchDemo: 'Watch Demo Video',
     studentsEnrolled: 'Students Enrolled',
@@ -82,7 +82,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: 'भारत की #1 NEET बायोलॉजी कोचिंग',
-    heroSubtitle: '94.2% सफलता दर • AIIMS फैकल्टी • लाइव क्लासेस',
+    heroSubtitle: '98% सफलता दर • AIIMS फैकल्टी • लाइव क्लासेस',
     bookDemo: 'मुफ्त NEET बायोलॉजी डेमो बुक करें',
     watchDemo: 'डेमो वीडियो देखें',
     studentsEnrolled: 'नामांकित छात्र',
@@ -151,7 +151,7 @@ export const translations = {
 
     // Hero Section
     heroTitle: 'இந்தியாவின் #1 NEET உயிரியல் பயிற்சி',
-    heroSubtitle: '94.2% வெற்றி விகிதம் • AIIMS ஆசிரியர்கள் • நேரடி வகுப்புகள்',
+    heroSubtitle: '98% வெற்றி விகிதம் • AIIMS ஆசிரியர்கள் • நேரடி வகுப்புகள்',
     bookDemo: 'இலவச NEET உயிரியல் டெமோ பதிவு செய்யுங்கள்',
     watchDemo: 'டெமோ வீடியோ பார்க்கவும்',
     studentsEnrolled: 'சேர்ந்த மாணவர்கள்',

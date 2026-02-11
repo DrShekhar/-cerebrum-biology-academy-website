@@ -79,7 +79,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Surat Students', value: '680+', icon: Users },
   { label: 'Medical Selections', value: '22+', icon: GraduationCap },
@@ -89,7 +89,7 @@ const faqs = [
   {
     question: 'Why choose online biology tuition over Surat coaching centers?',
     answer:
-      "Surat coaching centers typically have large batches. Our online classes limit to 10-15 students. Save commute time across Surat's busy roads, get personalized attention, same 94.2% success rate.",
+      "Surat coaching centers typically have large batches. Our online classes limit to 10-15 students. Save commute time across Surat's busy roads, get personalized attention, same 98% success rate.",
   },
   {
     question: 'Which areas in Surat do you serve?',
@@ -189,7 +189,7 @@ export default function PageContent() {
               Adajan | Vesu | Athwa | City Light | All Surat
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium Biology tuition & NEET coaching for Surat students. 94.2% success rate, AIIMS
+              Premium Biology tuition & NEET coaching for Surat students. 98% success rate, AIIMS
               faculty. Target GMC Surat, AIIMS. Join 680+ Surat students!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -397,7 +397,7 @@ export default function PageContent() {
               Ready to Excel in Biology & NEET from Surat?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 680+ Surat students. Target GMC Surat, AIIMS. 94.2% success rate!
+              Join 680+ Surat students. Target GMC Surat, AIIMS. 98% success rate!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

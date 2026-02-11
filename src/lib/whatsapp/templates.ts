@@ -34,7 +34,7 @@ Just ask any NEET Biology doubt and get instant answers with NCERT references!
 • *SUPPORT* - Talk to our team
 
 *Why Choose Us?*
-✓ 94.2% NEET qualification rate
+✓ 98% NEET qualification rate
 ✓ AIIMS/JIPMER faculty
 ✓ 10,000+ successful students
 ✓ Complete Biology coverage
@@ -306,7 +306,7 @@ Small steps, big dreams! 🎯`,
       `⭐ *You've Got This, ${studentName}!*
 
 Our students have:
-• 94.2% NEET qualification rate
+• 98% NEET qualification rate
 • 540+ average Biology score
 • Multiple AIIMS selections
 

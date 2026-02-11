@@ -41,7 +41,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
   const [liveStats, setLiveStats] = useState({
     enrollmentsToday: 23,
     studentsOnline: 127,
-    successRate: 94.2,
+    successRate: 98,
   })
 
   // Simulate live stats updates
@@ -119,7 +119,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
     },
     {
       icon: Trophy,
-      title: '94.2% Success Rate',
+      title: '98% Success Rate',
       description: 'Proven track record of student success',
       color: 'text-green-600',
     },

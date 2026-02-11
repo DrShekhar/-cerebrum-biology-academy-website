@@ -151,7 +151,7 @@ export class CitySpecificSEOService {
     return {
       ...seoData,
       title: `Best Biology Coaching in ${city.name} | Top NEET Classes ${city.name} 2025 | Cerebrum Academy`,
-      description: `🏆 #1 Biology coaching in ${city.name}, ${city.state}. 94.2% NEET success rate, AIIMS faculty, online+offline classes. Better than ${city.competitors[0]}! Book free demo.`,
+      description: `🏆 #1 Biology coaching in ${city.name}, ${city.state}. 98% NEET success rate, AIIMS faculty, online+offline classes. Better than ${city.competitors[0]}! Book free demo.`,
       keywords: [
         ...city.keywords,
         `best biology coaching ${city.name.toLowerCase()}`,
@@ -183,7 +183,7 @@ export class CitySpecificSEOService {
         `NEET Classes ${city.name}`,
         `Biology Tuition ${city.name}`,
       ],
-      description: `Top Biology coaching institute in ${city.name}, ${city.state}. Specialized NEET preparation with 94.2% success rate.`,
+      description: `Top Biology coaching institute in ${city.name}, ${city.state}. Specialized NEET preparation with 98% success rate.`,
       url: `https://cerebrumbiologyacademy.com/locations/${city.name.toLowerCase()}`,
       address: {
         '@type': 'PostalAddress',
@@ -262,7 +262,7 @@ export class CitySpecificSEOService {
         comparisons.push({
           ...comparisonSEO,
           title: `Cerebrum vs ${competitor} in ${city.name} | Which is Better for NEET Biology 2025?`,
-          description: `🔥 Honest comparison: Cerebrum Biology Academy vs ${competitor} in ${city.name}. Compare fees, success rate, faculty. 94.2% students choose Cerebrum!`,
+          description: `🔥 Honest comparison: Cerebrum Biology Academy vs ${competitor} in ${city.name}. Compare fees, success rate, faculty. 98% students choose Cerebrum!`,
           keywords: [
             ...comparisonSEO.keywords,
             `cerebrum vs ${competitor.toLowerCase()} ${city.name.toLowerCase()}`,

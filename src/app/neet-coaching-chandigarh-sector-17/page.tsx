@@ -29,7 +29,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score', value: '358/360', icon: Star },
   { label: 'Sector 17 Students', value: '120+', icon: Users },
   { label: 'PGIMER Selections', value: '15+', icon: GraduationCap },
@@ -38,7 +38,7 @@ const successMetrics = [
 const schools = ['Bhavan Vidyalaya Sector 15', 'Government Model School Sector 16', 'St. Annes Sector 10', 'DAV College Sector 10', 'Government College Sector 11', 'GGDSD College Sector 32']
 
 const faqs = [
-  { question: 'Which is the best NEET coaching near Sector 17 Chandigarh?', answer: 'Cerebrum Biology Academy offers the best NEET coaching accessible from Sector 17 with AIIMS faculty, 94.2% success rate. 120+ students from City Center area enrolled. Online classes - no travel to crowded Sector 34!' },
+  { question: 'Which is the best NEET coaching near Sector 17 Chandigarh?', answer: 'Cerebrum Biology Academy offers the best NEET coaching accessible from Sector 17 with AIIMS faculty, 98% success rate. 120+ students from City Center area enrolled. Online classes - no travel to crowded Sector 34!' },
   { question: 'Why not go to Sector 34 for NEET coaching?', answer: 'Sector 34 coaching centers have 60-120 students per batch, parking issues, and crowded classrooms. Cerebrum offers online classes with 10-15 students batch from your Sector 17 home. Same quality, better attention.' },
   { question: 'How much does NEET coaching cost for Sector 17 students?', answer: 'Cerebrum fees: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Dropper Rs 68,000/year. Compare to Sector 34: Allen Rs 1.5-2.5 Lakhs, Aakash Rs 1-3.5 Lakhs. Save 60-70%!' },
   { question: 'What are batch timings for Sector 17 students?', answer: 'Multiple options: Morning (6-8 AM), After-school (4-6 PM), Evening (7-9 PM). Choose based on your school schedule. Weekend batches also available.' },
@@ -47,7 +47,7 @@ const faqs = [
   { question: 'How do Sector 17 students clear doubts online?', answer: 'Live doubt solving in every class, WhatsApp direct to faculty (2-hour response), weekly doubt sessions, one-on-one video calls. No doubt goes unanswered!' },
   { question: 'Is dropper batch available for Sector 17 students?', answer: 'Yes! Intensive dropper batch at Rs 68,000/year. 6-8 hours daily, personal mentorship, weekly tests. Many droppers improved 100+ marks.' },
   { question: 'How to book free demo from Sector 17?', answer: 'Call/WhatsApp: +91-8826444334 or visit cerebrumbiologyacademy.com. Attend live demo from home. Free demo - no commitment!' },
-  { question: 'What makes Cerebrum better than Sector 17 local tutors?', answer: 'AIIMS faculty (not local graduates), structured NEET curriculum, national mock tests, 94.2% success rate, complete study material, technology-enabled learning.' },
+  { question: 'What makes Cerebrum better than Sector 17 local tutors?', answer: 'AIIMS faculty (not local graduates), structured NEET curriculum, national mock tests, 98% success rate, complete study material, technology-enabled learning.' },
 ]
 
 export default function Sector17Page() {
@@ -61,7 +61,7 @@ export default function Sector17Page() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-medium mb-6">🎯 120+ Students from City Center Area</span>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">NEET Coaching for <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Sector 17 Chandigarh</span></h1>
-            <p className="text-xl lg:text-2xl text-blue-100 mb-8">Skip crowded Sector 34 coaching. Get <strong>same quality NEET coaching</strong> online from City Center. AIIMS faculty, 94.2% success rate.</p>
+            <p className="text-xl lg:text-2xl text-blue-100 mb-8">Skip crowded Sector 34 coaching. Get <strong>same quality NEET coaching</strong> online from City Center. AIIMS faculty, 98% success rate.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}><Button size="lg" className="bg-green-500 hover:bg-green-600"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp Now</Button></Link>
               <Link href="/book-free-demo"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Book Free Demo<ArrowRight className="w-5 h-5 ml-2" /></Button></Link>

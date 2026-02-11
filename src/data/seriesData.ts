@@ -135,7 +135,7 @@ export const COURSE_SERIES: Record<string, Series[]> = {
       id: 'ascent',
       name: 'Ascent',
       description:
-        '🥇 Most Popular Choice • 94.2% NEET success rate • Perfect balance of price and results',
+        '🥇 Most Popular Choice • 98% NEET success rate • Perfect balance of price and results',
       icon: '🎯',
       color: 'blue',
       batchSize: 20,
