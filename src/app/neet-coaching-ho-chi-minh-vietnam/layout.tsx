@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Ho Chi Minh City, Vietnam - 98% Success Rate',
-  description: 'NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.',
+  description: "NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.",
   keywords: [
     'NEET coaching Ho Chi Minh City',
     'medical entrance exam preparation',
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Coaching in Ho Chi Minh City, Vietnam - 98% Success Rate',
-    description: 'NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.',
+    description: "NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.",
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Ho Chi Minh City, Vietnam',
-    description: 'NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships.'
+    description: "NEET Coaching in Ho Chi Minh City - Vietnam's emerging medical entrance destination with international school partnerships."
   },
   robots: {
     index: true,

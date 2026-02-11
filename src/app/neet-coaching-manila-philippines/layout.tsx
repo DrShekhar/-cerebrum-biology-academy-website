@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Manila, Philippines - 98% Success Rate',
-  description: 'NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.',
+  description: "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
   keywords: [
     'NEET coaching Manila',
     'medical entrance exam preparation',
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Coaching in Manila, Philippines - 98% Success Rate',
-    description: 'NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.',
+    description: "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.",
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Manila, Philippines',
-    description: 'NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support.'
+    description: "NEET Coaching in Manila - Philippines' premier medical entrance hub with International School Manila partnerships and business community support."
   },
   robots: {
     index: true,

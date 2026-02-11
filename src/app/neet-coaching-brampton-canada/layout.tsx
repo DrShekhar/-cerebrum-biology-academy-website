@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Brampton, Canada - 98% Success Rate',
-  description: 'NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.',
+  description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
   keywords: [
     'NEET coaching Brampton',
     'medical entrance exam preparation',
@@ -11,13 +11,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Coaching in Brampton, Canada - 98% Success Rate',
-    description: 'NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.',
+    description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.",
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in Brampton, Canada',
-    description: 'NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge.'
+    description: "NEET Coaching in Brampton - Canada's premier medical entrance prep in the largest Indian community with Ontario curriculum bridge."
   },
   robots: {
     index: true,
