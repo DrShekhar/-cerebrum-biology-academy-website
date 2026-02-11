@@ -457,7 +457,7 @@ export default function PageContent() {
             Students from These Nashik Schools Trust Us
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Fravashi Academy Nashik', 'Podar International Nashik', 'KTHM College', 'BYK College of Commerce', 'St. Francis D'Assisi School', 'Delhi Public School Nashik', 'Trimurti International School', 'Boys Town School Nashik'].map((school) => (
+            {['Fravashi Academy Nashik', 'Podar International Nashik', 'KTHM College', 'BYK College of Commerce', "St. Francis D'Assisi School", 'Delhi Public School Nashik', 'Trimurti International School', 'Boys Town School Nashik'].map((school) => (
               <div
                 key={school}
                 className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"

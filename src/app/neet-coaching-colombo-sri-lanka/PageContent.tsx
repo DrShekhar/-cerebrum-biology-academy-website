@@ -30,7 +30,7 @@ export default function PageContent() {
     'Colombo International School',
     'Royal College Colombo',
     'Ladies College',
-    'S. Thomas' College',
+    "S. Thomas' College",
     'Gateway College',
     'Lyceum International',
     'Cambridge Schools Sri Lanka',

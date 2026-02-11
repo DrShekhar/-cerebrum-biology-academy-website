@@ -459,7 +459,7 @@ export default function PageContent() {
             Students from These Trivandrum Schools Trust Us
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Loyola School Trivandrum', 'Holy Angels ISC School', 'Kendriya Vidyalaya Pangode', 'Christ Nagar School', 'St. Joseph's HSS Trivandrum', 'Carmel Girls Higher Secondary', 'Sarvodaya Vidyalaya', 'Chinmaya Vidyalaya Trivandrum'].map((school) => (
+            {['Loyola School Trivandrum', 'Holy Angels ISC School', 'Kendriya Vidyalaya Pangode', 'Christ Nagar School', "St. Joseph's HSS Trivandrum", 'Carmel Girls Higher Secondary', 'Sarvodaya Vidyalaya', 'Chinmaya Vidyalaya Trivandrum'].map((school) => (
               <div
                 key={school}
                 className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"

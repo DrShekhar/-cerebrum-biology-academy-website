@@ -456,7 +456,7 @@ export default function PageContent() {
             Students from These Goa Schools Trust Us
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['Sharada Mandir School', 'People's High School', 'Mushtifund Aryaan High School', 'Smt. Parvatibai Chowgule College', 'Don Bosco High School', 'Our Lady of Rosary School', 'Loyola High School', 'GVM's SNJB High School'].map((school) => (
+            {['Sharada Mandir School', "People's High School", 'Mushtifund Aryaan High School', 'Smt. Parvatibai Chowgule College', 'Don Bosco High School', 'Our Lady of Rosary School', 'Loyola High School', "GVM's SNJB High School"].map((school) => (
               <div
                 key={school}
                 className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
