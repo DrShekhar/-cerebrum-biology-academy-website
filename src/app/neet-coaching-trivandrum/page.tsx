@@ -62,8 +62,7 @@ export default function NEETCoachingTrivandumPage() {
         slug="neet-coaching-trivandrum"
         pageTitle="Best NEET Coaching in Trivandrum"
         pageDescription="Premium online NEET coaching in Trivandrum. 8,000+ aspirants, expert faculty, near Trivandrum Medical College & SUT Royal. 98% success rate."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "8.5241", lng: "76.9366" }} />
       <PageContent />
     </>
   )

@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       "Many NRI families in Goa choose our online NEET coaching for flexibility and global-standard teaching. Flexible batch timings accommodate different timezones, recorded sessions allow flexible learning, and you can continue your preparation even if you relocate. Perfect for Goa's expat-heavy population.",
   },
+  {
+    question: 'What is the fee structure for NEET coaching for Goa students?',
+    answer:
+      'Our NEET Biology coaching plans start from Rs 24,000/year for the Foundation batch, Rs 36,000/year for Comprehensive, and Rs 48,000/year for Intensive. EMI options and scholarships are available. This is significantly more affordable than relocating to Kota or Pune for coaching.',
+  },
+  {
+    question: 'Can Goa students prepare for NEET while attending school?',
+    answer:
+      'Yes, our flexible batch timings are designed around school schedules. We offer morning, afternoon, and evening slots. Recorded lectures are available for revision. Many students from Panaji and Margao balance school and NEET preparation successfully with us.',
+  },
+  {
+    question: 'What medical colleges can Goa NEET aspirants target?',
+    answer:
+      'Goa students can target Goa Medical College Bambolim, AIIMS Goa (upcoming), and through strong NEET scores, any medical college in India including AIIMS Delhi, Maulana Azad Medical College, and all state quota seats across India.',
+  },
+  {
+    question: 'How do you handle doubt clearing for Goa students?',
+    answer:
+      'We provide unlimited doubt clearing through dedicated WhatsApp groups, live doubt sessions after each class, one-on-one mentoring slots, and 24/7 access to recorded explanations. Response time is under 2 minutes on WhatsApp.',
+  },
 ]
 
 const faqSchema = {
@@ -139,6 +163,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Goa (Panaji & Margao)" stateName="Goa" stateSlug="goa" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -395,6 +420,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Goa (Panaji & Margao)" />
+      <CostComparisonSection cityName="Goa (Panaji & Margao)" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -420,7 +448,28 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Goa Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Sharada Mandir School', "People's High School", 'Mushtifund Aryaan High School', 'Smt. Parvatibai Chowgule College', 'Don Bosco High School', 'Our Lady of Rosary School', 'Loyola High School', "GVM's SNJB High School"].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
+      <RelatedCityLinks currentCity="goa" variant="default" />
     </div>
   )
 }

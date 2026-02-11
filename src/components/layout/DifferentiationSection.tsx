@@ -55,7 +55,7 @@ const comparisonData = [
   },
   {
     feature: 'Success Rate (Repeaters)',
-    cerebrum: '90% (Audited)',
+    cerebrum: '98% (Audited)',
     allen: 'Not published',
     aakash: 'Self-claimed 85%',
     jpt: '70% (unverified)',

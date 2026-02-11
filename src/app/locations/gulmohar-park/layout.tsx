@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/gulmohar-park',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Gulmohar Park Delhi | Cerebrum Biology Academy',
+    description: 'Best NEET Biology coaching for Gulmohar Park students. Premium South Delhi locality. AIIMS faculty, small batches.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/gulmohar-park',
   },

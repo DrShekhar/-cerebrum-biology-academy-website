@@ -11024,10 +11024,10 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Chandigarh',
     metaTitle: 'Best NEET Coaching in Chandigarh 2026 | Biology Classes Tricity | Cerebrum Academy',
     metaDescription:
-      'Top NEET Biology coaching in Chandigarh with 94.2% success rate. AIIMS faculty, online classes for Tricity. Target PGIMER, GMCH. 780+ students. Book free demo!',
+      'Top NEET Biology coaching in Chandigarh with 98% success rate. AIIMS faculty, online classes for Tricity. Target PGIMER, GMCH. 780+ students. Book free demo!',
     heroTitle: 'Best NEET Coaching in Chandigarh',
     heroSubtitle:
-      'Premium online biology coaching for Chandigarh Tricity. AIIMS-trained faculty, 94.2% success rate. Target PGIMER & GMCH Chandigarh.',
+      'Premium online biology coaching for Chandigarh Tricity. AIIMS-trained faculty, 98% success rate. Target PGIMER & GMCH Chandigarh.',
     hasOfflineCenter: false,
     nearestCenter: {
       name: 'Online Live Classes',
@@ -11052,7 +11052,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which is the best NEET coaching in Chandigarh for Biology?',
         answer:
-          'Cerebrum Biology Academy is the top-rated NEET biology coaching for Chandigarh students. With AIIMS-trained faculty, 94.2% success rate, and 780+ Tricity students, we specialize in biology preparation. Unlike crowded Sector 34 centers with 50-100 students, our online batches have only 10-15 students for personalized attention.',
+          'Cerebrum Biology Academy is the top-rated NEET biology coaching for Chandigarh students. With AIIMS-trained faculty, 98% success rate, and 780+ Tricity students, we specialize in biology preparation. Unlike crowded Sector 34 centers with 50-100 students, our online batches have only 10-15 students for personalized attention.',
       },
       {
         question: 'How is online coaching better than Sector 34 coaching centers?',
@@ -11077,7 +11077,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How is Cerebrum different from Allen/Aakash in Chandigarh?',
         answer:
-          'Unlike Allen/Aakash with 100+ students per batch, we keep batches of 10-15 only. Our faculty is exclusively from AIIMS (not just MBBS graduates). Online format offers flexibility, saves commute, and allows doubt clearing anytime via WhatsApp. 94.2% success rate speaks for itself.',
+          'Unlike Allen/Aakash with 100+ students per batch, we keep batches of 10-15 only. Our faculty is exclusively from AIIMS (not just MBBS graduates). Online format offers flexibility, saves commute, and allows doubt clearing anytime via WhatsApp. 98% success rate speaks for itself.',
       },
       {
         question: 'What are the batch timings for Chandigarh students?',
@@ -11092,7 +11092,7 @@ export const cityHubData: Record<string, CityHubData> = {
     ],
     stats: {
       studentsFromCity: '780+',
-      successRate: '94.2%',
+      successRate: '98%',
       rating: '4.9',
     },
     geoCoordinates: {
@@ -11135,7 +11135,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Which is the best NEET coaching in Mohali?',
         answer:
-          'Cerebrum Biology Academy is the top choice for Mohali students with 180+ enrolled from SAS Nagar. Our online live classes eliminate the need to commute to Chandigarh Sector 34. AIIMS-trained faculty, small batches of 10-15, and 94.2% success rate.',
+          'Cerebrum Biology Academy is the top choice for Mohali students with 180+ enrolled from SAS Nagar. Our online live classes eliminate the need to commute to Chandigarh Sector 34. AIIMS-trained faculty, small batches of 10-15, and 98% success rate.',
       },
       {
         question: 'Do I need to travel to Chandigarh for NEET coaching?',

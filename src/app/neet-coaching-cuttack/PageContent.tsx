@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       "Cuttack and Bhubaneswar form Odisha's twin city - a combined education and cultural hub. Our online coaching serves both cities with unified curriculum and expertise, helping students from both areas compete nationally.",
   },
+  {
+    question: 'What is the NEET coaching fee for Cuttack students?',
+    answer:
+      'Our plans: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Intensive Rs 48,000/year. EMI and merit scholarships available. Premium coaching at much lower cost than relocating for preparation.',
+  },
+  {
+    question: 'Which medical colleges can Cuttack students target?',
+    answer:
+      'Cuttack students can target SCB Medical College (right in Cuttack), AIIMS Bhubaneswar, MKCG Medical College Berhampur, and through strong NEET scores, AIIMS Delhi, JIPMER, and top medical colleges nationwide.',
+  },
+  {
+    question: 'How is online NEET coaching better than Cuttack coaching centers?',
+    answer:
+      'Online offers AIIMS-trained faculty not available locally, small batches of 10-15 students, no commute, recorded lectures, personalized mentoring, and lower fees than premium coaching centers. 98% success rate speaks for itself.',
+  },
+  {
+    question: 'Do you cover Odisha CHSE board for NEET?',
+    answer:
+      'Yes, our NCERT-focused teaching covers 100% of NEET syllabus. CHSE board students benefit fully as NEET is entirely NCERT-based. We seamlessly bridge any curriculum differences between CHSE and NEET.',
+  },
 ]
 
 const faqSchema = {
@@ -139,6 +163,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Cuttack" stateName="Odisha" stateSlug="odisha" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -395,6 +420,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Cuttack" />
+      <CostComparisonSection cityName="Cuttack" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -420,7 +448,28 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Cuttack Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Christ College Cuttack', 'Stewart School Cuttack', 'Ravenshaw Collegiate School', "St. Joseph's High School", 'DAV Public School Cuttack', 'Delhi Public School Cuttack', 'Prabhujee English Medium School', 'Kendriya Vidyalaya Cuttack'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
+      <RelatedCityLinks currentCity="cuttack" variant="default" />
     </div>
   )
 }

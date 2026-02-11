@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/new-friends-colony',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching New Friends Colony NFC | Cerebrum Biology Academy',
+    description: 'Best NEET Biology coaching for New Friends Colony students. Maharani Bagh, Friends Colony. AIIMS faculty, small batches.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/new-friends-colony',
   },

@@ -152,7 +152,7 @@ describe('WhatsAppService', () => {
       const body = JSON.parse(call?.body as string)
       expect(body.message).toContain('Alice Johnson')
       expect(body.message).toContain('NEET Biology Pinnacle')
-      expect(body.message).toContain('94.2% NEET qualification')
+      expect(body.message).toContain('98% NEET qualification')
     })
 
     it('should include course details and next steps', async () => {

@@ -168,7 +168,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '355', icon: Star },
   { label: 'Gujarat Students', value: '3,500+', icon: Users },
   { label: 'Areas Covered', value: '15+', icon: MapPin },
@@ -178,7 +178,7 @@ const faqs = [
   {
     question: 'Why choose online coaching for NEET preparation in Ahmedabad?',
     answer:
-      'Ahmedabad students typically spend 1-2 hours daily commuting to coaching centers on SG Highway or CG Road. Our online live classes deliver quality teaching from AIIMS trained faculties directly to your home. Save time, avoid traffic jams, and focus 100% on NEET preparation. Our 94.2% success rate proves online is as effective as offline.',
+      'Ahmedabad students typically spend 1-2 hours daily commuting to coaching centers on SG Highway or CG Road. Our online live classes deliver quality teaching from AIIMS trained faculties directly to your home. Save time, avoid traffic jams, and focus 100% on NEET preparation. Our 98% success rate proves online is as effective as offline.',
   },
   {
     question: 'Which areas in Ahmedabad do you serve?',
@@ -296,7 +296,7 @@ export default function NeetCoachingAhmedabadPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Skip Ahmedabad traffic. Get AIIMS trained faculties, 94.2% success rate, and live
+              Skip Ahmedabad traffic. Get AIIMS trained faculties, 98% success rate, and live
               interactive classes - all from your home. Join 3,500+ Gujarat students already
               preparing with us.
             </p>
@@ -579,7 +579,7 @@ export default function NeetCoachingAhmedabadPage() {
               Start Your NEET Journey from Ahmedabad Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS trained faculties, 3,500+ Gujarat students. No traffic
+              98% success rate, AIIMS trained faculties, 3,500+ Gujarat students. No traffic
               commute required!
             </p>
 

@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/adaptive-testing',
     siteName: 'Cerebrum Biology Academy',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Adaptive Testing | AI-Powered Assessment | Cerebrum Biology Academy',
+    description: 'AI-powered adaptive testing for NEET Biology preparation.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/adaptive-testing',
   },

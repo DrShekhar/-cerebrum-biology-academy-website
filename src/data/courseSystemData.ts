@@ -584,7 +584,7 @@ export const coursePrograms: CourseProgram[] = [
         specialization: ['Human Physiology', 'Medical Entrance', 'Board Preparation'],
         rating: 4.92,
         teachingExperience: '18 years medical entrance coaching',
-        achievementHighlights: ['AIIMS toppers producer', '95% success rate'],
+        achievementHighlights: ['AIIMS toppers producer', '98% success rate'],
       },
     ],
     prerequisites: ['Class 11th completion', 'NEET foundation knowledge'],

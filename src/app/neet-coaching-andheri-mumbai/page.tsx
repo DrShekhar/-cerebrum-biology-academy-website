@@ -120,7 +120,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '352', icon: Star },
   { label: 'Andheri Students', value: '850+', icon: Users },
   { label: 'Partner Schools', value: '20+', icon: GraduationCap },
@@ -239,7 +239,7 @@ export default function NeetCoachingAndheriPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Andheri students. 94.2% success rate, AIIMS faculty,
+              Premium NEET Biology coaching for Andheri students. 98% success rate, AIIMS faculty,
               zero traffic stress. Join 850+ students from Lokhandwala to Marol.
             </p>
 
@@ -479,7 +479,7 @@ export default function NeetCoachingAndheriPage() {
               Join Andheri&apos;s Top NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, premium small batches. No traffic stress!
+              98% success rate, AIIMS faculty, premium small batches. No traffic stress!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

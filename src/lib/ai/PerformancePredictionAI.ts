@@ -293,7 +293,7 @@ class PerformancePredictionAI {
     examDate?: Date
   ): Promise<PredictionResult> {
     const analysisPrompt = `
-You are an advanced AI education analyst specializing in Indian competitive exam predictions with 94.2% accuracy rate.
+You are an advanced AI education analyst specializing in Indian competitive exam predictions with 98% accuracy rate.
 
 Analyze this student's comprehensive data and predict their exam performance:
 

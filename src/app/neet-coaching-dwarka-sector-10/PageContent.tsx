@@ -31,6 +31,10 @@ import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 interface FAQ {
   question: string
@@ -1370,6 +1374,9 @@ export default function PageContent({ faqs }: PageContentProps) {
           }),
         }}
       />
+      <PricingSection cityName="Dwarka Sector 10" />
+      <CostComparisonSection cityName="Dwarka Sector 10" />
+      <RelatedCityLinks currentCity="dwarka-sector-10" variant="default" />
     </div>
   )
 }

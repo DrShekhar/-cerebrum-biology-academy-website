@@ -65,7 +65,7 @@ class CountryContentService {
       timezone: 'Asia/Kolkata',
       heroMessage: "India's #1 NEET Biology Academy - Join 10,000+ successful students nationwide!",
       value_proposition:
-        "Excel in NEET Biology with India's most trusted coaching. 94.2% success rate with personalized mentorship.",
+        "Excel in NEET Biology with India's most trusted coaching. 98% success rate with personalized mentorship.",
       localOffers: [
         'EMI starting at ₹2,500/month',
         'Free home visit for course counseling',
@@ -106,7 +106,7 @@ class CountryContentService {
       },
       socialProof: {
         totalStudents: 10000,
-        successRate: '94.2%',
+        successRate: '98%',
         averageScore: '580/720',
         topUniversities: ['AIIMS Delhi', 'JIPMER', 'KGMU', 'MAMC', 'LHMC'],
         yearsOfExperience: 8,

@@ -79,7 +79,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Maharashtra Students', value: '1,200+', icon: Users },
   { label: 'HSC Toppers', value: '45+', icon: GraduationCap },
@@ -220,7 +220,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Expert HSC Biology coaching with NEET focus. 94.2% success rate, AIIMS faculty. Bridge
+              Expert HSC Biology coaching with NEET focus. 98% success rate, AIIMS faculty. Bridge
               the gap between Maharashtra board and NCERT syllabus. Join 1,200+ Maharashtra
               students!
             </p>
@@ -568,7 +568,7 @@ export default function MaharashtraHSCBiologyTuitionPage() {
               Ready to Excel in HSC Biology & NEET?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 1,200+ Maharashtra students. 94.2% success rate. AIIMS faculty. Start your
+              Join 1,200+ Maharashtra students. 98% success rate. AIIMS faculty. Start your
               journey today!
             </p>
 

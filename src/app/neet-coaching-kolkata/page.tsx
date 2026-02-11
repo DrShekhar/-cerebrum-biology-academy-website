@@ -168,7 +168,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '360', icon: Star },
   { label: 'Bengal Students', value: '4,000+', icon: Users },
   { label: 'Areas Covered', value: '15+', icon: MapPin },
@@ -178,7 +178,7 @@ const faqs = [
   {
     question: 'Why choose online coaching for NEET preparation in Kolkata?',
     answer:
-      'Kolkata students typically spend 2-3 hours daily commuting to coaching centers in Park Street or Salt Lake. Our online live classes deliver quality teaching from AIIMS trained faculties directly to your home. Save time, avoid traffic jams, and focus 100% on NEET preparation. Our 94.2% success rate proves online is as effective as offline.',
+      'Kolkata students typically spend 2-3 hours daily commuting to coaching centers in Park Street or Salt Lake. Our online live classes deliver quality teaching from AIIMS trained faculties directly to your home. Save time, avoid traffic jams, and focus 100% on NEET preparation. Our 98% success rate proves online is as effective as offline.',
   },
   {
     question: 'Which areas in Kolkata do you serve?',
@@ -296,7 +296,7 @@ export default function NeetCoachingKolkataPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Skip Kolkata traffic. Get AIIMS trained faculties, 94.2% success rate, and live
+              Skip Kolkata traffic. Get AIIMS trained faculties, 98% success rate, and live
               interactive classes - all from your home. Join 4,000+ West Bengal students already
               preparing with us.
             </p>
@@ -579,7 +579,7 @@ export default function NeetCoachingKolkataPage() {
               Start Your NEET Journey from Kolkata Today
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS trained faculties, 4,000+ West Bengal students. No traffic
+              98% success rate, AIIMS trained faculties, 4,000+ West Bengal students. No traffic
               commute required!
             </p>
 

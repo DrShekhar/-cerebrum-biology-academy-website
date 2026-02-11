@@ -420,7 +420,7 @@ export const successStoriesData: SuccessStoryData[] = [
 
 export const successAnalyticsData = {
   totalStudents: 2847,
-  successRate: 94.2,
+  successRate: 98,
   averageImprovement: 167,
   topRanks: 247,
   batchesCompleted: 28,
@@ -461,7 +461,7 @@ export const successAnalyticsData = {
     {
       batchType: 'Class 12th Intensive',
       students: 468,
-      successRate: 94.2,
+      successRate: 98,
       avgImprovement: 167,
     },
     {

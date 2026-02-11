@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/defence-colony',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Defence Colony Delhi | Cerebrum Biology Academy',
+    description: 'Best NEET Biology coaching for Defence Colony students. AIIMS faculty, small batches, 98% success rate.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/defence-colony',
   },

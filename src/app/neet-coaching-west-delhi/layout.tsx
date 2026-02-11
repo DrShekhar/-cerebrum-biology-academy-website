@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in West Delhi | Dwarka, Janakpuri, Rajouri Garden | Cerebrum Academy',
+    description: 'Best NEET coaching for West Delhi students from Dwarka, Janakpuri, Rajouri Garden, Vikaspuri, Uttam Nagar.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-west-delhi',
   },

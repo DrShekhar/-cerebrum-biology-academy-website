@@ -95,7 +95,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Ludhiana Students', value: '400+', icon: Users },
   { label: 'Avg Score Improvement', value: '+125', icon: TrendingUp },
   { label: 'GMC Selections', value: '65+', icon: Award },
@@ -127,7 +127,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Ludhiana?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET coaching for Ludhiana students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 94.2% success rate, we bring Chandigarh-quality coaching to Punjab\'s largest city. Students from Model Town, Civil Lines, Sarabha Nagar join our live sessions.',
+      'Cerebrum Biology Academy offers the best NEET coaching for Ludhiana students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate, we bring Chandigarh-quality coaching to Punjab\'s largest city. Students from Model Town, Civil Lines, Sarabha Nagar join our live sessions.',
   },
   {
     question: 'Is there any good NEET coaching center in Ludhiana?',
@@ -192,8 +192,8 @@ export default function NEETCoachingLudhiana() {
       <CitySchema
         cityName="Ludhiana"
         stateName="Punjab"
-        description="Best NEET coaching for Ludhiana students. Online classes from AIIMS faculty. 94.2% success rate. Serving Model Town, Civil Lines, Sarabha Nagar, Dugri."
-        url="https://cerebrumacademy.in/neet-coaching-ludhiana"
+        description="Best NEET coaching for Ludhiana students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Civil Lines, Sarabha Nagar, Dugri."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-ludhiana"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-indigo-50">
@@ -232,7 +232,7 @@ export default function NEETCoachingLudhiana() {
 
                 <p className="mb-8 text-lg text-gray-600">
                   Online NEET coaching for students from Model Town, Civil Lines, Sarabha Nagar,
-                  Dugri, and all Ludhiana areas. <strong>94.2% success rate</strong> with AIIMS
+                  Dugri, and all Ludhiana areas. <strong>98% success rate</strong> with AIIMS
                   faculty.
                 </p>
 

@@ -2,6 +2,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
@@ -22,6 +26,7 @@ export default function PageContent() {
 
   return (
     <div className="w-full">
+      <CityBreadcrumb cityName="Nagpur" stateName="Maharashtra" stateSlug="maharashtra" />
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-indigo-50 overflow-hidden pt-20">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 right-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
@@ -185,7 +190,20 @@ export default function PageContent() {
               {
                 q: 'How many mock tests are conducted?',
                 a: 'Minimum 12 full-length NEET mocks annually with rank prediction and detailed performance analysis.'
-              }
+              },
+              {
+                q: 'Which medical colleges can Nagpur students target?',
+                a: 'Nagpur students can target Government Medical College Nagpur, AIIMS Nagpur, Indira Gandhi Government Medical College, NKP Salve Institute, and through strong NEET scores, top medical colleges across India.'
+              },
+              {
+                q: 'What schools do Nagpur NEET students come from?',
+                a: 'Our Nagpur students attend Centre Point School, Bhavan\'s B.P. Vidya Mandir, Somalwar Nikalas, Sandipani School, Delhi Public School Nagpur, and other premier institutions across the city.'
+              },
+              {
+                q: 'Do you cover Maharashtra state board for NEET?',
+                a: 'Yes, our NCERT-focused curriculum covers 100% of NEET. Maharashtra board students benefit fully since NEET is entirely NCERT-based. We seamlessly bridge any curriculum differences.'
+              },
+            
             ].map((item, idx) => (
               <div key={idx} className="bg-gray-50 rounded-lg p-6 hover:bg-gray-100 transition-colors">
                 <div className="flex items-start">
@@ -221,6 +239,30 @@ export default function PageContent() {
           <p className="text-blue-100 mt-8 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Students from These Nagpur Schools Trust Us
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {['Centre Point School', "Bhavan's B.P. Vidya Mandir", 'Somalwar Nikalas School', 'Sandipani School', 'Delhi Public School Nagpur', 'Saraswati Vidyalaya', 'Bishop Cotton School', 'Ryan International Nagpur'].map((school) => (
+                <span
+                  key={school}
+                  className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"
+                >
+                  {school}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <PricingSection cityName="Nagpur" />
+      <CostComparisonSection cityName="Nagpur" />
+      <RelatedCityLinks currentCity="nagpur" variant="default" />
     </div>
   )
 }

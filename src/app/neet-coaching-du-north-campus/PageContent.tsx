@@ -30,6 +30,10 @@ import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
 import { CEREBRUM_METRICS } from '@/lib/constants/metrics'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 const duColleges = [
   {
@@ -1197,6 +1201,9 @@ export default function PageContent() {
           }),
         }}
       />
+      <PricingSection cityName="Du North Campus" />
+      <CostComparisonSection cityName="Du North Campus" />
+      <RelatedCityLinks currentCity="du-north-campus" variant="default" />
     </div>
   )
 }

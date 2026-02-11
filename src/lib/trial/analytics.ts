@@ -1,6 +1,6 @@
 import { PrismaClient } from '@/generated/prisma'
 
-const prisma = new PrismaClient()
+const prisma = process.env.DATABASE_URL ? new PrismaClient() : (null as any)
 
 export interface TrialEventData {
   eventName: string

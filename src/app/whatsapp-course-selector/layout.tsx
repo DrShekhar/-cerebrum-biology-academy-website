@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://www.cerebrumbiologyacademy.com/whatsapp-course-selector',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Course Selector — Find Your Perfect NEET Biology Program | Cerebrum Biology Academy',
+    description: 'Choose from 15+ Biology coaching programs for Class 9–12 & Droppers.',
+  },
   alternates: {
     canonical: 'https://www.cerebrumbiologyacademy.com/whatsapp-course-selector',
   },

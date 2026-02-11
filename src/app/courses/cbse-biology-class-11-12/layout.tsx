@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/courses/cbse-biology-class-11-12',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'CBSE Biology Class 11 & 12 Coaching Delhi | Board Exam Preparation | Cerebrum',
+    description: 'Best CBSE Biology coaching for Class 11 & 12 in Delhi.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/cbse-biology-class-11-12',
   },

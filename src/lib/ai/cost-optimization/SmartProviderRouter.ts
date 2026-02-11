@@ -497,7 +497,7 @@ export class SmartProviderRouter {
       this.performanceHistory.set(providerId, {
         provider: providerId,
         averageLatency: 2000, // Default 2 seconds
-        successRate: 0.95, // Default 95% success rate
+        successRate: 0.95, // Default 98% success rate
         averageCost: 0.01, // Default cost estimate
         qualityScore: 0.85, // Default quality
         uptimeScore: 0.99, // Default uptime

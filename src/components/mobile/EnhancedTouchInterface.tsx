@@ -125,7 +125,7 @@ export function EnhancedTouchInterface({
             <div className="flex items-center gap-1">
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
               <span className="text-green-700 font-medium">
-                {showHindi ? '94.2% सफलता दर' : '94.2% Success Rate'}
+                {showHindi ? '98% सफलता दर' : '98% Success Rate'}
               </span>
             </div>
             <div className="flex items-center gap-1">

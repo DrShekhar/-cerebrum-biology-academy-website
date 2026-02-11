@@ -28,7 +28,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score', value: '358/360', icon: Star },
   { label: 'Manimajra Area', value: '60+', icon: Users },
   { label: 'PGIMER Selections', value: '15+', icon: GraduationCap },
@@ -37,7 +37,7 @@ const successMetrics = [
 const schools = ['Government School Manimajra', 'Spring Dale School', 'DAV Sector 38', 'Ryan International']
 
 const faqs = [
-  { question: 'Is there NEET coaching in Manimajra?', answer: 'Manimajra lacks dedicated NEET coaching. Cerebrum provides online coaching accessible from Manimajra with AIIMS faculty, 94.2% success. 60+ students enrolled. Better than traveling to Sector 34!' },
+  { question: 'Is there NEET coaching in Manimajra?', answer: 'Manimajra lacks dedicated NEET coaching. Cerebrum provides online coaching accessible from Manimajra with AIIMS faculty, 98% success. 60+ students enrolled. Better than traveling to Sector 34!' },
   { question: 'How much does NEET coaching cost for Manimajra students?', answer: 'Cerebrum fees: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Dropper Rs 68,000/year. Save transport costs to Sector 34!' },
   { question: 'What are batch timings for Manimajra students?', answer: 'Multiple options: Morning (6-8 AM), After-school (4-6 PM), Evening (7-9 PM). Weekend batches available.' },
   { question: 'Is dropper batch available?', answer: 'Yes! Intensive dropper batch at Rs 68,000/year with personal mentorship, weekly tests.' },
@@ -54,7 +54,7 @@ export default function ManimajraPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block px-4 py-2 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium mb-6">🎯 60+ Students from Manimajra Area</span>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">NEET Coaching for <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">Manimajra Chandigarh</span></h1>
-            <p className="text-xl lg:text-2xl text-orange-100 mb-8">Finally! Quality NEET coaching for Manimajra. <strong>Online classes</strong> with AIIMS faculty, 94.2% success rate.</p>
+            <p className="text-xl lg:text-2xl text-orange-100 mb-8">Finally! Quality NEET coaching for Manimajra. <strong>Online classes</strong> with AIIMS faculty, 98% success rate.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}><Button size="lg" className="bg-green-500 hover:bg-green-600"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp Now</Button></Link>
               <Link href="/book-free-demo"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Book Free Demo<ArrowRight className="w-5 h-5 ml-2" /></Button></Link>

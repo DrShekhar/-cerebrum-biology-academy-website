@@ -2,15 +2,20 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Panchkula 2026 | Haryana | Cerebrum Academy',
-  description: 'Top NEET coaching in Panchkula Haryana. 94.2% success rate, AIIMS faculty. Online classes for Sector 12A, MDC, Sector 20, Kalka. 150+ Panchkula students. Fee ₹24,000+. Book free demo!',
+  description: 'Top NEET coaching in Panchkula Haryana. 98% success rate, AIIMS faculty. Online classes for Sector 12A, MDC, Sector 20, Kalka. 150+ Panchkula students. Fee ₹24,000+. Book free demo!',
   keywords: 'NEET coaching Panchkula, best NEET coaching Panchkula Haryana, biology classes Panchkula, NEET preparation Sector 12A Panchkula, MDC Panchkula NEET coaching, online NEET classes Panchkula, NEET coaching near me Panchkula, biology tuition Panchkula, NEET 2026 coaching Panchkula, Kalka NEET classes, Pinjore coaching',
   openGraph: {
     title: 'Best NEET Coaching in Panchkula 2026 | Haryana | Cerebrum Academy',
-    description: 'Top NEET coaching in Panchkula Haryana. 94.2% success rate, AIIMS faculty. 150+ students from Panchkula. Skip traffic to Chandigarh!',
+    description: 'Top NEET coaching in Panchkula Haryana. 98% success rate, AIIMS faculty. 150+ students from Panchkula. Skip traffic to Chandigarh!',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-panchkula',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in Panchkula | Cerebrum Biology Academy',
+    description: 'Top NEET biology coaching in Panchkula, Haryana. 98% success rate. Sector 9, 12, 15.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-panchkula',

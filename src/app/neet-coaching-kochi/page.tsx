@@ -62,8 +62,7 @@ export default function NEETCoachingKochiPage() {
         slug="neet-coaching-kochi"
         pageTitle="Best NEET Coaching in Kochi"
         pageDescription="Premium online NEET coaching in Kochi. 15,000+ aspirants, expert faculty, near Amrita & KUHS medical colleges. 98% success rate."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "9.9312", lng: "76.2673" }} />
       <PageContent />
     </>
   )

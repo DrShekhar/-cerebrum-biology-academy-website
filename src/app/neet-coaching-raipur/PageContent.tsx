@@ -2,6 +2,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
@@ -231,6 +235,9 @@ export default function PageContent() {
           <p className="text-blue-100 mt-8 text-sm">Website: cerebrumbiologyacademy.com</p>
         </div>
       </section>
+      <PricingSection cityName="Raipur" />
+      <CostComparisonSection cityName="Raipur" />
+      <RelatedCityLinks currentCity="raipur" variant="default" />
     </div>
   )
 }

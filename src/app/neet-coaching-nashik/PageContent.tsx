@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       "Nashik's wine country families appreciate our structured, result-oriented approach. Fixed schedules, regular progress reports, and focus on top results align with values of educated, successful families. Online format allows flexibility without compromising on quality coaching.",
   },
+  {
+    question: 'What is the NEET coaching fee for Nashik students?',
+    answer:
+      'Our plans: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Intensive Rs 48,000/year. EMI and merit scholarships available. Much more affordable than travelling to Pune or Mumbai for coaching.',
+  },
+  {
+    question: 'Which medical colleges can Nashik students aim for?',
+    answer:
+      'Nashik students can target SMBT Medical College Nashik, Government Medical College Aurangabad, B.J. Medical College Pune, and through strong NEET scores, AIIMS, JIPMER, and top medical colleges across India.',
+  },
+  {
+    question: 'Do you cover Maharashtra state board for NEET?',
+    answer:
+      'Yes, our NCERT-focused curriculum covers 100% of NEET. Maharashtra board students benefit fully since NEET is entirely NCERT-based. We bridge any differences between MH board and NEET requirements.',
+  },
+  {
+    question: 'Is there a free trial class for Nashik students?',
+    answer:
+      'Yes, we offer a free demo class. Book via WhatsApp at 8826444334 or our website. Experience AIIMS-trained faculty with no commitment. Many Nashik families enroll after experiencing the quality difference.',
+  },
 ]
 
 const faqSchema = {
@@ -139,6 +163,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Nashik" stateName="Maharashtra" stateSlug="maharashtra" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -396,6 +421,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Nashik" />
+      <CostComparisonSection cityName="Nashik" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -421,7 +449,28 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Nashik Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Fravashi Academy Nashik', 'Podar International Nashik', 'KTHM College', 'BYK College of Commerce', "St. Francis D'Assisi School", 'Delhi Public School Nashik', 'Trimurti International School', 'Boys Town School Nashik'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
+      <RelatedCityLinks currentCity="nashik" variant="default" />
     </div>
   )
 }

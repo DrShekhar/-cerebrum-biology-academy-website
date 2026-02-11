@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     'NEET Biology coaching Central Delhi',
     'Premium NEET coaching Delhi',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Jor Bagh | Near Safdarjung | Cerebrum Academy',
+    description: 'Premium NEET Biology coaching for Jor Bagh students. Ultra-elite locality near Safdarjung Tomb, Lodhi Gardens.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/jor-bagh',
   },

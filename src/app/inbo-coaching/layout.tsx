@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'HBCSE olympiad',
     'IBO India team',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'INBO Coaching Online | Indian Biology Olympiad Preparation',
+    description: 'Expert INBO coaching for Indian students. Indian Biology Olympiad preparation with NSEB and INBiO focus.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/inbo-coaching/',
   },

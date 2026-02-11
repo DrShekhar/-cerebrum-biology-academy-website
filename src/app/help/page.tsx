@@ -429,10 +429,10 @@ export default function HelpCenterPage() {
                 Response within 4-6 hours
               </p>
               <a
-                href="mailto:support@cerebrumacademy.in"
+                href="mailto:support@cerebrumbiologyacademy.com"
                 className="text-white font-bold hover:text-yellow-300 transition-colors break-all text-sm sm:text-base"
               >
-                support@cerebrumacademy.in
+                support@cerebrumbiologyacademy.com
               </a>
             </div>
 
@@ -487,7 +487,7 @@ export default function HelpCenterPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href="mailto:support@cerebrumacademy.in?subject=Help Center Inquiry"
+                  href="mailto:support@cerebrumbiologyacademy.com?subject=Help Center Inquiry"
                   className="inline-flex items-center gap-2 px-5 py-2 bg-[#3d4d3d] text-white rounded-lg font-semibold hover:bg-[#4a5d4a] transition-colors"
                 >
                   <Mail className="w-5 h-5" />

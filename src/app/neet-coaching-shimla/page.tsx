@@ -95,7 +95,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'HP Students', value: '180+', icon: Users },
   { label: 'Avg Score Improvement', value: '+112', icon: TrendingUp },
   { label: 'IGMC Selections', value: '22+', icon: Award },
@@ -127,7 +127,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Shimla?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET coaching for Shimla students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 94.2% success rate, we provide superior preparation for IGMC Shimla. Students from Mall Road, Lakkar Bazaar, Sanjauli, and even Solan district trust us.',
+      'Cerebrum Biology Academy offers the best NEET coaching for Shimla students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate, we provide superior preparation for IGMC Shimla. Students from Mall Road, Lakkar Bazaar, Sanjauli, and even Solan district trust us.',
   },
   {
     question: 'Is there good NEET coaching available in Shimla city?',
@@ -192,8 +192,8 @@ export default function NEETCoachingShimla() {
       <CitySchema
         cityName="Shimla"
         stateName="Himachal Pradesh"
-        description="Best NEET coaching for Shimla students. Online classes from AIIMS faculty. 94.2% success rate. Serving Mall Road, Lakkar Bazaar, Sanjauli, Solan. IGMC Shimla preparation."
-        url="https://cerebrumacademy.in/neet-coaching-shimla"
+        description="Best NEET coaching for Shimla students. Online classes from AIIMS faculty. 98% success rate. Serving Mall Road, Lakkar Bazaar, Sanjauli, Solan. IGMC Shimla preparation."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-shimla"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-cyan-50">
@@ -232,7 +232,7 @@ export default function NEETCoachingShimla() {
 
                 <p className="mb-8 text-lg text-gray-600">
                   Online NEET coaching for students from Mall Road, Lakkar Bazaar, Sanjauli, Solan,
-                  and all HP districts. <strong>94.2% success rate</strong> with AIIMS faculty.
+                  and all HP districts. <strong>98% success rate</strong> with AIIMS faculty.
                 </p>
 
                 <div className="mb-8 flex flex-wrap gap-4">

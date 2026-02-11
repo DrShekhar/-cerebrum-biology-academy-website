@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       'Many Kochi students follow Kerala board, while others study CBSE or ISC curricula. Our comprehensive approach integrates Kerala board concepts with CBSE NEET requirements. We help students bridge curriculum gaps seamlessly.',
   },
+  {
+    question: 'What is the fee for NEET coaching in Kochi?',
+    answer:
+      'Our NEET Biology coaching starts from Rs 24,000/year for Foundation, Rs 36,000/year for Comprehensive, and Rs 48,000/year for Intensive batches. EMI and scholarship options available. Much more affordable than traditional Kochi coaching centers.',
+  },
+  {
+    question: 'Which medical colleges can Kochi students aim for?',
+    answer:
+      'Kochi students can target Government Medical College Ernakulam, Amrita Institute of Medical Sciences, KUHS-affiliated colleges across Kerala, and through strong NEET scores, AIIMS, JIPMER, and top medical colleges across India.',
+  },
+  {
+    question: 'Do you offer crash courses for Kochi NEET aspirants?',
+    answer:
+      'Yes, we offer 3-month and 6-month crash courses specially designed for last-minute NEET preparation. These include daily classes, intensive revision, mock tests, and personalized mentoring. Ideal for Kochi students who want focused preparation.',
+  },
+  {
+    question: 'How are online NEET classes better than Kochi coaching centers?',
+    answer:
+      'Online classes offer AIIMS-trained faculty (not available at most Kochi centers), small batches of 10-15 students, no commute across Kochi traffic, recorded lectures for revision, and personalized attention at lower fees than premium coaching centers.',
+  },
 ]
 
 const faqSchema = {
@@ -139,6 +163,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Kochi" stateName="Kerala" stateSlug="kerala" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -397,6 +422,30 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Students from These Kochi Schools Trust Us
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {['Choice School Kochi', 'Rajagiri Public School', 'Toc-H Public School', "Bhavan's Vidya Mandir", 'Chinmaya Vidyalaya', 'GEMS Our Own School', 'The International School Kochi', 'Gregorian Public School'].map((school) => (
+                <span
+                  key={school}
+                  className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"
+                >
+                  {school}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <PricingSection cityName="Kochi" />
+      <CostComparisonSection cityName="Kochi" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -423,6 +472,7 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+      <RelatedCityLinks currentCity="kochi" variant="default" />
     </div>
   )
 }

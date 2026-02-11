@@ -82,7 +82,7 @@ export default function IBBiologyTutorPage() {
         name: 'How can an IB Biology tutor help improve my score?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'An experienced IB Biology tutor provides targeted support in understanding complex concepts, mastering command terms, developing strong IA research questions, and practicing exam techniques. Our students achieve 95% success rate in scoring 6-7.',
+          text: 'An experienced IB Biology tutor provides targeted support in understanding complex concepts, mastering command terms, developing strong IA research questions, and practicing exam techniques. Our students achieve 98% success rate in scoring 6-7.',
         },
       },
       {
@@ -829,7 +829,7 @@ export default function IBBiologyTutorPage() {
                 {
                   question: 'How can an IB Biology tutor help improve my score?',
                   answer:
-                    'An experienced IB Biology tutor provides targeted support in understanding complex concepts, mastering command terms, developing strong IA research questions, and practicing exam techniques. Our structured approach focuses on the specific requirements of IB assessments, and our students achieve a 95% success rate in scoring 6-7.',
+                    'An experienced IB Biology tutor provides targeted support in understanding complex concepts, mastering command terms, developing strong IA research questions, and practicing exam techniques. Our structured approach focuses on the specific requirements of IB assessments, and our students achieve a 98% success rate in scoring 6-7.',
                 },
                 {
                   question: 'Do you provide support for IB Biology Internal Assessment?',

@@ -29,10 +29,21 @@ export const metadata: Metadata = {
   alternates: { canonical: `${BASE_URL}/${slug}` },
 }
 
+const faqs = [
+  { q: 'Is online NEET coaching effective for students in Agra?', a: 'Yes! Our online NEET coaching is specifically designed for Agra students. With AIIMS faculty, 98% success rate, and personalized attention, students in Agra achieve excellent results without traveling to coaching hubs.' },
+  { q: 'What are the class timings for Agra students?', a: 'We offer flexible morning, afternoon, and evening batches so Agra students can attend after school or college hours. Weekend revision sessions are also available.' },
+  { q: 'Do you provide WhatsApp support for doubt clearing?', a: 'Yes! Instant WhatsApp support available on +91-8826444334. Our AIIMS faculty responds within minutes. Agra students get unlimited doubt clearing.' },
+  { q: 'What makes Cerebrum different from local coaching in Agra?', a: 'AIIMS-qualified faculty, 10-15 student batches (vs 100+ locally), 695/720 top score, 98% success rate, structured NCERT approach. Agra students get premium coaching at affordable fees.' },
+  { q: 'What is the NEET coaching fee for Agra students?', a: 'Foundation (Class 11): Rs 24,000/year, Comprehensive (Class 12): Rs 36,000/year, Intensive (Dropper): Rs 48,000/year. EMI available. Much more affordable than Agra classroom coaching.' },
+  { q: 'Which medical colleges can Agra students target?', a: 'With strong NEET scores, Agra students can target AIIMS Delhi, JIPMER, LHMC, Maulana Azad Medical College, and top government medical colleges across India.' },
+  { q: 'Do you cover Class 11 and Class 12 NEET syllabus?', a: 'Yes! Foundation (Class 11), Comprehensive (Class 12), and Intensive (dropper) courses. All aligned with latest NTA NEET pattern and 100% NCERT-based curriculum.' },
+  { q: 'Can I attend a free demo class before enrolling?', a: 'Absolutely! WhatsApp us at +91-8826444334 to book your free demo class. Experience our AIIMS faculty teaching methodology.' },
+]
+
 export default function NEETCoachingAgraPage() {
   return (
     <>
-      <LocalitySchema locality="Agra" slug={slug} pageTitle="Best NEET Coaching in Agra" pageDescription="Top NEET Biology coaching in Agra, Uttar Pradesh with AIIMS faculty and 98% success rate." pageType="coaching" />
+      <LocalitySchema locality="Agra" slug={slug} pageTitle="Best NEET Coaching in Agra" pageDescription="Top NEET Biology coaching in Agra, Uttar Pradesh with AIIMS faculty and 98% success rate." pageType="coaching" coordinates={{ lat: "27.1767", lng: "78.0081" }} faqs={faqs} />
       <PageContent />
     </>
   )

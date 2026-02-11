@@ -20,7 +20,7 @@ export function LandingHero({
   highlightedBadge,
   ctaPrimary = 'Book Free Demo Class',
   ctaSecondary = 'Call Now',
-  trustBadges = ['15+ Years Experience', '10,000+ Students', '99% Results'],
+  trustBadges = ['15+ Years Experience', '10,000+ Students', '98% Results'],
   backgroundGradient = 'from-slate-900 to-slate-800',
 }: LandingHeroProps) {
   const phoneNumber = '918826444334'

@@ -5,14 +5,16 @@
 
 import { PrismaClient } from '@/generated/prisma'
 
-const db = new PrismaClient({
-  log: ['error', 'warn'],
-  datasources: {
-    db: {
-      url: process.env.DATABASE_URL,
-    },
-  },
-})
+const db = process.env.DATABASE_URL
+  ? new PrismaClient({
+      log: ['error', 'warn'],
+      datasources: {
+        db: {
+          url: process.env.DATABASE_URL,
+        },
+      },
+    })
+  : (null as any)
 
 async function testDatabaseConnection() {
   console.log('Testing database connection...')

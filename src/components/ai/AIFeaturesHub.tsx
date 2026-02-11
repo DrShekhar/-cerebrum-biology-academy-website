@@ -63,7 +63,7 @@ const aiFeatures: AIFeature[] = [
     ],
     metrics: [
       { label: 'Response Time', value: '<2 seconds' },
-      { label: 'Accuracy', value: '94.2%' },
+      { label: 'Accuracy', value: '98%' },
       { label: 'Students Helped', value: '10,000+' },
     ],
     color: 'blue-600',
@@ -137,7 +137,7 @@ const aiFeatures: AIFeature[] = [
 
 const stats = [
   { label: 'Total AI Interactions', value: '50,000+', icon: <MessageSquare className="w-5 h-5" /> },
-  { label: 'Student Success Rate', value: '94.2%', icon: <Award className="w-5 h-5" /> },
+  { label: 'Student Success Rate', value: '98%', icon: <Award className="w-5 h-5" /> },
   { label: 'Average Response Time', value: '<2s', icon: <Clock className="w-5 h-5" /> },
   { label: 'Active Daily Users', value: '2,500+', icon: <Users className="w-5 h-5" /> },
 ]
@@ -435,7 +435,7 @@ export default function AIFeaturesHub() {
               </div>
               <h3 className="text-xl font-bold mb-2">Proven Results</h3>
               <p className="text-gray-300">
-                94.2% NEET qualification rate with our AI-assisted learning
+                98% NEET qualification rate with our AI-assisted learning
               </p>
             </div>
           </div>

@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       'Vizag\'s local coaching ecosystem is primarily tutor-based or unstructured. Cerebrum brings comprehensive curriculum, expert faculty, regular testing, progress tracking, and personalized mentorship - addressing the quality gap in Vizag NEET coaching.',
   },
+  {
+    question: 'What is the NEET coaching fee for Vizag students?',
+    answer:
+      'Our NEET Biology plans start from Rs 24,000/year (Foundation), Rs 36,000/year (Comprehensive), and Rs 48,000/year (Intensive). EMI options available. This is significantly cheaper than Hyderabad coaching centers that many Vizag students travel to.',
+  },
+  {
+    question: 'Which medical colleges can Visakhapatnam students target?',
+    answer:
+      'Vizag students can target Andhra Medical College (right in Vizag), NTR University of Health Sciences colleges, AIIMS Mangalagiri, and through strong NEET scores, AIIMS Delhi, JIPMER, and top national medical colleges.',
+  },
+  {
+    question: 'Do you cover Andhra Pradesh state board syllabus for NEET?',
+    answer:
+      'Our teaching is NCERT-focused which covers 100% of NEET syllabus. AP state board students benefit from our approach as NEET is entirely NCERT-based. We bridge any gaps between state board and NEET requirements.',
+  },
+  {
+    question: 'How do Vizag students attend doubt clearing sessions?',
+    answer:
+      'We offer unlimited doubt clearing via WhatsApp groups, live post-class sessions, scheduled one-on-one mentoring, and 24/7 recorded explanations. Most doubts are resolved within 2 minutes on WhatsApp.',
+  },
 ]
 
 const faqSchema = {
@@ -146,6 +170,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Visakhapatnam" stateName="Andhra Pradesh" stateSlug="andhra-pradesh" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -404,6 +429,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Visakhapatnam" />
+      <CostComparisonSection cityName="Visakhapatnam" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -429,7 +457,28 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Vizag Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Delhi Public School Vizag', 'Timpany School', 'Sri Prakash Vidyaniketan', 'Bhashyam School', 'Oakridge International', 'Navy Children School', 'Sri Chaitanya Techno School', 'Visakha Valley School'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
+      <RelatedCityLinks currentCity="visakhapatnam" variant="default" />
     </div>
   )
 }

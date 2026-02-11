@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     'NEET Biology coaching fees Delhi',
     'Affordable NEET coaching Delhi',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Malviya Nagar | Near Saket | Cerebrum Academy',
+    description: 'Best NEET Biology coaching for Malviya Nagar students. High student population area near Saket.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/malviya-nagar',
   },

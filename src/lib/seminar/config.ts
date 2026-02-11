@@ -167,7 +167,7 @@ export function generateCalendarICS(seminarDate: Date, zoomLink?: string): strin
 VERSION:2.0
 PRODID:-//Cerebrum Biology Academy//NEET Seminar//EN
 BEGIN:VEVENT
-UID:${seminarDate.toISOString()}-neet-seminar@cerebrumacademy.com
+UID:${seminarDate.toISOString()}-neet-seminar@cerebrumbiologyacademy.com
 DTSTAMP:${formatICSDate(new Date())}
 DTSTART:${formatICSDate(seminarDate)}
 DTEND:${formatICSDate(endDate)}
@@ -175,7 +175,7 @@ SUMMARY:${SEMINAR_CONFIG.title}
 DESCRIPTION:${SEMINAR_CONFIG.description}${zoomLink ? `\\n\\nJoin: ${zoomLink}` : ''}
 LOCATION:Online (Zoom)
 STATUS:CONFIRMED
-ORGANIZER;CN=${SEMINAR_CONFIG.speakerName}:mailto:info@cerebrumacademy.com
+ORGANIZER;CN=${SEMINAR_CONFIG.speakerName}:mailto:info@cerebrumbiologyacademy.com
 END:VEVENT
 END:VCALENDAR`
 }

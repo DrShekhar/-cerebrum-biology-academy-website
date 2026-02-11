@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'Biology tutor Anand Niketan',
     'NEET coaching Chanakyapuri area',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Anand Niketan | Near Diplomatic Enclave | Cerebrum Academy',
+    description: 'Premium NEET Biology coaching for Anand Niketan families. Near Diplomatic Enclave and Chanakyapuri.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/anand-niketan',
   },

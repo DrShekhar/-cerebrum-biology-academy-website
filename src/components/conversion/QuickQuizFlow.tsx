@@ -184,7 +184,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               <div className="text-sm text-gray-500">Minutes</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600">94.2%</div>
+              <div className="text-3xl font-bold text-purple-600">98%</div>
               <div className="text-sm text-gray-500">Success Rate</div>
             </div>
           </div>
@@ -381,7 +381,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               <div className="text-xs text-gray-500">AIIMS Selections</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-gray-900">94.2%</div>
+              <div className="text-lg font-bold text-gray-900">98%</div>
               <div className="text-xs text-gray-500">Success Rate</div>
             </div>
           </div>

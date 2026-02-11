@@ -128,7 +128,7 @@ export default function GurugramLocationContent() {
 
               <p className="text-lg text-gray-300 leading-relaxed">
                 Premier NEET Biology coaching by AIIMS faculty. Small batches of 15 students,
-                personalized attention, 90% success rate. No need to travel to Delhi!
+                personalized attention, 98% success rate. No need to travel to Delhi!
               </p>
 
               {/* Address Card */}

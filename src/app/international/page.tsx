@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'MCAT prep',
   ],
   alternates: {
-    canonical: 'https://cerebrumacademy.com/international/',
+    canonical: 'https://cerebrumbiologyacademy.com/international/',
   },
   openGraph: {
     title: 'International Biology Tutoring | Cerebrum Academy',

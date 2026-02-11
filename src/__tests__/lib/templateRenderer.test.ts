@@ -57,7 +57,7 @@ describe('Template Renderer', () => {
       source: 'WEBSITE',
       users: {
         name: 'Sarah Williams',
-        email: 'sarah@cerebrumacademy.com',
+        email: 'sarah@cerebrumbiologyacademy.com',
         phone: '+0987654321',
       },
       demo_bookings: [
@@ -116,7 +116,7 @@ Days Since Contact: {{daysSinceContact}}
       expect(result).toContain('HOT')
       expect(result).toContain('85')
       expect(result).toContain('Sarah Williams')
-      expect(result).toContain('sarah@cerebrumacademy.com')
+      expect(result).toContain('sarah@cerebrumbiologyacademy.com')
       expect(result).toContain('+0987654321')
       expect(result).toContain('Website')
       expect(result).toContain('15000')

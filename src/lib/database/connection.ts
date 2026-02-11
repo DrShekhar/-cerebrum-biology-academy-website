@@ -7,6 +7,12 @@ declare global {
 
 // Connection configuration optimized for high concurrency
 const createPrismaClient = () => {
+  // Guard: skip PrismaClient creation when DATABASE_URL is not set (e.g. during Vercel build)
+  if (!process.env.DATABASE_URL) {
+    console.warn('DATABASE_URL not configured - database connection disabled')
+    return null as any
+  }
+
   return new PrismaClient({
     log: process.env.NODE_ENV === 'development' ? ['query', 'error', 'warn'] : ['error'],
 

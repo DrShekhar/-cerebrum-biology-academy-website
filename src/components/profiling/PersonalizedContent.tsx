@@ -434,7 +434,7 @@ function generatePersonalizedHero(preferences: any, segment: string, visitCount:
       : "Master NEET Biology with India's #1 Faculty",
     subtitle: 'Join 10,000+ students who chose us for guaranteed NEET success',
     stats: [
-      { value: '94.2%', label: 'Overall Success Rate' },
+      { value: '98%', label: 'Overall Success Rate' },
       { value: '330+', label: 'Avg Biology Score' },
       { value: '10,000+', label: 'Students Enrolled' },
     ],

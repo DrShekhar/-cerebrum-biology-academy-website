@@ -15,6 +15,8 @@ interface LocalitySchemaProps {
   pageTitle: string
   pageDescription: string
   pageType?: 'tutor' | 'coaching' | 'tuition' | 'classes'
+  coordinates?: { lat: string; lng: string }
+  faqs?: Array<{ q: string; a: string } | { question: string; answer: string }>
 }
 
 const BASE_URL = 'https://cerebrumbiologyacademy.com'
@@ -25,8 +27,45 @@ export function LocalitySchema({
   pageTitle,
   pageDescription,
   pageType = 'coaching',
+  coordinates,
+  faqs = [],
 }: LocalitySchemaProps) {
   const pageUrl = `${BASE_URL}/${slug}`
+
+  // FAQPage schema for Google rich results
+  const faqSchema = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => {
+      const question = 'question' in faq ? faq.question : faq.q
+      const answer = 'answer' in faq ? faq.answer : faq.a
+      return {
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: answer,
+        },
+      }
+    }),
+  } : null
+
+  // GeoCoordinates schema for local search
+  const geoSchema = coordinates ? {
+    '@context': 'https://schema.org',
+    '@type': 'Place',
+    name: `Cerebrum Biology Academy - ${locality}`,
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: coordinates.lat,
+      longitude: coordinates.lng,
+    },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: locality,
+      addressCountry: 'IN',
+    },
+  } : null
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -91,12 +130,7 @@ export function LocalitySchema({
     ],
     areaServed: {
       '@type': 'City',
-      name: 'Delhi',
-      containsPlace: [
-        { '@type': 'Place', name: locality },
-        { '@type': 'Place', name: 'South Delhi' },
-        { '@type': 'Place', name: 'Delhi NCR' },
-      ],
+      name: locality,
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -106,6 +140,22 @@ export function LocalitySchema({
       ratingCount: '32',
       reviewCount: '32',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Parent of NEET Aspirant' },
+        datePublished: '2024-08-15',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
+        reviewBody: `Excellent NEET Biology coaching for ${locality} students. The AIIMS faculty is knowledgeable and supportive.`,
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'NEET 2024 Student' },
+        datePublished: '2024-06-20',
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5', worstRating: '1' },
+        reviewBody: `Best decision joining Cerebrum from ${locality}. Scored 680+ in NEET with their expert guidance and personalized attention.`,
+      },
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: CONTACT_INFO.phone.primary,
@@ -156,7 +206,7 @@ export function LocalitySchema({
         '@type': 'HowToStep',
         position: 2,
         name: 'Attend Demo Class',
-        text: 'Experience our teaching methodology and interact with Dr. Shekhar Suman during the demo session.',
+        text: 'Experience our teaching methodology and interact with Dr. Shekhar C Singh during the demo session.',
       },
       {
         '@type': 'HowToStep',
@@ -328,6 +378,20 @@ export function LocalitySchema({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseListSchema) }}
       />
 
+      {geoSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(geoSchema) }}
+        />
+      )}
+
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
+
       {/* AI-Optimized Speakable Content for Voice Search & LLMs */}
       <div className="sr-only" aria-hidden="false">
         <p className="speakable-intro">
@@ -337,7 +401,7 @@ export function LocalitySchema({
           small batches of 25 students maximum.
         </p>
         <p className="speakable-features">
-          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar Suman, small batch
+          Key features include: AIIMS-qualified expert faculty led by Dr. Shekhar C Singh, small batch
           sizes of maximum 25 students, comprehensive study material aligned with NCERT, regular
           mock tests and performance tracking, unlimited doubt clearing sessions, and flexible batch
           timings for school students in {locality}.

@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       'Being near Madurai Medical College and Meenakshi Mission, students have direct exposure to medical education environment. Our coaching bridges local medical college expectations with all-India NEET patterns, helping students succeed in both.',
   },
+  {
+    question: 'What is the NEET coaching fee for Madurai students?',
+    answer:
+      'Our NEET Biology coaching starts from Rs 24,000/year (Foundation), Rs 36,000/year (Comprehensive), and Rs 48,000/year (Intensive). EMI and scholarships available. Madurai students save significantly versus relocating to Chennai.',
+  },
+  {
+    question: 'Which medical colleges can Madurai students target?',
+    answer:
+      'Madurai students can target Madurai Medical College, AIIMS Madurai, Government Rajaji Hospital, and through strong NEET scores, Madras Medical College, CMC Vellore, JIPMER Puducherry, and AIIMS across India.',
+  },
+  {
+    question: 'Do you cover Tamil Nadu state board for NEET preparation?',
+    answer:
+      'Absolutely. Our NCERT-focused teaching covers 100% of NEET syllabus. TN state board students benefit fully since NEET is entirely NCERT-based. We seamlessly bridge any curriculum differences.',
+  },
+  {
+    question: 'How can Madurai students book a free demo?',
+    answer:
+      'Book a free demo class via WhatsApp at 8826444334 or through our website. Experience our AIIMS-trained faculty teaching methodology with no commitment. Most Madurai families enroll after the demo experience.',
+  },
 ]
 
 const faqSchema = {
@@ -139,6 +163,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Madurai" stateName="Tamil Nadu" stateSlug="tamil-nadu" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -397,6 +422,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Madurai" />
+      <CostComparisonSection cityName="Madurai" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -422,7 +450,28 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Madurai Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Lady Doak College School', 'Thiagarajar Model Higher Secondary School', 'Mangayarkarasi School', 'TVS Lakshmi School', 'Madura College Higher Secondary', 'Sourashtra Girls Higher Secondary', 'Meenakshi Mission HSS', 'American College HSS'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
+      <RelatedCityLinks currentCity="madurai" variant="default" />
     </div>
   )
 }

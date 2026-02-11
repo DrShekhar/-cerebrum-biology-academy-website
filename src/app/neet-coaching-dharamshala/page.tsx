@@ -95,7 +95,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Kangra Students', value: '150+', icon: Users },
   { label: 'Avg Score Boost', value: '+118', icon: TrendingUp },
   { label: 'RPGMC Selections', value: '18+', icon: Award },
@@ -127,7 +127,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Dharamshala?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET coaching for Dharamshala and Kangra district students through online classes. With AIIMS-trained faculty, small batch sizes (10-15), and 94.2% success rate, we bring world-class coaching to your hill town. Students from McLeodGanj, Kangra, Palampur all study with us.',
+      'Cerebrum Biology Academy offers the best NEET coaching for Dharamshala and Kangra district students through online classes. With AIIMS-trained faculty, small batch sizes (10-15), and 98% success rate, we bring world-class coaching to your hill town. Students from McLeodGanj, Kangra, Palampur all study with us.',
   },
   {
     question: 'Is there any NEET coaching in Kangra district?',
@@ -182,8 +182,8 @@ export default function NEETCoachingDharamshala() {
       <CitySchema
         cityName="Dharamshala"
         stateName="Himachal Pradesh"
-        description="Best NEET coaching for Dharamshala & Kangra students. Online classes from AIIMS faculty. 94.2% success rate. RPGMC Tanda preparation. Serving McLeodGanj, Palampur, Kangra."
-        url="https://cerebrumacademy.in/neet-coaching-dharamshala"
+        description="Best NEET coaching for Dharamshala & Kangra students. Online classes from AIIMS faculty. 98% success rate. RPGMC Tanda preparation. Serving McLeodGanj, Palampur, Kangra."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-dharamshala"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-emerald-50">
@@ -222,7 +222,7 @@ export default function NEETCoachingDharamshala() {
 
                 <p className="mb-8 text-lg text-gray-600">
                   Online NEET coaching for students from Dharamshala, McLeodGanj, Kangra, Palampur,
-                  and entire Kangra valley. <strong>94.2% success rate</strong> with AIIMS faculty.
+                  and entire Kangra valley. <strong>98% success rate</strong> with AIIMS faculty.
                 </p>
 
                 <div className="mb-8 flex flex-wrap gap-4">

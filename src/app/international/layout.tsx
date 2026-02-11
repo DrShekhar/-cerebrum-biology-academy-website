@@ -17,7 +17,7 @@ export default function InternationalLayout({ children }: InternationalLayoutPro
               key={code}
               rel="alternate"
               hrefLang={country.hreflang}
-              href={`https://cerebrumacademy.com/international/${code}/`}
+              href={`https://cerebrumbiologyacademy.com/international/${code}/`}
             />
           )
         })}
@@ -25,7 +25,7 @@ export default function InternationalLayout({ children }: InternationalLayoutPro
         <link
           rel="alternate"
           hrefLang="x-default"
-          href="https://cerebrumacademy.com/international/"
+          href="https://cerebrumbiologyacademy.com/international/"
         />
       </head>
       {children}

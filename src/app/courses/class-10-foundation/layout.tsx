@@ -25,6 +25,11 @@ export const metadata: Metadata = {
       'Excel in Class 10 boards and build NEET foundation. Life processes, heredity, evolution with expert faculty.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Class 10 Biology Foundation | Board + NEET Preparation | Cerebrum Academy',
+    description: 'Class 10 Biology coaching with board exam focus and NEET foundation. Life processes, heredity, evolution covered.',
+  },
 }
 
 export default function Class10FoundationLayout({ children }: { children: React.ReactNode }) {

@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     'Premium NEET coaching Delhi',
     'NEET coaching near India Gate',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Sundar Nagar | Near Khan Market | Cerebrum Academy',
+    description: 'Premium NEET Biology coaching for Sundar Nagar students. Elite locality near Khan Market, art galleries.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/sundar-nagar',
   },

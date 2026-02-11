@@ -38,12 +38,12 @@ export default function NEETCoachingHamirpur() {
     {
       question: 'Why should I choose online coaching when Hamirpur has 59+ coaching institutes?',
       answer:
-        "While Hamirpur is HP's education hub with many coaching centers, most focus on general competitive exams. For specialized NEET preparation with AIIMS-trained faculty, expert guidance, and proven 94.2% success rate, Cerebrum offers what local institutes can't match. Our students consistently outperform those in traditional Hamirpur coaching centers.",
+        "While Hamirpur is HP's education hub with many coaching centers, most focus on general competitive exams. For specialized NEET preparation with AIIMS-trained faculty, expert guidance, and proven 98% success rate, Cerebrum offers what local institutes can't match. Our students consistently outperform those in traditional Hamirpur coaching centers.",
     },
     {
       question: 'Which is the best NEET coaching in Hamirpur for 2026?',
       answer:
-        "Cerebrum Biology Academy is the top choice for Hamirpur students seeking serious NEET preparation. Unlike general coaching centers, we specialize exclusively in NEET Biology with AIIMS-trained faculty. Our 94.2% success rate and 450+ HP selections speak for our quality. We combine the benefits of Hamirpur's studious environment with expert faculty you'd only find in metro cities.",
+        "Cerebrum Biology Academy is the top choice for Hamirpur students seeking serious NEET preparation. Unlike general coaching centers, we specialize exclusively in NEET Biology with AIIMS-trained faculty. Our 98% success rate and 450+ HP selections speak for our quality. We combine the benefits of Hamirpur's studious environment with expert faculty you'd only find in metro cities.",
     },
     {
       question: 'How can students from Nadaun and Sujanpur join NEET coaching?',
@@ -114,8 +114,8 @@ export default function NEETCoachingHamirpur() {
       <CitySchema
         cityName="Hamirpur"
         stateName="Himachal Pradesh"
-        url="https://cerebrumacademy.in/neet-coaching-hamirpur"
-        description="Best NEET coaching in Hamirpur, HP's education hub. Online classes from AIIMS faculty for Hamirpur, Nadaun, Sujanpur students. 94.2% success rate. Expert guidance beyond local coaching."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-hamirpur"
+        description="Best NEET coaching in Hamirpur, HP's education hub. Online classes from AIIMS faculty for Hamirpur, Nadaun, Sujanpur students. 98% success rate. Expert guidance beyond local coaching."
         areaServed={['Hamirpur', 'Nadaun', 'Sujanpur', 'Barsar', 'Bhoranj', 'Tira Sujanpur', 'Bijhari', 'Dhaneta']}
         faqs={faqs}
       />
@@ -158,14 +158,14 @@ export default function NEETCoachingHamirpur() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Hamirpur%20HP%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Hamirpur%20HP%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Now
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
@@ -176,7 +176,7 @@ export default function NEETCoachingHamirpur() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {[
-                  { number: '94.2%', label: 'Success Rate', icon: TrendingUp },
+                  { number: '98%', label: 'Success Rate', icon: TrendingUp },
                   { number: '280+', label: 'Hamirpur Students', icon: Users },
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '45+', label: 'HP Selections', icon: Award },
@@ -644,14 +644,14 @@ export default function NEETCoachingHamirpur() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Hamirpur%20HP%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Hamirpur%20HP%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-lg"
                 >
                   <MessageCircle className="w-6 h-6" />
                   Book Free Demo Class
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
                 >
                   <Phone className="w-6 h-6" />

@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       "With limited structured NEET coaching in Trivandrum, students choosing Cerebrum benefit from expert guidance without intense local competition. This allows personalized attention and customized learning approaches suited to each student's needs.",
   },
+  {
+    question: 'What is the NEET coaching fee for Trivandrum students?',
+    answer:
+      'Our plans start at Rs 24,000/year (Foundation), Rs 36,000/year (Comprehensive), and Rs 48,000/year (Intensive). EMI and scholarships available. Premium quality at fraction of the cost of traditional Trivandrum coaching centers.',
+  },
+  {
+    question: 'Which medical colleges can Trivandrum students target?',
+    answer:
+      'Trivandrum students can target Government Medical College Thiruvananthapuram, SUT Royal Hospital, KUHS-affiliated colleges across Kerala, and through strong NEET scores, AIIMS, JIPMER, and top national institutions.',
+  },
+  {
+    question: 'Do you cover Kerala state board syllabus for NEET?',
+    answer:
+      'Yes, our NCERT-based approach covers 100% of NEET syllabus. Kerala board students benefit fully as NEET is entirely NCERT-focused. We seamlessly bridge any curriculum gaps between Kerala board and NEET.',
+  },
+  {
+    question: 'How do NRI families in Trivandrum benefit from online coaching?',
+    answer:
+      'Many NRI families in Trivandrum choose our online NEET coaching for global flexibility. Flexible timings accommodate different schedules, recorded sessions allow revision, and preparation continues even during travel or relocation.',
+  },
 ]
 
 const faqSchema = {
@@ -140,6 +164,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Trivandrum" stateName="Kerala" stateSlug="kerala" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -398,6 +423,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Trivandrum" />
+      <CostComparisonSection cityName="Trivandrum" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -423,7 +451,28 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Trivandrum Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['Loyola School Trivandrum', 'Holy Angels ISC School', 'Kendriya Vidyalaya Pangode', 'Christ Nagar School', "St. Joseph's HSS Trivandrum", 'Carmel Girls Higher Secondary', 'Sarvodaya Vidyalaya', 'Chinmaya Vidyalaya Trivandrum'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
+      <RelatedCityLinks currentCity="trivandrum" variant="default" />
     </div>
   )
 }

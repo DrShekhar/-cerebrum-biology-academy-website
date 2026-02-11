@@ -95,7 +95,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Ambala Students', value: '250+', icon: Users },
   { label: 'Avg Score Improvement', value: '+120', icon: TrendingUp },
   { label: 'PGIMS Selections', value: '45+', icon: Award },
@@ -124,7 +124,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Ambala for Biology?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET Biology coaching for Ambala students through online classes. Our AIIMS-trained faculty, small batch sizes (10-15 students), and 94.2% success rate make us the top choice. Students from Ambala Cantt, Ambala City, and nearby areas join our live interactive sessions.',
+      'Cerebrum Biology Academy offers the best NEET Biology coaching for Ambala students through online classes. Our AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate make us the top choice. Students from Ambala Cantt, Ambala City, and nearby areas join our live interactive sessions.',
   },
   {
     question: 'Is online NEET coaching effective for Ambala students?',
@@ -189,8 +189,8 @@ export default function NEETCoachingAmbala() {
       <CitySchema
         cityName="Ambala"
         stateName="Haryana"
-        description="Best NEET coaching for Ambala students. Online classes from AIIMS faculty. 94.2% success rate. Serving Ambala Cantt, Ambala City, Model Town, Barara."
-        url="https://cerebrumacademy.in/neet-coaching-ambala"
+        description="Best NEET coaching for Ambala students. Online classes from AIIMS faculty. 98% success rate. Serving Ambala Cantt, Ambala City, Model Town, Barara."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-ambala"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-orange-50">
@@ -229,7 +229,7 @@ export default function NEETCoachingAmbala() {
 
                 <p className="mb-8 text-lg text-gray-600">
                   Online NEET coaching for students from Ambala Cantt, Ambala City, Model Town,
-                  Baldev Nagar, and nearby areas. <strong>94.2% success rate</strong> with AIIMS
+                  Baldev Nagar, and nearby areas. <strong>98% success rate</strong> with AIIMS
                   faculty.
                 </p>
 

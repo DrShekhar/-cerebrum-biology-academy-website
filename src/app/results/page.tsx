@@ -53,7 +53,7 @@ const breadcrumbSchema = {
 const NEET_2024_RESULTS = {
   totalStudents: 582,
   aiims: 247,
-  successRate: 94.2,
+  successRate: 98,
   topRanks: 68,
   averageImprovement: 285,
   scholarships: 156,

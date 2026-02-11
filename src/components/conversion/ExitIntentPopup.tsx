@@ -204,7 +204,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
       validFor: 'Until batch fills up',
       urgencyLevel: 'high',
       personalizedElements: [
-        '94.2% success rate in this batch',
+        '98% success rate in this batch',
         'Perfect timing for your NEET preparation',
       ],
       visual: {

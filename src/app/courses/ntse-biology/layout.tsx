@@ -25,6 +25,11 @@ export const metadata: Metadata = {
       "Expert NTSE preparation for Class 10. Biology SAT strategies, 90% selection rate. India's most prestigious scholarship.",
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NTSE Biology Coaching Delhi | Class 10 Scholarship Preparation | Cerebrum',
+    description: 'Expert NTSE Biology coaching in Delhi. Class 10 scholarship preparation, MAT & SAT strategies, Rs 1.',
+  },
 }
 
 export default function NTSEBiologyLayout({ children }: { children: React.ReactNode }) {

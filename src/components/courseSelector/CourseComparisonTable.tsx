@@ -216,7 +216,7 @@ const SERIES_INFO = {
     accent: 'text-blue-600',
     description: 'Most popular choice with proven track record',
     priceRange: '₹58K - ₹98K',
-    successRate: '94.2%',
+    successRate: '98%',
   },
   pursuit: {
     name: 'Pursuit',

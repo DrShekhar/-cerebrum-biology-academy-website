@@ -5,7 +5,7 @@ import {
   hasCoachingFeature,
 } from '@/lib/subscriptions/SmartSubscriptionTiers'
 
-const prisma = new PrismaClient()
+const prisma = process.env.DATABASE_URL ? new PrismaClient() : (null as any)
 
 // ============================================
 // TYPES

@@ -95,7 +95,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358/360', icon: Star },
   { label: 'Panchkula Students', value: '150+', icon: Users },
   { label: 'Govt Medical Selections', value: '18+', icon: GraduationCap },
@@ -132,7 +132,7 @@ const neetTools = [
 const faqs = [
   {
     question: 'Which is the best NEET coaching in Panchkula?',
-    answer: 'Cerebrum Biology Academy is the best NEET coaching for Panchkula students. With AIIMS-trained faculty, 94.2% success rate, and online classes, Panchkula students get top-quality coaching without crossing the border to Chandigarh. 150+ students from Panchkula already enrolled.',
+    answer: 'Cerebrum Biology Academy is the best NEET coaching for Panchkula students. With AIIMS-trained faculty, 98% success rate, and online classes, Panchkula students get top-quality coaching without crossing the border to Chandigarh. 150+ students from Panchkula already enrolled.',
   },
   {
     question: 'How much does NEET coaching cost for Panchkula students?',
@@ -144,7 +144,7 @@ const faqs = [
   },
   {
     question: 'Is online NEET coaching effective for Panchkula students?',
-    answer: 'Absolutely! Cerebrum\'s online coaching has 94.2% success rate. Live interactive classes, small batches (10-15 students), instant doubt clearing via WhatsApp, and recorded sessions. 150+ Panchkula students achieving excellent results.',
+    answer: 'Absolutely! Cerebrum\'s online coaching has 98% success rate. Live interactive classes, small batches (10-15 students), instant doubt clearing via WhatsApp, and recorded sessions. 150+ Panchkula students achieving excellent results.',
   },
   {
     question: 'Which areas in Panchkula does Cerebrum serve?',
@@ -168,7 +168,7 @@ const faqs = [
   },
   {
     question: 'How does Cerebrum compare to Chandigarh coaching centers?',
-    answer: 'Cerebrum advantages: (1) Batch size 10-15 vs 60-120 at Allen/Aakash, (2) AIIMS faculty vs regular teachers, (3) Fees Rs 24-68K vs Rs 1-3.5 Lakhs, (4) Online - no Chandigarh commute, (5) 94.2% success rate, (6) Haryana board support.',
+    answer: 'Cerebrum advantages: (1) Batch size 10-15 vs 60-120 at Allen/Aakash, (2) AIIMS faculty vs regular teachers, (3) Fees Rs 24-68K vs Rs 1-3.5 Lakhs, (4) Online - no Chandigarh commute, (5) 98% success rate, (6) Haryana board support.',
   },
   {
     question: 'Does Cerebrum provide study material for Panchkula students?',
@@ -184,7 +184,7 @@ const faqs = [
   },
   {
     question: 'What is the success rate for Panchkula students?',
-    answer: '94.2% of Cerebrum students qualify NEET. From Panchkula: 18+ students in government medical colleges in 2024, 6 in PGIMER/GMCH, 5 in Haryana GMCs. Highest score 358/360 in Biology.',
+    answer: '98% of Cerebrum students qualify NEET. From Panchkula: 18+ students in government medical colleges in 2024, 6 in PGIMER/GMCH, 5 in Haryana GMCs. Highest score 358/360 in Biology.',
   },
   {
     question: 'Are there scholarships for Panchkula students?',
@@ -196,7 +196,7 @@ const faqs = [
   },
   {
     question: 'What makes Cerebrum better than local Panchkula tutors?',
-    answer: 'Key differences: (1) AIIMS-trained faculty vs local graduates, (2) Structured NEET curriculum vs generic teaching, (3) National-level mock tests, (4) 94.2% proven success rate, (5) Complete study material, (6) Technology-enabled learning.',
+    answer: 'Key differences: (1) AIIMS-trained faculty vs local graduates, (2) Structured NEET curriculum vs generic teaching, (3) National-level mock tests, (4) 98% proven success rate, (5) Complete study material, (6) Technology-enabled learning.',
   },
   {
     question: 'How do Panchkula students clear doubts online?',
@@ -238,7 +238,7 @@ export default function NEETCoachingPanchkulaPage() {
               </h1>
               <p className="text-xl lg:text-2xl text-purple-100 mb-8 leading-relaxed">
                 Why cross the border to Chandigarh? Get <strong>same quality NEET coaching</strong> online
-                from your Panchkula home. AIIMS faculty, 94.2% success rate, starting ₹24,000/year.
+                from your Panchkula home. AIIMS faculty, 98% success rate, starting ₹24,000/year.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}>

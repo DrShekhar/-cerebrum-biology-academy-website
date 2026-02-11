@@ -144,6 +144,123 @@ class MockPrismaClient {
       return []
     },
   }
+
+  // Biology Topics - required for /biology-notes page
+  biology_topics = {
+    findUnique: async () => {
+      this.logWarning('biology_topics.findUnique')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('biology_topics.findMany')
+      return []
+    },
+    count: async () => {
+      this.logWarning('biology_topics.count')
+      return 0
+    },
+  }
+
+  // Analytics Events - required for trial event tracking
+  analytics_events = {
+    create: async () => {
+      this.logWarning('analytics_events.create')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('analytics_events.findMany')
+      return []
+    },
+  }
+
+  // Free Users - required for trial management
+  free_users = {
+    findUnique: async () => {
+      this.logWarning('free_users.findUnique')
+      return null
+    },
+    findMany: async () => {
+      this.logWarning('free_users.findMany')
+      return []
+    },
+    create: async () => {
+      this.logWarning('free_users.create')
+      return null
+    },
+    update: async () => {
+      this.logWarning('free_users.update')
+      return null
+    },
+    count: async () => {
+      this.logWarning('free_users.count')
+      return 0
+    },
+  }
+
+  // Test Sessions
+  test_sessions = {
+    findMany: async () => {
+      this.logWarning('test_sessions.findMany')
+      return []
+    },
+    create: async () => {
+      this.logWarning('test_sessions.create')
+      return null
+    },
+    updateMany: async () => {
+      this.logWarning('test_sessions.updateMany')
+      return { count: 0 }
+    },
+  }
+
+  // User Progress
+  user_progress = {
+    findMany: async () => {
+      this.logWarning('user_progress.findMany')
+      return []
+    },
+    updateMany: async () => {
+      this.logWarning('user_progress.updateMany')
+      return { count: 0 }
+    },
+  }
+
+  // User Question Responses
+  user_question_responses = {
+    findMany: async () => {
+      this.logWarning('user_question_responses.findMany')
+      return []
+    },
+    updateMany: async () => {
+      this.logWarning('user_question_responses.updateMany')
+      return { count: 0 }
+    },
+  }
+
+  // Performance Reports
+  performance_reports = {
+    findMany: async () => {
+      this.logWarning('performance_reports.findMany')
+      return []
+    },
+    updateMany: async () => {
+      this.logWarning('performance_reports.updateMany')
+      return { count: 0 }
+    },
+  }
+
+  // Test Attempts
+  test_attempts = {
+    findMany: async () => {
+      this.logWarning('test_attempts.findMany')
+      return []
+    },
+    create: async () => {
+      this.logWarning('test_attempts.create')
+      return null
+    },
+  }
+
   $connect = async () => {
     this.logWarning('$connect')
     return Promise.resolve()

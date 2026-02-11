@@ -94,7 +94,7 @@ const faqStructuredData = {
       name: 'Do you offer online NEET classes for Dwarka students?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes! We offer comprehensive online NEET Biology classes that are very popular with Dwarka students. Live interactive sessions with Dr. Shekhar Suman, recorded lectures for revision, weekly tests, and personal mentoring - all from the comfort of your home. 40+ students from Dwarka are currently enrolled in our online program.',
+        text: 'Yes! We offer comprehensive online NEET Biology classes that are very popular with Dwarka students. Live interactive sessions with Dr. Shekhar C Singh, recorded lectures for revision, weekly tests, and personal mentoring - all from the comfort of your home. 40+ students from Dwarka are currently enrolled in our online program.',
       },
     },
     {

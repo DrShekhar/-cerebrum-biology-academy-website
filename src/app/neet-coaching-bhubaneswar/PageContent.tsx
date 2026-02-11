@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       'Bhubaneswar offers quality education infrastructure and moderate NEET competition compared to metros. Combined with our expert online coaching, Bhubaneswar students can prepare effectively and compete for top medical colleges nationwide.',
   },
+  {
+    question: 'What is the NEET coaching fee for Bhubaneswar students?',
+    answer:
+      'Our plans: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Intensive Rs 48,000/year. EMI and merit scholarships available. Save significantly compared to coaching institutes in Delhi or Kota.',
+  },
+  {
+    question: 'Which medical colleges can Bhubaneswar students target?',
+    answer:
+      'Bhubaneswar students can target AIIMS Bhubaneswar, SCB Medical College Cuttack, MKCG Medical College, IMS and SUM Hospital, and through strong NEET scores, AIIMS Delhi, JIPMER, and top national medical colleges.',
+  },
+  {
+    question: 'Do you cover Odisha state board for NEET preparation?',
+    answer:
+      'Yes, our NCERT-focused curriculum covers 100% of NEET. Odisha board students benefit fully since NEET is entirely NCERT-based. We bridge any differences between CHSE board and NEET requirements.',
+  },
+  {
+    question: 'Is there a free demo for Bhubaneswar students?',
+    answer:
+      'Yes, book a free demo class via WhatsApp at 8826444334. Experience our AIIMS-trained faculty teaching methodology. No commitment required. Most Bhubaneswar families decide after attending the demo.',
+  },
 ]
 
 const faqSchema = {
@@ -139,6 +163,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Bhubaneswar" stateName="Odisha" stateSlug="odisha" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -395,6 +420,9 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      <PricingSection cityName="Bhubaneswar" />
+      <CostComparisonSection cityName="Bhubaneswar" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -420,7 +448,28 @@ export default function PageContent() {
             </Link>
           </div>
         </div>
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Students from These Bhubaneswar Schools Trust Us
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['DAV Public School Bhubaneswar', 'DPS Kalinga', 'SAI International School', 'Kiit International School', 'ODM Public School', 'Mothers Public School', "St. Xavier's School", 'Delhi Public School Bhubaneswar'].map((school) => (
+              <div
+                key={school}
+                className="bg-white rounded-lg p-4 text-center shadow-sm border border-gray-100"
+              >
+                {school}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
+
+</section>
+      <RelatedCityLinks currentCity="bhubaneswar" variant="default" />
     </div>
   )
 }

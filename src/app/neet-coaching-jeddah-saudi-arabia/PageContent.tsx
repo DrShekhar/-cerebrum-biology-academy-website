@@ -2,6 +2,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { Trophy, Users, MessageCircle, Play, Headphones, MapPin, Star, GraduationCap, Target, Building, Shield, ArrowRight, BookOpen, CheckCircle, Globe, Clock } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+
 
 function useScrollAnimation() {
   const ref = useRef<HTMLDivElement>(null)
@@ -21,10 +26,14 @@ export default function PageContent() {
   const faqSection = useScrollAnimation()
 
   const schools = [
-    'Al Hussan International School',
-    'Jeddah Knowledge School',
-    'Indian School Jeddah',
-    'CBSE Schools in Jeddah',
+    'International Indian School Jeddah',
+    'Jeddah Knowledge International',
+    'Al Waha International',
+    'Dar Al Fikr Schools',
+    'Jeddah Prep and Grammar',
+    'CBSE Schools Jeddah',
+    'Indian International School',
+    'Manarat Jeddah School',
   ]
 
   const faqs = [

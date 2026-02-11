@@ -278,7 +278,7 @@ const COURSE_DATABASE: CourseData[] = [
     },
     outcomes: {
       averageImprovement: 35,
-      successRate: 94.2,
+      successRate: 98,
       typicalTimeline: 20,
     },
   },

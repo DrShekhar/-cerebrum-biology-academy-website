@@ -147,7 +147,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '348', icon: Star },
   { label: 'UP Students', value: '2,800+', icon: Users },
   { label: 'Areas Covered', value: '12+', icon: MapPin },
@@ -157,7 +157,7 @@ const faqs = [
   {
     question: 'Why choose online coaching for NEET preparation in Prayagraj?',
     answer:
-      'Prayagraj students often consider migrating to Kota, spending Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the Holy City of Sangam with family, save money, and get personalized attention. Our 94.2% success rate proves online is equally effective.',
+      'Prayagraj students often consider migrating to Kota, spending Rs 3-4 lakhs annually. Our online coaching delivers same quality teaching at Rs 24,000-48,000 per year. Stay in the Holy City of Sangam with family, save money, and get personalized attention. Our 98% success rate proves online is equally effective.',
   },
   {
     question: 'Which areas in Prayagraj do you serve?',
@@ -275,7 +275,7 @@ export default function NeetCoachingPrayagrajPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Why migrate to Kota? Get AIIMS trained faculties, 94.2% success rate, and live
+              Why migrate to Kota? Get AIIMS trained faculties, 98% success rate, and live
               interactive classes - all from Prayagraj. Join 2,800+ UP students achieving NEET
               success from home.
             </p>
@@ -556,7 +556,7 @@ export default function NeetCoachingPrayagrajPage() {
               Start Your NEET Journey from the Holy City of Sangam
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS trained faculties, 2,800+ UP students. MLN Medical College
+              98% success rate, AIIMS trained faculties, 2,800+ UP students. MLN Medical College
               focused preparation!
             </p>
 

@@ -38,7 +38,7 @@ export default function NEETCoachingMandi() {
     {
       question: 'Which is the best NEET coaching in Mandi for 2026 preparation?',
       answer:
-        'Cerebrum Biology Academy is the top-rated NEET coaching for Mandi students, offering online classes from AIIMS-trained faculty. With 94.2% success rate and flexible timings suitable for hill students, we provide comprehensive preparation including live classes, doubt sessions, and study materials specifically designed for HP Board students.',
+        'Cerebrum Biology Academy is the top-rated NEET coaching for Mandi students, offering online classes from AIIMS-trained faculty. With 98% success rate and flexible timings suitable for hill students, we provide comprehensive preparation including live classes, doubt sessions, and study materials specifically designed for HP Board students.',
     },
     {
       question: 'How can students from Sundernagar and Nerchowk join NEET coaching?',
@@ -114,8 +114,8 @@ export default function NEETCoachingMandi() {
       <CitySchema
         cityName="Mandi"
         stateName="Himachal Pradesh"
-        url="https://cerebrumacademy.in/neet-coaching-mandi"
-        description="Best NEET coaching in Mandi, Himachal Pradesh. Online classes from AIIMS faculty for Mandi, Sundernagar, Nerchowk students. 94.2% success rate. Prepare for SLBSGMC from home."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-mandi"
+        description="Best NEET coaching in Mandi, Himachal Pradesh. Online classes from AIIMS faculty for Mandi, Sundernagar, Nerchowk students. 98% success rate. Prepare for SLBSGMC from home."
         areaServed={['Mandi', 'Sundernagar', 'Nerchowk', 'Pandoh', 'Jogindernagar', 'Karsog', 'Sarkaghat', 'Rewalsar']}
         faqs={faqs}
       />
@@ -158,14 +158,14 @@ export default function NEETCoachingMandi() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Mandi%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mandi%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Now
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
@@ -176,7 +176,7 @@ export default function NEETCoachingMandi() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {[
-                  { number: '94.2%', label: 'Success Rate', icon: TrendingUp },
+                  { number: '98%', label: 'Success Rate', icon: TrendingUp },
                   { number: '200+', label: 'Mandi Students', icon: Users },
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '35+', label: 'HP Selections', icon: Award },
@@ -642,14 +642,14 @@ export default function NEETCoachingMandi() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Mandi%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mandi%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-lg"
                 >
                   <MessageCircle className="w-6 h-6" />
                   Book Free Demo Class
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
                 >
                   <Phone className="w-6 h-6" />

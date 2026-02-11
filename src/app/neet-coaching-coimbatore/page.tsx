@@ -62,8 +62,7 @@ export default function NEETCoachingCoimbatorePage() {
         slug="neet-coaching-coimbatore"
         pageTitle="Best NEET Coaching in Coimbatore"
         pageDescription="Premium online NEET coaching in Coimbatore. 18,000+ aspirants, expert faculty, near Coimbatore Medical College & PSG IMS. 98% success rate."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "11.0168", lng: "76.9558" }} />
       <PageContent />
     </>
   )

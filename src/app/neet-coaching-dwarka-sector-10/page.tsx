@@ -80,7 +80,7 @@ const faqs = [
   {
     question: 'Is online NEET coaching available for Dwarka Sector 10 students?',
     answer:
-      'Yes! We offer comprehensive online NEET coaching for Dwarka Sector 10 students. Live interactive classes with Dr. Shekhar Suman, recorded lectures for revision, daily doubt sessions, weekly tests, and complete study material - all accessible from home. Many Dwarka families prefer our hybrid mode combining weekend offline classes with weekday online sessions.',
+      'Yes! We offer comprehensive online NEET coaching for Dwarka Sector 10 students. Live interactive classes with Dr. Shekhar C Singh, recorded lectures for revision, daily doubt sessions, weekly tests, and complete study material - all accessible from home. Many Dwarka families prefer our hybrid mode combining weekend offline classes with weekday online sessions.',
   },
   {
     question: 'What is the fee for NEET coaching for Dwarka Sector 10 students?',
@@ -169,7 +169,7 @@ const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
   name: 'Free NEET Biology Demo Class - For Dwarka Sector 10 Students',
-  description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from Dwarka Sector 10. Meet Dr. Shekhar Suman. Available online or at Rohini center.`,
+  description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from Dwarka Sector 10. Meet Dr. Shekhar C Singh. Available online or at Rohini center.`,
   startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
   endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
   eventStatus: 'https://schema.org/EventScheduled',
@@ -194,7 +194,7 @@ const eventSchema = {
   ],
   performer: {
     '@type': 'Person',
-    name: 'Dr. Shekhar Suman',
+    name: 'Dr. Shekhar C Singh',
     jobTitle: 'Founder & Lead Faculty',
   },
   organizer: {
@@ -347,6 +347,7 @@ const localBusinessSchema = {
   ],
 }
 
+
 export default function NEETCoachingDwarkaSector10Page() {
   return (
     <>
@@ -381,7 +382,7 @@ export default function NEETCoachingDwarkaSector10Page() {
         pageTitle="Best NEET Coaching in Dwarka Sector 10"
         pageDescription={`Join Dwarka Sector 10's most trusted NEET Biology coaching. Online + Offline classes. 25-30 min from Rohini via Metro. AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate, ${CEREBRUM_METRICS.topScoreText} top score.`}
         pageType="coaching"
-      />
+      coordinates={{ lat: "28.5833", lng: "77.0529" }} faqs={faqs} />
       <PageContent faqs={faqs} />
     </>
   )

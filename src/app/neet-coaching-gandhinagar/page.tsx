@@ -62,8 +62,7 @@ export default function NEETCoachingGandhinagarPage() {
         slug="neet-coaching-gandhinagar"
         pageTitle="Best NEET Coaching in Gandhinagar"
         pageDescription="Join #1 NEET coaching in Gandhinagar. Expert online classes for Gujarat state capital families. Government education hub."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "23.2156", lng: "72.6369" }} />
       <PageContent />
     </>
   )

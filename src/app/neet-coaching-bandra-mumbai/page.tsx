@@ -121,7 +121,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Bandra Students', value: '650+', icon: Users },
   { label: 'Premium Schools', value: '15+', icon: GraduationCap },
@@ -131,7 +131,7 @@ const faqs = [
   {
     question: 'Why do Bandra students choose online NEET coaching?',
     answer:
-      "Bandra's premium schools like American School of Bombay, Ecole Mondiale, and Cathedral School have demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on traffic to coaching centers in Dadar or Andheri. Our 94.2% success rate proves online is equally effective.",
+      "Bandra's premium schools like American School of Bombay, Ecole Mondiale, and Cathedral School have demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on traffic to coaching centers in Dadar or Andheri. Our 98% success rate proves online is equally effective.",
   },
   {
     question: 'Which areas in Bandra do you serve?',
@@ -240,7 +240,7 @@ export default function NeetCoachingBandraPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Bandra&apos;s elite schools. 94.2% success rate,
+              Premium NEET Biology coaching for Bandra&apos;s elite schools. 98% success rate,
               AIIMS faculty, zero traffic commute. Join 650+ students from ASB, Cathedral, Ecole
               Mondiale.
             </p>
@@ -481,7 +481,7 @@ export default function NeetCoachingBandraPage() {
               Join Bandra&apos;s Elite NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, premium small batches. International school
+              98% success rate, AIIMS faculty, premium small batches. International school
               specialists!
             </p>
 

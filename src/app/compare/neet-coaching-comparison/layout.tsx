@@ -22,6 +22,11 @@ export const metadata: Metadata = {
       'Detailed comparison of NEET coaching options - batch sizes, faculty, success rates, and fees.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cerebrum vs Other NEET Coaching | Small Batch vs Large Batch Comparison 2026',
+    description: 'Compare Cerebrum Biology Academy with other NEET coaching institutes.',
+  },
 }
 
 export default function ComparisonLayout({ children }: { children: React.ReactNode }) {

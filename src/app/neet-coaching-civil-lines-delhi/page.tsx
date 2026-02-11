@@ -167,7 +167,7 @@ const eventSchema = {
   '@context': 'https://schema.org',
   '@type': 'Event',
   name: 'Free NEET Biology Demo Class - For Civil Lines Delhi Students',
-  description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from Civil Lines Delhi. Meet Dr. Shekhar Suman. Accessible via Yellow Line Metro.`,
+  description: `Experience Cerebrum Biology Academy's teaching methodology. Free demo class for NEET aspirants from Civil Lines Delhi. Meet Dr. Shekhar C Singh. Accessible via Yellow Line Metro.`,
   startDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
   endDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
   eventStatus: 'https://schema.org/EventScheduled',
@@ -192,7 +192,7 @@ const eventSchema = {
   ],
   performer: {
     '@type': 'Person',
-    name: 'Dr. Shekhar Suman',
+    name: 'Dr. Shekhar C Singh',
     jobTitle: 'Founder & Lead Faculty',
   },
   organizer: {
@@ -333,42 +333,3 @@ const localBusinessSchema = {
   ],
 }
 
-export default function NEETCoachingCivilLinesDelhiPage() {
-  return (
-    <>
-      {/* FAQPage Schema for Featured Snippets */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateOfferSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
-      />
-      <LocalitySchema
-        locality="Civil Lines Delhi"
-        slug="neet-coaching-civil-lines-delhi"
-        pageTitle="Best NEET Coaching in Civil Lines Delhi"
-        pageDescription={`Join Civil Lines Delhi's most trusted NEET Biology coaching. Ultra-premium area, nearest to Rohini via Yellow Line Metro. AIIMS faculty, ${CEREBRUM_METRICS.successRateText} success rate, ${CEREBRUM_METRICS.topScoreText} top score.`}
-        pageType="coaching"
-      />
-      <PageContent faqs={faqs} />
-    </>
-  )
-}

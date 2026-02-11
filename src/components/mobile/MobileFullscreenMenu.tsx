@@ -137,7 +137,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
     },
     {
       icon: Award,
-      value: '94.2%',
+      value: '98%',
       label: language === 'hi' ? 'सफलता दर' : 'Success Rate',
       color: 'text-green-600',
     },

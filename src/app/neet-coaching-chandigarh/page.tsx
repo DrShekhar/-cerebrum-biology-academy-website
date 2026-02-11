@@ -75,7 +75,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Tricity Students', value: '780+', icon: Users },
   { label: 'PGIMER Selections', value: '15+', icon: GraduationCap },
@@ -85,12 +85,12 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Chandigarh for Biology?',
     answer:
-      'Cerebrum Biology Academy is rated the best NEET biology coaching in Chandigarh with 94.2% success rate. Unlike Sector 34 coaching centers with 50-100 students per batch, we offer small batches of 10-15 students with AIIMS-trained faculty. Our 780+ Tricity students and 15+ PGIMER selections make us the top choice.',
+      'Cerebrum Biology Academy is rated the best NEET biology coaching in Chandigarh with 98% success rate. Unlike Sector 34 coaching centers with 50-100 students per batch, we offer small batches of 10-15 students with AIIMS-trained faculty. Our 780+ Tricity students and 15+ PGIMER selections make us the top choice.',
   },
   {
     question: 'Why choose online NEET coaching over Chandigarh Sector 34 centers?',
     answer:
-      'Sector 34 coaching centers like Allen and Aakash have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save 1-2 hours daily commute from Panchkula/Mohali. Same 94.2% success rate, better attention, no traffic stress.',
+      'Sector 34 coaching centers like Allen and Aakash have 50-100+ students per batch. Our online classes limit to 10-15 students ensuring personalized attention. Plus, save 1-2 hours daily commute from Panchkula/Mohali. Same 98% success rate, better attention, no traffic stress.',
   },
   {
     question: 'What areas in Chandigarh Tricity do you serve for NEET coaching?',
@@ -120,7 +120,7 @@ const faqs = [
   {
     question: 'How is Cerebrum different from Allen Chandigarh?',
     answer:
-      'Allen Chandigarh has large batches (50-100+ students) and fees of Rs 1.5-2.5 lakhs. Cerebrum offers small batches (10-15 students), AIIMS-trained faculty (not just MBBS graduates), flexible online format saving commute time, and fees of Rs 24K-68K. Our 94.2% success rate competes with Allen\'s results.',
+      'Allen Chandigarh has large batches (50-100+ students) and fees of Rs 1.5-2.5 lakhs. Cerebrum offers small batches (10-15 students), AIIMS-trained faculty (not just MBBS graduates), flexible online format saving commute time, and fees of Rs 24K-68K. Our 98% success rate competes with Allen\'s results.',
   },
   {
     question: 'How is Cerebrum different from Aakash Chandigarh?',
@@ -130,7 +130,7 @@ const faqs = [
   {
     question: 'Is online NEET coaching effective for Chandigarh students?',
     answer:
-      'Absolutely! Our online coaching has 94.2% success rate - same as top Sector 34 centers. Live interactive classes (not recorded), instant doubt resolution, WhatsApp support, recorded sessions for revision. 780+ Tricity students enrolled. Many prefer it over crowded offline centers.',
+      'Absolutely! Our online coaching has 98% success rate - same as top Sector 34 centers. Live interactive classes (not recorded), instant doubt resolution, WhatsApp support, recorded sessions for revision. 780+ Tricity students enrolled. Many prefer it over crowded offline centers.',
   },
   {
     question: 'What are the batch timings for Chandigarh NEET students?',
@@ -241,7 +241,7 @@ export default function NEETCoachingChandigarhPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Chandigarh Tricity. 94.2% success rate, AIIMS
+              Premium NEET Biology coaching for Chandigarh Tricity. 98% success rate, AIIMS
               faculty. Target PGIMER, GMCH with expert guidance. Join 780+ Tricity students!
             </p>
 
@@ -462,7 +462,7 @@ export default function NEETCoachingChandigarhPage() {
               Ready to Crack NEET from Chandigarh?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 780+ Tricity students. Target PGIMER, GMCH. 94.2% success rate!
+              Join 780+ Tricity students. Target PGIMER, GMCH. 98% success rate!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

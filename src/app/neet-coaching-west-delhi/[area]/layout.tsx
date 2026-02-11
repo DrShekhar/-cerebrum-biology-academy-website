@@ -20,7 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: 'en_IN',
       type: 'website',
     },
-    alternates: {
+    twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in ${areaName}, West Delhi | Cerebrum Biology Academy',
+    description: 'Best NEET coaching in ${areaName}, West Delhi with AIIMS faculty. 98% success rate, small batches.',
+  },
+  alternates: {
       canonical: `https://cerebrumbiologyacademy.com/neet-coaching-west-delhi/${area}`,
     },
   }

@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/vasant-vihar',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Vasant Vihar | IB Biology Tutor | Cerebrum',
+    description: 'Best NEET Biology & IB Biology coaching for Vasant Vihar students. Near diplomatic area, international schools.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/vasant-vihar',
   },

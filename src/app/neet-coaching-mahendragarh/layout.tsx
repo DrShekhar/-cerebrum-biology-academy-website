@@ -3,13 +3,13 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Mahendragarh | Narnaul, Rewari | Cerebrum Academy',
   description:
-    'Top NEET biology coaching in Mahendragarh for Haryana students. 94.2% success rate, AIIMS faculty. Narnaul, Ateli, Kanina. Online live classes for rural Haryana. Book free demo!',
+    'Top NEET biology coaching in Mahendragarh for Haryana students. 98% success rate, AIIMS faculty. Narnaul, Ateli, Kanina. Online live classes for rural Haryana. Book free demo!',
   keywords:
     'NEET coaching Mahendragarh, NEET biology coaching Mahendragarh, best NEET coaching Narnaul, NEET classes Ateli, biology coaching Kanina, NEET tuition Mahendragarh, NEET coaching South Haryana, NEET preparation Haryana, online NEET coaching Mahendragarh, NEET biology Mahendragarh, biology tuition Mahendragarh, biology classes Mahendragarh, online biology coaching Mahendragarh, biology teacher Mahendragarh, NEET biology Mahendragarh',
   openGraph: {
     title: 'Best NEET Coaching in Mahendragarh | Haryana | Cerebrum Academy',
     description:
-      'Top NEET biology coaching in Mahendragarh with 94.2% success rate. AIIMS faculty. Online classes for rural Haryana.',
+      'Top NEET biology coaching in Mahendragarh with 98% success rate. AIIMS faculty. Online classes for rural Haryana.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-mahendragarh',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best NEET Coaching in Mahendragarh | Cerebrum Biology Academy',
     description:
-      'Top NEET biology coaching in Mahendragarh. 94.2% success rate. Narnaul, Ateli, Kanina.',
+      'Top NEET biology coaching in Mahendragarh. 98% success rate. Narnaul, Ateli, Kanina.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mahendragarh',

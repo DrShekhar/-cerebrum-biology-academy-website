@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     'IB Biology coaching',
     'Campbell Biology chapters',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Campbell Biology Online Coaching | 56 Chapters | Biology Olympiad & NEET Prep',
+    description: 'Expert online coaching for Campbell Biology.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/campbell-biology/',
   },

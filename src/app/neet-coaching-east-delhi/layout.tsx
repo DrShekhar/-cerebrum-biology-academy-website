@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-east-delhi',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in East Delhi | Laxmi Nagar, Preet Vihar, Mayur Vihar | Cerebrum Academy',
+    description: 'Best NEET coaching for East Delhi students from Laxmi Nagar, Preet Vihar, Mayur Vihar, Patparganj, IP Extension.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-east-delhi',
   },

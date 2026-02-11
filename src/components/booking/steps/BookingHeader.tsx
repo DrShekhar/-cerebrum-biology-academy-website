@@ -29,7 +29,7 @@ export function BookingHeader({ currentStep, stepTitles, liveBookings }: Booking
         </div>
         <div className="flex items-center gap-2">
           <TrendingUp className="w-4 h-4" />
-          <span>94.2% NEET success rate</span>
+          <span>98% NEET success rate</span>
         </div>
       </div>
 

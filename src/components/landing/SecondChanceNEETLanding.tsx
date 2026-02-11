@@ -226,7 +226,7 @@ export function SecondChanceNEETLanding({
                   <span className="text-red-600">Failed NEET 2024?</span>
                   <br />
                   <span className="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-                    90% of Our Students Clear in Second Attempt
+                    98% of Our Students Clear in Second Attempt
                   </span>
                 </h1>
 
@@ -614,7 +614,7 @@ export function SecondChanceNEETLanding({
                   {
                     title: 'Weekly Counseling and Motivation',
                     description: 'Mental health support, failure trauma healing, success mindset',
-                    stat: '90% success rate',
+                    stat: '98% success rate',
                   },
                 ].map((solution, index) => (
                   <motion.div

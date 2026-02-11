@@ -62,8 +62,7 @@ export default function NEETCoachingBhubaneswarPage() {
         slug="neet-coaching-bhubaneswar"
         pageTitle="Best NEET Coaching in Bhubaneswar"
         pageDescription="Join #1 NEET coaching in Bhubaneswar. Expert online classes for 13000+ aspirants. Odisha education hub."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "20.2961", lng: "85.8245" }} />
       <PageContent />
     </>
   )

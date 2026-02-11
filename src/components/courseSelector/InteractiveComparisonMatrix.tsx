@@ -119,7 +119,7 @@ const MOCK_COURSES: CourseData[] = [
       offlineAccess: false,
       doubtClearing: 'Group + WhatsApp',
     },
-    successRate: 94.2,
+    successRate: 98,
     averageRank: '2000',
   },
   {

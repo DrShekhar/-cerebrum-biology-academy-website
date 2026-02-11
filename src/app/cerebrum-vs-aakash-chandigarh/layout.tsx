@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Cerebrum vs Aakash Chandigarh | NEET Biology Coaching Comparison 2026',
   description:
-    'Compare Cerebrum Biology Academy vs Aakash Institute Chandigarh for NEET preparation. Batch size (10-15 vs 100+), fees (Rs 24K-68K vs Rs 1-3.5 Lakhs), AIIMS faculty, 94.2% success rate. All 7 Aakash centers compared.',
+    'Compare Cerebrum Biology Academy vs Aakash Institute Chandigarh for NEET preparation. Batch size (10-15 vs 100+), fees (Rs 24K-68K vs Rs 1-3.5 Lakhs), AIIMS faculty, 98% success rate. All 7 Aakash centers compared.',
   keywords: [
     'cerebrum vs aakash chandigarh',
     'aakash chandigarh alternative',
@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cerebrum vs Aakash Chandigarh | NEET Biology Coaching Comparison 2026',
+    description: 'Compare Cerebrum Biology Academy vs Aakash Institute Chandigarh for NEET preparation.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-aakash-chandigarh',

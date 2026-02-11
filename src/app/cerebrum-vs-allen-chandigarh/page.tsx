@@ -32,7 +32,7 @@ const faqs = [
   {
     question: 'How is Cerebrum different from Allen Chandigarh for NEET Biology?',
     answer:
-      'Cerebrum offers small batches of 10-15 students compared to Allen Chandigarh\'s 60-100+ students per batch. Our faculty is exclusively AIIMS-trained, while Allen has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1.5-2.5 Lakhs at Allen. Our 94.2% success rate competes with Allen\'s results but with far better personalized attention.',
+      'Cerebrum offers small batches of 10-15 students compared to Allen Chandigarh\'s 60-100+ students per batch. Our faculty is exclusively AIIMS-trained, while Allen has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1.5-2.5 Lakhs at Allen. Our 98% success rate competes with Allen\'s results but with far better personalized attention.',
   },
   {
     question: 'Where is Allen Chandigarh located and how does Cerebrum compare for Tricity students?',
@@ -67,7 +67,7 @@ const faqs = [
   {
     question: 'Is online coaching from Cerebrum as effective as Allen Chandigarh offline classes?',
     answer:
-      'Our 94.2% success rate proves online coaching effectiveness. Benefits include: live interactive classes (not recorded), instant screen sharing for doubt clearing, 7am-11pm WhatsApp support, recorded sessions for revision, no commute stress. Many students prefer our online model over spending 2 hours daily traveling to Sector 34.',
+      'Our 98% success rate proves online coaching effectiveness. Benefits include: live interactive classes (not recorded), instant screen sharing for doubt clearing, 7am-11pm WhatsApp support, recorded sessions for revision, no commute stress. Many students prefer our online model over spending 2 hours daily traveling to Sector 34.',
   },
   {
     question: 'How does faculty qualification compare between Cerebrum and Allen Chandigarh?',
@@ -142,7 +142,7 @@ const comparisonData = [
   },
   {
     feature: 'Top Results',
-    cerebrum: '94.2% success rate',
+    cerebrum: '98% success rate',
     allen: 'AIR 7 (Keshav Mittal 2025)',
     winner: 'tie',
   },
@@ -388,7 +388,7 @@ export default function CerebrumVsAllenChandigarhPage() {
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <TrendingUp className="w-5 h-5 text-green-400" />
-                <span>94.2% Success Rate</span>
+                <span>98% Success Rate</span>
               </div>
             </div>
 

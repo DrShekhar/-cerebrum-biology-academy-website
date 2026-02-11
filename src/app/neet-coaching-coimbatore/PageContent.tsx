@@ -16,6 +16,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -101,6 +105,26 @@ const faqs = [
     answer:
       'Being near Coimbatore Medical College and PSG IMS, students understand local medical education culture. Many successful students transition directly to these colleges or top AIIMS across India. Our coaching helps bridge the gap with targeted NEET scoring strategies.',
   },
+  {
+    question: 'What is the NEET coaching fee in Coimbatore?',
+    answer:
+      'Our plans start from Rs 24,000/year (Foundation), Rs 36,000/year (Comprehensive), and Rs 48,000/year (Intensive). EMI and merit scholarships available. Save significantly compared to travelling to Chennai for coaching.',
+  },
+  {
+    question: 'Which medical colleges can Coimbatore students target?',
+    answer:
+      'Coimbatore students can target Coimbatore Medical College, PSG Institute of Medical Sciences, AIIMS Madurai, Madras Medical College, and through strong NEET scores, AIIMS Delhi, JIPMER, CMC Vellore, and other top national institutions.',
+  },
+  {
+    question: 'Do you teach Tamil Nadu HSC board students for NEET?',
+    answer:
+      'Yes, our NCERT-based curriculum covers 100% of NEET syllabus. Tamil Nadu HSC students benefit fully as NEET is entirely NCERT-focused. We bridge any differences between TN board and NEET requirements seamlessly.',
+  },
+  {
+    question: 'Is there a free demo class for Coimbatore students?',
+    answer:
+      'Yes, we offer a completely free demo class so you can experience our teaching quality. Book via WhatsApp at 8826444334 or through our website. No commitment required. Most Coimbatore families decide after attending the demo.',
+  },
 ]
 
 const faqSchema = {
@@ -146,6 +170,7 @@ export default function PageContent() {
 
   return (
     <div className="min-h-screen">
+      <CityBreadcrumb cityName="Coimbatore" stateName="Tamil Nadu" stateSlug="tamil-nadu" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -404,6 +429,30 @@ export default function PageContent() {
         </div>
       </section>
 
+
+      
+      {/* Schools Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              Students from These Coimbatore Schools Trust Us
+            </h3>
+            <div className="flex flex-wrap justify-center gap-4">
+              {['SSVM School of Excellence', 'PSG Public School', 'GD Matriculation School', 'Stanes Anglo Indian School', 'Delhi Public School Coimbatore', 'Chinmaya Vidyalaya', 'Amrita Vidyalayam', 'Lisieux CMI School'].map((school) => (
+                <span
+                  key={school}
+                  className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full font-medium"
+                >
+                  {school}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <PricingSection cityName="Coimbatore" />
+      <CostComparisonSection cityName="Coimbatore" />
       {/* Related */}
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
@@ -430,6 +479,7 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+      <RelatedCityLinks currentCity="coimbatore" variant="default" />
     </div>
   )
 }

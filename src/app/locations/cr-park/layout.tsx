@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     'NEET coaching Alaknanda',
     'Biology classes Kalkaji',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching CR Park | Chittaranjan Park | Cerebrum Academy',
+    description: 'Best NEET Biology coaching for CR Park (Chittaranjan Park) students.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/cr-park',
   },

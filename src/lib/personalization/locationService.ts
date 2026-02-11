@@ -182,7 +182,7 @@ class LocationService {
       return "Hyderabad's premier NEET Biology academy - 200+ local AIIMS selections!"
     }
     if (city === 'mumbai') {
-      return "Mumbai's fastest-growing NEET Biology institute - 94.2% success rate!"
+      return "Mumbai's fastest-growing NEET Biology institute - 98% success rate!"
     }
     if (city === 'pune') {
       return "Pune's most results-oriented NEET Biology coaching!"

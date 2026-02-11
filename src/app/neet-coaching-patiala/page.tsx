@@ -94,7 +94,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Patiala Students', value: '280+', icon: Users },
   { label: 'Avg Score Improvement', value: '+122', icon: TrendingUp },
   { label: 'GMC Patiala Selections', value: '35+', icon: Award },
@@ -126,7 +126,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Patiala?',
     answer:
-      'Cerebrum Biology Academy offers the best NEET coaching for Patiala students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 94.2% success rate, we provide superior preparation for GMC Patiala and other medical colleges. Students from Model Town, Leela Bhawan, Urban Estate trust us.',
+      'Cerebrum Biology Academy offers the best NEET coaching for Patiala students through online classes. With AIIMS-trained faculty, small batch sizes (10-15 students), and 98% success rate, we provide superior preparation for GMC Patiala and other medical colleges. Students from Model Town, Leela Bhawan, Urban Estate trust us.',
   },
   {
     question: 'Is there good NEET coaching in Patiala for GMC Patiala preparation?',
@@ -171,7 +171,7 @@ const faqs = [
   {
     question: 'Why choose online coaching over local Patiala coaching?',
     answer:
-      'Online coaching from Cerebrum gives you: AIIMS-trained faculty (not available locally), smaller batches, better results (94.2% success rate), comprehensive material, and 24/7 doubt support. Our track record at GMC Patiala proves our effectiveness.',
+      'Online coaching from Cerebrum gives you: AIIMS-trained faculty (not available locally), smaller batches, better results (98% success rate), comprehensive material, and 24/7 doubt support. Our track record at GMC Patiala proves our effectiveness.',
   },
 ]
 
@@ -181,8 +181,8 @@ export default function NEETCoachingPatiala() {
       <CitySchema
         cityName="Patiala"
         stateName="Punjab"
-        description="Best NEET coaching for Patiala students. Online classes from AIIMS faculty. 94.2% success rate. Serving Model Town, Leela Bhawan, Urban Estate, Tripuri."
-        url="https://cerebrumacademy.in/neet-coaching-patiala"
+        description="Best NEET coaching for Patiala students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Leela Bhawan, Urban Estate, Tripuri."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-patiala"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-pink-50">
@@ -221,7 +221,7 @@ export default function NEETCoachingPatiala() {
 
                 <p className="mb-8 text-lg text-gray-600">
                   Online NEET coaching for students from Model Town, Leela Bhawan, Urban Estate,
-                  Tripuri, and nearby areas. <strong>94.2% success rate</strong> with AIIMS faculty.
+                  Tripuri, and nearby areas. <strong>98% success rate</strong> with AIIMS faculty.
                 </p>
 
                 <div className="mb-8 flex flex-wrap gap-4">

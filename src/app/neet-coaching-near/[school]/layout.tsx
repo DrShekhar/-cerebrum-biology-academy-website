@@ -75,7 +75,12 @@ export async function generateMetadata({
   return {
     title: data.title,
     description: data.description,
-    alternates: {
+    twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching Near DPS RK Puram | Biology Classes for DPS Students | Cerebrum Academy',
+    description: 'Best NEET coaching for DPS RK Puram students. Timings aligned with school, expert AIIMS faculty.',
+  },
+  alternates: {
       canonical: data.canonical,
     },
     openGraph: {

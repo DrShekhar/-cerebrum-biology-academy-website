@@ -108,6 +108,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/south-extension',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching South Extension Delhi | Flagship Center | Cerebrum',
+    description: 'Flagship NEET Biology coaching center in South Extension, Delhi. AIIMS faculty, small batches, near Lajpat Nagar Metro.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/south-extension',
   },

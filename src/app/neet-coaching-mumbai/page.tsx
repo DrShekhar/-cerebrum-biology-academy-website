@@ -39,7 +39,7 @@ export default function NEETCoachingMumbai() {
     {
       question: 'Which is the best NEET coaching in Mumbai for 2026 preparation?',
       answer:
-        "Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While Allen, Aakash, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 94.2% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!",
+        "Cerebrum Biology Academy is the top-rated NEET coaching for Mumbai students. While Allen, Aakash, and local institutes have physical centers, we offer AIIMS-trained faculty online at a fraction of the cost. Our 98% success rate beats most Mumbai coaching centers. No more wasting 2-3 hours daily in Mumbai traffic - study from home in Andheri, Bandra, Thane, or anywhere!",
     },
     {
       question: 'What medical colleges can Mumbai students target through NEET?',
@@ -115,8 +115,8 @@ export default function NEETCoachingMumbai() {
       <CitySchema
         cityName="Mumbai"
         stateName="Maharashtra"
-        url="https://cerebrumacademy.in/neet-coaching-mumbai"
-        description="Best NEET coaching in Mumbai, Maharashtra. Online classes from AIIMS faculty for Andheri, Bandra, Borivali, Thane, Navi Mumbai students. 94.2% success rate. Prepare for Seth GS, Grant Medical, KEM from home."
+        url="https://cerebrumbiologyacademy.com/neet-coaching-mumbai"
+        description="Best NEET coaching in Mumbai, Maharashtra. Online classes from AIIMS faculty for Andheri, Bandra, Borivali, Thane, Navi Mumbai students. 98% success rate. Prepare for Seth GS, Grant Medical, KEM from home."
         areaServed={['Mumbai', 'Andheri', 'Bandra', 'Borivali', 'Thane', 'Navi Mumbai', 'Powai', 'Mulund', 'Dadar', 'Kalyan', 'Dombivli']}
         faqs={faqs}
       />
@@ -159,14 +159,14 @@ export default function NEETCoachingMumbai() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Now
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
@@ -177,7 +177,7 @@ export default function NEETCoachingMumbai() {
               {/* Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {[
-                  { number: '94.2%', label: 'Success Rate', icon: TrendingUp },
+                  { number: '98%', label: 'Success Rate', icon: TrendingUp },
                   { number: '2500+', label: 'Mumbai Students', icon: Users },
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '5125', label: 'MH MBBS Seats', icon: Award },
@@ -655,14 +655,14 @@ export default function NEETCoachingMumbai() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mumbai%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-lg"
                 >
                   <MessageCircle className="w-6 h-6" />
                   Book Free Demo Class
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
                 >
                   <Phone className="w-6 h-6" />

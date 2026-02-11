@@ -622,7 +622,7 @@ function ScholarshipChecker({
 function CompetitorComparison({ course }: { course: CourseData }) {
   const ourFeatureScore = course.features.length
   const ourSuccessRate =
-    course.seriesId === 'pinnacle' ? 98.5 : course.seriesId === 'ascent' ? 94.2 : 89.7
+    course.seriesId === 'pinnacle' ? 98.5 : course.seriesId === 'ascent' ? 98 : 89.7
   const ourBatchSize = course.seriesId === 'pinnacle' ? 12 : course.seriesId === 'ascent' ? 25 : 35
 
   const comparison = COMPETITOR_PRICING.map((competitor) => ({

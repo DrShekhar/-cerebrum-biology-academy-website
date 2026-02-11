@@ -27,6 +27,10 @@ import { Button } from '@/components/ui/Button'
 import { QuickAnswers } from '@/components/seo/QuickAnswers'
 import { NEETToolsWidget } from '@/components/seo/NEETToolsWidget'
 import { LazyGoogleMap } from '@/components/performance/LazyGoogleMap'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 interface FAQ {
   question: string
@@ -344,7 +348,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                   {
                     icon: GraduationCap,
                     title: 'AIIMS-Trained Faculty',
-                    desc: 'Dr. Shekhar Suman (Ex-AIIMS) personally teaches batches',
+                    desc: 'Dr. Shekhar C Singh (Ex-AIIMS) personally teaches batches',
                   },
                   {
                     icon: Users,
@@ -1149,6 +1153,9 @@ export default function PageContent({ faqs }: PageContentProps) {
           }),
         }}
       />
+      <PricingSection cityName="Civil Lines" />
+      <CostComparisonSection cityName="Civil Lines" />
+      <RelatedCityLinks currentCity="civil-lines-delhi" variant="default" />
     </div>
   )
 }

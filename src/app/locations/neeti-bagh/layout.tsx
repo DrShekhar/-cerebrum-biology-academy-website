@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/locations/neeti-bagh',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Neeti Bagh | Elite South Delhi | Cerebrum Academy',
+    description: 'Exclusive NEET Biology coaching for Neeti Bagh students. Near Panchsheel & Andrews Ganj.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/neeti-bagh',
   },

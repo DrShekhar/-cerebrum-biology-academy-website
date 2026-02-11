@@ -51,7 +51,7 @@ interface TrustProviderProps {
 // PERFORMANCE: Default static metrics - avoid useState when features are disabled
 const DEFAULT_METRICS: TrustMetrics = {
   totalStudents: 10247,
-  successRate: 94.2,
+  successRate: 98,
   averageRating: 4.9,
   verifiedReviews: 2847,
   facultyCount: 25,

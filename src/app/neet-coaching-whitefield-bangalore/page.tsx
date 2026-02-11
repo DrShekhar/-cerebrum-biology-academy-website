@@ -77,7 +77,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Whitefield Students', value: '780+', icon: Users },
   { label: 'Premium Schools', value: '20+', icon: GraduationCap },
@@ -87,7 +87,7 @@ const faqs = [
   {
     question: 'Why do Whitefield students choose online NEET coaching?',
     answer:
-      "Whitefield's IT corridor has premium international schools like Inventure Academy, Greenwood High, and Canadian International School with demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on ORR traffic. Our 94.2% success rate proves online is equally effective.",
+      "Whitefield's IT corridor has premium international schools like Inventure Academy, Greenwood High, and Canadian International School with demanding schedules. Our online classes offer flexibility that physical coaching cannot. Save 2-3 hours daily on ORR traffic. Our 98% success rate proves online is equally effective.",
   },
   {
     question: 'Which areas in Whitefield do you serve?',
@@ -200,7 +200,7 @@ export default function NeetCoachingWhitefieldPage() {
               ITPL | Brookefield | Marathahalli | Kadugodi | Hoodi
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Whitefield&apos;s international schools. 94.2%
+              Premium NEET Biology coaching for Whitefield&apos;s international schools. 98%
               success rate, AIIMS faculty, zero traffic commute. Join 780+ students from Inventure,
               Greenwood High, TISB!
             </p>
@@ -432,7 +432,7 @@ export default function NeetCoachingWhitefieldPage() {
               Join Whitefield&apos;s Elite NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, premium small batches. International school
+              98% success rate, AIIMS faculty, premium small batches. International school
               specialists!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

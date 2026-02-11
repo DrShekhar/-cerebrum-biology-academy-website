@@ -62,8 +62,7 @@ export default function NEETCoachingVisakhapatnamPage() {
         slug="neet-coaching-visakhapatnam"
         pageTitle="Best NEET Coaching in Visakhapatnam"
         pageDescription="Premium online NEET coaching in Vizag. 12,000+ aspirants, expert faculty, near Andhra Medical College & GITAM. 98% success rate."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "17.6868", lng: "83.2185" }} />
       <PageContent />
     </>
   )

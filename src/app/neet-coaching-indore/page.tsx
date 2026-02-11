@@ -76,7 +76,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Indore Students', value: '720+', icon: Users },
   { label: 'MGM Selections', value: '18+', icon: GraduationCap },
@@ -86,7 +86,7 @@ const faqs = [
   {
     question: 'Why choose online NEET coaching over Indore coaching centers?',
     answer:
-      'Indore has become a coaching hub with centers in Vijay Nagar and Rau having 100+ students per batch. Our online classes limit to 10-15 students. Save commute time, get personalized attention, same 94.2% success rate.',
+      'Indore has become a coaching hub with centers in Vijay Nagar and Rau having 100+ students per batch. Our online classes limit to 10-15 students. Save commute time, get personalized attention, same 98% success rate.',
   },
   {
     question: 'Which areas in Indore do you serve?',
@@ -175,7 +175,7 @@ export default function NEETCoachingIndorePage() {
               Vijay Nagar | Palasia | Rau | All Indore
             </h2>
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Premium NEET Biology coaching for Indore students. 94.2% success rate, AIIMS faculty.
+              Premium NEET Biology coaching for Indore students. 98% success rate, AIIMS faculty.
               Target MGM Indore, AIIMS Bhopal. Join 720+ Indore students!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -379,7 +379,7 @@ export default function NEETCoachingIndorePage() {
               Ready to Crack NEET from Indore?
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 720+ Indore students. Target MGM, AIIMS Bhopal. 94.2% success rate!
+              Join 720+ Indore students. Target MGM, AIIMS Bhopal. 98% success rate!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

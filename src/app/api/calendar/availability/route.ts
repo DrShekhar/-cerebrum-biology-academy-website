@@ -17,7 +17,7 @@ const facultyAvailabilities: FacultyAvailability[] = [
   {
     facultyId: 'faculty_1',
     facultyName: 'Dr. Priya Sharma',
-    email: 'priya.sharma@cerebrumacademy.com',
+    email: 'priya.sharma@cerebrumbiologyacademy.com',
     phone: '+91-9876543210',
     subjects: ['biology'],
     grades: ['11', '12', 'dropper'],
@@ -71,7 +71,7 @@ const facultyAvailabilities: FacultyAvailability[] = [
   {
     facultyId: 'faculty_2',
     facultyName: 'Prof. Rajesh Kumar',
-    email: 'rajesh.kumar@cerebrumacademy.com',
+    email: 'rajesh.kumar@cerebrumbiologyacademy.com',
     phone: '+91-9876543211',
     subjects: ['biology', 'chemistry'],
     grades: ['11', '12', 'foundation'],

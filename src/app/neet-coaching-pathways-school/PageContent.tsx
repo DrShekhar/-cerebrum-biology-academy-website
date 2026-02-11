@@ -2,6 +2,10 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import {
   CheckCircle,
   Users,
@@ -294,6 +298,9 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+      <PricingSection cityName="Pathways School" />
+      <CostComparisonSection cityName="Pathways School" />
+      <RelatedCityLinks currentCity="pathways-school" variant="default" />
     </div>
   )
 }

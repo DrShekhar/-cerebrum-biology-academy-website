@@ -248,7 +248,12 @@ export async function generateMetadata({
   return {
     title: data.title,
     description: data.description,
-    alternates: {
+    twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching Hauz Khas | Biology Classes Near IIT Delhi | Cerebrum Academy',
+    description: 'Top NEET coaching in Hauz Khas, South Delhi. Near IIT Delhi, expert AIIMS faculty, 94% success rate.',
+  },
+  alternates: {
       canonical: data.canonical,
     },
     openGraph: {

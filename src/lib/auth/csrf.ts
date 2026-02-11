@@ -6,13 +6,18 @@ import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
 
 // Initialize Redis for rate limiting if available
-const redis =
-  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
-    ? new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
-      })
-    : null
+let redis: Redis | null = null
+try {
+  const redisUrl = (process.env.UPSTASH_REDIS_REST_URL || '').trim()
+  const redisToken = (process.env.UPSTASH_REDIS_REST_TOKEN || '').trim()
+  if (redisUrl && redisToken) {
+    redis = new Redis({ url: redisUrl, token: redisToken })
+  }
+} catch (e) {
+  // Redis initialization failed (invalid URL, etc.) — fall back to in-memory
+  console.warn('CSRF Redis initialization failed, using in-memory fallback')
+  redis = null
+}
 
 // CSRF token rate limiter using Redis
 const csrfRateLimiter = redis

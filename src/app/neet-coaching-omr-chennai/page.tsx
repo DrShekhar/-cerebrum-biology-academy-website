@@ -121,7 +121,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '353', icon: Star },
   { label: 'OMR Students', value: '650+', icon: Users },
   { label: 'IT Schools', value: '12+', icon: GraduationCap },
@@ -240,7 +240,7 @@ export default function NeetCoachingOMRPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Tech-forward NEET Biology coaching for OMR IT families. 94.2% success rate, AIIMS
+              Tech-forward NEET Biology coaching for OMR IT families. 98% success rate, AIIMS
               faculty, zero traffic stress. Join 650+ students from DPS, SBOA, Velammal.
             </p>
 
@@ -480,7 +480,7 @@ export default function NeetCoachingOMRPage() {
               Join OMR&apos;s Top NEET Aspirants
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              94.2% success rate, AIIMS faculty, tech-forward platform. IT family specialists!
+              98% success rate, AIIMS faculty, tech-forward platform. IT family specialists!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

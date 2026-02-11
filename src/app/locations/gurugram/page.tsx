@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
     description:
-      'Premier NEET Biology coaching at M2K Corporate Park, Sector 51, Gurugram. AIIMS faculty, 15-student batches, 90% success rate.',
+      'Premier NEET Biology coaching at M2K Corporate Park, Sector 51, Gurugram. AIIMS faculty, 15-student batches, 98% success rate.',
     url: 'https://cerebrumbiologyacademy.com/locations/gurugram',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching in Gurugram | Cerebrum Biology Academy',
     description:
-      'Premier NEET Biology coaching at Sector 51, Gurugram. AIIMS faculty, small batches, 90% success rate.',
+      'Premier NEET Biology coaching at Sector 51, Gurugram. AIIMS faculty, small batches, 98% success rate.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/gurugram',

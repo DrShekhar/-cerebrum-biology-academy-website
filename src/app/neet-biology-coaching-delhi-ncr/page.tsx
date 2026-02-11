@@ -14,7 +14,7 @@ import type { USP, FAQ } from '@/components/landing-pages'
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching in Delhi NCR | Top Institute 2026',
   description:
-    'Best NEET Biology coaching in Delhi NCR. Expert faculty, small batches, 99% results. Book free demo class at South Extension. Call +91-88264-44334',
+    'Best NEET Biology coaching in Delhi NCR. Expert faculty, small batches, 98% results. Book free demo class at South Extension. Call +91-88264-44334',
   keywords: [
     'neet biology',
     'neet biology classes',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Biology Coaching in Delhi NCR | Cerebrum Biology Academy',
     description:
-      'Premier NEET Biology coaching with 15+ years experience. Small batches, expert faculty, 99% results. Book free demo.',
+      'Premier NEET Biology coaching with 15+ years experience. Small batches, expert faculty, 98% results. Book free demo.',
     type: 'website',
   },
 }
@@ -52,7 +52,7 @@ const usps: USP[] = [
   },
   {
     icon: 'trending',
-    title: '99% Results',
+    title: '98% Results',
     description:
       'Proven track record of NEET qualifications with students scoring 300+ in Biology section consistently.',
   },
@@ -98,7 +98,7 @@ const faqs: FAQ[] = [
   {
     question: 'What makes Cerebrum the best NEET Biology coaching in Delhi NCR?',
     answer:
-      'With 15+ years of experience, expert faculty from IIT/AIIMS, small batch sizes of maximum 15 students, and 99% results, Cerebrum offers comprehensive NEET Biology preparation that helps students achieve their medical dreams. Our personalized approach, updated study material, and proven teaching methodology set us apart.',
+      'With 15+ years of experience, expert faculty from IIT/AIIMS, small batch sizes of maximum 15 students, and 98% results, Cerebrum offers comprehensive NEET Biology preparation that helps students achieve their medical dreams. Our personalized approach, updated study material, and proven teaching methodology set us apart.',
   },
   {
     question: 'What is covered in your NEET Biology coaching program?',
@@ -139,7 +139,7 @@ export default function NEETBiologyCoachingDelhiNCRPage() {
         h1="Premier NEET Biology Coaching in Delhi NCR"
         subheadline="Achieve Your Medical Dream with Expert Faculty, Small Batches, and Proven Results. Join India's Leading NEET Biology Institute."
         highlightedBadge="🎯 NEET 2026 Admissions Open - Limited Seats"
-        trustBadges={['15+ Years Experience', '10,000+ Students', '99% Results']}
+        trustBadges={['15+ Years Experience', '10,000+ Students', '98% Results']}
       />
 
       {/* Urgency Banner - Seats & Batch Start Date */}

@@ -28,6 +28,11 @@ export const metadata: Metadata = {
       'Expert AP Biology preparation for College Board exams. Lab skills, FRQ strategies, score 5 coaching. AES, Pathways, American School students.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AP Biology Coaching Delhi | College Board AP Exam Preparation | Cerebrum',
+    description: 'Expert AP Biology coaching in Delhi for American curriculum students.',
+  },
 }
 
 export default function APBiologyLayout({ children }: { children: React.ReactNode }) {

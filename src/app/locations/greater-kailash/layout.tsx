@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/greater-kailash',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Greater Kailash GK | Cerebrum Biology Academy',
+    description: 'Best NEET Biology coaching for Greater Kailash students. GK 1, GK 2, Kailash Colony.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/greater-kailash',
   },

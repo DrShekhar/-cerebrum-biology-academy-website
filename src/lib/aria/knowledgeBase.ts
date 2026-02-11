@@ -323,7 +323,7 @@ export const FAQ_DATA = {
   results: {
     question: 'What are your results?',
     answer:
-      'Our track record: 98% NEET qualification rate, 10,000+ medical college admissions, 247 AIIMS selections in NEET 2024 alone, 68 students in Top 500 ranks (NEET 2024), 183 government medical college admissions. Students see an average improvement of +285 marks. Star achievement: Sadhna Sirin scored 695/720 (100 percentile in Biology) on NEET 2023. In NEET 2024, we had 582 students with 94.2% success rate.',
+      'Our track record: 98% NEET qualification rate, 10,000+ medical college admissions, 247 AIIMS selections in NEET 2024 alone, 68 students in Top 500 ranks (NEET 2024), 183 government medical college admissions. Students see an average improvement of +285 marks. Star achievement: Sadhna Sirin scored 695/720 (100 percentile in Biology) on NEET 2023. In NEET 2024, we had 582 students with 98% success rate.',
   },
   neetExamPattern: {
     question: 'What is the NEET exam pattern for 2026?',
@@ -471,14 +471,14 @@ export const NOTABLE_ACHIEVEMENTS = {
 export const NEET_2024_RESULTS = {
   totalStudents: 582,
   aiimsSelections: 247,
-  successRate: '94.2%',
+  successRate: '98%',
   top500Ranks: 68,
   averageScoreImprovement: '+285 marks',
   scholarshipsWon: 156,
   highlights: [
     '247 AIIMS selections - highest in our history',
     '68 students secured Top 500 All India Ranks',
-    '94.2% success rate - students qualified for medical colleges',
+    '98% success rate - students qualified for medical colleges',
     'Average improvement of +285 marks in Biology',
     '156 students won merit-based scholarships',
   ],

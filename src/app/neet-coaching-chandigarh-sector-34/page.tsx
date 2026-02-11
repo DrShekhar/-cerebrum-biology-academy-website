@@ -74,7 +74,7 @@ const cerebrumAdvantages = [
   { point: 'AIIMS-trained faculty (not just MBBS)', icon: Award },
   { point: 'No commute - learn from home', icon: Car },
   { point: 'Fees: Rs 24,000 - 68,000 only', icon: TrendingUp },
-  { point: '94.2% success rate', icon: Trophy },
+  { point: '98% success rate', icon: Trophy },
   { point: 'Instant doubt resolution via WhatsApp', icon: MessageCircle },
 ]
 
@@ -107,12 +107,12 @@ const features = [
   {
     icon: Shield,
     title: 'Better Results, Lower Fees',
-    description: '94.2% success rate at 1/4th the fees of Sector 34 coaching centers.',
+    description: '98% success rate at 1/4th the fees of Sector 34 coaching centers.',
   },
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '358', icon: Star },
   { label: 'Sector 34 Area Students', value: '320+', icon: Users },
   { label: 'PGIMER Selections', value: '15+', icon: GraduationCap },
@@ -136,7 +136,7 @@ const faqs = [
   {
     question: 'Which is better for NEET - Allen Sector 34 or Cerebrum online?',
     answer:
-      'Allen Sector 34 (SCO 350-352) has 60-100+ students per batch with fees of Rs 1.5-2.5 lakhs. Cerebrum has 10-15 students per batch with AIIMS faculty and fees of Rs 24K-68K. Our 94.2% success rate matches Allen\'s results. The key difference: personalized attention and no commute stress.',
+      'Allen Sector 34 (SCO 350-352) has 60-100+ students per batch with fees of Rs 1.5-2.5 lakhs. Cerebrum has 10-15 students per batch with AIIMS faculty and fees of Rs 24K-68K. Our 98% success rate matches Allen\'s results. The key difference: personalized attention and no commute stress.',
   },
   {
     question: 'Is Aakash Sector 34 worth the fees for NEET coaching?',
@@ -161,7 +161,7 @@ const faqs = [
   {
     question: 'Is Physics Wallah center in Sector 34 good for NEET?',
     answer:
-      'Physics Wallah opened their Sector 34-C center recently with 50-80 students per batch. While their fees (Rs 50K-1.5L) are lower than Allen/Aakash, they lack local track record. Cerebrum has 5+ years of proven results in Chandigarh with 94.2% success rate and even smaller batch sizes.',
+      'Physics Wallah opened their Sector 34-C center recently with 50-80 students per batch. While their fees (Rs 50K-1.5L) are lower than Allen/Aakash, they lack local track record. Cerebrum has 5+ years of proven results in Chandigarh with 98% success rate and even smaller batch sizes.',
   },
   {
     question: 'What is the best time to attend coaching in Sector 34?',
@@ -181,7 +181,7 @@ const faqs = [
   {
     question: 'What is the success rate of Sector 34 coaching centers vs Cerebrum?',
     answer:
-      'Allen Sector 34 claims 85-90% success rate, Aakash claims similar. Cerebrum has verified 94.2% success rate. The difference: our small batches ensure every student gets attention, not just toppers. We track progress weekly and intervene early for struggling students.',
+      'Allen Sector 34 claims 85-98% success rate, Aakash claims similar. Cerebrum has verified 98% success rate. The difference: our small batches ensure every student gets attention, not just toppers. We track progress weekly and intervene early for struggling students.',
   },
   {
     question: 'Can I get demo class before deciding between Sector 34 centers and Cerebrum?',
@@ -196,7 +196,7 @@ const faqs = [
   {
     question: 'Is online NEET coaching as effective as classroom coaching in Sector 34?',
     answer:
-      'Our 94.2% success rate proves it! Live interactive classes (not recorded), instant doubt resolution, smaller batches mean better attention. 320+ students from Sector 34 area have chosen us over crowded offline centers. Many Allen/Aakash dropouts improved 100+ marks with us.',
+      'Our 98% success rate proves it! Live interactive classes (not recorded), instant doubt resolution, smaller batches mean better attention. 320+ students from Sector 34 area have chosen us over crowded offline centers. Many Allen/Aakash dropouts improved 100+ marks with us.',
   },
   {
     question: 'What if I face technical issues during online classes?',
@@ -272,7 +272,7 @@ export default function NEETCoachingSector34Page() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Why fight for parking at SCO 350-352? Get better NEET coaching online. 94.2% success rate,
+              Why fight for parking at SCO 350-352? Get better NEET coaching online. 98% success rate,
               AIIMS faculty, batches of 10-15 students. Same quality as Allen/Aakash at 1/4th the fees!
             </p>
 
@@ -481,7 +481,7 @@ export default function NEETCoachingSector34Page() {
               </div>
               <div>
                 <CheckCircle className="w-8 h-8 mx-auto mb-2 text-[#4ade80]" />
-                <div className="font-bold">94.2% Success</div>
+                <div className="font-bold">98% Success</div>
                 <div className="text-sm opacity-80">verified rate</div>
               </div>
             </div>
@@ -763,7 +763,7 @@ export default function NEETCoachingSector34Page() {
               Skip Sector 34 Chaos. Get Better Results.
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 320+ students from Sector 34 area. 94.2% success rate. Save Rs 1-2.5 Lakhs!
+              Join 320+ students from Sector 34 area. 98% success rate. Save Rs 1-2.5 Lakhs!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Button

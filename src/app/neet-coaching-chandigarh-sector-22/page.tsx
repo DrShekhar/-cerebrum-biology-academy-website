@@ -28,7 +28,7 @@ const features = [
 ]
 
 const successMetrics = [
-  { label: 'Success Rate', value: '94.2%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score', value: '358/360', icon: Star },
   { label: 'Sector 22 Area', value: '95+', icon: Users },
   { label: 'PGIMER Selections', value: '15+', icon: GraduationCap },
@@ -37,7 +37,7 @@ const successMetrics = [
 const schools = ['Government Model School Sector 20', 'DAV Sector 8', 'Carmel Convent Sector 9', 'St. Kabir Public School']
 
 const faqs = [
-  { question: 'Which is the best NEET coaching near Sector 22 Chandigarh?', answer: 'Cerebrum Biology Academy offers excellent NEET coaching for Sector 22 students with AIIMS faculty, 94.2% success rate. 95+ students from Commercial Hub area enrolled. Online classes - no Sector 34 traffic!' },
+  { question: 'Which is the best NEET coaching near Sector 22 Chandigarh?', answer: 'Cerebrum Biology Academy offers excellent NEET coaching for Sector 22 students with AIIMS faculty, 98% success rate. 95+ students from Commercial Hub area enrolled. Online classes - no Sector 34 traffic!' },
   { question: 'How much does NEET coaching cost for Sector 22 students?', answer: 'Cerebrum fees: Foundation Rs 24,000/year, Comprehensive Rs 36,000/year, Dropper Rs 68,000/year. Save 60-70% compared to Sector 34 coaching centers.' },
   { question: 'What are batch timings for Sector 22 students?', answer: 'Multiple options: Morning (6-8 AM), After-school (4-6 PM), Evening (7-9 PM). Weekend batches also available.' },
   { question: 'Is dropper batch available?', answer: 'Yes! Intensive dropper batch at Rs 68,000/year with 6-8 hours daily coaching, personal mentorship, weekly tests.' },
@@ -55,7 +55,7 @@ export default function Sector22Page() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <span className="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-medium mb-6">🎯 95+ Students from Commercial Hub Area</span>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6">NEET Coaching for <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Sector 22 Chandigarh</span></h1>
-            <p className="text-xl lg:text-2xl text-emerald-100 mb-8">Skip Sector 34 crowd. Get <strong>premium NEET coaching</strong> online from Sector 22. AIIMS faculty, 94.2% success.</p>
+            <p className="text-xl lg:text-2xl text-emerald-100 mb-8">Skip Sector 34 crowd. Get <strong>premium NEET coaching</strong> online from Sector 22. AIIMS faculty, 98% success.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}><Button size="lg" className="bg-green-500 hover:bg-green-600"><MessageCircle className="w-5 h-5 mr-2" />WhatsApp Now</Button></Link>
               <Link href="/book-free-demo"><Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Book Free Demo<ArrowRight className="w-5 h-5 ml-2" /></Button></Link>

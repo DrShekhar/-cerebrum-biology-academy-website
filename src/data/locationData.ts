@@ -78,7 +78,7 @@ export const locationDatabase: LocationData[] = [
     seoData: {
       title: 'Best NEET Biology Coaching in Kota | Cerebrum Biology Academy',
       description:
-        'Top NEET Biology coaching in Kota with 94.2% success rate. Join 2500+ Kota students. Expert faculty, proven results, guaranteed success.',
+        'Top NEET Biology coaching in Kota with 98% success rate. Join 2500+ Kota students. Expert faculty, proven results, guaranteed success.',
       keywords: [
         'NEET Biology coaching Kota',
         'Best biology institute Kota',
@@ -138,7 +138,7 @@ export const locationDatabase: LocationData[] = [
     seoData: {
       title: 'Online NEET Biology Coaching Delhi | Better Than Offline Classes',
       description:
-        'Best online NEET Biology coaching for Delhi students. Save time & money. 94.2% success rate. AIIMS Delhi selections.',
+        'Best online NEET Biology coaching for Delhi students. Save time & money. 98% success rate. AIIMS Delhi selections.',
       keywords: [
         'NEET Biology coaching Delhi',
         'Online medical coaching Delhi',
@@ -195,7 +195,7 @@ export const locationDatabase: LocationData[] = [
     seoData: {
       title: 'Best NEET Biology Coaching Hyderabad | State Quota Specialists',
       description:
-        'Top NEET Biology coaching in Hyderabad for Telangana state quota. Expert faculty, proven results, 94.2% success rate.',
+        'Top NEET Biology coaching in Hyderabad for Telangana state quota. Expert faculty, proven results, 98% success rate.',
       keywords: [
         'NEET Biology coaching Hyderabad',
         'Telangana medical coaching',

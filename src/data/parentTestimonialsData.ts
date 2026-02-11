@@ -53,7 +53,7 @@ export const parentTestimonials: ParentTestimonial[] = [
     studentAchievement: 'NEET AIR 127',
     location: 'Ahmedabad, Gujarat',
     testimonial:
-      "Being a doctor myself, I was particular about the quality of education for Ananya. Cerebrum exceeded all expectations. Dr. Shekhar's teaching methodology is scientifically sound and exam-oriented. Ananya secured AIR 127 in NEET and is now at KGMU Lucknow. The regular parent-teacher interactions kept us informed about her progress. The 94.2% success rate isn't just a number - it's a testament to their dedication.",
+      "Being a doctor myself, I was particular about the quality of education for Ananya. Cerebrum exceeded all expectations. Dr. Shekhar's teaching methodology is scientifically sound and exam-oriented. Ananya secured AIR 127 in NEET and is now at KGMU Lucknow. The regular parent-teacher interactions kept us informed about her progress. The 98% success rate isn't just a number - it's a testament to their dedication.",
     beforeScore: 520,
     afterScore: 670,
     college: 'KGMU Lucknow',

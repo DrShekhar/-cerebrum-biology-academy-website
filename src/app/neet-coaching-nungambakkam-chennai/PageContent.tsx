@@ -15,6 +15,10 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
+import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
+import { PricingSection } from '@/components/city/PricingSection'
+import { CostComparisonSection } from '@/components/city/CostComparisonSection'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 
 function useScrollAnimation(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -371,6 +375,10 @@ export default function PageContent() {
       </section>
 
       {/* Related */}
+
+      <PricingSection cityName="Nungambakkam" />
+      <CostComparisonSection cityName="Nungambakkam" />
+
       <section className="py-12 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4">
           <h3 className="text-xl font-bold text-gray-900 mb-6 text-center">Explore More</h3>
@@ -396,6 +404,7 @@ export default function PageContent() {
           </div>
         </div>
       </section>
+      <RelatedCityLinks currentCity="nungambakkam-chennai" variant="default" />
     </div>
   )
 }

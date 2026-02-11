@@ -36,7 +36,7 @@ export const simplifiedPricingTiers: SimplifiedPricingTier[] = [
       'Guaranteed Result Tracking',
     ],
     highlights: [
-      '94.2% Success Rate',
+      '98% Success Rate',
       '12 Students vs 100+ in Allen/Aakash',
       'AIIMS Faculty',
       'Personal Attention',
@@ -144,7 +144,7 @@ export const keyDifferentiators = {
     competitors: 'Mass Teaching',
   },
   results: {
-    cerebrum: '94.2% Success Rate',
+    cerebrum: '98% Success Rate',
     industry: '23% Average',
   },
 }

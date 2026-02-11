@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     'AP Biology labs',
     'AP Biology FRQ',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AP Biology Online Tutor | College Board Aligned Coaching',
+    description: 'Expert AP Biology tutoring aligned with Campbell Biology textbook.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ap-biology-online-tutor/',
   },

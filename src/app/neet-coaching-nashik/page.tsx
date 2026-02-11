@@ -62,8 +62,7 @@ export default function NEETCoachingNashikPage() {
         slug="neet-coaching-nashik"
         pageTitle="Best NEET Coaching in Nashik"
         pageDescription="Join #1 NEET coaching in Nashik. Expert online classes for 12000+ aspirants. Wine country families trust us."
-        pageType="coaching"
-      />
+        pageType="coaching" coordinates={{ lat: "19.9975", lng: "73.7898" }} />
       <PageContent />
     </>
   )

@@ -85,7 +85,7 @@ export default function NEETBiologyClass12Page() {
         h1="NEET Biology for Class 12 - Score 340+ Strategy"
         subheadline="Master high-weightage Class 12 topics. Comprehensive preparation for NEET 2026 with expert faculty and proven methods."
         highlightedBadge="⚡ NEET 2026 - Only 150 Days Left"
-        trustBadges={['340+ Score Strategy', 'Mock Tests', '99% Results']}
+        trustBadges={['340+ Score Strategy', 'Mock Tests', '98% Results']}
       />
 
       {/* Urgency Banner */}

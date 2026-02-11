@@ -475,7 +475,7 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
             </span>
           </div>
           <div className="text-xs text-green-600 mt-1">
-            94.2% qualification rate • Join them today!
+            98% qualification rate • Join them today!
           </div>
         </motion.div>
       )}

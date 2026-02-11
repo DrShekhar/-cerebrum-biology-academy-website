@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/referral',
     siteName: 'Cerebrum Biology Academy',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Refer & Earn | Cerebrum Biology Academy',
+    description: 'Refer friends to Cerebrum Biology Academy and earn rewards. Get ₹500 for every successful referral.',
+  },
 }
 
 export default function ReferralLayout({ children }: { children: React.ReactNode }) {

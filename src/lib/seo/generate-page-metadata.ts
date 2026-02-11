@@ -162,7 +162,7 @@ export function generateLocalBusinessSchema(params: {
     name: `Cerebrum Biology Academy - ${params.locality}`,
     description: `Premier NEET Biology coaching and biology tuition in ${params.locality}. 98% success rate with expert faculty.`,
     url: BASE_URL,
-    telephone: '+91-9560465663',
+    telephone: '+91-8826444334',
     email: 'info@cerebrumbiologyacademy.com',
     address: {
       '@type': 'PostalAddress',

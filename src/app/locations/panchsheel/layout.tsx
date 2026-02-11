@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/panchsheel',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Panchsheel Park & Enclave | Cerebrum Biology Academy',
+    description: 'Best NEET Biology coaching for Panchsheel Park & Panchsheel Enclave students. Diplomat area, premium locality.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/panchsheel',
   },

@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Maharani Bagh | Premium South Delhi | Cerebrum Academy',
+    description: 'Expert NEET Biology coaching for Maharani Bagh students. Near Sundar Nagar & Friends Colony.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/maharani-bagh',
   },

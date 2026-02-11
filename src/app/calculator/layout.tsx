@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/calculator',
     siteName: 'Cerebrum Biology Academy',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Score Calculator 2025 | Calculate Your Expected Score | Cerebrum Academy',
+    description: 'Free NEET score calculator to estimate your marks and rank.',
+  },
 }
 
 export default function CalculatorLayout({ children }: { children: React.ReactNode }) {

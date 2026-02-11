@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'How is Cerebrum different from Aakash Chandigarh for NEET Biology?',
     answer:
-      'Cerebrum offers small batches of 10-15 students compared to Aakash Chandigarh\'s 100+ students per batch. Our faculty is exclusively AIIMS-trained, while Aakash has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1-3.5 Lakhs at Aakash. Despite being a specialized Biology institute, our 94.2% success rate rivals Aakash\'s results.',
+      'Cerebrum offers small batches of 10-15 students compared to Aakash Chandigarh\'s 100+ students per batch. Our faculty is exclusively AIIMS-trained, while Aakash has mixed faculty backgrounds. You get daily 1-on-1 doubt sessions vs crowded doubt counters. Fees are Rs 24K-68K vs Rs 1-3.5 Lakhs at Aakash. Despite being a specialized Biology institute, our 98% success rate rivals Aakash\'s results.',
   },
   {
     question: 'How many Aakash centers are there in Chandigarh Tricity?',
@@ -73,7 +73,7 @@ const faqs = [
   {
     question: 'Is online coaching from Cerebrum as effective as Aakash Chandigarh offline classes?',
     answer:
-      'Our 94.2% success rate proves online coaching effectiveness. Benefits include: live interactive classes (not recorded), instant doubt clearing via screen share, 7am-11pm WhatsApp support, recorded sessions for revision. Many students prefer focused online learning over traveling to crowded Aakash centers.',
+      'Our 98% success rate proves online coaching effectiveness. Benefits include: live interactive classes (not recorded), instant doubt clearing via screen share, 7am-11pm WhatsApp support, recorded sessions for revision. Many students prefer focused online learning over traveling to crowded Aakash centers.',
   },
   {
     question: 'How does faculty qualification compare between Cerebrum and Aakash Chandigarh?',
@@ -199,7 +199,7 @@ const reasonsToSwitch = [
   {
     title: 'Quality Over Quantity',
     description:
-      'Aakash\'s 36+ years and 7 centers mean scale, not necessarily quality attention. Cerebrum focuses on depth with AIIMS expertise in small batches - proven by 94.2% success rate.',
+      'Aakash\'s 36+ years and 7 centers mean scale, not necessarily quality attention. Cerebrum focuses on depth with AIIMS expertise in small batches - proven by 98% success rate.',
     icon: Target,
   },
 ]
@@ -391,7 +391,7 @@ export default function CerebrumVsAakashChandigarhPage() {
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <TrendingUp className="w-5 h-5 text-green-400" />
-                <span>94.2% Success Rate</span>
+                <span>98% Success Rate</span>
               </div>
             </div>
 
