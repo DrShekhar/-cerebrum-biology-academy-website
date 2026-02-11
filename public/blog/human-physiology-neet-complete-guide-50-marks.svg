@@ -1,0 +1,50 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f766e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad3)"/>
+
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="100" r="60" fill="#14b8a6" opacity="0.3"/>
+  <circle cx="1100" cy="530" r="80" fill="#2dd4bf" opacity="0.3"/>
+
+  <!-- Human Body Silhouette -->
+  <ellipse cx="200" cy="300" rx="80" ry="100" fill="#ffffff" opacity="0.2"/>
+  <circle cx="200" cy="230" r="40" fill="#ffffff" opacity="0.2"/>
+
+  <!-- System Icons -->
+  <!-- Heart -->
+  <path d="M 180 270 Q 160 250 180 230 Q 200 250 220 230 Q 240 250 220 270 L 200 290 Z" fill="#ef4444" opacity="0.9"/>
+  <!-- Lungs -->
+  <ellipse cx="160" cy="310" rx="20" ry="30" fill="#60a5fa" opacity="0.9"/>
+  <ellipse cx="240" cy="310" rx="20" ry="30" fill="#60a5fa" opacity="0.9"/>
+  <!-- Kidney -->
+  <ellipse cx="180" cy="360" rx="15" ry="25" fill="#a855f7" opacity="0.9"/>
+  <ellipse cx="220" cy="360" rx="15" ry="25" fill="#a855f7" opacity="0.9"/>
+
+  <!-- Main Title -->
+  <text x="400" y="200" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">Human</text>
+  <text x="400" y="270" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">Physiology</text>
+  <text x="400" y="340" font-family="Arial, sans-serif" font-size="48" fill="#facc15">Complete Guide</text>
+
+  <!-- Score Badge -->
+  <circle cx="950" cy="250" r="120" fill="#facc15" opacity="0.95"/>
+  <text x="950" y="240" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#854d0e" text-anchor="middle">50+</text>
+  <text x="950" y="280" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#854d0e" text-anchor="middle">MARKS</text>
+
+  <!-- System List -->
+  <rect x="400" y="380" width="700" height="180" rx="15" fill="#ffffff" opacity="0.15"/>
+  <text x="420" y="420" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Digestive • Respiratory • Circulatory</text>
+  <text x="420" y="460" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Excretory • Neural Control & Coordination</text>
+  <text x="420" y="510" font-family="Arial, sans-serif" font-size="22" font-weight="600" fill="#facc15">12-15 Questions = Highest Scoring NEET Chapter</text>
+
+  <!-- Tag -->
+  <rect x="900" y="10" width="280" height="50" rx="25" fill="#ffffff" opacity="0.2"/>
+  <text x="1040" y="43" font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle">HIGH WEIGHTAGE</text>
+</svg>

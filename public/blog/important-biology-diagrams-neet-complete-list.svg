@@ -1,0 +1,82 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad8" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f766e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#14b8a6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2dd4bf;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad8)"/>
+
+  <!-- Diagram Grid (simplified icons) -->
+  <g transform="translate(80, 80)">
+    <!-- Heart -->
+    <g>
+      <path d="M 40 20 Q 20 0 0 20 Q 20 0 40 20 L 60 40 L 80 20 Q 100 0 120 20 Q 100 0 80 20 Z" fill="#ef4444" opacity="0.7"/>
+      <text x="60" y="80" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Heart</text>
+    </g>
+
+    <!-- Kidney -->
+    <g transform="translate(140, 0)">
+      <ellipse cx="60" cy="30" rx="35" ry="50" fill="#a855f7" opacity="0.7"/>
+      <text x="60" y="100" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Nephron</text>
+    </g>
+
+    <!-- Flower -->
+    <g transform="translate(280, 0)">
+      <circle cx="60" cy="30" r="10" fill="#facc15" opacity="0.8"/>
+      <circle cx="45" cy="20" r="12" fill="#f472b6" opacity="0.7"/>
+      <circle cx="75" cy="20" r="12" fill="#f472b6" opacity="0.7"/>
+      <circle cx="50" cy="45" r="12" fill="#f472b6" opacity="0.7"/>
+      <circle cx="70" cy="45" r="12" fill="#f472b6" opacity="0.7"/>
+      <text x="60" y="100" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Flower</text>
+    </g>
+
+    <!-- Brain -->
+    <g transform="translate(0, 140)">
+      <ellipse cx="60" cy="30" rx="50" ry="40" fill="#60a5fa" opacity="0.7"/>
+      <path d="M 30 20 Q 20 10 30 0 Q 40 10 50 0 Q 60 10 70 0 Q 80 10 90 0 Q 100 10 90 20" fill="#60a5fa" opacity="0.7"/>
+      <text x="60" y="100" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Brain</text>
+    </g>
+
+    <!-- DNA -->
+    <g transform="translate(140, 140)">
+      <path d="M 40 0 Q 20 20 40 40 Q 60 60 40 80" stroke="#22c55e" stroke-width="6" fill="none" opacity="0.8"/>
+      <path d="M 80 0 Q 100 20 80 40 Q 60 60 80 80" stroke="#22c55e" stroke-width="6" fill="none" opacity="0.8"/>
+      <line x1="40" y1="10" x2="80" y2="10" stroke="#ffffff" stroke-width="3"/>
+      <line x1="40" y1="40" x2="80" y2="40" stroke="#ffffff" stroke-width="3"/>
+      <line x1="40" y1="70" x2="80" y2="70" stroke="#ffffff" stroke-width="3"/>
+      <text x="60" y="110" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">DNA</text>
+    </g>
+
+    <!-- Digestive -->
+    <g transform="translate(280, 140)">
+      <rect x="40" y="0" width="40" height="80" rx="20" fill="#fb923c" opacity="0.7"/>
+      <circle cx="60" cy="15" r="8" fill="#fbbf24" opacity="0.8"/>
+      <text x="60" y="110" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Digestive</text>
+    </g>
+  </g>
+
+  <!-- Main Title -->
+  <text x="550" y="140" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">50 Important</text>
+  <text x="550" y="220" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">Biology Diagrams</text>
+  <text x="550" y="290" font-family="Arial, sans-serif" font-size="46" fill="#fef3c7">Mastery Guide for NEET</text>
+
+  <!-- Stats Box -->
+  <rect x="550" y="330" width="600" height="250" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="850" y="385" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#facc15" text-anchor="middle">20-25% Questions</text>
+  <text x="580" y="435" font-family="Arial, sans-serif" font-size="26" fill="#ffffff">✏️ 5-Step Mastery Method</text>
+  <text x="580" y="475" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Observe → Trace → Draw → Label → Teach</text>
+  <text x="580" y="515" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Practice each diagram 10 times</text>
+  <text x="580" y="555" font-family="Arial, sans-serif" font-size="22" font-weight="600" fill="#fef3c7">60-80 marks from diagrams alone!</text>
+
+  <!-- Pencil Icon -->
+  <g transform="translate(1050, 450) rotate(-30)">
+    <rect x="0" y="0" width="20" height="100" fill="#fbbf24" opacity="0.9"/>
+    <polygon points="0,0 10,-15 20,0" fill="#854d0e"/>
+    <rect x="0" y="90" width="20" height="10" fill="#f59e0b"/>
+  </g>
+</svg>

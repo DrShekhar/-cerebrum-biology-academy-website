@@ -1,0 +1,36 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad1)"/>
+
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="100" r="80" fill="#3b82f6" opacity="0.2"/>
+  <circle cx="1100" cy="530" r="100" fill="#60a5fa" opacity="0.2"/>
+
+  <!-- Calendar Icon -->
+  <rect x="80" y="200" width="180" height="200" rx="15" fill="#ffffff" opacity="0.9"/>
+  <rect x="80" y="200" width="180" height="50" rx="15" fill="#22c55e"/>
+  <text x="170" y="237" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">FEB-MAR</text>
+  <text x="170" y="310" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#2563eb" text-anchor="middle">8-8</text>
+  <text x="170" y="360" font-family="Arial, sans-serif" font-size="20" fill="#64748b" text-anchor="middle">2026</text>
+
+  <!-- Main Title -->
+  <text x="400" y="220" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#ffffff">NEET 2026</text>
+  <text x="400" y="290" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#ffffff">Registration</text>
+  <text x="400" y="360" font-family="Arial, sans-serif" font-size="42" fill="#facc15">Step-by-Step Guide</text>
+
+  <!-- Checkmark Icon -->
+  <circle cx="950" cy="300" r="80" fill="#22c55e" opacity="0.9"/>
+  <path d="M 920 300 L 940 320 L 980 280" stroke="#ffffff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Bottom Info -->
+  <rect x="0" y="550" width="1200" height="80" fill="#1e3a8a" opacity="0.8"/>
+  <text x="600" y="600" font-family="Arial, sans-serif" font-size="28" font-weight="500" fill="#ffffff" text-anchor="middle">Complete Document Checklist • eKYC Requirements • Common Mistakes</text>
+</svg>

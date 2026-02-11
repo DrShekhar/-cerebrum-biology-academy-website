@@ -1,0 +1,58 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad7)"/>
+
+  <!-- Decorative calm waves -->
+  <path d="M 0 400 Q 150 380 300 400 T 600 400 T 900 400 T 1200 400 L 1200 630 L 0 630 Z" fill="#60a5fa" opacity="0.2"/>
+  <path d="M 0 450 Q 150 430 300 450 T 600 450 T 900 450 T 1200 450 L 1200 630 L 0 630 Z" fill="#60a5fa" opacity="0.15"/>
+
+  <!-- Brain Icon -->
+  <g transform="translate(120, 180)">
+    <ellipse cx="0" cy="0" rx="100" ry="90" fill="#ffffff" opacity="0.3"/>
+    <path d="M -50 -40 Q -70 -60 -50 -80 Q -30 -70 -10 -80 Q 10 -70 30 -80 Q 50 -60 30 -40" fill="#ffffff" opacity="0.3"/>
+    <path d="M -50 40 Q -70 60 -50 80 Q -30 70 -10 80 Q 10 70 30 80 Q 50 60 30 40" fill="#ffffff" opacity="0.3"/>
+    <!-- Calm indicator lines -->
+    <path d="M -80 0 Q -100 -10 -120 0 Q -100 10 -80 0" stroke="#22c55e" stroke-width="4" fill="none" opacity="0.8"/>
+    <path d="M 80 0 Q 100 -10 120 0 Q 100 10 80 0" stroke="#22c55e" stroke-width="4" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- 4-7-8 Breathing Visual -->
+  <g transform="translate(100, 400)">
+    <circle cx="0" cy="0" r="40" fill="#22c55e" opacity="0.8"/>
+    <text x="0" y="10" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="0" y="65" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Inhale</text>
+
+    <circle cx="100" cy="0" r="40" fill="#facc15" opacity="0.8"/>
+    <text x="100" y="10" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#78350f" text-anchor="middle">7</text>
+    <text x="100" y="65" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Hold</text>
+
+    <circle cx="200" cy="0" r="40" fill="#60a5fa" opacity="0.8"/>
+    <text x="200" y="10" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#ffffff" text-anchor="middle">8</text>
+    <text x="200" y="65" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Exhale</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="450" y="160" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">Stress Management</text>
+  <text x="450" y="230" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">&amp; Mental Health</text>
+  <text x="450" y="300" font-family="Arial, sans-serif" font-size="42" fill="#22c55e">Complete Wellness Guide</text>
+
+  <!-- Stats Box -->
+  <rect x="450" y="340" width="700" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="480" y="390" font-family="Arial, sans-serif" font-size="26" font-weight="600" fill="#fef3c7">🧠 Evidence-Based Techniques</text>
+  <text x="480" y="430" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• 4-7-8 Breathing (Harvard Method)</text>
+  <text x="480" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Pomodoro Technique (Prevent Burnout)</text>
+  <text x="480" y="510" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• CBT Cognitive Reframing</text>
+  <text x="480" y="550" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Crisis Protocols • Professional Help Resources • 24/7 Helpline</text>
+
+  <!-- Emergency Badge -->
+  <rect x="950" y="50" width="220" height="60" rx="30" fill="#ef4444" opacity="0.9"/>
+  <text x="1060" y="90" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#ffffff" text-anchor="middle">Emergency: 1800-599-0019</text>
+</svg>

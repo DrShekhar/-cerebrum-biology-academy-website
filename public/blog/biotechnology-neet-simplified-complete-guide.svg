@@ -1,0 +1,70 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad10" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#059669;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#047857;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad10)"/>
+
+  <!-- DNA Scissors (Restriction Enzyme) -->
+  <g transform="translate(100, 180)">
+    <!-- DNA -->
+    <path d="M 40 50 Q 20 70 40 90 Q 60 110 40 130 Q 20 150 40 170" stroke="#22c55e" stroke-width="8" fill="none" opacity="0.7"/>
+    <path d="M 120 50 Q 140 70 120 90 Q 100 110 120 130 Q 140 150 120 170" stroke="#22c55e" stroke-width="8" fill="none" opacity="0.7"/>
+    <!-- Connecting lines -->
+    <line x1="40" y1="70" x2="120" y2="70" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+    <line x1="40" y1="110" x2="120" y2="110" stroke="#ffffff" stroke-width="4" stroke-dasharray="10,5" opacity="0.6"/>
+    <line x1="40" y1="150" x2="120" y2="150" stroke="#ffffff" stroke-width="4" opacity="0.6"/>
+    <!-- Scissors -->
+    <g transform="translate(60, 110) rotate(-45)">
+      <circle cx="-15" cy="0" r="12" fill="#ef4444" opacity="0.9"/>
+      <circle cx="15" cy="0" r="12" fill="#ef4444" opacity="0.9"/>
+      <line x1="-15" y1="0" x2="-30" y2="20" stroke="#dc2626" stroke-width="4"/>
+      <line x1="15" y1="0" x2="30" y2="20" stroke="#dc2626" stroke-width="4"/>
+    </g>
+  </g>
+
+  <!-- Bt Cotton Plant -->
+  <g transform="translate(120, 400)">
+    <!-- Stem -->
+    <rect x="-5" y="0" width="10" height="80" fill="#16a34a"/>
+    <!-- Leaves -->
+    <ellipse cx="-20" cy="30" rx="15" ry="25" fill="#22c55e" opacity="0.8"/>
+    <ellipse cx="20" cy="50" rx="15" ry="25" fill="#22c55e" opacity="0.8"/>
+    <!-- Cotton -->
+    <circle cx="0" cy="0" r="20" fill="#ffffff" opacity="0.9"/>
+    <text x="0" y="120" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="600">Bt Cotton</text>
+  </g>
+
+  <!-- PCR Tubes -->
+  <g transform="translate(100, 500)">
+    <rect x="0" y="0" width="30" height="60" rx="5" fill="#3b82f6" opacity="0.8"/>
+    <rect x="40" y="0" width="30" height="60" rx="5" fill="#60a5fa" opacity="0.8"/>
+    <rect x="80" y="0" width="30" height="60" rx="5" fill="#93c5fd" opacity="0.8"/>
+    <ellipse cx="15" cy="0" rx="15" ry="5" fill="#1e40af" opacity="0.8"/>
+    <ellipse cx="55" cy="0" rx="15" ry="5" fill="#2563eb" opacity="0.8"/>
+    <ellipse cx="95" cy="0" rx="15" ry="5" fill="#3b82f6" opacity="0.8"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="400" y="160" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">Biotechnology</text>
+  <text x="400" y="240" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#ffffff">Simplified</text>
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="46" fill="#facc15">Complete NEET Guide</text>
+
+  <!-- Score Badge -->
+  <rect x="820" y="130" width="280" height="130" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="960" y="185" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#facc15" text-anchor="middle">16-24</text>
+  <text x="960" y="235" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#ffffff" text-anchor="middle">MARKS</text>
+
+  <!-- Key Topics Box -->
+  <rect x="400" y="350" width="750" height="230" rx="20" fill="#ffffff" opacity="0.1"/>
+  <text x="430" y="400" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">🧬 High ROI Topic (40 pages = 16-24 marks)</text>
+  <text x="430" y="445" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">✓ PCR (Taq Polymerase, 94°C-55°C-72°C)</text>
+  <text x="430" y="485" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">✓ Restriction Enzymes (EcoRI, BamHI)</text>
+  <text x="430" y="525" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">✓ Bt Cotton (cry gene), Insulin, Gene Therapy</text>
+  <text x="430" y="560" font-family="Arial, sans-serif" font-size="20" fill="#86efac">Easiest 16-24 marks in NEET Biology!</text>
+</svg>

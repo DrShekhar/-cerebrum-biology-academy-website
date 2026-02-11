@@ -1,0 +1,55 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#facc15;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#eab308;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad5)"/>
+
+  <!-- Open Book Icon -->
+  <g transform="translate(80, 180)">
+    <path d="M 0 20 L 0 220 Q 0 240 20 240 L 160 240 L 160 20 Q 160 0 140 0 L 20 0 Q 0 0 0 20 Z" fill="#ffffff" opacity="0.9"/>
+    <path d="M 200 20 L 200 220 Q 200 240 180 240 L 40 240 L 40 20 Q 40 0 60 0 L 180 0 Q 200 0 200 20 Z" fill="#ffffff" opacity="0.9"/>
+    <!-- Lines on pages -->
+    <line x1="20" y1="60" x2="140" y2="60" stroke="#fbbf24" stroke-width="3" opacity="0.5"/>
+    <line x1="20" y1="90" x2="140" y2="90" stroke="#fbbf24" stroke-width="3" opacity="0.5"/>
+    <line x1="20" y1="120" x2="140" y2="120" stroke="#f59e0b" stroke-width="4"/>
+    <line x1="20" y1="150" x2="140" y2="150" stroke="#fbbf24" stroke-width="3" opacity="0.5"/>
+    <line x1="60" y1="60" x2="180" y2="60" stroke="#fbbf24" stroke-width="3" opacity="0.5"/>
+    <line x1="60" y1="90" x2="180" y2="90" stroke="#f59e0b" stroke-width="4"/>
+    <line x1="60" y1="120" x2="180" y2="120" stroke="#fbbf24" stroke-width="3" opacity="0.5"/>
+  </g>
+
+  <!-- 4-Color Annotation Bars -->
+  <g transform="translate(100, 450)">
+    <rect x="0" y="0" width="40" height="100" fill="#ef4444" rx="5"/>
+    <rect x="50" y="0" width="40" height="100" fill="#3b82f6" rx="5"/>
+    <rect x="100" y="0" width="40" height="100" fill="#22c55e" rx="5"/>
+    <rect x="150" y="0" width="40" height="100" fill="#171717" rx="5"/>
+    <text x="100" y="130" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#78350f" text-anchor="middle">4-Color System</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="400" y="180" font-family="Arial, sans-serif" font-size="62" font-weight="bold" fill="#78350f">NCERT Line-by-Line</text>
+  <text x="400" y="250" font-family="Arial, sans-serif" font-size="62" font-weight="bold" fill="#78350f">Reading Strategy</text>
+  <text x="400" y="320" font-family="Arial, sans-serif" font-size="44" fill="#92400e">Score 600+ with This Method</text>
+
+  <!-- 3 Revisions Circle -->
+  <g transform="translate(900, 200)">
+    <circle cx="0" cy="0" r="100" fill="#78350f" opacity="0.9"/>
+    <text x="0" y="-15" font-family="Arial, sans-serif" font-size="56" font-weight="bold" fill="#facc15" text-anchor="middle">3</text>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="24" font-weight="600" fill="#fef3c7" text-anchor="middle">Revisions</text>
+    <text x="0" y="50" font-family="Arial, sans-serif" font-size="18" fill="#fef3c7" text-anchor="middle">Cycle</text>
+  </g>
+
+  <!-- Stats Box -->
+  <rect x="400" y="360" width="750" height="220" rx="15" fill="#78350f" opacity="0.85"/>
+  <text x="775" y="410" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#facc15" text-anchor="middle">85-90% NEET Questions from NCERT</text>
+  <text x="430" y="460" font-family="Arial, sans-serif" font-size="24" fill="#fef3c7">✓ 70-80% Retention after 3 revisions</text>
+  <text x="430" y="500" font-family="Arial, sans-serif" font-size="24" fill="#fef3c7">✓ 322 hours for Biology (Class 11 + 12)</text>
+  <text x="430" y="540" font-family="Arial, sans-serif" font-size="24" fill="#fef3c7">✓ Active annotation increases retention by 300%</text>
+</svg>
