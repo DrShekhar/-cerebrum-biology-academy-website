@@ -3,7 +3,7 @@
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
-import { RelatedCityLinks } from '@/components/city/RelatedCityLinks'
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
 import { Globe, Clock, MapPin, Phone, Star, CheckCircle, Users, BookOpen } from 'lucide-react'
 import Link from 'next/link'
 
