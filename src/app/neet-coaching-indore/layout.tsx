@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Indore | Biology Classes | Cerebrum Academy',
+    description: 'Best NEET biology coaching in Indore. 98% success rate. AIIMS faculty. Vijay Nagar, Palasia, Rau, Bhawarkua.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-indore',
   },

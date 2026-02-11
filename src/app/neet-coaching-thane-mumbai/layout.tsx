@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Thane Mumbai | Biology Classes | Cerebrum Academy',
+    description: 'Best NEET biology coaching in Thane Mumbai. 98% success rate. AIIMS faculty.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-thane-mumbai',
   },

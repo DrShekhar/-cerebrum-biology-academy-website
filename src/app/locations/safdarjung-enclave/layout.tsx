@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/locations/safdarjung-enclave',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Safdarjung Enclave | Near AIIMS | Cerebrum Academy',
+    description: 'Expert NEET Biology coaching for Safdarjung Enclave students. Near AIIMS & Green Park.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/safdarjung-enclave',
   },

@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-north-delhi',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in North Delhi | Rohini, Pitampura, Model Town | Cerebrum Academy',
+    description: 'Best NEET coaching for North Delhi students from Rohini, Pitampura, Model Town, Shalimar Bagh, Ashok Vihar.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-north-delhi',
   },

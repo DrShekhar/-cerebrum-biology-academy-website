@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Viman Nagar Pune | Biology Classes | Cerebrum Academy',
+    description: 'Best NEET biology coaching in Viman Nagar Pune. 98% success rate. AIIMS faculty. Kalyani Nagar, Kharadi, Wadgaon Sheri.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-viman-nagar-pune',
   },

@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     'NEET Biology coaching fees Delhi',
     'Best NEET coaching near me',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Lajpat Nagar | Walking Distance | Cerebrum Academy',
+    description: 'Best NEET Biology coaching in Lajpat Nagar - walking distance from our flagship center.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/lajpat-nagar',
   },

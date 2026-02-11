@@ -193,7 +193,7 @@ export default function NEETCoachingShimla() {
         cityName="Shimla"
         stateName="Himachal Pradesh"
         description="Best NEET coaching for Shimla students. Online classes from AIIMS faculty. 98% success rate. Serving Mall Road, Lakkar Bazaar, Sanjauli, Solan. IGMC Shimla preparation."
-        url="https://cerebrumacademy.in/neet-coaching-shimla"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-shimla"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-sky-50 via-white to-cyan-50">

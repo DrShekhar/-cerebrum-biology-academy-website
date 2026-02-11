@@ -24,6 +24,11 @@ export const metadata: Metadata = {
       'Build strong Biology foundation in Class 9 for future NEET success. NCERT-based, interactive learning with expert faculty.',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Class 9 Biology Foundation | Pre-NEET Preparation | Cerebrum Academy',
+    description: 'Class 9 Biology foundation course with NEET-aligned curriculum.',
+  },
 }
 
 export default function Class9FoundationLayout({ children }: { children: React.ReactNode }) {

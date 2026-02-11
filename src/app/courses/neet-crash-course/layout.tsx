@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Crash Course 2026 | 3-Month Intensive Biology Program | Cerebrum',
+    description: 'Intensive 3-month NEET crash course for Biology. Complete syllabus revision, 100+ mock tests, daily practice sessions.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/neet-crash-course',
   },

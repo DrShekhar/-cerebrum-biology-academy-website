@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kerala Biology Tuition & Coaching Online | NEET + Board Prep | Cerebrum Academy',
+    description: 'Best Kerala State Board Biology tuition online. 98% success rate. AIIMS faculty.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/kerala-biology-tuition-coaching',
   },

@@ -123,7 +123,12 @@ export async function generateMetadata({
   return {
     title: data.title,
     description: data.description,
-    alternates: {
+    twitter: {
+    card: 'summary_large_image',
+    title: 'Biology Tuition Hauz Khas | Classes 9-12 Near IIT Delhi | Cerebrum Academy',
+    description: 'Best biology tuition in Hauz Khas for Classes 9-12. Near IIT Delhi, expert AIIMS faculty, NEET foundation.',
+  },
+  alternates: {
       canonical: data.canonical,
     },
     openGraph: {

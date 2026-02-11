@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in Manimajra Chandigarh | Growing Hub | Cerebrum Academy',
+    description: 'Best NEET coaching for Manimajra Chandigarh students. 98% success rate, AIIMS faculty.',
+  },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-manimajra' },
 }
 

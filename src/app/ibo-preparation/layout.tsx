@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     'IBO practical preparation',
     'international biology competition',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IBO Preparation Online | International Biology Olympiad Coaching',
+    description: 'Expert IBO preparation for students worldwide.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ibo-preparation/',
   },

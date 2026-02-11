@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     siteName: 'Cerebrum Biology Academy',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Punjab 2026 | Online Biology Classes | Cerebrum Academy',
+    description: 'Top NEET Biology coaching in Punjab with AIIMS faculty.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-punjab',
   },

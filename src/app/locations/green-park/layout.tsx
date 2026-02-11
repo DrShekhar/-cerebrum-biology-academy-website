@@ -82,6 +82,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/green-park',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Green Park Delhi | Near Hauz Khas | Cerebrum',
+    description: 'NEET Biology coaching center in Green Park, Delhi. Near Yellow Line Metro, Hauz Khas, IIT Delhi.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/green-park',
   },

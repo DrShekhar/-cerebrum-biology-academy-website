@@ -183,7 +183,7 @@ export default function NEETCoachingKarnal() {
         cityName="Karnal"
         stateName="Haryana"
         description="Best NEET coaching for Karnal students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Sector 12, NDRI Area, Kunjpura."
-        url="https://cerebrumacademy.in/neet-coaching-karnal"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-karnal"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-emerald-50 via-white to-green-50">

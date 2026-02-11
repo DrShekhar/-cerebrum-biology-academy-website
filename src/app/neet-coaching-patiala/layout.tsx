@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Patiala 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Patiala. Online classes from AIIMS-trained faculty. 98% success rate. Royal City students excel with us.',
-    url: 'https://cerebrumacademy.in/neet-coaching-patiala',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-patiala',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Patiala | Cerebrum Biology Academy',
+    description: 'Top NEET biology coaching in Patiala, Punjab. 98% success rate. The Mall, Rajpura Road.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-patiala',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-patiala',
   },
   other: {
     'geo.region': 'IN-PB',

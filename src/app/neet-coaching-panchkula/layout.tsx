@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in Panchkula | Cerebrum Biology Academy',
+    description: 'Top NEET biology coaching in Panchkula, Haryana. 98% success rate. Sector 9, 12, 15.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-panchkula',
   },

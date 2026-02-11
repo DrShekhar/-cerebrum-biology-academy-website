@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free NEET Biology Resources [Notes, PYQs, Formulas] | Cerebrum',
+    description: 'Download FREE NEET Biology notes, PYQs, formula sheets & study materials. Used by 2500+ successful students.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/free-resources',
   },

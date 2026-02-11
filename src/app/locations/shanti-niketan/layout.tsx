@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     'NEET coaching Diplomatic Enclave',
     'Biology classes West Delhi premium',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Shanti Niketan | Premium Delhi | Cerebrum Academy',
+    description: 'Premium NEET Biology coaching for Shanti Niketan families. Affluent locality near Chanakyapuri.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/shanti-niketan',
   },

@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Telangana Inter Biology Coaching Online | NEET + Board Prep | Cerebrum Academy',
+    description: 'Best Telangana Intermediate Biology coaching online. 98% success rate. AIIMS faculty.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/telangana-inter-biology-coaching',
   },

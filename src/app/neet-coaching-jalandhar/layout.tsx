@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Jalandhar 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Jalandhar. Online classes from AIIMS-trained faculty. 98% success rate. Doaba region students excel with us.',
-    url: 'https://cerebrumacademy.in/neet-coaching-jalandhar',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-jalandhar',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Jalandhar | Cerebrum Biology Academy',
+    description: 'Top NEET biology coaching in Jalandhar, Punjab. 98% success rate. Model Town, BMC Chowk.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-jalandhar',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-jalandhar',
   },
   other: {
     'geo.region': 'IN-PB',

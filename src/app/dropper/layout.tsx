@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     'NEET second attempt',
     'best coaching for NEET repeaters',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Dropper Course 2025 | Best Biology Coaching for Repeaters | Cerebrum Academy',
+    description: 'Specialized NEET Biology coaching for droppers. Transform your second attempt into success with AIIMS faculty guidance.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/dropper',
   },

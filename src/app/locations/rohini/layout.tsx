@@ -82,6 +82,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/locations/rohini',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Rohini Delhi | DC Chowk | Cerebrum Biology Academy',
+    description: 'NEET Biology coaching center in Rohini, Delhi at DC Chowk. AIIMS faculty, small batches, near Rohini West Metro.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/rohini',
   },

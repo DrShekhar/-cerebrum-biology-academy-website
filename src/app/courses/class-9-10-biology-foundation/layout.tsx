@@ -28,6 +28,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/courses/class-9-10-biology-foundation',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Class 9-10 Biology Foundation Course | Pre-NEET Coaching | Cerebrum',
+    description: 'Best Biology tuition for Class 9 & 10 students in Delhi. CBSE & ICSE syllabus with NEET foundation.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/courses/class-9-10-biology-foundation',
   },

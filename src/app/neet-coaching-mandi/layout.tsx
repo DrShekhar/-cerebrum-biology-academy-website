@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Mandi 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Mandi. Online classes from AIIMS-trained faculty. 98% success rate. SLBSGMC Nerchowk preparation from home.',
-    url: 'https://cerebrumacademy.in/neet-coaching-mandi',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-mandi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Mandi 2026 | Sadar District | Cerebrum Academy',
+    description: 'Top NEET coaching for Mandi & Sundernagar students. 98% success rate. Online classes from AIIMS faculty.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-mandi',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mandi',
   },
   other: {
     'geo.region': 'IN-HP',

@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Chandigarh | Cerebrum Biology Academy',
+    description: 'Top NEET biology coaching in Chandigarh. 98% success rate. Sector 17, 22, 34, Manimajra.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh',
   },

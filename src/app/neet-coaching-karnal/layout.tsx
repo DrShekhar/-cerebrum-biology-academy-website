@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Karnal 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Karnal. Online classes from AIIMS-trained faculty. 98% success rate. KCGMC city students excel with us.',
-    url: 'https://cerebrumacademy.in/neet-coaching-karnal',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-karnal',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Karnal 2026 | KCGMC City | Cerebrum Academy',
+    description: 'Top NEET coaching for Karnal students. 98% success rate. Online classes from AIIMS faculty.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-karnal',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-karnal',
   },
   other: {
     'geo.region': 'IN-HR',

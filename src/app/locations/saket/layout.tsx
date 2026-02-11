@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     'NEET Biology coaching South Delhi',
     'Medical coaching Saket',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching in Saket | Near Select Citywalk | Cerebrum Academy',
+    description: 'Best NEET Biology coaching for Saket students. 10 min from Select Citywalk, near Max Hospital.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/saket',
   },

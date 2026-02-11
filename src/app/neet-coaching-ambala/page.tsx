@@ -190,7 +190,7 @@ export default function NEETCoachingAmbala() {
         cityName="Ambala"
         stateName="Haryana"
         description="Best NEET coaching for Ambala students. Online classes from AIIMS faculty. 98% success rate. Serving Ambala Cantt, Ambala City, Model Town, Barara."
-        url="https://cerebrumacademy.in/neet-coaching-ambala"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-ambala"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-amber-50 via-white to-orange-50">

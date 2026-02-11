@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/class-12',
     siteName: 'Cerebrum Biology Academy',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Class 12 NEET Biology Coaching | Board + NEET Preparation | Cerebrum Academy',
+    description: 'Expert Class 12 Biology coaching for CBSE boards and NEET preparation. Integrated curriculum by AIIMS faculty.',
+  },
 }
 
 export default function Class12Layout({ children }: { children: React.ReactNode }) {

@@ -182,7 +182,7 @@ export default function NEETCoachingJalandhar() {
         cityName="Jalandhar"
         stateName="Punjab"
         description="Best NEET coaching for Jalandhar students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Urban Estate, Maqsudan, Phagwara, Kapurthala."
-        url="https://cerebrumacademy.in/neet-coaching-jalandhar"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-jalandhar"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-purple-50 via-white to-violet-50">

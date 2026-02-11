@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Mohali | Cerebrum Biology Academy',
+    description: 'Top NEET biology coaching in Mohali, Punjab. 98% success rate. Phase 3B2, Sector 70.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mohali',
   },

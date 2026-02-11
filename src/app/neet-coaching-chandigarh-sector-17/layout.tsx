@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in Sector 17 Chandigarh | City Center | Cerebrum Academy',
+    description: 'Best NEET coaching for Sector 17 Chandigarh students. 98% success rate, AIIMS faculty.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh-sector-17',
   },

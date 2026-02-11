@@ -193,7 +193,7 @@ export default function NEETCoachingLudhiana() {
         cityName="Ludhiana"
         stateName="Punjab"
         description="Best NEET coaching for Ludhiana students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Civil Lines, Sarabha Nagar, Dugri."
-        url="https://cerebrumacademy.in/neet-coaching-ludhiana"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-ludhiana"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-blue-50 via-white to-indigo-50">

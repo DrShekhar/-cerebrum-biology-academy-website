@@ -18,6 +18,11 @@ export const metadata: Metadata = {
     'Elite NEET coaching Delhi',
     'NEET Biology coaching fees Delhi',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Golf Links | Ultra-Premium Delhi | Cerebrum Academy',
+    description: 'Exclusive NEET Biology coaching for Golf Links families. Elite locality near India Gate.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/golf-links',
   },

@@ -27,6 +27,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cerebrum vs Aakash Chandigarh | NEET Biology Coaching Comparison 2026',
+    description: 'Compare Cerebrum Biology Academy vs Aakash Institute Chandigarh for NEET preparation.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/cerebrum-vs-aakash-chandigarh',
   },

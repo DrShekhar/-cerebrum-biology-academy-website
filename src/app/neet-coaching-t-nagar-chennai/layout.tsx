@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in T Nagar Chennai | Biology Classes | Cerebrum Academy',
+    description: 'Best NEET biology coaching in T Nagar Chennai. 98% success rate. AIIMS faculty.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-t-nagar-chennai',
   },

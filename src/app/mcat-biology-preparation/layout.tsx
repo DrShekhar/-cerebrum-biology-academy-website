@@ -14,6 +14,11 @@ export const metadata: Metadata = {
     'medical school admissions test',
     'MCAT 520+ preparation',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MCAT Biology Preparation | Online MCAT Biology Tutoring',
+    description: 'Expert MCAT Biology preparation with Campbell Biology-based curriculum.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/mcat-biology-preparation/',
   },

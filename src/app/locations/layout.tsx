@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_IN',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Centers in Delhi NCR | Cerebrum Biology Academy',
+    description: 'Find the best NEET Biology coaching center near you.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations',
   },

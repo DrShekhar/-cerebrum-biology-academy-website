@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Ludhiana 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Ludhiana. Online classes from AIIMS-trained faculty. 98% success rate. Punjab largest city deserves best preparation.',
-    url: 'https://cerebrumacademy.in/neet-coaching-ludhiana',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-ludhiana',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Ludhiana | Cerebrum Biology Academy',
+    description: 'Top NEET biology coaching in Ludhiana, Punjab. 98% success rate. Model Town, Civil Lines.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-ludhiana',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ludhiana',
   },
   other: {
     'geo.region': 'IN-PB',

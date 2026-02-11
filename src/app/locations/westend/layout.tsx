@@ -25,6 +25,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/locations/westend',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Westend | Near Vasant Vihar | Cerebrum Academy',
+    description: 'Premium NEET Biology coaching for Westend & Vasant Vihar students. Near DPS RK Puram.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/westend',
   },

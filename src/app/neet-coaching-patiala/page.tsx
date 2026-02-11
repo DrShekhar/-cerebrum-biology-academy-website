@@ -182,7 +182,7 @@ export default function NEETCoachingPatiala() {
         cityName="Patiala"
         stateName="Punjab"
         description="Best NEET coaching for Patiala students. Online classes from AIIMS faculty. 98% success rate. Serving Model Town, Leela Bhawan, Urban Estate, Tripuri."
-        url="https://cerebrumacademy.in/neet-coaching-patiala"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-patiala"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-rose-50 via-white to-pink-50">

@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Coaching in Sector 22 Chandigarh | Commercial Hub | Cerebrum Academy',
+    description: 'Best NEET coaching for Sector 22 Chandigarh students. 98% success rate, AIIMS faculty.',
+  },
   alternates: { canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-chandigarh-sector-22' },
 }
 

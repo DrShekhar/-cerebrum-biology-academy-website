@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Ambala 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Ambala. Online classes from AIIMS-trained faculty. 98% success rate. Affordable fees with proven results.',
-    url: 'https://cerebrumacademy.in/neet-coaching-ambala',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-ambala',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Ambala 2026 | Cantonment & City | Cerebrum Academy',
+    description: 'Top NEET coaching for Ambala students. 98% success rate. Online classes from AIIMS faculty.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-ambala',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-ambala',
   },
   other: {
     'geo.region': 'IN-HR',

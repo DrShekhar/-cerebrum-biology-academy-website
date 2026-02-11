@@ -17,6 +17,11 @@ export const metadata: Metadata = {
     'Biology classes Nehru Place',
     'NEET coaching Okhla',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'NEET Biology Coaching Kalkaji | Near Nehru Place | Cerebrum Academy',
+    description: 'Best NEET Biology coaching for Kalkaji students. Near Nehru Place, Govindpuri, Kalkaji Temple.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/locations/kalkaji',
   },

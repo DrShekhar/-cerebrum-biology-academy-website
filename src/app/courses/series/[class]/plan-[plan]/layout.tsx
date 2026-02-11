@@ -21,7 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       locale: 'en_IN',
       type: 'website',
     },
-    alternates: {
+    twitter: {
+    card: 'summary_large_image',
+    title: '${className} ${planName} Plan | NEET Biology Coaching - Cerebrum Academy',
+    description: '${planName} coaching plan for ${className} students. Expert AIIMS faculty, comprehensive NEET preparation.',
+  },
+  alternates: {
       canonical: `https://cerebrumbiologyacademy.com/courses/series/${resolvedParams.class}/plan-${resolvedParams.plan}`,
     },
   }

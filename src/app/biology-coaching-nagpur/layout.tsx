@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Biology Coaching in Nagpur | NEET Tuition | Cerebrum Academy',
+    description: 'Best biology coaching & NEET tuition in Nagpur. 98% success rate. AIIMS faculty.',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/biology-coaching-nagpur',
   },

@@ -16,6 +16,11 @@ export const metadata: Metadata = {
     'International Baccalaureate Biology',
     'IB Diploma Biology',
   ],
+  twitter: {
+    card: 'summary_large_image',
+    title: 'IB Biology Online Classes | HL & SL Tutoring | IA Support',
+    description: 'Expert IB Biology tutoring for Higher Level (HL) and Standard Level (SL).',
+  },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/ib-biology-online-classes/',
   },

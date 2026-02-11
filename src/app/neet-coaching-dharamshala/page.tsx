@@ -183,7 +183,7 @@ export default function NEETCoachingDharamshala() {
         cityName="Dharamshala"
         stateName="Himachal Pradesh"
         description="Best NEET coaching for Dharamshala & Kangra students. Online classes from AIIMS faculty. 98% success rate. RPGMC Tanda preparation. Serving McLeodGanj, Palampur, Kangra."
-        url="https://cerebrumacademy.in/neet-coaching-dharamshala"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-dharamshala"
       />
 
       <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-emerald-50">

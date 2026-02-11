@@ -114,7 +114,7 @@ export default function NEETCoachingMandi() {
       <CitySchema
         cityName="Mandi"
         stateName="Himachal Pradesh"
-        url="https://cerebrumacademy.in/neet-coaching-mandi"
+        url="https://cerebrumbiologyacademy.com/neet-coaching-mandi"
         description="Best NEET coaching in Mandi, Himachal Pradesh. Online classes from AIIMS faculty for Mandi, Sundernagar, Nerchowk students. 98% success rate. Prepare for SLBSGMC from home."
         areaServed={['Mandi', 'Sundernagar', 'Nerchowk', 'Pandoh', 'Jogindernagar', 'Karsog', 'Sarkaghat', 'Rewalsar']}
         faqs={faqs}
@@ -158,14 +158,14 @@ export default function NEETCoachingMandi() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Mandi%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mandi%20and%20interested%20in%20NEET%20coaching.%20Please%20share%20details."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
                 >
                   <MessageCircle className="w-5 h-5" />
                   WhatsApp Now
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5" />
@@ -642,14 +642,14 @@ export default function NEETCoachingMandi() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://wa.me/919872100215?text=Hi%2C%20I%27m%20from%20Mandi%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
+                  href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20from%20Mandi%20and%20want%20to%20join%20NEET%20coaching.%20Please%20share%20the%20admission%20process."
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300 text-lg"
                 >
                   <MessageCircle className="w-6 h-6" />
                   Book Free Demo Class
                 </Link>
                 <Link
-                  href="tel:+919872100215"
+                  href="tel:+918826444334"
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/20 transition-all duration-300 text-lg"
                 >
                   <Phone className="w-6 h-6" />

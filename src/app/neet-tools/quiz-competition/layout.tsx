@@ -19,6 +19,11 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/neet-tools/quiz-competition',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Quiz Competition - Classroom Quiz Tool | Cerebrum Biology Academy',
+    description: 'Conduct engaging team-based quizzes in your classroom. Two teams compete with live score updates on all devices.',
+  },
 }
 
 export default function QuizCompetitionLayout({ children }: { children: React.ReactNode }) {

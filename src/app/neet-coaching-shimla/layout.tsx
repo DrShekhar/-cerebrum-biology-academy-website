@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Shimla 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Shimla. Online classes from AIIMS-trained faculty. 98% success rate. HP capital students excel with us. IGMC Shimla preparation.',
-    url: 'https://cerebrumacademy.in/neet-coaching-shimla',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-shimla',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Shimla 2026 | Hill Capital | Cerebrum Academy',
+    description: 'Top NEET coaching for Shimla students. 98% success rate. Online classes from AIIMS faculty.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-shimla',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-shimla',
   },
   other: {
     'geo.region': 'IN-HP',

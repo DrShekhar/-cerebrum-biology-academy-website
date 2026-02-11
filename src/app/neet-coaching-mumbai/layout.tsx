@@ -10,13 +10,18 @@ export const metadata: Metadata = {
     title: 'Best NEET Coaching in Mumbai 2026 | Cerebrum Biology Academy',
     description:
       'Join the most trusted NEET coaching for Mumbai. Online classes from AIIMS-trained faculty. 98% success rate. Prepare for top Maharashtra medical colleges from home.',
-    url: 'https://cerebrumacademy.in/neet-coaching-mumbai',
+    url: 'https://cerebrumbiologyacademy.com/neet-coaching-mumbai',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
     type: 'website',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best NEET Coaching in Mumbai 2026 | Maharashtra | Cerebrum Academy',
+    description: 'Top NEET coaching for Mumbai students. 98% success rate. Online classes from AIIMS faculty.',
+  },
   alternates: {
-    canonical: 'https://cerebrumacademy.in/neet-coaching-mumbai',
+    canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-mumbai',
   },
   other: {
     'geo.region': 'IN-MH',
