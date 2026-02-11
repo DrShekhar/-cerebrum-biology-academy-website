@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
 import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA';
-import VideoTestimonialsSection from '@/components/testimonials/VideoTestimonialsSection';
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection';
 import LocalitySchema from '@/components/seo/LocalitySchema';
-import RelatedCityLinks from '@/components/seo/RelatedCityLinks';
-import PricingSection from '@/components/city/PricingSection';
-import CostComparisonSection from '@/components/city/CostComparisonSection';
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks';
+import { PricingSection } from '@/components/city/PricingSection';
+import { CostComparisonSection } from '@/components/city/CostComparisonSection';
 
 export default function PageContent() {
   const cityData = {

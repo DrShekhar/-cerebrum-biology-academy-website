@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import SmartWhatsAppCTA from '@/components/conversion/SmartWhatsAppCTA';
-import VideoTestimonialsSection from '@/components/testimonials/VideoTestimonialsSection';
+import { VideoTestimonialsSection } from '@/components/testimonials/VideoTestimonialsSection';
 import LocalitySchema from '@/components/seo/LocalitySchema';
-import PricingSection from '@/components/city/PricingSection';
-import CostComparisonSection from '@/components/city/CostComparisonSection';
-import RelatedCityLinks from '@/components/seo/RelatedCityLinks';
+import { PricingSection } from '@/components/city/PricingSection';
+import { CostComparisonSection } from '@/components/city/CostComparisonSection';
+import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks';
 
 export default function NEETCoachingPageContent() {
   const faqData = [
