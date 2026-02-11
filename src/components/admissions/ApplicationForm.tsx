@@ -1502,10 +1502,10 @@ export default function ApplicationForm() {
                 </a>{' '}
                 or{' '}
                 <a
-                  href="mailto:admissions@cerebrumbiology.com"
+                  href="mailto:admissions@cerebrumbiologyacademy.com"
                   className="text-blue-600 font-medium hover:underline"
                 >
-                  admissions@cerebrumbiology.com
+                  admissions@cerebrumbiologyacademy.com
                 </a>
               </p>
             </div>

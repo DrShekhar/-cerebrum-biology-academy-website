@@ -222,7 +222,7 @@ export function previewTemplate(content: string): string {
     nextFollowUpAt: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000),
     users: {
       name: 'Sarah Williams',
-      email: 'sarah@cerebrumacademy.com',
+      email: 'sarah@cerebrumbiologyacademy.com',
       phone: '+1234567891',
     },
     demo_bookings: [

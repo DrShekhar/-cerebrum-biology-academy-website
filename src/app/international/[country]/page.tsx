@@ -39,18 +39,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       `${config.name.toLowerCase()} biology tutor`,
     ],
     alternates: {
-      canonical: `https://cerebrumacademy.com/international/${country}/`,
+      canonical: `https://cerebrumbiologyacademy.com/international/${country}/`,
     },
     openGraph: {
       title: `Biology Tutoring for ${config.name} Students`,
       description: `Expert ${config.examSystems[0]} tutoring. From ${priceString}.`,
-      url: `https://cerebrumacademy.com/international/${country}/`,
+      url: `https://cerebrumbiologyacademy.com/international/${country}/`,
       siteName: 'Cerebrum Biology Academy',
       locale: config.hreflang.replace('-', '_'),
       type: 'website',
       images: [
         {
-          url: `https://cerebrumacademy.com/og/international-${country}.jpg`,
+          url: `https://cerebrumbiologyacademy.com/og/international-${country}.jpg`,
           width: 1200,
           height: 630,
           alt: `Biology tutoring for ${config.name} students`,
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title: `Biology Tutoring for ${config.name} Students`,
       description: `Expert tutoring for ${config.examSystems.slice(0, 2).join(' & ')}`,
-      images: [`https://cerebrumacademy.com/og/international-${country}.jpg`],
+      images: [`https://cerebrumbiologyacademy.com/og/international-${country}.jpg`],
     },
   }
 }
@@ -73,8 +73,8 @@ function generateStructuredData(config: NonNullable<ReturnType<typeof getCountry
     '@type': 'EducationalOrganization',
     name: 'Cerebrum Biology Academy',
     description: `Expert biology tutoring for ${config.name} students`,
-    url: `https://cerebrumacademy.com/international/${config.code}/`,
-    logo: 'https://cerebrumacademy.com/logo.png',
+    url: `https://cerebrumbiologyacademy.com/international/${config.code}/`,
+    logo: 'https://cerebrumbiologyacademy.com/logo.png',
     areaServed: {
       '@type': 'Country',
       name: config.name,

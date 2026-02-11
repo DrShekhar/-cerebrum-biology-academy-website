@@ -641,10 +641,10 @@ export default function InternationalProgramsPage() {
                 Regional Email Support
               </h3>
               <div className="text-xs sm:text-sm text-gray-600 space-y-1">
-                <div>americas@cerebrum.edu</div>
-                <div>europe@cerebrum.edu</div>
-                <div>apac@cerebrum.edu</div>
-                <div>mena@cerebrum.edu</div>
+                <div>americas@cerebrumbiologyacademy.com</div>
+                <div>europe@cerebrumbiologyacademy.com</div>
+                <div>apac@cerebrumbiologyacademy.com</div>
+                <div>mena@cerebrumbiologyacademy.com</div>
               </div>
             </div>
 

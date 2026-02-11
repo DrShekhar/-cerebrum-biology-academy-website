@@ -150,7 +150,7 @@ const Distribution: React.FC = () => {
         testId: 'test_001',
         testTitle: 'NEET Biology Mock Test 1',
         distributionType: 'online',
-        url: 'https://app.cerebrumacademy.com/test/neet-bio-001',
+        url: 'https://app.cerebrumbiologyacademy.com/test/neet-bio-001',
         recipients: ['student1@example.com', 'student2@example.com'],
         status: 'active',
         accessCount: 45,
@@ -214,7 +214,7 @@ const Distribution: React.FC = () => {
     setLoading(true)
     setTimeout(() => {
       const testId = `test_${Date.now()}`
-      const link = `https://app.cerebrumacademy.com/test/${testId}`
+      const link = `https://app.cerebrumbiologyacademy.com/test/${testId}`
       setGeneratedLink(link)
 
       const newDistribution: TestDistribution = {
@@ -245,7 +245,7 @@ const Distribution: React.FC = () => {
     setLoading(true)
     setTimeout(() => {
       // Mock QR code generation
-      const qrData = `https://app.cerebrumacademy.com/test/qr_${Date.now()}`
+      const qrData = `https://app.cerebrumbiologyacademy.com/test/qr_${Date.now()}`
       setQrCodeData(qrData)
 
       const newDistribution: TestDistribution = {
@@ -335,7 +335,7 @@ const Distribution: React.FC = () => {
   // Generate Embed Code
   const generateEmbedCode = () => {
     const embedHtml = `<iframe
-  src="https://app.cerebrumacademy.com/embed/test/${Date.now()}"
+  src="https://app.cerebrumbiologyacademy.com/embed/test/${Date.now()}"
   width="${embedOptions.width}"
   height="${embedOptions.height}"
   style="border: none; ${embedOptions.responsiveMode ? 'max-width: 100%;' : ''}"
