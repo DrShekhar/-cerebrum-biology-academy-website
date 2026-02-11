@@ -42,8 +42,8 @@ export default function Layout({
       <LocalitySchema 
         cityName="Sydney"
         country="Australia"
-        latitude=-33.8688
-        longitude=151.2093
+        latitude={-33.8688}
+        longitude={151.2093}
         phone="+918826444334"
         whatsapp="918826444334"
         email="info@cerebrumbiologyacademy.com"

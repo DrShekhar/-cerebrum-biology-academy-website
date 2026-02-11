@@ -42,8 +42,8 @@ export default function Layout({
       <LocalitySchema 
         cityName="Toronto"
         country="Canada"
-        latitude=43.6532
-        longitude=-79.3832
+        latitude={43.6532}
+        longitude={-79.3832}
         phone="+918826444334"
         whatsapp="918826444334"
         email="info@cerebrumbiologyacademy.com"

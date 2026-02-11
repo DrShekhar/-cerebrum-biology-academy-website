@@ -42,8 +42,8 @@ export default function Layout({
       <LocalitySchema 
         cityName="London"
         country="UK"
-        latitude=51.5074
-        longitude=-0.1278
+        latitude={51.5074}
+        longitude={-0.1278}
         phone="+918826444334"
         whatsapp="918826444334"
         email="info@cerebrumbiologyacademy.com"

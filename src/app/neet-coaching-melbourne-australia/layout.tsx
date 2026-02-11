@@ -42,8 +42,8 @@ export default function Layout({
       <LocalitySchema 
         cityName="Melbourne"
         country="Australia"
-        latitude=-37.8136
-        longitude=144.9631
+        latitude={-37.8136}
+        longitude={144.9631}
         phone="+918826444334"
         whatsapp="918826444334"
         email="info@cerebrumbiologyacademy.com"

@@ -270,7 +270,6 @@ const speakableSchema = {
   },
 }
 
-]
 
 export default function NEETCoachingDUNorthCampusPage() {
   return (

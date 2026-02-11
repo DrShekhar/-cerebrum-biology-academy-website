@@ -42,8 +42,8 @@ export default function Layout({
       <LocalitySchema 
         cityName="Vancouver"
         country="Canada"
-        latitude=49.2827
-        longitude=-123.1207
+        latitude={49.2827}
+        longitude={-123.1207}
         phone="+918826444334"
         whatsapp="918826444334"
         email="info@cerebrumbiologyacademy.com"

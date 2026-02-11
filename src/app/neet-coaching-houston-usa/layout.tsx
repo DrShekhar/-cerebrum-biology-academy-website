@@ -42,8 +42,8 @@ export default function Layout({
       <LocalitySchema 
         cityName="Houston"
         country="USA"
-        latitude=29.7604
-        longitude=-95.3698
+        latitude={29.7604}
+        longitude={-95.3698}
         phone="+918826444334"
         whatsapp="918826444334"
         email="info@cerebrumbiologyacademy.com"

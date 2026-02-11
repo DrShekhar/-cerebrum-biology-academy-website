@@ -42,8 +42,8 @@ export default function Layout({
       <LocalitySchema 
         cityName="New York"
         country="USA"
-        latitude=40.7128
-        longitude=-74.006
+        latitude={40.7128}
+        longitude={-74.006}
         phone="+918826444334"
         whatsapp="918826444334"
         email="info@cerebrumbiologyacademy.com"

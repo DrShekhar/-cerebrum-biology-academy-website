@@ -347,7 +347,6 @@ const localBusinessSchema = {
   ],
 }
 
-]
 
 export default function NEETCoachingDwarkaSector10Page() {
   return (

@@ -51,7 +51,6 @@ const faqs = [
   { q: 'How do I start NEET preparation from Colombo?', a: 'WhatsApp 918826444334 for a free demo class. We assess your level and recommend the right NEET course.' },
 ]
 
-]
 
 export default function NEETCoachingColomboPage() {
   return (
