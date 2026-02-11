@@ -131,7 +131,17 @@ export function getPostBySlug(slug: string): {
   }
 
   const fileContents = fs.readFileSync(filePath, 'utf8')
-  const { data, content } = matter(fileContents)
+
+  let data: Record<string, any>
+  let content: string
+  try {
+    const parsed = matter(fileContents)
+    data = parsed.data
+    content = parsed.content
+  } catch (error) {
+    console.warn(`[Blog] Failed to parse frontmatter for ${slug}:`, error instanceof Error ? error.message : error)
+    return null
+  }
 
   const stats = readingTime(content)
   const toc = extractTableOfContents(content)
