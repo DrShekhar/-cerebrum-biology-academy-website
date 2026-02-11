@@ -68,7 +68,7 @@ export default function NEETCoachingPageContent() {
               NEET Coaching in Dallas, USA
             </h1>
             <p className="text-xl sm:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              NEET Coaching in Dallas - Growing Indian tech hub's premier medical entrance prep with Texas CBSE school partnerships.
+              NEET Coaching in Dallas - Growing Indian tech hub&apos;s premier medical entrance prep with Texas CBSE school partnerships.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <SmartWhatsAppCTA 
@@ -149,7 +149,7 @@ export default function NEETCoachingPageContent() {
             <div key="1" className="bg-blue-50 p-4 rounded-lg border border-blue-200">Plano East Senior High School</div>
             <div key="2" className="bg-blue-50 p-4 rounded-lg border border-blue-200">Frisco High School</div>
             <div key="3" className="bg-blue-50 p-4 rounded-lg border border-blue-200">Lakewood High School</div>
-            <div key="4" className="bg-blue-50 p-4 rounded-lg border border-blue-200">St Mark's School of Texas</div>
+            <div key="4" className="bg-blue-50 p-4 rounded-lg border border-blue-200">St Mark&apos;s School of Texas</div>
           </div>
         </div>
       </section>

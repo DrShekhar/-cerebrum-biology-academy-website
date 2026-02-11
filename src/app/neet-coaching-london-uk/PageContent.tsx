@@ -58,7 +58,7 @@ export function PageContent() {
             NEET Coaching in London, UK
           </h1>
           <p className="text-xl mb-6 text-blue-100">
-            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh's proven methodology.
+            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh&apos;s proven methodology.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -186,7 +186,7 @@ export function PageContent() {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li key="0">Royal Grammar School London</li>
                   <li key="1">City of London School</li>
-                  <li key="2">St Paul's School</li>
+                  <li key="2">St Paul&apos;s School</li>
                   <li key="3">Dulwich College</li>
                   <li key="4">Mill Hill School</li>
             </ul>
@@ -284,7 +284,7 @@ export function PageContent() {
             Join 500+ Successful NEET Students
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your preparation with India's most trusted NEET coaching. Limited seats available in London batch.
+            Start your preparation with India&apos;s most trusted NEET coaching. Limited seats available in London batch.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

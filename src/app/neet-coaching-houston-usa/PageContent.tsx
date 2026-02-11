@@ -58,7 +58,7 @@ export function PageContent() {
             NEET Coaching in Houston, USA
           </h1>
           <p className="text-xl mb-6 text-blue-100">
-            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh's proven methodology.
+            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh&apos;s proven methodology.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -185,7 +185,7 @@ export function PageContent() {
           <div className="bg-white border border-gray-200 rounded-lg p-8">
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <li key="0">Kinkaid School</li>
-                  <li key="1">St. John's School</li>
+                  <li key="1">St. John&apos;s School</li>
                   <li key="2">Bellaire High School IB</li>
                   <li key="3">Awty International School</li>
                   <li key="4">The Woodlands High School</li>
@@ -284,7 +284,7 @@ export function PageContent() {
             Join 500+ Successful NEET Students
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your preparation with India's most trusted NEET coaching. Limited seats available in Houston batch.
+            Start your preparation with India&apos;s most trusted NEET coaching. Limited seats available in Houston batch.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

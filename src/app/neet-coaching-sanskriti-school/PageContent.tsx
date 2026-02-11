@@ -47,7 +47,7 @@ export default function PageContent() {
             NEET Coaching for Sanskriti School Students
           </h1>
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Specialized NEET preparation for Sanskriti's accomplished CBSE students. Balance rigorous school academics with comprehensive NEET Biology mastery.
+            Specialized NEET preparation for Sanskriti&apos;s accomplished CBSE students. Balance rigorous school academics with comprehensive NEET Biology mastery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button variant="primary" className="px-8 py-3 text-lg">
@@ -77,7 +77,7 @@ export default function PageContent() {
               <Target className="w-10 h-10 text-purple-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Rigorous Academic Support</h3>
               <p className="text-gray-600">
-                Sanskriti's demanding CBSE curriculum requires structured NEET prep. We help you split time efficiently without compromising either.
+                Sanskriti&apos;s demanding CBSE curriculum requires structured NEET prep. We help you split time efficiently without compromising either.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
@@ -91,7 +91,7 @@ export default function PageContent() {
               <Shield className="w-10 h-10 text-purple-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Time-Efficient Coaching</h3>
               <p className="text-gray-600">
-                Strategic NEET prep that builds on Sanskriti's rigorous CBSE foundation. Learn concepts once, apply to both school and NEET exams.
+                Strategic NEET prep that builds on Sanskriti&apos;s rigorous CBSE foundation. Learn concepts once, apply to both school and NEET exams.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
@@ -189,7 +189,7 @@ export default function PageContent() {
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
           <div ref={faqAnimation.ref} className={`space-y-6 transition-all duration-700 ${faqAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">How do you balance Sanskriti's demanding academics with NEET prep?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">How do you balance Sanskriti&apos;s demanding academics with NEET prep?</h3>
               <p className="text-gray-600">
                 We design a strategic curriculum that leverages your CBSE foundation for NEET. Many topics you study for school directly support NEET, reducing study time while improving retention.
               </p>
@@ -207,7 +207,7 @@ export default function PageContent() {
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">What's the typical time commitment required?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What&apos;s the typical time commitment required?</h3>
               <p className="text-gray-600">
                 For Sanskriti students splitting time between school and NEET, we recommend 12-15 hours per week focused NEET prep. Our strategic approach is time-efficient without being rushed.
               </p>
@@ -215,7 +215,7 @@ export default function PageContent() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-bold text-gray-900 mb-3">How can I book a free demo class?</h3>
               <p className="text-gray-600">
-                WhatsApp us at +91 88264 44334 or call 8826444334. Visit cerebrumbiologyacademy.com to learn more. We'll schedule a session that fits your availability.
+                WhatsApp us at +91 88264 44334 or call 8826444334. Visit cerebrumbiologyacademy.com to learn more. We&apos;ll schedule a session that fits your availability.
               </p>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function PageContent() {
       <section className="py-20 px-6 bg-gradient-to-r from-purple-600 to-purple-800">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Master NEET While Excelling at Sanskriti</h2>
-          <p className="text-xl mb-8">Join Sanskriti School students who've achieved 98%+ success rates with Cerebrum Biology Academy.</p>
+          <p className="text-xl mb-8">Join Sanskriti School students who&apos;ve achieved 98%+ success rates with Cerebrum Biology Academy.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="light" className="px-8 py-3 text-lg font-semibold">
               Start Your Free Demo <ArrowRight className="w-5 h-5 ml-2 inline" />

@@ -58,7 +58,7 @@ export function PageContent() {
             NEET Coaching in Toronto, Canada
           </h1>
           <p className="text-xl mb-6 text-blue-100">
-            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh's proven methodology.
+            Expert NEET preparation with 98% success rate. Dr. Shekhar C Singh&apos;s proven methodology.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -187,7 +187,7 @@ export function PageContent() {
               <li key="0">Upper Canada College</li>
                   <li key="1">Crescent School</li>
                   <li key="2">Ridley College</li>
-                  <li key="3">St. Andrew's College</li>
+                  <li key="3">St. Andrew&apos;s College</li>
                   <li key="4">Havergal College</li>
             </ul>
           </div>
@@ -284,7 +284,7 @@ export function PageContent() {
             Join 500+ Successful NEET Students
           </h2>
           <p className="text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your preparation with India's most trusted NEET coaching. Limited seats available in Toronto batch.
+            Start your preparation with India&apos;s most trusted NEET coaching. Limited seats available in Toronto batch.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a

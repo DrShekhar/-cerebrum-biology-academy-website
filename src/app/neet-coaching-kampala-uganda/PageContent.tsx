@@ -52,7 +52,7 @@ export default function PageContent() {
         <div className="container">
           <h1>NEET Coaching in Kampala, Uganda</h1>
           <p className="lead">
-            Kampala, Uganda's capital, is home to a historic Indian community with strong educational institutions and business presence. Cerebrum Biology Academy brings expert NEET coaching to Kampala with a proven 98% success rate and personalized learning paths.
+            Kampala, Uganda&apos;s capital, is home to a historic Indian community with strong educational institutions and business presence. Cerebrum Biology Academy brings expert NEET coaching to Kampala with a proven 98% success rate and personalized learning paths.
           </p>
           
           <div className="info-grid">
@@ -85,7 +85,7 @@ export default function PageContent() {
               <li>Aga Khan School Kampala</li>
               <li>Kampala International School</li>
               <li>Kampala Senior School</li>
-              <li>St. Mary's College Kisubi</li>
+              <li>St. Mary&apos;s College Kisubi</li>
           </ul>
         </div>
       </section>

@@ -2,11 +2,11 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import {
   CheckCircle,
   Users,
   Award,
@@ -114,10 +114,10 @@ export default function PageContent() {
               Pune Medical Education Excellence
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              NEET Coaching for <span className="text-yellow-300">Bishop's School, Pune</span>
+              NEET Coaching for <span className="text-yellow-300">Bishop&apos;s School, Pune</span>
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8">
-              Expert ICSE/ISC-to-NEET bridge coaching for Bishop's School students in Pune. Transform premium school foundation into 630+ NEET success.
+              Expert ICSE/ISC-to-NEET bridge coaching for Bishop&apos;s School students in Pune. Transform premium school foundation into 630+ NEET success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link href="/demo-booking" className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center">
@@ -140,7 +140,7 @@ export default function PageContent() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                 <div className="text-2xl font-bold text-yellow-300">280+</div>
-                <div className="text-sm opacity-80">Bishop's Students</div>
+                <div className="text-sm opacity-80">Bishop&apos;s Students</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                 <div className="text-2xl font-bold text-yellow-300">Pune Hub</div>
@@ -151,11 +151,11 @@ export default function PageContent() {
         </div>
       </motion.section>
 
-      {/* Bishop's Advantages */}
+      {/* Bishop&apos;s Advantages */}
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div ref={whyAnim.ref} className={`text-center mb-12 transition-all duration-600 ${whyAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bishop's School Excellence in NEET</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bishop&apos;s School Excellence in NEET</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">Premium school advantage for medical entrance success</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -183,7 +183,7 @@ export default function PageContent() {
       <section className="py-12 md:py-20 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bishop's School NEET Programs</h2>
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">Bishop&apos;s School NEET Programs</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {pricingPlans.map((plan, index) => (
@@ -248,8 +248,8 @@ export default function PageContent() {
       {/* CTA */}
       <section className="bg-gradient-to-r from-amber-700 to-orange-800 text-white py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Bishop's School Excellence in NEET</h2>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">Join 280+ Bishop's School students achieving top NEET scores</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">Bishop&apos;s School Excellence in NEET</h2>
+          <p className="text-xl md:text-2xl mb-8 opacity-90">Join 280+ Bishop&apos;s School students achieving top NEET scores</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/demo-booking" className="bg-white text-amber-700 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors inline-flex items-center justify-center">
               Book Free Demo

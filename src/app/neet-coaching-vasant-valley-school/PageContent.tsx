@@ -47,7 +47,7 @@ export default function PageContent() {
             NEET Coaching for Vasant Valley School Students
           </h1>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Elite CBSE + enriched curriculum support for Vasant Kunj's most accomplished students. Master NEET Biology while excelling in school academics.
+            Elite CBSE + enriched curriculum support for Vasant Kunj&apos;s most accomplished students. Master NEET Biology while excelling in school academics.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button variant="primary" className="px-8 py-3 text-lg">
@@ -77,7 +77,7 @@ export default function PageContent() {
               <Target className="w-10 h-10 text-blue-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">School + NEET Balance</h3>
               <p className="text-gray-600">
-                Understand how your enriched CBSE curriculum directly supports NEET preparation. Our faculty knows Vasant Valley's curriculum depth.
+                Understand how your enriched CBSE curriculum directly supports NEET preparation. Our faculty knows Vasant Valley&apos;s curriculum depth.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
@@ -163,7 +163,7 @@ export default function PageContent() {
               </div>
               <p className="text-yellow-500 mb-3">★★★★★</p>
               <p className="text-gray-600">
-                "The faculty understood our school's curriculum and showed how it connects to NEET. Classes were flexible around my sports commitments."
+                "The faculty understood our school&apos;s curriculum and showed how it connects to NEET. Classes were flexible around my sports commitments."
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-lg">
@@ -189,9 +189,9 @@ export default function PageContent() {
           <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Frequently Asked Questions</h2>
           <div ref={faqAnimation.ref} className={`space-y-6 transition-all duration-700 ${faqAnimation.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">How does Cerebrum coordinate with Vasant Valley's curriculum?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">How does Cerebrum coordinate with Vasant Valley&apos;s curriculum?</h3>
               <p className="text-gray-600">
-                We understand the CBSE + enriched curriculum at Vasant Valley. Our faculty aligns NEET preparation with your school's teaching progression, ensuring no conflicts and maximum synergy between school studies and NEET prep.
+                We understand the CBSE + enriched curriculum at Vasant Valley. Our faculty aligns NEET preparation with your school&apos;s teaching progression, ensuring no conflicts and maximum synergy between school studies and NEET prep.
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
@@ -207,7 +207,7 @@ export default function PageContent() {
               </p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">What if I'm balancing school academics with NEET prep?</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3">What if I&apos;m balancing school academics with NEET prep?</h3>
               <p className="text-gray-600">
                 This is exactly what we specialize in for Vasant Valley students. We focus on high-yield NEET topics and teach concepts that directly support your CBSE curriculum. The integrated approach means less time studying the same content twice.
               </p>
@@ -215,7 +215,7 @@ export default function PageContent() {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-bold text-gray-900 mb-3">How can we schedule a free demo class?</h3>
               <p className="text-gray-600">
-                Simply WhatsApp us at +91 88264 44334 or call 8826444334. Visit cerebrumbiologyacademy.com to explore more. We'll arrange a session at a time convenient for you.
+                Simply WhatsApp us at +91 88264 44334 or call 8826444334. Visit cerebrumbiologyacademy.com to explore more. We&apos;ll arrange a session at a time convenient for you.
               </p>
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function PageContent() {
       <section className="py-20 px-6 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="max-w-4xl mx-auto text-center text-white">
           <h2 className="text-4xl font-bold mb-6">Ready to Excel in NEET?</h2>
-          <p className="text-xl mb-8">Join Vasant Valley students who've achieved 98%+ success rates with Cerebrum Biology Academy.</p>
+          <p className="text-xl mb-8">Join Vasant Valley students who&apos;ve achieved 98%+ success rates with Cerebrum Biology Academy.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="light" className="px-8 py-3 text-lg font-semibold">
               Start Your Free Demo <ArrowRight className="w-5 h-5 ml-2 inline" />

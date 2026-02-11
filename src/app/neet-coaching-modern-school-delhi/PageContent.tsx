@@ -2,11 +2,11 @@
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import {
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
 import { RelatedCityLinks } from '@/components/seo/RelatedCityLinks'
+import {
   CheckCircle,
   Users,
   Award,
@@ -111,7 +111,7 @@ export default function PageContent() {
           <div ref={heroAnim.ref} className={`text-center max-w-4xl mx-auto transition-all duration-700 ${heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Building className="w-5 h-5 mr-2 text-yellow-400" />
-              Delhi's Prestigious Science Excellence
+              Delhi&apos;s Prestigious Science Excellence
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               NEET Coaching for <span className="text-yellow-300">Modern School, Delhi</span>
