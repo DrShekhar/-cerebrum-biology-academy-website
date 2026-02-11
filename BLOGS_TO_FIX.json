@@ -1,0 +1,592 @@
+{
+  "missingMetadata": [
+    {
+      "file": "affordable-mbbs-under-50-lakhs-india-2026.mdx",
+      "field": "publishedAt"
+    },
+    {
+      "file": "biotechnology-neet-simplified-complete-guide.mdx",
+      "field": "featuredImage"
+    },
+    {
+      "file": "biotechnology-neet-simplified-complete-guide.mdx",
+      "field": "readTime"
+    },
+    {
+      "file": "delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2026.mdx",
+      "field": "publishedAt"
+    },
+    {
+      "file": "genetics-molecular-biology-neet-complete-guide.mdx",
+      "field": "featuredImage"
+    },
+    {
+      "file": "genetics-molecular-biology-neet-complete-guide.mdx",
+      "field": "readTime"
+    },
+    {
+      "file": "important-biology-diagrams-neet-complete-list.mdx",
+      "field": "featuredImage"
+    },
+    {
+      "file": "important-biology-diagrams-neet-complete-list.mdx",
+      "field": "readTime"
+    },
+    {
+      "file": "management-nri-quota-mbbs-admission-guide-2026.mdx",
+      "field": "publishedAt"
+    },
+    {
+      "file": "ncert-line-by-line-reading-strategy-neet.mdx",
+      "field": "featuredImage"
+    },
+    {
+      "file": "ncert-line-by-line-reading-strategy-neet.mdx",
+      "field": "readTime"
+    },
+    {
+      "file": "neet-animal-kingdom-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-biotechnology-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-cell-biology-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-dropper-repeater-complete-strategy-guide.mdx",
+      "field": "featuredImage"
+    },
+    {
+      "file": "neet-dropper-repeater-complete-strategy-guide.mdx",
+      "field": "readTime"
+    },
+    {
+      "file": "neet-ecology-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-evolution-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-genetics-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-human-physiology-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-mock-test-strategy-complete-guide.mdx",
+      "field": "featuredImage"
+    },
+    {
+      "file": "neet-mock-test-strategy-complete-guide.mdx",
+      "field": "readTime"
+    },
+    {
+      "file": "neet-plant-morphology-anatomy-weightage-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-plant-physiology-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-reproduction-weightage-chapter-wise-analysis.mdx",
+      "field": "excerpt"
+    },
+    {
+      "file": "neet-score-450-550-colleges-guide-2026.mdx",
+      "field": "publishedAt"
+    },
+    {
+      "file": "state-wise-medical-colleges-north-india-2026.mdx",
+      "field": "publishedAt"
+    }
+  ],
+  "aiSignatures": [
+    {
+      "file": "best-ai-tools-apps-neet-preparation-2026.mdx",
+      "signature": "ChatGPT"
+    },
+    {
+      "file": "ncert-line-by-line-biology-neet-guide.mdx",
+      "signature": "As an AI"
+    }
+  ],
+  "seoTitleLength": [
+    {
+      "file": "5-month-neet-2026-study-plan-january-may.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "affordable-mbbs-under-50-lakhs-india-2026.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "best-neet-coaching-delhi-ncr-comparison.mdx",
+      "currentLength": 50
+    },
+    {
+      "file": "biology-mnemonics-neet-preparation.mdx",
+      "currentLength": 52
+    },
+    {
+      "file": "biomolecules-neet-biology-complete-guide.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "breathing-gas-exchange-neet-notes.mdx",
+      "currentLength": 51
+    },
+    {
+      "file": "cell-structure-function-neet-notes.mdx",
+      "currentLength": 54
+    },
+    {
+      "file": "class-11-biology-neet-foundation-guide.mdx",
+      "currentLength": 36
+    },
+    {
+      "file": "class-12-biology-board-neet-dual-preparation.mdx",
+      "currentLength": 54
+    },
+    {
+      "file": "common-mistakes-neet-aspirants-avoid-2026.mdx",
+      "currentLength": 48
+    },
+    {
+      "file": "cracking-the-code-of-neet-exam-success.mdx",
+      "currentLength": 54
+    },
+    {
+      "file": "delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2026.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "do-or-die-chapters-neet-2026-biology.mdx",
+      "currentLength": 51
+    },
+    {
+      "file": "dps-students-neet-preparation-guide.mdx",
+      "currentLength": 54
+    },
+    {
+      "file": "dropper-batch-vs-regular-batch-comparison.mdx",
+      "currentLength": 52
+    },
+    {
+      "file": "dropper-case-studies-480-to-650-score-improvement.mdx",
+      "currentLength": 52
+    },
+    {
+      "file": "dropper-mental-health-guide-handling-pressure-motivation.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "dy-patil-medical-college-pune-mumbai-kolhapur-comparison.mdx",
+      "currentLength": 52
+    },
+    {
+      "file": "excretory-system-neet-notes.mdx",
+      "currentLength": 50
+    },
+    {
+      "file": "future-of-neet-coaching-india-2026-expert-analysis.mdx",
+      "currentLength": 50
+    },
+    {
+      "file": "genetics-for-neet-mendel-to-molecular-biology.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "genetics-heredity-variation-neet.mdx",
+      "currentLength": 51
+    },
+    {
+      "file": "how-to-avoid-silly-mistakes-neet-exam.mdx",
+      "currentLength": 48
+    },
+    {
+      "file": "how-to-improve-neet-score-400-to-600-strategy.mdx",
+      "currentLength": 49
+    },
+    {
+      "file": "how-to-score-320-plus-neet-biology.mdx",
+      "currentLength": 50
+    },
+    {
+      "file": "how-to-score-360-in-neet-biology.mdx",
+      "currentLength": 52
+    },
+    {
+      "file": "how-to-score-600-plus-in-neet-2026.mdx",
+      "currentLength": 49
+    },
+    {
+      "file": "how-to-stay-motivated-during-neet-preparation.mdx",
+      "currentLength": 51
+    },
+    {
+      "file": "human-digestion-absorption-neet.mdx",
+      "currentLength": 48
+    },
+    {
+      "file": "human-physiology-neet-complete-notes.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "human-reproduction-neet-notes-complete-guide.mdx",
+      "currentLength": 50
+    },
+    {
+      "file": "important-biology-diagrams-neet-complete-list.mdx",
+      "currentLength": 54
+    },
+    {
+      "file": "kota-vs-online-neet-coaching-2026.mdx",
+      "currentLength": 47
+    },
+    {
+      "file": "maharashtra-mbbs-counselling-dmer-guide-2026.mdx",
+      "currentLength": 54
+    },
+    {
+      "file": "ncert-line-by-line-biology-neet-guide.mdx",
+      "currentLength": 35
+    },
+    {
+      "file": "neet-400-500-marks-medical-colleges-maharashtra.mdx",
+      "currentLength": 48
+    },
+    {
+      "file": "neet-biology-30-day-revision-plan.mdx",
+      "currentLength": 53
+    },
+    {
+      "file": "neet-biology-assertion-reason-questions-guide.mdx",
+      "currentLength": 39
+    },
+    {
+      "file": "neet-biology-human-physiology-complete-guide.mdx",
+      "currentLength": 54
+    },
+    {
+      "file": "neet-biology-pyq-analysis-2015-2025.mdx",
+      "currentLength": 35
+    },
+    {
+      "file": "neet-exam-centres-state-wise-2026.mdx",
+      "currentLength": 54
+    }
+  ],
+  "seoDescLength": [
+    {
+      "file": "5-month-neet-2026-study-plan-january-may.mdx",
+      "currentLength": 152
+    },
+    {
+      "file": "affordable-mbbs-under-50-lakhs-india-2026.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "aiims-new-delhi-complete-guide-campus-life.mdx",
+      "currentLength": 143
+    },
+    {
+      "file": "all-aiims-india-complete-guide-2026.mdx",
+      "currentLength": 147
+    },
+    {
+      "file": "best-ai-tools-apps-neet-preparation-2026.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "best-books-for-neet-2026-biology-physics-chemistry.mdx",
+      "currentLength": 143
+    },
+    {
+      "file": "best-neet-coaching-delhi-ncr-comparison.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "cell-division-mitosis-meiosis-neet.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "class-12-biology-board-neet-dual-preparation.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "cracking-the-code-of-neet-exam-success.mdx",
+      "currentLength": 152
+    },
+    {
+      "file": "do-or-die-chapters-neet-2026-biology.mdx",
+      "currentLength": 152
+    },
+    {
+      "file": "dps-students-neet-preparation-guide.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "dropper-case-studies-480-to-650-score-improvement.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "dy-patil-medical-college-pune-mumbai-kolhapur-comparison.mdx",
+      "currentLength": 150
+    },
+    {
+      "file": "excretory-system-neet-notes.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "genetics-for-neet-mendel-to-molecular-biology.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "how-to-score-320-plus-neet-biology.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "how-to-score-600-plus-in-neet-2026.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "how-to-score-700-plus-in-neet.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "how-to-stay-motivated-during-neet-preparation.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "human-physiology-neet-complete-notes.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "human-reproduction-neet-notes-complete-guide.mdx",
+      "currentLength": 146
+    },
+    {
+      "file": "kota-vs-online-neet-coaching-2026.mdx",
+      "currentLength": 142
+    },
+    {
+      "file": "last-6-months-neet-2026-preparation-strategy.mdx",
+      "currentLength": 145
+    },
+    {
+      "file": "maharashtra-mbbs-counselling-dmer-guide-2026.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "management-nri-quota-mbbs-admission-guide-2026.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "mock-test-strategy-neet-2026-complete-guide.mdx",
+      "currentLength": 143
+    },
+    {
+      "file": "ncert-line-by-line-biology-neet-guide.mdx",
+      "currentLength": 110
+    },
+    {
+      "file": "neet-2026-biology-paper-analysis.mdx",
+      "currentLength": 152
+    },
+    {
+      "file": "neet-2026-biology-syllabus-complete-guide.mdx",
+      "currentLength": 141
+    },
+    {
+      "file": "neet-2026-complete-guide-exam-pattern-syllabus-dates.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "neet-2026-exam-pattern-changes.mdx",
+      "currentLength": 130
+    },
+    {
+      "file": "neet-2026-preparation-timeline-class-12.mdx",
+      "currentLength": 127
+    },
+    {
+      "file": "neet-2026-result-analysis-cutoff-trends.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "neet-2026-syllabus-complete-guide-deleted-topics.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "neet-application-form-2026.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "neet-biology-30-day-revision-plan.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "neet-biology-assertion-reason-questions-guide.mdx",
+      "currentLength": 102
+    },
+    {
+      "file": "neet-biology-chapter-wise-weightage-2026-advanced.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "neet-biology-coaching-delhi-ncr-guide.mdx",
+      "currentLength": 149
+    },
+    {
+      "file": "neet-biology-diagrams-practice-guide.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "neet-biology-human-physiology-complete-guide.mdx",
+      "currentLength": 145
+    },
+    {
+      "file": "neet-biology-most-repeated-questions-analysis-2026.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "neet-biology-olympiad-preparation-guide.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "neet-biology-previous-year-questions-analysis.mdx",
+      "currentLength": 144
+    },
+    {
+      "file": "neet-biology-pyq-analysis-2015-2025.mdx",
+      "currentLength": 112
+    },
+    {
+      "file": "neet-biology-pyq-chapter-wise-pdf-download.mdx",
+      "currentLength": 150
+    },
+    {
+      "file": "neet-biology-syllabus-2026-complete-guide.mdx",
+      "currentLength": 147
+    },
+    {
+      "file": "neet-coaching-delhi-vs-kota-2026.mdx",
+      "currentLength": 112
+    },
+    {
+      "file": "neet-drop-year-strategy-2026.mdx",
+      "currentLength": 149
+    },
+    {
+      "file": "neet-plant-morphology-anatomy-weightage-analysis.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "neet-preparation-tips-for-delhi-ncr-students.mdx",
+      "currentLength": 126
+    },
+    {
+      "file": "neet-reproduction-weightage-chapter-wise-analysis.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "neet-score-450-550-colleges-guide-2026.mdx",
+      "currentLength": 150
+    },
+    {
+      "file": "neet-vs-jee-which-is-tougher.mdx",
+      "currentLength": 148
+    },
+    {
+      "file": "nervous-system-neet-biology.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "nri-quota-mbbs-maharashtra-complete-guide-2026.mdx",
+      "currentLength": 147
+    },
+    {
+      "file": "online-career-counselling-neet-aspirants-guide.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "online-vs-offline-neet-coaching-2026.mdx",
+      "currentLength": 137
+    },
+    {
+      "file": "parents-guide-choosing-neet-coaching-delhi.mdx",
+      "currentLength": 125
+    },
+    {
+      "file": "photosynthesis-complete-neet-guide.mdx",
+      "currentLength": 150
+    },
+    {
+      "file": "plant-kingdom-classification-neet.mdx",
+      "currentLength": 152
+    },
+    {
+      "file": "roadmap-for-aiims-mbbs-seat-complete-guide.mdx",
+      "currentLength": 151
+    },
+    {
+      "file": "self-study-vs-coaching-neet-2026.mdx",
+      "currentLength": 150
+    },
+    {
+      "file": "student-case-study-class-11-early-start-neet-success.mdx",
+      "currentLength": 153
+    },
+    {
+      "file": "student-case-study-online-offline-hybrid-neet.mdx",
+      "currentLength": 149
+    },
+    {
+      "file": "top-10-neet-biology-coaching-delhi-ncr-2026.mdx",
+      "currentLength": 154
+    },
+    {
+      "file": "when-to-start-neet-preparation-class-9-vs-10.mdx",
+      "currentLength": 153
+    }
+  ],
+  "wrongDates": [
+    {
+      "file": "dps-students-neet-preparation-guide.mdx",
+      "date": "2024-05-20"
+    },
+    {
+      "file": "kota-vs-online-neet-coaching-2026.mdx",
+      "date": "2024-04-15"
+    },
+    {
+      "file": "neet-biology-coaching-delhi-ncr-guide.mdx",
+      "date": "2024-03-01"
+    },
+    {
+      "file": "neet-biology-preparation-strategy-score-340-plus.mdx",
+      "date": "2024-01-15"
+    },
+    {
+      "file": "photosynthesis-vs-respiration-neet-comparison.mdx",
+      "date": "2024-02-10"
+    },
+    {
+      "file": "top-10-neet-biology-coaching-delhi-ncr-2026.mdx",
+      "date": "2024-06-01"
+    },
+    {
+      "file": "when-to-start-neet-preparation-class-9-vs-10.mdx",
+      "date": "2024-05-01"
+    }
+  ]
+}
