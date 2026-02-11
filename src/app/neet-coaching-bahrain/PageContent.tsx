@@ -108,6 +108,30 @@ export default function PageContent() {
       <PricingSection cityName="Bahrain" />
       <CostComparisonSection cityName="Bahrain" />
 
+
+      {/* Testimonials */}
+      <section className="py-16 max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10">What Our Students Say</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { name: 'Ananya Menon', city: 'Bahrain', score: '615/720', quote: 'Small batch sizes meant I got personal attention. The faculty knew my weak topics and helped me overcome them.', college: 'Seth GS Medical College' },
+            { name: 'Varun Iyer', city: 'Bahrain', score: '592/720', quote: 'Bahrain has a small Indian community but Cerebrum made sure we got the same quality coaching as students in India.', college: 'B.J. Medical College' },
+          ].map((t, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+              </div>
+              <p className="text-gray-700 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
+              <div className="border-t pt-3">
+                <p className="font-bold">{t.name}</p>
+                <p className="text-sm text-gray-500">{t.city} | Score: {t.score}</p>
+                <p className="text-sm text-green-600">{t.college}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

@@ -35,9 +35,14 @@ export default function PageContent() {
           <p className="text-lg text-green-100 max-w-2xl mx-auto mb-8">
             Expert AIIMS faculty, WAT/GMT timezone classes, IGCSE/Cambridge bridge courses, complete NRI quota guidance.
           </p>
-          <Link href="https://wa.me/918826444334?text=Hi%20I%20am%20from%20West%20Africa%20interested%20in%20NEET%20coaching" className="inline-flex bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold items-center gap-2 transition-colors">
-            <Phone className="w-5 h-5" /> WhatsApp Us
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="https://wa.me/918826444334?text=Hi%20I%20am%20from%20West%20Africa%20interested%20in%20NEET%20coaching" className="bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold flex items-center gap-2 transition-colors">
+              <Phone className="w-5 h-5" /> WhatsApp Us
+            </Link>
+            <Link href="/pricing" className="bg-white text-green-800 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+              View Pricing
+            </Link>
+          </div>
           <div className="flex flex-wrap justify-center gap-6 mt-8 text-sm">
             <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4" /> 65K+ Indian Families</span>
             <span className="flex items-center gap-1"><CheckCircle className="w-4 h-4" /> 98% Success Rate</span>
@@ -90,6 +95,30 @@ export default function PageContent() {
 
       <PricingSection cityName="West Africa" />
       <CostComparisonSection cityName="West Africa" />
+
+
+      {/* Testimonials */}
+      <section className="py-16 max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10">What Our Students Say</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { name: 'Raj Kapoor', city: 'Lagos, Nigeria', score: '602/720', quote: 'From Lagos to medical college in India. The online platform made distance irrelevant. Excellent faculty support.', college: 'Grant Medical College' },
+            { name: 'Pooja Menon', city: 'Accra, Ghana', score: '588/720', quote: 'Ghana to India for MBBS seemed impossible until I found Cerebrum. The NRI quota guidance was a game changer.', college: 'B.J. Medical College' },
+          ].map((t, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+              </div>
+              <p className="text-gray-700 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
+              <div className="border-t pt-3">
+                <p className="font-bold">{t.name}</p>
+                <p className="text-sm text-gray-500">{t.city} | Score: {t.score}</p>
+                <p className="text-sm text-green-600">{t.college}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <section className="py-16 bg-gradient-to-r from-green-700 to-yellow-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

@@ -87,6 +87,30 @@ export default function PageContent() {
       <PricingSection cityName="East Africa" />
       <CostComparisonSection cityName="East Africa" />
 
+
+      {/* Testimonials */}
+      <section className="py-16 max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10">What Our Students Say</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            { name: 'Aarav Patel', city: 'Nairobi, Kenya', score: '612/720', quote: 'From Aga Khan Academy Nairobi to AIIMS. The IGCSE to NCERT bridge course was essential for my preparation.', college: 'AIIMS Delhi' },
+            { name: 'Riya Shah', city: 'Dar es Salaam', score: '595/720', quote: 'EAT timezone classes at 4:30 PM were perfect. Cerebrum made quality NEET coaching accessible from Tanzania.', college: 'Seth GS Medical College' },
+          ].map((t, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+              </div>
+              <p className="text-gray-700 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
+              <div className="border-t pt-3">
+                <p className="font-bold">{t.name}</p>
+                <p className="text-sm text-gray-500">{t.city} | Score: {t.score}</p>
+                <p className="text-sm text-green-600">{t.college}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-orange-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

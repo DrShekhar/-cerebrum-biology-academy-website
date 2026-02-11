@@ -8,7 +8,7 @@ const locality = 'Bangkok'
 const ogImageParams = new URLSearchParams({
   title: 'NEET Biology Coaching',
   subtitle: 'Expert coaching with 98% success rate',
-  locality: `${Bangkok}, Thailand`,
+  locality: `${locality}, Thailand`,
 })
 
 export const metadata: Metadata = {

@@ -8,14 +8,12 @@ import {
   GraduationCap,
   Clock,
   Globe,
-  DollarSign,
   Users,
   BookOpen,
   MapPin,
   Phone,
   Star,
   CheckCircle,
-  ArrowRight,
 } from 'lucide-react'
 import Link from 'next/link'
 

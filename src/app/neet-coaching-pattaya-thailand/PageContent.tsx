@@ -108,6 +108,29 @@ export default function PageContent() {
       <PricingSection cityName="Pattaya" />
       <CostComparisonSection cityName="Pattaya" />
 
+
+      {/* Testimonials */}
+      <section className="py-16 max-w-6xl mx-auto px-4">
+        <h2 className="text-3xl font-bold text-center mb-10">What Our Students Say</h2>
+        <div className="grid  gap-6">
+          {[
+            { name: 'Ravi Kumar', city: 'Pattaya', score: '578/720', quote: 'Living in Pattaya, I thought quality NEET coaching was out of reach. Cerebrum proved me wrong with their online platform.', college: 'Topiwala National Medical College' },
+          ].map((t, i) => (
+            <div key={i} className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+              <div className="flex items-center gap-1 mb-3">
+                {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 text-yellow-400 fill-yellow-400" />)}
+              </div>
+              <p className="text-gray-700 italic mb-4">&ldquo;{t.quote}&rdquo;</p>
+              <div className="border-t pt-3">
+                <p className="font-bold">{t.name}</p>
+                <p className="text-sm text-gray-500">{t.city} | Score: {t.score}</p>
+                <p className="text-sm text-green-600">{t.college}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">

@@ -8,7 +8,6 @@ import {
   GraduationCap,
   Clock,
   Globe,
-  DollarSign,
   Users,
   BookOpen,
   MapPin,
