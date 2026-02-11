@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { addSecurityHeaders, getJWTSecret } from '@/lib/auth/config'
-import { addCSPHeaders } from '@/lib/auth/csrf'
+import { addCSPHeaders } from '@/lib/security/csp'
 import { compressResponseMiddleware } from '@/lib/middleware/compression'
 import { jwtVerify } from 'jose'
 
