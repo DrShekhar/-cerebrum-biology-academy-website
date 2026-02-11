@@ -8,58 +8,58 @@ import { Redis } from '@upstash/redis'
 import { NextRequest, NextResponse } from 'next/server'
 
 // Initialize Redis client (trim env vars to prevent whitespace/newline URL parse errors)
-const redis = new Redis({
-  url: (process.env.UPSTASH_REDIS_REST_URL || '').trim(),
-  token: (process.env.UPSTASH_REDIS_REST_TOKEN || '').trim(),
-})
-
-// Rate limit configurations for different endpoint types
-export const rateLimiters = {
-  // Strict limits for auth endpoints
-  auth: new Ratelimit({
-    redis,
-    limiter: Ratelimit.slidingWindow(5, '15 m'), // 5 requests per 15 minutes
-    analytics: true,
-    prefix: 'ratelimit:auth',
-  }),
-
-  // Moderate limits for API endpoints
-  api: new Ratelimit({
-    redis,
-    limiter: Ratelimit.slidingWindow(30, '1 m'), // 30 requests per minute
-    analytics: true,
-    prefix: 'ratelimit:api',
-  }),
-
-  // Lenient limits for public endpoints
-  public: new Ratelimit({
-    redis,
-    limiter: Ratelimit.slidingWindow(60, '1 m'), // 60 requests per minute
-    analytics: true,
-    prefix: 'ratelimit:public',
-  }),
-
-  // Very strict for sensitive operations
-  payment: new Ratelimit({
-    redis,
-    limiter: Ratelimit.slidingWindow(3, '1 h'), // 3 requests per hour
-    analytics: true,
-    prefix: 'ratelimit:payment',
-  }),
-
-  // AI endpoints (higher cost)
-  ai: new Ratelimit({
-    redis,
-    limiter: Ratelimit.slidingWindow(10, '1 m'), // 10 requests per minute
-    analytics: true,
-    prefix: 'ratelimit:ai',
-  }),
+let redis: Redis | null = null
+try {
+  const redisUrl = (process.env.UPSTASH_REDIS_REST_URL || '').trim()
+  const redisToken = (process.env.UPSTASH_REDIS_REST_TOKEN || '').trim()
+  if (redisUrl && redisToken) {
+    redis = new Redis({ url: redisUrl, token: redisToken })
+  }
+} catch {
+  redis = null
 }
+
+// Rate limit configurations for different endpoint types (only created when Redis is available)
+export const rateLimiters = redis
+  ? {
+      auth: new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(5, '15 m'),
+        analytics: true,
+        prefix: 'ratelimit:auth',
+      }),
+      api: new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(30, '1 m'),
+        analytics: true,
+        prefix: 'ratelimit:api',
+      }),
+      public: new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(60, '1 m'),
+        analytics: true,
+        prefix: 'ratelimit:public',
+      }),
+      payment: new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(3, '1 h'),
+        analytics: true,
+        prefix: 'ratelimit:payment',
+      }),
+      ai: new Ratelimit({
+        redis,
+        limiter: Ratelimit.slidingWindow(10, '1 m'),
+        analytics: true,
+        prefix: 'ratelimit:ai',
+      }),
+    }
+  : null
 
 /**
  * Get rate limiter based on route path
  */
-export function getRateLimiterForPath(pathname: string): Ratelimit {
+export function getRateLimiterForPath(pathname: string): Ratelimit | null {
+  if (!rateLimiters) return null
   if (pathname.includes('/api/auth')) return rateLimiters.auth
   if (pathname.includes('/api/payment')) return rateLimiters.payment
   if (pathname.includes('/api/ai') || pathname.includes('/api/agents')) return rateLimiters.ai

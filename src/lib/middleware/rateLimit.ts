@@ -5,13 +5,16 @@ import { logger } from '@/lib/utils/logger'
 
 // Create Upstash Redis client for distributed rate limiting
 // Falls back to in-memory if not configured
-const upstashRedis =
-  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
-    ? new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
-      })
-    : null
+let upstashRedis: Redis | null = null
+try {
+  const redisUrl = (process.env.UPSTASH_REDIS_REST_URL || '').trim()
+  const redisToken = (process.env.UPSTASH_REDIS_REST_TOKEN || '').trim()
+  if (redisUrl && redisToken) {
+    upstashRedis = new Redis({ url: redisUrl, token: redisToken })
+  }
+} catch {
+  upstashRedis = null
+}
 
 // Track if production warning has been logged
 let hasLoggedProductionWarning = false
