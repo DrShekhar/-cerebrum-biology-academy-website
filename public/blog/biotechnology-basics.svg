@@ -1,0 +1,64 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-biotech" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-biotech)"/>
+
+  <!-- Lab Equipment -->
+  <g transform="translate(180, 220)">
+    <!-- Microscope -->
+    <rect x="40" y="0" width="15" height="80" rx="3" fill="#ffffff" opacity="0.9"/>
+    <circle cx="47.5" cy="90" r="30" fill="#ffffff" opacity="0.9"/>
+    <rect x="20" y="120" width="55" height="10" rx="2" fill="#ffffff" opacity="0.9"/>
+    
+    <!-- DNA Sample -->
+    <g transform="translate(130, 50)">
+      <rect x="0" y="0" width="50" height="80" rx="5" fill="#22c55e" opacity="0.3"/>
+      <path d="M 15 10 Q 10 25 15 40 Q 20 55 15 70" stroke="#22c55e" stroke-width="3" fill="none"/>
+      <path d="M 35 10 Q 40 25 35 40 Q 30 55 35 70" stroke="#22c55e" stroke-width="3" fill="none"/>
+    </g>
+    
+    <!-- Petri dish -->
+    <ellipse cx="50" cy="180" rx="45" ry="15" fill="#ffffff" opacity="0.8"/>
+    <ellipse cx="50" cy="178" rx="40" ry="13" fill="#93c5fd" opacity="0.6"/>
+    <circle cx="30" cy="178" r="8" fill="#22c55e" opacity="0.8"/>
+    <circle cx="55" cy="175" r="10" fill="#22c55e" opacity="0.8"/>
+    <circle cx="65" cy="180" r="6" fill="#22c55e" opacity="0.8"/>
+  </g>
+
+  <!-- Test Tubes -->
+  <g transform="translate(120, 480)">
+    <rect x="0" y="20" width="30" height="80" rx="3" fill="#ef4444" opacity="0.6"/>
+    <ellipse cx="15" cy="20" rx="15" ry="5" fill="#ef4444" opacity="0.8"/>
+    
+    <rect x="50" y="10" width="30" height="90" rx="3" fill="#22c55e" opacity="0.6"/>
+    <ellipse cx="65" cy="10" rx="15" ry="5" fill="#22c55e" opacity="0.8"/>
+    
+    <rect x="100" y="30" width="30" height="70" rx="3" fill="#3b82f6" opacity="0.6"/>
+    <ellipse cx="115" cy="30" rx="15" ry="5" fill="#3b82f6" opacity="0.8"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="520" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Biotechnology</text>
+  <text x="520" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">For NEET</text>
+  <text x="520" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">Principles & Applications</text>
+
+  <!-- Key Points -->
+  <rect x="520" y="345" width="630" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="550" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">🧪 Modern Biology Techniques</text>
+  <text x="550" y="435" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Recombinant DNA technology & PCR</text>
+  <text x="550" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Genetic engineering & cloning</text>
+  <text x="550" y="505" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Biotechnology applications in health</text>
+  <text x="550" y="540" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Important chapter: 6-8 questions!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="125" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">6-8</text>
+  <text x="1050" y="153" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Questions</text>
+</svg>

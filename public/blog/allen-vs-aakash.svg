@@ -1,0 +1,57 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-vs" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-vs)"/>
+
+  <!-- VS Symbol -->
+  <g transform="translate(200, 280)">
+    <circle cx="0" cy="0" r="80" fill="#facc15" opacity="0.9"/>
+    <text x="0" y="25" font-family="Arial, sans-serif" font-size="64" fill="#000000" text-anchor="middle" font-weight="bold">VS</text>
+  </g>
+
+  <!-- Allen Icon -->
+  <g transform="translate(120, 160)">
+    <rect x="0" y="0" width="100" height="80" rx="10" fill="#ef4444" opacity="0.8"/>
+    <text x="50" y="50" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">ALLEN</text>
+  </g>
+
+  <!-- Aakash Icon -->
+  <g transform="translate(280, 160)">
+    <rect x="0" y="0" width="100" height="80" rx="10" fill="#3b82f6" opacity="0.8"/>
+    <text x="50" y="50" font-family="Arial, sans-serif" font-size="22" fill="#ffffff" text-anchor="middle" font-weight="bold">AAKASH</text>
+  </g>
+
+  <!-- Comparison Table -->
+  <g transform="translate(100, 450)">
+    <rect x="0" y="0" width="320" height="110" rx="10" fill="#ffffff" opacity="0.2"/>
+    <text x="160" y="30" font-family="Arial, sans-serif" font-size="22" fill="#facc15" text-anchor="middle" font-weight="600">📊 Compare:</text>
+    <text x="160" y="60" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Fees • Faculty • Results</text>
+    <text x="160" y="90" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle">Study Material • Batch Size</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="580" y="140" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">Allen vs Aakash</text>
+  <text x="580" y="210" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">for NEET 2026</text>
+  <text x="580" y="275" font-family="Arial, sans-serif" font-size="40" fill="#fef3c7">Complete Comparison</text>
+
+  <!-- Key Points -->
+  <rect x="580" y="315" width="570" height="260" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="610" y="365" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">🎯 Which Coaching is Better?</text>
+  <text x="610" y="405" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Allen: Strong in Physics, Kota-based legacy</text>
+  <text x="610" y="440" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Aakash: Biology-focused, pan-India presence</text>
+  <text x="610" y="475" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Fees, batch size, and faculty comparison</text>
+  <text x="610" y="510" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Success rates & student reviews analysis</text>
+  <text x="610" y="545" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Choose based on YOUR learning style!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="120" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="105" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#ffffff" text-anchor="middle">2026</text>
+  <text x="1050" y="133" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Updated</text>
+</svg>

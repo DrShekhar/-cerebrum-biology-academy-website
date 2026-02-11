@@ -1,0 +1,60 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-time" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-time)"/>
+
+  <!-- Clock with Sections -->
+  <g transform="translate(200, 250)">
+    <circle cx="0" cy="0" r="120" fill="#ffffff" opacity="0.9"/>
+    
+    <!-- Clock segments (3 hours) -->
+    <path d="M 0 -120 A 120 120 0 0 1 104 -60 L 0 0 Z" fill="#22c55e" opacity="0.8"/>
+    <text x="45" y="-50" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="600">Bio</text>
+    
+    <path d="M 104 -60 A 120 120 0 0 1 60 104 L 0 0 Z" fill="#2563eb" opacity="0.8"/>
+    <text x="60" y="45" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="600">Phy</text>
+    
+    <path d="M 60 104 A 120 120 0 0 1 -104 60 L 0 0 Z" fill="#f97316" opacity="0.8"/>
+    <text x="-45" y="60" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" font-weight="600">Chem</text>
+    
+    <path d="M -104 60 A 120 120 0 0 1 0 -120 L 0 0 Z" fill="#facc15" opacity="0.8"/>
+    <text x="-45" y="-40" font-family="Arial, sans-serif" font-size="14" fill="#000000" font-weight="600">Rev</text>
+    
+    <!-- Clock hands -->
+    <line x1="0" y1="0" x2="0" y2="-90" stroke="#000000" stroke-width="4"/>
+    <line x1="0" y1="0" x2="70" y2="0" stroke="#000000" stroke-width="3"/>
+    <circle cx="0" cy="0" r="8" fill="#000000"/>
+  </g>
+
+  <!-- Time Boxes -->
+  <g transform="translate(100, 480)">
+    <rect x="0" y="0" width="280" height="70" rx="10" fill="#ffffff" opacity="0.2"/>
+    <text x="140" y="30" font-family="Arial, sans-serif" font-size="28" fill="#facc15" text-anchor="middle" font-weight="bold">3 Hours</text>
+    <text x="140" y="60" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">Exam Duration</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="550" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">NEET Time</text>
+  <text x="550" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Management</text>
+  <text x="550" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">Maximize Every Second</text>
+
+  <!-- Strategy Points -->
+  <rect x="550" y="345" width="600" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="580" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">⏱️ Strategic Time Allocation</text>
+  <text x="580" y="435" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Biology: 75-80 min (90 questions)</text>
+  <text x="580" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Physics: 50-55 min (45 questions)</text>
+  <text x="580" y="505" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Chemistry: 50-55 min (45 questions)</text>
+  <text x="580" y="540" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Buffer: 15-20 min for revision!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="125" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">180</text>
+  <text x="1050" y="153" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Minutes</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-genetics" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-genetics)"/>
+
+  <!-- DNA Double Helix -->
+  <g transform="translate(150, 200)">
+    <!-- Left strand -->
+    <path d="M 0 0 Q -20 30 0 60 Q 20 90 0 120 Q -20 150 0 180 Q 20 210 0 240" 
+          stroke="#22c55e" stroke-width="8" fill="none" opacity="0.9"/>
+    
+    <!-- Right strand -->
+    <path d="M 100 0 Q 120 30 100 60 Q 80 90 100 120 Q 120 150 100 180 Q 80 210 100 240" 
+          stroke="#22c55e" stroke-width="8" fill="none" opacity="0.9"/>
+    
+    <!-- Base pairs -->
+    <line x1="0" y1="20" x2="100" y2="20" stroke="#facc15" stroke-width="4" opacity="0.8"/>
+    <circle cx="50" cy="20" r="6" fill="#facc15"/>
+    
+    <line x1="0" y1="60" x2="100" y2="60" stroke="#facc15" stroke-width="4" opacity="0.8"/>
+    <circle cx="50" cy="60" r="6" fill="#facc15"/>
+    
+    <line x1="0" y1="100" x2="100" y2="100" stroke="#facc15" stroke-width="4" opacity="0.8"/>
+    <circle cx="50" cy="100" r="6" fill="#facc15"/>
+    
+    <line x1="0" y1="140" x2="100" y2="140" stroke="#facc15" stroke-width="4" opacity="0.8"/>
+    <circle cx="50" cy="140" r="6" fill="#facc15"/>
+    
+    <line x1="0" y1="180" x2="100" y2="180" stroke="#facc15" stroke-width="4" opacity="0.8"/>
+    <circle cx="50" cy="180" r="6" fill="#facc15"/>
+    
+    <line x1="0" y1="220" x2="100" y2="220" stroke="#facc15" stroke-width="4" opacity="0.8"/>
+    <circle cx="50" cy="220" r="6" fill="#facc15"/>
+  </g>
+
+  <!-- Punnett Square -->
+  <g transform="translate(150, 480)">
+    <rect x="0" y="0" width="100" height="100" fill="#ffffff" opacity="0.2" stroke="#ffffff" stroke-width="2"/>
+    <line x1="50" y1="0" x2="50" y2="100" stroke="#ffffff" stroke-width="2"/>
+    <line x1="0" y1="50" x2="100" y2="50" stroke="#ffffff" stroke-width="2"/>
+    <text x="25" y="35" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">AA</text>
+    <text x="75" y="35" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">Aa</text>
+    <text x="25" y="85" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">Aa</text>
+    <text x="75" y="85" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">aa</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="450" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Genetics</text>
+  <text x="450" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">For NEET</text>
+  <text x="450" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">Complete Chapter Guide</text>
+
+  <!-- Key Points -->
+  <rect x="450" y="345" width="700" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="480" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">🧬 Master Genetics Concepts</text>
+  <text x="480" y="435" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Mendelian genetics: Laws & ratios (3:1, 9:3:3:1)</text>
+  <text x="480" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• DNA structure & replication mechanisms</text>
+  <text x="480" y="505" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Gene expression: Transcription & translation</text>
+  <text x="480" y="540" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">12-15 questions from genetics in NEET!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="125" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle">12-15</text>
+  <text x="1050" y="153" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Questions</text>
+</svg>

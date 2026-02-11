@@ -1,0 +1,61 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-4month" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-4month)"/>
+
+  <!-- 4 Month Blocks -->
+  <g transform="translate(80, 200)">
+    <!-- Month 1 -->
+    <rect x="0" y="0" width="70" height="200" rx="8" fill="#22c55e" opacity="0.9"/>
+    <text x="35" y="230" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">M1</text>
+    <text x="35" y="100" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" transform="rotate(-90 35 100)">Build</text>
+    
+    <!-- Month 2 -->
+    <rect x="90" y="0" width="70" height="200" rx="8" fill="#84cc16" opacity="0.9"/>
+    <text x="125" y="230" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">M2</text>
+    <text x="125" y="100" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" transform="rotate(-90 125 100)">Revise</text>
+    
+    <!-- Month 3 -->
+    <rect x="180" y="0" width="70" height="200" rx="8" fill="#facc15" opacity="0.9"/>
+    <text x="215" y="230" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">M3</text>
+    <text x="215" y="100" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" transform="rotate(-90 215 100)">Practice</text>
+    
+    <!-- Month 4 -->
+    <rect x="270" y="0" width="70" height="200" rx="8" fill="#f97316" opacity="0.9"/>
+    <text x="305" y="230" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">M4</text>
+    <text x="305" y="100" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle" transform="rotate(-90 305 100)">Perfect</text>
+  </g>
+
+  <!-- Clock Icon -->
+  <g transform="translate(150, 400)">
+    <circle cx="80" cy="80" r="70" fill="#ffffff" opacity="0.2"/>
+    <circle cx="80" cy="80" r="60" fill="#ffffff" opacity="0.9"/>
+    <text x="80" y="105" font-family="Arial, sans-serif" font-size="56" fill="#2563eb" text-anchor="middle" font-weight="bold">4</text>
+    <text x="80" y="180" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">Months</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="500" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">4-Month NEET</text>
+  <text x="500" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Master Plan</text>
+  <text x="500" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">Strategic Preparation Guide</text>
+
+  <!-- Key Points -->
+  <rect x="500" y="345" width="650" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="530" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">📅 Structured 120-Day Journey</text>
+  <text x="530" y="435" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Month 1-2: Complete syllabus + 1st revision</text>
+  <text x="530" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Month 3: 2nd revision + weekly mocks</text>
+  <text x="530" y="505" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Month 4: 3rd revision + daily practice tests</text>
+  <text x="530" y="540" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Disciplined execution = 600+ score!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="135" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">600+</text>
+  <text x="1050" y="163" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Target</text>
+</svg>

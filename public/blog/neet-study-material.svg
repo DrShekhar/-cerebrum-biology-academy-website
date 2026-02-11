@@ -1,0 +1,58 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-material" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d9488;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#14b8a6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-material)"/>
+
+  <!-- Stack of Books -->
+  <g transform="translate(140, 240)">
+    <!-- Book 1 (bottom) -->
+    <rect x="0" y="120" width="200" height="50" rx="5" fill="#ef4444" opacity="0.9"/>
+    <rect x="10" y="120" width="180" height="10" rx="2" fill="#dc2626" opacity="0.9"/>
+    <text x="100" y="152" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">NCERT</text>
+    
+    <!-- Book 2 -->
+    <rect x="10" y="60" width="200" height="50" rx="5" fill="#3b82f6" opacity="0.9"/>
+    <rect x="20" y="60" width="180" height="10" rx="2" fill="#2563eb" opacity="0.9"/>
+    <text x="110" y="92" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">Reference</text>
+    
+    <!-- Book 3 (top) -->
+    <rect x="20" y="0" width="200" height="50" rx="5" fill="#22c55e" opacity="0.9"/>
+    <rect x="30" y="0" width="180" height="10" rx="2" fill="#16a34a" opacity="0.9"/>
+    <text x="120" y="32" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">PYQs</text>
+  </g>
+
+  <!-- Notes Icon -->
+  <g transform="translate(150, 470)">
+    <rect x="0" y="0" width="180" height="120" rx="8" fill="#ffffff" opacity="0.9"/>
+    <line x1="20" y1="30" x2="160" y2="30" stroke="#0d9488" stroke-width="3"/>
+    <line x1="20" y1="50" x2="160" y2="50" stroke="#0d9488" stroke-width="3"/>
+    <line x1="20" y1="70" x2="160" y2="70" stroke="#0d9488" stroke-width="3"/>
+    <line x1="20" y1="90" x2="120" y2="90" stroke="#0d9488" stroke-width="3"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="540" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">NEET Study</text>
+  <text x="540" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Material Guide</text>
+  <text x="540" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">Best Books & Resources</text>
+
+  <!-- Key Points -->
+  <rect x="540" y="345" width="610" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="570" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">📚 Essential Study Resources</text>
+  <text x="570" y="435" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Biology: NCERT + MTG Fingertips</text>
+  <text x="570" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Physics: NCERT + HC Verma (concepts)</text>
+  <text x="570" y="505" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Chemistry: NCERT + MS Chauhan (Organic)</text>
+  <text x="570" y="540" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Quality over quantity - master few books!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="120" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">2-3</text>
+  <text x="1050" y="148" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Books</text>
+  <text x="1050" y="165" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">per subject</text>
+</svg>

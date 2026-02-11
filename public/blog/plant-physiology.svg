@@ -1,0 +1,57 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-plant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#16a34a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#15803d;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-plant)"/>
+
+  <!-- Plant Illustration -->
+  <g transform="translate(200, 200)">
+    <!-- Leaves -->
+    <ellipse cx="-40" cy="-20" rx="30" ry="50" fill="#22c55e" opacity="0.9" transform="rotate(-30 -40 -20)"/>
+    <ellipse cx="40" cy="-20" rx="30" ry="50" fill="#22c55e" opacity="0.9" transform="rotate(30 40 -20)"/>
+    <ellipse cx="-50" cy="40" rx="25" ry="45" fill="#22c55e" opacity="0.9" transform="rotate(-40 -50 40)"/>
+    <ellipse cx="50" cy="40" rx="25" ry="45" fill="#22c55e" opacity="0.9" transform="rotate(40 50 40)"/>
+    
+    <!-- Stem -->
+    <rect x="-10" y="-40" width="20" height="200" rx="5" fill="#84cc16" opacity="0.9"/>
+    
+    <!-- Roots -->
+    <path d="M -10 160 Q -30 180 -40 220" stroke="#a16207" stroke-width="8" fill="none" opacity="0.8"/>
+    <path d="M 0 160 Q 0 190 0 230" stroke="#a16207" stroke-width="8" fill="none" opacity="0.8"/>
+    <path d="M 10 160 Q 30 180 40 220" stroke="#a16207" stroke-width="8" fill="none" opacity="0.8"/>
+    
+    <!-- Soil -->
+    <rect x="-80" y="230" width="160" height="50" fill="#78350f" opacity="0.6"/>
+  </g>
+
+  <!-- Photosynthesis Equation Box -->
+  <g transform="translate(100, 480)">
+    <rect x="0" y="0" width="300" height="80" rx="10" fill="#ffffff" opacity="0.2"/>
+    <text x="150" y="30" font-family="Arial, sans-serif" font-size="20" fill="#facc15" text-anchor="middle" font-weight="600">6CO₂ + 6H₂O → C₆H₁₂O₆</text>
+    <text x="150" y="60" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">Photosynthesis</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="550" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Plant</text>
+  <text x="550" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Physiology</text>
+  <text x="550" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">Plant Functions & Processes</text>
+
+  <!-- Key Points -->
+  <rect x="550" y="345" width="600" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="580" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">🌱 Essential Plant Processes</text>
+  <text x="580" y="435" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Photosynthesis: Light & dark reactions</text>
+  <text x="580" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Respiration & mineral nutrition</text>
+  <text x="580" y="505" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Transport (xylem, phloem) & growth</text>
+  <text x="580" y="540" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">10-12 questions from plant physiology!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="125" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle">10-12</text>
+  <text x="1050" y="153" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">Questions</text>
+</svg>

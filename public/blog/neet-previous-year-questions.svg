@@ -1,0 +1,59 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-pyq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5b21b6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-pyq)"/>
+
+  <!-- Question Papers Stack -->
+  <g transform="translate(130, 200)">
+    <!-- Paper 2024 -->
+    <rect x="20" y="0" width="240" height="60" rx="5" fill="#ffffff" opacity="0.9"/>
+    <text x="140" y="40" font-family="Arial, sans-serif" font-size="28" fill="#7c3aed" text-anchor="middle" font-weight="bold">2024</text>
+    
+    <!-- Paper 2023 -->
+    <rect x="10" y="70" width="240" height="60" rx="5" fill="#ffffff" opacity="0.8"/>
+    <text x="130" y="110" font-family="Arial, sans-serif" font-size="28" fill="#7c3aed" text-anchor="middle" font-weight="bold">2023</text>
+    
+    <!-- Paper 2022 -->
+    <rect x="0" y="140" width="240" height="60" rx="5" fill="#ffffff" opacity="0.7"/>
+    <text x="120" y="180" font-family="Arial, sans-serif" font-size="28" fill="#7c3aed" text-anchor="middle" font-weight="bold">2022</text>
+    
+    <!-- More papers indicator -->
+    <text x="120" y="230" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="600">...2015-2021</text>
+  </g>
+
+  <!-- Analysis Chart -->
+  <g transform="translate(120, 450)">
+    <rect x="0" y="0" width="260" height="100" rx="10" fill="#ffffff" opacity="0.2"/>
+    <text x="130" y="35" font-family="Arial, sans-serif" font-size="24" fill="#facc15" text-anchor="middle" font-weight="600">📊 Trend Analysis</text>
+    <rect x="20" y="50" width="40" height="30" fill="#22c55e" opacity="0.8"/>
+    <rect x="70" y="40" width="40" height="40" fill="#22c55e" opacity="0.8"/>
+    <rect x="120" y="30" width="40" height="50" fill="#22c55e" opacity="0.8"/>
+    <rect x="170" y="20" width="40" height="60" fill="#22c55e" opacity="0.8"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="540" y="140" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">NEET Previous</text>
+  <text x="540" y="210" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#ffffff">Year Questions</text>
+  <text x="540" y="275" font-family="Arial, sans-serif" font-size="40" fill="#fef3c7">10 Years PYQ Strategy</text>
+
+  <!-- Key Points -->
+  <rect x="540" y="315" width="610" height="260" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="570" y="365" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">📝 Master PYQs for Success</text>
+  <text x="570" y="405" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Solve last 10 years (2015-2024) minimum</text>
+  <text x="570" y="440" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Identify repeat topics & question patterns</text>
+  <text x="570" y="475" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Practice 3 times: 60% questions feel familiar</text>
+  <text x="570" y="510" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Chapter-wise analysis reveals high-yield topics</text>
+  <text x="570" y="545" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">PYQs = Blueprint for NEET success!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="120" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="110" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">10</text>
+  <text x="1050" y="138" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Years</text>
+</svg>

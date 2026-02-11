@@ -1,0 +1,47 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-delhi" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6d28d9;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-delhi)"/>
+
+  <!-- India Gate Silhouette -->
+  <g transform="translate(180, 250)">
+    <rect x="60" y="0" width="80" height="180" fill="#ffffff" opacity="0.3"/>
+    <rect x="0" y="180" width="200" height="20" fill="#ffffff" opacity="0.3"/>
+    <rect x="80" y="40" width="40" height="80" fill="#7c3aed" opacity="0.5"/>
+    <polygon points="100,0 60,-20 60,0" fill="#ffffff" opacity="0.3"/>
+    <polygon points="100,0 140,-20 140,0" fill="#ffffff" opacity="0.3"/>
+  </g>
+
+  <!-- Medical Symbol -->
+  <g transform="translate(200, 480)">
+    <circle cx="0" cy="0" r="50" fill="#22c55e" opacity="0.9"/>
+    <rect x="-30" y="-8" width="60" height="16" rx="3" fill="#ffffff"/>
+    <rect x="-8" y="-30" width="16" height="60" rx="3" fill="#ffffff"/>
+    <text x="0" y="80" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" text-anchor="middle" font-weight="600">Medical</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="500" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Delhi Medical</text>
+  <text x="500" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">Colleges 2026</text>
+  <text x="500" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">AIIMS, MAMC, UCMS & More</text>
+
+  <!-- Key Points -->
+  <rect x="500" y="345" width="650" height="230" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="530" y="395" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">🏥 Top Delhi MBBS Colleges</text>
+  <text x="530" y="435" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• AIIMS Delhi: 680+ NEET score required</text>
+  <text x="530" y="470" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• MAMC, UCMS, LHMC: 650+ for general</text>
+  <text x="530" y="505" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Seats, fees, cutoffs & admission process</text>
+  <text x="530" y="540" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Complete guide to Delhi MBBS admission!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="125" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">650+</text>
+  <text x="1050" y="153" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">Cutoff</text>
+</svg>
