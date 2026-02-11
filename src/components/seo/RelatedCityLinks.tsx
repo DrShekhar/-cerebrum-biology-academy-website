@@ -269,6 +269,289 @@ export const cityPages = {
     region: 'Himachal Pradesh',
     students: '400+',
   },
+  // ═══════════════════════════════════════
+  // INTERNATIONAL — Country Hub Pages
+  // ═══════════════════════════════════════
+  nriSaudiArabia: {
+    name: 'Saudi Arabia',
+    href: '/neet-coaching-nri-saudi-arabia',
+    region: 'Middle East (NRI)',
+    students: '2,600+',
+  },
+  nriQatar: {
+    name: 'Qatar',
+    href: '/neet-coaching-nri-qatar',
+    region: 'Middle East (NRI)',
+    students: '700+',
+  },
+  nriOman: {
+    name: 'Oman',
+    href: '/neet-coaching-nri-oman',
+    region: 'Middle East (NRI)',
+    students: '900+',
+  },
+  nriSingapore: {
+    name: 'Singapore',
+    href: '/neet-coaching-nri-singapore',
+    region: 'SE Asia (NRI)',
+    students: '600+',
+  },
+  nriMalaysia: {
+    name: 'Malaysia',
+    href: '/neet-coaching-nri-malaysia',
+    region: 'SE Asia (NRI)',
+    students: '200+',
+  },
+  nriUK: {
+    name: 'UK',
+    href: '/neet-coaching-nri-uk',
+    region: 'Europe (NRI)',
+    students: '1,800+',
+  },
+  nriUSA: {
+    name: 'USA',
+    href: '/neet-coaching-nri-usa',
+    region: 'Americas (NRI)',
+    students: '5,160+',
+  },
+  nriNepal: {
+    name: 'Nepal',
+    href: '/neet-coaching-nri-nepal',
+    region: 'South Asia',
+    students: '1,500+',
+  },
+  nriCanada: {
+    name: 'Canada',
+    href: '/neet-coaching-nri-canada',
+    region: 'Americas (NRI)',
+    students: '1,200+',
+  },
+  nriAustralia: {
+    name: 'Australia',
+    href: '/neet-coaching-nri-australia',
+    region: 'Oceania (NRI)',
+    students: '700+',
+  },
+  // ═══════════════════════════════════════
+  // INTERNATIONAL — City Pages
+  // ═══════════════════════════════════════
+  // Gulf
+  dubai: {
+    name: 'Dubai',
+    href: '/neet-coaching-dubai-uae',
+    region: 'UAE',
+    students: '3,000+',
+  },
+  abuDhabi: {
+    name: 'Abu Dhabi',
+    href: '/neet-coaching-abu-dhabi-uae',
+    region: 'UAE',
+    students: '1,500+',
+  },
+  riyadh: {
+    name: 'Riyadh',
+    href: '/neet-coaching-riyadh-saudi-arabia',
+    region: 'Saudi Arabia',
+    students: '1,800+',
+  },
+  jeddah: {
+    name: 'Jeddah',
+    href: '/neet-coaching-jeddah-saudi-arabia',
+    region: 'Saudi Arabia',
+    students: '1,200+',
+  },
+  doha: {
+    name: 'Doha',
+    href: '/neet-coaching-doha-qatar',
+    region: 'Qatar',
+    students: '600+',
+  },
+  muscat: {
+    name: 'Muscat',
+    href: '/neet-coaching-muscat-oman',
+    region: 'Oman',
+    students: '700+',
+  },
+  kuwaitCity: {
+    name: 'Kuwait City',
+    href: '/neet-coaching-kuwait-city',
+    region: 'Kuwait',
+    students: '500+',
+  },
+  dammam: {
+    name: 'Dammam',
+    href: '/neet-coaching-dammam-saudi-arabia',
+    region: 'Saudi Arabia',
+    students: '400+',
+  },
+  alKhobar: {
+    name: 'Al Khobar',
+    href: '/neet-coaching-al-khobar-saudi-arabia',
+    region: 'Saudi Arabia',
+    students: '300+',
+  },
+  alAin: {
+    name: 'Al Ain',
+    href: '/neet-coaching-al-ain-uae',
+    region: 'UAE',
+    students: '250+',
+  },
+  salalah: {
+    name: 'Salalah',
+    href: '/neet-coaching-salalah-oman',
+    region: 'Oman',
+    students: '200+',
+  },
+  alWakrah: {
+    name: 'Al Wakrah',
+    href: '/neet-coaching-al-wakrah-qatar',
+    region: 'Qatar',
+    students: '150+',
+  },
+  // UK/Europe
+  london: {
+    name: 'London',
+    href: '/neet-coaching-london-uk',
+    region: 'UK',
+    students: '1,200+',
+  },
+  // Americas
+  newYork: {
+    name: 'New York',
+    href: '/neet-coaching-new-york-usa',
+    region: 'USA',
+    students: '800+',
+  },
+  houston: {
+    name: 'Houston',
+    href: '/neet-coaching-houston-usa',
+    region: 'USA',
+    students: '600+',
+  },
+  chicago: {
+    name: 'Chicago',
+    href: '/neet-coaching-chicago-usa',
+    region: 'USA',
+    students: '500+',
+  },
+  sanJose: {
+    name: 'San Jose',
+    href: '/neet-coaching-san-jose-usa',
+    region: 'USA',
+    students: '400+',
+  },
+  dallas: {
+    name: 'Dallas',
+    href: '/neet-coaching-dallas-usa',
+    region: 'USA',
+    students: '350+',
+  },
+  toronto: {
+    name: 'Toronto',
+    href: '/neet-coaching-toronto-canada',
+    region: 'Canada',
+    students: '500+',
+  },
+  vancouver: {
+    name: 'Vancouver',
+    href: '/neet-coaching-vancouver-canada',
+    region: 'Canada',
+    students: '300+',
+  },
+  brampton: {
+    name: 'Brampton',
+    href: '/neet-coaching-brampton-canada',
+    region: 'Canada',
+    students: '250+',
+  },
+  // Australia
+  sydney: {
+    name: 'Sydney',
+    href: '/neet-coaching-sydney-australia',
+    region: 'Australia',
+    students: '400+',
+  },
+  melbourne: {
+    name: 'Melbourne',
+    href: '/neet-coaching-melbourne-australia',
+    region: 'Australia',
+    students: '350+',
+  },
+  // South Asia
+  kathmandu: {
+    name: 'Kathmandu',
+    href: '/neet-coaching-kathmandu-nepal',
+    region: 'Nepal',
+    students: '1,000+',
+  },
+  colombo: {
+    name: 'Colombo',
+    href: '/neet-coaching-colombo-sri-lanka',
+    region: 'Sri Lanka',
+    students: '300+',
+  },
+  // SE Asia
+  singaporeCity: {
+    name: 'Singapore City',
+    href: '/neet-coaching-singapore-city',
+    region: 'Singapore',
+    students: '500+',
+  },
+  kualaLumpur: {
+    name: 'Kuala Lumpur',
+    href: '/neet-coaching-kuala-lumpur-malaysia',
+    region: 'Malaysia',
+    students: '300+',
+  },
+  jakarta: {
+    name: 'Jakarta',
+    href: '/neet-coaching-jakarta-indonesia',
+    region: 'Indonesia',
+    students: '200+',
+  },
+  manila: {
+    name: 'Manila',
+    href: '/neet-coaching-manila-philippines',
+    region: 'Philippines',
+    students: '150+',
+  },
+  hoChiMinh: {
+    name: 'Ho Chi Minh City',
+    href: '/neet-coaching-ho-chi-minh-vietnam',
+    region: 'Vietnam',
+    students: '100+',
+  },
+  // Africa
+  lagos: {
+    name: 'Lagos',
+    href: '/neet-coaching-lagos-nigeria',
+    region: 'Nigeria',
+    students: '300+',
+  },
+  nairobi: {
+    name: 'Nairobi',
+    href: '/neet-coaching-nairobi-kenya',
+    region: 'Kenya',
+    students: '250+',
+  },
+  darEsSalaam: {
+    name: 'Dar es Salaam',
+    href: '/neet-coaching-dar-es-salaam-tanzania',
+    region: 'Tanzania',
+    students: '150+',
+  },
+  accra: {
+    name: 'Accra',
+    href: '/neet-coaching-accra-ghana',
+    region: 'Ghana',
+    students: '100+',
+  },
+  kampala: {
+    name: 'Kampala',
+    href: '/neet-coaching-kampala-uganda',
+    region: 'Uganda',
+    students: '100+',
+  },
 }
 
 type CityKey = keyof typeof cityPages
@@ -336,6 +619,62 @@ const relatedCitiesMap: Record<CityKey, CityKey[]> = {
   mahendragarh: ['gurgaon', 'faridabad', 'jaipur', 'delhiNCR', 'agra'],
   // Himachal Pradesh
   manali: ['dehradun', 'amritsar', 'delhiNCR', 'lucknow', 'jammu'],
+  // ═══════════════════════════════════════
+  // INTERNATIONAL — Related City Mappings
+  // ═══════════════════════════════════════
+  // Country Hubs → Related Cities
+  nriSaudiArabia: ['riyadh', 'jeddah', 'dammam', 'alKhobar', 'nriQatar'],
+  nriQatar: ['doha', 'alWakrah', 'nriSaudiArabia', 'nriOman', 'dubai'],
+  nriOman: ['muscat', 'salalah', 'nriSaudiArabia', 'nriQatar', 'dubai'],
+  nriSingapore: ['singaporeCity', 'nriMalaysia', 'kualaLumpur', 'jakarta', 'manila'],
+  nriMalaysia: ['kualaLumpur', 'nriSingapore', 'singaporeCity', 'jakarta', 'hoChiMinh'],
+  nriUK: ['london', 'nriUSA', 'nriCanada', 'nriAustralia', 'dubai'],
+  nriUSA: ['newYork', 'houston', 'chicago', 'sanJose', 'dallas'],
+  nriNepal: ['kathmandu', 'nriSingapore', 'nriMalaysia', 'colombo', 'delhiNCR'],
+  nriCanada: ['toronto', 'vancouver', 'brampton', 'nriUSA', 'nriUK'],
+  nriAustralia: ['sydney', 'melbourne', 'nriSingapore', 'nriUK', 'nriCanada'],
+  // Gulf Cities
+  dubai: ['abuDhabi', 'nriSaudiArabia', 'riyadh', 'doha', 'muscat'],
+  abuDhabi: ['dubai', 'alAin', 'nriSaudiArabia', 'doha', 'muscat'],
+  riyadh: ['jeddah', 'dammam', 'alKhobar', 'nriSaudiArabia', 'dubai'],
+  jeddah: ['riyadh', 'dammam', 'nriSaudiArabia', 'dubai', 'doha'],
+  doha: ['alWakrah', 'nriQatar', 'dubai', 'muscat', 'kuwaitCity'],
+  muscat: ['salalah', 'nriOman', 'dubai', 'doha', 'kuwaitCity'],
+  kuwaitCity: ['dubai', 'riyadh', 'doha', 'muscat', 'nriSaudiArabia'],
+  dammam: ['alKhobar', 'riyadh', 'jeddah', 'nriSaudiArabia', 'dubai'],
+  alKhobar: ['dammam', 'riyadh', 'dubai', 'doha', 'nriSaudiArabia'],
+  alAin: ['abuDhabi', 'dubai', 'muscat', 'nriSaudiArabia', 'doha'],
+  salalah: ['muscat', 'nriOman', 'dubai', 'doha', 'nriSaudiArabia'],
+  alWakrah: ['doha', 'nriQatar', 'dubai', 'muscat', 'kuwaitCity'],
+  // UK/Europe
+  london: ['nriUK', 'toronto', 'newYork', 'sydney', 'dubai'],
+  // Americas
+  newYork: ['houston', 'chicago', 'nriUSA', 'toronto', 'london'],
+  houston: ['dallas', 'newYork', 'sanJose', 'nriUSA', 'chicago'],
+  chicago: ['newYork', 'houston', 'dallas', 'nriUSA', 'toronto'],
+  sanJose: ['houston', 'newYork', 'dallas', 'nriUSA', 'vancouver'],
+  dallas: ['houston', 'chicago', 'newYork', 'nriUSA', 'sanJose'],
+  toronto: ['vancouver', 'brampton', 'nriCanada', 'newYork', 'london'],
+  vancouver: ['toronto', 'brampton', 'nriCanada', 'sanJose', 'sydney'],
+  brampton: ['toronto', 'vancouver', 'nriCanada', 'newYork', 'london'],
+  // Australia
+  sydney: ['melbourne', 'nriAustralia', 'singaporeCity', 'london', 'toronto'],
+  melbourne: ['sydney', 'nriAustralia', 'singaporeCity', 'london', 'toronto'],
+  // South Asia
+  kathmandu: ['nriNepal', 'colombo', 'nriSingapore', 'delhiNCR', 'patna'],
+  colombo: ['kathmandu', 'nriNepal', 'nriSingapore', 'kualaLumpur', 'chennai'],
+  // SE Asia
+  singaporeCity: ['nriSingapore', 'kualaLumpur', 'jakarta', 'manila', 'hoChiMinh'],
+  kualaLumpur: ['nriMalaysia', 'singaporeCity', 'jakarta', 'manila', 'hoChiMinh'],
+  jakarta: ['kualaLumpur', 'singaporeCity', 'manila', 'hoChiMinh', 'nriMalaysia'],
+  manila: ['singaporeCity', 'kualaLumpur', 'jakarta', 'hoChiMinh', 'nriSingapore'],
+  hoChiMinh: ['kualaLumpur', 'singaporeCity', 'jakarta', 'manila', 'nriMalaysia'],
+  // Africa
+  lagos: ['nairobi', 'accra', 'kampala', 'darEsSalaam', 'dubai'],
+  nairobi: ['darEsSalaam', 'kampala', 'lagos', 'accra', 'dubai'],
+  darEsSalaam: ['nairobi', 'kampala', 'lagos', 'accra', 'dubai'],
+  accra: ['lagos', 'nairobi', 'kampala', 'darEsSalaam', 'london'],
+  kampala: ['nairobi', 'darEsSalaam', 'lagos', 'accra', 'dubai'],
 }
 
 export function RelatedCityLinks({
@@ -495,6 +834,9 @@ export function CityQuickLinks() {
     'ghaziabad',
   ]
   const coachingHubCities: CityKey[] = ['kota', 'jaipur', 'patna', 'lucknow', 'kanpur', 'prayagraj', 'varanasi', 'agra', 'meerut', 'dehradun', 'jammu', 'srinagar', 'vadodara', 'jodhpur', 'gwalior', 'mussoorie', 'udaipur', 'ranchi', 'amritsar', 'mahendragarh', 'manali']
+  const gulfCities: CityKey[] = ['dubai', 'abuDhabi', 'riyadh', 'jeddah', 'doha', 'muscat', 'kuwaitCity', 'dammam']
+  const westernCities: CityKey[] = ['london', 'newYork', 'houston', 'chicago', 'toronto', 'vancouver', 'sydney', 'melbourne']
+  const asiaAfricaCities: CityKey[] = ['singaporeCity', 'kualaLumpur', 'kathmandu', 'jakarta', 'manila', 'lagos', 'nairobi']
 
   return (
     <div className="space-y-6">
@@ -540,6 +882,63 @@ export function CityQuickLinks() {
         <h4 className="font-semibold text-gray-900 mb-3">Coaching Hubs</h4>
         <ul className="space-y-2">
           {coachingHubCities.map((cityKey) => {
+            const city = cityPages[cityKey]
+            return (
+              <li key={cityKey}>
+                <Link
+                  href={city.href}
+                  className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
+                >
+                  NEET Coaching in {city.name}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-semibold text-green-400 mb-3">Gulf & Middle East</h4>
+        <ul className="space-y-2">
+          {gulfCities.map((cityKey) => {
+            const city = cityPages[cityKey]
+            return (
+              <li key={cityKey}>
+                <Link
+                  href={city.href}
+                  className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
+                >
+                  NEET Coaching in {city.name}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-semibold text-green-400 mb-3">USA, UK, Canada & Australia</h4>
+        <ul className="space-y-2">
+          {westernCities.map((cityKey) => {
+            const city = cityPages[cityKey]
+            return (
+              <li key={cityKey}>
+                <Link
+                  href={city.href}
+                  className="text-gray-600 hover:text-blue-600 transition-colors text-sm"
+                >
+                  NEET Coaching in {city.name}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-semibold text-green-400 mb-3">Asia & Africa</h4>
+        <ul className="space-y-2">
+          {asiaAfricaCities.map((cityKey) => {
             const city = cityPages[cityKey]
             return (
               <li key={cityKey}>

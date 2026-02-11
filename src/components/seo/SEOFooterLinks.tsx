@@ -69,14 +69,58 @@ const FOOTER_CATEGORIES: FooterLinkCategory[] = [
       { label: 'Book Free Demo', href: '/book-free-demo' },
     ],
   },
+  {
+    heading: 'NRI — Gulf & Middle East',
+    links: [
+      { label: 'Dubai', href: '/neet-coaching-dubai-uae' },
+      { label: 'Riyadh', href: '/neet-coaching-riyadh-saudi-arabia' },
+      { label: 'Doha', href: '/neet-coaching-doha-qatar' },
+      { label: 'Muscat', href: '/neet-coaching-muscat-oman' },
+      { label: 'Kuwait City', href: '/neet-coaching-kuwait-city' },
+      { label: 'Bahrain', href: '/neet-coaching-bahrain' },
+    ],
+  },
+  {
+    heading: 'NRI — Americas & UK',
+    links: [
+      { label: 'New York', href: '/neet-coaching-new-york-usa' },
+      { label: 'Houston', href: '/neet-coaching-houston-usa' },
+      { label: 'Toronto', href: '/neet-coaching-toronto-canada' },
+      { label: 'London', href: '/neet-coaching-london-uk' },
+      { label: 'Sydney', href: '/neet-coaching-sydney-australia' },
+      { label: 'NRI USA Hub', href: '/neet-coaching-nri-usa' },
+    ],
+  },
+  {
+    heading: 'NRI — Asia & Africa',
+    links: [
+      { label: 'Singapore', href: '/neet-coaching-singapore-city' },
+      { label: 'Kuala Lumpur', href: '/neet-coaching-kuala-lumpur-malaysia' },
+      { label: 'Kathmandu', href: '/neet-coaching-kathmandu-nepal' },
+      { label: 'Lagos', href: '/neet-coaching-lagos-nigeria' },
+      { label: 'Nairobi', href: '/neet-coaching-nairobi-kenya' },
+      { label: 'NRI Dropper', href: '/nri-neet-dropper-program' },
+    ],
+  },
+  {
+    heading: 'Board to NEET',
+    links: [
+      { label: 'IB → NEET', href: '/ib-to-neet-biology-preparation' },
+      { label: 'IGCSE → NEET', href: '/igcse-to-neet-biology-preparation' },
+      { label: 'A-Level → NEET', href: '/a-level-to-neet-biology-preparation' },
+      { label: 'AP Bio → NEET', href: '/ap-biology-to-neet-preparation' },
+      { label: 'Edexcel → NEET', href: '/edexcel-to-neet-biology-preparation' },
+      { label: 'NRI Foundation', href: '/nri-neet-foundation-program' },
+    ],
+  },
 ]
 
 export function SEOFooterLinks() {
   return (
     <section className="bg-slate-900 text-white py-12 px-4 md:px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Grid layout: 5 columns on desktop, 2 on mobile */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-6">
+        {/* Grid layout: responsive columns */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-5 gap-8 md:gap-6">
           {FOOTER_CATEGORIES.map((category, categoryIndex) => (
             <div key={categoryIndex}>
               {/* Category heading */}
@@ -104,7 +148,7 @@ export function SEOFooterLinks() {
         <div className="border-t border-slate-700 mt-10 pt-8">
           {/* Footer meta info */}
           <div className="flex flex-col md:flex-row items-center justify-between text-xs text-gray-400">
-            <p>&copy; 2024 Cerebrum. All rights reserved.</p>
+            <p>&copy; 2026 Cerebrum Biology Academy. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
               <Link href="/privacy">
                 <span className="hover:text-green-400 transition-colors">Privacy Policy</span>

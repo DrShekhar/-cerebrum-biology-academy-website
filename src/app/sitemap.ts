@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://cerebrumbiologyacademy.com'
   // Use a stable date for static pages so Google can distinguish actual content updates
   // from mere redeployments. Update this date when site content meaningfully changes.
-  const lastUpdated = new Date('2026-02-06')
+  const lastUpdated = new Date('2026-02-11')
 
   // Dynamically generate blog post URLs from MDX files
   const blogPosts = getAllPosts()
@@ -7209,6 +7209,274 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/neet-coaching-chiang-mai-thailand`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+
+    // ══════════════════════════════════════════════════════
+    // NEW INTERNATIONAL PAGES — Phase 1-4 (Feb 2026)
+    // ══════════════════════════════════════════════════════
+
+    // Phase 1A: Country Hub Pages (8)
+    {
+      url: `${baseUrl}/neet-coaching-nri-saudi-arabia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-qatar`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-oman`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-singapore`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-malaysia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-uk`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-nri-nepal`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.90,
+    },
+
+    // Phase 1B: NEET Exam Center City Pages (5)
+    {
+      url: `${baseUrl}/neet-coaching-kathmandu-nepal`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-singapore-city`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-kuala-lumpur-malaysia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-lagos-nigeria`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dammam-saudi-arabia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+
+    // Phase 1C: Board-to-NEET Bridge Pages (2)
+    {
+      url: `${baseUrl}/ap-biology-to-neet-preparation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/edexcel-to-neet-biology-preparation`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+
+    // Phase 2A: Top NRI City Pages (7)
+    {
+      url: `${baseUrl}/neet-coaching-london-uk`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-toronto-canada`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-vancouver-canada`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-sydney-australia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-melbourne-australia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-new-york-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-houston-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.89,
+    },
+
+    // Phase 2B: NRI Student Segment Pages (4)
+    {
+      url: `${baseUrl}/nri-neet-dropper-program`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/nri-neet-crash-course`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/nri-neet-foundation-program`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+    {
+      url: `${baseUrl}/nri-medical-admission-counseling`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.88,
+    },
+
+    // Phase 3A: US/Canada City Pages (4)
+    {
+      url: `${baseUrl}/neet-coaching-chicago-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-san-jose-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-brampton-canada`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dallas-usa`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+
+    // Phase 3B: Southeast Asian City Pages (3)
+    {
+      url: `${baseUrl}/neet-coaching-jakarta-indonesia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-ho-chi-minh-vietnam`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-manila-philippines`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.87,
+    },
+
+    // Phase 4A: African City Pages (4)
+    {
+      url: `${baseUrl}/neet-coaching-nairobi-kenya`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-dar-es-salaam-tanzania`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-accra-ghana`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-kampala-uganda`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+
+    // Phase 4B: Middle East Satellite City Pages (4)
+    {
+      url: `${baseUrl}/neet-coaching-al-ain-uae`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-salalah-oman`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-al-khobar-saudi-arabia`,
+      lastModified: lastUpdated,
+      changeFrequency: 'weekly' as const,
+      priority: 0.86,
+    },
+    {
+      url: `${baseUrl}/neet-coaching-al-wakrah-qatar`,
       lastModified: lastUpdated,
       changeFrequency: 'weekly' as const,
       priority: 0.86,
