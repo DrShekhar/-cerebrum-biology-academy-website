@@ -15,14 +15,16 @@ import {
 import { PrismaClient } from '@/generated/prisma'
 
 // Initialize Prisma client with connection pooling and timeout settings
-const db = new PrismaClient({
-  log: ['error', 'warn'],
-  datasources: {
-    db: {
-      url: process.env.DATABASE_URL,
-    },
-  },
-})
+const db = process.env.DATABASE_URL
+  ? new PrismaClient({
+      log: ['error', 'warn'],
+      datasources: {
+        db: {
+          url: process.env.DATABASE_URL,
+        },
+      },
+    })
+  : (null as any)
 
 // Set query timeout to 5 seconds
 const QUERY_TIMEOUT = 5000
