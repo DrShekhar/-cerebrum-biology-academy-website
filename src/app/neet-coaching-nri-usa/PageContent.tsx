@@ -201,7 +201,7 @@ export default function PageContent() {
             Serving 2 CBSE schools across New York, California, Texas, Illinois
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {config['cities'].map((city) => (
+            {['New York', 'Los Angeles', 'Chicago', 'Houston', 'San Francisco', 'Dallas', 'Edison'].map((city) => (
               <div key={city} className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg text-center">
                 <p className="font-semibold text-gray-900">{city}</p>
                 <p className="text-sm text-gray-600 mt-2">CBSE Schools & Centers</p>
