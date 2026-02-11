@@ -1,0 +1,21 @@
+# Branch Ownership Rules
+
+## STAGING BRANCH (Terminal/CLI)
+Owns:
+- content/blog/**
+- public/blog/**  
+- SEO optimizations
+- Blog-related fixes
+
+## COWORK BRANCH (Claude.ai)
+Owns:
+- src/app/**
+- src/components/**
+- prisma/**
+- New features
+- UI/UX changes
+
+## CONFLICT PREVENTION
+- Don't edit same files in both branches
+- Sync with main daily
+- Communicate before touching shared files
