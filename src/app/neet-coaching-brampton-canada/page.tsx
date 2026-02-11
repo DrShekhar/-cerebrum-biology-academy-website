@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import NEETCoachingPageContent from './neet-coaching-brampton-canada/PageContent';
+import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Brampton, Canada - 98% Success Rate | Cerebrum Academy',

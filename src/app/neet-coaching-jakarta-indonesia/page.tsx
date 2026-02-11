@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import NEETCoachingPageContent from './neet-coaching-jakarta-indonesia/PageContent';
+import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Jakarta, Indonesia - 98% Success Rate | Cerebrum Academy',

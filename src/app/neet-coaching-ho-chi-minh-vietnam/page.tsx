@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import NEETCoachingPageContent from './neet-coaching-ho-chi-minh-vietnam/PageContent';
+import NEETCoachingPageContent from './PageContent';
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in Ho Chi Minh City, Vietnam - 98% Success Rate | Cerebrum Academy',
