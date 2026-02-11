@@ -50,8 +50,8 @@ export default function NEETCoachingPageContent() {
         address="Jakarta, Indonesia"
         city="Jakarta"
         country="Indonesia"
-        latitude=-6.2088
-        longitude=106.8456
+        latitude={-6.2088}
+        longitude={106.8456}
         phone="+918826444334"
       />
 

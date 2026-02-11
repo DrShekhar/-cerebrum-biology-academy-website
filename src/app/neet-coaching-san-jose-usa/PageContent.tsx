@@ -50,8 +50,8 @@ export default function NEETCoachingPageContent() {
         address="San Jose, USA"
         city="San Jose"
         country="USA"
-        latitude=37.3382
-        longitude=-121.8863
+        latitude={37.3382}
+        longitude={-121.8863}
         phone="+918826444334"
       />
 

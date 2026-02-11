@@ -50,8 +50,8 @@ export default function NEETCoachingPageContent() {
         address="Ho Chi Minh City, Vietnam"
         city="Ho Chi Minh City"
         country="Vietnam"
-        latitude=10.8231
-        longitude=106.6297
+        latitude={10.8231}
+        longitude={106.6297}
         phone="+918826444334"
       />
 

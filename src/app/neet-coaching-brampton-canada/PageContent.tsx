@@ -50,8 +50,8 @@ export default function NEETCoachingPageContent() {
         address="Brampton, Canada"
         city="Brampton"
         country="Canada"
-        latitude=43.7315
-        longitude=-79.7624
+        latitude={43.7315}
+        longitude={-79.7624}
         phone="+918826444334"
       />
 

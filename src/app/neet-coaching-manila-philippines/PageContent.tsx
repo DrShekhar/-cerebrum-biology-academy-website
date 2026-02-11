@@ -50,8 +50,8 @@ export default function NEETCoachingPageContent() {
         address="Manila, Philippines"
         city="Manila"
         country="Philippines"
-        latitude=14.5995
-        longitude=120.9842
+        latitude={14.5995}
+        longitude={120.9842}
         phone="+918826444334"
       />
 

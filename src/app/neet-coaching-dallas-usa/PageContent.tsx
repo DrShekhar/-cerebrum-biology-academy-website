@@ -50,8 +50,8 @@ export default function NEETCoachingPageContent() {
         address="Dallas, USA"
         city="Dallas"
         country="USA"
-        latitude=32.7767
-        longitude=-96.797
+        latitude={32.7767}
+        longitude={-96.797}
         phone="+918826444334"
       />
 
