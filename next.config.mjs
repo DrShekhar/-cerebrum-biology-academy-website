@@ -1549,11 +1549,8 @@ const nextConfig = {
         key: 'Strict-Transport-Security',
         value: 'max-age=63072000; includeSubDomains; preload',
       },
-      {
-        key: 'Content-Security-Policy',
-        value:
-          "default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com https://checkout.razorpay.com https://*.razorpay.com https://*.sentry.io https://browser.sentry-cdn.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.instantdb.com https://*.razorpay.com https://*.sentry.io https://connect.facebook.net; frame-ancestors 'self'; worker-src 'self' blob:; frame-src 'self' https://www.youtube.com https://player.vimeo.com https://checkout.razorpay.com;",
-      },
+      // CSP is set centrally in middleware via addCSPHeaders().
+      // Avoid duplicate CSP headers because browsers combine them (often over-restrictive).
     ]
 
     // Development: no caching
