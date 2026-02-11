@@ -1,0 +1,2089 @@
+{
+  "total": 151,
+  "validImages": [
+    {
+      "file": "affordable-mbbs-maharashtra-under-50-lakhs.mdx",
+      "imagePath": "/blog/affordable-mbbs-maharashtra.svg",
+      "imageFileName": "affordable-mbbs-maharashtra.svg"
+    },
+    {
+      "file": "affordable-mbbs-under-50-lakhs-india-2026.mdx",
+      "imagePath": "/blog/affordable-mbbs-under-50-lakhs.svg",
+      "imageFileName": "affordable-mbbs-under-50-lakhs.svg"
+    },
+    {
+      "file": "best-books-for-neet-2026-biology-physics-chemistry.mdx",
+      "imagePath": "/blog/best-books-neet.svg",
+      "imageFileName": "best-books-neet.svg"
+    },
+    {
+      "file": "best-neet-coaching-delhi-ncr-comparison.mdx",
+      "imagePath": "/blog/neet-coaching-delhi.svg",
+      "imageFileName": "neet-coaching-delhi.svg"
+    },
+    {
+      "file": "best-private-medical-colleges-maharashtra-2026.mdx",
+      "imagePath": "/blog/private-medical-colleges-maharashtra.svg",
+      "imageFileName": "private-medical-colleges-maharashtra.svg"
+    },
+    {
+      "file": "best-private-medical-colleges-up-low-fees-2026.mdx",
+      "imagePath": "/blog/private-medical-colleges-up-low-fees.svg",
+      "imageFileName": "private-medical-colleges-up-low-fees.svg"
+    },
+    {
+      "file": "biomolecules-neet-biology-complete-guide.mdx",
+      "imagePath": "/blog/biomolecules.svg",
+      "imageFileName": "biomolecules.svg"
+    },
+    {
+      "file": "body-fluids-circulation-neet.mdx",
+      "imagePath": "/blog/circulation.svg",
+      "imageFileName": "circulation.svg"
+    },
+    {
+      "file": "breathing-gas-exchange-neet-notes.mdx",
+      "imagePath": "/blog/respiration.svg",
+      "imageFileName": "respiration.svg"
+    },
+    {
+      "file": "career-options-after-12th-pcb-complete-guide.mdx",
+      "imagePath": "/blog/career-options-pcb.svg",
+      "imageFileName": "career-options-pcb.svg"
+    },
+    {
+      "file": "cell-division-mitosis-meiosis-neet.mdx",
+      "imagePath": "/blog/cell-division.svg",
+      "imageFileName": "cell-division.svg"
+    },
+    {
+      "file": "cell-structure-function-neet-notes.mdx",
+      "imagePath": "/blog/cell-biology.svg",
+      "imageFileName": "cell-biology.svg"
+    },
+    {
+      "file": "common-mistakes-neet-aspirants-avoid-2026.mdx",
+      "imagePath": "/blog/common-mistakes.svg",
+      "imageFileName": "common-mistakes.svg"
+    },
+    {
+      "file": "delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2026.mdx",
+      "imagePath": "/blog/delhi-ncr-medical-colleges-review.svg",
+      "imageFileName": "delhi-ncr-medical-colleges-review.svg"
+    },
+    {
+      "file": "do-or-die-chapters-neet-2026-biology.mdx",
+      "imagePath": "/blog/do-or-die-chapters.svg",
+      "imageFileName": "do-or-die-chapters.svg"
+    },
+    {
+      "file": "dps-students-neet-preparation-guide.mdx",
+      "imagePath": "/blog/dps-neet-guide.svg",
+      "imageFileName": "dps-neet-guide.svg"
+    },
+    {
+      "file": "dy-patil-medical-college-pune-mumbai-kolhapur-comparison.mdx",
+      "imagePath": "/blog/dy-patil-medical-college-comparison.svg",
+      "imageFileName": "dy-patil-medical-college-comparison.svg"
+    },
+    {
+      "file": "excretory-system-neet-notes.mdx",
+      "imagePath": "/blog/excretion.svg",
+      "imageFileName": "excretion.svg"
+    },
+    {
+      "file": "genetics-heredity-variation-neet.mdx",
+      "imagePath": "/blog/genetics.svg",
+      "imageFileName": "genetics.svg"
+    },
+    {
+      "file": "how-to-crack-neet-in-6-months.mdx",
+      "imagePath": "/blog/neet-6-months-strategy.svg",
+      "imageFileName": "neet-6-months-strategy.svg"
+    },
+    {
+      "file": "how-to-score-700-plus-in-neet.mdx",
+      "imagePath": "/blog/neet-700-plus-strategy.svg",
+      "imageFileName": "neet-700-plus-strategy.svg"
+    },
+    {
+      "file": "human-digestion-absorption-neet.mdx",
+      "imagePath": "/blog/digestion.svg",
+      "imageFileName": "digestion.svg"
+    },
+    {
+      "file": "human-physiology-neet-complete-notes.mdx",
+      "imagePath": "/blog/human-physiology-notes.svg",
+      "imageFileName": "human-physiology-notes.svg"
+    },
+    {
+      "file": "kota-vs-online-neet-coaching-2026.mdx",
+      "imagePath": "/blog/kota-vs-online.svg",
+      "imageFileName": "kota-vs-online.svg"
+    },
+    {
+      "file": "last-6-months-neet-2026-preparation-strategy.mdx",
+      "imagePath": "/blog/6-months-strategy.svg",
+      "imageFileName": "6-months-strategy.svg"
+    },
+    {
+      "file": "maharashtra-mbbs-counselling-dmer-guide-2026.mdx",
+      "imagePath": "/blog/maharashtra-mbbs-counselling-dmer.svg",
+      "imageFileName": "maharashtra-mbbs-counselling-dmer.svg"
+    },
+    {
+      "file": "management-nri-quota-mbbs-admission-guide-2026.mdx",
+      "imagePath": "/blog/management-nri-quota-mbbs.svg",
+      "imageFileName": "management-nri-quota-mbbs.svg"
+    },
+    {
+      "file": "medical-colleges-pune-complete-guide-2026.mdx",
+      "imagePath": "/blog/medical-colleges-pune-guide.svg",
+      "imageFileName": "medical-colleges-pune-guide.svg"
+    },
+    {
+      "file": "mock-test-strategy-neet-2026-complete-guide.mdx",
+      "imagePath": "/blog/mock-test-strategy.svg",
+      "imageFileName": "mock-test-strategy.svg"
+    },
+    {
+      "file": "navi-mumbai-medical-colleges-comparison-2026.mdx",
+      "imagePath": "/blog/navi-mumbai-medical-colleges.svg",
+      "imageFileName": "navi-mumbai-medical-colleges.svg"
+    },
+    {
+      "file": "ncert-reading-strategy-neet-biology-2026.mdx",
+      "imagePath": "/blog/ncert-strategy.svg",
+      "imageFileName": "ncert-strategy.svg"
+    },
+    {
+      "file": "neet-2026-complete-guide-exam-pattern-syllabus-dates.mdx",
+      "imagePath": "/blog/neet-2026-guide.svg",
+      "imageFileName": "neet-2026-guide.svg"
+    },
+    {
+      "file": "neet-2026-registration-guide-step-by-step.mdx",
+      "imagePath": "/blog/neet-2026-registration-guide.svg",
+      "imageFileName": "neet-2026-registration-guide.svg"
+    },
+    {
+      "file": "neet-2026-syllabus-complete-guide-deleted-topics.mdx",
+      "imagePath": "/blog/neet-syllabus-2026.svg",
+      "imageFileName": "neet-syllabus-2026.svg"
+    },
+    {
+      "file": "neet-400-500-marks-medical-colleges-maharashtra.mdx",
+      "imagePath": "/blog/neet-400-500-colleges-maharashtra.svg",
+      "imageFileName": "neet-400-500-colleges-maharashtra.svg"
+    },
+    {
+      "file": "neet-animal-kingdom-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-application-form-2026.mdx",
+      "imagePath": "/blog/neet-application-form-2026.svg",
+      "imageFileName": "neet-application-form-2026.svg"
+    },
+    {
+      "file": "neet-biology-chapter-wise-weightage-2026.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-biology-coaching-delhi-ncr-guide.mdx",
+      "imagePath": "/blog/neet-coaching-delhi.svg",
+      "imageFileName": "neet-coaching-delhi.svg"
+    },
+    {
+      "file": "neet-biology-preparation-strategy-score-340-plus.mdx",
+      "imagePath": "/blog/neet-biology-strategy.svg",
+      "imageFileName": "neet-biology-strategy.svg"
+    },
+    {
+      "file": "neet-biology-pyq-chapter-wise-pdf-download.mdx",
+      "imagePath": "/blog/neet-pyq-biology.svg",
+      "imageFileName": "neet-pyq-biology.svg"
+    },
+    {
+      "file": "neet-biology-syllabus-2026-complete-guide.mdx",
+      "imagePath": "/blog/neet-syllabus.svg",
+      "imageFileName": "neet-syllabus.svg"
+    },
+    {
+      "file": "neet-biotechnology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-cell-biology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-cutoff-2026-category-wise.mdx",
+      "imagePath": "/blog/neet-cutoff-2026.svg",
+      "imageFileName": "neet-cutoff-2026.svg"
+    },
+    {
+      "file": "neet-ecology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-eligibility-criteria-2026.mdx",
+      "imagePath": "/blog/neet-eligibility-2026.svg",
+      "imageFileName": "neet-eligibility-2026.svg"
+    },
+    {
+      "file": "neet-evolution-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-exam-centres-state-wise-2026.mdx",
+      "imagePath": "/blog/neet-exam-centres-2026.svg",
+      "imageFileName": "neet-exam-centres-2026.svg"
+    },
+    {
+      "file": "neet-genetics-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-human-physiology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-plant-morphology-anatomy-weightage-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-plant-physiology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-reproduction-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg"
+    },
+    {
+      "file": "neet-score-450-550-colleges-guide-2026.mdx",
+      "imagePath": "/blog/neet-score-450-550-colleges.svg",
+      "imageFileName": "neet-score-450-550-colleges.svg"
+    },
+    {
+      "file": "neet-vs-jee-which-is-tougher.mdx",
+      "imagePath": "/blog/neet-vs-jee-comparison.svg",
+      "imageFileName": "neet-vs-jee-comparison.svg"
+    },
+    {
+      "file": "nervous-system-neet-biology.mdx",
+      "imagePath": "/blog/nervous-system.svg",
+      "imageFileName": "nervous-system.svg"
+    },
+    {
+      "file": "nri-quota-mbbs-maharashtra-complete-guide-2026.mdx",
+      "imagePath": "/blog/nri-quota-mbbs-maharashtra.svg",
+      "imageFileName": "nri-quota-mbbs-maharashtra.svg"
+    },
+    {
+      "file": "photosynthesis-neet-biology-notes.mdx",
+      "imagePath": "/blog/photosynthesis.svg",
+      "imageFileName": "photosynthesis.svg"
+    },
+    {
+      "file": "photosynthesis-vs-respiration-neet-comparison.mdx",
+      "imagePath": "/blog/photosynthesis-respiration.svg",
+      "imageFileName": "photosynthesis-respiration.svg"
+    },
+    {
+      "file": "plant-kingdom-classification-neet.mdx",
+      "imagePath": "/blog/plant-kingdom.svg",
+      "imageFileName": "plant-kingdom.svg"
+    },
+    {
+      "file": "state-wise-medical-colleges-north-india-2026.mdx",
+      "imagePath": "/blog/state-wise-medical-colleges-north-india.svg",
+      "imageFileName": "state-wise-medical-colleges-north-india.svg"
+    },
+    {
+      "file": "top-10-neet-biology-coaching-delhi-ncr-2026.mdx",
+      "imagePath": "/blog/top-coaching-delhi.svg",
+      "imageFileName": "top-coaching-delhi.svg"
+    },
+    {
+      "file": "top-private-medical-colleges-india-fees-cutoff-rankings.mdx",
+      "imagePath": "/blog/private-medical-colleges-india.svg",
+      "imageFileName": "private-medical-colleges-india.svg"
+    },
+    {
+      "file": "what-neet-toppers-do-differently-secrets-revealed.mdx",
+      "imagePath": "/blog/topper-secrets.svg",
+      "imageFileName": "topper-secrets.svg"
+    },
+    {
+      "file": "when-to-start-neet-preparation-class-9-vs-10.mdx",
+      "imagePath": "/blog/when-to-start-neet.svg",
+      "imageFileName": "when-to-start-neet.svg"
+    }
+  ],
+  "placeholders": [
+    {
+      "file": "class-11-biology-neet-complete-foundation.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp"
+    },
+    {
+      "file": "neet-2026-month-by-month-roadmap-complete.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp"
+    },
+    {
+      "file": "neet-biology-mcq-practice-guide-1000-questions.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp"
+    },
+    {
+      "file": "student-case-study-class-11-early-start-neet-success.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp"
+    },
+    {
+      "file": "student-case-study-dropper-480-to-650-neet.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp"
+    },
+    {
+      "file": "student-case-study-online-offline-hybrid-neet.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp"
+    }
+  ],
+  "missingImages": [
+    {
+      "file": "12-month-neet-dropper-study-plan-complete-guide.mdx",
+      "imagePath": "/blog/12-month-dropper-plan.svg",
+      "imageFileName": "12-month-dropper-plan.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "5-month-neet-2026-study-plan-january-may.mdx",
+      "imagePath": "/blog/5-month-neet-study-plan.svg",
+      "imageFileName": "5-month-neet-study-plan.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "aiims-new-delhi-complete-guide-campus-life.mdx",
+      "imagePath": "/blog/aiims-delhi-campus-guide.svg",
+      "imageFileName": "aiims-delhi-campus-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "all-aiims-india-complete-guide-2026.mdx",
+      "imagePath": "/blog/all-aiims-india-guide.svg",
+      "imageFileName": "all-aiims-india-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "allen-vs-aakash-vs-pw-comparison-2026.mdx",
+      "imagePath": "/blog/allen-aakash-pw-comparison.svg",
+      "imageFileName": "allen-aakash-pw-comparison.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "best-ai-tools-apps-neet-preparation-2026.mdx",
+      "imagePath": "/blog/ai-tools-neet-prep.svg",
+      "imageFileName": "ai-tools-neet-prep.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "best-neet-coaching-delhi-ncr-2026-comparison.mdx",
+      "imagePath": "/blog/best-neet-coaching-delhi.jpg",
+      "imageFileName": "best-neet-coaching-delhi.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "biology-diagram-practice-neet.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "biology-mnemonics-neet-preparation.mdx",
+      "imagePath": "/blog/biology-mnemonics.jpg",
+      "imageFileName": "biology-mnemonics.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "biotechnology-neet-simplified-complete-guide.mdx",
+      "reason": "No featuredImage field in frontmatter",
+      "imagePath": null
+    },
+    {
+      "file": "cbse-biology-board-exam-preparation-2026.mdx",
+      "imagePath": "/blog/cbse-biology-board.svg",
+      "imageFileName": "cbse-biology-board.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "class-11-biology-neet-foundation-guide.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "class-11-biology-neet-foundation-strategy.mdx",
+      "imagePath": "/blog/class-11-foundation.svg",
+      "imageFileName": "class-11-foundation.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "class-12-biology-board-neet-dual-preparation.mdx",
+      "imagePath": "/blog/class-12-board-neet.svg",
+      "imageFileName": "class-12-board-neet.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "cracking-the-code-of-neet-exam-success.mdx",
+      "imagePath": "/blog/cracking-neet-code.svg",
+      "imageFileName": "cracking-neet-code.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "dropper-batch-vs-regular-batch-comparison.mdx",
+      "imagePath": "/blog/dropper-vs-regular-batch.svg",
+      "imageFileName": "dropper-vs-regular-batch.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "dropper-case-studies-480-to-650-score-improvement.mdx",
+      "imagePath": "/blog/dropper-case-studies.svg",
+      "imageFileName": "dropper-case-studies.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "dropper-mental-health-guide-handling-pressure-motivation.mdx",
+      "imagePath": "/blog/dropper-mental-health.svg",
+      "imageFileName": "dropper-mental-health.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "future-of-neet-coaching-india-2026-expert-analysis.mdx",
+      "imagePath": "/blog/future-neet-coaching.jpg",
+      "imageFileName": "future-neet-coaching.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "genetics-for-neet-mendel-to-molecular-biology.mdx",
+      "imagePath": "/blog/genetics-mendel-molecular.svg",
+      "imageFileName": "genetics-mendel-molecular.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "genetics-molecular-biology-neet-complete-guide.mdx",
+      "reason": "No featuredImage field in frontmatter",
+      "imagePath": null
+    },
+    {
+      "file": "how-to-avoid-silly-mistakes-neet-exam.mdx",
+      "imagePath": "/blog/avoid-silly-mistakes-neet.svg",
+      "imageFileName": "avoid-silly-mistakes-neet.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "how-to-improve-neet-score-400-to-600-strategy.mdx",
+      "imagePath": "/blog/neet-score-improvement.svg",
+      "imageFileName": "neet-score-improvement.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "how-to-score-320-plus-neet-biology.mdx",
+      "imagePath": "/blog/score-320-neet-biology.svg",
+      "imageFileName": "score-320-neet-biology.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "how-to-score-340-plus-in-neet-biology-expert-strategy.mdx",
+      "imagePath": "/blog/score-340-biology.jpg",
+      "imageFileName": "score-340-biology.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "how-to-score-360-in-neet-biology.mdx",
+      "imagePath": "/blog/neet-360-strategy.svg",
+      "imageFileName": "neet-360-strategy.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "how-to-score-600-plus-in-neet-2026.mdx",
+      "imagePath": "/blog/neet-600-plus-strategy.svg",
+      "imageFileName": "neet-600-plus-strategy.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "how-to-stay-motivated-during-neet-preparation.mdx",
+      "imagePath": "/blog/stay-motivated-neet.svg",
+      "imageFileName": "stay-motivated-neet.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "human-physiology-neet-complete-guide-50-marks.mdx",
+      "imagePath": "/blog/human-physiology-neet-guide.svg",
+      "imageFileName": "human-physiology-neet-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "human-reproduction-neet-notes-complete-guide.mdx",
+      "imagePath": "/blog/human-reproduction-neet.svg",
+      "imageFileName": "human-reproduction-neet.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "important-biology-diagrams-neet-complete-list.mdx",
+      "reason": "No featuredImage field in frontmatter",
+      "imagePath": null
+    },
+    {
+      "file": "mistakes-to-avoid-during-neet-preparation.mdx",
+      "imagePath": "/blog/mistakes-avoid-neet-preparation.svg",
+      "imageFileName": "mistakes-avoid-neet-preparation.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "most-important-topics-neet-physics-chemistry-biology.mdx",
+      "imagePath": "/blog/important-topics-neet.svg",
+      "imageFileName": "important-topics-neet.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "ncert-line-by-line-biology-neet-guide.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "ncert-line-by-line-reading-strategy-neet.mdx",
+      "reason": "No featuredImage field in frontmatter",
+      "imagePath": null
+    },
+    {
+      "file": "neet-100-day-strategy-complete-guide-2026.mdx",
+      "imagePath": "/blog/neet-100-day-strategy.svg",
+      "imageFileName": "neet-100-day-strategy.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-biology-paper-analysis.mdx",
+      "imagePath": "/blog/neet-2026-analysis.svg",
+      "imageFileName": "neet-2026-analysis.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-biology-syllabus-complete-guide.mdx",
+      "imagePath": "/blog/neet-2026-syllabus.svg",
+      "imageFileName": "neet-2026-syllabus.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-complete-preparation-guide-ai-optimized.mdx",
+      "imagePath": "/blog/neet-2026-preparation-guide.svg",
+      "imageFileName": "neet-2026-preparation-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-difficulty-level-cutoff-prediction-analysis.mdx",
+      "imagePath": "/blog/neet-difficulty-prediction.svg",
+      "imageFileName": "neet-difficulty-prediction.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-exam-pattern-changes-explained.mdx",
+      "imagePath": "/blog/neet-2026-pattern-changes.svg",
+      "imageFileName": "neet-2026-pattern-changes.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-exam-pattern-changes.mdx",
+      "imagePath": "/blog/neet-2026-exam-pattern.jpg",
+      "imageFileName": "neet-2026-exam-pattern.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-expected-questions-predictions.mdx",
+      "imagePath": "/blog/neet-expected-questions-2026.svg",
+      "imageFileName": "neet-expected-questions-2026.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-preparation-timeline-class-12.mdx",
+      "imagePath": "/blog/neet-2026-timeline.jpg",
+      "imageFileName": "neet-2026-timeline.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-2026-result-analysis-cutoff-trends.mdx",
+      "imagePath": "/blog/neet-2026-result-analysis.svg",
+      "imageFileName": "neet-2026-result-analysis.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-4-month-study-plan-2026.mdx",
+      "imagePath": "/blog/neet-4-month-plan.svg",
+      "imageFileName": "neet-4-month-plan.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-30-day-revision-plan.mdx",
+      "imagePath": "/blog/neet-30-day-revision.svg",
+      "imageFileName": "neet-30-day-revision.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-assertion-reason-diagram-questions-guide.mdx",
+      "imagePath": "/blog/assertion-reason-guide.svg",
+      "imageFileName": "assertion-reason-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-assertion-reason-questions-guide.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-chapter-wise-weightage-2026-advanced.mdx",
+      "imagePath": "/blog/neet-chapter-weightage.jpg",
+      "imageFileName": "neet-chapter-weightage.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-complete-chapter-wise-resource-hub.mdx",
+      "imagePath": "/blog/neet-biology-chapters.svg",
+      "imageFileName": "neet-biology-chapters.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-diagrams-practice-guide.mdx",
+      "imagePath": "/blog/neet-biology-diagrams.jpg",
+      "imageFileName": "neet-biology-diagrams.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-human-physiology-complete-guide.mdx",
+      "imagePath": "/blog/human-physiology-neet.jpg",
+      "imageFileName": "human-physiology-neet.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-most-repeated-questions-analysis-2026.mdx",
+      "imagePath": "/blog/neet-biology-repeated-questions.svg",
+      "imageFileName": "neet-biology-repeated-questions.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-notes-pdf-free-download-2026.mdx",
+      "imagePath": "/blog/neet-biology-notes-pdf.svg",
+      "imageFileName": "neet-biology-notes-pdf.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-olympiad-preparation-guide.mdx",
+      "imagePath": "/blog/biology-olympiad.svg",
+      "imageFileName": "biology-olympiad.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-previous-year-questions-analysis.mdx",
+      "imagePath": "/blog/neet-pyq-analysis.jpg",
+      "imageFileName": "neet-pyq-analysis.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-pyq-analysis-2015-2025.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-biology-topper-handwritten-notes-2026.mdx",
+      "imagePath": "/blog/neet-topper-notes.svg",
+      "imageFileName": "neet-topper-notes.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-coaching-delhi-vs-kota-2026.mdx",
+      "imagePath": "/blog/delhi-vs-kota.jpg",
+      "imageFileName": "delhi-vs-kota.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-drop-year-strategy-2026.mdx",
+      "imagePath": "/blog/neet-drop-year-strategy.svg",
+      "imageFileName": "neet-drop-year-strategy.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-dropper-batch-2026-online-coaching-guide.mdx",
+      "imagePath": "/blog/neet-dropper-batch-2026.svg",
+      "imageFileName": "neet-dropper-batch-2026.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-dropper-daily-routine-timetable-2026.mdx",
+      "imagePath": "/blog/neet-dropper-routine.svg",
+      "imageFileName": "neet-dropper-routine.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-dropper-repeater-complete-strategy-guide.mdx",
+      "reason": "No featuredImage field in frontmatter",
+      "imagePath": null
+    },
+    {
+      "file": "neet-dropper-year-complete-guide-2026.mdx",
+      "imagePath": "/blog/neet-dropper-guide.svg",
+      "imageFileName": "neet-dropper-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-exam-day-tips-last-minute-guide-2026.mdx",
+      "imagePath": "/blog/neet-exam-day-tips.svg",
+      "imageFileName": "neet-exam-day-tips.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-mock-test-strategy-complete-guide.mdx",
+      "reason": "No featuredImage field in frontmatter",
+      "imagePath": null
+    },
+    {
+      "file": "neet-negative-marking-strategy-when-to-guess-skip.mdx",
+      "imagePath": "/blog/neet-negative-marking.svg",
+      "imageFileName": "neet-negative-marking.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-preparation-roadmap-class-9-10-students.mdx",
+      "imagePath": "/blog/neet-roadmap-class-9-10.svg",
+      "imageFileName": "neet-roadmap-class-9-10.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "neet-preparation-tips-for-delhi-ncr-students.mdx",
+      "imagePath": "/blog/delhi-ncr-neet-prep.jpg",
+      "imageFileName": "delhi-ncr-neet-prep.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "online-career-counselling-neet-aspirants-guide.mdx",
+      "imagePath": "/blog/career-counselling-neet.svg",
+      "imageFileName": "career-counselling-neet.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "online-vs-offline-neet-coaching-2026.mdx",
+      "imagePath": "/blog/online-vs-offline-coaching.jpg",
+      "imageFileName": "online-vs-offline-coaching.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "parents-guide-choosing-neet-coaching-delhi.mdx",
+      "imagePath": "/blog/parents-guide-neet-coaching.jpg",
+      "imageFileName": "parents-guide-neet-coaching.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "parents-guide-supporting-neet-aspirant-2026.mdx",
+      "imagePath": "/blog/parents-guide-neet.svg",
+      "imageFileName": "parents-guide-neet.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "photosynthesis-complete-neet-guide.mdx",
+      "imagePath": "/blog/photosynthesis-neet-guide.svg",
+      "imageFileName": "photosynthesis-neet-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "revision-strategy-neet-2026-complete-guide.mdx",
+      "imagePath": "/blog/neet-revision-strategy.svg",
+      "imageFileName": "neet-revision-strategy.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "roadmap-for-aiims-mbbs-seat-complete-guide.mdx",
+      "imagePath": "/blog/aiims-mbbs-roadmap.svg",
+      "imageFileName": "aiims-mbbs-roadmap.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "self-study-vs-coaching-neet-2026.mdx",
+      "imagePath": "/blog/self-study-vs-coaching.svg",
+      "imageFileName": "self-study-vs-coaching.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "small-batch-coaching-vs-large-batch-neet.mdx",
+      "imagePath": "/blog/small-batch-coaching.svg",
+      "imageFileName": "small-batch-coaching.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "small-batch-neet-coaching-research-outcomes-2026.mdx",
+      "imagePath": "/blog/research-small-batch.jpg",
+      "imageFileName": "research-small-batch.jpg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "stress-management-mental-health-neet-students.mdx",
+      "reason": "No featuredImage field in frontmatter",
+      "imagePath": null
+    },
+    {
+      "file": "struggling-with-neet-preparation-mental-stress-guide.mdx",
+      "imagePath": "/blog/neet-mental-stress-guide.svg",
+      "imageFileName": "neet-mental-stress-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "time-management-neet-preparation-exam-day.mdx",
+      "imagePath": "/blog/neet-time-management.svg",
+      "imageFileName": "neet-time-management.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "ultimate-neet-2026-guide-specialized-vs-mass-coaching.mdx",
+      "imagePath": "https://images.unsplash.com/photo-1659353886114-9aa119aef5aa?w=1200&h=630&fit=crop&auto=format",
+      "imageFileName": "https://images.unsplash.com/photo-1659353886114-9aa119aef5aa?w=1200&h=630&fit=crop&auto=format",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "ultimate-neet-biology-guide-2026.mdx",
+      "imagePath": "/blog/ultimate-neet-biology-guide.svg",
+      "imageFileName": "ultimate-neet-biology-guide.svg",
+      "reason": "File does not exist"
+    },
+    {
+      "file": "usabo-ibo-complete-parent-guide-grade-wise-preparation.mdx",
+      "imagePath": "/blog/usabo-ibo-guide.svg",
+      "imageFileName": "usabo-ibo-guide.svg",
+      "reason": "File does not exist"
+    }
+  ],
+  "nonSVG": [],
+  "allBlogData": [
+    {
+      "mdxFile": "12-month-neet-dropper-study-plan-complete-guide.mdx",
+      "imagePath": "/blog/12-month-dropper-plan.svg",
+      "imageFileName": "12-month-dropper-plan.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "5-month-neet-2026-study-plan-january-may.mdx",
+      "imagePath": "/blog/5-month-neet-study-plan.svg",
+      "imageFileName": "5-month-neet-study-plan.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "affordable-mbbs-maharashtra-under-50-lakhs.mdx",
+      "imagePath": "/blog/affordable-mbbs-maharashtra.svg",
+      "imageFileName": "affordable-mbbs-maharashtra.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "affordable-mbbs-under-50-lakhs-india-2026.mdx",
+      "imagePath": "/blog/affordable-mbbs-under-50-lakhs.svg",
+      "imageFileName": "affordable-mbbs-under-50-lakhs.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "aiims-new-delhi-complete-guide-campus-life.mdx",
+      "imagePath": "/blog/aiims-delhi-campus-guide.svg",
+      "imageFileName": "aiims-delhi-campus-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "all-aiims-india-complete-guide-2026.mdx",
+      "imagePath": "/blog/all-aiims-india-guide.svg",
+      "imageFileName": "all-aiims-india-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "allen-vs-aakash-vs-pw-comparison-2026.mdx",
+      "imagePath": "/blog/allen-aakash-pw-comparison.svg",
+      "imageFileName": "allen-aakash-pw-comparison.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "best-ai-tools-apps-neet-preparation-2026.mdx",
+      "imagePath": "/blog/ai-tools-neet-prep.svg",
+      "imageFileName": "ai-tools-neet-prep.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "best-books-for-neet-2026-biology-physics-chemistry.mdx",
+      "imagePath": "/blog/best-books-neet.svg",
+      "imageFileName": "best-books-neet.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "best-neet-coaching-delhi-ncr-2026-comparison.mdx",
+      "imagePath": "/blog/best-neet-coaching-delhi.jpg",
+      "imageFileName": "best-neet-coaching-delhi.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "best-neet-coaching-delhi-ncr-comparison.mdx",
+      "imagePath": "/blog/neet-coaching-delhi.svg",
+      "imageFileName": "neet-coaching-delhi.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "best-private-medical-colleges-maharashtra-2026.mdx",
+      "imagePath": "/blog/private-medical-colleges-maharashtra.svg",
+      "imageFileName": "private-medical-colleges-maharashtra.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "best-private-medical-colleges-up-low-fees-2026.mdx",
+      "imagePath": "/blog/private-medical-colleges-up-low-fees.svg",
+      "imageFileName": "private-medical-colleges-up-low-fees.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "biology-diagram-practice-neet.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "biology-mnemonics-neet-preparation.mdx",
+      "imagePath": "/blog/biology-mnemonics.jpg",
+      "imageFileName": "biology-mnemonics.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "biomolecules-neet-biology-complete-guide.mdx",
+      "imagePath": "/blog/biomolecules.svg",
+      "imageFileName": "biomolecules.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "body-fluids-circulation-neet.mdx",
+      "imagePath": "/blog/circulation.svg",
+      "imageFileName": "circulation.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "breathing-gas-exchange-neet-notes.mdx",
+      "imagePath": "/blog/respiration.svg",
+      "imageFileName": "respiration.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "career-options-after-12th-pcb-complete-guide.mdx",
+      "imagePath": "/blog/career-options-pcb.svg",
+      "imageFileName": "career-options-pcb.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "cbse-biology-board-exam-preparation-2026.mdx",
+      "imagePath": "/blog/cbse-biology-board.svg",
+      "imageFileName": "cbse-biology-board.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "cell-division-mitosis-meiosis-neet.mdx",
+      "imagePath": "/blog/cell-division.svg",
+      "imageFileName": "cell-division.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "cell-structure-function-neet-notes.mdx",
+      "imagePath": "/blog/cell-biology.svg",
+      "imageFileName": "cell-biology.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "class-11-biology-neet-complete-foundation.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp",
+      "exists": false,
+      "isPlaceholder": true,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "class-11-biology-neet-foundation-guide.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "class-11-biology-neet-foundation-strategy.mdx",
+      "imagePath": "/blog/class-11-foundation.svg",
+      "imageFileName": "class-11-foundation.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "class-12-biology-board-neet-dual-preparation.mdx",
+      "imagePath": "/blog/class-12-board-neet.svg",
+      "imageFileName": "class-12-board-neet.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "common-mistakes-neet-aspirants-avoid-2026.mdx",
+      "imagePath": "/blog/common-mistakes.svg",
+      "imageFileName": "common-mistakes.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "cracking-the-code-of-neet-exam-success.mdx",
+      "imagePath": "/blog/cracking-neet-code.svg",
+      "imageFileName": "cracking-neet-code.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2026.mdx",
+      "imagePath": "/blog/delhi-ncr-medical-colleges-review.svg",
+      "imageFileName": "delhi-ncr-medical-colleges-review.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "do-or-die-chapters-neet-2026-biology.mdx",
+      "imagePath": "/blog/do-or-die-chapters.svg",
+      "imageFileName": "do-or-die-chapters.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "dps-students-neet-preparation-guide.mdx",
+      "imagePath": "/blog/dps-neet-guide.svg",
+      "imageFileName": "dps-neet-guide.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "dropper-batch-vs-regular-batch-comparison.mdx",
+      "imagePath": "/blog/dropper-vs-regular-batch.svg",
+      "imageFileName": "dropper-vs-regular-batch.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "dropper-case-studies-480-to-650-score-improvement.mdx",
+      "imagePath": "/blog/dropper-case-studies.svg",
+      "imageFileName": "dropper-case-studies.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "dropper-mental-health-guide-handling-pressure-motivation.mdx",
+      "imagePath": "/blog/dropper-mental-health.svg",
+      "imageFileName": "dropper-mental-health.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "dy-patil-medical-college-pune-mumbai-kolhapur-comparison.mdx",
+      "imagePath": "/blog/dy-patil-medical-college-comparison.svg",
+      "imageFileName": "dy-patil-medical-college-comparison.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "excretory-system-neet-notes.mdx",
+      "imagePath": "/blog/excretion.svg",
+      "imageFileName": "excretion.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "future-of-neet-coaching-india-2026-expert-analysis.mdx",
+      "imagePath": "/blog/future-neet-coaching.jpg",
+      "imageFileName": "future-neet-coaching.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "genetics-for-neet-mendel-to-molecular-biology.mdx",
+      "imagePath": "/blog/genetics-mendel-molecular.svg",
+      "imageFileName": "genetics-mendel-molecular.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "genetics-heredity-variation-neet.mdx",
+      "imagePath": "/blog/genetics.svg",
+      "imageFileName": "genetics.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "how-to-avoid-silly-mistakes-neet-exam.mdx",
+      "imagePath": "/blog/avoid-silly-mistakes-neet.svg",
+      "imageFileName": "avoid-silly-mistakes-neet.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "how-to-crack-neet-in-6-months.mdx",
+      "imagePath": "/blog/neet-6-months-strategy.svg",
+      "imageFileName": "neet-6-months-strategy.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "how-to-improve-neet-score-400-to-600-strategy.mdx",
+      "imagePath": "/blog/neet-score-improvement.svg",
+      "imageFileName": "neet-score-improvement.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "how-to-score-320-plus-neet-biology.mdx",
+      "imagePath": "/blog/score-320-neet-biology.svg",
+      "imageFileName": "score-320-neet-biology.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "how-to-score-340-plus-in-neet-biology-expert-strategy.mdx",
+      "imagePath": "/blog/score-340-biology.jpg",
+      "imageFileName": "score-340-biology.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "how-to-score-360-in-neet-biology.mdx",
+      "imagePath": "/blog/neet-360-strategy.svg",
+      "imageFileName": "neet-360-strategy.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "how-to-score-600-plus-in-neet-2026.mdx",
+      "imagePath": "/blog/neet-600-plus-strategy.svg",
+      "imageFileName": "neet-600-plus-strategy.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "how-to-score-700-plus-in-neet.mdx",
+      "imagePath": "/blog/neet-700-plus-strategy.svg",
+      "imageFileName": "neet-700-plus-strategy.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "how-to-stay-motivated-during-neet-preparation.mdx",
+      "imagePath": "/blog/stay-motivated-neet.svg",
+      "imageFileName": "stay-motivated-neet.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "human-digestion-absorption-neet.mdx",
+      "imagePath": "/blog/digestion.svg",
+      "imageFileName": "digestion.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "human-physiology-neet-complete-guide-50-marks.mdx",
+      "imagePath": "/blog/human-physiology-neet-guide.svg",
+      "imageFileName": "human-physiology-neet-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "human-physiology-neet-complete-notes.mdx",
+      "imagePath": "/blog/human-physiology-notes.svg",
+      "imageFileName": "human-physiology-notes.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "human-reproduction-neet-notes-complete-guide.mdx",
+      "imagePath": "/blog/human-reproduction-neet.svg",
+      "imageFileName": "human-reproduction-neet.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "kota-vs-online-neet-coaching-2026.mdx",
+      "imagePath": "/blog/kota-vs-online.svg",
+      "imageFileName": "kota-vs-online.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "last-6-months-neet-2026-preparation-strategy.mdx",
+      "imagePath": "/blog/6-months-strategy.svg",
+      "imageFileName": "6-months-strategy.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "maharashtra-mbbs-counselling-dmer-guide-2026.mdx",
+      "imagePath": "/blog/maharashtra-mbbs-counselling-dmer.svg",
+      "imageFileName": "maharashtra-mbbs-counselling-dmer.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "management-nri-quota-mbbs-admission-guide-2026.mdx",
+      "imagePath": "/blog/management-nri-quota-mbbs.svg",
+      "imageFileName": "management-nri-quota-mbbs.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "medical-colleges-pune-complete-guide-2026.mdx",
+      "imagePath": "/blog/medical-colleges-pune-guide.svg",
+      "imageFileName": "medical-colleges-pune-guide.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "mistakes-to-avoid-during-neet-preparation.mdx",
+      "imagePath": "/blog/mistakes-avoid-neet-preparation.svg",
+      "imageFileName": "mistakes-avoid-neet-preparation.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "mock-test-strategy-neet-2026-complete-guide.mdx",
+      "imagePath": "/blog/mock-test-strategy.svg",
+      "imageFileName": "mock-test-strategy.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "most-important-topics-neet-physics-chemistry-biology.mdx",
+      "imagePath": "/blog/important-topics-neet.svg",
+      "imageFileName": "important-topics-neet.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "navi-mumbai-medical-colleges-comparison-2026.mdx",
+      "imagePath": "/blog/navi-mumbai-medical-colleges.svg",
+      "imageFileName": "navi-mumbai-medical-colleges.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "ncert-line-by-line-biology-neet-guide.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "ncert-reading-strategy-neet-biology-2026.mdx",
+      "imagePath": "/blog/ncert-strategy.svg",
+      "imageFileName": "ncert-strategy.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-100-day-strategy-complete-guide-2026.mdx",
+      "imagePath": "/blog/neet-100-day-strategy.svg",
+      "imageFileName": "neet-100-day-strategy.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-biology-paper-analysis.mdx",
+      "imagePath": "/blog/neet-2026-analysis.svg",
+      "imageFileName": "neet-2026-analysis.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-biology-syllabus-complete-guide.mdx",
+      "imagePath": "/blog/neet-2026-syllabus.svg",
+      "imageFileName": "neet-2026-syllabus.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-complete-guide-exam-pattern-syllabus-dates.mdx",
+      "imagePath": "/blog/neet-2026-guide.svg",
+      "imageFileName": "neet-2026-guide.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-2026-complete-preparation-guide-ai-optimized.mdx",
+      "imagePath": "/blog/neet-2026-preparation-guide.svg",
+      "imageFileName": "neet-2026-preparation-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-difficulty-level-cutoff-prediction-analysis.mdx",
+      "imagePath": "/blog/neet-difficulty-prediction.svg",
+      "imageFileName": "neet-difficulty-prediction.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-exam-pattern-changes-explained.mdx",
+      "imagePath": "/blog/neet-2026-pattern-changes.svg",
+      "imageFileName": "neet-2026-pattern-changes.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-exam-pattern-changes.mdx",
+      "imagePath": "/blog/neet-2026-exam-pattern.jpg",
+      "imageFileName": "neet-2026-exam-pattern.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-expected-questions-predictions.mdx",
+      "imagePath": "/blog/neet-expected-questions-2026.svg",
+      "imageFileName": "neet-expected-questions-2026.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-month-by-month-roadmap-complete.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp",
+      "exists": false,
+      "isPlaceholder": true,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-preparation-timeline-class-12.mdx",
+      "imagePath": "/blog/neet-2026-timeline.jpg",
+      "imageFileName": "neet-2026-timeline.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-registration-guide-step-by-step.mdx",
+      "imagePath": "/blog/neet-2026-registration-guide.svg",
+      "imageFileName": "neet-2026-registration-guide.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-2026-result-analysis-cutoff-trends.mdx",
+      "imagePath": "/blog/neet-2026-result-analysis.svg",
+      "imageFileName": "neet-2026-result-analysis.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-2026-syllabus-complete-guide-deleted-topics.mdx",
+      "imagePath": "/blog/neet-syllabus-2026.svg",
+      "imageFileName": "neet-syllabus-2026.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-4-month-study-plan-2026.mdx",
+      "imagePath": "/blog/neet-4-month-plan.svg",
+      "imageFileName": "neet-4-month-plan.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-400-500-marks-medical-colleges-maharashtra.mdx",
+      "imagePath": "/blog/neet-400-500-colleges-maharashtra.svg",
+      "imageFileName": "neet-400-500-colleges-maharashtra.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-animal-kingdom-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-application-form-2026.mdx",
+      "imagePath": "/blog/neet-application-form-2026.svg",
+      "imageFileName": "neet-application-form-2026.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-biology-30-day-revision-plan.mdx",
+      "imagePath": "/blog/neet-30-day-revision.svg",
+      "imageFileName": "neet-30-day-revision.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-assertion-reason-diagram-questions-guide.mdx",
+      "imagePath": "/blog/assertion-reason-guide.svg",
+      "imageFileName": "assertion-reason-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-assertion-reason-questions-guide.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-chapter-wise-weightage-2026-advanced.mdx",
+      "imagePath": "/blog/neet-chapter-weightage.jpg",
+      "imageFileName": "neet-chapter-weightage.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-chapter-wise-weightage-2026.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-biology-coaching-delhi-ncr-guide.mdx",
+      "imagePath": "/blog/neet-coaching-delhi.svg",
+      "imageFileName": "neet-coaching-delhi.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-biology-complete-chapter-wise-resource-hub.mdx",
+      "imagePath": "/blog/neet-biology-chapters.svg",
+      "imageFileName": "neet-biology-chapters.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-diagrams-practice-guide.mdx",
+      "imagePath": "/blog/neet-biology-diagrams.jpg",
+      "imageFileName": "neet-biology-diagrams.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-human-physiology-complete-guide.mdx",
+      "imagePath": "/blog/human-physiology-neet.jpg",
+      "imageFileName": "human-physiology-neet.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-mcq-practice-guide-1000-questions.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp",
+      "exists": false,
+      "isPlaceholder": true,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-most-repeated-questions-analysis-2026.mdx",
+      "imagePath": "/blog/neet-biology-repeated-questions.svg",
+      "imageFileName": "neet-biology-repeated-questions.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-notes-pdf-free-download-2026.mdx",
+      "imagePath": "/blog/neet-biology-notes-pdf.svg",
+      "imageFileName": "neet-biology-notes-pdf.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-olympiad-preparation-guide.mdx",
+      "imagePath": "/blog/biology-olympiad.svg",
+      "imageFileName": "biology-olympiad.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-preparation-strategy-score-340-plus.mdx",
+      "imagePath": "/blog/neet-biology-strategy.svg",
+      "imageFileName": "neet-biology-strategy.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-biology-previous-year-questions-analysis.mdx",
+      "imagePath": "/blog/neet-pyq-analysis.jpg",
+      "imageFileName": "neet-pyq-analysis.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-pyq-analysis-2015-2025.mdx",
+      "imagePath": "/blog/neet-biology-guide.jpg",
+      "imageFileName": "neet-biology-guide.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biology-pyq-chapter-wise-pdf-download.mdx",
+      "imagePath": "/blog/neet-pyq-biology.svg",
+      "imageFileName": "neet-pyq-biology.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-biology-syllabus-2026-complete-guide.mdx",
+      "imagePath": "/blog/neet-syllabus.svg",
+      "imageFileName": "neet-syllabus.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-biology-topper-handwritten-notes-2026.mdx",
+      "imagePath": "/blog/neet-topper-notes.svg",
+      "imageFileName": "neet-topper-notes.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-biotechnology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-cell-biology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-coaching-delhi-vs-kota-2026.mdx",
+      "imagePath": "/blog/delhi-vs-kota.jpg",
+      "imageFileName": "delhi-vs-kota.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-cutoff-2026-category-wise.mdx",
+      "imagePath": "/blog/neet-cutoff-2026.svg",
+      "imageFileName": "neet-cutoff-2026.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-drop-year-strategy-2026.mdx",
+      "imagePath": "/blog/neet-drop-year-strategy.svg",
+      "imageFileName": "neet-drop-year-strategy.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-dropper-batch-2026-online-coaching-guide.mdx",
+      "imagePath": "/blog/neet-dropper-batch-2026.svg",
+      "imageFileName": "neet-dropper-batch-2026.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-dropper-daily-routine-timetable-2026.mdx",
+      "imagePath": "/blog/neet-dropper-routine.svg",
+      "imageFileName": "neet-dropper-routine.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-dropper-year-complete-guide-2026.mdx",
+      "imagePath": "/blog/neet-dropper-guide.svg",
+      "imageFileName": "neet-dropper-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-ecology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-eligibility-criteria-2026.mdx",
+      "imagePath": "/blog/neet-eligibility-2026.svg",
+      "imageFileName": "neet-eligibility-2026.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-evolution-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-exam-centres-state-wise-2026.mdx",
+      "imagePath": "/blog/neet-exam-centres-2026.svg",
+      "imageFileName": "neet-exam-centres-2026.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-exam-day-tips-last-minute-guide-2026.mdx",
+      "imagePath": "/blog/neet-exam-day-tips.svg",
+      "imageFileName": "neet-exam-day-tips.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-genetics-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-human-physiology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-negative-marking-strategy-when-to-guess-skip.mdx",
+      "imagePath": "/blog/neet-negative-marking.svg",
+      "imageFileName": "neet-negative-marking.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-plant-morphology-anatomy-weightage-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-plant-physiology-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-preparation-roadmap-class-9-10-students.mdx",
+      "imagePath": "/blog/neet-roadmap-class-9-10.svg",
+      "imageFileName": "neet-roadmap-class-9-10.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-preparation-tips-for-delhi-ncr-students.mdx",
+      "imagePath": "/blog/delhi-ncr-neet-prep.jpg",
+      "imageFileName": "delhi-ncr-neet-prep.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "neet-reproduction-weightage-chapter-wise-analysis.mdx",
+      "imagePath": "/blog/biology-weightage.svg",
+      "imageFileName": "biology-weightage.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-score-450-550-colleges-guide-2026.mdx",
+      "imagePath": "/blog/neet-score-450-550-colleges.svg",
+      "imageFileName": "neet-score-450-550-colleges.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "neet-vs-jee-which-is-tougher.mdx",
+      "imagePath": "/blog/neet-vs-jee-comparison.svg",
+      "imageFileName": "neet-vs-jee-comparison.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "nervous-system-neet-biology.mdx",
+      "imagePath": "/blog/nervous-system.svg",
+      "imageFileName": "nervous-system.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "nri-quota-mbbs-maharashtra-complete-guide-2026.mdx",
+      "imagePath": "/blog/nri-quota-mbbs-maharashtra.svg",
+      "imageFileName": "nri-quota-mbbs-maharashtra.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "online-career-counselling-neet-aspirants-guide.mdx",
+      "imagePath": "/blog/career-counselling-neet.svg",
+      "imageFileName": "career-counselling-neet.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "online-vs-offline-neet-coaching-2026.mdx",
+      "imagePath": "/blog/online-vs-offline-coaching.jpg",
+      "imageFileName": "online-vs-offline-coaching.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "parents-guide-choosing-neet-coaching-delhi.mdx",
+      "imagePath": "/blog/parents-guide-neet-coaching.jpg",
+      "imageFileName": "parents-guide-neet-coaching.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "parents-guide-supporting-neet-aspirant-2026.mdx",
+      "imagePath": "/blog/parents-guide-neet.svg",
+      "imageFileName": "parents-guide-neet.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "photosynthesis-complete-neet-guide.mdx",
+      "imagePath": "/blog/photosynthesis-neet-guide.svg",
+      "imageFileName": "photosynthesis-neet-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "photosynthesis-neet-biology-notes.mdx",
+      "imagePath": "/blog/photosynthesis.svg",
+      "imageFileName": "photosynthesis.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "photosynthesis-vs-respiration-neet-comparison.mdx",
+      "imagePath": "/blog/photosynthesis-respiration.svg",
+      "imageFileName": "photosynthesis-respiration.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "plant-kingdom-classification-neet.mdx",
+      "imagePath": "/blog/plant-kingdom.svg",
+      "imageFileName": "plant-kingdom.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "revision-strategy-neet-2026-complete-guide.mdx",
+      "imagePath": "/blog/neet-revision-strategy.svg",
+      "imageFileName": "neet-revision-strategy.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "roadmap-for-aiims-mbbs-seat-complete-guide.mdx",
+      "imagePath": "/blog/aiims-mbbs-roadmap.svg",
+      "imageFileName": "aiims-mbbs-roadmap.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "self-study-vs-coaching-neet-2026.mdx",
+      "imagePath": "/blog/self-study-vs-coaching.svg",
+      "imageFileName": "self-study-vs-coaching.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "small-batch-coaching-vs-large-batch-neet.mdx",
+      "imagePath": "/blog/small-batch-coaching.svg",
+      "imageFileName": "small-batch-coaching.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "small-batch-neet-coaching-research-outcomes-2026.mdx",
+      "imagePath": "/blog/research-small-batch.jpg",
+      "imageFileName": "research-small-batch.jpg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "state-wise-medical-colleges-north-india-2026.mdx",
+      "imagePath": "/blog/state-wise-medical-colleges-north-india.svg",
+      "imageFileName": "state-wise-medical-colleges-north-india.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "struggling-with-neet-preparation-mental-stress-guide.mdx",
+      "imagePath": "/blog/neet-mental-stress-guide.svg",
+      "imageFileName": "neet-mental-stress-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "student-case-study-class-11-early-start-neet-success.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp",
+      "exists": false,
+      "isPlaceholder": true,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "student-case-study-dropper-480-to-650-neet.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp",
+      "exists": false,
+      "isPlaceholder": true,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "student-case-study-online-offline-hybrid-neet.mdx",
+      "imagePath": "/blog/placeholder.webp",
+      "imageFileName": "placeholder.webp",
+      "exists": false,
+      "isPlaceholder": true,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "time-management-neet-preparation-exam-day.mdx",
+      "imagePath": "/blog/neet-time-management.svg",
+      "imageFileName": "neet-time-management.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "top-10-neet-biology-coaching-delhi-ncr-2026.mdx",
+      "imagePath": "/blog/top-coaching-delhi.svg",
+      "imageFileName": "top-coaching-delhi.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "top-private-medical-colleges-india-fees-cutoff-rankings.mdx",
+      "imagePath": "/blog/private-medical-colleges-india.svg",
+      "imageFileName": "private-medical-colleges-india.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "ultimate-neet-2026-guide-specialized-vs-mass-coaching.mdx",
+      "imagePath": "https://images.unsplash.com/photo-1659353886114-9aa119aef5aa?w=1200&h=630&fit=crop&auto=format",
+      "imageFileName": "https://images.unsplash.com/photo-1659353886114-9aa119aef5aa?w=1200&h=630&fit=crop&auto=format",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "ultimate-neet-biology-guide-2026.mdx",
+      "imagePath": "/blog/ultimate-neet-biology-guide.svg",
+      "imageFileName": "ultimate-neet-biology-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "usabo-ibo-complete-parent-guide-grade-wise-preparation.mdx",
+      "imagePath": "/blog/usabo-ibo-guide.svg",
+      "imageFileName": "usabo-ibo-guide.svg",
+      "exists": false,
+      "isPlaceholder": false,
+      "isSVG": false
+    },
+    {
+      "mdxFile": "what-neet-toppers-do-differently-secrets-revealed.mdx",
+      "imagePath": "/blog/topper-secrets.svg",
+      "imageFileName": "topper-secrets.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    },
+    {
+      "mdxFile": "when-to-start-neet-preparation-class-9-vs-10.mdx",
+      "imagePath": "/blog/when-to-start-neet.svg",
+      "imageFileName": "when-to-start-neet.svg",
+      "exists": true,
+      "isPlaceholder": false,
+      "isSVG": true
+    }
+  ]
+}

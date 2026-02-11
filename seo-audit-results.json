@@ -1,0 +1,1378 @@
+{
+  "total": 158,
+  "perfect": 5,
+  "needsFixes": 153,
+  "issues": [
+    {
+      "file": "12-month-neet-dropper-study-plan-complete-guide.mdx",
+      "titleLen": 54,
+      "titleStatus": "TOO SHORT",
+      "descLen": 156,
+      "descStatus": "OK",
+      "seoTitle": "12-Month NEET Dropper Study Plan 2026 | Complete Guide",
+      "seoDescription": "Detailed 12-month study plan for NEET droppers. Month-wise targets, daily schedule, subject distribution, and mock test strategy for guaranteed improvement."
+    },
+    {
+      "file": "5-month-neet-2026-study-plan-january-may.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 140,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "5-Month NEET 2026 Study Plan (Jan-May) | Score 340+ in Biology",
+      "seoDescription": "Complete 5-month NEET 2026 study plan (Jan-May). Daily schedules, mock test strategy, revision cycles. Used by 247 AIIMS selections in 2024."
+    },
+    {
+      "file": "affordable-mbbs-maharashtra-under-50-lakhs.mdx",
+      "titleLen": 57,
+      "titleStatus": "OK",
+      "descLen": 170,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Affordable MBBS Maharashtra 2026: Under Rs 50 Lakhs Total",
+      "seoDescription": "Complete guide to affordable medical colleges in Maharashtra under Rs 50 Lakhs total cost. Terna (Rs 37.5L), SMBT (Rs 40L) & 15+ NMC approved options with honest reviews."
+    },
+    {
+      "file": "affordable-mbbs-under-50-lakhs-india-2026.mdx",
+      "titleLen": 54,
+      "titleStatus": "TOO SHORT",
+      "descLen": 172,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Affordable MBBS Under ₹50 Lakhs 2026 | Budget Colleges",
+      "seoDescription": "Complete list of affordable private MBBS colleges under ₹50 Lakhs total cost. NMC approved, fee breakdown, hidden costs, loan options for budget-friendly medical education."
+    },
+    {
+      "file": "aiims-new-delhi-complete-guide-campus-life.mdx",
+      "titleLen": 56,
+      "titleStatus": "OK",
+      "descLen": 149,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "AIIMS Delhi Complete Guide 2026 | Campus, Career & USMLE",
+      "seoDescription": "Complete guide to AIIMS New Delhi - campus life, hostel facilities, USMLE trends, career prospects, alumni success & life after graduating from India"
+    },
+    {
+      "file": "all-aiims-india-complete-guide-2026.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 147,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "All AIIMS in India 2026 - Complete Guide | Seats, Cutoffs, Rankings",
+      "seoDescription": "Complete guide to all 25 AIIMS institutes in India for 2026. MBBS seats, NEET cutoffs, fees, NIRF rankings, facilities, pros & cons for each AIIMS."
+    },
+    {
+      "file": "allen-vs-aakash-vs-pw-comparison-2026.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 161,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Allen vs Aakash vs PW 2026 - Why Mass Coaching Fails NEET Biology",
+      "seoDescription": "Allen, Aakash, Physics Wallah comparison 2026. Why factory-model coaching fails Biology students. Cerebrum offers AIIMS faculty, 30-student batches, 98% success."
+    },
+    {
+      "file": "best-ai-tools-apps-neet-preparation-2026.mdx",
+      "titleLen": 72,
+      "titleStatus": "TOO LONG",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Best AI Tools & Apps for NEET 2026 Preparation: Complete Digital Toolkit",
+      "seoDescription": "Discover the best AI tools and apps for NEET 2026 preparation. From doubt-solving AI to spaced repetition apps — build the ultimate digital study toolkit."
+    },
+    {
+      "file": "best-books-for-neet-2026-biology-physics-chemistry.mdx",
+      "titleLen": 68,
+      "titleStatus": "TOO LONG",
+      "descLen": 143,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Best Books for NEET 2026: Complete Subject-wise Book List by Toppers",
+      "seoDescription": "Discover the best books for NEET 2026 preparation. Expert-recommended Biology, Physics, and Chemistry books used by NEET toppers to score 650+."
+    },
+    {
+      "file": "best-neet-coaching-delhi-ncr-2026-comparison.mdx",
+      "titleLen": 59,
+      "titleStatus": "OK",
+      "descLen": 164,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Best NEET Coaching in Delhi NCR 2026 — Top Centers Compared",
+      "seoDescription": "Find the best NEET coaching in Delhi NCR. Compare top centers, faculty quality, batch sizes, results, fees, and make an informed decision for your NEET preparation."
+    },
+    {
+      "file": "best-neet-coaching-delhi-ncr-comparison.mdx",
+      "titleLen": 50,
+      "titleStatus": "TOO SHORT",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Best NEET Coaching Delhi NCR 2026 | Fees & Results",
+      "seoDescription": "Find the best NEET coaching in Delhi, Noida, Gurugram, Faridabad. Compare fees, batch size, faculty, and results of top coaching institutes for NEET 2026."
+    },
+    {
+      "file": "best-private-medical-colleges-maharashtra-2026.mdx",
+      "titleLen": 58,
+      "titleStatus": "OK",
+      "descLen": 145,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Private Medical Colleges Maharashtra 2026 | Fees & Cutoffs",
+      "seoDescription": "Complete guide to top private MBBS colleges in Maharashtra with NEET 2025 cutoffs, fees (Rs 7-35L/year), DMER counselling, and admission process."
+    },
+    {
+      "file": "biology-diagram-practice-neet.mdx",
+      "titleLen": 60,
+      "titleStatus": "OK",
+      "descLen": 194,
+      "descStatus": "TOO LONG",
+      "seoTitle": "50 Must-Know Biology Diagrams for NEET 2026 | Complete Guide",
+      "seoDescription": "Master the 50 most important biology diagrams for NEET 2026. Learn diagram identification, drawing techniques, labeling strategies & test-taking patterns used by top scorers to gain 75-90 marks."
+    },
+    {
+      "file": "biology-mnemonics-neet-preparation.mdx",
+      "titleLen": 52,
+      "titleStatus": "TOO SHORT",
+      "descLen": 176,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Biology Mnemonics for NEET 2026 - 100+ Memory Tricks",
+      "seoDescription": "Master 100+ proven biology mnemonics for NEET 2026. Learn creative memory tricks for taxonomy, physiology, genetics & ecology. Increase retention by 60% with tested strategies."
+    },
+    {
+      "file": "biomolecules-neet-biology-complete-guide.mdx",
+      "titleLen": 53,
+      "titleStatus": "TOO SHORT",
+      "descLen": 171,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Biomolecules NEET 2026 Notes | Complete Chapter Guide",
+      "seoDescription": "Complete NEET Biology notes on Biomolecules. Master carbohydrates, proteins, lipids, nucleic acids and enzymes with structures, functions, diagrams and PYQs for NEET 2026."
+    },
+    {
+      "file": "biotechnology-neet-simplified-complete-guide.mdx",
+      "titleLen": 72,
+      "titleStatus": "TOO LONG",
+      "descLen": 187,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Biotechnology NEET Guide: Simplified PCR, Cloning, Bt Cotton | 16+ Marks",
+      "seoDescription": "Complete Biotechnology guide for NEET 2026 simplified: Recombinant DNA technology, PCR steps, restriction enzymes, vectors, Bt cotton, insulin production, gene therapy. Score 16-24 marks."
+    },
+    {
+      "file": "body-fluids-circulation-neet.mdx",
+      "titleLen": 55,
+      "titleStatus": "OK",
+      "descLen": 171,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Body Fluids & Circulation NEET 2026 | Heart, Blood, ECG",
+      "seoDescription": "Complete NEET Biology notes on Body Fluids and Circulation. Learn blood composition, heart anatomy, cardiac cycle, ECG interpretation with diagrams and PYQs for NEET 2026."
+    },
+    {
+      "file": "breathing-gas-exchange-neet-notes.mdx",
+      "titleLen": 51,
+      "titleStatus": "TOO SHORT",
+      "descLen": 166,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Breathing & Gas Exchange NEET 2026 | Complete Guide",
+      "seoDescription": "Complete NEET Biology notes on Breathing and Exchange of Gases. Learn respiratory system, gas transport, oxygen-hemoglobin curve with diagrams and PYQs for NEET 2026."
+    },
+    {
+      "file": "career-options-after-12th-pcb-complete-guide.mdx",
+      "titleLen": 56,
+      "titleStatus": "OK",
+      "descLen": 175,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Career Options After 12th PCB 2026 | Entrance Exam Guide",
+      "seoDescription": "50+ career options for PCB students beyond MBBS. Complete entrance exam guide with exam dates, syllabus, cutoffs for NEET, CUET, ICAR AIEEA, IIT JAM, BITSAT and more for 2026."
+    },
+    {
+      "file": "cbse-biology-board-exam-preparation-2026.mdx",
+      "titleLen": 91,
+      "titleStatus": "TOO LONG",
+      "descLen": 207,
+      "descStatus": "TOO LONG",
+      "seoTitle": "CBSE Biology Board Exam 2026 — Chapter-Wise Weightage, Tips to Score 95+ | Cerebrum Academy",
+      "seoDescription": "Complete CBSE Class 12 Biology board exam 2026 preparation guide. Chapter-wise marks distribution, diagram practice tips, NCERT mastery strategy, and how to score 95+ while preparing for NEET simultaneously."
+    },
+    {
+      "file": "cell-division-mitosis-meiosis-neet.mdx",
+      "titleLen": 75,
+      "titleStatus": "TOO LONG",
+      "descLen": 144,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Cell Division NEET Notes 2026 | Mitosis, Meiosis, Cell Cycle Complete Guide",
+      "seoDescription": "Comprehensive NEET Biology notes on Cell Division. Learn cell cycle phases, mitosis stages, meiosis I & II with diagrams, differences, and PYQs."
+    },
+    {
+      "file": "cell-structure-function-neet-notes.mdx",
+      "titleLen": 73,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Cell Structure and Function NEET Notes 2026 | Complete Cell Biology Guide",
+      "seoDescription": "Comprehensive NEET Biology notes on Cell Structure and Function. Learn cell theory, organelles, prokaryotic vs eukaryotic cells with diagrams and PYQs."
+    },
+    {
+      "file": "class-11-biology-neet-complete-foundation.mdx",
+      "titleLen": 0,
+      "descLen": 0,
+      "seoTitle": "MISSING",
+      "seoDescription": "MISSING"
+    },
+    {
+      "file": "class-11-biology-neet-foundation-guide.mdx",
+      "titleLen": 36,
+      "titleStatus": "TOO SHORT",
+      "descLen": 157,
+      "descStatus": "OK",
+      "seoTitle": "Class 11 Biology Foundation for NEET",
+      "seoDescription": "Complete guide to mastering Class 11 Biology for NEET with chapter breakdown, study strategy, and connection to Class 12 topics. Build your foundation early."
+    },
+    {
+      "file": "class-11-biology-neet-foundation-strategy.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 156,
+      "descStatus": "OK",
+      "seoTitle": "Class 11 Biology for NEET: Foundation Strategy & Chapter Guide 2026",
+      "seoDescription": "Complete Class 11 Biology guide for NEET preparation. Learn chapter breakdown, study plan, time allocation, and master the foundation for NEET 2026 success."
+    },
+    {
+      "file": "class-12-biology-board-neet-dual-preparation.mdx",
+      "titleLen": 61,
+      "titleStatus": "TOO LONG",
+      "descLen": 160,
+      "descStatus": "OK",
+      "seoTitle": "Class 12 Biology: Board + NEET Dual Preparation Strategy 2026",
+      "seoDescription": "Master Class 12 Biology for both board exams and NEET. Learn chapter overlap, prioritization strategy, daily schedule, and insider tips from 95%+ board scorers."
+    },
+    {
+      "file": "common-mistakes-neet-aspirants-avoid-2026.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "15 Common Mistakes NEET Aspirants Make | Avoid These for 650+ Score",
+      "seoDescription": "Learn the 15 most common mistakes NEET aspirants make and how to avoid them. Expert guidance to prevent preparation pitfalls and score 650+ in NEET 2026."
+    },
+    {
+      "file": "cracking-the-code-of-neet-exam-success.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 148,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Cracking the Code of NEET Exam Success: Complete Blueprint 2026",
+      "seoDescription": "Decode the secrets of NEET exam success. Learn the strategies, study patterns, and mindset shifts that transform average students into NEET toppers."
+    },
+    {
+      "file": "delhi-ncr-medical-colleges-review-sharda-santosh-sgt-hamdard-2026.mdx",
+      "titleLen": 76,
+      "titleStatus": "TOO LONG",
+      "descLen": 157,
+      "descStatus": "OK",
+      "seoTitle": "Sharda vs Santosh vs SGT vs Hamdard Review 2026 | Delhi NCR Medical Colleges",
+      "seoDescription": "Honest review of Delhi NCR medical colleges - Sharda, Santosh, SGT, Hamdard, Subharti. Compare infrastructure, fees (₹18-23L), hospital, faculty & placement."
+    },
+    {
+      "file": "do-or-die-chapters-neet-2026-biology.mdx",
+      "titleLen": 78,
+      "titleStatus": "TOO LONG",
+      "descLen": 150,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Do or Die Chapters NEET 2026 Biology - Score 340+ with These Must-Learn Topics",
+      "seoDescription": "Complete list of Do or Die chapters for NEET 2026 Biology. High-yield topics that guarantee 70-80 questions. Expert strategy to score 340+ in Biology."
+    },
+    {
+      "file": "dps-students-neet-preparation-guide.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 134,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "DPS Students NEET Preparation Guide 2026: Excel in Medical Entrance",
+      "seoDescription": "Complete NEET preparation guide for DPS students. Balance school activities, leverage CBSE curriculum, and ace medical entrance exams."
+    },
+    {
+      "file": "dropper-batch-vs-regular-batch-comparison.mdx",
+      "titleLen": 66,
+      "titleStatus": "TOO LONG",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Dropper Batch vs Regular Batch for NEET 2026 - Complete Comparison",
+      "seoDescription": "Should droppers join dropper batch or regular batch? Detailed comparison of teaching pace, batch composition, fees, and success rates to help you decide."
+    },
+    {
+      "file": "dropper-case-studies-480-to-650-score-improvement.mdx",
+      "titleLen": 72,
+      "titleStatus": "TOO LONG",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Dropper Success Stories: 480 to 650+ Score Improvement Case Studies",
+      "seoDescription": "Real case studies of NEET droppers who improved 100-200 marks in their drop year. Detailed strategies, study plans, and lessons from successful repeaters."
+    },
+    {
+      "file": "dropper-mental-health-guide-handling-pressure-motivation.mdx",
+      "titleLen": 69,
+      "titleStatus": "TOO LONG",
+      "descLen": 173,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Dropper Mental Health Guide 2026 - Managing Anxiety & Motivation",
+      "seoDescription": "Essential mental health guide for NEET droppers. Learn to handle pressure, manage anxiety, deal with social stigma, and stay motivated throughout your drop year preparation."
+    },
+    {
+      "file": "dy-patil-medical-college-pune-mumbai-kolhapur-comparison.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 141,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "DY Patil Medical College: Pune vs Navi Mumbai vs Kolhapur 2026",
+      "seoDescription": "Compare DY Patil Medical College campuses - Pune (Rs 32L), Navi Mumbai (Rs 28L), Kolhapur (Rs 22L). Fees, cutoffs, infrastructure comparison."
+    },
+    {
+      "file": "excretory-system-neet-notes.mdx",
+      "titleLen": 73,
+      "titleStatus": "TOO LONG",
+      "descLen": 139,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Excretory System NEET Notes 2026 | Kidney, Nephron, Urine Formation Guide",
+      "seoDescription": "Complete NEET Biology notes on Excretory System. Learn kidney anatomy, nephron structure, urine formation mechanism with diagrams and PYQs."
+    },
+    {
+      "file": "future-of-neet-coaching-india-2026-expert-analysis.mdx",
+      "titleLen": 68,
+      "titleStatus": "TOO LONG",
+      "descLen": 142,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Future of NEET Coaching India 2026-2030: Expert Trends & Predictions",
+      "seoDescription": "Expert analysis by Dr. Shekhar on future of NEET coaching: AI, hybrid learning, small batches, regional expansion, outcome-based pricing. What"
+    },
+    {
+      "file": "genetics-for-neet-mendel-to-molecular-biology.mdx",
+      "titleLen": 66,
+      "titleStatus": "TOO LONG",
+      "descLen": 150,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Genetics for NEET 2026: Mendel to Molecular Biology Complete Guide",
+      "seoDescription": "Complete NEET Genetics guide covering Mendelian inheritance, molecular basis of inheritance, evolution, and previous year analysis with practice MCQs."
+    },
+    {
+      "file": "genetics-heredity-variation-neet.mdx",
+      "titleLen": 33,
+      "titleStatus": "TOO SHORT",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Genetics NEET Notes 2026 | Mendel",
+      "seoDescription": "Complete NEET Biology notes on Principles of Inheritance and Variation. Learn Mendelian genetics, chromosomal basis, linkage, genetic disorders with PYQs."
+    },
+    {
+      "file": "genetics-molecular-biology-neet-complete-guide.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 168,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Genetics & Molecular Biology NEET Guide: 8-12 Questions = 40+ Marks",
+      "seoDescription": "Complete Genetics & Molecular Biology guide for NEET 2026. Master DNA replication, transcription, translation, Mendelian laws, and inheritance patterns for 32-48 marks."
+    },
+    {
+      "file": "how-to-avoid-silly-mistakes-neet-exam.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 149,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "How to Avoid Silly Mistakes in NEET Exam 2026: Save 20-40 Marks",
+      "seoDescription": "Stop losing marks to silly mistakes in NEET. 15 proven exam-hall techniques to avoid careless errors in bubbling, calculations, and question reading."
+    },
+    {
+      "file": "how-to-improve-neet-score-400-to-600-strategy.mdx",
+      "titleLen": 71,
+      "titleStatus": "TOO LONG",
+      "descLen": 179,
+      "descStatus": "TOO LONG",
+      "seoTitle": "How to Improve NEET Score from 400 to 600+ in 90 Days - Proven Strategy",
+      "seoDescription": "Step-by-step 90-day plan to jump from 400 to 600+ in NEET. Subject-wise strategy, daily timetable, chapter priority list, and common mistakes to avoid. Works for average students."
+    },
+    {
+      "file": "how-to-score-320-plus-neet-biology.mdx",
+      "titleLen": 59,
+      "titleStatus": "OK",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "How to Score 320+ in NEET Biology - Complete Strategy Guide",
+      "seoDescription": "Master the art of scoring 320+ in NEET Biology with our comprehensive guide covering chapter priorities, NCERT reading techniques, and topper strategies."
+    },
+    {
+      "file": "how-to-score-340-plus-in-neet-biology-expert-strategy.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 165,
+      "descStatus": "TOO LONG",
+      "seoTitle": "How to Score 340+ in NEET Biology 2026 — Expert Strategy & Tips",
+      "seoDescription": "Step-by-step strategy to score 340+ in NEET Biology. Month-by-month plan, NCERT mastery, PYQ analysis, diagram practice, and mock test techniques from AIIMS faculty."
+    },
+    {
+      "file": "how-to-score-360-in-neet-biology.mdx",
+      "titleLen": 61,
+      "titleStatus": "TOO LONG",
+      "descLen": 160,
+      "descStatus": "OK",
+      "seoTitle": "How to Score 360/360 in NEET Biology 2026 — Complete Strategy",
+      "seoDescription": "Proven strategy to score 360/360 in NEET Biology. Chapter-wise plan, daily schedule, PYQ analysis, and expert tips from Dr. Shekhar at Cerebrum Biology Academy."
+    },
+    {
+      "file": "how-to-score-600-plus-in-neet-2026.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 181,
+      "descStatus": "TOO LONG",
+      "seoTitle": "How to Score 600+ in NEET 2026 - Complete Strategy & Study Plan",
+      "seoDescription": "Learn how to score 600+ marks in NEET 2026 with proven strategies. Subject-wise tips, daily timetable, mock test schedule & expert guidance for government medical college admission."
+    },
+    {
+      "file": "how-to-score-700-plus-in-neet.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "How to Score 700+ in NEET 2026 - Topper Strategy & Complete Roadmap",
+      "seoDescription": "Learn how to score 700+ in NEET 2026 with proven strategies from AIIMS toppers. Includes daily schedule, subject-wise approach, and month-wise study plan."
+    },
+    {
+      "file": "how-to-stay-motivated-during-neet-preparation.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "How to Stay Motivated During NEET Preparation: 12 Proven Strategies",
+      "seoDescription": "Struggling with motivation during NEET prep? 12 science-backed strategies to maintain drive, overcome slumps, and stay consistent throughout your preparation."
+    },
+    {
+      "file": "human-digestion-absorption-neet.mdx",
+      "titleLen": 80,
+      "titleStatus": "TOO LONG",
+      "descLen": 148,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Human Digestion and Absorption NEET Notes 2026 | Complete Digestive System Guide",
+      "seoDescription": "Comprehensive NEET Biology notes on Digestion and Absorption. Learn digestive system anatomy, enzymes, absorption mechanisms with diagrams and PYQs."
+    },
+    {
+      "file": "human-physiology-neet-complete-guide-50-marks.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 189,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Human Physiology NEET Guide: 12-15 Questions = 50+ Marks Strategy",
+      "seoDescription": "Complete Human Physiology guide for NEET 2026. Master all 5 systems (digestion, respiration, circulation, excretion, neural) with diagrams, NCERT strategy, and scoring tips for 48-60 marks."
+    },
+    {
+      "file": "human-physiology-neet-complete-notes.mdx",
+      "titleLen": 74,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "Human Physiology NEET Notes PDF - Complete 7 Chapters with Diagrams (2026)",
+      "seoDescription": "Download Human Physiology notes for NEET. All 7 chapters covered with diagrams, tables, mnemonics. Highest-weightage unit contributing 14-16 questions yearly."
+    },
+    {
+      "file": "human-reproduction-neet-notes-complete-guide.mdx",
+      "titleLen": 71,
+      "titleStatus": "TOO LONG",
+      "descLen": 146,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Human Reproduction NEET Notes 2026 | Gametogenesis, Fertilization Guide",
+      "seoDescription": "Complete Human Reproduction notes for NEET 2026. Learn gametogenesis, fertilization, pregnancy & development with NCERT diagrams and PYQ analysis."
+    },
+    {
+      "file": "important-biology-diagrams-neet-complete-list.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 187,
+      "descStatus": "TOO LONG",
+      "seoTitle": "50 Important NEET Biology Diagrams 2026: Complete Mastery Guide",
+      "seoDescription": "Master 50 critical NEET Biology diagrams with 5-step practice method. 20-25% Biology questions are diagram-based (60-80 marks). Includes heart, nephron, brain, flower, all NCERT diagrams."
+    },
+    {
+      "file": "kota-vs-online-neet-coaching-2026.mdx",
+      "titleLen": 48,
+      "titleStatus": "TOO SHORT",
+      "descLen": 149,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Kota vs Online NEET Coaching 2026: Honest Parent",
+      "seoDescription": "Complete comparison of Kota vs online NEET coaching. Real costs, success rates, mental health impact, and expert recommendations for parents in 2026."
+    },
+    {
+      "file": "last-6-months-neet-2026-preparation-strategy.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 145,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Last 6 Months NEET 2026 Strategy: Month-by-Month Preparation Plan",
+      "seoDescription": "Complete 6-month NEET 2026 preparation strategy with detailed daily schedule, subject-wise plan, revision techniques, and tips from NEET toppers."
+    },
+    {
+      "file": "maharashtra-mbbs-counselling-dmer-guide-2026.mdx",
+      "titleLen": 54,
+      "titleStatus": "TOO SHORT",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Maharashtra MBBS Counselling 2026: DMER Complete Guide",
+      "seoDescription": "Complete guide to DMER Maharashtra MBBS counselling 2026 - registration process, documents, choice filling strategy, seat allotment, and important dates."
+    },
+    {
+      "file": "management-nri-quota-mbbs-admission-guide-2026.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Management & NRI Quota MBBS 2026 | Complete Fee & Admission Guide",
+      "seoDescription": "Complete guide to Management Quota (₹20-35L) & NRI Quota ($25-40K) MBBS admission 2026. Legal process, eligibility, fee comparison, scam prevention tips."
+    },
+    {
+      "file": "medical-colleges-pune-complete-guide-2026.mdx",
+      "titleLen": 59,
+      "titleStatus": "OK",
+      "descLen": 146,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Top 10 Medical Colleges Pune 2026: Fees, Cutoffs & Rankings",
+      "seoDescription": "Complete guide to best medical colleges in Pune with fees (Rs 8L-32L/year), NEET cutoffs, government vs private comparison, and admission process."
+    },
+    {
+      "file": "mistakes-to-avoid-during-neet-preparation.mdx",
+      "titleLen": 70,
+      "titleStatus": "TOO LONG",
+      "descLen": 160,
+      "descStatus": "OK",
+      "seoTitle": "Mistakes to Avoid During NEET Preparation 2026: Parent & Student Guide",
+      "seoDescription": "10 critical NEET preparation mistakes that cost students a year or more. A comprehensive guide for both parents and students on what NOT to do during NEET prep."
+    },
+    {
+      "file": "mock-test-strategy-neet-2026-complete-guide.mdx",
+      "titleLen": 74,
+      "titleStatus": "TOO LONG",
+      "descLen": 143,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Mock Test Strategy for NEET 2026: Complete Guide to Score 650+ Using Mocks",
+      "seoDescription": "Learn the proven mock test strategy for NEET 2026. Discover how to take, analyze, and improve from mocks. Expert tips to jump from 450 to 650+."
+    },
+    {
+      "file": "most-important-topics-neet-physics-chemistry-biology.mdx",
+      "titleLen": 80,
+      "titleStatus": "TOO LONG",
+      "descLen": 162,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Most Important Topics for NEET 2026: Physics, Chemistry & Biology Priority Guide",
+      "seoDescription": "Complete list of most important topics for NEET 2026 in all three subjects. Chapter-wise weightage analysis, high-yield topics, and smart prioritization strategy."
+    },
+    {
+      "file": "ncert-line-by-line-biology-neet-guide.mdx",
+      "titleLen": 35,
+      "titleStatus": "TOO SHORT",
+      "descLen": 96,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NCERT Line-by-Line for NEET Biology",
+      "seoDescription": "Complete guide to reading NCERT for NEET Biology with exam-critical concepts and practical tips."
+    },
+    {
+      "file": "ncert-line-by-line-reading-strategy-neet.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 178,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NCERT Line-by-Line Reading for NEET 2026: Complete Strategy Guide",
+      "seoDescription": "Complete NCERT line-by-line reading strategy for NEET 2026. Master annotation, chapter priorities, 3-revision cycle, time management for 600+ score. Used by AIR Top 100 students."
+    },
+    {
+      "file": "ncert-reading-strategy-neet-biology-2026.mdx",
+      "titleLen": 66,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "NCERT Reading Strategy for NEET Biology 2026: Line-by-Line Mastery",
+      "seoDescription": "Learn the proven NCERT reading strategy for NEET Biology. Discover how toppers read NCERT line-by-line to score 340+ in Biology. Complete guide with examples."
+    },
+    {
+      "file": "neet-2026-biology-paper-analysis.mdx",
+      "titleLen": 80,
+      "titleStatus": "TOO LONG",
+      "descLen": 152,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Biology Paper Analysis - Chapter-wise Questions, Difficulty & Insights",
+      "seoDescription": "Detailed NEET 2026 Biology paper analysis with chapter-wise breakdown, difficulty level, most asked topics, and key learnings for NEET 2026 preparation."
+    },
+    {
+      "file": "neet-2026-biology-syllabus-complete-guide.mdx",
+      "titleLen": 66,
+      "titleStatus": "TOO LONG",
+      "descLen": 141,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Biology Syllabus - Complete Chapter-Wise Weightage Guide",
+      "seoDescription": "Official NEET 2026 Biology syllabus with chapter-wise weightage analysis. Complete guide to all Class 11 and 12 topics with preparation tips."
+    },
+    {
+      "file": "neet-2026-complete-guide-exam-pattern-syllabus-dates.mdx",
+      "titleLen": 78,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Complete Guide: Exam Pattern, Syllabus, Dates | Official Information",
+      "seoDescription": "Complete NEET 2026 guide with exam pattern, syllabus, important dates, eligibility criteria, and expert preparation strategy. Updated for NEET UG 2026."
+    },
+    {
+      "file": "neet-2026-complete-preparation-guide-ai-optimized.mdx",
+      "titleLen": 77,
+      "titleStatus": "TOO LONG",
+      "descLen": 161,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET 2026 Complete Preparation Guide: Exam Pattern, Syllabus, Strategy & Tips",
+      "seoDescription": "Complete NEET 2026 preparation guide with exam details, syllabus breakdown, subject-wise strategy, best books, and month-by-month timeline to score 650+ in NEET."
+    },
+    {
+      "file": "neet-2026-difficulty-level-cutoff-prediction-analysis.mdx",
+      "titleLen": 73,
+      "titleStatus": "TOO LONG",
+      "descLen": 175,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET 2026 Difficulty Level Prediction & Expected Cutoff - Expert Analysis",
+      "seoDescription": "NEET 2026 difficulty level prediction with category-wise cutoff analysis. Expert insights on expected paper pattern, marking trends, and rank vs marks data for all categories."
+    },
+    {
+      "file": "neet-2026-exam-pattern-changes-explained.mdx",
+      "titleLen": 68,
+      "titleStatus": "TOO LONG",
+      "descLen": 168,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET 2026 Pattern Changes: 180 Questions, No Choice | Complete Guide",
+      "seoDescription": "NMC announces NEET 2026 pattern changes: 180 compulsory questions (no internal choice), updated syllabus, stronger security. Complete analysis and preparation strategy."
+    },
+    {
+      "file": "neet-2026-exam-pattern-changes.mdx",
+      "titleLen": 56,
+      "titleStatus": "OK",
+      "descLen": 130,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Exam Pattern & Latest Changes - Complete Guide",
+      "seoDescription": "Master NEET 2026 exam pattern, marking scheme, syllabus changes. Learn how this year differs from 2025 with our detailed analysis."
+    },
+    {
+      "file": "neet-2026-expected-questions-predictions.mdx",
+      "titleLen": 74,
+      "titleStatus": "TOO LONG",
+      "descLen": 177,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET 2026 Expected Questions - Chapter-wise Predictions & Important Topics",
+      "seoDescription": "NEET 2026 expected questions based on 10-year trend analysis. Get chapter-wise predictions, most repeated topics, and high-probability questions for Biology, Physics, Chemistry."
+    },
+    {
+      "file": "neet-2026-month-by-month-roadmap-complete.mdx",
+      "titleLen": 0,
+      "descLen": 0,
+      "seoTitle": "MISSING",
+      "seoDescription": "MISSING"
+    },
+    {
+      "file": "neet-2026-preparation-timeline-class-12.mdx",
+      "titleLen": 61,
+      "titleStatus": "TOO LONG",
+      "descLen": 127,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Class 12 Preparation Timeline | Month-by-Month Plan",
+      "seoDescription": "NEET 2026 study schedule for Class 12 students: February to May plan, board exam balance, mock test strategy, final month prep."
+    },
+    {
+      "file": "neet-2026-registration-guide-step-by-step.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "NEET 2026 Registration: Step-by-Step Guide | Dates & Documents",
+      "seoDescription": "Complete NEET 2026 registration guide with exact dates, document checklist, eKYC process, fee details, and common mistakes. Registration closes March 8, 2026."
+    },
+    {
+      "file": "neet-2026-result-analysis-cutoff-trends.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Result Analysis - Cutoff Trends & Admission Predictions",
+      "seoDescription": "Complete NEET 2026 result analysis with category-wise cutoffs, state-wise college admission trends, score vs rank data, and MBBS counselling predictions."
+    },
+    {
+      "file": "neet-2026-syllabus-complete-guide-deleted-topics.mdx",
+      "titleLen": 73,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Syllabus PDF Download - Deleted Topics, New Changes & Weightage",
+      "seoDescription": "Complete NEET 2026 syllabus with deleted topics list, newly added chapters, chapter-wise weightage. Free PDF download with expert preparation strategy."
+    },
+    {
+      "file": "neet-4-month-study-plan-2026.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 156,
+      "descStatus": "OK",
+      "seoTitle": "NEET 4 Months Study Plan 2026 - Week-by-Week Schedule for 600+",
+      "seoDescription": "Complete NEET 4 months study plan 2026. Get week-by-week schedule, daily timetable, subject-wise strategy & mock test plan to score 600+ marks. Start today!"
+    },
+    {
+      "file": "neet-400-500-marks-medical-colleges-maharashtra.mdx",
+      "titleLen": 48,
+      "titleStatus": "TOO SHORT",
+      "descLen": 145,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 400-500 Marks: Colleges in Maharashtra 2026",
+      "seoDescription": "Get MBBS admission in Maharashtra with 400-500 NEET marks. Score-to-rank conversion, college options by category, fees, and admission strategies."
+    },
+    {
+      "file": "neet-animal-kingdom-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 79,
+      "titleStatus": "TOO LONG",
+      "descLen": 163,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Animal Kingdom Weightage 2026 | Phyla-Wise Analysis, PYQ Trends & Strategy",
+      "seoDescription": "NEET Animal Kingdom weightage breakdown — all 11 phyla analysis with year-wise PYQ data, most-asked features, example-based questions, and memorization strategies."
+    },
+    {
+      "file": "neet-application-form-2026.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET 2026 Application Form - Registration, Fees & How to Apply",
+      "seoDescription": "Complete guide to NEET 2026 application form registration. Step-by-step process, documents required, fees, important dates, and common mistakes to avoid."
+    },
+    {
+      "file": "neet-biology-30-day-revision-plan.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology 30-Day Revision Plan - Complete Day-Wise Schedule",
+      "seoDescription": "Master NEET Biology in 30 days with our proven revision plan. Day-by-day schedule covering all chapters, revision techniques, and last-minute strategies."
+    },
+    {
+      "file": "neet-biology-assertion-reason-diagram-questions-guide.mdx",
+      "titleLen": 84,
+      "titleStatus": "TOO LONG",
+      "descLen": 179,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Biology Assertion-Reason & Diagram Questions - 50+ Practice MCQs with Solutions",
+      "seoDescription": "Complete guide to solving NEET Biology assertion-reason and diagram-based questions. 50+ practice MCQs with explanations. Scoring strategy for these high-frequency question types."
+    },
+    {
+      "file": "neet-biology-assertion-reason-questions-guide.mdx",
+      "titleLen": 39,
+      "titleStatus": "TOO SHORT",
+      "descLen": 88,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Assertion-Reason Questions NEET Biology",
+      "seoDescription": "Complete guide to NEET Assertion-Reason questions with strategies and practice examples."
+    },
+    {
+      "file": "neet-biology-chapter-wise-weightage-2026-advanced.mdx",
+      "titleLen": 70,
+      "titleStatus": "TOO LONG",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology Chapter-Wise Weightage 2026 — Complete Marks Distribution",
+      "seoDescription": "Detailed NEET Biology chapter weightage 2026: exact marks per chapter, priority ranking, and smart preparation strategy to score 340+ in biology section."
+    },
+    {
+      "file": "neet-biology-chapter-wise-weightage-2026.mdx",
+      "titleLen": 68,
+      "titleStatus": "TOO LONG",
+      "descLen": 161,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Biology Chapter-wise Weightage 2026: High-Yield Topics for 340+",
+      "seoDescription": "Detailed analysis of NEET Biology chapter-wise weightage based on 10-year trends. Know which chapters give maximum questions and how to prioritize for NEET 2026."
+    },
+    {
+      "file": "neet-biology-coaching-delhi-ncr-guide.mdx",
+      "titleLen": 60,
+      "titleStatus": "OK",
+      "descLen": 149,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Best NEET Biology Coaching in Delhi NCR 2026: Complete Guide",
+      "seoDescription": "Compare top NEET biology coaching institutes in Delhi NCR. Expert reviews, fees, success rates, and student testimonials to help you choose the best."
+    },
+    {
+      "file": "neet-biology-complete-chapter-wise-resource-hub.mdx",
+      "titleLen": 82,
+      "titleStatus": "TOO LONG",
+      "descLen": 168,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Biology Chapter-Wise Resource Hub: Weightage, Notes, PYQs for All 38 Chapters",
+      "seoDescription": "Complete chapter-wise resource hub for NEET Biology. Covers all 38 chapters with weightage, key topics, common questions, tips, and diagrams for systematic preparation."
+    },
+    {
+      "file": "neet-biology-diagrams-practice-guide.mdx",
+      "titleLen": 64,
+      "titleStatus": "TOO LONG",
+      "descLen": 137,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology Diagrams - 50 Must-Practice Diagrams & Drawing Tips",
+      "seoDescription": "Complete guide to NEET biology diagrams. Learn 50 must-practice diagrams with marking criteria, common mistakes, and expert drawing tips."
+    },
+    {
+      "file": "neet-biology-human-physiology-complete-guide.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 131,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Human Physiology NEET 2026 | Complete Chapter Guide & Weightage",
+      "seoDescription": "All Human Physiology chapters for NEET: detailed explanation, weightage analysis, common questions, mnemonics and scoring strategy."
+    },
+    {
+      "file": "neet-biology-mcq-practice-guide-1000-questions.mdx",
+      "titleLen": 0,
+      "descLen": 0,
+      "seoTitle": "MISSING",
+      "seoDescription": "MISSING"
+    },
+    {
+      "file": "neet-biology-most-repeated-questions-analysis-2026.mdx",
+      "titleLen": 68,
+      "titleStatus": "TOO LONG",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology Most Repeated Questions - 10-Year Chapter-wise Analysis",
+      "seoDescription": "NEET Biology most repeated questions analysis from 2015-2025. Get chapter-wise list of frequently asked topics, patterns & high-yield areas for NEET 2026."
+    },
+    {
+      "file": "neet-biology-notes-pdf-free-download-2026.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 155,
+      "descStatus": "OK",
+      "seoTitle": "NEET Biology Notes PDF Free Download 2026 - Chapter-wise Material",
+      "seoDescription": "Free NEET Biology notes PDF download 2026. Get chapter-wise notes, NCERT summaries, diagrams, mnemonics & quick revision sheets. Prepared by AIIMS faculty."
+    },
+    {
+      "file": "neet-biology-olympiad-preparation-guide.mdx",
+      "titleLen": 58,
+      "titleStatus": "OK",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Biology Olympiad Preparation Guide: NSBO, INBO, IBO + NEET",
+      "seoDescription": "Complete guide to biology olympiad preparation (NSBO, INBO, IBO) and its overlap with NEET. Advance from school to national to international competitions."
+    },
+    {
+      "file": "neet-biology-preparation-strategy-score-340-plus.mdx",
+      "titleLen": 64,
+      "titleStatus": "TOO LONG",
+      "descLen": 156,
+      "descStatus": "OK",
+      "seoTitle": "NEET Biology Strategy 2026: Score 340+ out of 360 | Expert Guide",
+      "seoDescription": "Complete NEET Biology preparation strategy to score 340+ out of 360 marks. Expert tips, study plan, and high-weightage topics by AIIMS faculty. Start today!"
+    },
+    {
+      "file": "neet-biology-previous-year-questions-analysis.mdx",
+      "titleLen": 60,
+      "titleStatus": "OK",
+      "descLen": 130,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology PYQ Analysis 2019-2025 - Complete Pattern Guide",
+      "seoDescription": "Analyze NEET biology previous year questions (2019-2025). Understand repeated topics, chapter patterns, and prepare strategically."
+    },
+    {
+      "file": "neet-biology-pyq-analysis-2015-2025.mdx",
+      "titleLen": 35,
+      "titleStatus": "TOO SHORT",
+      "descLen": 98,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology PYQ Analysis 2015-2025",
+      "seoDescription": "10-year past question analysis showing chapter trends, weightage patterns, and what to prioritize."
+    },
+    {
+      "file": "neet-biology-pyq-chapter-wise-pdf-download.mdx",
+      "titleLen": 82,
+      "titleStatus": "TOO LONG",
+      "descLen": 150,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology PYQ PDF Download - 37 Years Chapter-wise Solved Questions (1988-2024)",
+      "seoDescription": "Free download NEET Biology Previous Year Questions PDF. Chapter-wise PYQs from 1988-2024 with detailed solutions. Essential for NEET 2026 preparation."
+    },
+    {
+      "file": "neet-biology-syllabus-2026-complete-guide.mdx",
+      "titleLen": 70,
+      "titleStatus": "TOO LONG",
+      "descLen": 147,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Biology Syllabus 2026: Complete Official Chapter-wise Topics List",
+      "seoDescription": "Download NEET 2026 Biology syllabus PDF. Complete chapter-wise topics from Class 11 & 12 NCERT with weightage analysis and expert preparation tips."
+    },
+    {
+      "file": "neet-biology-topper-handwritten-notes-2026.mdx",
+      "titleLen": 69,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "NEET Biology Topper Notes 2026 - Handwritten Notes from AIIMS Rankers",
+      "seoDescription": "NEET Biology topper handwritten notes for 2026. Learn note-making secrets from AIIMS toppers, chapter-wise examples & techniques that helped score 680+ marks."
+    },
+    {
+      "file": "neet-biotechnology-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 74,
+      "titleStatus": "TOO LONG",
+      "descLen": 172,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Biotechnology Weightage 2026 | Principles & Applications PYQ Analysis",
+      "seoDescription": "NEET Biotechnology weightage analysis covering Principles (rDNA, PCR, gel electrophoresis) and Applications (Bt crops, gene therapy, GMOs). Year-wise PYQ data and strategy."
+    },
+    {
+      "file": "neet-cell-biology-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 84,
+      "titleStatus": "TOO LONG",
+      "descLen": 162,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Cell Biology Weightage 2026 | Cell Structure + Biomolecules + Division Analysis",
+      "seoDescription": "NEET Cell Biology unit weightage — combining Cell: The Unit of Life, Biomolecules, and Cell Division. Year-wise PYQ trends, important diagrams, and scoring guide."
+    },
+    {
+      "file": "neet-coaching-delhi-vs-kota-2026.mdx",
+      "titleLen": 56,
+      "titleStatus": "OK",
+      "descLen": 112,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Coaching Delhi vs Kota 2026 | Which City is Better?",
+      "seoDescription": "Compare Delhi vs Kota NEET coaching 2026: costs, quality, peer network, mental health impact, and success rates."
+    },
+    {
+      "file": "neet-cutoff-2026-category-wise.mdx",
+      "titleLen": 71,
+      "titleStatus": "TOO LONG",
+      "descLen": 165,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Cut-off 2026 Category-wise - Expected Marks, Percentile & Colleges",
+      "seoDescription": "NEET 2026 cut-off marks for all categories - General, OBC, SC, ST, EWS, PwD. State-wise cut-offs, AIQ predictions, and which college you can get based on your score."
+    },
+    {
+      "file": "neet-drop-year-strategy-2026.mdx",
+      "titleLen": 59,
+      "titleStatus": "OK",
+      "descLen": 149,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Drop Year Strategy 2026 - Complete Guide for Repeaters",
+      "seoDescription": "Comprehensive drop year strategy for NEET 2026 repeaters. Month-wise preparation plan, mental health tips, and success strategies for second attempt."
+    },
+    {
+      "file": "neet-dropper-batch-2026-online-coaching-guide.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 156,
+      "descStatus": "OK",
+      "seoTitle": "NEET Dropper Batch 2026 Online - Transform Your Second Attempt",
+      "seoDescription": "Best NEET dropper batch 2026 with small batches, AIIMS faculty, personal mentorship. 98% success rate, 150+ marks improvement. Avoid mass coaching mistakes."
+    },
+    {
+      "file": "neet-dropper-repeater-complete-strategy-guide.mdx",
+      "titleLen": 70,
+      "titleStatus": "TOO LONG",
+      "descLen": 176,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Dropper Strategy 2026: Score 650+ in 2nd Attempt | Complete Guide",
+      "seoDescription": "Complete NEET dropper strategy for 2026: Analyze mistakes, rebuild concepts, manage psychology, avoid burnout, and score 650+ in second attempt. 40% NEET toppers are repeaters."
+    },
+    {
+      "file": "neet-dropper-year-complete-guide-2026.mdx",
+      "titleLen": 83,
+      "titleStatus": "TOO LONG",
+      "descLen": 206,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Dropper Year Complete Guide 2026 — Strategy, Timeline, Tips | Cerebrum Academy",
+      "seoDescription": "Is taking a NEET drop year worth it in 2026? Complete guide with month-by-month study plan, score improvement strategies, mental health tips, and real student success stories. By Dr. Shekhar, AIIMS faculty."
+    },
+    {
+      "file": "neet-ecology-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 75,
+      "titleStatus": "TOO LONG",
+      "descLen": 182,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Ecology Weightage 2026 | Year-Wise Analysis, Scoring Topics & Strategy",
+      "seoDescription": "NEET Ecology weightage analysis with year-wise question trends (2019-2025). Covers Organisms & Populations, Ecosystem, Biodiversity, Environmental Issues. Easy scoring chapter guide."
+    },
+    {
+      "file": "neet-eligibility-criteria-2026.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 177,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET 2026 Eligibility Criteria - Age Limit, Qualification, Attempts",
+      "seoDescription": "Complete NEET 2026 eligibility criteria - age limit, educational qualification, attempts allowed, nationality requirements, and category-wise relaxations for MBBS/BDS admission."
+    },
+    {
+      "file": "neet-evolution-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 79,
+      "titleStatus": "TOO LONG",
+      "descLen": 166,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Evolution Weightage 2026 | PYQ Analysis, Important Topics & Quick Strategy",
+      "seoDescription": "NEET Evolution chapter weightage analysis — Origin of Life, evidences, Darwin vs Lamarck, Hardy-Weinberg, human evolution. Year-wise PYQ trends and high-yield topics."
+    },
+    {
+      "file": "neet-exam-centres-state-wise-2026.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 159,
+      "descStatus": "OK",
+      "seoTitle": "NEET 2026 Exam Centres State-wise - Complete List of All Cities",
+      "seoDescription": "Complete list of NEET 2026 exam centres state-wise. Find all 600+ cities across India, how to choose exam centers, and tips for selecting the nearest location."
+    },
+    {
+      "file": "neet-exam-day-tips-last-minute-guide-2026.mdx",
+      "titleLen": 64,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "NEET Exam Day Tips 2026 - Last Minute Guide for Best Performance",
+      "seoDescription": "NEET 2026 exam day tips and last minute guide. Learn time management, paper-attempting strategy, what to carry, and mental preparation to score maximum marks."
+    },
+    {
+      "file": "neet-genetics-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 70,
+      "titleStatus": "TOO LONG",
+      "descLen": 179,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Genetics Weightage 2026 | MBI + PIV Year-Wise Analysis & Strategy",
+      "seoDescription": "Complete NEET Genetics weightage analysis covering Molecular Basis of Inheritance and Principles of Inheritance. Year-wise PYQ distribution, scoring topics, and preparation guide."
+    },
+    {
+      "file": "neet-human-physiology-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 86,
+      "titleStatus": "TOO LONG",
+      "descLen": 174,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Human Physiology Weightage 2026 | Year-Wise Analysis, Important Topics & Strategy",
+      "seoDescription": "Complete NEET Human Physiology weightage analysis with year-wise question distribution (2019-2025), most important topics, PYQ trends, and 90-day study plan by AIIMS faculty."
+    },
+    {
+      "file": "neet-mock-test-strategy-complete-guide.mdx",
+      "titleLen": 62,
+      "titleStatus": "TOO LONG",
+      "descLen": 187,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Mock Test Strategy 2026: Score 650+ with 30-40 Mock Tests",
+      "seoDescription": "Complete NEET mock test guide: When to start, frequency (2-3/week last 2 months), 3-hour analysis method, time management techniques, score tracking. Improve from 520 to 650+ in 12 weeks."
+    },
+    {
+      "file": "neet-negative-marking-strategy-when-to-guess-skip.mdx",
+      "titleLen": 69,
+      "titleStatus": "TOO LONG",
+      "descLen": 161,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Negative Marking Strategy 2026: When to Guess vs Skip — The Math",
+      "seoDescription": "Master NEET negative marking with probability-based decision making. The exact math behind when to attempt, guess, or skip questions to maximize your NEET score."
+    },
+    {
+      "file": "neet-plant-morphology-anatomy-weightage-analysis.mdx",
+      "titleLen": 84,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Plant Morphology & Anatomy Weightage 2026 | Tissues, Organs & Families Analysis",
+      "seoDescription": "NEET Morphology of Flowering Plants + Anatomy weightage analysis. Covers root, stem, leaf structure, tissue systems, families comparison with PYQ data."
+    },
+    {
+      "file": "neet-plant-physiology-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 83,
+      "titleStatus": "TOO LONG",
+      "descLen": 155,
+      "descStatus": "OK",
+      "seoTitle": "NEET Plant Physiology Weightage 2026 | Photosynthesis, Respiration, Growth Analysis",
+      "seoDescription": "NEET Plant Physiology chapter weightage breakdown covering Photosynthesis, Respiration in Plants, Plant Growth. Year-wise PYQ analysis and mastery roadmap."
+    },
+    {
+      "file": "neet-preparation-roadmap-class-9-10-students.mdx",
+      "titleLen": 71,
+      "titleStatus": "TOO LONG",
+      "descLen": 157,
+      "descStatus": "OK",
+      "seoTitle": "NEET Preparation Roadmap for Class 9 & 10 Students: Complete Guide 2026",
+      "seoDescription": "Detailed NEET preparation roadmap for Class 9 and 10 students. Year-by-year plan, subject priorities, resource recommendations, and school-NEET balance tips."
+    },
+    {
+      "file": "neet-preparation-tips-for-delhi-ncr-students.mdx",
+      "titleLen": 63,
+      "titleStatus": "TOO LONG",
+      "descLen": 126,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Preparation Tips for Delhi NCR Students | Local Advantages",
+      "seoDescription": "Use Delhi NCR advantages for NEET 2026: AIIMS library, medical museums, hospital visits, coaching ecosystem, and peer network."
+    },
+    {
+      "file": "neet-reproduction-weightage-chapter-wise-analysis.mdx",
+      "titleLen": 76,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Reproduction Weightage 2026 | Year-Wise PYQ Analysis & Important Topics",
+      "seoDescription": "NEET Reproduction unit weightage analysis — covers Reproduction in Organisms, Human Reproduction, Reproductive Health with PYQ trends and scoring tips."
+    },
+    {
+      "file": "neet-score-450-550-colleges-guide-2026.mdx",
+      "titleLen": 73,
+      "titleStatus": "TOO LONG",
+      "descLen": 150,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Score 450-550: Best Medical Colleges 2026 | Complete Admission Guide",
+      "seoDescription": "NEET score 450-550? Find best private medical colleges you can get in 2026. State-wise options, fee structure, cutoffs & tips to improve 50-100 marks."
+    },
+    {
+      "file": "neet-vs-jee-which-is-tougher.mdx",
+      "titleLen": 55,
+      "titleStatus": "OK",
+      "descLen": 148,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET vs JEE 2026: Which is Tougher? Complete Comparison",
+      "seoDescription": "NEET vs JEE comparison 2026 - difficulty level, syllabus, competition, career prospects, salary, and which exam is right for you. Complete analysis."
+    },
+    {
+      "file": "nervous-system-neet-biology.mdx",
+      "titleLen": 70,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Nervous System NEET Notes 2026 | Brain, Neuron, Synapse Complete Guide",
+      "seoDescription": "Complete NEET Biology notes on Neural Control and Coordination. Learn neuron structure, nerve impulse transmission, brain parts with diagrams and PYQs."
+    },
+    {
+      "file": "nri-quota-mbbs-maharashtra-complete-guide-2026.mdx",
+      "titleLen": 60,
+      "titleStatus": "OK",
+      "descLen": 165,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NRI Quota MBBS Maharashtra 2026: Fees, Eligibility & Process",
+      "seoDescription": "Complete guide to NRI quota MBBS in Maharashtra - eligibility for NRI/OCI/PIO, fees $20K-70K/year, colleges accepting NRI students, documents, and admission process."
+    },
+    {
+      "file": "online-career-counselling-neet-aspirants-guide.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Online Career Counselling for NEET Aspirants: Complete Guide 2026",
+      "seoDescription": "Discover how online career counselling helps NEET aspirants make informed decisions about medical careers, college choices, and preparation strategies."
+    },
+    {
+      "file": "online-vs-offline-neet-coaching-2026.mdx",
+      "titleLen": 55,
+      "titleStatus": "OK",
+      "descLen": 137,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Online vs Offline NEET Coaching 2026 - Which Is Better?",
+      "seoDescription": "Compare online and offline NEET coaching for biology. Pros, cons, costs, and tips to choose the best mode for your 2026 exam preparation."
+    },
+    {
+      "file": "parents-guide-choosing-neet-coaching-delhi.mdx",
+      "titleLen": 6,
+      "titleStatus": "TOO SHORT",
+      "descLen": 111,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Parent",
+      "seoDescription": "How to choose NEET coaching for your child in Delhi: faculty credentials, batch size, fees, EMI, and red flags."
+    },
+    {
+      "file": "parents-guide-supporting-neet-aspirant-2026.mdx",
+      "titleLen": 69,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "Parent Guide to NEET 2026: Support Your Child Without Adding Pressure",
+      "seoDescription": "Complete guide for parents of NEET aspirants. Learn how to create the right environment, manage expectations, and support your child through NEET preparation."
+    },
+    {
+      "file": "photosynthesis-complete-neet-guide.mdx",
+      "titleLen": 76,
+      "titleStatus": "TOO LONG",
+      "descLen": 150,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Photosynthesis NEET 2026: Light Reactions, Calvin Cycle, C3/C4 Plants & MCQs",
+      "seoDescription": "Master photosynthesis for NEET with complete explanation of light reactions, dark reactions, C3 vs C4 plants, and practice MCQs with detailed answers."
+    },
+    {
+      "file": "photosynthesis-neet-biology-notes.mdx",
+      "titleLen": 72,
+      "titleStatus": "TOO LONG",
+      "descLen": 144,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Photosynthesis NEET Notes 2026 | Light Reaction, Calvin Cycle, C3 C4 CAM",
+      "seoDescription": "Complete NEET Biology notes on Photosynthesis. Learn light reactions, dark reactions, Calvin cycle, C3, C4, CAM pathways with diagrams and PYQs."
+    },
+    {
+      "file": "photosynthesis-vs-respiration-neet-comparison.mdx",
+      "titleLen": 66,
+      "titleStatus": "TOO LONG",
+      "descLen": 143,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Photosynthesis vs Respiration NEET: Complete Comparison Guide 2026",
+      "seoDescription": "Master photosynthesis and respiration for NEET with detailed comparison tables, equations, diagrams, and MCQs. 4-6 questions appear every year!"
+    },
+    {
+      "file": "plant-kingdom-classification-neet.mdx",
+      "titleLen": 79,
+      "titleStatus": "TOO LONG",
+      "descLen": 152,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Plant Kingdom NEET Notes 2026 | Algae, Bryophytes, Pteridophytes Complete Guide",
+      "seoDescription": "Complete NEET Biology notes on Plant Kingdom. Learn classification of algae, bryophytes, pteridophytes, gymnosperms, angiosperms with examples and PYQs."
+    },
+    {
+      "file": "revision-strategy-neet-2026-complete-guide.mdx",
+      "titleLen": 70,
+      "titleStatus": "TOO LONG",
+      "descLen": 160,
+      "descStatus": "OK",
+      "seoTitle": "NEET 2026 Revision Strategy: Complete Subject-Wise Plan for 650+ Score",
+      "seoDescription": "Proven revision strategy for NEET 2026 covering Biology, Physics, and Chemistry. Spaced repetition, 3-cycle method, and chapter prioritization by AIIMS faculty."
+    },
+    {
+      "file": "roadmap-for-aiims-mbbs-seat-complete-guide.mdx",
+      "titleLen": 72,
+      "titleStatus": "TOO LONG",
+      "descLen": 151,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Roadmap for AIIMS MBBS Seat 2026: Complete Strategy & Score Requirements",
+      "seoDescription": "Step-by-step roadmap to get into AIIMS for MBBS. Learn the exact NEET score needed, preparation timeline, subject strategy, and tips from AIIMS alumni."
+    },
+    {
+      "file": "self-study-vs-coaching-neet-2026.mdx",
+      "titleLen": 55,
+      "titleStatus": "OK",
+      "descLen": 150,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Self Study vs Coaching for NEET 2026 - Which is Better?",
+      "seoDescription": "Self study vs coaching for NEET 2026 - honest comparison. Learn success rates, costs, pros & cons to decide if you need coaching or can prepare alone."
+    },
+    {
+      "file": "small-batch-coaching-vs-large-batch-neet.mdx",
+      "titleLen": 78,
+      "titleStatus": "TOO LONG",
+      "descLen": 158,
+      "descStatus": "OK",
+      "seoTitle": "Small Batch Coaching for NEET: 15-Student Batches vs 100+ Batches - Comparison",
+      "seoDescription": "Why small batch NEET coaching wins. Compare 15-student vs large 100+ batches on success rates, personal attention, doubt resolution, and costs with real data."
+    },
+    {
+      "file": "small-batch-neet-coaching-research-outcomes-2026.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 178,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Research Report: Small Batch NEET Coaching 3x Better Results 2026",
+      "seoDescription": "Comprehensive research data on small batch (8-15 students) vs large batch NEET coaching. 94% qualification rate in small batches vs 31% in large batches. Evidence-based analysis."
+    },
+    {
+      "file": "state-wise-medical-colleges-north-india-2026.mdx",
+      "titleLen": 78,
+      "titleStatus": "TOO LONG",
+      "descLen": 157,
+      "descStatus": "OK",
+      "seoTitle": "State-wise Private Medical Colleges North India 2026 | Delhi, UP, Punjab Guide",
+      "seoDescription": "Complete guide to private medical colleges in North India - Delhi NCR, UP, Punjab, Haryana, Rajasthan. Compare fees (₹10-25L), NEET cutoffs & admission 2026."
+    },
+    {
+      "file": "stress-management-mental-health-neet-students.mdx",
+      "titleLen": 61,
+      "titleStatus": "TOO LONG",
+      "descLen": 196,
+      "descStatus": "TOO LONG",
+      "seoTitle": "NEET Stress Management: Mental Health Guide for Students 2026",
+      "seoDescription": "Complete mental health guide for NEET students: Recognize anxiety/depression, practice stress management techniques, avoid burnout, maintain performance. Evidence-based strategies from psychology."
+    },
+    {
+      "file": "struggling-with-neet-preparation-mental-stress-guide.mdx",
+      "titleLen": 72,
+      "titleStatus": "TOO LONG",
+      "descLen": 164,
+      "descStatus": "TOO LONG",
+      "seoTitle": "How to Handle Mental Stress During NEET Preparation: Complete Guide 2026",
+      "seoDescription": "Struggling with NEET stress? Expert strategies to manage anxiety, overcome burnout, build resilience, and stay mentally strong during your NEET preparation journey."
+    },
+    {
+      "file": "student-case-study-class-11-early-start-neet-success.mdx",
+      "titleLen": 25,
+      "titleStatus": "TOO SHORT",
+      "descLen": 153,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Success Story: Arjun",
+      "seoDescription": "Case study: Arjun began NEET prep in Class 11 at Cerebrum foundation batch, scored 685 in NEET 2026. Learn how early foundation prepares you for success."
+    },
+    {
+      "file": "student-case-study-dropper-480-to-650-neet.mdx",
+      "titleLen": 27,
+      "titleStatus": "TOO SHORT",
+      "descLen": 160,
+      "descStatus": "OK",
+      "seoTitle": "NEET Dropper Success: Priya",
+      "seoDescription": "Real case study: Priya scored 480 in 2025, joined Cerebrum dropper batch, scored 650 in 2026. Learn her transformation strategy and biology improvement methods."
+    },
+    {
+      "file": "student-case-study-online-offline-hybrid-neet.mdx",
+      "titleLen": 26,
+      "titleStatus": "TOO SHORT",
+      "descLen": 149,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "NEET Coaching Noida: Sneha",
+      "seoDescription": "Case study: Sneha Gupta scored 620 NEET 2026 using hybrid coaching (online lectures + offline doubt sessions). Cerebrum Noida center B-45, Sector 62."
+    },
+    {
+      "file": "time-management-neet-preparation-exam-day.mdx",
+      "titleLen": 71,
+      "titleStatus": "TOO LONG",
+      "descLen": 160,
+      "descStatus": "OK",
+      "seoTitle": "Time Management for NEET 2026: Preparation Schedule & Exam Day Strategy",
+      "seoDescription": "Master time management for NEET preparation and exam day. Expert-designed study schedules, time allocation strategies, and productivity tips from AIIMS faculty."
+    },
+    {
+      "file": "top-10-neet-biology-coaching-delhi-ncr-2026.mdx",
+      "titleLen": 59,
+      "titleStatus": "OK",
+      "descLen": 154,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Top 10 NEET Biology Coaching Delhi NCR 2026: Honest Reviews",
+      "seoDescription": "Comprehensive review of best NEET biology coaching in Delhi NCR. Compare Allen, Aakash, PW, and local institutes with honest analysis and recommendations."
+    },
+    {
+      "file": "top-private-medical-colleges-india-fees-cutoff-rankings.mdx",
+      "titleLen": 58,
+      "titleStatus": "OK",
+      "descLen": 146,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "Top 25 Private Medical Colleges India 2026: Fees & Cutoffs",
+      "seoDescription": "Complete guide to best private MBBS colleges in India with NEET 2025 cutoffs, fee structure (Rs 10L-30L/year), pros & cons, and admission process."
+    },
+    {
+      "file": "ultimate-neet-2026-guide-specialized-vs-mass-coaching.mdx",
+      "titleLen": 81,
+      "titleStatus": "TOO LONG",
+      "descLen": 183,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Ultimate NEET 2026 Guide: Specialized vs Mass Coaching | Cerebrum Biology Academy",
+      "seoDescription": "Complete NEET 2026 preparation guide. Learn why specialized coaching beats mass coaching, subject-wise strategy, and how Cerebrum Biology Academy helps students score 300+ in Biology."
+    },
+    {
+      "file": "ultimate-neet-biology-guide-2026.mdx",
+      "titleLen": 74,
+      "titleStatus": "TOO LONG",
+      "descLen": 165,
+      "descStatus": "TOO LONG",
+      "seoTitle": "Ultimate NEET Biology Guide 2026: Complete Strategy, Weightage & Resources",
+      "seoDescription": "Master NEET Biology 2026 with complete chapter-wise strategy, weightage analysis from 5 years data, month-by-month timeline, and expert resources from AIIMS faculty."
+    },
+    {
+      "file": "usabo-ibo-complete-parent-guide-grade-wise-preparation.mdx",
+      "titleLen": 67,
+      "titleStatus": "TOO LONG",
+      "descLen": 15,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "USABO & IBO Complete Guide 2026: Grade-wise Preparation for Parents",
+      "seoDescription": "Complete parent"
+    },
+    {
+      "file": "what-neet-toppers-do-differently-secrets-revealed.mdx",
+      "titleLen": 66,
+      "titleStatus": "TOO LONG",
+      "descLen": 159,
+      "descStatus": "OK",
+      "seoTitle": "What NEET Toppers Do Differently: 15 Proven Secrets for 700+ Score",
+      "seoDescription": "Learn the 15 secrets that NEET toppers use to score 700+. Discover their study strategies, daily habits, and mindset that separate them from average aspirants."
+    },
+    {
+      "file": "when-to-start-neet-preparation-class-9-vs-10.mdx",
+      "titleLen": 65,
+      "titleStatus": "TOO LONG",
+      "descLen": 139,
+      "descStatus": "TOO SHORT",
+      "seoTitle": "When to Start NEET Preparation: Class 9 vs 10 | Expert Guide 2026",
+      "seoDescription": "Should you start NEET preparation in Class 9 or Class 10? Expert comparison with study plans, advantages, and personalized recommendations."
+    }
+  ]
+}
