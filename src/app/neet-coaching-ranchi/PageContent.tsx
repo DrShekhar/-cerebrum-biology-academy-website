@@ -238,4 +238,6 @@ export default function PageContent() {
       <PricingSection cityName="Ranchi" />
       <CostComparisonSection cityName="Ranchi" />
       <RelatedCityLinks currentCity="ranchi" variant="default" />
-
+    </div>
+  )
+}

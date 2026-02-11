@@ -437,4 +437,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="safdarjung-enclave-delhi" variant="default" />
-
+    </div>
+  )
+}

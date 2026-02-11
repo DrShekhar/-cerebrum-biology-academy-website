@@ -1156,4 +1156,6 @@ export default function PageContent({ faqs }: PageContentProps) {
       <PricingSection cityName="Civil Lines" />
       <CostComparisonSection cityName="Civil Lines" />
       <RelatedCityLinks currentCity="civil-lines-delhi" variant="default" />
-
+    </div>
+  )
+}

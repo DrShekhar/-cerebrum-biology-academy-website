@@ -1343,4 +1343,6 @@ export default function PageContent() {
       <PricingSection cityName="South" />
       <CostComparisonSection cityName="South" />
       <RelatedCityLinks currentCity="south-delhi" variant="default" />
-
+    </div>
+  )
+}

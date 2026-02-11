@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Vasant Valley School" />
       <CostComparisonSection cityName="Vasant Valley School" />
       <RelatedCityLinks currentCity="vasant-valley-school" variant="default" />
-
+    </div>
+  )
+}

@@ -429,4 +429,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="vasant-kunj-delhi" variant="default" />
-
+    </div>
+  )
+}

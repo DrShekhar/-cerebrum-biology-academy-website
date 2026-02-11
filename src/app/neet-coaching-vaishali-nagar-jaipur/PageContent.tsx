@@ -167,4 +167,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="vaishali-nagar-jaipur" variant="default" />
-
+    </div>
+  )
+}

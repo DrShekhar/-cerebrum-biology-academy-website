@@ -238,4 +238,6 @@ export default function PageContent() {
       <PricingSection cityName="Raipur" />
       <CostComparisonSection cityName="Raipur" />
       <RelatedCityLinks currentCity="raipur" variant="default" />
-
+    </div>
+  )
+}

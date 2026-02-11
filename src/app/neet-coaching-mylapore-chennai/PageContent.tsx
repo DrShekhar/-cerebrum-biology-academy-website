@@ -406,4 +406,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="mylapore-chennai" variant="default" />
-
+    </div>
+  )
+}

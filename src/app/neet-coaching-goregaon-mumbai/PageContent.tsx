@@ -431,4 +431,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="goregaon-mumbai" variant="default" />
-
+    </div>
+  )
+}

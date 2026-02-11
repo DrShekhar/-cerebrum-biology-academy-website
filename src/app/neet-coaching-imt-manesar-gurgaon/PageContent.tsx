@@ -430,4 +430,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="imt-manesar-gurgaon" variant="default" />
-
+    </div>
+  )
+}

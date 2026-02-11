@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Cathedral School" />
       <CostComparisonSection cityName="Cathedral School" />
       <RelatedCityLinks currentCity="cathedral-school-mumbai" variant="default" />
-
+    </div>
+  )
+}

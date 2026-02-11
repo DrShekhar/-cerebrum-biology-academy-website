@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Sanskriti School" />
       <CostComparisonSection cityName="Sanskriti School" />
       <RelatedCityLinks currentCity="sanskriti-school" variant="default" />
-
+    </div>
+  )
+}

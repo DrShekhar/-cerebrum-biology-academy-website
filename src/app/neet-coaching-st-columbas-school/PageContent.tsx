@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="St Columbas School" />
       <CostComparisonSection cityName="St Columbas School" />
       <RelatedCityLinks currentCity="st-columbas-school" variant="default" />
-
+    </div>
+  )
+}

@@ -1377,4 +1377,6 @@ export default function PageContent({ faqs }: PageContentProps) {
       <PricingSection cityName="Dwarka Sector 10" />
       <CostComparisonSection cityName="Dwarka Sector 10" />
       <RelatedCityLinks currentCity="dwarka-sector-10" variant="default" />
-
+    </div>
+  )
+}

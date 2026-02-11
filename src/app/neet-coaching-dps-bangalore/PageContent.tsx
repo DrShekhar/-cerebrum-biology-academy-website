@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Dps" />
       <CostComparisonSection cityName="Dps" />
       <RelatedCityLinks currentCity="dps-bangalore" variant="default" />
-
+    </div>
+  )
+}

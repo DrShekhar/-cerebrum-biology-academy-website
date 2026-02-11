@@ -430,4 +430,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="indiranagar-bangalore" variant="default" />
-
+    </div>
+  )
+}

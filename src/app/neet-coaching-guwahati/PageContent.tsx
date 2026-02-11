@@ -228,4 +228,6 @@ export default function PageContent() {
       <PricingSection cityName="Guwahati" />
       <CostComparisonSection cityName="Guwahati" />
       <RelatedCityLinks currentCity="guwahati" variant="default" />
-
+    </div>
+  )
+}

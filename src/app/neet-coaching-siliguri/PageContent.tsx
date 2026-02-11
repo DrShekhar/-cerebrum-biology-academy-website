@@ -228,4 +228,6 @@ export default function PageContent() {
       <PricingSection cityName="Siliguri" />
       <CostComparisonSection cityName="Siliguri" />
       <RelatedCityLinks currentCity="siliguri" variant="default" />
-
+    </div>
+  )
+}

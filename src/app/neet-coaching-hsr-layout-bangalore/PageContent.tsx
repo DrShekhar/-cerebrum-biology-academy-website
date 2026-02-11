@@ -431,4 +431,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="hsr-layout-bangalore" variant="default" />
-
+    </div>
+  )
+}

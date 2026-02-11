@@ -300,4 +300,6 @@ export default function PageContent() {
       <PricingSection cityName="Amity International" />
       <CostComparisonSection cityName="Amity International" />
       <RelatedCityLinks currentCity="amity-international" variant="default" />
-
+    </div>
+  )
+}

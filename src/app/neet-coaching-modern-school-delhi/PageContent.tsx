@@ -268,4 +268,6 @@ export default function PageContent() {
       <PricingSection cityName="Modern School" />
       <CostComparisonSection cityName="Modern School" />
       <RelatedCityLinks currentCity="modern-school-delhi" variant="default" />
-
+    </div>
+  )
+}

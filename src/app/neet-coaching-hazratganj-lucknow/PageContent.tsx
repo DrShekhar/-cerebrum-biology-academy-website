@@ -167,4 +167,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="hazratganj-lucknow" variant="default" />
-
+    </div>
+  )
+}

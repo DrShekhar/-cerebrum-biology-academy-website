@@ -326,4 +326,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="viman-nagar-pune" variant="default" />
-
+    </div>
+  )
+}

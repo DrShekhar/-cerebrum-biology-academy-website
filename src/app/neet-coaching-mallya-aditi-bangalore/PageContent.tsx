@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Mallya Aditi" />
       <CostComparisonSection cityName="Mallya Aditi" />
       <RelatedCityLinks currentCity="mallya-aditi-bangalore" variant="default" />
-
+    </div>
+  )
+}

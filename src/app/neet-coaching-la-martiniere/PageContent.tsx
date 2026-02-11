@@ -297,4 +297,6 @@ export default function PageContent() {
       <PricingSection cityName="La Martiniere" />
       <CostComparisonSection cityName="La Martiniere" />
       <RelatedCityLinks currentCity="la-martiniere" variant="default" />
-
+    </div>
+  )
+}

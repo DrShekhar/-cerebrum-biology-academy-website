@@ -228,4 +228,6 @@ export default function PageContent() {
       <PricingSection cityName="Agra" />
       <CostComparisonSection cityName="Agra" />
       <RelatedCityLinks currentCity="agra" variant="default" />
-
+    </div>
+  )
+}

@@ -431,4 +431,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="chandni-chowk-delhi" variant="default" />
-
+    </div>
+  )
+}

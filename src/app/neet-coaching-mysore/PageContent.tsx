@@ -228,4 +228,6 @@ export default function PageContent() {
       <PricingSection cityName="Mysore" />
       <CostComparisonSection cityName="Mysore" />
       <RelatedCityLinks currentCity="mysore" variant="default" />
-
+    </div>
+  )
+}

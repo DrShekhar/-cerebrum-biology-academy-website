@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Chirec" />
       <CostComparisonSection cityName="Chirec" />
       <RelatedCityLinks currentCity="chirec-hyderabad" variant="default" />
-
+    </div>
+  )
+}

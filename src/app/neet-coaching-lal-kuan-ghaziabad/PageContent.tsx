@@ -430,4 +430,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="lal-kuan-ghaziabad" variant="default" />
-
+    </div>
+  )
+}

@@ -1204,4 +1204,6 @@ export default function PageContent() {
       <PricingSection cityName="Du North Campus" />
       <CostComparisonSection cityName="Du North Campus" />
       <RelatedCityLinks currentCity="du-north-campus" variant="default" />
-
+    </div>
+  )
+}

@@ -268,4 +268,6 @@ export default function PageContent() {
       <PricingSection cityName="Bishops School" />
       <CostComparisonSection cityName="Bishops School" />
       <RelatedCityLinks currentCity="bishops-school-pune" variant="default" />
-
+    </div>
+  )
+}

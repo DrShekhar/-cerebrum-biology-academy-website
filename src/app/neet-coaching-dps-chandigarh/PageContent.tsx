@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Dps Chandigarh" />
       <CostComparisonSection cityName="Dps Chandigarh" />
       <RelatedCityLinks currentCity="dps-chandigarh" variant="default" />
-
+    </div>
+  )
+}

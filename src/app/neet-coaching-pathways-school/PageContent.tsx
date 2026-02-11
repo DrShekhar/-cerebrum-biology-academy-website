@@ -301,4 +301,6 @@ export default function PageContent() {
       <PricingSection cityName="Pathways School" />
       <CostComparisonSection cityName="Pathways School" />
       <RelatedCityLinks currentCity="pathways-school" variant="default" />
-
+    </div>
+  )
+}

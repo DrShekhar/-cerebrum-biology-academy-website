@@ -167,4 +167,6 @@ export default function PageContent() {
         </div>
       </section>
       <RelatedCityLinks currentCity="malviya-nagar-jaipur" variant="default" />
-
+    </div>
+  )
+}

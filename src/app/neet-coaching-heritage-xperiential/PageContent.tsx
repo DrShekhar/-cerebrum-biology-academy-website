@@ -248,4 +248,6 @@ export default function PageContent() {
       <PricingSection cityName="Heritage Xperiential" />
       <CostComparisonSection cityName="Heritage Xperiential" />
       <RelatedCityLinks currentCity="heritage-xperiential" variant="default" />
-
+    </div>
+  )
+}
