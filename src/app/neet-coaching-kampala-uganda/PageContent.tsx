@@ -41,7 +41,7 @@ export default function PageContent() {
       answer: 'Our pricing is competitive and transparent with no hidden charges. We offer flexible payment plans and scholarships for merit students. Contact us for customized packages.',
     },
     {
-      question: 'Can I join from Kampala if I'm still in Grade 10 or 11?',
+      question: "Can I join from Kampala if I'm still in Grade 10 or 11?",
       answer: 'Absolutely! Early-bird enrollment gives students a significant advantage. We offer foundational courses for Grade 10-11 students to build strong fundamentals before intensive NEET prep.',
     },
   ];

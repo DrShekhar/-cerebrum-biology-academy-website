@@ -3,7 +3,7 @@ import NEETCoachingPageContent from './neet-coaching-san-jose-usa/PageContent';
 
 export const metadata: Metadata = {
   title: 'NEET Coaching in San Jose, USA - 98% Success Rate | Cerebrum Academy',
-  description: 'NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.',
+  description: "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.",
   keywords: [
     'NEET coaching in San Jose',
     'medical entrance exam preparation San Jose',
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'NEET Coaching in San Jose, USA - 98% Success Rate | Cerebrum Academy',
-    description: 'NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.',
+    description: "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.",
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'NEET Coaching in San Jose, USA',
-    description: 'NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration.'
+    description: "NEET Coaching in San Jose - Premium medical entrance prep in Silicon Valley's heart with highest Indian-American concentration."
   }
 };
 
