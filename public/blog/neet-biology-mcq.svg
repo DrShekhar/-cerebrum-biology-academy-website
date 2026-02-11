@@ -1,0 +1,72 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad-mcq" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#grad-mcq)"/>
+
+  <!-- MCQ Bubbles -->
+  <g transform="translate(100, 180)">
+    <!-- Question 1 -->
+    <circle cx="0" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+    <circle cx="50" cy="0" r="15" fill="#22c55e" opacity="0.9"/>
+    <circle cx="100" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+    <circle cx="150" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+    <text x="-30" y="5" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" font-weight="600">Q1</text>
+
+    <!-- Question 2 -->
+    <g transform="translate(0, 60)">
+      <circle cx="0" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+      <circle cx="50" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+      <circle cx="100" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+      <circle cx="150" cy="0" r="15" fill="#22c55e" opacity="0.9"/>
+      <text x="-30" y="5" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" font-weight="600">Q2</text>
+    </g>
+
+    <!-- Question 3 -->
+    <g transform="translate(0, 120)">
+      <circle cx="0" cy="0" r="15" fill="#22c55e" opacity="0.9"/>
+      <circle cx="50" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+      <circle cx="100" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+      <circle cx="150" cy="0" r="15" fill="#e5e7eb" opacity="0.3"/>
+      <text x="-30" y="5" font-family="Arial, sans-serif" font-size="18" fill="#ffffff" font-weight="600">Q3</text>
+    </g>
+
+    <!-- Labels -->
+    <text x="0" y="-30" font-family="Arial, sans-serif" font-size="14" fill="#facc15" font-weight="600">A</text>
+    <text x="50" y="-30" font-family="Arial, sans-serif" font-size="14" fill="#facc15" font-weight="600">B</text>
+    <text x="100" y="-30" font-family="Arial, sans-serif" font-size="14" fill="#facc15" font-weight="600">C</text>
+    <text x="150" y="-30" font-family="Arial, sans-serif" font-size="14" fill="#facc15" font-weight="600">D</text>
+  </g>
+
+  <!-- Calculator/Timer -->
+  <g transform="translate(100, 430)">
+    <rect x="0" y="0" width="200" height="120" rx="10" fill="#ffffff" opacity="0.2"/>
+    <text x="100" y="50" font-family="Arial, sans-serif" font-size="48" fill="#facc15" text-anchor="middle" font-weight="bold">90</text>
+    <text x="100" y="85" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle" font-weight="600">Questions</text>
+    <text x="100" y="110" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">45 min each section</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="450" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">NEET Biology</text>
+  <text x="450" y="240" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="#ffffff">MCQ Practice</text>
+  <text x="450" y="305" font-family="Arial, sans-serif" font-size="44" fill="#fef3c7">1000+ Questions Strategy</text>
+
+  <!-- Stats Box -->
+  <rect x="450" y="350" width="700" height="220" rx="20" fill="#ffffff" opacity="0.15"/>
+  <text x="480" y="400" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#fef3c7">📝 Master MCQ Techniques</text>
+  <text x="480" y="440" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Chapter-wise question distribution patterns</text>
+  <text x="480" y="475" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Time management: 50 seconds per question</text>
+  <text x="480" y="510" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">• Common traps & elimination strategies</text>
+  <text x="480" y="545" font-family="Arial, sans-serif" font-size="22" fill="#22c55e">Practice 1000+ to score 340+!</text>
+
+  <!-- Badge -->
+  <circle cx="1050" cy="140" r="70" fill="#22c55e" opacity="0.9"/>
+  <text x="1050" y="135" font-family="Arial, sans-serif" font-size="42" font-weight="bold" fill="#ffffff" text-anchor="middle">360</text>
+  <text x="1050" y="163" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#ffffff" text-anchor="middle">marks</text>
+</svg>
