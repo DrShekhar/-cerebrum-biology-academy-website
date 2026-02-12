@@ -108,7 +108,7 @@ export function ViewAnalytics({ isOpen, onClose }: ViewAnalyticsProps) {
   const mockAnalyticsData: AnalyticsData = {
     overview: {
       totalTests: 156,
-      totalStudents: 2847,
+      totalStudents: 150000,
       averageScore: 78.5,
       completionRate: 89.2,
       totalAttempts: 12450,

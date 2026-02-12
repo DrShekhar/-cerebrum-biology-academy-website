@@ -57,7 +57,7 @@ const aboutFAQs = [
   {
     question: 'How long has Cerebrum Biology Academy been operating?',
     answer:
-      'Cerebrum Biology Academy has been operating since 2010, starting with just 23 students in a 400 sq ft room in Rohini. Over 15+ years, we have grown to coach 2,847+ students with a 98% NEET qualification rate.',
+      'Cerebrum Biology Academy has been operating since 2010, starting with just 23 students in a 400 sq ft room in Rohini. Over 15+ years, we have grown to coach 1,50,000+ students with a 98% NEET qualification rate.',
   },
   {
     question: 'What makes Cerebrum different from other NEET coaching institutes?',
@@ -150,7 +150,7 @@ export default function AboutPage() {
         'Highest standards of ethical teaching with transparent progress tracking and honest performance assessment.',
       color: 'from-blue-600 to-blue-500',
       pillGradient: 'from-blue-700 to-blue-600',
-      metric: '2,847+',
+      metric: '1,50,000+',
       metricLabel: 'Students Trust Us',
     },
     {
@@ -176,7 +176,7 @@ export default function AboutPage() {
   ]
 
   const achievements = [
-    { number: '2847+', label: 'Students Coached', icon: Users },
+    { number: '150000+', label: 'Students Coached', icon: Users },
     { number: '98%', label: 'Success Rate', icon: Target },
     { number: '27', label: 'Top 1000 Ranks', icon: Award },
     { number: '9+', label: 'Years of Excellence', icon: Calendar },
@@ -235,7 +235,7 @@ export default function AboutPage() {
               </h1>
 
               <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-800 font-light leading-relaxed tracking-wide">
-                How One Doctor's Mission Helped 2,847 Students Get Into Medical College
+                How One Doctor's Mission Helped 1,50,000+ Students Get Into Medical College
               </p>
 
               <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-[1.8] font-light max-w-3xl">
@@ -642,7 +642,7 @@ export default function AboutPage() {
                       <strong className="text-[#3d4d3d] font-semibold">
                         "Concept Pyramid" method
                       </strong>{' '}
-                      used by 2,847+ students
+                      used by 1,50,000+ students
                     </p>
                   </div>
                   <div className="flex items-start gap-4">
@@ -683,7 +683,7 @@ export default function AboutPage() {
               Nine Years of Growth
             </h2>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-4xl mx-auto font-light">
-              From a 400 sq ft room to transforming 2,847+ lives
+              From a 400 sq ft room to transforming 1,50,000+ lives
             </p>
           </div>
 

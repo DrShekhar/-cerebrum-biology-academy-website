@@ -61,7 +61,7 @@ const faculty = [
     name: 'Dr. Amit Kumar',
     title: 'Faculty - Cell Biology & Biotechnology',
     qualification: 'MBBS, MSc Biotechnology (IIT Delhi)',
-    experience: '12 years',
+    experience: '15+ years',
     specialization: 'Cell Biology, Molecular Biology, Biotechnology',
     achievements: [
       'Former Aakash senior faculty',

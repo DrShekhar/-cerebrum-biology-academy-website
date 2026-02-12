@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords:
     'NEET testimonials, success stories, student reviews, NEET qualifiers, AIIMS selections, medical college admissions, student feedback, coaching reviews',
   openGraph: {
-    title: 'NEET Success Stories | 2,847+ Medical College Selections',
+    title: 'NEET Success Stories | 1,50,000+ Students Trained',
     description:
       'Real students, real results. See how our NEET Biology coaching transformed lives. 98% success rate, 247+ in Top 1000 AIR.',
     images: ['/og-image.jpg'],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Success Testimonials | Cerebrum Biology Academy',
     description:
-      '2,847+ medical college selections, 98% success rate, student transformation stories',
+      '1,50,000+ students trained, 98% success rate, student transformation stories',
     images: ['/og-image.jpg'],
   },
   alternates: {

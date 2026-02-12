@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Free NEET Biology Demo Class | Experience Excellence',
     description:
-      'Try our NEET Biology coaching for free! 60-minute demo with AIIMS faculty. See why 2,847+ students chose us. Book now!',
+      'Try our NEET Biology coaching for free! 60-minute demo with AIIMS faculty. See why 1,50,000+ students chose us. Book now!',
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/demo',
     type: 'website',

@@ -573,7 +573,7 @@ export default function ResultsPage() {
             Ready to Write Your Success Story?
           </h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Join 2,847+ students who cracked NEET with Cerebrum Biology Academy. Book a free demo
+            Join 1,50,000+ students who cracked NEET with Cerebrum Biology Academy. Book a free demo
             class today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

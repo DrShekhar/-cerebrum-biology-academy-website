@@ -25,7 +25,7 @@ const aboutFaqs = [
   {
     question: 'How long has Cerebrum been operating?',
     answer:
-      'Since 2010 (15+ years), Cerebrum has coached 2,847+ students with a 98% NEET qualification rate and 67+ AIIMS selections across campuses.',
+      'Since 2010 (15+ years), Cerebrum has coached 1,50,000+ students with a 98% NEET qualification rate and 67+ AIIMS selections across campuses.',
   },
   {
     question: 'What makes Cerebrum different?',

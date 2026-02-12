@@ -249,7 +249,7 @@ export function RealTimeSocialProof() {
 export function LiveStatsCounter() {
   const [stats, setStats] = useState({
     enrolledToday: 127,
-    currentLiveStudents: 2847,
+    currentLiveStudents: 847,
     totalQualified: 9632,
   })
 

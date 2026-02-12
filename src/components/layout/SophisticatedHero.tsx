@@ -244,7 +244,7 @@ export function SophisticatedHero({
                     <Star key={i} className="h-4 w-4 text-yellow-400" />
                   ))}
                 </div>
-                <span className="font-medium">4.9/5 Rating • 2,847 Reviews</span>
+                <span className="font-medium">4.9/5 Rating • 1,50,000+ Students</span>
               </div>
               <div className="flex items-center gap-2">
                 <FlaskConical className="h-5 w-5 text-green-600" />

@@ -62,7 +62,7 @@ export default function ResultsPage() {
   const yearlyStats = [
     {
       year: '2024',
-      totalStudents: 2847,
+      totalStudents: 150000,
       neetQualified: 2683,
       qualificationRate: '98%',
       aiims: 23,

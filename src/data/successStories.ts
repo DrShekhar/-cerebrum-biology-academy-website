@@ -419,7 +419,7 @@ export const successStoriesData: SuccessStoryData[] = [
 ]
 
 export const successAnalyticsData = {
-  totalStudents: 2847,
+  totalStudents: 150000,
   successRate: 98,
   averageImprovement: 167,
   topRanks: 247,

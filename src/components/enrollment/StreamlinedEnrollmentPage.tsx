@@ -81,7 +81,7 @@ export function StreamlinedEnrollmentPage({
   const [selectedSlot, setSelectedSlot] = useState<CounselingSlot | null>(null)
   const [selectedPlan, setSelectedPlan] = useState<PlanOption | null>(null)
   const [urgencyTimer, setUrgencyTimer] = useState(86400) // 24 hours in seconds
-  const [enrollmentStats, setEnrollmentStats] = useState({ thisMonth: 2847, seatsLeft: 12 })
+  const [enrollmentStats, setEnrollmentStats] = useState({ thisMonth: 847, seatsLeft: 12 })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [paymentError, setPaymentError] = useState<string | null>(null)
 
@@ -414,7 +414,7 @@ export function StreamlinedEnrollmentPage({
           <div className="flex items-center justify-between mb-8">
             <div>
               <h1 className="text-3xl font-bold text-indigo-600">Secure Your NEET Success</h1>
-              <p className="text-gray-600 mt-2">Join 2,847 students who enrolled this month</p>
+              <p className="text-gray-600 mt-2">Join 1,50,000+ students who enrolled this month</p>
             </div>
 
             {/* Urgency Timer */}

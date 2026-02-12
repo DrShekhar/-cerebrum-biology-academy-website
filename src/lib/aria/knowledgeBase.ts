@@ -462,7 +462,7 @@ export const NOTABLE_ACHIEVEMENTS = {
   successRate: '98% NEET qualification rate',
   totalAdmissions: '10,000+ medical college selections',
   aiimsSelections2024: '247 AIIMS selections in NEET 2024',
-  aiimsSelectionsTotal: '47+ AIIMS selections across seven campuses (historical)',
+  aiimsSelectionsTotal: '67+ AIIMS selections across seven campuses (historical)',
   topRanks: "27 students ranked in India's top 1,000",
   govtColleges: '183 government medical college admissions',
   averageImprovement: '+285 marks average score improvement',

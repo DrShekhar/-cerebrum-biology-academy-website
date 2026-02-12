@@ -115,7 +115,7 @@ export function ExitIntentPopup({
     'Complete Cerebrum NEET Biology Course Outline',
     'Chapter-wise Study Timeline by Cerebrum Experts',
     'Previous Year Question Analysis & Solutions',
-    'Success Stories from 2,847 Cerebrum Students',
+    'Success Stories from 1,50,000+ Cerebrum Students',
     'Cerebrum AIIMS Faculty Profiles & Credentials',
     'Fee Structure & Cerebrum Scholarship Details',
     'Exclusive Cerebrum Study Materials Preview',

@@ -302,7 +302,7 @@ const NEETCompletePage = () => {
       name: 'Dr. Rajesh Kumar',
       credentials: 'Ph.D. Plant Physiology, IISc • M.Sc. Botany, DU',
       specialization: 'Plant Biology & Ecology',
-      experience: '12 years academic excellence',
+      experience: '15+ years academic excellence',
       research: [
         'Leading expert in plant stress biology',
         '30+ publications in Plant Cell, Plant Journal',

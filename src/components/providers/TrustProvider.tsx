@@ -53,7 +53,7 @@ const DEFAULT_METRICS: TrustMetrics = {
   totalStudents: 10247,
   successRate: 98,
   averageRating: 4.9,
-  verifiedReviews: 2847,
+  verifiedReviews: 4500,
   facultyCount: 25,
   yearsEstablished: 5,
   aimsQualified: 1289,

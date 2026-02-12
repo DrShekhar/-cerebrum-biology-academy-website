@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Expert Faculty | AIIMS & MBBS Teachers | Cerebrum Biology Academy',
   description:
-    'Meet our NEET Biology faculty: AIIMS graduates, PhD holders, 15+ years teaching experience. Expert mentors who have produced 2,847+ medical college selections.',
+    'Meet our NEET Biology faculty: AIIMS graduates, PhD holders, 15+ years teaching experience. Expert mentors who have produced 1,50,000+ students trained.',
   keywords:
     'NEET faculty, biology teachers, AIIMS faculty, experienced teachers, NEET mentors, biology experts, qualified teachers, teaching staff',
   openGraph: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Expert NEET Biology Faculty | Cerebrum Academy',
-    description: 'AIIMS graduates, PhD holders, 15+ years experience, 2,847+ selections produced',
+    description: 'AIIMS graduates, PhD holders, 15+ years experience, 1,50,000+ students trained produced',
     images: ['/og-image.jpg'],
   },
   alternates: {

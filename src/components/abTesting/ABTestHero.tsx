@@ -72,7 +72,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
                   <Star key={i} className="h-4 w-4 text-yellow-400" />
                 ))}
               </div>
-              <span>4.9/5 ★ Rated by 2,847 Students</span>
+              <span>4.9/5 ★ Rated by 1,50,000+ Students</span>
             </div>
 
             {/* Main Headline */}

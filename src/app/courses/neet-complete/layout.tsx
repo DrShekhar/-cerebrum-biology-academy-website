@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best 2-Year NEET Biology Complete Program | 98% Success Rate',
     description:
-      'Comprehensive NEET Biology coaching for Class 11 & 12. AIIMS expert faculty, proven curriculum, 2,847+ medical college selections. Start your journey today!',
+      'Comprehensive NEET Biology coaching for Class 11 & 12. AIIMS expert faculty, proven curriculum, 1,50,000+ students trained. Start your journey today!',
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/courses/neet-complete',
     type: 'website',

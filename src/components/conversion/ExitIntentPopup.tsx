@@ -151,7 +151,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
         accentColor: 'emerald',
       },
       socialProof: {
-        count: 2847,
+        count: 150000,
         message: 'students have taken free consultations',
       },
       riskReversal: [

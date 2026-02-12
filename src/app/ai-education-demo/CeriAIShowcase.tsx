@@ -114,7 +114,7 @@ function AnimatedCounter({
 
 // Live Question Counter Component
 function LiveQuestionCounter() {
-  const [todayCount, setTodayCount] = useState(2847)
+  const [todayCount, setTodayCount] = useState(847)
   const [totalCount, setTotalCount] = useState(156842)
 
   useEffect(() => {

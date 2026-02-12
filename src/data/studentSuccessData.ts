@@ -1031,7 +1031,7 @@ export function getRandomSuccessStory(): {
 
 // Analytics data for authentic feel
 export const successStats = {
-  totalSelections: 2847,
+  totalSelections: 150000,
   aiimsCracks: 247,
   topRankers: 156,
   governmentSeats: 2234,

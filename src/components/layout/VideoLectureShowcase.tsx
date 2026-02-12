@@ -207,7 +207,7 @@ export function VideoLectureShowcase() {
 
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
             Access Dr. Shekhar's comprehensive video lecture library covering all NEET Biology
-            topics. Learn from an AIIMSonian's expertise with 2,847+ successful students.
+            topics. Learn from an AIIMSonian's expertise with 1,50,000+ successful students.
           </p>
 
           {/* Quick Stats */}
@@ -409,7 +409,7 @@ export function VideoLectureShowcase() {
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Access Complete Video Library?</h3>
           <p className="text-xl mb-8 text-indigo-100">
-            Join 2,847+ successful students and get unlimited access to all Cerebrum video lectures
+            Join 1,50,000+ successful students and get unlimited access to all Cerebrum video lectures
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

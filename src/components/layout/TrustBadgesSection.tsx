@@ -105,7 +105,7 @@ export function TrustBadgesSection() {
 
   const successMetrics = [
     {
-      number: '2847+',
+      number: '150000+',
       label: 'Medical College Admissions',
       description: 'Students successfully placed',
       growth: '+23% YoY',
