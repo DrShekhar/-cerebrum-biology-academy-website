@@ -64,15 +64,20 @@ export function PersonalizationProvider({ children }: PersonalizationProviderPro
 
       // Detect referral source
       if (document.referrer) {
-        const referrerDomain = new URL(document.referrer).hostname
-        if (referrerDomain.includes('google')) {
-          updates.referralSource = 'google'
-        } else if (referrerDomain.includes('facebook')) {
-          updates.referralSource = 'facebook'
-        } else if (referrerDomain.includes('youtube')) {
-          updates.referralSource = 'youtube'
-        } else {
-          updates.referralSource = 'referral'
+        try {
+          const referrerDomain = new URL(document.referrer).hostname
+          if (referrerDomain.includes('google')) {
+            updates.referralSource = 'google'
+          } else if (referrerDomain.includes('facebook')) {
+            updates.referralSource = 'facebook'
+          } else if (referrerDomain.includes('youtube')) {
+            updates.referralSource = 'youtube'
+          } else {
+            updates.referralSource = 'referral'
+          }
+        } catch {
+          // Malformed referrer URLs from extensions/apps should never break app initialization.
+          updates.referralSource = 'direct'
         }
       } else {
         updates.referralSource = 'direct'

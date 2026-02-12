@@ -187,22 +187,22 @@ export default function RootLayout({
             - Task scheduler now handled by browser native APIs */}
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* PERFORMANCE: Analytics moved after main content for better LCP */}
-        {/* These scripts use lazyOnload strategy but still benefit from being after content */}
-        <DynamicPWAProvider />
-        <FocusVisibleStyles />
-        <I18nProvider>
-          <AuthProvider>
-            <TrackingProvider>
-              <ToastProvider>
-                <TrustProvider
-                  enableSocialProof={false}
-                  enableTrustBadges={true}
-                  enableRealTimeUpdates={false}
-                >
-                  <PersonalizationProvider>
-                    <MotionProvider>
-                      <PageErrorBoundary>
+        <PageErrorBoundary>
+          {/* PERFORMANCE: Analytics moved after main content for better LCP */}
+          {/* These scripts use lazyOnload strategy but still benefit from being after content */}
+          <DynamicPWAProvider />
+          <FocusVisibleStyles />
+          <I18nProvider>
+            <AuthProvider>
+              <TrackingProvider>
+                <ToastProvider>
+                  <TrustProvider
+                    enableSocialProof={false}
+                    enableTrustBadges={true}
+                    enableRealTimeUpdates={false}
+                  >
+                    <PersonalizationProvider>
+                      <MotionProvider>
                         {/* Navigation progress indicator - prevents FOUC during page transitions */}
                         <Suspense fallback={null}>
                           <RouteChangeIndicator />
@@ -262,14 +262,14 @@ export default function RootLayout({
                         <GoogleAnalytics />
                         <FacebookPixel />
                         <WebVitalsReporter />
-                      </PageErrorBoundary>
-                    </MotionProvider>
-                  </PersonalizationProvider>
-                </TrustProvider>
-              </ToastProvider>
-            </TrackingProvider>
-          </AuthProvider>
-        </I18nProvider>
+                      </MotionProvider>
+                    </PersonalizationProvider>
+                  </TrustProvider>
+                </ToastProvider>
+              </TrackingProvider>
+            </AuthProvider>
+          </I18nProvider>
+        </PageErrorBoundary>
       </body>
     </html>
   )
