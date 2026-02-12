@@ -220,6 +220,7 @@ export default async function middleware(req: NextRequest) {
     '/api/cache/demo',
     '/brand-studio',
     '/claudechat-standalone',
+    '/api/test',
   ]
   if (process.env.NODE_ENV === 'production') {
     const isBlocked = blockedPrefixes.some(
@@ -407,8 +408,9 @@ export default async function middleware(req: NextRequest) {
   response.cookies.set('x-pathname', pathname, {
     path: '/',
     sameSite: 'strict',
-    httpOnly: false, // Allow client-side access if needed
-    maxAge: 60, // Short-lived - just for request/response cycle
+    httpOnly: true,
+    secure: process.env.NODE_ENV === 'production',
+    maxAge: 60,
   })
 
   // Preserve 404 and other error status codes

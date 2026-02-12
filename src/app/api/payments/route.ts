@@ -26,7 +26,6 @@ const paymentActionSchema = z.object({
     'setup_payment_method',
     'process_one_time_payment',
     'get_billing_history',
-    'demo_payment_system',
   ]),
   data: z.record(z.string(), z.unknown()).optional().default({}),
 })
@@ -145,15 +144,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Demo action only available in development
-    if (action === 'demo_payment_system' && process.env.NODE_ENV === 'production') {
-      return NextResponse.json(
-        { success: false, error: 'Demo not available in production' },
-        { status: 403 }
-      )
-    }
-
-
     switch (action) {
       case 'create_subscription':
         return await createSubscription(data as unknown as CreateSubscriptionData)
@@ -188,28 +178,9 @@ export async function POST(request: NextRequest) {
       case 'get_billing_history':
         return await getBillingHistory(data as unknown as BillingHistoryData)
 
-      case 'demo_payment_system':
-        return await demonstratePaymentSystem(data as unknown as DemoData)
-
       default:
         return NextResponse.json(
-          {
-            error: 'Unknown action',
-            available_actions: [
-              'create_subscription',
-              'upgrade_subscription',
-              'cancel_subscription',
-              'process_usage_billing',
-              'apply_promotional_code',
-              'process_referral',
-              'create_affiliate_account',
-              'calculate_pricing',
-              'setup_payment_method',
-              'process_one_time_payment',
-              'get_billing_history',
-              'demo_payment_system',
-            ],
-          },
+          { error: 'Unknown action' },
           { status: 400 }
         )
     }
@@ -236,21 +207,32 @@ export async function GET(request: NextRequest) {
     const type = searchParams.get('type')
     const userId = searchParams.get('userId')
 
+    // SECURITY: Verify user can only access their own data (admins can access any)
+    if (userId && session.user.id !== userId && session.user.role !== 'ADMIN') {
+      return NextResponse.json(
+        { error: 'You can only access your own payment data' },
+        { status: 403 }
+      )
+    }
+
     switch (type) {
       case 'subscription_plans':
         return await getSubscriptionPlans()
 
       case 'user_subscription':
-        return await getUserSubscription(userId!)
+        return await getUserSubscription(userId || session.user.id)
 
       case 'payment_methods':
-        return await getPaymentMethods(userId!)
+        return await getPaymentMethods(userId || session.user.id)
 
       case 'billing_analytics':
+        if (session.user.role !== 'ADMIN') {
+          return NextResponse.json({ error: 'Admin access required' }, { status: 403 })
+        }
         return await getBillingAnalytics()
 
       case 'referral_status':
-        return await getReferralStatus(userId!)
+        return await getReferralStatus(userId || session.user.id)
 
       default:
         return NextResponse.json({ error: 'Invalid type parameter' }, { status: 400 })

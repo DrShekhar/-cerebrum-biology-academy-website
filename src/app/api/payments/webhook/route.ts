@@ -317,8 +317,5 @@ async function handleRefundCreated(event: any) {
 }
 
 export async function GET() {
-  return NextResponse.json({
-    message: 'Razorpay Webhook Endpoint',
-    status: 'active',
-  })
+  return NextResponse.json({ error: 'Method not allowed' }, { status: 405 })
 }

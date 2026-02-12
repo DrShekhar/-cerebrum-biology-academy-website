@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
 import { SessionManager, CookieManager, addSecurityHeaders, AuthRateLimit } from '@/lib/auth/config'
 import { z } from 'zod'
@@ -98,10 +99,12 @@ export async function POST(request: NextRequest) {
       },
     })
 
+    // SECURITY: Compare OTP hash (OTP is stored hashed since send-otp)
+    const otpHash = crypto.createHash('sha256').update(otp).digest('hex')
     if (
       !otpRecord ||
       otpRecord.mobile !== mobile ||
-      otpRecord.otp !== otp ||
+      otpRecord.otp !== otpHash ||
       otpRecord.purpose !== purpose ||
       otpRecord.verified
     ) {

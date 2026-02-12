@@ -19,6 +19,15 @@ const paymentVerificationSchema = z.object({
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Require authentication for payment verification
+    const session = await validateUserSession(request)
+    if (!session.valid) {
+      return NextResponse.json(
+        { verified: false, error: 'Authentication required' },
+        { status: 401 }
+      )
+    }
+
     const rateLimitResult = await rateLimit(request, { maxRequests: 20, windowMs: 60 * 60 * 1000 })
     if (!rateLimitResult.success) {
       return NextResponse.json(
@@ -260,8 +269,7 @@ export async function POST(request: NextRequest) {
             verified: true,
             orderId,
             paymentId,
-            warning: 'Payment verified but database update failed',
-            error: dbError instanceof Error ? dbError.message : 'Unknown error',
+            warning: 'Payment verified but database update failed. Please contact support.',
           },
           { status: 200 }
         )

@@ -272,12 +272,13 @@ export async function POST(request: NextRequest) {
       }
     }
 
-    // Store OTP in database
+    // Store OTP hash in database (never store plaintext OTP)
+    const otpHash = crypto.createHash('sha256').update(otp).digest('hex')
     await prisma.otpVerification.create({
       data: {
         id: otpId,
         mobile,
-        otp,
+        otp: otpHash,
         purpose,
         expiresAt: new Date(expiresAt),
         attempts: 0,
