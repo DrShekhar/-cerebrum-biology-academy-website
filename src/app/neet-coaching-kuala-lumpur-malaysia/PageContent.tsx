@@ -24,7 +24,7 @@ export function PageContent({ city, country }: PageContentProps) {
   const faqs: FAQ[] = [
     { id: 'faq-1', question: 'Why choose Kuala Lumpur for NEET coaching?', answer: 'Affordable fees (50% cheaper than Singapore), established Indian community, quality international education system, and modern infrastructure.' },
     { id: 'faq-2', question: 'What about timezone challenges with IST classes?', answer: 'Our MYT timezone classes are specifically designed for Malaysia students. Morning classes at 8 AM MYT = 10:30 AM IST.' },
-    { id: 'faq-3', question: 'How good are international schools in Kuala Lumpur?', answer: 'Top-notch IB schools like Alice Smith and Garden International with strong science focus. NEET success rate: 97%.' },
+    { id: 'faq-3', question: 'How good are international schools in Kuala Lumpur?', answer: 'Top-notch IB schools like Alice Smith and Garden International with strong science focus. NEET success rate: 98%.' },
     { id: 'faq-4', question: 'Is accommodation affordable in Kuala Lumpur?', answer: 'Yes, very affordable. Student hostels near coaching center cost RM 400-600/month with meals included.' },
     { id: 'faq-5', question: 'What\'s the Indian community support like?', answer: 'Strong Indian community in Bangsar and Bukit Bintang areas. Many Indian restaurants, temples, and student networks.' },
     { id: 'faq-6', question: 'Do you have counseling for AIIMS/JIPMER?', answer: 'Yes, dedicated counseling team for college selection. 2023-24: 8 students got AIIMS seats from Kuala Lumpur center.' },
