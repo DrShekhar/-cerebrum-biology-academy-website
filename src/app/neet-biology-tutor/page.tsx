@@ -210,7 +210,7 @@ export default function NEETBiologyTutorPage() {
                 </Button>
               </Link>
 
-              <Link href="/courses/neet-biology">
+              <Link href="/courses/intensive-neet-biology">
                 <Button
                   variant="outline"
                   size="xl"
@@ -412,7 +412,7 @@ export default function NEETBiologyTutorPage() {
               NEET Tutor for Droppers
             </Link>
             <Link
-              href="/courses/neet-biology"
+              href="/courses/intensive-neet-biology"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               NEET Courses

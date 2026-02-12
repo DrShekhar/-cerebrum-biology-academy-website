@@ -180,7 +180,7 @@ export default function OnlineBiologyTutorClass9Page() {
                 </Button>
               </Link>
 
-              <Link href="/courses/class-9-biology">
+              <Link href="/courses/class-9-foundation">
                 <Button
                   variant="outline"
                   size="xl"

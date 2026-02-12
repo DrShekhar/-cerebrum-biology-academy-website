@@ -209,7 +209,7 @@ export default function BiologyTutorClass9ICSEPage() {
                 </Button>
               </Link>
 
-              <Link href="/courses/class-9">
+              <Link href="/courses/class-9-foundation">
                 <Button
                   variant="outline"
                   size="xl"
@@ -436,7 +436,7 @@ export default function BiologyTutorClass9ICSEPage() {
               Class 10 ICSE Biology
             </Link>
             <Link
-              href="/courses/class-9"
+              href="/courses/class-9-foundation"
               className="bg-white px-6 py-3 rounded-lg shadow hover:shadow-md transition"
             >
               Class 9 Course Details

@@ -179,7 +179,7 @@ export default function Class9ScienceTuitionPage() {
                 </Button>
               </Link>
 
-              <Link href="/courses/class-9">
+              <Link href="/courses/class-9-foundation">
                 <Button
                   variant="outline"
                   size="xl"

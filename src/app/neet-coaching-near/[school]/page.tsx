@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, notFound } from 'next/navigation'
 import {
   GraduationCap,
   MapPin,
@@ -281,16 +281,7 @@ export default function SchoolNEETCoachingPage() {
   const school = schoolDetails[schoolSlug]
 
   if (!school) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">School not found</h1>
-          <Link href="/neet-coaching-near">
-            <Button>View All Schools</Button>
-          </Link>
-        </div>
-      </div>
-    )
+    notFound()
   }
 
   const handleDemoBooking = () => {

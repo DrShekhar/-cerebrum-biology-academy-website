@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, notFound } from 'next/navigation'
 import {
   Phone,
   BookOpen,
@@ -379,30 +379,15 @@ const chapterData: Record<
 }
 
 // Add more chapters as needed...
-const defaultChapter = {
-  name: 'Chapter',
-  unit: 'Biology',
-  class: '11' as const,
-  weightage: '2-3%',
-  questionsPerYear: '2-3',
-  description: 'This chapter covers important concepts for NEET Biology preparation.',
-  keyTopics: ['Topic 1', 'Topic 2', 'Topic 3'],
-  importantConcepts: ['Concept 1', 'Concept 2', 'Concept 3'],
-  neetTips: ['Focus on NCERT', 'Practice MCQs', 'Revise regularly'],
-  relatedChapters: [],
-}
-
 export default function ChapterPage() {
   const params = useParams()
   const chapterSlug = params.chapter as string
 
-  const chapter = chapterData[chapterSlug] || {
-    ...defaultChapter,
-    name: chapterSlug
-      .split('-')
-      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' '),
+  if (!chapterData[chapterSlug]) {
+    notFound()
   }
+
+  const chapter = chapterData[chapterSlug]
 
   const structuredData = {
     '@context': 'https://schema.org',

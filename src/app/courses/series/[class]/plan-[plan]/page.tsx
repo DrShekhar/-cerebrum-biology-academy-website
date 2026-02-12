@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams, useRouter, notFound } from 'next/navigation'
 import {
   ArrowLeft,
   Target,
@@ -33,20 +33,7 @@ export default function PlanDetailsPage() {
   const planDetails = getPlanDetails(classLevel, series, planLetter)
 
   if (!seriesDetails || !planDetails) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Plan Not Found</h1>
-          <p className="text-gray-600 mb-6">The requested plan could not be found.</p>
-          <Link
-            href="/courses/final-selector"
-            className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Back to Course Selector
-          </Link>
-        </div>
-      </div>
-    )
+    notFound()
   }
 
   const getSeriesGradient = (seriesId: string) => {

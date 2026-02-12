@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, use } from 'react'
+import { notFound } from 'next/navigation'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import Link from 'next/link'
 import {
@@ -623,45 +624,15 @@ const programsData: Record<string, ProgramData> = {
 }
 
 // Default program data for unknown slugs
-const defaultProgram: ProgramData = {
-  name: 'NEET Biology Program',
-  slug: 'default',
-  tagline: 'Your Path to Medical College',
-  description:
-    'Comprehensive NEET Biology preparation program designed by Dr. Shekhar C Singh, AIIMS alumnus.',
-  price: 45000,
-  originalPrice: 60000,
-  duration: '12 Months',
-  mode: 'Online Live',
-  batchSize: '50 Students',
-  startDate: 'Contact for Details',
-  features: [
-    'Complete NEET Biology coverage',
-    'Live interactive sessions',
-    'Expert faculty',
-    'Doubt resolution',
-    'Test series',
-    'Study material',
-  ],
-  highlights: ['AIIMS faculty', 'Proven results', 'Personalized attention'],
-  curriculum: [{ title: 'Complete Biology', topics: ['Class 11 + Class 12', 'NCERT + Advanced'] }],
-  testimonials: [],
-  faqs: [
-    {
-      question: 'How can I learn more?',
-      answer: 'Contact us on WhatsApp at +91 88264-44334 for detailed information.',
-    },
-  ],
-  gradient: 'from-indigo-500 to-indigo-600',
-  icon: '🎓',
-}
-
 export default function ProgramPage({ params }: { params: Promise<{ slug: string[] }> }) {
   const { slug } = use(params)
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   const programSlug = slug?.[0] || 'default'
-  const program = programsData[programSlug] || defaultProgram
+  if (!programsData[programSlug]) {
+    notFound()
+  }
+  const program = programsData[programSlug]
 
   return (
     <div className="min-h-screen bg-gray-50">

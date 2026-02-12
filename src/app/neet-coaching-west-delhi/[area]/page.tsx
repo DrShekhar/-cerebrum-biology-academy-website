@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useParams } from 'next/navigation'
+import { useParams, notFound } from 'next/navigation'
 import {
   MapPin,
   GraduationCap,
@@ -227,16 +227,7 @@ export default function WestDelhiAreaPage() {
   const area = areaDetails[areaSlug]
 
   if (!area) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Area not found</h1>
-          <Link href="/neet-coaching-west-delhi">
-            <Button>Back to West Delhi</Button>
-          </Link>
-        </div>
-      </div>
-    )
+    notFound()
   }
 
   const handleDemoBooking = () => {

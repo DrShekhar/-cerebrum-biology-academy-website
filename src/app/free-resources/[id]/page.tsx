@@ -13,6 +13,7 @@ import {
   Calculator,
   Archive,
 } from 'lucide-react'
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import PDFViewer from '@/components/free-resources/PDFViewer'
 
@@ -108,25 +109,7 @@ export default function ResourceViewPage({ params }: { params: Promise<{ id: str
   }
 
   if (error || !resource) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16 text-center">
-            <h1 className="text-2xl font-bold text-gray-900 mb-4">Resource Not Found</h1>
-            <p className="text-gray-600 mb-8">
-              {error || 'The requested resource could not be found.'}
-            </p>
-            <Link
-              href="/free-resources"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Resources
-            </Link>
-          </div>
-        </main>
-      </div>
-    )
+    notFound()
   }
 
   const config = typeConfig[resource.type] || typeConfig.PDF
