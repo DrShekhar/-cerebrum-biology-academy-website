@@ -461,7 +461,7 @@ export default function NEETCoachingDwarkaSector6Page() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {[
                 { icon: Award, label: '15+ Years', sublabel: 'Experience', color: 'text-blue-600' },
-                { icon: Users, label: '94% Success', sublabel: 'Rate', color: 'text-green-600' },
+                { icon: Users, label: '98% Success', sublabel: 'Rate', color: 'text-green-600' },
                 { icon: Star, label: '4.9 Rating', sublabel: '847+ Reviews', color: 'text-yellow-600' },
                 { icon: GraduationCap, label: 'AIIMS Faculty', sublabel: 'Expert Teachers', color: 'text-purple-600' },
               ].map((badge, index) => (

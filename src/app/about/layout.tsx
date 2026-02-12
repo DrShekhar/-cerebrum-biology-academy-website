@@ -3,13 +3,13 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: "About Cerebrum Biology Academy | India's Most Trusted NEET Coaching",
   description:
-    'Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2015. 98% NEET qualification success rate, 2,847+ medical college selections achieved. AIIMS alumnus-led teaching excellence with proven methodologies.',
+    'Founded by Dr. Shekhar C Singh (AIIMS Delhi) in 2010. 98% NEET qualification success rate, 1,50,000+ students coached achieved. AIIMS alumnus-led teaching excellence with proven methodologies.',
   keywords:
     'Cerebrum Biology Academy, AIIMS faculty NEET coaching, Dr Shekhar Singh AIIMS, NEET Biology coaching Delhi, medical college entrance coaching, NEET success rate, top NEET coaching institute',
   openGraph: {
-    title: 'About Cerebrum Biology Academy | AIIMS-Led NEET Excellence Since 2015',
+    title: 'About Cerebrum Biology Academy | AIIMS-Led NEET Excellence Since 2010',
     description:
-      "Founded by AIIMS alumnus Dr. Shekhar C Singh. 2,847+ medical college selections, 98% success rate, 247+ Top 1000 AIR ranks. Meet the team behind India's most trusted NEET Biology coaching.",
+      "Founded by AIIMS alumnus Dr. Shekhar C Singh. 1,50,000+ students coached, 98% success rate, 247+ Top 1000 AIR ranks. Meet the team behind India's most trusted NEET Biology coaching.",
     images: ['/og-image.jpg'],
     url: 'https://cerebrumbiologyacademy.com/about',
     type: 'website',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Cerebrum Biology Academy | AIIMS-Led Excellence',
     description:
-      'Founded 2015. AIIMS alumnus-led. 2,847+ selections. 98% success rate. 247+ Top 1000 ranks.',
+      'Founded 2010. AIIMS alumnus-led. 1,50,000+ students coached. 98% success rate. 247+ Top 1000 ranks.',
     images: ['/og-image.jpg'],
     creator: '@CerebrumAcademy',
     site: '@CerebrumAcademy',

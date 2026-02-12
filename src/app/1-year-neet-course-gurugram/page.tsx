@@ -237,7 +237,7 @@ export default function OneYearNEETCourseGurugram() {
               <Award className="w-12 h-12 text-red-600 mb-4" />
               <h3 className="text-xl font-bold mb-3">Track Record</h3>
               <p className="text-gray-600">
-                94% of our 1-year students qualify NEET. Many score 600+ with dedicated preparation.
+               98% of our 1-year students qualify NEET. Many score 600+ with dedicated preparation.
               </p>
             </div>
           </div>

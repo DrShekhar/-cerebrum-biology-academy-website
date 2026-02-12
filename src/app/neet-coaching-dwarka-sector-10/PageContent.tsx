@@ -1229,7 +1229,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               },
               {
                 icon: Trophy,
-                label: '94% Success',
+                label: '98% Success',
                 sublabel: 'NEET Qualification',
                 color: 'text-orange-600',
               },

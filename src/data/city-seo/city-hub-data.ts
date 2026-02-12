@@ -4387,7 +4387,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'How experienced are the biology tutors at Cerebrum?',
         answer:
-          'Our biology tutors have 10+ years of teaching experience with backgrounds from AIIMS and top medical institutions. They understand NEET patterns thoroughly and provide personalized guidance.',
+          'Our biology tutors have 15+ years of teaching experience with backgrounds from AIIMS and top medical institutions. They understand NEET patterns thoroughly and provide personalized guidance.',
       },
       {
         question: 'Can I get a personal biology tutor for my child in Gurgaon?',
@@ -5418,7 +5418,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Why choose Cerebrum over FIITJEE for NEET?',
         answer:
-          'FIITJEE is primarily an IIT-JEE coaching with NEET as add-on. Cerebrum is NEET-specialized with AIIMS faculty. Our biology teachers have 10+ years NEET experience vs generalist approach.',
+          'FIITJEE is primarily an IIT-JEE coaching with NEET as add-on. Cerebrum is NEET-specialized with AIIMS faculty. Our biology teachers have 15+ years NEET experience vs generalist approach.',
       },
       {
         question: 'How do fees compare with FIITJEE?',
@@ -5551,7 +5551,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Is PW Vidyapeeth center in Gurgaon good?',
         answer:
-          'PW Vidyapeeth is new with inexperienced faculty. Cerebrum has 10+ years of NEET teaching experience in Gurugram with proven track record.',
+          'PW Vidyapeeth is new with inexperienced faculty. Cerebrum has 15+ years of NEET teaching experience in Gurugram with proven track record.',
       },
     ],
     stats: {
@@ -5670,7 +5670,7 @@ export const cityHubData: Record<string, CityHubData> = {
     stateName: 'Haryana',
     metaTitle: 'NEET Coaching in Sector 17 Gurgaon | Old Gurgaon | Cerebrum Academy',
     metaDescription:
-      'Best NEET coaching for Sector 17 Gurgaon students. Serving Old Gurgaon since 2015. AIIMS faculty, small batches. Call 88264-44334!',
+      'Best NEET coaching for Sector 17 Gurgaon students. Serving Old Gurgaon since 2010. AIIMS faculty, small batches. Call 88264-44334!',
     heroTitle: 'NEET Coaching for Sector 17 Gurgaon',
     heroSubtitle:
       'Old Gurgaon\'s trusted NEET coaching partner. Students from Sectors 17, 18, 21 join our Sector 51 center.',
@@ -10929,7 +10929,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What makes your Class 12 coaching different?',
         answer:
-          'Our USP: 1) Experienced NEET faculty (10+ years), 2) Small batches (max 25 students), 3) Daily doubt sessions, 4) WhatsApp support for quick doubts, 5) Parent-teacher meetings, 6) Metro-connected location (5 min from South Extension Metro).',
+          'Our USP: 1) Experienced NEET faculty (15+ years), 2) Small batches (max 25 students), 3) Daily doubt sessions, 4) WhatsApp support for quick doubts, 5) Parent-teacher meetings, 6) Metro-connected location (5 min from South Extension Metro).',
       },
     ],
     stats: {

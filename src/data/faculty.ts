@@ -52,7 +52,7 @@ export const facultyMembers: Faculty[] = [
     id: 'dr-amit-singh',
     name: 'Dr. Amit Singh',
     qualification: 'MBBS (AIIMS Rishikesh), MS Surgery',
-    experience: '10+ years',
+    experience: '15+ years',
     specialization: ['Animal Physiology', 'Human Biology', 'Surgery Basics'],
     image: '/faculty/dr-amit-singh.jpg',
     designation: 'Senior Faculty - Zoology',

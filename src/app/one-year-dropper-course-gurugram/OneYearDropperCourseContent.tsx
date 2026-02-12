@@ -20,7 +20,7 @@ const courseFeatures = [
   { title: '5000+ Question Practice', description: 'Extensive question bank with detailed solutions', icon: FileText },
   { title: '30+ Mock Tests', description: 'Full-length tests in actual NEET pattern', icon: Target },
   { title: 'Daily Testing', description: 'Topic-wise tests to track daily progress', icon: Calendar },
-  { title: 'Expert Faculty', description: '10+ years experience in NEET coaching', icon: Users },
+  { title: 'Expert Faculty', description: '15+ years experience in NEET coaching', icon: Users },
   { title: 'Doubt Resolution', description: 'Dedicated doubt clearing sessions daily', icon: Zap },
 ]
 

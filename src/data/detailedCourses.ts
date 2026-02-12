@@ -467,7 +467,7 @@ export const detailedCourses: Course[] = [
     instructor: {
       name: 'Dr. Shekhar',
       qualification: 'MBBS (AIIMS Jodhpur), MS (General Surgery)',
-      experience: '10+ years',
+      experience: '15+ years',
       specialization: ['Animal Physiology', 'Human Biology', 'Clinical Correlation'],
       rating: 4.9,
       image: '/instructors/dr-amit-singh.jpg',
@@ -747,7 +747,7 @@ export const detailedCourses: Course[] = [
     instructor: {
       name: 'Dr. Shekhar',
       qualification: 'PhD in Zoology, MSc (Life Sciences)',
-      experience: '10+ years',
+      experience: '15+ years',
       specialization: ['Foundation Biology', 'Human Physiology', 'Genetics'],
       rating: 4.9,
       image: '/instructors/dr-rajesh-kumar.jpg',
@@ -1039,7 +1039,7 @@ export const detailedCourses: Course[] = [
     instructor: {
       name: 'Dr. Shekhar',
       qualification: 'MBBS (AIIMS Jodhpur), MS (General Surgery)',
-      experience: '10+ years in dropper batch coaching',
+      experience: '15+ years in dropper batch coaching',
       specialization: ['NEET Strategy', 'Score Improvement', 'Motivation'],
       rating: 4.9,
       image: '/instructors/dr-amit-singh.jpg',

@@ -506,7 +506,7 @@ export default function FeesPage() {
                   <Target className="w-8 h-8 text-yellow-300 mr-4 flex-shrink-0 mt-1" />
                   <div>
                     <h4 className="font-semibold mb-2">Proven Results</h4>
-                    <p className="text-purple-100">94% students score above 320 in NEET Biology</p>
+                    <p className="text-purple-100">98% students score above 320 in NEET Biology</p>
                   </div>
                 </div>
               </div>

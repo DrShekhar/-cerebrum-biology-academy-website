@@ -25,7 +25,7 @@ const aboutFaqs = [
   {
     question: 'How long has Cerebrum been operating?',
     answer:
-      'Since 2014 (15+ years), Cerebrum has coached 2,847+ students with a 98% NEET qualification rate and 47+ AIIMS selections across 7 campuses.',
+      'Since 2010 (15+ years), Cerebrum has coached 2,847+ students with a 98% NEET qualification rate and 67+ AIIMS selections across campuses.',
   },
   {
     question: 'What makes Cerebrum different?',
@@ -35,7 +35,7 @@ const aboutFaqs = [
   {
     question: 'What is the success rate?',
     answer:
-      '98% NEET qualification rate, 680+ selections, 47 AIIMS admissions, 12 students scored 700+ in 2024.',
+      '98% NEET qualification rate, 1,50,000+ students coached, 47 AIIMS admissions, 12 students scored 700+ in 2024.',
   },
   {
     question: 'How can I enroll?',
@@ -45,23 +45,23 @@ const aboutFaqs = [
 ]
 
 export const metadata: Metadata = {
-  title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014 | Delhi NCR',
+  title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2010 | Delhi NCR',
   description:
-    "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ selections, 98% success rate, batches of 8-15 students.",
+    "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 4 centers in Delhi NCR, 1,50,000+ students coached, 98% success rate, batches of 8-15 students.",
   keywords:
     'Cerebrum Biology Academy, NEET coaching, AIIMS faculty, Biology tuition, Delhi NCR',
   openGraph: {
-    title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014 | Delhi NCR',
+    title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2010 | Delhi NCR',
     description:
-      "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ selections, 98% success rate.",
+      "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 4 centers in Delhi NCR, 1,50,000+ students coached, 98% success rate.",
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/about-cerebrum-biology-academy',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014',
+    title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2010',
     description:
-      'Cerebrum: 15+ years, 680+ NEET selections, 98% success rate, AIIMS-trained faculty, 6 centers in Delhi NCR.',
+      'Cerebrum: 15+ years, 1,50,000+ NEET selections, 98% success rate, AIIMS-trained faculty, 4 centers in Delhi NCR.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/about-cerebrum-biology-academy',
@@ -124,17 +124,17 @@ export default function AboutCerebrumPage() {
     {
       metric: '98%',
       label: 'NEET Qualification Rate',
-      description: '680+ successful selections over 15 years',
+      description: '1,50,000+ students coached over 15 years',
     },
     {
-      metric: '47+',
+      metric: '67+',
       label: 'AIIMS Selections',
-      description: 'Across 7 AIIMS campuses nationwide',
+      description: 'Across AIIMS campuses nationwide',
     },
     {
-      metric: '6',
+      metric: '4',
       label: 'Centers in Delhi NCR',
-      description: 'Serving 2,847+ students',
+      description: 'Serving 1,50,000+ students',
     },
     {
       metric: '8-15',
@@ -142,7 +142,7 @@ export default function AboutCerebrumPage() {
       description: 'For personalized attention',
     },
     {
-      metric: '10+',
+      metric: '15+',
       label: 'Years Experience',
       description: 'Dr. Shekhar C Singh, AIIMS Faculty',
     },
@@ -176,7 +176,7 @@ export default function AboutCerebrumPage() {
           </h1>
           <p className="text-xl sm:text-2xl text-slate-200 mb-8 max-w-3xl">
             India's premier NEET Biology coaching institute dedicated to delivering AIIMS-level
-            instruction through personalized teaching since 2014.
+            instruction through personalized teaching since 2010.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
@@ -184,7 +184,7 @@ export default function AboutCerebrumPage() {
               <div className="text-slate-200">NEET Selections</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
-              <div className="text-3xl font-bold text-green-400 mb-2">12 Years</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">15+ Years</div>
               <div className="text-slate-200">Proven Track Record</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
@@ -273,8 +273,8 @@ export default function AboutCerebrumPage() {
                 <div className="flex gap-4">
                   <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-slate-900">680+ Successful Students</h3>
-                    <p className="text-slate-600">47+ AIIMS selections under his guidance</p>
+                    <h3 className="font-semibold text-slate-900">1,50,000+ Successful Students</h3>
+                    <p className="text-slate-600">67+ AIIMS selections under his guidance</p>
                   </div>
                 </div>
               </div>
@@ -315,7 +315,7 @@ export default function AboutCerebrumPage() {
       <section className="py-12 sm:py-16 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-12 text-center">
-            6 Centers Across Delhi NCR
+            4 Centers Across Delhi NCR
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {centers.map((center, idx) => (
@@ -470,14 +470,14 @@ export default function AboutCerebrumPage() {
             <div className="border-l-4 border-green-400 pl-6">
               <h3 className="text-xl font-bold mb-3">AIIMS Selections</h3>
               <p className="text-slate-300 mb-4">
-                47+ students selected to AIIMS across 7 campuses (Delhi, Pune, Bhopal, Jodhpur,
-                Raipur, Rishikesh, Nagpur) since 2015.
+                47+ students selected to AIIMS across campuses (Delhi, Pune, Bhopal, Jodhpur,
+                Raipur, Rishikesh, Nagpur) since 2010.
               </p>
             </div>
             <div className="border-l-4 border-green-400 pl-6">
               <h3 className="text-xl font-bold mb-3">NEET Success Rate</h3>
               <p className="text-slate-300 mb-4">
-                98% qualification rate (680+ selections) - Highest in coaching industry
+                98% qualification rate (1,50,000+ students coached) - Highest in coaching industry
                 consistently.
               </p>
             </div>
@@ -651,10 +651,10 @@ export default function AboutCerebrumPage() {
             logo: 'https://cerebrumbiologyacademy.com/logo.png',
             image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
             description:
-              "India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers, 680+ selections, 98% success rate",
+              "India's premier NEET Biology coaching with AIIMS-trained faculty, 4 centers, 1,50,000+ students coached, 98% success rate",
             telephone: '+91-88264-44334',
             email: 'info@cerebrumbiologyacademy.com',
-            foundingDate: '2014',
+            foundingDate: '2010',
             founders: [
               {
                 '@type': 'Person',

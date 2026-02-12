@@ -491,7 +491,7 @@ export const localities: Locality[] = [
       urgencyMessage: 'Exclusive Vasant Vihar batch starting soon - Limited to 12 students only!',
       localChallenge:
         'Vasant Vihar students waste hours traveling to coaching hubs. Our online format delivers superior results without the commute.',
-      successMetric: '94% of Vasant Vihar students scored 335+ in Biology',
+      successMetric: '98% of Vasant Vihar students scored 335+ in Biology',
     },
 
     socialProof: {
@@ -4140,7 +4140,7 @@ export const localities: Locality[] = [
       urgencyMessage: 'Exclusive DLF Phase 1 batch! Limited to 10 students only.',
       localChallenge:
         'DLF students waste hours crossing border to Delhi for coaching. Our online format eliminates this.',
-      successMetric: '94% of DLF Phase 1 students scored 338+ in Biology',
+      successMetric: '98% of DLF Phase 1 students scored 338+ in Biology',
     },
 
     socialProof: {
@@ -6390,7 +6390,7 @@ export const localities: Locality[] = [
       urgencyMessage: 'Exclusive Sector 58 batch - Only 12 seats for premium experience!',
       localChallenge:
         'Ireo Grand Arch families enjoy landmark living but travel 45+ mins for quality coaching. Our online model solves this.',
-      successMetric: '94% of Sector 58 students scored 345+ in Biology',
+      successMetric: '98% of Sector 58 students scored 345+ in Biology',
     },
     socialProof: {
       studentCount: 28,
@@ -10772,7 +10772,7 @@ export const localities: Locality[] = [
         'Only 8 seats left in Premium batch! Bandra students from DAIS and JBCN enrolling fast.',
       localChallenge:
         'Bandra students spend 3-4 hours daily on Western Express Highway and local trains. Our online model delivers superior results without the commute stress.',
-      successMetric: '94% of our Bandra students scored above 335 in NEET 2024 Biology',
+      successMetric: '98% of our Bandra students scored above 335 in NEET 2024 Biology',
     },
 
     socialProof: {
@@ -11270,7 +11270,7 @@ export const localities: Locality[] = [
         'Limited seats in Pinnacle batch! DPS Powai and Somaiya School students enrolling fast.',
       localChallenge:
         'Powai students travel to Ghatkopar/Kanjurmarg through heavy JVLR traffic. 3-4 hours daily wasted despite living in premium locality.',
-      successMetric: '94% of our Powai students scored above 340 in NEET 2024 Biology',
+      successMetric: '98% of our Powai students scored above 340 in NEET 2024 Biology',
     },
 
     socialProof: {
@@ -11295,7 +11295,7 @@ export const localities: Locality[] = [
       {
         question: 'How effective is your coaching for DPS Powai students?',
         answer:
-          "94% of our DPS Powai students scored above 340 in NEET 2024 Biology. We complement DPS's strong curriculum with NEET-specific strategies, clinical applications, and conceptual depth. Many students score 350+.",
+          "98% of our DPS Powai students scored above 340 in NEET 2024 Biology. We complement DPS's strong curriculum with NEET-specific strategies, clinical applications, and conceptual depth. Many students score 350+.",
       },
       {
         question: 'What study resources do you provide?',

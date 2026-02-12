@@ -59,7 +59,7 @@ export function OrganizationSchema() {
       'https://twitter.com/cerebrumbiology',
       'https://g.page/cerebrumbiologyacademy',
     ],
-    foundingDate: '2015',
+    foundingDate: '2010',
     founder: {
       '@type': 'Person',
       name: 'Dr. Shekhar C Singh',

@@ -102,7 +102,7 @@ const faqStructuredData = {
       name: 'What is the success rate of Dwarka students at Cerebrum?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Students from Dwarka have consistently achieved excellent results at Cerebrum Biology Academy. Our Dwarka students have secured admissions to AIIMS, MAMC, UCMS, LHMC, and other top medical colleges with scores ranging from 640-695 in NEET. Overall 94% of our students qualify NEET.',
+        text: 'Students from Dwarka have consistently achieved excellent results at Cerebrum Biology Academy. Our Dwarka students have secured admissions to AIIMS, MAMC, UCMS, LHMC, and other top medical colleges with scores ranging from 640-695 in NEET. Overall 98% of our students qualify NEET.',
       },
     },
     {

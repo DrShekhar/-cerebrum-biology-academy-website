@@ -57,7 +57,7 @@ const aboutFAQs = [
   {
     question: 'How long has Cerebrum Biology Academy been operating?',
     answer:
-      'Cerebrum Biology Academy has been operating since 2015, starting with just 23 students in a 400 sq ft room in Rohini. Over 9+ years, we have grown to coach 2,847+ students with a 98% NEET qualification rate.',
+      'Cerebrum Biology Academy has been operating since 2010, starting with just 23 students in a 400 sq ft room in Rohini. Over 15+ years, we have grown to coach 2,847+ students with a 98% NEET qualification rate.',
   },
   {
     question: 'What makes Cerebrum different from other NEET coaching institutes?',
@@ -67,7 +67,7 @@ const aboutFAQs = [
   {
     question: 'What are the success statistics of Cerebrum Biology Academy?',
     answer:
-      "98% NEET qualification rate, 47 AIIMS selections across 7 campuses, 27 students ranked in India's top 1,000, 183 students admitted to government medical colleges, and 12 students scored 700+ in NEET 2024.",
+      "98% NEET qualification rate, 47 AIIMS selections across campuses, 27 students ranked in India's top 1,000, 183 students admitted to government medical colleges, and 12 students scored 700+ in NEET 2024.",
   },
   {
     question: 'Where are Cerebrum Biology Academy centers located?',
@@ -264,7 +264,7 @@ export default function AboutPage() {
                     <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" strokeWidth={2} />
                   </div>
                   <p className="text-gray-800 text-base sm:text-lg font-light leading-relaxed">
-                    47 AIIMS selections across 7 campuses
+                    47 AIIMS selections across campuses
                   </p>
                 </div>
                 <div className="flex items-start gap-3 sm:gap-4 group hover:translate-x-1 transition-transform duration-300">

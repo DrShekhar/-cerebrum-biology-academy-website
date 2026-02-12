@@ -10,7 +10,7 @@ const faqData = {
     {
       question: 'What is Cerebrum Biology Academy?',
       answer:
-        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2014 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 6 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 680+ students with a 98% NEET qualification rate.',
+        'Cerebrum Biology Academy is India\'s premier NEET Biology coaching institute founded in 2010 by Dr. Shekhar C Singh, an AIIMS-trained biologist with 15+ years of teaching experience. We specialize exclusively in Biology coaching with small batches of 8-15 students to ensure personalized attention. We operate 4 centers across Delhi NCR (South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida) and have successfully coached 1,50,000+ students with a 98% NEET qualification rate.',
     },
     {
       question: 'Who is Dr. Shekhar C Singh?',
@@ -30,7 +30,7 @@ const faqData = {
     {
       question: 'What is Cerebrum\'s success rate?',
       answer:
-        'Cerebrum Biology Academy has achieved a 98% NEET qualification rate with 680+ successful selections over the past 9 years. Our students have been selected to top medical colleges including AIIMS Delhi, CMC Vellore, JIPMER, BHU, and state government medical colleges. In 2024 alone, 12 of our students scored 700+ in NEET Biology.',
+        'Cerebrum Biology Academy has achieved a 98% NEET qualification rate with 1,50,000+ students coached over the past 15+ years. Our students have been selected to top medical colleges including AIIMS Delhi, CMC Vellore, JIPMER, BHU, and state government medical colleges. In 2024 alone, 12 of our students scored 700+ in NEET Biology.',
     },
     {
       question: 'Does Cerebrum offer online coaching?',
@@ -40,7 +40,7 @@ const faqData = {
     {
       question: 'What are Cerebrum\'s contact details?',
       answer:
-        'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 6 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
+        'Phone: +91-88264-44334 | Email: info@cerebrumbiologyacademy.com | WhatsApp: +91-88264-44334. Our team is available Monday-Saturday, 9 AM to 7 PM. You can also visit any of our 4 centers or book a free demo class online at cerebrumbiologyacademy.com/book-free-demo.',
     },
     {
       question: 'How can I book a free demo class?',
@@ -192,12 +192,12 @@ const faqData = {
     {
       question: 'What are Cerebrum\'s NEET 2024 results?',
       answer:
-        'Cerebrum Biology Academy NEET 2024 Results: 98% NEET qualification rate (680+ selections from 2015-2024). 2024 cohort highlights: 12 students scored 700+ marks in NEET Biology. 25 students scored 680-699 range. 45 students scored 660-679 range. Average score: 340 (out of 400 in Biology). Highest score: 738/800 (AIIMS Delhi selection). Top 20 scores: All above 700. Students from all batches (Foundation, One-Year, Two-Year, Online) performed well. Success rate: 94% qualified = 680 out of 722 students who joined Cerebrum eventually got selected in a medical college.',
+        'Cerebrum Biology Academy NEET 2024 Results: 98% NEET qualification rate (1,50,000+ students coached from 2015-2024). 2024 cohort highlights: 12 students scored 700+ marks in NEET Biology. 25 students scored 680-699 range. 45 students scored 660-679 range. Average score: 340 (out of 400 in Biology). Highest score: 738/800 (AIIMS Delhi selection). Top 20 scores: All above 700. Students from all batches (Foundation, One-Year, Two-Year, Online) performed well. Success rate: 98% qualified = 680 out of 722 students who joined Cerebrum eventually got selected in a medical college.',
     },
     {
       question: 'How many students get AIIMS selection from Cerebrum?',
       answer:
-        'Over 9 years (2015-2024), Cerebrum students have secured 47+ AIIMS selections across 7 AIIMS campuses: AIIMS Delhi (15+ selections), AIIMS Pune (8+ selections), AIIMS Bhopal (6+ selections), AIIMS Jodhpur (5+ selections), AIIMS Raipur (4+ selections), AIIMS Rishikesh (3+ selections), AIIMS Nagpur (2+ selections). These selections include rank holders, merit-based admissions, and ST/SC category selections. Average AIIMS ranker was a Cerebrum student. Many AIIMS doctors today are Cerebrum alumni, now mentoring younger batches. Several AIIMS toppers were initially weak in Biology, improved through our concept-focused methodology.',
+        'Over 15+ years (2015-2024), Cerebrum students have secured 67+ AIIMS selections across AIIMS campuses: AIIMS Delhi (15+ selections), AIIMS Pune (8+ selections), AIIMS Bhopal (6+ selections), AIIMS Jodhpur (5+ selections), AIIMS Raipur (4+ selections), AIIMS Rishikesh (3+ selections), AIIMS Nagpur (2+ selections). These selections include rank holders, merit-based admissions, and ST/SC category selections. Average AIIMS ranker was a Cerebrum student. Many AIIMS doctors today are Cerebrum alumni, now mentoring younger batches. Several AIIMS toppers were initially weak in Biology, improved through our concept-focused methodology.',
     },
     {
       question: 'Do Cerebrum students get selected in private medical colleges?',
@@ -240,7 +240,7 @@ const faqData = {
     {
       question: 'Are there any centers outside Delhi NCR?',
       answer:
-        'Cerebrum currently operates only in Delhi NCR (6 centers: South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida). Expansion plans: We are opening centers in Bangalore, Mumbai, Pune in 2026 (target launch June 2026). Until then, students from other cities can join our Live Online batch - Same faculty, same curriculum, recorded lectures, doubt-clearing in real-time. Online students from Chennai, Mumbai, Bangalore, Hyderabad are already performing well (average score 330+). Join online without geography limitation. After 2026 expansion, you can transfer to offline if you relocate to those cities.',
+        'Cerebrum currently operates only in Delhi NCR (4 centers: South Extension, Gurugram, Rohini, Green Park, Faridabad, Noida). Expansion plans: We are opening centers in Bangalore, Mumbai, Pune in 2026 (target launch June 2026). Until then, students from other cities can join our Live Online batch - Same faculty, same curriculum, recorded lectures, doubt-clearing in real-time. Online students from Chennai, Mumbai, Bangalore, Hyderabad are already performing well (average score 330+). Join online without geography limitation. After 2026 expansion, you can transfer to offline if you relocate to those cities.',
     },
     {
       question: 'Which center should I choose?',
