@@ -9,9 +9,17 @@ import { Redis } from '@upstash/redis'
 // Initialize Redis for rate limiting if available
 let redis: Redis | null = null
 try {
-  const redisUrl = (process.env.UPSTASH_REDIS_REST_URL || '').trim()
-  const redisToken = (process.env.UPSTASH_REDIS_REST_TOKEN || '').trim()
-  if (redisUrl && redisToken) {
+  const rawRedisUrl = process.env.UPSTASH_REDIS_REST_URL || ''
+  const rawRedisToken = process.env.UPSTASH_REDIS_REST_TOKEN || ''
+  const redisUrl = rawRedisUrl.trim()
+  const redisToken = rawRedisToken.trim()
+
+  // If env vars contain internal whitespace/newlines, disable Redis fallback to avoid import-time crashes.
+  const hasInvalidWhitespace = /\s/.test(redisUrl) || /\s/.test(redisToken)
+  if (hasInvalidWhitespace) {
+    console.warn('CSRF Redis disabled: UPSTASH_REDIS_REST_URL/TOKEN contains whitespace/newline')
+    redis = null
+  } else if (redisUrl && redisToken) {
     redis = new Redis({ url: redisUrl, token: redisToken })
   }
 } catch (e) {
@@ -21,14 +29,23 @@ try {
 }
 
 // CSRF token rate limiter using Redis
-const csrfRateLimiter = redis
-  ? new Ratelimit({
+let csrfRateLimiter: Ratelimit | null = null
+if (redis) {
+  try {
+    csrfRateLimiter = new Ratelimit({
       redis,
       limiter: Ratelimit.slidingWindow(10, '1 m'),
       analytics: true,
       prefix: 'ratelimit:csrf:token',
     })
-  : null
+  } catch (error) {
+    console.warn(
+      'CSRF rate limiter initialization failed, using in-memory fallback:',
+      error instanceof Error ? error.message : 'Unknown error'
+    )
+    csrfRateLimiter = null
+  }
+}
 
 // Fallback in-memory rate limiting (only for dev without Redis)
 const inMemoryLimits = new Map<string, { count: number; resetTime: number }>()
