@@ -652,7 +652,7 @@ export class ExportService {
       datasets: [
         {
           label: 'Class Average (%)',
-          data: dates.map(() => Math.random() * 100), // Placeholder data
+          data: dates.map(() => 0), // No data available yet
           borderColor: '#3B82F6',
           backgroundColor: 'rgba(59, 130, 246, 0.1)',
           fill: true,

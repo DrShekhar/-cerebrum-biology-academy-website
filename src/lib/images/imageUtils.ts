@@ -79,10 +79,10 @@ export function getPlaceholderAvatar(
 }
 
 /**
- * Generate a placeholder image URL using a reliable service
+ * Generate a placeholder image as a data URI (no external dependency)
  */
 export function getPlaceholderImage(width: number, height: number, text?: string): string {
-  // Use placeholder.com for generic placeholders
-  const textParam = text ? `?text=${encodeURIComponent(text)}` : ''
-  return `https://via.placeholder.com/${width}x${height}/e2e8f0/64748b${textParam}`
+  const label = text || `${width}x${height}`
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><rect fill="#e2e8f0" width="100%" height="100%"/><text fill="#64748b" font-family="system-ui,sans-serif" font-size="14" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">${label}</text></svg>`
+  return `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`
 }

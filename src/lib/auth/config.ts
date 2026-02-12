@@ -1009,53 +1009,8 @@ export function createDemoToken(): string {
   return `demo_${Date.now()}_${randomHex}`
 }
 
-/**
- * NextAuth configuration options
- * Legacy config for backwards compatibility - primary auth is Firebase
- */
-export const authOptions = {
-  providers: [
-    // For development, we'll use a credentials provider
-    {
-      id: 'demo',
-      name: 'Demo',
-      type: 'credentials',
-      credentials: {},
-      async authorize() {
-        // Return a demo user for development
-        return {
-          id: 'demo_user',
-          email: 'demo@cerebrumbiologyacademy.com',
-          name: 'Demo Student',
-          role: 'STUDENT',
-        }
-      },
-    },
-  ],
-  session: {
-    strategy: 'jwt' as const,
-  },
-  callbacks: {
-    async jwt({ token, user }: any) {
-      if (user) {
-        token.role = user.role || 'STUDENT'
-        token.userId = user.id
-      }
-      return token
-    },
-    async session({ session, token }: any) {
-      if (token) {
-        session.user.role = token.role as string
-        session.user.id = token.userId as string
-      }
-      return session
-    },
-  },
-  pages: {
-    signIn: '/sign-in',
-    signUp: '/sign-up',
-  },
-}
+// Legacy demo auth provider removed for security — was never imported but exported a
+// hardcoded demo user that could be used if accidentally wired up.
 
 /**
  * Allowed CORS origins for the application

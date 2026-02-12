@@ -362,8 +362,8 @@ export async function connectToDatabase() {
   }
   try {
     await prisma.$connect()
-    logger.info('Successfully connected to SQLite database', {
-      database: 'sqlite',
+    logger.info('Successfully connected to database', {
+      database: 'postgresql',
     })
     return true
   } catch (error) {

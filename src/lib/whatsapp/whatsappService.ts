@@ -204,10 +204,9 @@ Keep going, future doctor! 🩺🌟`
   }
 
   async getMediaUrl(mediaId: string): Promise<string> {
-    // This would integrate with WhatsApp Business API to download media
-    // For MVP, return a placeholder URL
-    console.log('📥 Fetching media URL for:', mediaId)
-    return `https://placeholder.com/media/${mediaId}`
+    // TODO: Integrate with WhatsApp Business API to download media
+    // Returns empty string until WhatsApp credentials are configured
+    return ''
   }
 
   async sendInteractiveMessage(phoneNumberId: string, message: any): Promise<boolean> {
