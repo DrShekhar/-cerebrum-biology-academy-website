@@ -5,7 +5,7 @@ import { Phone, Award, Users, GraduationCap, Star, ArrowRight, CheckCircle, Cale
 export const metadata: Metadata = {
   title: 'Dr. Shekhar C Singh | AIIMS Alumni | Lead NEET Biology Faculty',
   description:
-    'Meet Dr. Shekhar C Singh - AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy. 15+ years NEET coaching experience, 500+ AIIMS selections. Expert NEET Biology faculty.',
+    'Meet Dr. Shekhar C Singh - AIIMS New Delhi alumnus, founder of Cerebrum Biology Academy. 15+ years NEET coaching experience, 67+ AIIMS selections. Expert NEET Biology faculty.',
   keywords: [
     'dr shekhar singh',
     'aiims faculty neet',
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Dr. Shekhar C Singh | AIIMS Alumni | NEET Biology Expert',
-    description: 'AIIMS New Delhi alumnus with 15+ years experience. 500+ AIIMS/medical college selections.',
+    description: 'AIIMS New Delhi alumnus with 15+ years experience. 67+ AIIMS/medical college selections.',
     url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh-neet-biology-faculty',
   },
   alternates: {
@@ -84,7 +84,7 @@ const faqs = [
   },
   {
     question: 'How many students has Dr. Singh trained for NEET?',
-    answer: 'Dr. Singh has personally mentored over 10,000 students for NEET over his 15+ year career. Of these, 500+ have been selected to AIIMS and top government medical colleges. His consistent success rate is 98%.',
+    answer: 'Dr. Singh has personally mentored over 1,50,000 students for NEET over his 15+ year career. Of these, 67+ have been selected to AIIMS and top government medical colleges. His consistent success rate is 98%.',
   },
   {
     question: 'Does Dr. Singh teach all batches personally?',
@@ -164,8 +164,8 @@ export default function DrShekharSinghPage() {
                 to NEET Biology that textbooks simply cannot provide.
               </p>
               <p className="mb-4">
-                With <strong>15+ years of dedicated NEET coaching experience</strong>, Dr. Singh has personally mentored over 10,000 students,
-                with 500+ gaining admission to AIIMS and top government medical colleges. His teaching methodology combines rigorous academic
+                With <strong>15+ years of dedicated NEET coaching experience</strong>, Dr. Singh has personally mentored over 1,50,000 students,
+                with 67+ gaining admission to AIIMS and top government medical colleges. His teaching methodology combines rigorous academic
                 preparation with clinical insights from his medical background.
               </p>
               <p>
@@ -320,7 +320,7 @@ export default function DrShekharSinghPage() {
           },
           {
             '@type': 'EducationalOccupationalCredential',
-            name: '500+ Medical College Selections',
+            name: '67+ AIIMS Selections',
             description: 'Students mentored to AIIMS and top government medical colleges',
           },
         ],

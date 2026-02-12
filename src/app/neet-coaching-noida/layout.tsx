@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Noida 2026 [1200+ Students] 98% Success | Cerebrum',
   description:
-    'Top NEET biology coaching in Noida & Greater Noida. AIIMS faculty Dr. Shekhar Singh, 98% success rate, 500+ AIIMS selections. Fee Rs 48,000-98,000. Sector 18, 62, 137, 150 covered. FREE demo class!',
+    'Top NEET biology coaching in Noida & Greater Noida. AIIMS faculty Dr. Shekhar Singh, 98% success rate, 67+ AIIMS selections. Fee Rs 48,000-98,000. Sector 18, 62, 137, 150 covered. FREE demo class!',
   keywords: [
     // Primary location keywords
     'NEET coaching Noida',

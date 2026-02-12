@@ -388,7 +388,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                   </div>
                   <h4 className="font-bold text-gray-900 mb-2">Proven Results</h4>
                   <p className="text-sm text-gray-700">
-                    98% success rate with 500+ AIIMS selections
+                    98% success rate with 67+ AIIMS selections
                   </p>
                 </div>
               </div>

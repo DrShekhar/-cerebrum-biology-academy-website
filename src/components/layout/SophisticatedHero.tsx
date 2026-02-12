@@ -172,7 +172,7 @@ export function SophisticatedHero({
 
               <p className="text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-2xl">
                 Experience NEET Biology preparation with
-                <PremiumTooltip content="AIIMS Graduate • 15+ Years Experience • 500+ AIIMS Selections">
+                <PremiumTooltip content="AIIMS Graduate • 15+ Years Experience • 67+ AIIMS Selections">
                   <span className="font-semibold text-blue-700 cursor-help"> Dr. Shekhar's </span>
                 </PremiumTooltip>
                 proven teaching methods.{' '}
@@ -252,7 +252,7 @@ export function SophisticatedHero({
               </div>
               <div className="flex items-center gap-2">
                 <Trophy className="h-5 w-5 text-blue-600" />
-                <span>500+ AIIMS Success Stories</span>
+                <span>67+ AIIMS Success Stories</span>
               </div>
             </motion.div>
           </div>

@@ -1133,7 +1133,7 @@ export function DrShekharSinghSchema() {
           description: "Medical degree from India's premier medical institution",
         },
         {
-          name: '500+ AIIMS/JIPMER Selections',
+          name: '67+ AIIMS/JIPMER Selections',
           description: 'Students mentored into top medical colleges',
         },
         {
