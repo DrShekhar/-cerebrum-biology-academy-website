@@ -462,7 +462,7 @@ export default function NEET2026PreparationPage() {
               Why Choose Cerebrum for NEET 2026?
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
-              India's most trusted NEET Biology coaching with proven track record of 500+ medical
+              India's most trusted NEET Biology coaching with proven track record of 67+ AIIMS
               selections annually.
             </p>
           </motion.div>

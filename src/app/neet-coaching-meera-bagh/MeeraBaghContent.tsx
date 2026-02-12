@@ -520,7 +520,7 @@ export function NEETCoachingMeeraBaghContent() {
                       </p>
                       <div className="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3">
                         <div className="rounded-lg bg-amber-50 p-3 text-center">
-                          <div className="text-2xl font-bold text-amber-600">500+</div>
+                          <div className="text-2xl font-bold text-amber-600">67+</div>
                           <div className="text-xs text-gray-600">Premium Houses in Block A</div>
                         </div>
                         <div className="rounded-lg bg-amber-50 p-3 text-center">

@@ -56,7 +56,7 @@ const northIndiaStates = [
   {
     name: 'Rajasthan',
     slug: 'rajasthan',
-    students: '500+',
+    students: '5,000+',
     cities: ['Jaipur', 'Jodhpur', 'Udaipur', 'Kota', 'Ajmer', 'Bikaner'],
     priority: 'high',
   },

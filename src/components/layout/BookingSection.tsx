@@ -177,7 +177,7 @@ export function BookingSection() {
                   <div className="text-sm text-green-100">{t('successRate')}</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold mb-1">500+</div>
+                  <div className="text-3xl font-bold mb-1">67+</div>
                   <div className="text-sm text-green-100">{t('expertFaculty')}</div>
                 </div>
                 <div className="text-center">

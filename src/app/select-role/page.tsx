@@ -220,7 +220,7 @@ export default function SelectRolePage() {
           <h3 className="text-lg font-semibold text-slate-900 mb-4">Quick Overview</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
             <div className="p-4 bg-slate-50 rounded-xl">
-              <div className="text-2xl font-bold text-slate-900">500+</div>
+              <div className="text-2xl font-bold text-slate-900">67+</div>
               <div className="text-sm text-slate-600">Students</div>
             </div>
             <div className="p-4 bg-slate-50 rounded-xl">

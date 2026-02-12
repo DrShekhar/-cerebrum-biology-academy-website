@@ -139,7 +139,7 @@ const FreeResourcesHub = () => {
                 <div className="text-sm opacity-90">Questions</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">
-                <div className="text-2xl font-bold">500+</div>
+                <div className="text-2xl font-bold">67+</div>
                 <div className="text-sm opacity-90">Chapter Notes</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">

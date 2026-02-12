@@ -116,7 +116,7 @@ export default async function InternationalCoursesPage({ params }: PageProps) {
               <div className="flex flex-wrap justify-center gap-6 md:gap-8">
                 <div className="flex items-center gap-2">
                   <Users className="w-5 h-5 text-green-400" />
-                  <span className="text-sm md:text-base">500+ Students</span>
+                  <span className="text-sm md:text-base">1,50,000+ Students</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Award className="w-5 h-5 text-yellow-400" />

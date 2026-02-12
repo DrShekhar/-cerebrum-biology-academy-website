@@ -87,7 +87,7 @@ export default function PageContent() {
                 <p className="text-xl mb-8 text-blue-100">Specialized coaching for board students preparing for NEET. Expert faculty, comprehensive gap analysis, 98% conversion rate.</p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-center gap-3"><Trophy className="w-6 h-6" /><span className="text-lg">98% Success Rate</span></div>
-                  <div className="flex items-center gap-3"><Users className="w-6 h-6" /><span className="text-lg">500+ Students Prepared</span></div>
+                  <div className="flex items-center gap-3"><Users className="w-6 h-6" /><span className="text-lg">1,50,000+ Students Prepared</span></div>
                   <div className="flex items-center gap-3"><Star className="w-6 h-6" /><span className="text-lg">650+ Average Score</span></div>
                 </div>
                 <SmartWhatsAppCTA phoneNumber="918826444334" text="Schedule Free Consultation" variant="light" size="lg" />

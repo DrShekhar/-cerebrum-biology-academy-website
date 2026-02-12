@@ -200,7 +200,7 @@ export default function OnlineBiologyClassesPage() {
               </h1>
               <p className="mb-8 text-xl text-white/80">
                 Join India&apos;s best online biology classes with AIIMS-trained faculty. Live
-                interactive sessions, 500+ recorded lectures, and comprehensive NEET preparation.
+                interactive sessions, 300+ recorded lectures, and comprehensive NEET preparation.
                 1,50,000+ students across India and abroad!
               </p>
               <div className="flex flex-wrap gap-4">

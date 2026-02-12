@@ -6,7 +6,7 @@ import { NoidaPageSchemas } from '@/components/seo/NoidaSchemas'
 export const metadata: Metadata = {
   title: 'Best Biology Tutor in Noida 2026 | AIIMS Faculty | Dr. Shekhar | Cerebrum',
   description:
-    'Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus, 15+ years). 500+ NEET selections, 4.9/5 rating. Online & offline. Gaur City, Sector 150. Free demo!',
+    'Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus, 15+ years). 67+ AIIMS selections, 4.9/5 rating. Online & offline. Gaur City, Sector 150. Free demo!',
   keywords: [
     'best biology tutor noida',
     'best biology teacher noida',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Best Biology Tutor in Noida | AIIMS Faculty | 500+ Selections',
-    description: 'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience and 500+ NEET selections.',
+    description: 'Learn from Dr. Shekhar C Singh, AIIMS alumnus with 15+ years experience and 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/best-biology-tutor-noida',
   },
   alternates: {
@@ -30,7 +30,7 @@ const tutorProfile = {
   name: 'Dr. Shekhar C Singh',
   qualification: 'AIIMS Delhi Alumnus',
   experience: '15+ Years',
-  selections: '500+',
+  selections: '67+',
   rating: '4.9/5',
   specialization: 'NEET Biology Expert',
 }
@@ -38,7 +38,7 @@ const tutorProfile = {
 const credentials = [
   { icon: GraduationCap, title: 'AIIMS Delhi Alumnus', description: 'Medical education from India\'s top institution' },
   { icon: Clock, title: '15+ Years Experience', description: 'Teaching Biology for NEET and boards since 2009' },
-  { icon: Trophy, title: '500+ NEET Selections', description: 'Students in top medical colleges across India' },
+  { icon: Trophy, title: '67+ AIIMS Selections', description: 'Students in top medical colleges across India' },
   { icon: Star, title: '4.9/5 Google Rating', description: 'Consistently rated best by students and parents' },
   { icon: Award, title: 'Subject Matter Expert', description: 'Author of NEET Biology study materials' },
   { icon: Users, title: '5000+ Students Taught', description: 'From Delhi NCR, India, and abroad' },
@@ -81,7 +81,7 @@ const courses = [
 const faqs = [
   {
     question: 'Who is the best Biology tutor in Noida?',
-    answer: 'Dr. Shekhar C Singh is widely regarded as the best Biology tutor in Noida. AIIMS Delhi alumnus with 15+ years experience, 500+ NEET selections, and 4.9/5 rating. He specializes in making complex Biology concepts simple and memorable.',
+    answer: 'Dr. Shekhar C Singh is widely regarded as the best Biology tutor in Noida. AIIMS Delhi alumnus with 15+ years experience, 67+ AIIMS selections, and 4.9/5 rating. He specializes in making complex Biology concepts simple and memorable.',
   },
   {
     question: 'What are the fees for the best Biology tutor in Noida?',
@@ -109,7 +109,7 @@ export default function BestBiologyTutorNoidaPage() {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Best Biology Tutor in Noida</h1>
             <p className="text-xl text-slate-300 mb-6">
-              Learn from Dr. Shekhar C Singh - AIIMS alumnus, 15+ years experience, 500+ NEET selections
+              Learn from Dr. Shekhar C Singh - AIIMS alumnus, 15+ years experience, 67+ AIIMS selections
             </p>
 
             {/* Tutor Quick Stats */}
@@ -297,7 +297,7 @@ export default function BestBiologyTutorNoidaPage() {
       <NoidaPageSchemas
         area="Noida"
         pageName="Best Biology Tutor in Noida"
-        pageDescription="Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus) with 15+ years experience. 500+ NEET selections."
+        pageDescription="Find the best Biology tutor in Noida. Dr. Shekhar C Singh (AIIMS alumnus) with 15+ years experience. 67+ AIIMS selections."
         pageUrl="https://cerebrumbiologyacademy.com/best-biology-tutor-noida"
         breadcrumbs={[
           { name: 'Home', url: 'https://cerebrumbiologyacademy.com' },

@@ -301,7 +301,7 @@ export default function NCERTBiologySolutionsPage() {
                 <div className="text-sm text-gray-600">Solved Questions</div>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">
-                <div className="text-3xl font-bold text-blue-600 mb-1">500+</div>
+                <div className="text-3xl font-bold text-blue-600 mb-1">67+</div>
                 <div className="text-sm text-gray-600">Diagrams & Flowcharts</div>
               </div>
               <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-100 text-center">

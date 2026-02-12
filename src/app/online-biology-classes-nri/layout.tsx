@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title:
     'Online Biology Classes for NRI Students | NEET Preparation from Abroad | Cerebrum Academy',
   description:
-    'Expert online biology classes for NRI students preparing for NEET. Multi-timezone support for USA, UK, UAE, Australia. International payment options. 8,500+ NRI students enrolled.',
+    'Expert online biology classes for NRI students preparing for NEET. Multi-timezone support for USA, UK, UAE, Australia. International payment options. thousands of NRI students enrolled.',
   keywords: [
     'online biology classes NRI',
     'NEET preparation abroad',

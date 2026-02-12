@@ -499,7 +499,7 @@ export default function IBBiologyPage() {
         <div className="container mx-auto mt-12 px-4">
           <div className="mx-auto grid max-w-4xl grid-cols-2 gap-4 md:grid-cols-4">
             {[
-              { value: '500+', label: 'IB Students' },
+              { value: '200+', label: 'IB Students' },
               { value: '6.4', label: 'Avg Grade' },
               { value: '85%', label: 'Score 6+' },
               { value: '40+', label: 'Countries' },

@@ -290,7 +290,7 @@ export default function BiologyClass11NoidaPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey in Class 11</h2>
-          <p className="text-xl text-slate-300 mb-8">Join 500+ successful students from Noida</p>
+          <p className="text-xl text-slate-300 mb-8">Join 1,50,000+ successful students from Noida</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <a

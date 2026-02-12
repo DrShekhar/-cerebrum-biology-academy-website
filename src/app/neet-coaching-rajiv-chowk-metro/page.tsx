@@ -52,7 +52,7 @@ const metroData = {
     {
       question: 'Is there NEET coaching near Rajiv Chowk Metro Station?',
       answer:
-        'Yes! Cerebrum Biology Academy offers NEET coaching easily accessible from Rajiv Chowk Metro. Our South Extension center is just 15 minutes via Yellow Line (get down at Green Park). We also offer online classes for students who prefer studying from home. 500+ students from Central Delhi areas like Connaught Place, Janpath, and Barakhamba Road are enrolled.',
+        'Yes! Cerebrum Biology Academy offers NEET coaching easily accessible from Rajiv Chowk Metro. Our South Extension center is just 15 minutes via Yellow Line (get down at Green Park). We also offer online classes for students who prefer studying from home. students from Central Delhi areas like Connaught Place, Janpath, and Barakhamba Road are enrolled.',
     },
     {
       question: 'How do I reach Cerebrum coaching center from Rajiv Chowk Metro?',

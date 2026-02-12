@@ -169,7 +169,7 @@ export const cities: CityData[] = [
     studentCount: '4,500+',
     metaTitle: 'Online Biology Classes in Noida | NEET Preparation | Cerebrum Academy',
     metaDescription:
-      'Top online biology classes for Noida students. NEET preparation with AIIMS faculty. No DND commute needed. 4,500+ students from Noida & Greater Noida.',
+      'Top online biology classes for Noida students. NEET preparation with AIIMS faculty. No DND commute needed. 4,students from Noida & Greater Noida.',
     heroSubtitle: "Why cross the border when Delhi's best teaching comes to your Noida home?",
   },
   {

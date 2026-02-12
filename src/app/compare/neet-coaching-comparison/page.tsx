@@ -272,7 +272,7 @@ export default function NEETCoachingComparisonPage() {
               {[
                 { value: '98%', label: 'Success Rate' },
                 { value: '695/720', label: 'Top Score' },
-                { value: '500+', label: 'NEET Selections' },
+                { value: '67+ AIIMS Selections' },
                 { value: '15+', label: 'Years Experience' },
               ].map((s, i) => (
                 <div key={i}>

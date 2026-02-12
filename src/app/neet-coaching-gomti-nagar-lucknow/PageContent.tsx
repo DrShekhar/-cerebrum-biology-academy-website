@@ -39,7 +39,7 @@ const areas = [
 
 const whyChooseUs = [
   { icon: Building, title: 'Gomti Nagar Professional Families Trust Us', description: 'Top choice for Gomti Nagar professionals and academics. Trusted by doctors, engineers, and business families.' },
-  { icon: Target, title: '500+ NEET Selections', description: 'Proven success with students from premier Lucknow institutions.' },
+  { icon: Target, title: '67+ AIIMS Selections', description: 'Proven success with students from premier Lucknow institutions.' },
   { icon: GraduationCap, title: 'Expert Medical Faculty', description: 'NEET biology coaching by experienced medical professionals with 15+ years expertise.' },
   { icon: Star, title: 'Top NEET Results', description: 'Gomti Nagar students achieve 685+ NEET scores consistently.' },
 ]
@@ -82,7 +82,7 @@ export default function PageContent() {
               <a href="tel:+918826444334"><Button variant="outline" size="xl" className="border-white text-white hover:bg-white hover:text-slate-900"><Headphones className="w-5 h-5 mr-2" />Call Now</Button></a>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"><Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-400" /><div className="text-2xl font-bold">500+</div><div className="text-sm opacity-80">NEET Selections</div></div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"><Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-400" /><div className="text-2xl font-bold">67+</div><div className="text-sm opacity-80">NEET Selections</div></div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"><Building className="w-8 h-8 mx-auto mb-2 text-yellow-400" /><div className="text-2xl font-bold">Premium</div><div className="text-sm opacity-80">Residential</div></div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"><Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" /><div className="text-2xl font-bold">15+</div><div className="text-sm opacity-80">Years Experience</div></div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"><Star className="w-8 h-8 mx-auto mb-2 text-yellow-400" /><div className="text-2xl font-bold">685+</div><div className="text-sm opacity-80">Top Score</div></div>

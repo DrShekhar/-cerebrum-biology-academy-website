@@ -110,7 +110,7 @@ const cerebrumAdvantages = [
 
 const comparisonData = [
   { feature: 'Faculty Qualification', homeTutor: 'BSc/MSc', cerebrum: 'AIIMS Trained' },
-  { feature: 'NEET Top 1000 Produced', homeTutor: '0-1', cerebrum: '500+' },
+  { feature: 'NEET Top 1000 Produced', homeTutor: '0-1', cerebrum: '67+' },
   { feature: 'Peer Learning', homeTutor: 'None', cerebrum: '10-15 Students' },
   { feature: 'Study Material', homeTutor: 'Textbooks Only', cerebrum: 'Complete Package' },
   { feature: 'Mock Tests', homeTutor: 'Rarely', cerebrum: 'Weekly + Monthly' },

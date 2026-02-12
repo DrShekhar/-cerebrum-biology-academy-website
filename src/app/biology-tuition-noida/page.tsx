@@ -114,7 +114,7 @@ export default function BiologyTuitionNoidaPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="inline-flex items-center gap-2 bg-teal-500 text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
-              <Star className="w-4 h-4" /> Rated 4.9/5 by 500+ Students
+              <Star className="w-4 h-4" /> Rated 4.9/5 by 1,50,000+ Students
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Biology Tuition in Noida</h1>
             <p className="text-xl text-slate-300 mb-6">
@@ -326,7 +326,7 @@ export default function BiologyTuitionNoidaPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Start Your Biology Tuition Today!</h2>
-          <p className="text-xl text-slate-300 mb-8">Join 500+ successful students from Noida</p>
+          <p className="text-xl text-slate-300 mb-8">Join 1,50,000+ successful students from Noida</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <a

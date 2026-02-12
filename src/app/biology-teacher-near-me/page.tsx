@@ -492,7 +492,7 @@ export default function BiologyTeacherNearMePage() {
                 </p>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 text-center">
-                    <div className="text-3xl font-bold">500+</div>
+                    <div className="text-3xl font-bold">67+</div>
                     <div className="text-sm text-green-100">Online Students</div>
                   </div>
                   <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 text-center">

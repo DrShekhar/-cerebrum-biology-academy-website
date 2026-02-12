@@ -195,7 +195,7 @@ export default function OnlineBiologyTutorNeetPage() {
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Master NEET Biology online with{' '}
               <strong>Dr. Shekhar C Singh, AIIMS Alumnus and former Narayana Academic Head</strong>.
-              Live interactive classes with NCERT-focused teaching that has produced 500+ medical
+              Live interactive classes with NCERT-focused teaching that has produced 67+ AIIMS
               selections.
             </p>
 
@@ -226,7 +226,7 @@ export default function OnlineBiologyTutorNeetPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">500+</div>
+                <div className="text-2xl font-bold">67+</div>
                 <div className="text-sm text-blue-100">Medical Selections</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
@@ -358,7 +358,7 @@ export default function OnlineBiologyTutorNeetPage() {
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Crack NEET Biology?</h2>
             <p className="text-xl md:text-2xl mb-8 text-green-100">
-              Join 500+ successful students. Book your free online demo today!
+              Join 1,50,000+ successful students. Book your free online demo today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

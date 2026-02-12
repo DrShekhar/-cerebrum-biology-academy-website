@@ -276,7 +276,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Students Choose Cerebrum</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Discover why 500+ Gurugram students trust Cerebrum Biology Academy for their NEET Biology preparation
+              Discover why thousands of Gurugram students trust Cerebrum Biology Academy for their NEET Biology preparation
             </p>
           </motion.div>
 

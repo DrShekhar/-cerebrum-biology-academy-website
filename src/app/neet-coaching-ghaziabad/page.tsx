@@ -157,7 +157,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Ghaziabad?',
     answer:
-      'Cerebrum Biology Academy is rated the best NEET coaching in Ghaziabad with 98% success rate. We have 1,500+ students from Indirapuram, Vaishali, Crossing Republik, Raj Nagar Extension and all major areas. Our AIIMS-trained faculty and small batch sizes ensure personalized attention.',
+      'Cerebrum Biology Academy is rated the best NEET coaching in Ghaziabad with 98% success rate. We have 1,students from Indirapuram, Vaishali, Crossing Republik, Raj Nagar Extension and all major areas. Our AIIMS-trained faculty and small batch sizes ensure personalized attention.',
   },
   {
     question: 'Do you have coaching centers in Indirapuram?',

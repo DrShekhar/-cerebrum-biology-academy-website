@@ -154,7 +154,7 @@ export function ABTestHero({ onCtaClick, className = '' }: ABTestHeroProps) {
                 <div className="text-xs text-gray-500 mt-1">Across India & Abroad</div>
               </div>
               <div className="bg-white p-6 rounded-2xl shadow-lg border hover:shadow-xl transition-shadow">
-                <div className="text-3xl font-bold text-orange-600 mb-2">500+</div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">67+</div>
                 <div className="text-sm text-gray-600">AIIMS Selections</div>
                 <div className="text-xs text-gray-500 mt-1">Last 3 years</div>
               </div>

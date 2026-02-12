@@ -326,7 +326,7 @@ export default function HowToPrepareNEETNoida() {
                 <div className="text-blue-100">Success Rate</div>
               </div>
               <div>
-                <div className="text-4xl font-bold key-stat">500+</div>
+                <div className="text-4xl font-bold key-stat">67+</div>
                 <div className="text-blue-100">AIIMS Selections</div>
               </div>
               <div>

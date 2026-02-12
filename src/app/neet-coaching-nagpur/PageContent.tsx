@@ -71,7 +71,7 @@ export default function PageContent() {
               <div className="flex justify-center mb-3">
                 <Users className="w-8 h-8 text-blue-500" />
               </div>
-              <h3 className="text-4xl font-bold text-gray-900">500+</h3>
+              <h3 className="text-4xl font-bold text-gray-900">67+</h3>
               <p className="text-gray-600 mt-1">Students Trained</p>
             </div>
             <div className="text-center">

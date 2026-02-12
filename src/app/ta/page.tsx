@@ -193,7 +193,7 @@ export default function TamilHomePage() {
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <div className="text-3xl font-bold text-green-600 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-green-600 mb-2">67+</div>
                   <div className="text-gray-600">தமிழ்நாடு மாணவர்கள்</div>
                 </div>
                 <div className="bg-white rounded-xl p-6 shadow-sm">

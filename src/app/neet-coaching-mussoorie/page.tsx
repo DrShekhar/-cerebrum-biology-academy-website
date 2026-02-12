@@ -30,7 +30,7 @@ const features = [
 const successMetrics = [
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '340', icon: Star },
-  { label: 'Hill Station Students', value: '500+', icon: Users },
+  { label: 'Hill Station Students', value: '200+', icon: Users },
   { label: 'Schools Served', value: '15+', icon: MapPin },
 ]
 

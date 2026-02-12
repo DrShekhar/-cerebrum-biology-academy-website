@@ -467,7 +467,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               FREE Resources for {area.name} Students
             </h2>
             <p className="text-xl text-gray-600">
-              Download our exclusive study materials used by 500+ successful students from{' '}
+              Download our exclusive study materials used by 1,50,000+ successful students from{' '}
               {area.name}
             </p>
           </motion.div>

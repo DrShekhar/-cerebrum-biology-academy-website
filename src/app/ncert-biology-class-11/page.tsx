@@ -391,7 +391,7 @@ export default function NCERTBiologyClass11Page() {
               },
               {
                 icon: GraduationCap,
-                title: '500+ Students',
+                title: '1,50,000+ Students',
                 description: 'Successfully guided to medical colleges',
                 color: 'blue',
               },

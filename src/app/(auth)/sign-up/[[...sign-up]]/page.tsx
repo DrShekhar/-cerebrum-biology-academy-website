@@ -66,7 +66,7 @@ export default function SignUpPage() {
             <p className="text-xs text-slate-400">Questions</p>
           </div>
           <div className="bg-slate-800/50 rounded-xl p-3 text-center">
-            <p className="text-lg font-bold text-white">500+</p>
+            <p className="text-lg font-bold text-white">67+</p>
             <p className="text-xs text-slate-400">Videos</p>
           </div>
           <div className="bg-slate-800/50 rounded-xl p-3 text-center">

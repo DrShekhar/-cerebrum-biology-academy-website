@@ -12,7 +12,7 @@ const ogImageParams = new URLSearchParams({
 export const metadata: Metadata = {
   title: 'IGCSE to NEET Biology | Bridge Course for IGCSE Students | Cerebrum Academy',
   description:
-    'Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 500+ successful students.',
+    'Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 1,50,000+ successful students.',
   keywords: [
     'IGCSE to NEET',
     'IGCSE Biology NEET preparation',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'IGCSE to NEET Biology | Bridge Course for IGCSE Students | Cerebrum Academy',
     description:
-      'Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 500+ successful students.',
+      'Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 1,50,000+ successful students.',
     url: `${BASE_URL}/igcse-to-neet-biology-preparation`,
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'IGCSE to NEET Biology | Bridge Course for IGCSE Students',
     description:
-      'Seamless IGCSE to NEET transition with our specialized bridge course. 500+ successful students.',
+      'Seamless IGCSE to NEET transition with our specialized bridge course. 1,50,000+ successful students.',
     images: [`${BASE_URL}/api/og?${ogImageParams.toString()}`],
   },
   alternates: {
@@ -68,7 +68,7 @@ export default function IGCSEToNEETPage() {
         locality="Online"
         slug="igcse-to-neet-biology-preparation"
         pageTitle="IGCSE to NEET Biology Bridge Course"
-        pageDescription="Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 500+ successful students."
+        pageDescription="Seamless IGCSE to NEET transition with our specialized bridge course. Fill syllabus gaps, master NEET patterns, join 1,50,000+ successful students."
         pageType="coaching"
       faqs={faqs} />
       <PageContent />

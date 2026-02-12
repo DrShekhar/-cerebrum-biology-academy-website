@@ -381,7 +381,7 @@ export default function Class12BiologyPage() {
             </div>
             <div className="flex items-center gap-2">
               <Trophy className="h-5 w-5 text-white/80" />
-              <span className="font-medium">500+ NEET Selections</span>
+              <span className="font-medium">67+ AIIMS Selections</span>
             </div>
             <div className="flex items-center gap-2">
               <Star className="h-5 w-5 text-white/80" />
@@ -735,7 +735,7 @@ export default function Class12BiologyPage() {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
               <BadgeCheck className="w-4 h-4 text-green-400" />
-              <span>500+ NEET Selections</span>
+              <span>67+ AIIMS Selections</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm">
               <Star className="w-4 h-4 text-yellow-400" />

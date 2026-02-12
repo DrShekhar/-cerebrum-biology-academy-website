@@ -189,7 +189,7 @@ export function BiologyCoachingNearMeClient() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                 <Users className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
-                <div className="text-2xl font-bold">500+</div>
+                <div className="text-2xl font-bold">67+</div>
                 <div className="text-xs opacity-80">Medical Selections</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">

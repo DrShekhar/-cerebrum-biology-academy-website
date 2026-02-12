@@ -507,7 +507,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                             <div className="text-sm text-gray-400">Faculty Members</div>
                           </div>
                           <div className="text-center">
-                            <div className="text-2xl font-bold text-yellow-400">500+</div>
+                            <div className="text-2xl font-bold text-yellow-400">67+</div>
                             <div className="text-sm text-gray-400">Students Currently</div>
                           </div>
                         </div>

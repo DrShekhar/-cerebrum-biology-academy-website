@@ -177,7 +177,7 @@ export function EEATSignals({
           )}
           {showExpertise && (
             <div className="text-center p-3">
-              <div className="text-2xl font-bold text-green-600">500+</div>
+              <div className="text-2xl font-bold text-green-600">67+</div>
               <div className="text-xs text-gray-600">Medical Selections</div>
             </div>
           )}

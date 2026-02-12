@@ -57,7 +57,7 @@ export function SeminarTestimonials() {
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap justify-center items-center gap-6 bg-white rounded-full px-8 py-4 shadow-lg">
             <div className="text-center">
-              <p className="text-2xl font-bold text-green-600">500+</p>
+              <p className="text-2xl font-bold text-green-600">67+</p>
               <p className="text-xs text-slate-500">Parents Attended</p>
             </div>
             <div className="w-px h-10 bg-slate-200" />

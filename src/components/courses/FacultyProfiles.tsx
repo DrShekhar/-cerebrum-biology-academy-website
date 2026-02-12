@@ -210,7 +210,7 @@ export function FacultyProfiles({ course }: FacultyProfilesProps) {
               <div className="text-xs text-gray-600">Success Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-green-600">500+</div>
+              <div className="text-lg font-bold text-green-600">67+</div>
               <div className="text-xs text-gray-600">Students Taught</div>
             </div>
             <div className="text-center">

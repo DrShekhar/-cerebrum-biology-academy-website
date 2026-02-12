@@ -1776,7 +1776,7 @@ export const cityHubData: Record<string, CityHubData> = {
       transportOptions: 'Pink Line to South Extension Metro, then 5 min walk. Auto from AIIMS Metro (15 min). Bus routes 502, 522 stop at Ring Road.',
     },
     areaSpecificContent: {
-      whyThisArea: 'South Delhi is home to some of India\'s top schools — DPS RK Puram, Sanskriti School, Modern School, Sardar Patel Vidyalaya. Our Ring Road center serves 1,500+ students from GK, Lajpat Nagar, Defence Colony, and surrounding areas. The location was chosen specifically for its metro connectivity, making it accessible from Hauz Khas to Nehru Place.',
+      whyThisArea: 'South Delhi is home to some of India\'s top schools — DPS RK Puram, Sanskriti School, Modern School, Sardar Patel Vidyalaya. Our Ring Road center serves 1,students from GK, Lajpat Nagar, Defence Colony, and surrounding areas. The location was chosen specifically for its metro connectivity, making it accessible from Hauz Khas to Nehru Place.',
     },
     studentSuccessStory: {
       name: 'Ananya S.',

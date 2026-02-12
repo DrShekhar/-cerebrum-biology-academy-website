@@ -66,7 +66,7 @@ const whyDelhiNCR = [
   {
     icon: Trophy,
     title: 'Top Delhi NCR Results',
-    description: '500+ students from Delhi NCR selected in NEET with top AIRs.',
+    description: 'students from Delhi NCR selected in NEET with top AIRs.',
   },
   {
     icon: MapPin,
@@ -224,7 +224,7 @@ export default function BestNEETBiologyTutorDelhiNCRPage() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-400" />
-                <div className="text-2xl font-bold">500+</div>
+                <div className="text-2xl font-bold">67+</div>
                 <div className="text-sm opacity-80">NCR Students</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">

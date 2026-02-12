@@ -108,7 +108,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
           ? `Perfect for your ${userProfile.goals.targetScore} target score`
           : 'Perfect for NEET aspirants',
         userProfile.location?.city
-          ? `Join 500+ students from ${userProfile.location.city}`
+          ? `Join students from ${userProfile.location.city}`
           : 'Join 10,000+ successful students',
       ],
       visual: {

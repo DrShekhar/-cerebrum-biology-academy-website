@@ -109,7 +109,7 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
               </div>
               <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg text-white">
                 <Users className="w-5 h-5 text-green-400" />
-                <span>500+ Students Enrolled</span>
+                <span>1,50,000+ Students Enrolled</span>
               </div>
             </div>
 

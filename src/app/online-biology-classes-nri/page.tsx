@@ -144,7 +144,7 @@ export default function OnlineBiologyClassesNRIPage() {
           >
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Globe className="h-4 w-4" />
-              11,500+ NRI Students Across 40+ Countries
+              10,000+ NRI Students Across 40+ Countries
             </span>
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
               Online Biology Classes for NRI Students
@@ -178,7 +178,7 @@ export default function OnlineBiologyClassesNRIPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { icon: Users, value: '11,500+', label: 'NRI Students' },
+              { icon: Users, value: '10,000+', label: 'NRI Students' },
               { icon: Globe, value: '40+', label: 'Countries' },
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Star, value: '4.9/5', label: 'Parent Rating' },

@@ -53,7 +53,7 @@ export default function QuickEnrollPage() {
           </div>
           <div className="bg-blue-50 rounded-xl p-3">
             <Users className="w-6 h-6 text-blue-600 mx-auto mb-1" />
-            <div className="text-lg font-bold text-gray-900">500+</div>
+            <div className="text-lg font-bold text-gray-900">67+</div>
             <div className="text-xs text-gray-500">Selections</div>
           </div>
           <div className="bg-purple-50 rounded-xl p-3">

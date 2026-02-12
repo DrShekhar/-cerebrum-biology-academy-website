@@ -66,7 +66,7 @@ export default function GalleryPage() {
           {/* Stats Row */}
           <div className="mx-auto mt-8 grid max-w-2xl grid-cols-2 gap-4 sm:mt-10 md:grid-cols-4">
             {[
-              { label: 'NEET Toppers', icon: '🏆', value: '500+' },
+              { label: 'NEET Toppers', icon: '🏆', value: '67+' },
               { label: 'Events', icon: '🎉', value: '100+' },
               { label: 'Seminars', icon: '🎓', value: '200+' },
               { label: 'Years of Excellence', icon: '📅', value: '10+' },

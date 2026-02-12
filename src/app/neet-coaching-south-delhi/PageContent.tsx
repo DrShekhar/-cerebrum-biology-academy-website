@@ -915,7 +915,7 @@ export default function PageContent() {
           >
             <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-6 py-3 rounded-full text-sm font-semibold">
               <Award className="w-5 h-5 mr-2" />
-              Average improvement: 150+ marks | 500+ students from South Delhi qualified NEET
+              Average improvement: 150+ marks | students from South Delhi qualified NEET
             </div>
           </motion.div>
         </div>

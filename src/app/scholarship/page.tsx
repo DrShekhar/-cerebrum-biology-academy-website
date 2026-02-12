@@ -202,7 +202,7 @@ export default function ScholarshipPage() {
   ]
 
   const stats = [
-    { number: '500+', label: 'Students Awarded', description: 'Scholarships in 2024' },
+    { number: '200+', label: 'Students Awarded', description: 'Scholarships in 2024' },
     { number: '₹2.5 Cr', label: 'Total Disbursed', description: 'In scholarships last year' },
     { number: '100%', label: 'Max Coverage', description: 'For merit toppers' },
     { number: '98%', label: 'Selection Rate', description: 'Of scholarship students' },

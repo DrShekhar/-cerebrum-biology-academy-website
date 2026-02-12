@@ -70,7 +70,7 @@ export default function PageContent() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-6 inline-block">
-            <span className="bg-red-200 text-red-900 px-6 py-2 rounded-full text-sm font-semibold">Trusted by 500+ Indian Students</span>
+            <span className="bg-red-200 text-red-900 px-6 py-2 rounded-full text-sm font-semibold">Trusted by 1,50,000+ Students</span>
           </div>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Best NEET Coaching for Indian Students in Dhaka</h1>
           <p className="text-xl md:text-2xl mb-12 text-red-100">Medical Entrance Focus • 98% Success Rate • 695/720 Top Score • Bangladesh-Friendly Timing</p>
@@ -86,7 +86,7 @@ export default function PageContent() {
             </div>
             <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
               <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
-              <p className="text-sm text-red-200">500+ Students</p>
+              <p className="text-sm text-red-200">1,50,000+ Students</p>
             </div>
             <div className="bg-white/10 backdrop-blur p-6 rounded-lg border border-white/20">
               <Target className="w-8 h-8 mx-auto mb-2 text-yellow-300" />

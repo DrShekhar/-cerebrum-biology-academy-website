@@ -148,7 +148,7 @@ export default function PageContent() {
                 <div className="text-sm opacity-80">Average Score</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-                <div className="text-2xl font-bold text-yellow-300">500+</div>
+                <div className="text-2xl font-bold text-yellow-300">67+</div>
                 <div className="text-sm opacity-80">Amity Students Coached</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">

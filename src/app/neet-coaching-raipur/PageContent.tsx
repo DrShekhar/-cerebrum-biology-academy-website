@@ -72,7 +72,7 @@ export default function PageContent() {
               <div className="flex justify-center mb-3">
                 <Users className="w-8 h-8 text-blue-500" />
               </div>
-              <h3 className="text-4xl font-bold text-gray-900">500+</h3>
+              <h3 className="text-4xl font-bold text-gray-900">67+</h3>
               <p className="text-gray-600 mt-1">Students Trained</p>
             </div>
             <div className="text-center">
@@ -218,7 +218,7 @@ export default function PageContent() {
       <section className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">Start Your NEET Journey in Raipur!</h2>
-          <p className="text-xl text-blue-100 mb-8">Join 500+ successful NEET students from Chhattisgarh. Limited seats per batch. Enroll now!</p>
+          <p className="text-xl text-blue-100 mb-8">Join our successful NEET students from Chhattisgarh. Limited seats per batch. Enroll now!</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="https://wa.me/918826444334" target="_blank" rel="noopener noreferrer">

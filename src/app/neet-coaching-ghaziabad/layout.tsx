@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best NEET Coaching in Ghaziabad | Indirapuram, Vaishali | Cerebrum Academy',
     description:
-      'Top NEET biology coaching in Ghaziabad with 98% success rate. AIIMS faculty, small batches. Join 1,500+ students from Indirapuram, Vaishali, Crossing Republik.',
+      'Top NEET biology coaching in Ghaziabad with 98% success rate. AIIMS faculty, small batches. Join 1,students from Indirapuram, Vaishali, Crossing Republik.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-ghaziabad',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',

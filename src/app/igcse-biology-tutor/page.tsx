@@ -239,7 +239,7 @@ export default function IGCSEBiologyTutorPage() {
 
               <div className="mb-10 grid grid-cols-3 gap-4">
                 <div className="rounded-xl bg-white/10 p-6 backdrop-blur-md">
-                  <div className="text-3xl font-bold md:text-4xl">500+</div>
+                  <div className="text-3xl font-bold md:text-4xl">67+</div>
                   <div className="text-sm text-cyan-200">IGCSE Students</div>
                 </div>
                 <div className="rounded-xl bg-white/10 p-6 backdrop-blur-md">

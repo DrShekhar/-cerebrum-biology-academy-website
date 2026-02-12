@@ -57,7 +57,7 @@ const duColleges = [
     slug: 'miranda-house',
     description: "India's top women's college for science",
     highlights: ["#1 Women's College", 'NAAC A++', 'BSc Life Sciences'],
-    students: '500+',
+    students: '5,000+',
     type: 'premier',
   },
   {

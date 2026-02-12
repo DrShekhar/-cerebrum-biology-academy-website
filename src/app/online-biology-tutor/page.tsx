@@ -400,7 +400,7 @@ export default function OnlineBiologyTutorPage() {
                 <div>
                   <div className="flex justify-between mb-2">
                     <span className="font-medium">Medical College Selections</span>
-                    <span className="text-green-600 font-bold">500+</span>
+                    <span className="text-green-600 font-bold">67+</span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-3">
                     <div className="bg-green-600 h-3 rounded-full" style={{ width: '90%' }}></div>

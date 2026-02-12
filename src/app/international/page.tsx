@@ -64,7 +64,7 @@ export default function InternationalHubPage() {
               <div className="text-slate-300 text-sm">Countries</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <div className="text-3xl font-bold text-green-400">500+</div>
+              <div className="text-3xl font-bold text-green-400">67+</div>
               <div className="text-slate-300 text-sm">Students</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">

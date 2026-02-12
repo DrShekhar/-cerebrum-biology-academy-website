@@ -92,7 +92,7 @@ export default function NEETCoachingPageContent() {
               <p className="text-gray-700 font-semibold">Success Rate</p>
             </div>
             <div className="text-center">
-              <div className="text-4xl sm:text-5xl font-bold text-green-600 mb-2">500+</div>
+              <div className="text-4xl sm:text-5xl font-bold text-green-600 mb-2">67+</div>
               <p className="text-gray-700 font-semibold">Students Coached</p>
             </div>
             <div className="text-center">

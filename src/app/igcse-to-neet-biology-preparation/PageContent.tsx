@@ -155,7 +155,7 @@ const faqData = [
   {
     question: 'Can I score 650+ in NEET with IGCSE background?',
     answer:
-      'Absolutely! 500+ IGCSE students have achieved 650+ scores with our program. IGCSE students have strong concept clarity which helps in difficult questions. Our focus is converting this strength into NEET-specific problem-solving and speed.',
+      'Absolutely! hundreds of IGCSE students have achieved 650+ scores with our program. IGCSE students have strong concept clarity which helps in difficult questions. Our focus is converting this strength into NEET-specific problem-solving and speed.',
   },
   {
     question: 'Do you provide IGCSE-specific study material?',
@@ -271,7 +271,7 @@ export default function IGCSEToNEETContent() {
             </div>
             <div className="bg-teal-100 rounded-lg p-6 text-center">
               <Users className="w-10 h-10 text-teal-900 mx-auto mb-3" />
-              <h3 className="text-3xl font-bold text-teal-900">500+</h3>
+              <h3 className="text-3xl font-bold text-teal-900">67+</h3>
               <p className="text-gray-700">IGCSE Students Coached</p>
             </div>
             <div className="bg-cyan-100 rounded-lg p-6 text-center">

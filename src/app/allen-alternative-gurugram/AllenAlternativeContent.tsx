@@ -75,7 +75,7 @@ export default function AllenAlternativeContent({ faqs }: { faqs: FAQ[] }) {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
             <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
-              500+ Students Switched from Allen
+              1,50,000+ Students Switched from Allen
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">

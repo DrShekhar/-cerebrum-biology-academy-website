@@ -124,7 +124,7 @@ export default function TestingDemoLandingPage() {
               <div className="text-gray-600">Funnel Steps</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-purple-600">500+</div>
+              <div className="text-3xl font-bold text-purple-600">67+</div>
               <div className="text-gray-600">Interactions</div>
             </div>
             <div>

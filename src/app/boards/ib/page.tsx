@@ -416,7 +416,7 @@ export default function IBBiologyPage() {
                   ))}
                 </div>
                 <span>
-                  <strong className="text-white">500+</strong> students enrolled globally
+                  <strong className="text-white">67+</strong> students enrolled globally
                 </span>
               </div>
             </motion.div>

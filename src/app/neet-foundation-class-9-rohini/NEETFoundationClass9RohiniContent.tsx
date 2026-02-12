@@ -109,7 +109,7 @@ export default function NEETFoundationClass9RohiniContent({ faqs }: { faqs: FAQ[
 
             <p className="text-xl text-slate-300 mb-8 max-w-3xl">
               Start your medical dream journey from Class 9 at our DC Chauk center in Rohini.
-              Join Sadhna Sirin (695/720), Nishita, Aditya, and 500+ successful students.
+              Join Sadhna Sirin (695/720), Nishita, Aditya, and 1,50,000+ successful students.
               Build strong biology foundation for NEET with AIIMS-trained faculty.
             </p>
 
@@ -159,7 +159,7 @@ export default function NEETFoundationClass9RohiniContent({ faqs }: { faqs: FAQ[
               <p className="text-green-100 mt-1">Top Score (Sadhna Sirin)</p>
             </div>
             <div>
-              <p className="text-4xl md:text-5xl font-bold">500+</p>
+              <p className="text-4xl md:text-5xl font-bold">67+</p>
               <p className="text-green-100 mt-1">Medical College Selections</p>
             </div>
             <div>
