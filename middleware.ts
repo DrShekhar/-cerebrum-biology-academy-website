@@ -174,6 +174,8 @@ export default async function middleware(req: NextRequest) {
     '/api/demo',
     '/api/placeholder',
     '/api/cache/demo',
+    '/brand-studio',
+    '/claudechat-standalone',
   ]
   if (process.env.NODE_ENV === 'production') {
     const isBlocked = blockedPrefixes.some(
@@ -184,12 +186,27 @@ export default async function middleware(req: NextRequest) {
     }
   }
 
+  // PERFORMANCE: Check public routes BEFORE JWT verification to skip auth on 90%+ of traffic
+  if (isPublicRoute(pathname)) {
+    const response = NextResponse.next()
+    addSecurityHeaders(response)
+    addCSPHeaders(response)
+    response.cookies.set('x-pathname', pathname, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'strict',
+      maxAge: 60,
+      path: '/',
+    })
+    return response
+  }
+
   const authResult = await getUserFromToken(req)
   const userId = authResult?.userId || null
   const userRole = authResult?.role || null
 
   // For non-public routes, require authentication
-  if (!isPublicRoute(pathname) && !userId) {
+  if (!userId) {
     const signInUrl = new URL('/sign-in', req.url)
     signInUrl.searchParams.set('redirect_url', pathname)
     return NextResponse.redirect(signInUrl)

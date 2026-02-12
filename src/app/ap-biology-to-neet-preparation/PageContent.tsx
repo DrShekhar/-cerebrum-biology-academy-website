@@ -186,9 +186,9 @@ export default function PageContent() {
           title="Success Stories from Board Students"
           subtitle="See how board students achieved their NEET dreams"
           testimonials={[
-            { name: "Arjun Sharma", score: "720", school: "DPS Delhi", videoId: "dQw4w9WgXcQ", quote: "Bridge program helped me transition seamlessly to NEET style." },
-            { name: "Priya Gupta", score: "698", school: "Cathedral School, Mumbai", videoId: "dQw4w9WgXcQ", quote: "Structured approach made the learning efficient and effective." },
-            { name: "Rohit Verma", score: "685", school: "DPS, Bangalore", videoId: "dQw4w9WgXcQ", quote: "Expert guidance elevated my preparation significantly." },
+            { name: "Arjun Sharma", score: "720", school: "DPS Delhi", quote: "Bridge program helped me transition seamlessly to NEET style." },
+            { name: "Priya Gupta", score: "698", school: "Cathedral School, Mumbai", quote: "Structured approach made the learning efficient and effective." },
+            { name: "Rohit Verma", score: "685", school: "DPS, Bangalore", quote: "Expert guidance elevated my preparation significantly." },
           ]}
         />
       </section>
