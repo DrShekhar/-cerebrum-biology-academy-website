@@ -81,7 +81,7 @@ export default function StudentCoursesPage() {
             <p className="text-gray-600 mb-6">
               Log in to view your enrolled courses and continue learning.
             </p>
-            <Link href="/auth/whatsapp">
+            <Link href="/whatsapp">
               <Button variant="primary" className="w-full">
                 Log In to Continue
               </Button>
@@ -183,7 +183,7 @@ export default function StudentCoursesPage() {
                 icon={<BookOpen className="w-6 h-6" />}
                 title="Study Materials"
                 description="Access resources"
-                href="/student/materials"
+                href="/student/notes"
                 color="from-purple-500 to-purple-600"
               />
               <QuickLinkCard

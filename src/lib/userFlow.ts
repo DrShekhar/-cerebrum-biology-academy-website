@@ -460,7 +460,7 @@ export function getNavigationItems(user: User | null, freeUserId: string | null)
     },
     {
       label: 'Materials',
-      route: '/student/materials',
+      route: '/student/notes',
       icon: '📚',
       locked: false,
       description: 'Study materials and resources',

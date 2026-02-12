@@ -15,7 +15,7 @@ export default function CounselorLogin() {
     // Server-side bypass (BYPASS_CRM_AUTH) only works in non-production environments
 
     // Redirect to WhatsApp login
-    router.replace('/auth/whatsapp')
+    router.replace('/whatsapp')
   }, [router])
 
   return (

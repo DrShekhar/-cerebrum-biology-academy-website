@@ -374,7 +374,7 @@ export default function StudentDashboard() {
                   title="Recommended Study Topic"
                   description="Cell Structure and Function"
                   action="Start Learning"
-                  href="/student/materials"
+                  href="/student/notes"
                   color="bg-blue-50"
                 />
                 <FocusCard
@@ -487,7 +487,7 @@ export default function StudentDashboard() {
                 icon={<FileText className="w-6 h-6" />}
                 title="Browse Materials"
                 description="Study resources"
-                href="/student/materials"
+                href="/student/notes"
                 color="bg-green-600"
               />
               {isPaidUser ? (

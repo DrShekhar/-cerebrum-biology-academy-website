@@ -247,7 +247,7 @@ const FreeResourcesHub = () => {
               Join study groups, share doubts, and learn from peers in our interactive community
             </p>
             <Link
-              href="/resources/community"
+              href="/community"
               className="text-green-600 font-medium hover:underline"
             >
               Join Community →
@@ -261,7 +261,7 @@ const FreeResourcesHub = () => {
               Earn points, unlock achievements, and track your learning milestones
             </p>
             <Link
-              href="/resources/achievements"
+              href="/wall-of-achievers"
               className="text-purple-600 font-medium hover:underline"
             >
               View Achievements →
@@ -274,7 +274,7 @@ const FreeResourcesHub = () => {
             <p className="text-gray-600 mb-4">
               AI-generated study schedules based on your exam dates and weaknesses
             </p>
-            <Link href="/resources/planner" className="text-orange-600 font-medium hover:underline">
+            <Link href="/neet-study-plan-generator" className="text-orange-600 font-medium hover:underline">
               Create Plan →
             </Link>
           </div>
@@ -290,7 +290,7 @@ const FreeResourcesHub = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/resources/signup"
+              href="/sign-up"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-all shadow-lg"
             >
               Get Started Free

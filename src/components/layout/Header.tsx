@@ -247,7 +247,7 @@ const Header = () => {
 
                   {/* Sign In - Minimal Text Link */}
                   <Link
-                    href="/auth/whatsapp"
+                    href="/whatsapp"
                     className="flex items-center gap-1.5 text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200 group"
                   >
                     <UserPlus className="w-4 h-4 transition-transform group-hover:scale-110" />
@@ -349,7 +349,7 @@ const Header = () => {
 
                     {/* Sign In - Subtle Style (keep button for touch target) */}
                     <Link
-                      href="/auth/whatsapp"
+                      href="/whatsapp"
                       className="flex items-center justify-center gap-2 border border-gray-300 text-gray-700 hover:bg-gray-50 hover:border-gray-400 px-6 py-4 rounded-full font-medium transition-all duration-300 min-h-[52px]"
                     >
                       <UserPlus className="w-5 h-5" />

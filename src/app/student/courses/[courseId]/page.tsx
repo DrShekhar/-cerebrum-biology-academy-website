@@ -123,7 +123,7 @@ export default function CourseDetailPage() {
             <GraduationCap className="w-16 h-16 text-blue-600 mx-auto mb-4" />
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Please Log In</h2>
             <p className="text-gray-600 mb-6">Log in to access your course content.</p>
-            <Link href="/auth/whatsapp">
+            <Link href="/whatsapp">
               <Button variant="primary" className="w-full">
                 Log In to Continue
               </Button>

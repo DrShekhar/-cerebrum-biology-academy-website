@@ -105,7 +105,7 @@ export function AICitationTracking({
         name: 'Dr. Shekhar C Singh',
         jobTitle: 'Founder & Head Faculty',
         alumniOf: 'AIIMS Delhi',
-        url: 'https://cerebrumbiologyacademy.com/about/dr-shekhar',
+        url: 'https://cerebrumbiologyacademy.com/dr-shekhar-singh',
       },
       publisher: {
         '@type': 'EducationalOrganization',
