@@ -62,7 +62,7 @@ interface SuccessStoriesCarouselProps {
   className?: string
 }
 
-// Mock success stories data with realistic NEET achievements
+// Sample success stories — to be replaced with verified student data
 const SUCCESS_STORIES: SuccessStory[] = [
   {
     id: '1',
@@ -94,7 +94,6 @@ const SUCCESS_STORIES: SuccessStory[] = [
     currentStatus: 'MBBS Student at AIIMS Delhi',
     socialProof: {
       verified: true,
-      linkedIn: 'https://linkedin.com/in/priyasharma',
       medicalCollege: 'AIIMS Delhi',
     },
   },
