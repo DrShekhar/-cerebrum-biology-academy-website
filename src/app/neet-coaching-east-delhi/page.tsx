@@ -128,7 +128,7 @@ const features = [
   },
   {
     title: 'Proven Results',
-    description: '98% success rate with 500+ medical college selections',
+    description: '98% success rate with 67+ AIIMS selections',
     icon: Trophy,
   },
 ]

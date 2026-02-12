@@ -82,7 +82,7 @@ const faqs = [
   {
     question: 'What qualifications should the best biology teacher have?',
     answer:
-      'The best biology teacher should have: Medical background (AIIMS/MBBS), 10+ years teaching experience, proven NEET results (1000+ selections), expertise in NCERT curriculum, and ability to explain complex concepts simply.',
+      'The best biology teacher should have: Medical background (AIIMS/MBBS), 15+ years teaching experience, proven NEET results (1000+ selections), expertise in NCERT curriculum, and ability to explain complex concepts simply.',
   },
 ]
 

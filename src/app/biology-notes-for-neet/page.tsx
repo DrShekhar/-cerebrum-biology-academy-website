@@ -888,7 +888,7 @@ export default function BiologyNotesForNEETPage() {
               {
                 icon: <Award className="w-6 h-6" />,
                 title: 'Written by AIIMS Faculty',
-                desc: 'Dr. Shekhar brings 10+ years of NEET coaching experience and insight from training 600+ students who cleared NEET.',
+                desc: 'Dr. Shekhar brings 15+ years of NEET coaching experience and insight from training 600+ students who cleared NEET.',
               },
             ].map((feature, i) => (
               <motion.div

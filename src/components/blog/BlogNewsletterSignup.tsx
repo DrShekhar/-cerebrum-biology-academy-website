@@ -84,7 +84,7 @@ export function BlogNewsletterSignup({ articleSlug, category }: BlogNewsletterSi
             Get Weekly NEET Biology Tips
           </h3>
           <p className="text-sm text-gray-600 mb-4">
-            Join 5,000+ students receiving free chapter summaries, mnemonics, and exam strategies
+            Join 1,50,000+ students receiving free chapter summaries, mnemonics, and exam strategies
             every week from AIIMS faculty.
           </p>
 

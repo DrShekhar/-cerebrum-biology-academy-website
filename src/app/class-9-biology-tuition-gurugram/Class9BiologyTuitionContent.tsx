@@ -26,7 +26,7 @@ const syllabusTopics = [
 
 const features = [
   { title: 'CBSE & ICSE Coverage', description: 'Complete syllabus coverage for both board patterns', icon: FileText },
-  { title: 'Experienced Teachers', description: 'Faculty with 10+ years of teaching experience', icon: Users },
+  { title: 'Experienced Teachers', description: 'Faculty with 15+ years of teaching experience', icon: Users },
   { title: 'Small Batch Size', description: 'Maximum 15 students per batch for personal attention', icon: GraduationCap },
   { title: 'Practical Focus', description: 'Hands-on experiments and diagram practice', icon: Microscope },
   { title: 'Regular Testing', description: 'Weekly tests and monthly assessments', icon: Target },

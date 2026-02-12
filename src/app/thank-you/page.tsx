@@ -318,7 +318,7 @@ function ThankYouContent() {
           className="mt-12 text-center text-sm text-gray-500"
         >
           <p>🔒 Your information is secure and will never be shared with third parties</p>
-          <p className="mt-2">✅ Join 10,000+ students who chose Cerebrum for their NEET success</p>
+          <p className="mt-2">✅ Join 1,50,000+ students who chose Cerebrum for their NEET success</p>
         </motion.div>
       </div>
     </div>

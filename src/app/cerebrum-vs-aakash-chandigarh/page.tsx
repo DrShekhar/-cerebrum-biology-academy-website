@@ -125,7 +125,7 @@ const comparisonData = [
   },
   {
     feature: 'Industry Experience',
-    cerebrum: '10+ years',
+    cerebrum: '15+ years',
     aakash: '36+ years',
     winner: 'tie',
   },

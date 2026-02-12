@@ -280,7 +280,7 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">GSEB Experts</h3>
                   <p className="text-slate-700">
-                    10+ years specialization in GSEB curriculum. Deep expertise in board exam patterns, chapter-wise weightage, and Gujarati education system.
+                    15+ years specialization in GSEB curriculum. Deep expertise in board exam patterns, chapter-wise weightage, and Gujarati education system.
                   </p>
                 </div>
               </div>

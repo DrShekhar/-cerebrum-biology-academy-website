@@ -490,7 +490,7 @@ export default function BiologyTuitionPage() {
             Ready to Start Your Biology Tuition?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Book a FREE demo class and experience why 5,000+ students trust us for their biology
+            Book a FREE demo class and experience why 1,50,000+ students trust us for their biology
             preparation.
           </p>
 

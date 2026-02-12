@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology for NEET | Expert Preparation',
     description:
-      'Comprehensive NEET biology preparation with AIIMS faculty. 98% success rate, 2,500+ selections.',
+      'Comprehensive NEET biology preparation with AIIMS faculty. 98% success rate, 67+ AIIMS selections.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/biology-neet-preparation',

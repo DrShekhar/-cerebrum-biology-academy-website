@@ -108,7 +108,7 @@ export const speakablePages = {
   results: {
     headline: 'NEET 2023 Results - 98% Success Rate',
     description:
-      'Our students scored up to 695/720 in NEET 2023. 500+ medical college selections including AIIMS, JIPMER, and state medical colleges.',
+      'Our students scored up to 695/720 in NEET 2023. 67+ AIIMS selections including AIIMS, JIPMER, and state medical colleges.',
     url: 'https://cerebrumbiologyacademy.com/results',
     speakableSections: ['.results-summary', '.top-scorers', '.success-statistics'],
   },

@@ -3648,7 +3648,7 @@ const howToPrepareForNeetOnline: SEOLandingContent = {
   cta: {
     title: 'Start Your Online NEET Journey Today',
     subtitle:
-      'Join 10,000+ students who cracked NEET through our online program. Expert guidance, flexible learning, proven results.',
+      'Join 1,50,000+ students who cracked NEET through our online program. Expert guidance, flexible learning, proven results.',
     primaryButton: {
       text: 'Join Online Classes',
       link: '/courses',

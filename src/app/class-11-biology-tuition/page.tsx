@@ -32,7 +32,7 @@ const usps: USP[] = [
   {
     icon: 'users',
     title: 'Experienced Teachers',
-    description: 'Faculty with 10+ years experience in teaching CBSE Class 11 Biology.',
+    description: 'Faculty with 15+ years experience in teaching CBSE Class 11 Biology.',
   },
   {
     icon: 'target',

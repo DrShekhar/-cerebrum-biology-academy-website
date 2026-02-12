@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Online NEET Biology Tutor [98% Success Rate] | Dr. Shekhar AIIMS',
   description:
-    'Best online NEET Biology tutor in India. Learn from Dr. Shekhar C Singh, AIIMS Alumnus. 500+ medical selections, live classes, NCERT-focused teaching. Book FREE demo!',
+    'Best online NEET Biology tutor in India. Learn from Dr. Shekhar C Singh, AIIMS Alumnus. 67+ AIIMS selections, live classes, NCERT-focused teaching. Book FREE demo!',
   keywords: [
     'online neet biology tutor',
     'neet biology online tutor',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Online NEET Biology Tutor [98% Success Rate]',
-    description: 'Learn NEET Biology from AIIMS faculty online. 500+ medical selections!',
+    description: 'Learn NEET Biology from AIIMS faculty online. 67+ AIIMS selections!',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/online-biology-tutor-neet',

@@ -714,7 +714,7 @@ export default function NEETCoachingRohiniPage() {
                 },
                 {
                   icon: Users,
-                  label: '2,500+ Selections',
+                  label: '67+ AIIMS Selections',
                   sublabel: 'NEET Qualified',
                   color: 'text-green-600',
                 },

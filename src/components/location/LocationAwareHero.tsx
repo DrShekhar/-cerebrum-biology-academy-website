@@ -16,7 +16,7 @@ interface LocationAwareHeroProps {
 export function LocationAwareHero({
   className = '',
   fallbackTitle = "Master NEET Biology with India's #1 Faculty",
-  fallbackSubtitle = 'Join 10,000+ students who chose Cerebrum Biology Academy for guaranteed NEET success',
+  fallbackSubtitle = 'Join 1,50,000+ students who chose Cerebrum Biology Academy for guaranteed NEET success',
 }: LocationAwareHeroProps) {
   const { preferredLocation } = useUserLocation()
   const [isVisible, setIsVisible] = useState(false)

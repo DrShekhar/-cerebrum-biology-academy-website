@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Biology Coaching | Best NEET Biology Classes | 98% Success Rate',
   description:
-    'Expert NEET Biology coaching by AIIMS alumni. 98% success rate, 2500+ selections. Live classes, study materials, mock tests. Best NEET biology preparation for 2026.',
+    'Expert NEET Biology coaching by AIIMS alumni. 98% success rate, 67+ AIIMS selections. Live classes, study materials, mock tests. Best NEET biology preparation for 2026.',
   keywords: [
     'neet biology coaching',
     'neet biology classes',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Biology Coaching | Best NEET Biology Classes | 98% Success Rate',
     description:
-      'Expert NEET Biology coaching by AIIMS alumni. 98% success rate, 2500+ selections. Live classes, study materials, mock tests.',
+      'Expert NEET Biology coaching by AIIMS alumni. 98% success rate, 67+ AIIMS selections. Live classes, study materials, mock tests.',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/neet-biology-coaching',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Biology Coaching | 98% Success Rate',
     description:
-      'Expert NEET Biology coaching by AIIMS alumni. 2500+ selections. Best preparation for NEET 2026.',
+      'Expert NEET Biology coaching by AIIMS alumni. 67+ AIIMS selections. Best preparation for NEET 2026.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/neet-biology-coaching',

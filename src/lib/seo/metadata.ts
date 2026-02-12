@@ -112,7 +112,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   about: {
     title: 'About Us - Best NEET Biology Coaching Institute Delhi NCR | Cerebrum Academy',
     description:
-      'About Cerebrum Biology Academy - 10+ years of NEET coaching excellence in Delhi NCR. Expert AIIMS faculty, 98% success rate, 10,000+ students from Laxmi Nagar, Dwarka, Noida, Gurgaon.',
+      'About Cerebrum Biology Academy - 15+ years of NEET coaching excellence in Delhi NCR. Expert AIIMS faculty, 98% success rate, 1,50,000+ students from Laxmi Nagar, Dwarka, Noida, Gurgaon.',
     keywords: [
       'about cerebrum academy',
       'NEET coaching institute Delhi',
@@ -266,7 +266,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   faculty: {
     title: 'Expert NEET Biology Faculty Delhi NCR | AIIMS Qualified Teachers | Cerebrum Academy',
     description:
-      'Meet our expert NEET biology faculty in Delhi NCR. AIIMS qualified, 10+ years experience, teaching in Laxmi Nagar, Dwarka, Noida, Gurgaon centers.',
+      'Meet our expert NEET biology faculty in Delhi NCR. AIIMS qualified, 15+ years experience, teaching in Laxmi Nagar, Dwarka, Noida, Gurgaon centers.',
     keywords: [
       'NEET faculty Delhi',
       'biology teachers Delhi NCR',
@@ -417,7 +417,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   bestNeetCoachingIndia: {
     title: 'Best NEET Coaching in India 2026 [Compare Top 10] | 98% Success',
     description:
-      "Honest comparison of India's top NEET coaching. AIIMS-trained faculty, 2500+ selections, 98% success rate. Compare fees, results vs Kota, Allen. Book FREE demo today!",
+      "Honest comparison of India's top NEET coaching. AIIMS-trained faculty, 67+ AIIMS selections, 98% success rate. Compare fees, results vs Kota, Allen. Book FREE demo today!",
     keywords: [
       'best neet coaching india',
       'top neet coaching india',

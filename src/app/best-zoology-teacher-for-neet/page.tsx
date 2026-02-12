@@ -35,7 +35,7 @@ const faqs = [
   {
     question: 'Who is the best zoology teacher for NEET?',
     answer:
-      'The best zoology teacher for NEET should have medical background, NCERT expertise, and proven track record. Our AIIMS-trained faculty has helped 2,500+ students crack NEET with strong zoology scores.',
+      'The best zoology teacher for NEET should have medical background, NCERT expertise, and proven track record. Our AIIMS-trained faculty has helped 1,50,000+ students crack NEET with strong zoology scores.',
   },
   {
     question: 'Why is zoology important for NEET?',

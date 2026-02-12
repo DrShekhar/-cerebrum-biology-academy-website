@@ -80,7 +80,7 @@ const features = [
   },
   {
     title: 'Experienced Faculty',
-    description: 'Teachers with 10+ years experience in board and competitive exams',
+    description: 'Teachers with 15+ years experience in board and competitive exams',
     icon: Users,
   },
   {

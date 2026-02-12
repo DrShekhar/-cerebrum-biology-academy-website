@@ -659,7 +659,7 @@ export const class11BiologyData: CourseProgram = {
         'Research Methodology',
       ],
       rating: 4.95,
-      teachingExperience: '15 years in NEET coaching with 500+ selections',
+      teachingExperience: '15 years in NEET coaching with 67+ AIIMS selections',
       achievementHighlights: [
         '500+ NEET qualified students',
         'AIIMS toppers mentor (12 students)',

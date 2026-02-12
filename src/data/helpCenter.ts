@@ -305,7 +305,7 @@ export const allFAQs: FAQ[] = [
     id: 'cp-009',
     question: 'Who are the faculty members?',
     answer:
-      'Meet our expert faculty: Dr. Shekhar Singh - Founder & Lead Faculty, MBBS from AIIMS Delhi, 15+ years NEET teaching experience, 500+ students in medical colleges, Specialization: Human Physiology, Genetics. Dr. Priya Patel - Senior Faculty, M.Sc Botany, Ph.D. Plant Sciences, 10+ years experience, Expert in: Plant biology, Ecology. Dr. Amit Sharma - Faculty, M.Sc Zoology, 8+ years experience, Known for simplified teaching of complex topics. All faculty are full-time dedicated teachers (not part-timers), undergo regular training on latest NEET patterns, personally review every student performance.',
+      'Meet our expert faculty: Dr. Shekhar Singh - Founder & Lead Faculty, MBBS from AIIMS Delhi, 15+ years NEET teaching experience, 500+ students in medical colleges, Specialization: Human Physiology, Genetics. Dr. Priya Patel - Senior Faculty, M.Sc Botany, Ph.D. Plant Sciences, 15+ years experience, Expert in: Plant biology, Ecology. Dr. Amit Sharma - Faculty, M.Sc Zoology, 8+ years experience, Known for simplified teaching of complex topics. All faculty are full-time dedicated teachers (not part-timers), undergo regular training on latest NEET patterns, personally review every student performance.',
     category: 'courses-programs',
     tags: ['faculty', 'teachers', 'instructors'],
     priority: 4,

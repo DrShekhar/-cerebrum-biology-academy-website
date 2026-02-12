@@ -5428,7 +5428,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'What about FIITJEE brand value?',
         answer:
-          'Brand value helps in IIT-JEE. For NEET, what matters is biology expertise and results. Our 98% selection rate and 50+ medical college admits speak for themselves.',
+          'Brand value helps in IIT-JEE. For NEET, what matters is biology expertise and results. Our 98% selection rate and 67+ AIIMS admits speak for themselves.',
       },
       {
         question: 'Can I take FIITJEE for Physics-Chemistry and Cerebrum for Biology?',

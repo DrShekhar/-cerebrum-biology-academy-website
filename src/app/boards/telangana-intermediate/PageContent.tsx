@@ -291,7 +291,7 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Proven Track Record</h3>
                   <p className="text-slate-700">
-                    2000+ students coached with 95% board success rate. 850+ NEET selections from Telangana region in last 5 years.
+                    1,50,000+ students coached with 95% board success rate. 850+ NEET selections from Telangana region in last 5 years.
                   </p>
                 </div>
               </div>

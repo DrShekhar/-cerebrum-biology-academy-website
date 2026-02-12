@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Panchsheel Park Delhi | Medical Entrance Biology',
   description:
-    'Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 500+ selections. Join today.',
+    'Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 67+ AIIMS selections. Join today.',
   keywords: [
     'neet coaching panchsheel park',
     'neet coaching panchsheel park delhi',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching in Panchsheel Park Delhi | Medical Entrance Biology',
     description:
-      'Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 500+ selections.',
+      'Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-panchsheel-park-delhi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -47,7 +47,7 @@ export default function NEETCoachingPanchsheelParkPage() {
         locality="Panchsheel Park"
         slug="neet-coaching-panchsheel-park-delhi"
         pageTitle="NEET Coaching in Panchsheel Park Delhi"
-        pageDescription="Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 500+ selections."
+        pageDescription="Best NEET coaching for Panchsheel Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers premium online NEET biology coaching with 67+ AIIMS selections."
         pageType="coaching"
       coordinates={{ lat: "28.5497", lng: "77.2186" }} faqs={faqs} />
       <PageContent />

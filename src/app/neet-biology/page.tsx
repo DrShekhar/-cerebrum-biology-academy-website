@@ -390,7 +390,7 @@ export default function NEETBiologyPage() {
                 },
                 {
                   title: 'Expert Faculty',
-                  desc: 'Learn from teachers with 10+ years of NEET coaching experience.',
+                  desc: 'Learn from teachers with 15+ years of NEET coaching experience.',
                 },
               ].map((item, index) => (
                 <motion.div

@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching in CR Park Delhi | Medical Entrance Biology',
   description:
-    'Best NEET coaching for CR Park (Chittaranjan Park), Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections. Join today.',
+    'Best NEET coaching for CR Park (Chittaranjan Park), Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Join today.',
   keywords: [
     'neet coaching cr park',
     'neet coaching chittaranjan park delhi',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching in CR Park Delhi | Medical Entrance Biology',
     description:
-      'Best NEET coaching for CR Park (Chittaranjan Park), Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections.',
+      'Best NEET coaching for CR Park (Chittaranjan Park), Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-cr-park-delhi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -47,7 +47,7 @@ export default function NEETCoachingCRParkPage() {
         locality="CR Park"
         slug="neet-coaching-cr-park-delhi"
         pageTitle="NEET Coaching in CR Park Delhi"
-        pageDescription="Best NEET coaching for CR Park (Chittaranjan Park), Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections."
+        pageDescription="Best NEET coaching for CR Park (Chittaranjan Park), Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections."
         pageType="coaching"
       coordinates={{ lat: "28.5395", lng: "77.2474" }} faqs={faqs} />
       <PageContent />

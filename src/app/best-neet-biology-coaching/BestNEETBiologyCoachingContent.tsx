@@ -27,7 +27,7 @@ const institutes = [
     feeRange: '₹24,000 - ₹98,000',
     mentorship: '1-on-1 weekly sessions',
     freeDemo: 'Yes (WhatsApp to book)',
-    successRate: '98% (500+ selections)',
+    successRate: '98% (67+ AIIMS selections)',
     bestFor: 'Serious biology aspirants wanting personal attention',
     highlight: true,
   },
@@ -336,7 +336,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                   {
                     feature: 'Success Rate',
                     values: [
-                      '98% (500+ selections)',
+                      '98% (67+ AIIMS selections)',
                       'High (national)',
                       'High (national)',
                       'Varies',

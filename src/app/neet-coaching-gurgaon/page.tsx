@@ -207,7 +207,7 @@ const features = [
   {
     icon: Award,
     title: 'Expert Faculty',
-    description: 'Learn from experienced NEET biology experts with 10+ years experience',
+    description: 'Learn from experienced NEET biology experts with 15+ years experience',
   },
   {
     icon: Users,

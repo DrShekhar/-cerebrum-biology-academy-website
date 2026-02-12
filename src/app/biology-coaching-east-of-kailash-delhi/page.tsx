@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 export const metadata: Metadata = {
   title: 'Biology Coaching in East of Kailash Delhi | NEET & CBSE Tutor',
   description:
-    'Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 500+ selections. DPS EOK expertise, GK area students welcome.',
+    'Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. DPS EOK expertise, GK area students welcome.',
   keywords: [
     'biology coaching east of kailash',
     'neet coaching eok delhi',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Coaching in East of Kailash Delhi | NEET & CBSE Tutor',
     description:
-      'Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 500+ selections. DPS EOK expertise.',
+      'Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections. DPS EOK expertise.',
     url: 'https://cerebrumbiologyacademy.com/biology-coaching-east-of-kailash-delhi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -38,7 +38,7 @@ export default function BiologyCoachingEOKPage() {
         locality="East of Kailash"
         slug="biology-coaching-east-of-kailash-delhi"
         pageTitle="Biology Coaching in East of Kailash Delhi"
-        pageDescription="Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 500+ selections."
+        pageDescription="Best Biology coaching for East of Kailash, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers online NEET coaching with 67+ AIIMS selections."
         pageType="coaching"
       />
       <PageContent />

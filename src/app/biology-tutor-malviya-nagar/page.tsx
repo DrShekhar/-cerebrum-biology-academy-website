@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 export const metadata: Metadata = {
   title: 'Biology Tutor in Malviya Nagar Delhi | NEET & CBSE Coaching',
   description:
-    'Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 500+ selections. Saket, Sheikh Sarai, Panchsheel students welcome.',
+    'Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 67+ AIIMS selections. Saket, Sheikh Sarai, Panchsheel students welcome.',
   keywords: [
     'biology tutor malviya nagar',
     'neet coaching malviya nagar delhi',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Biology Tutor in Malviya Nagar Delhi | NEET & CBSE Coaching',
     description:
-      'Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 500+ selections.',
+      'Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/biology-tutor-malviya-nagar',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -38,7 +38,7 @@ export default function BiologyTutorMalviyaNagarPage() {
         locality="Malviya Nagar"
         slug="biology-tutor-malviya-nagar"
         pageTitle="Biology Tutor in Malviya Nagar Delhi"
-        pageDescription="Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 500+ selections."
+        pageDescription="Best Biology tutor for Malviya Nagar, Delhi. AIIMS alumnus Dr. Shekhar C Singh offers personalized online NEET coaching with 67+ AIIMS selections."
         pageType="tutor"
       />
       <PageContent />

@@ -60,7 +60,7 @@ const faqs = [
   {
     question: 'Is online NEET preparation effective?',
     answer:
-      'Yes! With the right platform, online NEET preparation is highly effective. Our online students have achieved the same success rates as offline students - 2,500+ selections with 98% success rate.',
+      'Yes! With the right platform, online NEET preparation is highly effective. Our online students have achieved the same success rates as offline students - 67+ AIIMS selections with 98% success rate.',
   },
   {
     question: 'What do I need for NEET online study?',

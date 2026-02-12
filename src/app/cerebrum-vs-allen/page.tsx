@@ -195,7 +195,7 @@ export default function CerebrumVsAllenPage() {
               <h3 className="text-xl font-semibold text-blue-600 mb-4">Cerebrum Biology Academy</h3>
               <ul className="space-y-3">
                 {[
-                  'AIIMS Senior Faculty with 10+ years experience',
+                  'AIIMS Senior Faculty with 15+ years experience',
                   'Founded by Dr. Shekhar (former AIIMS Senior Faculty)',
                   'Biology-specialized curriculum design',
                   'Personalized teaching approach with small batches',

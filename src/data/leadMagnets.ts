@@ -116,7 +116,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Get improvement timeline',
       'Compare with other NEET aspirants',
     ],
-    socialProof: 'Taken by 25,000+ students with 98% accuracy rate',
+    socialProof: 'Taken by 21,50,000+ students with 98% accuracy rate',
   },
   {
     id: 'dropper-year-planning',

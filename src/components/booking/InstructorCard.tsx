@@ -29,7 +29,7 @@ export const instructors: Record<string, InstructorProfile> = {
     name: 'Dr. Rahul',
     fullName: 'Dr. Rahul Verma',
     qualification: 'MBBS (AIIMS), MD',
-    experience: '10+ years NEET coaching',
+    experience: '15+ years NEET coaching',
     rating: 4.9,
     reviews: 312,
     specialization: ['Plant Biology', 'Ecology', 'Evolution'],

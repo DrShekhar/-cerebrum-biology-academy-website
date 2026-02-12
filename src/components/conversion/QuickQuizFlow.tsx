@@ -202,7 +202,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
 
           <div className="text-xs text-gray-500 flex items-center justify-center gap-1">
             <CheckCircle2 className="h-4 w-4 text-green-600" />
-            Used by 5,000+ students • 100% Free
+            Used by 1,50,000+ students • 100% Free
           </div>
         </div>
       </PremiumCard>

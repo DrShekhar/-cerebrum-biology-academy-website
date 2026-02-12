@@ -85,7 +85,7 @@ const features = [
   },
   {
     title: 'Experienced Teachers',
-    description: 'Faculty with 10+ years of teaching Class 10 Biology',
+    description: 'Faculty with 15+ years of teaching Class 10 Biology',
     icon: Users,
   },
   {

@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'International Biology Online Classes | A-Level, IB, AP, IGCSE | Cerebrum Academy',
   description:
-    'Expert online biology classes for international curricula. A-Level, IB Biology (HL/SL), AP Biology, IGCSE. 12,000+ students from 50+ countries. Global timezone support.',
+    'Expert online biology classes for international curricula. A-Level, IB Biology (HL/SL), AP Biology, IGCSE. 11,50,000+ students from 50+ countries. Global timezone support.',
   keywords: [
     'international biology online classes',
     'A-Level biology tutor',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'International Biology Online Classes | A-Level, IB, AP, IGCSE',
     description:
-      'Expert online biology classes for international curricula. 12,000+ students from 50+ countries.',
+      'Expert online biology classes for international curricula. 11,50,000+ students from 50+ countries.',
     url: 'https://cerebrumbiologyacademy.com/online-biology-classes-international',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',

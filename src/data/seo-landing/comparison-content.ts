@@ -1228,7 +1228,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
           icon: 'chart',
           title: 'Verified Success Rate',
           description:
-            'Ask for verifiable results with actual student names and scores. Our 2,500+ selections are documented with contact details.',
+            'Ask for verifiable results with actual student names and scores. Our 67+ AIIMS selections are documented with contact details.',
         },
         {
           icon: 'message',
@@ -1307,7 +1307,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'How is Cerebrum Academy different from other online coaching?',
         answer:
-          'Key differentiators: (1) Direct teaching by Dr. Shekhar Singh (AIIMS), (2) Batch size limited to 15 students, (3) 24/7 WhatsApp support with 2-hour response time, (4) 2,500+ selections with verifiable results, (5) 7-day refund policy if not satisfied, (6) Free demo class to evaluate before joining.',
+          'Key differentiators: (1) Direct teaching by Dr. Shekhar Singh (AIIMS), (2) Batch size limited to 15 students, (3) 24/7 WhatsApp support with 2-hour response time, (4) 67+ AIIMS selections with verifiable results, (5) 7-day refund policy if not satisfied, (6) Free demo class to evaluate before joining.',
       },
     ],
     courseSummary: {
@@ -1489,7 +1489,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'Is online coaching as effective as offline for NEET?',
         answer:
-          'Research and our data show online coaching can be equally or more effective when: (1) Classes are live and interactive, (2) Batch size is small (10-15), (3) Faculty quality is high, (4) Doubt support is quick. Our online students have similar success rates to top offline coaching, with 2,500+ selections.',
+          'Research and our data show online coaching can be equally or more effective when: (1) Classes are live and interactive, (2) Batch size is small (10-15), (3) Faculty quality is high, (4) Doubt support is quick. Our online students have similar success rates to top offline coaching, with 67+ AIIMS selections.',
       },
       {
         question: 'What are the disadvantages of online coaching for NEET?',

@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'Do you provide rank prediction?',
     answer:
-      'Yes, we provide All India Rank prediction based on your test scores compared to our database of 10,000+ students. Accuracy rate of 90% within ±5000 rank range.',
+      'Yes, we provide All India Rank prediction based on your test scores compared to our database of 1,50,000+ students. Accuracy rate of 90% within ±5000 rank range.',
   },
 ]
 

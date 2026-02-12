@@ -72,7 +72,7 @@ export const coachingFAQs: FAQ[] = [
   {
     question: 'Who is Dr. Shekhar Singh and what makes him qualified for NEET coaching?',
     answer:
-      'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years of NEET Biology teaching experience. He has mentored 2000+ students with 500+ medical college selections annually. His teaching methodology focuses on NCERT understanding, concept clarity, and application-based learning aligned with NEET pattern.',
+      'Dr. Shekhar C Singh is an AIIMS New Delhi alumnus with 15+ years of NEET Biology teaching experience. He has mentored 1,50,000+ students with 67+ AIIMS selections annually. His teaching methodology focuses on NCERT understanding, concept clarity, and application-based learning aligned with NEET pattern.',
     category: 'Coaching',
     keywords: ['Dr Shekhar Singh', 'AIIMS faculty', 'NEET Biology teacher'],
   },
@@ -193,7 +193,7 @@ export const resultsFAQs: FAQ[] = [
   {
     question: 'What is the success rate of Cerebrum Biology Academy?',
     answer:
-      'Cerebrum has 98% success rate in NEET qualification. Key results: Top score 695/720, 500+ selections annually, 80%+ score 550+, Students placed in AIIMS Delhi, Maulana Azad, government colleges across India. Verifiable results with student testimonials on our website.',
+      'Cerebrum has 98% success rate in NEET qualification. Key results: Top score 695/720, 67+ AIIMS selections annually, 80%+ score 550+, Students placed in AIIMS Delhi, Maulana Azad, government colleges across India. Verifiable results with student testimonials on our website.',
     category: 'Results',
     keywords: ['Cerebrum success rate', 'NEET results', 'coaching results'],
   },

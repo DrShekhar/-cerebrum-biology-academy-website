@@ -280,7 +280,7 @@ export default function NeetFoundationCoursePage() {
     {
       title: 'Research-Backed Approach',
       description:
-        'Students starting from Class 9-10 show 65% higher NEET success rate - proven by analysis of 10,000+ students.',
+        'Students starting from Class 9-10 show 65% higher NEET success rate - proven by analysis of 1,50,000+ students.',
       stat: '65%',
       statLabel: 'Higher Success',
     },
@@ -656,7 +656,7 @@ export default function NeetFoundationCoursePage() {
               Start Your Child's NEET Journey the Right Way
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join 2,000+ students in our foundation programs who are building the strong base
+              Join 1,50,000+ students in our foundation programs who are building the strong base
               needed for NEET success. Give your child the gift of early preparation and 65% higher
               success rate!
             </p>

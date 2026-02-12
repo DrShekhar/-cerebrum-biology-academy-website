@@ -105,7 +105,7 @@ export function HeroSection({ className = '' }: HeroSectionProps) {
             style={{ animationDelay: '0.2s' }}
           >
             <span className="text-yellow-300 font-bold">Sadhna scored 695/720 (100%ile)</span> •
-            500+ Medical Selections
+            67+ AIIMS Selections
           </p>
 
           {/* PRIMARY CTA - Call Now Button */}

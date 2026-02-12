@@ -448,7 +448,7 @@ export default function AIFeaturesHub() {
           <Star className="w-16 h-16 mx-auto mb-6" />
           <h2 className="text-3xl font-bold mb-4">Ready to Experience AI-Powered Learning?</h2>
           <p className="text-xl text-blue-100 mb-8">
-            Join 10,000+ students already using our AI features to ace their NEET preparation
+            Join 1,50,000+ students already using our AI features to ace their NEET preparation
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

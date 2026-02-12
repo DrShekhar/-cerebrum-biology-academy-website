@@ -270,7 +270,7 @@ export default function DoubtResolutionPage() {
                 <span className="text-yellow-300">12 Minutes or Less</span>
               </h1>
               <p className="text-base sm:text-lg md:text-xl text-red-100 mb-4 sm:mb-6">
-                Join 5,000+ students who cleared their doubts and scored{' '}
+                Join 1,50,000+ students who cleared their doubts and scored{' '}
                 <span className="font-bold text-yellow-300">340+ in Biology</span>. Expert AIIMS
                 faculty available 24/7 on WhatsApp, Video Call, and Chat.
               </p>

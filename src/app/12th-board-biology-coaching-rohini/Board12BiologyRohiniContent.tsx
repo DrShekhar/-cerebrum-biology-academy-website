@@ -92,7 +92,7 @@ const features = [
   },
   {
     title: 'Expert Faculty',
-    description: 'Teachers with 10+ years experience in Class 12 & NEET Biology',
+    description: 'Teachers with 15+ years experience in Class 12 & NEET Biology',
     icon: Users,
   },
   {

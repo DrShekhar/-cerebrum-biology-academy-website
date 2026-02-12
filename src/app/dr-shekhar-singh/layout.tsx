@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Dr. Shekhar C Singh - Expert NEET Biology Educator',
     description:
-      'AIIMS faculty with proven track record of 98% success rate. Mentored 2500+ students to medical college admissions.',
+      'AIIMS faculty with proven track record of 98% success rate. Mentored 1,50,000+ students to medical college admissions.',
     images: [
       {
         url: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=571,fit=crop/meP3n6VKelS9LnOn/img-0034-meP3pJDRGxsyRZyy.jpg',

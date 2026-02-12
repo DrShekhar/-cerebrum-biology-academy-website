@@ -181,7 +181,7 @@ export default function OnlineBiologyTutorNeetPage() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-5 h-5 mr-2 text-yellow-400" />
-              500+ Medical Selections
+              67+ AIIMS Selections
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">

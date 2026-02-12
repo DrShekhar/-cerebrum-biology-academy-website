@@ -348,7 +348,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               Use Our Free NEET Preparation Tools
             </h2>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Plan your NEET journey with our intelligent tools - used by 10,000+ students across{' '}
+              Plan your NEET journey with our intelligent tools - used by 1,50,000+ students across{' '}
               {area.name}
             </p>
           </motion.div>

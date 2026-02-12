@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Book FREE NEET Biology Demo Class [Limited Spots] | Cerebrum',
   description:
-    'Experience our teaching methodology in a FREE 45-min demo class. Learn from AIIMS-trained faculty with 2500+ selections. Only 5 slots/day - Book now!',
+    'Experience our teaching methodology in a FREE 45-min demo class. Learn from AIIMS-trained faculty with 67+ AIIMS selections. Only 5 slots/day - Book now!',
   keywords: [
     'free neet demo class',
     'neet biology demo',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Book FREE NEET Biology Demo Class [Limited Spots]',
     description:
-      'Experience our teaching with AIIMS-trained faculty. 45-min FREE demo, 2500+ selections. Book now!',
+      'Experience our teaching with AIIMS-trained faculty. 45-min FREE demo, 67+ AIIMS selections. Book now!',
     type: 'website',
     locale: 'en_IN',
     url: 'https://cerebrumbiologyacademy.com/demo-booking',

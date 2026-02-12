@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Green Park Delhi | Medical Entrance Biology',
   description:
-    'Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections. Quality matching IIT area standards.',
+    'Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Quality matching IIT area standards.',
   keywords: [
     'neet coaching green park',
     'neet coaching green park delhi',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching in Green Park Delhi | Medical Entrance Biology',
     description:
-      'Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections.',
+      'Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-green-park-delhi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -47,7 +47,7 @@ export default function NEETCoachingGreenParkPage() {
         locality="Green Park"
         slug="neet-coaching-green-park-delhi"
         pageTitle="NEET Coaching in Green Park Delhi"
-        pageDescription="Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections."
+        pageDescription="Best NEET coaching for Green Park, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections."
         pageType="coaching"
       coordinates={{ lat: "28.5600", lng: "77.2076" }} faqs={faqs} />
       <PageContent />

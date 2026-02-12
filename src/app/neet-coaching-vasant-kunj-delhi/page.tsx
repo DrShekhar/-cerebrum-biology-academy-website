@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Vasant Kunj Delhi | Medical Entrance Biology',
   description:
-    'Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 500+ selections. DPS Vasant Kunj, Sanskriti students welcome.',
+    'Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 67+ AIIMS selections. DPS Vasant Kunj, Sanskriti students welcome.',
   keywords: [
     'neet coaching vasant kunj',
     'neet biology tutor vasant kunj delhi',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching in Vasant Kunj Delhi | Medical Entrance Biology',
     description:
-      'Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 500+ selections.',
+      'Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-vasant-kunj-delhi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -49,7 +49,7 @@ export default function NEETCoachingVasantKunjPage() {
         locality="Vasant Kunj"
         slug="neet-coaching-vasant-kunj-delhi"
         pageTitle="NEET Coaching in Vasant Kunj Delhi"
-        pageDescription="Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 500+ selections."
+        pageDescription="Best NEET coaching for Vasant Kunj, Delhi students. AIIMS alumnus Dr. Shekhar C Singh offers online NEET Biology coaching with 67+ AIIMS selections."
         pageType="coaching"
       coordinates={{ lat: "28.5173", lng: "77.1586" }} faqs={faqs} />
       <PageContent />

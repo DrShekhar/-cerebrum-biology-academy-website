@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'NEET Success Stories [2500+ Selections, 98% Success] | Cerebrum',
+  title: 'NEET Success Stories [67+ AIIMS Selections, 98% Success] | Cerebrum',
   description:
     'Real student reviews: 2500+ NEET selections, 98% success rate, 247+ in Top 1000 AIR. See transformation stories & join the success club today!',
   keywords:

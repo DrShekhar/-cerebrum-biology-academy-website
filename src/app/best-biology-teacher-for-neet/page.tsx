@@ -168,7 +168,7 @@ export default function BestBiologyTeacherForNeetPage() {
 
             <p className="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Master NEET Biology with India&apos;s most experienced faculty. Our AIIMS-trained
-              teachers have helped 2500+ students crack NEET with their proven methodology focused
+              teachers have helped 1,50,000+ students crack NEET with their proven methodology focused
               on NCERT and conceptual clarity.
             </p>
 

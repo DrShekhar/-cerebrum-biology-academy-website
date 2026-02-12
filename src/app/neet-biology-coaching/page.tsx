@@ -172,7 +172,7 @@ export default function NEETBiologyCoachingPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              AIIMS-Trained Faculty | 98% Success Rate | 2,500+ Selections
+              AIIMS-Trained Faculty | 98% Success Rate | 67+ AIIMS Selections
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -231,7 +231,7 @@ export default function NEETBiologyCoachingPage() {
               Why Choose Our NEET Biology Coaching?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology that has helped 2,500+ students crack NEET
+              A proven methodology that has helped 1,50,000+ students crack NEET
             </p>
           </motion.div>
 

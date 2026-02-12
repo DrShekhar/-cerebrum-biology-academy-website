@@ -722,7 +722,7 @@ Hello [Content Manager],
 
 I'm writing to propose a guest post for ${target.domain} that would provide genuine value to your education-focused audience.
 
-As the founder of Cerebrum Biology Academy, I've helped over 2,000+ students achieve their NEET goals. I'd like to share a comprehensive guide on "[Specific Topic]" that aligns perfectly with your content standards.
+As the founder of Cerebrum Biology Academy, I've helped over 1,50,000+ students achieve their NEET goals. I'd like to share a comprehensive guide on "[Specific Topic]" that aligns perfectly with your content standards.
 
 Proposed article: "[Article Title]"
 Word count: 2,500-3,000 words

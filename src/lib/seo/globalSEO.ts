@@ -108,7 +108,7 @@ export class GlobalSEOService {
     const { courseId, className, subject, level, targetExam } = courseData
 
     const title = `${className} ${subject} Online Classes | Best ${targetExam} Biology Coaching | Cerebrum Academy`
-    const description = `🏆 #1 ${className} ${subject} online coaching for ${targetExam}. Expert AIIMS faculty, 98% success rate, live classes. Join 10,000+ students. Free demo available!`
+    const description = `🏆 #1 ${className} ${subject} online coaching for ${targetExam}. Expert AIIMS faculty, 98% success rate, live classes. Join 1,50,000+ students. Free demo available!`
 
     const keywords = [
       `${className} ${subject.toLowerCase()} online classes`,

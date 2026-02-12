@@ -186,7 +186,7 @@ Recommendation: [Yes/No] because [Reason]
 ### **Remember the Business Model:**
 
 - **Revenue:** Course fees (₹75K per student)
-- **Target:** 10,000+ students across India + international
+- **Target:** 1,50,000+ students across India + international
 - **Seasonality:** Peak during NEET preparation season
 - **Competition:** Allen, Resonance, Aakash, BYJU'S, Unacademy
 - **USP:** 94.2% NEET qualification rate

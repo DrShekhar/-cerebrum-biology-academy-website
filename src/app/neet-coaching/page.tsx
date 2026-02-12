@@ -340,7 +340,7 @@ export default function NEETCoachingPage() {
                   {
                     icon: <Trophy className="w-5 h-5 text-blue-400" />,
                     title: '98% Success Rate',
-                    desc: '2000+ students coached, 695/720 top score',
+                    desc: '1,50,000+ students coached, 695/720 top score',
                   },
                   {
                     icon: <Target className="w-5 h-5 text-purple-400" />,
@@ -1003,7 +1003,7 @@ export default function NEETCoachingPage() {
               Start Your NEET Journey Today
             </h2>
             <p className="text-gray-300 max-w-xl mx-auto mb-8 text-lg">
-              Join 2000+ students who cracked NEET with Cerebrum. Limited seats per batch — enroll
+              Join 1,50,000+ students who cracked NEET with Cerebrum. Limited seats per batch — enroll
               now.
             </p>
 

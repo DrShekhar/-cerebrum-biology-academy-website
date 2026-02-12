@@ -98,7 +98,7 @@ const faqs = [
   {
     question: 'Can I crack NEET with online biology coaching?',
     answer:
-      'Absolutely! Our online NEET biology students have achieved same results as offline batches - 2,500+ selections including 50+ in top 1000 AIR. Online coaching offers advantages like recorded lectures, flexible timing, and unlimited revision.',
+      'Absolutely! Our online NEET biology students have achieved same results as offline batches - 67+ AIIMS selections including 50+ in top 1000 AIR. Online coaching offers advantages like recorded lectures, flexible timing, and unlimited revision.',
   },
   {
     question: 'How many hours should I study biology for NEET daily?',

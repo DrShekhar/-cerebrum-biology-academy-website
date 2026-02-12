@@ -205,7 +205,7 @@ export default function Class11BiologyPage() {
     {
       name: 'Dr. Amit Verma',
       qualification: 'MBBS, MAMC Delhi',
-      experience: '10+ years NEET prep',
+      experience: '15+ years NEET prep',
       specialty: 'Cell Biology & Genetics',
     },
   ]

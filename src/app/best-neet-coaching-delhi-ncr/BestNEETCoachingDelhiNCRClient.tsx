@@ -128,7 +128,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in Delhi NCR?',
     answer:
-      'Cerebrum Biology Academy is rated as the #1 NEET Biology coaching in Delhi NCR with a 98% success rate, 500+ medical selections, and AIIMS faculty. Unlike large coaching chains, we maintain small batch sizes of 10-15 students for personalized attention.',
+      'Cerebrum Biology Academy is rated as the #1 NEET Biology coaching in Delhi NCR with a 98% success rate, 67+ AIIMS selections, and AIIMS faculty. Unlike large coaching chains, we maintain small batch sizes of 10-15 students for personalized attention.',
   },
   {
     question: 'What makes Cerebrum different from Kota coaching?',
@@ -534,7 +534,7 @@ export function BestNEETCoachingDelhiNCRClient() {
             award: [
               '#1 NEET Biology Coaching in Delhi NCR',
               '98% Success Rate',
-              '500+ Medical Selections',
+              '67+ AIIMS Selections',
             ],
           }),
         }}

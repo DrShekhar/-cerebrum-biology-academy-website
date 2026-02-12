@@ -671,7 +671,7 @@ export default function NEETCoachingMumbai() {
               </div>
 
               <p className="text-slate-400 mt-6">
-                Join 2500+ students from Mumbai who chose smart preparation over crowded local trains
+                Join 1,50,000+ students from Mumbai who chose smart preparation over crowded local trains
               </p>
             </motion.div>
           </div>

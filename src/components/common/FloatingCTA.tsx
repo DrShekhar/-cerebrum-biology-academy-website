@@ -17,7 +17,7 @@ const CTA_COPY = {
   desktop: {
     primary: 'Talk to AIIMS Expert',
     secondary: 'Avg reply: 2 mins',
-    badge: '500+ selections',
+    badge: '67+ AIIMS selections',
   },
   mobile: {
     callLabel: 'Call Now',
@@ -399,7 +399,7 @@ export const FloatingCTA = memo(function FloatingCTA() {
               <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
                 <span className="flex items-center gap-1">
                   <Users className="w-4 h-4" />
-                  5,000+ students coached
+                  1,50,000+ students coached
                 </span>
                 <span className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />

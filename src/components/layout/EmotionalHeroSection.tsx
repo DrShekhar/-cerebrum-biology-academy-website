@@ -234,7 +234,7 @@ export function EmotionalHeroSection({
               </h1>
 
               <p className="text-xl md:text-2xl text-slate-100 leading-relaxed max-w-2xl">
-                Join <span className="font-bold text-amber-300">5,000+ students</span> who
+                Join <span className="font-bold text-amber-300">1,50,000+ students</span> who
                 <span className="font-bold text-green-400">
                   {' '}
                   achieved their medical dreams

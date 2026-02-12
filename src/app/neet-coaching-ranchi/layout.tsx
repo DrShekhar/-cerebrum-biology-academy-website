@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Ranchi | Main Road, Lalpur | Cerebrum Academy',
   description:
-    'Top NEET biology coaching in Ranchi for Jharkhand students. RIMS Ranchi focused! 98% success rate, AIIMS faculty. Main Road, Lalpur, Doranda. 2,000+ students. Book free demo!',
+    'Top NEET biology coaching in Ranchi for Jharkhand students. RIMS Ranchi focused! 98% success rate, AIIMS faculty. Main Road, Lalpur, Doranda. 1,50,000+ students. Book free demo!',
   keywords:
     'NEET coaching Ranchi, NEET biology coaching Ranchi, best NEET coaching Main Road, NEET classes Lalpur, biology coaching Doranda, NEET tuition Ranchi, NEET coaching Morabadi, NEET preparation Jharkhand, online NEET coaching Ranchi, RIMS Ranchi preparation, NEET biology Ranchi, biology tuition Ranchi, biology classes Ranchi, online biology coaching Ranchi, biology teacher Ranchi, NEET biology Ranchi',
   openGraph: {

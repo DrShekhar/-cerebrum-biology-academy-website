@@ -79,7 +79,7 @@ const features = [
   {
     icon: Award,
     title: 'AIIMS Trained Faculty',
-    description: 'Expert teachers with medical background and 10+ years experience.',
+    description: 'Expert teachers with medical background and 15+ years experience.',
   },
   {
     icon: Users,

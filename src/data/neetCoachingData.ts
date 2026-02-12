@@ -315,7 +315,7 @@ export const faqs: FAQItem[] = [
   {
     question: 'What results has Cerebrum achieved in NEET?',
     answer:
-      'Our top student scored 695/720 in NEET (100th percentile). We have a 98% success rate with 2000+ students coached. Multiple students have secured seats in AIIMS Delhi, LHMC, Maulana Azad, and other top government medical colleges. Visit our Success Stories page for detailed results.',
+      'Our top student scored 695/720 in NEET (100th percentile). We have a 98% success rate with 1,50,000+ students coached. Multiple students have secured seats in AIIMS Delhi, LHMC, Maulana Azad, and other top government medical colleges. Visit our Success Stories page for detailed results.',
   },
   {
     question: 'Do you offer EMI or installment payment options?',

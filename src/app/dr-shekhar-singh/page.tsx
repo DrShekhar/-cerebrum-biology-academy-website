@@ -1054,7 +1054,7 @@ export default function DrShekharSinghPage() {
                 </h2>
                 <p className="text-xl text-white/80 mb-4">
                   Book a personal consultation with Dr. Shekhar and experience the teaching that has
-                  transformed 2,500+ students
+                  transformed 1,50,000+ students
                 </p>
                 <div className="inline-flex items-center bg-white/10 border border-white/20 px-4 py-2 rounded-full">
                   <Clock className="w-4 h-4 mr-2 text-white/80" />

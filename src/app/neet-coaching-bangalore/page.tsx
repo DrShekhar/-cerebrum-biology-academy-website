@@ -197,7 +197,7 @@ const faqs = [
   {
     question: 'Is online coaching effective for competitive exams like NEET?',
     answer:
-      'Yes! Our 98% success rate and 500+ medical college selections prove that online coaching is highly effective. Bangalore students particularly benefit as they save commute time for self-study. Our interactive live classes, doubt sessions, and AI-powered practice tests ensure comprehensive preparation.',
+      'Yes! Our 98% success rate and 67+ AIIMS selections prove that online coaching is highly effective. Bangalore students particularly benefit as they save commute time for self-study. Our interactive live classes, doubt sessions, and AI-powered practice tests ensure comprehensive preparation.',
   },
   {
     question: 'Do you understand Karnataka PU board patterns?',

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://cerebrumbiologyacademy.com'),
   title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute',
   description:
-    'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored. Online & offline classes for Class 11th, 12th & droppers across 50+ countries.',
+    'Top NEET Biology coaching by AIIMS experts. 98% success rate, 1,50,000+ students mentored. Online & offline classes for Class 11th, 12th & droppers across 50+ countries.',
   keywords:
     'NEET biology coaching, AIIMS faculty, biology coaching institute, NEET preparation, medical entrance coaching, biology classes, NEET 2026, online biology coaching',
   authors: [{ name: 'Cerebrum Biology Academy' }],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: 'Cerebrum Biology Academy',
     title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute',
     description:
-      'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored. Online & offline classes for Class 11th, 12th & droppers.',
+      'Top NEET Biology coaching by AIIMS experts. 98% success rate, 1,50,000+ students mentored. Online & offline classes for Class 11th, 12th & droppers.',
     images: [
       {
         url: '/og-image.jpg',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Cerebrum Biology Academy | Best NEET Biology Coaching Institute',
     description:
-      'Top NEET Biology coaching by AIIMS experts. 98% success rate, 2000+ students mentored worldwide.',
+      'Top NEET Biology coaching by AIIMS experts. 98% success rate, 1,50,000+ students mentored worldwide.',
     images: ['/og-image.jpg'],
     creator: '@cerebrumbiology',
   },

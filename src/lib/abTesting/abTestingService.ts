@@ -86,7 +86,7 @@ class ABTestingService {
           isControl: true,
           config: {
             headline: "Master NEET Biology with India's Top Faculty",
-            subtext: 'Join 10,000+ students who achieved 330+ in Biology',
+            subtext: 'Join 1,50,000+ students who achieved 330+ in Biology',
             ctaText: 'Book Free Demo Class',
             ctaColor: 'bg-gradient-to-r from-yellow-400 to-yellow-600',
           },

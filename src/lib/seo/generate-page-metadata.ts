@@ -26,7 +26,7 @@ const TYPE_TEMPLATES: Record<PageType, { titleTemplate: string; descriptionTempl
   'neet-preparation': {
     titleTemplate: 'NEET 2026 Preparation in {locality} | Expert Coaching | Cerebrum Academy',
     descriptionTemplate:
-      'Comprehensive NEET 2026 preparation in {locality}. Complete biology syllabus, mock tests, doubt sessions. Join 2500+ students who achieved their medical dreams!',
+      'Comprehensive NEET 2026 preparation in {locality}. Complete biology syllabus, mock tests, doubt sessions. Join 1,50,000+ students who achieved their medical dreams!',
   },
   'online-coaching': {
     titleTemplate: 'Online NEET Biology Coaching from {locality} | Live Classes | Cerebrum',

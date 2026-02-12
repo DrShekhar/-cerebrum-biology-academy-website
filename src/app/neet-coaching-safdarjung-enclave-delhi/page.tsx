@@ -5,7 +5,7 @@ import { LocalitySchema } from '@/components/seo/LocalitySchema'
 export const metadata: Metadata = {
   title: 'NEET Coaching in Safdarjung Enclave Delhi | Medical Entrance Biology',
   description:
-    'Best NEET coaching for Safdarjung Enclave, Delhi students near AIIMS. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections. Join today.',
+    'Best NEET coaching for Safdarjung Enclave, Delhi students near AIIMS. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections. Join today.',
   keywords: [
     'neet coaching safdarjung enclave',
     'neet coaching safdarjung enclave delhi',
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching in Safdarjung Enclave Delhi | Medical Entrance Biology',
     description:
-      'Best NEET coaching for Safdarjung Enclave, Delhi students near AIIMS. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections.',
+      'Best NEET coaching for Safdarjung Enclave, Delhi students near AIIMS. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-safdarjung-enclave-delhi',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',
@@ -47,7 +47,7 @@ export default function NEETCoachingSafdarjungEnclavePage() {
         locality="Safdarjung Enclave"
         slug="neet-coaching-safdarjung-enclave-delhi"
         pageTitle="NEET Coaching in Safdarjung Enclave Delhi"
-        pageDescription="Best NEET coaching for Safdarjung Enclave, Delhi students near AIIMS. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 500+ selections."
+        pageDescription="Best NEET coaching for Safdarjung Enclave, Delhi students near AIIMS. AIIMS alumnus Dr. Shekhar C Singh offers online NEET biology coaching with 67+ AIIMS selections."
         pageType="coaching"
       coordinates={{ lat: "28.5618", lng: "77.1963" }} faqs={faqs} />
       <PageContent />

@@ -34,7 +34,7 @@ const experienceSignals = [
   },
   {
     icon: Trophy,
-    label: '500+ Medical Selections',
+    label: '67+ AIIMS Selections',
     description: 'Including AIIMS, JIPMER, and top GMCs',
   },
 ]
@@ -61,7 +61,7 @@ const authoritySignals = [
   {
     icon: Star,
     label: '98% Success Rate',
-    description: 'Consistently high results since 2018',
+    description: 'Consistently high results since 2010',
   },
   {
     icon: Verified,
@@ -302,7 +302,7 @@ export function EEATSignals({
               award: [
                 'Top NEET Biology Coaching in Delhi NCR',
                 '98% Success Rate in NEET',
-                '500+ Medical Selections',
+                '67+ AIIMS Selections',
               ],
               knowsAbout: [
                 'NEET Biology',

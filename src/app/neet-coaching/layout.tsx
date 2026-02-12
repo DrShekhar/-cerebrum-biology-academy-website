@@ -74,7 +74,7 @@ function generateJsonLd() {
         instructor: {
           '@type': 'Person',
           name: 'Dr. Shekhar',
-          description: 'AIIMS Delhi alumnus with 10+ years of NEET coaching experience',
+          description: 'AIIMS Delhi alumnus with 15+ years of NEET coaching experience',
         },
       },
     ],

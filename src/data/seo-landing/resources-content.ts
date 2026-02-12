@@ -2643,7 +2643,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Online Classes 2025-26 | Live Biology Classes',
     metaDescription:
-      'Join NEET online classes with AIIMS faculty. Live interactive biology classes, small batches, 24/7 doubt support. 2500+ selections.',
+      'Join NEET online classes with AIIMS faculty. Live interactive biology classes, small batches, 24/7 doubt support. 67+ AIIMS selections.',
     keywords: [
       'neet online classes',
       'online classes for neet',

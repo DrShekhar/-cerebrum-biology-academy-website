@@ -280,7 +280,7 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">TN Board Specialists</h3>
                   <p className="text-slate-700">
-                    10+ years expertise in Tamil Nadu HSC curriculum. Deep understanding of board exam patterns, chapter weightage, and marking scheme expectations.
+                    15+ years expertise in Tamil Nadu HSC curriculum. Deep understanding of board exam patterns, chapter weightage, and marking scheme expectations.
                   </p>
                 </div>
               </div>
