@@ -111,8 +111,8 @@ export const courses: Course[] = [
     currentPrice: 48000,
     originalPrice: 55000,
     badge: 'recommended',
-    successRate: 94,
-    enrollmentCount: 2500,
+    successRate: 98,
+    enrollmentCount: 150000,
     rating: 4.9,
     description:
       'Comprehensive NEET preparation with expert faculty and proven teaching methodologies',

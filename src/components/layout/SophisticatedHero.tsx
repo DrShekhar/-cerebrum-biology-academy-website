@@ -78,7 +78,7 @@ export function SophisticatedHero({
     { value: 98, suffix: '%', label: 'NEET Success Rate', icon: Trophy },
     { value: 330, prefix: '', suffix: '+', label: 'Average Biology Score', icon: BarChart2 },
     { value: 695, suffix: '', label: 'Top Score (Sadhna)', icon: GraduationCap },
-    { value: 2500, suffix: '+', label: 'Students Mentored', icon: Globe },
+    { value: 150000, suffix: '+', label: 'Students Mentored', icon: Globe },
   ]
 
   useEffect(() => {

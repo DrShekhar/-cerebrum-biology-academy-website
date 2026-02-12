@@ -829,7 +829,7 @@ export const intentPagesData: Record<string, IntentPageData> = {
     solution: {
       title: 'The 360 Strategy Framework',
       description:
-        'Our proven framework has helped 65+ students get into AIIMS and 500+ students score 320+ in NEET Biology.',
+        'Our proven framework has helped 65+ students get into AIIMS and thousands of students score 320+ in NEET Biology.',
       features: [
         {
           icon: 'book',

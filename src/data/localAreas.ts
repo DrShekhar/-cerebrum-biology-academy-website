@@ -34,7 +34,7 @@ export const delhiNCRAreas: LocalArea[] = [
     displayName: 'Gurgaon (Gurugram)',
     state: 'Haryana',
     description:
-      'Premier NEET Biology coaching in Gurgaon with AIIMS expert faculty. Join 500+ successful students from Cyber City, DLF, and Sector 14-56 areas.',
+      'Premier NEET Biology coaching in Gurgaon with AIIMS expert faculty. Join 1,50,000+ successful students from Cyber City, DLF, and Sector 14-56 areas.',
     metaTitle: 'Best Biology Coaching in Gurgaon | NEET Classes | Cerebrum Biology Academy',
     metaDescription:
       'Top-rated biology coaching in Gurgaon for NEET 2025. Expert AIIMS faculty, 98% success rate. Serving DLF, Cyber City, Sector 14-56. Book free demo class!',

@@ -144,7 +144,7 @@ export const AB_TEST_DECISION_POINTS: ABTestDecisionPoint[] = [
             element: 'Hero messaging',
             type: 'content',
             description: 'Personalize based on detected location',
-            implementation: '"Join 500+ students from [City] who qualified NEET"',
+            implementation: '"Join students from [City] who qualified NEET"',
           },
           {
             element: 'Visual content',

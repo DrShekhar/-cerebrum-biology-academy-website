@@ -66,7 +66,7 @@ const whyChooseUs = [
   },
   {
     icon: Target,
-    title: '500+ NEET Selections',
+    title: '67+ AIIMS Selections',
     description:
       'Proven track record with students from Bangalore International School, Vidyashilp Academy, and heritage school backgrounds.',
   },

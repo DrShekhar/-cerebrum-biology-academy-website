@@ -131,7 +131,7 @@ const FACULTY_MEMBERS: FacultyMember[] = [
     achievements: {
       publicationsCount: 45,
       awardsCount: 8,
-      studentsGuided: 2500,
+      studentsGuided: 150000,
       successRate: 96.8,
       topRanksProduced: 156,
     },
@@ -187,7 +187,7 @@ const FACULTY_MEMBERS: FacultyMember[] = [
       coursesHandling: ['Pinnacle Biology', 'Ascent Genetics', 'Advanced Molecular Biology'],
     },
 
-    bio: 'Dr. Rajesh Kumar Singh is a renowned molecular biologist with extensive research and teaching experience. Having guided over 2,500 NEET aspirants, he specializes in making complex biological concepts accessible and exam-oriented.',
+    bio: 'Dr. Rajesh Kumar Singh is a renowned molecular biologist with extensive research and teaching experience. Having guided thousands of NEET aspirants, he specializes in making complex biological concepts accessible and exam-oriented.',
     personalQuote:
       "Biology is not just about memorization, it's about understanding the beautiful complexity of life and applying that knowledge strategically.",
     availability: 'full-time',
