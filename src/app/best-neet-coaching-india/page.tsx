@@ -137,7 +137,7 @@ export default function BestNeetCoachingIndiaPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              98% Success Rate • AIIMS Trained Faculty • 2,500+ Students
+              98% Success Rate • AIIMS Trained Faculty • 1,50,000+ Students
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -200,7 +200,7 @@ export default function BestNeetCoachingIndiaPage() {
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
               >
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
-                <div className="text-2xl font-bold">2,500+</div>
+                <div className="text-2xl font-bold">1,50,000+</div>
                 <div className="text-sm opacity-80">Students</div>
               </motion.div>
 

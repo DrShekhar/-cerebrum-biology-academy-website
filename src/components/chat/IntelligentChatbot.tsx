@@ -675,7 +675,7 @@ export function IntelligentChatbot() {
       '• 98% success rate (National avg: 23%)\n' +
       '• Top Score: 695/720 (100%ile Biology - Sadhna Sirin)\n' +
       '• Perfect 360/360: Priya Sehgal\n' +
-      '• 2,500+ medical college admissions\n\n' +
+      '• 67+ AIIMS selections\n\n' +
       '📊 **Score Improvement:**\n' +
       '• Average improvement: 127 points\n' +
       '• Biology average: 335+/360\n' +

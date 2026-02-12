@@ -111,7 +111,7 @@ export function TrustBadgesSection() {
       growth: '+23% YoY',
     },
     {
-      number: '247',
+      number: '67+',
       label: 'AIIMS Selections',
       description: 'Across all campuses',
       growth: '+31% YoY',

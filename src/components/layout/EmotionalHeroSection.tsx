@@ -33,7 +33,7 @@ export function EmotionalHeroSection({
 }: EmotionalHeroSectionProps) {
   const router = useRouter()
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
-  const [liveCounter, setLiveCounter] = useState(1247)
+  const [liveCounter, setLiveCounter] = useState(150000)
   const [timeLeft, setTimeLeft] = useState({
     days: 15,
     hours: 8,
@@ -81,8 +81,8 @@ export function EmotionalHeroSection({
   ]
 
   const successStats = [
-    { value: 1247, label: 'MBBS Seats Secured', icon: GraduationCap },
-    { value: 342, label: 'Government Colleges', icon: Trophy },
+    { value: 67, label: 'AIIMS Selections', icon: GraduationCap },
+    { value: 98, label: 'Success Rate %', icon: Trophy },
     { value: 98, suffix: '%', label: 'NEET Success Rate', icon: Heart },
     {
       value: 5000,
@@ -161,7 +161,7 @@ export function EmotionalHeroSection({
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
             <Trophy className="h-5 w-5 text-yellow-300" />
             <span>
-              🎯 98% NEET Success Rate | 247 AIIMS Selections | Next batch starting January 15, 2025
+              🎯 98% NEET Success Rate | 67+ AIIMS Selections | Next batch starting January 15, 2025
             </span>
             <Sparkles className="h-5 w-5 text-yellow-300 animate-pulse" />
           </div>

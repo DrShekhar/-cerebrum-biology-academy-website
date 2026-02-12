@@ -496,7 +496,7 @@ export function NEETToppersShowcase({
             </div>
             <div className="flex items-center">
               <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
-              <span>267+ NEET Selections</span>
+              <span>67+ AIIMS Selections</span>
             </div>
           </div>
         </motion.div>

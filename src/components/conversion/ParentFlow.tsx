@@ -48,7 +48,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
       icon: Award,
       title: 'Proven Success Rate',
       description: '98% of our students qualify NEET with significant score improvements',
-      stat: '247 AIIMS Selections',
+      stat: '67+ AIIMS Selections',
       emphasis: true,
     },
     {

@@ -208,7 +208,7 @@ export function UpgradeModal({
                       </span>
                       <span className="flex items-center gap-1">
                         <CheckCircle className="w-4 h-4 text-green-600" />
-                        2,500+ Students
+                        1,50,000+ Students
                       </span>
                     </div>
                   </div>

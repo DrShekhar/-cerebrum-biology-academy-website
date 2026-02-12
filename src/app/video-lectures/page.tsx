@@ -154,11 +154,7 @@ export default function VideoLecturesPage() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">AIIMS Selections</span>
-                  <span className="text-2xl font-bold text-blue-600">247</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-600">AIIMS Selections</span>
-                  <span className="text-2xl font-bold text-purple-600">67+</span>
+                  <span className="text-2xl font-bold text-blue-600">67+</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Student Rating</span>

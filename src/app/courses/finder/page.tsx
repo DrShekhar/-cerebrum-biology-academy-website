@@ -162,7 +162,7 @@ export default function CourseFinderPage() {
   const stats = [
     { icon: Users, value: '5,000+', label: 'Students Guided' },
     { icon: Star, value: '95%', label: 'Satisfaction Rate' },
-    { icon: GraduationCap, value: '2,500+', label: 'NEET Qualifiers' },
+    { icon: GraduationCap, value: '67+', label: 'AIIMS Selections' },
     { icon: Target, value: '650+', label: 'Avg Score Improvement' },
   ]
 

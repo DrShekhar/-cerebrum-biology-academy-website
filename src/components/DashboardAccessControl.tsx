@@ -240,7 +240,7 @@ export function DashboardAccessControl({
             {/* Trust Signals */}
             <div className="mt-6 pt-6 border-t border-gray-200 text-center">
               <p className="text-sm text-gray-600">
-                Join <strong className="text-gray-900">2,500+</strong> students with{' '}
+                Join <strong className="text-gray-900">1,50,000+</strong> students with{' '}
                 <strong className="text-green-600">98% success rate</strong>
               </p>
             </div>

@@ -148,7 +148,7 @@ const features = [
 const successMetrics = [
   { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'Top Score 2024', value: '360', icon: Star },
-  { label: 'Kota Students', value: '2,500+', icon: Users },
+  { label: 'Kota Students', value: '5,000+', icon: Users },
   { label: 'Biology Specialist', value: '100%', icon: Target },
 ]
 
@@ -269,7 +269,7 @@ export default function NeetCoachingKotaPage() {
         state="Rajasthan"
         localities={kotaLocalities.map((l) => l.name)}
         faqs={faqs}
-        studentCount="2500"
+        studentCount="150000"
         coordinates={{ lat: '25.2138', lng: '75.8648' }}
       />
       {/* Hero Section */}
@@ -296,7 +296,7 @@ export default function NeetCoachingKotaPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
-              Score 340+ in Biology while continuing your Kota PCM coaching. 2,500+ Kota students
+              Score 340+ in Biology while continuing your Kota PCM coaching. 5,000+ Kota students
               trust our specialized Biology program. Fill the Biology gap that most Kota institutes
               miss.
             </p>
@@ -497,7 +497,7 @@ export default function NeetCoachingKotaPage() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-              Why 2,500+ Kota Students Added Cerebrum
+              Why 1,000+ Kota Students Added Cerebrum
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Complement your Kota coaching with specialized Biology excellence.
@@ -678,7 +678,7 @@ export default function NeetCoachingKotaPage() {
               Fill Your Biology Gap - Score 340+ in NEET
             </h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              98% success rate, AIIMS trained faculties, 2,500+ Kota students. Complement your
+              98% success rate, AIIMS trained faculties, 5,000+ Kota students. Complement your
               Kota coaching today!
             </p>
 

@@ -88,7 +88,7 @@ export default function BestZoologyTeacherForNeetPage() {
           >
             <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Trophy className="mr-1 inline h-4 w-4" />
-              2,500+ NEET Selections | 98% Success Rate
+              67+ AIIMS Selections | 98% Success Rate
             </span>
             <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
               Best Zoology Teacher for NEET
@@ -152,7 +152,7 @@ export default function BestZoologyTeacherForNeetPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
+              { icon: Trophy, value: '67+', label: 'AIIMS Selections' },
               { icon: Users, value: '1,50,000+', label: 'Students Taught' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '15+', label: 'Years Teaching NEET' },
@@ -241,7 +241,7 @@ export default function BestZoologyTeacherForNeetPage() {
               {
                 icon: TrendingUp,
                 title: 'Proven Track Record',
-                desc: '2,500+ NEET selections with consistent 98% success rate year after year.',
+                desc: '67+ AIIMS selections with consistent 98% success rate year after year.',
               },
               {
                 icon: BookOpen,

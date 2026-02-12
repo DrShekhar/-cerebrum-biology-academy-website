@@ -138,7 +138,7 @@ export default function NeetOnlinePage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
+              { icon: Trophy, value: '67+', label: 'AIIMS Selections' },
               { icon: Users, value: '1,50,000+', label: 'Online Students' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '24/7', label: 'Access' },

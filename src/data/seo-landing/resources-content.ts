@@ -2730,7 +2730,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '2500+', label: 'Students' },
+      { value: '1,50,000+', label: 'Students' },
       { value: '4.9/5', label: 'Rating' },
       { value: '500+', label: 'Hours' },
       { value: '85%', label: 'Selection Rate' },
@@ -3699,7 +3699,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '2500+', label: 'Students Selected' },
+      { value: '67+', label: 'AIIMS Selections' },
       { value: '85%', label: 'Selection Rate' },
       { value: '70%', label: 'Govt College' },
       { value: '680+', label: 'Top Scores' },

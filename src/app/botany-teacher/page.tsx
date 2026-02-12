@@ -114,7 +114,7 @@ export default function BotanyTeacherPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
+              { icon: Trophy, value: '67+', label: 'AIIMS Selections' },
               { icon: Users, value: '1,50,000+', label: 'Students Taught' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '15+', label: 'Years Experience' },

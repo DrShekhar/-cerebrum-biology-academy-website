@@ -377,7 +377,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               <div className="text-xs text-gray-500">Happy Students</div>
             </div>
             <div className="text-center">
-              <div className="text-lg font-bold text-gray-900">247</div>
+              <div className="text-lg font-bold text-gray-900">67+</div>
               <div className="text-xs text-gray-500">AIIMS Selections</div>
             </div>
             <div className="text-center">

@@ -83,7 +83,7 @@ export function MiniTestimonials({ testimonials }: MiniTestimonialsProps) {
           className="mt-12 text-center"
         >
           <p className="text-white/60">
-            Join <span className="font-semibold text-white">2,500+</span> successful students
+            Join <span className="font-semibold text-white">1,50,000+</span> successful students
           </p>
         </motion.div>
       </div>

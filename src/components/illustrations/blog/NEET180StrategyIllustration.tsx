@@ -375,7 +375,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           fontWeight="bold"
           fontFamily="system-ui, sans-serif"
         >
-          2500+
+          67+
         </text>
         <text
           x="170"

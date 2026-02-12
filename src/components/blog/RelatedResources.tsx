@@ -60,7 +60,7 @@ const hubPages = [
   {
     slug: '/best-biology-teacher-for-neet',
     title: 'Meet Our Expert Faculty',
-    description: 'AIIMS-trained teachers with 2500+ NEET selections',
+    description: 'AIIMS-trained teachers with 67+ AIIMS selections',
     icon: Award,
     color: 'bg-green-50 text-green-600 border-green-200',
     iconBg: 'bg-green-100',

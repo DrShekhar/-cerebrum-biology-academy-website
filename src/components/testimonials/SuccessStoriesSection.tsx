@@ -160,8 +160,8 @@ export function SuccessStoriesSection({
             <div className="text-xs md:text-sm text-gray-600">Success Rate</div>
           </div>
           <div className="text-center bg-white rounded-xl p-4 shadow-md">
-            <div className="text-2xl md:text-3xl font-bold text-purple-600">2,500+</div>
-            <div className="text-xs md:text-sm text-gray-600">Selections</div>
+            <div className="text-2xl md:text-3xl font-bold text-purple-600">67+</div>
+            <div className="text-xs md:text-sm text-gray-600">AIIMS Selections</div>
           </div>
         </motion.div>
 

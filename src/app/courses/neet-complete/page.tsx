@@ -483,7 +483,7 @@ const NEETCompletePage = () => {
                   <div className="text-sm text-blue-200">Success Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">2500+</div>
+                  <div className="text-3xl font-bold text-yellow-400">1,50,000+</div>
                   <div className="text-sm text-blue-200">Students</div>
                 </div>
                 <div className="text-center">
@@ -915,7 +915,7 @@ const NEETCompletePage = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Excel in NEET Biology?</h2>
           <p className="text-xl mb-8">
-            Join 2500+ successful students and achieve your medical college dream
+            Join 1,50,000+ successful students and achieve your medical college dream
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

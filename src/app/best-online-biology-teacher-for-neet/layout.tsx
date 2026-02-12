@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Best Online Biology Teacher for NEET | Cerebrum',
-    description: '2500+ NEET selections. Master Biology (360 marks) with AIIMS faculty online.',
+    description: '67+ AIIMS selections. Master Biology (360 marks) with AIIMS faculty online.',
     images: ['https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=630&fit=crop'],
   },
   alternates: {

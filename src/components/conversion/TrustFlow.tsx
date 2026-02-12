@@ -39,7 +39,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
       icon: Users,
       title: 'Proven Track Record',
       description: 'Our students consistently secure top ranks in NEET with personalized attention',
-      stat: '247 AIIMS Selections',
+      stat: '67+ AIIMS Selections',
     },
     {
       icon: BookOpen,
@@ -61,7 +61,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
   // Counter animation effect
   useEffect(() => {
     if (currentStep === 1) {
-      const targets = { students: 5000, selections: 247, success: 94 }
+      const targets = { students: 5000, selections: 67, success: 98 }
       const duration = 2000 // 2 seconds
 
       const startTime = Date.now()

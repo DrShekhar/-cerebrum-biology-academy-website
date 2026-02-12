@@ -1251,7 +1251,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       ],
     },
     stats: [
-      { value: '2500+', label: 'Students Selected' },
+      { value: '67+', label: 'AIIMS Selections' },
       { value: '4.9/5', label: 'Google Rating' },
       { value: '15', label: 'Max Batch Size' },
       { value: '85%', label: 'Selection Rate' },
@@ -1458,7 +1458,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     },
     stats: [
       { value: '85%', label: 'Success Rate Online' },
-      { value: '2500+', label: 'Online Selections' },
+      { value: '67+', label: 'AIIMS Selections' },
       { value: 'Equal', label: 'Results vs Offline' },
       { value: '60%', label: 'Cost Savings' },
     ],

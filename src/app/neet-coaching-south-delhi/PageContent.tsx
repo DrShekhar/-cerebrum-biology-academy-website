@@ -117,7 +117,7 @@ const southDelhiAreas = [
 
 const nearbySchools = [
   { name: 'DPS RK Puram', location: 'RK Puram', students: '3000+' },
-  { name: 'DPS Vasant Vihar', location: 'Vasant Vihar', students: '2500+' },
+  { name: 'DPS Vasant Vihar', location: 'Vasant Vihar', students: '5,000+' },
   { name: 'Vasant Valley School', location: 'Vasant Kunj', students: '1800+' },
   { name: 'Modern School', location: 'Vasant Vihar', students: '2000+' },
   { name: 'Sanskriti School', location: 'Chanakyapuri', students: '1500+' },
@@ -125,7 +125,7 @@ const nearbySchools = [
 ]
 
 const stats = [
-  { label: 'Students from South Delhi', value: '2,500+' },
+  { label: 'Students from South Delhi', value: '5,000+' },
   { label: 'Success Rate', value: '98%' },
   { label: 'Areas Covered', value: '15+' },
   { label: 'Top 1000 Rankers', value: '180+' },
@@ -1198,7 +1198,7 @@ export default function PageContent() {
               },
               {
                 icon: Users,
-                label: '2,500+ Students',
+                label: '1,50,000+ Students',
                 sublabel: 'From South Delhi',
                 color: 'text-green-600',
               },

@@ -231,7 +231,7 @@ export function EnhancedCourseFinderQuiz({
             '24/7 AI-powered doubt bot',
           ],
           highlights: [
-            '2500+ successful students',
+            '1,50,000+ successful students',
             '94.8% NEET success rate',
             'Premium materials (₹15K value)',
           ],

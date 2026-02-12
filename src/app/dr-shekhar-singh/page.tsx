@@ -152,7 +152,7 @@ export default function DrShekharSinghPage() {
     },
     {
       icon: Users,
-      label: '2,500+ Students',
+      label: '1,50,000+ Students',
       description: 'Successfully Mentored',
     },
     {
@@ -194,7 +194,7 @@ export default function DrShekharSinghPage() {
     name: 'Dr. Shekhar C Singh',
     jobTitle: 'Director & Chief Educator',
     description:
-      'AIIMS faculty with 15+ years of experience, mentored 2500+ NEET aspirants with 98% success rate',
+      'AIIMS faculty with 15+ years of experience, mentored 1,50,000+ NEET aspirants with 98% success rate',
     image:
       'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=571,fit=crop/meP3n6VKelS9LnOn/img-0034-meP3pJDRGxsyRZyy.jpg',
     worksFor: {
@@ -369,9 +369,9 @@ export default function DrShekharSinghPage() {
                   >
                     <div
                       className="text-3xl font-bold text-[#3d4d3d]"
-                      aria-label="2500 plus students"
+                      aria-label="150000 plus students"
                     >
-                      2,500+
+                      1,50,000+
                     </div>
                     <div className="text-xs text-gray-600">Students</div>
                   </div>
@@ -730,7 +730,7 @@ export default function DrShekharSinghPage() {
                     <Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">Mentored 2,500+ Students</h4>
+                    <h4 className="font-semibold text-gray-900">Mentored 1,50,000+ Students</h4>
                     <p className="text-sm text-gray-600">To top medical colleges across India</p>
                   </div>
                 </div>

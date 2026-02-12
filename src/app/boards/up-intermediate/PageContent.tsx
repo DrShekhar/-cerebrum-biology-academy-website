@@ -74,7 +74,7 @@ export default function PageContent() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
             <div className="bg-white rounded-lg p-6 border border-slate-200">
-              <div className="text-3xl font-bold text-pink-600 mb-2">2500+</div>
+              <div className="text-3xl font-bold text-pink-600 mb-2">10,000+</div>
               <p className="text-sm text-slate-600">UP Students Trained</p>
             </div>
             <div className="bg-white rounded-lg p-6 border border-slate-200">
@@ -291,7 +291,7 @@ export default function PageContent() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Large Student Base Success</h3>
                   <p className="text-slate-700">
-                    2500+ UP students trained with 92% board success. 1100+ NEET qualifiers with special focus on UP state quota.
+                    10,000+ UP students trained with 92% board success. 1100+ NEET qualifiers with special focus on UP state quota.
                   </p>
                 </div>
               </div>
@@ -371,7 +371,7 @@ export default function PageContent() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Master UP Board Biology + NEET Today</h2>
           <p className="text-lg text-pink-100 mb-8">
-            Join 2500+ UP students who achieved board excellence and NEET success with Cerebrum. Hindi and English medium available.
+            Join 10,000+ UP students who achieved board excellence and NEET success with Cerebrum. Hindi and English medium available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button

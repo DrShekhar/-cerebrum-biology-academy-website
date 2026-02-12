@@ -21,7 +21,7 @@ const credentials = [
   { label: 'AIIMS Alumni', value: 'Faculty' },
   { label: 'Teaching Experience', value: '15+ Years' },
   { label: 'Students Taught', value: '10,000+' },
-  { label: 'NEET Selections', value: '2,500+' },
+  { label: 'AIIMS Selections', value: '67+' },
   { label: 'Success Rate', value: '98%' },
   { label: 'Average Score Boost', value: '40%' },
 ]

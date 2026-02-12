@@ -71,7 +71,7 @@ const preparationFeatures = [
 ]
 
 const neetStats = [
-  { label: 'NEET Selections', value: '2,500+' },
+  { label: 'AIIMS Selections', value: '67+' },
   { label: 'Students Trained', value: '10,000+' },
   { label: 'Success Rate', value: '98%' },
   { label: 'Average Score Boost', value: '40%' },
@@ -144,7 +144,7 @@ export default function BiologyNeetPreparationPage() {
             </h1>
 
             <h2 className="text-xl md:text-2xl opacity-90 mb-4">
-              360/720 Marks from Biology | 2,500+ NEET Selections | 98% Success Rate
+              360/720 Marks from Biology | 67+ AIIMS Selections | 98% Success Rate
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
@@ -367,7 +367,7 @@ export default function BiologyNeetPreparationPage() {
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 2,500+ successful students who cracked NEET with our expert Biology preparation!
+              Join 1,50,000+ successful students who cracked NEET with our expert Biology preparation!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

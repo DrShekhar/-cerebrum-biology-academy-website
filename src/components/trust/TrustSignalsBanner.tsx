@@ -53,7 +53,7 @@ const trustSignals: TrustSignal[] = [
   },
   {
     id: 'students',
-    value: '2,500+',
+    value: '1,50,000+',
     label: 'Students',
     sublabel: 'Medical admissions in last 5 years',
     icon: Users,
@@ -138,7 +138,7 @@ export function TrustSignalsBanner({
             Verified Trust Signals
           </div>
           <h2 className="text-2xl xs:text-3xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 xs:mb-4">
-            Why 2,500+ Students Trust Us
+            Why 1,50,000+ Students Trust Us
           </h2>
           <p className="text-base xs:text-lg text-gray-600 max-w-2xl mx-auto">
             Every number tells a story of dedication, excellence, and proven results

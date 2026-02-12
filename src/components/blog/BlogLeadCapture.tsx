@@ -29,7 +29,7 @@ const getContentConfig = (category?: string) => {
   }
 
   return {
-    badge: '2,500+ Students Placed',
+    badge: '1,50,000+ Students Trained',
     heading: 'Get Into Your Dream Medical College',
     subheading: 'Expert guidance from',
     highlight: 'AIIMS alumni',

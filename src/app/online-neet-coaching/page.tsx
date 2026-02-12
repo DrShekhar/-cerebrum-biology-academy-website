@@ -63,7 +63,7 @@ const faqs = [
   {
     question: 'What is the best online coaching for NEET?',
     answer:
-      'The best online NEET coaching combines experienced faculty, live interactive classes, comprehensive study material, and proven results. Cerebrum Biology Academy offers all these with AIIMS-trained faculty and 2,500+ NEET selections.',
+      'The best online NEET coaching combines experienced faculty, live interactive classes, comprehensive study material, and proven results. Cerebrum Biology Academy offers all these with AIIMS-trained faculty and 67+ AIIMS selections.',
   },
   {
     question: 'How effective is online NEET coaching compared to offline?',
@@ -123,7 +123,7 @@ export default function OnlineNeetCoachingPage() {
             </h1>
             <p className="mb-8 text-xl text-blue-100">
               Join India&apos;s best online NEET coaching with AIIMS-trained faculty. Live
-              interactive classes, recorded lectures, and complete study material. 2,500+ NEET
+              interactive classes, recorded lectures, and complete study material. 67+ AIIMS
               selections!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -149,7 +149,7 @@ export default function OnlineNeetCoachingPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
             {[
-              { icon: Trophy, value: '2,500+', label: 'NEET Selections' },
+              { icon: Trophy, value: '67+', label: 'AIIMS Selections' },
               { icon: Users, value: '1,50,000+', label: 'Students Online' },
               { icon: Star, value: '98%', label: 'Success Rate' },
               { icon: Clock, value: '500+', label: 'Video Hours' },

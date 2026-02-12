@@ -350,7 +350,7 @@ export function HighConversionLanding({ className = '' }: HighConversionLandingP
             {[
               { value: '12-15%', label: 'Conversion Rate', desc: 'Industry Leading' },
               { value: '2-3min', label: 'Enrollment Time', desc: 'Lightning Fast' },
-              { value: '247', label: 'AIIMS Selections', desc: 'Proven Results' },
+              { value: '67+', label: 'AIIMS Selections', desc: 'Proven Results' },
               { value: '5000+', label: 'Students Enrolled', desc: 'Via Quick Quiz' },
             ].map((stat, index) => (
               <motion.div

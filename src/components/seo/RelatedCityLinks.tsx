@@ -123,7 +123,7 @@ export const cityPages = {
     name: 'Kota',
     href: '/neet-coaching-kota',
     region: 'Rajasthan',
-    students: '2,500+',
+    students: '1,50,000+',
   },
   jaipur: {
     name: 'Jaipur',
@@ -180,7 +180,7 @@ export const cityPages = {
     name: 'Agra',
     href: '/neet-coaching-agra',
     region: 'Uttar Pradesh',
-    students: '2,500+',
+    students: '1,50,000+',
   },
   meerut: {
     name: 'Meerut',

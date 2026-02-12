@@ -178,7 +178,7 @@ export default function NEETCoachingMumbai() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                 {[
                   { number: '98%', label: 'Success Rate', icon: TrendingUp },
-                  { number: '2500+', label: 'Mumbai Students', icon: Users },
+                  { number: '10,000+', label: 'Mumbai Students', icon: Users },
                   { number: '650+', label: 'Avg. NEET Score', icon: Target },
                   { number: '5125', label: 'MH MBBS Seats', icon: Award },
                 ].map((stat, index) => (

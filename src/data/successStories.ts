@@ -422,7 +422,7 @@ export const successAnalyticsData = {
   totalStudents: 150000,
   successRate: 98,
   averageImprovement: 167,
-  topRanks: 247,
+  topRanks: 67,
   batchesCompleted: 28,
   studyMaterials: 156,
   mockTestsCompleted: 24567,

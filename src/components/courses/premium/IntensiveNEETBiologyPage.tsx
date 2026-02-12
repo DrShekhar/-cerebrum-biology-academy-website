@@ -493,7 +493,7 @@ export function IntensiveNEETBiologyPage() {
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
               Dr. Shekhar Singh, AIIMS Delhi alumnus with 14+ years of experience in NEET Biology
-              coaching and 2,500+ successful medical college admissions.
+              coaching and 67+ AIIMS selections.
             </p>
             <a
               href="/dr-shekhar-singh"

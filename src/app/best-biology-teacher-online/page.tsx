@@ -18,7 +18,7 @@ import {
 const teacherCredentials = [
   { icon: GraduationCap, title: 'AIIMS Delhi', desc: 'Medical education background' },
   { icon: Clock, title: '15+ Years', desc: 'Teaching experience' },
-  { icon: Trophy, title: '2,500+', desc: 'NEET selections' },
+  { icon: Trophy, title: '67+', desc: 'AIIMS selections' },
   { icon: Users, title: '1,50,000+', desc: 'Students taught' },
 ]
 
@@ -52,7 +52,7 @@ const teachingMethodology = [
 const whyBestTeacher = [
   { metric: 'Experience', value: '15+ Years', detail: 'Teaching Biology for NEET and Boards' },
   { metric: 'Success Rate', value: '98%', detail: 'Students clearing NEET cutoff' },
-  { metric: 'Selections', value: '2,500+', detail: 'Students in medical colleges' },
+  { metric: 'Selections', value: '67+', detail: 'AIIMS selections' },
   { metric: 'Top AIRs', value: '50+', detail: 'Students in Top 1000 AIR' },
   { metric: 'Rating', value: '4.9/5', detail: 'Average student rating' },
   { metric: 'Reach', value: 'Pan-India', detail: 'Students from all 28 states' },
@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'Who is the best biology teacher online in India?',
     answer:
-      'The best online biology teacher should have strong academic credentials, proven results, and effective teaching methodology. At Cerebrum, our AIIMS-trained faculty with 15+ years experience and 2,500+ NEET selections is considered among the best biology teachers online in India.',
+      'The best online biology teacher should have strong academic credentials, proven results, and effective teaching methodology. At Cerebrum, our AIIMS-trained faculty with 15+ years experience and 67+ AIIMS selections is considered among the best biology teachers online in India.',
   },
   {
     question: 'What makes a biology teacher the best for online classes?',
@@ -122,7 +122,7 @@ export default function BestBiologyTeacherOnlinePage() {
               name: 'Cerebrum Biology Academy',
             },
             description:
-              'AIIMS-trained biology teacher with 15+ years experience and 2500+ NEET selections',
+              'AIIMS-trained biology teacher with 15+ years experience and 67+ AIIMS selections',
             knowsAbout: ['Biology', 'NEET', 'Medical Entrance', 'NCERT Biology'],
           }),
         }}
@@ -147,7 +147,7 @@ export default function BestBiologyTeacherOnlinePage() {
               </h1>
               <p className="mb-8 text-xl text-green-100">
                 Learn from India&apos;s best online biology teacher with AIIMS background. 15+ years
-                of experience, 2,500+ NEET selections, and a teaching methodology that makes biology
+                of experience, 67+ AIIMS selections, and a teaching methodology that makes biology
                 simple and scoring.
               </p>
               <div className="flex flex-wrap gap-4">

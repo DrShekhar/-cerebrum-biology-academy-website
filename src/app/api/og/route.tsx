@@ -249,7 +249,7 @@ export async function GET(request: NextRequest) {
                   color: '#a855f7',
                 }}
               >
-                2500+
+                1,50,000+
               </span>
               <span
                 style={{

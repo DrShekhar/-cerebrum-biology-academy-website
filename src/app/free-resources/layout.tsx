@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Free NEET Biology Resources [Notes, PYQs, Formulas] | Cerebrum',
   description:
-    'Download FREE NEET Biology notes, PYQs, formula sheets & study materials. Used by 2500+ successful students. No login required - start learning now!',
+    'Download FREE NEET Biology notes, PYQs, formula sheets & study materials. Used by 1,50,000+ successful students. No login required - start learning now!',
   keywords: [
     'free NEET biology materials',
     'NEET biology study resources',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Free NEET Biology Resources [Notes, PYQs, Formulas]',
     description:
-      'FREE study materials used by 2500+ successful students. Notes, PYQs, formula sheets!',
+      'FREE study materials used by 1,50,000+ successful students. Notes, PYQs, formula sheets!',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/free-resources',
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free NEET Biology Resources [Notes, PYQs, Formulas] | Cerebrum',
-    description: 'Download FREE NEET Biology notes, PYQs, formula sheets & study materials. Used by 2500+ successful students.',
+    description: 'Download FREE NEET Biology notes, PYQs, formula sheets & study materials. Used by 1,50,000+ successful students.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/free-resources',

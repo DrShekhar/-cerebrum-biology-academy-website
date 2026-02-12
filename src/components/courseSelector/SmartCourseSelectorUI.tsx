@@ -323,7 +323,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
     pinnacle: {
       successRate: 98.5,
       avgRank: 'Top 500',
-      students: '2,500+',
+      students: '1,50,000+',
       colleges: 'AIIMS/Top Medical',
     },
     ascent: {

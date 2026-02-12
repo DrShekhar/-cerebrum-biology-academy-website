@@ -6,7 +6,7 @@ const class11BaseContent = {
   stats: [
     { value: '98%', label: 'Success Rate', icon: 'trophy' },
     { value: '330+', label: 'Avg NEET Score', icon: 'target' },
-    { value: '2,500+', label: 'Students Trained', icon: 'users' },
+    { value: '1,50,000+', label: 'Students Trained', icon: 'users' },
     { value: '45+', label: 'AIIMS Selections', icon: 'award' },
   ],
   testimonials: [
@@ -79,7 +79,7 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
   hero: {
     headline: 'Class 11 is Where NEET Dreams Begin',
     subheadline:
-      "Join 2,500+ successful students who scored 330+ in NEET Biology with Dr. Shekhar's proven methodology",
+      "Join 1,50,000+ successful students who scored 330+ in NEET Biology with Dr. Shekhar's proven methodology",
     highlightedText: "Don't Leave Your Medical Dreams to Chance",
     ctaText: 'View Complete Course Details',
     ctaLink: '/class-11',
@@ -191,7 +191,7 @@ export const neetBiologyCoachingClass11: SEOLandingContent = {
   // CTA
   cta: {
     title: 'Start Your NEET Journey in Class 11',
-    subtitle: 'The earlier you start, the higher you score. Join 2,500+ successful students.',
+    subtitle: 'The earlier you start, the higher you score. Join 1,50,000+ successful students.',
     primaryButton: {
       text: 'View Course & Pricing',
       link: '/class-11',
@@ -272,7 +272,7 @@ export const class11BiologyTuitionOnline: SEOLandingContent = {
 
   benefits: {
     title: 'The Cerebrum Advantage',
-    subtitle: "Why 2,500+ parents trust us with their child's NEET dreams",
+    subtitle: "Why 1,50,000+ parents trust us with their child's NEET dreams",
     items: [
       {
         icon: 'video',

@@ -148,7 +148,7 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
-              <div className="text-3xl font-bold">3,247</div>
+              <div className="text-3xl font-bold">1,000+</div>
               <div className="text-red-100 text-sm">Successful Droppers in 2024</div>
             </div>
             <div className="space-y-2">
@@ -183,7 +183,7 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
             Start Your Success Journey Today
           </button>
           <p className="text-gray-500 text-sm mt-3">
-            Join 3,247 droppers who transformed their NEET journey with us
+            Join 1,000+ droppers who transformed their NEET journey with us
           </p>
         </motion.div>
       </div>

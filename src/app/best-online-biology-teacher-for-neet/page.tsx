@@ -83,7 +83,7 @@ const faqs = [
   {
     question: 'Who is the best online biology teacher for NEET?',
     answer:
-      'The best online biology teacher for NEET should have medical background, deep understanding of NEET pattern, and proven results. At Cerebrum, our AIIMS-trained faculty with 2,500+ NEET selections and 98% success rate is considered among the best NEET biology teachers online.',
+      'The best online biology teacher for NEET should have medical background, deep understanding of NEET pattern, and proven results. At Cerebrum, our AIIMS-trained faculty with 67+ AIIMS selections and 98% success rate is considered among the best NEET biology teachers online.',
   },
   {
     question: 'How important is biology in NEET?',
@@ -148,7 +148,7 @@ export default function BestOnlineBiologyTeacherNEETPage() {
               </h1>
               <p className="mb-8 text-xl text-purple-100">
                 Master NEET Biology with India&apos;s best online biology teacher. 90 questions, 360
-                marks, 50% of NEET - biology decides your rank. 2,500+ NEET selections, 98% success
+                marks, 50% of NEET - biology decides your rank. 67+ AIIMS selections, 98% success
                 rate!
               </p>
               <div className="flex flex-wrap gap-4">

@@ -355,7 +355,7 @@ export function ExitIntentPopup({
                         </div>
                         <div className="flex items-center">
                           <Users className="w-4 h-4 mr-1 text-[#4a5d4a]" />
-                          2,500+ Students
+                          1,50,000+ Students
                         </div>
                       </div>
                     </div>
@@ -413,7 +413,7 @@ export function ExitIntentPopup({
                     </div>
                     <div className="flex items-center">
                       <Users className="w-4 h-4 mr-2" />
-                      <span>2,500+ Students</span>
+                      <span>1,50,000+ Students</span>
                     </div>
                     <div className="flex items-center">
                       <BookOpen className="w-4 h-4 mr-2" />

@@ -431,7 +431,7 @@ export default function NEET2026PreparationPage() {
                     <div className="flex items-center">
                       <Users className="w-3 h-3 sm:w-4 sm:h-4 mr-1 text-[#3d4d3d]" />
                       <span>
-                        <strong>2,500+</strong> enrolled
+                        <strong>1,50,000+</strong> enrolled
                       </span>
                     </div>
                     <div className="flex items-center">

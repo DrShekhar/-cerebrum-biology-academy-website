@@ -37,7 +37,7 @@ const schools = [
     name: 'DPS Vasant Vihar',
     slug: 'dps-vasant-vihar',
     location: 'Vasant Vihar, South Delhi',
-    students: '2,500+',
+    students: '1,50,000+',
     description: 'Premium DPS branch in the elite Vasant Vihar area',
     nearbyAreas: ['Vasant Vihar', 'Vasant Kunj', 'Munirka'],
     rank: 'Top 10 in Delhi',

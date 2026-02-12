@@ -70,7 +70,7 @@ const schoolDetails: Record<
     description: 'Premium DPS branch in elite Vasant Vihar',
     heroDescription:
       'DPS Vasant Vihar students enjoy our specialized NEET coaching with convenient location and timings designed around their school hours.',
-    students: '2,500+',
+    students: '1,50,000+',
     curriculum: 'CBSE',
     timings: '8:00 AM - 2:30 PM',
     nearbyAreas: ['Vasant Vihar', 'Vasant Kunj', 'Munirka', 'RK Puram'],

@@ -58,7 +58,7 @@ const credentials = [
   { label: 'AIIMS Alumni', value: 'Faculty' },
   { label: 'Teaching Experience', value: '15+ Years' },
   { label: 'Students Taught', value: '10,000+' },
-  { label: 'NEET Selections', value: '2,500+' },
+  { label: 'AIIMS Selections', value: '67+' },
   { label: 'Success Rate', value: '98%' },
   { label: 'Average Score Improvement', value: '40%' },
 ]
@@ -260,7 +260,7 @@ export default function BiologyTeacherPage() {
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">Proven Track Record</h3>
                     <p className="text-gray-600">
-                      2,500+ NEET selections with multiple students in top 1000 ranks every year.
+                      67+ AIIMS selections with multiple students in top 1000 ranks every year.
                     </p>
                   </div>
                 </div>

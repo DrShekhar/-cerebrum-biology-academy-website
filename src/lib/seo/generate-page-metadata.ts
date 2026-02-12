@@ -21,7 +21,7 @@ const TYPE_TEMPLATES: Record<PageType, { titleTemplate: string; descriptionTempl
   'biology-tuition': {
     titleTemplate: 'Biology Tuition in {locality} | Class 11-12 & NEET | Cerebrum Academy',
     descriptionTemplate:
-      'Premium biology tuition in {locality} for Class 11, 12 & NEET. Experienced teachers, small batches, interactive learning. 2500+ successful students. Enroll now!',
+      'Premium biology tuition in {locality} for Class 11, 12 & NEET. Experienced teachers, small batches, interactive learning. 1,50,000+ students trained. Enroll now!',
   },
   'neet-preparation': {
     titleTemplate: 'NEET 2026 Preparation in {locality} | Expert Coaching | Cerebrum Academy',

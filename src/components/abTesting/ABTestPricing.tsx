@@ -195,7 +195,7 @@ export function ABTestPricing({ tiers, onEnroll, className = '' }: ABTestPricing
             <div className="text-sm text-gray-600">Success Rate</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-gray-900">2,500+</div>
+            <div className="text-2xl font-bold text-gray-900">1,50,000+</div>
             <div className="text-sm text-gray-600">Students</div>
           </div>
           <div>

@@ -155,7 +155,7 @@ export default function BestBiologyTeacherForNeetPage() {
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-5 h-5 mr-2 text-yellow-300" />
-              2500+ NEET Selections
+              67+ AIIMS Selections
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -199,8 +199,8 @@ export default function BestBiologyTeacherForNeetPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
-                <div className="text-2xl font-bold">2500+</div>
-                <div className="text-sm text-blue-100">NEET Selections</div>
+                <div className="text-2xl font-bold">67+</div>
+                <div className="text-sm text-blue-100">AIIMS Selections</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
@@ -414,7 +414,7 @@ export default function BestBiologyTeacherForNeetPage() {
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to Master NEET Biology?</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
-              Join 2500+ successful students. Book your free demo today!
+              Join 1,50,000+ successful students. Book your free demo today!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

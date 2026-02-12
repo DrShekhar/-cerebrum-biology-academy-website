@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best NEET Coaching in Agra | Uttar Pradesh | Cerebrum Academy',
     description:
-      'Top NEET biology coaching in Agra with 98% success rate. SN Medical College focused preparation! AIIMS faculty, small batches. Join 2,500+ UP students from Tajganj, Civil Lines.',
+      'Top NEET biology coaching in Agra with 98% success rate. SN Medical College focused preparation! AIIMS faculty, small batches. Join 10,000+ UP students from Tajganj, Civil Lines.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-agra',
     siteName: 'Cerebrum Biology Academy',
     locale: 'en_IN',

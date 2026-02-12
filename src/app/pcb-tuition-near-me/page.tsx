@@ -111,7 +111,7 @@ const credentials = [
   { label: 'Faculty', value: 'AIIMS/IIT' },
   { label: 'Experience', value: '15+ Years' },
   { label: 'Students', value: '10,000+' },
-  { label: 'NEET Selections', value: '2,500+' },
+  { label: 'AIIMS Selections', value: '67+' },
   { label: 'Success Rate', value: '98%' },
   { label: 'All 3 Subjects', value: 'PCB' },
 ]
