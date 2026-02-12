@@ -25,17 +25,17 @@ const aboutFaqs = [
   {
     question: 'How long has Cerebrum been operating?',
     answer:
-      'Since 2014 (12 years), Cerebrum has coached 2,847+ students with a 94% NEET qualification rate and 47+ AIIMS selections across 7 campuses.',
+      'Since 2014 (15+ years), Cerebrum has coached 2,847+ students with a 98% NEET qualification rate and 47+ AIIMS selections across 7 campuses.',
   },
   {
     question: 'What makes Cerebrum different?',
     answer:
-      'AIIMS-trained founder, small batches (8-15 students), personalized mentoring, concept-focused teaching, 94% success rate, and affordable fees compared to ₹3-8 lakh competitors.',
+      'AIIMS-trained founder, small batches (8-15 students), personalized mentoring, concept-focused teaching, 98% success rate, and affordable fees compared to ₹3-8 lakh competitors.',
   },
   {
     question: 'What is the success rate?',
     answer:
-      '94% NEET qualification rate, 680+ selections, 47 AIIMS admissions, 12 students scored 700+ in 2024.',
+      '98% NEET qualification rate, 680+ selections, 47 AIIMS admissions, 12 students scored 700+ in 2024.',
   },
   {
     question: 'How can I enroll?',
@@ -47,13 +47,13 @@ const aboutFaqs = [
 export const metadata: Metadata = {
   title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014 | Delhi NCR',
   description:
-    "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ selections, 94% success rate, batches of 8-15 students.",
+    "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ selections, 98% success rate, batches of 8-15 students.",
   keywords:
     'Cerebrum Biology Academy, NEET coaching, AIIMS faculty, Biology tuition, Delhi NCR',
   openGraph: {
     title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014 | Delhi NCR',
     description:
-      "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ selections, 94% success rate.",
+      "Cerebrum Biology Academy: India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers in Delhi NCR, 680+ selections, 98% success rate.",
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/about-cerebrum-biology-academy',
   },
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Cerebrum Biology Academy — NEET Biology Coaching Since 2014',
     description:
-      'Cerebrum: 12 years, 680+ NEET selections, 94% success rate, AIIMS-trained faculty, 6 centers in Delhi NCR.',
+      'Cerebrum: 15+ years, 680+ NEET selections, 98% success rate, AIIMS-trained faculty, 6 centers in Delhi NCR.',
   },
   alternates: {
     canonical: 'https://cerebrumbiologyacademy.com/about-cerebrum-biology-academy',
@@ -122,9 +122,9 @@ export default function AboutCerebrumPage() {
 
   const achievements = [
     {
-      metric: '94%',
+      metric: '98%',
       label: 'NEET Qualification Rate',
-      description: '680+ successful selections over 12 years',
+      description: '680+ successful selections over 15 years',
     },
     {
       metric: '47+',
@@ -477,7 +477,7 @@ export default function AboutCerebrumPage() {
             <div className="border-l-4 border-green-400 pl-6">
               <h3 className="text-xl font-bold mb-3">NEET Success Rate</h3>
               <p className="text-slate-300 mb-4">
-                94% qualification rate (680+ selections) - Highest in coaching industry
+                98% qualification rate (680+ selections) - Highest in coaching industry
                 consistently.
               </p>
             </div>
@@ -651,7 +651,7 @@ export default function AboutCerebrumPage() {
             logo: 'https://cerebrumbiologyacademy.com/logo.png',
             image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
             description:
-              "India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers, 680+ selections, 94% success rate",
+              "India's premier NEET Biology coaching with AIIMS-trained faculty, 6 centers, 680+ selections, 98% success rate",
             telephone: '+91-88264-44334',
             email: 'info@cerebrumbiologyacademy.com',
             foundingDate: '2014',

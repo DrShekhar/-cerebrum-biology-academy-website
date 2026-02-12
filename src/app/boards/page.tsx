@@ -81,7 +81,7 @@ export default function BoardPreparationPage() {
   ]
 
   const successStats = [
-    { number: '94%', label: 'Board Success Rate', description: 'Students scoring 85+ marks' },
+    { number: '98%', label: 'Board Success Rate', description: 'Students scoring 85+ marks' },
     { number: '4900+', label: 'Students Coached', description: 'Across all boards' },
     { number: '89', label: 'Average Score', description: 'Board Biology marks' },
     { number: '15+', label: 'Years Experience', description: 'Teaching all boards' },

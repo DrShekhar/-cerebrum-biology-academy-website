@@ -98,7 +98,7 @@ export default function StateBoardsPage() {
   ]
 
   const successStats = [
-    { number: '94%', label: 'Pass Rate', description: 'Students scoring 80+ marks' },
+    { number: '98%', label: 'Pass Rate', description: 'Students scoring 80+ marks' },
     { number: '1800+', label: 'State Board Students', description: 'Across all states' },
     { number: '12', label: 'States Covered', description: 'Major state boards' },
     { number: '83.5', label: 'Average Score', description: 'State board Biology marks' },

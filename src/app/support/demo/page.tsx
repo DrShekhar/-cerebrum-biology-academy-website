@@ -75,7 +75,7 @@ export default function DemoPage() {
     },
     {
       name: 'Dr. Rajesh Kumar',
-      qualification: 'M.Sc. Zoology, 12+ years experience',
+      qualification: 'M.Sc. Zoology, 15+ years experience',
       specialization: 'Human Physiology & Genetics',
       image: '/faculty/dr-rajesh-kumar.jpg',
     },

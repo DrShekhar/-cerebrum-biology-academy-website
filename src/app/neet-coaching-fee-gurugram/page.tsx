@@ -254,7 +254,7 @@ export default function NEETCoachingFeeGurugram() {
             </Link>
             <Link href="/neet-result-2025-gurugram" className="bg-purple-50 p-4 rounded-lg hover:bg-purple-100 transition text-center">
               <h3 className="font-semibold text-purple-800">2025 Results</h3>
-              <p className="text-sm text-gray-600">97% success rate</p>
+              <p className="text-sm text-gray-600">98% success rate</p>
             </Link>
             <Link href="/which-is-better-aakash-or-allen-gurugram" className="bg-amber-50 p-4 rounded-lg hover:bg-amber-100 transition text-center">
               <h3 className="font-semibold text-amber-800">Institute Comparison</h3>

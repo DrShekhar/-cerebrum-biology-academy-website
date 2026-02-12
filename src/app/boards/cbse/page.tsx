@@ -133,7 +133,7 @@ export default function CBSEBiologyPage() {
     { number: '96%', label: 'Students Score 90+', description: 'In CBSE Biology exam' },
     { number: '2000+', label: 'CBSE Students', description: 'Successfully coached' },
     { number: '89.2', label: 'Average Score', description: 'CBSE Biology marks' },
-    { number: '94%', label: 'NEET Qualification', description: 'From CBSE students' },
+    { number: '98%', label: 'NEET Qualification', description: 'From CBSE students' },
   ]
 
   const teachingApproach = [

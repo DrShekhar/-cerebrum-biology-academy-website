@@ -180,7 +180,7 @@ export default function OnlineBiologyClassesNRIPage() {
             {[
               { icon: Users, value: '11,500+', label: 'NRI Students' },
               { icon: Globe, value: '40+', label: 'Countries' },
-              { icon: Trophy, value: '97%', label: 'Success Rate' },
+              { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Star, value: '4.9/5', label: 'Parent Rating' },
             ].map((stat, index) => (
               <motion.div

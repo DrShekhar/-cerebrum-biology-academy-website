@@ -113,7 +113,7 @@ export default function IBBiologyPage() {
     { value: '89%', label: 'Score 6-7', sublabel: 'Top IB grades' },
     { value: '6.3', label: 'Avg Score', sublabel: 'Out of 7 points' },
     { value: '500+', label: 'IB Students', sublabel: 'Globally coached' },
-    { value: '94%', label: 'University', sublabel: 'Top admissions' },
+    { value: '98%', label: 'University', sublabel: 'Top admissions' },
   ]
 
   const trustBadges = [

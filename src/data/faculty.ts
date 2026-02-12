@@ -31,7 +31,7 @@ export const facultyMembers: Faculty[] = [
     id: 'dr-priya-sharma',
     name: 'Dr. Priya Sharma',
     qualification: 'MSc Botany (JNU), PhD Plant Physiology (IISc)',
-    experience: '12+ years',
+    experience: '15+ years',
     specialization: ['Plant Biology', 'Ecology', 'Genetics'],
     image: '/faculty/dr-priya-sharma.jpg',
     designation: 'Senior Faculty - Botany',

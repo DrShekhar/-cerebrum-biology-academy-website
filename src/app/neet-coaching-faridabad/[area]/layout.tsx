@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!areaData) {
     return {
       title: 'NEET Coaching in Faridabad | Cerebrum Biology Academy',
-      description: 'Best NEET coaching in Faridabad with 94% success rate.',
+      description: 'Best NEET coaching in Faridabad with 98% success rate.',
     }
   }
 

@@ -221,7 +221,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Tricity transport time calculator',
       'Success stories from 780+ Tricity students',
     ],
-    socialProof: 'Downloaded by 2,500+ Chandigarh Tricity students',
+    socialProof: 'Downloaded by 1,50,000+ Chandigarh Tricity students',
   },
   {
     id: 'pgimer-gmch-roadmap',

@@ -245,7 +245,7 @@ export function CourseSchema() {
       name: 'Cerebrum Biology Academy',
       sameAs: 'https://cerebrumbiologyacademy.com',
     },
-    datePublished: '2014-06-01',
+    datePublished: '2010-06-01',
     dateModified: new Date().toISOString().split('T')[0],
     // aggregateRating removed — OrganizationSchema already includes it globally
     hasCourseInstance: [
@@ -302,7 +302,7 @@ export function FAQSchema() {
         name: 'What is the success rate of Cerebrum Biology Academy?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Cerebrum Biology Academy has a 98% success rate with 500+ students selected annually for medical colleges. Over 2000+ students have been mentored successfully for NEET examinations since 2015.',
+          text: 'Cerebrum Biology Academy has a 98% success rate with 67+ AIIMS selections. Over 1,50,000+ students have been mentored successfully for NEET examinations since 2010.',
         },
       },
       {

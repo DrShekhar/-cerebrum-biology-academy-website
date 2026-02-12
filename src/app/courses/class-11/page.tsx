@@ -199,7 +199,7 @@ export default function Class11BiologyPage() {
     {
       name: 'Dr. Priya Sharma',
       qualification: 'PhD Botany, DU',
-      experience: '12+ years coaching',
+      experience: '15+ years coaching',
       specialty: 'Plant Biology Specialist',
     },
     {
@@ -238,7 +238,7 @@ export default function Class11BiologyPage() {
   ]
 
   const successStats = [
-    { number: '94%', label: 'Board Exam Success', description: 'Students scoring 90+' },
+    { number: '98%', label: 'Board Exam Success', description: 'Students scoring 90+' },
     { number: '88%', label: 'NEET Foundation', description: 'Strong conceptual clarity' },
     { number: '2000+', label: 'Students Taught', description: 'Since 2018' },
     { number: '4.9/5', label: 'Student Rating', description: 'Google Reviews' },
@@ -438,7 +438,7 @@ export default function Class11BiologyPage() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-semibold">94% Success Rate</h4>
+                    <h4 className="font-semibold">98% Success Rate</h4>
                     <p className="text-gray-300 text-sm">Our Class 11 starters top NEET</p>
                   </div>
                 </div>

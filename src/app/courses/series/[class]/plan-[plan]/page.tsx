@@ -354,7 +354,7 @@ export default function PlanDetailsPage() {
 
                 <div className="mt-6 text-center text-white/80 text-sm">
                   <p>
-                    💯 94% NEET qualification rate • 🎯 Personalized attention • 📚 Complete study
+                    💯 98% NEET qualification rate • 🎯 Personalized attention • 📚 Complete study
                     materials
                   </p>
                 </div>

@@ -4,7 +4,7 @@ import { Check, X } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',
-  description: 'Detailed comparison of Cerebrum Biology Academy vs Aakash Institute for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 94% success rate.',
+  description: 'Detailed comparison of Cerebrum Biology Academy vs Aakash Institute for NEET coaching. Compare faculty, fees, results, and why Cerebrum specializes in Biology with 98% success rate.',
   keywords: 'cerebrum vs aakash, aakash vs cerebrum, NEET coaching comparison, Biology coaching, Delhi NCR',
   openGraph: {
     title: 'Cerebrum vs Aakash: Which is Better for NEET Biology 2026?',
@@ -21,7 +21,7 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     question: 'Is Cerebrum better than Aakash for NEET Biology?',
-    answer: 'Cerebrum specializes exclusively in Biology and leverages AIIMS-trained faculty, making it superior for students prioritizing Biology mastery. With a 94% selection rate and average 120+ marks improvement in Biology, Cerebrum offers focused expertise. Aakash covers all NEET subjects, which may work better if you need comprehensive subject coverage. The choice depends on your Biology proficiency and goals.',
+    answer: 'Cerebrum specializes exclusively in Biology and leverages AIIMS-trained faculty, making it superior for students prioritizing Biology mastery. With a 98% selection rate and average 120+ marks improvement in Biology, Cerebrum offers focused expertise. Aakash covers all NEET subjects, which may work better if you need comprehensive subject coverage. The choice depends on your Biology proficiency and goals.',
   },
   {
     question: 'What is the fee difference between Cerebrum and Aakash?',
@@ -301,7 +301,7 @@ export default function CerebrumVsAakash() {
                   </div>
                   <div className="bg-white p-4 rounded border border-blue-200">
                     <p className="text-sm text-gray-700">
-                      <strong>Value Add:</strong> Better ROI through focused Biology training with proven 94% selection rate
+                      <strong>Value Add:</strong> Better ROI through focused Biology training with proven 98% selection rate
                     </p>
                   </div>
                 </div>
@@ -392,7 +392,7 @@ export default function CerebrumVsAakash() {
               </div>
             </div>
             <p className="mt-6 text-gray-700 text-base">
-              <strong>Verdict:</strong> Cerebrum's 94% selection rate demonstrates focused excellence in Biology training. Aakash's track record is solid but distributed across multiple subjects. For Biology-specific improvements, Cerebrum's specialized approach shows measurable advantages.
+              <strong>Verdict:</strong> Cerebrum's 98% selection rate demonstrates focused excellence in Biology training. Aakash's track record is solid but distributed across multiple subjects. For Biology-specific improvements, Cerebrum's specialized approach shows measurable advantages.
             </p>
           </div>
 
@@ -560,7 +560,7 @@ export default function CerebrumVsAakash() {
                       Biology-Focused Curriculum
                     </p>
                     <p className="text-gray-700 text-sm">
-                      Specialized coaching for Biology with 94% selection rate proves the effectiveness of focused expertise over generalized approaches.
+                      Specialized coaching for Biology with 98% selection rate proves the effectiveness of focused expertise over generalized approaches.
                     </p>
                   </div>
                 </li>
@@ -675,7 +675,7 @@ export default function CerebrumVsAakash() {
             Ready to Master Biology for NEET?
           </h2>
           <p className="text-lg text-blue-100 mb-8">
-            Join Cerebrum Biology Academy and experience AIIMS-trained coaching with proven 94% selection rate.
+            Join Cerebrum Biology Academy and experience AIIMS-trained coaching with proven 98% selection rate.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

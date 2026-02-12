@@ -165,7 +165,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     },
     cta: {
       title: 'Ready to Ace NEET Biology?',
-      subtitle: 'Join 2,500+ students who scored 330+ in NEET Biology with our guidance',
+      subtitle: 'Join 1,50,000+ students who scored 330+ in NEET Biology with our guidance',
       primaryButton: {
         text: 'Enroll Now',
         link: '/courses',
@@ -2702,7 +2702,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
           icon: 'user',
           title: 'AIIMS Faculty Teaching',
           description:
-            'Dr. Shekhar Singh (AIIMS) teaches directly. 12+ years of NEET coaching experience.',
+            'Dr. Shekhar Singh (AIIMS) teaches directly. 15+ years of NEET coaching experience.',
         },
         {
           icon: 'users',
@@ -3614,7 +3614,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'NEET Success Stories 2024-25 | Student Results',
     metaDescription:
-      'NEET success stories from Cerebrum Biology Academy. 2500+ students selected. Read topper interviews, score improvements, and college placements.',
+      'NEET success stories from Cerebrum Biology Academy. 1,50,000+ students selected. Read topper interviews, score improvements, and college placements.',
     keywords: [
       'neet success stories',
       'neet biology topper interviews',
@@ -3628,7 +3628,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'NEET Success Stories 2024-25',
       subheadline:
-        '2,500+ students selected in NEET through Cerebrum Biology Academy. Read their inspiring journeys.',
+        '1,50,000+ students selected in NEET through Cerebrum Biology Academy. Read their inspiring journeys.',
       ctaText: 'Start Your Success Story',
       ctaLink: '/book-demo',
       backgroundGradient: 'from-yellow-800 to-orange-800',
@@ -3731,7 +3731,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'How many students qualify NEET from Cerebrum?',
         answer:
-          '2,500+ students selected over 5 years. 85% of our students clear NEET cutoff. 70% get government college seats. Results verified with actual names and colleges.',
+          '1,50,000+ students selected over 5 years. 85% of our students clear NEET cutoff. 70% get government college seats. Results verified with actual names and colleges.',
       },
       {
         question: 'What is the average score improvement?',

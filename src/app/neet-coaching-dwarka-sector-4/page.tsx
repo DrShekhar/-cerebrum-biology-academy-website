@@ -24,7 +24,7 @@ const structuredData = {
   '@type': 'EducationalOrganization',
   name: 'Cerebrum Biology Academy - NEET Coaching Dwarka Sector 4',
   description:
-    'Best NEET biology coaching for Dwarka Sector 4 students. Expert AIIMS Trained faculty, 94% success rate. Online + Offline classes. 30 min from Rohini center via Blue Line Metro.',
+    'Best NEET biology coaching for Dwarka Sector 4 students. Expert AIIMS Trained faculty, 98% success rate. Online + Offline classes. 30 min from Rohini center via Blue Line Metro.',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-dwarka-sector-4',
   telephone: '+91-8826444334',
   address: {
@@ -53,7 +53,7 @@ const faqStructuredData = {
       name: 'Which is the best NEET coaching for Dwarka Sector 4 students?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum Biology Academy offers specialized NEET biology coaching for Dwarka Sector 4 students with 94% success rate. Our Rohini DC Chauk center is accessible via Blue Line Metro from Dwarka Mor station in about 30 minutes. We also offer online classes for students who prefer studying from home.',
+        text: 'Cerebrum Biology Academy offers specialized NEET biology coaching for Dwarka Sector 4 students with 98% success rate. Our Rohini DC Chauk center is accessible via Blue Line Metro from Dwarka Mor station in about 30 minutes. We also offer online classes for students who prefer studying from home.',
       },
     },
     {

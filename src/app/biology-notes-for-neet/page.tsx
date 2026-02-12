@@ -730,7 +730,7 @@ export default function BiologyNotesForNEETPage() {
         name: 'Who writes these NEET biology notes?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'All notes are prepared by Dr. Shekhar, an AIIMS-qualified biology faculty with over 10 years of NEET coaching experience. The notes incorporate insights from analyzing 15+ years of NEET previous year questions.',
+          text: 'All notes are prepared by Dr. Shekhar, an AIIMS-qualified biology faculty with over 15 years of NEET coaching experience. The notes incorporate insights from analyzing 15+ years of NEET previous year questions.',
         },
       },
     ],

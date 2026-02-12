@@ -83,7 +83,7 @@ const metroStations = [
 
 const successStats = [
   { label: 'West Delhi Students', value: '750+', icon: Users },
-  { label: 'Success Rate', value: '97%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'NEET Selections', value: '520+', icon: Award },
   { label: 'Google Rating', value: '4.9', icon: Star },
 ]
@@ -92,7 +92,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching near Tagore Garden, Delhi?',
     answer:
-      'Cerebrum Biology Academy is rated the best NEET coaching accessible from Tagore Garden with 97% success rate. We have 750+ students from West Delhi areas including Tagore Garden, Rajouri Garden, Janakpuri, and Punjabi Bagh. Our AIIMS-trained faculty and small batch sizes (15-20 students) ensure personalized attention for every student.',
+      'Cerebrum Biology Academy is rated the best NEET coaching accessible from Tagore Garden with 98% success rate. We have 750+ students from West Delhi areas including Tagore Garden, Rajouri Garden, Janakpuri, and Punjabi Bagh. Our AIIMS-trained faculty and small batch sizes (15-20 students) ensure personalized attention for every student.',
   },
   {
     question: 'How far is Cerebrum Academy from Tagore Garden?',
@@ -180,7 +180,7 @@ export default function NEETCoachingTagoreGardenPage() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto hero-description">
-              Join 750+ NEET aspirants from West Delhi. Expert AIIMS faculty, 97% success rate, live
+              Join 750+ NEET aspirants from West Delhi. Expert AIIMS faculty, 98% success rate, live
               online classes accessible from Kohli One Westend Greens, MIG Flats Extension &amp; all
               premium West Delhi localities. Just 20 minutes from Rohini via Metro.
             </p>
@@ -244,7 +244,7 @@ export default function NEETCoachingTagoreGardenPage() {
               Cerebrum Biology Academy offers the best NEET coaching for students in Tagore Garden, West Delhi.
               Our Rohini center is just 20 minutes away via Blue Line Metro. We serve 750+ students from
               Tagore Garden Extension, Kohli One Westend Greens, MIG Flats, Rajouri Garden, Janakpuri, and
-              surrounding areas. With 97% success rate, AIIMS-trained faculty, and flexible online/offline
+              surrounding areas. With 98% success rate, AIIMS-trained faculty, and flexible online/offline
               options, we provide comprehensive NEET Biology preparation. Call +91 88264 44334 or book a
               free demo class today.
             </p>

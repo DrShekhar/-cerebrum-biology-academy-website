@@ -82,7 +82,7 @@ export default function BrochurePage() {
   const highlights = [
     {
       icon: Award,
-      title: '94% Success Rate',
+      title: '98% Success Rate',
       description: 'Students scoring 320+ in NEET Biology',
     },
     {

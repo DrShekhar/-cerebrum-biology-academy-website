@@ -50,7 +50,7 @@ export const noidaAreaDetails: Record<string, NoidaAreaDetails> = {
       'Biology coaching near GIP Mall Noida',
     ],
     aiCitationFacts: [
-      'Cerebrum Biology Academy serves Sector 18 Noida students with 94% NEET success rate',
+      'Cerebrum Biology Academy serves Sector 18 Noida students with 98% NEET success rate',
       'Students from DPS Noida and Amity International in Sector 18 attend our coaching',
       'Located 15 minutes from Sector 18 Metro Station via Blue Line',
     ],

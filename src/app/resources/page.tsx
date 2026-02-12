@@ -131,8 +131,8 @@ const FreeResourcesHub = () => {
             {/* Quick Stats */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-2xl mx-auto">
               <div className="bg-white/20 rounded-lg p-4">
-                <div className="text-2xl font-bold">50,000+</div>
-                <div className="text-sm opacity-90">Free Users</div>
+                <div className="text-2xl font-bold">1,50,000+</div>
+                <div className="text-sm opacity-90">Students</div>
               </div>
               <div className="bg-white/20 rounded-lg p-4">
                 <div className="text-2xl font-bold">10,000+</div>
@@ -284,7 +284,7 @@ const FreeResourcesHub = () => {
         <div className="bg-indigo-500 rounded-xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">🚀 Ready to Accelerate Your Biology Learning?</h3>
           <p className="text-lg mb-6 max-w-2xl mx-auto">
-            Join 50,000+ students who are already using our free resources to excel in Biology.
+            Join 1,50,000+ students who are already using our free resources to excel in Biology.
             Start your journey to academic success today!
           </p>
 

@@ -515,7 +515,7 @@ export const localities: Locality[] = [
       {
         question: 'What is your success rate with Vasant Vihar students?',
         answer:
-          'We have coached 145+ students from Vasant Vihar with a 94% success rate (students scoring 335+). Our personalized approach works exceptionally well with Vasant Vihar students who value quality education.',
+          'We have coached 145+ students from Vasant Vihar with a 98% success rate (students scoring 335+). Our personalized approach works exceptionally well with Vasant Vihar students who value quality education.',
       },
       {
         question: 'Do you offer flexible timings for Vasant Vihar students?',
@@ -8054,7 +8054,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 17 Faridabad | Our Center | Best Faculty',
       description:
-        'Best NEET Biology coaching in Sector 17 Faridabad - OUR CENTER LOCATION. Near HUDA Complex, Bata Chowk Metro. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 17 Faridabad - OUR CENTER LOCATION. Near HUDA Complex, Bata Chowk Metro. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 17 faridabad',
         'biology coaching faridabad center',
@@ -8091,7 +8091,7 @@ export const localities: Locality[] = [
       valueProposition: 'Our flagship Faridabad center serving the entire city',
       urgencyMessage: 'Visit our center for a free demo class today!',
       localChallenge: 'The most accessible location for all Faridabad students',
-      successMetric: '94% success rate from our Sector 17 center',
+      successMetric: '98% success rate from our Sector 17 center',
     },
     socialProof: {
       studentCount: 320,
@@ -8124,7 +8124,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching for BPTP Parklands Faridabad | Premium Coaching',
       description:
-        'Premium NEET Biology coaching for BPTP Parklands residents. Elite families deserve elite coaching. 94% success rate. Book free demo!',
+        'Premium NEET Biology coaching for BPTP Parklands residents. Elite families deserve elite coaching. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching bptp parklands',
         'biology coaching greater faridabad',
@@ -8194,7 +8194,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching for Omaxe Heights Faridabad | Expert Faculty',
       description:
-        'Best NEET Biology coaching for Omaxe Heights residents. Quality coaching for quality families. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching for Omaxe Heights residents. Quality coaching for quality families. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching omaxe heights faridabad',
         'biology coaching sector 77',
@@ -8264,7 +8264,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching for RPS Palms Faridabad | Top Faculty',
       description:
-        'Best NEET Biology coaching for RPS Palms residents. Green township deserves quality education. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching for RPS Palms residents. Green township deserves quality education. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching rps palms faridabad',
         'biology coaching sector 76',
@@ -8334,7 +8334,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching near Crown Interiorz Mall Faridabad | Best Faculty',
       description:
-        'Best NEET Biology coaching near Crown Interiorz Mall Faridabad. Premium area students. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching near Crown Interiorz Mall Faridabad. Premium area students. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching crown interiorz faridabad',
         'biology coaching sector 86',
@@ -8404,7 +8404,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Surajkund Faridabad | Expert Faculty',
       description:
-        'Best NEET Biology coaching in Surajkund Faridabad. Scenic area students. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Surajkund Faridabad. Scenic area students. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching surajkund faridabad',
         'biology coaching surajkund',
@@ -8474,7 +8474,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Badkhal Faridabad | Near Metro',
       description:
-        'Best NEET Biology coaching in Badkhal Faridabad. Near Badkhal Mor Metro. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Badkhal Faridabad. Near Badkhal Mor Metro. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching badkhal faridabad',
         'biology coaching badkhal',
@@ -8544,7 +8544,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 21 Faridabad | MVN School Area',
       description:
-        'Best NEET Biology coaching in Sector 21 Faridabad. MVN School, Greenfields area. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 21 Faridabad. MVN School, Greenfields area. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 21 faridabad',
         'biology coaching mvn school area',
@@ -8614,7 +8614,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 28 Faridabad | Metro Connected',
       description:
-        'Best NEET Biology coaching in Sector 28 Faridabad. Near Sector 28 Metro. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 28 Faridabad. Near Sector 28 Metro. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 28 faridabad',
         'biology coaching sector 28 metro',
@@ -8684,7 +8684,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 75 Faridabad | BPTP Parklands Area',
       description:
-        'Best NEET Biology coaching in Sector 75 Greater Faridabad. BPTP Parklands residents. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 75 Greater Faridabad. BPTP Parklands residents. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 75 faridabad',
         'biology coaching bptp parklands',
@@ -8754,7 +8754,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 84 Faridabad | Omaxe New Heights',
       description:
-        'Best NEET Biology coaching in Sector 84 Greater Faridabad. Omaxe New Heights residents. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 84 Greater Faridabad. Omaxe New Heights residents. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 84 faridabad',
         'biology coaching omaxe new heights',
@@ -8824,7 +8824,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 29 Faridabad | Near Metro',
       description:
-        'Best NEET Biology coaching in Sector 29 Faridabad. Near Sector 28 Metro. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 29 Faridabad. Near Sector 28 Metro. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 29 faridabad',
         'biology coaching sector 29',
@@ -8894,7 +8894,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 31 Faridabad | NHPC Colony Area',
       description:
-        'Best NEET Biology coaching in Sector 31 Faridabad. NHPC Colony residents. Near NHPC Chowk Metro. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 31 Faridabad. NHPC Colony residents. Near NHPC Chowk Metro. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 31 faridabad',
         'biology coaching nhpc colony',
@@ -8964,7 +8964,7 @@ export const localities: Locality[] = [
     seo: {
       title: 'NEET Biology Coaching in Sector 37 Faridabad | Industrial Area',
       description:
-        'Best NEET Biology coaching in Sector 37 Faridabad. Industrial area families. Affordable fees. 94% success rate. Book free demo!',
+        'Best NEET Biology coaching in Sector 37 Faridabad. Industrial area families. Affordable fees. 98% success rate. Book free demo!',
       keywords: [
         'neet coaching sector 37 faridabad',
         'biology coaching industrial area',

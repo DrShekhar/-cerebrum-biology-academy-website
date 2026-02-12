@@ -79,7 +79,7 @@ const nearbySchools = [
 
 const stats = [
   { label: 'Students from Civil Lines', value: '180+' },
-  { label: 'Success Rate', value: '94%' },
+  { label: 'Success Rate', value: '98%' },
   { label: 'Metro Stations Away', value: '8' },
   { label: 'Top 1000 Rankers', value: '45+' },
 ]
@@ -167,7 +167,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             <p className="hero-description text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto speakable-intro">
               Join Delhi's most trusted NEET Biology coaching. Civil Lines' ultra-premium families
               trust us for academic excellence. Direct Yellow Line Metro to our Rohini DC Chauk
-              center - just 8 stops, 20 minutes! AIIMS faculty, 94% success rate, small batches of
+              center - just 8 stops, 20 minutes! AIIMS faculty, 98% success rate, small batches of
               15-20 students.
             </p>
 
@@ -357,7 +357,7 @@ export default function PageContent({ faqs }: PageContentProps) {
                   },
                   {
                     icon: Trophy,
-                    title: '94% Success Rate',
+                    title: '98% Success Rate',
                     desc: 'Top score 695/720 in NEET Biology',
                   },
                   {
@@ -713,7 +713,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               'Direct Yellow Line Metro access',
               'Small batches (15-20 students)',
               'Weekend & evening batches',
-              '94% NEET success rate',
+              '98% NEET success rate',
               'Personalized mentoring',
               'Hybrid mode available',
               'Regular progress reports',
@@ -1133,7 +1133,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             '@type': 'EducationalOrganization',
             name: 'Cerebrum Biology Academy - NEET Coaching for Civil Lines Delhi',
             description:
-              'Best NEET coaching for Civil Lines Delhi students. Ultra-premium area with direct Yellow Line Metro access. 94% success rate, AIIMS faculty.',
+              'Best NEET coaching for Civil Lines Delhi students. Ultra-premium area with direct Yellow Line Metro access. 98% success rate, AIIMS faculty.',
             url: 'https://cerebrumbiologyacademy.com/neet-coaching-civil-lines-delhi',
             areaServed: [
               'Civil Lines',

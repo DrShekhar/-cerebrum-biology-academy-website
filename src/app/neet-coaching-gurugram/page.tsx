@@ -1737,7 +1737,7 @@ export default function NeetCoachingGurugramPage() {
           <div className="grid md:grid-cols-4 gap-4 mt-4">
             <Link href="/neet-result-2025-gurugram" className="bg-green-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-green-100">
               <h3 className="font-semibold text-green-700">NEET 2025 Results</h3>
-              <p className="text-sm text-gray-600">97% success rate</p>
+              <p className="text-sm text-gray-600">98% success rate</p>
             </Link>
             <Link href="/neet-topper-interview-gurugram" className="bg-purple-50 p-4 rounded-xl hover:shadow-md transition-shadow border border-purple-100">
               <h3 className="font-semibold text-purple-700">Topper Interviews</h3>

@@ -29,7 +29,7 @@ export const NOIDA_COMPREHENSIVE_FAQS = {
     {
       question: 'How many students from Noida got AIIMS selection?',
       answer:
-        '23 students from Noida/Greater Noida got AIIMS selection in 2025. Since 2014, 500+ Cerebrum students have been selected to AIIMS across India. Our AIIMS selection rate is 15% - highest among Noida coaching institutes.',
+        '23 students from Noida/Greater Noida got AIIMS selection in 2025. Since 2010, 67+ Cerebrum students have been selected to AIIMS across India. Our AIIMS selection rate is 15% - highest among Noida coaching institutes.',
     },
     {
       question: 'What is the average NEET score of Cerebrum Noida students?',

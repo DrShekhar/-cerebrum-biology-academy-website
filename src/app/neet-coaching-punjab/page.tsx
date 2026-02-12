@@ -106,7 +106,7 @@ const features = [
 
 const successMetrics = [
   { label: 'Punjab Students', value: '760+', icon: Users },
-  { label: 'Success Rate', value: '94%', icon: Trophy },
+  { label: 'Success Rate', value: '98%', icon: Trophy },
   { label: 'DMC/GMC Selections', value: '45+', icon: GraduationCap },
   { label: 'Average Improvement', value: '95 marks', icon: Star },
 ]
@@ -187,7 +187,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching for Punjab students?',
     answer:
-      'Cerebrum Biology Academy is the top choice for Punjab students with 760+ enrolled from across the state. Our online live classes bring AIIMS-quality coaching to your home - no need to relocate to Chandigarh or Kota. 94% success rate, small batches of 10-15 students.',
+      'Cerebrum Biology Academy is the top choice for Punjab students with 760+ enrolled from across the state. Our online live classes bring AIIMS-quality coaching to your home - no need to relocate to Chandigarh or Kota. 98% success rate, small batches of 10-15 students.',
   },
   {
     question: 'Do I need to go to Chandigarh for good NEET coaching?',
@@ -212,7 +212,7 @@ const faqs = [
   {
     question: 'Is online coaching effective for NEET preparation?',
     answer:
-      'Absolutely! Our 94% success rate proves online coaching works. Live interactive classes (not recorded), instant doubt resolution, WhatsApp support 24/7, recorded sessions for revision. 760+ Punjab students enrolled and succeeding.',
+      'Absolutely! Our 98% success rate proves online coaching works. Live interactive classes (not recorded), instant doubt resolution, WhatsApp support 24/7, recorded sessions for revision. 760+ Punjab students enrolled and succeeding.',
   },
   {
     question: 'Which cities in Punjab do you serve?',
@@ -319,7 +319,7 @@ export default function NEETCoachingPunjabPage() {
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-3xl mx-auto">
               Premium online NEET Biology coaching for Punjab students. No need to relocate to
-              Chandigarh or Kota. AIIMS faculty, 94% success rate. Target DMC Ludhiana, GMC Amritsar,
+              Chandigarh or Kota. AIIMS faculty, 98% success rate. Target DMC Ludhiana, GMC Amritsar,
               GMC Patiala from your home!
             </p>
 

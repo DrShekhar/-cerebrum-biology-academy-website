@@ -647,7 +647,7 @@ export default async function GurugramAreaPage({ params }: PageProps) {
     '@id': 'https://cerebrumbiologyacademy.com/#website',
     url: 'https://cerebrumbiologyacademy.com',
     name: 'Cerebrum Biology Academy',
-    description: 'Best NEET Biology Coaching in Gurugram with 94% success rate',
+    description: 'Best NEET Biology Coaching in Gurugram with 98% success rate',
     publisher: { '@id': organizationId },
     inLanguage: 'en-IN',
     potentialAction: {

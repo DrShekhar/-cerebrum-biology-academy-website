@@ -974,7 +974,7 @@ export const microLocationAreas: LocalArea[] = [
       'Expert biology coaching in Punjabi Bagh for NEET preparation. Premium residential area location, experienced faculty, proven results.',
     metaTitle: 'Biology Coaching Punjabi Bagh Delhi | NEET Classes | Cerebrum Academy',
     metaDescription:
-      'Top biology coaching in Punjabi Bagh. Expert NEET preparation with 97% success rate. Club Road location. Enroll now!',
+      'Top biology coaching in Punjabi Bagh. Expert NEET preparation with 98% success rate. Club Road location. Enroll now!',
     keywords: [
       'biology coaching punjabi bagh',
       'neet classes punjabi bagh delhi',

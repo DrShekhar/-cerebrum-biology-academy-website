@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Best NEET Coaching in Punjab 2026 | Online Biology Classes | Cerebrum Academy',
   description:
-    'Top NEET Biology coaching in Punjab with AIIMS faculty. Online classes for Ludhiana, Jalandhar, Amritsar, Mohali, Patiala. Target DMC Ludhiana, GMC Amritsar. 94% success rate. Book free demo!',
+    'Top NEET Biology coaching in Punjab with AIIMS faculty. Online classes for Ludhiana, Jalandhar, Amritsar, Mohali, Patiala. Target DMC Ludhiana, GMC Amritsar. 98% success rate. Book free demo!',
   keywords: [
     'NEET coaching Punjab',
     'best NEET coaching in Punjab',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best NEET Coaching in Punjab 2026 | Cerebrum Biology Academy',
     description:
-      'Premium online NEET biology coaching for Punjab students. AIIMS faculty, 94% success rate. Target DMC Ludhiana, GMC Amritsar, GMC Patiala.',
+      'Premium online NEET biology coaching for Punjab students. AIIMS faculty, 98% success rate. Target DMC Ludhiana, GMC Amritsar, GMC Patiala.',
     type: 'website',
     locale: 'en_IN',
     siteName: 'Cerebrum Biology Academy',

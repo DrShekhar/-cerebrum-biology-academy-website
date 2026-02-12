@@ -301,7 +301,7 @@ export function generateFaridabadCourseSchema() {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: 'NEET Biology Coaching Program - Faridabad',
-    description: 'Comprehensive NEET Biology preparation by AIIMS faculty in Faridabad. Small batches of 15 students, 94% success rate, both offline and online options.',
+    description: 'Comprehensive NEET Biology preparation by AIIMS faculty in Faridabad. Small batches of 15 students, 98% success rate, both offline and online options.',
     provider: {
       '@type': 'Organization',
       name: 'Cerebrum Biology Academy - Faridabad',
@@ -368,7 +368,7 @@ export function generateFaridabadServiceSchema() {
     '@id': `${BASE_URL}/neet-coaching-faridabad#service`,
     name: 'NEET Biology Coaching Faridabad',
     alternateName: ['NEET Coaching Faridabad', 'Best NEET Coaching Faridabad'],
-    description: 'Premier NEET Biology coaching in Faridabad serving Greater Faridabad, NIT, Ballabgarh, Old Faridabad, and 30+ areas. 94% success rate, AIIMS faculty, small batches.',
+    description: 'Premier NEET Biology coaching in Faridabad serving Greater Faridabad, NIT, Ballabgarh, Old Faridabad, and 30+ areas. 98% success rate, AIIMS faculty, small batches.',
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Cerebrum Biology Academy',

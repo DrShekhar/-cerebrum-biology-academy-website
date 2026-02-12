@@ -587,7 +587,7 @@ export default function BiologyClassesDelhiPage() {
                     Dr. Shekhar Singh - AIIMS Alumnus
                   </h2>
                   <p className="mb-6 text-gray-600">
-                    With over 10 years of teaching experience and an AIIMS Delhi background, Dr.
+                    With over 15 years of teaching experience and an AIIMS Delhi background, Dr.
                     Shekhar Singh has helped 1,50,000+ students achieve their medical dreams. His
                     unique teaching methodology makes complex biology concepts simple and memorable.
                   </p>

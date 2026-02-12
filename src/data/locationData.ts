@@ -68,7 +68,7 @@ export const locationDatabase: LocationData[] = [
     contentVariants: {
       heroTitle: "Master NEET Biology in Kota with India's Top Faculty",
       heroSubtitle:
-        'Join 2500+ Kota students who chose Cerebrum Biology Academy for guaranteed NEET success',
+        'Join 1,50,000+ Kota students who chose Cerebrum Biology Academy for guaranteed NEET success',
       valueProposition:
         'Unlike crowded Kota classrooms, get personalized attention with our proven teaching methodology',
       urgencyMessage: 'Only 150 seats left for 2026 batch in Kota region',
@@ -78,7 +78,7 @@ export const locationDatabase: LocationData[] = [
     seoData: {
       title: 'Best NEET Biology Coaching in Kota | Cerebrum Biology Academy',
       description:
-        'Top NEET Biology coaching in Kota with 98% success rate. Join 2500+ Kota students. Expert faculty, proven results, guaranteed success.',
+        'Top NEET Biology coaching in Kota with 98% success rate. Join 1,50,000+ Kota students. Expert faculty, proven results, guaranteed success.',
       keywords: [
         'NEET Biology coaching Kota',
         'Best biology institute Kota',

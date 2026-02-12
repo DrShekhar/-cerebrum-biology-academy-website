@@ -672,7 +672,7 @@ export const class11BiologyData: CourseProgram = {
       id: 'fac-011',
       name: 'Dr. Rajesh Verma',
       qualification: ['M.Sc Zoology', 'Ph.D Animal Physiology', 'Post-Doc (Cell Biology)'],
-      experience: '12+ years',
+      experience: '15+ years',
       specialization: [
         'Animal Biology',
         'Cell Biology',
@@ -681,7 +681,7 @@ export const class11BiologyData: CourseProgram = {
         'Medical Entrance Coaching',
       ],
       rating: 4.88,
-      teachingExperience: '12 years with focus on Class 11th foundation',
+      teachingExperience: '15+ years with focus on Class 11th foundation',
       achievementHighlights: [
         '300+ NEET selections',
         'Specialist in difficult concept explanation',

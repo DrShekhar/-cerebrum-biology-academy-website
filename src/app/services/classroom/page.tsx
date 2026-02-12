@@ -49,7 +49,7 @@ export default function ClassroomCoachingPage() {
     {
       number: '8,500+',
       label: 'Classroom Students Trained',
-      sublabel: 'Over 12 years of excellence',
+      sublabel: 'Over 15 years of excellence',
     },
     { number: '96.2%', label: 'Classroom Success Rate', sublabel: 'Highest in the region' },
     { number: '12:1', label: 'Student-Faculty Ratio', sublabel: 'Maximum personal attention' },
@@ -1155,7 +1155,7 @@ export default function ClassroomCoachingPage() {
             </div>
             <div className="flex items-center justify-center">
               <Award className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0" />
-              <span>12+ years of classroom excellence • Proven track record</span>
+              <span>15+ years of classroom excellence • Proven track record</span>
             </div>
           </div>
         </div>

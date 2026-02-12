@@ -77,7 +77,7 @@ const faculty = [
     name: 'Dr. Sneha Gupta',
     title: 'Faculty - Zoology & Classification',
     qualification: 'MBBS (Lady Hardinge), Wildlife Biology cert.',
-    experience: '10 years',
+    experience: '15+ years',
     specialization: 'Animal Kingdom, Structural Organisation, Reproduction',
     achievements: [
       'Former LHMC demonstrator',
@@ -263,7 +263,7 @@ export default function NEETBiologyFacultyGurugram() {
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <Link href="/neet-result-2025-gurugram" className="bg-green-50 p-4 rounded-lg hover:bg-green-100 transition text-center">
               <h3 className="font-semibold text-green-800">2025 Results</h3>
-              <p className="text-sm text-gray-600">97% success rate this year</p>
+              <p className="text-sm text-gray-600">98% success rate this year</p>
             </Link>
             <Link href="/neet-topper-interview-gurugram" className="bg-purple-50 p-4 rounded-lg hover:bg-purple-100 transition text-center">
               <h3 className="font-semibold text-purple-800">Topper Interviews</h3>

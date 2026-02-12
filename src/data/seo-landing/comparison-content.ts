@@ -1159,7 +1159,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     classLevel: 'universal',
     title: 'Best Online Coaching for NEET Biology 2025 | Top Rated',
     metaDescription:
-      'Find the best online coaching for NEET biology with our detailed comparison. Expert faculty, small batches, 4.9★ rating. 2500+ students selected.',
+      'Find the best online coaching for NEET biology with our detailed comparison. Expert faculty, small batches, 4.9★ rating. 1,50,000+ students selected.',
     keywords: [
       'best online coaching for neet biology',
       'best online neet coaching',
@@ -1174,7 +1174,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
     hero: {
       headline: 'Best Online Coaching for NEET Biology',
       subheadline:
-        'Find the right online coaching with our detailed comparison. Learn why 2,500+ students chose Cerebrum Academy for NEET Biology.',
+        'Find the right online coaching with our detailed comparison. Learn why 1,50,000+ students chose Cerebrum Academy for NEET Biology.',
       ctaText: 'Book Free Demo Class',
       ctaLink: '/book-demo',
       backgroundGradient: 'from-indigo-900 to-blue-800',
@@ -1198,7 +1198,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
           icon: 'chart',
           question: 'Not sure about success rates online?',
           solution:
-            '2,500+ students selected in NEET through our online coaching. See verified results and student testimonials.',
+            '1,50,000+ students selected in NEET through our online coaching. See verified results and student testimonials.',
         },
         {
           icon: 'clock',
@@ -1216,7 +1216,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
           icon: 'user',
           title: 'Faculty Credentials Matter Most',
           description:
-            'Look for faculty from AIIMS/top medical colleges with proven teaching experience. Dr. Shekhar has 12+ years NEET coaching experience.',
+            'Look for faculty from AIIMS/top medical colleges with proven teaching experience. Dr. Shekhar has 15+ years NEET coaching experience.',
         },
         {
           icon: 'users',
@@ -1282,7 +1282,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'Which is the best online coaching for NEET biology?',
         answer:
-          'The best online coaching depends on your learning style, but key factors are: (1) Expert faculty with medical background, (2) Small batch sizes of 10-15 students, (3) Live interactive sessions, (4) Quick doubt resolution, (5) Comprehensive study material, and (6) Regular tests. Cerebrum Biology Academy scores high on all these with 4.9★ rating from 2,500+ students.',
+          'The best online coaching depends on your learning style, but key factors are: (1) Expert faculty with medical background, (2) Small batch sizes of 10-15 students, (3) Live interactive sessions, (4) Quick doubt resolution, (5) Comprehensive study material, and (6) Regular tests. Cerebrum Biology Academy scores high on all these with 4.9★ rating from 1,50,000+ students.',
       },
       {
         question: 'How do I choose the right online NEET coaching?',

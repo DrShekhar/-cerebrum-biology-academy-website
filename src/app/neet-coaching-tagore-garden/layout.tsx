@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'NEET Coaching Tagore Garden | Biology Classes West Delhi | Cerebrum Academy',
   description:
-    'Best NEET coaching for Tagore Garden students. Biology tuition near Kohli One Westend Greens, MIG Flats Extension. Just 20 min from Rohini via metro. 97% success rate. Call 88264-44334.',
+    'Best NEET coaching for Tagore Garden students. Biology tuition near Kohli One Westend Greens, MIG Flats Extension. Just 20 min from Rohini via metro. 98% success rate. Call 88264-44334.',
   keywords: [
     // Primary location keywords
     'NEET coaching tagore garden',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NEET Coaching Tagore Garden | Biology Classes West Delhi | Cerebrum Academy',
     description:
-      'Best NEET coaching for Tagore Garden & West Delhi students. Just 20 min from Rohini via metro. 97% success rate, AIIMS faculty.',
+      'Best NEET coaching for Tagore Garden & West Delhi students. Just 20 min from Rohini via metro. 98% success rate, AIIMS faculty.',
     url: 'https://cerebrumbiologyacademy.com/neet-coaching-tagore-garden',
     siteName: 'Cerebrum Biology Academy',
     images: [
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'NEET Coaching Tagore Garden | Cerebrum Biology Academy',
     description:
-      'Top NEET biology coaching for Tagore Garden & West Delhi. 97% success rate. Rajouri Garden, Janakpuri, Punjabi Bagh covered.',
+      'Top NEET biology coaching for Tagore Garden & West Delhi. 98% success rate. Rajouri Garden, Janakpuri, Punjabi Bagh covered.',
     images: ['/api/og?title=NEET+Coaching+Tagore+Garden&subtitle=West+Delhi&locality=Tagore+Garden'],
   },
   alternates: {

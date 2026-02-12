@@ -28,7 +28,7 @@ const structuredData = {
   '@type': 'EducationalOrganization',
   name: 'Cerebrum Biology Academy - NEET Coaching Dwarka',
   description:
-    'Best NEET biology coaching for Dwarka students. Expert AIIMS Trained faculty, proven 94% success rate, and comprehensive study material for NEET UG preparation. Online + Offline classes available.',
+    'Best NEET biology coaching for Dwarka students. Expert AIIMS Trained faculty, proven 98% success rate, and comprehensive study material for NEET UG preparation. Online + Offline classes available.',
   url: 'https://cerebrumbiologyacademy.com/neet-coaching-dwarka',
   telephone: '+91-8826444334',
   address: {
@@ -78,7 +78,7 @@ const faqStructuredData = {
       name: 'Which is the best NEET coaching in Dwarka?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum Biology Academy offers specialized NEET biology coaching for Dwarka students with 94% success rate. Our AIIMS Trained faculty and personalized approach have helped many Dwarka students score 650+ in NEET. We offer both online classes and offline batches at our Rohini center, accessible via Blue Line Metro in 25-35 minutes.',
+        text: 'Cerebrum Biology Academy offers specialized NEET biology coaching for Dwarka students with 98% success rate. Our AIIMS Trained faculty and personalized approach have helped many Dwarka students score 650+ in NEET. We offer both online classes and offline batches at our Rohini center, accessible via Blue Line Metro in 25-35 minutes.',
       },
     },
     {
@@ -716,7 +716,7 @@ export default function NEETCoachingDwarkaPage() {
                 },
                 {
                   icon: Users,
-                  label: '94% Success Rate',
+                  label: '98% Success Rate',
                   sublabel: 'NEET Qualified',
                   color: 'text-green-600',
                 },

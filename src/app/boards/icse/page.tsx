@@ -91,7 +91,7 @@ export default function ICSEBiologyPage() {
   ]
 
   const successStats = [
-    { number: '94%', label: 'Students Score 85+', description: 'In ICSE Biology exam' },
+    { number: '98%', label: 'Students Score 85+', description: 'In ICSE Biology exam' },
     { number: '800+', label: 'ICSE Students', description: 'Successfully coached' },
     { number: '87.5', label: 'Average Score', description: 'ICSE Biology marks' },
     { number: '89%', label: 'Medical Entrance', description: 'Qualification rate' },

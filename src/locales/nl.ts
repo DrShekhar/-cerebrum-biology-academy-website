@@ -11,7 +11,7 @@ export const nl = {
   heroSubtitle: 'Delhi NCR & Online in heel India',
   locations: 'Laxmi Nagar • Dwarka • Noida • Gurgaon • Kota • Hyderabad • Bangalore',
   topperHighlight: 'Sadhna behaalde 695 (100e Percentiel)',
-  stats: '98% Slagingspercentage • 2.500+ Studenten • AIIMS Opgeleide Docenten',
+  stats: '98% Slagingspercentage • 1,50,000+ Studenten • AIIMS Opgeleide Docenten',
   sadhnasScore: "Sadhna's Score",
   percentile100: '100e Percentiel',
   successRate: 'Slagingspercentage',

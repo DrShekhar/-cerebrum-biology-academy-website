@@ -238,7 +238,7 @@ export default function NEETTopperInterviewGurugram() {
           <div className="grid md:grid-cols-4 gap-4 max-w-4xl mx-auto">
             <Link href="/neet-result-2025-gurugram" className="bg-green-50 p-4 rounded-lg hover:bg-green-100 transition text-center">
               <h3 className="font-semibold text-green-800">2025 Results</h3>
-              <p className="text-sm text-gray-600">Our best year - 97% success</p>
+              <p className="text-sm text-gray-600">Our best year - 98% success</p>
             </Link>
             <Link href="/neet-biology-faculty-gurugram" className="bg-blue-50 p-4 rounded-lg hover:bg-blue-100 transition text-center">
               <h3 className="font-semibold text-blue-800">Our Faculty</h3>

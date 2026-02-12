@@ -95,7 +95,7 @@ const nearbySchools = [
 
 const stats = [
   { label: 'Students from Dwarka', value: '85+' },
-  { label: 'Success Rate', value: '94%' },
+  { label: 'Success Rate', value: '98%' },
   { label: 'Metro Travel Time', value: '25-30 min' },
   { label: 'Online Students', value: '40+' },
 ]
@@ -219,7 +219,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             <p className="hero-description text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto speakable-intro">
               Join Delhi's most trusted NEET Biology coaching. Dwarka students can attend via{' '}
               <strong>Online Classes</strong> or visit our Rohini center (25-30 min via Blue Line +
-              Yellow Line). AIIMS faculty, 94% success rate, small batches of 15-20 students.
+              Yellow Line). AIIMS faculty, 98% success rate, small batches of 15-20 students.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -919,7 +919,7 @@ export default function PageContent({ faqs }: PageContentProps) {
               'Hybrid mode available',
               'Small batches (15-20 students)',
               'Weekend & evening batches',
-              '94% NEET success rate',
+              '98% NEET success rate',
               'Personalized mentoring',
               'Regular progress reports',
               'Scholarship for toppers',
@@ -1353,7 +1353,7 @@ export default function PageContent({ faqs }: PageContentProps) {
             '@type': 'EducationalOrganization',
             name: 'Cerebrum Biology Academy - NEET Coaching for Dwarka Sector 10',
             description:
-              'Best NEET coaching for Dwarka Sector 10 students. Online + Offline classes available. 25-30 min from Rohini via Metro. 94% success rate, AIIMS faculty.',
+              'Best NEET coaching for Dwarka Sector 10 students. Online + Offline classes available. 25-30 min from Rohini via Metro. 98% success rate, AIIMS faculty.',
             url: 'https://cerebrumbiologyacademy.com/neet-coaching-dwarka-sector-10',
             areaServed: [
               'Dwarka Sector 10',

@@ -9,8 +9,8 @@
 
 export const STATISTICS = {
   // Student counts - Use the most accurate current number
-  TOTAL_STUDENTS: '11,500+',
-  TOTAL_STUDENTS_NUMBER: 11500,
+  TOTAL_STUDENTS: '1,50,000+',
+  TOTAL_STUDENTS_NUMBER: 150000,
 
   // Student mentored (historical total)
   STUDENTS_MENTORED: '1.5 lakh+',
@@ -25,8 +25,8 @@ export const STATISTICS = {
   // Success metrics
   SUCCESS_RATE: '98%',
   SUCCESS_RATE_NUMBER: 98,
-  NEET_SUCCESS_RATE: '93%',
-  NEET_SUCCESS_RATE_NUMBER: 93,
+  NEET_SUCCESS_RATE: '98%',
+  NEET_SUCCESS_RATE_NUMBER: 98,
 
   // Score metrics
   AVERAGE_BIOLOGY_SCORE: '330+',
@@ -35,8 +35,8 @@ export const STATISTICS = {
   TOP_SCORER_NAME: 'Sadhna',
 
   // AIIMS statistics
-  AIIMS_SELECTIONS: '500+',
-  AIIMS_SELECTIONS_NUMBER: 500,
+  AIIMS_SELECTIONS: '67+',
+  AIIMS_SELECTIONS_NUMBER: 67,
 
   // Experience
   YEARS_EXPERIENCE: 15,

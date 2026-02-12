@@ -62,7 +62,7 @@ export function TrustBadgesSection() {
     {
       icon: Tv,
       outlet: 'NDTV Education',
-      headline: 'How This Academy Achieved 94% NEET Success Rate',
+      headline: 'How This Academy Achieved 98% NEET Success Rate',
       type: 'TV Interview',
       date: 'February 2024',
       color: 'text-red-600',

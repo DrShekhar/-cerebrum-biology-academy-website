@@ -126,7 +126,7 @@ const nearbySchools = [
 
 const stats = [
   { label: 'Students from South Delhi', value: '2,500+' },
-  { label: 'Success Rate', value: '94%' },
+  { label: 'Success Rate', value: '98%' },
   { label: 'Areas Covered', value: '15+' },
   { label: 'Top 1000 Rankers', value: '180+' },
 ]
@@ -135,7 +135,7 @@ const faqs = [
   {
     question: 'Which is the best NEET coaching in South Delhi?',
     answer:
-      'Cerebrum Biology Academy is rated among the top NEET coaching institutes in South Delhi with 94% success rate. We have expert AIIMS faculty, comprehensive study material, and proven track record with students from GK, Defence Colony, Vasant Vihar, and Hauz Khas.',
+      'Cerebrum Biology Academy is rated among the top NEET coaching institutes in South Delhi with 98% success rate. We have expert AIIMS faculty, comprehensive study material, and proven track record with students from GK, Defence Colony, Vasant Vihar, and Hauz Khas.',
   },
   {
     question: 'Is there NEET coaching near Hauz Khas Metro?',
@@ -170,7 +170,7 @@ const faqs = [
   {
     question: 'What is the batch size for NEET Biology coaching at Cerebrum?',
     answer:
-      "We maintain small batches of maximum 15-20 students to ensure personalized attention. Unlike large coaching institutes where batch sizes can exceed 100 students, our small batches allow faculty to track each student's progress individually, conduct regular doubt-clearing sessions, and provide customized study plans. This personalized approach has resulted in our 94% NEET success rate.",
+      "We maintain small batches of maximum 15-20 students to ensure personalized attention. Unlike large coaching institutes where batch sizes can exceed 100 students, our small batches allow faculty to track each student's progress individually, conduct regular doubt-clearing sessions, and provide customized study plans. This personalized approach has resulted in our 98% NEET success rate.",
   },
   {
     question: 'Do you provide hybrid mode (online + offline) NEET coaching?',
@@ -180,7 +180,7 @@ const faqs = [
   {
     question: 'How does Cerebrum compare to other NEET coaching institutes in the Hauz Khas area?',
     answer:
-      'Unlike generic coaching institutes in Hauz Khas/Kalu Sarai that teach all subjects with large batches (50-100 students), Cerebrum specializes exclusively in Biology with AIIMS trained faculty. Our advantages: (1) Small batch size (15-20 vs 50-100 students), (2) 15+ years of specialized Biology teaching experience, (3) 94% NEET success rate vs 60-70% industry average, (4) Personalized doubt-clearing sessions, (5) Comprehensive NCERT-focused study material. Our students from DPS RK Puram, Modern School, and Vasant Valley consistently outperform peers who attend larger coaching institutes.',
+      'Unlike generic coaching institutes in Hauz Khas/Kalu Sarai that teach all subjects with large batches (50-100 students), Cerebrum specializes exclusively in Biology with AIIMS trained faculty. Our advantages: (1) Small batch size (15-20 vs 50-100 students), (2) 15+ years of specialized Biology teaching experience, (3) 98% NEET success rate vs 60-70% industry average, (4) Personalized doubt-clearing sessions, (5) Comprehensive NCERT-focused study material. Our students from DPS RK Puram, Modern School, and Vasant Valley consistently outperform peers who attend larger coaching institutes.',
   },
 ]
 
@@ -1319,7 +1319,7 @@ export default function PageContent() {
             '@type': 'EducationalOrganization',
             name: 'Cerebrum Biology Academy - South Delhi',
             description:
-              'Best NEET coaching in South Delhi. Expert AIIMS faculty, 94% success rate.',
+              'Best NEET coaching in South Delhi. Expert AIIMS faculty, 98% success rate.',
             url: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi',
             areaServed: [
               'Hauz Khas',

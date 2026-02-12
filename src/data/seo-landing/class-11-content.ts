@@ -959,7 +959,7 @@ export const ncertBiologyClass11Tuition: SEOLandingContent = {
 
   cta: {
     title: 'Master NCERT, Ace NEET',
-    subtitle: 'Join 2,500+ students who built their NEET foundation on NCERT.',
+    subtitle: 'Join 1,50,000+ students who built their NEET foundation on NCERT.',
     primaryButton: {
       text: 'See NCERT-Based Curriculum',
       link: '/class-11',

@@ -6,19 +6,19 @@
 
 export const CEREBRUM_METRICS = {
   // Success metrics
-  successRate: 94, // Percentage of students qualifying NEET
-  successRateText: '94%',
+  successRate: 98, // Percentage of students qualifying NEET
+  successRateText: '98%',
   topScore: 695,
   topScoreTotal: 720,
   topScoreText: '695/720',
 
   // Student counts
-  totalStudents: 2500,
-  totalStudentsText: '2,500+',
+  totalStudents: 150000,
+  totalStudentsText: '1,50,000+',
   topRankers: 180,
   topRankersText: '180+',
-  medicalSelections: 500,
-  medicalSelectionsText: '500+',
+  medicalSelections: 67,
+  medicalSelectionsText: '67+ AIIMS Selections',
 
   // Reviews/Ratings (actual Google reviews)
   rating: 5.0,

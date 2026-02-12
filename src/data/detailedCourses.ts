@@ -304,7 +304,7 @@ export const detailedCourses: Course[] = [
     instructor: {
       name: 'Dr. Shekhar',
       qualification: 'MSc (Botany), PhD (Plant Physiology)',
-      experience: '12+ years',
+      experience: '15+ years',
       specialization: ['Plant Biology', 'Ecology', 'Genetics'],
       rating: 4.8,
       image: '/instructors/dr-priya-mehta.jpg',
@@ -885,7 +885,7 @@ export const detailedCourses: Course[] = [
     instructor: {
       name: 'Dr. Shekhar',
       qualification: 'MBBS (AIIMS Delhi), PhD (Molecular Biology)',
-      experience: '12+ years',
+      experience: '15+ years',
       specialization: ['NEET Biology', 'Molecular Biology', 'Genetics'],
       rating: 4.9,
       image: '/instructors/dr-vikram-mehta.jpg',

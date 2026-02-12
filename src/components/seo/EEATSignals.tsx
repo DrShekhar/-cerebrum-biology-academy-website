@@ -24,12 +24,12 @@ interface EEATSignalsProps {
 const experienceSignals = [
   {
     icon: Clock,
-    label: '10+ Years Teaching NEET Biology',
-    description: 'Proven track record since 2014',
+    label: '15+ Years Teaching NEET Biology',
+    description: 'Proven track record since 2010',
   },
   {
     icon: Users,
-    label: '5,000+ Students Trained',
+    label: '1,50,000+ Students Trained',
     description: 'Across Delhi NCR and online',
   },
   {
@@ -165,7 +165,7 @@ export function EEATSignals({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {showExperience && (
             <div className="text-center p-3">
-              <div className="text-2xl font-bold text-green-600">10+</div>
+              <div className="text-2xl font-bold text-green-600">15+</div>
               <div className="text-xs text-gray-600">Years Experience</div>
             </div>
           )}
@@ -273,7 +273,7 @@ export function EEATSignals({
               name: 'Cerebrum Biology Academy',
               description:
                 'Premier NEET Biology coaching institute with 15+ years of experience and 98% success rate',
-              foundingDate: '2015',
+              foundingDate: '2010',
               numberOfEmployees: {
                 '@type': 'QuantitativeValue',
                 value: 25,
@@ -327,7 +327,7 @@ export function ExperienceBadge({ className = '' }: { className?: string }) {
       className={`inline-flex items-center gap-2 px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg ${className}`}
     >
       <Clock className="w-4 h-4 text-yellow-600" />
-      <span className="text-sm font-medium text-yellow-800">10+ Years of NEET Excellence</span>
+      <span className="text-sm font-medium text-yellow-800">15+ Years of NEET Excellence</span>
     </div>
   )
 }

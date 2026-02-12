@@ -208,7 +208,7 @@ export default function CourseComparePage() {
     { icon: Scale, value: '5', label: 'Courses to Compare' },
     { icon: Users, value: '14,000+', label: 'Active Students' },
     { icon: Star, value: '4.7', label: 'Average Rating' },
-    { icon: Award, value: '94%', label: 'Success Rate' },
+    { icon: Award, value: '98%', label: 'Success Rate' },
   ]
 
   const FeatureRow = ({

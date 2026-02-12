@@ -5,7 +5,7 @@ import { ChevronRight, Check, X, Phone, MessageCircle } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Cerebrum vs Allen: Which is Better for NEET Biology 2026?',
   description:
-    'Compare Cerebrum Biology Academy vs Allen Career Institute for NEET coaching. Specialized biology training, AIIMS faculty, 94% success rate. Free demo available.',
+    'Compare Cerebrum Biology Academy vs Allen Career Institute for NEET coaching. Specialized biology training, AIIMS faculty, 98% success rate. Free demo available.',
   keywords: [
     'cerebrum vs allen',
     'best neet coaching delhi',
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cerebrum vs Allen: Which is Better for NEET Biology 2026?',
     description:
-      'Compare Cerebrum Biology Academy vs Allen Career Institute for NEET coaching. Specialized biology training, AIIMS faculty, 94% success rate.',
+      'Compare Cerebrum Biology Academy vs Allen Career Institute for NEET coaching. Specialized biology training, AIIMS faculty, 98% success rate.',
     type: 'website',
     url: 'https://cerebrumbiologyacademy.com/cerebrum-vs-allen',
   },
@@ -61,7 +61,7 @@ const jsonLdSchema = {
       name: 'What is Cerebrum success rate compared to Allen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cerebrum has a 94% selection rate among students who complete the course consistently. Allen does not publicly disclose individual success rates separately, making direct comparison difficult.',
+        text: 'Cerebrum has a 98% selection rate among students who complete the course consistently. Allen does not publicly disclose individual success rates separately, making direct comparison difficult.',
       },
     },
     {
@@ -145,7 +145,7 @@ export default function CerebrumVsAllenPage() {
                   },
                   {
                     criteria: 'Selection Rate',
-                    cerebrum: '94% selection rate',
+                    cerebrum: '98% selection rate',
                     allen: 'Not disclosed separately',
                   },
                   {
@@ -266,7 +266,7 @@ export default function CerebrumVsAllenPage() {
                   <li>✓ Lower fee for specialized Biology training</li>
                   <li>✓ Small batches (25-30) = better ROI</li>
                   <li>✓ No need to pay for other subjects</li>
-                  <li>✓ 94% success rate justifies investment</li>
+                  <li>✓ 98% success rate justifies investment</li>
                 </ul>
               </div>
             </div>
@@ -365,7 +365,7 @@ export default function CerebrumVsAllenPage() {
 
           <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
             <p className="text-gray-800">
-              <strong>Key Insight:</strong> Cerebrum's transparent 94% selection rate specifically for
+              <strong>Key Insight:</strong> Cerebrum's transparent 98% selection rate specifically for
               Biology demonstrates accountability. Smaller batches ensure personalized monitoring of
               progress, leading to consistent results.
             </p>
@@ -504,7 +504,7 @@ export default function CerebrumVsAllenPage() {
                   'With 25-30 students per batch, you get personalized attention. Teachers know your strengths and weaknesses, enabling targeted improvement.',
               },
               {
-                title: '94% Success Rate',
+                title: '98% Success Rate',
                 description:
                   'Our transparent, verifiable success rate demonstrates our commitment to results. This metric reflects Biology-focused coaching effectiveness.',
               },
@@ -575,7 +575,7 @@ export default function CerebrumVsAllenPage() {
               },
               {
                 q: 'What is Cerebrum\'s success rate compared to Allen?',
-                a: 'Cerebrum has a transparent 94% selection rate among students who complete the course consistently. Allen does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum\'s transparent metrics demonstrate accountability.',
+                a: 'Cerebrum has a transparent 98% selection rate among students who complete the course consistently. Allen does not publicly disclose Biology-specific success rates, making direct comparison difficult. Cerebrum\'s transparent metrics demonstrate accountability.',
               },
               {
                 q: 'Can I shift from Allen to Cerebrum mid-course?',

@@ -104,7 +104,7 @@ export default function AboutPage() {
       title: 'Going Digital During COVID',
       description:
         'Launched live online classes when pandemic hit. 420 students enrolled remotely from 47 cities.',
-      stats: 'Maintained 94% qualification despite lockdown',
+      stats: 'Maintained 98% qualification despite lockdown',
       icon: BookOpen,
     },
     {

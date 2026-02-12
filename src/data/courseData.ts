@@ -121,7 +121,7 @@ export const courses: Course[] = [
       'Regular mock tests and assessments',
       'Expert faculty guidance',
       'Small batch personal attention',
-      '94% success rate',
+      '98% success rate',
     ],
     features: [
       'Live Classes by AIIMS Faculty',

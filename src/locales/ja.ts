@@ -11,7 +11,7 @@ export const ja = {
   heroSubtitle: 'デリーNCR＆インド全土オンライン',
   locations: 'ラクシュミナガル・ドワルカ・ノイダ・グルガオン・コタ・ハイデラバード・バンガロール',
   topperHighlight: 'サドナが695点獲得（100パーセンタイル）',
-  stats: '98%合格率・2,500人以上の学生・AIIMS訓練済み講師',
+  stats: '98%合格率・1,50,000人以上の学生・AIIMS訓練済み講師',
   sadhnasScore: 'サドナのスコア',
   percentile100: '100パーセンタイル',
   successRate: '合格率',

@@ -22,7 +22,7 @@ export function AdmissionsHeroStatic() {
             {/* Badge - animate with CSS */}
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-4 animate-fade-in-up">
               <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">2,847+ Students Enrolled</span>
+              <span className="text-sm font-medium">1,50,000+ Students Enrolled</span>
             </div>
 
             {/* Main Heading - Critical LCP element, no JS required */}
@@ -53,7 +53,7 @@ export function AdmissionsHeroStatic() {
               </div>
               <div className="flex items-center gap-2 bg-white/10 rounded-lg px-3 py-2">
                 <Trophy className="w-5 h-5 text-yellow-400" />
-                <span className="text-sm font-medium">94% Success Rate</span>
+                <span className="text-sm font-medium">98% Success Rate</span>
               </div>
             </div>
 

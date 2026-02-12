@@ -174,7 +174,7 @@ export default function CareersPage() {
   const stats = [
     { number: '50+', label: 'Team Members', description: 'Across all departments' },
     { number: '5000+', label: 'Students Taught', description: 'Every year' },
-    { number: '94%', label: 'Success Rate', description: 'NEET qualifications' },
+    { number: '98%', label: 'Success Rate', description: 'NEET qualifications' },
     { number: '4.8/5', label: 'Employee Rating', description: 'On Glassdoor' },
   ]
 

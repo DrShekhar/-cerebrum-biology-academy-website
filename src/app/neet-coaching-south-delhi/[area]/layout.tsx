@@ -4,7 +4,7 @@ const areaData: Record<string, { title: string; description: string; canonical: 
   'hauz-khas': {
     title: 'Best NEET Coaching Hauz Khas | Biology Classes Near IIT Delhi | Cerebrum Academy',
     description:
-      'Top NEET coaching in Hauz Khas, South Delhi. Near IIT Delhi, expert AIIMS faculty, 94% success rate. Online & offline batches. Book free demo!',
+      'Top NEET coaching in Hauz Khas, South Delhi. Near IIT Delhi, expert AIIMS faculty, 98% success rate. Online & offline batches. Book free demo!',
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/hauz-khas',
   },
   'kalu-sarai': {
@@ -22,7 +22,7 @@ const areaData: Record<string, { title: string; description: string; canonical: 
   'defence-colony': {
     title: 'NEET Coaching Defence Colony Delhi | Biology Classes | Cerebrum Academy',
     description:
-      'Top NEET coaching in Defence Colony. Expert AIIMS faculty, 94% success rate, flexible timings. Book free demo class today!',
+      'Top NEET coaching in Defence Colony. Expert AIIMS faculty, 98% success rate, flexible timings. Book free demo class today!',
     canonical: 'https://cerebrumbiologyacademy.com/neet-coaching-south-delhi/defence-colony',
   },
   'vasant-vihar': {
@@ -251,7 +251,7 @@ export async function generateMetadata({
     twitter: {
     card: 'summary_large_image',
     title: 'Best NEET Coaching Hauz Khas | Biology Classes Near IIT Delhi | Cerebrum Academy',
-    description: 'Top NEET coaching in Hauz Khas, South Delhi. Near IIT Delhi, expert AIIMS faculty, 94% success rate.',
+    description: 'Top NEET coaching in Hauz Khas, South Delhi. Near IIT Delhi, expert AIIMS faculty, 98% success rate.',
   },
   alternates: {
       canonical: data.canonical,
