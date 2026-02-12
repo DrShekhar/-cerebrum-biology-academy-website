@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { validateUserSession } from '@/lib/auth/config'
+import { rateLimit } from '@/lib/rateLimit'
 import { authenticQuestionBank, AuthenticQuestion } from '@/data/authenticQuestions'
 import { allAdvancedQuestions } from '@/data/advancedQuestions'
 import {
@@ -289,6 +291,24 @@ function validateQuestionAvailability(
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Rate limit test generation (20 per hour per IP)
+    const rateLimitResult = await rateLimit(request, { maxRequests: 20, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { error: 'Too many test generation requests. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
+    // SECURITY: Require authentication to protect question bank IP
+    const session = await validateUserSession(request)
+    if (!session.valid) {
+      return NextResponse.json(
+        { error: 'Authentication required to generate tests' },
+        { status: 401 }
+      )
+    }
+
     // Parse request
     const config: TestConfig = await request.json()
 
@@ -364,7 +384,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to generate test',
-        details: error instanceof Error ? error.message : 'Unknown error',
+        details: 'Internal server error',
       },
       { status: 500 }
     )

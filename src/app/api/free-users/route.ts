@@ -1,12 +1,22 @@
 import { NextRequest, NextResponse } from 'next/server'
 import crypto from 'crypto'
 import { prisma } from '@/lib/prisma'
+import { rateLimit } from '@/lib/rateLimit'
 
 export const dynamic = 'force-dynamic'
 
 // POST /api/free-users - Create or retrieve a free user for MCQ practice
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: Rate limit account creation (5 per hour per IP)
+    const rateLimitResult = await rateLimit(request, { maxRequests: 5, windowMs: 60 * 60 * 1000 })
+    if (!rateLimitResult.success) {
+      return NextResponse.json(
+        { success: false, error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
     const body = await request.json()
     const { phone, name, email, studentClass, source, sessionId } = body
 
@@ -147,14 +157,13 @@ export async function POST(request: NextRequest) {
       {
         success: false,
         error: 'Failed to process request',
-        message: error instanceof Error ? error.message : 'Unknown error',
       },
       { status: 500 }
     )
   }
 }
 
-// GET /api/free-users - Get user by ID
+// GET /api/free-users - Get user by ID (requires matching user cookie or session)
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url)
@@ -164,12 +173,21 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'User ID is required' }, { status: 400 })
     }
 
+    // SECURITY: Validate the requesting user matches the requested ID
+    // Free users store their ID in a cookie set during registration
+    const freeUserCookie = request.cookies.get('free_user_id')?.value
+    if (!freeUserCookie || freeUserCookie !== userId) {
+      return NextResponse.json(
+        { success: false, error: 'Unauthorized' },
+        { status: 401 }
+      )
+    }
+
     const user = await prisma.free_users.findUnique({
       where: { id: userId },
       select: {
         id: true,
         name: true,
-        email: true,
         grade: true,
         currentLevel: true,
         totalPoints: true,

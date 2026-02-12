@@ -3,6 +3,7 @@ import Razorpay from 'razorpay'
 import { prisma } from '@/lib/prisma'
 import { nanoid } from 'nanoid'
 import { rateLimit } from '@/lib/rateLimit'
+import { validateUserSession } from '@/lib/auth/config'
 
 function getRazorpayInstance() {
   if (!process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
@@ -40,6 +41,15 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         { error: 'Too many enrollment attempts. Please try again later.' },
         { status: 429 }
+      )
+    }
+
+    // SECURITY: Require authentication for enrollment order creation
+    const session = await validateUserSession(request)
+    if (!session.valid) {
+      return NextResponse.json(
+        { error: 'Authentication required to create enrollment' },
+        { status: 401 }
       )
     }
 
@@ -236,7 +246,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         error: 'Failed to create enrollment order',
-        details: error instanceof Error ? error.message : 'Unknown error occurred',
+        details: 'Internal server error',
       },
       { status: 500 }
     )
