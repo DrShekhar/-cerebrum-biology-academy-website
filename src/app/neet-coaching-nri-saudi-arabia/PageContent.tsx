@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/Button'
 import SmartWhatsAppCTA from "@/components/conversion/SmartWhatsAppCTA";
 import { VideoTestimonialsSection } from "@/components/testimonials/VideoTestimonialsSection";
 import { PricingSection } from "@/components/city/PricingSection";
