@@ -1,7 +1,7 @@
 {
   "name": "Cerebrum Biology Academy - NEET Biology Excellence",
   "short_name": "Cerebrum Bio",
-  "description": "India's leading Biology coaching for NEET with AI-powered learning, voice synthesis by Shekhar Sir, and comprehensive study materials. Achieve 94.2% success rate with offline support.",
+  "description": "India's leading Biology coaching for NEET with AI-powered learning and comprehensive study materials. Achieve 98% success rate with expert faculty.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -67,11 +67,11 @@
     {
       "name": "NEET Mock Tests",
       "short_name": "Tests",
-      "description": "Take NEET Biology mock tests with offline support",
+      "description": "Take NEET Biology mock tests",
       "url": "/mock-tests",
       "icons": [
         {
-          "src": "/icons/shortcut-test.png",
+          "src": "/icons/shortcut-mock-tests.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -84,20 +84,20 @@
       "url": "/courses",
       "icons": [
         {
-          "src": "/icons/shortcut-course.png",
+          "src": "/icons/shortcut-study-materials.png",
           "sizes": "96x96",
           "type": "image/png"
         }
       ]
     },
     {
-      "name": "AI Biology Tutor",
-      "short_name": "AI Tutor",
-      "description": "Get instant doubt resolution with AI voice synthesis",
-      "url": "/claudechat",
+      "name": "Live Classes",
+      "short_name": "Live",
+      "description": "Join live interactive biology classes",
+      "url": "/courses",
       "icons": [
         {
-          "src": "/icons/shortcut-ai.png",
+          "src": "/icons/shortcut-live-classes.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -107,10 +107,10 @@
       "name": "Book Demo Class",
       "short_name": "Demo",
       "description": "Book a free demo class with AIIMS faculty",
-      "url": "/demo",
+      "url": "/demo-booking",
       "icons": [
         {
-          "src": "/icons/shortcut-demo.png",
+          "src": "/icons/shortcut-video-lectures.png",
           "sizes": "96x96",
           "type": "image/png"
         }
@@ -144,8 +144,7 @@
 
   "display_override": ["window-controls-overlay", "minimal-ui", "standalone"],
   "prefer_related_applications": false,
-  "offline_capable": true,
-
+  
   "protocol_handlers": [
     {
       "protocol": "mailto",
