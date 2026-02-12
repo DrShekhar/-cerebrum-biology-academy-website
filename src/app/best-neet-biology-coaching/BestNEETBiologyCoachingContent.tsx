@@ -112,7 +112,7 @@ const standoutReasons = [
   {
     icon: TrendingUp,
     title: '98% Success Rate',
-    description: '500+ students selected in NEET',
+    description: '67+ AIIMS selections',
   },
   {
     icon: MessageCircle,

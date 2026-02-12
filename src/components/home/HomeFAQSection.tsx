@@ -12,7 +12,7 @@ const homepageFAQs: FAQ[] = [
   {
     question: 'What is the success rate of Cerebrum Biology Academy?',
     answer:
-      'We have a 98% success rate with 500+ students qualifying NEET annually. Our toppers have secured ranks under 1000 AIR, with many getting into AIIMS, JIPMER, and other top medical colleges. Our star achiever Sadhna Sirin scored 695 marks in NEET 2023 with 100 percentile in Biology.',
+      'We have a 98% success rate with 67+ AIIMS selections, 98% qualification rate. Our toppers have secured ranks under 1000 AIR, with many getting into AIIMS, JIPMER, and other top medical colleges. Our star achiever Sadhna Sirin scored 695 marks in NEET 2023 with 100 percentile in Biology.',
   },
   {
     question: 'What are the course fees for NEET coaching?',

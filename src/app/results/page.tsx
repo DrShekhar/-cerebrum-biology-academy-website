@@ -51,8 +51,8 @@ const breadcrumbSchema = {
 }
 
 const NEET_2024_RESULTS = {
-  totalStudents: 582,
-  aiims: 247,
+  totalStudents: 150000,
+  aiims: 67,
   successRate: 98,
   topRanks: 68,
   averageImprovement: 285,
@@ -189,7 +189,7 @@ export default function ResultsPage() {
       : 'https://cerebrumbiologyacademy.com/results'
 
   const handleShare = (platform: string) => {
-    const text = `Cerebrum Biology Academy NEET 2024: 247 AIIMS selections, 98% success rate! Check out these incredible results.`
+    const text = `Cerebrum Biology Academy NEET 2024: 67+ AIIMS selections, 98% success rate! Check out these incredible results.`
 
     const urls = {
       facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
@@ -526,7 +526,7 @@ export default function ResultsPage() {
               </h2>
 
               <p className="text-lg text-[#4a5d4a] mb-8">
-                Join 500+ successful students who achieved their NEET dreams with our proven
+                Join 1,50,000+ successful students who achieved their NEET dreams with our proven
                 methodology and expert guidance. Book your free demo class today and experience the
                 Cerebrum difference.
               </p>
@@ -601,7 +601,7 @@ export default function ResultsPage() {
             <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
             <span className="ml-2 font-semibold">4.9/5</span>
           </div>
-          <p>Rated by 500+ students and parents</p>
+          <p>Rated by 1,50,000+ students and parents</p>
         </section>
       </div>
       </div>

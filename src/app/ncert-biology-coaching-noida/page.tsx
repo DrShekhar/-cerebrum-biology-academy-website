@@ -295,7 +295,7 @@ export default function NcertBiologyCoachingNoidaPage() {
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">Master NCERT Biology Today!</h2>
-          <p className="text-xl text-slate-300 mb-8">Join 500+ students who scored 650+ with our NCERT-focused approach</p>
+          <p className="text-xl text-slate-300 mb-8">Join our students who scored 650+ with our NCERT-focused approach</p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">
             <a

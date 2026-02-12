@@ -806,7 +806,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             Ready to Experience the Cerebrum Difference?
           </h2>
           <p className="text-xl mb-8 opacity-90">
-            Join 500+ students who chose specialized Biology coaching for better NEET results
+            Join 1,50,000+ students who chose specialized Biology coaching for better NEET results
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/demo-booking">

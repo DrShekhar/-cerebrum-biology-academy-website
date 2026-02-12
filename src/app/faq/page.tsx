@@ -220,7 +220,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'What is your success rate?',
         answer:
-          'We have a 98% success rate with 500+ students qualifying NEET annually. Our toppers have secured ranks under 1000 AIR, with many getting into AIIMS, JIPMER, and other top medical colleges.',
+          'We have a 98% success rate with 67+ AIIMS selections, 98% qualification rate. Our toppers have secured ranks under 1000 AIR, with many getting into AIIMS, JIPMER, and other top medical colleges.',
       },
       {
         question: 'Who are your notable achievers?',
@@ -294,7 +294,7 @@ const faqCategories: FAQCategory[] = [
       {
         question: 'What is the success rate of Cerebrum Biology Academy?',
         answer:
-          'Cerebrum Biology Academy has a 98% success rate with 500+ students qualifying NEET annually. Our highest score is 695/720 in NEET Biology (Sadhna Sirin, 2023). We have 15+ years of experience with AIIMS-qualified faculty. Over 60% of our students score above 330/360 in Biology.',
+          'Cerebrum Biology Academy has a 98% success rate with 67+ AIIMS selections, 98% qualification rate. Our highest score is 695/720 in NEET Biology (Sadhna Sirin, 2023). We have 15+ years of experience with AIIMS-qualified faculty. Over 60% of our students score above 330/360 in Biology.',
       },
       {
         question: 'How much does NEET Biology coaching cost in Delhi?',

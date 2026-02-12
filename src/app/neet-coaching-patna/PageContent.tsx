@@ -43,7 +43,7 @@ export default function PageContent() {
           </h1>
           
           <p className="text-xl sm:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto font-light">
-            Bihar's premier NEET biology coaching. AIIMS faculty-led. 500+ students trained. 98% success rate. Beat Kota competition!
+            Bihar's premier NEET biology coaching. AIIMS faculty-led. 1,50,000+ students trained. 98% success rate. Beat Kota competition!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -72,7 +72,7 @@ export default function PageContent() {
               <div className="flex justify-center mb-3">
                 <Users className="w-8 h-8 text-blue-500" />
               </div>
-              <h3 className="text-4xl font-bold text-gray-900">500+</h3>
+              <h3 className="text-4xl font-bold text-gray-900">1,50,000+</h3>
               <p className="text-gray-600 mt-1">Students Trained</p>
             </div>
             <div className="text-center">

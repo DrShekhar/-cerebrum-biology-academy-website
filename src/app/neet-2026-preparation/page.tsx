@@ -80,8 +80,8 @@ export default function NEET2026PreparationPage() {
       color: 'bg-blue-500',
     },
     {
-      title: '500+ NEET Selections',
-      description: '98% success rate with 500+ students in top medical colleges yearly',
+      title: '67+ AIIMS Selections',
+      description: '98% success rate with 67+ AIIMS selections across batches',
       icon: Trophy,
       color: 'bg-amber-500',
     },
@@ -193,7 +193,7 @@ export default function NEET2026PreparationPage() {
 
   const successMetrics = [
     { label: '98%', sublabel: 'Success Rate', icon: Trophy },
-    { label: '500+', sublabel: 'Selections Yearly', icon: Users },
+    { label: '67+', sublabel: 'AIIMS Selections', icon: Users },
     { label: '650+', sublabel: 'Avg Top Score', icon: Star },
     { label: '15+', sublabel: 'Years Experience', icon: Award },
   ]
@@ -639,7 +639,7 @@ export default function NEET2026PreparationPage() {
               Start Your NEET 2026 Journey Today
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 opacity-90">
-              Join 500+ students who crack NEET every year with Cerebrum Biology Academy. Expert
+              Join 1,50,000+ students who trust Cerebrum with Cerebrum Biology Academy. Expert
               faculty, proven methodology, and personalized attention await you.
             </p>
 

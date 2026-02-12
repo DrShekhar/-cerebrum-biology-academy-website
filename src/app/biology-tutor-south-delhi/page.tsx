@@ -62,7 +62,7 @@ const whyChooseUs = [
   {
     icon: Target,
     title: 'Proven Results',
-    description: '500+ students selected in NEET. Many from South Delhi localities.',
+    description: '67+ AIIMS selections. Many from South Delhi localities.',
   },
   {
     icon: Clock,
