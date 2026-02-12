@@ -235,6 +235,9 @@ const nextConfig = {
   // Experimental features for better performance
   // Note: optimizeCss DISABLED - causes CSS MIME type errors and breaks MCQ page on desktop
   // swcMinify removed - enabled by default in Next.js 15
+  // Increase timeout for static generation (blog pages with heavy content)
+  staticPageGenerationTimeout: 180,
+
   experimental: {
     optimizeCss: false, // DISABLED: Causes "Refused to execute script... MIME type ('text/css')" errors
     scrollRestoration: true,
