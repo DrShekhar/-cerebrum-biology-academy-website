@@ -150,7 +150,7 @@ export function SEOFooterLinks() {
           <div className="flex flex-col md:flex-row items-center justify-between text-xs text-gray-400">
             <p>&copy; 2026 Cerebrum Biology Academy. All rights reserved.</p>
             <div className="flex gap-6 mt-4 md:mt-0">
-              <Link href="/privacy">
+              <Link href="/privacy-policy">
                 <span className="hover:text-green-400 transition-colors">Privacy Policy</span>
               </Link>
               <Link href="/terms">

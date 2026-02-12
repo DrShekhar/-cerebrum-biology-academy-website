@@ -77,8 +77,7 @@ export function CoursesSection() {
   }
 
   const handleBrochureDownload = () => {
-    // Trigger brochure download
-    window.open('/brochure.pdf', '_blank')
+    router.push('/support/brochure')
   }
 
   const handleWhatsAppEnquiry = (courseTitle: string) => {

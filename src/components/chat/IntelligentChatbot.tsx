@@ -892,7 +892,7 @@ export function IntelligentChatbot() {
         window.location.href = getPhoneLink()
         break
       case 'download_brochure':
-        window.open('/brochure.pdf', '_blank')
+        window.location.href = '/support/brochure'
         break
       case 'view_course':
         window.location.href = '/courses'

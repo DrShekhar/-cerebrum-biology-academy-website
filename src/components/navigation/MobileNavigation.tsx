@@ -114,8 +114,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
     {
       icon: User,
       label: 'Profile',
-      // Always render /profile to avoid hydration mismatch - auth redirect handled by middleware
-      href: '/profile',
+      href: '/dashboard',
       ariaLabel: 'View your profile',
       requiresAuth: true,
     },

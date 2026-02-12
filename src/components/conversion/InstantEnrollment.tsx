@@ -337,7 +337,7 @@ export function InstantEnrollment({
                     Terms & Conditions
                   </a>{' '}
                   and
-                  <a href="/privacy" className="text-blue-600 hover:underline ml-1">
+                  <a href="/privacy-policy" className="text-blue-600 hover:underline ml-1">
                     Privacy Policy
                   </a>
                 </label>

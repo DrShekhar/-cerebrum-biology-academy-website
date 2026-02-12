@@ -634,7 +634,7 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
           Terms of Service
         </a>{' '}
         and{' '}
-        <a href="/privacy" className="text-green-600 hover:underline">
+        <a href="/privacy-policy" className="text-green-600 hover:underline">
           Privacy Policy
         </a>
       </div>
