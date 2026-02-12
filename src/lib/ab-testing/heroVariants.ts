@@ -34,7 +34,7 @@ export const heroVariants: HeroVariant[] = [
     id: 'outcome_focused_v2',
     name: 'Results-Focused with Differentiation',
     headline: {
-      main: '2,847 Medical Seats Secured',
+      main: '1,50,000+ Students Mentored',
       highlight1: 'with Personal Mentoring',
       highlight2: '98% Success Rate',
     },
@@ -53,7 +53,7 @@ export const heroVariants: HeroVariant[] = [
       highlight2: '98% Success Rate',
     },
     subtext:
-      'AIIMS faculty teaching 12-25 students (not 100+). Proven track record: 2,847 medical seats secured. Personal mentoring that actually works.',
+      'AIIMS faculty teaching 12-25 students (not 100+). Proven track record: 1,50,000+ students mentored, 67+ AIIMS selections. Personal mentoring that actually works.',
     primaryCTA: 'Book Free NEET Biology Demo',
     secondaryCTA: 'Call Now: +91 88264 44334',
     weight: 25, // Trust-building variant

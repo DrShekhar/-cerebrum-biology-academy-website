@@ -50,7 +50,7 @@ export default function CoursesPage() {
     '@type': 'Course',
     name: 'NEET Biology Courses Delhi NCR | Class 11, 12, Dropper Batches | Cerebrum Academy',
     description:
-      'NEET biology courses 2026 in Delhi NCR — Class 11, Class 12 & Dropper batches. AIIMS faculty, 15-student batches, 98% success rate. Rs 45K–1.56L with EMI. 6 centers across Delhi NCR. Enroll now!',
+      'NEET biology courses 2026 in Delhi NCR — Class 11, Class 12 & Dropper batches. AIIMS faculty, 15-student batches, 98% success rate. Rs 45K–1.56L with EMI. 4 centers across Delhi NCR. Enroll now!',
     url: 'https://cerebrumbiologyacademy.com/courses',
     provider: {
       '@type': 'EducationalOrganization',

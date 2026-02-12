@@ -53,7 +53,7 @@ const jsonLdSchema = {
       name: 'Does Cerebrum have online coaching like Allen?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes, Cerebrum offers both offline classes at 6 centers in Delhi NCR and online coaching options. Students can choose the mode that best fits their schedule.',
+        text: 'Yes, Cerebrum offers both offline classes at 4 centers in Delhi NCR and online coaching options. Students can choose the mode that best fits their schedule.',
       },
     },
     {
@@ -160,7 +160,7 @@ export default function CerebrumVsAllenPage() {
                   },
                   {
                     criteria: 'Coverage',
-                    cerebrum: '6 centers in Delhi NCR + Online',
+                    cerebrum: '4 centers in Delhi NCR + Online',
                     allen: 'Pan-India (50+ centers)',
                   },
                 ].map((row, index) => (
@@ -315,7 +315,7 @@ export default function CerebrumVsAllenPage() {
               <h3 className="text-xl font-semibold text-blue-600 mb-4">Cerebrum Biology Academy</h3>
               <div className="space-y-4">
                 <div className="bg-white p-4 rounded-lg border border-gray-200">
-                  <div className="text-3xl font-bold text-blue-600 mb-2">94%</div>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
                   <p className="text-gray-700">Selection rate among consistent students</p>
                 </div>
                 <div className="bg-white p-4 rounded-lg border border-gray-200">
@@ -435,7 +435,7 @@ export default function CerebrumVsAllenPage() {
             <div>
               <h3 className="text-xl font-semibold text-blue-600 mb-4">Cerebrum Biology Academy</h3>
               <div className="bg-white p-6 rounded-lg border border-blue-200">
-                <p className="font-semibold text-gray-900 mb-3">6 Centers in Delhi NCR:</p>
+                <p className="font-semibold text-gray-900 mb-3">4 Centers in Delhi NCR:</p>
                 <ul className="space-y-2 text-gray-700 text-sm mb-4">
                   <li>• Delhi (Multiple locations)</li>
                   <li>• Gurgaon</li>
@@ -516,7 +516,7 @@ export default function CerebrumVsAllenPage() {
               {
                 title: 'Delhi NCR Convenience',
                 description:
-                  '6 centers strategically located across Delhi NCR with flexible online options. Learn in your preferred mode and location.',
+                  '4 centers strategically located across Delhi NCR with flexible online options. Learn in your preferred mode and location.',
               },
             ].map((item, i) => (
               <div key={i} className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg border border-blue-200">

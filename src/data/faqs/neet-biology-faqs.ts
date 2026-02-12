@@ -207,7 +207,7 @@ export const resultsFAQs: FAQ[] = [
   {
     question: 'How many students got into AIIMS from Cerebrum?',
     answer:
-      '47+ students admitted to AIIMS institutions (Delhi, Jodhpur, Bhopal, Patna, Rishikesh) in last 3 years. Additionally, 100+ in other top government colleges. Our systematic approach ensures high-rankers are produced consistently, not by chance.',
+      '67+ students admitted to AIIMS institutions (Delhi, Jodhpur, Bhopal, Patna, Rishikesh) in last 3 years. Additionally, 100+ in other top government colleges. Our systematic approach ensures high-rankers are produced consistently, not by chance.',
     category: 'Results',
     keywords: ['AIIMS selection', 'Cerebrum AIIMS', 'top rank coaching'],
   },

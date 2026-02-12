@@ -79,8 +79,8 @@ export default function VideoLecturesPage() {
               <div className="text-sm opacity-90">Hours Content</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-              <div className="text-3xl font-bold mb-2">2,847+</div>
-              <div className="text-sm opacity-90">Success Stories</div>
+              <div className="text-3xl font-bold mb-2">1,50,000+</div>
+              <div className="text-sm opacity-90">Students Mentored</div>
             </div>
           </div>
         </div>
@@ -157,8 +157,8 @@ export default function VideoLecturesPage() {
                   <span className="text-2xl font-bold text-blue-600">247</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-600">Medical Seats Secured</span>
-                  <span className="text-2xl font-bold text-purple-600">2,847+</span>
+                  <span className="text-gray-600">AIIMS Selections</span>
+                  <span className="text-2xl font-bold text-purple-600">67+</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-600">Student Rating</span>

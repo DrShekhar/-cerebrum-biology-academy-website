@@ -239,10 +239,10 @@ export default function AboutPage() {
               </p>
 
               <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-[1.8] font-light max-w-3xl">
-                In 2015, Dr. Shekhar C Singh walked out of{' '}
+                In 2010, Dr. Shekhar C Singh walked out of{' '}
                 <strong className="font-semibold text-[#3d4d3d]">AIIMS Delhi</strong> with a
                 mission: no student should struggle with NEET Biology the way he saw thousands
-                struggle. Nine years later,{' '}
+                struggle. Fifteen years later,{' '}
                 <strong className="font-semibold text-[#3d4d3d]">
                   98% of our students qualify for NEET
                 </strong>

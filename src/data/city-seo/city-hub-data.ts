@@ -8066,7 +8066,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Can CBSE students prepare for both boards and NEET together?',
         answer:
-          'Absolutely! 97% of our CBSE students excel in both. Our curriculum is CBSE-aligned, so board preparation happens naturally. We add NEET-specific problem-solving, speed techniques, and competitive strategies on top of strong board foundation.',
+          'Absolutely! 98% of our CBSE students excel in both. Our curriculum is CBSE-aligned, so board preparation happens naturally. We add NEET-specific problem-solving, speed techniques, and competitive strategies on top of strong board foundation.',
       },
       {
         question: 'What results do CBSE students achieve at Cerebrum?',
@@ -8121,7 +8121,7 @@ export const cityHubData: Record<string, CityHubData> = {
       {
         question: 'Can I really prepare for NEET while attending regular school?',
         answer:
-          'Absolutely! 97% of our students attend regular school alongside NEET coaching. We offer 4:30 PM and 6:00 PM after-school batches, plus intensive weekend classes. Our smart time management techniques help you excel in both board exams and NEET.',
+          'Absolutely! 98% of our students attend regular school alongside NEET coaching. We offer 4:30 PM and 6:00 PM after-school batches, plus intensive weekend classes. Our smart time management techniques help you excel in both board exams and NEET.',
       },
       {
         question: 'How much time should I dedicate to NEET coaching alongside school?',

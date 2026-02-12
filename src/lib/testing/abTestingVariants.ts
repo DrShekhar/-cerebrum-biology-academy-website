@@ -274,7 +274,7 @@ export const AB_TEST_DECISION_POINTS: ABTestDecisionPoint[] = [
             element: 'Onboarding content',
             type: 'content',
             description: 'Add social proof at each step',
-            implementation: '"12,847 students have completed this step"',
+            implementation: '"1,50,000+ students have enrolled"',
           },
           {
             element: 'Live activity feed',
@@ -740,7 +740,7 @@ export const AB_TEST_DECISION_POINTS: ABTestDecisionPoint[] = [
             element: 'Statistics presentation',
             type: 'design',
             description: 'Detailed statistics with context',
-            implementation: '"98% qualification rate (2,847 out of 3,020 students in 2023)"',
+            implementation: '"98% qualification rate across 1,50,000+ students"',
           },
           {
             element: 'Verification badges',

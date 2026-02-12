@@ -51,11 +51,11 @@ function CommunityPage() {
           <div className="mt-6 pt-6 border-t">
             <div className="flex justify-center space-x-8 text-sm text-gray-500">
               <div className="text-center">
-                <div className="font-semibold text-blue-600">2,847</div>
-                <div>Active Students</div>
+                <div className="font-semibold text-blue-600">1,50,000+</div>
+                <div>Students Mentored</div>
               </div>
               <div className="text-center">
-                <div className="font-semibold text-green-600">1,50,000+</div>
+                <div className="font-semibold text-green-600">5,000+</div>
                 <div>Discussions</div>
               </div>
               <div className="text-center">

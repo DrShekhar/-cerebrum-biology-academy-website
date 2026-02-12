@@ -461,7 +461,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                 <div className="text-xs text-gray-600">Students</div>
               </div>
               <div>
-                <div className="text-lg font-bold text-purple-600">94%</div>
+                <div className="text-lg font-bold text-purple-600">98%</div>
                 <div className="text-xs text-gray-600">Success</div>
               </div>
             </div>

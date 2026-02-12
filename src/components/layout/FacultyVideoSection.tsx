@@ -118,11 +118,11 @@ export function FacultyVideoSection() {
           {/* Quick Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
             {[
-              { icon: Users, label: '2,847+', sublabel: 'Students Placed', color: 'text-blue-600' },
+              { icon: Users, label: '1,50,000+', sublabel: 'Students Mentored', color: 'text-blue-600' },
               { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-green-600' },
               {
                 icon: BookOpen,
-                label: '247',
+                label: '67+',
                 sublabel: 'AIIMS Selections',
                 color: 'text-green-600',
               },

@@ -584,7 +584,7 @@ export default function ContactPage() {
               <div className="text-[#e8ede8] text-xs sm:text-sm md:text-base">Support</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">94%</div>
+              <div className="text-xl sm:text-2xl md:text-3xl font-bold mb-1 sm:mb-2">98%</div>
               <div className="text-[#e8ede8] text-xs sm:text-sm md:text-base">Success Rate</div>
             </div>
           </div>

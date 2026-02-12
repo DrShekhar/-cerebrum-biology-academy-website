@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Find Your Nearest Cerebrum Biology Academy Center',
-    description: 'Locate our 6 centers in Delhi NCR with addresses, phone numbers, and directions.',
+    description: 'Locate our 4 centers in Delhi NCR with addresses, phone numbers, and directions.',
     url: 'https://cerebrumbiologyacademy.com/find-center',
   },
   alternates: {
@@ -108,7 +108,7 @@ const faqItems = [
   {
     question: 'Which Cerebrum center is closest to me?',
     answer:
-      'We have 6 centers strategically located across Delhi NCR: Rohini (North Delhi), Gurugram (Haryana), South Extension & Green Park (South Delhi), Faridabad (Haryana), and Noida (UP). Visit our map above to find the nearest center.',
+      'We have 4 centers strategically located across Delhi NCR: Rohini (North Delhi), Gurugram (Haryana), South Extension & Green Park (South Delhi), Faridabad (Haryana), and Noida (UP). Visit our map above to find the nearest center.',
   },
   {
     question: 'What are the center timings?',
@@ -125,7 +125,7 @@ const faqItems = [
     answer:
       'Absolutely! All our centers offer free demo classes. Simply call ' +
       CONTACT_INFO.phone.primary +
-      ' or WhatsApp us to book a demo. You can attend at any of our 6 centers.',
+      ' or WhatsApp us to book a demo. You can attend at any of our 4 centers.',
   },
   {
     question: 'Is there a center closest to my school?',

@@ -37,7 +37,7 @@ const faqs: FAQItem[] = [
   },
   {
     question: 'Does Cerebrum have centers outside Delhi NCR?',
-    answer: 'Currently, Cerebrum Biology Academy operates 6 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum\'s online programs allow students nationwide to access AIIMS-trained faculty expertise.',
+    answer: 'Currently, Cerebrum Biology Academy operates 4 centers across Delhi NCR and offers live online classes with recorded sessions. For pan-India availability, Aakash has centers in most major cities. However, Cerebrum\'s online programs allow students nationwide to access AIIMS-trained faculty expertise.',
   },
 ];
 
@@ -154,7 +154,7 @@ export default function CerebrumVsAakash() {
                     Success Rate
                   </td>
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base">
-                    <span className="text-green-700 font-medium">94% Selection Rate</span>
+                    <span className="text-green-700 font-medium">98% Selection Rate</span>
                   </td>
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base text-gray-700">
                     High Success Rate Claimed
@@ -202,7 +202,7 @@ export default function CerebrumVsAakash() {
                     Pan-India Presence
                   </td>
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base">
-                    6 Centers Delhi NCR + Online
+                    4 Centers Delhi NCR + Online
                   </td>
                   <td className="px-4 sm:px-6 py-4 text-sm sm:text-base text-gray-700">
                     Pan India + BYJU'S Integration
@@ -344,7 +344,7 @@ export default function CerebrumVsAakash() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span><strong>94% Selection Rate</strong> - Among all students completing the program</span>
+                    <span><strong>98% Selection Rate</strong> - Among all students completing the program</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
@@ -478,7 +478,7 @@ export default function CerebrumVsAakash() {
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />
-                    <span><strong>6 Centers in Delhi NCR:</strong> Strategically located for easy accessibility</span>
+                    <span><strong>4 Centers in Delhi NCR:</strong> Strategically located for easy accessibility</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-1" />

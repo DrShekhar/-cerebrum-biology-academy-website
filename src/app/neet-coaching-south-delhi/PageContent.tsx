@@ -223,7 +223,7 @@ export default function PageContent() {
             </h2>
 
             <p className="text-lg md:text-xl opacity-80 mb-8 max-w-4xl mx-auto">
-              Join South Delhi's most trusted NEET Biology coaching. Expert AIIMS faculty, 94%
+              Join South Delhi's most trusted NEET Biology coaching. Expert AIIMS faculty, 98%
               success rate, students from top schools like DPS, Modern, and Vasant Valley. Online &
               offline batches available.
             </p>

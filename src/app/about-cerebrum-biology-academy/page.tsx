@@ -20,7 +20,7 @@ const aboutFaqs = [
   {
     question: 'Who founded Cerebrum Biology Academy?',
     answer:
-      'Cerebrum was founded by Dr. Shekhar C Singh in 2014, an AIIMS Delhi graduate (2014) who scored 680/720 in NEET. After observing thousands of students struggle despite expensive coaching, he chose teaching to democratize AIIMS-level Biology instruction.',
+      'Cerebrum was founded by Dr. Shekhar C Singh in 2010, an AIIMS Delhi graduate who scored 680/720 in NEET. After observing thousands of students struggle despite expensive coaching, he chose teaching to democratize AIIMS-level Biology instruction.',
   },
   {
     question: 'How long has Cerebrum been operating?',
@@ -188,7 +188,7 @@ export default function AboutCerebrumPage() {
               <div className="text-slate-200">Proven Track Record</div>
             </div>
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-6 border border-white border-opacity-20">
-              <div className="text-3xl font-bold text-green-400 mb-2">94%</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
               <div className="text-slate-200">Success Rate</div>
             </div>
           </div>
@@ -470,7 +470,7 @@ export default function AboutCerebrumPage() {
             <div className="border-l-4 border-green-400 pl-6">
               <h3 className="text-xl font-bold mb-3">AIIMS Selections</h3>
               <p className="text-slate-300 mb-4">
-                47+ students selected to AIIMS across campuses (Delhi, Pune, Bhopal, Jodhpur,
+                67+ students selected to AIIMS across campuses (Delhi, Pune, Bhopal, Jodhpur,
                 Raipur, Rishikesh, Nagpur) since 2010.
               </p>
             </div>
@@ -511,7 +511,7 @@ export default function AboutCerebrumPage() {
               <p className="text-slate-600">Total NEET Selections (All-time)</p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">94%</div>
+              <div className="text-4xl font-bold text-blue-600 mb-2">98%</div>
               <p className="text-slate-600">Qualification Rate</p>
             </div>
             <div className="bg-white rounded-lg p-8 border border-slate-200 text-center">

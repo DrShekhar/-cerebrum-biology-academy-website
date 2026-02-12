@@ -265,7 +265,7 @@ export const NEET_BIOLOGY_PAA_QUESTIONS: PAQuestion[] = [
   },
   {
     question: 'What makes Cerebrum different from other NEET coaching?',
-    answer: 'Cerebrum stands out for: (1) AIIMS-trained faculty, (2) Biology-only specialization (not general coaching), (3) Small batch sizes (max 25), (4) 98% success rate, (5) 6 centers across Delhi NCR, (6) Comprehensive study material with 10,000+ MCQs.',
+    answer: 'Cerebrum stands out for: (1) AIIMS-trained faculty, (2) Biology-only specialization (not general coaching), (3) Small batch sizes (max 25), (4) 98% success rate, (5) 4 centers across Delhi NCR, (6) Comprehensive study material with 10,000+ MCQs.',
   },
 ]
 
@@ -411,7 +411,7 @@ export const PARENT_BOARD_PAA_QUESTIONS: PAQuestion[] = [
   },
   {
     question: 'Does Cerebrum provide progress reports to parents?',
-    answer: 'Yes, Cerebrum provides weekly test scores, monthly progress reports, and regular parent-teacher meetings. Parents get a dedicated WhatsApp group for updates, attendance tracking, and direct communication with faculty. Bi-monthly PTMs are held at all 6 centers.',
+    answer: 'Yes, Cerebrum provides weekly test scores, monthly progress reports, and regular parent-teacher meetings. Parents get a dedicated WhatsApp group for updates, attendance tracking, and direct communication with faculty. Bi-monthly PTMs are held at all 4 centers.',
   },
   {
     question: 'Can Biology Board exam marks help in NEET?',

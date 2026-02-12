@@ -25,7 +25,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
     title:
       'Best NEET Biology Coaching in Delhi NCR | Laxmi Nagar, Dwarka, Noida, Gurgaon | Cerebrum Academy',
     description:
-      'Top NEET coaching in Delhi NCR 2026. AIIMS faculty, 98% success rate, 15-student batches, 680+ selections. 6 centers — South Extension, Green Park, Rohini, Gurugram, Noida, Faridabad. Class 11, 12 & droppers. Book free demo!',
+      'Top NEET coaching in Delhi NCR 2026. AIIMS faculty, 98% success rate, 15-student batches, 680+ selections. 4 centers across Delhi NCR. Class 11, 12 & droppers. Book free demo!',
     keywords: [
       'NEET coaching in Delhi',
       'NEET coaching Delhi NCR',
@@ -89,7 +89,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   courses: {
     title: 'NEET Biology Courses Delhi NCR | Class 11, 12, Dropper Batches | Cerebrum Academy',
     description:
-      'NEET biology courses 2026 in Delhi NCR — Class 11, Class 12 & Dropper batches. AIIMS faculty, 15-student batches, 98% success rate. Rs 45K–1.56L with EMI. 6 centers across Delhi NCR. Enroll now!',
+      'NEET biology courses 2026 in Delhi NCR — Class 11, Class 12 & Dropper batches. AIIMS faculty, 15-student batches, 98% success rate. Rs 45K–1.56L with EMI. 4 centers across Delhi NCR. Enroll now!',
     keywords: [
       'NEET biology courses Delhi',
       'NEET biology syllabus',
@@ -160,7 +160,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   bookDemo: {
     title: 'Book Free NEET Demo Class 2026 | WhatsApp Instant Booking | Cerebrum Academy Delhi NCR',
     description:
-      'Book your FREE NEET biology demo class at Cerebrum Academy. Experience 15-student batches, AIIMS faculty teaching. Instant WhatsApp confirmation. 6 centers across Delhi NCR — South Extension, Green Park, Rohini, Gurugram, Noida, Faridabad.',
+      'Book your FREE NEET biology demo class at Cerebrum Academy. Experience 15-student batches, AIIMS faculty teaching. Instant WhatsApp confirmation. 4 centers across Delhi NCR.',
     keywords: [
       'book free demo NEET coaching',
       'free demo class biology Delhi',
@@ -195,7 +195,7 @@ export const pageMetadata: Record<string, PageMetadata> = {
   pricing: {
     title: 'NEET Coaching Fees 2026 Delhi NCR | Rs 45K–1.56L | EMI Available | Cerebrum Academy',
     description:
-      'NEET biology coaching fees starting Rs 45,000 in Delhi NCR. 15-student batches, AIIMS faculty, 98% success rate. Compare with Aakash & Allen. Flexible EMI options across 6 centers. Book free demo!',
+      'NEET biology coaching fees starting Rs 45,000 in Delhi NCR. 15-student batches, AIIMS faculty, 98% success rate. Compare with Aakash & Allen. Flexible EMI options across 4 centers. Book free demo!',
     keywords: [
       'NEET course fees Delhi',
       'NEET coaching fees 2026',

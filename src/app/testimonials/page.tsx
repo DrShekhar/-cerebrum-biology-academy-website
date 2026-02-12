@@ -127,8 +127,8 @@ const testimonials = [
 const stats = [
   {
     icon: Users,
-    value: '2,847',
-    label: 'Students Taught',
+    value: '1,50,000+',
+    label: 'Students Mentored',
     color: 'text-blue-600',
   },
   {

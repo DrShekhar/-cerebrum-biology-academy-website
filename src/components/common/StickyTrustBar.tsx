@@ -17,13 +17,13 @@ export function StickyTrustBar() {
     },
     {
       icon: Users,
-      value: '2,847+',
-      label: 'Medical Seats Secured',
+      value: '1,50,000+',
+      label: 'Students Mentored',
       color: 'text-blue-600 bg-blue-50 border-blue-200',
     },
     {
       icon: BookOpen,
-      value: '247',
+      value: '67+',
       label: 'AIIMS Selections',
       color: 'text-purple-600 bg-purple-50 border-purple-200',
     },

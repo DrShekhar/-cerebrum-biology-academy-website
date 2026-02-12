@@ -157,7 +157,7 @@ export default function OneYearNEETCourseGurugram() {
               <div className="text-gray-600">Total Teaching</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-red-600">94%</div>
+              <div className="text-3xl font-bold text-red-600">98%</div>
               <div className="text-gray-600">Success Rate</div>
             </div>
             <div className="text-center">
