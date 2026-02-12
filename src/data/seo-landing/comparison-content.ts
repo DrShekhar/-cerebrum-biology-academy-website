@@ -873,7 +873,7 @@ export const comparisonSEOPages: Record<string, SEOLandingContent> = {
       { value: '98%', label: 'Qualification Rate' },
       { value: '330+', label: 'Avg Biology Score' },
       { value: '78%', label: 'Govt College Admission' },
-      { value: '2,500+', label: 'Verified Alumni' },
+      { value: '1,50,000+', label: 'Students Trained' },
     ],
     testimonials: [
       {

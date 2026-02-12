@@ -2137,13 +2137,13 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '📉',
           question: 'Scared of another disappointment?',
-          solution: 'Proven strategy that has helped 500+ droppers succeed',
+          solution: 'Proven strategy that has helped thousands of droppers succeed',
         },
       ],
     },
     benefits: {
       title: 'Why Droppers Succeed at Cerebrum',
-      subtitle: '500+ Successful Repeaters',
+      subtitle: 'Thousands of Successful Repeaters',
       items: [
         {
           icon: '📊',
@@ -2170,7 +2170,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     stats: [
       { value: '78%', label: 'Govt Seat Rate', icon: '🏥' },
       { value: '150+', label: 'Avg Mark Improvement', icon: '📈' },
-      { value: '500+', label: 'Success Stories', icon: '⭐' },
+      { value: '1,000+', label: 'Success Stories', icon: '⭐' },
       { value: '12', label: 'Month Program', icon: '📅' },
     ],
     testimonials: [
@@ -2215,7 +2215,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       {
         question: 'What makes Cerebrum different for droppers?',
         answer:
-          'Small batches (10-12 students), personalized attention, gap analysis from first attempt, mental wellness support, and a community of fellow droppers. Our faculty has helped 500+ droppers succeed.',
+          'Small batches (10-12 students), personalized attention, gap analysis from first attempt, mental wellness support, and a community of fellow droppers. Our faculty has helped thousands of droppers succeed.',
       },
     ],
     courseSummary: {
@@ -2237,7 +2237,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
     },
     cta: {
       title: 'Start Your Comeback Story',
-      subtitle: 'Join 500+ successful droppers who proved everyone wrong',
+      subtitle: 'Join thousands of successful droppers who proved everyone wrong',
       primaryButton: {
         text: 'Join Dropper Batch 2025',
         link: '/courses/neet-dropper',
@@ -3759,7 +3759,7 @@ export const resourcesSEOPages: Record<string, SEOLandingContent> = {
       duration: '12-month program',
       batchSize: '10-15 students',
       features: [
-        '2,500+ success stories',
+        '1,50,000+ students trained',
         '85% selection rate',
         'AIIMS faculty guidance',
         'Proven methodology',

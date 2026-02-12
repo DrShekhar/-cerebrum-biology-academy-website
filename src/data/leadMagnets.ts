@@ -75,7 +75,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Local coaching comparison matrix',
       'Area-specific parent guidance tips',
     ],
-    socialProof: 'Helped 500+ students from [AREA] crack NEET',
+    socialProof: 'Trusted by 1,50,000+ students for NEET preparation',
   },
   {
     id: 'biology-memory-techniques',
@@ -263,7 +263,7 @@ export const localLeadMagnets: LeadMagnet[] = [
       'Fee structure comparison (Govt vs Private)',
       'NRI quota and management seats info',
     ],
-    socialProof: 'Helped 500+ Punjab students make college decisions',
+    socialProof: 'Helped thousands of Punjab students make college decisions',
   },
   {
     id: 'sector-34-vs-online-comparison',

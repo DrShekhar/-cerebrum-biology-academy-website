@@ -905,7 +905,7 @@ export const privateSchoolBiologyTuition: SEOLandingContent = {
   },
 
   stats: [
-    { value: '500+', label: 'Elite School Students', icon: 'users' },
+    { value: '1,50,000+', label: 'Students Trained', icon: 'users' },
     { value: '92%', label: 'Private School Success Rate', icon: 'trophy' },
     { value: '50+', label: 'Partner Schools', icon: 'building' },
     { value: '15+', label: 'Years Experience', icon: 'clock' },

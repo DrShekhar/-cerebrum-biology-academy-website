@@ -200,7 +200,7 @@ export const resultsFAQs: FAQ[] = [
   {
     question: 'Do you have student testimonials and success stories?',
     answer:
-      'Yes! 500+ video testimonials from successful students available on our YouTube channel and website. Recent success stories include: Priya Sharma (698/720 - AIIMS Delhi), Rahul Verma (685/720 - Maulana Azad), and many more. Ask for testimonials from students in your city/state.',
+      'Yes! Hundreds of video testimonials from successful students available on our YouTube channel and website. Recent success stories include: Priya Sharma (698/720 - AIIMS Delhi), Rahul Verma (685/720 - Maulana Azad), and many more. Ask for testimonials from students in your city/state.',
     category: 'Results',
     keywords: ['NEET success stories', 'student testimonials', 'Cerebrum reviews'],
   },

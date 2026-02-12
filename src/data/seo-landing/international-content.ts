@@ -37,7 +37,7 @@ const gcseBiologyTuition: SEOLandingContent = {
   hero: {
     headline: 'GCSE Biology Tuition That Gets You Grade 9',
     subheadline:
-      'Expert online tutoring covering AQA, Edexcel & OCR exam boards. Join 500+ UK students who achieved top grades with our proven methodology.',
+      'Expert online tutoring covering AQA, Edexcel & OCR exam boards. Join hundreds of UK students who achieved top grades with our proven methodology.',
     highlightedText: 'Grade 9',
     ctaText: 'Start Your Free Trial',
     ctaLink: '/book-demo',
@@ -113,7 +113,7 @@ const gcseBiologyTuition: SEOLandingContent = {
 
   stats: [
     { value: '95%', label: 'Grade 7+ Achievement', icon: 'trophy' },
-    { value: '500+', label: 'UK Students Tutored', icon: 'users' },
+    { value: '200+', label: 'UK Students Tutored', icon: 'users' },
     { value: '2+', label: 'Average Grade Improvement', icon: 'trending-up' },
     { value: '4.9/5', label: 'Student Rating', icon: 'star' },
   ],

@@ -661,7 +661,7 @@ export const class11BiologyData: CourseProgram = {
       rating: 4.95,
       teachingExperience: '15 years in NEET coaching with 67+ AIIMS selections',
       achievementHighlights: [
-        '500+ NEET qualified students',
+        '1,50,000+ students trained',
         'AIIMS toppers mentor (12 students)',
         '15+ research publications in plant biology',
         'Expert in foundation building',

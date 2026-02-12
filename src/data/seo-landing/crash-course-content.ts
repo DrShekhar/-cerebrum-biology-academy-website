@@ -232,7 +232,7 @@ export const crashCourseSEOPages: Record<string, SEOLandingContent> = {
         {
           icon: '📈',
           question: 'Want guaranteed improvement?',
-          solution: 'Proven strategy that helped 500+ students improve 50+ marks',
+          solution: 'Proven strategy that helped thousands of students improve 50+ marks',
         },
       ],
     },
