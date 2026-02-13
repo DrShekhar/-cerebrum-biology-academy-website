@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Bell,
@@ -227,6 +228,7 @@ export function NotificationPopover({
   isLoading = false,
   className = '',
 }: NotificationPopoverProps) {
+  const router = useRouter()
   const [isOpen, setIsOpen] = useState(false)
   const popoverRef = useRef<HTMLDivElement>(null)
 
@@ -335,7 +337,7 @@ export function NotificationPopover({
                 onClick={() => {
                   setIsOpen(false)
                   // Navigate to full notifications page
-                  window.location.href = '/student/notifications'
+                  router.push('/student/notifications')
                 }}
                 className="w-full text-center text-sm text-gray-600 hover:text-gray-900 font-medium flex items-center justify-center"
               >

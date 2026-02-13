@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import FocusTrap from 'focus-trap-react'
 import {
@@ -34,6 +35,7 @@ export function TrialExpiredModal({
   onUpgrade,
   onContactUs,
 }: TrialExpiredModalProps) {
+  const router = useRouter()
   const [showContactForm, setShowContactForm] = useState(false)
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
@@ -212,7 +214,7 @@ export function TrialExpiredModal({
 
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                       <button
-                        onClick={onUpgrade || (() => (window.location.href = '/pricing'))}
+                        onClick={onUpgrade || (() => router.push('/pricing'))}
                         className="flex-1 flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-xl font-semibold hover:shadow-xl transition-all active:scale-95 min-h-[56px] focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2"
                       >
                         <Crown className="w-5 h-5" />
@@ -232,7 +234,7 @@ export function TrialExpiredModal({
                       <p className="text-sm text-gray-600">
                         Have questions?{' '}
                         <button
-                          onClick={onContactUs || (() => (window.location.href = '/contact'))}
+                          onClick={onContactUs || (() => router.push('/contact'))}
                           className="text-green-600 hover:text-green-700 font-semibold underline focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-offset-2 rounded px-1"
                         >
                           Contact our support team

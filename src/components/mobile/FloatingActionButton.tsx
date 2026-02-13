@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Plus, X, BookOpen, Target, Clock, MessageCircle } from 'lucide-react'
 
@@ -138,6 +139,7 @@ export function FloatingActionButton({
 }
 
 export function useDashboardFAB() {
+  const router = useRouter()
   const defaultActions: FABAction[] = [
     {
       id: 'start-study',
@@ -155,7 +157,7 @@ export function useDashboardFAB() {
       label: 'Take Practice Test',
       icon: Target,
       onClick: () => {
-        window.location.href = '/mock-tests'
+        router.push('/mock-tests')
       },
       color: 'bg-green-100',
       ariaLabel: 'Navigate to practice tests',
@@ -165,7 +167,7 @@ export function useDashboardFAB() {
       label: 'Browse Topics',
       icon: BookOpen,
       onClick: () => {
-        window.location.href = '/practice'
+        router.push('/practice')
       },
       color: 'bg-purple-100',
       ariaLabel: 'Browse study topics',
@@ -175,7 +177,7 @@ export function useDashboardFAB() {
       label: 'Ask Doubt',
       icon: MessageCircle,
       onClick: () => {
-        window.location.href = '/support'
+        router.push('/support')
       },
       color: 'bg-orange-100',
       ariaLabel: 'Ask a question or doubt',

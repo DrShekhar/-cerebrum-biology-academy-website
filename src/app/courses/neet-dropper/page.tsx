@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
@@ -30,6 +31,7 @@ import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking
 import { BookFreeDemoCard } from '@/components/courses/BookFreeDemoCard'
 
 export default function NEETDropperPage() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -77,7 +79,7 @@ export default function NEETDropperPage() {
         value: 1,
       })
     }
-    window.location.href = '/demo-booking'
+    router.push('/demo-booking')
   }
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
@@ -97,7 +99,7 @@ export default function NEETDropperPage() {
     setIsSubmitting(false)
 
     setTimeout(() => {
-      window.location.href = '/demo-booking'
+      router.push('/demo-booking')
     }, 2000)
   }
 

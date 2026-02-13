@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle2,
@@ -67,6 +68,7 @@ export function StreamlinedEnrollmentPage({
   onWhatsAppContact,
   onCallNow,
 }: StreamlinedEnrollmentPageProps) {
+  const router = useRouter()
   const [currentStep, setCurrentStep] = useState(0)
   const [formData, setFormData] = useState({
     fullName: '',
@@ -1249,7 +1251,7 @@ export function StreamlinedEnrollmentPage({
                     Join WhatsApp Group
                   </PremiumButton>
                   <PremiumButton
-                    onClick={() => (window.location.href = '/student/dashboard')}
+                    onClick={() => router.push('/student/dashboard')}
                     variant="medical"
                     size="lg"
                   >

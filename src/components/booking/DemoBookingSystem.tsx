@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
@@ -65,6 +66,7 @@ interface BookingData {
 }
 
 export function DemoBookingSystem() {
+  const router = useRouter()
   const { trackDemoRequest } = useAnalytics()
   const { trackDemoBooking, trackFormStart, trackContentView } = useFacebookPixel()
   const { validationStates, validateField, formatPhone, capitalizeName } = useFormValidation()
@@ -612,13 +614,13 @@ export function DemoBookingSystem() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <button
-                onClick={() => (window.location.href = '/courses')}
+                onClick={() => router.push('/courses')}
                 className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-blue-700 transition-colors"
               >
                 Explore Courses
               </button>
               <button
-                onClick={() => (window.location.href = '/')}
+                onClick={() => router.push('/')}
                 className="flex-1 border border-gray-300 text-gray-700 py-3 px-6 rounded-lg font-medium hover:bg-gray-50 transition-colors"
               >
                 Back to Home

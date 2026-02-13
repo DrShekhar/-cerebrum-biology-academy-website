@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, Star, CheckCircle2 } from 'lucide-react'
 
@@ -24,6 +25,7 @@ interface SimplifiedCourseCardsProps {
 }
 
 export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsProps) {
+  const router = useRouter()
   const [expandedCourse, setExpandedCourse] = useState<string | null>(null)
 
   const courses: Course[] = [
@@ -82,7 +84,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
   }
 
   const handleExplore = (courseId: string) => {
-    window.location.href = `/courses/${courseId}`
+    router.push(`/courses/${courseId}`)
   }
 
   return (
@@ -200,7 +202,7 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                               View Full Details
                             </button>
                             <button
-                              onClick={() => (window.location.href = '/demo')}
+                              onClick={() => router.push('/demo')}
                               className="flex-1 border border-blue-600 text-blue-600 hover:bg-blue-50 py-2 px-4 rounded-lg transition-colors duration-200"
                             >
                               Book Demo

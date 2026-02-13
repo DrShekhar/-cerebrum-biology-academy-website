@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   CheckCircle,
@@ -28,6 +29,7 @@ import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { MobilePhoneStickyBar } from '@/components/common/MobilePhoneStickyBar'
 
 export default function NEETCrashCoursePage() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -66,7 +68,7 @@ export default function NEETCrashCoursePage() {
   }, [])
 
   const handleDemoBooking = () => {
-    window.location.href = '/demo-booking'
+    router.push('/demo-booking')
   }
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
@@ -76,7 +78,7 @@ export default function NEETCrashCoursePage() {
     setSubmitSuccess(true)
     setIsSubmitting(false)
     setTimeout(() => {
-      window.location.href = '/demo-booking'
+      router.push('/demo-booking')
     }, 2000)
   }
 

@@ -1,10 +1,12 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { TrialBanner, useTrialBanner } from './TrialBanner'
 
 export function TrialBannerWrapper() {
+  const router = useRouter()
   const { isAuthenticated, isLoading: authLoading } = useAuth()
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
   const { trialStatus, isLoading: trialLoading } = useTrialBanner(freeUserId)
@@ -32,7 +34,7 @@ export function TrialBannerWrapper() {
     <TrialBanner
       trialStatus={trialStatus}
       onUpgradeClick={() => {
-        window.location.href = '/enrollment'
+        router.push('/enrollment')
       }}
       onDismiss={() => {
         console.log('Trial banner dismissed')

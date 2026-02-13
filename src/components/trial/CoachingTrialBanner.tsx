@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
@@ -44,6 +45,7 @@ export function CoachingTrialBanner({
   onDismiss,
   onStartTrial,
 }: CoachingTrialBannerProps) {
+  const router = useRouter()
   const [isDismissed, setIsDismissed] = useState(false)
   const [showAnimation, setShowAnimation] = useState(false)
   const [isStartingTrial, setIsStartingTrial] = useState(false)
@@ -282,7 +284,7 @@ export function CoachingTrialBanner({
 
               <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
                 <button
-                  onClick={onUpgradeClick || (() => (window.location.href = '/enrollment'))}
+                  onClick={onUpgradeClick || (() => router.push('/enrollment'))}
                   className={`flex items-center justify-center gap-2 px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg font-semibold text-sm transition-all hover:shadow-lg active:scale-95 ${config.buttonStyle} flex-1 sm:flex-initial min-h-[44px] focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2`}
                   aria-label={config.buttonText}
                 >

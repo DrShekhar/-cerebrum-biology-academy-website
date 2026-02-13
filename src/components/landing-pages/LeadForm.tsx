@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Send, MessageCircle, Loader2 } from 'lucide-react'
 import { trackDemoBooking, trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
@@ -18,6 +19,7 @@ export function LeadForm({
   courseType,
   formId = 'demo-form',
 }: LeadFormProps) {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -57,7 +59,7 @@ export function LeadForm({
 
       // Redirect to thank you page after 2 seconds
       setTimeout(() => {
-        window.location.href = '/demo/complete'
+        router.push('/demo/complete')
       }, 2000)
     } catch (error) {
       console.error('Form submission error:', error)

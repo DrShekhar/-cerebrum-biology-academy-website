@@ -4,6 +4,7 @@
 export const dynamic = 'force-dynamic'
 
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   BookOpen,
@@ -63,6 +64,7 @@ interface RecentActivity {
 }
 
 export default function StudentDashboard() {
+  const router = useRouter()
   const {
     user,
     isAuthenticated,
@@ -233,7 +235,7 @@ export default function StudentDashboard() {
               </span>
             </div>
             <Button
-              onClick={() => (window.location.href = '/enrollment')}
+              onClick={() => router.push('/enrollment')}
               variant="secondary"
               size="sm"
               className="bg-white text-blue-600 hover:bg-gray-100"

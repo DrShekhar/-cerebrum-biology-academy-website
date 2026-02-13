@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send, Bot, BookOpen, Calendar, Phone, Download } from 'lucide-react'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
@@ -56,6 +57,7 @@ interface ChatbotState {
 }
 
 export function IntelligentChatbot() {
+  const router = useRouter()
   const { preferences, updatePreferences, trackBehavior } = usePersonalization()
   const [chatState, setChatState] = useState<ChatbotState>({
     isOpen: false,
@@ -886,16 +888,16 @@ export function IntelligentChatbot() {
 
     switch (action.type) {
       case 'book_demo':
-        window.location.href = '/support/demo'
+        router.push('/support/demo')
         break
       case 'call_request':
         window.location.href = getPhoneLink()
         break
       case 'download_brochure':
-        window.location.href = '/support/brochure'
+        router.push('/support/brochure')
         break
       case 'view_course':
-        window.location.href = '/courses'
+        router.push('/courses')
         break
     }
   }

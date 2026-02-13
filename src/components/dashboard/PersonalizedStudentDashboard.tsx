@@ -8,7 +8,7 @@ import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
 import { FloatingActionButton, useDashboardFAB } from '@/components/mobile/FloatingActionButton'
 import { BottomNavigation } from '@/components/mobile/MobileFullscreenMenu'
 import { useBottomSheet } from '@/components/mobile/BottomSheet'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { fetchWithRetry } from '@/lib/utils/fetchWithRetry'
 import { useToast } from '@/components/ui/Toast'
 
@@ -34,6 +34,7 @@ import {
 } from './tabs'
 
 export function PersonalizedStudentDashboard() {
+  const router = useRouter()
   const { user, isAuthenticated } = useAuth()
   const pathname = usePathname()
   const { showToast } = useToast()
@@ -503,7 +504,7 @@ export function PersonalizedStudentDashboard() {
           setActiveTab('study')
         }}
         onBrowse={() => {
-          window.location.href = '/practice'
+          router.push('/practice')
         }}
       />
     </div>

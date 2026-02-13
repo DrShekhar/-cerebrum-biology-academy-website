@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import {
   InternationalPaymentService,
   PaymentMethod,
@@ -29,6 +30,7 @@ export function InternationalPaymentForm({
   onPaymentError,
   className = '',
 }: InternationalPaymentFormProps) {
+  const router = useRouter()
   const { preferences, trackBehavior } = usePersonalization()
   const [availableProviders, setAvailableProviders] = useState<PaymentProvider[]>([])
   const [availableMethods, setAvailableMethods] = useState<PaymentMethod[]>([])
@@ -209,7 +211,7 @@ export function InternationalPaymentForm({
         </div>
         <div className="mt-4">
           <button
-            onClick={() => (window.location.href = '/contact')}
+            onClick={() => router.push('/contact')}
             className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
           >
             Contact Support

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X } from 'lucide-react'
@@ -12,6 +13,7 @@ interface FixedHeaderProps {
 }
 
 export function FixedHeader({ className = '' }: FixedHeaderProps) {
+  const router = useRouter()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const toggleMobileMenu = () => {
@@ -19,7 +21,7 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
   }
 
   const handleBookDemo = () => {
-    window.location.href = '/demo'
+    router.push('/demo')
   }
 
   const handleCall = () => {

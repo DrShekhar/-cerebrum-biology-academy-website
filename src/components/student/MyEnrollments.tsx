@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
 import { useEnrollment } from '@/hooks/useEnrollment'
 import { Button } from '@/components/ui/Button'
@@ -46,6 +47,7 @@ interface ProgressData {
 }
 
 export function MyEnrollments() {
+  const router = useRouter()
   const { user, isAuthenticated } = useAuth()
   const { getUserEnrollments } = useEnrollment()
   const [progressData, setProgressData] = useState<Record<string, ProgressData>>({})
@@ -152,7 +154,7 @@ export function MyEnrollments() {
           <Button
             variant="outline"
             size="default"
-            onClick={() => (window.location.href = '/login')}
+            onClick={() => router.push('/login')}
           >
             Sign In to View Enrollments
           </Button>
