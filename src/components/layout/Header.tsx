@@ -122,7 +122,7 @@ const Header = () => {
               <div className="relative flex-shrink-0">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-xl flex items-center justify-center shadow-md border border-green-100 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 overflow-hidden">
                   <Image
-                    src="/brain-logo.png"
+                    src="/brain-logo.webp"
                     alt="Cerebrum Biology Academy Logo"
                     width={40}
                     height={40}

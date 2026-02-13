@@ -20,7 +20,7 @@ export function generateAggregateRatingSchema(reviews?: ReviewData[]) {
     description:
       "Delhi NCR's leading NEET Biology coaching institute with 98% success rate. Specializing exclusively in Biology coaching for NEET and board exams.",
     url: 'https://cerebrumbiologyacademy.com',
-    logo: 'https://cerebrumbiologyacademy.com/brain-logo.png',
+    logo: 'https://cerebrumbiologyacademy.com/brain-logo.webp',
     image: 'https://cerebrumbiologyacademy.com/og-image.jpg',
     telephone: '+91-88264-44334',
     email: 'info@cerebrumbiologyacademy.com',

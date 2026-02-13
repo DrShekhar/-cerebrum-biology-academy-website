@@ -67,7 +67,7 @@ export function generateSpeakableArticleSchema(article: SpeakableArticleData) {
       name: 'Cerebrum Biology Academy',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://cerebrumbiologyacademy.com/brain-logo.png',
+        url: 'https://cerebrumbiologyacademy.com/brain-logo.webp',
       },
     },
     image: article.image || 'https://cerebrumbiologyacademy.com/images/blog/default.jpg',

@@ -33,7 +33,7 @@ export function generateVideoSchema(video: VideoData) {
       name: 'Cerebrum Biology Academy',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://cerebrumbiologyacademy.com/brain-logo.png',
+        url: 'https://cerebrumbiologyacademy.com/brain-logo.webp',
       },
     },
   }
