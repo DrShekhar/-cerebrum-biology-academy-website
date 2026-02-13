@@ -1,8 +1,5 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import { useState, useEffect, useCallback } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'

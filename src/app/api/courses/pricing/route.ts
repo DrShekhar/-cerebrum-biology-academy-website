@@ -55,6 +55,8 @@ export async function GET(request: NextRequest) {
             amountDisplay: course.totalFees / 100,
             fallback: true,
           },
+        }, {
+          headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
         })
       }
 
@@ -68,6 +70,8 @@ export async function GET(request: NextRequest) {
           amountDisplay: pricing.amount / 100,
           fallback: false,
         },
+      }, {
+        headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
       })
     }
 
@@ -125,6 +129,8 @@ export async function GET(request: NextRequest) {
       success: true,
       currency,
       data: coursesWithPricing,
+    }, {
+      headers: { 'Cache-Control': 'public, s-maxage=300, stale-while-revalidate=3600' },
     })
   } catch (error) {
     console.error('Error fetching course pricing:', error)

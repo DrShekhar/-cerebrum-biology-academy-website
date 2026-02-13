@@ -85,6 +85,8 @@ export async function GET(request: NextRequest) {
         },
       },
       questionGenerationReady: pages.some((p) => p.content.length > 0),
+    }, {
+      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
     })
   } catch (error) {
     console.error('[NCERT Content API] Error:', error)

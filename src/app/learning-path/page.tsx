@@ -1,8 +1,5 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import dynamicImport from 'next/dynamic'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'

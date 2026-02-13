@@ -24,6 +24,8 @@ export async function GET(request: NextRequest) {
         success: true,
         count: chapters.length,
         chapters,
+      }, {
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
       })
     }
 
@@ -33,6 +35,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         success: true,
         stats,
+      }, {
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
       })
     }
 
@@ -56,6 +60,8 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         success: true,
         chapter,
+      }, {
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
       })
     }
 
@@ -73,6 +79,8 @@ export async function GET(request: NextRequest) {
         class: ncertClass,
         count: chapters.length,
         chapters,
+      }, {
+        headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
       })
     }
 
@@ -88,6 +96,8 @@ export async function GET(request: NextRequest) {
         totalChapters: index.class12.totalChapters,
         chapters: index.class12.chapters,
       },
+    }, {
+      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
     })
   } catch (error) {
     console.error('[NCERT API] Error:', error)

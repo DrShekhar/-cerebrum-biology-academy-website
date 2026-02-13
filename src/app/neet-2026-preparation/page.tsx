@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -230,11 +229,7 @@ export default function NEET2026PreparationPage() {
 
         <div className="relative max-w-7xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
           <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="animate-fadeInLeft">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
                 <Target className="w-4 h-4 sm:w-5 sm:h-5 mr-2 text-yellow-400" />
                 #1 NEET Biology Coaching for 2026
@@ -256,17 +251,14 @@ export default function NEET2026PreparationPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
                 {successMetrics.map((metric, index) => (
-                  <motion.div
+                  <div
                     key={metric.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3"
+                    className="text-center bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-2 sm:p-3 animate-fadeInUp"
                   >
                     <metric.icon className="w-5 h-5 sm:w-6 sm:h-6 mx-auto mb-1 sm:mb-2 text-yellow-400" />
                     <div className="text-lg sm:text-xl md:text-2xl font-bold">{metric.label}</div>
                     <div className="text-[10px] sm:text-xs text-[#e8ede8]">{metric.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -308,14 +300,9 @@ export default function NEET2026PreparationPage() {
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
+            <div className="relative animate-fadeInRight">
               {/* Lead Collection Form */}
               <div className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-2xl">
                 <div className="text-center mb-4 sm:mb-6">
@@ -445,7 +432,7 @@ export default function NEET2026PreparationPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -453,13 +440,7 @@ export default function NEET2026PreparationPage() {
       {/* Why Choose Us Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               Why Choose Cerebrum for NEET 2026?
             </h2>
@@ -467,17 +448,13 @@ export default function NEET2026PreparationPage() {
               India's most trusted NEET Biology coaching with proven track record of 67+ AIIMS
               selections annually.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
             {neet2026Highlights.map((highlight, index) => (
-              <motion.div
+              <div
                 key={highlight.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg sm:rounded-xl shadow-lg p-3 sm:p-4 md:p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-lg sm:rounded-xl shadow-lg p-3 sm:p-4 md:p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-r ${highlight.color} rounded-lg sm:rounded-xl flex items-center justify-center mb-2 sm:mb-3 md:mb-4`}
@@ -490,7 +467,7 @@ export default function NEET2026PreparationPage() {
                 <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
                   {highlight.description}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -499,32 +476,22 @@ export default function NEET2026PreparationPage() {
       {/* NEET 2026 Batches */}
       <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               NEET 2026 Course Options
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the right batch based on your current class and preparation level.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
             {neet2026Batches.map((batch, index) => (
-              <motion.div
+              <div
                 key={batch.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`relative bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-5 md:p-6 border-2 ${
                   batch.popular ? 'border-[#4a5d4a]' : 'border-gray-100'
-                } hover:shadow-xl transition-shadow`}
+                } hover:shadow-xl transition-shadow animate-fadeInUp`}
               >
                 {batch.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#4a5d4a] text-white px-3 sm:px-4 py-1 rounded-full text-[10px] sm:text-xs font-bold whitespace-nowrap">
@@ -575,7 +542,7 @@ export default function NEET2026PreparationPage() {
                 >
                   Enroll Now
                 </Button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -584,30 +551,20 @@ export default function NEET2026PreparationPage() {
       {/* FAQ Section with Schema */}
       <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-3 sm:px-4">
-          <motion.div
-            className="text-center mb-8 sm:mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 md:mb-6">
               NEET 2026 FAQs
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
               Common questions about NEET 2026 preparation answered by experts
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-3 sm:space-y-4">
             {neet2026FAQs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-5 md:p-6"
+                className="bg-white rounded-lg sm:rounded-xl shadow-md p-4 sm:p-5 md:p-6 animate-fadeInUp"
               >
                 <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-2 sm:mb-3 flex items-start">
                   <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-[#3d4d3d] flex-shrink-0 mt-0.5" />
@@ -616,7 +573,7 @@ export default function NEET2026PreparationPage() {
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base ml-7 sm:ml-9">
                   {faq.answer}
                 </p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -631,12 +588,7 @@ export default function NEET2026PreparationPage() {
       {/* Final CTA */}
       <section className="py-12 sm:py-16 md:py-20 bg-[#3d4d3d] text-white">
         <div className="max-w-4xl mx-auto px-3 sm:px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">
               Start Your NEET 2026 Journey Today
             </h2>
@@ -671,7 +623,7 @@ export default function NEET2026PreparationPage() {
             <p className="text-xs sm:text-sm opacity-80">
               New batch for NEET 2026 starting soon. Limited seats available!
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

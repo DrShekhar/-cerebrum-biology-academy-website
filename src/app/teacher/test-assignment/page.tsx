@@ -1,8 +1,5 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
@@ -26,6 +23,7 @@ import {
   BookOpen,
 } from 'lucide-react'
 import { format } from 'date-fns'
+import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 import { showToast } from '@/lib/toast'
 
@@ -66,6 +64,7 @@ interface TestAssignmentStats {
 }
 
 export default function TeacherTestAssignmentPage() {
+  const router = useRouter()
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
   const [testAssignments, setTestAssignments] = useState<TestAssignment[]>([])
   const [stats, setStats] = useState<TestAssignmentStats>({
@@ -81,7 +80,7 @@ export default function TeacherTestAssignmentPage() {
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'TEACHER')) {
-      window.location.href = '/sign-in'
+      router.push('/sign-in')
       return
     }
   }, [authLoading, isAuthenticated, user])

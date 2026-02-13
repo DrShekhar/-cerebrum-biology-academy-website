@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { Phone, MessageSquare, CheckCircle2, Users, Trophy, Clock, Star } from 'lucide-react'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -12,6 +13,7 @@ import {
 } from '@/lib/analytics/googleAdsConversions'
 
 export default function NEETDemoLandingPage() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -54,7 +56,7 @@ export default function NEETDemoLandingPage() {
 
       if (response.ok) {
         setShowSuccess(true)
-        window.location.href = '/thank-you?form=demo-booking&source=google-ads'
+        router.push('/thank-you?form=demo-booking&source=google-ads')
       }
     } catch (error) {
       console.error('Form submission error:', error)

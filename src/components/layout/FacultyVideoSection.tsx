@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { VideoShowcase } from '@/components/ui/VideoShowcase'
 import { BookOpen, Award, Users, Star, Play, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
@@ -94,13 +93,7 @@ export function FacultyVideoSection() {
     <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Play className="w-4 h-4 mr-2" />
             Dr. Shekhar's Teaching Excellence
@@ -128,14 +121,7 @@ export function FacultyVideoSection() {
               },
               { icon: Star, label: '4.9/5', sublabel: 'Student Rating', color: 'text-yellow-600' },
             ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+              <div key={stat.label} className="text-center">
                 <div
                   className={`w-12 h-12 ${stat.color} mx-auto mb-3 rounded-lg flex items-center justify-center bg-white shadow-lg`}
                 >
@@ -143,19 +129,13 @@ export function FacultyVideoSection() {
                 </div>
                 <div className="text-2xl font-bold text-gray-900">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.sublabel}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Video Category Filters */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-4 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fadeInUp">
           {categories.map((category) => (
             <button
               key={category.id}
@@ -170,16 +150,10 @@ export function FacultyVideoSection() {
               {category.label}
             </button>
           ))}
-        </motion.div>
+        </div>
 
         {/* Featured Video */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-        >
+        <div className="mb-16 animate-fadeInUp">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured Teaching Demo</h3>
             <p className="text-gray-600">Experience Dr. Shekhar's proven teaching methodology</p>
@@ -196,17 +170,11 @@ export function FacultyVideoSection() {
             ctaText="Book Free Cerebrum Demo Class"
             onCTAClick={handleDemoBooking}
           />
-        </motion.div>
+        </div>
 
         {/* Video Grid */}
         {filteredVideos.length > 1 && (
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-fadeInUp">
             {filteredVideos
               .filter((video) => !video.featured)
               .map((video, index) => (
@@ -222,17 +190,11 @@ export function FacultyVideoSection() {
                   onCTAClick={handleDemoBooking}
                 />
               ))}
-          </motion.div>
+          </div>
         )}
 
         {/* Bottom CTA Section */}
-        <motion.div
-          className="text-center bg-navy-900 rounded-3xl p-12 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center bg-navy-900 rounded-3xl p-12 text-white animate-fadeInUp">
           <div className="max-w-3xl mx-auto">
             <h3 className="text-3xl font-bold mb-4">
               Ready to Experience Cerebrum's Teaching Excellence?
@@ -279,7 +241,7 @@ export function FacultyVideoSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

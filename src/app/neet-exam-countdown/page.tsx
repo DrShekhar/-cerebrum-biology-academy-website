@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Calendar, Clock, FileText, Star, Trophy, CheckCircle, Award, GraduationCap } from 'lucide-react'
 import { CountdownClient } from './CountdownClient'
 
@@ -83,9 +84,9 @@ export default function NEETExamCountdownPage() {
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             {/* Breadcrumb - Server rendered */}
             <nav className="mb-6 flex items-center gap-2 text-sm text-gray-500">
-              <a href="/" className="hover:text-blue-500">Home</a>
+              <Link href="/" className="hover:text-blue-500">Home</Link>
               <span>/</span>
-              <a href="/neet-tools" className="hover:text-blue-500">NEET Tools</a>
+              <Link href="/neet-tools" className="hover:text-blue-500">NEET Tools</Link>
               <span>/</span>
               <span className="text-gray-800">Exam Countdown</span>
             </nav>

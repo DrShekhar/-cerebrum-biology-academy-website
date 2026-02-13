@@ -145,7 +145,7 @@ export function QuestionCard({
         return `${baseClasses} border-green-600 bg-gradient-to-r from-green-50 to-green-50 shadow-md animate-correct-pulse-botanical`
       }
       if (option === selectedAnswer && !result.isCorrect) {
-        return `${baseClasses} border-coral-500 bg-gradient-to-r from-coral-50 to-red-50 shadow-sm animate-shake-wrong`
+        return `${baseClasses} border-red-500 bg-gradient-to-r from-red-50 to-red-50 shadow-sm animate-shake-wrong`
       }
     }
 
@@ -171,7 +171,7 @@ export function QuestionCard({
               question.difficulty === 'EASY'
                 ? 'bg-green-100 text-green-700'
                 : question.difficulty === 'HARD'
-                  ? 'bg-coral-100 text-coral-700'
+                  ? 'bg-red-100 text-red-700'
                   : 'bg-amber-100 text-yellow-700'
             }`}
           >
@@ -180,7 +180,7 @@ export function QuestionCard({
                 question.difficulty === 'EASY'
                   ? 'bg-green-600'
                   : question.difficulty === 'HARD'
-                    ? 'bg-coral-500'
+                    ? 'bg-red-500'
                     : 'bg-amber-500'
               }`}
             />
@@ -282,7 +282,7 @@ export function QuestionCard({
                 result && optionLabels[index] === result.correctAnswer
                   ? 'bg-green-600 text-white shadow-md'
                   : result && optionLabels[index] === selectedAnswer && !result.isCorrect
-                    ? 'bg-coral-500 text-white shadow-md'
+                    ? 'bg-red-500 text-white shadow-md'
                     : selectedAnswer === optionLabels[index]
                       ? 'bg-sage-500 text-white shadow-md'
                       : 'bg-stone-100 text-stone-700'
@@ -298,7 +298,7 @@ export function QuestionCard({
               </span>
             )}
             {result && optionLabels[index] === selectedAnswer && !result.isCorrect && (
-              <span className="text-coral-500 text-lg font-bold" aria-label="Incorrect">
+              <span className="text-red-500 text-lg font-bold" aria-label="Incorrect">
                 ✗
               </span>
             )}
@@ -338,7 +338,7 @@ export function QuestionCard({
               className={`p-4 rounded-xl ${
                 result.isCorrect
                   ? 'bg-gradient-to-r from-green-50 to-green-50 border-2 border-green-300 animate-correct-pulse-botanical'
-                  : 'bg-gradient-to-r from-coral-50 to-red-50 border-2 border-coral-300 animate-shake-wrong'
+                  : 'bg-gradient-to-r from-red-50 to-red-50 border-2 border-red-300 animate-shake-wrong'
               }`}
             >
               <div className="flex items-center justify-between">
@@ -349,7 +349,7 @@ export function QuestionCard({
                     {result.isCorrect ? '🎉' : '😔'}
                   </span>
                   <span
-                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-coral-700'}`}
+                    className={`font-bold text-base ${result.isCorrect ? 'text-green-700' : 'text-red-700'}`}
                   >
                     {result.isCorrect ? 'Correct!' : 'Incorrect'}
                   </span>
@@ -361,7 +361,7 @@ export function QuestionCard({
                   {onReportError && (
                     <button
                       onClick={() => onReportError(question.id)}
-                      className="p-1.5 text-stone-400 hover:text-coral-500 hover:bg-coral-50 rounded-full transition-colors"
+                      className="p-1.5 text-stone-400 hover:text-red-500 hover:bg-red-50 rounded-full transition-colors"
                       title="Report an error with this question"
                       aria-label="Report error"
                     >

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Star,
   Users,
@@ -134,13 +133,7 @@ export function TrustBadgesSection() {
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-16 animate-fadeInUp">
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Shield className="w-4 h-4 mr-2" />
             Trusted & Recognized Excellence
@@ -152,41 +145,25 @@ export function TrustBadgesSection() {
             Recognized by government bodies, featured in leading media, and trusted by thousands of
             families for proven NEET success.
           </p>
-        </motion.div>
+        </div>
 
         {/* Trust Badges */}
-        <motion.div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 animate-fadeInUp">
           {trustBadges.map((badge, index) => (
-            <motion.div
+            <div
               key={index}
               className={`${badge.color} rounded-3xl p-6 text-center hover:scale-105 transition-transform`}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              viewport={{ once: true }}
             >
               <badge.icon className="w-12 h-12 mx-auto mb-4" />
               <h3 className="font-bold text-lg mb-2">{badge.title}</h3>
               <p className="text-sm text-current/90 mb-1">{badge.organization}</p>
               <p className="text-xs font-medium">{badge.year}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Success Metrics with Growth */}
-        <motion.div
-          className="bg-white rounded-3xl shadow-xl p-8 mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
+        <div className="bg-white rounded-3xl shadow-xl p-8 mb-16 animate-fadeInUp">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Growing Impact</h3>
             <p className="text-gray-600">
@@ -196,14 +173,7 @@ export function TrustBadgesSection() {
 
           <div className="grid md:grid-cols-4 gap-8">
             {successMetrics.map((metric, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                viewport={{ once: true }}
-              >
+              <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-blue-600 mb-2">{metric.number}</div>
                 <div className="text-lg font-semibold text-gray-900 mb-1">{metric.label}</div>
                 <div className="text-sm text-gray-600 mb-2">{metric.description}</div>
@@ -211,19 +181,13 @@ export function TrustBadgesSection() {
                   <TrendingUp className="w-3 h-3 mr-1" />
                   {metric.growth}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Media Features */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="mb-16 animate-fadeInUp">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Featured in Leading Media</h3>
             <p className="text-xl text-gray-600">
@@ -233,13 +197,9 @@ export function TrustBadgesSection() {
 
           <div className="grid md:grid-cols-2 gap-6">
             {mediaFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                viewport={{ once: true }}
+                className={`bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow ${index % 2 === 0 ? 'animate-fadeInLeft' : 'animate-fadeInRight'}`}
               >
                 <div className="flex items-start space-x-4">
                   <div
@@ -258,18 +218,13 @@ export function TrustBadgesSection() {
                     <p className="text-sm text-gray-600">{feature.type}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Government Recognition */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fadeInUp">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Government Recognition</h3>
             <p className="text-xl text-gray-600">Official endorsements for educational quality</p>
@@ -277,13 +232,9 @@ export function TrustBadgesSection() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {governmentRecognition.map((recognition, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.9 + index * 0.1 }}
-                viewport={{ once: true }}
+                className="bg-white rounded-2xl shadow-lg p-8 text-center hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <recognition.icon className="w-8 h-8 text-blue-600" />
@@ -294,19 +245,13 @@ export function TrustBadgesSection() {
                   <CheckCircle className="w-4 h-4 mr-2" />
                   Verified
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Final Trust Statement */}
-        <motion.div
-          className="text-center mt-16 p-8 bg-green-600 rounded-3xl text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mt-16 p-8 bg-green-600 rounded-3xl text-white animate-fadeInUp">
           <h3 className="text-3xl font-bold mb-4">Join the Most Trusted NEET Community</h3>
           <p className="text-xl text-blue-100 mb-6">
             When families trust us with their children's medical career dreams, we deliver results
@@ -326,7 +271,7 @@ export function TrustBadgesSection() {
               <span>Result Guaranteed</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

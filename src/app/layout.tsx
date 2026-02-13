@@ -132,9 +132,7 @@ export default function RootLayout({
         {/* Using modulepreload for modern browsers on actual chunks is handled by Next.js */}
 
         {/* Performance: Preconnect to critical domains - ORDER MATTERS */}
-        {/* Google Fonts - CRITICAL for reducing render blocking */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Google Fonts preconnect removed - next/font/google self-hosts fonts */}
         {/* Self-origin preconnect for faster CSS/JS loading */}
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" />
         <link rel="preconnect" href="https://cerebrumbiologyacademy.com" crossOrigin="anonymous" />

@@ -1242,7 +1242,7 @@ export default function NEETBiologyMCQPage() {
                   </button>
                   <button
                     onClick={handleResetQuiz}
-                    className="flex-1 py-2 px-4 bg-gradient-to-r from-coral-500 to-coral-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-coral-500/25 transition-all"
+                    className="flex-1 py-2 px-4 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-red-500/25 transition-all"
                   >
                     Reset
                   </button>

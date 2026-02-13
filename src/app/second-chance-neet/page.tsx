@@ -3,6 +3,7 @@
 import { SecondChanceNEETLanding } from '@/components/landing/SecondChanceNEETLanding'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import {
   trackGoogleAdsConversion,
@@ -13,6 +14,8 @@ import {
 } from '@/lib/analytics/googleAdsConversions'
 
 export default function SecondChanceNEETPage() {
+  const router = useRouter()
+
   useEffect(() => {
     // Initialize conversion tracking
     ConversionTracker.initialize()
@@ -82,7 +85,7 @@ export default function SecondChanceNEETPage() {
 
       if (response.ok) {
         // Redirect to thank you page or show success message
-        window.location.href = '/thank-you?form=failure-analysis'
+        router.push('/thank-you?form=failure-analysis')
       }
     } catch (error) {
       console.error('Form submission error:', error)
@@ -122,7 +125,7 @@ export default function SecondChanceNEETPage() {
     trackDemoBookingConversion('second-chance-neet-counseling')
 
     // Redirect to booking page with source tracking
-    window.location.href = '/enrollment?source=second-chance-neet&step=counseling'
+    router.push('/enrollment?source=second-chance-neet&step=counseling')
   }
 
   const handleDownloadStories = () => {

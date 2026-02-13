@@ -1,8 +1,5 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { Loader2, Users } from 'lucide-react'

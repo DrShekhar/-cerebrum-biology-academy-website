@@ -1,8 +1,5 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import { ABTestDashboard } from '@/components/abTesting/ABTestDashboard'
 import { useState } from 'react'
 import { FlaskConical, BarChart2, Settings, FileDown } from 'lucide-react'

@@ -1,8 +1,5 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import { Suspense } from 'react'
 import { StudentCommunity } from '@/components/student/StudentCommunity'
 import { useAuth } from '@/contexts/AuthContext'

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   Home,
@@ -148,6 +149,7 @@ const faqs = [
 ]
 
 export default function BiologyHomeTutorPage() {
+  const router = useRouter()
   const [showEnquiryForm, setShowEnquiryForm] = useState(false)
   const [formData, setFormData] = useState({
     name: '',
@@ -160,7 +162,7 @@ export default function BiologyHomeTutorPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     // Handle form submission
-    window.location.href = `/demo-booking?source=home-tutor&name=${formData.name}&phone=${formData.phone}`
+    router.push(`/demo-booking?source=home-tutor&name=${formData.name}&phone=${formData.phone}`)
   }
 
   return (

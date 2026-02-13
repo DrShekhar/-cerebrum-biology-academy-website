@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Menu,
@@ -696,18 +697,18 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <div className="text-sm font-medium text-gray-900 mb-3">Quick Links</div>
                   <div className="grid grid-cols-2 gap-2 text-xs">
-                    <a href="/scholarship" className="text-blue-600 hover:underline">
+                    <Link href="/scholarship" className="text-blue-600 hover:underline">
                       Scholarship Test
-                    </a>
-                    <a href="/calculator" className="text-blue-600 hover:underline">
+                    </Link>
+                    <Link href="/calculator" className="text-blue-600 hover:underline">
                       Fee Calculator
-                    </a>
-                    <a href="/resources/free" className="text-blue-600 hover:underline">
+                    </Link>
+                    <Link href="/resources/free" className="text-blue-600 hover:underline">
                       Free Resources
-                    </a>
-                    <a href="/courses/compare" className="text-blue-600 hover:underline">
+                    </Link>
+                    <Link href="/courses/compare" className="text-blue-600 hover:underline">
                       Compare Courses
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

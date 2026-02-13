@@ -1,8 +1,5 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import Link from 'next/link'
@@ -29,6 +26,7 @@ import {
   Award,
 } from 'lucide-react'
 import { format } from 'date-fns'
+import { useRouter } from 'next/navigation'
 import { cn } from '@/lib/utils'
 
 type TestStatus = 'DRAFT' | 'TEMPLATE' | 'ACTIVE' | 'COMPLETED' | 'ARCHIVED'
@@ -61,6 +59,7 @@ interface AdminTestStats {
 }
 
 export default function AdminTestsPage() {
+  const router = useRouter()
   const { user, isAuthenticated, isLoading: authLoading } = useAuth()
   const [testTemplates, setTestTemplates] = useState<TestTemplate[]>([])
   const [stats, setStats] = useState<AdminTestStats>({
@@ -77,7 +76,7 @@ export default function AdminTestsPage() {
 
   useEffect(() => {
     if (!authLoading && (!isAuthenticated || user?.role !== 'ADMIN')) {
-      window.location.href = '/sign-in'
+      router.push('/sign-in')
       return
     }
   }, [authLoading, isAuthenticated, user])

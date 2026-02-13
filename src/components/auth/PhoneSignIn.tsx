@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import Link from 'next/link'
 import { Phone, Loader2, Check, Clock, AlertCircle, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import {
@@ -630,13 +631,13 @@ function PhoneSignInWithFirebase({ onSuccess, redirectUrl = '/dashboard' }: Phon
 
       <div className="text-xs text-center text-gray-500">
         By continuing, you agree to our{' '}
-        <a href="/terms" className="text-green-600 hover:underline">
+        <Link href="/terms" className="text-green-600 hover:underline">
           Terms of Service
-        </a>{' '}
+        </Link>{' '}
         and{' '}
-        <a href="/privacy-policy" className="text-green-600 hover:underline">
+        <Link href="/privacy-policy" className="text-green-600 hover:underline">
           Privacy Policy
-        </a>
+        </Link>
       </div>
     </div>
   )

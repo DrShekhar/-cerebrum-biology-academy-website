@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import {
   CheckCircle,
@@ -16,6 +17,7 @@ import {
 import { PricingDisplay } from '@/components/ui/PricingDisplay'
 
 export default function Class10FoundationPage() {
+  const router = useRouter()
   const courseFeatures = [
     'Advanced Biology concepts preparation',
     'Board exam excellence strategies',
@@ -423,7 +425,7 @@ export default function Class10FoundationPage() {
                 <PricingDisplay
                   courseId="class-10-foundation-biology"
                   showCompetitiveAdvantage={true}
-                  onEnrollClick={() => (window.location.href = '/admissions')}
+                  onEnrollClick={() => router.push('/admissions')}
                 />
               </div>
             </div>

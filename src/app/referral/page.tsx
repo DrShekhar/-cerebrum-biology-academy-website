@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   Gift,
@@ -372,9 +373,9 @@ export default function ReferralPage() {
         >
           <p>
             By participating, you agree to our{' '}
-            <a href="/terms-of-service" className="text-purple-600 hover:underline">
+            <Link href="/terms-of-service" className="text-purple-600 hover:underline">
               referral program terms
-            </a>
+            </Link>
             .
           </p>
           <p className="mt-2">

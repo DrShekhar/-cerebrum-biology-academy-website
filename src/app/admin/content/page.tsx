@@ -1,7 +1,5 @@
 'use client'
 
-export const dynamic = 'force-dynamic'
-
 import Link from 'next/link'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { FileText, BarChart3, Search, Zap, TrendingUp, FileDown } from 'lucide-react'

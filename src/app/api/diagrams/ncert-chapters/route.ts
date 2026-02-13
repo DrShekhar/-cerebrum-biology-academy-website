@@ -34,6 +34,8 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       success: true,
       data: { chapters, grouped, total: chapters.length },
+    }, {
+      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
     })
   } catch (error) {
     console.error('NCERT chapters error:', error)

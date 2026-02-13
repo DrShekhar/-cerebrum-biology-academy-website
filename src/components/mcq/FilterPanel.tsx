@@ -43,9 +43,9 @@ const difficulties: {
   {
     value: 'HARD',
     label: 'Hard',
-    color: 'border-coral-300 hover:border-coral-400 hover:bg-coral-50',
-    dotColor: 'bg-coral-500',
-    activeColor: 'bg-coral-100 border-coral-500 text-coral-800',
+    color: 'border-red-300 hover:border-red-400 hover:bg-red-50',
+    dotColor: 'bg-red-500',
+    activeColor: 'bg-red-100 border-red-500 text-red-800',
   },
 ]
 

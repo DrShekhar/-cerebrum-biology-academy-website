@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     url: 'https://cerebrumbiologyacademy.com/school-career-seminar',
     images: [
       {
-        url: '/images/seminars/euro-school-seminar-1.jpg',
+        url: '/images/seminars/euro-school-seminar-1.webp',
         width: 1200,
         height: 630,
         alt: 'Free Career Guidance Seminar for Schools - Cerebrum Biology Academy',

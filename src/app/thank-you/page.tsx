@@ -2,7 +2,6 @@
 
 import { useEffect, useState, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { CheckCircle2, Phone, MessageSquare, Clock, FileText, CalendarDays } from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
@@ -127,36 +126,22 @@ function ThankYouContent() {
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50 py-8 sm:py-12">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Main Success Message */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
-        >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
-            className="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6"
-          >
+        <div className="text-center mb-12 animate-fadeInUp">
+          <div className="w-24 h-24 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6 animate-scaleIn">
             <CheckCircle2 className="w-12 h-12 text-white" />
-          </motion.div>
+          </div>
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             {content.title}
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 mb-6">{content.subtitle}</p>
           <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto">{content.message}</p>
-        </motion.div>
+        </div>
 
         {/* Status Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* WhatsApp Delivery Status */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-          >
+          <div className="animate-fadeInLeft">
             <PremiumCard variant="premium" size="lg" className="bg-green-50 border-green-200">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center">
@@ -172,14 +157,10 @@ function ThankYouContent() {
                 </div>
               </div>
             </PremiumCard>
-          </motion.div>
+          </div>
 
           {/* Call Back Status */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
-          >
+          <div className="animate-fadeInRight">
             <PremiumCard variant="premium" size="lg" className="bg-blue-50 border-blue-200">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center">
@@ -195,16 +176,11 @@ function ThankYouContent() {
                 </div>
               </div>
             </PremiumCard>
-          </motion.div>
+          </div>
         </div>
 
         {/* Next Steps */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12 animate-fadeInUp">
           <PremiumCard variant="luxury" size="lg">
             <div className="text-center mb-8">
               <FileText className="w-12 h-12 sm:w-16 sm:h-16 text-purple-500 mx-auto mb-4" />
@@ -218,30 +194,22 @@ function ThankYouContent() {
 
             <div className="space-y-4">
               {content.nextSteps.map((step, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.7 + index * 0.1 }}
-                  className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl"
+                  className="flex items-center space-x-4 p-4 bg-gray-50 rounded-xl animate-fadeInLeft"
                 >
                   <div className="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold">
                     {index + 1}
                   </div>
                   <p className="text-gray-800 font-medium">{step}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </PremiumCard>
-        </motion.div>
+        </div>
 
         {/* Quick Actions */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mb-12"
-        >
+        <div className="mb-12 animate-fadeInUp">
           <div className="text-center mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
               Need Immediate Assistance?
@@ -282,15 +250,10 @@ function ThankYouContent() {
               Book Free Counseling
             </PremiumButton>
           </div>
-        </motion.div>
+        </div>
 
         {/* Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
-          className="text-center"
-        >
+        <div className="text-center animate-fadeInUp">
           <PremiumCard variant="premium" className="bg-gray-50">
             <div className="grid grid-cols-3 gap-4 sm:gap-6 md:gap-8">
               <div className="text-center">
@@ -309,18 +272,13 @@ function ThankYouContent() {
               </div>
             </div>
           </PremiumCard>
-        </motion.div>
+        </div>
 
         {/* Social Proof */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.0 }}
-          className="mt-12 text-center text-sm text-gray-500"
-        >
+        <div className="mt-12 text-center text-sm text-gray-500 animate-fadeIn">
           <p>🔒 Your information is secure and will never be shared with third parties</p>
           <p className="mt-2">✅ Join 1,50,000+ students who chose Cerebrum for their NEET success</p>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

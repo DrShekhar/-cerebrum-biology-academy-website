@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-export const dynamic = 'force-dynamic'
-
 /**
  * GET /api/mcq/ncert-chapters
  * Returns available NCERT chapters for filtering questions
@@ -89,6 +87,8 @@ export async function GET(request: NextRequest) {
           weightages: ['HIGH', 'MEDIUM', 'LOW'],
         },
       },
+    }, {
+      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
     })
   } catch (error) {
     console.error('Error fetching NCERT chapters:', error)

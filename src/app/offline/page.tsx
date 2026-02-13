@@ -1,9 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 
 export default function OfflinePage() {
+  const router = useRouter()
   const [isOnline, setIsOnline] = useState(false)
   const [retryCount, setRetryCount] = useState(0)
 
@@ -15,7 +17,7 @@ export default function OfflinePage() {
       setIsOnline(true)
       // Redirect to home when online
       setTimeout(() => {
-        window.location.href = '/'
+        router.push('/')
       }, 2000)
     }
 

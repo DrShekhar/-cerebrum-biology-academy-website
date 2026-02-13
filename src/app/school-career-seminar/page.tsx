@@ -207,47 +207,47 @@ Submitted via School Seminar Booking Form`
 
   const seminarGalleryImages = [
     {
-      src: '/images/seminars/euro-school-seminar-1.jpg',
+      src: '/images/seminars/euro-school-seminar-1.webp',
       alt: 'Dr. Shekhar addressing students at Euro International School, Gurugram',
       school: 'Euro International School, Gurugram',
     },
     {
-      src: '/images/seminars/euro-students-crowd.jpg',
+      src: '/images/seminars/euro-students-crowd.webp',
       alt: 'Students in auditorium listening to NEET career guidance at Euro International School',
       school: 'Euro International School - Students',
     },
     {
-      src: '/images/seminars/parents-seminar-crowd.jpg',
+      src: '/images/seminars/parents-seminar-crowd.webp',
       alt: 'Parents attending NEET career guidance seminar for their children',
       school: 'Parent Orientation Session',
     },
     {
-      src: '/images/seminars/students-parents-notes.jpg',
+      src: '/images/seminars/students-parents-notes.webp',
       alt: 'Students and parents taking notes during NEET career counselling session',
       school: 'Students & Parents Session',
     },
     {
-      src: '/images/seminars/dr-shekhar-speaking.jpg',
+      src: '/images/seminars/dr-shekhar-speaking.webp',
       alt: 'Dr. Shekhar Singh speaking about preparing future medical professionals',
       school: 'Expert Guidance Session',
     },
     {
-      src: '/images/seminars/euro-auditorium-wide.jpg',
+      src: '/images/seminars/euro-auditorium-wide.webp',
       alt: 'Wide view of Euro International School auditorium during career seminar',
       school: 'Euro International School Auditorium',
     },
     {
-      src: '/images/seminars/gvm-sonipat-seminar.jpg',
+      src: '/images/seminars/gvm-sonipat-seminar.webp',
       alt: 'Students listening to NEET career guidance at GVM Sonipat, Haryana',
       school: 'GVM School, Sonipat',
     },
     {
-      src: '/images/seminars/neet-aspirants-seminar.jpg',
+      src: '/images/seminars/neet-aspirants-seminar.webp',
       alt: 'NEET aspirants attending career seminar session',
       school: 'NEET Aspirants Session',
     },
     {
-      src: '/images/seminars/south-city-seminar.jpg',
+      src: '/images/seminars/south-city-seminar.webp',
       alt: 'Dr. Shekhar with audience at South City seminar',
       school: 'South City Seminar',
     },

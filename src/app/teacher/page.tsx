@@ -1,9 +1,7 @@
 'use client'
 
-// Force dynamic rendering to prevent auth issues during static build
-export const dynamic = 'force-dynamic'
-
 import React, { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
@@ -66,9 +64,11 @@ export default function TeacherDashboardPage() {
   // Allow access if owner OR teacher role
   const hasTeacherAccess = isOwner || (isAuthenticated && user?.role === 'TEACHER')
 
+  const router = useRouter()
+
   useEffect(() => {
     if (!authLoading && !isCheckingOwner && !hasTeacherAccess) {
-      window.location.href = '/sign-in'
+      router.push('/sign-in')
       return
     }
   }, [authLoading, isCheckingOwner, hasTeacherAccess])

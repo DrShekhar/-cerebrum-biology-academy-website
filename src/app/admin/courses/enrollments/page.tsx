@@ -1,5 +1,3 @@
-export const dynamic = 'force-dynamic'
-
 import { EnrollmentDashboard } from '@/components/admin/EnrollmentDashboard'
 
 export default function CourseEnrollmentsPage() {

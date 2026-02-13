@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { MapPin, ArrowRight } from 'lucide-react'
 
@@ -717,30 +716,18 @@ export function RelatedCityLinks({
     return (
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Explore our NEET coaching programs in other major cities across India
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {relatedCities.map((cityKey, index) => {
+            {relatedCities.map((cityKey) => {
               const city = cityPages[cityKey]
               return (
-                <motion.div
-                  key={cityKey}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
+                <div key={cityKey} className="animate-fadeInUp">
                   <Link href={city.href}>
                     <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all hover:-translate-y-1 text-center">
                       <MapPin className="w-8 h-8 mx-auto mb-3 text-blue-600" />
@@ -749,7 +736,7 @@ export function RelatedCityLinks({
                       <p className="text-blue-600 font-medium text-sm">{city.students} Students</p>
                     </div>
                   </Link>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -762,30 +749,18 @@ export function RelatedCityLinks({
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="text-center mb-12 animate-fadeInUp">
           <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Serving NEET aspirants across India with the same quality education
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {relatedCities.map((cityKey, index) => {
+          {relatedCities.map((cityKey) => {
             const city = cityPages[cityKey]
             return (
-              <motion.div
-                key={cityKey}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+              <div key={cityKey} className="animate-fadeInUp">
                 <Link href={city.href}>
                   <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-between group">
                     <div className="flex items-center">
@@ -805,7 +780,7 @@ export function RelatedCityLinks({
                     <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             )
           })}
         </div>

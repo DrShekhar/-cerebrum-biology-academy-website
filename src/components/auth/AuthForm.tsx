@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useAuth, SignupData } from '@/contexts/AuthContext'
 import { Button } from '@/components/ui/Button'
@@ -453,9 +454,9 @@ export default function AuthForm({
                   Remember me
                 </label>
               </div>
-              <a href="/auth/forgot-password" className="text-sm text-blue-600 hover:underline">
+              <Link href="/auth/forgot-password" className="text-sm text-blue-600 hover:underline">
                 Forgot password?
-              </a>
+              </Link>
             </div>
           )}
 

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { PremiumButton, PremiumCard } from '@/components/ui/PremiumDesignSystem'
 import {
@@ -333,13 +334,13 @@ export function InstantEnrollment({
                 />
                 <label htmlFor="agreeTerms" className="text-sm text-gray-600">
                   I agree to the{' '}
-                  <a href="/terms" className="text-blue-600 hover:underline">
+                  <Link href="/terms" className="text-blue-600 hover:underline">
                     Terms & Conditions
-                  </a>{' '}
+                  </Link>{' '}
                   and
-                  <a href="/privacy-policy" className="text-blue-600 hover:underline ml-1">
+                  <Link href="/privacy-policy" className="text-blue-600 hover:underline ml-1">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </label>
               </div>
 

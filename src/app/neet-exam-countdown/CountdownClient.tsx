@@ -2,13 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { Share2, CheckCircle, Flame } from 'lucide-react'
-import { DM_Sans } from 'next/font/google'
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  weight: ['700'],
-  variable: '--font-dm-sans',
-})
 
 const NEET_EXAM_DATES: Record<number, Date> = {
   2026: new Date('2026-05-03T14:00:00+05:30'),
@@ -140,7 +133,7 @@ export function CountdownClient() {
             className={`rounded-2xl bg-white border border-gray-100 shadow-sm px-2 py-4 sm:p-4 md:p-6 border-t-4 ${item.borderColor}`}
           >
             <div
-              className={`${dmSans.className} text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl tabular-nums`}
+              className="text-3xl font-bold text-gray-900 md:text-4xl lg:text-5xl tabular-nums"
             >
               {item.value.toString().padStart(2, '0')}
             </div>

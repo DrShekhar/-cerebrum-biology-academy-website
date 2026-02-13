@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 
-export const dynamic = 'force-dynamic'
-
 // ============================================
 // GET - Fetch wall of achievers (public)
 // ============================================
@@ -112,6 +110,8 @@ export async function GET(request: NextRequest) {
           hasMore: offset + achievers.length < total,
         },
       },
+    }, {
+      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
     })
   } catch (error) {
     console.error('Error fetching wall of achievers:', error)

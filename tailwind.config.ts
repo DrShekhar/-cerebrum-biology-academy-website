@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss'
 const config: Config = {
   // Dark mode uses system preference (media query)
   // Phase 1 focus on light mode excellence, dark mode reconsidered in Phase 4
-  darkMode: 'media',
+  darkMode: 'class',
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -208,18 +208,7 @@ const config: Config = {
           800: '#5b21b6',
           900: '#4c1d95',
         },
-        coral: {
-          50: '#fef2f2',
-          100: '#fee2e2',
-          200: '#fecaca',
-          300: '#fca5a5',
-          400: '#f87171',
-          500: '#ef4444', // Primary
-          600: '#dc2626',
-          700: '#b91c1c',
-          800: '#991b1b',
-          900: '#7f1d1d',
-        },
+        // coral removed - was exact duplicate of red
         sky: {
           50: '#f0f9ff',
           100: '#e0f2fe',
@@ -245,7 +234,7 @@ const config: Config = {
           900: '#78350f',
         },
 
-        // Primary - Medical Navy
+        // Primary - Medical Navy (alias of slate - 87 uses, kept to avoid mass refactor)
         navy: {
           50: '#f8fafc',
           100: '#f1f5f9',
@@ -272,7 +261,7 @@ const config: Config = {
           800: '#115e67',
           900: '#0f4c59',
         },
-        // Achievement - Academic Gold
+        // Achievement - Academic Gold (alias of amber - 40 uses, kept to avoid mass refactor)
         gold: {
           50: '#fffbeb',
           100: '#fef3c7',
@@ -285,7 +274,7 @@ const config: Config = {
           800: '#92400e',
           900: '#78350f',
         },
-        // Legacy mapping
+        // Legacy mapping (alias of slate - 128 uses, kept to avoid mass refactor)
         primary: {
           50: '#f8fafc',
           100: '#f1f5f9',

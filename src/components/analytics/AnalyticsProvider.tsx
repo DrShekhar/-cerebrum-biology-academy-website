@@ -1,6 +1,6 @@
 'use client'
 
-import { createContext, useContext, useEffect, ReactNode } from 'react'
+import { createContext, useContext, useEffect, useMemo, ReactNode } from 'react'
 import { usePathname } from 'next/navigation'
 import analytics from '@/lib/analytics/tracker'
 
@@ -68,18 +68,21 @@ export function AnalyticsProvider({ children }: AnalyticsProviderProps) {
     }
   }, [])
 
-  const contextValue: AnalyticsContextType = {
-    trackPageView: analytics.trackPageView.bind(analytics),
-    trackCourseView: analytics.trackCourseView.bind(analytics),
-    trackVideoPlay: analytics.trackVideoPlay.bind(analytics),
-    trackDownload: analytics.trackDownload.bind(analytics),
-    trackQuizAttempt: analytics.trackQuizAttempt.bind(analytics),
-    trackDemoBooking: analytics.trackDemoBooking.bind(analytics),
-    trackLogin: analytics.trackLogin.bind(analytics),
-    trackLogout: analytics.trackLogout.bind(analytics),
-    trackEvent: analytics.trackEvent.bind(analytics),
-    setUserId: analytics.setUserId.bind(analytics),
-  }
+  const contextValue = useMemo<AnalyticsContextType>(
+    () => ({
+      trackPageView: analytics.trackPageView.bind(analytics),
+      trackCourseView: analytics.trackCourseView.bind(analytics),
+      trackVideoPlay: analytics.trackVideoPlay.bind(analytics),
+      trackDownload: analytics.trackDownload.bind(analytics),
+      trackQuizAttempt: analytics.trackQuizAttempt.bind(analytics),
+      trackDemoBooking: analytics.trackDemoBooking.bind(analytics),
+      trackLogin: analytics.trackLogin.bind(analytics),
+      trackLogout: analytics.trackLogout.bind(analytics),
+      trackEvent: analytics.trackEvent.bind(analytics),
+      setUserId: analytics.setUserId.bind(analytics),
+    }),
+    []
+  )
 
   return <AnalyticsContext.Provider value={contextValue}>{children}</AnalyticsContext.Provider>
 }

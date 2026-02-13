@@ -6,7 +6,6 @@
 
 import { NextRequest, NextResponse } from 'next/server'
 
-export const dynamic = 'force-dynamic'
 import { getGalleryItems, getFeaturedGalleryItems, getCategoriesWithCounts } from '@/lib/gallery'
 import { GalleryCategory, GalleryItemType } from '@/generated/prisma'
 
@@ -29,6 +28,8 @@ export async function GET(request: NextRequest) {
         success: true,
         items,
         total: items.length,
+      }, {
+        headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
       })
     }
 
@@ -59,6 +60,8 @@ export async function GET(request: NextRequest) {
       success: true,
       ...result,
       ...(categories && { categories }),
+    }, {
+      headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
     })
   } catch (error) {
     console.error('Error fetching gallery items:', error)

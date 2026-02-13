@@ -1,7 +1,5 @@
 'use client'
 
-export const dynamic = 'force-dynamic'
-
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -21,6 +19,7 @@ import {
   RefreshCcw,
   AlertCircle,
 } from 'lucide-react'
+import Image from 'next/image'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
 import { Modal } from '@/components/ui/Modal'
@@ -388,10 +387,13 @@ export default function AdminGalleryPage() {
                     {/* Image/Video Thumbnail */}
                     <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
                       {item.thumbnailUrl ? (
-                        <img
+                        <Image
                           src={item.thumbnailUrl}
                           alt={item.title}
-                          className="h-full w-full object-cover transition-transform group-hover:scale-105"
+                          fill
+                          sizes="(max-width: 768px) 50vw, 25vw"
+                          className="object-cover transition-transform group-hover:scale-105"
+                          unoptimized
                         />
                       ) : (
                         <div className="flex h-full w-full items-center justify-center">
@@ -495,12 +497,15 @@ export default function AdminGalleryPage() {
                   {items.map((item) => (
                     <tr key={item.id} className="hover:bg-gray-50">
                       <td className="px-4 py-3">
-                        <div className="h-12 w-12 overflow-hidden rounded-lg bg-gray-100">
+                        <div className="relative h-12 w-12 overflow-hidden rounded-lg bg-gray-100">
                           {item.thumbnailUrl ? (
-                            <img
+                            <Image
                               src={item.thumbnailUrl}
                               alt={item.title}
-                              className="h-full w-full object-cover"
+                              fill
+                              sizes="48px"
+                              className="object-cover"
+                              unoptimized
                             />
                           ) : (
                             <div className="flex h-full w-full items-center justify-center">
@@ -782,7 +787,7 @@ function GalleryUploadForm({
         <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center">
           {preview ? (
             <div className="relative">
-              <img src={preview} alt="Preview" className="max-h-48 mx-auto rounded" />
+              <Image src={preview} alt="Preview" width={400} height={192} className="max-h-48 mx-auto rounded object-contain" unoptimized />
               <button
                 type="button"
                 onClick={() => {
@@ -1118,7 +1123,7 @@ function GalleryEditForm({
       {/* Preview */}
       {item.thumbnailUrl && (
         <div className="flex justify-center">
-          <img src={item.thumbnailUrl} alt={item.title} className="max-h-32 rounded-lg" />
+          <Image src={item.thumbnailUrl} alt={item.title} width={300} height={128} className="max-h-32 rounded-lg object-contain" unoptimized />
         </div>
       )}
 
