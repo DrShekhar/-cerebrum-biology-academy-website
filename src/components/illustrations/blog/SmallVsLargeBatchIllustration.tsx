@@ -6,8 +6,7 @@ export function SmallVsLargeBatchIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -16,12 +15,11 @@ export function SmallVsLargeBatchIllustration({
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Background */}
       <rect width="400" height="300" fill="#F8FAFC" />
@@ -154,6 +152,6 @@ export function SmallVsLargeBatchIllustration({
       >
         Batch Size Comparison
       </text>
-    </Wrapper>
+    </svg>
   )
 }

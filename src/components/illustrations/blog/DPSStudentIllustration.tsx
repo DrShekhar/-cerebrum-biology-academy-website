@@ -3,8 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function DPSStudentIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -13,12 +12,11 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Background */}
       <rect x="20" y="20" width="360" height="260" rx="20" fill="#F0FDFA" opacity="0.5" />
@@ -118,6 +116,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
       >
         ⭐
       </text>
-    </Wrapper>
+    </svg>
   )
 }

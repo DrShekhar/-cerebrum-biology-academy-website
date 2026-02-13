@@ -6,8 +6,7 @@ export function Last6MonthsStrategyIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -65,13 +64,12 @@ export function Last6MonthsStrategyIllustration({
   ]
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       preserveAspectRatio="xMidYMid meet"
-      {...wrapperProps}
     >
       <defs>
         {/* Background gradient */}
@@ -445,6 +443,6 @@ export function Last6MonthsStrategyIllustration({
           </text>
         </>
       )}
-    </Wrapper>
+    </svg>
   )
 }

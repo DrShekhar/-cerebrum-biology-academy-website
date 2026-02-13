@@ -3,8 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function HumanPhysiologyIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -13,13 +12,12 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 500 380"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       preserveAspectRatio="xMidYMid meet"
-      {...wrapperProps}
     >
       <defs>
         <linearGradient id="physBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -375,6 +373,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           18-20 Questions in NEET
         </text>
       </g>
-    </Wrapper>
+    </svg>
   )
 }

@@ -6,8 +6,7 @@ export function Class12BoardBalanceIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -16,12 +15,11 @@ export function Class12BoardBalanceIllustration({
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#FEF3C7" />
@@ -135,6 +133,6 @@ export function Class12BoardBalanceIllustration({
           NEET Day!
         </text>
       </g>
-    </Wrapper>
+    </svg>
   )
 }

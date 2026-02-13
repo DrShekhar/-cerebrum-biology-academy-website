@@ -3,8 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function ClassStartTimeIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },
@@ -13,12 +12,11 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Background timeline */}
       <rect x="50" y="140" width="300" height="8" rx="4" fill="#E2E8F0" />
@@ -143,6 +141,6 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
         fill="#14B8A6"
         opacity="0.3"
       />
-    </Wrapper>
+    </svg>
   )
 }

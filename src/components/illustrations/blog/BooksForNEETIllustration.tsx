@@ -3,8 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function BooksForNEETIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -29,13 +28,12 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
   ]
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 700 520"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       preserveAspectRatio="xMidYMid meet"
-      {...wrapperProps}
     >
       <defs>
         {/* Background gradient */}
@@ -546,6 +544,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         fill="#5EEAD4"
         opacity="0.4"
       />
-    </Wrapper>
+    </svg>
   )
 }

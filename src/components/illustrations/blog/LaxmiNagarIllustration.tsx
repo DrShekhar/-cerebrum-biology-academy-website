@@ -3,8 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function LaxmiNagarIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -13,12 +12,11 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Background gradient - East Delhi warm tones */}
       <defs>
@@ -140,6 +138,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
         <circle cx="145" cy="235" r="6" fill="#3B82F6" />
         <rect x="142" y="241" width="6" height="12" rx="2" fill="#3B82F6" />
       </g>
-    </Wrapper>
+    </svg>
   )
 }

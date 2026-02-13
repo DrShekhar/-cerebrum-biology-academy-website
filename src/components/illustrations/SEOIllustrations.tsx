@@ -10,22 +10,12 @@ interface IllustrationProps {
 
 // Student studying with laptop - perfect for online learning pages
 export function StudentStudyingIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
-    ? {
-        initial: { opacity: 0, y: 20 },
-        animate: { opacity: 1, y: 0 },
-        transition: { duration: 0.6 },
-      }
-    : {}
-
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      {...wrapperProps}
+      className={`${animate ? 'animate-fadeInUp' : ''} ${className}`}
     >
       {/* Background shapes */}
       <ellipse cx="200" cy="260" rx="150" ry="20" fill="#E8F4FC" />
@@ -84,14 +74,13 @@ export function StudentStudyingIllustration({ className = '', animate = true }: 
           <stop offset="100%" stopColor="#8B5CF6" />
         </linearGradient>
       </defs>
-    </Wrapper>
+    </svg>
   )
 }
 
 // Teacher with whiteboard - for teaching/faculty pages
 export function TeacherIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, x: -20 },
         animate: { opacity: 1, x: 0 },
@@ -100,12 +89,11 @@ export function TeacherIllustration({ className = '', animate = true }: Illustra
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Background */}
       <rect x="50" y="30" width="300" height="200" rx="12" fill="#F0FDFA" />
@@ -191,14 +179,13 @@ export function TeacherIllustration({ className = '', animate = true }: Illustra
         fill="#F97316"
         opacity="0.5"
       />
-    </Wrapper>
+    </svg>
   )
 }
 
 // Books stack - for NCERT/reference book pages
 export function BookStackIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -207,12 +194,11 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 300 250"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Shadow */}
       <ellipse cx="150" cy="230" rx="100" ry="15" fill="#E8F4FC" />
@@ -288,14 +274,13 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
       <ellipse cx="270" cy="180" rx="20" ry="10" stroke="#1E293B" strokeWidth="2" fill="none" />
       <ellipse cx="270" cy="180" rx="12" ry="6" fill="#BFDBFE" opacity="0.5" />
       <line x1="250" y1="180" x2="230" y2="175" stroke="#1E293B" strokeWidth="2" />
-    </Wrapper>
+    </svg>
   )
 }
 
 // Location/Map illustration - for "near me" pages
 export function LocationIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, y: 20 },
         animate: { opacity: 1, y: 0 },
@@ -304,12 +289,11 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 350 280"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Map background */}
       <rect x="30" y="40" width="290" height="180" rx="20" fill="#E8F4FC" />
@@ -453,14 +437,13 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
         strokeDasharray="4"
         opacity="0.5"
       />
-    </Wrapper>
+    </svg>
   )
 }
 
 // Online class illustration - split screen teacher/student
 export function OnlineClassIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0 },
         animate: { opacity: 1 },
@@ -469,12 +452,11 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 280"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Left side - Lavender background */}
       <rect x="0" y="0" width="200" height="280" fill="#EDE9FE" />
@@ -550,7 +532,7 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
       <circle cx="30" cy="50" r="15" fill="#8B5CF6" opacity="0.3" />
       <circle cx="370" cy="50" r="15" fill="#14B8A6" opacity="0.3" />
       <rect x="180" y="250" width="40" height="4" rx="2" fill="#6366F1" opacity="0.5" />
-    </Wrapper>
+    </svg>
   )
 }
 

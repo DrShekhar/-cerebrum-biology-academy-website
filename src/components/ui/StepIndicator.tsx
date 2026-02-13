@@ -139,9 +139,7 @@ export function StepIndicator({
       sizes.spacing
     )
 
-    const StepWrapper = animated ? motion.div : 'div'
-
-    return (
+        return (
       <div
         key={step.id}
         className={cn(
@@ -150,7 +148,7 @@ export function StepIndicator({
         )}
       >
         <div className={containerClasses}>
-          <StepWrapper
+          <div
             className={circleClasses}
             onClick={() => isClickable && onStepClick?.(index)}
             {...(animated && {
@@ -160,7 +158,7 @@ export function StepIndicator({
             })}
           >
             {getIcon()}
-          </StepWrapper>
+          </div>
         </div>
 
         <div className={cn('flex-1', orientation === 'vertical' ? '' : 'text-center')}>

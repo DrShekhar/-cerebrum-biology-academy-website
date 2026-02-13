@@ -3,8 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function EvolutionIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.9 },
         animate: { opacity: 1, scale: 1 },
@@ -13,12 +12,11 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Background */}
       <rect x="10" y="10" width="380" height="280" rx="20" fill="#FDF4FF" />
@@ -150,6 +148,6 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
           Qs
         </text>
       </g>
-    </Wrapper>
+    </svg>
   )
 }

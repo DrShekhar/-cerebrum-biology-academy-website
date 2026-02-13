@@ -6,8 +6,7 @@ export function PhotosynthesisVsRespirationIllustration({
   className = '',
   animate = true,
 }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0, scale: 0.95 },
         animate: { opacity: 1, scale: 1 },
@@ -16,13 +15,12 @@ export function PhotosynthesisVsRespirationIllustration({
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 520 400"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       preserveAspectRatio="xMidYMid meet"
-      {...wrapperProps}
     >
       <defs>
         {/* Professional gradients */}
@@ -506,6 +504,6 @@ export function PhotosynthesisVsRespirationIllustration({
       >
         CO₂ + H₂O
       </text>
-    </Wrapper>
+    </svg>
   )
 }

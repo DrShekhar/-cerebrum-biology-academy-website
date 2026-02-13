@@ -3,8 +3,7 @@
 import type { IllustrationProps } from './shared'
 
 export function CoachingCenterIllustration({ className = '', animate = true }: IllustrationProps) {
-  const Wrapper = animate ? motion.svg : 'svg'
-  const wrapperProps = animate
+    const wrapperProps = animate
     ? {
         initial: { opacity: 0 },
         animate: { opacity: 1 },
@@ -13,12 +12,11 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
     : {}
 
   return (
-    <Wrapper
+    <svg
       viewBox="0 0 400 300"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      {...wrapperProps}
     >
       {/* Grid background */}
       <rect x="20" y="20" width="360" height="260" rx="16" fill="#EDE9FE" opacity="0.3" />
@@ -127,6 +125,6 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
         fill="#F97316"
         opacity="0.5"
       />
-    </Wrapper>
+    </svg>
   )
 }
