@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Users,
@@ -118,11 +117,7 @@ export default function NeetBiologyCoachingIndiaPage() {
       <section className="relative bg-gradient-to-br from-purple-900 via-violet-800 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Brain className="w-5 h-5 mr-2" />
@@ -169,63 +164,42 @@ export default function NeetBiologyCoachingIndiaPage() {
             </div>
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
               >
                 <Trophy className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">360/360</div>
                 <div className="text-sm text-blue-100">Perfect Biology Score</div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
               >
                 <Star className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">50+</div>
                 <div className="text-sm text-blue-100">360 Scorers</div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
               >
                 <Award className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">340+</div>
                 <div className="text-sm text-blue-100">Average Biology Score</div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
               >
                 <Users className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                 <div className="text-2xl font-bold">1,50,000+</div>
                 <div className="text-sm text-blue-100">Biology Students</div>
-              </motion.div>
+              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Biology Topics Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Complete NEET Biology Syllabus Coverage
@@ -233,18 +207,11 @@ export default function NeetBiologyCoachingIndiaPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               From Cell Biology to Ecology - comprehensive coverage of all NEET Biology topics.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {biologyTopics.map((topic, index) => (
-              <motion.div
-                key={topic.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8"
-              >
+              <div key={topic.title} className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp">
                 <div className="flex items-center mb-4">
                   <topic.icon className="w-10 h-10 text-purple-600 mr-4" />
                   <div>
@@ -264,7 +231,7 @@ export default function NeetBiologyCoachingIndiaPage() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -273,12 +240,7 @@ export default function NeetBiologyCoachingIndiaPage() {
       {/* Toppers Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Our Biology Toppers
@@ -286,24 +248,17 @@ export default function NeetBiologyCoachingIndiaPage() {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Students who achieved perfect and near-perfect Biology scores in NEET.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {topperResults.map((topper, index) => (
-              <motion.div
-                key={topper.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 text-center"
-              >
+              <div key={topper.name} className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 text-center animate-fadeInUp">
                 <Trophy className="w-10 h-10 text-yellow-500 mx-auto mb-3" />
                 <h3 className="text-lg font-bold text-gray-900">{topper.name}</h3>
                 <div className="text-3xl font-bold text-purple-600 my-2">{topper.biologyScore}</div>
                 <div className="text-gray-600 text-sm">Biology Score</div>
                 <div className="text-gray-500 text-sm mt-2">{topper.rank}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -312,32 +267,20 @@ export default function NeetBiologyCoachingIndiaPage() {
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Our Biology Coaching is Different
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-8"
-              >
+              <div key={feature.title} className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp">
                 <feature.icon className="w-12 h-12 text-purple-600 mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -346,34 +289,22 @@ export default function NeetBiologyCoachingIndiaPage() {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Biology Coaching FAQs
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-purple-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -382,12 +313,7 @@ export default function NeetBiologyCoachingIndiaPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Score 360/360 in NEET Biology</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Join India's best Biology coaching. AIIMS trained faculty, proven methodology, 50+
@@ -437,7 +363,7 @@ export default function NeetBiologyCoachingIndiaPage() {
                 <span>5000+ MCQs</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

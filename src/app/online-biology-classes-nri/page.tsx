@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Users,
@@ -136,11 +135,7 @@ export default function OnlineBiologyClassesNRIPage() {
       <section className="relative overflow-hidden bg-gradient-to-r from-orange-500 to-red-500 py-20 text-white">
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl"
+          <div className="max-w-4xl animate-fadeInUp"
           >
             <span className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
               <Globe className="h-4 w-4" />
@@ -169,7 +164,7 @@ export default function OnlineBiologyClassesNRIPage() {
                 WhatsApp: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -183,17 +178,12 @@ export default function OnlineBiologyClassesNRIPage() {
               { icon: Trophy, value: '98%', label: 'Success Rate' },
               { icon: Star, value: '4.9/5', label: 'Parent Rating' },
             ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-orange-500" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -202,25 +192,16 @@ export default function OnlineBiologyClassesNRIPage() {
       {/* NRI Regions */}
       <section className="bg-blue-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               NRI Students From Around the World
             </h2>
             <p className="text-lg text-gray-600">We serve Indian families in every major region</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {nriRegions.map((region, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="mb-3 flex items-center gap-3">
                   <MapPin className="h-6 w-6 text-orange-500" />
@@ -236,7 +217,7 @@ export default function OnlineBiologyClassesNRIPage() {
                     {region.timezones}
                   </span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -245,32 +226,23 @@ export default function OnlineBiologyClassesNRIPage() {
       {/* Why NRI Parents Choose Us */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why NRI Parents Choose Cerebrum
             </h2>
             <p className="text-lg text-gray-600">
               Designed specifically for families living abroad
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-orange-500" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -279,11 +251,7 @@ export default function OnlineBiologyClassesNRIPage() {
       {/* Curriculum Bridge */}
       <section className="bg-green-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mx-auto max-w-4xl"
-          >
+          <div className="mx-auto max-w-4xl animate-fadeInUp">
             <div className="mb-6 text-center">
               <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-6 py-3 text-green-800">
                 <Target className="h-5 w-5" />
@@ -304,33 +272,24 @@ export default function OnlineBiologyClassesNRIPage() {
                 'UK GCSE/A-Level to Indian medical entrance',
                 'Middle East curriculum alignment',
               ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-md"
+                <div key={index} className="flex items-center gap-3 rounded-lg bg-white p-4 shadow-md animate-fadeInUp"
                 >
                   <CheckCircle className="h-5 w-5 flex-shrink-0 text-green-600" />
                   <span className="text-gray-700">{item}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Class Timings */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Class Timing Options</h2>
             <p className="text-lg text-gray-600">Choose what works for your timezone</p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             {[
@@ -350,18 +309,13 @@ export default function OnlineBiologyClassesNRIPage() {
                 works: 'All timezones • Working parents',
               },
             ].map((batch, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-orange-50 p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-orange-50 p-6 shadow-lg animate-fadeInUp"
               >
                 <Clock className="mb-4 h-10 w-10 text-orange-500" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{batch.name}</h3>
                 <p className="mb-2 font-medium text-orange-600">{batch.time}</p>
                 <p className="text-sm text-gray-600">{batch.works}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -370,26 +324,17 @@ export default function OnlineBiologyClassesNRIPage() {
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">FAQs for NRI Parents</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -439,7 +384,7 @@ export default function OnlineBiologyClassesNRIPage() {
       {/* CTA */}
       <section className="bg-gradient-to-r from-orange-500 to-red-500 py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Join 11,500+ NRI Families Worldwide</h2>
             <p className="mb-8 text-xl text-orange-100">
               Your child&apos;s NEET dreams don&apos;t have to wait until you return to India
@@ -462,7 +407,7 @@ export default function OnlineBiologyClassesNRIPage() {
                 WhatsApp Us
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

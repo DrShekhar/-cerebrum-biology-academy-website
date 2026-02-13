@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -160,11 +159,7 @@ export default function NEETCoachingTagoreGardenPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
@@ -216,20 +211,14 @@ export default function NEETCoachingTagoreGardenPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {successStats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
-                >
+                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp">
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -319,12 +308,7 @@ export default function NEETCoachingTagoreGardenPage() {
       {/* Nearby Areas Coverage */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching for All West Delhi Areas
@@ -333,18 +317,11 @@ export default function NEETCoachingTagoreGardenPage() {
               Students from every West Delhi locality trust us. Our online classes make quality NEET
               coaching accessible from anywhere.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {nearbyAreas.map((item, index) => (
-              <motion.div
-                key={item.area}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-md hover:shadow-xl p-5 transition-all hover:-translate-y-1 border border-gray-100"
-              >
+              <div key={item.area} className="bg-white rounded-xl shadow-md hover:shadow-xl p-5 transition-all hover:-translate-y-1 border border-gray-100 animate-fadeInUp">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-lg font-bold text-gray-900">{item.area}</span>
                   <MapPin className="w-4 h-4 text-blue-600" />
@@ -359,7 +336,7 @@ export default function NEETCoachingTagoreGardenPage() {
                     </span>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -368,12 +345,7 @@ export default function NEETCoachingTagoreGardenPage() {
       {/* Premium Societies Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Premium Tagore Garden & West Delhi Societies
@@ -382,23 +354,16 @@ export default function NEETCoachingTagoreGardenPage() {
               Trusted by families from West Delhi&apos;s best residential complexes including
               Kohli One Westend Greens and MIG Flats Extension
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSocieties.map((society, index) => (
-              <motion.div
-                key={society.name}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-blue-50 rounded-xl p-5 border border-blue-100"
-              >
+              <div key={society.name} className="bg-blue-50 rounded-xl p-5 border border-blue-100 animate-fadeInUp">
                 <Building2 className="w-6 h-6 text-blue-600 mb-2" />
                 <div className="font-bold text-gray-900">{society.name}</div>
                 <div className="text-sm text-gray-500">{society.location}</div>
                 <div className="text-blue-600 font-semibold mt-2">{society.students} students</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -407,12 +372,7 @@ export default function NEETCoachingTagoreGardenPage() {
       {/* Learning Modes Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <span className="inline-flex items-center gap-2 bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold mb-4">
               <Monitor className="w-4 h-4" />
@@ -424,17 +384,11 @@ export default function NEETCoachingTagoreGardenPage() {
             <p className="text-lg text-slate-300 max-w-3xl mx-auto">
               Study from your Tagore Garden home or visit our Rohini center - the choice is yours
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {/* Online Mode */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition"
-            >
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition animate-fadeInUp">
               <div className="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center mb-4">
                 <Monitor className="w-7 h-7 text-white" />
               </div>
@@ -450,16 +404,10 @@ export default function NEETCoachingTagoreGardenPage() {
                 <span className="text-yellow-400 font-semibold">Rs 45,000/year</span>
                 <span className="text-slate-400 text-sm ml-2">Most Popular</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Hybrid Mode */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-yellow-500 rounded-2xl p-6 text-slate-900 relative overflow-hidden"
-            >
+            <div className="bg-yellow-500 rounded-2xl p-6 text-slate-900 relative overflow-hidden animate-fadeInUp">
               <div className="absolute top-0 right-0 bg-slate-900 text-yellow-400 text-xs font-bold px-3 py-1 rounded-bl-lg">RECOMMENDED</div>
               <div className="w-14 h-14 bg-slate-900 rounded-xl flex items-center justify-center mb-4">
                 <TrendingUp className="w-7 h-7 text-yellow-400" />
@@ -476,16 +424,10 @@ export default function NEETCoachingTagoreGardenPage() {
                 <span className="text-slate-900 font-semibold">Rs 55,000/year</span>
                 <span className="text-slate-700 text-sm ml-2">Best Value</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Offline Mode */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition"
-            >
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition animate-fadeInUp">
               <div className="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mb-4">
                 <MapPin className="w-7 h-7 text-white" />
               </div>
@@ -501,17 +443,11 @@ export default function NEETCoachingTagoreGardenPage() {
                 <span className="text-yellow-400 font-semibold">Rs 65,000/year</span>
                 <span className="text-slate-400 text-sm ml-2">Premium</span>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Rohini Center Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="mt-12 bg-white/5 rounded-2xl p-6 max-w-4xl mx-auto"
-          >
+          <div className="mt-12 bg-white/5 rounded-2xl p-6 max-w-4xl mx-auto animate-fadeInUp">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2">Rohini Offline Center</h3>
@@ -532,19 +468,14 @@ export default function NEETCoachingTagoreGardenPage() {
                 View Center Details <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Top West Delhi Schools
@@ -553,23 +484,16 @@ export default function NEETCoachingTagoreGardenPage() {
               Trusted by students from leading schools in Tagore Garden, Rajouri Garden,
               Janakpuri and surrounding areas
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {nearbySchools.map((school, index) => (
-              <motion.div
-                key={school.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-md p-5 border border-gray-100"
-              >
+              <div key={school.name} className="bg-white rounded-xl shadow-md p-5 border border-gray-100 animate-fadeInUp">
                 <School className="w-6 h-6 text-blue-600 mb-2" />
                 <div className="font-bold text-gray-900 text-sm">{school.name}</div>
                 <div className="text-sm text-gray-500">{school.area}</div>
                 <div className="text-blue-600 text-sm mt-2">{school.distance}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -578,12 +502,7 @@ export default function NEETCoachingTagoreGardenPage() {
       {/* Metro Connectivity Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Metro Connectivity from West Delhi
@@ -591,23 +510,16 @@ export default function NEETCoachingTagoreGardenPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Easy access from all major West Delhi metro stations via Blue, Green, and Pink lines
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {metroStations.map((station, index) => (
-              <motion.div
-                key={station.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-100"
-              >
+              <div key={station.name} className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-4 border border-blue-100 animate-fadeInUp">
                 <Train className="w-5 h-5 text-blue-600 mb-2" />
                 <div className="font-bold text-gray-900 text-sm">{station.name}</div>
                 <div className="text-xs text-blue-600 font-medium">{station.line}</div>
                 <div className="text-xs text-gray-500 mt-1">{station.areas}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -624,12 +536,7 @@ export default function NEETCoachingTagoreGardenPage() {
       {/* Google Reviews & Map Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by West Delhi Families
@@ -637,17 +544,11 @@ export default function NEETCoachingTagoreGardenPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               See what students and parents from Tagore Garden, Rajouri Garden, and Janakpuri say about us
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Google Rating Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 flex flex-col items-center"
-            >
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 flex flex-col items-center animate-fadeInUp">
               <div className="w-16 h-16 mb-4">
                 <svg viewBox="0 0 24 24" className="w-full h-full">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
@@ -677,18 +578,12 @@ export default function NEETCoachingTagoreGardenPage() {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Review Highlights */}
             <div className="lg:col-span-2 space-y-5">
               {/* Review 1: Tagore Garden Student */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
+              <div className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -714,16 +609,10 @@ export default function NEETCoachingTagoreGardenPage() {
                   <Trophy className="w-4 h-4 mr-1" />
                   <span className="font-semibold">658/720 NEET 2024 | Government Medical College</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 2: MIG Flats Parent */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -749,16 +638,10 @@ export default function NEETCoachingTagoreGardenPage() {
                   <TrendingUp className="w-4 h-4 mr-1" />
                   <span className="font-semibold">520 to 635 Improvement | +115 Marks</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 3: Rajouri Garden Student */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -784,7 +667,7 @@ export default function NEETCoachingTagoreGardenPage() {
                   <Trophy className="w-4 h-4 mr-1" />
                   <span className="font-semibold">350/360 Biology | Near-Perfect Score</span>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>
@@ -793,12 +676,7 @@ export default function NEETCoachingTagoreGardenPage() {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
@@ -806,18 +684,11 @@ export default function NEETCoachingTagoreGardenPage() {
             <p className="text-lg text-gray-600">
               Common questions from Tagore Garden and West Delhi students
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-md overflow-hidden"
-              >
+              <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden animate-fadeInUp">
                 <details className="group">
                   <summary className="flex items-center justify-between cursor-pointer p-6 font-semibold text-gray-900 hover:bg-gray-50">
                     <span>{faq.question}</span>
@@ -827,7 +698,7 @@ export default function NEETCoachingTagoreGardenPage() {
                     {faq.answer}
                   </div>
                 </details>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -836,12 +707,7 @@ export default function NEETCoachingTagoreGardenPage() {
       {/* Final CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your NEET Journey from Tagore Garden Today
             </h2>
@@ -875,16 +741,12 @@ export default function NEETCoachingTagoreGardenPage() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Floating WhatsApp Button */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.3 }}
-        className="fixed bottom-6 right-6 z-50"
+      <div className="fixed bottom-6 right-6 z-50 animate-fadeInUp"
       >
         <Link
           href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20coaching%20from%20Tagore%20Garden.%20Please%20share%20details."
@@ -896,7 +758,7 @@ export default function NEETCoachingTagoreGardenPage() {
           {/* Notification Dot */}
           <span className="absolute top-0 right-0 w-3 h-3 bg-red-500 rounded-full animate-pulse border-2 border-white" />
         </Link>
-      </motion.div>
+      </div>
 
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />

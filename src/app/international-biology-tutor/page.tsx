@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Globe,
   Users,
@@ -314,11 +313,7 @@ export default function InternationalBiologyTutorPage() {
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 
           <div className="relative max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center max-w-5xl mx-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+            <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/20">
                 <Globe className="w-5 h-5 mr-2" />
@@ -367,52 +362,35 @@ export default function InternationalBiologyTutorPage() {
               </div>
 
               <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp"
                 >
                   <Users className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">1,500+</div>
                   <div className="text-sm opacity-80 mt-1">International Students</div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.3 }}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp"
                 >
                   <MapPin className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">15+</div>
                   <div className="text-sm opacity-80 mt-1">Countries Worldwide</div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 }}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20"
+                <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 animate-fadeInUp"
                 >
                   <Clock className="w-10 h-10 mx-auto mb-3 text-blue-300" />
                   <div className="text-3xl font-bold">All Zones</div>
                   <div className="text-sm opacity-80 mt-1">EST, GMT, GST, SGT, AEST</div>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Curriculum Cards Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Choose Your Curriculum
@@ -420,17 +398,11 @@ export default function InternationalBiologyTutorPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Specialized expert tutors for each international biology curriculum
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {curriculumCards.map((card, index) => (
-                <motion.div
-                  key={card.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
+                <div key={card.title} className="animate-fadeInUp">
                   <Link href={card.href}>
                     <div
                       className={`relative group bg-gradient-to-br ${card.color} rounded-2xl p-8 text-white hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl overflow-hidden`}
@@ -465,7 +437,7 @@ export default function InternationalBiologyTutorPage() {
                       </div>
                     </div>
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -474,12 +446,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Why Choose Us Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Why Choose Our International Tutoring?
@@ -487,24 +454,17 @@ export default function InternationalBiologyTutorPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Specialized expertise that goes beyond generic online tutoring
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {whyChooseUs.map((item, index) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-indigo-50 to-slate-50 rounded-xl p-8 hover:shadow-lg transition-shadow"
-                >
+                <div key={item.title} className="bg-gradient-to-br from-indigo-50 to-slate-50 rounded-xl p-8 hover:shadow-lg transition-shadow animate-fadeInUp">
                   <div className="bg-gradient-to-br from-indigo-600 to-slate-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -513,12 +473,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Countries We Serve Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Students Worldwide Trust Us
@@ -527,18 +482,11 @@ export default function InternationalBiologyTutorPage() {
                 Teaching international biology students across 15+ countries and all major time
                 zones
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
               {countries.map((country, index) => (
-                <motion.div
-                  key={country.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all hover:scale-105"
-                >
+                <div key={country.name} className="bg-white rounded-xl shadow-md p-6 hover:shadow-xl transition-all hover:scale-105 animate-fadeInUp">
                   <div className="text-4xl mb-3 text-center">{country.flag}</div>
                   <h3 className="text-lg font-bold text-gray-900 text-center mb-2">
                     {country.name}
@@ -547,7 +495,7 @@ export default function InternationalBiologyTutorPage() {
                     {country.students}
                   </div>
                   <div className="text-sm text-gray-500 text-center">{country.cities}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -556,12 +504,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Comparison Table Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Compare Biology Curricula
@@ -569,15 +512,9 @@ export default function InternationalBiologyTutorPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Understand the differences between IGCSE, A-Level, IB, and AP Biology
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="overflow-x-auto rounded-xl shadow-lg"
-            >
+            <div className="overflow-x-auto rounded-xl shadow-lg animate-fadeInUp">
               <table className="w-full bg-white">
                 <thead className="bg-gradient-to-r from-indigo-600 to-slate-700 text-white">
                   <tr>
@@ -603,19 +540,14 @@ export default function InternationalBiologyTutorPage() {
                   ))}
                 </tbody>
               </table>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Success Stories Section */}
         <section className="py-20 bg-gradient-to-br from-indigo-600 via-indigo-700 to-slate-800 text-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 International Student Success Stories
@@ -623,18 +555,11 @@ export default function InternationalBiologyTutorPage() {
               <p className="text-xl opacity-90 max-w-3xl mx-auto">
                 Real students from around the world achieving exceptional results
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 gap-8">
               {successStories.map((story, index) => (
-                <motion.div
-                  key={story.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all"
-                >
+                <div key={story.name} className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all animate-fadeInUp">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{story.flag}</div>
@@ -655,7 +580,7 @@ export default function InternationalBiologyTutorPage() {
                   <div className="text-2xl font-bold text-yellow-300 mb-4">{story.achievement}</div>
 
                   <p className="italic opacity-90 leading-relaxed">&ldquo;{story.quote}&rdquo;</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -664,12 +589,7 @@ export default function InternationalBiologyTutorPage() {
         {/* Features Grid Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Premium Learning Features
@@ -677,24 +597,17 @@ export default function InternationalBiologyTutorPage() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Everything you need for international biology exam success
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-slate-50 to-indigo-50 rounded-xl p-8 hover:shadow-lg transition-all"
-                >
+                <div key={feature.title} className="bg-gradient-to-br from-slate-50 to-indigo-50 rounded-xl p-8 hover:shadow-lg transition-all animate-fadeInUp">
                   <div className="bg-gradient-to-br from-indigo-600 to-slate-700 w-14 h-14 rounded-xl flex items-center justify-center mb-4">
                     <feature.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                   <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -703,12 +616,7 @@ export default function InternationalBiologyTutorPage() {
         {/* FAQ Section */}
         <section className="py-20 bg-gradient-to-br from-slate-50 to-indigo-50">
           <div className="max-w-4xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 Frequently Asked Questions
@@ -716,24 +624,17 @@ export default function InternationalBiologyTutorPage() {
               <p className="text-xl text-gray-600">
                 Common questions about international biology tutoring
               </p>
-            </motion.div>
+            </div>
 
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <motion.div
-                  key={faq.question}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow"
-                >
+                <div key={faq.question} className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp">
                   <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                     <MessageCircle className="w-6 h-6 mr-3 text-indigo-600 flex-shrink-0 mt-1" />
                     {faq.question}
                   </h3>
                   <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -742,12 +643,7 @@ export default function InternationalBiologyTutorPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-indigo-600 via-indigo-700 to-slate-800 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div className="animate-fadeInUp">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Start Your International Biology Journey Today
               </h2>
@@ -798,7 +694,7 @@ export default function InternationalBiologyTutorPage() {
                   <span>Proven Results</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

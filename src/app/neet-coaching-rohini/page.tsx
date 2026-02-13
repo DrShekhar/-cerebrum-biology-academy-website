@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -164,11 +163,7 @@ export default function NEETCoachingRohiniPage() {
           </div>
 
           <div className="container mx-auto px-4 relative z-10">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center max-w-4xl mx-auto"
+            <div className="text-center max-w-4xl mx-auto animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
                 <MapPin className="w-5 h-5" />
@@ -200,18 +195,14 @@ export default function NEETCoachingRohiniPage() {
                   Book Free Demo Class
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Why Rohini Students Choose Us */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Why Rohini Students Choose Cerebrum Biology Academy
@@ -220,24 +211,18 @@ export default function NEETCoachingRohiniPage() {
                 Convenient Red Line Metro connectivity and weekend batches make it easy for Rohini
                 students to access quality NEET coaching with AIIMS Trained faculty.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-gray-100"
+                <div key={feature.title} className="bg-white rounded-xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-green-600" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-800 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -246,11 +231,7 @@ export default function NEETCoachingRohiniPage() {
         {/* Connectivity from Rohini Areas */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Easy Access from All Rohini Areas
@@ -259,17 +240,11 @@ export default function NEETCoachingRohiniPage() {
                 Well-connected via Red Line Metro. Special weekend batches designed for Rohini and
                 North Delhi students.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {rohiniAreas.map((area, index) => (
-                <motion.div
-                  key={area.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100"
+                <div key={area.name} className="bg-white rounded-lg p-4 shadow-md border border-gray-100 animate-fadeInUp"
                 >
                   <div className="flex items-start gap-3">
                     <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -281,15 +256,11 @@ export default function NEETCoachingRohiniPage() {
                       <p className="text-gray-500 text-xs mt-1">{area.description}</p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-8 bg-red-50 rounded-xl p-6 border border-red-200"
+            <div className="mt-8 bg-red-50 rounded-xl p-6 border border-red-200 animate-fadeInUp"
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -310,18 +281,14 @@ export default function NEETCoachingRohiniPage() {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Rohini Schools We Serve */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Students from Top Rohini Schools
@@ -329,7 +296,7 @@ export default function NEETCoachingRohiniPage() {
               <p className="text-gray-600 max-w-2xl mx-auto">
                 We proudly serve students from leading schools across Rohini and North Delhi
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
@@ -346,17 +313,11 @@ export default function NEETCoachingRohiniPage() {
                 'Bal Bharati Public School',
                 'Hansraj Model School',
               ].map((school, index) => (
-                <motion.div
-                  key={school}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-center gap-3"
+                <div key={school} className="bg-white rounded-lg p-4 shadow-md border border-gray-100 flex items-center gap-3 animate-fadeInUp"
                 >
                   <GraduationCap className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span className="text-gray-700 font-medium">{school}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -372,11 +333,7 @@ export default function NEETCoachingRohiniPage() {
         {/* Success Stories */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="max-w-3xl mx-auto"
+            <div className="max-w-3xl mx-auto animate-fadeInUp"
             >
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -409,18 +366,14 @@ export default function NEETCoachingRohiniPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Video Testimonials Section */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Watch Success Stories from Our Students
@@ -428,7 +381,7 @@ export default function NEETCoachingRohiniPage() {
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Hear directly from NEET achievers about their journey with Cerebrum Biology Academy
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {[
@@ -451,13 +404,7 @@ export default function NEETCoachingRohiniPage() {
                   achievement: '6-Month Intensive Program',
                 },
               ].map((video, index) => (
-                <motion.div
-                  key={video.youtubeId}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100"
+                <div key={video.youtubeId} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 animate-fadeInUp"
                 >
                   <div className="relative aspect-video">
                     <iframe
@@ -476,15 +423,11 @@ export default function NEETCoachingRohiniPage() {
                     <p className="text-green-600 font-semibold text-sm">{video.score}</p>
                     <p className="text-gray-600 text-xs mt-1">{video.achievement}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="text-center mt-8"
+            <div className="text-center mt-8 animate-fadeInUp"
             >
               <a
                 href="https://www.youtube.com/@cerebrumbiologyacademy"
@@ -496,7 +439,7 @@ export default function NEETCoachingRohiniPage() {
                 Watch More on YouTube
                 <ExternalLink className="w-4 h-4" />
               </a>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -504,11 +447,7 @@ export default function NEETCoachingRohiniPage() {
         <section className="py-16 bg-gradient-to-br from-blue-50 to-green-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-center mb-12"
+              <div className="text-center mb-12 animate-fadeInUp"
               >
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">
                   Trusted by 500+ Verified Google Reviews
@@ -516,15 +455,11 @@ export default function NEETCoachingRohiniPage() {
                 <p className="text-gray-600">
                   See what parents and students say about Cerebrum Biology Academy
                 </p>
-              </motion.div>
+              </div>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 {/* Google Rating Card */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-xl p-8 border border-gray-100"
+                <div className="bg-white rounded-xl shadow-xl p-8 border border-gray-100 animate-fadeInUp"
                 >
                   <div className="flex items-center justify-center mb-4">
                     <img
@@ -563,14 +498,10 @@ export default function NEETCoachingRohiniPage() {
                       </a>
                     </div>
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Recent Reviews Highlights */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-xl p-6 border border-gray-100"
+                <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                     <MessageCircle className="w-5 h-5 text-green-600" />
@@ -607,15 +538,11 @@ export default function NEETCoachingRohiniPage() {
                       </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               </div>
 
               {/* Google Maps Embed */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-xl p-6 border border-gray-100"
+              <div className="bg-white rounded-xl shadow-xl p-6 border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                   <MapPinned className="w-5 h-5 text-red-600" />
@@ -661,7 +588,7 @@ export default function NEETCoachingRohiniPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -669,33 +596,23 @@ export default function NEETCoachingRohiniPage() {
         {/* FAQ Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
                 Frequently Asked Questions - NEET Coaching Rohini
               </h2>
-            </motion.div>
+            </div>
 
             <div className="max-w-3xl mx-auto space-y-4">
               {faqStructuredData.mainEntity.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-md border border-gray-100 p-6"
+                <div key={index} className="bg-white rounded-lg shadow-md border border-gray-100 p-6 animate-fadeInUp"
                 >
                   <h3 className="font-bold text-gray-800 mb-3 flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     {faq.name}
                   </h3>
                   <p className="text-gray-600 ml-8">{faq.acceptedAnswer.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -731,18 +648,12 @@ export default function NEETCoachingRohiniPage() {
                   color: 'text-purple-600',
                 },
               ].map((badge, index) => (
-                <motion.div
-                  key={badge.label}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
+                <div key={badge.label} className="text-center animate-fadeInUp"
                 >
                   <badge.icon className={`w-8 h-8 mx-auto mb-2 ${badge.color}`} />
                   <div className="font-bold text-gray-900 text-sm">{badge.label}</div>
                   <div className="text-xs text-gray-600">{badge.sublabel}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -751,11 +662,7 @@ export default function NEETCoachingRohiniPage() {
         {/* CTA Section */}
         <section className="py-16 bg-[#4a5d4a] text-white">
           <div className="container mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl font-bold mb-4">Start Your NEET Journey from Rohini</h2>
               <p className="text-green-100 mb-8 max-w-2xl mx-auto">
                 Join the growing community of successful NEET aspirants from Rohini. Book your free
@@ -776,7 +683,7 @@ export default function NEETCoachingRohiniPage() {
                   Call: 8826444334
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>

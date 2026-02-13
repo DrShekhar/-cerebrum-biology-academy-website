@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -87,10 +86,7 @@ export default function LajpatNagarPage() {
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-orange-900 via-red-800 to-orange-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="max-w-4xl mx-auto text-center"
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Navigation className="w-4 h-4" />
@@ -119,18 +115,14 @@ export default function LajpatNagarPage() {
                   WhatsApp Us
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         <section className="py-12 md:py-16 -mt-8">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-green-500"
+              <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border-4 border-green-500 animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white py-4 px-6">
                   <div className="flex items-center gap-3">
@@ -192,7 +184,7 @@ export default function LajpatNagarPage() {
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -209,20 +201,14 @@ export default function LajpatNagarPage() {
                 { icon: Trophy, title: '98% Success', desc: 'Proven results' },
                 { icon: Award, title: 'Biology Only', desc: '100% focused' },
               ].map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
                   <div className="w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-orange-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -277,16 +263,11 @@ export default function LajpatNagarPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((f, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                <div key={i} className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{f.q}</h3>
                   <p className="text-gray-600">{f.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

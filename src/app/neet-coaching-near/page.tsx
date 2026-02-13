@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
@@ -143,11 +142,7 @@ export default function NEETCoachingNearPage() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
@@ -186,19 +181,14 @@ export default function NEETCoachingNearPage() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Schools Grid */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Find NEET Coaching Near Your School
@@ -206,17 +196,11 @@ export default function NEETCoachingNearPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Select your school to see customized coaching options
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {schools.map((school, index) => (
-              <motion.div
-                key={school.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+              <div key={school.slug} className="animate-fadeInUp">
                 <Link href={`/neet-coaching-near/${school.slug}`}>
                   <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 h-full group">
                     <div className="flex items-center justify-between mb-3">
@@ -239,7 +223,7 @@ export default function NEETCoachingNearPage() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -248,17 +232,12 @@ export default function NEETCoachingNearPage() {
       {/* Why School-Specific */}
       <section className="py-16 md:py-20 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why School-Specific NEET Coaching?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -271,17 +250,10 @@ export default function NEETCoachingNearPage() {
               'Holiday batch options',
               'Online classes for exam periods',
             ].map((item, index) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4"
-              >
+              <div key={item} className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 animate-fadeInUp">
                 <CheckCircle className="w-6 h-6 text-yellow-300 mr-3 flex-shrink-0" />
                 <span>{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -291,13 +263,7 @@ export default function NEETCoachingNearPage() {
       {isInDelhiNCR === false && (
         <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
+            <div className="text-center mb-12 animate-fadeInUp">
               <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Wifi className="w-4 h-4 mr-2" />
                 Online NEET Coaching Available
@@ -309,18 +275,11 @@ export default function NEETCoachingNearPage() {
                 Get the same expert NEET coaching from anywhere in India through our interactive
                 online platform.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {onlineRegions.map((region, index) => (
-                <motion.div
-                  key={region.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-blue-100"
-                >
+                <div key={region.name} className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 animate-fadeInUp">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
                       <Wifi className="w-6 h-6 text-white" />
@@ -347,24 +306,18 @@ export default function NEETCoachingNearPage() {
                       </span>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-10"
-            >
+            <div className="text-center mt-10 animate-fadeInUp">
               <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD, 'Online')}>
                 <Button size="xl" className="bg-green-600 hover:bg-green-700 text-white">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Enquire About Online Classes
                 </Button>
               </a>
-            </motion.div>
+            </div>
           </div>
         </section>
       )}
@@ -372,12 +325,7 @@ export default function NEETCoachingNearPage() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Don't See Your School Listed?</h2>
             <p className="text-xl mb-8 opacity-90">
               We serve students from all major schools in Delhi NCR. Contact us for a customized
@@ -407,7 +355,7 @@ export default function NEETCoachingNearPage() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

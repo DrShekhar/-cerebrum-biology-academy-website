@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -223,11 +222,7 @@ export default function NeetCoachingFaridabadPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
@@ -275,32 +270,21 @@ export default function NeetCoachingFaridabadPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {successStats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
-                >
+                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp">
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Faridabad Areas Coverage */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Across All Faridabad Areas
@@ -309,17 +293,11 @@ export default function NeetCoachingFaridabadPage() {
               Students from every Faridabad area trust us. Click on your area to see local success
               stories.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {faridabadAreas.map((item, index) => (
-              <motion.div
-                key={item.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-              >
+              <div key={item.slug} className="animate-fadeInUp">
                 <Link
                   href={`/neet-coaching-faridabad/${item.slug}`}
                   className="block bg-white rounded-xl shadow-md hover:shadow-xl p-5 transition-all hover:-translate-y-1 border border-gray-100"
@@ -339,7 +317,7 @@ export default function NeetCoachingFaridabadPage() {
                     )}
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -348,12 +326,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Greater Faridabad Sectors Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching in Greater Faridabad Sectors
@@ -361,21 +334,14 @@ export default function NeetCoachingFaridabadPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Serving students from all premium sectors of Greater Faridabad
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-4 md:grid-cols-8 gap-4">
             {greaterFaridabadSectors.map((item, index) => (
-              <motion.div
-                key={item.sector}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-orange-50 rounded-xl p-4 border border-orange-100 text-center"
-              >
+              <div key={item.sector} className="bg-orange-50 rounded-xl p-4 border border-orange-100 text-center animate-fadeInUp">
                 <div className="font-bold text-gray-900">Sector {item.sector}</div>
                 <div className="text-orange-600 font-semibold text-sm mt-1">{item.students}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -384,12 +350,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Premium Societies Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Premium Faridabad Societies
@@ -397,25 +358,18 @@ export default function NeetCoachingFaridabadPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Trusted by families from Faridabad&apos;s best residential complexes
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {premiumSocieties.map((society, index) => (
-              <motion.div
-                key={society.name}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-rose-50 rounded-xl p-5 border border-orange-100"
-              >
+              <div key={society.name} className="bg-gradient-to-br from-orange-50 to-rose-50 rounded-xl p-5 border border-orange-100 animate-fadeInUp">
                 <Building2 className="w-6 h-6 text-orange-600 mb-2" />
                 <div className="font-bold text-gray-900">{society.name}</div>
                 <div className="text-sm text-gray-500">{society.location}</div>
                 <div className="text-orange-600 font-semibold mt-2">
                   {society.students} students
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -424,12 +378,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-orange-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Top Faridabad Schools
@@ -437,23 +386,16 @@ export default function NeetCoachingFaridabadPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Perfect for students from DAV, DPS, Modern Vidya Niketan &amp; other premier schools
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {nearbySchools.map((school, index) => (
-              <motion.div
-                key={school.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.03 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-5 shadow-md"
-              >
+              <div key={school.name} className="bg-white rounded-xl p-5 shadow-md animate-fadeInUp">
                 <School className="w-6 h-6 text-orange-600 mb-2" />
                 <div className="font-bold text-gray-900 text-sm">{school.name}</div>
                 <div className="text-sm text-gray-500">{school.location}</div>
                 <div className="text-orange-600 text-sm mt-2">Online classes available</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -462,12 +404,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Metro Connectivity Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Near Faridabad Metro Stations
@@ -475,7 +412,7 @@ export default function NeetCoachingFaridabadPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Online classes accessible from all Violet Line metro stations
             </p>
-          </motion.div>
+          </div>
 
           <div className="bg-purple-50 rounded-xl p-6">
             <h3 className="text-xl font-bold text-purple-900 mb-4 flex items-center justify-center">
@@ -497,12 +434,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Colleges Section */}
       <section className="py-16 md:py-20 bg-rose-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Faridabad Universities &amp; Colleges
@@ -510,23 +442,16 @@ export default function NeetCoachingFaridabadPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               NEET droppers and repeaters from premier Faridabad institutions
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {colleges.map((college, index) => (
-              <motion.div
-                key={college.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-5 shadow-md"
-              >
+              <div key={college.name} className="bg-white rounded-xl p-5 shadow-md animate-fadeInUp">
                 <GraduationCap className="w-6 h-6 text-rose-600 mb-2" />
                 <div className="font-bold text-gray-900 text-sm">{college.name}</div>
                 <div className="text-sm text-gray-500">{college.location}</div>
                 <div className="text-rose-600 font-semibold mt-2">{college.students} students</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -535,17 +460,12 @@ export default function NeetCoachingFaridabadPage() {
       {/* Why Choose Us Section */}
       <section className="py-16 md:py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Faridabad Students Choose Cerebrum Biology Academy
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -566,18 +486,11 @@ export default function NeetCoachingFaridabadPage() {
                 desc: 'NCERT notes, tests, PYQs included',
               },
             ].map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
-              >
+              <div key={feature.title} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <feature.icon className="w-10 h-10 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -586,12 +499,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* Video Testimonials Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-red-100 text-red-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
@@ -604,17 +512,11 @@ export default function NeetCoachingFaridabadPage() {
               See how our students from premium Faridabad societies and schools achieved their NEET
               dreams through our online and offline coaching programs
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {/* Video 1: Sadhna Sirin */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="relative aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/bk6wQCh6b9w"
@@ -639,16 +541,10 @@ export default function NeetCoachingFaridabadPage() {
                   Accessible from Greater Faridabad & NIT
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Video 2: Abhisek */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="relative aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/NfhkGqOQXzk"
@@ -673,16 +569,10 @@ export default function NeetCoachingFaridabadPage() {
                   Online coaching from Ballabgarh area
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Video 3: Nishita */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="relative aspect-video">
                 <iframe
                   src="https://www.youtube.com/embed/t5F8RBuHITM"
@@ -709,16 +599,11 @@ export default function NeetCoachingFaridabadPage() {
                   Studied from Neharpar with online classes
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Watch More CTA */}
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
+          <div className="text-center animate-fadeInUp"
           >
             <Link
               href="https://www.youtube.com/@CerebrumBiologyAcademy"
@@ -734,19 +619,14 @@ export default function NeetCoachingFaridabadPage() {
               100+ video testimonials from students across Greater Faridabad, NIT, Sector 21,
               Ballabgarh, and Neharpar
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Google Business Profile & Reviews Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by 1,200+ Faridabad Students & Parents
@@ -755,17 +635,11 @@ export default function NeetCoachingFaridabadPage() {
               Read verified reviews from students across Greater Faridabad, NIT, Ballabgarh, and
               Neharpar
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {/* Google Rating Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="lg:col-span-1"
-            >
+            <div className="lg:col-span-1 animate-fadeInUp">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-xl h-full flex flex-col items-center justify-center text-center">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg">
                   <svg className="w-12 h-12" viewBox="0 0 24 24" fill="none">
@@ -821,18 +695,12 @@ export default function NeetCoachingFaridabadPage() {
                   Verified reviews from students and parents across all Faridabad areas
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Review Highlights */}
             <div className="lg:col-span-2 space-y-5">
               {/* Review 1: Greater Faridabad (BPTP Parklands) */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
+              <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -859,16 +727,10 @@ export default function NeetCoachingFaridabadPage() {
                   <Trophy className="w-4 h-4 mr-1" />
                   <span className="font-semibold">670/720 NEET 2024 | VMMC Delhi</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 2: NIT Faridabad */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -895,16 +757,10 @@ export default function NeetCoachingFaridabadPage() {
                   <Award className="w-4 h-4 mr-1" />
                   <span className="font-semibold">665+ in Mock Tests | AIIMS Faculty Guidance</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 3: Ballabgarh */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
+              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -931,16 +787,10 @@ export default function NeetCoachingFaridabadPage() {
                   <TrendingUp className="w-4 h-4 mr-1" />
                   <span className="font-semibold">530 → 645 Marks (+115 Improvement)</span>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Review 4: Neharpar */}
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300"
-              >
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300 animate-fadeInUp">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -969,18 +819,12 @@ export default function NeetCoachingFaridabadPage() {
                     355/360 Biology | Lady Hardinge Medical College
                   </span>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
 
           {/* Google Maps & Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8"
-          >
+          <div className="grid md:grid-cols-2 gap-8 bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 animate-fadeInUp">
             {/* Map */}
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -1088,19 +932,14 @@ export default function NeetCoachingFaridabadPage() {
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Enhanced Success Stories Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
@@ -1113,17 +952,11 @@ export default function NeetCoachingFaridabadPage() {
               Read how our students from premium Faridabad societies achieved remarkable score
               improvements and secured top medical colleges
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {/* Story 1: Priya Sehgal */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="bg-gradient-to-br from-purple-600 to-pink-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -1207,16 +1040,10 @@ export default function NeetCoachingFaridabadPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Story 2: Vinita Singh */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="bg-gradient-to-br from-red-600 to-orange-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -1301,16 +1128,10 @@ export default function NeetCoachingFaridabadPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Story 3: Dipika Singh */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="bg-gradient-to-br from-green-600 to-teal-600 p-6 text-white">
                 <div className="flex items-center justify-between mb-4">
                   <div>
@@ -1398,17 +1219,11 @@ export default function NeetCoachingFaridabadPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Average Improvement Stats Banner */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white text-center"
-          >
+          <div className="bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 rounded-2xl p-8 text-white text-center animate-fadeInUp">
             <h3 className="text-2xl md:text-3xl font-bold mb-6">
               Proven Success from Faridabad Students
             </h3>
@@ -1447,19 +1262,14 @@ export default function NeetCoachingFaridabadPage() {
                 Start Your Success Story from Faridabad
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Trust Badges Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Shield className="w-4 h-4 mr-2" />
@@ -1472,17 +1282,11 @@ export default function NeetCoachingFaridabadPage() {
               Every number tells a story of dedication, excellence, and proven results from Greater
               Faridabad to NIT
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {/* Badge 1: 15+ Years of Excellence */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
-            >
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden animate-fadeInUp">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-800 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -1495,16 +1299,10 @@ export default function NeetCoachingFaridabadPage() {
                   consistent results
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Badge 2: 1,200+ Faridabad Students */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
-            >
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden animate-fadeInUp">
               <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -1517,16 +1315,10 @@ export default function NeetCoachingFaridabadPage() {
                   and Neharpar
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Badge 3: 4.9/5 Google Rating */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
-            >
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden animate-fadeInUp">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-600 to-orange-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -1539,16 +1331,10 @@ export default function NeetCoachingFaridabadPage() {
                   Faridabad
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Badge 4: AIIMS Trained Faculty */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
-            >
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden animate-fadeInUp">
               <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -1561,16 +1347,10 @@ export default function NeetCoachingFaridabadPage() {
                   experience
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Badge 5: 98% Success Rate */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
-            >
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden animate-fadeInUp">
               <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-emerald-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -1583,16 +1363,10 @@ export default function NeetCoachingFaridabadPage() {
                   students
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Badge 6: Live Online Classes */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
-            >
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden animate-fadeInUp">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <div className="relative z-10">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform duration-300">
@@ -1605,17 +1379,11 @@ export default function NeetCoachingFaridabadPage() {
                   coaching
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Bottom CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white text-center shadow-2xl"
-          >
+          <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 rounded-2xl p-8 text-white text-center shadow-2xl animate-fadeInUp">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Join 1,200+ Successful Faridabad Students
             </h3>
@@ -1638,19 +1406,14 @@ export default function NeetCoachingFaridabadPage() {
                 Call +91-88264-44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Premium Area Spotlight Cards */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <MapPin className="w-4 h-4 mr-2" />
@@ -1663,17 +1426,11 @@ export default function NeetCoachingFaridabadPage() {
               Discover how students from your area are achieving NEET success with our online and
               hybrid coaching programs
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             {/* Card 1: Greater Faridabad (Sectors 81-89) */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h3 className="text-2xl font-bold mb-1">Greater Faridabad</h3>
@@ -1754,16 +1511,10 @@ export default function NeetCoachingFaridabadPage() {
                 </p>
                 <div className="text-xs text-blue-100 mt-3">- Parent, BPTP Parklands</div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Card 2: NIT Faridabad & Ballabgarh */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-teal-500/50 transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-teal-500/50 transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h3 className="text-2xl font-bold mb-1">NIT & Ballabgarh</h3>
@@ -1844,16 +1595,10 @@ export default function NeetCoachingFaridabadPage() {
                 </p>
                 <div className="text-xs text-green-100 mt-3">- Sunita M., Ballabgarh</div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Card 3: Neharpar & South Faridabad */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-orange-600 to-yellow-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:-translate-y-1"
-            >
+            <div className="bg-gradient-to-br from-orange-600 to-yellow-600 rounded-2xl p-8 text-white shadow-2xl hover:shadow-yellow-500/50 transition-all duration-300 hover:-translate-y-1 animate-fadeInUp">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h3 className="text-2xl font-bold mb-1">Neharpar & South</h3>
@@ -1936,17 +1681,11 @@ export default function NeetCoachingFaridabadPage() {
                 </p>
                 <div className="text-xs text-orange-100 mt-3">- Rajesh K., Neharpar</div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Bottom Stats Banner */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white text-center shadow-2xl"
-          >
+          <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white text-center shadow-2xl animate-fadeInUp">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
               <div>
                 <div className="text-4xl font-bold text-yellow-400 mb-2">1,200+</div>
@@ -1971,38 +1710,26 @@ export default function NeetCoachingFaridabadPage() {
             >
               Book Your Free Demo from Faridabad
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQs Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching in Faridabad - FAQs
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -2011,12 +1738,7 @@ export default function NeetCoachingFaridabadPage() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-orange-600 via-red-600 to-rose-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your NEET Journey in Faridabad Today
             </h2>
@@ -2057,7 +1779,7 @@ export default function NeetCoachingFaridabadPage() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -2127,16 +1849,11 @@ export default function NeetCoachingFaridabadPage() {
       />
 
       {/* WhatsApp Floating Button */}
-      <motion.a
+      <a
         href="https://wa.me/918826444334?text=Hi!%20I'm%20interested%20in%20online%20NEET%20Biology%20coaching%20from%20Faridabad%20(Greater%20Faridabad/NIT/Ballabgarh).%20I'd%20like%20to%20know%20about%20online%20batch%20timings%20and%20demo%20classes."
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 group"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 active:scale-95 group animate-scaleIn"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="w-7 h-7" />
@@ -2144,7 +1861,7 @@ export default function NeetCoachingFaridabadPage() {
         <span className="absolute bottom-full right-0 mb-2 px-3 py-1.5 bg-gray-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap shadow-lg">
           Chat with us on WhatsApp
         </span>
-      </motion.a>
+      </a>
 
       {/* Schema Markup for SEO */}
       <LocalBusinessSchema />

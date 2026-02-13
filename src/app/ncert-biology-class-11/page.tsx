@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle2,
@@ -143,25 +142,13 @@ export default function NCERTBiologyClass11Page() {
       <section className="relative bg-gradient-to-br from-green-600 via-green-600 to-cyan-700 text-white overflow-hidden">
         {/* Animated background blobs */}
         <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
-            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 8, repeat: Infinity }}
-          />
-          <motion.div
-            className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"
-            animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.6, 0.4] }}
-            transition={{ duration: 10, repeat: Infinity }}
-          />
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl animate-pulse" />
         </div>
 
         <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
                 <BookOpen className="w-4 h-4" />
                 <span className="text-sm font-medium">NCERT Textbook Series</span>
@@ -211,16 +198,12 @@ export default function NCERTBiologyClass11Page() {
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="hidden md:block"
+            <div className="hidden md:block animate-fadeInUp"
             >
               <BookStackIllustration className="w-full max-w-md mx-auto" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -228,11 +211,7 @@ export default function NCERTBiologyClass11Page() {
       {/* Book Info Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+          <div className="max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="p-8 md:p-10">
@@ -281,18 +260,14 @@ export default function NCERTBiologyClass11Page() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Chapter Breakdown */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Unit-wise Chapter Breakdown
@@ -300,19 +275,15 @@ export default function NCERTBiologyClass11Page() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Complete syllabus with NEET weightage and expected questions from each unit
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6 max-w-4xl mx-auto">
             {chapters.map((unit, idx) => {
               const colors = colorMap[unit.color]
               return (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className={`bg-white rounded-2xl shadow-md border ${colors.border} overflow-hidden`}
+                  className={`bg-white rounded-2xl shadow-md border ${colors.border} overflow-hidden animate-fadeInUp`}
                 >
                   <div className={`${colors.light} p-5 flex items-center justify-between`}>
                     <div className="flex items-center gap-3">
@@ -345,7 +316,7 @@ export default function NCERTBiologyClass11Page() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -355,11 +326,7 @@ export default function NCERTBiologyClass11Page() {
       {/* Why Study at Cerebrum */}
       <section className="py-16 bg-green-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Study Class 11 Biology at Cerebrum?
@@ -367,7 +334,7 @@ export default function NCERTBiologyClass11Page() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our AIIMS-trained faculty ensures you master every concept from NCERT
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {[
@@ -396,13 +363,7 @@ export default function NCERTBiologyClass11Page() {
                 color: 'blue',
               },
             ].map((feature, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow"
+              <div key={idx} className="bg-white rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 bg-${feature.color}-100 rounded-xl flex items-center justify-center mb-4`}
@@ -411,7 +372,7 @@ export default function NCERTBiologyClass11Page() {
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -420,11 +381,7 @@ export default function NCERTBiologyClass11Page() {
       {/* Related Books */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Recommended Reference Books
@@ -432,7 +389,7 @@ export default function NCERTBiologyClass11Page() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Complete your Class 11 preparation with these essential reference books
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
@@ -455,13 +412,7 @@ export default function NCERTBiologyClass11Page() {
                 color: 'from-purple-500 to-violet-500',
               },
             ].map((book, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
+              <div key={idx} className="animate-fadeInUp">
                 <Link href={book.link}>
                   <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all p-6 border border-gray-100 h-full group">
                     <div
@@ -475,7 +426,7 @@ export default function NCERTBiologyClass11Page() {
                     <p className="text-gray-600 text-sm">{book.description}</p>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -484,26 +435,16 @@ export default function NCERTBiologyClass11Page() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                className="bg-white rounded-xl shadow-sm overflow-hidden"
+              <div key={idx} className="bg-white rounded-xl shadow-sm overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -521,7 +462,7 @@ export default function NCERTBiologyClass11Page() {
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -530,11 +471,7 @@ export default function NCERTBiologyClass11Page() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-green-600 via-green-600 to-cyan-700 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Start Your NEET Journey Today</h2>
             <p className="text-white/90 max-w-2xl mx-auto mb-8">
               Join Cerebrum Biology Academy and get expert guidance on Class 11 NCERT Biology
@@ -551,7 +488,7 @@ export default function NCERTBiologyClass11Page() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

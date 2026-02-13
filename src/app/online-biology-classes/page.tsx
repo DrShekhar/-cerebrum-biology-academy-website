@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
@@ -186,11 +185,7 @@ export default function OnlineBiologyClassesPage() {
         <div className="absolute inset-0 bg-black/10" />
         <div className="container relative mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div className="animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <Globe className="mr-1 inline h-4 w-4" />
                 Learn from Anywhere in India or Abroad
@@ -217,12 +212,8 @@ export default function OnlineBiologyClassesPage() {
                   View Curriculum
                 </Link>
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative hidden lg:block"
+            </div>
+            <div className="relative hidden lg:block animate-fadeInUp"
             >
               <div className="relative h-[400px] w-full overflow-hidden rounded-2xl shadow-2xl">
                 <Image
@@ -245,7 +236,7 @@ export default function OnlineBiologyClassesPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -267,17 +258,12 @@ export default function OnlineBiologyClassesPage() {
               { icon: Video, value: '500+', label: 'Video Hours' },
               { icon: Star, value: '4.9/5', label: 'Student Rating' },
             ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 text-center shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 text-center shadow-lg animate-fadeInUp"
               >
                 <stat.icon className="mx-auto mb-3 h-10 w-10 text-[#4a5d4a]" />
                 <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -286,27 +272,18 @@ export default function OnlineBiologyClassesPage() {
       {/* Class Options */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Online Biology Classes for All Levels
             </h2>
             <p className="text-lg text-gray-600">
               Choose the right program for your academic journey
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {classOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <div className={`mb-4 h-2 w-full rounded-full ${option.color}`} />
                 <h3 className="mb-2 text-2xl font-bold text-gray-900">{option.class}</h3>
@@ -315,7 +292,7 @@ export default function OnlineBiologyClassesPage() {
                 <div className="rounded-lg bg-[#e8ede8] p-2 text-sm font-medium text-[#3d4d3d]">
                   {option.neetRelevance}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -325,11 +302,7 @@ export default function OnlineBiologyClassesPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="relative"
-            >
+            <div className="relative animate-fadeInUp">
               <div className="relative h-[350px] w-full overflow-hidden rounded-2xl shadow-xl">
                 <Image
                   src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&h=600&fit=crop"
@@ -338,8 +311,8 @@ export default function OnlineBiologyClassesPage() {
                   className="object-cover"
                 />
               </div>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }}>
+            </div>
+            <div className="animate-fadeInUp">
               <span className="mb-2 inline-block rounded-full bg-[#e8ede8] px-3 py-1 text-sm font-semibold text-[#3d4d3d]">
                 Most Popular
               </span>
@@ -370,7 +343,7 @@ export default function OnlineBiologyClassesPage() {
               >
                 Join Class 11 Batch
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -378,32 +351,23 @@ export default function OnlineBiologyClassesPage() {
       {/* Online Features */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Why Learn Biology Online with Us?
             </h2>
             <p className="text-lg text-gray-600">
               Everything you need for effective online learning
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {onlineFeatures.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-[#4a5d4a]" />
                 <h3 className="mb-2 text-xl font-semibold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -412,16 +376,12 @@ export default function OnlineBiologyClassesPage() {
       {/* Comparison Table */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">
               Online Classes vs Local Coaching
             </h2>
             <p className="text-lg text-gray-600">See why students prefer our online platform</p>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-4xl overflow-hidden rounded-xl shadow-lg">
             <table className="w-full">
@@ -450,7 +410,7 @@ export default function OnlineBiologyClassesPage() {
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}>
+            <div className="animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-white/20 px-4 py-2 text-sm font-semibold">
                 <MapPin className="mr-1 inline h-4 w-4" />
                 For NRI Students
@@ -474,12 +434,8 @@ export default function OnlineBiologyClassesPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              className="grid grid-cols-2 gap-4"
-            >
+            </div>
+            <div className="grid grid-cols-2 gap-4 animate-fadeInUp">
               {['UAE', 'USA', 'UK', 'Singapore', 'Australia', 'Canada'].map((country, index) => (
                 <div
                   key={index}
@@ -489,7 +445,7 @@ export default function OnlineBiologyClassesPage() {
                   <span className="font-medium">{country}</span>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -500,26 +456,17 @@ export default function OnlineBiologyClassesPage() {
       {/* FAQs */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="mb-12 text-center"
-          >
+          <div className="mb-12 text-center animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-gray-900">Frequently Asked Questions</h2>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-2 text-lg font-semibold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -563,7 +510,7 @@ export default function OnlineBiologyClassesPage() {
       {/* CTA */}
       <section className="bg-[#3d4d3d] py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold">Start Learning Biology Online Today</h2>
             <p className="mb-8 text-xl text-white/80">
               Join 1,50,000+ students learning biology online from anywhere in the world!
@@ -583,7 +530,7 @@ export default function OnlineBiologyClassesPage() {
                 Call: +91 88264 44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

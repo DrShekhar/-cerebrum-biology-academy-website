@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { Phone, MessageSquare, CheckCircle2, Users, Trophy, Clock, Star } from 'lucide-react'
 import { ConversionTracker } from '@/lib/abTesting/conversionTracking'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
@@ -102,10 +101,7 @@ export default function NEETDemoLandingPage() {
       <div className="max-w-6xl mx-auto px-4 py-8 lg:py-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Value Proposition */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-white space-y-6"
+          <div className="text-white space-y-6 animate-fadeInUp"
           >
             <div className="inline-flex items-center space-x-2 bg-yellow-500/20 border border-yellow-500/40 rounded-full px-4 py-2">
               <Star className="w-4 h-4 text-yellow-400" />
@@ -155,14 +151,10 @@ export default function NEETDemoLandingPage() {
                 <span className="font-semibold text-white">847 students</span> enrolled this month
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right Side - Simple Lead Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-          >
+          <div className="animate-fadeInUp">
             <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
               <div className="text-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -239,7 +231,7 @@ export default function NEETDemoLandingPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

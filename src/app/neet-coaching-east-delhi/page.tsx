@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -217,11 +216,7 @@ export default function NEETCoachingEastDelhiPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-green-800 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
+          <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
           >
             <span className="inline-block px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
               #1 NEET Coaching for East Delhi Students
@@ -250,7 +245,7 @@ export default function NEETCoachingEastDelhiPage() {
                 </a>
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -259,18 +254,12 @@ export default function NEETCoachingEastDelhiPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center p-6 rounded-xl bg-gray-50"
+              <div key={stat.label} className="text-center p-6 rounded-xl bg-gray-50 animate-fadeInUp"
               >
                 <stat.icon className="w-8 h-8 mx-auto mb-3 text-green-600" />
                 <div className="text-3xl font-bold text-navy-900">{stat.value}</div>
                 <div className="text-gray-600 text-sm">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -279,11 +268,7 @@ export default function NEETCoachingEastDelhiPage() {
       {/* Areas Grid Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               NEET Coaching for All East Delhi Localities
@@ -292,17 +277,11 @@ export default function NEETCoachingEastDelhiPage() {
               We serve students from every corner of East Delhi. Find NEET coaching information for
               your area.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {eastDelhiAreas.map((area, index) => (
-              <motion.div
-                key={area.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-              >
+              <div key={area.slug} className="animate-fadeInUp">
                 <Link href={`/neet-coaching-east-delhi/${area.slug}`}>
                   <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-green-200 h-full">
                     <div className="flex items-start justify-between mb-4">
@@ -346,7 +325,7 @@ export default function NEETCoachingEastDelhiPage() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -355,11 +334,7 @@ export default function NEETCoachingEastDelhiPage() {
       {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               Why East Delhi Students Choose Cerebrum
@@ -368,24 +343,18 @@ export default function NEETCoachingEastDelhiPage() {
               Better than Laxmi Nagar coaching centers with personalized attention and proven
               results
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6 text-center"
+              <div key={feature.title} className="bg-gray-50 rounded-xl p-6 text-center animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="font-semibold text-navy-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -394,11 +363,7 @@ export default function NEETCoachingEastDelhiPage() {
       {/* Comparison Section */}
       <section className="py-16 bg-navy-900">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Cerebrum vs Laxmi Nagar Coaching Centers
@@ -406,7 +371,7 @@ export default function NEETCoachingEastDelhiPage() {
             <p className="text-gray-300 max-w-2xl mx-auto">
               See why students are choosing quality over convenience
             </p>
-          </motion.div>
+          </div>
 
           <div className="max-w-4xl mx-auto">
             <div className="bg-white rounded-2xl overflow-hidden">
@@ -442,11 +407,7 @@ export default function NEETCoachingEastDelhiPage() {
       {/* Testimonials Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               Success Stories from East Delhi
@@ -454,17 +415,11 @@ export default function NEETCoachingEastDelhiPage() {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Hear from students who made the journey from East Delhi to medical colleges
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-sm"
+              <div key={testimonial.name} className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -480,7 +435,7 @@ export default function NEETCoachingEastDelhiPage() {
                   <div className="text-sm text-green-600 font-medium mt-1">{testimonial.score}</div>
                   <div className="text-sm text-gray-600">{testimonial.college}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -489,30 +444,20 @@ export default function NEETCoachingEastDelhiPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-navy-900 mb-4">
               FAQs for East Delhi Students
             </h2>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-xl p-6"
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <h3 className="font-semibold text-navy-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -540,11 +485,7 @@ export default function NEETCoachingEastDelhiPage() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Start Your NEET Journey?
             </h2>
@@ -567,7 +508,7 @@ export default function NEETCoachingEastDelhiPage() {
                 </a>
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </main>

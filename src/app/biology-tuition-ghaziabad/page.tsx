@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -169,11 +168,7 @@ export default function BiologyTuitionGhaziabadPage() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Microscope className="w-5 h-5 mr-2 text-yellow-300" />
@@ -220,32 +215,21 @@ export default function BiologyTuitionGhaziabadPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
               {successStats.map((stat, index) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6"
-                >
+                <div key={stat.label} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 animate-fadeInUp">
                   <stat.icon className="w-6 h-6 md:w-8 md:h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-xl md:text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Class Programs Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition Programs for All Classes
@@ -253,18 +237,11 @@ export default function BiologyTuitionGhaziabadPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Comprehensive biology coaching from foundation to NEET level
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {classPrograms.map((program, index) => (
-              <motion.div
-                key={program.class}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow"
-              >
+              <div key={program.class} className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow animate-fadeInUp">
                 <div className="bg-[#4a5d4a] text-white p-4">
                   <div className="text-sm font-medium opacity-90">{program.class}</div>
                   <div className="text-xl font-bold">{program.title}</div>
@@ -296,7 +273,7 @@ export default function BiologyTuitionGhaziabadPage() {
                     </Link>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -305,12 +282,7 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* Areas Coverage */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition Across Ghaziabad
@@ -318,23 +290,16 @@ export default function BiologyTuitionGhaziabadPage() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Students from all major Ghaziabad areas trust us for biology coaching
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {ghaziabadAreas.map((area, index) => (
-              <motion.div
-                key={area.name}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-green-50 rounded-xl p-4 text-center border border-green-100"
-              >
+              <div key={area.name} className="bg-green-50 rounded-xl p-4 text-center border border-green-100 animate-fadeInUp">
                 <MapPin className="w-6 h-6 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-gray-900">{area.name}</div>
                 <div className="text-green-600 font-semibold text-sm">{area.students}</div>
                 <div className="text-xs text-gray-500">{area.highlight}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -343,32 +308,20 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Choose Our Biology Tuition in Ghaziabad
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyChooseUs.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
-              >
+              <div key={feature.title} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp">
                 <feature.icon className="w-10 h-10 text-yellow-400 mb-4" />
                 <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -377,31 +330,19 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* FAQs Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Tuition in Ghaziabad - FAQs
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6"
-              >
+              <div key={index} className="bg-gray-50 rounded-xl p-6 animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -410,12 +351,7 @@ export default function BiologyTuitionGhaziabadPage() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Start Your Biology Journey in Ghaziabad Today
             </h2>
@@ -456,7 +392,7 @@ export default function BiologyTuitionGhaziabadPage() {
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

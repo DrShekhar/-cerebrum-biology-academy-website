@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -121,11 +120,7 @@ export default function DelhiLocationPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-4xl mx-auto text-center"
+            <div className="max-w-4xl mx-auto text-center animate-fadeInUp"
             >
               <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <MapPin className="w-4 h-4" />
@@ -154,7 +149,7 @@ export default function DelhiLocationPage() {
                   Call Us
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
@@ -166,13 +161,7 @@ export default function DelhiLocationPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {nearestCenters.map((center, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all"
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-transparent hover:border-blue-500 transition-all animate-fadeInUp"
                 >
                   <div className={`bg-${center.color}-500 text-white py-3 px-6`}>
                     <h3 className="font-bold text-lg">{center.name}</h3>
@@ -198,7 +187,7 @@ export default function DelhiLocationPage() {
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -233,20 +222,14 @@ export default function DelhiLocationPage() {
                   desc: 'All centers near metro stations',
                 },
               ].map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg text-center"
+                <div className="bg-white rounded-xl p-6 shadow-lg text-center animate-fadeInUp"
                 >
                   <div className="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <item.icon className="w-7 h-7 text-blue-600" />
                   </div>
                   <h3 className="font-bold text-lg mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -305,17 +288,11 @@ export default function DelhiLocationPage() {
             </h2>
             <div className="max-w-3xl mx-auto space-y-4">
               {faqs.map((faq, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white rounded-xl shadow-md p-6"
+                <div className="bg-white rounded-xl shadow-md p-6 animate-fadeInUp"
                 >
                   <h3 className="font-semibold text-lg mb-2">{faq.q}</h3>
                   <p className="text-gray-600">{faq.a}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
