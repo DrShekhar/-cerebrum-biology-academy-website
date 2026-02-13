@@ -14,7 +14,6 @@ import { ToastProvider } from '@/components/ui/Toast'
 import { TrackingProvider } from '@/components/tracking/TrackingProvider'
 import { TrustProvider } from '@/components/providers/TrustProvider'
 import { PersonalizationProvider } from '@/components/providers/PersonalizationProvider'
-import { MotionProvider } from '@/components/providers/MotionProvider'
 import { SkipToContent } from '@/components/accessibility/SkipToContent'
 import { FocusVisibleStyles } from '@/components/accessibility/FocusVisibleStyles'
 import {
@@ -200,7 +199,6 @@ export default function RootLayout({
                     enableRealTimeUpdates={false}
                   >
                     <PersonalizationProvider>
-                      <MotionProvider>
                         {/* Navigation progress indicator - prevents FOUC during page transitions */}
                         <Suspense fallback={null}>
                           <RouteChangeIndicator />
@@ -260,7 +258,6 @@ export default function RootLayout({
                         <GoogleAnalytics />
                         <FacebookPixel />
                         <WebVitalsReporter />
-                      </MotionProvider>
                     </PersonalizationProvider>
                   </TrustProvider>
                 </ToastProvider>
