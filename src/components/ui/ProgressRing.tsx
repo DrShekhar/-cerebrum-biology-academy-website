@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState, memo, useId } from 'react'
+import React, { useEffect, useState, memo, useId, useRef } from 'react'
 interface ProgressRingProps {
   value: number
   max: number
@@ -25,20 +25,13 @@ export const ProgressRing = memo(function ProgressRing({
   className = '',
 }: ProgressRingProps) {
   const [displayValue, setDisplayValue] = useState(0)
-  // Use React's useId hook for stable, unique gradient IDs (SSR-safe)
   const uniqueId = useId()
+  const animRef = useRef<number>(0)
 
   const radius = (size - strokeWidth) / 2
   const circumference = 2 * Math.PI * radius
   const percentage = Math.min((value / max) * 100, 100)
-
-  const spring = useSpring(0, {
-    stiffness: 75,
-    damping: 25,
-    restSpeed: 0.5,
-  })
-
-  const offset = useTransform(spring, (latest) => circumference - (latest / 100) * circumference)
+  const strokeOffset = circumference - (displayValue / 100) * circumference
 
   const colorClasses: Record<string, { stroke: string; text: string }> = {
     purple: { stroke: 'stroke-purple-500', text: 'text-purple-600' },
@@ -50,24 +43,28 @@ export const ProgressRing = memo(function ProgressRing({
   }
 
   const selectedColor = colorClasses[color] || colorClasses.purple
-
-  // Use React's useId for stable gradient ID instead of Math.random()
   const gradientId = `gradient-${color}-${uniqueId.replace(/:/g, '-')}`
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      spring.set(percentage)
-    }, 100)
+    const start = displayValue
+    const end = percentage
+    const duration = 800
+    const startTime = performance.now()
 
-    const unsubscribe = spring.on('change', (latest) => {
-      setDisplayValue(Math.round(latest))
-    })
-
-    return () => {
-      clearTimeout(timer)
-      unsubscribe()
+    function animate(now: number) {
+      const elapsed = now - startTime
+      const progress = Math.min(elapsed / duration, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      const current = start + (end - start) * eased
+      setDisplayValue(Math.round(current))
+      if (progress < 1) {
+        animRef.current = requestAnimationFrame(animate)
+      }
     }
-  }, [percentage, spring])
+
+    animRef.current = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(animRef.current)
+  }, [percentage])
 
   return (
     <div className={`relative inline-flex items-center justify-center ${className}`}>
@@ -105,24 +102,20 @@ export const ProgressRing = memo(function ProgressRing({
           strokeWidth={strokeWidth}
           fill="transparent"
           strokeDasharray={circumference}
-          style={{ strokeDashoffset: offset }}
-          className={!gradientColors ? selectedColor.stroke : ''}
+          strokeDashoffset={strokeOffset}
+          className={`${!gradientColors ? selectedColor.stroke : ''} transition-[stroke-dashoffset] duration-700 ease-out`}
           strokeLinecap="round"
         />
       </svg>
 
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         {showPercentage && (
-          <span
-            className={`text-2xl font-bold ${selectedColor.text}`}
-          >
+          <span className={`text-2xl font-bold ${selectedColor.text}`}>
             {displayValue}%
           </span>
         )}
         {label && (
-          <span
-            className="text-xs text-gray-500 mt-1 text-center animate-fadeInUp"
-          >
+          <span className="text-xs text-gray-500 mt-1 text-center animate-fadeInUp">
             {label}
           </span>
         )}

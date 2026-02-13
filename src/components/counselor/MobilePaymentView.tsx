@@ -74,48 +74,11 @@ function SwipeablePaymentCard({
   onSendReminder: (payment: PaymentInstallment) => void
   onCallClick: (payment: PaymentInstallment) => void
 }) {
-  const x = useMotionValue(0)
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null)
 
   const dueDate = new Date(payment.dueDate)
   const isOverdue = isPast(dueDate) && payment.status === 'PENDING'
   const daysUntilDue = differenceInDays(dueDate, new Date())
-
-  const background = useTransform(
-    x,
-    [-150, -75, 0, 75, 150],
-    [
-      'linear-gradient(to right, #dc2626, #dc2626)', // Red for call
-      'linear-gradient(to right, #ea580c, #ea580c)',
-      'linear-gradient(to right, #ffffff, #ffffff)',
-      'linear-gradient(to right, #10b981, #10b981)', // Green for mark paid
-      'linear-gradient(to right, #059669, #059669)',
-    ]
-  )
-
-  function handleDragEnd(event: any, info: PanInfo) {
-    const threshold = 75
-
-    if (info.offset.x > threshold && payment.status !== 'PAID') {
-      // Swipe right - Mark as paid
-      setSwipeDirection('right')
-      onMarkAsPaid(payment)
-      setTimeout(() => {
-        x.set(0)
-        setSwipeDirection(null)
-      }, 300)
-    } else if (info.offset.x < -threshold) {
-      // Swipe left - Call student
-      setSwipeDirection('left')
-      onCallClick(payment)
-      setTimeout(() => {
-        x.set(0)
-        setSwipeDirection(null)
-      }, 300)
-    } else {
-      x.set(0)
-    }
-  }
 
   return (
     <div className="relative overflow-hidden">
@@ -131,13 +94,8 @@ function SwipeablePaymentCard({
         </div>
       </div>
 
-      {/* Swipeable card */}
+      {/* Card */}
       <div
-        style={{ x, background }}
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.2}
-        onDragEnd={handleDragEnd}
         className={`relative bg-white rounded-lg shadow-sm border-2 p-4 ${
           isOverdue ? 'border-red-500' : 'border-gray-200'
         }`}

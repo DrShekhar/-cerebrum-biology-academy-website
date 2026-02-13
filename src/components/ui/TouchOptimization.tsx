@@ -70,7 +70,7 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
     setIsDragging(true)
   }
 
-  const handlePanEnd = (event: any, info: PanInfo) => {
+  const handlePanEnd = (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
     setIsDragging(false)
     const threshold = 100
 
@@ -398,13 +398,13 @@ export function PullToRefresh({
     }
   }
 
-  const handlePan = (event: any, info: PanInfo) => {
+  const handlePan = (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
     if (!useNative && isPulling && info.offset.y > 0) {
       setPullDistance(Math.min(info.offset.y, 100))
     }
   }
 
-  const handlePanEnd = (event: any, info: PanInfo) => {
+  const handlePanEnd = (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
     if (!useNative && isPulling) {
       if (pullDistance > 60) {
         onRefresh()

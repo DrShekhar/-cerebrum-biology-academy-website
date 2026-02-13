@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 interface AnimatedCounterProps {
   from?: number
   to: number
@@ -23,22 +23,28 @@ export function AnimatedCounter({
   formatLargeNumbers = false,
 }: AnimatedCounterProps) {
   const [displayValue, setDisplayValue] = useState(from)
-
-  const spring = useSpring(from, {
-    stiffness: 100,
-    damping: 30,
-    duration: duration * 1000,
-  })
+  const animRef = useRef<number>(0)
 
   useEffect(() => {
-    spring.set(to)
+    const start = from
+    const end = to
+    const durationMs = duration * 1000
+    const startTime = performance.now()
 
-    const unsubscribe = spring.on('change', (latest) => {
-      setDisplayValue(latest)
-    })
+    function animate(now: number) {
+      const elapsed = now - startTime
+      const progress = Math.min(elapsed / durationMs, 1)
+      const eased = 1 - Math.pow(1 - progress, 3)
+      const current = start + (end - start) * eased
+      setDisplayValue(current)
+      if (progress < 1) {
+        animRef.current = requestAnimationFrame(animate)
+      }
+    }
 
-    return () => unsubscribe()
-  }, [to, spring])
+    animRef.current = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(animRef.current)
+  }, [from, to, duration])
 
   const formatNumber = (value: number): string => {
     if (!formatLargeNumbers) {
@@ -57,9 +63,7 @@ export function AnimatedCounter({
   }
 
   return (
-    <span
-      className={className}
-    >
+    <span className={className}>
       {prefix}
       {formatNumber(displayValue)}
       {suffix}

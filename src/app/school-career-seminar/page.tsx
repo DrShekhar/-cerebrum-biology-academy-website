@@ -28,6 +28,7 @@ import {
 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { CONTACT_INFO, getWhatsAppLink } from '@/lib/constants/contactInfo'
+import { useReducedMotion } from '@/hooks/useReducedMotion'
 import Script from 'next/script'
 
 export default function SchoolCareerSeminarPage() {
@@ -484,7 +485,7 @@ Submitted via School Seminar Booking Form`
 
           <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div {...fadeInUp} className="animate-fadeInUp">
+              <div className="animate-fadeInUp">
                 <div className="inline-flex items-center px-4 py-2 bg-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
                   <Sparkles className="w-4 h-4 mr-2" />
                   100% Free for Schools

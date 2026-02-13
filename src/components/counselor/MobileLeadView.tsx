@@ -67,44 +67,7 @@ function SwipeableLeadCard({
   onCallClick: (lead: Lead) => void
   onEmailClick: (lead: Lead) => void
 }) {
-  const x = useMotionValue(0)
   const [swipeDirection, setSwipeDirection] = useState<'left' | 'right' | null>(null)
-
-  const background = useTransform(
-    x,
-    [-150, -75, 0, 75, 150],
-    [
-      'linear-gradient(to right, #dc2626, #dc2626)',
-      'linear-gradient(to right, #ea580c, #ea580c)',
-      'linear-gradient(to right, #ffffff, #ffffff)',
-      'linear-gradient(to right, #059669, #059669)',
-      'linear-gradient(to right, #10b981, #10b981)',
-    ]
-  )
-
-  function handleDragEnd(event: any, info: PanInfo) {
-    const threshold = 75
-
-    if (info.offset.x > threshold) {
-      // Swipe right - WhatsApp
-      setSwipeDirection('right')
-      onWhatsAppClick(lead)
-      setTimeout(() => {
-        x.set(0)
-        setSwipeDirection(null)
-      }, 300)
-    } else if (info.offset.x < -threshold) {
-      // Swipe left - Call
-      setSwipeDirection('left')
-      onCallClick(lead)
-      setTimeout(() => {
-        x.set(0)
-        setSwipeDirection(null)
-      }, 300)
-    } else {
-      x.set(0)
-    }
-  }
 
   const PriorityIcon = priorityConfig[lead.priority].icon
 
@@ -122,13 +85,8 @@ function SwipeableLeadCard({
         </div>
       </div>
 
-      {/* Swipeable card */}
+      {/* Card */}
       <div
-        style={{ x, background }}
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.2}
-        onDragEnd={handleDragEnd}
         className="relative bg-white rounded-lg shadow-sm border border-gray-200 p-4 animate-fadeInUp"
       >
         <div className="flex items-start justify-between gap-3">

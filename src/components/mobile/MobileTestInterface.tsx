@@ -166,7 +166,7 @@ export function MobileTestInterface({
 
   // Pan gesture for Framer Motion
   const handlePan = useCallback(
-    (event: any, info: PanInfo) => {
+    (event: any, info: { offset: { x: number; y: number }; velocity: { x: number; y: number } }) => {
       const { offset, velocity } = info
 
       if (Math.abs(offset.x) > 100 && Math.abs(velocity.x) > 500) {
