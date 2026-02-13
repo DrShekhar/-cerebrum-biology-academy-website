@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Users, BookOpen, Award, Clock, MapPin, Star } from 'lucide-react'
 import { useTranslations } from '@/lib/i18n/translations'
 
@@ -153,18 +152,8 @@ export function RealTimeSocialProof() {
   const EventIcon = getEventIcon(currentEvent.type)
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: 100, scale: 0.8 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: -50, scale: 0.8 }}
-        transition={{
-          type: 'spring',
-          stiffness: 400,
-          damping: 25,
-          duration: 0.5,
-        }}
-        className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 z-40"
+<div
+        className="fixed bottom-4 left-4 right-4 md:left-auto md:right-4 md:w-96 z-40 animate-fadeInUp"
       >
         <div className="bg-white border border-gray-200 rounded-xl shadow-lg p-4 backdrop-blur-sm bg-opacity-95">
           <div className="flex items-start space-x-3">
@@ -230,19 +219,15 @@ export function RealTimeSocialProof() {
 
           {/* Progress bar */}
           <div className="mt-3">
-            <motion.div className="h-1 bg-gray-100 rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-green-600 rounded-full"
-                initial={{ width: '0%' }}
-                animate={{ width: '100%' }}
-                transition={{ duration: 4, ease: 'linear' }}
+            <div className="h-1 bg-gray-100 rounded-full overflow-hidden animate-fadeInUp">
+              <div
+                className="h-full bg-green-600 rounded-full animate-fadeInUp"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
-  )
+      </div>
+)
 }
 
 // Live stats counter component
@@ -303,24 +288,19 @@ export function LiveStatsCounter() {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {statsData.map((stat, index) => (
-          <motion.div
+          <div
             key={stat.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
             className={`${stat.bgColor} rounded-lg p-4 text-center`}
           >
             <stat.icon className={`w-6 h-6 ${stat.color} mx-auto mb-2`} />
-            <motion.div
+            <div
               key={stat.value}
-              initial={{ scale: 1.1 }}
-              animate={{ scale: 1 }}
               className={`text-2xl font-bold ${stat.color} mb-1`}
             >
               {stat.value.toLocaleString()}
-            </motion.div>
+            </div>
             <div className="text-sm text-gray-600">{stat.label}</div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
@@ -350,12 +330,9 @@ export function RecentJoinsTicket() {
 
       <div className="space-y-2">
         {recentStudents.slice(0, 3).map((student, index) => (
-          <motion.div
+          <div
             key={student.name}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="flex items-center justify-between text-sm"
+            className="flex items-center justify-between text-sm animate-fadeInUp"
           >
             <div className="flex items-center space-x-2">
               <div className="w-2 h-2 bg-green-600 rounded-full" />
@@ -363,7 +340,7 @@ export function RecentJoinsTicket() {
               <span className="text-gray-500">from {student.location}</span>
             </div>
             <span className="text-xs text-gray-400">{student.time}</span>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

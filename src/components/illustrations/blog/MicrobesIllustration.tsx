@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function MicrobesIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -31,8 +30,6 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
 
       {/* Bacteria */}
       <motion.g
-        animate={animate ? { rotate: [0, 10, 0, -10, 0] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
         style={{ transformOrigin: '70px 100px' }}
       >
         <ellipse cx="70" cy="100" rx="30" ry="18" fill="#93C5FD" stroke="#3B82F6" strokeWidth="2" />
@@ -50,8 +47,6 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
 
       {/* Yeast */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <ellipse
           cx="170"
@@ -74,8 +69,6 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
 
       {/* Virus */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <polygon
           points="270,75 250,100 270,125 290,100"
@@ -98,8 +91,6 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
 
       {/* Mushroom */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       >
         <ellipse cx="360" cy="95" rx="25" ry="12" fill="#F9A8D4" stroke="#EC4899" strokeWidth="2" />
         <rect
@@ -135,8 +126,6 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
       </text>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         {/* Application boxes */}
         <rect x="45" y="210" width="75" height="55" rx="6" fill="#DBEAFE" />

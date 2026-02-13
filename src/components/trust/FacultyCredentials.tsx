@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Award,
   BookOpen,
@@ -136,23 +135,18 @@ export function FacultyCredentials() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl font-bold text-gray-900 mb-4"
+          <h2
+            className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp"
           >
             {language === 'hi' ? 'हमारे विशेषज्ञ संकाय' : 'Our Expert Faculty'}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-gray-600 mb-8"
+          </h2>
+          <p
+            className="text-xl text-gray-600 mb-8 animate-fadeInUp"
           >
             {language === 'hi'
               ? 'AIIMS डॉक्टरों और अनुभवी शिक्षकों से सीखें'
               : 'Learn from AIIMS doctors and experienced educators'}
-          </motion.p>
+          </p>
 
           {/* Filters */}
           <div className="flex justify-center space-x-4 mb-8">
@@ -179,12 +173,9 @@ export function FacultyCredentials() {
         {/* Faculty Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredFaculty.map((faculty, index) => (
-            <motion.div
+            <div
               key={faculty.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-shadow cursor-pointer"
+              className="bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-xl transition-shadow cursor-pointer animate-fadeInUp"
               onClick={() => setSelectedFaculty(faculty)}
             >
               {/* Faculty Photo */}
@@ -253,7 +244,7 @@ export function FacultyCredentials() {
               <button className="w-full bg-blue-50 text-blue-600 py-2 rounded-lg hover:bg-blue-100 transition-colors text-sm font-medium">
                 {language === 'hi' ? 'प्रोफाइल देखें' : 'View Profile'}
               </button>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -262,12 +253,10 @@ export function FacultyCredentials() {
       </div>
 
       {/* Faculty Detail Modal */}
-      <AnimatePresence>
-        {selectedFaculty && (
+{selectedFaculty && (
           <FacultyDetailModal faculty={selectedFaculty} onClose={() => setSelectedFaculty(null)} />
         )}
-      </AnimatePresence>
-    </section>
+</section>
   )
 }
 
@@ -275,18 +264,12 @@ function FacultyDetailModal({ faculty, onClose }: { faculty: FacultyMember; onCl
   const { language } = useTranslations()
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fadeInUp"
       onClick={onClose}
     >
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+      <div
+        className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -476,8 +459,8 @@ function FacultyDetailModal({ faculty, onClose }: { faculty: FacultyMember; onCl
             </div>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 
@@ -519,17 +502,14 @@ function FacultyStatsSection() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {stats.map((stat, index) => (
-          <motion.div
+          <div
             key={stat.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="text-center"
+            className="text-center animate-fadeInUp"
           >
             <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-2`} />
             <div className="text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
             <div className="text-sm text-gray-600">{stat.label}</div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

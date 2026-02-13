@@ -21,7 +21,6 @@ import {
   Lightbulb,
   Quote,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { getDisplayPhone } from '@/lib/constants/contactInfo'
 
@@ -56,10 +55,8 @@ export function FacultyProfile({ facultyId }: Props) {
         <div className="absolute inset-0 bg-gradient-to-r from-primary-600 to-purple-600 opacity-10"></div>
 
         <div className="container mx-auto px-4 relative">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-8"
+          <div
+            className="mb-8 animate-fadeInUp"
           >
             <Link
               href="/faculty"
@@ -68,15 +65,12 @@ export function FacultyProfile({ facultyId }: Props) {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Faculty
             </Link>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Faculty Image */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="relative"
+            <div
+              className="relative animate-fadeInUp"
             >
               <div className="relative w-full max-w-md mx-auto lg:mx-0">
                 <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary-100 to-purple-100 p-8 flex items-center justify-center">
@@ -88,14 +82,11 @@ export function FacultyProfile({ facultyId }: Props) {
                   <Award className="w-6 h-6 text-gold-500" />
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Faculty Info */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-center lg:text-left"
+            <div
+              className="text-center lg:text-left animate-fadeInUp"
             >
               <div className="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-medium mb-4">
                 {faculty.designation}
@@ -141,7 +132,7 @@ export function FacultyProfile({ facultyId }: Props) {
                   Ask Question
                 </Button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -149,11 +140,8 @@ export function FacultyProfile({ facultyId }: Props) {
       {/* About Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
+          <div
+            className="max-w-4xl mx-auto animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               About {faculty.name}
@@ -208,18 +196,15 @@ export function FacultyProfile({ facultyId }: Props) {
                 </ul>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Contact Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
+          <div
+            className="max-w-2xl mx-auto text-center animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
             <p className="text-gray-600 mb-8">
@@ -245,7 +230,7 @@ export function FacultyProfile({ facultyId }: Props) {
             <p className="text-sm text-gray-500">
               Demo classes are free and available for all courses
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

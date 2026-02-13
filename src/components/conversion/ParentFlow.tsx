@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   X,
@@ -122,21 +121,15 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
   return (
     <div className="fixed inset-0 z-50">
       {/* Backdrop */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+      <div
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-fadeInUp"
         onClick={onClose}
       />
 
       {/* Parent Flow Modal */}
       <div className="fixed inset-0 flex items-center justify-center p-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl w-full max-h-[90vh] overflow-hidden border border-slate-700"
+        <div
+          className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl w-full max-h-[90vh] overflow-hidden border border-slate-700 animate-fadeInUp"
         >
           {/* Header */}
           <div className="flex justify-between items-center p-6 border-b border-slate-700">
@@ -171,15 +164,11 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
           </div>
 
           <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
-            <AnimatePresence mode="wait">
-              {/* Step 0: Safety & Success Statistics */}
+{/* Step 0: Safety & Success Statistics */}
               {currentStep === 0 && (
-                <motion.div
+                <div
                   key="safety-stats"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-bold text-white mb-2">
@@ -190,11 +179,8 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
 
                   <div className="grid gap-6">
                     {safetyAndSuccessStats.map((item, index) => (
-                      <motion.div
+                      <div
                         key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
                         className={`bg-slate-800 rounded-xl p-6 border ${item.emphasis ? 'border-green-600/50 bg-green-800/20' : 'border-slate-700'}`}
                       >
                         <div className="flex items-start gap-4">
@@ -215,20 +201,17 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                             </div>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 1: Faculty Credentials */}
               {currentStep === 1 && (
-                <motion.div
+                <div
                   key="faculty-credentials"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-bold text-white mb-2">World-Class Faculty</h3>
@@ -239,12 +222,9 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
 
                   <div className="grid gap-6">
                     {facultyCredentials.map((item, index) => (
-                      <motion.div
+                      <div
                         key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="bg-slate-800 rounded-xl p-6 border border-slate-700"
+                        className="bg-slate-800 rounded-xl p-6 border border-slate-700 animate-fadeInUp"
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-purple-600/20 p-3 rounded-lg">
@@ -256,7 +236,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                             <div className="text-lg font-bold text-purple-400">{item.stat}</div>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
@@ -270,17 +250,14 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                       Schedule Faculty Meeting
                     </button>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 2: Fee Transparency */}
               {currentStep === 2 && (
-                <motion.div
+                <div
                   key="fee-transparency"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-bold text-white mb-2">Complete Fee Transparency</h3>
@@ -331,17 +308,14 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                       <div>• Examination strategy</div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 3: EMI Options */}
               {currentStep === 3 && (
-                <motion.div
+                <div
                   key="emi-options"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-bold text-white mb-2">Flexible Payment Options</h3>
@@ -350,11 +324,8 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
 
                   <div className="grid gap-4">
                     {emiOptions.map((option, index) => (
-                      <motion.div
+                      <div
                         key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
                         className={`bg-slate-800 rounded-xl p-6 border ${index === 1 ? 'border-green-600 bg-green-800/20' : 'border-slate-700'} cursor-pointer hover:border-green-600/50 transition-colors`}
                       >
                         <div className="flex justify-between items-center">
@@ -377,7 +348,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                             <div className="text-xs text-gray-400">Bank approved</div>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
@@ -396,17 +367,14 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 4: Direct Contact */}
               {currentStep === 4 && (
-                <motion.div
+                <div
                   key="direct-contact"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-bold text-white mb-2">Direct Communication</h3>
@@ -469,17 +437,14 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                       <div>• "Are there any additional costs?"</div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 5: Visit Center Invitation */}
               {currentStep === 5 && (
-                <motion.div
+                <div
                   key="visit-center"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-bold text-white mb-2">Visit Our Center</h3>
@@ -553,10 +518,9 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
                       Free consultation and facility tour • No obligations
                     </p>
                   </div>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-          </div>
+</div>
 
           {/* Footer with Navigation */}
           <div className="border-t border-slate-700 p-6">
@@ -586,7 +550,7 @@ export function ParentFlow({ isOpen, onClose, onComplete }: ParentFlowProps) {
               )}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

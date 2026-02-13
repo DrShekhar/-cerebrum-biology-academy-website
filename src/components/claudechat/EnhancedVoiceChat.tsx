@@ -9,7 +9,6 @@ import React, { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
-import { motion, AnimatePresence } from 'framer-motion'
 import { Volume2, Brain, Sparkles, Languages, Heart, Zap } from 'lucide-react'
 import VoiceMemosUI from '../voice/VoiceMemosUI'
 import VoiceRecognitionService, {
@@ -468,19 +467,15 @@ export function EnhancedVoiceChat({
   return (
     <div className={`enhanced-voice-chat ${className}`}>
       {/* Header with Shekhar Sir branding */}
-      <motion.div
-        className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white rounded-t-2xl p-6"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
+        className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 text-white rounded-t-2xl p-6 animate-fadeInUp"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <motion.div
-              animate={{ rotate: isRecording ? 360 : 0 }}
-              transition={{ duration: 2, repeat: isRecording ? Infinity : 0 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Brain className="w-8 h-8" />
-            </motion.div>
+            </div>
             <div>
               <h2 className="text-2xl font-bold">Shekhar Sir Voice Chat</h2>
               <p className="opacity-90 text-sm">
@@ -491,16 +486,14 @@ export function EnhancedVoiceChat({
 
           <div className="flex items-center space-x-3">
             {shekharSirVoice && (
-              <motion.div
-                className="bg-white/20 px-3 py-1 rounded-full text-xs font-medium"
-                animate={{ scale: isSpeaking ? [1, 1.05, 1] : 1 }}
-                transition={{ duration: 0.5, repeat: isSpeaking ? Infinity : 0 }}
+              <div
+                className="bg-white/20 px-3 py-1 rounded-full text-xs font-medium animate-fadeInUp"
               >
                 <Heart className="w-3 h-3 inline mr-1" />
                 Shekhar Sir's Voice
-              </motion.div>
+              </div>
             )}
-            <motion.div
+            <div
               className={`w-3 h-3 rounded-full ${
                 isRecording
                   ? 'bg-red-300'
@@ -510,14 +503,10 @@ export function EnhancedVoiceChat({
                       ? 'bg-green-300'
                       : 'bg-white/50'
               }`}
-              animate={{
-                scale: isRecording || isSpeaking ? [1, 1.3, 1] : 1,
-              }}
-              transition={{ duration: 1, repeat: isRecording || isSpeaking ? Infinity : 0 }}
             />
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Main Voice Interface */}
       <div className="p-6 bg-white">
@@ -537,13 +526,9 @@ export function EnhancedVoiceChat({
         />
 
         {/* Biology Terms Detection Panel */}
-        <AnimatePresence>
-          {showBiologyHelp && detectedBiologyTerms.length > 0 && (
-            <motion.div
-              className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-4 mb-6 border border-green-200"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
+{showBiologyHelp && detectedBiologyTerms.length > 0 && (
+            <div
+              className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-4 mb-6 border border-green-200 animate-fadeInUp"
             >
               <div className="flex items-center space-x-2 mb-3">
                 <Brain className="text-green-600" size={20} />
@@ -557,12 +542,9 @@ export function EnhancedVoiceChat({
                 {detectedBiologyTerms.map((term, index) => {
                   const termData = biologyTermDefinitions[term.toLowerCase()]
                   return termData ? (
-                    <motion.div
+                    <div
                       key={term}
-                      className="bg-white rounded-lg p-3 border shadow-sm"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      className="bg-white rounded-lg p-3 border shadow-sm animate-fadeInUp"
                     >
                       <div className="flex items-center justify-between mb-2">
                         <span className="font-medium text-gray-800">{termData.term}</span>
@@ -599,7 +581,7 @@ export function EnhancedVoiceChat({
                       <p className="text-xs text-blue-600 font-medium">
                         {termData.hindiTranslation}
                       </p>
-                    </motion.div>
+                    </div>
                   ) : null
                 })}
               </div>
@@ -610,16 +592,11 @@ export function EnhancedVoiceChat({
                 <span>Hide Biology Help</span>
                 <Zap size={12} />
               </button>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Language & Settings Panel */}
-        <motion.div
-          className="bg-gray-50 rounded-xl p-4 mb-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+{/* Language & Settings Panel */}
+        <div
+          className="bg-gray-50 rounded-xl p-4 mb-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
@@ -627,54 +604,44 @@ export function EnhancedVoiceChat({
               <span className="text-sm font-medium text-gray-700">Language:</span>
               <div className="flex space-x-2">
                 {languages.map((lang) => (
-                  <motion.button
+                  <button
                     key={lang.code}
                     className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                       currentLanguage === lang.code
                         ? 'bg-blue-500 text-white'
                         : 'bg-white text-gray-700 hover:bg-gray-100 border'
                     }`}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                     onClick={() => setCurrentLanguage(lang.code)}
                   >
                     <span className="mr-2">{lang.flag}</span>
                     {lang.name}
-                  </motion.button>
+                  </button>
                 ))}
               </div>
             </div>
 
             <div className="flex items-center space-x-3 text-sm text-gray-600">
-              <motion.div
-                className="flex items-center space-x-2"
-                animate={{ opacity: isProcessing ? [1, 0.5, 1] : 1 }}
-                transition={{ duration: 1, repeat: isProcessing ? Infinity : 0 }}
+              <div
+                className="flex items-center space-x-2 animate-fadeInUp"
               >
                 <Volume2 size={16} />
                 <span>AI Enhanced</span>
-              </motion.div>
+              </div>
               <div className="w-2 h-2 bg-green-600 rounded-full" />
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Processing Status */}
-        <AnimatePresence>
-          {isProcessing && (
-            <motion.div
-              className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
+{isProcessing && (
+            <div
+              className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6 animate-fadeInUp"
             >
               <div className="flex items-center space-x-3">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                >
+                <div
+                 className="animate-fadeInUp">
                   <Brain className="text-blue-600" size={20} />
-                </motion.div>
+                </div>
                 <div>
                   <p className="font-medium text-blue-800">Shekhar Sir is thinking...</p>
                   <p className="text-sm text-blue-600">
@@ -682,17 +649,13 @@ export function EnhancedVoiceChat({
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Footer Status */}
-      <motion.div
-        className="bg-gray-50 px-6 py-4 rounded-b-2xl border-t"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
+      <div
+        className="bg-gray-50 px-6 py-4 rounded-b-2xl border-t animate-fadeInUp"
       >
         <div className="flex items-center justify-between text-xs text-gray-500">
           <div className="flex items-center space-x-4">
@@ -711,7 +674,7 @@ export function EnhancedVoiceChat({
             <span>Made with love for NEET students</span>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

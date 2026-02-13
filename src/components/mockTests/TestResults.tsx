@@ -24,8 +24,6 @@ import {
   BookOpen,
   Eye,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 interface TestResultsProps {
   test: MockTest
   responses: TestResponse[]
@@ -178,11 +176,8 @@ export function TestResults({
       {/* Header */}
       <div className="bg-indigo-500 text-white py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center animate-fadeInUp"
           >
             <div className="flex items-center justify-center mb-4">
               <performanceMessage.icon className={`w-12 h-12 ${performanceMessage.color} mr-3`} />
@@ -211,7 +206,7 @@ export function TestResults({
                 <div className="text-blue-100">Time Taken</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -243,11 +238,8 @@ export function TestResults({
         {activeTab === 'overview' && (
           <div className="space-y-8">
             {/* Performance Summary */}
-            <motion.div
-              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+            <div
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
             >
               <div className="bg-white rounded-2xl shadow-lg p-6">
                 <div className="flex items-center justify-between mb-4">
@@ -286,14 +278,11 @@ export function TestResults({
                 <h3 className="font-semibold text-gray-900">Avg. Time/Question</h3>
                 <p className="text-gray-600 text-sm">Time efficiency: {timeEfficiency}%</p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Performance Insights */}
-            <motion.div
-              className="bg-white rounded-3xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+            <div
+              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Performance Insights</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -305,14 +294,11 @@ export function TestResults({
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Subject-wise Analysis */}
-            <motion.div
-              className="bg-white rounded-3xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            <div
+              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Subject-wise Performance</h2>
               <div className="space-y-6">
@@ -326,25 +312,19 @@ export function TestResults({
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-3">
-                        <motion.div
+                        <div
                           className={`h-3 rounded-full ${subject.color}`}
-                          initial={{ width: 0 }}
-                          animate={{ width: `${subject.percentage}%` }}
-                          transition={{ duration: 1, delay: index * 0.1 }}
                         />
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
             {/* Recommendations */}
-            <motion.div
-              className="bg-white rounded-3xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
+            <div
+              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Personalized Recommendations
@@ -365,18 +345,15 @@ export function TestResults({
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
 
         {/* Detailed Analysis Tab */}
         {activeTab === 'detailed' && (
           <div className="space-y-8">
-            <motion.div
-              className="bg-white rounded-3xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+            <div
+              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">
                 Detailed Performance Analysis
@@ -441,18 +418,15 @@ export function TestResults({
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
 
         {/* Solutions Tab */}
         {activeTab === 'solutions' && (
           <div className="space-y-6">
-            <motion.div
-              className="bg-white rounded-3xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+            <div
+              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Detailed Solutions</h2>
 
@@ -529,23 +503,20 @@ export function TestResults({
                     </div>
 
                     {showAnswer.has(question.id) && (
-                      <motion.div
-                        className="bg-blue-50 rounded-2xl p-6"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        transition={{ duration: 0.3 }}
+                      <div
+                        className="bg-blue-50 rounded-2xl p-6 animate-fadeInUp"
                       >
                         <h4 className="font-semibold text-blue-900 mb-3">
                           <Lightbulb className="w-5 h-5 inline mr-2" />
                           Explanation
                         </h4>
                         <p className="text-blue-800">{question.explanation}</p>
-                      </motion.div>
+                      </div>
                     )}
                   </div>
                 )
               })}
-            </motion.div>
+            </div>
           </div>
         )}
       </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import ProgressIndicator from '@/components/ui/ProgressIndicator'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
@@ -141,10 +140,8 @@ export default function FileUploadWithProgress() {
             ${isDragging ? 'border-blue-500 bg-blue-50' : 'border-slate-300 hover:border-blue-400'}
           `}
         >
-          <motion.div
-            animate={isDragging ? { scale: 1.05 } : { scale: 1 }}
-            transition={{ type: 'spring', stiffness: 300 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <Upload
               className={`w-16 h-16 mx-auto mb-4 ${isDragging ? 'text-blue-500' : 'text-slate-400'}`}
             />
@@ -167,7 +164,7 @@ export default function FileUploadWithProgress() {
             <p className="text-xs text-slate-500 mt-4">
               Supports: Images, Videos, PDF, Documents (Max 10MB per file)
             </p>
-          </motion.div>
+          </div>
         </div>
 
         {totalFiles > 0 && (
@@ -201,14 +198,10 @@ export default function FileUploadWithProgress() {
         <Card className="p-6">
           <h3 className="font-semibold text-slate-900 mb-4">Files</h3>
           <div className="space-y-3">
-            <AnimatePresence>
-              {files.map((file) => (
-                <motion.div
+{files.map((file) => (
+                <div
                   key={file.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  className="bg-slate-50 rounded-lg p-4"
+                  className="bg-slate-50 rounded-lg p-4 animate-fadeInUp"
                 >
                   <div className="flex items-start gap-3">
                     <div
@@ -274,10 +267,9 @@ export default function FileUploadWithProgress() {
                       )}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </AnimatePresence>
-          </div>
+</div>
         </Card>
       )}
 

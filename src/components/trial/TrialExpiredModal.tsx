@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import FocusTrap from 'focus-trap-react'
 import {
   X,
@@ -110,25 +109,17 @@ export function TrialExpiredModal({
   if (!isOpen) return null
 
   return (
-    <AnimatePresence>
-      <FocusTrap>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+<FocusTrap>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeInUp"
           onClick={(e) => {
             if (e.target === e.currentTarget && onClose) {
               onClose()
             }
           }}
         >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
-            exit={{ scale: 0.9, opacity: 0, y: 20 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+          <div
+            className="relative w-full max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp"
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
@@ -148,14 +139,11 @@ export function TrialExpiredModal({
 
               <div className="p-6 sm:p-8 lg:p-12">
                 <div className="text-center mb-8">
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-                    className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-600 to-blue-600 rounded-full mb-6"
+                  <div
+                    className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-600 to-blue-600 rounded-full mb-6 animate-fadeInUp"
                   >
                     <Lock className="w-10 h-10 text-white" />
-                  </motion.div>
+                  </div>
 
                   <h2
                     id="modal-title"
@@ -173,12 +161,9 @@ export function TrialExpiredModal({
                   <>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                       {benefits.map((benefit, index) => (
-                        <motion.div
+                        <div
                           key={index}
-                          initial={{ opacity: 0, y: 20 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: 0.1 * index }}
-                          className="p-5 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow"
+                          className="p-5 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-lg transition-shadow animate-fadeInUp"
                         >
                           <div className="flex items-start gap-3">
                             <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center">
@@ -193,7 +178,7 @@ export function TrialExpiredModal({
                               </p>
                             </div>
                           </div>
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
 
@@ -350,9 +335,8 @@ export function TrialExpiredModal({
                 )}
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </FocusTrap>
-    </AnimatePresence>
-  )
+)
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, Award, Users, BookOpen, Play, Calendar, MessageCircle, ArrowRight } from 'lucide-react'
 import { FormSteps } from '@/components/ui/ProgressIndicators'
 
@@ -119,21 +118,15 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
   return (
     <div className="fixed inset-0 z-50">
       {/* Backdrop */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+      <div
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm animate-fadeInUp"
         onClick={onClose}
       />
 
       {/* Main Trust Flow Modal */}
       <div className="fixed inset-0 flex items-center justify-center p-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl w-full mx-4 sm:mx-0 max-h-[90vh] overflow-hidden border border-slate-700"
+        <div
+          className="bg-slate-900 rounded-2xl shadow-2xl max-w-full sm:max-w-2xl lg:max-w-4xl w-full mx-4 sm:mx-0 max-h-[90vh] overflow-hidden border border-slate-700 animate-fadeInUp"
         >
           {/* Header */}
           <div className="flex justify-between items-center p-4 sm:p-6 border-b border-slate-700">
@@ -152,15 +145,11 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
           </div>
 
           <div className="p-4 sm:p-6">
-            <AnimatePresence mode="wait">
-              {/* Step 0: Key Differentiators */}
+{/* Step 0: Key Differentiators */}
               {currentStep === 0 && (
-                <motion.div
+                <div
                   key="differentiators"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-bold text-white mb-2">
@@ -173,12 +162,9 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
 
                   <div className="grid gap-6">
                     {differentiators.map((item, index) => (
-                      <motion.div
+                      <div
                         key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.2 }}
-                        className="bg-slate-800 rounded-xl p-6 border border-slate-700"
+                        className="bg-slate-800 rounded-xl p-6 border border-slate-700 animate-fadeInUp"
                       >
                         <div className="flex items-start gap-4">
                           <div className="bg-green-600/20 p-3 rounded-lg">
@@ -190,7 +176,7 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                             <div className="text-green-500 font-bold text-lg">{item.stat}</div>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
@@ -203,17 +189,14 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                       <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 1: Success Counter Animation */}
               {currentStep === 1 && (
-                <motion.div
+                <div
                   key="counters"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="text-center space-y-8"
+                  className="text-center space-y-8 animate-fadeInUp"
                 >
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">Our Success in Numbers</h3>
@@ -255,17 +238,14 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                       <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 2: Video Testimonial */}
               {currentStep === 2 && (
-                <motion.div
+                <div
                   key="testimonial"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center">
                     <h3 className="text-xl font-bold text-white mb-2">Success Stories</h3>
@@ -301,17 +281,14 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                       <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {/* Step 3: Free Demo Offer & Lead Capture */}
               {currentStep === 3 && (
-                <motion.div
+                <div
                   key="demo"
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  className="space-y-6"
+                  className="space-y-6 animate-fadeInUp"
                 >
                   <div className="text-center">
                     <h3 className="text-xl font-bold text-white mb-2">
@@ -368,10 +345,9 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                   <div className="text-center text-sm text-gray-400">
                     🔒 No spam, no obligations. Just pure learning experience.
                   </div>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-          </div>
+</div>
 
           {/* Enhanced Progress Indicator */}
           <div className="px-6 pb-6">
@@ -390,26 +366,19 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
               className="justify-center"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Exit Intent Modal */}
-      <AnimatePresence>
-        {showExitIntent && (
+{showExitIntent && (
           <div className="fixed inset-0 z-60 flex items-center justify-center p-4">
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="absolute inset-0 bg-black/80"
+            <div
+              className="absolute inset-0 bg-black/80 animate-fadeInUp"
               onClick={() => setShowExitIntent(false)}
             />
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-slate-900 rounded-xl p-6 max-w-md w-full border border-red-500/50 relative"
+            <div
+              className="bg-slate-900 rounded-xl p-6 max-w-md w-full border border-red-500/50 relative animate-fadeInUp"
             >
               <button
                 onClick={() => setShowExitIntent(false)}
@@ -441,10 +410,9 @@ export function TrustFlow({ isOpen, onClose, onComplete }: TrustFlowProps) {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

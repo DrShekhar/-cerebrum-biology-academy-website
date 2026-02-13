@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import ProgressIndicator from '@/components/ui/ProgressIndicator'
 import StepIndicator, { Step } from '@/components/ui/StepIndicator'
 import { Button } from '@/components/ui/Button'
@@ -153,15 +152,10 @@ export default function TestGenerationWithProgress() {
             </p>
           </div>
         </div>
-
-        <AnimatePresence mode="wait">
-          {!isGenerating && !generatedTest && (
-            <motion.div
+{!isGenerating && !generatedTest && (
+            <div
               key="start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-slate-50 rounded-lg p-6 space-y-4">
                 <h3 className="font-semibold text-slate-900">Test Configuration</h3>
@@ -194,16 +188,13 @@ export default function TestGenerationWithProgress() {
                 <Sparkles className="w-5 h-5 mr-2" />
                 Start Generation
               </Button>
-            </motion.div>
+            </div>
           )}
 
           {isGenerating && (
-            <motion.div
+            <div
               key="generating"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-8"
+              className="space-y-8 animate-fadeInUp"
             >
               <StepIndicator
                 steps={steps}
@@ -243,25 +234,20 @@ export default function TestGenerationWithProgress() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {generatedTest && !isGenerating && (
-            <motion.div
+            <div
               key="success"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-green-50 border-2 border-green-200 rounded-xl p-8 text-center">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: 'spring', delay: 0.2 }}
-                  className="inline-flex p-4 bg-green-100 rounded-full mb-4"
+                <div
+                  className="inline-flex p-4 bg-green-100 rounded-full mb-4 animate-fadeInUp"
                 >
                   <CheckCircle2 className="w-12 h-12 text-green-600" />
-                </motion.div>
+                </div>
 
                 <h2 className="text-2xl font-bold text-green-800 mb-2">
                   Test Generated Successfully!
@@ -289,15 +275,13 @@ export default function TestGenerationWithProgress() {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {error && !isGenerating && (
-            <motion.div
+            <div
               key="error"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-gradient-to-br bg-red-50 border-2 border-red-200 rounded-xl p-8 text-center">
                 <div className="inline-flex p-4 bg-red-100 rounded-full mb-4">
@@ -318,10 +302,9 @@ export default function TestGenerationWithProgress() {
                   Try Again
                 </Button>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </Card>
+</Card>
 
       <Card className="p-6">
         <h3 className="font-semibold text-slate-900 mb-4">Generation Process</h3>

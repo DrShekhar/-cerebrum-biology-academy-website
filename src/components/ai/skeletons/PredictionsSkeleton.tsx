@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
-
 const shimmerAnimation = {
   backgroundPosition: ['200% 0', '-200% 0'],
   transition: {
@@ -22,47 +20,42 @@ export function PredictionCardSkeleton() {
       aria-label="Loading prediction card"
     >
       <div className="flex items-center justify-between mb-3 sm:mb-4">
-        <motion.div
-          className="w-5 h-5 sm:w-6 sm:h-6 rounded"
+        <div
+          className="w-5 h-5 sm:w-6 sm:h-6 rounded animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
-        <motion.div
-          className="h-3 rounded w-20"
+        <div
+          className="h-3 rounded w-20 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
-      <motion.div
-        className="h-4 rounded w-full mb-2 sm:mb-3"
+      <div
+        className="h-4 rounded w-full mb-2 sm:mb-3 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
-      <motion.div
-        className="h-8 sm:h-10 rounded w-24 sm:w-32 mb-3"
+      <div
+        className="h-8 sm:h-10 rounded w-24 sm:w-32 mb-3 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
       <div className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5">
-        <motion.div
-          className="h-2 sm:h-2.5 rounded-full w-3/4"
+        <div
+          className="h-2 sm:h-2.5 rounded-full w-3/4 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
       <span className="sr-only">Loading...</span>
@@ -79,30 +72,27 @@ export function PredictionsSkeleton() {
     >
       <div className="flex items-center justify-between mb-6 sm:mb-8">
         <div className="flex items-center">
-          <motion.div
-            className="w-5 h-5 rounded mr-2 sm:mr-3"
+          <div
+            className="w-5 h-5 rounded mr-2 sm:mr-3 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
-          <motion.div
-            className="h-6 sm:h-7 rounded w-32 sm:w-40"
+          <div
+            className="h-6 sm:h-7 rounded w-32 sm:w-40 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         </div>
-        <motion.div
-          className="h-5 rounded w-20"
+        <div
+          className="h-5 rounded w-20 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
 
@@ -114,14 +104,13 @@ export function PredictionsSkeleton() {
 
       <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
         {[1, 2, 3, 4].map((i) => (
-          <motion.div
+          <div
             key={i}
-            className="h-10 sm:h-12 rounded-lg w-32 sm:w-40"
+            className="h-10 sm:h-12 rounded-lg w-32 sm:w-40 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         ))}
       </div>

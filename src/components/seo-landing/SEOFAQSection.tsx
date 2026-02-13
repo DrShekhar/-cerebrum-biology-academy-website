@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, HelpCircle } from 'lucide-react'
 import { SEOLandingContent } from '@/data/seo-landing/types'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
@@ -21,12 +20,8 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
   return (
     <section className="bg-gray-50 py-16 lg:py-24">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+        <div
+          className="text-center animate-fadeInUp"
         >
           <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100">
             <HelpCircle className="h-6 w-6 text-blue-600" />
@@ -35,17 +30,13 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
           <p className="mx-auto mt-4 max-w-2xl text-gray-600">
             Find answers to common questions about our courses and teaching methodology
           </p>
-        </motion.div>
+        </div>
 
         <div className="mt-12 space-y-4">
           {faqs.map((faq, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="overflow-hidden rounded-xl bg-white shadow-sm"
+              className="overflow-hidden rounded-xl bg-white shadow-sm animate-fadeInUp"
             >
               {/* H3 wrapper for voice search and AI crawler optimization */}
               <h3 className="m-0">
@@ -64,35 +55,24 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
                   />
                 </button>
               </h3>
-
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
+{openIndex === index && (
+                  <div
                     id={`faq-answer-${index}`}
                     role="region"
                     aria-labelledby={`faq-question-${index}`}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                   className="animate-fadeInUp">
                     <div className="border-t border-gray-100 px-6 pb-6 pt-4">
                       <p className="leading-relaxed text-gray-600">{faq.answer}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </motion.div>
+</div>
           ))}
         </div>
 
         {/* CTA below FAQs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="mt-12 rounded-2xl bg-indigo-500 p-8 text-center"
+        <div
+          className="mt-12 rounded-2xl bg-indigo-500 p-8 text-center animate-fadeInUp"
         >
           <p className="text-lg text-white/90">Still have questions?</p>
           <p className="mt-2 text-2xl font-bold text-white">Talk to our academic counselor</p>
@@ -102,7 +82,7 @@ export function SEOFAQSection({ faqs, title = 'Frequently Asked Questions' }: SE
           >
             Call Now: {getDisplayPhone()}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

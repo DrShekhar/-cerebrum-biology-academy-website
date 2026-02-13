@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
-
 const shimmerAnimation = {
   backgroundPosition: ['200% 0', '-200% 0'],
   transition: {
@@ -24,73 +22,66 @@ export function ProgressCardSkeleton() {
       <div className="relative z-10">
         <div className="flex items-start justify-between mb-4 sm:mb-6 lg:mb-8">
           <div className="flex-1 min-w-0 pr-3 sm:pr-4">
-            <motion.div
-              className="h-5 sm:h-6 rounded w-32 sm:w-40 mb-2"
+            <div
+              className="h-5 sm:h-6 rounded w-32 sm:w-40 mb-2 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
-            <motion.div
-              className="h-3 sm:h-4 rounded w-24 sm:w-32"
+            <div
+              className="h-3 sm:h-4 rounded w-24 sm:w-32 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
           </div>
 
-          <motion.div
-            className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl"
+          <div
+            className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         </div>
 
         <div className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8">
           <div className="flex-1 min-w-0">
-            <motion.div
-              className="h-10 sm:h-12 lg:h-14 rounded w-32 sm:w-40 mb-3"
+            <div
+              className="h-10 sm:h-12 lg:h-14 rounded w-32 sm:w-40 mb-3 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
-            <motion.div
-              className="h-4 sm:h-5 rounded w-28 sm:w-36"
+            <div
+              className="h-4 sm:h-5 rounded w-28 sm:w-36 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
           </div>
 
-          <motion.div
-            className="ml-3 sm:ml-4 lg:ml-6 w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full"
+          <div
+            className="ml-3 sm:ml-4 lg:ml-6 w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         </div>
 
         <div className="mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-200">
           <div className="flex items-center justify-between">
-            <motion.div
-              className="h-2 sm:h-3 rounded-full flex-1 mr-2"
+            <div
+              className="h-2 sm:h-3 rounded-full flex-1 mr-2 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
           </div>
         </div>

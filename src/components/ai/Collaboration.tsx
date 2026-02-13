@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Users,
   UserPlus,
@@ -550,10 +549,8 @@ const Collaboration: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
             <Users className="w-8 h-8 text-white" />
@@ -561,7 +558,7 @@ const Collaboration: React.FC = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Team Collaboration
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Collaborative test development with peer review, version control, approval workflows, and
           seamless team communication
@@ -667,15 +664,11 @@ const Collaboration: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Co-author Invitations */}
+{/* Co-author Invitations */}
         {activeTab === 'invitations' && (
-          <motion.div
+          <div
             key="invitations"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Invite New Collaborator */}
             <div className="bg-white rounded-xl p-6 border">
@@ -818,17 +811,14 @@ const Collaboration: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Peer Review System */}
         {activeTab === 'reviews' && (
-          <motion.div
+          <div
             key="reviews"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Review Summary */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -931,17 +921,14 @@ const Collaboration: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Comments & Feedback */}
         {activeTab === 'comments' && (
-          <motion.div
+          <div
             key="comments"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Add New Comment */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1134,17 +1121,14 @@ const Collaboration: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Version Control */}
         {activeTab === 'versions' && (
-          <motion.div
+          <div
             key="versions"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1228,17 +1212,14 @@ const Collaboration: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Change History */}
         {activeTab === 'history' && (
-          <motion.div
+          <div
             key="history"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1336,17 +1317,14 @@ const Collaboration: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Approval Workflow */}
         {activeTab === 'workflow' && (
-          <motion.div
+          <div
             key="workflow"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Workflow Overview */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1419,17 +1397,14 @@ const Collaboration: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Question Sharing */}
         {activeTab === 'sharing' && (
-          <motion.div
+          <div
             key="sharing"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Create Share Link */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1556,11 +1531,9 @@ const Collaboration: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Quick Actions */}
+{/* Quick Actions */}
       <div className="bg-white rounded-xl p-6 border">
         <div className="flex justify-between items-center">
           <div>

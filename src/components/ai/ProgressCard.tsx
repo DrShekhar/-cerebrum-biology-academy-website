@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { motion, useAnimationControls } from 'framer-motion'
 import { LucideIcon, Flame, Clock, Target, BookOpen, TrendingUp, Sparkles } from 'lucide-react'
 import { ProgressRing } from '../ui/ProgressRing'
 import { AnimatedCounter } from '../ui/AnimatedCounter'
@@ -144,8 +143,7 @@ export function ProgressCard({
   }
 
   return (
-    <motion.div
-      variants={cardAnimationVariants}
+    <div
       initial="initial"
       animate="animate"
       whileHover="hover"
@@ -155,70 +153,47 @@ export function ProgressCard({
         willChange: 'transform',
       }}
     >
-      <motion.div
-        className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-20 rounded-full blur-3xl -mr-16 -mt-16"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.3, 0.2],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
+      <div
+        className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-20 rounded-full blur-3xl -mr-16 -mt-16 animate-fadeInUp"
       />
 
       {isCelebrating && (
-        <motion.div
-          className="absolute inset-0 flex items-center justify-center pointer-events-none"
-          initial={{ opacity: 0 }}
-          animate={celebrationControls}
+        <div
+          className="absolute inset-0 flex items-center justify-center pointer-events-none animate-fadeInUp"
         >
           <Sparkles className={`w-12 h-12 text-yellow-400`} />
-        </motion.div>
+        </div>
       )}
 
       <div className="relative z-10">
-        <motion.div
-          variants={childVariants}
-          className="flex items-start justify-between mb-4 sm:mb-6 lg:mb-8"
+        <div
+          className="flex items-start justify-between mb-4 sm:mb-6 lg:mb-8 animate-fadeInUp"
         >
           <div className="flex-1 min-w-0 pr-3 sm:pr-4">
-            <motion.h3
-              className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-1 sm:mb-2"
+            <h3
+              className="text-base sm:text-lg lg:text-xl font-semibold text-gray-800 mb-1 sm:mb-2 animate-fadeInUp"
               layoutId={`title-${variant}`}
             >
               {title}
-            </motion.h3>
+            </h3>
             {subtitle && (
-              <motion.p
-                className="text-xs sm:text-sm text-gray-600"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
+              <p
+                className="text-xs sm:text-sm text-gray-600 animate-fadeInUp"
               >
                 {subtitle}
-              </motion.p>
+              </p>
             )}
           </div>
 
-          <motion.div
-            animate={iconControls}
+          <div
             className={`w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 rounded-xl bg-gradient-to-r ${gradientClass} flex items-center justify-center shadow-lg`}
-            whileHover={{
-              scale: 1.1,
-              rotate: 5,
-              transition: { duration: 0.2 },
-            }}
-            whileTap={{ scale: 0.95 }}
           >
             <Icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-white" />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
-        <motion.div
-          variants={childVariants}
-          className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8"
+        <div
+          className="flex items-center justify-between mb-4 sm:mb-6 lg:mb-8 animate-fadeInUp"
         >
           <div className="flex-1 min-w-0">
             <div className="flex items-baseline space-x-1 sm:space-x-2">
@@ -228,76 +203,44 @@ export function ProgressCard({
                 formatLargeNumbers={variant === 'study-hours'}
               />
               {maxValue > 0 && variant !== 'streak' && (
-                <motion.span
-                  className="text-base sm:text-lg lg:text-xl text-gray-500"
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 }}
+                <span
+                  className="text-base sm:text-lg lg:text-xl text-gray-500 animate-fadeInUp"
                 >
                   / {maxValue}
-                </motion.span>
+                </span>
               )}
             </div>
 
             {change && (
-              <motion.div
-                className="flex items-center mt-2 sm:mt-3"
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
+              <div
+                className="flex items-center mt-2 sm:mt-3 animate-fadeInUp"
               >
-                <motion.div
-                  animate={{ y: [0, -2, 0] }}
-                  transition={{ duration: 1, repeat: Infinity, ease: 'easeInOut' }}
-                >
+                <div
+                 className="animate-fadeInUp">
                   <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-600 mr-1" />
-                </motion.div>
+                </div>
                 <span className="text-xs sm:text-sm text-green-600 font-medium">{change}</span>
                 <span className="text-xs sm:text-sm text-gray-500 ml-1">this week</span>
-              </motion.div>
+              </div>
             )}
 
             {variant === 'streak' && streak !== undefined && (
-              <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                transition={{
-                  delay: 0.3,
-                  type: 'spring',
-                  stiffness: 200,
-                  damping: 15,
-                }}
-                whileHover={{
-                  scale: 1.05,
-                  transition: { duration: 0.2 },
-                }}
-                className="mt-2 sm:mt-3 inline-flex items-center space-x-1 sm:space-x-1.5 bg-orange-100 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full"
+              <div
+                className="mt-2 sm:mt-3 inline-flex items-center space-x-1 sm:space-x-1.5 bg-orange-100 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full animate-fadeInUp"
               >
-                <motion.div
-                  animate={{
-                    scale: [1, 1.2, 1],
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                >
+                <div
+                 className="animate-fadeInUp">
                   <Flame className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-orange-500" />
-                </motion.div>
+                </div>
                 <span className="text-xs sm:text-sm font-bold text-orange-700">
                   {streak} day streak!
                 </span>
-              </motion.div>
+              </div>
             )}
           </div>
 
-          <motion.div
-            className="ml-3 sm:ml-4 lg:ml-6 flex-shrink-0"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, type: 'spring', stiffness: 150, damping: 20 }}
+          <div
+            className="ml-3 sm:ml-4 lg:ml-6 flex-shrink-0 animate-fadeInUp"
           >
             <ProgressRing
               value={value}
@@ -308,13 +251,12 @@ export function ProgressCard({
               gradientColors={getGradientColors(gradientClass)}
               showPercentage={variant !== 'streak'}
             />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {showMilestones && milestones && milestones.length > 0 && (
-          <motion.div
-            variants={childVariants}
-            className="mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-200"
+          <div
+            className="mt-4 sm:mt-6 pt-4 sm:pt-5 border-t border-gray-200 animate-fadeInUp"
           >
             <MilestoneIndicator
               current={value}
@@ -322,10 +264,10 @@ export function ProgressCard({
               color={colorScheme}
               showProgress={false}
             />
-          </motion.div>
+          </div>
         )}
       </div>
-    </motion.div>
+    </div>
   )
 }
 

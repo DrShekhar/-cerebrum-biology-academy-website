@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Users,
@@ -209,12 +208,9 @@ export default function CoursesPage() {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {statsData.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200"
+              className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -228,7 +224,7 @@ export default function CoursesPage() {
                   <stat.icon className="h-6 w-6" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -277,12 +273,9 @@ export default function CoursesPage() {
         {/* Courses Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredCourses.map((course, index) => (
-            <motion.div
+            <div
               key={course.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
             >
               {/* Course Header */}
               <div className="flex justify-between items-start mb-4">
@@ -397,7 +390,7 @@ export default function CoursesPage() {
                   )}
                 </Button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

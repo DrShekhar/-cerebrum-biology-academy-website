@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { motion } from 'framer-motion'
 import { Play, Pause, SkipForward, RotateCcw } from 'lucide-react'
 import type { DisplayMode, PomodoroPhase, PomodoroState } from '@/lib/study-with-me/types'
 import { POMODORO_DEFAULTS, PHASE_COLORS, STORAGE_KEYS } from '@/lib/study-with-me/constants'
@@ -330,10 +329,7 @@ export function PomodoroTimer({
   const playIconSize = compact ? 'w-5 h-5' : 'w-6 h-6'
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.2 }}
+    <div
       className={`bg-white rounded-xl shadow-xl ${compact ? 'p-4' : 'p-6'} ${className}`}
     >
       {/* Header */}
@@ -358,9 +354,6 @@ export function PomodoroTimer({
               stroke={phaseColors.primary}
               strokeWidth="8"
               strokeLinecap="round"
-              initial={{ strokeDasharray: '0 282.7' }}
-              animate={{ strokeDasharray: `${progress * 2.827} 282.7` }}
-              transition={{ duration: 0.5 }}
             />
           </svg>
 
@@ -417,6 +410,6 @@ export function PomodoroTimer({
           </p>
         )}
       </div>
-    </motion.div>
+    </div>
   )
 }

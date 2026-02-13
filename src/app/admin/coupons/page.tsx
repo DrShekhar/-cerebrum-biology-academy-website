@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   Tag,
   Search,
@@ -159,12 +158,9 @@ export default function CouponsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {statsCards.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200"
+              className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -177,7 +173,7 @@ export default function CouponsPage() {
                   <stat.icon className="h-6 w-6" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -194,10 +190,8 @@ export default function CouponsPage() {
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+        <div
+          className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
         >
           {loading ? (
             <div className="text-center py-12 text-gray-500">Loading...</div>
@@ -333,7 +327,7 @@ export default function CouponsPage() {
               )}
             </>
           )}
-        </motion.div>
+        </div>
       </div>
 
       <Modal

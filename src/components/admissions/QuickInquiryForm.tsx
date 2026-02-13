@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Phone,
   User,
@@ -189,9 +188,7 @@ export function QuickInquiryForm({
 
   if (step === 'success') {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
         className={`${isHero ? 'bg-white/10 backdrop-blur-sm' : 'bg-green-50'} rounded-2xl p-6 text-center`}
       >
         <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -209,7 +206,7 @@ export function QuickInquiryForm({
           <Phone className="w-4 h-4" />
           <span>Keep your phone ready!</span>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
@@ -231,15 +228,10 @@ export function QuickInquiryForm({
           {error}
         </div>
       )}
-
-      <AnimatePresence mode="wait">
-        {step === 'form' ? (
-          <motion.div
+{step === 'form' ? (
+          <div
             key="form"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="space-y-3"
+            className="space-y-3 animate-fadeInUp"
           >
             <div className="relative">
               <User
@@ -333,14 +325,11 @@ export function QuickInquiryForm({
                 Instant Callback
               </span>
             </div>
-          </motion.div>
+          </div>
         ) : (
-          <motion.div
+          <div
             key="otp"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="space-y-4"
+            className="space-y-4 animate-fadeInUp"
           >
             <div className="text-center mb-2">
               <p className={`text-sm ${isHero ? 'text-blue-100' : 'text-gray-600'}`}>
@@ -408,9 +397,8 @@ export function QuickInquiryForm({
                 </button>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

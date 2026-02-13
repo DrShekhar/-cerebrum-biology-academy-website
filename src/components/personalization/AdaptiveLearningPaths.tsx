@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useMemo, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Clock,
@@ -403,11 +402,10 @@ function AdaptiveLearningPathsComponent() {
         </h3>
         <div className="space-y-4">
           {learningPaths.map((path) => (
-            <motion.div
+            <div
               key={path.id}
-              className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer"
+              className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow cursor-pointer animate-fadeInUp"
               onClick={() => handlePathSelection(path)}
-              whileHover={{ scale: 1.02 }}
             >
               <div className="flex justify-between items-start mb-2">
                 <h4 className="font-semibold text-gray-900">{path.name}</h4>
@@ -435,7 +433,7 @@ function AdaptiveLearningPathsComponent() {
                   {path.modules.length} modules
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

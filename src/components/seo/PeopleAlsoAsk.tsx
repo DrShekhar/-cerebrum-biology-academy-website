@@ -2,8 +2,6 @@
 
 import { useState } from 'react'
 import { ChevronDown, Search, HelpCircle } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 export interface PAQuestion {
   question: string
   answer: string
@@ -119,32 +117,23 @@ export function PeopleAlsoAsk({
                 <span className="font-medium text-gray-900 pr-4 text-sm md:text-base">
                   {item.question}
                 </span>
-                <motion.div
-                  animate={{ rotate: isOpen ? 180 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex-shrink-0"
+                <div
+                  className="flex-shrink-0 animate-fadeInUp"
                 >
                   <ChevronDown className="w-5 h-5 text-gray-400" />
-                </motion.div>
+                </div>
               </button>
-
-              <AnimatePresence>
-                {isOpen && (
-                  <motion.div
+{isOpen && (
+                  <div
                     id={`paa-answer-${index}`}
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2, ease: 'easeInOut' }}
-                  >
+                   className="animate-fadeInUp">
                     <div className="px-4 pb-4 text-gray-600 text-sm md:text-base leading-relaxed border-t border-gray-100 pt-3">
                       {/* Speakable class for voice search */}
                       <p className="speakable-answer">{item.answer}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           )
         })}
       </div>

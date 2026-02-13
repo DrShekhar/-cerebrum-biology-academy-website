@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { DiagramContainer } from '../shared/DiagramContainer'
 import { DiagramLabel } from '../shared/DiagramLabel'
 import { biologyColors } from '../hooks/useDiagram'
@@ -60,9 +59,6 @@ export function StemCrossSection({
     return (
       <motion.g
         className="dicot-stem"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
       >
         {/* Title */}
         <text
@@ -157,9 +153,6 @@ export function StemCrossSection({
           return (
             <motion.g
               key={`vb-dicot-${i}`}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.3 + i * 0.05, type: 'spring' }}
             >
               {/* Bundle sheath / Pericycle patch */}
               <ellipse
@@ -304,9 +297,6 @@ export function StemCrossSection({
     return (
       <motion.g
         className="monocot-stem"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: stemType === 'both' ? 0.3 : 0 }}
       >
         {/* Title */}
         <text
@@ -373,9 +363,6 @@ export function StemCrossSection({
           return (
             <motion.g
               key={`vb-monocot-${i}`}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.4 + i * 0.04, type: 'spring' }}
             >
               {/* Bundle sheath */}
               <circle
@@ -511,10 +498,8 @@ export function StemCrossSection({
 
       {/* Info Panel */}
       {selectedPart && (
-        <motion.div
-          className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200 animate-fadeInUp"
         >
           <h4 className="font-bold text-green-800 mb-1 capitalize">
             {selectedPart.part.replace(/([A-Z])/g, ' $1').trim()} ({selectedPart.type})
@@ -526,7 +511,7 @@ export function StemCrossSection({
               ]
             }
           </p>
-        </motion.div>
+        </div>
       )}
     </DiagramContainer>
   )

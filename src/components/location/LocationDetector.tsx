@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { MapPin, X, ChevronRight, Loader2 } from 'lucide-react'
 import { getLocationBySlug, locationDatabase } from '@/data/locationData'
 import { Button } from '@/components/ui/Button'
@@ -227,12 +226,8 @@ export function LocationDetector({
   }
 
   return (
-    <AnimatePresence>
-      {showLocationBanner && (
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -100, opacity: 0 }}
+{showLocationBanner && (
+        <div
           className={`fixed top-0 left-0 right-0 z-50 ${className}`}
         >
           <Card className="mx-4 mt-4 border-2 border-primary/20 shadow-lg bg-gray-50">
@@ -303,10 +298,9 @@ export function LocationDetector({
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }
 
 // Hook for getting user's preferred location

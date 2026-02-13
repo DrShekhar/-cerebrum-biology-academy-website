@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Shield, Award, Users, Star, CheckCircle, Lock, Globe, Zap } from 'lucide-react'
 import { useTranslations } from '@/lib/i18n/translations'
 
@@ -76,11 +75,8 @@ export function TrustBadges() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {trustBadges.map((badge, index) => (
-            <motion.div
+            <div
               key={badge.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               className={`${badge.bgColor} rounded-xl p-6 text-center relative overflow-hidden`}
             >
               {badge.verified && (
@@ -97,7 +93,7 @@ export function TrustBadges() {
 
               <h3 className={`font-bold ${badge.color} mb-2`}>{badge.title}</h3>
               <p className="text-sm text-gray-600">{badge.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -140,17 +136,14 @@ export function SecurityBadges() {
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {securityFeatures.map((feature, index) => (
-          <motion.div
+          <div
             key={feature.title}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
-            className="text-center p-3 rounded-lg hover:bg-gray-50 transition-colors"
+            className="text-center p-3 rounded-lg hover:bg-gray-50 transition-colors animate-fadeInUp"
           >
             <feature.icon className="w-6 h-6 text-green-600 mx-auto mb-2" />
             <div className="text-sm font-medium text-gray-900 mb-1">{feature.title}</div>
             <div className="text-xs text-gray-500">{feature.description}</div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
@@ -186,12 +179,9 @@ export function PaymentTrustIndicators() {
 
       <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
         {paymentMethods.map((method, index) => (
-          <motion.div
+          <div
             key={method.name}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.05 }}
-            className="relative bg-white rounded-lg p-3 text-center hover:shadow-md transition-shadow"
+            className="relative bg-white rounded-lg p-3 text-center hover:shadow-md transition-shadow animate-fadeInUp"
           >
             {method.popular && (
               <div className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs px-1 rounded">
@@ -208,7 +198,7 @@ export function PaymentTrustIndicators() {
               <span className="text-xs font-medium text-gray-600">{method.name.slice(0, 2)}</span>
             </div>
             <div className="text-xs text-gray-600">{method.name}</div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -258,17 +248,14 @@ export function GuaranteeBadges() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {guarantees.map((guarantee, index) => (
-        <motion.div
+        <div
           key={guarantee.title}
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: index * 0.1 }}
           className={`${guarantee.bgColor} rounded-xl p-6 text-center border-2 border-dashed ${guarantee.color.replace('text-', 'border-')}`}
         >
           <guarantee.icon className={`w-8 h-8 ${guarantee.color} mx-auto mb-3`} />
           <h3 className={`font-bold ${guarantee.color} mb-2`}>{guarantee.title}</h3>
           <p className="text-sm text-gray-600">{guarantee.description}</p>
-        </motion.div>
+        </div>
       ))}
     </div>
   )
@@ -309,12 +296,9 @@ export function AccreditationBadges() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {accreditations.map((acc, index) => (
-          <motion.div
+          <div
             key={acc.name}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
+            className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors animate-fadeInUp"
           >
             <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
               <Award className="w-5 h-5 text-blue-600" />
@@ -326,7 +310,7 @@ export function AccreditationBadges() {
                 {acc.status}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ThumbsUp, ThumbsDown, Heart, Star, Loader2 } from 'lucide-react'
 import { useOptimisticUpdate } from '@/hooks/useOptimisticUpdate'
 import { useToast } from '@/components/ui/Toast'
@@ -96,7 +95,7 @@ export function OptimisticVoteButton({
 
   if (variant === 'heart') {
     return (
-      <motion.button
+      <button
         onClick={() => handleVote('up')}
         disabled={isLoading}
         className={`${sizeClasses[size]} rounded-full transition-all disabled:opacity-50 ${
@@ -104,15 +103,6 @@ export function OptimisticVoteButton({
             ? 'bg-red-100 text-red-600'
             : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
         } ${isOptimistic ? 'ring-2 ring-red-300' : ''}`}
-        whileTap={{ scale: 0.9 }}
-        animate={
-          isOptimistic
-            ? {
-                scale: [1, 1.1, 1],
-                transition: { duration: 0.3 },
-              }
-            : {}
-        }
       >
         <div className="flex items-center space-x-2">
           {isLoading ? (
@@ -125,13 +115,13 @@ export function OptimisticVoteButton({
           )}
           <span className="font-semibold">{data.upvotes}</span>
         </div>
-      </motion.button>
+      </button>
     )
   }
 
   if (variant === 'star') {
     return (
-      <motion.button
+      <button
         onClick={() => handleVote('up')}
         disabled={isLoading}
         className={`${sizeClasses[size]} rounded-full transition-all disabled:opacity-50 ${
@@ -139,16 +129,6 @@ export function OptimisticVoteButton({
             ? 'bg-yellow-100 text-yellow-600'
             : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
         } ${isOptimistic ? 'ring-2 ring-yellow-300' : ''}`}
-        whileTap={{ scale: 0.9 }}
-        animate={
-          isOptimistic
-            ? {
-                scale: [1, 1.1, 1],
-                rotate: [0, 20, 0],
-                transition: { duration: 0.4 },
-              }
-            : {}
-        }
       >
         <div className="flex items-center space-x-2">
           {isLoading ? (
@@ -161,7 +141,7 @@ export function OptimisticVoteButton({
           )}
           <span className="font-semibold">{data.upvotes}</span>
         </div>
-      </motion.button>
+      </button>
     )
   }
 
@@ -169,7 +149,7 @@ export function OptimisticVoteButton({
     <div
       className={`flex items-center space-x-2 ${isOptimistic ? 'bg-blue-50 rounded-full p-1' : ''}`}
     >
-      <motion.button
+      <button
         onClick={() => handleVote('up')}
         disabled={isLoading}
         className={`${sizeClasses[size]} rounded-lg transition-all disabled:opacity-50 ${
@@ -177,15 +157,6 @@ export function OptimisticVoteButton({
             ? 'bg-green-100 text-green-600'
             : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
         }`}
-        whileTap={{ scale: 0.9 }}
-        animate={
-          isOptimistic && data.userVote === 'up'
-            ? {
-                y: [-2, 0],
-                transition: { duration: 0.2 },
-              }
-            : {}
-        }
       >
         <div className="flex items-center space-x-1">
           {isLoading && data.userVote === 'up' ? (
@@ -198,9 +169,9 @@ export function OptimisticVoteButton({
           )}
           <span className="font-semibold">{data.upvotes}</span>
         </div>
-      </motion.button>
+      </button>
 
-      <motion.button
+      <button
         onClick={() => handleVote('down')}
         disabled={isLoading}
         className={`${sizeClasses[size]} rounded-lg transition-all disabled:opacity-50 ${
@@ -208,15 +179,6 @@ export function OptimisticVoteButton({
             ? 'bg-red-100 text-red-600'
             : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
         }`}
-        whileTap={{ scale: 0.9 }}
-        animate={
-          isOptimistic && data.userVote === 'down'
-            ? {
-                y: [2, 0],
-                transition: { duration: 0.2 },
-              }
-            : {}
-        }
       >
         <div className="flex items-center space-x-1">
           {isLoading && data.userVote === 'down' ? (
@@ -229,7 +191,7 @@ export function OptimisticVoteButton({
           )}
           <span className="font-semibold">{data.downvotes}</span>
         </div>
-      </motion.button>
+      </button>
     </div>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Star,
   CheckCircle,
@@ -167,23 +166,18 @@ export function AuthenticTestimonials() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-3xl font-bold text-gray-900 mb-4"
+          <h2
+            className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp"
           >
             {language === 'hi' ? 'सत्यापित सफलता की कहानियां' : 'Verified Success Stories'}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-gray-600 mb-8"
+          </h2>
+          <p
+            className="text-xl text-gray-600 mb-8 animate-fadeInUp"
           >
             {language === 'hi'
               ? 'हमारे छात्रों की प्रामाणिक समीक्षाएं और उनकी सफलता'
               : 'Authentic reviews and success stories from our students'}
-          </motion.p>
+          </p>
 
           {/* Filters */}
           <div className="flex justify-center space-x-4 mb-8">
@@ -212,14 +206,9 @@ export function AuthenticTestimonials() {
 
         {/* Main Testimonial */}
         <div className="max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
+<div
               key={currentTestimonial.id}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
-              className="bg-white rounded-3xl shadow-xl overflow-hidden"
+              className="bg-white rounded-3xl shadow-xl overflow-hidden animate-fadeInUp"
             >
               <div className="p-8 md:p-12">
                 {/* Student Info Header */}
@@ -359,10 +348,8 @@ export function AuthenticTestimonials() {
                   </div>
                 )}
               </div>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Navigation */}
+            </div>
+{/* Navigation */}
           <div className="flex items-center justify-between mt-8">
             <button
               onClick={prevTestimonial}
@@ -395,20 +382,13 @@ export function AuthenticTestimonials() {
         </div>
 
         {/* Video Modal */}
-        <AnimatePresence>
-          {showVideo && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4"
+{showVideo && (
+            <div
+              className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4 animate-fadeInUp"
               onClick={() => setShowVideo(null)}
             >
-              <motion.div
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.9 }}
-                className="relative max-w-4xl w-full"
+              <div
+                className="relative max-w-4xl w-full animate-fadeInUp"
                 onClick={(e) => e.stopPropagation()}
               >
                 <LazyVideo
@@ -432,11 +412,10 @@ export function AuthenticTestimonials() {
                     />
                   </svg>
                 </button>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </section>
   )
 }
@@ -475,17 +454,14 @@ export function TestimonialStats() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
       {stats.map((stat, index) => (
-        <motion.div
+        <div
           key={stat.label}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-          className="text-center"
+          className="text-center animate-fadeInUp"
         >
           <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-2`} />
           <div className="text-2xl font-bold text-gray-900 mb-1">{stat.value}</div>
           <div className="text-sm text-gray-600">{stat.label}</div>
-        </motion.div>
+        </div>
       ))}
     </div>
   )

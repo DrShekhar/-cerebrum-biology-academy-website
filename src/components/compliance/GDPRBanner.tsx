@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, ShieldCheck, Settings } from 'lucide-react'
 import { GTMService } from '@/lib/analytics/gtmService'
 import { FacebookPixelService } from '@/lib/analytics/facebookPixelService'
@@ -159,11 +158,7 @@ export const GDPRBanner = ({
   if (!isVisible) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ y: position === 'bottom' ? 100 : -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: position === 'bottom' ? 100 : -100, opacity: 0 }}
+<div
         className={bannerClasses}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -361,9 +356,8 @@ export const GDPRBanner = ({
             </div>
           )}
         </div>
-      </motion.div>
-    </AnimatePresence>
-  )
+      </div>
+)
 }
 
 export type { ConsentPreferences }

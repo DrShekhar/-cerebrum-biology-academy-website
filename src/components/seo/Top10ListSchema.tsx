@@ -14,8 +14,6 @@ import {
   MapPin,
   ExternalLink,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 export interface RankedItem {
   rank: number
   name: string
@@ -220,24 +218,17 @@ export function Top10List({
                       <span className="font-semibold">{item.rating}</span>
                     </div>
                   )}
-                  <motion.div
-                    animate={{ rotate: isExpanded ? 180 : 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <div
+                   className="animate-fadeInUp">
                     <ChevronDown className="w-5 h-5 text-gray-400" />
-                  </motion.div>
+                  </div>
                 </div>
               </button>
 
               {/* Expanded Content */}
-              <AnimatePresence>
-                {isExpanded && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
+{isExpanded && (
+                  <div
+                   className="animate-fadeInUp">
                     <div className="px-4 pb-4 border-t border-gray-100 pt-4">
                       {/* Key Features Grid */}
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
@@ -305,10 +296,9 @@ export function Top10List({
                         )}
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           )
         })}
       </div>

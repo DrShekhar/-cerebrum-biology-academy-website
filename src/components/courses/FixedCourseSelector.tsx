@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ClassLevel, CourseProgram } from '@/types/courseSystem'
 import { coursePrograms } from '@/data/courseSystemData'
 import { getSeriesForClass, Series } from '@/data/seriesData'
@@ -86,9 +85,7 @@ function EnhancedSeriesCard({
   const selectedPlanData = series.plans.find((p) => p.id === selectedPlan) || series.plans[0]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border-2 ${theme.border}`}
     >
       {/* Header */}
@@ -169,10 +166,8 @@ function EnhancedSeriesCard({
 
         {/* Selected Plan Details */}
         {selectedPlanData && (
-          <motion.div
+          <div
             key={selectedPlan}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
             className={`${theme.bgCard} border ${theme.border} rounded-xl p-4 mb-6`}
           >
             <div className="flex justify-between items-start mb-3">
@@ -201,7 +196,7 @@ function EnhancedSeriesCard({
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Action Buttons - Prioritized CTA */}
@@ -231,7 +226,7 @@ function EnhancedSeriesCard({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -299,11 +294,8 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
         </div>
 
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Find Your Perfect
               <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
@@ -316,50 +308,38 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
               Join 10,000+ successful students with our AI-powered course matching and expert
               faculty guidance.
             </p>
-          </motion.div>
+          </div>
 
           {/* Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
             >
               <BookOpen className="w-8 h-8 text-blue-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">{coursePrograms.length}+</div>
               <div className="text-blue-100">Expert Courses</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
             >
               <Users className="w-8 h-8 text-green-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">10,000+</div>
               <div className="text-blue-100">Active Students</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
             >
               <Award className="w-8 h-8 text-yellow-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">98%</div>
               <div className="text-blue-100">NEET Success Rate</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20"
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 animate-fadeInUp"
             >
               <Sparkles className="w-8 h-8 text-purple-300 mx-auto mb-2" />
               <div className="text-3xl font-bold">₹25L+</div>
               <div className="text-blue-100">Scholarships Given</div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -368,11 +348,8 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
           {/* Search and Filter Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-8"
+          <div
+            className="mb-8 animate-fadeInUp"
           >
             <div className="text-center mb-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Find Your Perfect Course</h2>
@@ -412,14 +389,11 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
               onClassSelect={setSelectedClass}
               courseCounts={courseCounts}
             />
-          </motion.div>
+          </div>
 
           {/* Results Summary */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-8 text-center"
+          <div
+            className="mb-8 text-center animate-fadeInUp"
           >
             <p className="text-gray-600">
               {selectedClass !== 'all' ? (
@@ -446,28 +420,20 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
                 </>
               )}
             </p>
-          </motion.div>
+          </div>
 
           {/* Course Grid */}
-          <AnimatePresence mode="wait">
-            {selectedClass !== 'all' ? (
+{selectedClass !== 'all' ? (
               // Show Series Cards when specific class is selected
               seriesData.length > 0 ? (
-                <motion.div
+                <div
                   key={`series-${selectedClass}`}
-                  initial={{ opacity: 0, y: 60 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -30 }}
-                  transition={{ duration: 0.6 }}
-                  className="grid lg:grid-cols-3 gap-8"
+                  className="grid lg:grid-cols-3 gap-8 animate-fadeInUp"
                 >
                   {seriesData.map((series, index) => (
-                    <motion.div
+                    <div
                       key={series.id}
-                      initial={{ opacity: 0, y: 40 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                    >
+                     className="animate-fadeInUp">
                       <EnhancedSeriesCard
                         series={series}
                         classLevel={selectedClass}
@@ -484,52 +450,39 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
                           setShowDemoModal(true)
                         }}
                       />
-                    </motion.div>
+                    </div>
                   ))}
-                </motion.div>
+                </div>
               ) : (
-                <motion.div
+                <div
                   key={`no-series-${selectedClass}`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text-center py-16"
+                  className="text-center py-16 animate-fadeInUp"
                 >
                   <div className="text-6xl mb-4">📚</div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">No Series Found</h3>
                   <p className="text-gray-600">
                     No series data available for Class {selectedClass}
                   </p>
-                </motion.div>
+                </div>
               )
             ) : filteredCourses.length > 0 ? (
               // Show Course Cards when 'all' is selected
-              <motion.div
+              <div
                 key="all-courses"
-                initial={{ opacity: 0, y: 60 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6 }}
-                className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8"
+                className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 animate-fadeInUp"
               >
                 {filteredCourses.map((course, index) => (
-                  <motion.div
+                  <div
                     key={course.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
+                   className="animate-fadeInUp">
                     <CourseCard course={course} />
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             ) : (
-              <motion.div
+              <div
                 key="no-courses"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className="text-center py-16"
+                className="text-center py-16 animate-fadeInUp"
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">No Courses Found</h3>
@@ -547,16 +500,11 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
                 >
                   Clear Filters
                 </button>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
-          {/* CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-16 text-center bg-indigo-500 rounded-3xl p-12 text-white"
+{/* CTA Section */}
+          <div
+            className="mt-16 text-center bg-indigo-500 rounded-3xl p-12 text-white animate-fadeInUp"
           >
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your NEET Journey?</h3>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -582,7 +530,7 @@ export function FixedCourseSelector({ onCourseSelect, className = '' }: FixedCou
                 Talk to Expert
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

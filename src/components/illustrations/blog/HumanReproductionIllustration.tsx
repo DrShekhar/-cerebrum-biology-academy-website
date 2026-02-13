@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function HumanReproductionIllustration({
@@ -34,8 +33,6 @@ export function HumanReproductionIllustration({
 
       {/* Male symbol */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="100" cy="120" r="30" fill="#BFDBFE" stroke="#3B82F6" strokeWidth="3" />
         <line x1="120" y1="100" x2="145" y2="75" stroke="#3B82F6" strokeWidth="3" />
@@ -48,8 +45,6 @@ export function HumanReproductionIllustration({
 
       {/* Female symbol */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
       >
         <circle cx="300" cy="120" r="30" fill="#FBCFE8" stroke="#EC4899" strokeWidth="3" />
         <line x1="300" y1="150" x2="300" y2="180" stroke="#EC4899" strokeWidth="3" />
@@ -61,8 +56,6 @@ export function HumanReproductionIllustration({
 
       {/* Connecting heart */}
       <motion.g
-        animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
       >
         <path
           d="M200 110 L190 100 Q175 90 175 105 Q175 120 200 140 Q225 120 225 105 Q225 90 210 100 Z"
@@ -74,8 +67,6 @@ export function HumanReproductionIllustration({
 
       {/* Gametogenesis boxes */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       >
         <rect
           x="40"
@@ -99,8 +90,6 @@ export function HumanReproductionIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [2, -2, 2] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       >
         <rect
           x="240"
@@ -125,8 +114,6 @@ export function HumanReproductionIllustration({
 
       {/* Fertilization central */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1], opacity: [0.8, 1, 0.8] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       >
         <ellipse
           cx="200"
@@ -198,8 +185,6 @@ export function HumanReproductionIllustration({
 
       {/* Questions badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="40" cy="260" r="18" fill="#EC4899" />
         <text x="40" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">

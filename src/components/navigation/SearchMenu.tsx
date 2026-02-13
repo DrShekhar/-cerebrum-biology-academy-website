@@ -5,7 +5,6 @@ import { createPortal } from 'react-dom'
 import { useScrollLock } from '@/lib/hooks/useScrollLock'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Search,
   X,
@@ -560,22 +559,19 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
   // Modal content for portal
   const modalContent = (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          variants={overlayVariants}
+{isOpen && (
+        <div
           initial="closed"
           animate="open"
           exit="closed"
           className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
           onClick={handleClose}
         >
-          <motion.div
+          <div
             ref={focusTrapRef}
             role="dialog"
             aria-modal="true"
             aria-label="Search dialog"
-            variants={modalVariants}
             initial="closed"
             animate="open"
             exit="closed"
@@ -950,11 +946,10 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
                 <span className="sm:hidden">Tap to select</span>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 
   return (
     <>

@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, Download, Share2, Expand, Minimize } from 'lucide-react'
 import { GalleryItemData } from './GalleryCard'
 
@@ -113,12 +112,8 @@ export function GalleryLightbox({
   }
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/95"
+<div
+        className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 animate-fadeInUp"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -187,12 +182,8 @@ export function GalleryLightbox({
         )}
 
         {/* Main Image */}
-        <motion.div
+        <div
           key={currentItem.id}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
-          transition={{ duration: 0.2 }}
           className={`relative h-full w-full ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
           onClick={() => setIsZoomed(!isZoomed)}
         >
@@ -220,7 +211,7 @@ export function GalleryLightbox({
               />
             </div>
           )}
-        </motion.div>
+        </div>
 
         {/* Bottom Bar - Description */}
         {currentItem.description && (
@@ -271,7 +262,6 @@ export function GalleryLightbox({
             ))}
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
-  )
+      </div>
+)
 }

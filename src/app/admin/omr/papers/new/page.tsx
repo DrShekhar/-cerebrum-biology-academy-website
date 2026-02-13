@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { ArrowLeft, Save, Loader2 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
@@ -94,11 +93,9 @@ export default function CreatePaperPage() {
           </div>
         )}
 
-        <motion.form
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+        <form
           onSubmit={handleSubmit}
-          className="bg-white rounded-lg shadow-sm border p-6 space-y-6"
+          className="bg-white rounded-lg shadow-sm border p-6 space-y-6 animate-fadeInUp"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
@@ -274,7 +271,7 @@ export default function CreatePaperPage() {
               )}
             </Button>
           </div>
-        </motion.form>
+        </form>
       </div>
     </AdminLayout>
   )

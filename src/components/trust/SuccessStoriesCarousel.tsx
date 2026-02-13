@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronLeft,
   ChevronRight,
@@ -286,11 +285,8 @@ function SuccessStoryCard({ story }: { story: SuccessStory }) {
   const theme = getSeriesTheme(story.series)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+    <div
+      className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fadeInUp"
     >
       {/* Header with student info */}
       <div className={`${theme.bg} p-6 relative`}>
@@ -444,7 +440,7 @@ function SuccessStoryCard({ story }: { story: SuccessStory }) {
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -586,21 +582,15 @@ export default function SuccessStoriesCarousel({
 
       {/* Stories Grid */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
-          <motion.div
+<div
             key={currentIndex}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-fadeInUp"
           >
             {currentStories.map((story) => (
               <SuccessStoryCard key={story.id} story={story} />
             ))}
-          </motion.div>
-        </AnimatePresence>
-      </div>
+          </div>
+</div>
 
       {/* Slide Indicators */}
       {totalSlideGroups > 1 && (

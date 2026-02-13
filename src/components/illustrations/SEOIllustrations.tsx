@@ -1,7 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 // Modern flat illustration style similar to WhatsApp Business Platform
 // Colors: Soft pastels matching the site theme
 
@@ -74,8 +72,6 @@ export function StudentStudyingIllustration({ className = '', animate = true }: 
 
       {/* Floating elements */}
       <motion.g
-        animate={animate ? { y: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="50" cy="80" r="8" fill="#14B8A6" opacity="0.6" />
         <circle cx="350" cy="150" r="6" fill="#8B5CF6" opacity="0.6" />
@@ -185,8 +181,6 @@ export function TeacherIllustration({ className = '', animate = true }: Illustra
 
       {/* Floating elements */}
       <motion.g
-        animate={animate ? { rotate: [0, 10, 0] } : undefined}
-        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
       >
         <path d="M60 60 L70 50 L80 60 L70 70 Z" fill="#14B8A6" opacity="0.5" />
       </motion.g>
@@ -196,8 +190,6 @@ export function TeacherIllustration({ className = '', animate = true }: Illustra
         r="8"
         fill="#F97316"
         opacity="0.5"
-        animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       />
     </Wrapper>
   )
@@ -227,8 +219,6 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
 
       {/* Book 1 - Bottom (NCERT Green) */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0 }}
       >
         <rect x="60" y="170" width="180" height="30" rx="4" fill="#14B8A6" />
         <rect x="65" y="175" width="5" height="20" fill="#0D9488" />
@@ -239,8 +229,6 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
 
       {/* Book 2 - Blue */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
       >
         <rect x="70" y="140" width="170" height="28" rx="4" fill="#3B82F6" />
         <rect x="75" y="145" width="5" height="18" fill="#2563EB" />
@@ -251,8 +239,6 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
 
       {/* Book 3 - Purple */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
       >
         <rect x="65" y="112" width="175" height="26" rx="4" fill="#8B5CF6" />
         <rect x="70" y="117" width="5" height="16" fill="#7C3AED" />
@@ -263,8 +249,6 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
 
       {/* Book 4 - Orange (Fingertips) */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
       >
         <rect x="75" y="86" width="165" height="24" rx="4" fill="#F97316" />
         <rect x="80" y="90" width="5" height="16" fill="#EA580C" />
@@ -275,8 +259,6 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
 
       {/* Book 5 - Top (Red) */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.8 }}
       >
         <rect x="80" y="62" width="155" height="22" rx="4" fill="#EF4444" />
         <rect x="85" y="66" width="5" height="14" fill="#DC2626" />
@@ -291,16 +273,12 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
         cy="100"
         r="20"
         fill="#F0FDFA"
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.circle
         cx="50"
         cy="130"
         r="15"
         fill="#EDE9FE"
-        animate={animate ? { scale: [1, 1.15, 1] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       />
 
       {/* Bookmark */}
@@ -398,8 +376,6 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
 
       {/* Location pins */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <path
           d="M90 55 C90 40 75 35 75 50 C75 60 90 70 90 70 C90 70 105 60 105 50 C105 35 90 40 90 55"
@@ -409,8 +385,6 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
       >
         <path
           d="M260 55 C260 40 245 35 245 50 C245 60 260 70 260 70 C260 70 275 60 275 50 C275 35 260 40 260 55"
@@ -420,8 +394,6 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
       >
         <path
           d="M90 140 C90 125 75 120 75 135 C75 145 90 155 90 155 C90 155 105 145 105 135 C105 120 90 125 90 140"
@@ -431,8 +403,6 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}
       >
         <path
           d="M260 140 C260 125 245 120 245 135 C245 145 260 155 260 155 C260 155 275 145 275 135 C275 120 260 125 260 140"
@@ -443,8 +413,6 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
 
       {/* Central marker - main location */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="175" cy="130" r="25" fill="#EF4444" opacity="0.2" />
         <circle cx="175" cy="130" r="15" fill="#EF4444" opacity="0.4" />
@@ -527,8 +495,6 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
 
       {/* Speech bubble from teacher */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect x="130" y="80" width="50" height="30" rx="8" fill="#FFFFFF" />
         <polygon points="135,110 145,110 140,120" fill="#FFFFFF" />
@@ -562,8 +528,6 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
 
       {/* Speech bubble from student */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <ellipse cx="250" cy="100" rx="30" ry="20" fill="#FFFFFF" />
         <polygon points="265,118 275,118 270,128" fill="#FFFFFF" />
@@ -580,8 +544,6 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
         strokeWidth="2"
         strokeDasharray="5"
         fill="none"
-        animate={animate ? { strokeDashoffset: [0, 20] } : undefined}
-        transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
       />
 
       {/* Decorative elements */}

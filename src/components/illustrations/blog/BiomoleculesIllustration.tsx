@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function BiomoleculesIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -110,9 +109,6 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
 
       {/* Center hexagon representing cell/biomolecule hub */}
       <motion.g
-        initial={animate ? { scale: 0, opacity: 0 } : undefined}
-        animate={animate ? { scale: 1, opacity: 1 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <circle cx="260" cy="200" r="55" fill="url(#centerGlow)" filter="url(#biomolShadow)" />
         <circle cx="260" cy="200" r="50" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
@@ -129,9 +125,6 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
 
       {/* Carbohydrates - Top Left */}
       <motion.g
-        initial={animate ? { x: -30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.3, duration: 0.5 }}
       >
         {/* Card */}
         <rect
@@ -191,16 +184,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         strokeWidth="2"
         strokeDasharray="4 2"
         opacity="0.4"
-        initial={animate ? { pathLength: 0 } : undefined}
-        animate={animate ? { pathLength: 1 } : undefined}
-        transition={{ delay: 0.6, duration: 0.4 }}
       />
 
       {/* Proteins - Top Right */}
       <motion.g
-        initial={animate ? { x: 30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.4, duration: 0.5 }}
       >
         {/* Card */}
         <rect
@@ -284,16 +271,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         strokeWidth="2"
         strokeDasharray="4 2"
         opacity="0.4"
-        initial={animate ? { pathLength: 0 } : undefined}
-        animate={animate ? { pathLength: 1 } : undefined}
-        transition={{ delay: 0.7, duration: 0.4 }}
       />
 
       {/* Lipids - Bottom Left */}
       <motion.g
-        initial={animate ? { x: -30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.5 }}
       >
         {/* Card */}
         <rect
@@ -370,16 +351,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         strokeWidth="2"
         strokeDasharray="4 2"
         opacity="0.4"
-        initial={animate ? { pathLength: 0 } : undefined}
-        animate={animate ? { pathLength: 1 } : undefined}
-        transition={{ delay: 0.8, duration: 0.4 }}
       />
 
       {/* Nucleic Acids - Bottom Right */}
       <motion.g
-        initial={animate ? { x: 30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.6, duration: 0.5 }}
       >
         {/* Card */}
         <rect
@@ -482,16 +457,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         strokeWidth="2"
         strokeDasharray="4 2"
         opacity="0.4"
-        initial={animate ? { pathLength: 0 } : undefined}
-        animate={animate ? { pathLength: 1 } : undefined}
-        transition={{ delay: 0.9, duration: 0.4 }}
       />
 
       {/* Bottom info bar */}
       <motion.g
-        initial={animate ? { y: 20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 1, duration: 0.5 }}
       >
         <rect
           x="180"
@@ -515,9 +484,6 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         fill="#1E293B"
         fontSize="14"
         fontWeight="700"
-        initial={animate ? { opacity: 0, y: -10 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         The 4 Major Biomolecules
       </motion.text>

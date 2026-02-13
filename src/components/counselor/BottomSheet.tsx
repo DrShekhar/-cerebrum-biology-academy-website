@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useRef, ReactNode } from 'react'
-import { motion, AnimatePresence, PanInfo } from 'framer-motion'
 import { X } from 'lucide-react'
 
 interface BottomSheetProps {
@@ -65,32 +64,23 @@ export function BottomSheet({
   const sheetHeight = `${snapPoints[currentSnapIndex.current]}vh`
 
   return (
-    <AnimatePresence>
-      {isOpen && (
+{isOpen && (
         <>
           {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 z-50"
+          <div
+            className="fixed inset-0 bg-black/50 z-50 animate-fadeInUp"
             onClick={onClose}
           />
 
           {/* Bottom Sheet */}
-          <motion.div
+          <div
             ref={sheetRef}
-            initial={{ y: '100%' }}
-            animate={{ y: 0 }}
-            exit={{ y: '100%' }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
             drag="y"
             dragConstraints={{ top: 0, bottom: 0 }}
             dragElastic={0.2}
             onDragEnd={handleDragEnd}
             style={{ height: sheetHeight }}
-            className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-2xl flex flex-col"
+            className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-2xl flex flex-col animate-fadeInUp"
           >
             {/* Drag Handle */}
             <div className="flex justify-center pt-3 pb-2">
@@ -112,9 +102,8 @@ export function BottomSheet({
 
             {/* Content */}
             <div className="flex-1 overflow-y-auto overscroll-contain">{children}</div>
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
-  )
+)
 }

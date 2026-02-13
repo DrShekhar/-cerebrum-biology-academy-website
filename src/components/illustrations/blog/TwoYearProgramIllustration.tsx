@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function TwoYearProgramIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -36,16 +35,10 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
         stroke="#9CA3AF"
         strokeWidth="4"
         strokeLinecap="round"
-        initial={animate ? { pathLength: 0 } : undefined}
-        animate={animate ? { pathLength: 1 } : undefined}
-        transition={{ delay: 0.2, duration: 1 }}
       />
 
       {/* Year 1 - Class 11 */}
       <motion.g
-        initial={animate ? { y: 30, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.5 }}
       >
         <circle cx="100" cy="150" r="25" fill="#8B5CF6" />
         <text x="100" y="145" textAnchor="middle" fill="#FFF" fontSize="9" fontWeight="600">
@@ -85,9 +78,6 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
 
       {/* Midpoint - Revision */}
       <motion.g
-        initial={animate ? { scale: 0 } : undefined}
-        animate={animate ? { scale: 1 } : undefined}
-        transition={{ delay: 0.8, duration: 0.4 }}
       >
         <circle cx="200" cy="150" r="18" fill="#F59E0B" />
         <text x="200" y="154" textAnchor="middle" fill="#FFF" fontSize="8" fontWeight="600">
@@ -114,9 +104,6 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
 
       {/* Year 2 - Class 12 */}
       <motion.g
-        initial={animate ? { y: 30, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 1.1, duration: 0.5 }}
       >
         <circle cx="300" cy="150" r="25" fill="#22C55E" />
         <text x="300" y="145" textAnchor="middle" fill="#FFF" fontSize="9" fontWeight="600">
@@ -153,9 +140,6 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
 
       {/* NEET Exam endpoint */}
       <motion.g
-        initial={animate ? { scale: 0 } : undefined}
-        animate={animate ? { scale: 1 } : undefined}
-        transition={{ delay: 1.4, duration: 0.4, type: 'spring' }}
       >
         <circle cx="350" cy="150" r="15" fill="#EF4444" />
         <text x="350" y="154" textAnchor="middle" fill="#FFF" fontSize="7" fontWeight="700">
@@ -164,8 +148,6 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
 
         {/* Trophy */}
         <motion.g
-          animate={animate ? { y: [0, -5, 0] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           <rect x="338" y="170" width="24" height="30" rx="4" fill="#FCD34D" />
           <circle cx="350" cy="180" r="8" fill="#F59E0B" />
@@ -179,16 +161,10 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
         stroke="#22C55E"
         strokeWidth="3"
         strokeLinecap="round"
-        initial={animate ? { pathLength: 0 } : undefined}
-        animate={animate ? { pathLength: 1 } : undefined}
-        transition={{ delay: 1.6, duration: 1.5 }}
       />
 
       {/* Title */}
       <motion.g
-        initial={animate ? { y: -20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         <rect x="100" y="250" width="200" height="35" rx="6" fill="#1F2937" />
         <text x="200" y="272" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="600">
@@ -198,9 +174,6 @@ export function TwoYearProgramIllustration({ className = '', animate = true }: I
 
       {/* Benefits bubbles */}
       <motion.g
-        initial={animate ? { scale: 0 } : undefined}
-        animate={animate ? { scale: 1 } : undefined}
-        transition={{ delay: 1.8, duration: 0.3 }}
       >
         <circle cx="30" cy="80" r="25" fill="#DBEAFE" />
         <text x="30" y="77" textAnchor="middle" fill="#1D4ED8" fontSize="7" fontWeight="600">

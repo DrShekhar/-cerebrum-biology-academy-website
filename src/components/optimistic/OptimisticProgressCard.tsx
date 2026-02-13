@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { TrendingUp, CheckCircle, Loader2 } from 'lucide-react'
 import { useOptimisticUpdate } from '@/hooks/useOptimisticUpdate'
 import { useToast } from '@/components/ui/Toast'
@@ -66,18 +65,10 @@ export function OptimisticProgressCard({ userId, initialProgress }: OptimisticPr
   }
 
   return (
-    <motion.div
+    <div
       className={`bg-white rounded-2xl p-6 shadow-lg border-2 transition-all ${
         isOptimistic ? 'border-blue-300 bg-blue-50/50' : 'border-gray-200'
       }`}
-      animate={
-        isOptimistic
-          ? {
-              scale: [1, 1.02, 1],
-              transition: { duration: 0.3 },
-            }
-          : {}
-      }
     >
       <div className="flex items-start justify-between mb-4">
         <div>
@@ -141,6 +132,6 @@ export function OptimisticProgressCard({ userId, initialProgress }: OptimisticPr
           <span>Complete Practice Session</span>
         </button>
       </div>
-    </motion.div>
+    </div>
   )
 }

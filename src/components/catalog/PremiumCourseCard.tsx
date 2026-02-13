@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Star,
   Users,
@@ -116,14 +115,8 @@ export function PremiumCourseCard({ course, onSelect, className = '' }: PremiumC
   const savingsPercentage = Math.round((savings / course.originalPrice) * 100)
 
   return (
-    <motion.div
+    <div
       className={`relative group cursor-pointer ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{
-        scale: 1.02,
-        transition: { duration: 0.2, ease: 'easeOut' },
-      }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >
@@ -284,54 +277,42 @@ export function PremiumCourseCard({ course, onSelect, className = '' }: PremiumC
                 <ChevronDown className={`h-4 w-4 ${design.accentColor}`} />
               )}
             </button>
-
-            <AnimatePresence>
-              {isExpanded && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  className="overflow-hidden"
+{isExpanded && (
+                <div
+                  className="overflow-hidden animate-fadeInUp"
                 >
                   <div
                     className={`${design.glassColor} rounded-xl p-4 mt-2 border border-white/20`}
                   >
                     <div className="grid gap-2">
                       {course.features.map((feature, index) => (
-                        <motion.div
+                        <div
                           key={index}
-                          initial={{ x: -10, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          transition={{ delay: index * 0.05 }}
-                          className="flex items-start gap-2"
+                          className="flex items-start gap-2 animate-fadeInUp"
                         >
                           <Check className={`h-3 w-3 ${design.accentColor} mt-1 flex-shrink-0`} />
                           <span className={`${design.textColor} text-sm opacity-90`}>
                             {feature}
                           </span>
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-          </div>
+</div>
 
           {/* Silicon Valley CTA */}
-          <motion.button
+          <button
             onClick={(e) => {
               e.stopPropagation()
               onSelect?.(course)
             }}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
             className={`w-full ${design.buttonColor} py-4 rounded-xl font-bold text-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl`}
           >
             Choose This Path
             <ArrowRight className="h-5 w-5" />
-          </motion.button>
+          </button>
         </div>
 
         {/* Harvard-style Academic Excellence Watermark */}
@@ -341,6 +322,6 @@ export function PremiumCourseCard({ course, onSelect, className = '' }: PremiumC
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

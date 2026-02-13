@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { AnimatePresence } from 'framer-motion'
 import {
   Save,
   Send,
@@ -188,8 +187,7 @@ export function Lifecycle() {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {activeTab === 'draft' && (
+{activeTab === 'draft' && (
           <DraftTab
             draftSettings={draftSettings}
             setDraftSettings={setDraftSettings}
@@ -260,8 +258,7 @@ export function Lifecycle() {
             initiateRegrade={initiateRegrade}
           />
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

@@ -21,8 +21,6 @@ import {
   Timer,
   BarChart3,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface TestEngineProps {
   test: MockTest
   userClass: 'class-11' | 'class-12' | 'dropper'
@@ -194,11 +192,8 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
   if (showInstructions) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
-        <motion.div
-          className="bg-white rounded-3xl shadow-xl max-w-4xl w-full p-8"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+        <div
+          className="bg-white rounded-3xl shadow-xl max-w-4xl w-full p-8 animate-fadeInUp"
         >
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">{test.title}</h1>
@@ -259,7 +254,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
               Start Test
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     )
   }
@@ -324,14 +319,9 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
 
       <div className="flex h-[calc(100vh-80px)]">
         {/* Question Palette Sidebar */}
-        <AnimatePresence>
-          {showQuestionPalette && (
-            <motion.div
-              className="w-80 bg-gray-50 border-r border-gray-200 p-6 overflow-y-auto"
-              initial={{ x: -320 }}
-              animate={{ x: 0 }}
-              exit={{ x: -320 }}
-              transition={{ duration: 0.3 }}
+{showQuestionPalette && (
+            <div
+              className="w-80 bg-gray-50 border-r border-gray-200 p-6 overflow-y-auto animate-fadeInUp"
             >
               <h3 className="font-bold text-gray-900 mb-4">Question Palette</h3>
 
@@ -392,11 +382,9 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Main Content */}
+{/* Main Content */}
         <div className="flex-1 flex flex-col">
           {/* Question Content */}
           <div className="flex-1 p-8 overflow-y-auto">
@@ -426,12 +414,9 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
               </div>
 
               {/* Question */}
-              <motion.div
+              <div
                 key={currentQuestionIndex}
-                className="bg-white rounded-2xl border border-gray-200 p-8 mb-8"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3 }}
+                className="bg-white rounded-2xl border border-gray-200 p-8 mb-8 animate-fadeInUp"
               >
                 <div className="mb-6">
                   <p className="text-lg text-gray-900 leading-relaxed">
@@ -457,7 +442,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                     const isSelected =
                       responses.get(currentQuestionIndex)?.selectedAnswer === option.id
                     return (
-                      <motion.button
+                      <button
                         key={option.id}
                         onClick={() => handleOptionSelect(option.id)}
                         className={`w-full text-left p-4 rounded-xl border-2 transition-all ${
@@ -465,8 +450,6 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                             ? 'border-blue-500 bg-blue-50 text-blue-900'
                             : 'border-gray-200 hover:border-gray-300 hover:bg-gray-50'
                         }`}
-                        whileHover={{ scale: 1.01 }}
-                        whileTap={{ scale: 0.99 }}
                       >
                         <div className="flex items-center">
                           <div
@@ -490,7 +473,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                             />
                           </div>
                         )}
-                      </motion.button>
+                      </button>
                     )
                   })}
                 </div>
@@ -518,7 +501,7 @@ export function TestEngine({ test, userClass, onTestComplete, onTestExit }: Test
                     </div>
                   </div>
                 )}
-              </motion.div>
+              </div>
             </div>
           </div>
 

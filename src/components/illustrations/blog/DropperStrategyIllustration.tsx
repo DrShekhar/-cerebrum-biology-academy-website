@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function DropperStrategyIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -32,8 +31,6 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
       {/* Before vs After comparison */}
       {/* First attempt - faded */}
       <motion.g
-        animate={animate ? { opacity: [0.5, 0.7, 0.5] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect
           x="30"
@@ -59,8 +56,6 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
 
       {/* Arrow */}
       <motion.g
-        animate={animate ? { x: [0, 5, 0] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
       >
         <line x1="190" y1="110" x2="220" y2="110" stroke="#8B5CF6" strokeWidth="3" />
         <polygon points="220,110 210,105 210,115" fill="#8B5CF6" />
@@ -71,8 +66,6 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
 
       {/* Second attempt - bright */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect
           x="230"
@@ -112,8 +105,6 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
       </text>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect x="45" y="205" width="100" height="55" rx="6" fill="#DBEAFE" />
         <text x="95" y="223" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
@@ -128,8 +119,6 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
       >
         <rect x="155" y="205" width="100" height="55" rx="6" fill="#FEF3C7" />
         <text x="205" y="223" fontSize="7" fill="#B45309" textAnchor="middle" fontWeight="bold">
@@ -144,8 +133,6 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
       >
         <rect x="265" y="205" width="100" height="55" rx="6" fill="#DCFCE7" />
         <text x="315" y="223" fontSize="7" fill="#16A34A" textAnchor="middle" fontWeight="bold">

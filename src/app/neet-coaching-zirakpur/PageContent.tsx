@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   Users,
   Trophy,
@@ -211,11 +210,8 @@ export default function PageContent() {
         <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <span className="inline-block px-4 py-2 bg-teal-500/20 text-teal-300 rounded-full text-sm font-medium mb-6">
                 🎯 90+ Zirakpur Students | Fastest Growing Area
               </span>
@@ -243,7 +239,7 @@ export default function PageContent() {
                   </Button>
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -253,18 +249,14 @@ export default function PageContent() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {successMetrics.map((metric, index) => (
-              <motion.div
+              <div
                 key={metric.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50"
+                className="text-center p-6 rounded-xl bg-gradient-to-br from-teal-50 to-cyan-50 animate-fadeInUp"
               >
                 <metric.icon className="w-8 h-8 text-teal-600 mx-auto mb-3" />
                 <div className="text-3xl lg:text-4xl font-bold text-teal-900">{metric.value}</div>
                 <div className="text-gray-600 mt-1">{metric.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -281,19 +273,15 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {whyNotSector34.map((item, index) => (
-              <motion.div
+              <div
                 key={item.problem}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm border border-red-100"
+                className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm border border-red-100 animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-red-600" />
                 </div>
                 <p className="text-gray-700 font-medium">{item.problem}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -310,19 +298,15 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {cerebrumAdvantages.map((item, index) => (
-              <motion.div
+              <div
                 key={item.point}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm border border-green-100"
+                className="flex items-center gap-4 p-5 bg-white rounded-xl shadow-sm border border-green-100 animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-6 h-6 text-green-600" />
                 </div>
                 <p className="text-gray-700 font-medium">{item.point}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -339,12 +323,8 @@ export default function PageContent() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {zirakpurAreas.map((area, index) => (
-              <motion.div
+              <div
                 key={area.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.05 }}
-                viewport={{ once: true }}
                 className={`p-4 rounded-xl text-center ${
                   area.priority === 'high'
                     ? 'bg-gradient-to-br from-teal-500 to-cyan-600 text-white'
@@ -358,7 +338,7 @@ export default function PageContent() {
                 <div className={`text-xs mt-1 ${area.priority === 'high' ? 'text-teal-200' : 'text-gray-500'}`}>
                   {area.highlight}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -374,20 +354,16 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow animate-fadeInUp"
               >
                 <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-7 h-7 text-teal-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -506,13 +482,9 @@ export default function PageContent() {
           </div>
           <div className="max-w-4xl mx-auto space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="border border-gray-200 rounded-xl overflow-hidden"
+                className="border border-gray-200 rounded-xl overflow-hidden animate-fadeInUp"
               >
                 <details className="group">
                   <summary className="flex items-center justify-between p-5 cursor-pointer bg-gray-50 hover:bg-gray-100">
@@ -523,7 +495,7 @@ export default function PageContent() {
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 </details>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

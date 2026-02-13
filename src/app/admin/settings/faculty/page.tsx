@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   UserCog,
   UserPlus,
@@ -181,10 +180,8 @@ export default function FacultySettingsPage() {
 
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -193,13 +190,10 @@ export default function FacultySettingsPage() {
               </div>
               <UserCog className="w-8 h-8 text-blue-500" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -208,13 +202,10 @@ export default function FacultySettingsPage() {
               </div>
               <Users className="w-8 h-8 text-green-600" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -223,13 +214,10 @@ export default function FacultySettingsPage() {
               </div>
               <Star className="w-8 h-8 text-yellow-500" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -238,7 +226,7 @@ export default function FacultySettingsPage() {
               </div>
               <Award className="w-8 h-8 text-purple-500" />
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Filters */}
@@ -272,12 +260,9 @@ export default function FacultySettingsPage() {
         {/* Faculty Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {filteredFaculty.map((member, index) => (
-            <motion.div
+            <div
               key={member.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
             >
               {/* Faculty Header */}
               <div className="flex justify-between items-start mb-4">
@@ -382,7 +367,7 @@ export default function FacultySettingsPage() {
                   Analytics
                 </Button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

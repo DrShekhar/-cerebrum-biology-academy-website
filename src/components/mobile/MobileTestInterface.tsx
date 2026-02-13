@@ -21,8 +21,6 @@ import {
   AlertTriangle,
   Smartphone,
 } from 'lucide-react'
-import { motion, AnimatePresence, PanInfo } from 'framer-motion'
-
 interface MobileTestInterfaceProps {
   test: MockTest
   userClass: 'class-11' | 'class-12' | 'dropper'
@@ -343,9 +341,9 @@ export function MobileTestInterface({
       </header>
 
       {/* Question Content */}
-      <motion.div
+      <div
         ref={questionRef}
-        className="flex-1 p-4 pb-20 overflow-y-auto"
+        className="flex-1 p-4 pb-20 overflow-y-auto animate-fadeInUp"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -353,8 +351,6 @@ export function MobileTestInterface({
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.2}
-        animate={isShaking ? { x: [-10, 10, -10, 10, 0] } : {}}
-        transition={{ duration: 0.3 }}
       >
         {/* Question */}
         <div className="mb-6">
@@ -401,7 +397,7 @@ export function MobileTestInterface({
             const isSelected = selectedAnswers[currentQuestionIndex] === index
 
             return (
-              <motion.button
+              <button
                 key={index}
                 onClick={() => handleAnswerSelect(index)}
                 className={`w-full p-4 rounded-xl border-2 text-left transition-all duration-200 touch-target ripple-effect ${
@@ -409,8 +405,6 @@ export function MobileTestInterface({
                     ? 'border-blue-500 bg-blue-50 text-blue-900'
                     : 'border-gray-200 bg-white text-gray-700 hover:border-gray-300'
                 }`}
-                whileTap={{ scale: 0.98 }}
-                layout
               >
                 <div className="flex items-center">
                   <div
@@ -423,7 +417,7 @@ export function MobileTestInterface({
                   </div>
                   <span className="text-base">{option}</span>
                 </div>
-              </motion.button>
+              </button>
             )
           })}
         </div>
@@ -433,7 +427,7 @@ export function MobileTestInterface({
           <Smartphone className="w-4 h-4 inline mr-1" />
           Swipe left/right to navigate • Shake to clear answer
         </div>
-      </motion.div>
+      </div>
 
       {/* Navigation Footer */}
       <footer className="bg-white border-t border-gray-200 p-4 safe-area-bottom">
@@ -484,24 +478,16 @@ export function MobileTestInterface({
       </footer>
 
       {/* Side Menu */}
-      <AnimatePresence>
-        {showMenu && (
-          <motion.div
-            className="fixed inset-0 z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+{showMenu && (
+          <div
+            className="fixed inset-0 z-50 animate-fadeInUp"
           >
             <div
               className="absolute inset-0 bg-black bg-opacity-50"
               onClick={() => setShowMenu(false)}
             />
-            <motion.div
-              className="absolute top-0 left-0 h-full w-80 bg-white shadow-xl"
-              initial={{ x: -320 }}
-              animate={{ x: 0 }}
-              exit={{ x: -320 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            <div
+              className="absolute top-0 left-0 h-full w-80 bg-white shadow-xl animate-fadeInUp"
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
@@ -572,30 +558,20 @@ export function MobileTestInterface({
                   </Button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Question Palette */}
-      <AnimatePresence>
-        {showQuestionPalette && (
-          <motion.div
-            className="fixed inset-0 z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+{/* Question Palette */}
+{showQuestionPalette && (
+          <div
+            className="fixed inset-0 z-50 animate-fadeInUp"
           >
             <div
               className="absolute inset-0 bg-black bg-opacity-50"
               onClick={() => setShowQuestionPalette(false)}
             />
-            <motion.div
-              className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-96 overflow-y-auto"
-              initial={{ y: 400 }}
-              animate={{ y: 0 }}
-              exit={{ y: 400 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            <div
+              className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-96 overflow-y-auto animate-fadeInUp"
             >
               <div className="p-6">
                 <div className="flex items-center justify-between mb-6">
@@ -643,10 +619,9 @@ export function MobileTestInterface({
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

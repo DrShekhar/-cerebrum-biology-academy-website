@@ -13,8 +13,6 @@ import {
   Trophy,
   ArrowUp,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 interface SuccessAnalyticsProps {
   data: {
     totalStudents: number
@@ -71,11 +69,8 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
     color: string
     trend?: number
   }) => (
-    <motion.div
-      className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <div
+      className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
     >
       <div className="flex items-center justify-between mb-4">
         <div className={`w-12 h-12 ${color} rounded-xl flex items-center justify-center`}>
@@ -90,7 +85,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
       </div>
       <div className="text-3xl font-bold text-gray-900 mb-1">{value}</div>
       <div className="text-sm text-gray-600">{subtitle}</div>
-    </motion.div>
+    </div>
   )
 
   const tabs: Array<{
@@ -229,7 +224,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
         <div className="space-y-8">
           <div className="grid md:grid-cols-3 gap-6">
             {Object.entries(data.subjectWiseStats).map(([subject, stats]) => (
-              <motion.div
+              <div
                 key={subject}
                 className={`rounded-3xl shadow-lg p-8 ${
                   subject === 'biology'
@@ -238,9 +233,6 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                       ? 'bg-blue-50'
                       : 'bg-purple-50'
                 }`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
               >
                 <div className="text-center">
                   <h3
@@ -302,7 +294,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -334,9 +326,6 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                     <motion.tr
                       key={index}
                       className="border-b border-gray-100 hover:bg-gray-50"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
                       <td className="py-4 px-6">
                         <div className="font-medium text-gray-900">{batch.batchType}</div>
@@ -393,12 +382,9 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
 
             <div className="space-y-4">
               {data.collegeAdmissions.map((college, index) => (
-                <motion.div
+                <div
                   key={index}
-                  className="flex items-center justify-between p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="flex items-center justify-between p-6 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors animate-fadeInUp"
                 >
                   <div className="flex items-center">
                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4">
@@ -416,7 +402,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                     <div className="text-2xl font-bold text-blue-600">{college.students}</div>
                     <div className="text-gray-600 text-sm">Students Admitted</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>

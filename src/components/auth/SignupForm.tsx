@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   User,
   Mail,
@@ -78,10 +77,8 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="w-full max-w-2xl mx-auto"
+    <div
+      className="w-full max-w-2xl mx-auto animate-fadeInUp"
     >
       <div className="text-center mb-8">
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -272,6 +269,6 @@ export function SignupForm({ userId, phone, onComplete }: SignupFormProps) {
       <p className="text-xs text-center text-gray-500 mt-6">
         * Required fields. Your information is secure and will not be shared.
       </p>
-    </motion.div>
+    </div>
   )
 }

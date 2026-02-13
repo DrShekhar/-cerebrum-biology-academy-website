@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Loader2, X, CheckCircle2, AlertCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -130,17 +129,6 @@ export function ProgressIndicator({
               r="42"
               cx="50"
               cy="50"
-              initial={{ strokeDashoffset: 264 }}
-              animate={{
-                strokeDashoffset:
-                  mode === 'determinate' ? 264 - (264 * calculatedPercentage) / 100 : 264,
-                rotate: mode === 'indeterminate' ? 360 : 0,
-              }}
-              transition={{
-                strokeDashoffset: { duration: 0.5, ease: 'easeInOut' },
-                rotate:
-                  mode === 'indeterminate' ? { duration: 2, repeat: Infinity, ease: 'linear' } : {},
-              }}
               style={{
                 transformOrigin: '50% 50%',
                 transform: 'rotate(-90deg)',
@@ -165,14 +153,12 @@ export function ProgressIndicator({
         </div>
 
         <div className="text-center max-w-xs">
-          <motion.p
+          <p
             className={cn('font-medium', error ? 'text-red-600' : colors.text, sizes.container)}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
             key={status}
           >
             {error || status}
-          </motion.p>
+          </p>
 
           {showSteps && !error && (
             <p className={cn('text-slate-500 mt-1', sizes.text)}>
@@ -230,9 +216,6 @@ export function ProgressIndicator({
                 r="14"
                 cx="16"
                 cy="16"
-                initial={{ strokeDashoffset: 88 }}
-                animate={{ strokeDashoffset: 88 - (88 * calculatedPercentage) / 100 }}
-                transition={{ duration: 0.5, ease: 'easeInOut' }}
               />
             </svg>
             <div className="absolute inset-0 flex items-center justify-center">
@@ -273,14 +256,12 @@ export function ProgressIndicator({
     <div className={cn('w-full space-y-3', className)}>
       <div className="flex items-center justify-between">
         <div className="flex-1 min-w-0">
-          <motion.p
+          <p
             className={cn(
               'font-medium truncate',
               error ? 'text-red-600' : colors.text,
               sizes.container
             )}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
             key={status}
           >
             {error ? (
@@ -296,7 +277,7 @@ export function ProgressIndicator({
             ) : (
               status
             )}
-          </motion.p>
+          </p>
 
           <div className={cn('flex items-center gap-4 mt-1', sizes.text)}>
             {showSteps && !error && (
@@ -334,34 +315,19 @@ export function ProgressIndicator({
       <div className="relative">
         <div className={cn('w-full bg-slate-200 rounded-full overflow-hidden', sizes.progress)}>
           {mode === 'indeterminate' ? (
-            <motion.div
+            <div
               className={cn('h-full rounded-full', colors.bg)}
-              initial={{ x: '-100%', width: '40%' }}
-              animate={{
-                x: ['0%', '250%'],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
             />
           ) : (
-            <motion.div
+            <div
               className={cn('h-full rounded-full', colors.bg)}
-              initial={{ width: 0 }}
-              animate={{ width: `${calculatedPercentage}%` }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
             />
           )}
         </div>
 
         {success && (
-          <motion.div
+          <div
             className={cn('absolute inset-0 rounded-full', colors.bg)}
-            initial={{ scaleX: calculatedPercentage / 100 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.3 }}
             style={{ transformOrigin: 'left' }}
           />
         )}

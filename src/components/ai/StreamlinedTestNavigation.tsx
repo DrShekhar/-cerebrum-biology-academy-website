@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronDown,
   ChevronRight,
@@ -474,14 +473,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                 <Search className="w-4 h-4" />
                 <span>Search tabs... (Ctrl+K)</span>
               </button>
-
-              <AnimatePresence>
-                {showSearch && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-lg shadow-lg z-50"
+{showSearch && (
+                  <div
+                    className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-lg shadow-lg z-50 animate-fadeInUp"
                   >
                     <div className="p-3">
                       <input
@@ -524,10 +518,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                         ))}
                       </div>
                     )}
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
 
             {/* Breadcrumbs */}
             {showBreadcrumbs && (
@@ -678,13 +671,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
               </button>
 
               {/* Group Tabs */}
-              <AnimatePresence>
-                {(groupStates[group.id] || isCollapsed) && (
-                  <motion.div
-                    initial={!isCollapsed ? { height: 0, opacity: 0 } : { opacity: 1 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={!isCollapsed ? { height: 0, opacity: 0 } : { opacity: 0 }}
-                    className="overflow-hidden"
+{(groupStates[group.id] || isCollapsed) && (
+                  <div
+                    className="overflow-hidden animate-fadeInUp"
                   >
                     <div className={isCollapsed ? 'space-y-1' : 'ml-4 space-y-1'}>
                       {group.tabs.map((tab) => (
@@ -756,10 +745,9 @@ const StreamlinedTestNavigation: React.FC<StreamlinedTestNavigationProps> = ({
                         </button>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           ))}
         </div>
       </div>

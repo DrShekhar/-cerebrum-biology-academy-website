@@ -1,7 +1,6 @@
 'use client'
 
 import { useMemo } from 'react'
-import { motion } from 'framer-motion'
 import {
   TrendingUp,
   TrendingDown,
@@ -223,10 +222,8 @@ export default function ComparisonAnalytics({
       <div className="p-6 space-y-6">
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-green-50 rounded-lg p-4 text-center border border-green-200"
+          <div
+            className="bg-green-50 rounded-lg p-4 text-center border border-green-200 animate-fadeInUp"
           >
             <DollarSign className="w-6 h-6 text-green-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-green-900">
@@ -234,13 +231,10 @@ export default function ComparisonAnalytics({
             </div>
             <div className="text-sm text-green-700">Most Affordable</div>
             <div className="text-xs text-gray-600 mt-1">{analytics.mostAffordable.name}</div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-blue-50 rounded-lg p-4 text-center border border-blue-200"
+          <div
+            className="bg-blue-50 rounded-lg p-4 text-center border border-blue-200 animate-fadeInUp"
           >
             <Calculator className="w-6 h-6 text-blue-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-blue-900">
@@ -248,13 +242,10 @@ export default function ComparisonAnalytics({
             </div>
             <div className="text-sm text-blue-700">Best Value/Hour</div>
             <div className="text-xs text-gray-600 mt-1">{analytics.bestValue.name}</div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-purple-50 rounded-lg p-4 text-center border border-purple-200"
+          <div
+            className="bg-purple-50 rounded-lg p-4 text-center border border-purple-200 animate-fadeInUp"
           >
             <Award className="w-6 h-6 text-purple-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-purple-900">
@@ -262,13 +253,10 @@ export default function ComparisonAnalytics({
             </div>
             <div className="text-sm text-purple-700">Highest Success</div>
             <div className="text-xs text-gray-600 mt-1">{analytics.highestSuccess.name}</div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="bg-orange-50 rounded-lg p-4 text-center border border-orange-200"
+          <div
+            className="bg-orange-50 rounded-lg p-4 text-center border border-orange-200 animate-fadeInUp"
           >
             <TrendingUp className="w-6 h-6 text-orange-600 mx-auto mb-2" />
             <div className="text-lg font-bold text-orange-900">
@@ -276,7 +264,7 @@ export default function ComparisonAnalytics({
             </div>
             <div className="text-sm text-orange-700">Top Value Score</div>
             <div className="text-xs text-gray-600 mt-1">{analytics.valueAnalysis[0].name}</div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Value Analysis Chart */}
@@ -299,10 +287,7 @@ export default function ComparisonAnalytics({
                     <span className="text-gray-600">{course.valueScore}/100</span>
                   </div>
                   <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${percentage}%` }}
-                      transition={{ duration: 1, delay: index * 0.2 }}
+                    <div
                       className={`h-full ${barColor} rounded-full`}
                     />
                   </div>
@@ -332,11 +317,8 @@ export default function ComparisonAnalytics({
             }
 
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
                 className={`p-4 rounded-lg border-l-4 ${colorClasses[insight.type]}`}
               >
                 <div className="flex items-start">
@@ -353,7 +335,7 @@ export default function ComparisonAnalytics({
                     <p className="text-sm opacity-90">{insight.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>

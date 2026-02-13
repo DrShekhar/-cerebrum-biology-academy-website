@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home, Target, Clock, BookOpen, Zap, Calendar, TrendingUp,
 } from 'lucide-react'
@@ -74,7 +73,7 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
               Limited Seats - Next Batch Starting Soon
@@ -115,12 +114,12 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Demo
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Get Next Batch Dates
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -129,11 +128,11 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-orange-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -142,21 +141,21 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
       {/* Course Highlights */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What You Get in 45 Days</h2>
             <p className="text-xl text-slate-600">Complete preparation package for last-minute revision</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courseHighlights.map((highlight, index) => (
-              <motion.div key={highlight.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={highlight.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                   <highlight.icon className="w-6 h-6 text-orange-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{highlight.title}</h3>
                 <p className="text-slate-600 text-sm">{highlight.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -165,15 +164,15 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
       {/* Daily Schedule */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Daily Schedule</h2>
             <p className="text-xl text-slate-600">Intensive 6-hour daily program</p>
-          </motion.div>
+          </div>
 
           <div className="max-w-3xl mx-auto">
             {dailySchedule.map((item, index) => (
-              <motion.div key={item.time} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="flex items-start gap-4 py-4 border-b border-gray-100">
+              <div key={item.time}
+                className="flex items-start gap-4 py-4 border-b border-gray-100 animate-fadeInUp">
                 <div className="bg-orange-100 text-orange-700 px-3 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">
                   {item.time}
                 </div>
@@ -181,7 +180,7 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
                   <h3 className="font-bold text-slate-900">{item.activity}</h3>
                   <p className="text-sm text-slate-600">{item.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -190,22 +189,22 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
       {/* Weekly Plan */}
       <section className="py-16 bg-gradient-to-br from-orange-600 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">45-Day Syllabus Plan</h2>
             <p className="text-xl text-orange-100">Structured coverage of complete NEET Biology</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {weeklyPlan.map((week, index) => (
-              <motion.div key={week.week} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+              <div key={week.week}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-fadeInUp">
                 <h3 className="text-xl font-bold mb-2">{week.week}</h3>
                 <p className="text-orange-100 text-sm mb-4">{week.focus}</p>
                 <div className="flex items-center gap-2">
                   <Target className="w-4 h-4 text-yellow-400" />
                   <span className="text-sm">{week.questions}+ Questions</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -214,14 +213,14 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
       {/* Pricing */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Crash Course Packages</h2>
             <p className="text-xl text-slate-600">Choose the duration that fits your preparation</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg">
+            <div
+              className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
               <h3 className="text-xl font-bold text-slate-900 mb-2">30-Day Intensive</h3>
               <p className="text-3xl font-bold text-orange-600 mb-4">₹18,000</p>
               <ul className="space-y-2 mb-6">
@@ -230,13 +229,13 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
                 <li className="flex items-center gap-2 text-sm"><CheckCircle className="w-4 h-4 text-green-500" />10 mock tests</li>
                 <li className="flex items-center gap-2 text-sm"><CheckCircle className="w-4 h-4 text-green-500" />Study material</li>
               </ul>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp} className="w-full py-3 bg-gray-100 text-slate-700 rounded-xl font-semibold hover:bg-gray-200">
+              <button onClick={handleWhatsApp} className="w-full py-3 bg-gray-100 text-slate-700 rounded-xl font-semibold hover:bg-gray-200 animate-fadeInUp">
                 Get Details
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="bg-white rounded-2xl p-6 shadow-lg ring-2 ring-orange-500 relative">
+            <div
+              className="bg-white rounded-2xl p-6 shadow-lg ring-2 ring-orange-500 relative animate-fadeInUp">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">Most Popular</div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">45-Day Complete</h3>
               <p className="text-3xl font-bold text-orange-600 mb-4">₹25,000</p>
@@ -247,13 +246,13 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
                 <li className="flex items-center gap-2 text-sm"><CheckCircle className="w-4 h-4 text-green-500" />Daily doubt clearing</li>
                 <li className="flex items-center gap-2 text-sm"><CheckCircle className="w-4 h-4 text-green-500" />Previous year analysis</li>
               </ul>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp} className="w-full py-3 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700">
+              <button onClick={handleWhatsApp} className="w-full py-3 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700 animate-fadeInUp">
                 Enroll Now
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-              className="bg-white rounded-2xl p-6 shadow-lg">
+            <div
+              className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
               <h3 className="text-xl font-bold text-slate-900 mb-2">60-Day Premium</h3>
               <p className="text-3xl font-bold text-orange-600 mb-4">₹35,000</p>
               <ul className="space-y-2 mb-6">
@@ -263,10 +262,10 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
                 <li className="flex items-center gap-2 text-sm"><CheckCircle className="w-4 h-4 text-green-500" />1-on-1 mentorship</li>
                 <li className="flex items-center gap-2 text-sm"><CheckCircle className="w-4 h-4 text-green-500" />Weak area focus</li>
               </ul>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp} className="w-full py-3 bg-gray-100 text-slate-700 rounded-xl font-semibold hover:bg-gray-200">
+              <button onClick={handleWhatsApp} className="w-full py-3 bg-gray-100 text-slate-700 rounded-xl font-semibold hover:bg-gray-200 animate-fadeInUp">
                 Get Details
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -287,7 +286,7 @@ export default function NEETCrashCourseContent({ faqs }: { faqs: FAQ[] }) {
                 </div>
                 <div className="flex gap-4">
                   <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>
-                  <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}><Button><Calendar className="w-4 h-4 mr-2" />Book Seat</Button></motion.button>
+                  <button onClick={handleWhatsApp} className="animate-fadeInUp"><Button><Calendar className="w-4 h-4 mr-2" />Book Seat</Button></button>
                 </div>
               </div>
               <div className="bg-white rounded-xl p-6 shadow-lg">

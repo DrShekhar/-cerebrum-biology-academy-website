@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle2, AlertCircle, X } from 'lucide-react'
 
 // Validation Rules
@@ -284,49 +283,33 @@ export function ValidatedInput({
 
         {/* Validation Icons */}
         <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
-          <AnimatePresence mode="wait">
-            {hasError && (
-              <motion.div
+{hasError && (
+              <div
                 key="error"
-                initial={{ scale: 0, rotate: -90 }}
-                animate={{ scale: 1, rotate: 0 }}
-                exit={{ scale: 0, rotate: 90 }}
-                transition={{ duration: 0.2 }}
-              >
+               className="animate-fadeInUp">
                 <AlertCircle className="w-5 h-5 text-red-500" />
-              </motion.div>
+              </div>
             )}
             {isValid && (
-              <motion.div
+              <div
                 key="success"
-                initial={{ scale: 0, rotate: -90 }}
-                animate={{ scale: 1, rotate: 0 }}
-                exit={{ scale: 0, rotate: 90 }}
-                transition={{ duration: 0.2 }}
-              >
+               className="animate-fadeInUp">
                 <CheckCircle2 className="w-5 h-5 text-green-600" />
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </div>
+</div>
       </div>
 
       {/* Error Message */}
-      <AnimatePresence>
-        {hasError && (
-          <motion.div
-            initial={{ opacity: 0, y: -10, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: 'auto' }}
-            exit={{ opacity: 0, y: -10, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex items-center space-x-1 text-sm text-red-600"
+{hasError && (
+          <div
+            className="flex items-center space-x-1 text-sm text-red-600 animate-fadeInUp"
           >
             <AlertCircle className="w-4 h-4 flex-shrink-0" />
             <span>{error}</span>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -401,46 +384,33 @@ export function ValidatedSelect({
 
         {/* Validation Icons */}
         <div className="absolute right-10 top-1/2 transform -translate-y-1/2">
-          <AnimatePresence mode="wait">
-            {hasError && (
-              <motion.div
+{hasError && (
+              <div
                 key="error"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0 }}
-              >
+               className="animate-fadeInUp">
                 <AlertCircle className="w-5 h-5 text-red-500" />
-              </motion.div>
+              </div>
             )}
             {isValid && (
-              <motion.div
+              <div
                 key="success"
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0 }}
-              >
+               className="animate-fadeInUp">
                 <CheckCircle2 className="w-5 h-5 text-green-600" />
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </div>
+</div>
       </div>
 
       {/* Error Message */}
-      <AnimatePresence>
-        {hasError && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="flex items-center space-x-1 text-sm text-red-600"
+{hasError && (
+          <div
+            className="flex items-center space-x-1 text-sm text-red-600 animate-fadeInUp"
           >
             <AlertCircle className="w-4 h-4" />
             <span>{error}</span>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -463,12 +433,8 @@ export function ErrorSummary({
   if (!isVisible || errorList.length === 0) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, y: -20, scale: 0.95 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: -20, scale: 0.95 }}
-        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 max-w-md w-full mx-4"
+<div
+        className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 max-w-md w-full mx-4 animate-fadeInUp"
       >
         <div className="bg-red-50 border border-red-200 rounded-lg p-4 shadow-lg">
           <div className="flex items-start justify-between">
@@ -496,9 +462,8 @@ export function ErrorSummary({
             </button>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
-  )
+      </div>
+)
 }
 
 // Form Container with validation

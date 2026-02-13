@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Shield,
   CheckCircle,
@@ -181,10 +180,8 @@ const RefundPolicyDisplay: React.FC = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center mb-8"
+      <div
+        className="text-center mb-8 animate-fadeInUp"
       >
         <div className="flex items-center justify-center gap-3 mb-4">
           <Shield className="w-10 h-10 text-green-600" />
@@ -194,7 +191,7 @@ const RefundPolicyDisplay: React.FC = () => {
           We believe in complete transparency. Our refund policy is designed to be fair, clear, and
           student-friendly with no hidden clauses.
         </p>
-      </motion.div>
+      </div>
 
       {/* Tab Navigation */}
       <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -217,19 +214,14 @@ const RefundPolicyDisplay: React.FC = () => {
           </button>
         ))}
       </div>
-
-      <AnimatePresence mode="wait">
-        {activeTab === 'policy' && (
-          <motion.div
+{activeTab === 'policy' && (
+          <div
             key="policy"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="grid gap-6 md:grid-cols-2">
               {refundScenarios.map((scenario) => (
-                <motion.div
+                <div
                   key={scenario.id}
                   onClick={() =>
                     setSelectedScenario(selectedScenario === scenario.id ? '' : scenario.id)
@@ -239,8 +231,6 @@ const RefundPolicyDisplay: React.FC = () => {
                       ? `border-${scenario.color}-500 bg-${scenario.color}-50`
                       : 'border-gray-200 bg-white hover:border-gray-300'
                   }`}
-                  whileHover={{ y: -4 }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -261,14 +251,9 @@ const RefundPolicyDisplay: React.FC = () => {
                       <div className="text-xs text-gray-500">refund</div>
                     </div>
                   </div>
-
-                  <AnimatePresence>
-                    {selectedScenario === scenario.id && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="space-y-4 pt-4 border-t border-gray-200"
+{selectedScenario === scenario.id && (
+                      <div
+                        className="space-y-4 pt-4 border-t border-gray-200 animate-fadeInUp"
                       >
                         <div>
                           <h4 className="font-medium text-gray-900 mb-2">Conditions:</h4>
@@ -288,22 +273,18 @@ const RefundPolicyDisplay: React.FC = () => {
                           <Clock className="w-4 h-4" />
                           <span>Processing time: {scenario.processingTime}</span>
                         </div>
-                      </motion.div>
+                      </div>
                     )}
-                  </AnimatePresence>
-                </motion.div>
+</div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'calculator' && (
-          <motion.div
+          <div
             key="calculator"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="bg-white rounded-2xl border border-gray-200 p-8"
+            className="bg-white rounded-2xl border border-gray-200 p-8 animate-fadeInUp"
           >
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 text-center">
               Refund Calculator
@@ -377,10 +358,8 @@ const RefundPolicyDisplay: React.FC = () => {
 
               <div className="lg:pl-8">
                 {calculateRefund() && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-4"
+                  <div
+                    className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 space-y-4 animate-fadeInUp"
                   >
                     <h4 className="text-lg font-semibold text-gray-900 mb-4">Refund Calculation</h4>
 
@@ -432,7 +411,7 @@ const RefundPolicyDisplay: React.FC = () => {
                         </>
                       )
                     })()}
-                  </motion.div>
+                  </div>
                 )}
 
                 {!calculateRefund() && (
@@ -445,16 +424,13 @@ const RefundPolicyDisplay: React.FC = () => {
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'process' && (
-          <motion.div
+          <div
             key="process"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-8"
+            className="space-y-8 animate-fadeInUp"
           >
             {/* Process Steps */}
             <div className="bg-white rounded-2xl border border-gray-200 p-8">
@@ -536,20 +512,14 @@ const RefundPolicyDisplay: React.FC = () => {
                         <ChevronDown className="w-5 h-5 text-gray-500" />
                       )}
                     </button>
-
-                    <AnimatePresence>
-                      {expandedFAQ === faq.id && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{ opacity: 1, height: 'auto' }}
-                          exit={{ opacity: 0, height: 0 }}
-                          className="px-6 pb-4 bg-gray-50"
+{expandedFAQ === faq.id && (
+                        <div
+                          className="px-6 pb-4 bg-gray-50 animate-fadeInUp"
                         >
                           <p className="text-gray-600">{faq.answer}</p>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
-                  </div>
+</div>
                 ))}
               </div>
             </div>
@@ -569,10 +539,9 @@ const RefundPolicyDisplay: React.FC = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

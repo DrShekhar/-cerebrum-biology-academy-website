@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import type {
   DailyChallenge as DailyChallengeType,
   MCQQuestion,
@@ -155,10 +154,8 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
   // Ready state - show challenge card
   if (state === 'ready' && challenge) {
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-indigo-500 rounded-2xl shadow-lg overflow-hidden"
+      <div
+        className="bg-indigo-500 rounded-2xl shadow-lg overflow-hidden animate-fadeInUp"
       >
         <div className="p-6 text-white">
           <div className="flex items-center gap-3 mb-4">
@@ -208,7 +205,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
         <div className="bg-white/10 p-4 text-center text-purple-200 text-sm">
           New challenge available every day at midnight
         </div>
-      </motion.div>
+      </div>
     )
   }
 
@@ -229,21 +226,16 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
             </span>
           </div>
           <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-blue-500"
-              initial={{ width: 0 }}
-              animate={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+            <div
+              className="h-full bg-blue-500 animate-fadeInUp"
             />
           </div>
         </div>
 
         {/* Question card */}
-        <motion.div
+        <div
           key={currentQuestion.id}
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -50 }}
-          className="bg-white rounded-2xl shadow-lg p-6"
+          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
         >
           <div className="flex items-center gap-2 mb-4">
             {currentQuestion.isPYQ && (
@@ -283,7 +275,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
               )
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* Navigation */}
         <div className="flex items-center justify-between">
@@ -337,10 +329,8 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
   // Completed state
   if (state === 'completed') {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-2xl shadow-lg overflow-hidden"
+      <div
+        className="bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp"
       >
         <div
           className={`p-8 text-center ${
@@ -399,7 +389,7 @@ export function DailyChallenge({ freeUserId, onRequireLogin }: DailyChallengePro
         <div className="p-4 border-t text-center">
           <p className="text-gray-500 text-sm">Come back tomorrow for a new challenge!</p>
         </div>
-      </motion.div>
+      </div>
     )
   }
 

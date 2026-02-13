@@ -8,7 +8,6 @@ import { PaymentOptionsDisplay } from './PaymentOptionsDisplay'
 import { coursePrograms } from '@/data/courseSystemData'
 import { ClassLevel, CourseSeries } from '@/types/courseSystem'
 import { getCoursesByClass } from '@/utils/courseUtils'
-import { motion } from 'framer-motion'
 import { BookOpen, CreditCard, Grid3x3, BarChart3, CheckCircle } from 'lucide-react'
 
 export function CourseSystemDemo() {
@@ -59,11 +58,8 @@ export function CourseSystemDemo() {
       {/* Header */}
       <div className="bg-blue-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-4 h-4 mr-2" />
               Course System Components Demo
@@ -72,7 +68,7 @@ export function CourseSystemDemo() {
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               Comprehensive class-wise course navigation with 3-tier pricing system
             </p>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -86,7 +82,7 @@ export function CourseSystemDemo() {
               const isActive = activeComponent === component.id
 
               return (
-                <motion.button
+                <button
                   key={component.id}
                   onClick={() => setActiveComponent(component.id as any)}
                   className={`
@@ -97,8 +93,6 @@ export function CourseSystemDemo() {
                         : 'border-gray-200 bg-white hover:border-gray-300 hover:shadow-md'
                     }
                   `}
-                  whileHover={!isActive ? { y: -2 } : {}}
-                  whileTap={{ scale: 0.98 }}
                 >
                   <div
                     className={`
@@ -124,19 +118,16 @@ export function CourseSystemDemo() {
                       Active
                     </div>
                   )}
-                </motion.button>
+                </button>
               )
             })}
           </div>
         </div>
 
         {/* Component Display */}
-        <motion.div
+        <div
           key={activeComponent}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="bg-white rounded-3xl shadow-xl overflow-hidden"
+          className="bg-white rounded-3xl shadow-xl overflow-hidden animate-fadeInUp"
         >
           {/* Component Header */}
           <div
@@ -208,7 +199,7 @@ export function CourseSystemDemo() {
               />
             )}
           </div>
-        </motion.div>
+        </div>
 
         {/* Features Summary */}
         <div className="mt-16 grid md:grid-cols-3 gap-8">

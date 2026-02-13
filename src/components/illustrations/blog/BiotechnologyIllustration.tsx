@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function BiotechnologyIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -31,8 +30,6 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
 
       {/* DNA strand being cut */}
       <motion.g
-        animate={animate ? { x: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         {/* DNA helix segment */}
         <path
@@ -55,8 +52,6 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
 
       {/* Scissors (restriction enzyme) */}
       <motion.g
-        animate={animate ? { rotate: [-10, 10, -10] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
         style={{ transformOrigin: '120px 120px' }}
       >
         <path d="M100 100 L120 120 L100 140" stroke="#EF4444" strokeWidth="3" fill="none" />
@@ -72,8 +67,6 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
 
       {/* Plasmid vector */}
       <motion.g
-        animate={animate ? { rotate: [0, 360] } : undefined}
-        transition={{ duration: 10, repeat: Infinity, ease: 'linear' }}
         style={{ transformOrigin: '200px 120px' }}
       >
         <circle cx="200" cy="120" r="40" fill="none" stroke="#3B82F6" strokeWidth="4" />
@@ -92,14 +85,10 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
         stroke="#059669"
         strokeWidth="2"
         fill="none"
-        animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
       />
 
       {/* Recombinant DNA */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="300" cy="120" r="45" fill="none" stroke="#10B981" strokeWidth="4" />
         <line x1="280" y1="100" x2="320" y2="100" stroke="#EC4899" strokeWidth="3" />
@@ -166,8 +155,6 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
 
       {/* Questions badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="360" cy="70" r="18" fill="#10B981" />
         <text x="360" y="67" fontSize="8" fill="#FFFFFF" textAnchor="middle">

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { BookOpen, Clock, Play, Calendar, Trophy, GraduationCap, Loader2 } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent } from '@/components/ui/Card'
@@ -205,11 +204,8 @@ function CourseCard({ course, index }: { course: EnrolledCourse; index: number }
   )
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
-    >
+    <div
+     className="animate-fadeInUp">
       <Card className={cn('h-full hover:shadow-lg transition-shadow', isExpired && 'opacity-75')}>
         <CardContent className="p-6">
           {/* Course Header */}
@@ -287,7 +283,7 @@ function CourseCard({ course, index }: { course: EnrolledCourse; index: number }
           )}
         </CardContent>
       </Card>
-    </motion.div>
+    </div>
   )
 }
 
@@ -306,7 +302,7 @@ function QuickLinkCard({
 }) {
   return (
     <Link href={href}>
-      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+      <div className="animate-fadeInUp">
         <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
           <CardContent className="p-4">
             <div
@@ -321,7 +317,7 @@ function QuickLinkCard({
             <p className="text-sm text-gray-600">{description}</p>
           </CardContent>
         </Card>
-      </motion.div>
+      </div>
     </Link>
   )
 }

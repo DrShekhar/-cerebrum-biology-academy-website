@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function PlantKingdomIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -155,8 +154,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         <g>
           {/* Chlorophyta */}
           <motion.g
-            animate={animate ? { y: [-2, 2, -2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <rect
               x="30"
@@ -219,8 +216,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
 
           {/* Phaeophyta */}
           <motion.g
-            animate={animate ? { y: [-2, 2, -2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
           >
             <rect
               x="115"
@@ -270,8 +265,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
 
           {/* Rhodophyta */}
           <motion.g
-            animate={animate ? { y: [-2, 2, -2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
           >
             <rect
               x="200"
@@ -395,8 +388,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         <g>
           {/* Liverwort (Marchantia) */}
           <motion.g
-            animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-            transition={{ duration: 2.5, repeat: Infinity }}
           >
             <rect
               x="325"
@@ -447,8 +438,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
 
           {/* Mosses */}
           <motion.g
-            animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-            transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
           >
             <rect
               x="455"
@@ -561,8 +550,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
 
         {/* Fern diagram */}
         <motion.g
-          animate={animate ? { rotate: [-1, 1, -1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
           style={{ transformOrigin: '745px 210px' }}
         >
           {/* Fern fronds with circinate vernation */}
@@ -687,8 +674,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         <g>
           {/* Cycas */}
           <motion.g
-            animate={animate ? { y: [-1, 1, -1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <rect
               x="30"
@@ -731,8 +716,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
 
           {/* Pinus */}
           <motion.g
-            animate={animate ? { y: [-1, 1, -1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
             <rect
               x="155"
@@ -840,8 +823,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         <g>
           {/* Dicot */}
           <motion.g
-            animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <rect
               x="325"
@@ -884,8 +865,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
 
           {/* Monocot */}
           <motion.g
-            animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
             <rect
               x="450"
@@ -1312,8 +1291,6 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
       {/* NEET Questions Badge */}
       <motion.g
         filter="url(#pkGlow)"
-        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="850" cy="50" r="35" fill="#15803D" />
         <text

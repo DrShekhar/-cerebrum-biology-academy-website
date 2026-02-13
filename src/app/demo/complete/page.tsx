@@ -1,26 +1,19 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function DemoCompletePage() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-green-50 to-green-100 p-4">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="max-w-lg rounded-2xl bg-white p-8 text-center shadow-xl"
+      <div
+        className="max-w-lg rounded-2xl bg-white p-8 text-center shadow-xl animate-fadeInUp"
       >
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.2, type: 'spring', stiffness: 200 }}
-          className="mb-6 text-7xl"
+        <div
+          className="mb-6 text-7xl animate-fadeInUp"
         >
           🎉
-        </motion.div>
+        </div>
 
         <h1 className="mb-4 text-3xl font-bold text-gray-900">Demo Class Completed!</h1>
 
@@ -34,18 +27,16 @@ export default function DemoCompletePage() {
           <h2 className="mb-3 text-lg font-semibold text-gray-800">How was your experience?</h2>
           <div className="flex justify-center gap-4">
             {['😐', '🙂', '😊', '🤩'].map((emoji, index) => (
-              <motion.button
+              <button
                 key={index}
-                whileHover={{ scale: 1.2 }}
-                whileTap={{ scale: 0.9 }}
-                className="text-4xl transition hover:opacity-80"
+                className="text-4xl transition hover:opacity-80 animate-fadeInUp"
                 onClick={() => {
                   // TODO: Track feedback
                   alert(`Thank you for your feedback! Rating: ${index + 1}/4`)
                 }}
               >
                 {emoji}
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
@@ -86,16 +77,13 @@ export default function DemoCompletePage() {
         </div>
 
         {/* Special Offer */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="rounded-xl bg-gradient-to-r from-amber-100 to-orange-100 p-6"
+        <div
+          className="rounded-xl bg-gradient-to-r from-amber-100 to-orange-100 p-6 animate-fadeInUp"
         >
           <p className="mb-2 text-sm font-medium text-yellow-800">🎁 DEMO ATTENDEE SPECIAL</p>
           <p className="text-xl font-bold text-yellow-900">Get 15% OFF on Course Enrollment</p>
           <p className="mt-1 text-sm text-yellow-700">Valid for 48 hours • Use code: DEMO15</p>
-        </motion.div>
+        </div>
 
         {/* Footer */}
         <div className="mt-8 border-t border-gray-200 pt-6">
@@ -104,7 +92,7 @@ export default function DemoCompletePage() {
             📞 +91 88264 44334 • 📧 info@cerebrumbiologyacademy.com
           </p>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

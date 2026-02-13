@@ -3,7 +3,6 @@
 import React, { useEffect, useState, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
   GraduationCap,
@@ -152,10 +151,8 @@ export function EmotionalHeroSection({
   return (
     <div className={`relative min-h-screen bg-navy-900 overflow-hidden ${className}`}>
       {/* Announcement Bar */}
-      <motion.div
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className="relative z-50 bg-green-600 text-white py-3 px-4"
+      <div
+        className="relative z-50 bg-green-600 text-white py-3 px-4 animate-fadeInUp"
       >
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 text-sm md:text-base font-semibold">
@@ -166,51 +163,30 @@ export function EmotionalHeroSection({
             <Sparkles className="h-5 w-5 text-yellow-300 animate-pulse" />
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Background Effects */}
       <div className="absolute inset-0">
         {/* Animated gradient orbs */}
-        <motion.div
-          className="absolute top-1/4 left-1/6 w-96 h-96 bg-green-600/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.2, 1],
-            x: [0, 50, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+        <div
+          className="absolute top-1/4 left-1/6 w-96 h-96 bg-green-600/10 rounded-full blur-3xl animate-fadeInUp"
         />
-        <motion.div
-          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-navy-500/10 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            x: [0, -40, 0],
-            y: [0, 40, 0],
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+        <div
+          className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-navy-500/10 rounded-full blur-3xl animate-fadeInUp"
         />
 
         {/* Floating hearts for emotional connection */}
         {[...Array(5)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
-            className="absolute"
+            className="absolute animate-fadeInUp"
             style={{
               left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`,
             }}
-            animate={{
-              y: [0, -20, 0],
-              opacity: [0.3, 0.7, 0.3],
-            }}
-            transition={{
-              duration: 4 + i,
-              repeat: Infinity,
-              delay: i * 0.5,
-            }}
           >
             <Heart className="h-4 w-4 text-green-400/50" />
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -219,11 +195,8 @@ export function EmotionalHeroSection({
           {/* Left Column - Main Content */}
           <div className="space-y-8 text-white">
             {/* Main Emotional Headline */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
+            <div
+              className="space-y-6 animate-fadeInUp"
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-amber-200">Master Biology,</span>
@@ -242,14 +215,11 @@ export function EmotionalHeroSection({
                 with India's premier
                 <span className="font-bold text-green-200"> Biology coaching academy</span>
               </p>
-            </motion.div>
+            </div>
 
             {/* Trust Badges */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="flex flex-wrap gap-3"
+            <div
+              className="flex flex-wrap gap-3 animate-fadeInUp"
             >
               {trustBadges.map((badge, index) => (
                 <div
@@ -260,14 +230,11 @@ export function EmotionalHeroSection({
                   {badge}
                 </div>
               ))}
-            </motion.div>
+            </div>
 
             {/* Success Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4"
+            <div
+              className="grid grid-cols-2 lg:grid-cols-4 gap-4 animate-fadeInUp"
             >
               {successStats.map((stat, index) => (
                 <PremiumCard
@@ -283,14 +250,11 @@ export function EmotionalHeroSection({
                   <div className="text-sm text-blue-200">{stat.label}</div>
                 </PremiumCard>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
             >
               <PremiumButton
                 variant="medical"
@@ -317,14 +281,11 @@ export function EmotionalHeroSection({
                   8-10% CONVERSION
                 </span>
               </PremiumButton>
-            </motion.div>
+            </div>
 
             {/* Quick Eligibility Checker */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="bg-green-800/30 backdrop-blur-sm border border-green-400/30 rounded-lg p-4"
+            <div
+              className="bg-green-800/30 backdrop-blur-sm border border-green-400/30 rounded-lg p-4 animate-fadeInUp"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -340,15 +301,12 @@ export function EmotionalHeroSection({
                   Check Now
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Column - Emotional Story & Countdown */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="space-y-6"
+          <div
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Hero Image/Video Placeholder */}
             <PremiumCard
@@ -390,14 +348,9 @@ export function EmotionalHeroSection({
               size="lg"
               className="bg-white/10 backdrop-blur-sm border-white/20"
             >
-              <AnimatePresence mode="wait">
-                <motion.div
+<div
                   key={currentTestimonial}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="space-y-4"
+                  className="space-y-4 animate-fadeInUp"
                 >
                   <div className="flex items-center gap-4">
                     <Image
@@ -434,9 +387,8 @@ export function EmotionalHeroSection({
                     </div>
                     <Heart className="h-6 w-6 text-red-400 animate-pulse fill-current" />
                   </div>
-                </motion.div>
-              </AnimatePresence>
-            </PremiumCard>
+                </div>
+</PremiumCard>
 
             {/* Next Batch Countdown */}
             <PremiumCard
@@ -471,15 +423,12 @@ export function EmotionalHeroSection({
                 </p>
               </div>
             </PremiumCard>
-          </motion.div>
+          </div>
         </div>
 
         {/* Floating Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-2xl border border-white/50"
+        <div
+          className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-2xl border border-white/50 animate-fadeInUp"
         >
           <div className="flex items-center gap-6 text-sm font-semibold">
             <div className="flex items-center gap-2">
@@ -493,7 +442,7 @@ export function EmotionalHeroSection({
             <div className="w-px h-4 bg-gray-300" />
             <span className="text-gray-800">98% Success Rate</span>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

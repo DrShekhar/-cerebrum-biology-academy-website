@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Tag,
   Clock,
@@ -335,14 +334,10 @@ export function QuestionProperties({
 
       {/* Tab Content */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
-          {activeTab === 'basic' && (
-            <motion.div
+{activeTab === 'basic' && (
+            <div
               key="basic"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Difficulty Level */}
               <div>
@@ -515,16 +510,13 @@ export function QuestionProperties({
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'taxonomy' && (
-            <motion.div
+            <div
               key="taxonomy"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Bloom's Taxonomy Level */}
               <div>
@@ -678,16 +670,13 @@ export function QuestionProperties({
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'content' && (
-            <motion.div
+            <div
               key="content"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Solution */}
               <div>
@@ -871,16 +860,13 @@ export function QuestionProperties({
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'metadata' && (
-            <motion.div
+            <div
               key="metadata"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Quality Metrics */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1093,10 +1079,9 @@ export function QuestionProperties({
                     )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </div>
   )
 }

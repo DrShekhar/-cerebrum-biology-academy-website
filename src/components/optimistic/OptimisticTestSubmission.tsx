@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { CheckCircle, Loader2, Send, AlertCircle, RotateCcw } from 'lucide-react'
 import { useOptimisticUpdate } from '@/hooks/useOptimisticUpdate'
 import { useToast } from '@/components/ui/Toast'
@@ -125,20 +124,15 @@ export function OptimisticTestSubmission({
 
   if (data.status === 'submitted') {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="bg-green-600 rounded-2xl p-8 text-white shadow-2xl"
+      <div
+        className="bg-green-600 rounded-2xl p-8 text-white shadow-2xl animate-fadeInUp"
       >
         <div className="text-center">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ type: 'spring', stiffness: 200, damping: 15 }}
-            className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4"
+          <div
+            className="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-4 animate-fadeInUp"
           >
             <CheckCircle className="w-12 h-12 text-green-600" />
-          </motion.div>
+          </div>
           <h2 className="text-3xl font-bold mb-2">Test Submitted!</h2>
           <p className="text-green-100 text-lg mb-4">Your answers have been saved successfully</p>
           {data.score !== undefined && (
@@ -151,7 +145,7 @@ export function OptimisticTestSubmission({
             Submitted at {new Date(data.submittedAt!).toLocaleTimeString()}
           </p>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
@@ -162,16 +156,8 @@ export function OptimisticTestSubmission({
         <p className="text-gray-600">{answers.length} questions answered • Ready for submission</p>
       </div>
 
-      <motion.div
+      <div
         className={`${status.bgColor} border-2 ${status.borderColor} rounded-xl p-4 mb-6`}
-        animate={
-          isOptimistic
-            ? {
-                scale: [1, 1.02, 1],
-                transition: { duration: 0.3, repeat: Infinity, repeatDelay: 1 },
-              }
-            : {}
-        }
       >
         <div className="flex items-center space-x-3">
           <StatusIcon
@@ -186,7 +172,7 @@ export function OptimisticTestSubmission({
             )}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {error && (
         <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4 mb-6">

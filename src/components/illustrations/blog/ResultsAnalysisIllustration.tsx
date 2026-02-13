@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function ResultsAnalysisIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -52,8 +51,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         height="40"
         rx="2"
         fill="#EF4444"
-        animate={animate ? { height: [0, 40], y: [170, 130] } : undefined}
-        transition={{ duration: 1 }}
       />
       <text x="62" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         0-200
@@ -66,8 +63,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         height="60"
         rx="2"
         fill="#F59E0B"
-        animate={animate ? { height: [0, 60], y: [170, 110] } : undefined}
-        transition={{ duration: 1, delay: 0.2 }}
       />
       <text x="97" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         200-400
@@ -80,8 +75,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         height="70"
         rx="2"
         fill="#3B82F6"
-        animate={animate ? { height: [0, 70], y: [170, 100] } : undefined}
-        transition={{ duration: 1, delay: 0.4 }}
       />
       <text x="132" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         400-600
@@ -94,8 +87,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         height="50"
         rx="2"
         fill="#22C55E"
-        animate={animate ? { height: [0, 50], y: [170, 120] } : undefined}
-        transition={{ duration: 1, delay: 0.6 }}
       />
       <text x="167" y="180" fontSize="5" fill="#6B7280" textAnchor="middle">
         600+
@@ -117,8 +108,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </text>
 
       <motion.g
-        animate={animate ? { opacity: [0, 1] } : undefined}
-        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <rect x="245" y="85" width="120" height="22" rx="4" fill="#DCFCE7" />
         <text x="305" y="100" fontSize="7" fill="#166534" textAnchor="middle">
@@ -127,8 +116,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0, 1] } : undefined}
-        transition={{ duration: 0.5, delay: 0.7 }}
       >
         <rect x="245" y="112" width="120" height="22" rx="4" fill="#DBEAFE" />
         <text x="305" y="127" fontSize="7" fill="#1D4ED8" textAnchor="middle">
@@ -137,8 +124,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0, 1] } : undefined}
-        transition={{ duration: 0.5, delay: 0.9 }}
       >
         <rect x="245" y="139" width="120" height="22" rx="4" fill="#FEF3C7" />
         <text x="305" y="154" fontSize="7" fill="#B45309" textAnchor="middle">
@@ -147,8 +132,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0, 1] } : undefined}
-        transition={{ duration: 0.5, delay: 1.1 }}
       >
         <rect x="245" y="166" width="120" height="15" rx="4" fill="#FCE7F3" />
         <text x="305" y="177" fontSize="6" fill="#DB2777" textAnchor="middle">
@@ -172,8 +155,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </text>
 
       <motion.g
-        animate={animate ? { x: [0, 2, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <rect x="45" y="225" width="90" height="40" rx="6" fill="#DCFCE7" />
         <text x="90" y="243" fontSize="7" fill="#166534" textAnchor="middle" fontWeight="bold">
@@ -185,8 +166,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { x: [0, 2, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
       >
         <rect x="155" y="225" width="90" height="40" rx="6" fill="#DBEAFE" />
         <text x="200" y="243" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
@@ -198,8 +177,6 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { x: [0, 2, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 1 }}
       >
         <rect x="265" y="225" width="90" height="40" rx="6" fill="#FEF3C7" />
         <text x="310" y="243" fontSize="7" fill="#B45309" textAnchor="middle" fontWeight="bold">

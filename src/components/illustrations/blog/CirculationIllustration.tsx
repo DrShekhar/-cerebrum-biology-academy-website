@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function CirculationIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -128,18 +127,12 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         fontSize="18"
         fontWeight="700"
         fontFamily="system-ui, sans-serif"
-        initial={animate ? { opacity: 0, y: -10 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         Human Heart & Circulatory System
       </motion.text>
 
       {/* HEART DIAGRAM - Left side */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <g transform="translate(30, 55)">
           {/* Heart outline */}
@@ -195,8 +188,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             strokeWidth="10"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <text x="62" y="6" textAnchor="middle" fill="#2563EB" fontSize="6" fontWeight="500">
             SVC
@@ -209,8 +200,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             strokeWidth="8"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           />
           <text x="22" y="145" fill="#2563EB" fontSize="6" fontWeight="500">
             IVC
@@ -223,8 +212,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             strokeWidth="9"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
-            transition={{ duration: 1, repeat: Infinity }}
             strokeDasharray="5 3"
           />
           <text x="15" y="22" fill="#6366F1" fontSize="6" fontWeight="500">
@@ -238,8 +225,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             strokeWidth="7"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <text x="180" y="22" fill="#EC4899" fontSize="6" fontWeight="500">
             PV
@@ -252,8 +237,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             strokeWidth="11"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
-            transition={{ duration: 1, repeat: Infinity }}
             strokeDasharray="5 3"
           />
           <text x="192" y="15" fill="#DC2626" fontSize="7" fontWeight="600">
@@ -267,8 +250,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             r="8"
             fill="#EF4444"
             opacity="0.5"
-            animate={animate ? { scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] } : undefined}
-            transition={{ duration: 0.8, repeat: Infinity }}
           />
 
           {/* Labels */}
@@ -292,9 +273,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
       {/* DOUBLE CIRCULATION DIAGRAM */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g transform="translate(25, 370)">
           <rect
@@ -373,8 +351,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             stroke="#DC2626"
             strokeWidth="2.5"
             markerEnd="url(#circArrow)"
-            animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-            transition={{ duration: 1.5, repeat: Infinity }}
           />
           <defs>
             <marker
@@ -393,9 +369,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
       {/* BLOOD COMPOSITION - Right Top */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.25, duration: 0.6 }}
       >
         <g transform="translate(315, 52)">
           <rect
@@ -460,8 +433,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               rx="15"
               ry="8"
               fill="url(#rbcGrad)"
-              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             />
             <text x="32" y="60" textAnchor="middle" fill="#991B1B" fontSize="7">
               RBC
@@ -475,8 +446,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               fill="#DBEAFE"
               stroke="#3B82F6"
               strokeWidth="1.5"
-              animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-              transition={{ duration: 2.5, repeat: Infinity }}
             />
             <text x="77" y="60" textAnchor="middle" fill="#1D4ED8" fontSize="7">
               WBC
@@ -484,8 +453,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
             {/* Platelets */}
             <motion.g
-              animate={animate ? { y: [0, -2, 0] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity }}
             >
               <circle cx="118" cy="38" r="4" fill="#A78BFA" />
               <circle cx="126" cy="42" r="4" fill="#A78BFA" />
@@ -500,9 +467,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
       {/* CARDIAC CYCLE - Right Middle */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.35, duration: 0.6 }}
       >
         <g transform="translate(315, 185)">
           <rect
@@ -530,8 +494,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               height="16"
               rx="8"
               fill="#F59E0B"
-              animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-              transition={{ duration: 0.8, repeat: Infinity, delay: 0 }}
             />
             <text x="21" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.1s
@@ -545,8 +507,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               height="16"
               rx="0"
               fill="#EF4444"
-              animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-              transition={{ duration: 0.8, repeat: Infinity, delay: 0.1 }}
             />
             <text x="104" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.3s
@@ -560,8 +520,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               height="16"
               rx="8"
               fill="#22C55E"
-              animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-              transition={{ duration: 0.8, repeat: Infinity, delay: 0.4 }}
             />
             <text x="248" y="12" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               0.4s
@@ -606,9 +564,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
       {/* ECG - Right Bottom */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <g transform="translate(315, 310)">
           <rect
@@ -635,15 +590,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
-            animate={
-              animate
-                ? {
-                    pathLength: [0, 1],
-                    opacity: [0.5, 1],
-                  }
-                : undefined
-            }
-            transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
           />
 
           {/* Wave labels */}
@@ -672,9 +618,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
       {/* BLOOD GROUPS & KEY FACTS - Bottom Right */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.45, duration: 0.6 }}
       >
         <g transform="translate(315, 430)">
           <rect
@@ -699,8 +642,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               fill="#FEE2E2"
               stroke="#EF4444"
               strokeWidth="2.5"
-              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0 }}
             />
             <text x="25" y="27" textAnchor="middle" fill="#B91C1C" fontSize="12" fontWeight="bold">
               A
@@ -713,8 +654,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               fill="#DBEAFE"
               stroke="#3B82F6"
               strokeWidth="2.5"
-              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
             />
             <text x="75" y="27" textAnchor="middle" fill="#1D4ED8" fontSize="12" fontWeight="bold">
               B
@@ -727,8 +666,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               fill="#F3E8FF"
               stroke="#8B5CF6"
               strokeWidth="2.5"
-              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
             />
             <text x="125" y="27" textAnchor="middle" fill="#6D28D9" fontSize="11" fontWeight="bold">
               AB
@@ -741,8 +678,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               fill="#F1F5F9"
               stroke="#64748B"
               strokeWidth="2.5"
-              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
             />
             <text x="175" y="27" textAnchor="middle" fill="#334155" fontSize="12" fontWeight="bold">
               O
@@ -766,8 +701,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
       {/* SA Node indicator on heart */}
       <motion.g
-        animate={animate ? { scale: [1, 1.3, 1], opacity: [1, 0.5, 1] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
       >
         <circle cx="115" cy="108" r="7" fill="#22C55E" filter="url(#vesselGlow)" />
         <text x="128" y="105" fill="#166534" fontSize="6" fontWeight="bold">
@@ -777,8 +710,6 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
       {/* AV Node indicator */}
       <motion.g
-        animate={animate ? { scale: [1, 1.2, 1], opacity: [1, 0.6, 1] } : undefined}
-        transition={{ duration: 1, repeat: Infinity, delay: 0.2 }}
       >
         <circle cx="128" cy="135" r="6" fill="#FBBF24" />
         <text x="140" y="133" fill="#92400E" fontSize="6" fontWeight="bold">

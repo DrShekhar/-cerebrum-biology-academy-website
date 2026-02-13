@@ -7,7 +7,6 @@ import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { Calendar, Clock, Video, MapPin, ChevronRight, BookOpen } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
@@ -155,11 +154,8 @@ export function UpcomingSessionsWidget({
             const isUpcomingToday = isToday(session.startTime)
 
             return (
-              <motion.div
+              <div
                 key={session.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
                 className={cn(
                   'p-4 rounded-lg border transition-all hover:shadow-md',
                   isUpcomingToday ? 'bg-blue-50 border-blue-200' : 'bg-white border-gray-200'
@@ -223,7 +219,7 @@ export function UpcomingSessionsWidget({
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>

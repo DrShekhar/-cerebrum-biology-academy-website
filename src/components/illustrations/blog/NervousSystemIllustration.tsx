@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function NervousSystemIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -122,18 +121,12 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         fontSize="18"
         fontWeight="700"
         fontFamily="system-ui, sans-serif"
-        initial={animate ? { opacity: 0, y: -10 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         Neural Control & Coordination
       </motion.text>
 
       {/* NEURON STRUCTURE - Top Left */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <g transform="translate(20, 50)">
           <rect
@@ -157,8 +150,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               strokeWidth="4"
               fill="none"
               strokeLinecap="round"
-              animate={animate ? { pathLength: [0.9, 1, 0.9] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             />
             <motion.path
               d="M35 40 Q15 40 5 35"
@@ -166,8 +157,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               strokeWidth="4"
               fill="none"
               strokeLinecap="round"
-              animate={animate ? { pathLength: [0.9, 1, 0.9] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
             />
             <motion.path
               d="M35 40 Q20 50 10 60"
@@ -175,8 +164,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               strokeWidth="4"
               fill="none"
               strokeLinecap="round"
-              animate={animate ? { pathLength: [0.9, 1, 0.9] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
             />
             <text x="5" y="75" fill="#A855F7" fontSize="6" fontWeight="500">
               Dendrites
@@ -190,8 +177,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               ry="15"
               fill="url(#somaGrad)"
               filter="url(#neuronGlow)"
-              animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             />
             <circle cx="50" cy="38" r="6" fill="#DDD6FE" opacity="0.7" />
             <text x="50" y="60" textAnchor="middle" fill="#7C3AED" fontSize="6" fontWeight="500">
@@ -212,8 +197,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               height="14"
               rx="7"
               fill="url(#myelinGrad)"
-              animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity }}
             />
             <motion.rect
               x="120"
@@ -222,8 +205,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               height="14"
               rx="7"
               fill="url(#myelinGrad)"
-              animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
             />
             <motion.rect
               x="155"
@@ -232,8 +213,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               height="14"
               rx="7"
               fill="url(#myelinGrad)"
-              animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
             />
 
             {/* Nodes of Ranvier labels */}
@@ -248,8 +227,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               r="4"
               fill="#22C55E"
               filter="url(#impulseGlow)"
-              animate={animate ? { cx: [90, 115, 150, 185, 200] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
             />
 
             {/* Axon terminal */}
@@ -288,9 +265,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
 
       {/* ACTION POTENTIAL GRAPH - Top Right */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.25, duration: 0.6 }}
       >
         <g transform="translate(350, 50)">
           <rect
@@ -371,15 +345,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               strokeWidth="3"
               fill="none"
               strokeLinecap="round"
-              animate={
-                animate
-                  ? {
-                      pathLength: [0, 1],
-                      opacity: [0.5, 1],
-                    }
-                  : undefined
-              }
-              transition={{ duration: 2.5, repeat: Infinity }}
             />
 
             {/* Phase labels */}
@@ -415,9 +380,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
 
       {/* BRAIN REGIONS - Bottom Left */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g transform="translate(20, 250)">
           <rect
@@ -439,8 +401,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             <motion.path
               d="M75 15 Q20 15 15 60 Q10 100 30 120 Q50 135 75 130 Q100 135 120 120 Q140 100 135 60 Q130 15 75 15"
               fill="url(#cerebrumGrad)"
-              animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-              transition={{ duration: 3, repeat: Infinity }}
             />
             {/* Brain folds */}
             <path
@@ -472,8 +432,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             <motion.path
               d="M100 125 Q90 140 100 155 Q115 165 130 155 Q145 140 135 125"
               fill="url(#cerebellumGrad)"
-              animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-              transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
             />
             {/* Cerebellum folds */}
             <path d="M105 135 Q115 130 125 135" stroke="#6D28D9" strokeWidth="1" fill="none" />
@@ -489,8 +447,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               strokeWidth="12"
               fill="none"
               strokeLinecap="round"
-              animate={animate ? { opacity: [0.9, 1, 0.9] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             />
             <text x="30" y="155" fill="#4F46E5" fontSize="6" fontWeight="600">
               Brain
@@ -521,9 +477,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
 
       {/* SYNAPSE - Bottom Center */}
       <motion.g
-        initial={animate ? { opacity: 0, scale: 0.9 } : undefined}
-        animate={animate ? { opacity: 1, scale: 1 } : undefined}
-        transition={{ delay: 0.35, duration: 0.6 }}
       >
         <g transform="translate(280, 250)">
           <rect
@@ -557,24 +510,18 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               cy="45"
               r="6"
               fill="url(#vesicleGrad)"
-              animate={animate ? { y: [0, 5, 0] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity }}
             />
             <motion.circle
               cx="50"
               cy="40"
               r="6"
               fill="url(#vesicleGrad)"
-              animate={animate ? { y: [0, 8, 0] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
             />
             <motion.circle
               cx="70"
               cy="45"
               r="6"
               fill="url(#vesicleGrad)"
-              animate={animate ? { y: [0, 5, 0] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
             />
             <text x="50" y="60" textAnchor="middle" fill="#0891B2" fontSize="5">
               Vesicles
@@ -587,8 +534,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               fill="#22C55E"
               fontSize="6"
               fontWeight="bold"
-              animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-              transition={{ duration: 1, repeat: Infinity }}
             >
               Ca²⁺
             </motion.text>
@@ -599,24 +544,18 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               cy="85"
               r="3"
               fill="#06B6D4"
-              animate={animate ? { cy: [85, 115, 85], opacity: [1, 0.5, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             />
             <motion.circle
               cx="50"
               cy="85"
               r="3"
               fill="#06B6D4"
-              animate={animate ? { cy: [85, 120, 85], opacity: [1, 0.5, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
             />
             <motion.circle
               cx="65"
               cy="85"
               r="3"
               fill="#06B6D4"
-              animate={animate ? { cy: [85, 115, 85], opacity: [1, 0.5, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
             />
           </g>
 
@@ -653,9 +592,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
 
       {/* NEUROTRANSMITTERS & ANS - Bottom Right */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <g transform="translate(495, 250)">
           <rect
@@ -771,9 +707,6 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
 
       {/* Key values badge */}
       <motion.g
-        initial={animate ? { opacity: 0, scale: 0.8 } : undefined}
-        animate={animate ? { opacity: 1, scale: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.4 }}
       >
         <g transform="translate(565, 175)">
           <rect x="0" y="0" width="115" height="58" rx="10" fill="#1E293B" opacity="0.9" />

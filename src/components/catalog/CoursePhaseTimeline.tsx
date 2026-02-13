@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
 import { Check, Clock, Target, Trophy, Brain, Zap, Star } from 'lucide-react'
 
 interface TimelinePhase {
@@ -146,11 +145,8 @@ export function CoursePhaseTimeline({
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-indigo-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <Clock className="w-4 h-4" />
@@ -169,7 +165,7 @@ export function CoursePhaseTimeline({
             performance, with 92% of students achieving their target rank through this proven
             methodology.
           </p>
-        </motion.div>
+        </div>
 
         {/* Timeline Container */}
         <div className="relative">
@@ -177,34 +173,21 @@ export function CoursePhaseTimeline({
           <div className={`${isMobile ? 'hidden' : 'block'}`}>
             {/* Connecting Line */}
             <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-green-200 to-green-500 rounded-full">
-              <motion.div
-                initial={{ scaleX: 0 }}
-                animate={isInView ? { scaleX: currentPhase / 4 } : {}}
-                transition={{ duration: 2, delay: 0.5, ease: 'easeOut' }}
-                className="h-full bg-green-600 rounded-full origin-left"
+              <div
+                className="h-full bg-green-600 rounded-full origin-left animate-fadeInUp"
               />
             </div>
 
             {/* Phase Cards */}
             <div className="grid grid-cols-4 gap-8">
               {COURSE_PHASES.map((phase, index) => (
-                <motion.div
+                <div
                   key={phase.id}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.2,
-                    ease: 'easeOut',
-                  }}
-                  className="relative"
+                  className="relative animate-fadeInUp"
                 >
                   {/* Timeline Dot */}
                   <div className="absolute top-20 left-1/2 transform -translate-x-1/2 z-10">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={isInView ? { scale: 1 } : {}}
-                      transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
+                    <div
                       className={`w-8 h-8 rounded-full border-4 border-white ${phase.id <= currentPhase ? 'bg-green-600' : 'bg-gray-300'} shadow-lg`}
                       style={{
                         opacity: phase.id <= currentPhase ? 1 : 0.5,
@@ -213,11 +196,7 @@ export function CoursePhaseTimeline({
                   </div>
 
                   {/* Phase Card */}
-                  <motion.div
-                    whileHover={{
-                      y: -8,
-                      transition: { duration: 0.3, ease: 'easeOut' },
-                    }}
+                  <div
                     className={`bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-gray-200 mt-12 ${phase.color.glowColor} hover:shadow-2xl`}
                   >
                     {/* Phase Header */}
@@ -246,16 +225,13 @@ export function CoursePhaseTimeline({
                     {/* Key Points */}
                     <div className="space-y-2 mb-4">
                       {phase.keyPoints.map((point, pointIndex) => (
-                        <motion.div
+                        <div
                           key={pointIndex}
-                          initial={{ x: -10, opacity: 0 }}
-                          animate={isInView ? { x: 0, opacity: 1 } : {}}
-                          transition={{ delay: index * 0.2 + pointIndex * 0.1 + 0.5 }}
-                          className="flex items-start gap-2"
+                          className="flex items-start gap-2 animate-fadeInUp"
                         >
                           <Check className={`h-4 w-4 ${phase.color.accent} mt-0.5 flex-shrink-0`} />
                           <span className="text-gray-700 text-xs leading-relaxed">{point}</span>
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
 
@@ -269,11 +245,8 @@ export function CoursePhaseTimeline({
                           </span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-2">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={isInView ? { width: `${phase.completionRate}%` } : {}}
-                            transition={{ duration: 1, delay: index * 0.2 + 0.8 }}
-                            className="h-2 rounded-full"
+                          <div
+                            className="h-2 rounded-full animate-fadeInUp"
                             style={{ background: phase.color.gradient }}
                           />
                         </div>
@@ -282,17 +255,14 @@ export function CoursePhaseTimeline({
 
                     {/* Current Phase Indicator */}
                     {phase.id === currentPhase && (
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                        transition={{ delay: index * 0.2 + 1 }}
-                        className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg"
+                      <div
+                        className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-fadeInUp"
                       >
                         CURRENT
-                      </motion.div>
+                      </div>
                     )}
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -301,49 +271,32 @@ export function CoursePhaseTimeline({
           <div className={`${isMobile ? 'block' : 'hidden'} relative`}>
             {/* Vertical Connecting Line */}
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-green-200 to-green-500 rounded-full">
-              <motion.div
-                initial={{ scaleY: 0 }}
-                animate={isInView ? { scaleY: currentPhase / 4 } : {}}
-                transition={{ duration: 2, delay: 0.5, ease: 'easeOut' }}
-                className="w-full bg-green-600 rounded-full origin-top"
+              <div
+                className="w-full bg-green-600 rounded-full origin-top animate-fadeInUp"
               />
             </div>
 
             {/* Mobile Phase Cards */}
             <div className="space-y-8">
               {COURSE_PHASES.map((phase, index) => (
-                <motion.div
+                <div
                   key={phase.id}
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
-                  transition={{
-                    duration: 0.6,
-                    delay: index * 0.2,
-                    ease: 'easeOut',
-                  }}
-                  className="relative flex items-start gap-6"
+                  className="relative flex items-start gap-6 animate-fadeInUp"
                 >
                   {/* Timeline Dot */}
                   <div className="relative z-10">
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={isInView ? { scale: 1 } : {}}
-                      transition={{ duration: 0.4, delay: index * 0.2 + 0.3 }}
+                    <div
                       className={`w-8 h-8 rounded-full border-4 border-white shadow-lg flex items-center justify-center ${phase.id <= currentPhase ? 'bg-green-600' : 'bg-gray-300'}`}
                       style={{
                         opacity: phase.id <= currentPhase ? 1 : 0.5,
                       }}
                     >
                       {phase.id <= currentPhase && <Check className="h-4 w-4 text-white" />}
-                    </motion.div>
+                    </div>
                   </div>
 
                   {/* Mobile Phase Card */}
-                  <motion.div
-                    whileHover={{
-                      x: 4,
-                      transition: { duration: 0.2, ease: 'easeOut' },
-                    }}
+                  <div
                     className={`flex-1 bg-white rounded-xl p-5 shadow-lg border border-gray-100 ${phase.color.glowColor}`}
                   >
                     {/* Mobile Phase Header */}
@@ -394,29 +347,23 @@ export function CoursePhaseTimeline({
                           </span>
                         </div>
                         <div className="w-full bg-gray-200 rounded-full h-1.5">
-                          <motion.div
-                            initial={{ width: 0 }}
-                            animate={isInView ? { width: `${phase.completionRate}%` } : {}}
-                            transition={{ duration: 1, delay: index * 0.2 + 0.8 }}
-                            className="h-1.5 rounded-full"
+                          <div
+                            className="h-1.5 rounded-full animate-fadeInUp"
                             style={{ background: phase.color.gradient }}
                           />
                         </div>
                       </div>
                     )}
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </div>
 
         {/* Success Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-16 bg-navy-900 border-t-4 border-green-600 rounded-2xl p-8 text-center text-white"
+        <div
+          className="mt-16 bg-navy-900 border-t-4 border-green-600 rounded-2xl p-8 text-center text-white animate-fadeInUp"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
@@ -449,7 +396,7 @@ export function CoursePhaseTimeline({
               — Ananya Singh, NEET 2024 (Rank 247, AIIMS Delhi)
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

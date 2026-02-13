@@ -5,7 +5,6 @@ import Image from 'next/image'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Mic,
   Send,
@@ -441,20 +440,17 @@ Want me to explain any specific part in more detail?`
   return (
     <div className="flex flex-col h-screen bg-gray-50">
       {/* Enhanced Header */}
-      <motion.div
-        className="bg-indigo-500 text-white shadow-lg"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
+        className="bg-indigo-500 text-white shadow-lg animate-fadeInUp"
       >
         <div className="px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <motion.div
-                className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center"
-                whileHover={{ scale: 1.1 }}
+              <div
+                className="w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center animate-fadeInUp"
               >
                 <Brain className="w-6 h-6 text-white" />
-              </motion.div>
+              </div>
               <div>
                 <h1 className="text-xl font-bold">ClaudeChat Board</h1>
                 <p className="text-sm opacity-90">AI-Powered Biology Learning with Shekhar Sir</p>
@@ -470,34 +466,27 @@ Want me to explain any specific part in more detail?`
 
               {/* Session Controls */}
               {isSessionActive ? (
-                <motion.button
-                  className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg font-medium"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
+                  className="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-lg font-medium animate-fadeInUp"
                   onClick={endSession}
                 >
                   End Session ({getSessionDuration()}m)
-                </motion.button>
+                </button>
               ) : (
-                <motion.button
-                  className="bg-green-600 hover:bg-green-600 px-4 py-2 rounded-lg font-medium"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
+                  className="bg-green-600 hover:bg-green-600 px-4 py-2 rounded-lg font-medium animate-fadeInUp"
                   onClick={startSession}
                 >
                   Start Learning
-                </motion.button>
+                </button>
               )}
             </div>
           </div>
 
           {/* Progress Stats */}
           {isSessionActive && (
-            <motion.div
-              className="mt-4 grid grid-cols-4 gap-4 text-center"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+            <div
+              className="mt-4 grid grid-cols-4 gap-4 text-center animate-fadeInUp"
             >
               <div className="bg-white bg-opacity-10 rounded-lg p-3">
                 <div className="text-lg font-bold">
@@ -519,7 +508,7 @@ Want me to explain any specific part in more detail?`
                 </div>
                 <div className="text-xs opacity-90">Motivation</div>
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
 
@@ -531,7 +520,7 @@ Want me to explain any specific part in more detail?`
               { mode: 'voice', icon: Mic, label: 'Voice (Hindi/English)' },
               { mode: 'image', icon: ImageIcon, label: 'Image Analysis' },
             ].map(({ mode, icon: Icon, label }) => (
-              <motion.button
+              <button
                 key={mode}
                 className={`flex-1 px-4 py-2 rounded-md flex items-center justify-center space-x-2 transition-all ${
                   inputMode === mode
@@ -539,47 +528,40 @@ Want me to explain any specific part in more detail?`
                     : 'text-white hover:bg-white hover:bg-opacity-10'
                 }`}
                 onClick={() => setInputMode(mode as any)}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
               >
                 <Icon size={16} />
                 <span className="text-sm font-medium">{label}</span>
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto p-6 space-y-6">
-        <AnimatePresence>
-          {messages.map((message) => (
-            <motion.div
+{messages.map((message) => (
+            <div
               key={message.id}
               className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
             >
               <div className={`max-w-4xl ${message.type === 'user' ? 'order-2' : 'order-1'}`}>
                 <div
                   className={`flex items-start space-x-3 ${message.type === 'user' ? 'flex-row-reverse space-x-reverse' : ''}`}
                 >
                   {/* Avatar */}
-                  <motion.div
+                  <div
                     className={`w-10 h-10 rounded-full flex items-center justify-center ${
                       message.type === 'user'
                         ? 'bg-blue-500'
                         : 'bg-gradient-to-br from-green-600 to-blue-600'
                     }`}
-                    whileHover={{ scale: 1.1 }}
                   >
                     {message.type === 'user' ? (
                       <User className="w-5 h-5 text-white" />
                     ) : (
                       <Bot className="w-5 h-5 text-white" />
                     )}
-                  </motion.div>
+                  </div>
 
                   {/* Message Content */}
                   <div className={`flex-1 ${message.type === 'user' ? 'text-right' : 'text-left'}`}>
@@ -633,9 +615,8 @@ Want me to explain any specific part in more detail?`
 
                       {/* Image Preview */}
                       {message.metadata?.imageUrl && (
-                        <motion.div
-                          className="mt-3 rounded-lg overflow-hidden relative"
-                          whileHover={{ scale: 1.02 }}
+                        <div
+                          className="mt-3 rounded-lg overflow-hidden relative animate-fadeInUp"
                         >
                           <Image
                             src={message.metadata.imageUrl}
@@ -645,25 +626,20 @@ Want me to explain any specific part in more detail?`
                             className="max-w-full h-auto max-h-64 object-contain"
                             style={{ width: 'auto', height: 'auto' }}
                           />
-                        </motion.div>
+                        </div>
                       )}
 
                       {/* Audio Controls for Assistant Messages */}
                       {message.type === 'assistant' && (
-                        <motion.div
-                          className="mt-3 flex items-center space-x-2"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: 0.5 }}
+                        <div
+                          className="mt-3 flex items-center space-x-2 animate-fadeInUp"
                         >
-                          <motion.button
+                          <button
                             className={`p-2 rounded-lg ${
                               currentPlayingMessage === message.id && isPlayingAudio
                                 ? 'bg-red-100 text-red-600'
                                 : 'bg-blue-100 text-blue-600'
                             } hover:bg-opacity-80`}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
                             onClick={() =>
                               currentPlayingMessage === message.id && isPlayingAudio
                                 ? stopAudioMessage()
@@ -675,64 +651,47 @@ Want me to explain any specific part in more detail?`
                             ) : (
                               <Volume2 size={16} />
                             )}
-                          </motion.button>
+                          </button>
                           <span className="text-xs text-gray-600">
                             {currentPlayingMessage === message.id && isPlayingAudio
                               ? "🔊 Playing in Shekhar Sir's voice..."
                               : "🎵 Click to hear in Shekhar Sir's voice"}
                           </span>
-                        </motion.div>
+                        </div>
                       )}
                     </div>
 
                     {/* Analysis Result Display */}
                     {message.metadata?.analysisResult && (
-                      <motion.div
-                        className="mt-4"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
+                      <div
+                        className="mt-4 animate-fadeInUp"
                       >
                         <AnalysisResultDisplay result={message.metadata.analysisResult} />
-                      </motion.div>
+                      </div>
                     )}
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
-
-        {/* Typing Indicator */}
-        <AnimatePresence>
-          {isTyping && (
-            <motion.div
-              className="flex justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
+{/* Typing Indicator */}
+{isTyping && (
+            <div
+              className="flex justify-start animate-fadeInUp"
             >
               <div className="flex items-start space-x-3">
-                <motion.div
-                  className="w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center"
-                  animate={{ scale: [1, 1.1, 1] }}
-                  transition={{ duration: 1, repeat: Infinity }}
+                <div
+                  className="w-10 h-10 rounded-full bg-gradient-to-br from-green-600 to-blue-600 flex items-center justify-center animate-fadeInUp"
                 >
                   <Bot className="w-5 h-5 text-white" />
-                </motion.div>
+                </div>
                 <div className="bg-white p-4 rounded-2xl shadow-lg border">
                   <div className="flex items-center space-x-2">
                     <div className="flex space-x-1">
                       {[0, 1, 2].map((i) => (
-                        <motion.div
+                        <div
                           key={i}
-                          className="w-2 h-2 bg-blue-500 rounded-full"
-                          animate={{ scale: [1, 1.5, 1] }}
-                          transition={{
-                            duration: 0.6,
-                            repeat: Infinity,
-                            delay: i * 0.2,
-                          }}
+                          className="w-2 h-2 bg-blue-500 rounded-full animate-fadeInUp"
                         />
                       ))}
                     </div>
@@ -740,18 +699,14 @@ Want me to explain any specific part in more detail?`
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        <div ref={messagesEndRef} />
+<div ref={messagesEndRef} />
       </div>
 
       {/* Enhanced Input Area */}
-      <motion.div
-        className="bg-white border-t p-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
+        className="bg-white border-t p-6 animate-fadeInUp"
       >
         {inputMode === 'text' && (
           <div className="flex items-center space-x-4">
@@ -764,15 +719,13 @@ Want me to explain any specific part in more detail?`
                 placeholder="Ask Shekhar Sir any Biology question... (e.g., 'Mitochondria kya hai?' or 'Explain photosynthesis')"
                 className="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 pr-12"
               />
-              <motion.button
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 disabled:opacity-50 animate-fadeInUp"
                 onClick={handleTextSubmit}
                 disabled={!inputText.trim()}
               >
                 <Send size={16} />
-              </motion.button>
+              </button>
             </div>
           </div>
         )}
@@ -799,15 +752,12 @@ Want me to explain any specific part in more detail?`
             onError={(error) => console.error('Image analysis error:', error)}
           />
         )}
-      </motion.div>
+      </div>
 
       {/* Floating Progress Indicator */}
       {isSessionActive && (
-        <motion.div
-          className="fixed bottom-6 left-6 bg-white rounded-full shadow-lg p-3 border"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.05 }}
+        <div
+          className="fixed bottom-6 left-6 bg-white rounded-full shadow-lg p-3 border animate-fadeInUp"
         >
           <div className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
@@ -818,7 +768,7 @@ Want me to explain any specific part in more detail?`
               <div className="text-gray-600">{getSessionDuration()} minutes</div>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   )

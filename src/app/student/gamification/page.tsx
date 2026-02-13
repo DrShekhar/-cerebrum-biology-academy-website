@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useMemo } from 'react'
-import { motion } from 'framer-motion'
 import { Trophy, Flame, Target, Users, Crown, Sparkles, Star, Zap } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { Card, CardContent } from '@/components/ui/Card'
@@ -411,11 +410,8 @@ function BadgesTab({
             </div>
           </div>
           <div className="mt-4 h-3 bg-gray-200 rounded-full overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${completionPercentage}%` }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-              className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full"
+            <div
+              className="h-full bg-gradient-to-r from-purple-500 to-purple-600 rounded-full animate-fadeInUp"
             />
           </div>
         </CardContent>

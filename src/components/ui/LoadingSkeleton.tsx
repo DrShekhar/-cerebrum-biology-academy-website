@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
-
 const shimmerAnimation = {
   backgroundPosition: ['200% 0', '-200% 0'],
   transition: {
@@ -23,38 +21,34 @@ export function MetricCardSkeleton() {
     >
       <div className="flex items-center justify-between">
         <div className="flex-1">
-          <motion.div
-            className="h-4 rounded w-24 mb-2"
+          <div
+            className="h-4 rounded w-24 mb-2 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
-          <motion.div
-            className="h-8 rounded w-16 mb-2"
+          <div
+            className="h-8 rounded w-16 mb-2 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
-          <motion.div
-            className="h-3 rounded w-32"
+          <div
+            className="h-3 rounded w-32 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         </div>
-        <motion.div
-          className="w-12 h-12 rounded-xl"
+        <div
+          className="w-12 h-12 rounded-xl animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
       <span className="sr-only">Loading...</span>
@@ -69,38 +63,34 @@ export function ActivityCardSkeleton() {
       role="status"
       aria-label="Loading activity card"
     >
-      <motion.div
-        className="w-8 h-8 rounded-lg"
+      <div
+        className="w-8 h-8 rounded-lg animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
       <div className="flex-1 min-w-0">
-        <motion.div
-          className="h-4 rounded w-3/4 mb-2"
+        <div
+          className="h-4 rounded w-3/4 mb-2 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
-        <motion.div
-          className="h-3 rounded w-full mb-2"
+        <div
+          className="h-3 rounded w-full mb-2 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
-        <motion.div
-          className="h-3 rounded w-16"
+        <div
+          className="h-3 rounded w-16 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
       <span className="sr-only">Loading...</span>
@@ -115,32 +105,29 @@ export function ChartSkeleton() {
       role="status"
       aria-label="Loading chart"
     >
-      <motion.div
-        className="h-6 rounded w-48 mb-6"
+      <div
+        className="h-6 rounded w-48 mb-6 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {[1, 2, 3, 4].map((i) => (
           <div key={i} className="text-center">
-            <motion.div
-              className="w-20 h-20 rounded-full mx-auto mb-3"
+            <div
+              className="w-20 h-20 rounded-full mx-auto mb-3 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
-            <motion.div
-              className="h-4 rounded w-20 mx-auto"
+            <div
+              className="h-4 rounded w-20 mx-auto animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
           </div>
         ))}
@@ -158,21 +145,19 @@ export function ChatSkeleton() {
           <div
             className={`max-w-[70%] p-3 rounded-lg ${i % 2 === 0 ? 'bg-blue-100' : 'bg-gray-100'}`}
           >
-            <motion.div
-              className="h-4 rounded w-48 mb-2"
+            <div
+              className="h-4 rounded w-48 mb-2 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
-            <motion.div
-              className="h-4 rounded w-32"
+            <div
+              className="h-4 rounded w-32 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
           </div>
         </div>
@@ -185,41 +170,37 @@ export function ChatSkeleton() {
 export function TestGenerationSkeleton() {
   return (
     <div className="space-y-6 p-6" role="status" aria-label="Generating test">
-      <motion.div
-        className="h-8 rounded w-64 mb-4"
+      <div
+        className="h-8 rounded w-64 mb-4 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {[1, 2, 3, 4].map((i) => (
           <div key={i} className="bg-white/60 rounded-xl p-4 border border-gray-200">
-            <motion.div
-              className="h-6 rounded w-32 mb-3"
+            <div
+              className="h-6 rounded w-32 mb-3 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
-            <motion.div
-              className="h-4 rounded w-full mb-2"
+            <div
+              className="h-4 rounded w-full mb-2 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
-            <motion.div
-              className="h-4 rounded w-3/4"
+            <div
+              className="h-4 rounded w-3/4 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
           </div>
         ))}
@@ -236,37 +217,33 @@ export function CardSkeleton() {
       role="status"
       aria-label="Loading card"
     >
-      <motion.div
-        className="h-6 rounded w-3/4 mb-4"
+      <div
+        className="h-6 rounded w-3/4 mb-4 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
-      <motion.div
-        className="h-4 rounded w-full mb-2"
+      <div
+        className="h-4 rounded w-full mb-2 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
-      <motion.div
-        className="h-4 rounded w-5/6 mb-2"
+      <div
+        className="h-4 rounded w-5/6 mb-2 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
-      <motion.div
-        className="h-4 rounded w-2/3"
+      <div
+        className="h-4 rounded w-2/3 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
       <span className="sr-only">Loading...</span>
     </div>
@@ -285,24 +262,22 @@ export function DashboardSkeleton() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
           <div className="bg-white/60 rounded-2xl p-6 border border-gray-200 h-96">
-            <motion.div
-              className="h-6 rounded w-32 mb-6"
+            <div
+              className="h-6 rounded w-32 mb-6 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
             <div className="space-y-4">
               {[1, 2, 3, 4].map((i) => (
-                <motion.div
+                <div
                   key={i}
-                  className="h-16 rounded"
+                  className="h-16 rounded animate-fadeInUp"
                   style={{
                     background: shimmerGradient,
                     backgroundSize: '200% 100%',
                   }}
-                  animate={shimmerAnimation}
                 />
               ))}
             </div>

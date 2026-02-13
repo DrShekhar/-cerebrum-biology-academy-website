@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Globe,
@@ -148,11 +147,8 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-4xl">{data.flag}</span>
                 <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
@@ -221,14 +217,11 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column - Lead Capture Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-2xl p-6 shadow-2xl"
+            <div
+              className="bg-white rounded-2xl p-6 shadow-2xl animate-fadeInUp"
             >
               <div className="text-center mb-6">
                 <h2 className="text-xl font-bold text-black mb-2">Get Free Consultation</h2>
@@ -328,7 +321,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   Free Call
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -353,12 +346,8 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {/* Free Tools Section */}
       <section className="py-12 bg-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4 mr-2" />
@@ -367,16 +356,12 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             <h2 className="text-2xl md:text-3xl font-bold text-black">
               Try Our Free NEET Preparation Tools
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* MCQ Practice Tool */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Link href="/neet-biology-mcq">
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
                   <div className="flex items-start gap-4">
@@ -399,15 +384,11 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
 
             {/* Rank Predictor Tool */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Link href="/neet-rank-predictor">
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
                   <div className="flex items-start gap-4">
@@ -430,7 +411,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -438,12 +419,8 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {/* Class Timings */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Class Timings for {data.country} Students
@@ -451,7 +428,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             <p className="text-xl text-gray-600">
               Convenient timings aligned with {data.timezone} timezone
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-blue-50 rounded-xl p-6 text-center border border-blue-100">
@@ -479,12 +456,8 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {/* Courses Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               NEET & Board Courses for {data.country} Students
@@ -492,17 +465,13 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             <p className="text-xl text-gray-600">
               Classes 9th to 12th + Droppers | CBSE, ICSE, IB, Cambridge Boards
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.courses.map((course, index) => (
-              <motion.div
+              <div
                 key={course.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-blue-600 p-4 text-white">
                   <h3 className="text-xl font-bold">{course.name}</h3>
@@ -536,7 +505,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                     Enquire on WhatsApp
                   </Button>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -545,32 +514,24 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {/* Why Choose Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
               Why {data.country} Students Choose Cerebrum Biology Academy
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.whyChoose.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-blue-50 rounded-xl p-6 border border-blue-100"
+                className="bg-blue-50 rounded-xl p-6 border border-blue-100 animate-fadeInUp"
               >
                 <CheckCircle className="w-10 h-10 text-blue-600 mb-4" />
                 <h3 className="text-xl font-bold text-black mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -579,29 +540,21 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {/* Features Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">What You Get</h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {data.features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 flex items-center"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-4 flex items-center animate-fadeInUp"
               >
                 <CheckCircle className="w-5 h-5 mr-3 flex-shrink-0 text-yellow-300" />
                 <span className="text-sm">{feature}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -611,12 +564,8 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {(data.testimonials && data.testimonials.length > 0) || data.testimonial ? (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
                 {data.country} Students Who Cracked NEET
@@ -624,19 +573,15 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
               <p className="text-xl text-gray-600">
                 Success stories from students in {data.country}
               </p>
-            </motion.div>
+            </div>
 
             {/* Multiple Testimonials Grid */}
             {data.testimonials && data.testimonials.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {data.testimonials.map((testimonial, index) => (
-                  <motion.div
+                  <div
                     key={testimonial.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-purple-50 rounded-xl p-6 border border-purple-100"
+                    className="bg-purple-50 rounded-xl p-6 border border-purple-100 animate-fadeInUp"
                   >
                     <div className="flex items-center gap-4 mb-4">
                       <div className="text-4xl">{testimonial.avatar || '👨‍🎓'}</div>
@@ -657,18 +602,14 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                         <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             ) : data.testimonial ? (
               /* Single Testimonial Fallback */
               <div className="max-w-4xl mx-auto">
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                  className="bg-purple-50 rounded-2xl shadow-xl p-8 md:p-12 text-center border border-purple-100"
+                <div
+                  className="bg-purple-50 rounded-2xl shadow-xl p-8 md:p-12 text-center border border-purple-100 animate-fadeInUp"
                 >
                   <div className="text-4xl mb-4">{data.flag}</div>
                   <div className="flex justify-center mb-4">
@@ -686,7 +627,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   <div className="text-green-600 font-semibold mt-2">
                     NEET Score: {data.testimonial.score}
                   </div>
-                </motion.div>
+                </div>
               </div>
             ) : null}
           </div>
@@ -696,12 +637,8 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {/* FAQs Section - Accordion */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
               <HelpCircle className="w-4 h-4 mr-2" />
@@ -713,17 +650,13 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
             <p className="text-xl text-gray-600">
               Everything you need to know about NEET preparation from {data.country}
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {data.faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm"
+                className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
@@ -737,26 +670,18 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                   />
                 </button>
                 {openFaqIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="px-6 pb-5"
+                  <div
+                    className="px-6 pb-5 animate-fadeInUp"
                   >
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                  </motion.div>
+                  </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-10 animate-fadeInUp"
           >
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <button
@@ -766,7 +691,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
               <MessageCircle className="w-5 h-5" />
               Chat with us on WhatsApp
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -790,12 +715,8 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
       {/* Final CTA Section */}
       <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <div className="text-6xl mb-6">{data.flag}</div>
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NEET Journey from {data.country} Today!
@@ -842,7 +763,7 @@ export function NRICountryPageTemplate({ data }: NRICountryPageTemplateProps) {
                 {getDisplayPhone()} | Available 8 AM - 10 PM IST
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

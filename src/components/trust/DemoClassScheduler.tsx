@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Calendar,
   Clock,
@@ -228,9 +227,8 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
   const FormatIcon = getFormatIcon(demoClass.format)
 
   return (
-    <motion.div
-      layout
-      className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
+    <div
+      className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden animate-fadeInUp"
     >
       {/* Header */}
       <div className="bg-indigo-500 text-white p-4">
@@ -306,13 +304,9 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
         </div>
 
         {/* What You'll Learn (Expanded View) */}
-        <AnimatePresence>
-          {showDetails && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="mb-4"
+{showDetails && (
+            <div
+              className="mb-4 animate-fadeInUp"
             >
               <h4 className="font-semibold text-gray-900 mb-2 text-sm">What You'll Learn:</h4>
               <ul className="space-y-1">
@@ -323,11 +317,9 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Enrollment Status */}
+{/* Enrollment Status */}
         <div className="flex items-center justify-between">
           <div className="text-sm">
             {demoClass.capacity - demoClass.enrolledCount <= 5 ? (
@@ -345,7 +337,7 @@ function DemoClassCard({ demoClass }: { demoClass: DemoClass }) {
           <div className="text-sm font-bold text-blue-600">FREE</div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -413,11 +405,9 @@ function TimeSlotGrid({
           {/* Time Slots Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {filteredSlots.map((slot) => (
-              <motion.button
+              <button
                 key={slot.id}
                 onClick={() => slot.isAvailable && onSlotSelect(slot)}
-                whileHover={slot.isAvailable ? { scale: 1.02 } : {}}
-                whileTap={slot.isAvailable ? { scale: 0.98 } : {}}
                 disabled={!slot.isAvailable}
                 className={`p-4 rounded-lg border-2 text-left transition-all relative ${
                   slot.isAvailable
@@ -444,7 +434,7 @@ function TimeSlotGrid({
                 <div className="text-sm text-gray-600 mt-1">
                   {slot.isAvailable ? `${slot.spotsLeft} spots left` : 'Fully booked'}
                 </div>
-              </motion.button>
+              </button>
             ))}
           </div>
         </>
@@ -779,15 +769,11 @@ export default function DemoClassScheduler({
 
       {/* Main Content */}
       <div className="p-8">
-        <AnimatePresence mode="wait">
-          {/* Step 1: Select Demo Class */}
+{/* Step 1: Select Demo Class */}
           {currentStep === 'select' && (
-            <motion.div
+            <div
               key="select"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Choose Your Demo Class</h3>
@@ -812,17 +798,14 @@ export default function DemoClassScheduler({
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
 
           {/* Step 2: Schedule Time */}
           {currentStep === 'schedule' && (
-            <motion.div
+            <div
               key="schedule"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -852,17 +835,14 @@ export default function DemoClassScheduler({
               )}
 
               <TimeSlotGrid selectedClass={selectedClass} onSlotSelect={handleSlotSelect} />
-            </motion.div>
+            </div>
           )}
 
           {/* Step 3: Book Session */}
           {currentStep === 'book' && (
-            <motion.div
+            <div
               key="book"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <div>
@@ -885,16 +865,14 @@ export default function DemoClassScheduler({
                 selectedSlot={selectedSlot}
                 onSubmit={handleBookingSubmit}
               />
-            </motion.div>
+            </div>
           )}
 
           {/* Step 4: Confirmation */}
           {currentStep === 'confirmed' && (
-            <motion.div
+            <div
               key="confirmed"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="text-center py-12"
+              className="text-center py-12 animate-fadeInUp"
             >
               <div className="max-w-2xl mx-auto">
                 <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -966,10 +944,9 @@ export default function DemoClassScheduler({
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </div>
   )
 }

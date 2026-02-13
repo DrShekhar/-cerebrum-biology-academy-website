@@ -16,8 +16,6 @@ import {
   User,
   AlertCircle,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 interface EnrollmentDashboardProps {
   isAdmin?: boolean
 }
@@ -103,11 +101,8 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <motion.div
-          className="bg-white rounded-2xl shadow-lg p-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+        <div
+          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -116,13 +111,10 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
             </div>
             <Users className="w-8 h-8 text-blue-500" />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="bg-white rounded-2xl shadow-lg p-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <div
+          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -131,13 +123,10 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
             </div>
             <Clock className="w-8 h-8 text-orange-500" />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="bg-white rounded-2xl shadow-lg p-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+        <div
+          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -146,13 +135,10 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
             </div>
             <CheckCircle className="w-8 h-8 text-green-600" />
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="bg-white rounded-2xl shadow-lg p-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+        <div
+          className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -161,7 +147,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
             </div>
             <X className="w-8 h-8 text-red-500" />
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Filters and Search */}
@@ -222,8 +208,6 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
               {filteredEnrollments.map((enrollment) => (
                 <motion.tr
                   key={enrollment.id}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
                   className="hover:bg-gray-50 transition-colors"
                 >
                   <td className="px-6 py-4">

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumCard, PremiumButton, PremiumProgress } from '@/components/ui/PremiumDesignSystem'
 import {
   FlaskConical,
@@ -142,11 +141,8 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
     <div className={`py-20 bg-gradient-to-br from-slate-50 to-blue-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-indigo-100 border border-blue-200 rounded-full px-6 py-3 mb-6">
             <BookOpen className="h-6 w-6 text-blue-600" />
@@ -185,18 +181,15 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Biology Modules Grid */}
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
           {biologyModules.map((module, index) => (
-            <motion.div
+            <div
               key={module.id}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setSelectedModule(selectedModule === module.id ? null : module.id)}
-            >
+             className="animate-fadeInUp">
               <PremiumCard
                 variant="hover"
                 size="lg"
@@ -268,14 +261,9 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                   </div>
 
                   {/* Expanded Content */}
-                  <AnimatePresence>
-                    {selectedModule === module.id && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="border-t pt-6 space-y-4"
+{selectedModule === module.id && (
+                      <div
+                        className="border-t pt-6 space-y-4 animate-fadeInUp"
                       >
                         <div className="bg-gray-50 rounded-lg p-4">
                           <h4 className="font-semibold text-gray-900 mb-2">
@@ -293,22 +281,18 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                           <Play className="h-5 w-5 mr-2" />
                           Start Learning Journey
                         </PremiumButton>
-                      </motion.div>
+                      </div>
                     )}
-                  </AnimatePresence>
-                </div>
+</div>
               </PremiumCard>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Research Integration Section */}
         {viewMode === 'research' && (
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-16"
+          <div
+            className="mb-16 animate-fadeInUp"
           >
             <PremiumCard variant="luxury" size="xl">
               <div className="text-center mb-8">
@@ -322,12 +306,9 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
 
               <div className="grid md:grid-cols-3 gap-6">
                 {researchHighlights.map((research, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg border hover:shadow-xl transition-shadow"
+                    className="bg-white rounded-xl p-6 shadow-lg border hover:shadow-xl transition-shadow animate-fadeInUp"
                   >
                     <div className="flex items-center gap-2 mb-3">
                       <Sparkles className="h-5 w-5 text-blue-600" />
@@ -336,19 +317,16 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
                     </div>
                     <h4 className="font-bold text-gray-900 mb-2">{research.title}</h4>
                     <p className="text-sm text-gray-700">{research.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </PremiumCard>
-          </motion.div>
+          </div>
         )}
 
         {/* Faculty Excellence Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center"
+        <div
+          className="text-center animate-fadeInUp"
         >
           <PremiumCard variant="premium" size="xl" className="bg-gray-50">
             <div className="space-y-8">
@@ -401,7 +379,7 @@ export function HarvardLevelContent({ className = '' }: HarvardLevelContentProps
               </div>
             </div>
           </PremiumCard>
-        </motion.div>
+        </div>
       </div>
     </div>
   )

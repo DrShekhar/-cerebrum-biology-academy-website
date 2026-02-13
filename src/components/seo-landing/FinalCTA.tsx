@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ArrowRight, Phone, Calendar, BookOpen, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 import { SEOLandingContent } from '@/data/seo-landing/types'
@@ -37,12 +36,8 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
       <div className="absolute bottom-10 right-10 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl" />
 
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
+        <div
+          className="text-center animate-fadeInUp"
         >
           <h2 className="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">{cta.title}</h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-white/70">{cta.subtitle}</p>
@@ -78,12 +73,8 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
           </div>
 
           {/* Quick Contact */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6"
+          <div
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6 animate-fadeInUp"
           >
             <a
               href={contactButtons?.phone ? `tel:${phoneNumber}` : getPhoneLink()}
@@ -111,8 +102,8 @@ export function FinalCTA({ cta, contactButtons }: FinalCTAProps) {
             <span className="text-white/70">
               New batches starting <span className="font-semibold text-white">January 2025</span>
             </span>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   )

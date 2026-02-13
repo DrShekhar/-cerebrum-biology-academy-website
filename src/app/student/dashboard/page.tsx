@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   TrendingUp,
@@ -308,12 +307,9 @@ export default function StudentDashboard() {
             {quickStats.length > 0 ? (
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {quickStats.map((stat, index) => (
-                  <motion.div
+                  <div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                  >
+                   className="animate-fadeInUp">
                     <Card className="hover:shadow-lg transition-shadow">
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between">
@@ -340,7 +336,7 @@ export default function StudentDashboard() {
                         </div>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             ) : (
@@ -412,10 +408,7 @@ export default function StudentDashboard() {
                         <div key={index} className="flex items-center gap-2">
                           <span className="text-xs text-gray-500 w-8">Day {index + 1}</span>
                           <div className="flex-1 bg-gray-100 rounded-full h-2">
-                            <motion.div
-                              initial={{ width: 0 }}
-                              animate={{ width: `${score}%` }}
-                              transition={{ duration: 0.8, delay: index * 0.1 }}
+                            <div
                               className={cn(
                                 'h-2 rounded-full',
                                 score >= 90
@@ -600,7 +593,7 @@ function ActionButton({
 }) {
   return (
     <Link href={href}>
-      <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="h-full">
+      <div className="h-full animate-fadeInUp">
         <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
           <CardContent className="p-6">
             <div
@@ -615,7 +608,7 @@ function ActionButton({
             <p className="text-sm text-gray-600">{description}</p>
           </CardContent>
         </Card>
-      </motion.div>
+      </div>
     </Link>
   )
 }
@@ -634,10 +627,8 @@ function LockedActionButton({
   onClick: () => void
 }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      whileTap={{ scale: 0.98 }}
-      className="h-full cursor-pointer"
+    <div
+      className="h-full cursor-pointer animate-fadeInUp"
       onClick={onClick}
     >
       <Card className="h-full hover:shadow-lg transition-shadow relative overflow-hidden">
@@ -671,7 +662,7 @@ function LockedActionButton({
           </span>
         </div>
       </Card>
-    </motion.div>
+    </div>
   )
 }
 

@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { premiumTypography, premiumAnimations } from '@/lib/design/premiumPatterns'
 
@@ -54,14 +53,10 @@ export const AcademicHeadline: React.FC<AcademicHeadlineProps> = ({
 
   if (animation) {
     return (
-      <motion.div
-        initial={premiumAnimations.fadeInUp.initial}
-        whileInView={premiumAnimations.fadeInUp.animate}
-        transition={premiumAnimations.fadeInUp.transition}
-        viewport={{ once: true }}
-      >
+      <div
+       className="animate-fadeInUp">
         <Tag className={baseClasses}>{children}</Tag>
-      </motion.div>
+      </div>
     )
   }
 
@@ -102,15 +97,11 @@ export const AcademicParagraph: React.FC<AcademicParagraphProps> = ({
 
   if (animation) {
     return (
-      <motion.p
+      <p
         className={classes}
-        initial={premiumAnimations.fadeInUp.initial}
-        whileInView={premiumAnimations.fadeInUp.animate}
-        transition={{ ...premiumAnimations.fadeInUp.transition, delay: 0.2 }}
-        viewport={{ once: true }}
       >
         {children}
-      </motion.p>
+      </p>
     )
   }
 
@@ -186,10 +177,6 @@ export const AcademicQuote: React.FC<AcademicQuoteProps> = ({
   return (
     <motion.blockquote
       className={quoteClasses}
-      initial={premiumAnimations.fadeInUp.initial}
-      whileInView={premiumAnimations.fadeInUp.animate}
-      transition={premiumAnimations.fadeInUp.transition}
-      viewport={{ once: true }}
     >
       {variant !== 'research' && <div className="text-4xl text-blue-300 mb-4 font-serif">"</div>}
 
@@ -259,14 +246,12 @@ export const AcademicList: React.FC<AcademicListProps> = ({
 
   if (animation) {
     return (
-      <motion.div
-        variants={premiumAnimations.staggerContainer}
+      <div
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true }}
-      >
+       className="animate-fadeInUp">
         {listContent}
-      </motion.div>
+      </div>
     )
   }
 

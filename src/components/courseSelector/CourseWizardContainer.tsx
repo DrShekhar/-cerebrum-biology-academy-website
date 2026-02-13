@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronLeft,
   ChevronRight,
@@ -409,14 +408,9 @@ const CourseWizardContainer: React.FC = () => {
                 <span className="ml-3 text-gray-600">Processing your preferences...</span>
               </div>
             ) : (
-              <AnimatePresence mode="wait">
-                <motion.div
+<div
                   key={currentStepData.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.3 }}
-                >
+                 className="animate-fadeInUp">
                   <StepComponent
                     data={selectionData}
                     onUpdate={(data) => handleDataUpdate(currentStepData.id, data)}
@@ -425,9 +419,8 @@ const CourseWizardContainer: React.FC = () => {
                     isValid={isStepValid(currentStep)}
                     variant={(variant as 'default' | 'compact' | 'detailed') || 'default'}
                   />
-                </motion.div>
-              </AnimatePresence>
-            )}
+                </div>
+)}
           </div>
 
           {/* Navigation Footer */}

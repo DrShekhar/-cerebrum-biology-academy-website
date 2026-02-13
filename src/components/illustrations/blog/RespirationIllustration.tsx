@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function RespirationIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -119,18 +118,12 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         fill="#1E293B"
         fontSize="18"
         fontWeight="700"
-        initial={animate ? { opacity: 0, y: -10 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         Breathing & Gas Exchange
       </motion.text>
 
       {/* RESPIRATORY SYSTEM - Left side */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         {/* Nose/Nasal Cavity */}
         <g transform="translate(100, 50)">
@@ -205,8 +198,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
         {/* Left Lung - Realistic anatomical shape with 2 lobes */}
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
           style={{ transformOrigin: '75px 360px' }}
         >
           {/* Left lung outer shape - 2 lobes, cardiac notch */}
@@ -264,8 +255,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
         {/* Right Lung - Realistic anatomical shape with 3 lobes */}
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, delay: 0.1 }}
           style={{ transformOrigin: '210px 360px' }}
         >
           {/* Right lung outer shape - 3 lobes, larger */}
@@ -344,9 +333,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
       {/* ALVEOLUS DETAIL - Center/Right */}
       <motion.g
-        initial={animate ? { opacity: 0, scale: 0.9 } : undefined}
-        animate={animate ? { opacity: 1, scale: 1 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g transform="translate(290, 50)">
           <rect
@@ -391,8 +377,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
             {/* O2 molecules moving in */}
             <motion.g
-              animate={animate ? { x: [0, 18, 0], opacity: [1, 0.5, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             >
               <circle cx="55" cy="52" r="7" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
               <text x="55" y="56" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
@@ -400,8 +384,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
               </text>
             </motion.g>
             <motion.g
-              animate={animate ? { x: [0, 18, 0], opacity: [1, 0.5, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             >
               <circle cx="70" cy="40" r="7" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
               <text x="70" y="44" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
@@ -411,8 +393,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
             {/* CO2 molecules moving out */}
             <motion.g
-              animate={animate ? { x: [0, -18, 0], opacity: [1, 0.5, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             >
               <circle cx="115" cy="100" r="7" fill="url(#co2Grad)" filter="url(#gasGlow)" />
               <text x="115" y="104" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
@@ -420,8 +400,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
               </text>
             </motion.g>
             <motion.g
-              animate={animate ? { x: [0, -18, 0], opacity: [1, 0.5, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             >
               <circle cx="100" cy="115" r="7" fill="url(#co2Grad)" filter="url(#gasGlow)" />
               <text x="100" y="119" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
@@ -497,9 +475,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
       {/* OXYGEN TRANSPORT - Right side */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <g transform="translate(290, 265)">
           <rect
@@ -534,32 +509,24 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
               cy="32"
               r="6"
               fill="url(#oxygenGrad)"
-              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
             />
             <motion.circle
               cx="42"
               cy="22"
               r="6"
               fill="url(#oxygenGrad)"
-              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
             />
             <motion.circle
               cx="62"
               cy="22"
               r="6"
               fill="url(#oxygenGrad)"
-              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
             />
             <motion.circle
               cx="76"
               cy="35"
               r="6"
               fill="url(#oxygenGrad)"
-              animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}
             />
 
             <text x="50" y="75" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
@@ -598,9 +565,6 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
 
       {/* LUNG VOLUMES - Bottom Right */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6 }}
       >
         <g transform="translate(290, 395)">
           <rect

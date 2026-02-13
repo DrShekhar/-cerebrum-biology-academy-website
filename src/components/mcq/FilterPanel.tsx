@@ -1,6 +1,5 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
 import { Check } from 'lucide-react'
 import { BIOLOGY_TOPICS, BIOLOGY_CHAPTERS, type BiologyTopic } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
@@ -152,14 +151,9 @@ export function FilterPanel({
         </div>
 
         {/* Chapter Selection (only shown when topic is selected) */}
-        <AnimatePresence>
-          {selectedTopic && availableChapters.length > 0 && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
-              className="overflow-hidden"
+{selectedTopic && availableChapters.length > 0 && (
+            <div
+              className="overflow-hidden animate-fadeInUp"
             >
               <div className="flex items-center gap-2 mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">
@@ -202,11 +196,9 @@ export function FilterPanel({
                   </button>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Difficulty Selection */}
+{/* Difficulty Selection */}
         <div>
           <div className="flex items-center gap-2 mb-3">
             <span className="text-xs font-semibold uppercase tracking-wider text-stone-600">

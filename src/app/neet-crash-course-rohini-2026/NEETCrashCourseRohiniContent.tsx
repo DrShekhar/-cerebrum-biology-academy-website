@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle,
@@ -217,10 +216,8 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl"
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-white/20 text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
@@ -270,16 +267,15 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                   Book Free Demo
                 </Button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-xl font-semibold"
+                className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-xl font-semibold animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
                 WhatsApp: 88264-44334
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -288,17 +284,13 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div
+              <div
                 key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center"
+                className="text-center animate-fadeInUp"
               >
                 <p className="text-3xl md:text-4xl font-bold text-red-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -307,27 +299,20 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
       {/* Target Audience Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-orange-50 to-yellow-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Who Should Join?</h2>
             <p className="text-xl text-slate-600">
               Designed for serious NEET 2026 aspirants who need intensive preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {targetAudience.map((audience, index) => (
-              <motion.div
+              <div
                 key={audience.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-xl"
+                className="bg-white rounded-2xl p-8 shadow-xl animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
                   {index === 0 ? (
@@ -346,7 +331,7 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -355,34 +340,27 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
       {/* Program Highlights */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               What You Get in 6 Months
             </h2>
             <p className="text-xl text-slate-600">Complete NEET preparation package</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {programHighlights.map((highlight, index) => (
-              <motion.div
+              <div
                 key={highlight.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg border border-gray-100"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 shadow-lg border border-gray-100 animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-xl flex items-center justify-center mb-4">
                   <highlight.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{highlight.title}</h3>
                 <p className="text-slate-600">{highlight.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -391,30 +369,23 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
       {/* Batch Schedule */}
       <section className="py-16 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Batch Timings & Schedule</h2>
             <p className="text-xl text-slate-300">Choose the batch that suits your schedule</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {batchSchedule.map((batch, index) => (
-              <motion.div
+              <div
                 key={batch.batch}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold mb-2">{batch.batch}</h3>
                 <p className="text-2xl text-yellow-400 font-bold mb-3">{batch.time}</p>
                 <p className="text-slate-300 text-sm">{batch.ideal}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -422,13 +393,9 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
             <h3 className="text-xl font-bold mb-6 text-center">Daily Schedule (Morning Batch)</h3>
             <div className="grid md:grid-cols-3 gap-6">
               {dailySchedule.map((item, index) => (
-                <motion.div
+                <div
                   key={item.time}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-4 animate-fadeInUp"
                 >
                   <div className="bg-yellow-500 text-slate-900 px-3 py-1 rounded-lg text-sm font-semibold whitespace-nowrap">
                     {item.time}
@@ -437,7 +404,7 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                     <h4 className="font-bold">{item.activity}</h4>
                     <p className="text-sm text-slate-400">{item.description}</p>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -447,26 +414,20 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
       {/* 6-Month Plan */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               6-Month Syllabus Plan
             </h2>
             <p className="text-xl text-slate-600">Structured coverage of complete NEET Biology</p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {monthlyPlan.map((phase, index) => (
-              <motion.div
+              <div
                 key={phase.month}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl p-6 md:p-8 text-white"
+                className="bg-gradient-to-r from-red-600 to-orange-500 rounded-2xl p-6 md:p-8 text-white animate-fadeInUp"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-6">
                   <div className="md:w-1/4">
@@ -485,7 +446,7 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -494,27 +455,20 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
       {/* Free NEET Tools */}
       <section className="py-16 bg-gradient-to-br from-teal-600 to-cyan-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">FREE NEET Tools</h2>
             <p className="text-xl text-teal-100">
               Use our AI-powered tools to boost your preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {freeTools.map((tool, index) => (
-              <motion.div
+              <div
                 key={tool.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
+               className="animate-fadeInUp">
                 <Link
                   href={tool.href}
                   className="block bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-colors"
@@ -525,7 +479,7 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                     Try Now Free <ChevronRight className="w-4 h-4" />
                   </span>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -534,27 +488,20 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
       {/* Success Stories */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Success Stories</h2>
             <p className="text-xl text-slate-600">
               Students who achieved their dream with our crash course
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {successStories.map((story, index) => (
-              <motion.div
+              <div
                 key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden"
+                className="bg-white rounded-2xl shadow-xl overflow-hidden animate-fadeInUp"
               >
                 <div className="relative aspect-video bg-gray-200">
                   <iframe
@@ -580,15 +527,12 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                   </div>
                   <p className="text-slate-600 text-sm">{story.achievement}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-center mt-8"
+          <div
+            className="text-center mt-8 animate-fadeInUp"
           >
             <a
               href="https://www.youtube.com/@cerebrumbiologyacademy"
@@ -600,7 +544,7 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
               Watch More Success Stories
               <ExternalLink className="w-4 h-4" />
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -611,11 +555,8 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-red-600 to-orange-500 rounded-2xl p-8 text-white"
+            <div
+              className="bg-gradient-to-br from-red-600 to-orange-500 rounded-2xl p-8 text-white animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold mb-6">Fee Structure</h2>
               <div className="space-y-4">
@@ -643,13 +584,10 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
               <p className="mt-6 text-sm text-orange-100">
                 * Fee includes study material, 100+ mock tests, and digital platform access
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-slate-900 rounded-2xl p-8 text-white"
+            <div
+              className="bg-slate-900 rounded-2xl p-8 text-white animate-fadeInUp"
             >
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-yellow-400 mr-3" />
@@ -692,7 +630,7 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -791,14 +729,13 @@ export default function NEETCrashCourseRohiniContent({ faqs }: { faqs: FAQ[] }) 
                 Book Free Demo
               </Button>
             </Link>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
+            <button
               onClick={handleWhatsApp}
-              className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-xl font-bold"
+              className="inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-xl font-bold animate-fadeInUp"
             >
               <Phone className="w-5 h-5" />
               WhatsApp: 88264-44334
-            </motion.button>
+            </button>
           </div>
           <p className="mt-6 text-sm text-white/80">
             Limited seats available. Batch starting December 2025.

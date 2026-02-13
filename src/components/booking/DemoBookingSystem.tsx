@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { CONTACT_INFO, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Calendar,
@@ -496,10 +495,8 @@ export function DemoBookingSystem() {
   if (bookingComplete) {
     return (
       <div className="max-w-2xl mx-auto p-6">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-lg shadow-lg p-8 text-center"
+        <div
+          className="bg-white rounded-lg shadow-lg p-8 text-center animate-fadeInUp"
         >
           <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-8 h-8 text-green-600" />
@@ -632,7 +629,7 @@ export function DemoBookingSystem() {
               support@cerebrumbiologyacademy.com
             </p>
           </div>
-        </motion.div>
+        </div>
       </div>
     )
   }
@@ -701,10 +698,8 @@ export function DemoBookingSystem() {
         <div className="p-4 md:p-6">
           {/* Error Display */}
           {error && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-red-50 border-2 border-red-200 rounded-lg p-4 mb-6"
+            <div
+              className="bg-red-50 border-2 border-red-200 rounded-lg p-4 mb-6 animate-fadeInUp"
             >
               <div className="flex items-start gap-3">
                 <AlertCircle className="w-5 h-5 text-red-600 mt-0.5 flex-shrink-0" />
@@ -719,18 +714,13 @@ export function DemoBookingSystem() {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-
-          <AnimatePresence mode="wait">
-            {/* Step 1: Schedule Your Demo (Date, Time, Name, Email, Phone) */}
+{/* Step 1: Schedule Your Demo (Date, Time, Name, Email, Phone) */}
             {currentStep === 1 && (
-              <motion.div
+              <div
                 key="step1"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Date Selection */}
                 <div>
@@ -794,7 +784,7 @@ export function DemoBookingSystem() {
                 </div>
 
                 {selectedDate && (
-                  <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+                  <div className="animate-fadeInUp">
                     {/* Urgency Banner */}
                     <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4 rounded-r-lg">
                       <div className="flex items-start gap-3">
@@ -864,15 +854,13 @@ export function DemoBookingSystem() {
                         </div>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {/* Personal Information - Only show after time is selected */}
                 {selectedTime && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="space-y-6 pt-4 border-t border-gray-200"
+                  <div
+                    className="space-y-6 pt-4 border-t border-gray-200 animate-fadeInUp"
                   >
                     <h3 className="text-lg font-semibold text-gray-900">Your Contact Details</h3>
 
@@ -1027,7 +1015,7 @@ export function DemoBookingSystem() {
                         <span>Or Book via WhatsApp</span>
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {/* Testimonials - Show when no time selected yet */}
@@ -1041,17 +1029,14 @@ export function DemoBookingSystem() {
                     </div>
                   </>
                 )}
-              </motion.div>
+              </div>
             )}
 
             {/* Step 2: Confirm Booking (Course Interest + Summary) */}
             {currentStep === 2 && (
-              <motion.div
+              <div
                 key="step2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
                   Confirm Your Demo Booking
@@ -1170,11 +1155,9 @@ export function DemoBookingSystem() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
-          {/* Navigation Buttons for Step 2 - Sticky on mobile/tablet */}
+{/* Navigation Buttons for Step 2 - Sticky on mobile/tablet */}
           {currentStep === 2 && (
             <div className="sticky bottom-0 left-0 right-0 z-20 bg-white border-t shadow-lg md:shadow-none md:static md:mt-8">
               <div className="flex justify-between items-center p-4 md:px-0 md:pt-6">

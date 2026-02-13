@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { DiagramContainer } from '../shared/DiagramContainer'
 import { DiagramLabel } from '../shared/DiagramLabel'
 import { biologyColors } from '../hooks/useDiagram'
@@ -92,9 +91,6 @@ export function RootMeristem({
 
         <motion.g
           className="root-meristem"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
         >
           {/* Main root body - outer layer (Epidermis/Cortex) */}
           <motion.path
@@ -111,9 +107,6 @@ export function RootMeristem({
             stroke="#888"
             strokeWidth={2}
             filter="url(#shadow)"
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 1 }}
           />
 
           {/* Central Cylinder */}
@@ -135,9 +128,6 @@ export function RootMeristem({
             onMouseEnter={() => interactive && setHighlightedZone('centralCylinder')}
             onMouseLeave={() => interactive && setHighlightedZone(null)}
             style={{ cursor: interactive ? 'pointer' : 'default' }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.9 }}
-            transition={{ delay: 0.3 }}
           />
 
           {/* Protoderm layer (thin outer line) */}
@@ -174,9 +164,6 @@ export function RootMeristem({
             onMouseEnter={() => interactive && setHighlightedZone('quiescentCenter')}
             onMouseLeave={() => interactive && setHighlightedZone(null)}
             style={{ cursor: interactive ? 'pointer' : 'default' }}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.5, type: 'spring' }}
           />
 
           {/* Root Cap */}
@@ -196,9 +183,6 @@ export function RootMeristem({
             onMouseEnter={() => interactive && setHighlightedZone('rootCap')}
             onMouseLeave={() => interactive && setHighlightedZone(null)}
             style={{ cursor: interactive ? 'pointer' : 'default' }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 0.9, y: 0 }}
-            transition={{ delay: 0.6 }}
           />
 
           {/* Ground Meristem zone indicator */}
@@ -214,9 +198,6 @@ export function RootMeristem({
             onMouseLeave={() => interactive && setHighlightedZone(null)}
             style={{ cursor: interactive ? 'pointer' : 'default' }}
             rx={2}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            transition={{ delay: 0.4 }}
           />
           <motion.rect
             x={cx + 43}
@@ -226,9 +207,6 @@ export function RootMeristem({
             fill={biologyColors.groundMeristem}
             opacity={highlightedZone === 'groundMeristem' ? 0.8 : 0.5}
             rx={2}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            transition={{ delay: 0.4 }}
           />
 
           {/* Procambium zone in central cylinder */}
@@ -244,9 +222,6 @@ export function RootMeristem({
             onMouseLeave={() => interactive && setHighlightedZone(null)}
             style={{ cursor: interactive ? 'pointer' : 'default' }}
             rx={3}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.7 }}
-            transition={{ delay: 0.45 }}
           />
 
           {/* Cell pattern overlay */}
@@ -341,14 +316,12 @@ export function RootMeristem({
 
       {/* Info Panel */}
       {selectedZone && (
-        <motion.div
-          className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200 animate-fadeInUp"
         >
           <h4 className="font-bold text-blue-800 mb-1">{getZoneInfo(selectedZone)?.name}</h4>
           <p className="text-sm text-blue-700">{getZoneInfo(selectedZone)?.description}</p>
-        </motion.div>
+        </div>
       )}
     </DiagramContainer>
   )

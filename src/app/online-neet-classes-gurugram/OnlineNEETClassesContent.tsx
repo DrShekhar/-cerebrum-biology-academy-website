@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, Phone, Play, Home, Star, Monitor, Video, MessageCircle, Wifi,
   Download, Calendar, FileText, Zap,
@@ -94,7 +93,7 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Wifi className="w-4 h-4" />
               Live Interactive Classes
@@ -131,15 +130,15 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Try Free Online Demo
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Get Online Class Details
-              </motion.button>
+              </button>
             </div>
 
             {/* Urgency Banner */}
             <UrgencyBanner batchStartDate="Feb 10, 2026" seatsTotal={25} seatsFilled={19} showCountdown={true} />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -148,11 +147,11 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-blue-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -161,21 +160,21 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
       {/* Features */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What You Get with Online Classes</h2>
             <p className="text-xl text-slate-600">Complete NEET preparation from your home</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {onlineFeatures.map((feature, index) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={feature.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -184,14 +183,14 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
       {/* Pricing */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Online Class Packages</h2>
             <p className="text-xl text-slate-600">Choose the plan that works for you</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <motion.div key={plan.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
+              <div key={plan.name}
                 className={`rounded-2xl p-8 ${plan.popular ? 'bg-blue-50 border-2 border-blue-500 relative' : 'bg-gray-50 border-2 border-gray-200'}`}>
                 {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>}
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{plan.name}</h3>
@@ -207,7 +206,7 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
                 <Button className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : ''}`} onClick={handleWhatsApp}>
                   Get Started
                 </Button>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -216,10 +215,10 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
       {/* Tech Requirements */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Technical Requirements</h2>
             <p className="text-xl text-slate-600">Simple setup, no fancy equipment needed</p>
-          </motion.div>
+          </div>
 
           <div className="max-w-2xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
             <div className="space-y-4">
@@ -241,7 +240,7 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Same Quality, More Flexibility</h2>
               <p className="text-xl text-blue-100 mb-6">
                 Our online classes deliver the same results as offline. The only difference
@@ -258,9 +257,9 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-4 h-4 mr-2" />Try Free Online Demo
                 </Button>
               </Link>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">Online Student Results 2024</h3>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-white/20"><span>Average NEET Biology</span><span className="font-semibold">315/360</span></div>
@@ -268,7 +267,7 @@ export default function OnlineNEETClassesContent({ faqs }: { faqs: FAQ[] }) {
                 <div className="flex justify-between py-3 border-b border-white/20"><span>Student Satisfaction</span><span className="font-semibold">4.8/5</span></div>
                 <div className="flex justify-between py-3"><span>NEET Qualified</span><span className="font-semibold text-green-400">86%</span></div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

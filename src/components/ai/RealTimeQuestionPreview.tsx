@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Eye,
   Play,
@@ -265,13 +264,9 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
         </div>
 
         {/* Configuration Panel */}
-        <AnimatePresence>
-          {showConfig && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="overflow-hidden border-t pt-4"
+{showConfig && (
+            <div
+              className="overflow-hidden border-t pt-4 animate-fadeInUp"
             >
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div className="space-y-2">
@@ -360,20 +355,14 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Question Display */}
-      <AnimatePresence mode="wait">
-        <motion.div
+<div
           key={currentQuestion.id}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.3 }}
-          className="bg-white rounded-xl p-6 border"
+          className="bg-white rounded-xl p-6 border animate-fadeInUp"
         >
           {/* Question Header */}
           <div className="flex justify-between items-start mb-6">
@@ -544,10 +533,8 @@ const RealTimeQuestionPreview: React.FC<RealTimeQuestionPreviewProps> = ({
               <SkipForward className="w-4 h-4" />
             </button>
           </div>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Question Overview Strip */}
+        </div>
+{/* Question Overview Strip */}
       <div className="bg-white rounded-xl p-4 border">
         <h4 className="font-medium text-gray-800 mb-3">Question Overview</h4>
         <div className="flex gap-2 overflow-x-auto pb-2">

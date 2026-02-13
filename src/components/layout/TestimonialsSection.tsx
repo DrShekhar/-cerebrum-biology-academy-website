@@ -14,7 +14,6 @@ import {
   ChevronRight,
   Youtube,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { useI18n } from '@/contexts/I18nContext'
 
 export function TestimonialsSection() {
@@ -45,12 +44,8 @@ export function TestimonialsSection() {
     <section className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Award className="w-4 h-4 mr-2" />
@@ -62,39 +57,27 @@ export function TestimonialsSection() {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('realStoriesDescription')}</p>
-        </motion.div>
+        </div>
 
         {/* Success Statistics */}
-        <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 animate-fadeInUp"
         >
           {successStats.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              className="text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
-              viewport={{ once: true }}
+              className="text-center p-6 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow animate-fadeInUp"
             >
               <div className="text-3xl font-bold text-blue-600 mb-2">{stat.number}</div>
               <div className="font-semibold text-gray-900 mb-1">{stat.label}</div>
               <div className="text-sm text-gray-600">{stat.description}</div>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* Featured Testimonial Carousel */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12 relative overflow-hidden">
             {/* Background Pattern */}
@@ -224,24 +207,20 @@ export function TestimonialsSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Video Testimonials Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div
+         className="animate-fadeInUp">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-8">
             {t('videoSuccessStories')}
           </h3>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {videoTestimonials.map((video, index) => (
-              <motion.div
+              <div
                 key={video.id}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer group animate-fadeInUp"
                 onClick={() => openVideoModal(video.videoId)}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' || e.key === ' ') {
@@ -252,10 +231,6 @@ export function TestimonialsSection() {
                 role="button"
                 tabIndex={0}
                 aria-label={`Watch ${video.title} - ${video.studentName}`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
-                viewport={{ once: true }}
               >
                 <div className="relative aspect-video bg-blue-500">
                   {/* Placeholder thumbnail */}
@@ -292,18 +267,14 @@ export function TestimonialsSection() {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          className="text-center bg-blue-600 rounded-3xl p-12 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center bg-blue-600 rounded-3xl p-12 text-white animate-fadeInUp"
         >
           <h3 className="text-3xl font-bold mb-4">{t('readyToWriteStory')}</h3>
           <p className="text-xl mb-8 text-blue-100">{t('joinThousands')}</p>
@@ -323,7 +294,7 @@ export function TestimonialsSection() {
               {t('watchMoreStories')}
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Video Modal */}

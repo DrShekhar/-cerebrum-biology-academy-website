@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { Trophy, CheckCircle } from 'lucide-react'
 
 interface Achievement {
@@ -56,11 +55,8 @@ export function AchievementsDisplay({
       {/* Progress Bar */}
       <div className="mb-6">
         <div className="w-full bg-gray-200 rounded-full h-3">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: `${completionRate}%` }}
-            transition={{ duration: 1, ease: 'easeOut' }}
-            className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded-full"
+          <div
+            className="bg-gradient-to-r from-yellow-400 to-yellow-600 h-3 rounded-full animate-fadeInUp"
           />
         </div>
       </div>
@@ -77,11 +73,8 @@ export function AchievementsDisplay({
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {achievements.map((achievement, index) => (
-            <motion.div
+            <div
               key={achievement.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               className={`p-4 rounded-lg border-2 transition-all ${
                 achievement.isCompleted
                   ? 'bg-gradient-to-br from-yellow-50 to-orange-50 border-yellow-300 shadow-md'
@@ -158,7 +151,7 @@ export function AchievementsDisplay({
                   )}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       )}

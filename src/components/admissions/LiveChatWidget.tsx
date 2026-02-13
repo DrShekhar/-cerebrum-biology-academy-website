@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageCircle,
   X,
@@ -85,31 +84,22 @@ export function LiveChatWidget({
   return (
     <>
       {/* Chat Button */}
-      <motion.button
+      <button
         onClick={() => {
           setIsOpen(true)
           trackChatWidget.opened()
         }}
-        className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 bg-indigo-500 text-white p-4 rounded-full shadow-2xl z-40 flex items-center gap-2 group"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
+        className="fixed bottom-20 sm:bottom-6 right-4 sm:right-6 bg-indigo-500 text-white p-4 rounded-full shadow-2xl z-40 flex items-center gap-2 group animate-fadeInUp"
       >
         <HelpCircle className="w-6 h-6" />
         <span className="hidden sm:inline text-sm font-medium pr-1">Quick Help</span>
         <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-600 rounded-full animate-pulse" />
-      </motion.button>
+      </button>
 
       {/* Chat Modal */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[calc(100%-2rem)] max-w-[calc(100vw-2rem)] sm:w-96 sm:max-w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
+{isOpen && (
+          <div
+            className="fixed bottom-20 sm:bottom-24 right-4 sm:right-6 w-[calc(100%-2rem)] max-w-[calc(100vw-2rem)] sm:w-96 sm:max-w-96 bg-white rounded-2xl shadow-2xl z-50 overflow-hidden animate-fadeInUp"
             style={{ maxHeight: 'calc(100vh - 200px)' }}
           >
             {/* Header */}
@@ -139,7 +129,7 @@ export function LiveChatWidget({
             {/* Content */}
             <div className="p-4 max-h-[400px] overflow-y-auto">
               {selectedFAQ ? (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <div className="animate-fadeInUp">
                   <button
                     onClick={() => setSelectedFAQ(null)}
                     className="text-blue-600 text-sm mb-3 flex items-center gap-1 hover:underline"
@@ -174,7 +164,7 @@ export function LiveChatWidget({
                     <MessageCircle className="w-5 h-5" />
                     Chat on WhatsApp
                   </button>
-                </motion.div>
+                </div>
               ) : (
                 <>
                   <p className="text-sm text-gray-600 mb-4">
@@ -226,9 +216,8 @@ export function LiveChatWidget({
                 </>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </>
+</>
   )
 }

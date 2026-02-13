@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion'
 import {
   DollarSign,
   Calendar,
@@ -133,7 +132,7 @@ function SwipeablePaymentCard({
       </div>
 
       {/* Swipeable card */}
-      <motion.div
+      <div
         style={{ x, background }}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
@@ -222,7 +221,7 @@ function SwipeablePaymentCard({
             <ChevronRight className="w-5 h-5 text-gray-400" />
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

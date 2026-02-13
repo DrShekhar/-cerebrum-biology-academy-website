@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react'
 import { useScrollLock } from '@/lib/hooks/useScrollLock'
 import { createPortal } from 'react-dom'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   ChevronRight,
@@ -210,34 +209,28 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
   const menuContent = (
     <>
       {/* Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            variants={overlayVariants}
+{isOpen && (
+          <div
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-black bg-opacity-50 z-[100]"
+            className="fixed inset-0 bg-black bg-opacity-50 z-[100] animate-fadeInUp"
             onClick={onClose}
             style={{ pointerEvents: 'auto' }}
           />
         )}
-      </AnimatePresence>
-
-      {/* Menu Panel */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
+{/* Menu Panel */}
+{isOpen && (
+          <div
             ref={focusTrapRef}
             id="burger-menu-panel"
             role="dialog"
             aria-modal="true"
             aria-label="Navigation menu"
-            variants={menuVariants}
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[101] overflow-y-auto"
+            className="fixed left-0 top-0 h-full w-[85vw] max-w-80 bg-white shadow-2xl z-[101] overflow-y-auto animate-fadeInUp"
           >
             {/* Header - sticky with solid background and z-index to stay above scrolling content */}
             <div className="sticky top-0 bg-white/100 backdrop-blur-sm border-b border-gray-200 p-6 flex items-center justify-between pointer-events-auto z-20 shadow-md isolate">
@@ -344,23 +337,18 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                           {section.title}
                         </span>
                       </div>
-                      <motion.div
-                        animate={{ rotate: isExpanded ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="relative z-10"
+                      <div
+                        className="relative z-10 animate-fadeInUp"
                       >
                         <ChevronDown className="w-5 h-5 text-gray-500 group-hover:text-blue-600 transition-colors duration-300" />
-                      </motion.div>
+                      </div>
                     </button>
-
-                    <AnimatePresence>
-                      {isExpanded && (
-                        <motion.div
-                          variants={sectionVariants}
+{isExpanded && (
+                        <div
                           initial="closed"
                           animate="open"
                           exit="closed"
-                          className="overflow-hidden"
+                          className="overflow-hidden animate-fadeInUp"
                         >
                           <div className="p-4 space-y-2 bg-white">
                             {section.items.map((item) => (
@@ -398,10 +386,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                               </Link>
                             ))}
                           </div>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
-                  </div>
+</div>
                 )
               })}
             </div>
@@ -425,10 +412,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </>
+</>
   )
 
   return (
@@ -441,29 +427,17 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
         aria-expanded={isOpen}
         aria-controls="burger-menu-panel"
       >
-        <motion.div animate={isOpen ? 'open' : 'closed'} className="relative w-6 h-6">
-          <motion.span
-            variants={{
-              closed: { rotate: 0, y: 0 },
-              open: { rotate: 45, y: 6 },
-            }}
-            className="absolute left-0 top-0 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300"
+        <div className="relative w-6 h-6 animate-fadeInUp">
+          <span
+            className="absolute left-0 top-0 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300 animate-fadeInUp"
           />
-          <motion.span
-            variants={{
-              closed: { opacity: 1 },
-              open: { opacity: 0 },
-            }}
-            className="absolute left-0 top-2.5 w-6 h-0.5 bg-blue-600 transition-all duration-300"
+          <span
+            className="absolute left-0 top-2.5 w-6 h-0.5 bg-blue-600 transition-all duration-300 animate-fadeInUp"
           />
-          <motion.span
-            variants={{
-              closed: { rotate: 0, y: 0 },
-              open: { rotate: -45, y: -6 },
-            }}
-            className="absolute left-0 top-5 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300"
+          <span
+            className="absolute left-0 top-5 w-6 h-0.5 bg-blue-600 transform origin-left transition-all duration-300 animate-fadeInUp"
           />
-        </motion.div>
+        </div>
       </button>
 
       {/* Portal for overlay and menu panel to escape header stacking context */}

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   CheckCircle,
@@ -160,11 +159,8 @@ export function BiologyCoachingNearMeClient() {
         <div className="absolute inset-0 bg-black/20" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Target className="w-5 h-5 mr-2 text-yellow-300" />
@@ -227,19 +223,15 @@ export function BiologyCoachingNearMeClient() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Centers Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our Coaching Centers in Delhi NCR
@@ -247,17 +239,13 @@ export function BiologyCoachingNearMeClient() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               All centers near metro stations for easy accessibility
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {centers.map((center, index) => (
-              <motion.div
+              <div
                 key={center.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-[#4a5d4a] text-white p-4">
                   <div className="flex items-center justify-between">
@@ -296,7 +284,7 @@ export function BiologyCoachingNearMeClient() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -305,27 +293,19 @@ export function BiologyCoachingNearMeClient() {
       {/* Courses Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Biology Coaching Courses Available
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {courses.map((course, index) => (
-              <motion.div
+              <div
                 key={course.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-green-300 transition-colors"
+                className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:border-green-300 transition-colors animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-3">
                   <span className="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">
@@ -343,7 +323,7 @@ export function BiologyCoachingNearMeClient() {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -352,17 +332,13 @@ export function BiologyCoachingNearMeClient() {
       {/* Comparison Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Cerebrum vs Other Coaching Centers?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <table className="w-full">
@@ -390,27 +366,19 @@ export function BiologyCoachingNearMeClient() {
       {/* Testimonials */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Success Stories from Students Near You
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
@@ -428,7 +396,7 @@ export function BiologyCoachingNearMeClient() {
                   </span>
                   <span className="text-green-600 font-medium">{testimonial.college}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -438,12 +406,8 @@ export function BiologyCoachingNearMeClient() {
       {isInDelhiNCR === false && (
         <section className="py-16 bg-gradient-to-br from-blue-50 to-indigo-50">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 <Wifi className="w-4 h-4 mr-2" />
@@ -456,17 +420,13 @@ export function BiologyCoachingNearMeClient() {
                 Get the same expert biology coaching from anywhere in India through our interactive
                 online platform.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {onlineRegions.map((region, index) => (
-                <motion.div
+                <div
                   key={region.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-blue-100"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-blue-100 animate-fadeInUp"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center">
@@ -494,16 +454,12 @@ export function BiologyCoachingNearMeClient() {
                       </span>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center mt-10"
+            <div
+              className="text-center mt-10 animate-fadeInUp"
             >
               <a href={getWhatsAppEnquiryUrl(PAGE_KEYWORD, 'Online')}>
                 <Button size="xl" className="bg-green-600 hover:bg-green-700 text-white">
@@ -511,7 +467,7 @@ export function BiologyCoachingNearMeClient() {
                   Enquire About Online Classes
                 </Button>
               </a>
-            </motion.div>
+            </div>
           </div>
         </section>
       )}
@@ -519,12 +475,8 @@ export function BiologyCoachingNearMeClient() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-green-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Start Your NEET Journey Today</h2>
             <p className="text-xl mb-8 opacity-90">
               Find the best biology coaching near you. Book a FREE demo class!
@@ -553,7 +505,7 @@ export function BiologyCoachingNearMeClient() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

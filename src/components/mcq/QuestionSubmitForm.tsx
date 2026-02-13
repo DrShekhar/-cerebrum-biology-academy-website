@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { BIOLOGY_TOPICS, BIOLOGY_CHAPTERS, PYQ_YEARS, type BiologyTopic } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
@@ -173,10 +172,8 @@ export function QuestionSubmitForm({
   // Success state
   if (submitState === 'success') {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-2xl shadow-lg p-8 text-center"
+      <div
+        className="bg-white rounded-2xl shadow-lg p-8 text-center animate-fadeInUp"
       >
         <div className="text-6xl mb-4">🎉</div>
         <h2 className="text-2xl font-bold text-gray-800 mb-2">Question Submitted!</h2>
@@ -196,7 +193,7 @@ export function QuestionSubmitForm({
         >
           Submit Another Question
         </button>
-      </motion.div>
+      </div>
     )
   }
 
@@ -243,14 +240,10 @@ export function QuestionSubmitForm({
       </div>
 
       <form onSubmit={handleSubmit} className="p-6">
-        <AnimatePresence mode="wait">
-          {step === 1 ? (
-            <motion.div
+{step === 1 ? (
+            <div
               key="step1"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Question */}
               <div>
@@ -308,14 +301,11 @@ export function QuestionSubmitForm({
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ) : (
-            <motion.div
+            <div
               key="step2"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Explanation */}
               <div>
@@ -464,11 +454,9 @@ export function QuestionSubmitForm({
                   placeholder="e.g., NCERT Chapter 5, Page 87"
                 />
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Error Message */}
+{/* Error Message */}
         {error && (
           <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
             {error}

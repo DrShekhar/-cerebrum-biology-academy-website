@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   Phone,
@@ -128,10 +127,8 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-green-900 via-green-800 to-teal-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center"
+          <div
+            className="text-center animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 border border-yellow-400/30 px-4 py-2 rounded-full mb-6">
               <IndianRupee className="w-4 h-4 text-yellow-400" />
@@ -150,7 +147,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
               seatsFilled={16}
               showCountdown={true}
             />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -177,11 +174,8 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Fee Comparison Table */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Fee Comparison: Top Institutes in Gurugram
@@ -189,7 +183,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
             <p className="text-gray-600 max-w-2xl mx-auto">
               Detailed fee breakdown for Class 11, 12, and Dropper batches
             </p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-xl shadow-lg overflow-hidden">
@@ -272,11 +266,8 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Savings Calculator */}
       <section className="py-16 bg-gradient-to-br from-green-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               <Calculator className="inline w-8 h-8 mr-2 text-green-600" />
@@ -285,17 +276,13 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
             <p className="text-gray-600 max-w-2xl mx-auto">
               See how much you save compared to premium institutes - without compromising on quality
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {savingsCalculation.map((calc, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg p-6"
+                className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
               >
                 <h3 className="font-bold text-lg text-gray-900 mb-4">{calc.program}</h3>
                 <div className="space-y-3">
@@ -314,7 +301,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -323,16 +310,13 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
       {/* Why Lower Fees */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               How We Offer Lower Fees Without Compromising Quality
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -357,20 +341,16 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
                 description: '98% success rate with 15+ years track record. Quality teaching, not expensive branding.',
               },
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg p-6 text-center"
+                className="bg-white rounded-xl shadow-lg p-6 text-center animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <item.icon className="w-6 h-6 text-green-600" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -436,12 +416,9 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
           </h2>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-lg shadow-md overflow-hidden"
+                className="bg-white rounded-lg shadow-md overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -459,7 +436,7 @@ export default function NEETCoachingFeesContent({ faqs }: Props) {
                     <p className="text-gray-600">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

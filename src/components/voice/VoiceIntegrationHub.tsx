@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Mic,
   MicOff,
@@ -514,10 +513,8 @@ const VoiceIntegrationHub: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-4"
+      <div
+        className="text-center space-y-4 animate-fadeInUp"
       >
         <div className="flex items-center justify-center gap-3">
           <div className="p-3 bg-indigo-500 rounded-xl">
@@ -531,12 +528,12 @@ const VoiceIntegrationHub: React.FC = () => {
           Interactive voice-powered biology learning with multi-language support, pronunciation
           practice, and AI-driven conversations.
         </p>
-      </motion.div>
+      </div>
 
       {/* Voice Controls */}
       <div className="bg-white rounded-xl p-6 border">
         <div className="flex items-center justify-center gap-4">
-          <motion.button
+          <button
             onClick={isListening ? stopListening : startListening}
             disabled={isSpeaking}
             className={`p-4 rounded-full shadow-lg transition-all ${
@@ -544,13 +541,11 @@ const VoiceIntegrationHub: React.FC = () => {
                 ? 'bg-red-500 hover:bg-red-600 text-white'
                 : 'bg-blue-500 hover:bg-blue-600 text-white disabled:opacity-50'
             }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             {isListening ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
-          </motion.button>
+          </button>
 
-          <motion.button
+          <button
             onClick={
               isSpeaking
                 ? stopSpeaking
@@ -562,11 +557,9 @@ const VoiceIntegrationHub: React.FC = () => {
                 ? 'bg-orange-500 hover:bg-orange-600 text-white'
                 : 'bg-green-600 hover:bg-green-600 text-white disabled:opacity-50'
             }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             {isSpeaking ? <VolumeX className="w-6 h-6" /> : <Volume2 className="w-6 h-6" />}
-          </motion.button>
+          </button>
 
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Languages className="w-4 h-4" />
@@ -577,39 +570,31 @@ const VoiceIntegrationHub: React.FC = () => {
         </div>
 
         {isListening && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="mt-4 text-center"
+          <div
+            className="mt-4 text-center animate-fadeInUp"
           >
             <div className="flex items-center justify-center gap-2 text-blue-600">
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <Volume2 className="w-5 h-5" />
-              </motion.div>
+              </div>
               <span className="text-sm">Listening for your voice...</span>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {isSpeaking && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="mt-4 text-center"
+          <div
+            className="mt-4 text-center animate-fadeInUp"
           >
             <div className="flex items-center justify-center gap-2 text-green-600">
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <Volume2 className="w-5 h-5" />
-              </motion.div>
+              </div>
               <span className="text-sm">Speaking...</span>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 
@@ -640,15 +625,11 @@ const VoiceIntegrationHub: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Voice Chat Tab */}
+{/* Voice Chat Tab */}
         {activeTab === 'chat' && (
-          <motion.div
+          <div
             key="chat"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="bg-white rounded-xl p-6 border"
+            className="bg-white rounded-xl p-6 border animate-fadeInUp"
           >
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
               <MessageSquare className="w-5 h-5 text-blue-600" />
@@ -666,10 +647,8 @@ const VoiceIntegrationHub: React.FC = () => {
                 </div>
               ) : (
                 conversation.map((entry) => (
-                  <motion.div
+                  <div
                     key={entry.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
                     className={`flex ${entry.type === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div
@@ -701,7 +680,7 @@ const VoiceIntegrationHub: React.FC = () => {
                         </div>
                       )}
                     </div>
-                  </motion.div>
+                  </div>
                 ))
               )}
             </div>
@@ -724,17 +703,14 @@ const VoiceIntegrationHub: React.FC = () => {
                   ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Pronunciation Tab */}
         {activeTab === 'pronunciation' && (
-          <motion.div
+          <div
             key="pronunciation"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="bg-white rounded-xl p-6 border"
+            className="bg-white rounded-xl p-6 border animate-fadeInUp"
           >
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
               <Languages className="w-5 h-5 text-purple-600" />
@@ -743,12 +719,9 @@ const VoiceIntegrationHub: React.FC = () => {
 
             <div className="grid gap-4">
               {pronunciationChallenges.map((challenge, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="p-4 border rounded-lg hover:shadow-md transition-all"
+                  className="p-4 border rounded-lg hover:shadow-md transition-all animate-fadeInUp"
                 >
                   <div className="flex items-center justify-between">
                     <div>
@@ -771,20 +744,17 @@ const VoiceIntegrationHub: React.FC = () => {
                       </button>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Analytics Tab */}
         {activeTab === 'analytics' && (
-          <motion.div
+          <div
             key="analytics"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {session && (
               <div className="bg-white rounded-xl p-6 border">
@@ -878,17 +848,14 @@ const VoiceIntegrationHub: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Settings Tab */}
         {activeTab === 'settings' && (
-          <motion.div
+          <div
             key="settings"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1035,18 +1002,12 @@ const VoiceIntegrationHub: React.FC = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Error Display */}
-      <AnimatePresence>
-        {error && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3"
+{/* Error Display */}
+{error && (
+          <div
+            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp"
           >
             <AlertCircle className="w-5 h-5 text-red-500" />
             <span className="text-red-700">{error}</span>
@@ -1056,10 +1017,9 @@ const VoiceIntegrationHub: React.FC = () => {
             >
               ×
             </button>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

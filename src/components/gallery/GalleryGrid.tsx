@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { AnimatePresence } from 'framer-motion'
 import { GalleryCard, GalleryItemData } from './GalleryCard'
 import { GalleryLightbox } from './GalleryLightbox'
 
@@ -48,8 +47,7 @@ export function GalleryGrid({ items, columns = 3 }: GalleryGridProps) {
   return (
     <>
       <div className={`grid ${gridCols[columns]} gap-4 md:gap-6`}>
-        <AnimatePresence mode="popLayout">
-          {items.map((item, index) => (
+{items.map((item, index) => (
             <GalleryCard
               key={item.id}
               item={item}
@@ -57,8 +55,7 @@ export function GalleryGrid({ items, columns = 3 }: GalleryGridProps) {
               priority={index < 6}
             />
           ))}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Lightbox */}
       {lightboxOpen && (

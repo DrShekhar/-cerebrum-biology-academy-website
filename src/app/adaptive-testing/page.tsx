@@ -6,7 +6,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   Brain,
   Target,
@@ -108,10 +107,8 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center space-y-8"
+          <div
+            className="text-center space-y-8 animate-fadeInUp"
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
               <div className="p-3 sm:p-4 bg-indigo-500 rounded-xl">
@@ -149,38 +146,32 @@ const AdaptiveTestingPage: React.FC = () => {
                 { icon: BarChart3, label: '10+ Metrics', desc: 'Real-time Analytics' },
                 { icon: Users, label: '1000+ Students', desc: 'Successfully Tested' },
               ].map((stat, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 + index * 0.1 }}
-                  className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+                  className="text-center p-6 bg-white rounded-xl border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
                 >
                   <stat.icon className="w-8 h-8 mx-auto mb-3 text-blue-600" />
                   <div className="text-2xl font-bold text-gray-900">{stat.label}</div>
                   <div className="text-sm text-gray-600">{stat.desc}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Advanced Adaptive Features</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our system combines proven psychometric models with AI to deliver accurate and
               efficient assessment experiences.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -263,13 +254,9 @@ const AdaptiveTestingPage: React.FC = () => {
                 color: 'from-indigo-500 to-purple-500',
               },
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all group"
+                className="bg-gradient-to-br from-gray-50 to-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all group animate-fadeInUp"
               >
                 <div
                   className={`p-3 bg-gradient-to-r ${feature.color} rounded-xl w-fit mb-4 group-hover:scale-110 transition-transform`}
@@ -286,7 +273,7 @@ const AdaptiveTestingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -295,11 +282,8 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Technology Stack */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Built with Advanced Psychometrics
@@ -308,7 +292,7 @@ const AdaptiveTestingPage: React.FC = () => {
               Our implementation follows established psychometric principles and modern AI
               techniques for optimal assessment accuracy and efficiency.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Technical Specifications */}
@@ -412,20 +396,16 @@ const AdaptiveTestingPage: React.FC = () => {
                     description: 'Information per item ratio',
                   },
                 ].map((perf, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow"
+                    className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition-shadow animate-fadeInUp"
                   >
                     <div className="flex justify-between items-start mb-2">
                       <h4 className="font-semibold text-gray-900">{perf.metric}</h4>
                       <span className="text-2xl font-bold text-green-600">{perf.value}</span>
                     </div>
                     <p className="text-sm text-gray-600">{perf.description}</p>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -436,11 +416,8 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Benefits for Students & Educators
@@ -449,7 +426,7 @@ const AdaptiveTestingPage: React.FC = () => {
               Adaptive testing provides advantages for both students and educators, improving
               assessment efficiency and learning outcomes.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Student Benefits */}
@@ -492,20 +469,16 @@ const AdaptiveTestingPage: React.FC = () => {
                     icon: BarChart3,
                   },
                 ].map((benefit, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex gap-4 p-4 bg-blue-50 rounded-lg"
+                    className="flex gap-4 p-4 bg-blue-50 rounded-lg animate-fadeInUp"
                   >
                     <benefit.icon className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{benefit.title}</h4>
                       <p className="text-sm text-gray-700">{benefit.description}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -548,20 +521,16 @@ const AdaptiveTestingPage: React.FC = () => {
                     icon: Globe,
                   },
                 ].map((benefit, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex gap-4 p-4 bg-green-50 rounded-lg"
+                    className="flex gap-4 p-4 bg-green-50 rounded-lg animate-fadeInUp"
                   >
                     <benefit.icon className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">{benefit.title}</h4>
                       <p className="text-sm text-gray-700">{benefit.description}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -572,11 +541,8 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Configuration Panel */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Customize Your Test Experience
@@ -584,7 +550,7 @@ const AdaptiveTestingPage: React.FC = () => {
             <p className="text-gray-600">
               Configure the adaptive test parameters to match your specific needs and curriculum.
             </p>
-          </motion.div>
+          </div>
 
           <div className="bg-white rounded-xl border p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -767,11 +733,8 @@ const AdaptiveTestingPage: React.FC = () => {
       {/* Call to Action */}
       <section className="py-20 bg-indigo-500">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
+          <div
+            className="space-y-8 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-white">Ready to Experience Adaptive Testing?</h2>
             <p className="text-xl text-blue-100">
@@ -791,7 +754,7 @@ const AdaptiveTestingPage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

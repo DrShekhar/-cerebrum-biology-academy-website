@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function GeneticsIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -128,8 +127,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
       {/* NEET Badge */}
       <motion.g
         filter="url(#genGlow)"
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="820" cy="40" r="28" fill="#FBBF24" />
         <text
@@ -174,8 +171,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* DNA Double Helix Animation */}
         <motion.g
-          animate={animate ? { rotate: [0, 360] } : undefined}
-          transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
           style={{ transformOrigin: '120px 230px' }}
         >
           {/* Left strand */}
@@ -275,8 +270,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Law 1: Dominance */}
         <motion.g
-          animate={animate ? { x: [-2, 2, -2] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         >
           <circle cx="250" cy="130" r="12" fill="#DDD6FE" />
           <text x="250" y="135" fontSize="11" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
@@ -299,8 +292,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Law 2: Segregation */}
         <motion.g
-          animate={animate ? { x: [2, -2, 2] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
         >
           <circle cx="250" cy="165" r="12" fill="#C4B5FD" />
           <text x="250" y="170" fontSize="11" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
@@ -323,8 +314,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Law 3: Independent Assortment */}
         <motion.g
-          animate={animate ? { x: [-2, 2, -2] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         >
           <circle cx="250" cy="200" r="12" fill="#A78BFA" />
           <text x="250" y="205" fontSize="11" fill="white" textAnchor="middle" fontWeight="bold">
@@ -411,8 +400,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Results with animation */}
         <motion.g
-          animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           <rect x="490" y="148" width="40" height="20" rx="4" fill="#059669" />
           <text x="510" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
@@ -421,8 +408,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </motion.g>
 
         <motion.g
-          animate={animate ? { opacity: [1, 0.7, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
         >
           <rect x="550" y="148" width="40" height="20" rx="4" fill="#10B981" />
           <text x="570" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
@@ -431,8 +416,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </motion.g>
 
         <motion.g
-          animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
         >
           <rect x="490" y="173" width="40" height="20" rx="4" fill="#10B981" />
           <text x="510" y="187" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
@@ -441,8 +424,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </motion.g>
 
         <motion.g
-          animate={animate ? { opacity: [1, 0.7, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
         >
           <rect x="550" y="173" width="40" height="20" rx="4" fill="#6EE7B7" />
           <text x="570" y="187" fontSize="10" fill="#065F46" textAnchor="middle" fontWeight="bold">
@@ -484,8 +465,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Phenotype boxes */}
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         >
           <rect
             x="670"
@@ -506,8 +485,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </motion.g>
 
         <motion.g
-          animate={animate ? { scale: [1.02, 1, 1.02] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
         >
           <rect
             x="770"
@@ -528,8 +505,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </motion.g>
 
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, delay: 1 }}
         >
           <rect
             x="670"
@@ -550,8 +525,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </motion.g>
 
         <motion.g
-          animate={animate ? { scale: [1.02, 1, 1.02] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, delay: 1.5 }}
         >
           <rect
             x="770"
@@ -618,8 +591,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         <g>
           {/* Female XX */}
           <motion.g
-            animate={animate ? { y: [-3, 3, -3] } : undefined}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
             <text x="85" y="425" fontSize="10" fill="#BE185D" textAnchor="middle" fontWeight="bold">
               Female (XX)
@@ -645,8 +616,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
           {/* Male XY */}
           <motion.g
-            animate={animate ? { y: [3, -3, 3] } : undefined}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           >
             <text
               x="200"
@@ -686,8 +655,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Gametes arrow */}
         <motion.g
-          animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           <line
             x1="85"
@@ -792,8 +759,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
             strokeWidth="2"
             strokeDasharray="5,3"
             fill="none"
-            animate={animate ? { strokeDashoffset: [0, -16] } : undefined}
-            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
           <motion.path
             d="M498 330 L450 370"
@@ -801,8 +766,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
             strokeWidth="2"
             strokeDasharray="5,3"
             fill="none"
-            animate={animate ? { strokeDashoffset: [0, -16] } : undefined}
-            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           />
 
           {/* Offspring */}
@@ -888,8 +851,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Down Syndrome */}
         <motion.g
-          animate={animate ? { x: [-2, 2, -2] } : undefined}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         >
           <rect
             x="315"
@@ -914,8 +875,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Turner Syndrome */}
         <motion.g
-          animate={animate ? { x: [2, -2, 2] } : undefined}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
         >
           <rect
             x="445"
@@ -940,8 +899,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Klinefelter Syndrome */}
         <motion.g
-          animate={animate ? { x: [-2, 2, -2] } : undefined}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         >
           <rect
             x="315"
@@ -966,8 +923,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Super Female */}
         <motion.g
-          animate={animate ? { x: [2, -2, 2] } : undefined}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
         >
           <rect
             x="445"
@@ -1126,8 +1081,6 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
 
         {/* Sickle Cell Anemia - detailed */}
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         >
           <rect
             x="610"

@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
-import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Mic, Image as ImageIcon, Loader2 } from 'lucide-react'
 import { useSwipeable } from 'react-swipeable'
 import { MessageWithLatex } from '../latex/LatexRenderer'
@@ -190,14 +189,9 @@ export function MobileChatInterface({
 
       {/* Messages Container */}
       <div className="flex-1 overflow-y-auto px-4 py-4 sm:py-6 space-y-4">
-        <AnimatePresence initial={false}>
-          {messages.map((message, index) => (
-            <motion.div
+{messages.map((message, index) => (
+            <div
               key={message.id}
-              initial={{ opacity: 0, y: 20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.3 }}
               className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
@@ -225,10 +219,9 @@ export function MobileChatInterface({
                   })}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
-        <div ref={messagesEndRef} />
+<div ref={messagesEndRef} />
       </div>
 
       {/* Input Area - Fixed at bottom */}

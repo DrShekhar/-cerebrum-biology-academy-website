@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import {
   premiumAnimations,
@@ -56,16 +55,12 @@ export const PremiumSection: React.FC<PremiumSectionProps> = ({
 
   if (animation) {
     return (
-      <motion.section
+      <section
         className={sectionClasses}
-        initial={premiumAnimations.fadeInUp.initial}
-        whileInView={premiumAnimations.fadeInUp.animate}
-        transition={premiumAnimations.fadeInUp.transition}
-        viewport={{ once: true, margin: '-100px' }}
         {...props}
       >
         <div className={containerClasses}>{children}</div>
-      </motion.section>
+      </section>
     )
   }
 
@@ -126,12 +121,8 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   )
 
   return (
-    <motion.div
+    <div
       className={headerClasses}
-      initial={premiumAnimations.fadeInUp.initial}
-      whileInView={premiumAnimations.fadeInUp.animate}
-      transition={premiumAnimations.fadeInUp.transition}
-      viewport={{ once: true }}
     >
       {subtitle && (
         <div className="text-blue-600 font-semibold text-sm uppercase tracking-wider mb-4">
@@ -144,7 +135,7 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
           {description}
         </p>
       )}
-    </motion.div>
+    </div>
   )
 }
 
@@ -178,15 +169,13 @@ export const AcademicGrid: React.FC<AcademicGridProps> = ({
   )
 
   return (
-    <motion.div
+    <div
       className={gridClasses}
-      variants={premiumAnimations.staggerContainer}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -218,16 +207,12 @@ export const AcademicCard: React.FC<AcademicCardProps> = ({
   )
 
   return (
-    <motion.div
+    <div
       className={cardClasses}
-      variants={premiumAnimations.academicReveal}
       initial="initial"
       whileInView="animate"
-      viewport={{ once: true }}
-      whileHover={hover ? premiumAnimations.premiumHover.whileHover : undefined}
-      whileTap={hover ? premiumAnimations.premiumHover.whileTap : undefined}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }

@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { format } from 'date-fns'
 import {
   Calendar,
@@ -47,10 +46,8 @@ export function BookingSuccess({
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="bg-white rounded-lg shadow-lg p-8 text-center"
+      <div
+        className="bg-white rounded-lg shadow-lg p-8 text-center animate-fadeInUp"
       >
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <CheckCircle className="w-8 h-8 text-green-600" />
@@ -192,7 +189,7 @@ export function BookingSuccess({
             View Dashboard
           </Link>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

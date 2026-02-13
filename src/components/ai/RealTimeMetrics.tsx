@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Activity,
   Users,
@@ -484,15 +483,11 @@ export function RealTimeMetrics() {
       </div>
 
       {/* Live Alerts */}
-      <AnimatePresence>
-        {alerts
+{alerts
           .filter((alert) => !alert.dismissed)
           .map((alert) => (
-            <motion.div
+            <div
               key={alert.id}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
               className={`flex items-center justify-between p-4 rounded-lg border ${
                 alert.type === 'error'
                   ? 'bg-red-50 border-red-200 text-red-800'
@@ -526,19 +521,14 @@ export function RealTimeMetrics() {
               >
                 <X className="w-4 h-4" />
               </button>
-            </motion.div>
+            </div>
           ))}
-      </AnimatePresence>
-
-      {/* Performance Metrics Grid */}
+{/* Performance Metrics Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {performanceMetrics.map((metric, index) => (
-          <motion.div
+          <div
             key={metric.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+            className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-shadow animate-fadeInUp"
           >
             <div className="flex items-center justify-between mb-4">
               <div
@@ -603,7 +593,7 @@ export function RealTimeMetrics() {
                 vs {formatValue(metric.previousValue, metric.format, metric.unit)} previous
               </p>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -662,12 +652,9 @@ export function RealTimeMetrics() {
           </h3>
           <div className="space-y-3 max-h-96 overflow-y-auto">
             {activityFeed.map((activity, index) => (
-              <motion.div
+              <div
                 key={activity.id}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.05 }}
-                className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg"
+                className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg animate-fadeInUp"
               >
                 <div className="flex-shrink-0 mt-0.5">{getActivityIcon(activity.type)}</div>
                 <div className="flex-1 min-w-0">
@@ -693,7 +680,7 @@ export function RealTimeMetrics() {
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

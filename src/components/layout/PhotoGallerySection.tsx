@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Camera,
   Grid,
@@ -113,12 +112,8 @@ export function PhotoGallerySection({
     <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center bg-blue-100 text-blue-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Camera className="w-5 h-5 mr-2" />
@@ -163,13 +158,9 @@ export function PhotoGallerySection({
                 color: 'text-yellow-600',
               },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={stat.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="text-center animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 ${stat.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
@@ -178,19 +169,15 @@ export function PhotoGallerySection({
                 </div>
                 <div className="text-xl font-bold text-gray-900">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.sublabel}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Search and Filters */}
         {showSearch && (
-          <motion.div
-            className="mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+          <div
+            className="mb-12 animate-fadeInUp"
           >
             {/* Search Bar */}
             <div className="relative max-w-md mx-auto mb-8">
@@ -235,16 +222,12 @@ export function PhotoGallerySection({
                 )
               })}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Photo Grid */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           {isLoading ? (
             // Loading Skeleton
@@ -254,17 +237,11 @@ export function PhotoGallerySection({
               ))}
             </div>
           ) : (
-            <AnimatePresence mode="popLayout">
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {filteredPhotos.map((photo, index) => (
-                  <motion.div
+                  <div
                     key={photo.id}
-                    layout
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.4, delay: index * 0.05 }}
-                    className="group relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
+                    className="group relative aspect-square rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer animate-fadeInUp"
                     onClick={() => openLightbox(photo, index)}
                   >
                     {/* Photo Placeholder with Category Color */}
@@ -341,11 +318,10 @@ export function PhotoGallerySection({
                         Featured
                       </div>
                     )}
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </AnimatePresence>
-          )}
+)}
 
           {/* No Results Message */}
           {!isLoading && filteredPhotos.length === 0 && (
@@ -355,16 +331,12 @@ export function PhotoGallerySection({
               <p className="text-gray-500">Try adjusting your search or filter criteria</p>
             </div>
           )}
-        </motion.div>
+        </div>
 
         {/* Lightbox Modal */}
-        <AnimatePresence>
-          {lightboxPhoto && enableLightbox && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+{lightboxPhoto && enableLightbox && (
+            <div
+              className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fadeInUp"
               onClick={closeLightbox}
             >
               <div
@@ -449,17 +421,11 @@ export function PhotoGallerySection({
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Call to Action */}
-        <motion.div
-          className="text-center bg-navy-900 rounded-3xl p-6 sm:p-8 md:p-12 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+{/* Call to Action */}
+        <div
+          className="text-center bg-navy-900 rounded-3xl p-6 sm:p-8 md:p-12 text-white animate-fadeInUp"
         >
           <h3 className="text-3xl font-bold mb-4">Be Part of the Next Success Story</h3>
           <p className="text-xl mb-8 text-blue-100">
@@ -503,7 +469,7 @@ export function PhotoGallerySection({
               <span>Authentic Moments</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

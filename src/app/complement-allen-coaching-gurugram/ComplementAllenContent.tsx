@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Users, Clock, BookOpen, Zap, Calendar, TrendingUp,
@@ -73,7 +72,7 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Zap className="w-4 h-4" />
               For Allen Students Only
@@ -110,12 +109,12 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Trial Class
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Get Schedule for Allen Students
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -124,11 +123,11 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-teal-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -137,21 +136,21 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Why Complement */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Allen Students Add Cerebrum</h2>
             <p className="text-xl text-slate-600">Get the best of both worlds</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <motion.div key={benefit.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={benefit.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{benefit.title}</h3>
                 <p className="text-slate-600 text-sm">{benefit.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -160,15 +159,15 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Schedule Options */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Flexible Batches for Allen Students</h2>
             <p className="text-xl text-slate-600">Choose what fits your schedule</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {scheduleOptions.map((option, index) => (
-              <motion.div key={option.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-6 border border-teal-100">
+              <div key={option.name}
+                className="bg-gradient-to-br from-blue-50 to-teal-50 rounded-2xl p-6 border border-teal-100 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{option.name}</h3>
                 <div className="flex items-center gap-2 text-teal-600 mb-3">
                   <Clock className="w-4 h-4" />
@@ -176,15 +175,15 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
                 </div>
                 <p className="text-slate-700 font-medium mb-2">{option.focus}</p>
                 <p className="text-sm text-slate-500">{option.ideal}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           <div className="text-center mt-8">
-            <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-              className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-semibold">
+            <button onClick={handleWhatsApp}
+              className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-xl font-semibold animate-fadeInUp">
               <Phone className="w-5 h-5" />Get Full Schedule & Fees
-            </motion.button>
+            </button>
           </div>
         </div>
       </section>
@@ -192,15 +191,15 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Allen + Cerebrum Success Stories</h2>
             <p className="text-xl text-slate-600">Real results from students who combined both</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, index) => (
-              <motion.div key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={t.name}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-lg">{t.name[0]}</div>
                   <div>
@@ -210,7 +209,7 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
                   <div className="ml-auto bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">{t.score}</div>
                 </div>
                 <p className="text-slate-600 italic">"{t.quote}"</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -220,7 +219,7 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Same Building. Zero Extra Commute.</h2>
               <p className="text-xl text-blue-100 mb-6">
                 Cerebrum is located in <strong>M2K Corporate Park, Sector 51</strong> - the same building as Allen Career Institute Gurugram.
@@ -237,9 +236,9 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
                   <MapPin className="w-4 h-4 mr-2" />See Location on Map
                 </Button>
               </a>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">Special Package for Allen Students</h3>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-white/20"><span>Weekend Only</span><span className="font-semibold">From ₹30,000/year</span></div>
@@ -248,7 +247,7 @@ export default function ComplementAllenContent({ faqs }: { faqs: FAQ[] }) {
                 <div className="flex justify-between py-3"><span>Trial Period</span><span className="font-semibold text-green-400">7 Days Free</span></div>
               </div>
               <p className="text-sm text-blue-200 mt-4">*Fee depends on batch type and intensity. Discounts for Allen referrals.</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

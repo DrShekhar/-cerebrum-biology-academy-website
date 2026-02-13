@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function HumanPhysiologyIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -81,8 +80,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
         filter="url(#glowPulse)"
       >
         <ellipse cx="250" cy="95" rx="22" ry="18" fill="url(#brainGrad)" />
@@ -106,8 +103,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.12, 1] } : undefined}
-        transition={{ duration: 0.9, repeat: Infinity, ease: 'easeInOut' }}
       >
         <path
           d="M250 155 L238 143 Q220 130 220 148 Q220 168 250 195 Q280 168 280 148 Q280 130 262 143 Z"
@@ -120,8 +115,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { scaleX: [1, 1.08, 1] } : undefined}
-        transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
         style={{ transformOrigin: '250px 165px' }}
       >
         <ellipse
@@ -143,8 +136,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
         <rect
           x="30"
@@ -182,8 +173,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [2, -2, 2] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.3 }}
       >
         <rect
           x="370"
@@ -216,14 +205,10 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           cy="160"
           r="10"
           fill="#EF4444"
-          animate={animate ? { scale: [1, 1.25, 1] } : undefined}
-          transition={{ duration: 0.9, repeat: Infinity }}
         />
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
       >
         <rect
           x="30"
@@ -257,14 +242,10 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           rx="14"
           ry="9"
           fill="#60A5FA"
-          animate={animate ? { scaleX: [1, 1.15, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         />
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [2, -2, 2] } : undefined}
-        transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut', delay: 0.9 }}
       >
         <rect
           x="370"
@@ -302,8 +283,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
       >
         <rect
           x="145"
@@ -341,8 +320,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [1, 0.85, 1] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
       >
         <rect
           x="260"
@@ -374,8 +351,6 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect
           x="160"

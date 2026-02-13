@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function LaxmiNagarIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -33,9 +32,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Metro line representation */}
       <motion.g
-        initial={animate ? { x: -100, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.2, duration: 0.8 }}
       >
         {/* Blue Line Metro track */}
         <rect x="0" y="180" width="400" height="6" fill="#3B82F6" />
@@ -50,9 +46,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Metro train */}
       <motion.g
-        initial={animate ? { x: -150 } : undefined}
-        animate={animate ? { x: 400 } : undefined}
-        transition={{ delay: 0.5, duration: 4, repeat: Infinity, repeatDelay: 2 }}
       >
         <rect x="0" y="155" width="80" height="25" rx="4" fill="#3B82F6" />
         <rect x="5" y="160" width="15" height="12" rx="2" fill="#DBEAFE" />
@@ -63,9 +56,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Laxmi Nagar Metro Station */}
       <motion.g
-        initial={animate ? { y: 20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.4, duration: 0.5 }}
       >
         <rect x="160" y="100" width="80" height="80" rx="4" fill="#EF4444" />
         <rect x="165" y="105" width="70" height="45" fill="#FEE2E2" />
@@ -81,9 +71,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Buildings - East Delhi skyline */}
       <motion.g
-        initial={animate ? { y: 30, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.3, duration: 0.5 }}
       >
         {/* Building 1 */}
         <rect x="40" y="110" width="40" height="70" fill="#F59E0B" />
@@ -115,9 +102,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Location pin on coaching center */}
       <motion.g
-        initial={animate ? { y: -20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.6, duration: 0.5, type: 'spring' }}
       >
         <circle cx="285" cy="70" r="15" fill="#EF4444" />
         <path d="M285 55 L285 40" stroke="#EF4444" strokeWidth="3" />
@@ -126,9 +110,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Title banner */}
       <motion.g
-        initial={animate ? { y: 20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         <rect x="80" y="250" width="240" height="35" rx="6" fill="#1F2937" />
         <text x="200" y="272" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="600">
@@ -138,9 +119,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Nearby areas markers */}
       <motion.g
-        initial={animate ? { scale: 0 } : undefined}
-        animate={animate ? { scale: 1 } : undefined}
-        transition={{ delay: 0.8, duration: 0.4 }}
       >
         <circle cx="100" cy="200" r="8" fill="#22C55E" />
         <text x="100" y="220" textAnchor="middle" fill="#374151" fontSize="7">
@@ -155,9 +133,6 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
 
       {/* Students walking */}
       <motion.g
-        initial={animate ? { x: -20, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 1, duration: 0.5 }}
       >
         <circle cx="130" y="235" r="6" fill="#F59E0B" />
         <rect x="127" y="241" width="6" height="12" rx="2" fill="#F59E0B" />

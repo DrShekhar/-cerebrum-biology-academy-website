@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, CheckCircle, Lock, Zap, TrendingUp, Target, Award } from 'lucide-react'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
@@ -78,27 +77,19 @@ export function UpgradeModal({
   ]
 
   return (
-    <AnimatePresence>
-      {isOpen && (
+{isOpen && (
         <>
           {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 animate-fadeInUp"
           />
 
           {/* Modal */}
           <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
             <FocusTrap>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                transition={{ duration: 0.2 }}
-                className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
+              <div
+                className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fadeInUp"
                 role="dialog"
                 aria-modal="true"
                 aria-labelledby="upgrade-modal-title"
@@ -131,12 +122,9 @@ export function UpgradeModal({
                   {/* Features Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                     {features.map((item, index) => (
-                      <motion.div
+                      <div
                         key={index}
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex gap-3 p-4 rounded-lg bg-gray-50 border border-blue-100"
+                        className="flex gap-3 p-4 rounded-lg bg-gray-50 border border-blue-100 animate-fadeInUp"
                       >
                         <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-blue-600 text-white flex items-center justify-center">
                           {item.icon}
@@ -145,7 +133,7 @@ export function UpgradeModal({
                           <h3 className="font-semibold text-gray-900 text-sm">{item.title}</h3>
                           <p className="text-xs text-gray-600 mt-1">{item.description}</p>
                         </div>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
@@ -213,13 +201,12 @@ export function UpgradeModal({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </FocusTrap>
           </div>
         </>
       )}
-    </AnimatePresence>
-  )
+)
 }
 
 /**

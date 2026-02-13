@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle,
@@ -180,7 +179,7 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               Board + NEET Dual Preparation
@@ -226,27 +225,23 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
                   Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
                 WhatsApp: +91-88264-44334
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Board + NEET Dual Prep */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-emerald-50 to-cyan-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Board + NEET Dual Preparation?
@@ -254,14 +249,11 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Class 10 is the perfect time to start NEET foundation - 80% of Class 10 Biology is directly relevant to NEET
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg"
+            <div
+              className="bg-white rounded-2xl p-8 shadow-lg animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                 <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center">
@@ -277,13 +269,10 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white"
+            <div
+              className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-2xl p-8 text-white animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold mb-6">Class 10 to NEET Connection</h3>
               <div className="space-y-4">
@@ -312,7 +301,7 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -320,11 +309,8 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
       {/* Features */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Choose Our Class 10 Biology Tuition?
@@ -332,24 +318,20 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
             <p className="text-xl text-slate-600">
               Comprehensive preparation for both CBSE and ICSE boards with NEET foundation
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg"
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-emerald-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -358,15 +340,12 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
       {/* Board Comparison */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">CBSE vs ICSE Coverage</h2>
             <p className="text-xl text-slate-600">We cover both board patterns comprehensively</p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -396,27 +375,20 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
       {/* Syllabus */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-emerald-50 to-teal-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Complete Class 10 Biology Syllabus
             </h2>
             <p className="text-xl text-slate-600">All NCERT chapters covered with NEET relevance highlighted</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {syllabusTopics.map((topic, index) => (
-              <motion.div
+              <div
                 key={topic.unit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg"
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -442,7 +414,7 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -451,15 +423,12 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
       {/* Premium Schools */}
       <section className="py-16 bg-gradient-to-br from-emerald-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold mb-4">Students from Top Rohini Schools</h2>
             <p className="text-emerald-100">We teach students from all major CBSE & ICSE schools in Rohini</p>
-          </motion.div>
+          </div>
           <div className="flex flex-wrap justify-center gap-4">
             {premiumSchools.map((school) => (
               <span
@@ -477,11 +446,8 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8"
+            <div
+              className="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl p-8 animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Course Details</h2>
               <div className="space-y-4">
@@ -513,13 +479,10 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
               <Link href="/demo-booking" className="block mt-6">
                 <Button className="w-full bg-emerald-600 hover:bg-emerald-700">Book Free Demo</Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl"
+            <div
+              className="bg-white rounded-2xl p-8 shadow-xl animate-fadeInUp"
             >
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-emerald-600 mr-3" />
@@ -557,7 +520,7 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -655,14 +618,13 @@ export default function Class10BiologyTuitionRohiniContent({ faqs }: { faqs: FAQ
                 Book Free Demo
               </Button>
             </Link>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
+            <button
               onClick={handleWhatsApp}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-6 py-4 rounded-xl font-semibold transition-colors"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-emerald-600 px-6 py-4 rounded-xl font-semibold transition-colors animate-fadeInUp"
             >
               <Phone className="w-5 h-5" />
               WhatsApp: +91-88264-44334
-            </motion.button>
+            </button>
           </div>
         </div>
       </section>

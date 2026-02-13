@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Home,
   Users, Award, Star, TrendingUp, Brain, Zap, MessageCircle,
@@ -187,7 +186,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-100 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               Updated February 2026
@@ -220,7 +219,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -230,24 +229,18 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* Comparison Table Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Detailed Comparison</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               See how the top 6 NEET biology coaching institutes compare across important factors
             </p>
-          </motion.div>
+          </div>
 
           {/* Responsive Table */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="overflow-x-auto"
+          <div
+            className="overflow-x-auto animate-fadeInUp"
           >
             <table className="w-full border-collapse">
               <thead>
@@ -363,52 +356,42 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                 ))}
               </tbody>
             </table>
-          </motion.div>
+          </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-6 text-center text-sm text-slate-600"
+          <p
+            className="mt-6 text-center text-sm text-slate-600 animate-fadeInUp"
           >
             Data compiled from official websites and student reviews (February 2026)
-          </motion.p>
+          </p>
         </div>
       </section>
 
       {/* Why Cerebrum Stands Out */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Cerebrum Stands Out</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Key advantages that set Cerebrum apart from all other NEET biology coaching institutes
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {standoutReasons.map((reason, index) => {
               const Icon = reason.icon
               return (
-                <motion.div
+                <div
                   key={reason.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+                  className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
                 >
                   <div className="mb-4">
                     <Icon className="w-12 h-12 text-green-600" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{reason.title}</h3>
                   <p className="text-slate-600">{reason.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -418,27 +401,20 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* Testimonials Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What Students Say</h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
               Real testimonials from students who switched to Cerebrum
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 border border-green-200"
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-xl p-8 border border-green-200 animate-fadeInUp"
               >
                 <div className="flex gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -450,7 +426,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                   <p className="font-semibold text-slate-900">{testimonial.author}</p>
                   <p className="text-sm text-slate-600">{testimonial.college}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -459,25 +435,18 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div
+            className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-slate-600">Answers to common questions about best NEET biology coaching</p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-white rounded-lg border border-gray-200 overflow-hidden"
+                className="bg-white rounded-lg border border-gray-200 overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -491,16 +460,13 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
                   />
                 </button>
                 {openFaq === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="px-6 py-4 bg-gray-50 border-t border-gray-200"
+                  <div
+                    className="px-6 py-4 bg-gray-50 border-t border-gray-200 animate-fadeInUp"
                   >
                     <p className="text-slate-700 leading-relaxed">{faq.answer}</p>
-                  </motion.div>
+                  </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -509,7 +475,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
       {/* Final CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-green-700 to-teal-600">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Still Not Sure? Talk to Us</h2>
             <p className="text-lg text-slate-100 mb-8 max-w-2xl mx-auto">
               Book a FREE demo class with Dr. Shekhar and see the difference yourself.
@@ -533,7 +499,7 @@ export default function BestNEETBiologyCoachingContent({ faqs }: { faqs: FAQ[] }
             <p className="text-slate-200 text-sm mt-8">
               Pre-filled message: "Hi, I want to book a free demo class for NEET biology coaching"
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </main>

@@ -1,7 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 interface Point {
   x: number
   y: number
@@ -47,9 +45,6 @@ export function DiagramLabel({
           stroke={isHighlighted ? '#FF4500' : '#666666'}
           strokeWidth={isHighlighted ? 1.5 : 1}
           strokeDasharray={isHighlighted ? 'none' : '2,2'}
-          initial={{ pathLength: 0 }}
-          animate={{ pathLength: 1 }}
-          transition={{ duration: 0.5 }}
         />
       )}
 
@@ -59,9 +54,6 @@ export function DiagramLabel({
           cy={anchor.y}
           r={isHighlighted ? 4 : 3}
           fill={isHighlighted ? '#FF4500' : '#666666'}
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.3 }}
         />
       )}
 
@@ -75,9 +67,6 @@ export function DiagramLabel({
         fontWeight={isHighlighted ? 600 : 500}
         fill={isHighlighted ? '#FF4500' : color}
         onClick={onClick}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
         style={{
           textShadow: '0 0 3px white, 0 0 3px white, 0 0 3px white',
         }}
@@ -114,9 +103,6 @@ export function LeaderLine({
       strokeWidth={1}
       fill="none"
       strokeDasharray={dashed ? '3,3' : 'none'}
-      initial={animated ? { pathLength: 0 } : undefined}
-      animate={animated ? { pathLength: 1 } : undefined}
-      transition={{ duration: 0.8 }}
     />
   )
 }

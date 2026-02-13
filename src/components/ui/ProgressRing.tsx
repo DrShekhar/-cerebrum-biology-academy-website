@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useEffect, useState, memo, useId } from 'react'
-import { motion, useSpring, useTransform } from 'framer-motion'
-
 interface ProgressRingProps {
   value: number
   max: number
@@ -115,29 +113,18 @@ export const ProgressRing = memo(function ProgressRing({
 
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         {showPercentage && (
-          <motion.span
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              delay: 0.3,
-              type: 'spring',
-              stiffness: 200,
-              damping: 20,
-            }}
+          <span
             className={`text-2xl font-bold ${selectedColor.text}`}
           >
             {displayValue}%
-          </motion.span>
+          </span>
         )}
         {label && (
-          <motion.span
-            className="text-xs text-gray-500 mt-1 text-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+          <span
+            className="text-xs text-gray-500 mt-1 text-center animate-fadeInUp"
           >
             {label}
-          </motion.span>
+          </span>
         )}
       </div>
     </div>

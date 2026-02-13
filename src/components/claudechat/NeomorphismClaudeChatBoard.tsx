@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
-import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Mic, MicOff, Image as ImageIcon, Brain, Volume2, VolumeX } from 'lucide-react'
 import { useShekharVoice } from '@/hooks/useShekharVoice'
 
@@ -169,22 +168,18 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
   return (
     <div className="h-screen bg-gradient-to-br from-gray-100 via-gray-50 to-blue-50 flex flex-col overflow-hidden">
       {/* Header */}
-      <motion.div
-        className="bg-gray-100 rounded-b-3xl p-4 border-b border-gray-200/50"
+      <div
+        className="bg-gray-100 rounded-b-3xl p-4 border-b border-gray-200/50 animate-fadeInUp"
         style={neomorphStyles.shadowNeomorph}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
       >
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           <div className="flex items-center space-x-4">
-            <motion.div
-              className="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center"
+            <div
+              className="w-12 h-12 bg-blue-500 rounded-2xl flex items-center justify-center animate-fadeInUp"
               style={neomorphStyles.shadowNeomorphInset}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
             >
               <Brain className="w-6 h-6 text-white" />
-            </motion.div>
+            </div>
             <div>
               <h1 className="text-xl font-bold text-gray-800">ClaudeChat Board</h1>
               <p className="text-sm text-gray-600">AI-Powered Biology Learning with Shekhar Sir</p>
@@ -206,11 +201,10 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
             </motion.select>
 
             {/* Voice Status */}
-            <motion.div
+            <div
               className={`flex items-center space-x-2 px-3 py-2 rounded-xl shadow-neomorph ${
                 isVoiceAvailable ? 'bg-green-100' : 'bg-red-100'
               }`}
-              whileHover={{ scale: 1.05 }}
             >
               {isVoiceAvailable ? (
                 <Volume2 className="w-4 h-4 text-green-600" />
@@ -224,66 +218,53 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
               >
                 {isVoiceAvailable ? 'Voice Ready' : 'Voice Off'}
               </span>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Quick Topics */}
-        <motion.div
-          className="mt-4 flex flex-wrap gap-2 max-w-6xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+        <div
+          className="mt-4 flex flex-wrap gap-2 max-w-6xl mx-auto animate-fadeInUp"
         >
           {quickTopics.map((topic, index) => (
-            <motion.button
+            <button
               key={index}
-              className="flex items-center space-x-2 px-3 py-2 bg-gray-100 rounded-xl shadow-neomorph hover:shadow-neomorph-pressed text-sm text-gray-700 transition-all duration-200"
-              whileHover={{ scale: 1.02, y: -1 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex items-center space-x-2 px-3 py-2 bg-gray-100 rounded-xl shadow-neomorph hover:shadow-neomorph-pressed text-sm text-gray-700 transition-all duration-200 animate-fadeInUp"
               onClick={() => setInputMessage(topic.query)}
             >
               <span>{topic.icon}</span>
               <span className="font-medium">{topic.title}</span>
-            </motion.button>
+            </button>
           ))}
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Messages Area */}
       <div className="flex-1 overflow-hidden p-4">
         <div className="max-w-4xl mx-auto h-full flex flex-col">
           <div className="flex-1 overflow-y-auto space-y-4 pb-4">
-            <AnimatePresence>
-              {messages.map((message) => (
-                <motion.div
+{messages.map((message) => (
+                <div
                   key={message.id}
                   className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -20, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
                 >
                   <div
                     className={`max-w-xs lg:max-w-md xl:max-w-lg ${
                       message.type === 'user' ? 'order-2' : 'order-1'
                     }`}
                   >
-                    <motion.div
+                    <div
                       className={`p-4 rounded-2xl shadow-neomorph ${
                         message.type === 'user'
                           ? 'bg-blue-500 text-white ml-auto'
                           : 'bg-gray-100 text-gray-800'
                       }`}
-                      whileHover={{ scale: 1.02 }}
                     >
                       <p className="text-sm leading-relaxed">{message.content}</p>
 
                       {message.hasVoice && message.type === 'ai' && (
-                        <motion.button
-                          className="mt-3 flex items-center space-x-2 text-xs bg-white/20 hover:bg-white/30 px-3 py-1 rounded-lg transition-colors"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
+                        <button
+                          className="mt-3 flex items-center space-x-2 text-xs bg-white/20 hover:bg-white/30 px-3 py-1 rounded-lg transition-colors animate-fadeInUp"
                           onClick={() => handleVoiceToggle(message)}
                         >
                           {isSpeaking ? (
@@ -292,9 +273,9 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
                             <Volume2 className="w-3 h-3" />
                           )}
                           <span>{isSpeaking ? 'Stop' : 'Listen'}</span>
-                        </motion.button>
+                        </button>
                       )}
-                    </motion.div>
+                    </div>
 
                     <p
                       className={`text-xs text-gray-500 mt-1 ${
@@ -309,85 +290,61 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
                   </div>
 
                   {/* Avatar */}
-                  <motion.div
+                  <div
                     className={`w-8 h-8 rounded-full shadow-neomorph flex items-center justify-center text-xs font-bold ${
                       message.type === 'user'
                         ? 'order-1 mr-3 bg-gradient-to-br from-green-400 to-green-700 text-white'
                         : 'order-2 ml-3 bg-blue-500 text-white'
                     }`}
-                    whileHover={{ scale: 1.1 }}
                   >
                     {message.type === 'user' ? '👨‍🎓' : '👨‍🏫'}
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               ))}
-            </AnimatePresence>
-
-            {/* Thinking Indicator */}
-            <AnimatePresence>
-              {isThinking && (
-                <motion.div
-                  className="flex justify-start"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
+{/* Thinking Indicator */}
+{isThinking && (
+                <div
+                  className="flex justify-start animate-fadeInUp"
                 >
                   <div className="flex items-center space-x-3">
                     <div className="w-8 h-8 rounded-full bg-blue-500 shadow-neomorph flex items-center justify-center">
                       <span className="text-xs">👨‍🏫</span>
                     </div>
-                    <motion.div
-                      className="bg-gray-100 p-4 rounded-2xl shadow-neomorph flex items-center space-x-2"
-                      animate={{ scale: [1, 1.02, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
+                    <div
+                      className="bg-gray-100 p-4 rounded-2xl shadow-neomorph flex items-center space-x-2 animate-fadeInUp"
                     >
                       <div className="flex space-x-1">
                         {[0, 1, 2].map((i) => (
-                          <motion.div
+                          <div
                             key={i}
-                            className="w-2 h-2 bg-blue-400 rounded-full"
-                            animate={{ scale: [1, 1.3, 1], opacity: [0.5, 1, 0.5] }}
-                            transition={{
-                              duration: 1,
-                              repeat: Infinity,
-                              delay: i * 0.2,
-                            }}
+                            className="w-2 h-2 bg-blue-400 rounded-full animate-fadeInUp"
                           />
                         ))}
                       </div>
                       <span className="text-sm text-gray-600">Shekhar Sir is thinking...</span>
-                    </motion.div>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-
-            <div ref={messagesEndRef} />
+<div ref={messagesEndRef} />
           </div>
 
           {/* Input Area */}
-          <motion.div
-            className="bg-gray-100 rounded-2xl p-4 shadow-neomorph"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+          <div
+            className="bg-gray-100 rounded-2xl p-4 shadow-neomorph animate-fadeInUp"
           >
             <div className="flex items-end space-x-3">
               {/* Attachments */}
               <div className="flex space-x-2">
-                <motion.button
-                  className="w-10 h-10 bg-gray-100 rounded-xl shadow-neomorph-inset flex items-center justify-center text-gray-600 hover:text-blue-500 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                <button
+                  className="w-10 h-10 bg-gray-100 rounded-xl shadow-neomorph-inset flex items-center justify-center text-gray-600 hover:text-blue-500 transition-colors animate-fadeInUp"
                   onClick={() => fileInputRef.current?.click()}
                 >
                   <ImageIcon className="w-5 h-5" />
-                </motion.button>
+                </button>
 
-                <motion.button
-                  className="w-10 h-10 bg-gray-100 rounded-xl shadow-neomorph-inset flex items-center justify-center text-gray-600 hover:text-green-600 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                <button
+                  className="w-10 h-10 bg-gray-100 rounded-xl shadow-neomorph-inset flex items-center justify-center text-gray-600 hover:text-green-600 transition-colors animate-fadeInUp"
                   onClick={() => setIsRecording(!isRecording)}
                 >
                   {isRecording ? (
@@ -395,7 +352,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
                   ) : (
                     <Mic className="w-5 h-5" />
                   )}
-                </motion.button>
+                </button>
               </div>
 
               {/* Text Input */}
@@ -416,42 +373,33 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
               </div>
 
               {/* Send Button */}
-              <motion.button
+              <button
                 className={`w-12 h-12 rounded-xl shadow-neomorph flex items-center justify-center transition-all duration-200 ${
                   inputMessage.trim()
                     ? 'bg-blue-500 text-white shadow-neomorph-pressed'
                     : 'bg-gray-100 text-gray-400'
                 }`}
-                whileHover={{ scale: inputMessage.trim() ? 1.05 : 1 }}
-                whileTap={{ scale: inputMessage.trim() ? 0.95 : 1 }}
                 onClick={handleSendMessage}
                 disabled={!inputMessage.trim()}
               >
                 <Send className="w-5 h-5" />
-              </motion.button>
+              </button>
             </div>
 
             {/* Voice Recording Indicator */}
-            <AnimatePresence>
-              {isRecording && (
-                <motion.div
-                  className="mt-3 flex items-center justify-center space-x-2 text-red-500"
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
+{isRecording && (
+                <div
+                  className="mt-3 flex items-center justify-center space-x-2 text-red-500 animate-fadeInUp"
                 >
-                  <motion.div
-                    className="w-2 h-2 bg-red-500 rounded-full"
-                    animate={{ scale: [1, 1.3, 1] }}
-                    transition={{ duration: 1, repeat: Infinity }}
+                  <div
+                    className="w-2 h-2 bg-red-500 rounded-full animate-fadeInUp"
                   />
                   <span className="text-sm font-medium">
                     Recording... Speak in Hindi, English, or Hinglish
                   </span>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-          </motion.div>
+</div>
         </div>
       </div>
 

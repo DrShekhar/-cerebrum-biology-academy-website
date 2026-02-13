@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Users, TrendingUp, Clock, BookOpen, Zap, UserPlus } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'
 import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
@@ -291,10 +290,8 @@ export function LiveEnrollmentNotifications({
   return (
     <div className="fixed top-24 left-4 z-40 space-y-3 max-w-xs">
       {/* Live Activity Counter */}
-      <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 0 }}
-        className="bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg"
+      <div
+        className="bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg animate-fadeInUp"
       >
         <div className="flex items-center mb-2">
           <TrendingUp className="w-4 h-4 mr-2" />
@@ -314,26 +311,12 @@ export function LiveEnrollmentNotifications({
             <span className="font-bold">{enrollmentStats.lastHourBookings}</span>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Enrollment Notifications */}
-      <AnimatePresence mode="popLayout">
-        {notifications.map((notification, index) => (
-          <motion.div
+{notifications.map((notification, index) => (
+          <div
             key={notification.id}
-            initial={{ opacity: 0, x: -100, scale: 0.8 }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              scale: 1,
-              transition: { delay: index * 0.1 },
-            }}
-            exit={{
-              opacity: 0,
-              x: -100,
-              scale: 0.8,
-              transition: { duration: 0.3 },
-            }}
             className={`bg-white rounded-lg shadow-lg border-l-4 p-3 ${getNotificationStyle(notification.urgency)}`}
           >
             <div className="flex items-start space-x-3">
@@ -364,16 +347,12 @@ export function LiveEnrollmentNotifications({
             {notification.urgency === 'high' && (
               <div className="absolute inset-0 rounded-lg bg-red-200 opacity-20 animate-pulse pointer-events-none" />
             )}
-          </motion.div>
+          </div>
         ))}
-      </AnimatePresence>
-
-      {/* Call to Action for High Urgency */}
+{/* Call to Action for High Urgency */}
       {notifications.some((n) => n.urgency === 'high') && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-red-600 text-white p-3 rounded-lg shadow-lg text-center"
+        <div
+          className="bg-red-600 text-white p-3 rounded-lg shadow-lg text-center animate-fadeInUp"
         >
           <div className="flex items-center justify-center mb-1">
             <Zap className="w-4 h-4 mr-1" />
@@ -383,7 +362,7 @@ export function LiveEnrollmentNotifications({
           <button className="bg-white text-red-600 px-3 py-1 rounded-full text-xs font-semibold hover:bg-gray-100 transition-colors">
             Secure Your Seat Now
           </button>
-        </motion.div>
+        </div>
       )}
     </div>
   )

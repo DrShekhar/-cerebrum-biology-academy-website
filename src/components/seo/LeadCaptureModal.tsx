@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { X, Download, CheckCircle, Mail, MessageCircle, User, Shield } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface LeadCaptureModalProps {
   isOpen: boolean
   onClose: () => void
@@ -150,19 +148,12 @@ export function LeadCaptureModal({
   if (!isOpen) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+<div
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50 animate-fadeInUp"
         onClick={handleClose}
       >
-        <motion.div
-          className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto relative shadow-2xl"
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
+        <div
+          className="bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto relative shadow-2xl animate-fadeInUp"
           onClick={(e) => e.stopPropagation()}
         >
           <button
@@ -368,8 +359,7 @@ export function LeadCaptureModal({
               </button>
             </div>
           )}
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
+        </div>
+      </div>
+)
 }

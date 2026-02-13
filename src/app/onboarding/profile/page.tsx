@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Target, BookOpen, Brain, GraduationCap, ChevronRight, CheckCircle } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
@@ -154,13 +153,11 @@ export default function OnboardingProfilePage() {
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4"
+          <div
+            className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4 animate-fadeInUp"
           >
             <Brain className="w-8 h-8 text-white" />
-          </motion.div>
+          </div>
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome to Cerebrum!</h1>
           <p className="text-gray-600">Let's personalize your learning experience</p>
         </div>
@@ -194,10 +191,8 @@ export default function OnboardingProfilePage() {
 
         {/* Step 1: Track Selection */}
         {step === 1 && (
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+          <div
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="text-center mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-2">What are you preparing for?</h2>
@@ -206,7 +201,7 @@ export default function OnboardingProfilePage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {TRACK_OPTIONS.map((track) => (
-                <motion.div key={track.id} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <div key={track.id} className="animate-fadeInUp">
                   <Card
                     className={`cursor-pointer transition-all ${
                       selectedTrack === track.id
@@ -235,18 +230,16 @@ export default function OnboardingProfilePage() {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Step 2: Goal & Details */}
         {step === 2 && selectedTrackOption && (
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+          <div
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="text-center mb-8">
               <div
@@ -334,15 +327,13 @@ export default function OnboardingProfilePage() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         )}
 
         {/* Step 3: Target Score (NEET only) */}
         {step === 3 && selectedTrack === 'NEET' && (
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+          <div
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-indigo-500 text-white mb-4">
@@ -390,7 +381,7 @@ export default function OnboardingProfilePage() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         )}
 
         {/* Navigation Buttons */}

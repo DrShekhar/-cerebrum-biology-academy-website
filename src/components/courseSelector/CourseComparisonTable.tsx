@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Check, X, Crown, Target, Gem, Award, ChevronDown, ChevronUp } from 'lucide-react'
 
 interface ComparisonFeature {
@@ -370,14 +369,9 @@ export default function CourseComparisonTable({
               </button>
 
               {/* Category Features */}
-              <AnimatePresence>
-                {expandedCategories.includes(category) && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
+{expandedCategories.includes(category) && (
+                  <div
+                    className="overflow-hidden animate-fadeInUp"
                   >
                     {COMPARISON_DATA.filter((item) => item.category === category).map(
                       (feature, index) => (
@@ -417,23 +411,18 @@ export default function CourseComparisonTable({
                         </div>
                       )
                     )}
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           ))}
         </div>
       </div>
 
       {/* Mobile View */}
       <div className="md:hidden">
-        <AnimatePresence>
-          {showMobileComparison && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="overflow-hidden"
+{showMobileComparison && (
+            <div
+              className="overflow-hidden animate-fadeInUp"
             >
               {/* Series Selection */}
               <div className="p-4 border-b border-gray-200">
@@ -485,14 +474,9 @@ export default function CourseComparisonTable({
                           <ChevronDown className="w-4 h-4 text-gray-500" />
                         )}
                       </button>
-
-                      <AnimatePresence>
-                        {expandedCategories.includes(category) && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="space-y-3 overflow-hidden"
+{expandedCategories.includes(category) && (
+                          <div
+                            className="space-y-3 overflow-hidden animate-fadeInUp"
                           >
                             {COMPARISON_DATA.filter((item) => item.category === category).map(
                               (feature) => (
@@ -536,17 +520,15 @@ export default function CourseComparisonTable({
                                 </div>
                               )
                             )}
-                          </motion.div>
+                          </div>
                         )}
-                      </AnimatePresence>
-                    </div>
+</div>
                   ))}
                 </div>
               )}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Call to Action */}
       <div className="p-6 bg-gray-50 border-t border-gray-200">

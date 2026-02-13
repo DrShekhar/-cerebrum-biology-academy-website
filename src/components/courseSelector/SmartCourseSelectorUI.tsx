@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronLeft,
   ChevronRight,
@@ -45,11 +44,8 @@ function ProgressIndicator({
       {/* Progress Bar */}
       <div className="relative">
         <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-          <motion.div
-            className="h-full bg-blue-500"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
+          <div
+            className="h-full bg-blue-500 animate-fadeInUp"
           />
         </div>
 
@@ -57,7 +53,7 @@ function ProgressIndicator({
         <div className="flex justify-between mt-3">
           {Array.from({ length: totalSteps }, (_, i) => (
             <div key={i} className="flex flex-col items-center">
-              <motion.div
+              <div
                 className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold transition-all ${
                   i < currentStep
                     ? 'bg-green-600 text-white'
@@ -65,11 +61,9 @@ function ProgressIndicator({
                       ? 'bg-blue-500 text-white'
                       : 'bg-gray-200 text-gray-400'
                 }`}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
               >
                 {i < currentStep ? <Check className="w-4 h-4" /> : i + 1}
-              </motion.div>
+              </div>
               <span className="text-xs text-gray-500 mt-1 text-center">
                 {i === 0 && 'Class'}
                 {i === 1 && 'Goals'}
@@ -118,10 +112,8 @@ function QuestionCard({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100"
+    <div
+      className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100 animate-fadeInUp"
     >
       <div className="mb-6">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{question.question}</h3>
@@ -138,11 +130,9 @@ function QuestionCard({
               : selectedValue === option.value
 
           return (
-            <motion.button
+            <button
               key={option.value}
               onClick={() => handleOptionSelect(option.value)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
               className={`
                 p-4 rounded-xl border-2 text-left transition-all min-h-[60px] flex items-center
                 ${
@@ -162,11 +152,11 @@ function QuestionCard({
                 </div>
                 {isSelected && <Check className="w-5 h-5 text-blue-500 flex-shrink-0" />}
               </div>
-            </motion.button>
+            </button>
           )
         })}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -240,9 +230,7 @@ function FeeCalculator({
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`${theme.bg} ${theme.border} border-2 rounded-xl p-6`}
     >
       <div className="flex items-center mb-4">
@@ -310,7 +298,7 @@ function FeeCalculator({
       >
         💳 Secure Payment Gateway
       </button>
-    </motion.div>
+    </div>
   )
 }
 
@@ -344,9 +332,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
 
   return (
     <div className="grid grid-cols-2 gap-4">
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
+      <div
         className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
       >
         <div className="flex items-center justify-center mb-2">
@@ -354,12 +340,9 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
           <span className="text-2xl font-bold text-green-600">{metrics.successRate}%</span>
         </div>
         <div className="text-xs text-gray-600">NEET Success Rate</div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.1 }}
+      <div
         className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
       >
         <div className="flex items-center justify-center mb-2">
@@ -367,12 +350,9 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
           <span className="text-lg font-bold text-gray-900">{metrics.avgRank}</span>
         </div>
         <div className="text-xs text-gray-600">Average NEET Rank</div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.2 }}
+      <div
         className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
       >
         <div className="flex items-center justify-center mb-2">
@@ -380,12 +360,9 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
           <span className="text-lg font-bold text-gray-900">{metrics.students}</span>
         </div>
         <div className="text-xs text-gray-600">Success Stories</div>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ delay: 0.3 }}
+      <div
         className={`${theme.bg} rounded-xl p-4 text-center ${theme.border} border`}
       >
         <div className="flex items-center justify-center mb-2">
@@ -393,7 +370,7 @@ function SuccessIndicators({ seriesId }: { seriesId: string }) {
           <span className="text-xs font-bold text-gray-900">{metrics.colleges}</span>
         </div>
         <div className="text-xs text-gray-600">Top Admissions</div>
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -422,10 +399,8 @@ function RecommendationCard({
     ] || 58000
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100"
+    <div
+      className="bg-white rounded-2xl shadow-xl overflow-hidden border-2 border-gray-100 animate-fadeInUp"
     >
       {/* Header */}
       <div className={`bg-gradient-to-r ${theme.gradient} text-white p-6 relative overflow-hidden`}>
@@ -467,16 +442,13 @@ function RecommendationCard({
           <h4 className="font-semibold text-gray-800 mb-3">Why This is Perfect for You</h4>
           <div className="space-y-2">
             {recommendation.reasoning.map((reason, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="flex items-start text-sm text-gray-700"
+                className="flex items-start text-sm text-gray-700 animate-fadeInUp"
               >
                 <Check className="w-4 h-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
                 <span>{reason}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -537,7 +509,7 @@ function RecommendationCard({
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -606,10 +578,8 @@ export default function SmartCourseSelectorUI({
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 p-4">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mb-8"
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <h1 className="text-3xl font-bold text-gray-900 mb-2">
               🎉 Your Perfect NEET Course Match!
@@ -617,7 +587,7 @@ export default function SmartCourseSelectorUI({
             <p className="text-gray-600">
               Based on your preferences, here's our AI-powered recommendation
             </p>
-          </motion.div>
+          </div>
 
           {/* Recommendation Card */}
           <RecommendationCard recommendation={recommendation} showCalculator={showCalculator} />
@@ -641,16 +611,14 @@ export default function SmartCourseSelectorUI({
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 p-4">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
+        <div
+          className="text-center mb-8 animate-fadeInUp"
         >
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Find Your Perfect NEET Course</h1>
           <p className="text-gray-600">
             Answer a few questions and get personalized course recommendations
           </p>
-        </motion.div>
+        </div>
 
         {/* Progress Indicator */}
         <ProgressIndicator
@@ -660,15 +628,10 @@ export default function SmartCourseSelectorUI({
         />
 
         {/* Question Card */}
-        <AnimatePresence mode="wait">
-          {currentQuestion && (
-            <motion.div
+{currentQuestion && (
+            <div
               key={currentQuestion.id}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.3 }}
-            >
+             className="animate-fadeInUp">
               <QuestionCard
                 question={currentQuestion}
                 selectedValue={(() => {
@@ -679,11 +642,9 @@ export default function SmartCourseSelectorUI({
                 })()}
                 onAnswerSelect={(answer) => handleAnswerSelect(currentQuestion.id, answer)}
               />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Navigation */}
+{/* Navigation */}
         <div className="flex justify-between items-center mt-8">
           <button
             onClick={goBack}

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Bell, Moon, Eye, Volume2, Loader2, Check } from 'lucide-react'
 import { useOptimisticUpdate } from '@/hooks/useOptimisticUpdate'
 import { useToast } from '@/components/ui/Toast'
@@ -123,19 +122,11 @@ export function OptimisticSettingsToggle({
           }
 
           return (
-            <motion.div
+            <div
               key={setting.key}
               className={`p-4 border-2 rounded-xl transition-all ${
                 isOptimistic ? 'border-blue-200 bg-blue-50' : 'border-gray-200'
               }`}
-              animate={
-                isOptimistic
-                  ? {
-                      scale: [1, 1.01, 1],
-                      transition: { duration: 0.2 },
-                    }
-                  : {}
-              }
             >
               <div className="flex items-start justify-between">
                 <div className="flex items-start space-x-3">
@@ -156,18 +147,14 @@ export function OptimisticSettingsToggle({
                     isEnabled ? colors[setting.color as keyof typeof colors] : 'bg-gray-300'
                   } ${isLoading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}
                 >
-                  <motion.div
-                    className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center"
-                    animate={{
-                      x: isEnabled ? 24 : 0,
-                    }}
-                    transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                  <div
+                    className="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md flex items-center justify-center animate-fadeInUp"
                   >
                     {isEnabled && <Check className="w-4 h-4 text-green-600" />}
-                  </motion.div>
+                  </div>
                 </button>
               </div>
-            </motion.div>
+            </div>
           )
         })}
       </div>

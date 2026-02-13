@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Check, Clock } from 'lucide-react'
 
 export type FormDataRecord = Record<string, unknown>
@@ -212,13 +211,8 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
 
           {/* Progress bar */}
           <div className="mt-6 h-2 bg-gray-200 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-blue-600 rounded-full"
-              initial={{ width: 0 }}
-              animate={{
-                width: `${((currentStep + 1) / steps.length) * 100}%`,
-              }}
-              transition={{ duration: 0.3 }}
+            <div
+              className="h-full bg-blue-600 rounded-full animate-fadeInUp"
             />
           </div>
         </div>
@@ -226,23 +220,18 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
 
       {/* Auto-save indicator */}
       {savedProgress && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="mb-4 flex items-center justify-center text-sm text-green-600"
+        <div
+          className="mb-4 flex items-center justify-center text-sm text-green-600 animate-fadeInUp"
         >
           <Clock className="w-4 h-4 mr-1" />
           Progress saved automatically
-        </motion.div>
+        </div>
       )}
 
       {/* Error display */}
       {errors.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4"
+        <div
+          className="mb-6 bg-red-50 border border-red-200 rounded-lg p-4 animate-fadeInUp"
         >
           <div className="text-red-800">
             <h3 className="font-medium mb-2">Please fix the following errors:</h3>
@@ -254,7 +243,7 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
               ))}
             </ul>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Current Step Content */}
@@ -267,14 +256,9 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
         </div>
 
         <div className="p-6">
-          <AnimatePresence mode="wait">
-            <motion.div
+<div
               key={currentStep}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              transition={{ duration: 0.2 }}
-            >
+             className="animate-fadeInUp">
               <StepComponent
                 data={formData}
                 onNext={handleNext}
@@ -282,9 +266,8 @@ export const MultiStepForm = <T extends FormDataRecord = FormDataRecord>({
                 isLoading={isLoading}
                 errors={errors}
               />
-            </motion.div>
-          </AnimatePresence>
-        </div>
+            </div>
+</div>
 
         {/* Navigation */}
         <div className="px-6 py-4 bg-gray-50 border-t border-gray-200 flex items-center justify-between">

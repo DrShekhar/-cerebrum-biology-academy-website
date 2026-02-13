@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   Clock,
@@ -110,14 +109,9 @@ export function CoachingTrialBanner({
   // User hasn't started trial yet - show start trial banner
   if (!trialStatus.trialStartDate && !trialStatus.isTrialActive) {
     return (
-      <AnimatePresence>
-        {showAnimation && (
-          <motion.div
-            initial={{ y: -100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: -100, opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 100, damping: 20 }}
-            className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden"
+{showAnimation && (
+          <div
+            className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden animate-fadeInUp"
             role="alert"
             aria-live="polite"
           >
@@ -173,10 +167,9 @@ export function CoachingTrialBanner({
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    )
+)
   }
 
   // Get banner config based on trial status
@@ -235,13 +228,8 @@ export function CoachingTrialBanner({
   const Icon = config.icon
 
   return (
-    <AnimatePresence>
-      {showAnimation && (
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -100, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+{showAnimation && (
+        <div
           className={`relative bg-gradient-to-r ${config.bgGradient} text-white overflow-hidden`}
           role="alert"
           aria-live="polite"
@@ -315,20 +303,16 @@ export function CoachingTrialBanner({
                   </span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2 overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${((7 - trialStatus.daysRemaining) / 7) * 100}%` }}
-                    transition={{ duration: 1, ease: 'easeOut' }}
-                    className="h-full bg-white rounded-full"
+                  <div
+                    className="h-full bg-white rounded-full animate-fadeInUp"
                   />
                 </div>
               </div>
             )}
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }
 
 // Hook to fetch coaching trial status for authenticated users

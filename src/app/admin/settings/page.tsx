@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   Settings as SettingsIcon,
   Users,
@@ -105,12 +104,9 @@ export default function SettingsPage() {
         {/* Settings Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {settingsCards.map((card, index) => (
-            <motion.div
+            <div
               key={card.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            >
+             className="animate-fadeInUp">
               <Link
                 href={card.href}
                 className="block bg-white rounded-xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-200 group"
@@ -129,7 +125,7 @@ export default function SettingsPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{card.title}</h3>
                 <p className="text-sm text-gray-600">{card.description}</p>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 

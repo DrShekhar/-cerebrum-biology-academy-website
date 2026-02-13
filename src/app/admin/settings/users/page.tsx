@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   Users,
   UserPlus,
@@ -171,10 +170,8 @@ export default function UsersSettingsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -183,13 +180,10 @@ export default function UsersSettingsPage() {
               </div>
               <Users className="w-8 h-8 text-blue-500" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -200,13 +194,10 @@ export default function UsersSettingsPage() {
               </div>
               <Check className="w-8 h-8 text-green-600" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -217,13 +208,10 @@ export default function UsersSettingsPage() {
               </div>
               <Shield className="w-8 h-8 text-red-500" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="bg-white p-6 rounded-xl border border-gray-200"
+          <div
+            className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -234,7 +222,7 @@ export default function UsersSettingsPage() {
               </div>
               <Users className="w-8 h-8 text-blue-500" />
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <div className="bg-white p-6 rounded-xl border border-gray-200 mb-6">

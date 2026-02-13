@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import FocusTrap from 'focus-trap-react'
 import { X, Smartphone, QrCode, CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
@@ -150,23 +149,16 @@ export function UPIPaymentModal({
   if (!isOpen) return null
 
   return (
-    <AnimatePresence>
-      <FocusTrap>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+<FocusTrap>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 animate-fadeInUp"
           onClick={onClose}
           role="dialog"
           aria-modal="true"
           aria-labelledby="upi-payment-modal-title"
         >
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto"
+          <div
+            className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header */}
@@ -266,11 +258,10 @@ export function UPIPaymentModal({
                 />
               )}
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </FocusTrap>
-    </AnimatePresence>
-  )
+)
 }
 
 // Types for sub-components
@@ -320,11 +311,10 @@ function UPIAppSelection({
       {/* UPI Apps Grid */}
       <div className="grid grid-cols-2 gap-3">
         {apps.map((app) => (
-          <motion.button
+          <button
             key={app.scheme}
-            whileTap={{ scale: 0.98 }}
             onClick={() => onSelectApp(app.scheme)}
-            className="p-4 border-2 border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 mobile-cta"
+            className="p-4 border-2 border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 mobile-cta animate-fadeInUp"
           >
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 mb-2 relative">
@@ -345,7 +335,7 @@ function UPIAppSelection({
               <span className="font-medium text-sm">{app.name}</span>
               {app.isInstalled && <span className="text-xs text-green-600 mt-1">Installed</span>}
             </div>
-          </motion.button>
+          </button>
         ))}
       </div>
     </div>
@@ -362,13 +352,11 @@ function PaymentProcessing({
 }) {
   return (
     <div className="text-center">
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-        className="w-16 h-16 mx-auto mb-4"
+      <div
+        className="w-16 h-16 mx-auto mb-4 animate-fadeInUp"
       >
         <Loader2 className="w-16 h-16 text-blue-600" />
-      </motion.div>
+      </div>
       <h3 className="text-lg font-semibold mb-2">Opening UPI App...</h3>
       <p className="text-gray-600 mb-6">
         Please complete the payment in your UPI app and return here.
@@ -399,13 +387,11 @@ function PaymentStatus({
 }) {
   return (
     <div className="text-center">
-      <motion.div
-        animate={{ scale: [1, 1.1, 1] }}
-        transition={{ duration: 2, repeat: Infinity }}
-        className="w-16 h-16 mx-auto mb-4"
+      <div
+        className="w-16 h-16 mx-auto mb-4 animate-fadeInUp"
       >
         <Loader2 className="w-16 h-16 text-blue-600" />
-      </motion.div>
+      </div>
       <h3 className="text-lg font-semibold mb-2">Checking Payment Status...</h3>
       <p className="text-gray-600 mb-2">
         We're verifying your payment. This usually takes a few seconds.
@@ -436,9 +422,9 @@ function PaymentSuccess({
 }) {
   return (
     <div className="text-center">
-      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-16 h-16 mx-auto mb-4">
+      <div className="w-16 h-16 mx-auto mb-4 animate-fadeInUp">
         <CheckCircle className="w-16 h-16 text-green-600" />
-      </motion.div>
+      </div>
       <h3 className="text-lg font-semibold text-green-800 mb-2">Payment Successful!</h3>
       <p className="text-gray-600 mb-4">
         ₹{amount.toLocaleString('en-IN')} paid for {courseName}

@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/contexts/AuthContext'
 import { X, Download, CheckCircle } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { LeadMagnet } from '@/data/leadMagnets'
 import { LocalArea } from '@/data/localAreas'
 
@@ -76,19 +75,12 @@ export function LeadMagnetModal({ isOpen, onClose, leadMagnet, area }: LeadMagne
   if (!isOpen) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+<div
+        className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 animate-fadeInUp"
         onClick={handleClose}
       >
-        <motion.div
-          className="bg-white rounded-3xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto relative"
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.95 }}
+        <div
+          className="bg-white rounded-3xl p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto relative animate-fadeInUp"
           onClick={(e) => e.stopPropagation()}
         >
           <button
@@ -249,8 +241,7 @@ export function LeadMagnetModal({ isOpen, onClose, leadMagnet, area }: LeadMagne
               </Button>
             </div>
           )}
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
+        </div>
+      </div>
+)
 }

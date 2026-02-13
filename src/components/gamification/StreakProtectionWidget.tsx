@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Flame,
   Shield,
@@ -95,11 +94,8 @@ export function StreakProtectionWidget({
                 : 'Keep the momentum going!'}
           </p>
         </div>
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: 'spring', stiffness: 200, damping: 10 }}
-          className="flex items-center space-x-1"
+        <div
+          className="flex items-center space-x-1 animate-fadeInUp"
         >
           <span className="text-5xl font-bold">{status.currentStreak}</span>
           {status.isProtected ? (
@@ -109,15 +105,13 @@ export function StreakProtectionWidget({
               className={`w-8 h-8 ${status.currentStreak > 0 ? 'text-yellow-300' : 'text-white/50'}`}
             />
           )}
-        </motion.div>
+        </div>
       </div>
 
       {/* Protection Status Banner */}
       {status.isProtected && status.protectedUntil && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white/20 rounded-lg p-3 mb-4 flex items-center justify-between"
+        <div
+          className="bg-white/20 rounded-lg p-3 mb-4 flex items-center justify-between animate-fadeInUp"
         >
           <div className="flex items-center space-x-2">
             <Snowflake className="w-5 h-5 text-cyan-200" />
@@ -127,15 +121,13 @@ export function StreakProtectionWidget({
             <Clock className="w-4 h-4" />
             <span className="text-sm">{getTimeRemaining(status.protectedUntil)} remaining</span>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Recovery Banner */}
       {status.canRecover && status.recoveryDeadline && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-yellow-500/30 border border-yellow-400/50 rounded-lg p-3 mb-4"
+        <div
+          className="bg-yellow-500/30 border border-yellow-400/50 rounded-lg p-3 mb-4 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div>
@@ -160,7 +152,7 @@ export function StreakProtectionWidget({
             <Zap className="w-4 h-4" />
             <span>Recover Streak ({status.recoveryXpCost} XP)</span>
           </button>
-        </motion.div>
+        </div>
       )}
 
       {/* Stats Grid */}
@@ -211,21 +203,14 @@ export function StreakProtectionWidget({
       </div>
 
       {/* Freeze Modal */}
-      <AnimatePresence>
-        {showFreezeModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+{showFreezeModal && (
+          <div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
             onClick={() => setShowFreezeModal(false)}
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+            <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl"
+              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
             >
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -257,27 +242,18 @@ export function StreakProtectionWidget({
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Recovery Modal */}
-      <AnimatePresence>
-        {showRecoveryModal && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+{/* Recovery Modal */}
+{showRecoveryModal && (
+          <div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
             onClick={() => setShowRecoveryModal(false)}
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+            <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl"
+              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
             >
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -318,10 +294,9 @@ export function StreakProtectionWidget({
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

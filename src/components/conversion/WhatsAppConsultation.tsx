@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
 import {
   MessageCircle,
@@ -210,10 +209,8 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
 
   if (variant === 'compact' && !isExpanded) {
     return (
-      <motion.div
+      <div
         className={getPositionStyles()}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
       >
         <button
           onClick={() => setIsExpanded(true)}
@@ -223,10 +220,8 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
 
           {/* Pulse animation for urgency */}
           {urgencyLevel === 'high' && (
-            <motion.div
-              className="absolute inset-0 bg-white rounded-full"
-              animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0, 0.3] }}
-              transition={{ duration: 2, repeat: Infinity }}
+            <div
+              className="absolute inset-0 bg-white rounded-full animate-fadeInUp"
             />
           )}
 
@@ -235,16 +230,13 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
             <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
           </div>
         </button>
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
+    <div
       className={getPositionStyles()}
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
     >
       <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
         {/* Header */}
@@ -289,31 +281,27 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
         <div className="p-4">
           {/* Quick actions */}
           <div className="grid grid-cols-2 gap-3 mb-4">
-            <motion.button
+            <button
               onClick={() => handleWhatsAppClick()}
-              className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-xl hover:bg-green-100 transition-colors group"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-xl hover:bg-green-100 transition-colors group animate-fadeInUp"
             >
               <MessageCircle className="w-5 h-5 text-green-600 group-hover:scale-110 transition-transform" />
               <div className="text-left">
                 <div className="font-medium text-green-800 text-sm">WhatsApp</div>
                 <div className="text-xs text-green-600">Instant chat</div>
               </div>
-            </motion.button>
+            </button>
 
-            <motion.button
+            <button
               onClick={handlePhoneCall}
-              className="flex items-center gap-2 p-3 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 transition-colors group"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+              className="flex items-center gap-2 p-3 bg-blue-50 border border-blue-200 rounded-xl hover:bg-blue-100 transition-colors group animate-fadeInUp"
             >
               <Phone className="w-5 h-5 text-blue-600 group-hover:scale-110 transition-transform" />
               <div className="text-left">
                 <div className="font-medium text-blue-800 text-sm">Call Now</div>
                 <div className="text-xs text-blue-600">Direct call</div>
               </div>
-            </motion.button>
+            </button>
           </div>
 
           {/* Scheduled consultation section */}
@@ -333,14 +321,9 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                   <ChevronDown className="w-4 h-4 text-purple-600" />
                 )}
               </button>
-
-              <AnimatePresence>
-                {showForm && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
-                    className="mt-3 space-y-3"
+{showForm && (
+                  <div
+                    className="mt-3 space-y-3 animate-fadeInUp"
                   >
                     {/* Available slots */}
                     <div>
@@ -443,10 +426,9 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
                       <Send className="w-4 h-4" />
                       Book via WhatsApp
                     </button>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           )}
 
           {/* Trust indicators */}
@@ -477,7 +459,7 @@ const WhatsAppConsultation: React.FC<WhatsAppConsultationProps> = ({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

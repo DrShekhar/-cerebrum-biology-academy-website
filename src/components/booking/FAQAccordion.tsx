@@ -2,7 +2,6 @@
 
 import { useState, useMemo } from 'react'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronDown,
   Search,
@@ -140,30 +139,21 @@ export function FAQAccordion() {
                   </div>
                   <span className="font-medium text-gray-900">{faq.question}</span>
                 </div>
-                <motion.div
-                  animate={{ rotate: openId === faq.id ? 180 : 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex-shrink-0"
+                <div
+                  className="flex-shrink-0 animate-fadeInUp"
                 >
                   <ChevronDown className="w-5 h-5 text-gray-500" />
-                </motion.div>
+                </div>
               </button>
-
-              <AnimatePresence>
-                {openId === faq.id && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  >
+{openId === faq.id && (
+                  <div
+                   className="animate-fadeInUp">
                     <div className="px-4 pb-4 pt-2 text-gray-700 leading-relaxed border-t border-gray-100">
                       {faq.answer}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           ))}
         </div>
       )}

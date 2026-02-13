@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion, Variants, Transition } from 'framer-motion'
 import { fadeInUp, fadeIn, staggerContainer, staggerItem } from '@/lib/animations/variants'
 
 interface FadeTransitionProps {
@@ -59,30 +58,26 @@ export function FadeTransition({
 
   if (staggerChildren) {
     return (
-      <motion.div
+      <div
         className={className}
         initial="hidden"
         animate="visible"
         exit="exit"
-        variants={variants}
-        transition={transition}
       >
         {children}
-      </motion.div>
+      </div>
     )
   }
 
   return (
-    <motion.div
+    <div
       className={className}
       initial="hidden"
       animate="visible"
       exit="exit"
-      variants={variants}
-      transition={transition}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -96,9 +91,9 @@ export function StaggerItem({
   delay?: number
 }) {
   return (
-    <motion.div className={className} variants={staggerItem} transition={{ delay }}>
+    <div className={className}>
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -132,14 +127,13 @@ export function StaggerContainer({
   }
 
   return (
-    <motion.div
+    <div
       className={className}
       initial="hidden"
       animate="visible"
       exit="exit"
-      variants={containerVariants}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }

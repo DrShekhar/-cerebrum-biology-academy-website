@@ -3,7 +3,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import { usePathname } from 'next/navigation'
 import { useAuth } from '@/contexts/AuthContext'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   Send,
@@ -451,19 +450,14 @@ For personalized guidance, our counselor team can help. In the meantime:
   return (
     <>
       {/* Floating Button - ARIA branded (Green to match brand) */}
-      <motion.button
+      <button
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? 'Close ARIA Sales Agent Chat' : 'Open ARIA Sales Agent Chat'}
-        className="fixed bottom-20 left-4 md:bottom-8 md:left-8 z-[45] bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all"
+        className="fixed bottom-20 left-4 md:bottom-8 md:left-8 z-[45] bg-green-500 hover:bg-green-600 text-white shadow-lg hover:shadow-xl transition-all animate-fadeInUp"
         style={{
           borderRadius: isOpen ? '50%' : '16px',
           padding: isOpen ? '16px' : '12px 16px',
         }}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1 }}
       >
         {isOpen ? (
           <X className="w-6 h-6" />
@@ -487,16 +481,11 @@ For personalized guidance, our counselor team can help. In the meantime:
             )}
           </div>
         )}
-      </motion.button>
+      </button>
 
       {/* Chat Window */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
+{isOpen && (
+          <div
             className={`fixed z-[45] flex flex-col overflow-hidden border border-gray-200 bg-white shadow-2xl transition-all duration-300 ${
               isFullscreen
                 ? 'inset-0 rounded-none'
@@ -707,9 +696,8 @@ For personalized guidance, our counselor team can help. In the meantime:
                 <span className="font-medium text-green-600">Cerebrum Biology Academy</span>
               </p>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </>
+</>
   )
 }

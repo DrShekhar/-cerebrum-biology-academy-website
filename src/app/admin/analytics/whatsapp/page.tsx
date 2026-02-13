@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   MessageSquare,
   MousePointer,
@@ -204,12 +203,9 @@ export default function WhatsAppAnalyticsPage() {
               {stats.map((stat, index) => {
                 const Icon = stat.icon
                 return (
-                  <motion.div
+                  <div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+                    className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
                   >
                     <div className="flex items-center justify-between">
                       <div className={`p-3 rounded-lg ${stat.bg}`}>
@@ -234,16 +230,14 @@ export default function WhatsAppAnalyticsPage() {
                       <p className="text-3xl font-bold text-gray-900">{formatNumber(stat.value)}</p>
                       <p className="text-sm text-gray-500 mt-1">{stat.label}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 )
               })}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+              <div
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Target className="w-5 h-5 text-blue-600" />
@@ -274,13 +268,10 @@ export default function WhatsAppAnalyticsPage() {
                     ))
                   )}
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+              <div
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <MapPin className="w-5 h-5 text-purple-600" />
@@ -311,15 +302,12 @@ export default function WhatsAppAnalyticsPage() {
                     ))
                   )}
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+              <div
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Smartphone className="w-5 h-5 text-orange-600" />
@@ -358,13 +346,10 @@ export default function WhatsAppAnalyticsPage() {
                     </>
                   )}
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+              <div
+                className="lg:col-span-2 bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
                   <Clock className="w-5 h-5 text-blue-600" />
@@ -392,14 +377,11 @@ export default function WhatsAppAnalyticsPage() {
                     )
                   })}
                 </div>
-              </motion.div>
+              </div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-white rounded-xl p-6 shadow-sm border border-gray-100"
+            <div
+              className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-fadeInUp"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Clicks</h3>
               <div className="overflow-x-auto">
@@ -461,7 +443,7 @@ export default function WhatsAppAnalyticsPage() {
                   </tbody>
                 </table>
               </div>
-            </motion.div>
+            </div>
           </>
         )}
       </div>

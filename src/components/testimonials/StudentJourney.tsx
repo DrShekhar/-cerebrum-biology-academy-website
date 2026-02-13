@@ -13,8 +13,6 @@ import {
   Star,
   BarChart3,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 interface StudentJourneyProps {
   student: {
     id: string
@@ -138,11 +136,8 @@ export function StudentJourney({ student }: StudentJourneyProps) {
 
       {/* Score Progress Chart */}
       {showScoreChart && (
-        <motion.div
-          className="bg-white rounded-3xl shadow-lg p-8 mb-8"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
+        <div
+          className="bg-white rounded-3xl shadow-lg p-8 mb-8 animate-fadeInUp"
         >
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Score Improvement Timeline</h3>
 
@@ -194,7 +189,7 @@ export function StudentJourney({ student }: StudentJourneyProps) {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Journey Timeline */}
@@ -208,15 +203,12 @@ export function StudentJourney({ student }: StudentJourneyProps) {
           {/* Journey Phases */}
           <div className="space-y-8">
             {student.journey.map((phase, index) => (
-              <motion.div
+              <div
                 key={index}
                 className={`relative cursor-pointer transition-all duration-300 ${
                   activePhase === index ? 'transform scale-105' : ''
                 }`}
                 onClick={() => setActivePhase(activePhase === index ? -1 : index)}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 {/* Timeline Dot */}
                 <div
@@ -252,11 +244,8 @@ export function StudentJourney({ student }: StudentJourneyProps) {
 
                   {/* Expanded Details */}
                   {activePhase === index && (
-                    <motion.div
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: 'auto' }}
-                      exit={{ opacity: 0, height: 0 }}
-                      className="grid md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-gray-200"
+                    <div
+                      className="grid md:grid-cols-3 gap-6 mt-6 pt-6 border-t border-gray-200 animate-fadeInUp"
                     >
                       <div>
                         <h5 className="font-semibold text-green-900 mb-3 flex items-center">
@@ -302,10 +291,10 @@ export function StudentJourney({ student }: StudentJourneyProps) {
                           ))}
                         </ul>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

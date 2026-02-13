@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Image as ImageIcon,
   Video,
@@ -173,10 +172,8 @@ export default function AdminGalleryPage() {
       {/* Stats Cards */}
       {stats && (
         <div className="mb-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="rounded-xl bg-white p-4 shadow-sm"
+          <div
+            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-blue-100 p-2">
@@ -187,13 +184,10 @@ export default function AdminGalleryPage() {
                 <p className="text-2xl font-bold text-gray-900">{stats.total}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="rounded-xl bg-white p-4 shadow-sm"
+          <div
+            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-green-100 p-2">
@@ -204,13 +198,10 @@ export default function AdminGalleryPage() {
                 <p className="text-2xl font-bold text-gray-900">{stats.photos}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="rounded-xl bg-white p-4 shadow-sm"
+          <div
+            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-purple-100 p-2">
@@ -221,13 +212,10 @@ export default function AdminGalleryPage() {
                 <p className="text-2xl font-bold text-gray-900">{stats.videos}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="rounded-xl bg-white p-4 shadow-sm"
+          <div
+            className="rounded-xl bg-white p-4 shadow-sm animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="rounded-lg bg-yellow-100 p-2">
@@ -240,7 +228,7 @@ export default function AdminGalleryPage() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
 
@@ -374,15 +362,10 @@ export default function AdminGalleryPage() {
           {/* Gallery Grid */}
           {viewMode === 'grid' ? (
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              <AnimatePresence mode="popLayout">
-                {items.map((item) => (
-                  <motion.div
+{items.map((item) => (
+                  <div
                     key={item.id}
-                    layout
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    className="group relative overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-md"
+                    className="group relative overflow-hidden rounded-xl bg-white shadow-sm transition-shadow hover:shadow-md animate-fadeInUp"
                   >
                     {/* Image/Video Thumbnail */}
                     <div className="relative aspect-[4/3] overflow-hidden bg-gray-100">
@@ -469,10 +452,9 @@ export default function AdminGalleryPage() {
                         </span>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </AnimatePresence>
-            </div>
+</div>
           ) : (
             /* List View */
             <div className="overflow-hidden rounded-xl bg-white shadow-sm">

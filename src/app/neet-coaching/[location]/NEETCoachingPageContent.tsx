@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -102,11 +101,8 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       <section className={`relative bg-gradient-to-br ${heroGradient} text-white py-20 overflow-hidden`}>
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
@@ -154,20 +150,17 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
 
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successMetrics.map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-yellow-300" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -175,12 +168,8 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {location.localities && location.localities.length > 0 && (
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 NEET Coaching Across All {location.cityName} Areas
@@ -188,17 +177,13 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We serve students from every corner of {location.cityName} and {location.state}.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
               {location.localities.map((locality, index) => (
-                <motion.div
+                <div
                   key={locality.slug}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                >
+                 className="animate-fadeInUp">
                   <div
                     className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer ${
                       locality.priority === 'high' ? `ring-2 ring-${location.heroColor}-600` : ''
@@ -217,7 +202,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
                       </div>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -228,12 +213,8 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {location.medicalColleges && location.medicalColleges.length > 0 && (
         <section className={`py-20 ${accentBg.replace('bg-', 'bg-')}-50`}>
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
                 Get Into Top Medical Colleges
@@ -241,23 +222,19 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Our coaching helps you secure seats in prestigious medical institutions across {location.state}.
               </p>
-            </motion.div>
+            </div>
 
             <div className="flex flex-wrap justify-center gap-4">
               {location.medicalColleges.map((college, index) => (
-                <motion.div
+                <div
                   key={college}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white px-6 py-4 rounded-xl shadow-lg"
+                  className="bg-white px-6 py-4 rounded-xl shadow-lg animate-fadeInUp"
                 >
                   <div className="flex items-center">
                     <GraduationCap className={`w-5 h-5 ${accentText} mr-2`} />
                     <span className="font-semibold text-gray-900">{college}</span>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -267,32 +244,24 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {/* Features Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Choose Cerebrum for NEET Coaching in {location.cityName}?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
               >
                 <feature.icon className={`w-12 h-12 ${accentText} mb-4`} />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -307,16 +276,12 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
             </h3>
             <div className="flex flex-wrap justify-center gap-4">
               {location.schools.map((school, index) => (
-                <motion.span
+                <span
                   key={school}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm"
+                  className="bg-white text-gray-700 px-4 py-2 rounded-full font-medium shadow-sm animate-fadeInUp"
                 >
                   {school}
-                </motion.span>
+                </span>
               ))}
             </div>
           </div>
@@ -326,34 +291,26 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions - NEET Coaching {location.cityName}
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {location.faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className={`w-6 h-6 mr-3 ${accentText} flex-shrink-0 mt-1`} />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -384,12 +341,8 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
       {/* CTA Section */}
       <section className={`py-20 bg-gradient-to-r ${heroGradient} text-white`}>
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Start Your NEET Journey from {location.cityName}
             </h2>
@@ -450,7 +403,7 @@ export function NEETCoachingPageContent({ location, relatedLocations }: Props) {
                 <span>{location.state} Expert</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Target, CheckCircle2, Clock, Flame, Zap, Calendar, BookOpen, Trophy } from 'lucide-react'
 
 type GoalType = 'DAILY' | 'WEEKLY'
@@ -103,9 +102,7 @@ function GoalItem({
   const totalReward = goal.xpReward + goal.streakBonus
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`p-4 rounded-xl border-2 transition-all ${
         goal.isCompleted
           ? 'bg-gradient-to-br from-green-50 to-emerald-50 border-green-300'
@@ -144,10 +141,7 @@ function GoalItem({
 
           {/* Progress bar */}
           <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
+            <div
               className={`h-2 rounded-full ${
                 goal.isCompleted ? 'bg-green-500' : progress >= 75 ? 'bg-yellow-500' : 'bg-blue-500'
               }`}
@@ -177,7 +171,7 @@ function GoalItem({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -220,10 +214,8 @@ export function GoalProgressCard({
 
         {/* Streak Multiplier Banner */}
         {currentStreakDays >= 3 && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mt-4 bg-white/20 rounded-lg p-3 flex items-center justify-between"
+          <div
+            className="mt-4 bg-white/20 rounded-lg p-3 flex items-center justify-between animate-fadeInUp"
           >
             <div className="flex items-center space-x-2">
               <Flame className="w-5 h-5 text-orange-300" />
@@ -232,7 +224,7 @@ export function GoalProgressCard({
             <div className="bg-orange-400 text-white px-3 py-1 rounded-full text-sm font-bold">
               {streakMultiplier}x Bonus
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 
@@ -301,10 +293,8 @@ export function GoalProgressCard({
 
       {/* All Complete Banner */}
       {dailyCompleted === dailyGoals.length && dailyGoals.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          className="bg-gradient-to-r from-green-500 to-emerald-600 p-4 text-white text-center"
+        <div
+          className="bg-gradient-to-r from-green-500 to-emerald-600 p-4 text-white text-center animate-fadeInUp"
         >
           <div className="flex items-center justify-center space-x-2">
             <Trophy className="w-5 h-5" />
@@ -314,7 +304,7 @@ export function GoalProgressCard({
           <p className="text-sm text-white/90 mt-1">
             Great work! Come back tomorrow for new challenges.
           </p>
-        </motion.div>
+        </div>
       )}
     </div>
   )

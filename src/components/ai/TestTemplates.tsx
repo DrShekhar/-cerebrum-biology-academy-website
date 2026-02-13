@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   BookOpen,
   FileText,
@@ -635,10 +634,8 @@ const TestTemplates: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
             <FileText className="w-8 h-8 text-white" />
@@ -646,7 +643,7 @@ const TestTemplates: React.FC = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Test Templates
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Choose from professionally designed test templates for different exam patterns, difficulty
           levels, and assessment types
@@ -679,14 +676,10 @@ const TestTemplates: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {activeView === 'browse' && (
-          <motion.div
+{activeView === 'browse' && (
+          <div
             key="browse"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Search and Filter Bar */}
             <div className="flex flex-col sm:flex-row gap-4 bg-white rounded-xl p-4 border">
@@ -726,11 +719,9 @@ const TestTemplates: React.FC = () => {
             {/* Template Categories */}
             <div className="space-y-6">
               {filteredCategories.map((category) => (
-                <motion.div
+                <div
                   key={category.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl border"
+                  className="bg-white rounded-xl border animate-fadeInUp"
                 >
                   {/* Category Header */}
                   <div
@@ -755,24 +746,18 @@ const TestTemplates: React.FC = () => {
                         <span className="bg-white/20 px-2 py-1 rounded text-sm">
                           {category.templates.length} templates
                         </span>
-                        <motion.div
-                          animate={{ rotate: category.isExpanded ? 180 : 0 }}
-                          transition={{ duration: 0.2 }}
-                        >
+                        <div
+                         className="animate-fadeInUp">
                           <Settings className="w-4 h-4" />
-                        </motion.div>
+                        </div>
                       </div>
                     </div>
                   </div>
 
                   {/* Category Templates */}
-                  <AnimatePresence>
-                    {category.isExpanded && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        className="overflow-hidden"
+{category.isExpanded && (
+                      <div
+                        className="overflow-hidden animate-fadeInUp"
                       >
                         <div className="p-4 space-y-4">
                           {category.templates.length === 0 ? (
@@ -789,10 +774,9 @@ const TestTemplates: React.FC = () => {
                           ) : (
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                               {category.templates.map((template) => (
-                                <motion.div
+                                <div
                                   key={template.id}
-                                  whileHover={{ scale: 1.02 }}
-                                  className="border rounded-lg p-4 hover:shadow-lg transition-all cursor-pointer"
+                                  className="border rounded-lg p-4 hover:shadow-lg transition-all cursor-pointer animate-fadeInUp"
                                   onClick={() => handleSelectTemplate(template)}
                                 >
                                   <div className="flex justify-between items-start mb-3">
@@ -859,27 +843,23 @@ const TestTemplates: React.FC = () => {
                                       <Edit className="w-3 h-3" />
                                     </button>
                                   </div>
-                                </motion.div>
+                                </div>
                               ))}
                             </div>
                           )}
                         </div>
-                      </motion.div>
+                      </div>
                     )}
-                  </AnimatePresence>
-                </motion.div>
+</div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeView === 'create' && (
-          <motion.div
+          <div
             key="create"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="bg-white rounded-xl p-6 border"
+            className="bg-white rounded-xl p-6 border animate-fadeInUp"
           >
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-semibold">Create Custom Template</h3>
@@ -1113,16 +1093,13 @@ const TestTemplates: React.FC = () => {
                 Save Template
               </button>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeView === 'customize' && selectedTemplate && (
-          <motion.div
+          <div
             key="customize"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="bg-white rounded-xl p-6 border"
+            className="bg-white rounded-xl p-6 border animate-fadeInUp"
           >
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-xl font-semibold">Customize Template: {selectedTemplate.name}</h3>
@@ -1328,10 +1305,9 @@ const TestTemplates: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

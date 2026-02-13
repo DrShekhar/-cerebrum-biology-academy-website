@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageCircle,
   X,
@@ -246,14 +245,9 @@ const LiveChatSupport: React.FC = () => {
   return (
     <>
       {/* Chat Toggle Button */}
-      <motion.button
+      <button
         onClick={() => setIsOpen(true)}
         className={`fixed bottom-6 right-6 z-50 ${isOpen ? 'hidden' : ''}`}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
       >
         <div className="relative">
           <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-lg">
@@ -266,21 +260,12 @@ const LiveChatSupport: React.FC = () => {
           )}
           <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-600 rounded-full border-2 border-white animate-pulse" />
         </div>
-      </motion.button>
+      </button>
 
       {/* Chat Widget */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 100 }}
-            animate={{
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              height: isMinimized ? 'auto' : '600px',
-            }}
-            exit={{ opacity: 0, scale: 0.8, y: 100 }}
-            className="fixed bottom-6 right-6 z-50 w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden"
+{isOpen && (
+          <div
+            className="fixed bottom-6 right-6 z-50 w-96 bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-fadeInUp"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-green-600 to-blue-600 p-4 text-white">
@@ -492,22 +477,18 @@ const LiveChatSupport: React.FC = () => {
                 </div>
               </>
             )}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Offline Message */}
+{/* Offline Message */}
       {isOpen && !currentAgent && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="fixed bottom-24 right-6 z-40 bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm text-yellow-800 max-w-xs"
+        <div
+          className="fixed bottom-24 right-6 z-40 bg-yellow-100 border border-yellow-300 rounded-lg p-3 text-sm text-yellow-800 max-w-xs animate-fadeInUp"
         >
           <div className="flex items-center gap-2">
             <AlertCircle className="w-4 h-4 flex-shrink-0" />
             <span>All agents are busy. Average wait time: 3-5 minutes</span>
           </div>
-        </motion.div>
+        </div>
       )}
     </>
   )

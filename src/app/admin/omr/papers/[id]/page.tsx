@@ -2,7 +2,6 @@
 
 import { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   ArrowLeft,
   Save,
@@ -222,10 +221,8 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
           </div>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-lg shadow-sm border p-6"
+        <div
+          className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp"
         >
           <h2 className="text-lg font-semibold mb-4">Edit Paper Details</h2>
 
@@ -321,7 +318,7 @@ export default function PaperDetailPage({ params }: { params: Promise<{ id: stri
               )}
             </Button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </AdminLayout>
   )

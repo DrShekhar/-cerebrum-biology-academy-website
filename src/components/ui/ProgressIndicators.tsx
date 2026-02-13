@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Check } from 'lucide-react'
 
 interface ScrollProgressBarProps {
@@ -134,13 +133,8 @@ export function FormSteps({
                 {index < steps.length - 1 && (
                   <div className="flex-1 mx-2">
                     <div className="h-px bg-slate-200 relative">
-                      <motion.div
-                        className="h-full bg-green-600"
-                        initial={{ width: 0 }}
-                        animate={{
-                          width: completedSteps.includes(index) ? '100%' : '0%',
-                        }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
+                      <div
+                        className="h-full bg-green-600 animate-fadeInUp"
                       />
                     </div>
                   </div>
@@ -170,7 +164,7 @@ export function FormSteps({
 
         return (
           <div key={step.id} className="flex flex-col items-center">
-            <motion.div
+            <div
               className={`
                 ${sizeClasses.circle} rounded-full flex items-center justify-center font-semibold
                 transition-all duration-300 ${sizeClasses.text}
@@ -182,11 +176,9 @@ export function FormSteps({
                       : 'bg-slate-300 text-slate-600'
                 }
               `}
-              whileHover={{ scale: isActive ? 1.05 : 1 }}
-              whileTap={{ scale: 0.95 }}
             >
               {isCompleted ? <Check className="w-4 h-4" /> : <span>{index + 1}</span>}
-            </motion.div>
+            </div>
             {showLabels && (
               <div className="text-center mt-2">
                 <div
@@ -233,11 +225,8 @@ export function QuizProgress({
         <span>{Math.round(progress)}% complete</span>
       </div>
       <div className="w-full bg-slate-200 rounded-full h-2">
-        <motion.div
-          className="bg-gradient-to-r from-green-600 to-blue-500 h-2 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: `${progress}%` }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
+        <div
+          className="bg-gradient-to-r from-green-600 to-blue-500 h-2 rounded-full animate-fadeInUp"
         />
       </div>
     </div>

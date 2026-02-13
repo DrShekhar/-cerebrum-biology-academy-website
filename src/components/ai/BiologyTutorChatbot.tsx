@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   MessageCircle,
   X,
@@ -751,31 +750,21 @@ What would you like to explore today?`,
     <AIErrorBoundary>
       <div className="fixed bottom-4 right-4 z-50">
         {/* Chat toggle button */}
-        <AnimatePresence>
-          {!chatState.isOpen && (
-            <motion.button
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0, opacity: 0 }}
+{!chatState.isOpen && (
+            <button
               onClick={toggleChatbot}
-              className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+              className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group animate-fadeInUp"
             >
               <MessageCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
               <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
                 🧬
               </div>
-            </motion.button>
+            </button>
           )}
-        </AnimatePresence>
-
-        {/* Chat window */}
-        <AnimatePresence>
-          {chatState.isOpen && (
-            <motion.div
-              initial={{ opacity: 0, y: 100, scale: 0.3 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 100, scale: 0.3 }}
-              className="bg-white rounded-lg shadow-2xl md:w-80 md:h-96 flex flex-col border border-gray-200 fixed inset-0 md:inset-auto md:bottom-4 md:right-4 z-50"
+{/* Chat window */}
+{chatState.isOpen && (
+            <div
+              className="bg-white rounded-lg shadow-2xl md:w-80 md:h-96 flex flex-col border border-gray-200 fixed inset-0 md:inset-auto md:bottom-4 md:right-4 z-50 animate-fadeInUp"
             >
               {/* Header */}
               <div className="bg-gradient-to-r from-green-600 to-blue-500 text-white p-4 md:rounded-t-lg">
@@ -830,7 +819,6 @@ What would you like to explore today?`,
                       description="I can explain concepts, solve doubts, and help you understand difficult topics for NEET and school exams."
                       size="sm"
                       variant="default"
-                      animate={false}
                     />
                   </div>
                 ) : (
@@ -892,45 +880,26 @@ What would you like to explore today?`,
                 )}
 
                 {chatState.isTyping && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="flex justify-start"
+                  <div
+                    className="flex justify-start animate-fadeInUp"
                   >
                     <div className="bg-gray-100 p-3 rounded-lg">
                       <div className="flex items-center space-x-2">
                         <Bot className="w-4 h-4 text-green-600" />
                         <div className="flex space-x-1">
-                          <motion.div
-                            className="w-2 h-2 bg-gray-400 rounded-full"
-                            animate={{ y: [0, -8, 0] }}
-                            transition={{ duration: 0.6, repeat: Infinity, ease: 'easeInOut' }}
+                          <div
+                            className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
                           />
-                          <motion.div
-                            className="w-2 h-2 bg-gray-400 rounded-full"
-                            animate={{ y: [0, -8, 0] }}
-                            transition={{
-                              duration: 0.6,
-                              repeat: Infinity,
-                              ease: 'easeInOut',
-                              delay: 0.1,
-                            }}
+                          <div
+                            className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
                           />
-                          <motion.div
-                            className="w-2 h-2 bg-gray-400 rounded-full"
-                            animate={{ y: [0, -8, 0] }}
-                            transition={{
-                              duration: 0.6,
-                              repeat: Infinity,
-                              ease: 'easeInOut',
-                              delay: 0.2,
-                            }}
+                          <div
+                            className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
                           />
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 <div ref={messagesEndRef} />
@@ -970,16 +939,14 @@ What would you like to explore today?`,
                     )}
                   </div>
 
-                  <motion.button
+                  <button
                     onClick={handleSendMessage}
                     disabled={!inputValue.trim() || chatState.isTyping}
-                    whileHover={!inputValue.trim() || chatState.isTyping ? {} : { scale: 1.05 }}
-                    whileTap={!inputValue.trim() || chatState.isTyping ? {} : { scale: 0.95 }}
-                    className="bg-blue-500 text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors touch-manipulation"
+                    className="bg-blue-500 text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-lg hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors touch-manipulation animate-fadeInUp"
                     aria-label="Send message"
                   >
                     <Send className="w-4 h-4" />
-                  </motion.button>
+                  </button>
                 </div>
 
                 {voiceRecognition.isListening && (
@@ -988,10 +955,9 @@ What would you like to explore today?`,
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </AIErrorBoundary>
   )
 }

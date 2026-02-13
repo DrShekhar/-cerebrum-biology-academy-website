@@ -4,7 +4,6 @@ import { useState, ReactNode } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
 const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard,
   Calendar,
@@ -353,13 +352,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
         )}
 
         {hasChildren && (
-          <AnimatePresence>
-            {isOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                className="overflow-hidden"
+{isOpen && (
+              <div
+                className="overflow-hidden animate-fadeInUp"
               >
                 <div className="py-2">
                   {item.children!.map((child) => (
@@ -382,10 +377,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                     </Link>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        )}
+)}
       </div>
     )
   }
@@ -395,23 +389,15 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       <Toaster />
       <div className="min-h-screen bg-gray-50 flex">
         {/* Mobile sidebar backdrop */}
-        <AnimatePresence>
-          {sidebarOpen && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+{sidebarOpen && (
+            <div
+              className="fixed inset-0 bg-black/50 z-40 lg:hidden animate-fadeInUp"
               onClick={() => setSidebarOpen(false)}
             />
           )}
-        </AnimatePresence>
-
-        {/* Sidebar */}
-        <motion.aside
-          initial={false}
-          animate={{ x: sidebarOpen ? 0 : '-100%' }}
-          className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl lg:relative lg:translate-x-0 lg:shadow-lg"
+{/* Sidebar */}
+        <aside
+          className="fixed inset-y-0 left-0 z-50 w-64 bg-white shadow-xl lg:relative lg:translate-x-0 lg:shadow-lg animate-fadeInUp"
         >
           <div className="flex h-full flex-col">
             {/* Logo */}
@@ -462,14 +448,9 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                     className={`w-4 h-4 transition-transform ${userMenuOpen ? 'rotate-180' : ''}`}
                   />
                 </button>
-
-                <AnimatePresence>
-                  {userMenuOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      className="absolute bottom-full left-0 right-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg py-1"
+{userMenuOpen && (
+                    <div
+                      className="absolute bottom-full left-0 right-0 mb-2 bg-white border border-gray-200 rounded-lg shadow-lg py-1 animate-fadeInUp"
                     >
                       <button className="w-full flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         <User className="w-4 h-4 mr-3" />
@@ -487,13 +468,12 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                         <LogOut className="w-4 h-4 mr-3" />
                         Sign out
                       </button>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </div>
+</div>
             </div>
           </div>
-        </motion.aside>
+        </aside>
 
         {/* Main content */}
         <div className="flex-1 flex flex-col min-h-screen">

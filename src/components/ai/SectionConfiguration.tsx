@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Plus,
   Trash2,
@@ -328,10 +327,8 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-green-600 rounded-xl">
             <Settings className="w-8 h-8 text-white" />
@@ -339,7 +336,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
           <h1 className="text-3xl font-bold bg-green-600 bg-clip-text text-transparent">
             Section Configuration
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Configure multiple test sections with individual time limits, marking schemes, and
           question distributions for comprehensive assessments
@@ -374,11 +371,8 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
             color: 'bg-orange-600',
           },
         ].map((item, index) => (
-          <motion.div
+          <div
             key={item.label}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
             className={`bg-gradient-to-r ${item.color} rounded-xl p-4 text-white`}
           >
             <div className="flex items-center justify-between">
@@ -388,7 +382,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
               </div>
               <item.icon className="w-8 h-8 text-white/80" />
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -427,10 +421,8 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
 
       {/* Validation Errors */}
       {validationErrors.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          className="bg-red-50 border border-red-200 rounded-lg p-4"
+        <div
+          className="bg-red-50 border border-red-200 rounded-lg p-4 animate-fadeInUp"
         >
           <h4 className="font-semibold text-red-800 mb-2">Validation Errors:</h4>
           <ul className="list-disc list-inside space-y-1 text-sm text-red-600">
@@ -438,19 +430,14 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
               <li key={index}>{error}</li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       )}
 
       {/* Sections List */}
       <div className="space-y-4">
-        <AnimatePresence>
-          {sections.map((section, index) => (
-            <motion.div
+{sections.map((section, index) => (
+            <div
               key={section.id}
-              layout
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
               className={`bg-white rounded-xl border-2 transition-all ${
                 activeSection === section.id
                   ? 'border-green-600 shadow-lg'
@@ -537,13 +524,9 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
               </div>
 
               {/* Section Details */}
-              <AnimatePresence>
-                {activeSection === section.id && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    className="overflow-hidden"
+{activeSection === section.id && (
+                  <div
+                    className="overflow-hidden animate-fadeInUp"
                   >
                     <div className="border-t p-6 space-y-6">
                       {/* Basic Information */}
@@ -974,20 +957,16 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </motion.div>
+</div>
           ))}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Preview Mode */}
       {previewMode && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-gray-50 rounded-xl p-6 border-2 border-dashed border-gray-300"
+        <div
+          className="bg-gray-50 rounded-xl p-6 border-2 border-dashed border-gray-300 animate-fadeInUp"
         >
           <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
             <Eye className="w-5 h-5" />
@@ -1058,7 +1037,7 @@ const SectionConfiguration: React.FC<SectionConfigurationProps> = ({
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Action Buttons */}

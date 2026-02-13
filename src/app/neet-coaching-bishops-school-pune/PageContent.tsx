@@ -1,7 +1,6 @@
 'use client'
 import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
 import { CityBreadcrumb } from '@/components/city/CityBreadcrumb'
 import { PricingSection } from '@/components/city/PricingSection'
 import { CostComparisonSection } from '@/components/city/CostComparisonSection'
@@ -102,10 +101,8 @@ export default function PageContent() {
       <FloatingWhatsAppButton />
 
       {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="bg-gradient-to-br from-amber-700 to-orange-800 text-white py-12 sm:py-20"
+      <section
+        className="bg-gradient-to-br from-amber-700 to-orange-800 text-white py-12 sm:py-20 animate-fadeInUp"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div ref={heroAnim.ref} className={`text-center max-w-4xl mx-auto transition-all duration-700 ${heroAnim.isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'}`}>
@@ -149,7 +146,7 @@ export default function PageContent() {
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Bishop&apos;s Advantages */}
       <section className="py-12 md:py-20">
@@ -162,17 +159,14 @@ export default function PageContent() {
             {bishopsAdvantages.map((item, index) => {
               const Icon = item.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg"
+                  className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
                 >
                   <Icon className="w-10 h-10 text-amber-600 mb-4" />
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                   <p className="text-gray-600 text-sm">{item.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -187,12 +181,9 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {pricingPlans.map((plan, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-amber-600 mb-4">{plan.price}</div>
@@ -200,7 +191,7 @@ export default function PageContent() {
                 <Link href="/admissions" className="block bg-amber-600 text-white text-center py-2 rounded-lg font-semibold hover:bg-amber-700 transition-colors">
                   Enroll Now
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -214,7 +205,7 @@ export default function PageContent() {
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
@@ -226,20 +217,14 @@ export default function PageContent() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
                 </button>
-                <AnimatePresence>
-                  {expandedFAQ === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="border-t border-gray-200 bg-gray-50"
+{expandedFAQ === index && (
+                    <div
+                      className="border-t border-gray-200 bg-gray-50 animate-fadeInUp"
                     >
                       <p className="p-6 text-gray-700">{faq.answer}</p>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </motion.div>
+</div>
             ))}
           </div>
         </div>

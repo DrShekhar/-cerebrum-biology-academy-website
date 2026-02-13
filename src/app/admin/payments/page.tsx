@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   CreditCard,
   Search,
@@ -170,12 +169,9 @@ export default function PaymentsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {statsData.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200"
+              className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -187,7 +183,7 @@ export default function PaymentsPage() {
                   <stat.icon className="h-6 w-6" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

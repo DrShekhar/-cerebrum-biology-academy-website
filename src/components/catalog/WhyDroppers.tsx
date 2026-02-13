@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
 import { Brain, Target, Zap, Trophy } from 'lucide-react'
 
 interface FeatureCard {
@@ -60,11 +59,8 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
     <section ref={sectionRef} className={`py-16 bg-gray-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-red-100 text-red-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
@@ -82,25 +78,14 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
             designed to transform previous attempts into guaranteed success with targeted support
             and proven methodologies.
           </p>
-        </motion.div>
+        </div>
 
         {/* Feature Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {DROPPER_FEATURES.map((feature, index) => (
-            <motion.div
+            <div
               key={feature.title}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.15,
-                ease: 'easeOut',
-              }}
-              whileHover={{
-                y: -8,
-                transition: { duration: 0.3, ease: 'easeOut' },
-              }}
-              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-red-200 relative overflow-hidden"
+              className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-red-200 relative overflow-hidden animate-fadeInUp"
             >
               {/* Subtle Background Pattern */}
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-red-50 to-transparent rounded-bl-full opacity-50 group-hover:opacity-70 transition-opacity duration-300"></div>
@@ -135,16 +120,13 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
 
               {/* Hover Accent */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Success Statistics */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-center text-white"
+        <div
+          className="mt-16 bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-center text-white animate-fadeInUp"
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-2">
@@ -170,14 +152,11 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
               — Priya Sharma, NEET 2024 (Rank 450, GMC Nagpur)
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-center mt-12"
+        <div
+          className="text-center mt-12 animate-fadeInUp"
         >
           <button className="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
             Start Your Success Journey Today
@@ -185,7 +164,7 @@ export function WhyDroppers({ className = '' }: WhyDroppersSectionProps) {
           <p className="text-gray-500 text-sm mt-3">
             Join 1,000+ droppers who transformed their NEET journey with us
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

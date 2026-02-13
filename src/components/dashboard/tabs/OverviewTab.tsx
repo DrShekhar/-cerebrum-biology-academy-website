@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { TrendingUp, Target, Clock, Award, Brain, Star, ArrowUp, ArrowDown } from 'lucide-react'
 import { BiologyScoreDisplay } from '@/components/ui/BiologyScoreDisplay'
 import { AchievementsDisplay } from '@/components/gamification/AchievementsDisplay'
@@ -93,12 +92,9 @@ export function OverviewTab({
   testsCompleted,
 }: OverviewTabProps) {
   return (
-    <motion.div
+    <div
       key="overview"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      className="space-y-4 sm:space-y-8"
+      className="space-y-4 sm:space-y-8 animate-fadeInUp"
     >
       {/* NEET Score Prediction Card - Mobile Optimized */}
       <div className="bg-gradient-to-r from-green-600 to-navy-700 rounded-xl sm:rounded-2xl p-4 sm:p-8 text-white">
@@ -336,7 +332,7 @@ export function OverviewTab({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

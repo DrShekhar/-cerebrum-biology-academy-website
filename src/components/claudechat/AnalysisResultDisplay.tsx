@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
   BookOpen,
@@ -101,27 +100,20 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
   }
 
   return (
-    <motion.div
+    <div
       className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
     >
       {/* Header */}
-      <motion.div
-        className="px-6 py-4 bg-gray-50 border-b"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
+      <div
+        className="px-6 py-4 bg-gray-50 border-b animate-fadeInUp"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <motion.div
-              className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center"
-              whileHover={{ scale: 1.1 }}
+            <div
+              className="w-10 h-10 bg-indigo-500 rounded-full flex items-center justify-center animate-fadeInUp"
             >
               <Brain className="w-5 h-5 text-white" />
-            </motion.div>
+            </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-800">AI Analysis Complete</h3>
               <p className="text-sm text-gray-600">
@@ -132,35 +124,29 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
 
           <div className="flex items-center space-x-2">
             {/* Confidence Badge */}
-            <motion.span
+            <span
               className={`px-3 py-1 rounded-full text-sm font-medium ${getConfidenceColor(result.confidence)}`}
-              whileHover={{ scale: 1.05 }}
             >
               {(result.confidence * 100).toFixed(0)}% confident
-            </motion.span>
+            </span>
 
             {/* Difficulty Badge */}
-            <motion.span
+            <span
               className={`px-3 py-1 rounded-full text-sm font-medium capitalize ${getDifficultyColor(result.difficultyLevel)}`}
-              whileHover={{ scale: 1.05 }}
             >
               {result.difficultyLevel}
-            </motion.span>
+            </span>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Image Preview */}
-      <motion.div
-        className="p-4 border-b bg-gray-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2 }}
+      <div
+        className="p-4 border-b bg-gray-50 animate-fadeInUp"
       >
         <div className="flex items-start space-x-4">
-          <motion.div
-            className="relative w-24 h-24 rounded-lg overflow-hidden shadow-md"
-            whileHover={{ scale: 1.05 }}
+          <div
+            className="relative w-24 h-24 rounded-lg overflow-hidden shadow-md animate-fadeInUp"
           >
             <Image
               src={result.imageUrl}
@@ -175,20 +161,17 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
                 size={20}
               />
             </div>
-          </motion.div>
+          </div>
           <div className="flex-1">
             <h4 className="font-medium text-gray-800 mb-1">{result.fileName}</h4>
             <div className="flex flex-wrap gap-2">
               {result.biologyTopics.slice(0, 3).map((topic, index) => (
-                <motion.span
+                <span
                   key={topic}
-                  className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-md"
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
+                  className="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded-md animate-fadeInUp"
                 >
                   {topic}
-                </motion.span>
+                </span>
               ))}
               {result.biologyTopics.length > 3 && (
                 <span className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-md">
@@ -198,16 +181,13 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Analysis Content */}
       <div className="p-6">
         {/* Main Analysis */}
-        <motion.div
-          className="mb-6"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+        <div
+          className="mb-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-2">
@@ -216,10 +196,8 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
             </div>
             <div className="flex items-center space-x-2">
               {/* Audio Controls */}
-              <motion.button
+              <button
                 className={`p-2 rounded-lg ${isSpeaking ? 'bg-red-100 text-red-600' : 'bg-blue-100 text-blue-600'} hover:bg-opacity-80 ${!isVoiceAvailable ? 'opacity-50 cursor-not-allowed' : ''}`}
-                whileHover={{ scale: isVoiceAvailable ? 1.05 : 1 }}
-                whileTap={{ scale: isVoiceAvailable ? 0.95 : 1 }}
                 onClick={async () => {
                   if (!isVoiceAvailable) return
 
@@ -240,23 +218,19 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
                 }
               >
                 {isSpeaking ? <VolumeX size={16} /> : <Volume2 size={16} />}
-              </motion.button>
+              </button>
 
               {/* Copy Button */}
-              <motion.button
-                className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
+                className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 animate-fadeInUp"
                 onClick={() => copyToClipboard(result.analysisText, 'analysis')}
               >
                 <Copy size={16} />
-              </motion.button>
+              </button>
 
               {/* Expand/Collapse */}
-              <motion.button
-                className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
+                className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 animate-fadeInUp"
                 onClick={() => toggleSection('analysis')}
               >
                 {expandedSections.has('analysis') ? (
@@ -264,84 +238,61 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
                 ) : (
                   <ChevronDown size={16} />
                 )}
-              </motion.button>
+              </button>
             </div>
           </div>
-
-          <AnimatePresence>
-            {expandedSections.has('analysis') && (
-              <motion.div
-                className="prose prose-sm max-w-none"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
+{expandedSections.has('analysis') && (
+              <div
+                className="prose prose-sm max-w-none animate-fadeInUp"
               >
                 <div className="p-4 bg-blue-50 rounded-lg border border-blue-200">
                   {isSpeaking && (
-                    <motion.div
-                      className="flex items-center space-x-2 mb-3 text-blue-600"
-                      animate={{ opacity: [1, 0.5, 1] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
+                    <div
+                      className="flex items-center space-x-2 mb-3 text-blue-600 animate-fadeInUp"
                     >
                       <Volume2 size={16} />
                       <span className="text-sm font-medium">Playing in Shekhar Sir's voice...</span>
                       <div className="flex-1 bg-blue-200 rounded-full h-1 ml-2">
-                        <motion.div
-                          className="bg-blue-500 h-1 rounded-full"
-                          initial={{ width: 0 }}
-                          animate={{ width: `${progress}%` }}
-                          transition={{ duration: 0.3 }}
+                        <div
+                          className="bg-blue-500 h-1 rounded-full animate-fadeInUp"
                         />
                       </div>
-                    </motion.div>
+                    </div>
                   )}
                   {error && (
-                    <motion.div
-                      className="flex items-center space-x-2 mb-3 text-red-600"
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
+                    <div
+                      className="flex items-center space-x-2 mb-3 text-red-600 animate-fadeInUp"
                     >
                       <VolumeX size={16} />
                       <span className="text-sm">Voice synthesis error: {error}</span>
-                    </motion.div>
+                    </div>
                   )}
                   <div className="text-gray-800 leading-relaxed whitespace-pre-line">
                     {result.analysisText}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
-          {copiedText === 'analysis' && (
-            <motion.div
-              className="mt-2 text-green-600 text-sm"
-              initial={{ opacity: 0, y: -5 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -5 }}
+{copiedText === 'analysis' && (
+            <div
+              className="mt-2 text-green-600 text-sm animate-fadeInUp"
             >
               ✓ Analysis copied to clipboard
-            </motion.div>
+            </div>
           )}
-        </motion.div>
+        </div>
 
         {/* Study Suggestions */}
-        <motion.div
-          className="mb-6"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+        <div
+          className="mb-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
               <Lightbulb className="w-5 h-5 text-yellow-500" />
               <h4 className="font-semibold text-gray-800">Study Suggestions</h4>
             </div>
-            <motion.button
-              className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
+              className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 animate-fadeInUp"
               onClick={() => toggleSection('suggestions')}
             >
               {expandedSections.has('suggestions') ? (
@@ -349,51 +300,36 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
               ) : (
                 <ChevronDown size={16} />
               )}
-            </motion.button>
+            </button>
           </div>
-
-          <AnimatePresence>
-            {expandedSections.has('suggestions') && (
-              <motion.div
-                className="space-y-2"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
+{expandedSections.has('suggestions') && (
+              <div
+                className="space-y-2 animate-fadeInUp"
               >
                 {result.suggestions.map((suggestion, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    className="flex items-start space-x-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200"
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    className="flex items-start space-x-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200 animate-fadeInUp"
                   >
                     <Target className="w-4 h-4 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <span className="text-gray-800 text-sm">{suggestion}</span>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </motion.div>
+</div>
 
         {/* Related Concepts */}
-        <motion.div
-          className="mb-6"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+        <div
+          className="mb-6 animate-fadeInUp"
         >
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
               <Sparkles className="w-5 h-5 text-purple-500" />
               <h4 className="font-semibold text-gray-800">Related Concepts</h4>
             </div>
-            <motion.button
-              className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
+              className="p-2 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 animate-fadeInUp"
               onClick={() => toggleSection('concepts')}
             >
               {expandedSections.has('concepts') ? (
@@ -401,81 +337,58 @@ const AnalysisResultDisplay: React.FC<AnalysisResultDisplayProps> = ({
               ) : (
                 <ChevronDown size={16} />
               )}
-            </motion.button>
+            </button>
           </div>
-
-          <AnimatePresence>
-            {expandedSections.has('concepts') && (
-              <motion.div
-                className="flex flex-wrap gap-2"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
+{expandedSections.has('concepts') && (
+              <div
+                className="flex flex-wrap gap-2 animate-fadeInUp"
               >
                 {result.relatedConcepts.map((concept, index) => (
-                  <motion.span
+                  <span
                     key={concept}
-                    className="px-3 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium cursor-pointer hover:bg-purple-200 transition-colors"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    className="px-3 py-2 bg-purple-100 text-purple-700 rounded-lg text-sm font-medium cursor-pointer hover:bg-purple-200 transition-colors animate-fadeInUp"
                   >
                     {concept}
-                  </motion.span>
+                  </span>
                 ))}
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </motion.div>
+</div>
 
         {/* Action Buttons */}
-        <motion.div
-          className="flex flex-wrap gap-3 pt-4 border-t"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+        <div
+          className="flex flex-wrap gap-3 pt-4 border-t animate-fadeInUp"
         >
-          <motion.button
-            className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <button
+            className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 animate-fadeInUp"
           >
             <BookOpen size={16} />
             <span>Study More</span>
-          </motion.button>
+          </button>
 
-          <motion.button
-            className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-600"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <button
+            className="flex items-center space-x-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-600 animate-fadeInUp"
           >
             <Star size={16} />
             <span>Save to Favorites</span>
-          </motion.button>
+          </button>
 
-          <motion.button
-            className="flex items-center space-x-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <button
+            className="flex items-center space-x-2 px-4 py-2 bg-gray-500 text-white rounded-lg hover:bg-gray-600 animate-fadeInUp"
           >
             <Share size={16} />
             <span>Share</span>
-          </motion.button>
+          </button>
 
-          <motion.button
-            className="flex items-center space-x-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600"
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+          <button
+            className="flex items-center space-x-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 animate-fadeInUp"
           >
             <Download size={16} />
             <span>Download</span>
-          </motion.button>
-        </motion.div>
+          </button>
+        </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

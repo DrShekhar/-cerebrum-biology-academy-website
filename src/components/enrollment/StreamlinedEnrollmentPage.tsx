@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle2,
   Clock,
@@ -450,15 +449,11 @@ export function StreamlinedEnrollmentPage({
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <AnimatePresence mode="wait">
-          {/* Step 0: Free Assessment */}
+{/* Step 0: Free Assessment */}
           {currentStep === 0 && (
-            <motion.div
+            <div
               key="assessment"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="max-w-3xl mx-auto"
+              className="max-w-3xl mx-auto animate-fadeInUp"
             >
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
@@ -568,17 +563,14 @@ export function StreamlinedEnrollmentPage({
                   </p>
                 </div>
               </PremiumCard>
-            </motion.div>
+            </div>
           )}
 
           {/* Step 1: Counseling Session */}
           {currentStep === 1 && (
-            <motion.div
+            <div
               key="counseling"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto animate-fadeInUp"
             >
               {/* Assessment Results */}
               {assessmentResult && (
@@ -645,14 +637,13 @@ export function StreamlinedEnrollmentPage({
 
                 <div className="grid md:grid-cols-2 gap-6">
                   {counselingSlots.map((slot, index) => (
-                    <motion.div
+                    <div
                       key={index}
                       className={`border-2 rounded-xl p-6 cursor-pointer transition-all ${
                         slot.available
                           ? 'border-gray-200 hover:border-blue-500 hover:shadow-lg'
                           : 'border-gray-100 bg-gray-50 opacity-50 cursor-not-allowed'
                       }`}
-                      whileHover={slot.available ? { scale: 1.02 } : {}}
                       onClick={() => slot.available && handleSlotSelection(slot)}
                     >
                       <div className="flex items-center justify-between mb-4">
@@ -687,7 +678,7 @@ export function StreamlinedEnrollmentPage({
                       ) : (
                         <div className="text-red-600 font-medium text-sm">✗ Fully Booked</div>
                       )}
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
@@ -717,17 +708,14 @@ export function StreamlinedEnrollmentPage({
                   </button>
                 </div>
               </PremiumCard>
-            </motion.div>
+            </div>
           )}
 
           {/* Step 2: Plan Selection */}
           {currentStep === 2 && (
-            <motion.div
+            <div
               key="plan-selection"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="max-w-6xl mx-auto"
+              className="max-w-6xl mx-auto animate-fadeInUp"
             >
               <div className="text-center mb-8">
                 <CheckCircle2 className="w-12 h-12 sm:w-16 sm:h-16 text-green-600 mx-auto mb-4" />
@@ -739,14 +727,13 @@ export function StreamlinedEnrollmentPage({
 
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 {planOptions.map((plan) => (
-                  <motion.div
+                  <div
                     key={plan.id}
                     className={`relative border-2 rounded-2xl p-6 cursor-pointer transition-all ${
                       plan.recommended
                         ? 'border-purple-500 shadow-2xl bg-indigo-50'
                         : 'border-gray-200 hover:border-blue-500 hover:shadow-lg'
                     }`}
-                    whileHover={{ scale: 1.02 }}
                     onClick={() => handlePlanSelection(plan)}
                   >
                     {plan.recommended && (
@@ -794,7 +781,7 @@ export function StreamlinedEnrollmentPage({
                     >
                       Select {plan.name}
                     </PremiumButton>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -844,17 +831,14 @@ export function StreamlinedEnrollmentPage({
                   Back to Counseling
                 </button>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {/* Step 3: Enrollment Form */}
           {currentStep === 3 && (
-            <motion.div
+            <div
               key="enrollment"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              className="max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto animate-fadeInUp"
             >
               <PremiumCard variant="luxury" size="lg">
                 <div className="text-center mb-8">
@@ -1196,25 +1180,20 @@ export function StreamlinedEnrollmentPage({
                   </p>
                 </form>
               </PremiumCard>
-            </motion.div>
+            </div>
           )}
 
           {/* Step 4: Success */}
           {currentStep === 4 && (
-            <motion.div
+            <div
               key="success"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="max-w-3xl mx-auto text-center"
+              className="max-w-3xl mx-auto text-center animate-fadeInUp"
             >
               <PremiumCard variant="luxury" size="xl">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
-                >
+                <div
+                 className="animate-fadeInUp">
                   <Trophy className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-yellow-500 mx-auto mb-6" />
-                </motion.div>
+                </div>
 
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">🎉 Enrollment Successful!</h2>
                 <p className="text-xl text-gray-600 mb-8">
@@ -1259,10 +1238,9 @@ export function StreamlinedEnrollmentPage({
                   </PremiumButton>
                 </div>
               </PremiumCard>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Fixed Bottom Trust Elements & Support */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 z-50">

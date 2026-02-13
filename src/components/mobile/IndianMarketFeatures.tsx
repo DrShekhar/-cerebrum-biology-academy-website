@@ -17,7 +17,6 @@ import {
   Clock,
   BookOpen,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 
 interface IndianMarketFeaturesProps {
@@ -187,9 +186,7 @@ export function IndianMarketFeatures({
     <div className={`indian-market-features ${className}`}>
       {/* Network Status & Data Saver Banner */}
       {(showDataSaver || !isOnline) && (
-        <motion.div
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+        <div
           className={`mb-4 p-3 rounded-lg border ${
             !isOnline
               ? 'bg-red-50 border-red-200 text-red-800'
@@ -227,7 +224,7 @@ export function IndianMarketFeatures({
               </Button>
             )}
           </div>
-        </motion.div>
+        </div>
       )}
 
       {/* Quick Action Bar */}
@@ -280,23 +277,16 @@ export function IndianMarketFeatures({
       </div>
 
       {/* Language Selection Modal */}
-      <AnimatePresence>
-        {showLanguageSelector && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-end md:items-center justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+{showLanguageSelector && (
+          <div
+            className="fixed inset-0 z-50 flex items-end md:items-center justify-center animate-fadeInUp"
           >
             <div
               className="absolute inset-0 bg-black bg-opacity-50"
               onClick={() => setShowLanguageSelector(false)}
             />
-            <motion.div
-              className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md max-h-96 overflow-y-auto"
-              initial={{ y: 400 }}
-              animate={{ y: 0 }}
-              exit={{ y: 400 }}
+            <div
+              className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md max-h-96 overflow-y-auto animate-fadeInUp"
             >
               <div className="p-6">
                 <h3 className="text-lg font-bold mb-4 flex items-center">
@@ -326,29 +316,20 @@ export function IndianMarketFeatures({
                   ))}
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* WhatsApp Share Modal */}
-      <AnimatePresence>
-        {showWhatsAppShare && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-end md:items-center justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+{/* WhatsApp Share Modal */}
+{showWhatsAppShare && (
+          <div
+            className="fixed inset-0 z-50 flex items-end md:items-center justify-center animate-fadeInUp"
           >
             <div
               className="absolute inset-0 bg-black bg-opacity-50"
               onClick={() => setShowWhatsAppShare(false)}
             />
-            <motion.div
-              className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md"
-              initial={{ y: 400 }}
-              animate={{ y: 0 }}
-              exit={{ y: 400 }}
+            <div
+              className="relative bg-white rounded-t-2xl md:rounded-2xl w-full max-w-md animate-fadeInUp"
             >
               <div className="p-6">
                 <h3 className="text-lg font-bold mb-4 flex items-center text-green-600">
@@ -416,12 +397,10 @@ export function IndianMarketFeatures({
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Regional Context Info */}
+{/* Regional Context Info */}
       <div className="bg-gradient-to-r from-orange-50 to-green-50 rounded-lg p-4 border border-orange-200">
         <div className="flex items-center mb-2">
           <MapPin className="w-4 h-4 text-orange-600 mr-2" />

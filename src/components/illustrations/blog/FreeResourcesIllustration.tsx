@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function FreeResourcesIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -31,8 +30,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
 
       {/* FREE badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1], rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
         style={{ transformOrigin: '55px 65px' }}
       >
         <circle cx="55" cy="65" r="25" fill="#22C55E" />
@@ -46,8 +43,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
 
       {/* Resource cards */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect
           x="30"
@@ -72,8 +67,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [2, -2, 2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect
           x="150"
@@ -98,8 +91,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
       >
         <rect
           x="270"
@@ -139,8 +130,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </text>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="70" cy="245" r="15" fill="#DCFCE7" />
         <text x="70" y="248" fontSize="7" fill="#166534" textAnchor="middle">
@@ -152,8 +141,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
       >
         <circle cx="140" cy="245" r="15" fill="#DBEAFE" />
         <text x="140" y="248" fontSize="6" fill="#1D4ED8" textAnchor="middle">
@@ -165,8 +152,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
       >
         <circle cx="210" cy="245" r="15" fill="#FEF3C7" />
         <text x="210" y="248" fontSize="6" fill="#B45309" textAnchor="middle">
@@ -178,8 +163,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.9 }}
       >
         <circle cx="280" cy="245" r="15" fill="#FCE7F3" />
         <text x="280" y="248" fontSize="6" fill="#DB2777" textAnchor="middle">
@@ -191,8 +174,6 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </motion.g>
 
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1.2 }}
       >
         <circle cx="340" cy="245" r="15" fill="#E9D5FF" />
         <text x="340" y="248" fontSize="6" fill="#7C3AED" textAnchor="middle">

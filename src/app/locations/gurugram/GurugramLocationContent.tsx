@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Phone,
@@ -112,10 +111,8 @@ export default function GurugramLocationContent() {
         <div className="max-w-7xl mx-auto px-4 py-12 lg:py-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left - Location Info */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="space-y-6"
+            <div
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="inline-flex items-center space-x-2 bg-green-500/20 border border-green-500/40 rounded-full px-4 py-2">
                 <MapPin className="w-4 h-4 text-green-400" />
@@ -184,14 +181,11 @@ export default function GurugramLocationContent() {
                   <span>WhatsApp</span>
                 </button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right - Map Embed */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-              className="h-[400px] rounded-2xl overflow-hidden shadow-2xl"
+            <div
+              className="h-[400px] rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp"
             >
               <LazyGoogleMap
                 embedUrl={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d${CONTACT_INFO.location.gurugram.geo.longitude}!3d${CONTACT_INFO.location.gurugram.geo.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI3JzM0LjIiTiA3N8KwMDEnMzUuOCJF!5e0!3m2!1sen!2sin!4v1234567890`}
@@ -203,7 +197,7 @@ export default function GurugramLocationContent() {
                   address: `${CONTACT_INFO.location.gurugram.streetAddress}, ${CONTACT_INFO.location.gurugram.addressLocality}`
                 }}
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -282,17 +276,14 @@ export default function GurugramLocationContent() {
                 description: 'Quality coaching without the hassle of commuting to Delhi',
               },
             ].map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all"
+                className="text-center p-6 rounded-xl border border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all animate-fadeInUp"
               >
                 <feature.icon className="w-10 h-10 text-blue-600 mx-auto mb-4" />
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

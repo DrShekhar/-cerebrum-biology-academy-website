@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, TrendingUp, Trophy } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'
 
@@ -88,13 +87,8 @@ export function SuccessTicker({
   const scrollingText = [...successStories, ...successStories].join(' • ')
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: 100, opacity: 0 }}
-        transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="fixed bottom-16 sm:bottom-0 left-0 right-0 z-40 bg-blue-600 text-white shadow-lg border-t border-white/20"
+<div
+        className="fixed bottom-16 sm:bottom-0 left-0 right-0 z-40 bg-blue-600 text-white shadow-lg border-t border-white/20 animate-fadeInUp"
       >
         <div className="relative overflow-hidden h-14 flex items-center">
           {/* Icon */}
@@ -107,19 +101,11 @@ export function SuccessTicker({
 
           {/* Scrolling Text */}
           <div className="absolute left-0 right-0 flex items-center h-full pl-16 sm:pl-40 pr-16">
-            <motion.div
-              className="flex items-center whitespace-nowrap"
-              animate={{
-                x: [0, -50 + '%'],
-              }}
-              transition={{
-                duration: scrollSpeed,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
+            <div
+              className="flex items-center whitespace-nowrap animate-fadeInUp"
             >
               <span className="text-sm font-medium">{scrollingText}</span>
-            </motion.div>
+            </div>
           </div>
 
           {/* Close Button */}
@@ -137,9 +123,8 @@ export function SuccessTicker({
           <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-r from-blue-600 to-transparent pointer-events-none z-20" />
           <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-l from-indigo-600 to-transparent pointer-events-none z-20" />
         </div>
-      </motion.div>
-    </AnimatePresence>
-  )
+      </div>
+)
 }
 
 // Compact mobile ticker variant
@@ -211,11 +196,8 @@ export function CompactSuccessTicker() {
   if (!isVisible || isDismissed || !currentStory) return null
 
   return (
-    <motion.div
-      initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      exit={{ y: 50, opacity: 0 }}
-      className="lg:hidden fixed bottom-20 left-4 right-4 z-40 bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg"
+    <div
+      className="lg:hidden fixed bottom-20 left-4 right-4 z-40 bg-[#4a5d4a] text-white p-3 rounded-lg shadow-lg animate-fadeInUp"
     >
       <div className="flex items-start gap-2">
         <div className="flex-shrink-0 mt-0.5">
@@ -230,6 +212,6 @@ export function CompactSuccessTicker() {
           <X className="w-4 h-4" />
         </button>
       </div>
-    </motion.div>
+    </div>
   )
 }

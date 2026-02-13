@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Clock, Users, Check, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { SEOLandingContent, tierPageLinks, ClassLevel } from '@/data/seo-landing/types'
@@ -19,12 +18,8 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Course Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">{courseSummary.title}</h2>
 
             <div className="mt-6 flex flex-wrap gap-4">
@@ -40,30 +35,22 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
 
             <div className="mt-8 space-y-3">
               {courseSummary.features.map((feature, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="flex items-start gap-3"
+                  className="flex items-start gap-3 animate-fadeInUp"
                 >
                   <div className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
                     <Check className="h-3 w-3" />
                   </div>
                   <span className="text-gray-700">{feature}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Pricing Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative overflow-hidden rounded-3xl bg-indigo-500 p-8 text-white shadow-2xl"
+          <div
+            className="relative overflow-hidden rounded-3xl bg-indigo-500 p-8 text-white shadow-2xl animate-fadeInUp"
           >
             {/* Decorative Elements */}
             <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/10" />
@@ -118,7 +105,7 @@ export function CourseSummaryCard({ courseSummary, classLevel, ctaLink }: Course
                 3 pricing tiers available to match your budget
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

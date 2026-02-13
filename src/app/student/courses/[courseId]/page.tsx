@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Clock,
@@ -372,12 +371,9 @@ export default function CourseDetailPage() {
             <h2 className="text-xl font-bold text-gray-900">Course Content</h2>
 
             {displayModules.map((module, index) => (
-              <motion.div
+              <div
                 key={module.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-              >
+               className="animate-fadeInUp">
                 <Card className={cn(module.isLocked && 'opacity-75')}>
                   <CardContent className="p-0">
                     <button
@@ -423,7 +419,7 @@ export default function CourseDetailPage() {
                     )}
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
 

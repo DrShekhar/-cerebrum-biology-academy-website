@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useCallback } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Camera, Upload, X, Eye, Sparkles, Brain, Zap } from 'lucide-react'
 
 interface ImageAnalysisResult {
@@ -217,7 +216,7 @@ Key concepts covered:
   return (
     <div className={`w-full ${className}`}>
       {/* Upload Zone */}
-      <motion.div
+      <div
         ref={dropZoneRef}
         className={`relative border-2 border-dashed rounded-2xl p-8 transition-all duration-300 ${
           isDragOver
@@ -227,20 +226,13 @@ Key concepts covered:
         onDragOver={handleDragOver}
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
-        whileHover={{ scale: 1.01 }}
-        whileTap={{ scale: 0.99 }}
       >
         <div className="text-center">
-          <motion.div
-            className="mx-auto w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4"
-            animate={{
-              rotate: isDragOver ? 360 : 0,
-              scale: isDragOver ? 1.1 : 1,
-            }}
-            transition={{ duration: 0.3 }}
+          <div
+            className="mx-auto w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mb-4 animate-fadeInUp"
           >
             <Upload className="w-8 h-8 text-white" />
-          </motion.div>
+          </div>
 
           <h3 className="text-lg font-semibold text-gray-800 mb-2">Upload Biology Images</h3>
           <p className="text-sm text-gray-600 mb-4">
@@ -248,25 +240,21 @@ Key concepts covered:
           </p>
 
           <div className="flex items-center justify-center space-x-4">
-            <motion.button
-              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 flex items-center space-x-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
+              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 flex items-center space-x-2 animate-fadeInUp"
               onClick={() => fileInputRef.current?.click()}
             >
               <Upload size={20} />
               <span>Browse Files</span>
-            </motion.button>
+            </button>
 
-            <motion.button
-              className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-600 flex items-center space-x-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
+              className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-600 flex items-center space-x-2 animate-fadeInUp"
               onClick={openCamera}
             >
               <Camera size={20} />
               <span>Take Photo</span>
-            </motion.button>
+            </button>
           </div>
 
           <p className="text-xs text-gray-500 mt-4">
@@ -282,24 +270,18 @@ Key concepts covered:
           onChange={handleFileSelect}
           className="hidden"
         />
-      </motion.div>
+      </div>
 
       {/* Analysis Progress */}
-      <AnimatePresence>
-        {isAnalyzing && (
-          <motion.div
-            className="mt-6 p-6 bg-gray-50 rounded-2xl border"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+{isAnalyzing && (
+          <div
+            className="mt-6 p-6 bg-gray-50 rounded-2xl border animate-fadeInUp"
           >
             <div className="flex items-center space-x-4 mb-4">
-              <motion.div
-                animate={{ rotate: 360 }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <Brain className="w-8 h-8 text-blue-500" />
-              </motion.div>
+              </div>
               <div className="flex-1">
                 <h4 className="font-semibold text-gray-800">AI Analysis in Progress</h4>
                 <p className="text-sm text-gray-600">{currentAnalysis}</p>
@@ -312,34 +294,21 @@ Key concepts covered:
             </div>
 
             <div className="w-full bg-gray-200 rounded-full h-3">
-              <motion.div
-                className="bg-blue-500 h-3 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: `${analysisProgress}%` }}
-                transition={{ duration: 0.3 }}
+              <div
+                className="bg-blue-500 h-3 rounded-full animate-fadeInUp"
               />
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Uploaded Files */}
-      <AnimatePresence>
-        {uploadedFiles.length > 0 && (
-          <motion.div
-            className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+{/* Uploaded Files */}
+{uploadedFiles.length > 0 && (
+          <div
+            className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 animate-fadeInUp"
           >
             {uploadedFiles.map((file) => (
-              <motion.div
+              <div
                 key={file.id}
-                className="relative bg-white rounded-xl shadow-lg overflow-hidden"
-                initial={{ scale: 0.9, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.9, opacity: 0 }}
-                whileHover={{ y: -2 }}
+                className="relative bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="aspect-square relative">
                   <Image
@@ -350,14 +319,12 @@ Key concepts covered:
                     sizes="120px"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
-                    <motion.button
-                      className="opacity-0 hover:opacity-100 bg-white rounded-full p-2 transition-opacity"
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
+                    <button
+                      className="opacity-0 hover:opacity-100 bg-white rounded-full p-2 transition-opacity animate-fadeInUp"
                       onClick={() => analyzeImage(file)}
                     >
                       <Eye size={20} className="text-gray-700" />
-                    </motion.button>
+                    </button>
                   </div>
                 </div>
 
@@ -370,38 +337,29 @@ Key concepts covered:
                       {(file.file.size / 1024 / 1024).toFixed(1)} MB
                     </span>
                     <div className="flex space-x-2">
-                      <motion.button
-                        className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                      <button
+                        className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 animate-fadeInUp"
                         onClick={() => analyzeImage(file)}
                         disabled={isAnalyzing}
                       >
                         <Sparkles size={16} />
-                      </motion.button>
-                      <motion.button
-                        className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                      </button>
+                      <button
+                        className="p-2 bg-red-100 text-red-600 rounded-lg hover:bg-red-200 animate-fadeInUp"
                         onClick={() => removeFile(file.id)}
                       >
                         <X size={16} />
-                      </motion.button>
+                      </button>
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Quick Tips */}
-      <motion.div
-        className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
+{/* Quick Tips */}
+      <div
+        className="mt-6 p-4 bg-gradient-to-r from-green-50 to-blue-50 rounded-xl border border-green-200 animate-fadeInUp"
       >
         <div className="flex items-start space-x-3">
           <Zap className="w-5 h-5 text-green-600 mt-0.5" />
@@ -415,7 +373,7 @@ Key concepts covered:
             </ul>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

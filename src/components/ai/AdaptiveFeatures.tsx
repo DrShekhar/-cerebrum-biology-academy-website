@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
   GitBranch,
@@ -352,10 +351,8 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-indigo-500 rounded-xl">
             <Brain className="w-8 h-8 text-white" />
@@ -363,7 +360,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
           <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             Adaptive Features
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Configure intelligent test adaptation with prerequisite questions, branching logic,
           performance-based difficulty adjustment, and conditional questioning
@@ -438,11 +435,8 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                 color: 'from-indigo-500 to-purple-500',
               },
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 className={`bg-gradient-to-r ${item.color} rounded-xl p-4 text-white`}
               >
                 <div className="flex items-center justify-between">
@@ -452,7 +446,7 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                   </div>
                   <item.icon className="w-6 h-6 text-white/80" />
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -485,14 +479,10 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
           </div>
 
           {/* Tab Content */}
-          <AnimatePresence mode="wait">
-            {activeTab === 'overview' && (
-              <motion.div
+{activeTab === 'overview' && (
+              <div
                 key="overview"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Adaptive Settings */}
                 <div className="bg-white rounded-xl p-6 border">
@@ -656,16 +646,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'prerequisites' && (
-              <motion.div
+              <div
                 key="prerequisites"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="bg-white rounded-xl p-6 border">
                   <div className="flex justify-between items-center mb-4">
@@ -791,16 +778,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'branching' && (
-              <motion.div
+              <div
                 key="branching"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="bg-white rounded-xl p-6 border">
                   <div className="flex justify-between items-center mb-4">
@@ -952,16 +936,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'difficulty' && (
-              <motion.div
+              <div
                 key="difficulty"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="bg-white rounded-xl p-6 border">
                   <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1107,16 +1088,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'skip' && (
-              <motion.div
+              <div
                 key="skip"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="bg-white rounded-xl p-6 border">
                   <div className="flex justify-between items-center mb-4">
@@ -1268,16 +1246,13 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'time' && (
-              <motion.div
+              <div
                 key="time"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="bg-white rounded-xl p-6 border">
                   <div className="flex justify-between items-center mb-4">
@@ -1464,11 +1439,9 @@ const AdaptiveFeatures: React.FC<AdaptiveFeaturesProps> = ({
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
-          {/* Action Buttons */}
+{/* Action Buttons */}
           <div className="flex justify-between items-center pt-6 border-t bg-white rounded-xl p-6">
             <div className="text-sm text-gray-600">
               Adaptive features configured:{' '}

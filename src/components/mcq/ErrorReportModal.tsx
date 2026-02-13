@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import type { MCQQuestion } from '@/lib/mcq/types'
 import type { ErrorReportType } from '@/generated/prisma'
 
@@ -102,24 +101,17 @@ export function ErrorReportModal({
   }
 
   return (
-    <AnimatePresence>
-      {isOpen && (
+{isOpen && (
         <>
           {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+          <div
             onClick={onClose}
-            className="fixed inset-0 bg-black/50 z-50"
+            className="fixed inset-0 bg-black/50 z-50 animate-fadeInUp"
           />
 
           {/* Modal */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed inset-x-4 top-[10%] md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-lg bg-white rounded-2xl shadow-2xl z-50 max-h-[80vh] overflow-y-auto"
+          <div
+            className="fixed inset-x-4 top-[10%] md:inset-x-auto md:left-1/2 md:-translate-x-1/2 md:w-full md:max-w-lg bg-white rounded-2xl shadow-2xl z-50 max-h-[80vh] overflow-y-auto animate-fadeInUp"
           >
             {submitState === 'success' ? (
               <div className="p-8 text-center">
@@ -283,9 +275,8 @@ export function ErrorReportModal({
                 </div>
               </>
             )}
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
-  )
+)
 }

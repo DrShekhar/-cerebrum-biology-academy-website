@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Play,
   Square,
@@ -214,22 +213,18 @@ const VoiceTrainingStudio: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
+        className="text-center animate-fadeInUp"
       >
         <h1 className="text-3xl font-bold text-gray-800 mb-2">Shekhar Sir Voice Training Studio</h1>
         <p className="text-gray-600">
           Train and customize the AI voice to match Shekhar Sir's teaching style
         </p>
-      </motion.div>
+      </div>
 
       {/* Progress Bar */}
-      <motion.div
-        className="bg-white rounded-xl shadow-lg p-6"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
+        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
       >
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-800">Training Progress</h3>
@@ -238,27 +233,22 @@ const VoiceTrainingStudio: React.FC = () => {
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3">
-          <motion.div
-            className="bg-blue-500 h-3 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${trainingProgress}%` }}
-            transition={{ duration: 0.5 }}
+          <div
+            className="bg-blue-500 h-3 rounded-full animate-fadeInUp"
           />
         </div>
         <p className="text-center text-sm text-gray-600 mt-2">
           {Math.round(trainingProgress)}% Complete
         </p>
-      </motion.div>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Training Area */}
         <div className="lg:col-span-2 space-y-6">
           {/* Current Phrase Card */}
           {currentPhrase && (
-            <motion.div
-              className="bg-white rounded-xl shadow-lg p-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+            <div
+              className="bg-white rounded-xl shadow-lg p-8 animate-fadeInUp"
               key={currentPhrase.id}
             >
               <div className="flex items-center justify-between mb-6">
@@ -288,80 +278,65 @@ const VoiceTrainingStudio: React.FC = () => {
 
               {/* Controls */}
               <div className="flex items-center justify-center space-x-4">
-                <motion.button
-                  className="p-3 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
+                  className="p-3 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 animate-fadeInUp"
                   onClick={handlePreviousPhrase}
                 >
                   <RefreshCw className="w-5 h-5 rotate-180" />
-                </motion.button>
+                </button>
 
                 {isSpeaking ? (
-                  <motion.button
-                    className="p-4 bg-red-500 text-white rounded-full hover:bg-red-600 shadow-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <button
+                    className="p-4 bg-red-500 text-white rounded-full hover:bg-red-600 shadow-lg animate-fadeInUp"
                     onClick={stop}
                   >
                     <Square className="w-6 h-6" />
-                  </motion.button>
+                  </button>
                 ) : (
-                  <motion.button
-                    className="p-4 bg-blue-500 text-white rounded-full hover:bg-blue-600 shadow-lg"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                  <button
+                    className="p-4 bg-blue-500 text-white rounded-full hover:bg-blue-600 shadow-lg animate-fadeInUp"
                     onClick={handlePlayPhrase}
                   >
                     <Play className="w-6 h-6" />
-                  </motion.button>
+                  </button>
                 )}
 
-                <motion.button
-                  className="p-3 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <button
+                  className="p-3 bg-gray-100 text-gray-600 rounded-lg hover:bg-gray-200 animate-fadeInUp"
                   onClick={handleNextPhrase}
                 >
                   <RefreshCw className="w-5 h-5" />
-                </motion.button>
+                </button>
               </div>
 
               {/* Speech Progress */}
               {isSpeaking && (
-                <motion.div className="mt-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <div className="mt-6 animate-fadeInUp">
                   <div className="flex items-center space-x-3 mb-2">
-                    <motion.div
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 1, repeat: Infinity }}
-                    >
+                    <div
+                     className="animate-fadeInUp">
                       <Volume2 className="w-5 h-5 text-blue-500" />
-                    </motion.div>
+                    </div>
                     <span className="text-sm text-gray-600">
                       Speaking in Shekhar Sir's voice...
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <motion.div
-                      className="bg-blue-500 h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${progress}%` }}
-                      transition={{ duration: 0.3 }}
+                    <div
+                      className="bg-blue-500 h-2 rounded-full animate-fadeInUp"
                     />
                   </div>
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
           )}
         </div>
 
         {/* Settings Panel */}
         <div className="space-y-6">
           {/* Voice Settings */}
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-800">Voice Settings</h3>
@@ -433,27 +408,22 @@ const VoiceTrainingStudio: React.FC = () => {
                 </select>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Phrase List */}
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.1 }}
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
           >
             <h3 className="text-lg font-semibold text-gray-800 mb-4">Training Phrases</h3>
             <div className="space-y-2 max-h-64 overflow-y-auto">
               {trainingPhrases.map((phrase) => (
-                <motion.div
+                <div
                   key={phrase.id}
                   className={`p-3 rounded-lg cursor-pointer transition-colors ${
                     currentPhrase?.id === phrase.id
                       ? 'bg-blue-100 border border-blue-300'
                       : 'bg-gray-50 hover:bg-gray-100'
                   }`}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                   onClick={() => setCurrentPhrase(phrase)}
                 >
                   <div className="flex items-center justify-between mb-1">
@@ -463,28 +433,23 @@ const VoiceTrainingStudio: React.FC = () => {
                     )}
                   </div>
                   <p className="text-sm text-gray-800 truncate">{phrase.text}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Error Display */}
-      <AnimatePresence>
-        {error && (
-          <motion.div
-            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3"
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
+{error && (
+          <div
+            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3 animate-fadeInUp"
           >
             <AlertCircle className="w-5 h-5 text-red-500" />
             <span className="text-red-700">{error}</span>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

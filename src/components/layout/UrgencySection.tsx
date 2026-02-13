@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Clock, Users, AlertCircle, TrendingUp, Star, Zap, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 
@@ -87,33 +86,26 @@ export function UrgencySection() {
   }
 
   const TimeBlock = ({ value, label }: { value: number; label: string }) => (
-    <motion.div
+    <div
       key={value}
-      initial={{ scale: 1.1 }}
-      animate={{ scale: 1 }}
-      className="bg-white rounded-xl p-4 shadow-lg border-2 border-red-200 text-center min-w-[80px]"
+      className="bg-white rounded-xl p-4 shadow-lg border-2 border-red-200 text-center min-w-[80px] animate-fadeInUp"
     >
-      <motion.div
+      <div
         key={value}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        className="text-3xl md:text-4xl font-bold text-red-600"
+        className="text-3xl md:text-4xl font-bold text-red-600 animate-fadeInUp"
       >
         {value.toString().padStart(2, '0')}
-      </motion.div>
+      </div>
       <div className="text-sm text-gray-600 font-medium uppercase tracking-wide">{label}</div>
-    </motion.div>
+    </div>
   )
 
   return (
     <section className="py-16 bg-gradient-to-br from-red-50 via-orange-50 to-yellow-50 border-t-4 border-red-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Urgent Alert Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-red-600 text-white rounded-2xl p-6 mb-12 shadow-xl"
+        <div
+          className="bg-red-600 text-white rounded-2xl p-6 mb-12 shadow-xl animate-fadeInUp"
         >
           <div className="flex items-center justify-center space-x-3 mb-4">
             <AlertCircle className="w-8 h-8 animate-pulse" />
@@ -143,16 +135,13 @@ export function UrgencySection() {
               out of {batchInfo.totalSeats}
             </p>
           </div>
-        </motion.div>
+        </div>
 
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Urgency Factors */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h3 className="text-3xl font-bold text-gray-900 mb-8">
               Why You Need to Act <span className="text-red-600">Right Now</span>
             </h3>
@@ -161,13 +150,9 @@ export function UrgencySection() {
               {urgencyFactors.map((factor, index) => {
                 const Icon = factor.icon
                 return (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-400 hover:shadow-xl transition-all duration-300"
+                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-400 hover:shadow-xl transition-all duration-300 animate-fadeInUp"
                   >
                     <div className="flex items-start space-x-4">
                       <div
@@ -183,18 +168,15 @@ export function UrgencySection() {
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )
               })}
             </div>
-          </motion.div>
+          </div>
 
           {/* Right: Live Activity & Seats Visualization */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="space-y-8"
+          <div
+            className="space-y-8 animate-fadeInUp"
           >
             {/* Seats Visualization */}
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
@@ -205,12 +187,8 @@ export function UrgencySection() {
               {/* Seat Grid Visualization */}
               <div className="grid grid-cols-5 gap-3 mb-6">
                 {Array.from({ length: batchInfo.totalSeats }, (_, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05 }}
                     className={`w-10 h-10 rounded-lg flex items-center justify-center border-2 ${
                       index < batchInfo.filledSeats
                         ? 'bg-red-500 border-red-600 text-white'
@@ -218,7 +196,7 @@ export function UrgencySection() {
                     }`}
                   >
                     <Users className="w-5 h-5" />
-                  </motion.div>
+                  </div>
                 ))}
               </div>
 
@@ -230,14 +208,8 @@ export function UrgencySection() {
                   seats filled
                 </p>
                 <div className="bg-gray-200 rounded-full h-3 overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{
-                      width: `${(batchInfo.filledSeats / batchInfo.totalSeats) * 100}%`,
-                    }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1 }}
-                    className="bg-red-600 h-full rounded-full"
+                  <div
+                    className="bg-red-600 h-full rounded-full animate-fadeInUp"
                   />
                 </div>
                 <p className="text-sm text-gray-600">Only {batchInfo.remainingSeats} seats left!</p>
@@ -271,20 +243,18 @@ export function UrgencySection() {
                 </div>
 
                 <div className="text-center text-gray-600">
-                  <motion.span
+                  <span
                     key={recentEnrollments}
-                    initial={{ scale: 1.2, color: '#ef4444' }}
-                    animate={{ scale: 1, color: '#6b7280' }}
-                    className="font-semibold"
+                    className="font-semibold animate-fadeInUp"
                   >
                     {recentEnrollments} students enrolled today
-                  </motion.span>
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Urgent CTA */}
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <div className="animate-fadeInUp">
               <Link
                 href="/demo-booking"
                 className="block w-full bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-2xl p-6 text-center shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
@@ -302,8 +272,8 @@ export function UrgencySection() {
                   <ChevronRight className="w-5 h-5" />
                 </div>
               </Link>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

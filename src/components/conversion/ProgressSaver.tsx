@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Save,
   Cloud,
@@ -361,11 +360,8 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
               <span>{progressPercentage}% complete</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <motion.div
-                className="bg-green-600 h-2 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: `${progressPercentage}%` }}
-                transition={{ duration: 0.5 }}
+              <div
+                className="bg-green-600 h-2 rounded-full animate-fadeInUp"
               />
             </div>
           </div>
@@ -439,34 +435,21 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
       </div>
 
       {/* Save Success Notification */}
-      <AnimatePresence>
-        {showSaveNotification && (
-          <motion.div
-            initial={{ opacity: 0, y: 50, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 50, scale: 0.8 }}
-            className="fixed bottom-4 right-4 z-50 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2"
+{showSaveNotification && (
+          <div
+            className="fixed bottom-4 right-4 z-50 bg-green-600 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-fadeInUp"
           >
             <Check className="w-5 h-5" />
             <span className="font-medium">Progress saved successfully!</span>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Conflict Resolution Dialog */}
-      <AnimatePresence>
-        {showConflictDialog && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+{/* Conflict Resolution Dialog */}
+{showConflictDialog && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
           >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
-              className="bg-white rounded-xl p-6 max-w-md w-full"
+            <div
+              className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp"
             >
               <div className="flex items-center gap-3 mb-4">
                 <AlertCircle className="w-6 h-6 text-orange-500" />
@@ -502,11 +485,10 @@ const ProgressSaver: React.FC<ProgressSaverProps> = ({
                   <div className="text-sm text-gray-500">Synced from another device</div>
                 </button>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-    </>
+</>
   )
 }
 

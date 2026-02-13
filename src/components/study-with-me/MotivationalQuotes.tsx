@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 import type { DisplayMode, MotivationalQuote } from '@/lib/study-with-me/types'
 import { MOTIVATIONAL_QUOTES, QUOTE_ROTATION_INTERVAL } from '@/lib/study-with-me/constants'
@@ -77,27 +76,18 @@ export function MotivationalQuotes({
   if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`text-center max-w-2xl mx-auto ${className}`}>
-        <AnimatePresence mode="wait">
-          <motion.div
+<div
             key={currentIndex}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-          >
+           className="animate-fadeInUp">
             <p className="text-xl text-gray-200 italic leading-relaxed">"{currentQuote.text}"</p>
             <p className="text-sm text-gray-400 mt-3">— {currentQuote.author}</p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+          </div>
+</div>
     )
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.5 }}
+    <div
       className={`bg-white rounded-xl shadow-xl p-6 ${className}`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
@@ -119,20 +109,14 @@ export function MotivationalQuotes({
 
       {/* Quote Display */}
       <div className="min-h-[120px] flex items-center justify-center">
-        <AnimatePresence mode="wait">
-          <motion.div
+<div
             key={currentIndex}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.4 }}
-            className="text-center"
+            className="text-center animate-fadeInUp"
           >
             <p className="text-lg text-gray-700 leading-relaxed italic">"{currentQuote.text}"</p>
             <p className="text-sm text-gray-500 mt-3 font-medium">— {currentQuote.author}</p>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+          </div>
+</div>
 
       {/* Navigation */}
       <div className="flex items-center justify-between mt-4 pt-4 border-t border-gray-100">
@@ -170,6 +154,6 @@ export function MotivationalQuotes({
 
       {/* Pause indicator */}
       {isPaused && <p className="text-xs text-center text-gray-400 mt-2">Paused while hovering</p>}
-    </motion.div>
+    </div>
   )
 }

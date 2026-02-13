@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Search, Calculator, Star, Users, Clock, Award, CheckCircle } from 'lucide-react'
 import { courses, getSeriesInfo, getBadgeInfo, type Course } from '@/data/courseData'
 import { PaymentCalculator } from './PaymentCalculator'
@@ -328,8 +327,7 @@ export function SmartCourseCatalog() {
 
             {/* Course Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-              <AnimatePresence>
-                {filteredAndSortedCourses.map((course, index) => (
+{filteredAndSortedCourses.map((course, index) => (
                   <CourseCard
                     key={course.id}
                     course={course}
@@ -338,8 +336,7 @@ export function SmartCourseCatalog() {
                     onToggleSelection={toggleCourseSelection}
                   />
                 ))}
-              </AnimatePresence>
-            </div>
+</div>
 
             {filteredAndSortedCourses.length === 0 && (
               <div className="text-center py-12">
@@ -383,11 +380,7 @@ function CourseCard({ course, index, isSelected, onToggleSelection }: CourseCard
   const savingsPercentage = Math.round((savings / course.originalPrice) * 100)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
+    <div
       className={`bg-white rounded-xl shadow-sm border-2 transition-all hover:shadow-lg group ${
         isSelected
           ? 'border-blue-500 ring-2 ring-blue-200'
@@ -484,6 +477,6 @@ function CourseCard({ course, index, isSelected, onToggleSelection }: CourseCard
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

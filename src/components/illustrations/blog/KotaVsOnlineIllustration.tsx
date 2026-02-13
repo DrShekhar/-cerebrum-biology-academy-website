@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function KotaVsOnlineIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -59,9 +58,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
       {/* Title Section */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="175"
@@ -82,9 +78,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
       {/* Left Section - Kota Coaching */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="20"
@@ -102,8 +95,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
         {/* Kota Building Illustration */}
         <motion.g
-          animate={animate ? { y: [0, -2, 0] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         >
           {/* Building */}
           <rect x="60" y="115" width="120" height="80" rx="6" fill="#EA580C" />
@@ -124,15 +115,11 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
         {/* Walking students */}
         <motion.g
-          animate={animate ? { x: [-3, 3, -3] } : undefined}
-          transition={{ duration: 2.5, repeat: Infinity }}
         >
           <circle cx="50" cy="210" r="8" fill="#FBBF24" />
           <rect x="46" y="220" width="8" height="12" rx="2" fill="#3B82F6" />
         </motion.g>
         <motion.g
-          animate={animate ? { x: [3, -3, 3] } : undefined}
-          transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
         >
           <circle cx="75" cy="215" r="8" fill="#FBBF24" />
           <rect x="71" y="225" width="8" height="12" rx="2" fill="#8B5CF6" />
@@ -140,8 +127,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
         {/* Auto/Taxi */}
         <motion.g
-          animate={animate ? { x: [-5, 5, -5] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         >
           <rect x="140" y="205" width="35" height="18" rx="4" fill="#FCD34D" />
           <circle cx="148" cy="223" r="5" fill="#1E293B" />
@@ -168,9 +153,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
       {/* Center Section - Comparison Chart */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="250"
@@ -190,9 +172,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         {comparisonData.map((item, index) => (
           <motion.g
             key={item.factor}
-            initial={animate ? { opacity: 0, x: -10 } : undefined}
-            animate={animate ? { opacity: 1, x: 0 } : undefined}
-            transition={{ delay: 0.5 + index * 0.1, duration: 0.4, ease: 'easeOut' as const }}
           >
             {/* Row background */}
             <rect
@@ -250,8 +229,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
                 x="440"
                 y={144 + index * 48}
                 fontSize="10"
-                animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-                transition={{ duration: 1.5, repeat: Infinity }}
               >
                 ✓
               </motion.text>
@@ -262,9 +239,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
       {/* Right Section - Online Coaching */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="460"
@@ -282,8 +256,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
         {/* Laptop with Live Class */}
         <motion.g
-          animate={animate ? { y: [0, -3, 0] } : undefined}
-          transition={{ duration: 2.5, repeat: Infinity }}
         >
           <rect x="495" y="115" width="150" height="90" rx="8" fill="#1E293B" />
           <rect x="503" y="123" width="134" height="74" rx="4" fill="#3B82F6" />
@@ -309,8 +281,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
             cy="130"
             r="6"
             fill="#EF4444"
-            animate={animate ? { opacity: [1, 0.4, 1] } : undefined}
-            transition={{ duration: 1, repeat: Infinity }}
           />
           <text x="625" y="145" fontSize="6" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             LIVE
@@ -318,8 +288,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
           {/* Chat bubbles */}
           <motion.g
-            animate={animate ? { y: [-2, 2, -2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
             <rect x="595" y="165" width="35" height="10" rx="3" fill="#FFFFFF" />
             <rect x="600" y="178" width="28" height="8" rx="3" fill="#10B981" />
@@ -331,8 +299,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
         {/* Student at home */}
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         >
           <ellipse cx="570" cy="250" rx="25" ry="20" fill="#0D9488" />
           <circle cx="570" cy="228" r="15" fill="#FBBF24" />
@@ -372,8 +338,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
       {/* VS Badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="350" cy="360" r="25" fill="#EF4444" />
         <text x="350" y="365" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -383,9 +347,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
       {/* Bottom Section - Final Verdict */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.7, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="20"
@@ -492,8 +453,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         r="8"
         fill="#F97316"
         opacity="0.3"
-        animate={animate ? { y: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.circle
         cx="685"
@@ -501,8 +460,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         r="6"
         fill="#14B8A6"
         opacity="0.3"
-        animate={animate ? { y: [5, -5, 5] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       />
       <motion.rect
         x="660"
@@ -512,8 +469,6 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         rx="2"
         fill="#6366F1"
         opacity="0.3"
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
       />
     </Wrapper>
   )

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   Target,
   BookOpen,
@@ -145,10 +144,8 @@ export default function OnboardingDemoPage() {
       <div className="max-w-4xl mx-auto">
         {/* Success Message */}
         {demoComplete && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-2xl shadow-xl p-12 text-center"
+          <div
+            className="bg-white rounded-2xl shadow-xl p-12 text-center animate-fadeInUp"
           >
             <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
@@ -159,7 +156,7 @@ export default function OnboardingDemoPage() {
               <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
               Loading your personalized experience
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Onboarding Flow */}
@@ -167,13 +164,11 @@ export default function OnboardingDemoPage() {
           <>
             {/* Header */}
             <div className="text-center mb-8">
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4"
+              <div
+                className="inline-flex items-center justify-center w-16 h-16 bg-indigo-500 rounded-full mb-4 animate-fadeInUp"
               >
                 <Brain className="w-8 h-8 text-white" />
-              </motion.div>
+              </div>
               <h1 className="text-3xl font-bold text-gray-900 mb-2">Welcome to Cerebrum!</h1>
               <p className="text-gray-600">Let's personalize your learning experience</p>
             </div>
@@ -207,10 +202,8 @@ export default function OnboardingDemoPage() {
 
             {/* Step 1: Track Selection */}
             {step === 1 && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
+              <div
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="text-center mb-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -221,11 +214,9 @@ export default function OnboardingDemoPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {TRACK_OPTIONS.map((track) => (
-                    <motion.div
+                    <div
                       key={track.id}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
+                     className="animate-fadeInUp">
                       <Card
                         className={`cursor-pointer transition-all ${
                           selectedTrack === track.id
@@ -256,18 +247,16 @@ export default function OnboardingDemoPage() {
                           </div>
                         </CardContent>
                       </Card>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Step 2: Goal & Details */}
             {step === 2 && selectedTrackOption && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
+              <div
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="text-center mb-8">
                   <div
@@ -357,15 +346,13 @@ export default function OnboardingDemoPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             )}
 
             {/* Step 3: Target Score (NEET only) */}
             {step === 3 && selectedTrack === 'NEET' && (
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="space-y-6"
+              <div
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-indigo-500 text-white mb-4">
@@ -415,7 +402,7 @@ export default function OnboardingDemoPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             )}
 
             {/* Navigation Buttons */}

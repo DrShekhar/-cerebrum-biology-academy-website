@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { Send, MessageCircle, Loader2 } from 'lucide-react'
 import { trackDemoBooking, trackWhatsAppLead } from '@/lib/ads/googleAdsConversion'
 
@@ -81,12 +80,8 @@ export function LeadForm({
     <section id={formId} className="scroll-mt-20 bg-white py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 shadow-xl md:p-12"
+          <div
+            className="rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 to-purple-50 p-8 shadow-xl md:p-12 animate-fadeInUp"
           >
             <div className="text-center">
               <h2 className="text-3xl font-bold text-slate-900 md:text-4xl">{title}</h2>
@@ -205,7 +200,7 @@ export function LeadForm({
                 Academy.
               </p>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Users, Clock, Navigation, Car, Train, Building, Compass,
 } from 'lucide-react'
@@ -82,7 +81,7 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-4 h-4" />
               Central Gurugram Location - Sector 51
@@ -119,15 +118,15 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
                   <Navigation className="w-5 h-5 mr-2" />Get Directions
                 </Button>
               </a>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Ask Distance from My Area
-              </motion.button>
+              </button>
             </div>
 
             {/* Urgency Banner */}
             <UrgencyBanner batchStartDate="Feb 10, 2026" seatsTotal={15} seatsFilled={12} showCountdown={true} />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -136,11 +135,11 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-teal-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -149,10 +148,10 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
       {/* Map Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Location</h2>
             <p className="text-xl text-slate-600">M2K Corporate Park, Sector 51, Gurugram</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden h-[400px]">
@@ -190,15 +189,15 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
       {/* Distance from Areas */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Distance from Your Area</h2>
             <p className="text-xl text-slate-600">Find how far we are from your location</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
             {nearbyAreas.map((area, index) => (
-              <motion.div key={area.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }}
-                className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-4 border border-teal-100">
+              <div key={area.name}
+                className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-xl p-4 border border-teal-100 animate-fadeInUp">
                 <h3 className="font-bold text-slate-900">{area.name}</h3>
                 <div className="flex items-center gap-4 mt-2">
                   <span className="text-2xl font-bold text-teal-600">{area.distance}</span>
@@ -206,7 +205,7 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
                   <span className="text-slate-600">{area.time} drive</span>
                 </div>
                 <p className="text-xs text-slate-500 mt-1">{area.direction}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -219,21 +218,21 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
       {/* Transport Options */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">How to Reach Us</h2>
             <p className="text-xl text-slate-600">Multiple transport options available</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {transportOptions.map((option, index) => (
-              <motion.div key={option.mode} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={option.mode}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                   <option.icon className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{option.mode}</h3>
                 <p className="text-slate-600 text-sm">{option.details}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -242,21 +241,21 @@ export default function NEETCoachingNearMeContent({ faqs }: { faqs: FAQ[] }) {
       {/* Why This Location */}
       <section className="py-16 bg-gradient-to-br from-teal-600 to-cyan-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Sector 51 is the Perfect Location</h2>
             <p className="text-xl text-teal-100">Central position for students from all Gurugram areas</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyLocation.map((item, index) => (
-              <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+              <div key={item.title}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-fadeInUp">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                 <p className="text-teal-100 text-sm">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function ExcretorySystemIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -123,18 +122,12 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         fontSize="18"
         fontWeight="700"
         fontFamily="system-ui, sans-serif"
-        initial={animate ? { opacity: 0, y: -10 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         Excretory System - Kidney & Nephron
       </motion.text>
 
       {/* KIDNEY CROSS-SECTION - Left side */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <g transform="translate(25, 50)">
           {/* Kidney outline - bean shape */}
@@ -173,8 +166,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="8"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -8] } : undefined}
-            transition={{ duration: 1, repeat: Infinity }}
             strokeDasharray="4 2"
           />
           <text x="5" y="105" fill="#B91C1C" fontSize="6" fontWeight="500">
@@ -188,8 +179,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="8"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <text x="5" y="158" fill="#2563EB" fontSize="6" fontWeight="500">
             Renal Vein
@@ -202,8 +191,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="10"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
             strokeDasharray="5 3"
           />
           <text x="110" y="225" fill="#B45309" fontSize="6" fontWeight="500">
@@ -236,9 +223,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
       {/* NEPHRON DIAGRAM - Center */}
       <motion.g
-        initial={animate ? { opacity: 0, scale: 0.9 } : undefined}
-        animate={animate ? { opacity: 1, scale: 1 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g transform="translate(240, 50)">
           {/* Nephron background card */}
@@ -262,8 +246,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="4"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -6] } : undefined}
-            transition={{ duration: 0.8, repeat: Infinity }}
             strokeDasharray="3 2"
           />
           <text x="20" y="48" fill="#DC2626" fontSize="5">
@@ -272,8 +254,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* Glomerulus */}
           <motion.g
-            animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-            transition={{ duration: 1.5, repeat: Infinity }}
           >
             <circle cx="60" cy="55" r="15" fill="url(#glomerulusGrad)" filter="url(#nephronGlow)" />
             {/* Capillary loops inside */}
@@ -309,8 +289,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="3"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -6] } : undefined}
-            transition={{ duration: 0.8, repeat: Infinity, delay: 0.2 }}
             strokeDasharray="3 2"
           />
           <text x="100" y="48" fill="#B91C1C" fontSize="5">
@@ -324,8 +302,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="6"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { pathLength: [0.95, 1, 0.95] } : undefined}
-            transition={{ duration: 3, repeat: Infinity }}
           />
           <text x="115" y="110" fill="#7C3AED" fontSize="6" fontWeight="600">
             PCT
@@ -338,8 +314,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="5"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -8] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
             strokeDasharray="4 2"
           />
           <text x="70" y="180" fill="#0891B2" fontSize="5" fontWeight="500">
@@ -362,8 +336,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="5"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, 8] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
             strokeDasharray="4 2"
           />
           <text x="135" y="180" fill="#0D9488" fontSize="5" fontWeight="500">
@@ -377,8 +349,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="5"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { pathLength: [0.95, 1, 0.95] } : undefined}
-            transition={{ duration: 3, repeat: Infinity, delay: 1 }}
           />
           <text x="155" y="75" fill="#DB2777" fontSize="6" fontWeight="600">
             DCT
@@ -391,8 +361,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             strokeWidth="7"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
-            transition={{ duration: 3, repeat: Infinity }}
             strokeDasharray="5 3"
           />
           <text x="165" y="150" fill="#D97706" fontSize="5" fontWeight="600">
@@ -409,17 +377,12 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             rx="5"
             ry="7"
             fill="url(#urineGrad)"
-            animate={animate ? { y: [0, 5, 0], opacity: [1, 0.7, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
         </g>
       </motion.g>
 
       {/* URINE FORMATION PROCESS - Right Top */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.35, duration: 0.6 }}
       >
         <g transform="translate(470, 50)">
           <rect
@@ -437,8 +400,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* Step 1: Filtration */}
           <motion.g
-            animate={animate ? { x: [0, 2, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <circle cx="30" cy="50" r="15" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
             <text x="30" y="55" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="bold">
@@ -454,8 +415,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* Step 2: Reabsorption */}
           <motion.g
-            animate={animate ? { x: [0, 2, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
             <circle cx="30" cy="90" r="15" fill="#EDE9FE" stroke="#8B5CF6" strokeWidth="2" />
             <text x="30" y="95" textAnchor="middle" fill="#7C3AED" fontSize="10" fontWeight="bold">
@@ -471,8 +430,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* Step 3: Secretion */}
           <motion.g
-            animate={animate ? { x: [0, 2, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 1 }}
           >
             <circle cx="30" cy="130" r="15" fill="#D1FAE5" stroke="#10B981" strokeWidth="2" />
             <text x="30" y="135" textAnchor="middle" fill="#059669" fontSize="10" fontWeight="bold">
@@ -514,9 +471,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
       {/* GFR & KEY STATS - Right Middle */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <g transform="translate(470, 225)">
           <rect
@@ -544,8 +498,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
               fill="#1E40AF"
               fontSize="10"
               fontWeight="bold"
-              animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             >
               125 mL/min
             </motion.text>
@@ -577,9 +529,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
       {/* HORMONAL REGULATION - Bottom Left */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.45, duration: 0.6 }}
       >
         <g transform="translate(25, 375)">
           <rect
@@ -602,8 +551,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
               cy="16"
               r="14"
               fill="#3B82F6"
-              animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             />
             <text x="18" y="20" textAnchor="middle" fill="white" fontSize="7" fontWeight="bold">
               ADH
@@ -623,8 +570,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
               cy="16"
               r="14"
               fill="#F59E0B"
-              animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
             />
             <text x="18" y="20" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
               ALD
@@ -644,8 +589,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
               cy="16"
               r="14"
               fill="#10B981"
-              animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 1 }}
             />
             <text x="18" y="20" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
               ANP
@@ -662,9 +605,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
       {/* TYPES OF ANIMALS - Bottom Center */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6 }}
       >
         <g transform="translate(250, 375)">
           <rect
@@ -744,9 +684,6 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
       {/* COUNTERCURRENT INFO - Bottom Right */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.55, duration: 0.6 }}
       >
         <g transform="translate(470, 375)">
           <rect

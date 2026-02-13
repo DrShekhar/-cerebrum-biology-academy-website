@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Mic,
   Volume2,
@@ -384,10 +383,8 @@ const MultiModalQuestionGenerator: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-4"
+      <div
+        className="text-center space-y-4 animate-fadeInUp"
       >
         <div className="flex items-center justify-center gap-3">
           <div className="p-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl">
@@ -401,7 +398,7 @@ const MultiModalQuestionGenerator: React.FC = () => {
           Create engaging biology questions using images, audio, video, and interactive elements.
           Enhanced with AI for personalized learning experiences.
         </p>
-      </motion.div>
+      </div>
 
       {/* Tab Navigation */}
       <div className="flex justify-center">
@@ -429,15 +426,11 @@ const MultiModalQuestionGenerator: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Generate Tab */}
+{/* Generate Tab */}
         {activeTab === 'generate' && (
-          <motion.div
+          <div
             key="generate"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Generation Controls */}
             <div className="space-y-6">
@@ -573,11 +566,8 @@ const MultiModalQuestionGenerator: React.FC = () => {
                         <span>{generationProgress}%</span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
-                        <motion.div
-                          className="bg-gradient-to-r from-purple-600 to-indigo-600 h-2 rounded-full"
-                          initial={{ width: 0 }}
-                          animate={{ width: `${generationProgress}%` }}
-                          transition={{ duration: 0.3 }}
+                        <div
+                          className="bg-gradient-to-r from-purple-600 to-indigo-600 h-2 rounded-full animate-fadeInUp"
                         />
                       </div>
                     </div>
@@ -777,17 +767,14 @@ const MultiModalQuestionGenerator: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Library Tab */}
         {activeTab === 'library' && (
-          <motion.div
+          <div
             key="library"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -797,11 +784,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
 
               <div className="grid gap-4">
                 {questions.map((question) => (
-                  <motion.div
+                  <div
                     key={question.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="border rounded-lg p-4 hover:shadow-md transition-all cursor-pointer"
+                    className="border rounded-lg p-4 hover:shadow-md transition-all cursor-pointer animate-fadeInUp"
                     onClick={() => setCurrentQuestion(question)}
                   >
                     <div className="flex items-start justify-between">
@@ -855,21 +840,18 @@ const MultiModalQuestionGenerator: React.FC = () => {
                         </button>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Settings Tab */}
         {activeTab === 'settings' && (
-          <motion.div
+          <div
             key="settings"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1004,11 +986,9 @@ const MultiModalQuestionGenerator: React.FC = () => {
                 </label>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Hidden Audio Element */}
+{/* Hidden Audio Element */}
       <audio ref={audioRef} onEnded={() => setIsPlaying(false)} />
     </div>
   )

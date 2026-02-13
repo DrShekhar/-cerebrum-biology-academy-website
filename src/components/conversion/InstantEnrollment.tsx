@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { PremiumButton, PremiumCard } from '@/components/ui/PremiumDesignSystem'
 import {
   CreditCard,
@@ -154,17 +153,11 @@ export function InstantEnrollment({
 
   if (currentStep === 'form') {
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+      <div
         className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 ${className}`}
       >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        <div
+          className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
         >
           {/* Header */}
           <div className="bg-indigo-500 text-white p-6 rounded-t-2xl relative">
@@ -194,10 +187,8 @@ export function InstantEnrollment({
 
           <div className="p-6 space-y-6">
             {/* Seats Left Alert */}
-            <motion.div
-              animate={{ scale: [1, 1.02, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3"
+            <div
+              className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp"
             >
               <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse" />
               <div>
@@ -206,7 +197,7 @@ export function InstantEnrollment({
                 </div>
                 <div className="text-sm text-red-600">3 students enrolled in the last hour</div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Pricing Display */}
             <PremiumCard variant="luxury" className="bg-green-50 border-green-200">
@@ -389,22 +380,18 @@ export function InstantEnrollment({
               </div>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     )
   }
 
   if (currentStep === 'success') {
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+      <div
         className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 ${className}`}
       >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="bg-white rounded-2xl shadow-2xl max-w-lg w-full"
+        <div
+          className="bg-white rounded-2xl shadow-2xl max-w-lg w-full animate-fadeInUp"
         >
           <div className="p-8 text-center space-y-6">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
@@ -437,8 +424,8 @@ export function InstantEnrollment({
               Continue to Dashboard
             </PremiumButton>
           </div>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
     )
   }
 

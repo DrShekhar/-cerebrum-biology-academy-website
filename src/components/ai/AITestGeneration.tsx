@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import TestTemplates from './TestTemplates'
 import SectionConfiguration from './SectionConfiguration'
 import AdaptiveFeatures from './AdaptiveFeatures'
@@ -581,10 +580,8 @@ const AITestGeneration: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-indigo-500 rounded-xl">
             <Brain className="w-8 h-8 text-white" />
@@ -592,7 +589,7 @@ const AITestGeneration: React.FC = () => {
           <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             AI Test Generation
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-800 max-w-2xl mx-auto font-medium">
           Intelligent test generation with advanced algorithms for optimal question selection,
           difficulty distribution, and comprehensive topic coverage
@@ -636,14 +633,10 @@ const AITestGeneration: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {activeTab === 'configure' && (
-          <motion.div
+{activeTab === 'configure' && (
+          <div
             key="configure"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Basic Configuration */}
             <div className="bg-white rounded-xl p-6 border">
@@ -824,160 +817,121 @@ const AITestGeneration: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'templates' && (
-          <motion.div
+          <div
             key="templates"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <TestTemplates />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'sections' && (
-          <motion.div
+          <div
             key="sections"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <SectionConfiguration />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'adaptive' && (
-          <motion.div
+          <div
             key="adaptive"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <AdaptiveFeatures />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'access' && (
-          <motion.div
+          <div
             key="access"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <AccessSettings />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'security' && (
-          <motion.div
+          <div
             key="security"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <SecurityFeatures />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'collaborate' && (
-          <motion.div
+          <div
             key="collaborate"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <Collaboration />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'data' && (
-          <motion.div
+          <div
             key="data"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <DataManagement />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'bank' && (
-          <motion.div
+          <div
             key="bank"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <QuestionBank />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'distribute' && (
-          <motion.div
+          <div
             key="distribute"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <Distribution />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'analytics' && (
-          <motion.div
+          <div
             key="analytics"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <Analytics />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'ui' && (
-          <motion.div
+          <div
             key="ui"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <UICustomization />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'lifecycle' && (
-          <motion.div
+          <div
             key="lifecycle"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <Lifecycle />
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'generate' && (
-          <motion.div
+          <div
             key="generate"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="text-center space-y-8"
+            className="text-center space-y-8 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-8 border">
               <div className="space-y-6">
@@ -1013,12 +967,10 @@ const AITestGeneration: React.FC = () => {
                   ))}
                 </div>
 
-                <motion.button
+                <button
                   onClick={handleGenerateTest}
                   disabled={isGenerating}
-                  whileHover={isGenerating ? {} : { scale: 1.05 }}
-                  whileTap={isGenerating ? {} : { scale: 0.98 }}
-                  className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3 mx-auto"
+                  className="bg-indigo-500 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-600 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-3 mx-auto animate-fadeInUp"
                 >
                   {isGenerating ? (
                     <>
@@ -1031,25 +983,21 @@ const AITestGeneration: React.FC = () => {
                       Generate Test
                     </>
                   )}
-                </motion.button>
+                </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {activeTab === 'review' && (
-          <motion.div
+          <div
             key="review"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
             style={{ pointerEvents: 'all' }}
-          >
+           className="animate-fadeInUp">
             <TestReview />
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function ChapterWeightageIllustration({
@@ -142,9 +141,6 @@ export function ChapterWeightageIllustration({
 
       {/* Title Section */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
         <text x="350" y="42" fontSize="22" fill="#B45309" textAnchor="middle" fontWeight="bold">
@@ -157,9 +153,6 @@ export function ChapterWeightageIllustration({
 
       {/* === LEFT SECTION: Pie Chart === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g filter="url(#weightCardShadow)">
           <rect x="20" y="85" width="250" height="250" rx="16" fill="#FFFFFF" />
@@ -167,8 +160,6 @@ export function ChapterWeightageIllustration({
 
         {/* Pie Chart */}
         <motion.g
-          animate={animate ? { rotate: [0, 3, 0] } : undefined}
-          transition={{ duration: 8, repeat: Infinity }}
           style={{ transformOrigin: '145px 210px' }}
         >
           {pieSegments.map((segment, i) => (
@@ -176,9 +167,6 @@ export function ChapterWeightageIllustration({
               key={i}
               d={describeArc(145, 210, 85, segment.start, segment.end)}
               fill={segment.color}
-              initial={animate ? { scale: 0, opacity: 0 } : undefined}
-              animate={animate ? { scale: 1, opacity: 1 } : undefined}
-              transition={{ delay: 0.4 + i * 0.08, duration: 0.4 }}
               style={{ transformOrigin: '145px 210px' }}
             />
           ))}
@@ -186,8 +174,6 @@ export function ChapterWeightageIllustration({
 
         {/* Center circle */}
         <motion.g
-          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         >
           <circle cx="145" cy="210" r="45" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" />
           <text x="145" y="200" fontSize="12" fill="#6B7280" textAnchor="middle">
@@ -209,9 +195,6 @@ export function ChapterWeightageIllustration({
 
       {/* === CENTER SECTION: Bar Chart === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <g filter="url(#weightCardShadow)">
           <rect x="285" y="85" width="260" height="250" rx="16" fill="#FFFFFF" />
@@ -241,9 +224,6 @@ export function ChapterWeightageIllustration({
                 height="16"
                 rx="4"
                 fill={chapter.color}
-                initial={animate ? { width: 0 } : undefined}
-                animate={animate ? { width: (chapter.questions / 18) * 130 } : undefined}
-                transition={{ delay: 0.5 + i * 0.1, duration: 0.6, ease: 'easeOut' as const }}
               />
 
               {/* Question count */}
@@ -253,9 +233,6 @@ export function ChapterWeightageIllustration({
                 fontSize="9"
                 fill="#374151"
                 fontWeight="600"
-                initial={animate ? { opacity: 0 } : undefined}
-                animate={animate ? { opacity: 1 } : undefined}
-                transition={{ delay: 1 + i * 0.1 }}
               >
                 {chapter.questions}Q
               </motion.text>
@@ -311,9 +288,6 @@ export function ChapterWeightageIllustration({
 
       {/* === RIGHT SECTION: Key Stats === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6 }}
       >
         <g filter="url(#weightCardShadow)">
           <rect x="560" y="85" width="125" height="250" rx="16" fill="#FFFFFF" />
@@ -336,8 +310,6 @@ export function ChapterWeightageIllustration({
             fill="#B45309"
             textAnchor="middle"
             fontWeight="bold"
-            animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             360
           </motion.text>
@@ -386,9 +358,6 @@ export function ChapterWeightageIllustration({
 
       {/* === BOTTOM SECTION: Year-wise Comparison === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.6, duration: 0.6 }}
       >
         <g filter="url(#weightCardShadow)">
           <rect x="20" y="350" width="665" height="155" rx="16" fill="#FFFFFF" />
@@ -420,9 +389,6 @@ export function ChapterWeightageIllustration({
                   height="18"
                   rx="4"
                   fill="#22C55E"
-                  initial={animate ? { width: 0 } : undefined}
-                  animate={animate ? { width: year.botany * 2 } : undefined}
-                  transition={{ delay: 0.8 + i * 0.15, duration: 0.5 }}
                 />
                 <text x={50 + year.botany * 2} y="18" fontSize="9" fill="#166534" fontWeight="600">
                   {year.botany}
@@ -442,9 +408,6 @@ export function ChapterWeightageIllustration({
                   height="18"
                   rx="4"
                   fill="#EF4444"
-                  initial={animate ? { width: 0 } : undefined}
-                  animate={animate ? { width: year.zoology * 2 } : undefined}
-                  transition={{ delay: 0.9 + i * 0.15, duration: 0.5 }}
                 />
                 <text x={50 + year.zoology * 2} y="18" fontSize="9" fill="#991B1B" fontWeight="600">
                   {year.zoology}
@@ -456,8 +419,6 @@ export function ChapterWeightageIllustration({
 
         {/* Insight badge */}
         <motion.g
-          animate={animate ? { y: [0, -3, 0] } : undefined}
-          transition={{ duration: 2.5, repeat: Infinity }}
         >
           <rect x="250" y="480" width="200" height="22" rx="11" fill="#F59E0B" />
           <text x="350" y="494" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -475,8 +436,6 @@ export function ChapterWeightageIllustration({
             r="6"
             fill="#F59E0B"
             opacity="0.4"
-            animate={{ y: [0, -8, 0], opacity: [0.4, 0.7, 0.4] }}
-            transition={{ duration: 3, repeat: Infinity }}
           />
           <motion.circle
             cx="670"
@@ -484,8 +443,6 @@ export function ChapterWeightageIllustration({
             r="5"
             fill="#10B981"
             opacity="0.3"
-            animate={{ y: [0, -6, 0], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
           />
         </>
       )}

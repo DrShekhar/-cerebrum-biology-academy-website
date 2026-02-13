@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   Clock,
@@ -119,13 +118,8 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
   const Icon = config.icon
 
   return (
-    <AnimatePresence>
-      {showAnimation && (
-        <motion.div
-          initial={{ y: -100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: -100, opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 100, damping: 20 }}
+{showAnimation && (
+        <div
           className={`relative bg-gradient-to-r ${config.bgGradient} text-white overflow-hidden`}
           role="alert"
           aria-live="polite"
@@ -201,20 +195,16 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
                   </span>
                 </div>
                 <div className="w-full bg-white/20 rounded-full h-2 overflow-hidden">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${((15 - trialStatus.daysRemaining) / 15) * 100}%` }}
-                    transition={{ duration: 1, ease: 'easeOut' }}
-                    className="h-full bg-white rounded-full"
+                  <div
+                    className="h-full bg-white rounded-full animate-fadeInUp"
                   />
                 </div>
               </div>
             )}
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }
 
 export function useTrialBanner(freeUserId: string | null) {

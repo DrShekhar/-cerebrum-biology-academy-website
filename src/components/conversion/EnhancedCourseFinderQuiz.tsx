@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import { ParentFlow } from '@/components/conversion/ParentFlow'
 import { QuizProgress } from '@/components/ui/ProgressIndicators'
@@ -538,9 +537,7 @@ export function EnhancedCourseFinderQuiz({
 
   if (currentStep === 'recommendation' && recommendation) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
         className={`bg-white rounded-2xl p-6 max-w-2xl shadow-2xl ${className}`}
       >
         <div className="text-center space-y-6">
@@ -675,16 +672,14 @@ export function EnhancedCourseFinderQuiz({
             <span>✅ {liveStats.recentEnrollment}</span>
           </div>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
   const currentStepData = quizFlow[currentStep]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`bg-white rounded-2xl p-6 max-w-xl shadow-2xl ${className}`}
     >
       {/* Quiz Header */}
@@ -705,37 +700,27 @@ export function EnhancedCourseFinderQuiz({
       </div>
 
       {/* Current Question */}
-      <AnimatePresence mode="wait">
-        <motion.div
+<div
           key={currentStep}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.3 }}
-        >
+         className="animate-fadeInUp">
           <p className="text-gray-900 mb-4 font-medium text-center">{currentStepData.question}</p>
 
           <div className="grid gap-3">
             {currentStepData.options.map((option, index) => (
-              <motion.button
+              <button
                 key={option.value}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 onClick={() => handleAnswer(option.value)}
-                className="quiz-option bg-gray-50 hover:bg-gray-100 text-gray-900 p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-blue-600 border border-blue-100"
+                className="quiz-option bg-gray-50 hover:bg-gray-100 text-gray-900 p-4 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-blue-600 border border-blue-100 animate-fadeInUp"
               >
                 <div className="font-medium">{option.label}</div>
                 {option.description && (
                   <div className="text-xs text-gray-600 mt-1">{option.description}</div>
                 )}
-              </motion.button>
+              </button>
             ))}
           </div>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Enhanced Progress Indicator */}
+        </div>
+{/* Enhanced Progress Indicator */}
       <div className="mt-6">
         <QuizProgress
           totalSteps={Object.keys(quizFlow).length}
@@ -750,6 +735,6 @@ export function EnhancedCourseFinderQuiz({
         onClose={() => setShowParentFlow(false)}
         onComplete={handleParentFlowAction}
       />
-    </motion.div>
+    </div>
   )
 }

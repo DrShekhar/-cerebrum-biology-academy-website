@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Zap, TrendingUp, Star } from 'lucide-react'
 
 interface XPProgressCardProps {
@@ -49,16 +48,13 @@ export function XPProgressCard({
           </span>
         </div>
         <div className="w-full bg-purple-800 bg-opacity-50 rounded-full h-4 overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: `${levelProgress}%` }}
-            transition={{ duration: 1.5, ease: 'easeOut' }}
-            className="bg-gradient-to-r from-yellow-400 to-yellow-200 h-4 rounded-full flex items-center justify-end px-2"
+          <div
+            className="bg-gradient-to-r from-yellow-400 to-yellow-200 h-4 rounded-full flex items-center justify-end px-2 animate-fadeInUp"
           >
             {levelProgress > 10 && (
               <span className="text-xs font-bold text-purple-900">{levelProgress}%</span>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -87,14 +83,12 @@ export function XPProgressCard({
           {xpNeededForNextLevel - xpInCurrentLevel} XP needed to reach Level {currentLevel + 1}
         </div>
         {levelProgress >= 75 && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="mt-2 inline-flex items-center space-x-1 bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-xs font-bold"
+          <div
+            className="mt-2 inline-flex items-center space-x-1 bg-yellow-400 text-purple-900 px-3 py-1 rounded-full text-xs font-bold animate-fadeInUp"
           >
             <Zap className="w-3 h-3" />
             <span>Almost there! Keep going!</span>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function EvolutionIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -31,8 +30,6 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
 
       {/* Tree of Life */}
       <motion.g
-        animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       >
         {/* Main trunk */}
         <rect x="95" y="220" width="10" height="60" fill="#8B4513" />
@@ -71,8 +68,6 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
 
       {/* Darwin portrait placeholder */}
       <motion.g
-        animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="280" cy="90" r="35" fill="#E9D5FF" stroke="#A855F7" strokeWidth="2" />
         <circle cx="280" cy="80" r="15" fill="#FED7AA" />
@@ -101,8 +96,6 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
       </text>
 
       <motion.g
-        animate={animate ? { x: [0, 2, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <text x="295" y="200" fontSize="7" fill="#374151" textAnchor="middle">
           • Natural Selection
@@ -123,8 +116,6 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
 
       {/* Human evolution silhouettes */}
       <motion.g
-        animate={animate ? { x: [0, 3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <rect
           x="25"
@@ -150,8 +141,6 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
 
       {/* Questions badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="360" cy="260" r="18" fill="#A855F7" />
         <text x="360" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">

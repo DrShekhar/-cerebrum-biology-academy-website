@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { CheckCircle, X, Trophy, Star, MapPin, Calendar, TrendingUp } from 'lucide-react'
 import { getRandomSuccessStory, successStats } from '@/data/studentSuccessData'
 import { usePopupCoordinator } from '@/lib/ui/popupCoordinator'
@@ -168,11 +167,8 @@ export function SuccessNotifications({
   return (
     <div className="fixed top-20 right-4 z-50 space-y-3 max-w-sm">
       {/* Live Stats Counter */}
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 100 }}
-        className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-lg shadow-lg"
+      <div
+        className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-lg shadow-lg animate-fadeInUp"
       >
         <div className="flex items-center mb-2">
           <TrendingUp className="w-5 h-5 mr-2" />
@@ -188,26 +184,12 @@ export function SuccessNotifications({
             <div className="opacity-90">Success Rate</div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Success Notifications */}
-      <AnimatePresence mode="popLayout">
-        {notifications.map((notification, index) => (
-          <motion.div
+{notifications.map((notification, index) => (
+          <div
             key={notification.id}
-            initial={{ opacity: 0, x: 100, scale: 0.8 }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              scale: 1,
-              transition: { delay: index * 0.1 },
-            }}
-            exit={{
-              opacity: 0,
-              x: 100,
-              scale: 0.8,
-              transition: { duration: 0.3 },
-            }}
             className={`relative bg-white rounded-lg shadow-lg border-l-4 p-4 ${getNotificationColor(notification.type)}`}
             style={{ maxWidth: '320px' }}
           >
@@ -259,21 +241,16 @@ export function SuccessNotifications({
               className="absolute inset-0 rounded-lg bg-blue-200 opacity-20 animate-pulse pointer-events-none"
               style={{ animation: 'pulse 2s ease-in-out' }}
             />
-          </motion.div>
+          </div>
         ))}
-      </AnimatePresence>
-
-      {/* Cerebrum Branding */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="text-center"
+{/* Cerebrum Branding */}
+      <div
+        className="text-center animate-fadeInUp"
       >
         <p className="text-xs text-gray-500">
           Powered by <span className="font-semibold text-purple-600">Cerebrum Biology Academy</span>
         </p>
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -378,17 +355,14 @@ export function SuccessTicker({ useCoordination = false }: SuccessTickerProps) {
 
   return (
     <div className="md:hidden fixed bottom-4 left-4 right-4 z-40">
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: 50 }}
-        className="bg-[#4a5d4a] text-white p-2.5 rounded-lg shadow-lg"
+      <div
+        className="bg-[#4a5d4a] text-white p-2.5 rounded-lg shadow-lg animate-fadeInUp"
       >
         <div className="flex items-center">
           <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
           <p className="text-xs font-medium truncate">{currentStory}</p>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

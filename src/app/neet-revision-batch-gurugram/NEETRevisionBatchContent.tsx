@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home, Target, Clock, BookOpen, RefreshCw, TrendingUp, Zap,
 } from 'lucide-react'
@@ -73,7 +72,7 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-teal-500/20 text-teal-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-4 h-4" />
               Final 3-Month Intensive Revision
@@ -114,12 +113,12 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Demo
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Get Batch Details
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -128,11 +127,11 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-teal-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -141,21 +140,21 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
       {/* Revision Highlights */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What You Get in 3 Months</h2>
             <p className="text-xl text-slate-600">Complete revision package for final preparation</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {revisionHighlights.map((highlight, index) => (
-              <motion.div key={highlight.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={highlight.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                   <highlight.icon className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{highlight.title}</h3>
                 <p className="text-slate-600 text-sm">{highlight.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -164,10 +163,10 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
       {/* High-Yield Topics */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">High-Yield Topics Focus</h2>
             <p className="text-xl text-slate-600">30% syllabus covers 80% of NEET questions</p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -203,15 +202,15 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
       {/* Monthly Plan */}
       <section className="py-16 bg-gradient-to-br from-teal-600 to-green-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">3-Month Revision Plan</h2>
             <p className="text-xl text-teal-100">Structured approach to maximize your score</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {monthlyPlan.map((month, index) => (
-              <motion.div key={month.month} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+              <div key={month.month}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-fadeInUp">
                 <h3 className="text-2xl font-bold mb-2">{month.month}</h3>
                 <p className="text-yellow-400 font-semibold mb-4">{month.focus}</p>
                 <p className="text-teal-100 text-sm mb-4">{month.topics}</p>
@@ -219,7 +218,7 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
                   <Target className="w-4 h-4 text-yellow-400" />
                   <span className="text-sm">{month.mcqs} MCQs</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -259,7 +258,7 @@ export default function NEETRevisionBatchContent({ faqs }: { faqs: FAQ[] }) {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}><Button><RefreshCw className="w-4 h-4 mr-2" />Join Revision Batch</Button></motion.button>
+                  <button onClick={handleWhatsApp} className="animate-fadeInUp"><Button><RefreshCw className="w-4 h-4 mr-2" />Join Revision Batch</Button></button>
                   <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>
                 </div>
               </div>

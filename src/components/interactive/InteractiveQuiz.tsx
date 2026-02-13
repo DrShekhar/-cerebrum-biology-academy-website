@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import {
   CheckCircle,
@@ -119,11 +118,8 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
 
   if (!quizStarted) {
     return (
-      <motion.div
+      <div
         className={cn('bg-white rounded-3xl shadow-xl p-8 text-center', className)}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
       >
         <div className="mb-8">
           <Brain className="w-16 h-16 text-blue-600 mx-auto mb-4" />
@@ -160,7 +156,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
           <Brain className="w-5 h-5 mr-2" />
           Start Quiz Challenge
         </Button>
-      </motion.div>
+      </div>
     )
   }
 
@@ -170,11 +166,8 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
     const percentage = (score / questions.length) * 100
 
     return (
-      <motion.div
+      <div
         className={cn('bg-white rounded-3xl shadow-xl p-8 text-center', className)}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
       >
         <div className="mb-8">
           <Trophy className="w-20 h-20 text-yellow-500 mx-auto mb-6" />
@@ -222,7 +215,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
             Review Concepts
           </Button>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
@@ -246,11 +239,8 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
 
         {showProgress && (
           <div className="w-full bg-white/20 rounded-full h-2">
-            <motion.div
-              className="bg-white h-2 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${((currentQuestion + 1) / questions.length) * 100}%` }}
-              transition={{ duration: 0.3 }}
+            <div
+              className="bg-white h-2 rounded-full animate-fadeInUp"
             />
           </div>
         )}
@@ -292,7 +282,7 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
             const isCorrectOption = index === currentQ.correctAnswer
 
             return (
-              <motion.button
+              <button
                 key={index}
                 className={cn(
                   'w-full p-4 text-left rounded-2xl border-2 transition-all duration-200',
@@ -305,8 +295,6 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
                 )}
                 onClick={() => !isAnswered && handleAnswerSelect(index)}
                 disabled={isAnswered}
-                whileHover={!isAnswered ? { scale: 1.02 } : {}}
-                whileTap={!isAnswered ? { scale: 0.98 } : {}}
               >
                 <div className="flex items-center gap-3">
                   <div
@@ -338,20 +326,15 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
                   </div>
                   <span className="flex-1">{option}</span>
                 </div>
-              </motion.button>
+              </button>
             )
           })}
         </div>
 
         {/* Explanation */}
-        <AnimatePresence>
-          {showExplanation && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="overflow-hidden"
+{showExplanation && (
+            <div
+              className="overflow-hidden animate-fadeInUp"
             >
               <div
                 className={cn(
@@ -382,11 +365,9 @@ export const InteractiveQuiz: React.FC<QuizProps> = ({
                   </div>
                 )}
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Navigation */}
+{/* Navigation */}
         <div className="flex justify-between items-center">
           <div className="text-sm text-gray-500">
             {selectedAnswers.filter((a) => a !== null).length} of {questions.length} answered

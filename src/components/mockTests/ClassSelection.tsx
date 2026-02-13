@@ -14,8 +14,6 @@ import {
   Star,
   BarChart3,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 interface ClassOption {
   id: 'class-11' | 'class-12' | 'dropper'
   title: string
@@ -136,29 +134,23 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
     <div className="max-w-7xl mx-auto px-6 py-12">
       {/* Header */}
       <div className="text-center mb-16">
-        <motion.h2
-          className="text-4xl font-bold text-gray-900 mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <h2
+          className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
         >
           Choose Your Learning Path
-        </motion.h2>
-        <motion.p
-          className="text-xl text-gray-600 max-w-3xl mx-auto"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        </h2>
+        <p
+          className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp"
         >
           We customize test difficulty, question selection, and analytics based on your current
           class. This ensures optimal learning experience and better results.
-        </motion.p>
+        </p>
       </div>
 
       {/* Class Options */}
       <div className="grid lg:grid-cols-3 gap-8 mb-16">
         {classOptions.map((option, index) => (
-          <motion.div
+          <div
             key={option.id}
             className={`relative cursor-pointer transition-all duration-300 ${
               selectedClass === option.id
@@ -170,10 +162,6 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
             onMouseEnter={() => setHoveredClass(option.id)}
             onMouseLeave={() => setHoveredClass(null)}
             onClick={() => onClassSelect(option.id)}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -5 }}
           >
             {option.popular && (
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
@@ -251,16 +239,13 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
                 )}
               </Button>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
       {/* Benefits Section */}
-      <motion.div
-        className="bg-white rounded-3xl shadow-lg p-8"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
+      <div
+        className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
       >
         <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
           Why Class-Based Learning Works Better
@@ -268,30 +253,24 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <motion.div
+            <div
               key={index}
-              className="text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+              className="text-center animate-fadeInUp"
             >
               <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <benefit.icon className="w-6 h-6 text-blue-600" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">{benefit.title}</h4>
               <p className="text-gray-600 text-sm">{benefit.description}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Continue Button */}
       {selectedClass && (
-        <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+        <div
+          className="text-center mt-12 animate-fadeInUp"
         >
           <Button
             variant="primary"
@@ -307,7 +286,7 @@ export function ClassSelection({ onClassSelect, selectedClass }: ClassSelectionP
           <p className="text-gray-600 mt-4">
             You can change this selection anytime from your profile settings
           </p>
-        </motion.div>
+        </div>
       )}
     </div>
   )

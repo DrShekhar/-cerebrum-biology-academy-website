@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { CheckCircle, Target, TrendingUp, Award, BookOpen, Clock, Trophy } from 'lucide-react'
 import Link from 'next/link'
 import { useI18n } from '@/contexts/I18nContext'
@@ -84,17 +83,14 @@ export function ValuePropositionSection() {
     <section className="py-20 bg-navy-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             {t('neetSuccessFramework')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t('frameworkDescription')}</p>
-        </motion.div>
+        </div>
 
         {/* Success Framework Steps */}
         <div className="mb-20">
@@ -102,13 +98,9 @@ export function ValuePropositionSection() {
             {successFramework.map((step, index) => {
               const Icon = step.icon
               return (
-                <motion.div
+                <div
                   key={step.step}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.2 }}
-                  className="relative"
+                  className="relative animate-fadeInUp"
                 >
                   {/* Connection Line */}
                   {index < successFramework.length - 1 && (
@@ -143,18 +135,15 @@ export function ValuePropositionSection() {
                       ))}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )
             })}
           </div>
         </div>
 
         {/* Comparison Table */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-20"
+        <div
+          className="mb-20 animate-fadeInUp"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
@@ -198,14 +187,11 @@ export function ValuePropositionSection() {
               </table>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Guarantees */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mb-12"
+        <div
+          className="mb-12 animate-fadeInUp"
         >
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">{t('ourCommitment')}</h3>
@@ -216,31 +202,24 @@ export function ValuePropositionSection() {
             {guarantees.map((guarantee, index) => {
               const Icon = guarantee.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-all duration-300"
+                  className="bg-white rounded-xl p-6 shadow-lg border border-gray-100 text-center hover:shadow-xl transition-all duration-300 animate-fadeInUp"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-gray-900 mb-3">{guarantee.title}</h4>
                   <p className="text-gray-600 leading-relaxed">{guarantee.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
-        </motion.div>
+        </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center"
+        <div
+          className="text-center animate-fadeInUp"
         >
           <div className="bg-navy-900 rounded-2xl p-8 text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
@@ -254,7 +233,7 @@ export function ValuePropositionSection() {
               {t('bookFreeStrategy')}
             </Link>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

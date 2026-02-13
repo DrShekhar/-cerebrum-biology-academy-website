@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Users, Clock, BookOpen, Star, Shield, X, Check,
   GraduationCap, Building, Trophy,
@@ -125,7 +124,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Trophy className="w-4 h-4" />
               2026 Comparison Guide
@@ -162,36 +161,32 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Demo at Cerebrum
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Get Personalized Guidance
-              </motion.button>
+              </button>
             </div>
 
             <UrgencyBanner batchStartDate="Feb 10, 2026" seatsTotal={20} seatsFilled={15} showCountdown={true} />
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Comparison Table */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Compare Top NEET Coaching Institutes</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Side-by-side comparison of leading coaching centers in Gurugram. Make an informed decision for your NEET journey.
             </p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <div className="grid gap-6">
               {coachingComparison.map((institute, index) => (
-                <motion.div
+                <div
                   key={institute.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
                   className={`bg-white rounded-2xl shadow-lg overflow-hidden ${institute.highlight ? 'ring-2 ring-green-500' : ''}`}
                 >
                   {institute.highlight && (
@@ -263,7 +258,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -273,29 +268,25 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       {/* Why Cerebrum */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Students Choose Cerebrum</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Discover why thousands of Gurugram students trust Cerebrum Biology Academy for their NEET Biology preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseCerebrum.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow"
+                className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-green-600 rounded-xl flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -324,20 +315,16 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       {/* FAQs */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-lg text-gray-600">Common questions about choosing NEET coaching in Gurugram</p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-white rounded-xl shadow-md overflow-hidden"
+                className="bg-white rounded-xl shadow-md overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -351,7 +338,7 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -368,10 +355,10 @@ export default function BestNEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                 <Play className="w-5 h-5 mr-2" />Book Free Demo
               </Button>
             </Link>
-            <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-              className="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+            <button onClick={handleWhatsApp}
+              className="inline-flex items-center justify-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
               <Phone className="w-5 h-5" />WhatsApp Us
-            </motion.button>
+            </button>
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { EnhancedChatInterface } from './EnhancedChatInterface'
 import { useToast } from '../ui/Toast'
 import { SyllabusCard, StudyHoursCard, TestScoreCard, StreakCard } from './ProgressCard'
@@ -766,76 +765,55 @@ export function AIEducationDashboard() {
             )}
           </div>
         </div>
-
-        <AnimatePresence mode="wait">
-          {activeTab === 'overview' && (
-            <motion.div
+{activeTab === 'overview' && (
+            <div
               key="overview"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="space-y-8"
+              className="space-y-8 animate-fadeInUp"
             >
               {/* Visual Progress Cards */}
               {metrics.totalQuestions > 0 ||
               progressData.syllabus.completed > 0 ||
               progressData.studyHours.hours > 0 ? (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.6 }}
-                  className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8"
+                <div
+                  className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 animate-fadeInUp"
                 >
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 }}
-                  >
+                  <div
+                   className="animate-fadeInUp">
                     <SyllabusCard
                       completed={progressData.syllabus.completed}
                       total={progressData.syllabus.total}
                       change="+5%"
                       showMilestones={true}
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
-                  >
+                  <div
+                   className="animate-fadeInUp">
                     <StudyHoursCard
                       hours={progressData.studyHours.hours}
                       target={progressData.studyHours.target}
                       change="+8h"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                  >
+                  <div
+                   className="animate-fadeInUp">
                     <TestScoreCard
                       score={progressData.testScore.score}
                       maxScore={progressData.testScore.maxScore}
                       change="+2.5%"
                     />
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 }}
-                  >
+                  <div
+                   className="animate-fadeInUp">
                     <StreakCard
                       days={progressData.streak.days}
                       bestStreak={progressData.streak.bestStreak}
                       change="+3 days"
                     />
-                  </motion.div>
-                </motion.div>
+                  </div>
+                </div>
               ) : (
                 <div className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl">
                   <EmptyState
@@ -915,12 +893,9 @@ export function AIEducationDashboard() {
                             : 'bg-gradient-to-r from-green-400 to-green-600'
 
                       return (
-                        <motion.div
+                        <div
                           key={prediction.label}
-                          initial={{ opacity: 0, scale: 0.9 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: 0.2 + index * 0.1 }}
-                          className="backdrop-blur-lg bg-white/20 rounded-xl p-4 sm:p-6 border border-white/30 shadow-lg"
+                          className="backdrop-blur-lg bg-white/20 rounded-xl p-4 sm:p-6 border border-white/30 shadow-lg animate-fadeInUp"
                         >
                           <div className="flex items-center justify-between mb-3 sm:mb-4">
                             <prediction.icon
@@ -950,53 +925,45 @@ export function AIEducationDashboard() {
                               ></div>
                             </div>
                           )}
-                        </motion.div>
+                        </div>
                       )
                     })}
                   </div>
 
                   {/* Quick Actions - Marketing CTAs */}
                   <div className="mt-6 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
-                    <motion.button
+                    <button
                       onClick={() => setActiveTab('tutor')}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
                       aria-label="Try AI Tutor"
                     >
                       <MessageCircle className="w-4 h-4" />
                       <span>Try AI Tutor</span>
-                    </motion.button>
-                    <motion.a
+                    </button>
+                    <a
                       href="/demo-booking"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-[#4a5d4a] text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
                       aria-label="Book Free Demo"
                     >
                       <Calendar className="w-4 h-4" />
                       <span>Book Free Demo</span>
-                    </motion.a>
-                    <motion.a
+                    </a>
+                    <a
                       href="/courses"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
                       aria-label="View Courses"
                     >
                       <BookOpen className="w-4 h-4" />
                       <span>View Courses</span>
-                    </motion.a>
-                    <motion.a
+                    </a>
+                    <a
                       href="/sign-up"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
-                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px]"
+                      className="flex items-center space-x-2 px-3 py-2 sm:px-4 sm:py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:shadow-lg transition-all duration-200 text-sm font-medium min-h-[44px] animate-fadeInUp"
                       aria-label="Enroll Now"
                     >
                       <GraduationCap className="w-4 h-4" />
                       <span>Enroll Now</span>
-                    </motion.a>
+                    </a>
                   </div>
                 </div>
 
@@ -1020,12 +987,9 @@ export function AIEducationDashboard() {
                   {recentActivities.length > 0 ? (
                     <div className="space-y-3 sm:space-y-4">
                       {recentActivities.map((activity, index) => (
-                        <motion.div
+                        <div
                           key={activity.id}
-                          initial={{ opacity: 0, x: 20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: 0.3 + index * 0.1 }}
-                          className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-lg bg-white/20 rounded-lg border border-white/30 hover:shadow-lg transition-shadow"
+                          className="flex items-start space-x-3 sm:space-x-4 p-3 sm:p-4 backdrop-blur-lg bg-white/20 rounded-lg border border-white/30 hover:shadow-lg transition-shadow animate-fadeInUp"
                         >
                           <div
                             className={`w-8 h-8 rounded-lg flex items-center justify-center ${
@@ -1057,7 +1021,7 @@ export function AIEducationDashboard() {
                           {activity.success && (
                             <CheckCircle className="w-4 h-4 text-green-600 mt-1" />
                           )}
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
                   ) : (
@@ -1118,12 +1082,9 @@ export function AIEducationDashboard() {
                     { subject: 'Ecology', progress: 90, colorClass: 'text-green-600' },
                     { subject: 'Physiology', progress: 68, colorClass: 'text-orange-500' },
                   ].map((subject, index) => (
-                    <motion.div
+                    <div
                       key={subject.subject}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 + index * 0.1 }}
-                      className="text-center"
+                      className="text-center animate-fadeInUp"
                     >
                       <div className="relative w-20 h-20 mx-auto mb-3">
                         <svg className="w-20 h-20 transform -rotate-90" viewBox="0 0 100 100">
@@ -1156,21 +1117,17 @@ export function AIEducationDashboard() {
                         </div>
                       </div>
                       <p className="text-sm font-medium text-gray-700">{subject.subject}</p>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'tutor' && (
-            <motion.div
+            <div
               key="tutor"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl"
+              className="backdrop-blur-xl bg-white/10 rounded-2xl p-8 border border-white/20 shadow-xl animate-fadeInUp"
               style={{ pointerEvents: 'all' }}
             >
               <EnhancedChatInterface
@@ -1180,11 +1137,9 @@ export function AIEducationDashboard() {
                 onSendMessage={handleStartConversation}
                 isLoading={isChatLoading}
               />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Activity History Modal */}
+{/* Activity History Modal */}
         <ActivityHistoryModal
           isOpen={showActivityHistory}
           onClose={() => setShowActivityHistory(false)}

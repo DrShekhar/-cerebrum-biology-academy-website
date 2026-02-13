@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { Play, Star } from 'lucide-react'
 
 export interface GalleryItemData {
@@ -47,14 +46,8 @@ export function GalleryCard({ item, onClick, priority = false }: GalleryCardProp
   }
 
   return (
-    <motion.div
-      layout
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
-      whileHover={{ y: -4 }}
-      transition={{ duration: 0.3 }}
-      className="group relative cursor-pointer overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-xl"
+    <div
+      className="group relative cursor-pointer overflow-hidden rounded-xl bg-white shadow-md transition-shadow hover:shadow-xl animate-fadeInUp"
       onClick={onClick}
     >
       {/* Image Container */}
@@ -137,6 +130,6 @@ export function GalleryCard({ item, onClick, priority = false }: GalleryCardProp
           </p>
         )}
       </div>
-    </motion.div>
+    </div>
   )
 }

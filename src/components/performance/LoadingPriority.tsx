@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useEffect, useRef, useState, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 // Loading Priority Configuration
 export const LoadingPriority = {
   immediate: ['hero-section', 'primary-cta', 'navigation', 'scroll-progress', 'mobile-bottom-nav'],
@@ -196,28 +194,20 @@ export function LazySection({
       className={`lazy-section ${className}`}
       style={{ minHeight: isLoaded ? 'auto' : '200px' }}
     >
-      <AnimatePresence mode="wait">
-        {!isLoaded ? (
-          <motion.div
+{!isLoaded ? (
+          <div
             key="placeholder"
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
+           className="animate-fadeInUp">
             {placeholder || <SectionPlaceholder />}
-          </motion.div>
+          </div>
         ) : (
-          <motion.div
+          <div
             key="content"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-          >
+           className="animate-fadeInUp">
             {children}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -294,10 +284,8 @@ export function PerformanceMonitor() {
   if (process.env.NODE_ENV !== 'development' || !isVisible) return null
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className="fixed bottom-4 left-4 bg-black/80 text-white text-xs p-3 rounded-lg font-mono z-50"
+    <div
+      className="fixed bottom-4 left-4 bg-black/80 text-white text-xs p-3 rounded-lg font-mono z-50 animate-fadeInUp"
     >
       <div className="font-semibold mb-2">🚀 Performance Metrics</div>
       <div className="space-y-1">
@@ -307,7 +295,7 @@ export function PerformanceMonitor() {
         {metrics.cls && <div>CLS: {metrics.cls.toFixed(3)}</div>}
         {metrics.ttfb && <div>TTFB: {Math.round(metrics.ttfb)}ms</div>}
       </div>
-    </motion.div>
+    </div>
   )
 }
 

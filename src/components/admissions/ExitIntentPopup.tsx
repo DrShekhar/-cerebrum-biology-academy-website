@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, Gift, Clock, CheckCircle, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { trackExitIntent } from '@/lib/analytics'
@@ -109,29 +108,19 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
   if (!isVisible) return null
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+{isVisible && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fadeInUp"
         >
           {/* Backdrop */}
-          <motion.div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fadeInUp"
             onClick={handleClose}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
           />
 
           {/* Popup Content */}
-          <motion.div
-            className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden"
-            initial={{ scale: 0.9, y: 20 }}
-            animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.9, y: 20 }}
+          <div
+            className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden animate-fadeInUp"
           >
             {/* Close Button - prominent and easy to tap */}
             <button
@@ -233,9 +222,8 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
                 </div>
               </>
             )}
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }

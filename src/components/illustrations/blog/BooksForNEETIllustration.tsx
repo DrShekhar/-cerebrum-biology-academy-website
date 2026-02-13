@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function BooksForNEETIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -66,9 +65,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Title Section */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="200"
@@ -89,9 +85,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Left Section - Book Stack Visualization */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' as const }}
       >
         {/* Bookshelf background */}
         <rect
@@ -110,8 +103,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
         {/* NCERT Books - Essential */}
         <motion.g
-          animate={animate ? { y: [0, -3, 0] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         >
           {/* Book 1 - NCERT Class 11 */}
           <rect x="40" y="125" width="180" height="35" rx="4" fill="#14B8A6" />
@@ -144,8 +135,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
         {/* Reference Books */}
         <motion.g
-          animate={animate ? { y: [0, -2, 0] } : undefined}
-          transition={{ duration: 2.5, repeat: Infinity, delay: 0.3 }}
         >
           {/* MTG Fingertips */}
           <rect x="50" y="210" width="170" height="30" rx="4" fill="#2DD4BF" />
@@ -186,9 +175,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Center Section - Book Rating Chart */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="250"
@@ -208,9 +194,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         {biologyBooks.map((book, index) => (
           <motion.g
             key={book.name}
-            initial={animate ? { opacity: 0, x: -20 } : undefined}
-            animate={animate ? { opacity: 1, x: 0 } : undefined}
-            transition={{ delay: 0.5 + index * 0.1, duration: 0.5, ease: 'easeOut' as const }}
           >
             <text x="260" y={123 + index * 40} fontSize="8" fill="#374151" fontWeight="bold">
               {book.name}
@@ -225,9 +208,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
               height="12"
               rx="6"
               fill={book.color}
-              initial={animate ? { width: 0 } : undefined}
-              animate={animate ? { width: 120 * (book.rating / 5) } : undefined}
-              transition={{ delay: 0.6 + index * 0.1, duration: 0.8, ease: 'easeOut' as const }}
             />
             {/* Stars */}
             <text x="390" y={137 + index * 40} fontSize="8" fill="#F59E0B">
@@ -267,9 +247,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Right Section - Reading Strategy */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="460"
@@ -289,9 +266,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         {readingPhases.map((phase, index) => (
           <motion.g
             key={phase.phase}
-            initial={animate ? { opacity: 0, y: 10 } : undefined}
-            animate={animate ? { opacity: 1, y: 0 } : undefined}
-            transition={{ delay: 0.6 + index * 0.15, duration: 0.5, ease: 'easeOut' as const }}
           >
             {/* Phase card */}
             <rect
@@ -343,9 +317,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
                       ? '#5EEAD4'
                       : '#99F6E4'
               }
-              initial={animate ? { width: 0 } : undefined}
-              animate={animate ? { width: 80 * (phase.progress / 100) } : undefined}
-              transition={{ delay: 0.8 + index * 0.15, duration: 0.6, ease: 'easeOut' as const }}
             />
             <text x="600" y={161 + index * 55} fontSize="6" fill="#6B7280">
               {phase.progress}%
@@ -356,9 +327,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Bottom Section - Key Statistics */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.7, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="20"
@@ -474,8 +442,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Animated book floating */}
       <motion.g
-        animate={animate ? { y: [-5, 5, -5], rotate: [-2, 2, -2] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
       >
         <rect x="255" y="285" width="40" height="55" rx="4" fill="#14B8A6" />
         <rect x="255" y="285" width="8" height="55" fill="#0D9488" />
@@ -492,8 +458,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Must Read Badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect x="310" y="280" width="80" height="25" rx="12" fill="#DC2626" />
         <text x="350" y="297" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -503,9 +467,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Pro Tips Section */}
       <motion.g
-        initial={animate ? { opacity: 0 } : undefined}
-        animate={animate ? { opacity: 1 } : undefined}
-        transition={{ delay: 0.9, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="405"
@@ -536,8 +497,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
       {/* Success Formula */}
       <motion.g
-        animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       >
         <rect
           x="560"
@@ -570,8 +529,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         r="8"
         fill="#14B8A6"
         opacity="0.3"
-        animate={animate ? { y: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.circle
         cx="685"
@@ -579,8 +536,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         r="6"
         fill="#2DD4BF"
         opacity="0.3"
-        animate={animate ? { y: [5, -5, 5] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       />
       <motion.rect
         x="660"
@@ -590,8 +545,6 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         rx="2"
         fill="#5EEAD4"
         opacity="0.4"
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
       />
     </Wrapper>
   )

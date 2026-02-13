@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Star, Award, Users, CheckCircle } from 'lucide-react'
 import { getCoursePricing, formatPrice, formatCurrency } from '@/lib/utils/pricing'
 import { courseTiers } from '@/data/courseSystemData'
@@ -29,9 +28,7 @@ function TierCard({ tier, pricing, isPopular, onEnrollClick }: TierCardProps) {
   if (!tierInfo || !tierPricing) return null
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`relative bg-white rounded-2xl shadow-lg border-2 p-6 ${
         isPopular ? 'border-primary-500 ring-2 ring-primary-200' : 'border-gray-200'
       }`}
@@ -96,7 +93,7 @@ function TierCard({ tier, pricing, isPopular, onEnrollClick }: TierCardProps) {
           ✨ Best value for money
         </div>
       )}
-    </motion.div>
+    </div>
   )
 }
 

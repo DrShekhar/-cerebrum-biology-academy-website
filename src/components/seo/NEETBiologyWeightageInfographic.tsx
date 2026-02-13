@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { TrendingUp, BookOpen, Star, Target } from 'lucide-react'
 
 interface ChapterWeightage {
@@ -64,11 +63,8 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
   return (
     <section className={`py-12 md:py-16 ${className}`}>
       <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-10"
+        <div
+          className="text-center mb-10 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <TrendingUp className="w-4 h-4" />
@@ -80,15 +76,12 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
           <p className="text-gray-600 max-w-2xl mx-auto">
             Focus on high-weightage chapters for maximum marks. Based on analysis of last 10 years NEET papers.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8 mb-10">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+            <div
+              className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp"
             >
               <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white py-4 px-6">
                 <div className="flex items-center gap-3">
@@ -123,13 +116,10 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden"
+            <div
+              className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden animate-fadeInUp"
             >
               <div className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white py-4 px-6">
                 <div className="flex items-center gap-3">
@@ -164,14 +154,11 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 md:p-8 border border-amber-200"
+          <div
+            className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-6 md:p-8 border border-amber-200 animate-fadeInUp"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white">
@@ -185,17 +172,13 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {highYieldFacts.map((fact, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm"
+                  className="flex items-start gap-3 bg-white rounded-lg p-4 shadow-sm animate-fadeInUp"
                 >
                   <Target className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
                   <span className="text-sm text-gray-700">{fact}</span>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -213,7 +196,7 @@ export function NEETBiologyWeightageInfographic({ className = '' }: NEETBiologyW
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-500">

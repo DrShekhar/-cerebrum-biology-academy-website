@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
@@ -257,34 +256,26 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-bold text-gray-900 mb-4"
+            <h1
+              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
             >
               Explore Our NEET Biology Courses
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+            </h1>
+            <p
+              className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeInUp"
             >
               Take your time to explore our comprehensive programs. Each course is designed for
               specific student needs and goals.
-            </motion.p>
+            </p>
           </div>
 
           {/* Course Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
             {courses.map((course, index) => (
-              <motion.div
+              <div
                 key={course.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 onClick={() => handleCourseToggle(course.id)}
-                className="cursor-pointer"
+                className="cursor-pointer animate-fadeInUp"
               >
                 <PremiumCard
                   variant="luxury"
@@ -384,7 +375,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                     </div>
                   </div>
                 </PremiumCard>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -439,21 +430,16 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-bold text-gray-900 mb-4"
+            <h1
+              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
             >
               Course Comparison
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-xl text-gray-600"
+            </h1>
+            <p
+              className="text-xl text-gray-600 animate-fadeInUp"
             >
               Compare features, pricing, and outcomes side by side
-            </motion.p>
+            </p>
           </div>
 
           {/* Comparison Table */}
@@ -590,32 +576,24 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-bold text-gray-900 mb-4"
+            <h1
+              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
             >
               Real Success Stories
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-xl text-gray-600"
+            </h1>
+            <p
+              className="text-xl text-gray-600 animate-fadeInUp"
             >
               See how our students transformed their dreams into reality
-            </motion.p>
+            </p>
           </div>
 
           {/* Success Stories */}
           <div className="space-y-8 mb-12">
             {successStories.map((story, index) => (
-              <motion.div
+              <div
                 key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2 }}
-              >
+               className="animate-fadeInUp">
                 <PremiumCard variant="luxury" className="overflow-hidden">
                   <div className="p-8">
                     <div className="grid lg:grid-cols-3 gap-8">
@@ -705,7 +683,7 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
                     </div>
                   </div>
                 </PremiumCard>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -752,21 +730,16 @@ export function ExploratoryFlow({ onCounselingBook, className = '' }: Explorator
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-4xl font-bold text-gray-900 mb-4"
+            <h1
+              className="text-4xl font-bold text-gray-900 mb-4 animate-fadeInUp"
             >
               Ready to Start Your Journey?
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="text-xl text-gray-600"
+            </h1>
+            <p
+              className="text-xl text-gray-600 animate-fadeInUp"
             >
               Book a free counseling session to discuss your personalized NEET preparation plan
-            </motion.p>
+            </p>
           </div>
 
           {/* Counseling Options */}

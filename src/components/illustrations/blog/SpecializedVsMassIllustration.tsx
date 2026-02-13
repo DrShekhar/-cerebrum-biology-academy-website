@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function SpecializedVsMassIllustration({
@@ -84,9 +83,6 @@ export function SpecializedVsMassIllustration({
 
       {/* Title Section */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="150"
@@ -107,9 +103,6 @@ export function SpecializedVsMassIllustration({
 
       {/* Left Section - Specialized Coaching */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="20"
@@ -129,15 +122,11 @@ export function SpecializedVsMassIllustration({
 
         {/* DNA/Biology Icon */}
         <motion.g
-          animate={animate ? { rotate: [0, 360] } : undefined}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
           style={{ transformOrigin: '130px 145px' }}
         >
           <circle cx="130" cy="145" r="30" fill="#86EFAC" opacity="0.5" />
         </motion.g>
         <motion.g
-          animate={animate ? { y: [0, -3, 0] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           {/* DNA Helix */}
           <path
@@ -156,9 +145,6 @@ export function SpecializedVsMassIllustration({
         {specializedFeatures.map((feature, index) => (
           <motion.g
             key={feature.text}
-            initial={animate ? { opacity: 0, x: -20 } : undefined}
-            animate={animate ? { opacity: 1, x: 0 } : undefined}
-            transition={{ delay: 0.5 + index * 0.1, duration: 0.4, ease: 'easeOut' as const }}
           >
             <rect
               x="35"
@@ -181,8 +167,6 @@ export function SpecializedVsMassIllustration({
 
         {/* Success badge */}
         <motion.g
-          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           <rect x="55" y="335" width="150" height="22" rx="11" fill="#22C55E" />
           <text x="130" y="350" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -193,9 +177,6 @@ export function SpecializedVsMassIllustration({
 
       {/* Center Section - Comparison Metrics */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="250"
@@ -215,9 +196,6 @@ export function SpecializedVsMassIllustration({
         {comparisonMetrics.map((item, index) => (
           <motion.g
             key={item.metric}
-            initial={animate ? { opacity: 0, y: 10 } : undefined}
-            animate={animate ? { opacity: 1, y: 0 } : undefined}
-            transition={{ delay: 0.5 + index * 0.12, duration: 0.4, ease: 'easeOut' as const }}
           >
             {/* Row background */}
             <rect
@@ -275,8 +253,6 @@ export function SpecializedVsMassIllustration({
               y={151 + index * 60}
               fontSize="10"
               fill="#22C55E"
-              animate={animate ? { scale: [1, 1.3, 1] } : undefined}
-              transition={{ duration: 1.5, repeat: Infinity, delay: index * 0.2 }}
             >
               ✓
             </motion.text>
@@ -286,9 +262,6 @@ export function SpecializedVsMassIllustration({
 
       {/* Right Section - Mass Coaching */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="460"
@@ -308,8 +281,6 @@ export function SpecializedVsMassIllustration({
 
         {/* Factory Building Icon */}
         <motion.g
-          animate={animate ? { y: [0, -2, 0] } : undefined}
-          transition={{ duration: 2.5, repeat: Infinity }}
         >
           {/* Factory building */}
           <rect x="530" y="125" width="80" height="50" rx="4" fill="#FECACA" />
@@ -326,8 +297,6 @@ export function SpecializedVsMassIllustration({
             r="5"
             fill="#9CA3AF"
             opacity="0.6"
-            animate={animate ? { y: [-5, -15], opacity: [0.6, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <motion.circle
             cx="589"
@@ -335,8 +304,6 @@ export function SpecializedVsMassIllustration({
             r="5"
             fill="#9CA3AF"
             opacity="0.6"
-            animate={animate ? { y: [-5, -15], opacity: [0.6, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           />
         </motion.g>
 
@@ -344,9 +311,6 @@ export function SpecializedVsMassIllustration({
         {massDrawbacks.map((drawback, index) => (
           <motion.g
             key={drawback.text}
-            initial={animate ? { opacity: 0, x: 20 } : undefined}
-            animate={animate ? { opacity: 1, x: 0 } : undefined}
-            transition={{ delay: 0.6 + index * 0.1, duration: 0.4, ease: 'easeOut' as const }}
           >
             <rect
               x="475"
@@ -376,8 +340,6 @@ export function SpecializedVsMassIllustration({
 
       {/* VS Badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.15, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="350" cy="380" r="28" fill="#1F2937" />
         <text x="350" y="386" fontSize="16" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -387,9 +349,6 @@ export function SpecializedVsMassIllustration({
 
       {/* Bottom Section - Final Verdict */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.8, duration: 0.6, ease: 'easeOut' as const }}
       >
         <rect
           x="20"
@@ -473,8 +432,6 @@ export function SpecializedVsMassIllustration({
         r="8"
         fill="#22C55E"
         opacity="0.3"
-        animate={animate ? { y: [-5, 5, -5] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.circle
         cx="685"
@@ -482,8 +439,6 @@ export function SpecializedVsMassIllustration({
         r="6"
         fill="#EF4444"
         opacity="0.3"
-        animate={animate ? { y: [5, -5, 5] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       />
       <motion.rect
         x="660"
@@ -493,8 +448,6 @@ export function SpecializedVsMassIllustration({
         rx="2"
         fill="#1F2937"
         opacity="0.2"
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
       />
     </Wrapper>
   )

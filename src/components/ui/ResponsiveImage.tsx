@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 // Responsive image configuration
 interface ImageSource {
   media?: string
@@ -123,13 +121,9 @@ export function ResponsiveImage({
       style={{ aspectRatio: `${width}/${height}` }}
     >
       {/* Placeholder */}
-      <AnimatePresence>
-        {!isLoaded && !hasError && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0"
+{!isLoaded && !hasError && (
+          <div
+            className="absolute inset-0 animate-fadeInUp"
           >
             {placeholder === 'skeleton' && (
               <div className="w-full h-full bg-gradient-to-r from-slate-200 via-slate-100 to-slate-200 bg-[length:200%_100%] animate-pulse" />
@@ -141,11 +135,9 @@ export function ResponsiveImage({
                 className="w-full h-full object-cover filter blur-sm scale-110"
               />
             )}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Error State */}
+{/* Error State */}
       {hasError && (
         <div className="absolute inset-0 bg-slate-100 flex items-center justify-center">
           <div className="text-center text-slate-500">
@@ -172,7 +164,7 @@ export function ResponsiveImage({
           ))}
 
           {/* Fallback Image */}
-          <motion.img
+          <img
             ref={imgRef}
             src={src}
             alt={alt}
@@ -186,9 +178,6 @@ export function ResponsiveImage({
             onError={handleError}
             loading={priority ? 'eager' : 'lazy'}
             decoding="async"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: isLoaded ? 1 : 0 }}
-            transition={{ duration: 0.3 }}
           />
         </picture>
       )}

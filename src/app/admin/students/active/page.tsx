@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   Users,
   Search,
@@ -209,12 +208,9 @@ export default function ActiveStudentsPage() {
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {statsData.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200"
+              className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -228,7 +224,7 @@ export default function ActiveStudentsPage() {
                   <stat.icon className="h-6 w-6" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -264,12 +260,9 @@ export default function ActiveStudentsPage() {
         {/* Students Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
           {filteredStudents.map((student, index) => (
-            <motion.div
+            <div
               key={student.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow"
+              className="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow animate-fadeInUp"
             >
               {/* Student Header */}
               <div className="flex items-center justify-between mb-4">
@@ -370,7 +363,7 @@ export default function ActiveStudentsPage() {
                   </Button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

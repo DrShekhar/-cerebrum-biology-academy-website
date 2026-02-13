@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
-
 const shimmerAnimation = {
   backgroundPosition: ['200% 0', '-200% 0'],
   transition: {
@@ -21,47 +19,42 @@ export function ActivityItemSkeleton() {
       role="status"
       aria-label="Loading activity item"
     >
-      <motion.div
-        className="w-8 h-8 rounded-lg flex-shrink-0"
+      <div
+        className="w-8 h-8 rounded-lg flex-shrink-0 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
       <div className="flex-1 min-w-0 space-y-2">
-        <motion.div
-          className="h-4 rounded w-3/4"
+        <div
+          className="h-4 rounded w-3/4 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
-        <motion.div
-          className="h-3 rounded w-full"
+        <div
+          className="h-3 rounded w-full animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
-        <motion.div
-          className="h-3 rounded w-20"
+        <div
+          className="h-3 rounded w-20 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
-      <motion.div
-        className="w-4 h-4 rounded-full flex-shrink-0 mt-1"
+      <div
+        className="w-4 h-4 rounded-full flex-shrink-0 mt-1 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
       <span className="sr-only">Loading...</span>
     </div>
@@ -76,21 +69,19 @@ export function ActivityFeedSkeleton() {
       aria-label="Loading activity feed"
     >
       <div className="flex items-center justify-between mb-6 sm:mb-8">
-        <motion.div
-          className="h-6 sm:h-7 rounded w-40 sm:w-48"
+        <div
+          className="h-6 sm:h-7 rounded w-40 sm:w-48 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
-        <motion.div
-          className="h-5 rounded w-16"
+        <div
+          className="h-5 rounded w-16 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
 
@@ -112,63 +103,57 @@ export function LiveActivitySkeleton() {
       aria-label="Loading live activity"
     >
       <div className="flex items-center mb-4">
-        <motion.div
-          className="h-5 rounded w-32 mr-2"
+        <div
+          className="h-5 rounded w-32 mr-2 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
       <div className="space-y-3 max-h-96 overflow-y-auto">
         {[1, 2, 3, 4, 5].map((i) => (
-          <motion.div key={i} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
-            <motion.div
-              className="w-4 h-4 rounded flex-shrink-0 mt-0.5"
+          <div key={i} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg animate-fadeInUp">
+            <div
+              className="w-4 h-4 rounded flex-shrink-0 mt-0.5 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
             <div className="flex-1 min-w-0 space-y-2">
               <div className="flex items-center justify-between">
-                <motion.div
-                  className="h-4 rounded w-24"
+                <div
+                  className="h-4 rounded w-24 animate-fadeInUp"
                   style={{
                     background: shimmerGradient,
                     backgroundSize: '200% 100%',
                   }}
-                  animate={shimmerAnimation}
                 />
-                <motion.div
-                  className="h-3 rounded w-16"
+                <div
+                  className="h-3 rounded w-16 animate-fadeInUp"
                   style={{
                     background: shimmerGradient,
                     backgroundSize: '200% 100%',
                   }}
-                  animate={shimmerAnimation}
                 />
               </div>
-              <motion.div
-                className="h-3 rounded w-full"
+              <div
+                className="h-3 rounded w-full animate-fadeInUp"
                 style={{
                   background: shimmerGradient,
                   backgroundSize: '200% 100%',
                 }}
-                animate={shimmerAnimation}
               />
-              <motion.div
-                className="h-3 rounded w-3/4"
+              <div
+                className="h-3 rounded w-3/4 animate-fadeInUp"
                 style={{
                   background: shimmerGradient,
                   backgroundSize: '200% 100%',
                 }}
-                animate={shimmerAnimation}
               />
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
       <span className="sr-only">Loading live activity...</span>

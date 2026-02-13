@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Menu,
   X,
@@ -275,9 +274,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
   return (
     <>
       {/* Main Navigation */}
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+      <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
             ? 'bg-white/95 backdrop-blur-xl shadow-lg border-b border-gray-200'
@@ -287,7 +284,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
-            <motion.div whileHover={{ scale: 1.05 }} className="flex items-center gap-3">
+            <div className="flex items-center gap-3 animate-fadeInUp">
               <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center">
                 <Brain className="h-6 w-6 text-white" />
               </div>
@@ -295,7 +292,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 <div className="text-xl font-bold text-navy-900">Cerebrum Academy</div>
                 <div className="text-xs text-gray-500 font-medium">Biology Excellence</div>
               </div>
-            </motion.div>
+            </div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-4 lg:space-x-8">
@@ -314,25 +311,17 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 </button>
 
                 {/* Mega Dropdown */}
-                <AnimatePresence>
-                  {isProgramsDropdownOpen && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                      transition={{ duration: 0.2, ease: 'easeOut' }}
-                      className="absolute top-full left-0 mt-2 w-screen max-w-4xl bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden"
+{isProgramsDropdownOpen && (
+                    <div
+                      className="absolute top-full left-0 mt-2 w-screen max-w-4xl bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fadeInUp"
                       style={{ transform: 'translateX(-40%)' }}
                     >
                       <div className="p-8">
                         <div className="grid grid-cols-4 gap-8">
                           {MEGA_MENU_DATA.map((section, index) => (
-                            <motion.div
+                            <div
                               key={section.title}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                              className="space-y-4"
+                              className="space-y-4 animate-fadeInUp"
                             >
                               <div className="flex items-center gap-2 pb-3 border-b border-gray-100">
                                 <div className={section.color}>{section.icon}</div>
@@ -341,11 +330,10 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
 
                               <div className="space-y-3">
                                 {section.items.map((item) => (
-                                  <motion.a
+                                  <a
                                     key={item.label}
                                     href={item.href}
-                                    whileHover={{ x: 4 }}
-                                    className="block group"
+                                    className="block group animate-fadeInUp"
                                   >
                                     <div className="text-sm font-medium text-gray-700 group-hover:text-blue-600 transition-colors duration-200">
                                       {item.label}
@@ -355,10 +343,10 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                                         {item.description}
                                       </div>
                                     )}
-                                  </motion.a>
+                                  </a>
                                 ))}
                               </div>
-                            </motion.div>
+                            </div>
                           ))}
                         </div>
 
@@ -373,22 +361,19 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                                 Take our course finder quiz
                               </div>
                             </div>
-                            <motion.a
+                            <a
                               href="/courses/finder"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-green-700 hover:shadow-lg transition-all duration-200"
+                              className="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium flex items-center gap-2 hover:bg-green-700 hover:shadow-lg transition-all duration-200 animate-fadeInUp"
                             >
                               Find Course
                               <ArrowRight className="h-4 w-4" />
-                            </motion.a>
+                            </a>
                           </div>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </div>
+</div>
 
               {/* Other Navigation Items */}
               <a
@@ -446,24 +431,17 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                 </div>
 
                 {/* Search Results */}
-                <AnimatePresence>
-                  {isSearchOpen && (searchResults.length > 0 || searchQuery.length > 1) && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: 10 }}
-                      className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50"
+{isSearchOpen && (searchResults.length > 0 || searchQuery.length > 1) && (
+                    <div
+                      className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden z-50 animate-fadeInUp"
                     >
                       {searchResults.length > 0 ? (
                         <div className="max-h-80 overflow-y-auto">
                           {searchResults.map((result, index) => (
-                            <motion.a
+                            <a
                               key={index}
                               href={result.href}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: index * 0.05 }}
-                              className="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-50 last:border-0"
+                              className="flex items-start gap-3 p-4 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-50 last:border-0 animate-fadeInUp"
                               onClick={() => {
                                 setIsSearchOpen(false)
                                 setSearchQuery('')
@@ -482,7 +460,7 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                                   {result.type}
                                 </div>
                               </div>
-                            </motion.a>
+                            </a>
                           ))}
                         </div>
                       ) : (
@@ -490,15 +468,14 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                           No results found for "{searchQuery}"
                         </div>
                       )}
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </div>
+</div>
 
               {/* Action Buttons */}
               <div className="flex items-center gap-2">
                 {/* WhatsApp */}
-                <motion.button
+                <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({
                       source: 'sticky-header-desktop',
@@ -506,35 +483,29 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                       campaign: 'header-cta',
                     })
                   }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer"
+                  className="hidden sm:flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 cursor-pointer animate-fadeInUp"
                 >
                   <MessageCircle className="h-4 w-4" />
                   WhatsApp
-                </motion.button>
+                </button>
 
                 {/* Call */}
-                <motion.a
+                <a
                   href={getPhoneLink()}
                   onClick={() => handlePhoneClickTracking('sticky-header-desktop-call', 'primary', 100)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="hidden sm:flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="hidden sm:flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 animate-fadeInUp"
                 >
                   <Phone className="h-4 w-4" />
                   Call
-                </motion.a>
+                </a>
 
                 {/* Book Demo */}
-                <motion.a
+                <a
                   href="/demo-booking"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl animate-fadeInUp"
                 >
                   Book Demo
-                </motion.a>
+                </a>
 
                 {/* Mobile Menu Button */}
                 <button
@@ -547,28 +518,20 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
             </div>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       {/* Mobile Menu Slide-out */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
+{isMobileMenuOpen && (
           <>
             {/* Backdrop */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-40 md:hidden"
+            <div
+              className="fixed inset-0 bg-black/50 z-40 md:hidden animate-fadeInUp"
               onClick={() => setIsMobileMenuOpen(false)}
             />
 
             {/* Mobile Menu Drawer */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 md:hidden overflow-y-auto"
+            <div
+              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 md:hidden overflow-y-auto animate-fadeInUp"
             >
               <div className="p-6">
                 {/* Mobile Header */}
@@ -712,12 +675,10 @@ export function StickyNavigationHeader({ className = '' }: StickyNavigationHeade
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </>
         )}
-      </AnimatePresence>
-
-      {/* Spacer for fixed header */}
+{/* Spacer for fixed header */}
       <div className="h-16 lg:h-20" />
     </>
   )

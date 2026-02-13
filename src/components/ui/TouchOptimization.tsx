@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef, ReactNode } from 'react'
-import { motion, PanInfo } from 'framer-motion'
 import {
   PullToRefreshHandler,
   QuickActions,
@@ -84,21 +83,17 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
 
   return (
     <div className="course-carousel-container relative overflow-hidden">
-      <motion.div
-        className="course-carousel swipeable"
+      <div
+        className="course-carousel swipeable animate-fadeInUp"
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         onPanStart={handlePanStart}
         onPanEnd={handlePanEnd}
-        animate={{ x: -currentIndex * 320 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 30 }}
       >
         {courses.map((course, index) => (
-          <motion.div
+          <div
             key={course.id}
             className={`course-snap-item ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
           >
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-slate-200">
               <div className="h-40 bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center">
@@ -131,9 +126,9 @@ export function SwipeableCourseCarousel({ courses, onCourseSelect }: CourseCarou
                 </TouchTarget>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
 
       {/* Navigation Dots */}
       <div className="flex justify-center space-x-2 mt-4">
@@ -430,7 +425,7 @@ export function PullToRefresh({
       }
 
   return (
-    <motion.div ref={containerRef} className="pull-to-refresh" {...motionProps}>
+    <div ref={containerRef} className="pull-to-refresh animate-fadeInUp" {...motionProps}>
       <div
         className={`pull-refresh-indicator ${
           useNative || (isPulling && pullDistance > 60) ? 'active' : ''
@@ -446,14 +441,12 @@ export function PullToRefresh({
       {useNative ? (
         children
       ) : (
-        <motion.div
-          animate={{ y: isPulling ? pullDistance * 0.5 : 0 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-        >
+        <div
+         className="animate-fadeInUp">
           {children}
-        </motion.div>
+        </div>
       )}
-    </motion.div>
+    </div>
   )
 }
 

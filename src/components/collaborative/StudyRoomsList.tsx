@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Users, BookOpen, Brain, Target, ChevronRight, Plus, Filter } from 'lucide-react'
 import { useStudyRooms, StudyRoom } from '@/hooks/useStudyRooms'
 
@@ -126,11 +125,8 @@ export function StudyRoomsList({
             const isFull = isRoomFull(room)
 
             return (
-              <motion.div
+              <div
                 key={room.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
                 className={`px-6 py-4 hover:bg-gray-50 transition-colors ${
                   isFull ? 'opacity-60' : ''
                 }`}
@@ -199,7 +195,7 @@ export function StudyRoomsList({
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })
         )}

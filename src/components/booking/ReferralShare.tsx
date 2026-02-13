@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Gift, Copy, Share2, MessageCircle, CheckCircle, Loader2 } from 'lucide-react'
 
 interface ReferralShareProps {
@@ -93,10 +92,8 @@ Perfect for NEET Biology preparation! 📚`
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-gradient-to-r from-purple-50 via-pink-50 to-purple-50 rounded-xl p-6 border-2 border-purple-200"
+    <div
+      className="bg-gradient-to-r from-purple-50 via-pink-50 to-purple-50 rounded-xl p-6 border-2 border-purple-200 animate-fadeInUp"
     >
       <div className="flex items-center gap-2 mb-3">
         <Gift className="w-6 h-6 text-purple-600" />
@@ -173,6 +170,6 @@ Perfect for NEET Biology preparation! 📚`
       <p className="text-xs text-gray-500 mt-4 text-center">
         * Discount applicable on course enrollment. Valid for up to 10 uses.
       </p>
-    </motion.div>
+    </div>
   )
 }

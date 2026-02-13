@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ArrowRight, TrendingUp, Clock, Target, Quote, GraduationCap } from 'lucide-react'
 import { successStories, type SuccessStory } from '@/data/realTestimonials'
 import { useState } from 'react'
@@ -18,19 +17,13 @@ function StoryCard({ story, index }: { story: SuccessStory; index: number }) {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <motion.div
-      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
+    <div
+      className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 animate-fadeInUp"
     >
       {/* Score Improvement Header */}
       <div className="bg-green-600 p-6 text-white relative overflow-hidden">
-        <motion.div
-          className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full"
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 4, repeat: Infinity }}
+        <div
+          className="absolute -top-10 -right-10 w-32 h-32 bg-white/10 rounded-full animate-fadeInUp"
         />
 
         <div className="relative z-10">
@@ -51,9 +44,9 @@ function StoryCard({ story, index }: { story: SuccessStory; index: number }) {
               <div className="text-xs text-green-200">Before</div>
             </div>
             <div className="flex flex-col items-center">
-              <motion.div animate={{ x: [0, 5, 0] }} transition={{ duration: 1, repeat: Infinity }}>
+              <div className="animate-fadeInUp">
                 <ArrowRight className="w-6 h-6" />
-              </motion.div>
+              </div>
               <div className="text-xs mt-1 bg-yellow-400 text-yellow-900 px-2 py-0.5 rounded-full font-bold">
                 +{story.improvement}
               </div>
@@ -112,7 +105,7 @@ function StoryCard({ story, index }: { story: SuccessStory; index: number }) {
           <p className="text-sm text-gray-700 italic pl-6">"{story.quote}"</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -129,11 +122,8 @@ export function SuccessStoriesSection({
     <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center mb-12 animate-fadeInUp"
         >
           <div className="inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <TrendingUp className="w-4 h-4 mr-2" />
@@ -141,15 +131,11 @@ export function SuccessStoriesSection({
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{title}</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
-        </motion.div>
+        </div>
 
         {/* Stats Bar */}
-        <motion.div
-          className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
+        <div
+          className="grid grid-cols-3 gap-4 max-w-2xl mx-auto mb-12 animate-fadeInUp"
         >
           <div className="text-center bg-white rounded-xl p-4 shadow-md">
             <div className="text-2xl md:text-3xl font-bold text-green-600">156+</div>
@@ -163,7 +149,7 @@ export function SuccessStoriesSection({
             <div className="text-2xl md:text-3xl font-bold text-purple-600">67+</div>
             <div className="text-xs md:text-sm text-gray-600">AIIMS Selections</div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Stories Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
@@ -174,11 +160,8 @@ export function SuccessStoriesSection({
 
         {/* View All Button */}
         {showViewAll && (
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center animate-fadeInUp"
           >
             <Link
               href="/success-stories"
@@ -188,7 +171,7 @@ export function SuccessStoriesSection({
               View All Success Stories
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-          </motion.div>
+          </div>
         )}
       </div>
     </section>

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function NCERTReadingIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -95,9 +94,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
       {/* Title Section */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <rect x="175" y="15" width="300" height="50" rx="25" fill="#14B8A6" opacity="0.1" />
         <text x="325" y="45" fontSize="20" fill="#0D9488" textAnchor="middle" fontWeight="bold">
@@ -110,9 +106,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
       {/* === LEFT SECTION: Class 11 Book Stack === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         {/* Class 11 Book */}
         <g filter="url(#ncertBookShadow)">
@@ -160,8 +153,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
           rx="3"
           fill="#FFFFFF"
           opacity="0.6"
-          animate={animate ? { opacity: [0.4, 0.8, 0.4] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         />
 
         {/* Chapter list for Class 11 */}
@@ -189,9 +180,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
                 rx="3"
                 fill={ch.color}
                 opacity="0.8"
-                initial={animate ? { scaleX: 0 } : undefined}
-                animate={animate ? { scaleX: 1 } : undefined}
-                transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
                 style={{ transformOrigin: 'left' }}
               />
               <text x="5" y="11" fontSize="7" fill="#FFFFFF" fontWeight="500">
@@ -207,9 +195,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
       {/* === CENTER SECTION: Reading Strategy Flow === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         {/* 3-Stage Reading Process */}
         <g transform="translate(210, 80)">
@@ -235,9 +220,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
             <motion.g
               key={i}
               transform={`translate(15, ${45 + i * 45})`}
-              initial={animate ? { opacity: 0, x: -20 } : undefined}
-              animate={animate ? { opacity: 1, x: 0 } : undefined}
-              transition={{ delay: 0.6 + i * 0.15, duration: 0.4 }}
             >
               {/* Stage circle */}
               <motion.circle
@@ -245,8 +227,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
                 cy="18"
                 r="18"
                 fill={stage.color}
-                animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-                transition={{ delay: i * 0.5, duration: 1.5, repeat: Infinity }}
               />
               <text x="20" y="14" fontSize="10" fill="#FFFFFF" textAnchor="middle">
                 {stage.icon}
@@ -270,8 +250,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
                   stroke={stage.color}
                   strokeWidth="2"
                   strokeDasharray="3,2"
-                  animate={animate ? { strokeDashoffset: [0, -10] } : undefined}
-                  transition={{ duration: 1, repeat: Infinity }}
                 />
               )}
             </motion.g>
@@ -300,8 +278,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
           {/* Stats */}
           <g transform="translate(15, 45)">
             <motion.g
-              animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-              transition={{ duration: 2, repeat: Infinity }}
             >
               <circle cx="30" cy="25" r="28" fill="#10B981" />
               <text
@@ -337,8 +313,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
           {/* Tip badge */}
           <motion.g
-            animate={animate ? { y: [0, -3, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <rect x="60" y="105" width="110" height="20" rx="10" fill="#059669" />
             <text x="115" y="118" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -350,9 +324,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
       {/* === RIGHT SECTION: Class 12 Book Stack === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         {/* Class 12 Book */}
         <g filter="url(#ncertBookShadow)" transform="translate(455, 0)">
@@ -400,8 +371,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
           rx="3"
           fill="#FFFFFF"
           opacity="0.6"
-          animate={animate ? { opacity: [0.4, 0.8, 0.4] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
         />
 
         {/* Chapter list for Class 12 */}
@@ -429,9 +398,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
                 rx="3"
                 fill={ch.color}
                 opacity="0.8"
-                initial={animate ? { scaleX: 0 } : undefined}
-                animate={animate ? { scaleX: 1 } : undefined}
-                transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
                 style={{ transformOrigin: 'left' }}
               />
               <text x="5" y="11" fontSize="7" fill="#FFFFFF" fontWeight="500">
@@ -448,16 +414,11 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
       {/* === BOTTOM SECTION: Highlighting Tools === */}
       <motion.g
         transform="translate(20, 420)"
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.7, duration: 0.5 }}
       >
         {/* Highlighter pens */}
         <g>
           {/* Yellow highlighter */}
           <motion.g
-            animate={animate ? { rotate: [-3, 3, -3], x: [0, 5, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <rect x="0" y="10" width="80" height="18" rx="4" fill="url(#highlightGrad)" />
             <rect x="75" y="13" width="20" height="12" rx="2" fill="#F59E0B" />
@@ -466,8 +427,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
           {/* Pink highlighter */}
           <motion.g
-            animate={animate ? { rotate: [3, -3, 3], x: [0, -5, 0] } : undefined}
-            transition={{ duration: 2.5, repeat: Infinity }}
           >
             <rect x="110" y="10" width="80" height="18" rx="4" fill="#F9A8D4" />
             <rect x="185" y="13" width="20" height="12" rx="2" fill="#EC4899" />
@@ -476,8 +435,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
 
           {/* Green highlighter */}
           <motion.g
-            animate={animate ? { rotate: [-2, 4, -2], x: [0, 3, 0] } : undefined}
-            transition={{ duration: 2.2, repeat: Infinity }}
           >
             <rect x="220" y="10" width="80" height="18" rx="4" fill="#86EFAC" />
             <rect x="295" y="13" width="20" height="12" rx="2" fill="#22C55E" />
@@ -509,8 +466,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
             r="8"
             fill="#14B8A6"
             opacity="0.3"
-            animate={{ y: [0, -10, 0], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity }}
           />
           <motion.circle
             cx="600"
@@ -518,8 +473,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
             r="6"
             fill="#8B5CF6"
             opacity="0.3"
-            animate={{ y: [0, -8, 0], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
           />
           <motion.rect
             x="320"
@@ -529,8 +482,6 @@ export function NCERTReadingIllustration({ className = '', animate = true }: Ill
             rx="2"
             fill="#F59E0B"
             opacity="0.4"
-            animate={{ rotate: [0, 180, 360], scale: [1, 1.2, 1] }}
-            transition={{ duration: 4, repeat: Infinity }}
           />
         </>
       )}

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Gift,
   Award,
@@ -382,12 +381,8 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
     const isExpired = new Date() > offer.validUntil
 
     return (
-      <motion.div
+      <div
         key={offer.id}
-        initial={{ opacity: 0, y: 20, scale: 0.9 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={{ opacity: 0, y: -20, scale: 0.9 }}
-        transition={{ delay: index * 0.1 }}
         className={`
           relative overflow-hidden rounded-2xl border-2 shadow-lg backdrop-blur-sm
           ${offer.color.background} ${offer.color.border}
@@ -482,11 +477,8 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
                     </span>
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
-                    <motion.div
+                    <div
                       className={`h-2 rounded-full ${offer.urgencyLevel === 'critical' ? 'bg-red-500' : 'bg-green-600'}`}
-                      initial={{ width: 0 }}
-                      animate={{ width: `${(offer.claimedCount / offer.claimLimit) * 100}%` }}
-                      transition={{ duration: 1, delay: 0.5 }}
                     />
                   </div>
                 </div>
@@ -512,7 +504,7 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
 
               {/* Action buttons */}
               <div className="flex gap-3">
-                <motion.button
+                <button
                   onClick={() => handleClaimOffer(offer)}
                   disabled={isClaimed || isExpired}
                   className={`
@@ -525,8 +517,6 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
                           : 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700 shadow-lg hover:shadow-xl'
                     }
                   `}
-                  whileHover={!isClaimed && !isExpired ? { scale: 1.02 } : {}}
-                  whileTap={!isClaimed && !isExpired ? { scale: 0.98 } : {}}
                 >
                   {isClaimed ? (
                     <>
@@ -544,7 +534,7 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
                       Claim Offer
                     </>
                   )}
-                </motion.button>
+                </button>
 
                 <button
                   onClick={() => {
@@ -570,23 +560,17 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
   if (position === 'overlay') {
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+      <div
+        className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
       >
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.8, opacity: 0 }}
-          className="max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+        <div
+          className="max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
         >
           <div className="relative">
             <button
@@ -595,22 +579,17 @@ const PersonalizedDiscountOffers: React.FC<PersonalizedDiscountOffersProps> = ({
             >
               <X className="w-5 h-5 text-gray-600" />
             </button>
-
-            <AnimatePresence>
-              {visibleOffers.map((offer, index) => renderOfferCard(offer, index))}
-            </AnimatePresence>
-          </div>
-        </motion.div>
-      </motion.div>
+{visibleOffers.map((offer, index) => renderOfferCard(offer, index))}
+</div>
+        </div>
+      </div>
     )
   }
 
   return (
     <div className="space-y-6">
-      <AnimatePresence>
-        {visibleOffers.map((offer, index) => renderOfferCard(offer, index))}
-      </AnimatePresence>
-    </div>
+{visibleOffers.map((offer, index) => renderOfferCard(offer, index))}
+</div>
   )
 }
 

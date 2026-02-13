@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   Plus,
@@ -282,11 +281,8 @@ export function CourseComparisonTable({
           const recommendationLevel = getRecommendationLevel(course, courses)
 
           return (
-            <motion.div
+            <div
               key={course.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: courseIndex * 0.1 }}
               className={`bg-gradient-to-br ${design.gradient} border border-gray-200 rounded-2xl overflow-hidden`}
             >
               {/* Course Header */}
@@ -361,14 +357,9 @@ export function CourseComparisonTable({
                         <ChevronDown className="h-4 w-4 text-gray-500" />
                       )}
                     </button>
-
-                    <AnimatePresence>
-                      {expandedCategories.includes(category.category) && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden"
+{expandedCategories.includes(category.category) && (
+                        <div
+                          className="overflow-hidden animate-fadeInUp"
                         >
                           <div className="p-4 space-y-3 bg-white/40">
                             {category.features.map((feature) => {
@@ -396,13 +387,12 @@ export function CourseComparisonTable({
                               )
                             })}
                           </div>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
-                  </div>
+</div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )
         })}
       </div>
@@ -579,10 +569,8 @@ export function CourseComparisonTable({
 
       {/* Action Bar */}
       {selectedCourses.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-blue-50 border-t border-blue-200 p-4"
+        <div
+          className="bg-blue-50 border-t border-blue-200 p-4 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div className="text-blue-800 font-medium">
@@ -600,7 +588,7 @@ export function CourseComparisonTable({
               </button>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   )

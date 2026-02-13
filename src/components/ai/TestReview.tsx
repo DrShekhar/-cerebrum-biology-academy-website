@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Eye,
   GraduationCap,
@@ -320,10 +319,8 @@ const TestReview: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-indigo-500 rounded-xl">
             <Eye className="w-8 h-8 text-white" />
@@ -331,7 +328,7 @@ const TestReview: React.FC = () => {
           <h1 className="text-3xl font-bold bg-indigo-500 bg-clip-text text-transparent">
             Test Review & Preview
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Comprehensive test review with student/teacher preview modes, quality analysis, and
           verification tools for perfect test deployment
@@ -419,15 +416,11 @@ const TestReview: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Student Preview */}
+{/* Student Preview */}
         {activeTab === 'student' && (
-          <motion.div
+          <div
             key="student"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Preview Controls */}
             <div className="bg-white rounded-xl p-4 border">
@@ -637,17 +630,14 @@ const TestReview: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Teacher Preview */}
         {activeTab === 'teacher' && (
-          <motion.div
+          <div
             key="teacher"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Teacher Controls */}
             <div className="bg-white rounded-xl p-4 border">
@@ -876,17 +866,14 @@ const TestReview: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Answer Key Verification */}
         {activeTab === 'answers' && (
-          <motion.div
+          <div
             key="answers"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
@@ -989,17 +976,14 @@ const TestReview: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Total Marks Calculation */}
         {activeTab === 'calculation' && (
-          <motion.div
+          <div
             key="calculation"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
@@ -1234,17 +1218,14 @@ const TestReview: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Time Estimation Check */}
         {activeTab === 'timing' && (
-          <motion.div
+          <div
             key="timing"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
@@ -1471,17 +1452,14 @@ const TestReview: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Difficulty Balance Check */}
         {activeTab === 'difficulty' && (
-          <motion.div
+          <div
             key="difficulty"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
@@ -1800,17 +1778,14 @@ const TestReview: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Topic Coverage Analysis */}
         {activeTab === 'coverage' && (
-          <motion.div
+          <div
             key="coverage"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
@@ -2072,17 +2047,14 @@ const TestReview: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Grammar/Spell Check */}
         {activeTab === 'quality' && (
-          <motion.div
+          <div
             key="quality"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <div className="flex justify-between items-center mb-6">
@@ -2285,11 +2257,9 @@ const TestReview: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Final Actions */}
+{/* Final Actions */}
       <div className="bg-white rounded-xl p-6 border">
         <div className="flex justify-between items-center">
           <div>

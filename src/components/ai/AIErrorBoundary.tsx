@@ -1,7 +1,6 @@
 'use client'
 
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import { motion } from 'framer-motion'
 import { AlertTriangle, RefreshCw, MessageCircle, Phone } from 'lucide-react'
 import { clientAIDebugger } from '@/lib/ai/clientDebugger'
 import { AIDebugger } from '@/lib/ai/aiDebugger'
@@ -152,14 +151,12 @@ Please help resolve this AI system issue.
 
       // Default error UI
       return (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col items-center justify-center p-6 bg-red-50 border-2 border-red-200 rounded-xl max-w-md mx-auto"
+        <div
+          className="flex flex-col items-center justify-center p-6 bg-red-50 border-2 border-red-200 rounded-xl max-w-md mx-auto animate-fadeInUp"
         >
-          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.2 }}>
+          <div className="animate-fadeInUp">
             <AlertTriangle className="w-16 h-16 text-red-500 mb-4" />
-          </motion.div>
+          </div>
 
           <h2 className="text-xl font-bold text-red-800 mb-2 text-center">
             AI System Temporarily Unavailable
@@ -171,9 +168,6 @@ Please help resolve this AI system issue.
 
           {this.props.showDebugInfo && this.state.error && (
             <motion.details
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
               className="w-full mb-4 p-3 bg-red-100 rounded border text-xs"
             >
               <summary className="cursor-pointer font-medium text-red-700">
@@ -203,44 +197,37 @@ Please help resolve this AI system issue.
 
           <div className="flex flex-col sm:flex-row gap-3 w-full">
             {this.state.retryCount < this.maxRetries && (
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex-1"
+                className="flex items-center justify-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors flex-1 animate-fadeInUp"
               >
                 <RefreshCw className="w-4 h-4" />
                 <span>Try Again</span>
-              </motion.button>
+              </button>
             )}
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               onClick={this.handleFallbackChat}
-              className="flex items-center justify-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex-1"
+              className="flex items-center justify-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors flex-1 animate-fadeInUp"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Contact Support</span>
-            </motion.button>
+            </button>
           </div>
 
-          <motion.button
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
+          <button
             onClick={this.handleContactSupport}
-            className="flex items-center space-x-2 text-red-600 hover:text-red-800 mt-3 text-sm transition-colors"
+            className="flex items-center space-x-2 text-red-600 hover:text-red-800 mt-3 text-sm transition-colors animate-fadeInUp"
           >
             <Phone className="w-4 h-4" />
             <span>Email Error Report</span>
-          </motion.button>
+          </button>
 
           <div className="mt-4 text-xs text-red-500 text-center">
             <p>Error ID: {this.state.errorId}</p>
             <p>Time: {new Date().toLocaleString()}</p>
           </div>
-        </motion.div>
+        </div>
       )
     }
 

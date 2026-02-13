@@ -6,7 +6,6 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Bot, User, Sparkles } from 'lucide-react'
 import type { AriaMessage, Language } from '@/lib/aria/types'
 import { getTranslation } from '@/lib/aria/translations'
@@ -31,9 +30,7 @@ function MessageBubble({
   const isStreaming = message.metadata?.isStreaming
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`flex gap-2 ${isBot ? 'justify-start' : 'justify-end'}`}
     >
       {isBot && (
@@ -53,22 +50,18 @@ function MessageBubble({
           <div className="whitespace-pre-wrap break-words">
             {message.text || (
               <span className="inline-flex items-center gap-1 text-slate-400">
-                <motion.span
-                  animate={{ opacity: [0.4, 1, 0.4] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
+                <span
+                 className="animate-fadeInUp">
                   <Sparkles className="h-3 w-3" />
-                </motion.span>
+                </span>
                 {getTranslation('thinking', language)}
               </span>
             )}
           </div>
 
           {isStreaming && message.text && (
-            <motion.span
-              className="ml-0.5 inline-block h-3 w-0.5 bg-slate-400"
-              animate={{ opacity: [1, 0, 1] }}
-              transition={{ duration: 0.8, repeat: Infinity }}
+            <span
+              className="ml-0.5 inline-block h-3 w-0.5 bg-slate-400 animate-fadeInUp"
             />
           )}
         </div>
@@ -94,41 +87,32 @@ function MessageBubble({
           <User className="h-4 w-4 text-slate-600" />
         </div>
       )}
-    </motion.div>
+    </div>
   )
 }
 
 function TypingIndicator({ language }: { language: Language }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="flex items-center gap-2"
+    <div
+      className="flex items-center gap-2 animate-fadeInUp"
     >
       <div className="flex h-7 w-7 items-center justify-center rounded-full bg-green-500">
         <Bot className="h-4 w-4 text-white" />
       </div>
       <div className="rounded-2xl rounded-tl-sm bg-slate-100 px-3 py-2">
         <div className="flex items-center gap-1">
-          <motion.div
-            className="h-2 w-2 rounded-full bg-slate-400"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 0.6, repeat: Infinity, delay: 0 }}
+          <div
+            className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp"
           />
-          <motion.div
-            className="h-2 w-2 rounded-full bg-slate-400"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 0.6, repeat: Infinity, delay: 0.2 }}
+          <div
+            className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp"
           />
-          <motion.div
-            className="h-2 w-2 rounded-full bg-slate-400"
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 0.6, repeat: Infinity, delay: 0.4 }}
+          <div
+            className="h-2 w-2 rounded-full bg-slate-400 animate-fadeInUp"
           />
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -162,8 +146,7 @@ export function AriaChat({ messages, isStreaming, language, onQuickActionClick }
       className="flex-1 space-y-3 overflow-y-auto px-3 py-4"
       style={{ scrollBehavior: 'smooth' }}
     >
-      <AnimatePresence mode="popLayout">
-        {messages.map((message) => (
+{messages.map((message) => (
           <MessageBubble
             key={message.id}
             message={message}
@@ -177,9 +160,7 @@ export function AriaChat({ messages, isStreaming, language, onQuickActionClick }
           messages.length > 0 &&
           messages[messages.length - 1].sender === 'bot' &&
           !messages[messages.length - 1].text && <TypingIndicator language={language} />}
-      </AnimatePresence>
-
-      {/* Empty state */}
+{/* Empty state */}
       {messages.length === 0 && (
         <div className="flex h-full flex-col items-center justify-center text-center">
           <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-green-500">

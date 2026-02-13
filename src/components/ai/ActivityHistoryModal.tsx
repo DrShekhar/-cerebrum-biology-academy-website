@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useMemo, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   Brain,
@@ -347,20 +346,12 @@ export function ActivityHistoryModal({ isOpen, onClose }: ActivityHistoryModalPr
   if (!isOpen) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+<div
+        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeInUp"
         onClick={onClose}
       >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0, y: 20 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.9, opacity: 0, y: 20 }}
-          transition={{ type: 'spring', damping: 25, stiffness: 300 }}
-          className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col"
+        <div
+          className="bg-white rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col animate-fadeInUp"
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex items-center justify-between p-6 border-b border-gray-200">
@@ -471,12 +462,9 @@ export function ActivityHistoryModal({ isOpen, onClose }: ActivityHistoryModalPr
                       const isExpanded = expandedId === activity.id
 
                       return (
-                        <motion.div
+                        <div
                           key={activity.id}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: index * 0.02 }}
-                          className="bg-gradient-to-r from-white to-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-all"
+                          className="bg-gradient-to-r from-white to-gray-50 rounded-lg border border-gray-200 hover:shadow-md transition-all animate-fadeInUp"
                         >
                           <div
                             className="p-4 cursor-pointer"
@@ -542,15 +530,9 @@ export function ActivityHistoryModal({ isOpen, onClose }: ActivityHistoryModalPr
                               </button>
                             </div>
                           </div>
-
-                          <AnimatePresence>
-                            {isExpanded && (
-                              <motion.div
-                                initial={{ height: 0, opacity: 0 }}
-                                animate={{ height: 'auto', opacity: 1 }}
-                                exit={{ height: 0, opacity: 0 }}
-                                transition={{ duration: 0.2 }}
-                                className="overflow-hidden"
+{isExpanded && (
+                              <div
+                                className="overflow-hidden animate-fadeInUp"
                               >
                                 <div className="px-4 pb-4 pt-2 border-t border-gray-100">
                                   <div className="space-y-3">
@@ -626,10 +608,9 @@ export function ActivityHistoryModal({ isOpen, onClose }: ActivityHistoryModalPr
                                     )}
                                   </div>
                                 </div>
-                              </motion.div>
+                              </div>
                             )}
-                          </AnimatePresence>
-                        </motion.div>
+</div>
                       )
                     })}
                   </div>
@@ -670,10 +651,9 @@ export function ActivityHistoryModal({ isOpen, onClose }: ActivityHistoryModalPr
               </button>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
+        </div>
+      </div>
+)
 }
 
 export default ActivityHistoryModal

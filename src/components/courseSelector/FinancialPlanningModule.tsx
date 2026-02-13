@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Calendar,
   PiggyBank,
@@ -359,11 +358,8 @@ function InstallmentSchedule({
       {/* Schedule table */}
       <div className="space-y-3">
         {schedule.map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
             className={`flex items-center justify-between p-4 rounded-lg border-2 ${
               item.status === 'due'
                 ? 'border-orange-200 bg-orange-50'
@@ -396,7 +392,7 @@ function InstallmentSchedule({
                 {item.status === 'due' ? 'Payment Due' : 'Upcoming'}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 
@@ -1093,25 +1089,18 @@ export default function FinancialPlanningModule({
 
       {/* Tab Content */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
-          {activeTab === 'breakdown' && (
-            <motion.div
+{activeTab === 'breakdown' && (
+            <div
               key="breakdown"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+             className="animate-fadeInUp">
               <FeeBreakdown course={course} appliedScholarships={appliedScholarships} />
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'schedule' && (
-            <motion.div
+            <div
               key="schedule"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+             className="animate-fadeInUp">
               <div className="mb-4">
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -1138,16 +1127,13 @@ export default function FinancialPlanningModule({
                 </div>
               </div>
               <InstallmentSchedule totalAmount={totalWithScholarships} planType={paymentPlan} />
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'savings' && (
-            <motion.div
+            <div
               key="savings"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
             >
               <div className="bg-white rounded-xl border border-gray-200 p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -1211,46 +1197,36 @@ export default function FinancialPlanningModule({
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'scholarships' && (
-            <motion.div
+            <div
               key="scholarships"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+             className="animate-fadeInUp">
               <ScholarshipChecker course={course} onScholarshipSelect={setAppliedScholarships} />
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'comparison' && (
-            <motion.div
+            <div
               key="comparison"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+             className="animate-fadeInUp">
               <CompetitorComparison course={course} />
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'affordability' && (
-            <motion.div
+            <div
               key="affordability"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
+             className="animate-fadeInUp">
               <FamilyAffordabilityAssessment
                 totalAmount={totalWithScholarships}
                 familyProfile={familyProfile}
               />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Action Footer */}
       <div className="bg-gray-50 border-t border-gray-200 p-6">

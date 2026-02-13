@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import ProgressIndicator from '@/components/ui/ProgressIndicator'
 import StepIndicator, { Step } from '@/components/ui/StepIndicator'
 import { Button } from '@/components/ui/Button'
@@ -212,15 +211,10 @@ export default function BulkOperationsWithProgress() {
             })}
           </div>
         </div>
-
-        <AnimatePresence mode="wait">
-          {!isProcessing && processedCount === 0 && (
-            <motion.div
+{!isProcessing && processedCount === 0 && (
+            <div
               key="ready"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-slate-50 rounded-lg p-6 space-y-4">
                 <h3 className="font-semibold text-slate-900">Operation Details</h3>
@@ -248,15 +242,13 @@ export default function BulkOperationsWithProgress() {
                 <Play className="w-5 h-5 mr-2" />
                 Start Operation
               </Button>
-            </motion.div>
+            </div>
           )}
 
           {(isProcessing || processedCount > 0) && (
-            <motion.div
+            <div
               key="processing"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <StepIndicator
                 steps={processingSteps}
@@ -330,10 +322,8 @@ export default function BulkOperationsWithProgress() {
               </div>
 
               {processedCount === totalItems && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="bg-green-50 border-2 border-green-200 rounded-xl p-6"
+                <div
+                  className="bg-green-50 border-2 border-green-200 rounded-xl p-6 animate-fadeInUp"
                 >
                   <div className="flex items-start gap-4">
                     <div className="p-3 bg-green-100 rounded-full">
@@ -355,12 +345,11 @@ export default function BulkOperationsWithProgress() {
                       )}
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </Card>
+</Card>
 
       <Card className="p-6">
         <h3 className="font-semibold text-slate-900 mb-4">Batch Processing Features</h3>

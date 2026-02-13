@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Users,
@@ -173,10 +172,8 @@ export default function PageContent() {
       <section className="relative bg-gradient-to-br from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
+            className="text-center max-w-4xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2" />
@@ -222,20 +219,17 @@ export default function PageContent() {
             </div>
             <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               {successMetrics.map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 animate-fadeInUp"
                 >
                   <metric.icon className="w-8 h-8 mx-auto mb-2 text-[#4ade80]" />
                   <div className="text-2xl font-bold">{metric.value}</div>
                   <div className="text-sm opacity-80">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -271,20 +265,16 @@ export default function PageContent() {
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Biology Tuition Across Surat
             </h2>
-          </motion.div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {localities.map((locality, index) => (
-              <motion.div
+              <div
                 key={locality.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <div
                   className={`bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all hover:-translate-y-1 ${locality.priority === 'high' ? 'ring-2 ring-[#1e3a5f]' : ''}`}
                 >
@@ -295,7 +285,7 @@ export default function PageContent() {
                   <div className="text-2xl font-bold text-[#1e3a5f] mb-1">{locality.students}</div>
                   <div className="text-sm text-gray-500">{locality.highlight}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -303,25 +293,21 @@ export default function PageContent() {
 
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Why Surat Students Choose Us
             </h2>
-          </motion.div>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8 shadow-lg"
+                className="bg-gray-50 rounded-xl p-8 shadow-lg animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-[#1e3a5f] mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -351,20 +337,16 @@ export default function PageContent() {
 
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               FAQs - Biology Tuition Surat
             </h2>
-          </motion.div>
+          </div>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-8 animate-fadeInUp"
                 itemScope
                 itemType="https://schema.org/Question"
               >
@@ -380,7 +362,7 @@ export default function PageContent() {
                     {faq.answer}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -392,7 +374,7 @@ export default function PageContent() {
 
       <section className="py-20 bg-gradient-to-r from-[#1e3a5f] via-[#2d5a87] to-[#3d7ab5] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}>
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
               Ready to Excel in Biology & NEET from Surat?
             </h2>
@@ -427,7 +409,7 @@ export default function PageContent() {
                 +91-88264-44334
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useMemo } from 'react'
-import { motion } from 'framer-motion'
 import { X, Calculator, CreditCard, Calendar, TrendingUp, AlertCircle } from 'lucide-react'
 import { type Course, type InstallmentOption } from '@/data/courseData'
 
@@ -71,11 +70,8 @@ export function PaymentCalculator({ courses, onClose }: PaymentCalculatorProps) 
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
+      <div
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden animate-fadeInUp"
       >
         {/* Header */}
         <div className="bg-indigo-500 text-white p-6">
@@ -404,7 +400,7 @@ export function PaymentCalculator({ courses, onClose }: PaymentCalculatorProps) 
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

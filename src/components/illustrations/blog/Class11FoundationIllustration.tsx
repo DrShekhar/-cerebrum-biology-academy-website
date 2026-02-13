@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function Class11FoundationIllustration({
@@ -34,8 +33,6 @@ export function Class11FoundationIllustration({
 
       {/* Building blocks pyramid */}
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
       >
         <rect
           x="145"
@@ -53,8 +50,6 @@ export function Class11FoundationIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 1 }}
       >
         <rect
           x="115"
@@ -85,8 +80,6 @@ export function Class11FoundationIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
       >
         <rect
           x="85"
@@ -130,8 +123,6 @@ export function Class11FoundationIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { y: [0, -3, 0] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect
           x="55"
@@ -161,8 +152,6 @@ export function Class11FoundationIllustration({
       />
 
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="80" cy="252" r="18" fill="#22C55E" />
         <text x="80" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -174,8 +163,6 @@ export function Class11FoundationIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
       >
         <circle cx="155" cy="252" r="18" fill="#3B82F6" />
         <text x="155" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -187,8 +174,6 @@ export function Class11FoundationIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 1 }}
       >
         <circle cx="230" cy="252" r="18" fill="#F59E0B" />
         <text x="230" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">

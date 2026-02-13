@@ -2,7 +2,6 @@
 
 import { useState, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { Calendar, Clock, User, Mail, Phone, CheckCircle, XCircle, Loader2 } from 'lucide-react'
 
 interface BookingData {
@@ -126,10 +125,8 @@ function RescheduleContent() {
   if (error && !booking) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br bg-red-50 p-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center"
+        <div
+          className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
         >
           <XCircle className="w-16 h-16 text-red-500 mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Unable to Load Booking</h1>
@@ -140,7 +137,7 @@ function RescheduleContent() {
               +91 88264 44334
             </a>
           </p>
-        </motion.div>
+        </div>
       </div>
     )
   }
@@ -148,10 +145,8 @@ function RescheduleContent() {
   if (success) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-green-50 p-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center"
+        <div
+          className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
         >
           <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
           <h1 className="text-2xl font-bold text-gray-900 mb-2">Rescheduled Successfully!</h1>
@@ -170,7 +165,7 @@ function RescheduleContent() {
           <p className="text-sm text-gray-500">
             You will receive a confirmation via email and SMS shortly.
           </p>
-        </motion.div>
+        </div>
       </div>
     )
   }
@@ -178,10 +173,8 @@ function RescheduleContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 px-4">
       <div className="max-w-2xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-2xl shadow-xl overflow-hidden"
+        <div
+          className="bg-white rounded-2xl shadow-xl overflow-hidden animate-fadeInUp"
         >
           <div className="bg-gradient-to-r from-blue-600 to-blue-600 p-8 text-white">
             <h1 className="text-3xl font-bold mb-2">Reschedule Demo Class</h1>
@@ -297,7 +290,7 @@ function RescheduleContent() {
               </p>
             </div>
           )}
-        </motion.div>
+        </div>
       </div>
     </div>
   )

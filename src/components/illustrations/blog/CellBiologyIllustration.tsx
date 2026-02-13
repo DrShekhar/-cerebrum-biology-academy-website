@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function CellBiologyIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -109,8 +108,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
       {/* NEET Badge */}
       <motion.g
         filter="url(#cellGlow)"
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="820" cy="40" r="28" fill="#FBBF24" />
         <text
@@ -165,8 +162,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         ].map((item, i) => (
           <motion.g
             key={`ct-${i}`}
-            animate={animate ? { x: [-2, 2, -2] } : undefined}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
           >
             <circle cx="55" cy={item.y} r="6" fill="#14B8A6" />
             <text x="70" y={item.y - 5} fontSize="9" fill="#0D9488" fontWeight="bold">
@@ -311,8 +306,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             height="70"
             rx="10"
             fill="#F472B6"
-            animate={animate ? { y: [130, 135, 130] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
           />
           <text x="730" y="220" fontSize="7" fill="#BE185D" textAnchor="middle">
             Protein
@@ -325,8 +318,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             rx="8"
             ry="15"
             fill="#FBBF24"
-            animate={animate ? { rx: [8, 10, 8] } : undefined}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
           />
         </g>
 
@@ -374,8 +365,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           stroke="#A855F7"
           strokeWidth="6"
           strokeDasharray="12 4"
-          animate={animate ? { strokeDashoffset: [0, 16] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'linear' }}
         />
 
         {/* Cytoplasm */}
@@ -384,8 +373,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         {/* Nucleus */}
         <motion.g
           filter="url(#organelleShadow)"
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           style={{ transformOrigin: '240px 465px' }}
         >
           <ellipse cx="240" cy="465" rx="50" ry="38" fill="url(#nucleusGrad)" />
@@ -421,8 +408,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         {/* Mitochondria */}
         <motion.g
           filter="url(#organelleShadow)"
-          animate={animate ? { rotate: [0, 5, 0, -5, 0] } : undefined}
-          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
           style={{ transformOrigin: '110px 410px' }}
         >
           <ellipse cx="110" cy="410" rx="32" ry="16" fill="url(#mitoGrad)" />
@@ -458,8 +443,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             strokeWidth="5"
             fill="none"
             strokeLinecap="round"
-            animate={animate ? { pathLength: [0.5, 1, 0.5] } : undefined}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
           />
           {/* Ribosomes on RER */}
           {[385, 415, 445].map((y, i) => (
@@ -469,8 +452,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
               cy={y}
               r="4"
               fill="#10B981"
-              animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
             />
           ))}
         </motion.g>
@@ -485,8 +466,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           strokeWidth="4"
           fill="none"
           strokeLinecap="round"
-          animate={animate ? { pathLength: [0.3, 1, 0.3] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         />
         <text x="365" y="490" fontSize="8" fill="#2563EB" textAnchor="start" fontWeight="500">
           Smooth ER
@@ -495,8 +474,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         {/* Golgi Apparatus */}
         <motion.g
           filter="url(#organelleShadow)"
-          animate={animate ? { y: [-3, 3, -3] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         >
           <path
             d="M340 530 Q370 522 340 514"
@@ -529,8 +506,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
 
         {/* Lysosomes */}
         <motion.g
-          animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <circle cx="150" cy="530" r="15" fill="#A78BFA" />
           <circle cx="150" cy="530" r="12" fill="#C4B5FD" />
@@ -587,8 +562,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             cy={pos.cy}
             r="4"
             fill="#10B981"
-            animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: i * 0.1 }}
           />
         ))}
         <text x="190" y="360" fontSize="7" fill="#059669">
@@ -632,8 +605,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           stroke="#1E40AF"
           strokeWidth="3"
           fill="none"
-          animate={animate ? { pathLength: [0.7, 1, 0.7] } : undefined}
-          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
         />
         <text x="567" y="400" fontSize="8" fill="#1E3A8A" textAnchor="middle" fontWeight="500">
           Nucleoid (DNA)
@@ -661,8 +632,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           strokeWidth="2"
           fill="none"
           strokeLinecap="round"
-          animate={animate ? { strokeDashoffset: [0, -20] } : undefined}
-          transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
           strokeDasharray="5,5"
         />
         <text x="567" y="440" fontSize="7" fill="#B45309" textAnchor="middle">
@@ -707,8 +676,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         ].map((org, i) => (
           <motion.g
             key={`org-${i}`}
-            animate={animate ? { y: [-2, 2, -2] } : undefined}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
           >
             <rect x={org.x} y="505" width="125" height="50" rx="8" fill={org.bg} />
             <text
@@ -746,8 +713,6 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         ].map((org, i) => (
           <motion.g
             key={`org2-${i}`}
-            animate={animate ? { y: [2, -2, 2] } : undefined}
-            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.3 }}
           >
             <rect x={org.x} y="565" width="125" height="50" rx="8" fill={org.bg} />
             <text

@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { BookOpen, CheckCircle, Gift, Zap, Check, ArrowLeft } from 'lucide-react'
 
 interface ConfirmationStepProps {
@@ -38,12 +37,9 @@ export function ConfirmationStep({
   isSubmitting,
 }: ConfirmationStepProps) {
   return (
-    <motion.div
+    <div
       key="step2"
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -20 }}
-      className="space-y-6"
+      className="space-y-6 animate-fadeInUp"
     >
       <h3 className="text-lg font-semibold text-gray-900 mb-4">Confirm Your Demo Booking</h3>
 
@@ -185,6 +181,6 @@ export function ConfirmationStep({
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

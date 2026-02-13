@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { PremiumButton, PremiumCard } from '@/components/ui/PremiumDesignSystem'
 import {
   CheckCircle2,
@@ -203,11 +202,8 @@ export function DifferentiationSection({
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-yellow-900/30 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-3 mb-6">
             <Flame className="w-5 h-5 text-amber-400" />
@@ -230,14 +226,11 @@ export function DifferentiationSection({
               The only institute in India designed exclusively for failed NEET students.
             </span>
           </p>
-        </motion.div>
+        </div>
 
         {/* Comparison Matrix */}
-        <motion.div
-          className="mb-20"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+        <div
+          className="mb-20 animate-fadeInUp"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             The <span className="text-green-500">Honest</span> Comparison
@@ -294,9 +287,6 @@ export function DifferentiationSection({
                       className={`border-b border-white/5 hover:bg-white/5 transition-colors ${
                         row.highlight ? 'bg-green-600/5' : ''
                       }`}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ duration: 0.5, delay: 0.1 * index }}
                     >
                       <td className="py-4 px-6">
                         <div className="flex items-center gap-3">
@@ -328,14 +318,11 @@ export function DifferentiationSection({
               </table>
             </div>
           </PremiumCard>
-        </motion.div>
+        </div>
 
         {/* Unique Features Showcase */}
-        <motion.div
-          className="mb-20"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+        <div
+          className="mb-20 animate-fadeInUp"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Our <span className="text-green-500">Exclusive</span> Advantages
@@ -345,7 +332,7 @@ export function DifferentiationSection({
             {/* Feature Tabs */}
             <div className="space-y-4">
               {uniqueFeatures.map((feature, index) => (
-                <motion.div
+                <div
                   key={feature.id}
                   className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 border ${
                     activeFeature === feature.id
@@ -353,9 +340,6 @@ export function DifferentiationSection({
                       : 'bg-white/5 border-white/10 hover:bg-white/8'
                   }`}
                   onClick={() => setActiveFeature(feature.id)}
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-                  transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
                   <div className="flex items-start gap-4">
                     <div
@@ -376,23 +360,18 @@ export function DifferentiationSection({
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Active Feature Display */}
             <div className="lg:sticky lg:top-8">
-              <AnimatePresence mode="wait">
-                {uniqueFeatures.map(
+{uniqueFeatures.map(
                   (feature) =>
                     activeFeature === feature.id && (
-                      <motion.div
+                      <div
                         key={feature.id}
-                        initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 0.9, y: -20 }}
-                        transition={{ duration: 0.3 }}
-                      >
+                       className="animate-fadeInUp">
                         <PremiumCard variant="luxury" className="text-center">
                           <div
                             className={`w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center`}
@@ -410,20 +389,16 @@ export function DifferentiationSection({
                             <div className="text-green-400 font-medium">{feature.benefit}</div>
                           </div>
                         </PremiumCard>
-                      </motion.div>
+                      </div>
                     )
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Visual Attention Calculator */}
-        <motion.div
-          className="mb-20"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+        <div
+          className="mb-20 animate-fadeInUp"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             Your <span className="text-amber-400">Personal Attention</span> Calculator
@@ -472,14 +447,11 @@ export function DifferentiationSection({
               </PremiumCard>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call-to-Action Section */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 50 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
+        <div
+          className="text-center animate-fadeInUp"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-8 text-white">
             See the <span className="text-green-500">Difference</span> Yourself
@@ -528,7 +500,7 @@ export function DifferentiationSection({
             Join the <span className="text-green-500 font-semibold">3000+ failed students</span> who
             transformed their medical dreams into reality with us.
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

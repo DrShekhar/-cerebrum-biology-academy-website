@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   ChevronLeft,
   ChevronRight,
@@ -235,48 +234,34 @@ export function CourseFinder({
 
   if (isCompleted && recommendedCourse) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
         className={`bg-gradient-to-br from-green-50 to-blue-50 border border-green-200 rounded-3xl p-8 ${className}`}
       >
         <div className="text-center mb-8">
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-3 bg-green-100 text-green-800 px-6 py-3 rounded-full mb-6"
+          <div
+            className="inline-flex items-center gap-3 bg-green-100 text-green-800 px-6 py-3 rounded-full mb-6 animate-fadeInUp"
           >
             <CheckCircle className="h-6 w-6" />
             <span className="font-bold">Perfect Match Found!</span>
-          </motion.div>
+          </div>
 
-          <motion.h2
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-3xl font-bold text-gray-900 mb-4"
+          <h2
+            className="text-3xl font-bold text-gray-900 mb-4 animate-fadeInUp"
           >
             Recommended Course for You
-          </motion.h2>
+          </h2>
 
-          <motion.p
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.4 }}
-            className="text-gray-600 max-w-2xl mx-auto"
+          <p
+            className="text-gray-600 max-w-2xl mx-auto animate-fadeInUp"
           >
             Based on your preferences, we've found the perfect course that matches your academic
             goals and learning style
-          </motion.p>
+          </p>
         </div>
 
         {/* Course Recommendation Card */}
-        <motion.div
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5 }}
-          className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 mb-8"
+        <div
+          className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 mb-8 animate-fadeInUp"
         >
           <div className="flex items-start gap-6 mb-6">
             <div className="text-5xl">
@@ -378,14 +363,11 @@ export function CourseFinder({
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Action Buttons */}
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4"
+        <div
+          className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
         >
           <button
             onClick={() => onCourseRecommended?.(recommendedCourse)}
@@ -401,7 +383,7 @@ export function CourseFinder({
             Book Free Demo
             <Star className="h-5 w-5" />
           </button>
-        </motion.div>
+        </div>
 
         <div className="text-center mt-6">
           <button
@@ -411,7 +393,7 @@ export function CourseFinder({
             Take quiz again with different preferences
           </button>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
@@ -444,11 +426,8 @@ export function CourseFinder({
 
         {/* Progress Bar */}
         <div className="w-full bg-white/20 rounded-full h-2">
-          <motion.div
-            className="bg-white rounded-full h-2"
-            initial={{ width: 0 }}
-            animate={{ width: `${progressPercentage}%` }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
+          <div
+            className="bg-white rounded-full h-2 animate-fadeInUp"
           />
         </div>
         <div className="text-right text-sm text-blue-100 mt-1">
@@ -458,14 +437,9 @@ export function CourseFinder({
 
       {/* Question Content */}
       <div className="p-8">
-        <AnimatePresence mode="wait">
-          <motion.div
+<div
             key={currentStep}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.3 }}
-          >
+           className="animate-fadeInUp">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-3">{currentQuestion.title}</h3>
               <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -476,11 +450,8 @@ export function CourseFinder({
             {/* Options */}
             <div className="grid gap-4 max-w-3xl mx-auto">
               {currentQuestion.options.map((option, index) => (
-                <motion.button
+                <button
                   key={option.value}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
                   onClick={() => handleAnswer(option.value, option.label)}
                   className={`group relative bg-gray-50 hover:bg-blue-50 border border-gray-200 hover:border-blue-300 rounded-2xl p-6 text-left transition-all duration-300 ${
                     selectedOption === option.value
@@ -510,20 +481,17 @@ export function CourseFinder({
                   </div>
 
                   {selectedOption === option.value && (
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      className="absolute top-4 right-4 bg-blue-600 text-white rounded-full p-1"
+                    <div
+                      className="absolute top-4 right-4 bg-blue-600 text-white rounded-full p-1 animate-fadeInUp"
                     >
                       <CheckCircle className="h-4 w-4" />
-                    </motion.div>
+                    </div>
                   )}
-                </motion.button>
+                </button>
               ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+          </div>
+</div>
     </div>
   )
 }

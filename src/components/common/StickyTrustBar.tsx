@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Trophy, Users, Star, BookOpen, X, TrendingUp } from 'lucide-react'
 
 export function StickyTrustBar() {
@@ -72,22 +71,15 @@ export function StickyTrustBar() {
   if (!isVisible) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        exit={{ y: -100 }}
-        className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm"
+<div
+        className="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm animate-fadeInUp"
       >
         <div className="max-w-7xl mx-auto px-4 py-2">
           <div className="flex items-center justify-between">
             {/* Left: Rotating Trust Metric */}
-            <motion.div
+            <div
               key={currentMetric}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-3 animate-fadeInUp"
             >
               <div
                 className={`w-8 h-8 rounded-lg flex items-center justify-center border ${currentTrustMetric.color}`}
@@ -98,7 +90,7 @@ export function StickyTrustBar() {
                 <span className="text-lg font-bold text-gray-900">{currentTrustMetric.value}</span>
                 <span className="text-sm text-gray-600 ml-2">{currentTrustMetric.label}</span>
               </div>
-            </motion.div>
+            </div>
 
             {/* Center: Quick Stats */}
             <div className="hidden md:flex items-center space-x-6 text-sm">
@@ -138,7 +130,6 @@ export function StickyTrustBar() {
             </div>
           </div>
         </div>
-      </motion.div>
-    </AnimatePresence>
-  )
+      </div>
+)
 }

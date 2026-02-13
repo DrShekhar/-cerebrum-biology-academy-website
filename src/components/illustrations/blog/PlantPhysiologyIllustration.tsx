@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function PlantPhysiologyIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -300,8 +299,6 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         {/* Z-Scheme Diagram */}
         {/* PS II */}
         <motion.g
-          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <rect x="330" y="260" width="50" height="50" rx="8" fill="#3B82F6" />
           <text
@@ -329,8 +326,6 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
 
         {/* PS I */}
         <motion.g
-          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
         >
           <rect x="520" y="260" width="50" height="50" rx="8" fill="#8B5CF6" />
           <text
@@ -363,8 +358,6 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
           strokeWidth="2"
           fill="none"
           strokeDasharray="6 3"
-          animate={animate ? { strokeDashoffset: [0, -18] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
         />
 
         {/* ETC components */}
@@ -397,8 +390,6 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
             d="M350 315 L355 300"
             stroke="#3B82F6"
             strokeWidth="1.5"
-            animate={animate ? { opacity: [0.3, 1, 0.3] } : undefined}
-            transition={{ duration: 1.5, repeat: Infinity }}
           />
           <text x="365" y="320" fontSize="6" fill="#16A34A" fontFamily="system-ui, sans-serif">
             → O₂ + H⁺
@@ -617,15 +608,6 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
           cy="385"
           r="6"
           fill="#3B82F6"
-          animate={
-            animate
-              ? {
-                  cx: [155, 215, 215, 95, 95, 155],
-                  cy: [385, 445, 505, 505, 445, 385],
-                }
-              : undefined
-          }
-          transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
         />
 
         {/* Stage 1: Carbon Fixation */}
@@ -1337,8 +1319,6 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
       {/* NEET Questions Badge */}
       <motion.g
         filter="url(#photoGlow)"
-        animate={animate ? { scale: [1, 1.08, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="850" cy="50" r="35" fill="#15803D" />
         <text

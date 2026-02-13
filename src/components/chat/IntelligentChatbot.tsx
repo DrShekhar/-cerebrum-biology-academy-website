@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send, Bot, BookOpen, Calendar, Phone, Download } from 'lucide-react'
 import { usePersonalization } from '@/components/providers/PersonalizationProvider'
 import { AIErrorBoundary } from '@/components/ai/AIErrorBoundary'
@@ -923,11 +922,9 @@ export function IntelligentChatbot() {
     >
       {/* Chat Toggle Button - Positioned on LEFT to avoid overlap with FloatingCTA on right */}
       {/* On mobile: above the fixed bottom bar (56px), on desktop: normal position */}
-      <motion.button
+      <button
         onClick={toggleChat}
-        className="fixed bottom-20 left-4 lg:bottom-6 lg:left-6 bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-colors z-50"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        className="fixed bottom-20 left-4 lg:bottom-6 lg:left-6 bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none transition-colors z-50 animate-fadeInUp"
         aria-label={
           chatState.isOpen ? 'Close Ceri AI chat assistant' : 'Open Ceri AI chat assistant'
         }
@@ -935,40 +932,25 @@ export function IntelligentChatbot() {
         role="button"
         tabIndex={0}
       >
-        <AnimatePresence mode="wait">
-          {chatState.isOpen ? (
-            <motion.div
+{chatState.isOpen ? (
+            <div
               key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
+             className="animate-fadeInUp">
               <X className="w-6 h-6" />
-            </motion.div>
+            </div>
           ) : (
-            <motion.div
+            <div
               key="open"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: 0.2 }}
-            >
+             className="animate-fadeInUp">
               <MessageCircle className="w-6 h-6" />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </motion.button>
+</button>
 
       {/* Chat Window */}
-      <AnimatePresence>
-        {chatState.isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-            className="fixed bottom-32 left-4 right-4 md:left-6 md:right-auto md:w-96 lg:bottom-24 h-[70vh] md:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col"
+{chatState.isOpen && (
+          <div
+            className="fixed bottom-32 left-4 right-4 md:left-6 md:right-auto md:w-96 lg:bottom-24 h-[70vh] md:h-[32rem] max-h-[600px] bg-white rounded-2xl shadow-2xl border border-gray-200 z-40 flex flex-col animate-fadeInUp"
             role="dialog"
             aria-labelledby="chat-title"
             aria-describedby="chat-description"
@@ -1144,9 +1126,8 @@ export function IntelligentChatbot() {
                 characters.
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </AIErrorBoundary>
+</AIErrorBoundary>
   )
 }

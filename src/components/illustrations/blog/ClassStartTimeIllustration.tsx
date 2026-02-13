@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function ClassStartTimeIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -26,8 +25,6 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
 
       {/* Class 9 marker */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="100" cy="144" r="25" fill="#8B5CF6" />
         <text x="100" y="140" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -40,8 +37,6 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
 
       {/* Class 10 marker */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
       >
         <circle cx="200" cy="144" r="25" fill="#3B82F6" />
         <text x="200" y="140" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -54,8 +49,6 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
 
       {/* Class 11 marker */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
       >
         <circle cx="300" cy="144" r="25" fill="#14B8A6" />
         <text x="300" y="140" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -72,14 +65,10 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
         stroke="#14B8A6"
         strokeWidth="3"
         fill="none"
-        animate={animate ? { x: [0, 5, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       />
 
       {/* Clock above timeline */}
       <motion.g
-        animate={animate ? { rotate: [0, 360] } : undefined}
-        transition={{ duration: 60, repeat: Infinity, ease: 'linear' }}
         style={{ transformOrigin: '200px 60px' }}
       >
         <circle cx="200" cy="60" r="40" fill="#FEF3C7" stroke="#F97316" strokeWidth="3" />
@@ -132,8 +121,6 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
 
       {/* Recommendation badge */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect x="70" y="100" width="80" height="20" rx="10" fill="#10B981" />
         <text x="110" y="114" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -148,8 +135,6 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
         r="10"
         fill="#8B5CF6"
         opacity="0.3"
-        animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
       />
       <motion.circle
         cx="360"
@@ -157,8 +142,6 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
         r="8"
         fill="#14B8A6"
         opacity="0.3"
-        animate={animate ? { scale: [1.2, 1, 1.2] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       />
     </Wrapper>
   )

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence, useDragControls } from 'framer-motion'
 import {
   Play,
   Pause,
@@ -589,10 +588,8 @@ const InteractiveBiologyDiagrams: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-4"
+      <div
+        className="text-center space-y-4 animate-fadeInUp"
       >
         <div className="flex items-center justify-center gap-3">
           <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl">
@@ -606,16 +603,15 @@ const InteractiveBiologyDiagrams: React.FC = () => {
           Explore biology concepts through interactive 3D diagrams, animations, and simulations.
           Click, drag, and discover how biological systems work!
         </p>
-      </motion.div>
+      </div>
 
       {/* Diagram Selection */}
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4">Available Diagrams</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {diagrams.map((diagram) => (
-            <motion.div
+            <div
               key={diagram.id}
-              whileHover={{ scale: 1.02 }}
               onClick={() => setSelectedDiagram(diagram)}
               className={`p-4 border rounded-lg cursor-pointer transition-all ${
                 selectedDiagram.id === diagram.id
@@ -636,7 +632,7 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                 </span>
                 <span className="text-gray-500">{diagram.estimatedTime} min</span>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -748,11 +744,10 @@ const InteractiveBiologyDiagrams: React.FC = () => {
               }}
             >
               {/* Components */}
-              <AnimatePresence>
-                {selectedDiagram.components
+{selectedDiagram.components
                   .filter((comp) => comp.isVisible)
                   .map((component) => (
-                    <motion.div
+                    <div
                       key={component.id}
                       drag={component.isInteractive}
                       dragControls={dragControls}
@@ -764,16 +759,8 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                         }
                         handleComponentDrag(component.id, newPosition)
                       }}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{
-                        opacity: 1,
-                        scale: 1,
-                        x: component.position.x,
-                        y: component.position.y,
-                      }}
-                      whileHover={{ scale: 1.1 }}
                       onClick={() => handleComponentClick(component)}
-                      className="absolute cursor-pointer"
+                      className="absolute cursor-pointer animate-fadeInUp"
                       style={{
                         width: component.size.width,
                         height: component.size.height,
@@ -791,23 +778,17 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                       </div>
 
                       {/* Hover tooltip */}
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10 pointer-events-none"
+                      <div
+                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-black text-white text-xs px-2 py-1 rounded whitespace-nowrap z-10 pointer-events-none animate-fadeInUp"
                       >
                         {component.description}
-                      </motion.div>
-                    </motion.div>
+                      </div>
+                    </div>
                   ))}
-              </AnimatePresence>
-
-              {/* Process Animation Overlay */}
+{/* Process Animation Overlay */}
               {isPlaying && activeProcess && (
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  className="absolute inset-0 pointer-events-none"
+                <div
+                  className="absolute inset-0 pointer-events-none animate-fadeInUp"
                 >
                   {/* Current step description */}
                   <div className="absolute top-4 left-4 bg-white rounded-lg p-3 shadow-lg max-w-xs">
@@ -815,17 +796,12 @@ const InteractiveBiologyDiagrams: React.FC = () => {
                       {activeProcess.steps[currentStep]?.description}
                     </h4>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <motion.div
-                        className="bg-blue-600 h-2 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={{
-                          width: `${((currentStep + 1) / activeProcess.steps.length) * 100}%`,
-                        }}
-                        transition={{ duration: 0.5 }}
+                      <div
+                        className="bg-blue-600 h-2 rounded-full animate-fadeInUp"
                       />
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
             </div>
           </div>

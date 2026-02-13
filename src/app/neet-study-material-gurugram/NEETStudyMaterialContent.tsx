@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Home, BookOpen, Star, FileText, Download, Package, Truck, Laptop,
   ClipboardList, Image, Sparkles,
@@ -101,7 +100,7 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4" />
               2026 Edition Updated
@@ -138,15 +137,15 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
                   <Download className="w-5 h-5 mr-2" />Download Free Sample
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Order Study Material
-              </motion.button>
+              </button>
             </div>
 
             {/* Urgency Banner */}
             <UrgencyBanner batchStartDate="Feb 10, 2026" seatsTotal={50} seatsFilled={38} showCountdown={false} />
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -155,11 +154,11 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-orange-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -168,15 +167,15 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
       {/* What's Included */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What's Included in the Material</h2>
             <p className="text-xl text-slate-600">Everything you need for NEET Biology preparation</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {materialIncludes.map((item, index) => (
-              <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={item.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center">
                     <item.icon className="w-6 h-6 text-orange-600" />
@@ -185,7 +184,7 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-slate-600 text-sm">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -194,14 +193,14 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
       {/* Pricing */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Material Packages</h2>
             <p className="text-xl text-slate-600">Choose digital, physical, or both</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingOptions.map((plan, index) => (
-              <motion.div key={plan.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
+              <div key={plan.name}
                 className={`rounded-2xl p-8 ${plan.popular ? 'bg-orange-50 border-2 border-orange-500 relative' : 'bg-gray-50 border-2 border-gray-200'}`}>
                 {plan.popular && <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Best Value</div>}
                 <h3 className="text-xl font-bold text-slate-900 mb-1">{plan.name}</h3>
@@ -218,7 +217,7 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
                 <Button className={`w-full ${plan.popular ? 'bg-orange-600 hover:bg-orange-700' : ''}`} onClick={handleWhatsApp}>
                   Order Now
                 </Button>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -232,15 +231,15 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
       {/* Chapters Covered */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Complete Syllabus Coverage</h2>
             <p className="text-xl text-slate-600">All NCERT chapters with extra focus on high-weightage topics</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {chapters.map((unit, index) => (
-              <motion.div key={unit.unit} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.05 }}
-                className="bg-white rounded-xl p-6 shadow-sm">
+              <div key={unit.unit}
+                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp">
                 <h3 className="font-bold text-orange-600 mb-3">{unit.unit}</h3>
                 <ul className="space-y-1">
                   {unit.chapters.map((chapter) => (
@@ -249,7 +248,7 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -258,30 +257,30 @@ export default function NEETStudyMaterialContent({ faqs }: { faqs: FAQ[] }) {
       {/* How to Get */}
       <section className="py-16 bg-gradient-to-br from-orange-600 to-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How to Get Study Material</h2>
             <p className="text-xl text-orange-100">Multiple delivery options available</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp">
               <Download className="w-12 h-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Instant Download</h3>
               <p className="text-orange-100 text-sm">For digital packages. Get PDF access immediately after payment.</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp">
               <MapPin className="w-12 h-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Collect from Center</h3>
               <p className="text-orange-100 text-sm">Visit our Sector 51 center. Mon-Sat 9 AM - 7 PM. No extra charge.</p>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp">
               <Truck className="w-12 h-12 text-white mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Home Delivery</h3>
               <p className="text-orange-100 text-sm">Courier to your address. 3-5 days in Gurugram. ₹200 delivery charge.</p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

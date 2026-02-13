@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   BookOpen, CheckCircle, Clock, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Award, Users, Target, Calendar, FileText, Zap,
@@ -92,7 +91,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-indigo-500/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               Complete Transformation Program
@@ -129,12 +128,12 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Counseling
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />WhatsApp: +91-88264-44334
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -143,12 +142,12 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {statistics.map((stat, index) => (
-              <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center text-white">
+              <div key={stat.label}
+                className="text-center text-white animate-fadeInUp">
                 <div className="text-4xl md:text-5xl font-bold mb-1">{stat.value}</div>
                 <div className="text-indigo-200 text-sm">{stat.unit}</div>
                 <div className="text-white/80 text-sm mt-1">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -157,21 +156,21 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
       {/* Course Features */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">What You Get</h2>
             <p className="text-xl text-slate-600">Complete package for NEET success</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courseFeatures.map((feature, index) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={feature.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-indigo-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -180,14 +179,14 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
       {/* 3 Cycles */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">3-Cycle Revision System</h2>
             <p className="text-xl text-slate-600">Proven methodology for dropper success</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {syllabusCycles.map((cycle, index) => (
-              <motion.div key={cycle.cycle} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
+              <div key={cycle.cycle}
                 className={`rounded-2xl p-6 ${cycle.color === 'blue' ? 'bg-blue-50 border-2 border-blue-200' : cycle.color === 'purple' ? 'bg-purple-50 border-2 border-purple-200' : 'bg-green-50 border-2 border-green-200'}`}>
                 <div className="flex items-center gap-3 mb-4">
                   <span className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold ${cycle.color === 'blue' ? 'bg-blue-600' : cycle.color === 'purple' ? 'bg-purple-600' : 'bg-green-600'}`}>{index + 1}</span>
@@ -204,7 +203,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -213,20 +212,20 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
       {/* Weekly Schedule */}
       <section className="py-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold mb-4">Weekly Schedule</h2>
             <p className="text-indigo-100">Structured routine for maximum productivity</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {weeklySchedule.map((schedule, index) => (
-              <motion.div key={schedule.day} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+              <div key={schedule.day}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp">
                 <Clock className="w-8 h-8 mx-auto mb-4 text-indigo-300" />
                 <h3 className="font-bold text-lg mb-2">{schedule.day}</h3>
                 <p className="text-indigo-200 text-sm mb-2">{schedule.timing}</p>
                 <p className="text-white font-medium">{schedule.activity}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -236,8 +235,8 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl">
+            <div
+              className="bg-white rounded-2xl p-8 shadow-xl animate-fadeInUp">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Program Details</h2>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b"><span className="text-slate-600">Course</span><span className="font-semibold">Dropper/Repeater Batch</span></div>
@@ -252,10 +251,10 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
               <Link href="/demo-booking" className="block mt-6">
                 <Button className="w-full bg-indigo-600 hover:bg-indigo-700">Book Free Counseling</Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8">
+            <div
+              className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-8 animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-indigo-600 mr-3" />
                 <h2 className="text-2xl font-bold text-gray-900">Our Gurugram Center</h2>
@@ -267,7 +266,7 @@ export default function OneYearDropperCourseContent({ faqs }: { faqs: FAQ[] }) {
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>
                 <a href={CONTACT_INFO.location.gurugram.mapUrl} target="_blank" rel="noopener"><Button><MapPin className="w-4 h-4 mr-2" />Directions</Button></a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

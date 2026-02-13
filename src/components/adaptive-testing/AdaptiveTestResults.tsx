@@ -6,7 +6,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Award,
   TrendingUp,
@@ -148,10 +147,8 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-4"
+      <div
+        className="text-center space-y-4 animate-fadeInUp"
       >
         <div className="flex items-center justify-center gap-3">
           <div
@@ -164,14 +161,11 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
             <p className="text-gray-600">Your adaptive assessment results are ready</p>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Score Overview */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.1 }}
-        className="bg-white rounded-xl border-2 border-gray-200 p-8"
+      <div
+        className="bg-white rounded-xl border-2 border-gray-200 p-8 animate-fadeInUp"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Main Score */}
@@ -218,7 +212,7 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Action Buttons */}
       <div className="flex flex-wrap justify-center gap-4">
@@ -284,14 +278,10 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
 
         {/* Tab Content */}
         <div className="p-6">
-          <AnimatePresence mode="wait">
-            {activeTab === 'overview' && (
-              <motion.div
+{activeTab === 'overview' && (
+              <div
                 key="overview"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Topic Scores */}
                 {Object.keys(results.results.topicScores).length > 0 && (
@@ -373,16 +363,13 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'performance' && (
-              <motion.div
+              <div
                 key="performance"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Performance Metrics */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -487,16 +474,13 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'adaptations' && (
-              <motion.div
+              <div
                 key="adaptations"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Adaptation Summary */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -594,16 +578,13 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'gaps' && (
-              <motion.div
+              <div
                 key="gaps"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Gap Summary */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -684,16 +665,13 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </button>
                   </div>
                 )}
-              </motion.div>
+              </div>
             )}
 
             {activeTab === 'recommendations' && (
-              <motion.div
+              <div
                 key="recommendations"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Immediate Recommendations */}
                 {results.gaps.recommendations.length > 0 && (
@@ -791,10 +769,9 @@ const AdaptiveTestResults: React.FC<AdaptiveTestResultsProps> = ({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </div>
+</div>
       </div>
     </div>
   )

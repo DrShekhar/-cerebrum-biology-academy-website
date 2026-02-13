@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Database,
   CheckSquare,
@@ -392,13 +391,9 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
         )}
 
         {/* Filters Panel */}
-        <AnimatePresence>
-          {showFilters && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="overflow-hidden border-t pt-6 mb-6"
+{showFilters && (
+            <div
+              className="overflow-hidden border-t pt-6 mb-6 animate-fadeInUp"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {/* Search */}
@@ -525,10 +520,9 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                   Clear Filters
                 </button>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Questions Table */}
       <div className="bg-white rounded-xl border overflow-hidden">
@@ -667,19 +661,12 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
       </div>
 
       {/* Batch Operation Modal */}
-      <AnimatePresence>
-        {activeOperation && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+{activeOperation && (
+          <div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
           >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white rounded-xl p-6 max-w-md w-full"
+            <div
+              className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp"
             >
               <div className="flex justify-between items-center mb-4">
                 <h4 className="text-lg font-semibold flex items-center gap-2">
@@ -762,25 +749,16 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                   {activeOperation.label}
                 </button>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Bulk Generate Modal */}
-      <AnimatePresence>
-        {showBulkGenerate && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+{/* Bulk Generate Modal */}
+{showBulkGenerate && (
+          <div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
           >
-            <motion.div
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.95, opacity: 0 }}
-              className="bg-white rounded-xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+            <div
+              className="bg-white rounded-xl p-6 max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-fadeInUp"
             >
               <div className="flex justify-between items-center mb-6">
                 <h4 className="text-xl font-semibold flex items-center gap-2">
@@ -964,11 +942,10 @@ const BatchOperationsPanel: React.FC<BatchOperationsPanelProps> = ({
                   </button>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

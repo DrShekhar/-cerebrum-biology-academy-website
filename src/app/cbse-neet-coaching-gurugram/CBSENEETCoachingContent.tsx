@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Users, Clock, BookOpen, Star, GraduationCap, FileText,
@@ -71,7 +70,7 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BookOpen className="w-4 h-4" />
               100% NCERT-Based Approach
@@ -108,12 +107,12 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Get CBSE Batch Details
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -122,11 +121,11 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {successStats.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-blue-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -135,21 +134,21 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       {/* NCERT Advantages */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why CBSE Students Excel with Us</h2>
             <p className="text-xl text-slate-600">Leverage your NCERT foundation for NEET success</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {ncertAdvantages.map((advantage, index) => (
-              <motion.div key={advantage.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={advantage.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                   <advantage.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{advantage.title}</h3>
                 <p className="text-slate-600 text-sm">{advantage.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -158,20 +157,20 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       {/* CBSE Schools */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Students from Top CBSE Schools</h2>
             <p className="text-xl text-slate-600">Trusted by students from premier Gurugram CBSE schools</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {cbseSchools.map((school, index) => (
-              <motion.div key={school.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100">
+              <div key={school.name}
+                className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-100 animate-fadeInUp">
                 <h3 className="text-lg font-bold text-slate-900 mb-1">{school.name}</h3>
                 <p className="text-sm text-slate-500 mb-2">{school.sector}</p>
                 <p className="text-2xl font-bold text-blue-600">{school.students}</p>
                 <p className="text-xs text-slate-500">Students Enrolled</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -181,7 +180,7 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Board + NEET = One Preparation</h2>
               <p className="text-xl text-blue-100 mb-6">
                 CBSE Biology and NEET Biology are essentially the same syllabus. Our integrated approach
@@ -198,9 +197,9 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-4 h-4 mr-2" />Start Integrated Preparation
                 </Button>
               </Link>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">CBSE Student Results 2024</h3>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-white/20"><span>Average NEET Biology</span><span className="font-semibold">324/360</span></div>
@@ -208,7 +207,7 @@ export default function CBSENEETCoachingContent({ faqs }: { faqs: FAQ[] }) {
                 <div className="flex justify-between py-3 border-b border-white/20"><span>Students Above 340</span><span className="font-semibold">42%</span></div>
                 <div className="flex justify-between py-3"><span>NEET Qualified</span><span className="font-semibold text-green-400">85%</span></div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

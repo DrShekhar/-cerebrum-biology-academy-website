@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Bell,
   Trophy,
@@ -136,10 +135,7 @@ function NotificationItem({
   const Icon = config.icon
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 20 }}
+    <div
       className={`p-4 border-b border-gray-100 hover:bg-gray-50 transition-colors ${
         !notification.isRead ? 'bg-blue-50/50' : ''
       }`}
@@ -213,7 +209,7 @@ function NotificationItem({
         {/* Unread indicator */}
         {!notification.isRead && <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full" />}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -252,25 +248,18 @@ export function NotificationPopover({
       >
         <Bell className="w-6 h-6" />
         {unreadCount > 0 && (
-          <motion.span
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center"
+          <span
+            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full flex items-center justify-center animate-fadeInUp"
           >
             {unreadCount > 9 ? '9+' : unreadCount}
-          </motion.span>
+          </span>
         )}
       </button>
 
       {/* Popover */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: 10, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="absolute right-0 mt-2 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50"
+{isOpen && (
+          <div
+            className="absolute right-0 mt-2 w-96 max-w-[calc(100vw-2rem)] bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden z-50 animate-fadeInUp"
           >
             {/* Header */}
             <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-4 text-white">
@@ -307,8 +296,7 @@ export function NotificationPopover({
                   </p>
                 </div>
               ) : (
-                <AnimatePresence>
-                  {notifications.map((notification) => (
+{notifications.map((notification) => (
                     <NotificationItem
                       key={notification.id}
                       notification={notification}
@@ -316,8 +304,7 @@ export function NotificationPopover({
                       onDismiss={onDismiss}
                     />
                   ))}
-                </AnimatePresence>
-              )}
+)}
 
               {/* Load More */}
               {hasMore && (
@@ -345,9 +332,8 @@ export function NotificationPopover({
                 <ChevronRight className="w-4 h-4 ml-1" />
               </button>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

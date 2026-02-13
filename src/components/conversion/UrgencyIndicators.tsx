@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Users,
   TrendingUp,
@@ -211,17 +210,12 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
   }
 
   const SeatsIndicator = () => (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
+    <div
       className={`flex items-center gap-3 p-4 rounded-xl border-2 ${colors.bg} relative overflow-hidden`}
     >
       {urgencyLevel === 'critical' && (
-        <motion.div
+        <div
           className={`absolute inset-0 ${colors.pulse} opacity-10`}
-          animate={{ opacity: [0.1, 0.3, 0.1] }}
-          transition={{ duration: 2, repeat: Infinity }}
         />
       )}
 
@@ -243,24 +237,16 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
       </div>
 
       <div className="w-12 h-2 bg-white rounded-full overflow-hidden">
-        <motion.div
+        <div
           className={`h-full ${colors.pulse}`}
-          initial={{ width: 0 }}
-          animate={{
-            width: `${100 - (urgencyData.seatsRemaining / urgencyData.totalSeats) * 100}%`,
-          }}
-          transition={{ duration: 1, delay: 0.5 }}
         />
       </div>
-    </motion.div>
+    </div>
   )
 
   const TimerIndicator = () => (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 20 }}
-      className="flex items-center gap-3 p-4 bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl"
+    <div
+      className="flex items-center gap-3 p-4 bg-gradient-to-r from-purple-50 to-pink-50 border-2 border-purple-200 rounded-xl animate-fadeInUp"
     >
       <div className="p-2 rounded-lg bg-purple-100 text-purple-600">
         <Timer className="w-5 h-5" />
@@ -273,50 +259,37 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
         <div className="font-mono text-xl font-bold text-purple-600">{formatTimeRemaining()}</div>
       </div>
 
-      <motion.div
-        className="w-3 h-3 bg-purple-500 rounded-full"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 1, repeat: Infinity }}
+      <div
+        className="w-3 h-3 bg-purple-500 rounded-full animate-fadeInUp"
       />
-    </motion.div>
+    </div>
   )
 
   const ViewersIndicator = () => (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      className="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg"
+    <div
+      className="flex items-center gap-3 p-3 bg-blue-50 border border-blue-200 rounded-lg animate-fadeInUp"
     >
       <Eye className="w-4 h-4 text-blue-600" />
       <span className="text-sm text-blue-800">
         <span className="font-semibold">{urgencyData.currentViewers}</span> others viewing this
         course
       </span>
-      <motion.div
-        className="flex gap-1"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+      <div
+        className="flex gap-1 animate-fadeInUp"
       >
         {Array.from({ length: Math.min(urgencyData.currentViewers, 5) }).map((_, i) => (
-          <motion.div
+          <div
             key={i}
-            className="w-2 h-2 bg-blue-500 rounded-full"
-            animate={{ scale: [1, 1.3, 1] }}
-            transition={{ duration: 1.5, delay: i * 0.2, repeat: Infinity }}
+            className="w-2 h-2 bg-blue-500 rounded-full animate-fadeInUp"
           />
         ))}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 
   const SocialProofIndicator = () => (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
-      className="p-3 bg-green-50 border border-green-200 rounded-lg"
+    <div
+      className="p-3 bg-green-50 border border-green-200 rounded-lg animate-fadeInUp"
     >
       <div className="flex items-center gap-2 mb-2">
         <TrendingUp className="w-4 h-4 text-green-600" />
@@ -325,12 +298,9 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
 
       <div className="space-y-1">
         {urgencyData.recentActions.slice(0, 2).map((action, index) => (
-          <motion.div
+          <div
             key={index}
-            className="flex items-center gap-2 text-xs text-green-700"
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.2 }}
+            className="flex items-center gap-2 text-xs text-green-700 animate-fadeInUp"
           >
             <UserCheck className="w-3 h-3" />
             <span>
@@ -342,10 +312,10 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
                   : 'viewed'}{' '}
               {action.timeAgo}
             </span>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 
   const BatchStartIndicator = () => {
@@ -354,11 +324,8 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
     )
 
     return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="flex items-center gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg"
+      <div
+        className="flex items-center gap-3 p-3 bg-amber-50 border border-amber-200 rounded-lg animate-fadeInUp"
       >
         <Calendar className="w-4 h-4 text-yellow-600" />
         <div className="text-sm text-yellow-800">
@@ -371,7 +338,7 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
             })}
           </span>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
@@ -398,28 +365,21 @@ const UrgencyIndicators: React.FC<UrgencyIndicatorProps> = ({
 
   return (
     <div className={containerClass}>
-      <AnimatePresence mode="wait">
-        {showMultiple ? (
+{showMultiple ? (
           <div className="space-y-3">{visibleIndicators.map((type) => renderIndicator(type))}</div>
         ) : (
           visibleIndicators.map((type) => renderIndicator(type))
         )}
-      </AnimatePresence>
-
-      {/* Floating urgency badge for critical situations */}
+{/* Floating urgency badge for critical situations */}
       {urgencyLevel === 'critical' && variant === 'aggressive' && (
-        <motion.div
-          className="fixed top-4 right-4 z-50 p-3 bg-red-500 text-white rounded-full shadow-lg"
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
+        <div
+          className="fixed top-4 right-4 z-50 p-3 bg-red-500 text-white rounded-full shadow-lg animate-fadeInUp"
         >
           <div className="flex items-center gap-2">
             <AlertTriangle className="w-5 h-5" />
             <span className="text-sm font-bold">ONLY {urgencyData.seatsRemaining} LEFT!</span>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   )

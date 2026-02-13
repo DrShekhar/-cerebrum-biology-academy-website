@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   User,
   Mail,
@@ -183,9 +182,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
 
   if (success) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
         className={`text-center p-8 bg-green-50 rounded-2xl border border-green-200 ${className}`}
       >
         <Video className="w-20 h-20 text-green-600 mx-auto mb-6" />
@@ -225,7 +222,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
             <li>• Have a notebook and pen ready</li>
           </ul>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
@@ -248,9 +245,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`bg-white rounded-2xl border border-gray-200 shadow-xl overflow-hidden ${className}`}
     >
       {/* Progress Bar */}
@@ -277,10 +272,8 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
 
         {/* Step 1: Basic Information */}
         {step === 1 && (
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+          <div
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Your Information</h3>
@@ -370,15 +363,13 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Step 2: Schedule Demo */}
         {step === 2 && (
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="space-y-6"
+          <div
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Schedule Your Demo</h3>
@@ -468,7 +459,7 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
                 </li>
               </ul>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Navigation Buttons */}
@@ -518,6 +509,6 @@ export function DemoBookingForm({ onSuccess, className = '' }: DemoBookingFormPr
           )}
         </div>
       </form>
-    </motion.div>
+    </div>
   )
 }

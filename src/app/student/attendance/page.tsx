@@ -13,7 +13,6 @@ import { AttendanceStatisticsWidget } from '@/components/student/AttendanceStati
 import { UpcomingSessionsWidget } from '@/components/student/UpcomingSessionsWidget'
 import { SelfCheckIn } from '@/components/student/SelfCheckIn'
 import { Calendar, Clock, Filter, X, BookOpen, MapPin } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import type { StudentAttendance, AttendanceFilter } from '@/types/attendance'
 
@@ -207,12 +206,9 @@ export default function AttendancePage() {
             ) : attendance.length > 0 ? (
               <div className="space-y-3">
                 {attendance.map((record, index) => (
-                  <motion.div
+                  <div
                     key={record.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                  >
+                   className="animate-fadeInUp">
                     <Card className="hover:shadow-md transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
@@ -280,7 +276,7 @@ export default function AttendancePage() {
                         </div>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             ) : (

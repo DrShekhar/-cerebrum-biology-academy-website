@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Trophy,
   Star,
@@ -163,12 +162,8 @@ export function NEETToppersShowcase({
     <section className="py-20 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center bg-yellow-100 text-yellow-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Trophy className="w-5 h-5 mr-2" />
@@ -197,13 +192,9 @@ export function NEETToppersShowcase({
               },
               { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-green-600' },
             ].map((metric, index) => (
-              <motion.div
+              <div
                 key={metric.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="text-center animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 ${metric.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
@@ -212,28 +203,19 @@ export function NEETToppersShowcase({
                 </div>
                 <div className="text-xl font-bold text-gray-900">{metric.label}</div>
                 <div className="text-sm text-gray-600">{metric.sublabel}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Main Topper Showcase */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
+<div
                 key={currentTopper}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="p-8 md:p-12"
+                className="p-8 md:p-12 animate-fadeInUp"
               >
                 <div className="grid md:grid-cols-3 gap-8 items-center">
                   {/* Topper Photo & Achievement */}
@@ -351,10 +333,8 @@ export function NEETToppersShowcase({
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Controls */}
+              </div>
+{/* Navigation Controls */}
             <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
               <button
                 onClick={prevTopper}
@@ -397,28 +377,20 @@ export function NEETToppersShowcase({
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Toppers Grid */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
             More Success Stories
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {neetToppers.slice(maxToppers).map((topper, index) => (
-              <motion.div
+              <div
                 key={topper.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white text-lg font-bold">
@@ -444,18 +416,14 @@ export function NEETToppersShowcase({
                     <span className="text-green-600 font-medium">+{topper.improvement} marks</span>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          className="text-center bg-gradient-to-br from-[#3d4d3d] to-[#2d3d2d] rounded-3xl p-12 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center bg-gradient-to-br from-[#3d4d3d] to-[#2d3d2d] rounded-3xl p-12 text-white animate-fadeInUp"
         >
           <h3 className="text-3xl font-bold mb-4">Your Success Story Starts Here</h3>
           <p className="text-xl mb-8 text-green-100">
@@ -499,7 +467,7 @@ export function NEETToppersShowcase({
               <span>67+ AIIMS Selections</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

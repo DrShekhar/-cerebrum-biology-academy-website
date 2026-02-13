@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle,
   Users,
@@ -104,14 +103,12 @@ export default function PageContent() {
       <FloatingWhatsAppButton />
 
       {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="bg-gradient-to-br from-green-700 to-blue-800 text-white py-12 sm:py-20"
+      <section
+        className="bg-gradient-to-br from-green-700 to-blue-800 text-white py-12 sm:py-20 animate-fadeInUp"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-            <motion.div initial={{ y: 20 }} animate={{ y: 0 }} transition={{ delay: 0.1 }}>
+            <div className="animate-fadeInUp">
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
                 Kerala HSE to NEET & KEAM Excellence
               </h1>
@@ -134,8 +131,8 @@ export default function PageContent() {
                   <MessageCircle className="w-5 h-5 ml-2" />
                 </a>
               </div>
-            </motion.div>
-            <motion.div initial={{ x: 20, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.2 }} className="bg-white/10 backdrop-blur-sm rounded-3xl p-8">
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">Kerala HSE Success Stats</h3>
               <div className="grid grid-cols-2 gap-4">
                 {keralaStats.map((item, idx) => (
@@ -145,10 +142,10 @@ export default function PageContent() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
-      </motion.section>
+      </section>
 
       {/* Kerala Advantage */}
       <section className="py-12 sm:py-16 md:py-20">
@@ -161,16 +158,13 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {keralaNEETAdvantage.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-green-600"
+                className="bg-white rounded-xl p-6 shadow-lg border-t-4 border-green-600 animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{item.aspect}</h3>
                 <p className="text-gray-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -186,12 +180,9 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {syllabusCoverage.map((module, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg"
+                className="bg-white rounded-xl p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                   <BookOpen className="w-6 h-6 text-green-600 mr-3" />
@@ -205,7 +196,7 @@ export default function PageContent() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -223,17 +214,14 @@ export default function PageContent() {
             {whyChooseUs.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                  className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
                 >
                   <Icon className="w-8 h-8 text-green-600 mb-4" />
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
@@ -250,12 +238,9 @@ export default function PageContent() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {pricingPlans.map((plan, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <div className="text-3xl font-bold text-green-600 mb-4">{plan.price}</div>
@@ -266,7 +251,7 @@ export default function PageContent() {
                 >
                   Enroll Now
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -282,7 +267,7 @@ export default function PageContent() {
           </div>
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp">
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
                   className="w-full p-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
@@ -294,30 +279,22 @@ export default function PageContent() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                   )}
                 </button>
-                <AnimatePresence>
-                  {expandedFAQ === index && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="border-t border-gray-200 bg-gray-50"
+{expandedFAQ === index && (
+                    <div
+                      className="border-t border-gray-200 bg-gray-50 animate-fadeInUp"
                     >
                       <p className="p-6 text-gray-700">{faq.answer}</p>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </motion.div>
+</div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        className="bg-gradient-to-r from-green-700 to-blue-800 text-white py-12 sm:py-16 md:py-20"
+      <section
+        className="bg-gradient-to-r from-green-700 to-blue-800 text-white py-12 sm:py-16 md:py-20 animate-fadeInUp"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">
@@ -346,7 +323,7 @@ export default function PageContent() {
             <p>WhatsApp: +91 88264-44334 | Website: cerebrumbiologyacademy.com</p>
           </div>
         </div>
-      </motion.section>
+      </section>
     </div>
   )
 }

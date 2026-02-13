@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
 import { Check, ArrowRight, MessageCircle, Phone, Crown, Sparkles, Search } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
@@ -395,21 +394,15 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
       {/* Hero Section */}
       <section ref={heroRef} className="relative z-10 pt-32 pb-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-          >
-            <motion.div
-              initial={{ scale: 0, rotate: -10 }}
-              animate={heroInView ? { scale: 1, rotate: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl"
+          <div
+           className="animate-fadeInUp">
+            <div
+              className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl animate-fadeInUp"
             >
               <Crown className="w-8 h-8 text-yellow-400" />
               <span className="text-xl">Complete Course Catalog</span>
               <Sparkles className="w-6 h-6 text-blue-400" />
-            </motion.div>
+            </div>
 
             <h1 className="text-7xl md:text-8xl font-black text-white mb-8 leading-none tracking-tight">
               <span className="block">Cerebrum Biology</span>
@@ -419,7 +412,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
             <p className="text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed mb-12 font-light">
               Explore our complete range of Biology programs from Foundation to Intensive coaching
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -467,12 +460,9 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
             if (seriesCourses.length === 0 && selectedSeries !== 'all') return null
 
             return (
-              <motion.div
+              <div
                 key={seriesKey}
-                initial={{ opacity: 0, y: 50 }}
-                animate={catalogInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6 }}
-                className="mb-20"
+                className="mb-20 animate-fadeInUp"
               >
                 {/* Series Header */}
                 <div className="text-center mb-12">
@@ -495,13 +485,9 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {(selectedSeries === 'all' ? series.courses : seriesCourses).map(
                     (course: any, index: number) => (
-                      <motion.div
+                      <div
                         key={course.id}
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={catalogInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        whileHover={{ y: -10, scale: 1.02 }}
-                        className="bg-white/10 backdrop-blur-2xl rounded-3xl p-6 border border-white/30 hover:border-white/50 transition-all duration-500"
+                        className="bg-white/10 backdrop-blur-2xl rounded-3xl p-6 border border-white/30 hover:border-white/50 transition-all duration-500 animate-fadeInUp"
                       >
                         {/* Course Header */}
                         <div className="mb-6">
@@ -605,28 +591,24 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                         )}
 
                         {/* Action Button */}
-                        <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
-                          className="w-full py-3 rounded-2xl font-bold text-white transition-all duration-300 flex items-center justify-center gap-2"
+                        <button
+                          className="w-full py-3 rounded-2xl font-bold text-white transition-all duration-300 flex items-center justify-center gap-2 animate-fadeInUp"
                           style={{ background: series.color.gradient }}
                         >
                           Select Course
                           <ArrowRight className="h-4 w-4" />
-                        </motion.button>
-                      </motion.div>
+                        </button>
+                      </div>
                     )
                   )}
                 </div>
-              </motion.div>
+              </div>
             )
           })}
 
           {/* Contact Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={catalogInView ? { opacity: 1, y: 0 } : {}}
-            className="text-center mt-20"
+          <div
+            className="text-center mt-20 animate-fadeInUp"
           >
             <div className="bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-orange-600/20 backdrop-blur-2xl rounded-3xl p-10 border border-white/30">
               <h3 className="text-4xl font-black text-white mb-6">Need Help Choosing?</h3>
@@ -635,7 +617,7 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <motion.button
+                <button
                   onClick={async () => {
                     await trackAndOpenWhatsApp({
                       source: 'course-catalog-help',
@@ -643,24 +625,22 @@ export function CompleteCerebrumCatalog({ className = '' }: CompleteCerebrumCata
                       campaign: 'course-catalog',
                     })
                   }}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-[#4a5d4a] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 cursor-pointer"
+                  className="bg-[#4a5d4a] text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 cursor-pointer animate-fadeInUp"
                 >
                   <MessageCircle className="h-6 w-6" />
                   WhatsApp: {CONTACT_INFO.whatsapp.primary}
-                </motion.button>
+                </button>
 
-                <motion.a
+                <a
                   href={getPhoneLink()}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3"
+                  className="bg-gradient-to-r from-blue-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-bold flex items-center justify-center gap-3 animate-fadeInUp"
                 >
                   <Phone className="h-6 w-6" />
                   Call Now
-                </motion.a>
+                </a>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -83,11 +82,8 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
@@ -139,19 +135,15 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-purple-50 rounded-xl p-6"
+            <div
+              className="bg-purple-50 rounded-xl p-6 animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <Train className="w-6 h-6 text-purple-600 mr-2" />
@@ -173,14 +165,10 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                   )
                 })}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-blue-50 rounded-xl p-6"
+            <div
+              className="bg-blue-50 rounded-xl p-6 animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <MapPin className="w-6 h-6 text-blue-600 mr-2" />
@@ -194,14 +182,10 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-green-50 rounded-xl p-6"
+            <div
+              className="bg-green-50 rounded-xl p-6 animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <GraduationCap className="w-6 h-6 text-green-600 mr-2" />
@@ -215,14 +199,10 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-orange-50 rounded-xl p-6"
+            <div
+              className="bg-orange-50 rounded-xl p-6 animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <Building2 className="w-6 h-6 text-orange-600 mr-2" />
@@ -236,7 +216,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -257,12 +237,8 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Courses for {area.name} Students
@@ -270,17 +246,13 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
             <p className="text-lg text-gray-600">
               Choose the program that fits your preparation needs
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {faridabadCourseOptions.map((course, index) => (
-              <motion.div
+              <div
                 key={course.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white p-6">
                   <h3 className="text-xl font-bold">{course.name}</h3>
@@ -300,7 +272,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                     <Button className="w-full bg-orange-600 hover:bg-orange-700">Enroll Now</Button>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -308,12 +280,8 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8"
+          <div
+            className="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 animate-fadeInUp"
           >
             <div className="flex items-center mb-6">
               <MapPin className="w-8 h-8 text-orange-600 mr-3" />
@@ -352,23 +320,19 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 </ul>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       <section className="py-16 md:py-20 bg-orange-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why Students from {area.name} Choose Us
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -381,17 +345,13 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               'Regular assessments',
               'Parent-teacher meetings',
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-yellow-300 mr-3 flex-shrink-0" />
                 <span>{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -402,12 +362,8 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
       {nearbyAreas.length > 0 && (
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center mb-10"
+            <div
+              className="text-center mb-10 animate-fadeInUp"
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
                 NEET Coaching in Nearby Areas
@@ -415,20 +371,16 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
               <p className="text-gray-600">
                 Explore our coaching services in similar localities near {area.name}
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {nearbyAreas.map((slug, index) => {
                 const nearbyArea = faridabadAreaDetails[slug]
                 if (!nearbyArea) return null
                 return (
-                  <motion.div
+                  <div
                     key={slug}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
+                   className="animate-fadeInUp">
                     <Link
                       href={`/neet-coaching-faridabad/${slug}`}
                       className="block bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-orange-300 group"
@@ -452,7 +404,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                         ))}
                       </div>
                     </Link>
-                  </motion.div>
+                  </div>
                 )
               })}
             </div>
@@ -472,12 +424,8 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
 
       <section className="py-16 md:py-20 bg-slate-800 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your NEET Journey from {area.name}?
             </h2>
@@ -509,7 +457,7 @@ export default function AreaPageContent({ area, areaSlug }: AreaPageContentProps
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

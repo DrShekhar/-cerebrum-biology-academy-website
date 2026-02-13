@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Trophy, Users, Calendar, MapPin, TrendingUp, BookOpen, Clock } from 'lucide-react'
 import { getRandomSuccessStory } from '@/data/studentSuccessData'
 
@@ -147,14 +146,9 @@ export function NotificationCenter({
 
   return (
     <div className={`fixed ${getPositionClasses()} z-40`} style={{ maxWidth }}>
-      <AnimatePresence mode="wait">
-        <motion.div
+<div
           key={currentNotification.id}
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: -20 }}
-          transition={{ duration: 0.4, ease: 'easeOut' }}
-          className="relative"
+          className="relative animate-fadeInUp"
         >
           {/* TV Screen Frame */}
           <div className="bg-gray-900 p-2 rounded-xl shadow-2xl border border-gray-700">
@@ -214,11 +208,8 @@ export function NotificationCenter({
 
               {/* Progress Indicator */}
               <div className="absolute bottom-0 left-0 w-full">
-                <motion.div
-                  initial={{ width: '0%' }}
-                  animate={{ width: '100%' }}
-                  transition={{ duration: interval, ease: 'linear' }}
-                  className="h-0.5 bg-white/30"
+                <div
+                  className="h-0.5 bg-white/30 animate-fadeInUp"
                 />
               </div>
             </div>
@@ -231,9 +222,8 @@ export function NotificationCenter({
           <div className="flex justify-center mt-1">
             <div className="w-8 h-2 bg-gray-800 rounded-b-lg"></div>
           </div>
-        </motion.div>
-      </AnimatePresence>
-    </div>
+        </div>
+</div>
   )
 }
 

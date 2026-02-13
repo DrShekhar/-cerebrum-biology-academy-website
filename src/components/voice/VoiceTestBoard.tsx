@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   Play,
   Square,
@@ -99,10 +98,8 @@ const VoiceTestBoard: React.FC = () => {
   return (
     <div className="max-w-6xl mx-auto p-6 space-y-8">
       {/* Header */}
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
+        className="text-center animate-fadeInUp"
       >
         <h1 className="text-4xl font-bold text-gray-800 mb-4">🎯 Shekhar Sir Voice Test</h1>
         <p className="text-lg text-gray-600 mb-6">
@@ -124,23 +121,19 @@ const VoiceTestBoard: React.FC = () => {
 
           {isSpeaking && (
             <div className="flex items-center space-x-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full">
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <Mic className="w-5 h-5" />
-              </motion.div>
+              </div>
               <span className="font-medium">Speaking... {Math.round(progress)}%</span>
             </div>
           )}
         </div>
-      </motion.div>
+      </div>
 
       {/* Language Selector */}
-      <motion.div
-        className="bg-white rounded-xl shadow-lg p-6"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
+        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
       >
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <Settings className="w-5 h-5 mr-2" />
@@ -148,29 +141,24 @@ const VoiceTestBoard: React.FC = () => {
         </h3>
         <div className="flex flex-wrap gap-3">
           {(['auto', 'hindi', 'english', 'hinglish'] as const).map((lang) => (
-            <motion.button
+            <button
               key={lang}
               className={`px-4 py-2 rounded-lg capitalize transition-colors ${
                 selectedLanguage === lang
                   ? 'bg-blue-500 text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedLanguage(lang)}
             >
               {lang === 'auto' ? 'Auto Detect' : lang}
-            </motion.button>
+            </button>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Sample Texts */}
-      <motion.div
-        className="bg-white rounded-xl shadow-lg p-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
+      <div
+        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
       >
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <BookOpen className="w-5 h-5 mr-2" />
@@ -183,10 +171,9 @@ const VoiceTestBoard: React.FC = () => {
               <h4 className="font-medium text-gray-700 capitalize">{language}</h4>
               <div className="space-y-2">
                 {texts.map((text, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    className="p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors"
-                    whileHover={{ scale: 1.02 }}
+                    className="p-3 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors animate-fadeInUp"
                     onClick={() => handleSpeak(text)}
                   >
                     <p className="text-sm text-gray-800 mb-2">{text}</p>
@@ -198,20 +185,17 @@ const VoiceTestBoard: React.FC = () => {
                       {isSpeaking ? <Square size={12} /> : <Play size={12} />}
                       <span>{isSpeaking ? 'Stop' : 'Play'}</span>
                     </button>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Biology Topics */}
-      <motion.div
-        className="bg-white rounded-xl shadow-lg p-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
+      <div
+        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
       >
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <Brain className="w-5 h-5 mr-2" />
@@ -220,10 +204,9 @@ const VoiceTestBoard: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {biologyTopics.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
-              whileHover={{ scale: 1.02 }}
+              className="p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-3">
                 <h4 className="font-medium text-gray-800">{item.topic}</h4>
@@ -232,30 +215,25 @@ const VoiceTestBoard: React.FC = () => {
 
               <p className="text-sm text-gray-600 mb-3 line-clamp-3">{item.explanation}</p>
 
-              <motion.button
+              <button
                 className={`w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                   isSpeaking
                     ? 'bg-red-500 text-white hover:bg-red-600'
                     : 'bg-blue-500 text-white hover:bg-blue-600'
                 }`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 onClick={() => handleSpeakTopic(item.topic, item.explanation)}
               >
                 {isSpeaking ? <Square size={16} /> : <Play size={16} />}
                 <span>{isSpeaking ? 'Stop' : 'Listen to Explanation'}</span>
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Custom Text Input */}
-      <motion.div
-        className="bg-white rounded-xl shadow-lg p-6"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
+      <div
+        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
       >
         <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
           <Star className="w-5 h-5 mr-2" />
@@ -272,45 +250,38 @@ const VoiceTestBoard: React.FC = () => {
           />
 
           <div className="flex items-center space-x-3">
-            <motion.button
+            <button
               className={`flex items-center space-x-2 px-6 py-3 rounded-lg transition-colors ${
                 isSpeaking
                   ? 'bg-red-500 text-white hover:bg-red-600'
                   : 'bg-blue-500 text-white hover:bg-blue-600'
               } ${!selectedText.trim() ? 'opacity-50 cursor-not-allowed' : ''}`}
-              whileHover={{ scale: selectedText.trim() ? 1.05 : 1 }}
-              whileTap={{ scale: selectedText.trim() ? 0.95 : 1 }}
               onClick={() => selectedText.trim() && handleSpeak(selectedText)}
               disabled={!selectedText.trim()}
             >
               {isSpeaking ? <Square size={20} /> : <Play size={20} />}
               <span>{isSpeaking ? 'Stop Speaking' : 'Test Custom Text'}</span>
-            </motion.button>
+            </button>
 
             {progress > 0 && (
               <div className="flex-1 bg-gray-200 rounded-full h-2">
-                <motion.div
-                  className="bg-blue-500 h-2 rounded-full"
-                  initial={{ width: 0 }}
-                  animate={{ width: `${progress}%` }}
-                  transition={{ duration: 0.3 }}
+                <div
+                  className="bg-blue-500 h-2 rounded-full animate-fadeInUp"
                 />
               </div>
             )}
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Error Display */}
       {error && (
-        <motion.div
-          className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center space-x-3 animate-fadeInUp"
         >
           <VolumeX className="w-5 h-5 text-red-500" />
           <span className="text-red-700">Voice Error: {error}</span>
-        </motion.div>
+        </div>
       )}
     </div>
   )

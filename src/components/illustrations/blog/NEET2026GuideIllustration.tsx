@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function NEET2026GuideIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -84,9 +83,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* Title Banner */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.5 }}
       >
         <rect
           x="150"
@@ -98,8 +94,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           filter="url(#neetShadow)"
         />
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           <text x="300" y="35" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="500">
             COMPLETE GUIDE
@@ -112,9 +106,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* EXAM PATTERN CARD - Left */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <rect
           x="20"
@@ -190,9 +181,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* MARKING SCHEME CARD - Center */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <rect
           x="210"
@@ -253,9 +241,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* IMPORTANT DATES CARD */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <rect
           x="400"
@@ -298,8 +283,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           cy="210"
           r="8"
           fill="#EF4444"
-          animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
         />
         <text x="440" y="208" fontSize="8" fill="#64748B">
           Exam Date
@@ -311,9 +294,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* SUBJECT DISTRIBUTION PIE CHART */}
       <motion.g
-        initial={animate ? { opacity: 0, scale: 0.8 } : undefined}
-        animate={animate ? { opacity: 1, scale: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6 }}
       >
         <rect
           x="210"
@@ -334,25 +314,16 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           <motion.path
             d="M0,-45 A45,45 0 0,1 39,22.5 L0,0 Z"
             fill="#3B82F6"
-            initial={animate ? { opacity: 0 } : undefined}
-            animate={animate ? { opacity: 1 } : undefined}
-            transition={{ delay: 0.6, duration: 0.3 }}
           />
           {/* Chemistry - 25% */}
           <motion.path
             d="M39,22.5 A45,45 0 0,1 -39,22.5 L0,0 Z"
             fill="#8B5CF6"
-            initial={animate ? { opacity: 0 } : undefined}
-            animate={animate ? { opacity: 1 } : undefined}
-            transition={{ delay: 0.7, duration: 0.3 }}
           />
           {/* Biology - 50% */}
           <motion.path
             d="M-39,22.5 A45,45 0 0,1 0,-45 L0,0 Z"
             fill="#10B981"
-            initial={animate ? { opacity: 0 } : undefined}
-            animate={animate ? { opacity: 1 } : undefined}
-            transition={{ delay: 0.8, duration: 0.3 }}
           />
           <circle cx="0" cy="0" r="20" fill="white" />
           <text x="0" y="5" fontSize="10" fill="#1E293B" textAnchor="middle" fontWeight="bold">
@@ -379,9 +350,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* QUALIFYING CUTOFF CARD */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.6, duration: 0.6 }}
       >
         <rect
           x="400"
@@ -421,13 +389,8 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* SUCCESS MEDAL */}
       <motion.g
-        initial={animate ? { opacity: 0, scale: 0 } : undefined}
-        animate={animate ? { opacity: 1, scale: 1 } : undefined}
-        transition={{ delay: 0.7, duration: 0.5, type: 'spring' }}
       >
         <motion.g
-          animate={animate ? { y: [-3, 3, -3], rotate: [-2, 2, -2] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
           style={{ transformOrigin: '110px 370px' }}
         >
           {/* Ribbon */}
@@ -455,9 +418,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
 
       {/* BOTTOM CTA */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.8, duration: 0.5 }}
       >
         <rect
           x="400"
@@ -469,8 +429,6 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           filter="url(#neetShadow)"
         />
         <motion.g
-          animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           <text x="490" y="390" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="500">
             Start Your Journey

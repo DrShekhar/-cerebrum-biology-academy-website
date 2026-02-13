@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { Youtube, Play, Users, Video, TrendingUp, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
@@ -151,11 +150,8 @@ export function YouTubeChannel({
       <VideoListSchema videos={videosToShow} channelName={channelName} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+        <div
+          className="text-center mb-12 animate-fadeInUp"
         >
           <div className="flex items-center justify-center mb-4">
             <Youtube className="w-12 h-12 text-red-600 mr-3" />
@@ -172,14 +168,11 @@ export function YouTubeChannel({
             Subscribe to Channel
             <ExternalLink className="w-4 h-4 ml-2" />
           </Button>
-        </motion.div>
+        </div>
 
         {showStats && (
-          <motion.div
-            className="grid md:grid-cols-3 gap-6 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          <div
+            className="grid md:grid-cols-3 gap-6 mb-12 animate-fadeInUp"
           >
             <div className="bg-white rounded-3xl shadow-xl p-8 text-center hover:shadow-2xl transition-shadow">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -204,26 +197,20 @@ export function YouTubeChannel({
               <div className="text-4xl font-bold text-gray-900 mb-2">95%+</div>
               <div className="text-gray-600 font-medium">Success Rate</div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {showRecentVideos && videosToShow.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">
               Recent Success Stories
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {videosToShow.map((video, index) => (
-                <motion.div
+                <div
                   key={video.id}
-                  className="bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all transform hover:-translate-y-1"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  className="bg-white rounded-3xl shadow-xl overflow-hidden cursor-pointer hover:shadow-2xl transition-all transform hover:-translate-y-1 animate-fadeInUp"
                   onClick={() => openVideo(video)}
                 >
                   <div className="relative aspect-video bg-gray-900 group">
@@ -235,13 +222,11 @@ export function YouTubeChannel({
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                      <motion.div
-                        className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.95 }}
+                      <div
+                        className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg animate-fadeInUp"
                       >
                         <Play className="w-8 h-8 text-red-600 ml-1" />
-                      </motion.div>
+                      </div>
                     </div>
                     {video.duration && (
                       <div className="absolute bottom-3 right-3 bg-black/80 text-white px-2 py-1 rounded text-sm font-semibold">
@@ -264,7 +249,7 @@ export function YouTubeChannel({
                       <span>{formatDate(video.publishedAt)}</span>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -278,23 +263,17 @@ export function YouTubeChannel({
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Button>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {selectedVideo && (
-        <motion.div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fadeInUp"
           onClick={closeVideo}
         >
-          <motion.div
-            className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl"
-            initial={{ scale: 0.9, y: 20 }}
-            animate={{ scale: 1, y: 0 }}
-            exit={{ scale: 0.9, y: 20 }}
+          <div
+            className="relative w-full max-w-6xl bg-white rounded-3xl overflow-hidden shadow-2xl animate-fadeInUp"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -334,8 +313,8 @@ export function YouTubeChannel({
                 <span>{formatDate(selectedVideo.publishedAt)}</span>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       )}
     </div>
   )

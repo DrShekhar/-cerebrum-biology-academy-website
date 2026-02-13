@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { QuestionBuilder } from './QuestionBuilder'
 import {
   BookOpen,
@@ -615,11 +614,8 @@ export function TestCreationInterface({
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.95 }}
-        className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden"
+      <div
+        className="bg-white rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden animate-fadeInUp"
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-6">
@@ -673,15 +669,11 @@ export function TestCreationInterface({
 
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
-          <AnimatePresence mode="wait">
-            {/* Step 1: Content Selection */}
+{/* Step 1: Content Selection */}
             {currentStep === 1 && (
-              <motion.div
+              <div
                 key="step1"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -806,17 +798,14 @@ export function TestCreationInterface({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Step 2: Test Configuration */}
             {currentStep === 2 && (
-              <motion.div
+              <div
                 key="step2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-8"
+                className="space-y-8 animate-fadeInUp"
               >
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">Configure Test Settings</h3>
@@ -1661,17 +1650,14 @@ export function TestCreationInterface({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Step 3: Question Creation Method */}
             {currentStep === 3 && (
-              <motion.div
+              <div
                 key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-800 mb-2">
@@ -1688,10 +1674,8 @@ export function TestCreationInterface({
                     const isSelected = testConfig.questionCreationMethod === method.id
 
                     return (
-                      <motion.div
+                      <div
                         key={method.id}
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
                         className={`p-6 rounded-xl border-2 cursor-pointer transition-all duration-200 ${
                           isSelected
                             ? 'border-purple-500 bg-purple-50'
@@ -1748,17 +1732,15 @@ export function TestCreationInterface({
                             </div>
                           </div>
                         </div>
-                      </motion.div>
+                      </div>
                     )
                   })}
                 </div>
 
                 {/* Selected Method Details */}
                 {testConfig.questionCreationMethod && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border border-purple-200"
+                  <div
+                    className="p-6 bg-gradient-to-r from-purple-50 to-indigo-50 rounded-xl border border-purple-200 animate-fadeInUp"
                   >
                     <div className="flex items-center space-x-3 mb-4">
                       <div className="p-2 bg-purple-500 text-white rounded-lg">
@@ -1922,19 +1904,16 @@ export function TestCreationInterface({
                         </div>
                       )}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </motion.div>
+              </div>
             )}
 
             {/* Step 4: Question Types Configuration */}
             {currentStep === 4 && (
-              <motion.div
+              <div
                 key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -2251,17 +2230,14 @@ export function TestCreationInterface({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Step 5: Review & Create */}
             {currentStep === 5 && (
-              <motion.div
+              <div
                 key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">
@@ -2433,10 +2409,9 @@ export function TestCreationInterface({
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </div>
+</div>
 
         {/* Footer */}
         <div className="border-t border-gray-200 p-6 bg-gray-50">
@@ -2472,7 +2447,7 @@ export function TestCreationInterface({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Question Builder Component */}
       <QuestionBuilder

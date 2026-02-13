@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   Users,
   Eye,
@@ -131,10 +130,8 @@ export default function AnalyticsPage() {
 
         {/* Real-time Metrics Bar */}
         {realTimeData && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-indigo-500 rounded-xl p-6 text-white"
+          <div
+            className="bg-indigo-500 rounded-xl p-6 text-white animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -158,7 +155,7 @@ export default function AnalyticsPage() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Tab Navigation */}
@@ -195,11 +192,8 @@ export default function AnalyticsPage() {
           <div className="space-y-8">
             {/* Key Metrics Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -216,13 +210,10 @@ export default function AnalyticsPage() {
                     <Users className="w-6 h-6 text-blue-600" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -239,13 +230,10 @@ export default function AnalyticsPage() {
                     <Eye className="w-6 h-6 text-green-600" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -262,13 +250,10 @@ export default function AnalyticsPage() {
                     <Clock className="w-6 h-6 text-purple-600" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -285,17 +270,14 @@ export default function AnalyticsPage() {
                     <TrendingUp className="w-6 h-6 text-orange-600" />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Charts Row */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* User Growth Chart */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">User Growth Trend</h3>
                 <div className="h-64 flex items-center justify-center bg-gray-50 rounded-lg">
@@ -307,14 +289,11 @@ export default function AnalyticsPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Device Breakdown */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Device Usage</h3>
                 <div className="space-y-4">
@@ -372,17 +351,14 @@ export default function AnalyticsPage() {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Top Pages and Courses */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Top Pages */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.7 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Pages</h3>
                 <div className="space-y-3">
@@ -403,14 +379,11 @@ export default function AnalyticsPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Top Courses */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Top Courses</h3>
                 <div className="space-y-3">
@@ -438,7 +411,7 @@ export default function AnalyticsPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         )}
@@ -447,10 +420,8 @@ export default function AnalyticsPage() {
         {activeTab === 'conversions' && dashboardData && (
           <div className="space-y-8">
             {/* Conversion Funnel */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+            <div
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-6">
                 Lead-to-Payment Conversion Funnel
@@ -474,12 +445,9 @@ export default function AnalyticsPage() {
                   const width = (item.count / arr[0].count) * 100
 
                   return (
-                    <motion.div
+                    <div
                       key={item.stage}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="relative"
+                      className="relative animate-fadeInUp"
                     >
                       <div className="flex items-center justify-between mb-2">
                         <div className="flex items-center space-x-3">
@@ -499,75 +467,58 @@ export default function AnalyticsPage() {
                         </div>
                       </div>
                       <div className="h-8 bg-gray-100 rounded-lg overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: `${width}%` }}
-                          transition={{ duration: 0.8, delay: index * 0.1 }}
+                        <div
                           className={`h-full ${item.color} rounded-lg flex items-center justify-end pr-3`}
                         >
                           <span className="text-white text-xs font-medium">
                             {width.toFixed(1)}%
                           </span>
-                        </motion.div>
+                        </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )
                 })}
               </div>
-            </motion.div>
+            </div>
 
             {/* Key Conversion Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-xl text-white"
+              <div
+                className="bg-gradient-to-br from-blue-500 to-blue-600 p-6 rounded-xl text-white animate-fadeInUp"
               >
                 <div className="text-sm opacity-90">Lead Capture Rate</div>
                 <div className="text-3xl font-bold mt-2">16.7%</div>
                 <div className="text-xs opacity-80 mt-1">Visitors → Leads</div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.1 }}
-                className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-xl text-white"
+              <div
+                className="bg-gradient-to-br from-purple-500 to-purple-600 p-6 rounded-xl text-white animate-fadeInUp"
               >
                 <div className="text-sm opacity-90">Demo Booking Rate</div>
                 <div className="text-3xl font-bold mt-2">34.0%</div>
                 <div className="text-xs opacity-80 mt-1">Leads → Demo Booked</div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-xl text-white"
+              <div
+                className="bg-gradient-to-br from-indigo-500 to-indigo-600 p-6 rounded-xl text-white animate-fadeInUp"
               >
                 <div className="text-sm opacity-90">Demo Attendance</div>
                 <div className="text-3xl font-bold mt-2">75.0%</div>
                 <div className="text-xs opacity-80 mt-1">Confirmed → Attended</div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="bg-green-600 p-6 rounded-xl text-white"
+              <div
+                className="bg-green-600 p-6 rounded-xl text-white animate-fadeInUp"
               >
                 <div className="text-sm opacity-90">Overall Conversion</div>
                 <div className="text-3xl font-bold mt-2">1.63%</div>
                 <div className="text-xs opacity-80 mt-1">Visitors → Paid</div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Funnel Insights */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-6 rounded-xl"
+            <div
+              className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 p-6 rounded-xl animate-fadeInUp"
             >
               <h4 className="font-semibold text-yellow-800 mb-4 flex items-center">
                 <Target className="w-5 h-5 mr-2" />
@@ -603,14 +554,11 @@ export default function AnalyticsPage() {
                   </span>
                 </li>
               </ul>
-            </motion.div>
+            </div>
 
             {/* Exit Intent Performance */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+            <div
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
                 Exit Intent Popup Performance
@@ -629,7 +577,7 @@ export default function AnalyticsPage() {
                   <div className="text-sm text-gray-600">Conversion Rate</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
 
@@ -638,10 +586,8 @@ export default function AnalyticsPage() {
           <div className="space-y-8">
             {/* Real-time Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center space-x-3">
                   <div className="p-2 bg-green-100 rounded-full">
@@ -652,13 +598,10 @@ export default function AnalyticsPage() {
                     <p className="text-2xl font-bold text-gray-900">{realTimeData.activeUsers}</p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center space-x-3">
                   <MousePointer className="w-8 h-8 text-blue-600" />
@@ -669,13 +612,10 @@ export default function AnalyticsPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center space-x-3">
                   <Eye className="w-8 h-8 text-purple-600" />
@@ -686,13 +626,10 @@ export default function AnalyticsPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.3 }}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+              <div
+                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
               >
                 <div className="flex items-center space-x-3">
                   <Target className="w-8 h-8 text-orange-600" />
@@ -708,25 +645,19 @@ export default function AnalyticsPage() {
                     </p>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Live Activity Feed */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-white p-6 rounded-xl shadow-md border border-gray-100"
+            <div
+              className="bg-white p-6 rounded-xl shadow-md border border-gray-100 animate-fadeInUp"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Live Activity Feed</h3>
               <div className="space-y-2 max-h-96 overflow-y-auto">
                 {realTimeData.recentActivities.slice(0, 20).map((activity, index) => (
-                  <motion.div
+                  <div
                     key={activity.id}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.05 }}
-                    className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg"
+                    className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg animate-fadeInUp"
                   >
                     <div className="flex items-center space-x-3">
                       <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
@@ -742,10 +673,10 @@ export default function AnalyticsPage() {
                     <div className="text-xs text-gray-500">
                       {new Date(activity.timestamp).toLocaleTimeString()}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
       </div>

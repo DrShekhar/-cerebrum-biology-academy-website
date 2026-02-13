@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useRef, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import { Volume2, VolumeX, Music, Trees, VolumeOff } from 'lucide-react'
 import type { DisplayMode, AmbientSound } from '@/lib/study-with-me/types'
 import { AMBIENT_SOUNDS } from '@/lib/study-with-me/constants'
@@ -128,13 +127,11 @@ export function AmbientMusicPlayer({
       <div className={`flex items-center space-x-3 ${className}`}>
         {isPlaying && currentSound !== 'silence' ? (
           <>
-            <motion.div
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-              className="w-4 h-4"
+            <div
+              className="w-4 h-4 animate-fadeInUp"
             >
               <Volume2 className="w-4 h-4 text-green-400" />
-            </motion.div>
+            </div>
             <span className="text-gray-400 text-sm capitalize">{currentSound}</span>
           </>
         ) : (
@@ -148,10 +145,7 @@ export function AmbientMusicPlayer({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.4 }}
+    <div
       className={`bg-white rounded-xl shadow-xl p-5 ${className}`}
     >
       {/* Header */}
@@ -160,14 +154,12 @@ export function AmbientMusicPlayer({
           Ambient Sound
         </h3>
         {isPlaying && currentSound !== 'silence' && (
-          <motion.div
-            animate={{ opacity: [1, 0.5, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="flex items-center text-xs text-green-600"
+          <div
+            className="flex items-center text-xs text-green-600 animate-fadeInUp"
           >
             <span className="w-2 h-2 rounded-full bg-green-500 mr-2" />
             Playing
-          </motion.div>
+          </div>
         )}
       </div>
 
@@ -225,25 +217,17 @@ export function AmbientMusicPlayer({
 
       {/* Visual feedback when playing */}
       {isPlaying && currentSound !== 'silence' && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="mt-4 flex items-center justify-center space-x-1"
+        <div
+          className="mt-4 flex items-center justify-center space-x-1 animate-fadeInUp"
         >
           {[...Array(5)].map((_, i) => (
-            <motion.div
+            <div
               key={i}
-              animate={{ height: ['8px', '20px', '8px'] }}
-              transition={{
-                duration: 0.8,
-                repeat: Infinity,
-                delay: i * 0.1,
-              }}
-              className="w-1 bg-green-400 rounded-full"
+              className="w-1 bg-green-400 rounded-full animate-fadeInUp"
             />
           ))}
-        </motion.div>
+        </div>
       )}
-    </motion.div>
+    </div>
   )
 }

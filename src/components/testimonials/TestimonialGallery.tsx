@@ -18,8 +18,6 @@ import {
   MapPin,
   School,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface TestimonialData {
   id: string
   type: 'video' | 'score' | 'written'
@@ -250,24 +248,16 @@ export function TestimonialGallery({
       </div>
 
       {/* Results */}
-      <AnimatePresence mode="wait">
-        {currentTestimonials.length > 0 ? (
-          <motion.div
+{currentTestimonials.length > 0 ? (
+          <div
             key={`${selectedCategory}-${selectedType}-${currentPage}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-          >
+           className="animate-fadeInUp">
             {viewMode === 'grid' ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 {currentTestimonials.map((testimonial, index) => (
-                  <motion.div
+                  <div
                     key={testimonial.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
+                   className="animate-fadeInUp">
                     {testimonial.type === 'video' && testimonial.videoUrl && (
                       <VideoTestimonial
                         id={testimonial.id}
@@ -347,19 +337,16 @@ export function TestimonialGallery({
                         </div>
                       </div>
                     )}
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             ) : (
               /* List View */
               <div className="space-y-6 mb-12">
                 {currentTestimonials.map((testimonial, index) => (
-                  <motion.div
+                  <div
                     key={testimonial.id}
-                    className="bg-white rounded-3xl shadow-lg p-8"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
                   >
                     <div className="grid md:grid-cols-3 gap-6 items-center">
                       <div>
@@ -408,17 +395,14 @@ export function TestimonialGallery({
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             )}
-          </motion.div>
+          </div>
         ) : (
-          <motion.div
-            className="text-center py-12"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
+          <div
+            className="text-center py-12 animate-fadeInUp"
           >
             <Target className="w-16 h-16 text-gray-400 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-gray-900 mb-2">No stories found</h3>
@@ -433,11 +417,9 @@ export function TestimonialGallery({
             >
               Clear Filters
             </Button>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Pagination */}
+{/* Pagination */}
       {totalPages > 1 && (
         <div className="flex items-center justify-center space-x-2">
           <button

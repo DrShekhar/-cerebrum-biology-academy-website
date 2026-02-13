@@ -8,7 +8,6 @@ import { Input } from '@/components/ui/Input'
 import { Textarea } from '@/components/ui/Textarea'
 import { EmptyState } from '@/components/ui/EmptyState'
 import { useAuth } from '@/contexts/AuthContext'
-import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 import {
@@ -307,10 +306,8 @@ export default function StudentFeesPage() {
           </div>
 
           {activeTab === 'overview' && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-6"
+            <div
+              className="space-y-6 animate-fadeInUp"
             >
               {summary && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -491,14 +488,12 @@ export default function StudentFeesPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'schedule' && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="space-y-6"
+            <div
+              className="space-y-6 animate-fadeInUp"
             >
               {Object.keys(groupedInstallments).length === 0 ? (
                 <Card>
@@ -614,14 +609,12 @@ export default function StudentFeesPage() {
                   )
                 )
               )}
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'enquiry' && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+            <div
+              className="grid grid-cols-1 lg:grid-cols-3 gap-6 animate-fadeInUp"
             >
               <div className="lg:col-span-2">
                 <Card>
@@ -787,7 +780,7 @@ export default function StudentFeesPage() {
                   </CardContent>
                 </Card>
               </div>
-            </motion.div>
+            </div>
           )}
         </div>
       </div>

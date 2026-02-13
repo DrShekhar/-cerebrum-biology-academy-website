@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Trophy, Star, Lock, X, Sparkles, Filter } from 'lucide-react'
 
 type BadgeRarity = 'COMMON' | 'UNCOMMON' | 'RARE' | 'EPIC' | 'LEGENDARY'
@@ -127,11 +126,8 @@ export function BadgeGallery({
         {/* Progress Bar */}
         <div className="mt-4">
           <div className="w-full bg-white/30 rounded-full h-3">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${completionRate}%` }}
-              transition={{ duration: 1, ease: 'easeOut' }}
-              className="bg-white h-3 rounded-full"
+            <div
+              className="bg-white h-3 rounded-full animate-fadeInUp"
             />
           </div>
         </div>
@@ -196,11 +192,8 @@ export function BadgeGallery({
             {filteredBadges.map((badge, index) => {
               const rarityConfig = RARITY_CONFIG[badge.rarity]
               return (
-                <motion.button
+                <button
                   key={badge.id}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: index * 0.05 }}
                   onClick={() => setSelectedBadge(badge)}
                   className={`relative p-3 rounded-xl border-2 transition-all hover:scale-105 ${
                     badge.isEarned
@@ -257,7 +250,7 @@ export function BadgeGallery({
                         : 'bg-gray-300'
                     }`}
                   />
-                </motion.button>
+                </button>
               )
             })}
           </div>
@@ -265,21 +258,14 @@ export function BadgeGallery({
       </div>
 
       {/* Badge Detail Modal */}
-      <AnimatePresence>
-        {selectedBadge && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+{selectedBadge && (
+          <div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
             onClick={() => setSelectedBadge(null)}
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
+            <div
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl"
+              className="bg-white rounded-2xl p-6 max-w-sm w-full shadow-2xl animate-fadeInUp"
             >
               {/* Close button */}
               <button
@@ -356,12 +342,10 @@ export function BadgeGallery({
                   </div>
                 )}
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Add shimmer animation styles */}
+{/* Add shimmer animation styles */}
       <style jsx>{`
         @keyframes shimmer {
           0% {

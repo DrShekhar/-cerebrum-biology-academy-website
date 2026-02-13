@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Gift, CheckCircle, XCircle, Loader2 } from 'lucide-react'
 
 interface ReferralInputProps {
@@ -92,30 +91,21 @@ export function ReferralInput({ onReferralApplied, onReferralRemoved }: Referral
               )}
             </button>
           </div>
-
-          <AnimatePresence>
-            {error && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0 }}
-                className="flex items-start gap-2 text-red-600 text-sm"
+{error && (
+              <div
+                className="flex items-start gap-2 text-red-600 text-sm animate-fadeInUp"
               >
                 <XCircle className="w-4 h-4 mt-0.5 flex-shrink-0" />
                 <span>{error}</span>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
-          <p className="text-xs text-gray-500 mt-3">
+<p className="text-xs text-gray-500 mt-3">
             Get ₹500 off when you use a friend's referral code!
           </p>
         </div>
       ) : (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-lg p-4 border-2 border-green-600"
+        <div
+          className="bg-white rounded-lg p-4 border-2 border-green-600 animate-fadeInUp"
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -132,7 +122,7 @@ export function ReferralInput({ onReferralApplied, onReferralRemoved }: Referral
               Remove
             </button>
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   )

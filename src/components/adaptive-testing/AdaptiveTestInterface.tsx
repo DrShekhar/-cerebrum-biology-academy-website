@@ -6,7 +6,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Brain,
   TrendingUp,
@@ -575,15 +574,10 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Question Area */}
         <div className="lg:col-span-2">
-          <AnimatePresence mode="wait">
-            {currentItem && (
-              <motion.div
+{currentItem && (
+              <div
                 key={currentItem.id}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-xl border p-6"
+                className="bg-white rounded-xl border p-6 animate-fadeInUp"
               >
                 {/* Question Header */}
                 <div className="flex items-center justify-between mb-6">
@@ -709,10 +703,9 @@ const AdaptiveTestInterface: React.FC<AdaptiveTestInterfaceProps> = ({
                     </>
                   )}
                 </button>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </div>
+</div>
 
         {/* Analytics Panel */}
         {showAnalytics && analytics && (

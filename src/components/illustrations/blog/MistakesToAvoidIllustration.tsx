@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function MistakesToAvoidIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -66,9 +65,6 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
       {/* Title */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.5 }}
       >
         <rect
           x="150"
@@ -86,9 +82,6 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
       {/* LEFT COLUMN - DON'T DO */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <rect
           x="20"
@@ -113,8 +106,6 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
             fill="#FEE2E2"
             stroke="#EF4444"
             strokeWidth="2"
-            animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <text x="18" y="23" fontSize="14" textAnchor="middle" fill="#DC2626" fontWeight="bold">
             1
@@ -224,9 +215,6 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
       {/* RIGHT COLUMN - DO THIS INSTEAD */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <rect
           x="310"
@@ -251,8 +239,6 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
             fill="#DCFCE7"
             stroke="#22C55E"
             strokeWidth="2"
-            animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
           />
           <text x="18" y="24" fontSize="16" textAnchor="middle" fill="#16A34A">
             ✓
@@ -324,9 +310,6 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
       {/* STATISTICS BOX */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <rect
           x="310"
@@ -347,8 +330,6 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
           fill="#22C55E"
           textAnchor="middle"
           fontWeight="bold"
-          animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         >
           3x More Likely
         </motion.text>
@@ -359,13 +340,8 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
       {/* WARNING TRIANGLE */}
       <motion.g
-        initial={animate ? { opacity: 0, scale: 0.5 } : undefined}
-        animate={animate ? { opacity: 1, scale: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.5, type: 'spring' }}
       >
         <motion.g
-          animate={animate ? { y: [-3, 3, -3] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
           style={{ transformOrigin: '155px 440px' }}
         >
           <path

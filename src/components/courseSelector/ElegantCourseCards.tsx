@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Check, Star, Award } from 'lucide-react'
 
 interface CourseCard {
@@ -254,10 +253,8 @@ const courseData = generateCourseData()
 
 const CourseCard = ({ course }: { course: CourseCard }) => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden"
+    <div
+      className="bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-all duration-300 relative overflow-hidden animate-fadeInUp"
     >
       {/* Series Badge */}
       <div className="absolute top-4 right-4">
@@ -391,7 +388,7 @@ const CourseCard = ({ course }: { course: CourseCard }) => {
           <span className="text-xs text-gray-600">Hybrid</span>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

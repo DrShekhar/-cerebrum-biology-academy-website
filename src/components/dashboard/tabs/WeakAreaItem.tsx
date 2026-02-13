@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { useLongPress } from '@/hooks/useLongPress'
 
 interface WeakArea {
@@ -25,10 +24,9 @@ export function WeakAreaItem({ area, onSelect }: WeakAreaItemProps) {
   })
 
   return (
-    <motion.div
-      whileTap={{ scale: 0.98 }}
+    <div
       {...longPressHandlers}
-      className="p-3 sm:p-4 bg-orange-50 rounded-lg cursor-pointer hover:bg-orange-100 transition-colors active:bg-orange-200"
+      className="p-3 sm:p-4 bg-orange-50 rounded-lg cursor-pointer hover:bg-orange-100 transition-colors active:bg-orange-200 animate-fadeInUp"
       role="button"
       tabIndex={0}
       aria-label={`View details for ${area.chapter}`}
@@ -62,7 +60,7 @@ export function WeakAreaItem({ area, onSelect }: WeakAreaItemProps) {
         </span>
         <span className="text-blue-600 text-xs sm:text-sm font-medium">Tap for details →</span>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

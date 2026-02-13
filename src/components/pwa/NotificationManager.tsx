@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Bell, BellOff, Clock, BookOpen, Target, Settings, X, Check } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -186,10 +185,8 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
               >
                 {isRequesting ? (
                   <>
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                      className="w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2"
+                    <div
+                      className="w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2 animate-fadeInUp"
                     />
                     Requesting Permission...
                   </>
@@ -214,10 +211,8 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
               </div>
 
               {settings.enabled && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  className="space-y-3 p-4 bg-gray-50 rounded-lg border"
+                <div
+                  className="space-y-3 p-4 bg-gray-50 rounded-lg border animate-fadeInUp"
                 >
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -263,7 +258,7 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
                       />
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               <div className="flex space-x-2">
@@ -308,13 +303,9 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
       </Card>
 
       {/* Notification Examples */}
-      <AnimatePresence>
-        {showSettings && permission === 'granted' && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="mt-4"
+{showSettings && permission === 'granted' && (
+          <div
+            className="mt-4 animate-fadeInUp"
           >
             <Card className="border border-gray-200">
               <CardHeader>
@@ -375,10 +366,9 @@ export function NotificationManager({ className = '' }: NotificationManagerProps
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -425,11 +415,8 @@ export function QuickNotificationRequest() {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 50 }}
-      className="fixed bottom-6 right-6 z-40 max-w-sm"
+    <div
+      className="fixed bottom-6 right-6 z-40 max-w-sm animate-fadeInUp"
     >
       <Card className="border-2 border-primary/20 shadow-lg bg-white">
         <CardContent className="p-4">
@@ -463,6 +450,6 @@ export function QuickNotificationRequest() {
           </div>
         </CardContent>
       </Card>
-    </motion.div>
+    </div>
   )
 }

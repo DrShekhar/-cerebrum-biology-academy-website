@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function AnimalKingdomIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -46,8 +45,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Jellyfish */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <ellipse cx="55" cy="100" rx="15" ry="10" fill="#E879F9" />
         <path d="M45 110 Q55 120 65 110" stroke="#D946EF" strokeWidth="2" fill="none" />
@@ -58,8 +55,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Earthworm */}
       <motion.g
-        animate={animate ? { scaleX: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
         style={{ transformOrigin: '107px 100px' }}
       >
         <path
@@ -76,8 +71,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Insect */}
       <motion.g
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
         style={{ transformOrigin: '160px 100px' }}
       >
         <ellipse cx="160" cy="100" rx="12" ry="8" fill="#84CC16" />
@@ -114,8 +107,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Fish */}
       <motion.g
-        animate={animate ? { x: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <ellipse cx="235" cy="95" rx="15" ry="8" fill="#60A5FA" />
         <polygon points="250,95 260,88 260,102" fill="#3B82F6" />
@@ -127,8 +118,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Frog */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
       >
         <ellipse cx="275" cy="95" rx="12" ry="10" fill="#4ADE80" />
         <circle cx="270" cy="88" r="3" fill="#FFFFFF" stroke="#166534" strokeWidth="1" />
@@ -140,8 +129,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Bird */}
       <motion.g
-        animate={animate ? { y: [-3, 0, -3] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
       >
         <ellipse cx="315" cy="95" rx="10" ry="8" fill="#F472B6" />
         <polygon points="325,95 335,95 325,90" fill="#EC4899" />
@@ -153,8 +140,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Mammal */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <ellipse cx="355" cy="95" rx="12" ry="10" fill="#FBBF24" />
         <circle cx="362" cy="90" r="5" fill="#F59E0B" />
@@ -196,8 +181,6 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
 
       {/* Questions badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="360" cy="200" r="18" fill="#F59E0B" />
         <text x="360" y="197" fontSize="8" fill="#FFFFFF" textAnchor="middle">

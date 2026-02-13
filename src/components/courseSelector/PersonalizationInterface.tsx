@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   User,
   Brain,
@@ -558,9 +557,7 @@ function RecommendationDisplay({ recommendation }: { recommendation: CourseRecom
   const theme = getSeriesTheme(recommendation.seriesId)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`${theme.bg} ${theme.border} border-2 rounded-xl p-6`}
     >
       {/* Header */}
@@ -677,7 +674,7 @@ function RecommendationDisplay({ recommendation }: { recommendation: CourseRecom
           Select This Course
         </button>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -835,14 +832,10 @@ export default function PersonalizationInterface({
 
       {/* Content */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
-          {activeSection === 'profile' && (
-            <motion.div
+{activeSection === 'profile' && (
+            <div
               key="profile"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Basic Information */}
               <div className="bg-white rounded-xl border border-gray-200 p-6">
@@ -962,16 +955,13 @@ export default function PersonalizationInterface({
                   </p>
                 )}
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeSection === 'recommendations' && (
-            <motion.div
+            <div
               key="recommendations"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {recommendations.length > 0 ? (
                 <>
@@ -1017,10 +1007,9 @@ export default function PersonalizationInterface({
                   </button>
                 </div>
               )}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </div>
   )
 }

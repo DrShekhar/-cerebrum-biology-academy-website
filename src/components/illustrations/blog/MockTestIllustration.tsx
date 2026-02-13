@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function MockTestIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -81,9 +80,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
 
       {/* Title Section */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#6366F1" opacity="0.15" />
         <text x="350" y="45" fontSize="24" fill="#4F46E5" textAnchor="middle" fontWeight="bold">
@@ -96,9 +92,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
 
       {/* === LEFT SECTION: Test Paper & Timer === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g filter="url(#mockCardShadow)">
           <rect x="20" y="85" width="200" height="300" rx="16" fill="#FFFFFF" />
@@ -143,8 +136,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
                     rx="4"
                     fill={status}
                     opacity="0.8"
-                    animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
-                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.05 }}
                   />
                   <text
                     x={col * 30 + 12.5}
@@ -181,8 +172,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
         {/* Timer */}
         <g transform="translate(55, 315)">
           <motion.g
-            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-            transition={{ duration: 1, repeat: Infinity }}
           >
             <rect x="0" y="0" width="130" height="55" rx="10" fill="url(#timerGrad)" />
             <text x="65" y="22" fontSize="10" fill="#FFFFFF" textAnchor="middle">
@@ -195,8 +184,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
               fill="#FFFFFF"
               textAnchor="middle"
               fontWeight="bold"
-              animate={animate ? { opacity: [1, 0.7, 1] } : undefined}
-              transition={{ duration: 1, repeat: Infinity }}
             >
               2:45:32
             </motion.text>
@@ -206,9 +193,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
 
       {/* === CENTER SECTION: Progress Graph & Schedule === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         {/* Score Progress Graph */}
         <g filter="url(#mockCardShadow)">
@@ -244,9 +228,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
             stroke="url(#scoreGrad)"
             strokeWidth="3"
             strokeLinecap="round"
-            initial={animate ? { pathLength: 0 } : undefined}
-            animate={animate ? { pathLength: 1 } : undefined}
-            transition={{ delay: 0.6, duration: 1.5 }}
           />
 
           {/* Data points */}
@@ -257,9 +238,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
                 cx="0"
                 r="6"
                 fill="#10B981"
-                initial={animate ? { scale: 0 } : undefined}
-                animate={animate ? { scale: 1 } : undefined}
-                transition={{ delay: 0.8 + i * 0.15 }}
               />
               <text y="125" x="0" fontSize="8" fill="#6B7280" textAnchor="middle">
                 {point.month}
@@ -331,8 +309,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
                 fill={item.color}
                 textAnchor="middle"
                 fontWeight="bold"
-                animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-                transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
               >
                 {item.count}
               </motion.text>
@@ -346,9 +322,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
 
       {/* === RIGHT SECTION: Analysis & Tips === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6 }}
       >
         <g filter="url(#mockCardShadow)">
           <rect x="530" y="85" width="150" height="300" rx="16" fill="#FFFFFF" />
@@ -364,9 +337,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
             <motion.g
               key={i}
               transform={`translate(0, ${i * 55})`}
-              initial={animate ? { opacity: 0, x: 10 } : undefined}
-              animate={animate ? { opacity: 1, x: 0 } : undefined}
-              transition={{ delay: 0.6 + i * 0.1 }}
             >
               <rect x="0" y="0" width="120" height="45" rx="8" fill={`${item.color}15`} />
               <circle cx="25" cy="22" r="15" fill={item.color} />
@@ -403,8 +373,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
             fill="#4F46E5"
             textAnchor="middle"
             fontWeight="bold"
-            animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             80.5%
           </motion.text>
@@ -413,9 +381,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
 
       {/* === BOTTOM SECTION: Strategy Tips === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.6, duration: 0.6 }}
       >
         <g filter="url(#mockCardShadow)">
           <rect x="20" y="400" width="665" height="105" rx="16" fill="#FFFFFF" />
@@ -437,9 +402,6 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
             <motion.g
               key={i}
               transform={`translate(${i * 125}, 0)`}
-              initial={animate ? { opacity: 0, y: 10 } : undefined}
-              animate={animate ? { opacity: 1, y: 0 } : undefined}
-              transition={{ delay: 0.8 + i * 0.1 }}
             >
               <rect
                 x="0"
@@ -474,16 +436,12 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
             r="6"
             fill="#6366F1"
             opacity="0.3"
-            animate={{ y: [0, -8, 0], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity }}
           />
           <motion.text
             x="650"
             y="60"
             fontSize="16"
             opacity="0.5"
-            animate={{ y: [0, -6, 0], rotate: [0, 10, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
           >
             📝
           </motion.text>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
-import { motion, AnimatePresence, PanInfo } from 'framer-motion'
 import { X } from 'lucide-react'
 import { useSwipeGesture } from '@/hooks/useSwipeGesture'
 
@@ -65,25 +64,16 @@ export function BottomSheet({
   }
 
   return (
-    <AnimatePresence>
-      {isOpen && (
+{isOpen && (
         <>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
+          <div
             onClick={handleBackdropClick}
-            className="fixed inset-0 bg-black/50 z-50 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/50 z-50 backdrop-blur-sm animate-fadeInUp"
             aria-hidden="true"
           />
 
-          <motion.div
+          <div
             ref={sheetRef}
-            initial={{ y: '100%' }}
-            animate={{ y: 0 }}
-            exit={{ y: '100%' }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
             drag={closeOnSwipeDown ? 'y' : false}
             dragConstraints={{ top: 0, bottom: 0 }}
             dragElastic={{ top: 0, bottom: 0.7 }}
@@ -121,11 +111,10 @@ export function BottomSheet({
             </div>
 
             <div className="h-safe-area-bottom" />
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
-  )
+)
 }
 
 export function useBottomSheet(initialState = false) {

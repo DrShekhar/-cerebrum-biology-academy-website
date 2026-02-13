@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Clock,
   Users,
@@ -212,11 +211,8 @@ export function SecondChanceNEETLanding({
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Headlines and Hero Image */}
             <div className="space-y-8">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="space-y-6"
+              <div
+                className="space-y-6 animate-fadeInUp"
               >
                 <div className="bg-red-500 text-white px-4 py-2 rounded-full inline-block text-sm font-medium">
                   🎯 For NEET 2024 Repeaters Only
@@ -253,14 +249,11 @@ export function SecondChanceNEETLanding({
                     <span className="font-medium">Max 15 Students Per Batch</span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Hero Image - Split Screen Effect */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="relative"
+              <div
+                className="relative animate-fadeInUp"
               >
                 <div className="grid grid-cols-2 gap-4 rounded-2xl overflow-hidden shadow-2xl">
                   <div className="relative bg-gradient-to-br from-red-100 to-red-200 aspect-square flex items-center justify-center">
@@ -285,15 +278,12 @@ export function SecondChanceNEETLanding({
                 <div className="absolute inset-0 flex items-center justify-center">
                   <ChevronRight className="w-12 h-12 text-green-600 bg-white rounded-full p-2 shadow-lg" />
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Right Side - Lead Capture Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <PremiumCard variant="luxury" size="lg" className="bg-white shadow-2xl">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -390,7 +380,7 @@ export function SecondChanceNEETLanding({
                   </div>
                 </div>
               </PremiumCard>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -411,14 +401,9 @@ export function SecondChanceNEETLanding({
           {/* Video Testimonials Carousel */}
           <div className="relative mb-12">
             <div className="overflow-hidden rounded-2xl">
-              <AnimatePresence mode="wait">
-                <motion.div
+<div
                   key={currentTestimonial}
-                  initial={{ opacity: 0, x: 100 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -100 }}
-                  transition={{ duration: 0.5 }}
-                  className="grid md:grid-cols-2 gap-8 items-center bg-navy-50 border border-navy-100 p-8 rounded-2xl"
+                  className="grid md:grid-cols-2 gap-8 items-center bg-navy-50 border border-navy-100 p-8 rounded-2xl animate-fadeInUp"
                 >
                   <div className="relative">
                     <div className="relative bg-black rounded-2xl overflow-hidden aspect-video">
@@ -464,9 +449,8 @@ export function SecondChanceNEETLanding({
                       "{successStories[currentTestimonial].quote}"
                     </blockquote>
                   </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                </div>
+</div>
 
             {/* Testimonial indicators */}
             <div className="flex justify-center space-x-2 mt-6">
@@ -563,12 +547,9 @@ export function SecondChanceNEETLanding({
                     stat: '70% quit',
                   },
                 ].map((problem, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500"
+                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500 animate-fadeInUp"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -579,7 +560,7 @@ export function SecondChanceNEETLanding({
                         <div className="text-2xl font-bold text-red-600">{problem.stat}</div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -617,12 +598,9 @@ export function SecondChanceNEETLanding({
                     stat: '98% success rate',
                   },
                 ].map((solution, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    initial={{ opacity: 0, x: 30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-600"
+                    className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-600 animate-fadeInUp"
                   >
                     <div className="flex items-start justify-between">
                       <div className="flex-1">
@@ -633,7 +611,7 @@ export function SecondChanceNEETLanding({
                         <div className="text-2xl font-bold text-green-600">{solution.stat}</div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -644,10 +622,8 @@ export function SecondChanceNEETLanding({
       {/* Urgency Section */}
       <div className="py-16 bg-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="space-y-8"
+          <div
+            className="space-y-8 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold mb-6">🔥 Limited Time Offer - Act Now!</h2>
 
@@ -714,7 +690,7 @@ export function SecondChanceNEETLanding({
                 Book Free Counseling Now
               </PremiumButton>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
@@ -730,12 +706,9 @@ export function SecondChanceNEETLanding({
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="border border-gray-200 rounded-xl overflow-hidden"
+                className="border border-gray-200 rounded-xl overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
@@ -748,21 +721,14 @@ export function SecondChanceNEETLanding({
                     }`}
                   />
                 </button>
-
-                <AnimatePresence>
-                  {faq.isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
+{faq.isOpen && (
+                    <div
+                      className="overflow-hidden animate-fadeInUp"
                     >
                       <div className="px-6 pb-4 text-gray-600 leading-relaxed">{faq.answer}</div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </motion.div>
+</div>
             ))}
           </div>
         </div>
@@ -771,10 +737,8 @@ export function SecondChanceNEETLanding({
       {/* Final CTA Section */}
       <div className="py-16 bg-navy-900 border-t-4 border-green-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="space-y-8"
+          <div
+            className="space-y-8 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold mb-6">Your Medical Dream is Still Alive</h2>
             <p className="text-xl mb-8">
@@ -828,24 +792,17 @@ export function SecondChanceNEETLanding({
                 <span>90% Success Rate</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Exit Intent Popup */}
-      <AnimatePresence>
-        {showExitIntent && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+{showExitIntent && (
+          <div
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 animate-fadeInUp"
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white rounded-2xl p-8 max-w-md w-full relative"
+            <div
+              className="bg-white rounded-2xl p-8 max-w-md w-full relative animate-fadeInUp"
             >
               <button
                 onClick={() => setShowExitIntent(false)}
@@ -878,12 +835,10 @@ export function SecondChanceNEETLanding({
                   Limited time offer. Valid for 24 hours only.
                 </p>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Fixed Bottom Action Bar - Mobile */}
+{/* Fixed Bottom Action Bar - Mobile */}
       <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-3 z-40">
         <div className="flex space-x-3">
           <PremiumButton onClick={onCallNow} variant="secondary" size="sm" className="flex-1">

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { useState } from 'react'
 import {
   Globe,
@@ -371,11 +370,8 @@ export function NRIStudentsHubPage() {
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
                 <Globe className="w-4 h-4 mr-2" />
                 Serving NRI Students in 14+ Countries
@@ -436,14 +432,11 @@ export function NRIStudentsHubPage() {
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Right Column - Quick Lead Form */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-2xl p-6 shadow-2xl"
+            <div
+              className="bg-white rounded-2xl p-6 shadow-2xl animate-fadeInUp"
             >
               <div className="text-center mb-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-2">Get Free Consultation</h2>
@@ -541,7 +534,7 @@ export function NRIStudentsHubPage() {
                   Free Call
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -549,12 +542,8 @@ export function NRIStudentsHubPage() {
       {/* Free Tools Section */}
       <section className="py-12 bg-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
               <Sparkles className="w-4 h-4 mr-2" />
@@ -563,16 +552,12 @@ export function NRIStudentsHubPage() {
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
               Try Our Free NEET Preparation Tools
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {/* MCQ Practice Tool */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Link href="/neet-biology-mcq">
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
                   <div className="flex items-start gap-4">
@@ -595,15 +580,11 @@ export function NRIStudentsHubPage() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
 
             {/* Rank Predictor Tool */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Link href="/neet-rank-predictor">
                 <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow cursor-pointer group">
                   <div className="flex items-start gap-4">
@@ -626,7 +607,7 @@ export function NRIStudentsHubPage() {
                   </div>
                 </div>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -634,28 +615,20 @@ export function NRIStudentsHubPage() {
       {/* Features Section - Redesigned with Design System */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why NRI Students Choose Cerebrum
             </h2>
             <p className="text-xl text-gray-600">Everything you need to crack NEET from abroad</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-sm border border-gray-100 p-6"
+                className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 ${feature.color} rounded-2xl flex items-center justify-center mb-4`}
@@ -664,7 +637,7 @@ export function NRIStudentsHubPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -673,12 +646,8 @@ export function NRIStudentsHubPage() {
       {/* Regions & Countries Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Choose Your Country
@@ -686,16 +655,12 @@ export function NRIStudentsHubPage() {
             <p className="text-xl text-gray-600">
               Find NEET coaching information specific to your location
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {regions.map((region, index) => (
-              <motion.div
+              <div
                 key={region.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`${region.bgColor} rounded-2xl p-6 border ${region.borderColor}`}
               >
                 <div className="flex items-center justify-between mb-4">
@@ -725,7 +690,7 @@ export function NRIStudentsHubPage() {
                     )
                   })}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -756,28 +721,20 @@ export function NRIStudentsHubPage() {
       {/* Testimonials Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NRI Students Who Cracked NEET
             </h2>
             <p className="text-xl text-gray-600">Success stories from students around the world</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-indigo-50 rounded-xl p-6 border border-purple-100"
+                className="bg-indigo-50 rounded-xl p-6 border border-purple-100 animate-fadeInUp"
               >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="text-4xl">{testimonial.avatar}</div>
@@ -797,7 +754,7 @@ export function NRIStudentsHubPage() {
                     <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -806,12 +763,8 @@ export function NRIStudentsHubPage() {
       {/* FAQ Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 px-4 py-2 rounded-full text-purple-700 text-sm font-medium mb-4">
               <HelpCircle className="w-4 h-4 mr-2" />
@@ -823,17 +776,13 @@ export function NRIStudentsHubPage() {
             <p className="text-xl text-gray-600">
               Everything you need to know about NEET preparation from abroad
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm"
+                className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
@@ -847,26 +796,18 @@ export function NRIStudentsHubPage() {
                   />
                 </button>
                 {openFaqIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="px-6 pb-5"
+                  <div
+                    className="px-6 pb-5 animate-fadeInUp"
                   >
                     <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-                  </motion.div>
+                  </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            className="text-center mt-10"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mt-10 animate-fadeInUp"
           >
             <p className="text-gray-600 mb-4">Still have questions?</p>
             <Link
@@ -877,19 +818,15 @@ export function NRIStudentsHubPage() {
               <MessageCircle className="w-5 h-5" />
               Chat with us on WhatsApp
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Courses Section with Limited Seats */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-red-100 px-4 py-2 rounded-full text-red-700 text-sm font-medium mb-4">
               <Calendar className="w-4 h-4 mr-2" />
@@ -901,16 +838,12 @@ export function NRIStudentsHubPage() {
             <p className="text-xl text-gray-600">
               Classes 9th to 12th + Droppers | All Boards Welcome
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {courses.map((course, index) => (
-              <motion.div
+              <div
                 key={course.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`bg-white rounded-xl shadow-lg p-6 relative ${course.popular ? 'ring-2 ring-purple-500' : ''}`}
               >
                 {course.popular && (
@@ -947,7 +880,7 @@ export function NRIStudentsHubPage() {
                     Reserve Your Seat
                   </Button>
                 </a>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -972,19 +905,15 @@ export function NRIStudentsHubPage() {
       {/* NEET Centers Section */}
       <section className="py-16 bg-[#4a5d4a] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <Plane className="w-16 h-16 mx-auto mb-4 opacity-80" />
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Write NEET in Your Country!</h2>
             <p className="text-xl opacity-90 max-w-3xl mx-auto">
               NTA conducts NEET in 14 international cities. No need to travel to India for the exam.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {[
@@ -1021,28 +950,20 @@ export function NRIStudentsHubPage() {
       {/* Blog Resources Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Preparation Guides for NRI Students
             </h2>
             <p className="text-xl text-gray-600">Expert articles to help you prepare from abroad</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {blogArticles.map((article, index) => (
-              <motion.div
+              <div
                 key={article.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link href={article.link}>
                   <div className="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow group">
                     <div className="h-40 bg-indigo-100 flex items-center justify-center">
@@ -1064,7 +985,7 @@ export function NRIStudentsHubPage() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -1082,12 +1003,8 @@ export function NRIStudentsHubPage() {
       {/* Boards Supported */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               All Boards Welcome
@@ -1095,7 +1012,7 @@ export function NRIStudentsHubPage() {
             <p className="text-xl text-gray-600">
               We support students from any curriculum with bridge courses
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
             {['CBSE', 'ICSE', 'IB', 'Cambridge (IGCSE)', 'State Boards'].map((board) => (
@@ -1121,12 +1038,8 @@ export function NRIStudentsHubPage() {
       {/* Final CTA Section with Urgency */}
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             {/* Urgency Badge */}
             <div className="inline-flex items-center bg-red-500 px-6 py-2 rounded-full text-sm font-bold mb-6 animate-pulse">
               <Calendar className="w-4 h-4 mr-2" />
@@ -1197,7 +1110,7 @@ export function NRIStudentsHubPage() {
               <p>Available 8 AM - 10 PM IST | +91 8826444334</p>
               <p className="mt-1">info@cerebrumbiologyacademy.com</p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

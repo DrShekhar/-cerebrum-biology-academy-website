@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { CourseProgram, CourseSeries } from '@/types/courseSystem'
 import { formatPrice, calculateSavings, getFeatureMatrix } from '@/utils/courseUtils'
 import { Button } from '@/components/ui/Button'
@@ -125,15 +124,12 @@ export function TierComparison({
             const Icon = config.icon
 
             return (
-              <motion.div
+              <div
                 key={tier}
                 className={`
                   relative p-6 border-b border-gray-200 ${config.bgColor} 
                   ${selectedTier === tier ? 'ring-2 ring-blue-500 ring-inset' : ''}
                 `}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: tiers.indexOf(tier) * 0.1 }}
               >
                 {/* Recommended Badge */}
                 {config.recommended && (
@@ -203,7 +199,7 @@ export function TierComparison({
                   {selectedTier === tier ? 'Selected' : 'Choose Plan'}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
-              </motion.div>
+              </div>
             )
           })}
         </div>
@@ -212,12 +208,9 @@ export function TierComparison({
         <div className="overflow-x-auto">
           <div className="min-w-full">
             {featureMatrix.map((featureItem, idx) => (
-              <motion.div
+              <div
                 key={featureItem.feature}
                 className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 ${idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: idx * 0.05 }}
               >
                 {/* Feature Name */}
                 <div className="p-3 sm:p-4 lg:p-6 border-b border-gray-100">
@@ -260,7 +253,7 @@ export function TierComparison({
                     </div>
                   )
                 })}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

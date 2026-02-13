@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   BookOpen, CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Award, Users, Target, GraduationCap, Star, FileText, Microscope,
@@ -73,7 +72,7 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               CBSE & ICSE Board Preparation
@@ -110,33 +109,33 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />WhatsApp: +91-88264-44334
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Features */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Choose Our Class 9 Biology Tuition?</h2>
             <p className="text-xl text-slate-600">Comprehensive preparation for both CBSE and ICSE boards</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <motion.div key={feature.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={feature.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -145,10 +144,10 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
       {/* Board Comparison */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">CBSE vs ICSE Coverage</h2>
             <p className="text-xl text-slate-600">We cover both board patterns comprehensively</p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -178,15 +177,15 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
       {/* Syllabus */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Complete Class 9 Biology Syllabus</h2>
             <p className="text-xl text-slate-600">All NCERT chapters covered with practical focus</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {syllabusTopics.map((topic, index) => (
-              <motion.div key={topic.unit} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={topic.unit}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-lg font-bold text-slate-900">{topic.unit}</h3>
                   <span className="bg-purple-100 text-purple-700 px-2 py-1 rounded-full text-xs font-medium">{topic.board}</span>
@@ -198,7 +197,7 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -207,10 +206,10 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
       {/* Premium Schools */}
       <section className="py-16 bg-gradient-to-br from-purple-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-8">
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold mb-4">Students from Top Gurugram Schools</h2>
             <p className="text-purple-100">We teach students from all major CBSE & ICSE schools</p>
-          </motion.div>
+          </div>
           <div className="flex flex-wrap justify-center gap-4">
             {premiumSchools.map((school) => (
               <span key={school} className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">{school}</span>
@@ -223,8 +222,8 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8">
+            <div
+              className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 animate-fadeInUp">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Course Details</h2>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b border-purple-100"><span className="text-slate-600">Course</span><span className="font-semibold">Class IX Foundation (Academic)</span></div>
@@ -237,10 +236,10 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
               <Link href="/demo-booking" className="block mt-6">
                 <Button className="w-full bg-purple-600 hover:bg-purple-700">Book Free Demo</Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl">
+            <div
+              className="bg-white rounded-2xl p-8 shadow-xl animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-purple-600 mr-3" />
                 <h2 className="text-2xl font-bold text-gray-900">Our Gurugram Center</h2>
@@ -252,7 +251,7 @@ export default function Class9BiologyTuitionContent({ faqs }: { faqs: FAQ[] }) {
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>
                 <a href={CONTACT_INFO.location.gurugram.mapUrl} target="_blank" rel="noopener"><Button><MapPin className="w-4 h-4 mr-2" />Directions</Button></a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

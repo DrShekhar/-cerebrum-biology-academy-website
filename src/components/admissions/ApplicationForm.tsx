@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   User,
   Mail,
@@ -383,10 +382,8 @@ export default function ApplicationForm() {
     return (
       <div className="min-h-screen bg-gray-50 py-8 sm:py-12 px-4 sm:px-6">
         <div className="max-w-2xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden text-center p-8 sm:p-12"
+          <div
+            className="bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden text-center p-8 sm:p-12 animate-fadeInUp"
           >
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
               <CheckCircle className="w-10 h-10 text-green-600" />
@@ -433,7 +430,7 @@ export default function ApplicationForm() {
                 Back to Home
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     )
@@ -494,17 +491,13 @@ export default function ApplicationForm() {
                 </div>
               ))}
             </div>
-
-            <AnimatePresence mode="wait">
-              {currentStep === 1 && (
-                <motion.div
+{currentStep === 1 && (
+                <div
                   key="step1"
-                  variants={stepVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ duration: 0.3 }}
-                >
+                 className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-3 sm:mr-4">
@@ -762,18 +755,16 @@ export default function ApplicationForm() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {currentStep === 2 && (
-                <motion.div
+                <div
                   key="step2"
-                  variants={stepVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ duration: 0.3 }}
-                >
+                 className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-3 sm:mr-4">
@@ -967,18 +958,16 @@ export default function ApplicationForm() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {currentStep === 3 && (
-                <motion.div
+                <div
                   key="step3"
-                  variants={stepVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ duration: 0.3 }}
-                >
+                 className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-xl flex items-center justify-center mr-3 sm:mr-4">
@@ -1149,18 +1138,16 @@ export default function ApplicationForm() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {currentStep === 4 && (
-                <motion.div
+                <div
                   key="step4"
-                  variants={stepVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ duration: 0.3 }}
-                >
+                 className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-orange-100 rounded-xl flex items-center justify-center mr-3 sm:mr-4">
@@ -1282,18 +1269,16 @@ export default function ApplicationForm() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {currentStep === 5 && (
-                <motion.div
+                <div
                   key="step5"
-                  variants={stepVariants}
                   initial="hidden"
                   animate="visible"
                   exit="exit"
-                  transition={{ duration: 0.3 }}
-                >
+                 className="animate-fadeInUp">
                   <div className="mb-6 sm:mb-8">
                     <div className="flex items-center mb-4 sm:mb-6">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-xl flex items-center justify-center mr-3 sm:mr-4">
@@ -1456,11 +1441,9 @@ export default function ApplicationForm() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 border-t pt-6">
+<div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-8 border-t pt-6">
               {currentStep > 1 && (
                 <Button
                   variant="outline"

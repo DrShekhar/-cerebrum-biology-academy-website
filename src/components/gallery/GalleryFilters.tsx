@@ -1,7 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 export interface GalleryCategory {
   value: string
   label: string
@@ -34,10 +32,8 @@ export function GalleryFilters({
           category.value === 'all' ? selectedCategory === null : selectedCategory === category.value
 
         return (
-          <motion.button
+          <button
             key={category.value}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
             onClick={() => onCategoryChange(category.value === 'all' ? null : category.value)}
             className={`relative flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-all md:px-5 md:py-2.5 md:text-base ${
               isSelected
@@ -59,14 +55,13 @@ export function GalleryFilters({
 
             {/* Active indicator */}
             {isSelected && (
-              <motion.div
+              <div
                 layoutId="activeCategory"
-                className="absolute inset-0 rounded-full bg-[#3d4d3d]"
+                className="absolute inset-0 rounded-full bg-[#3d4d3d] animate-fadeInUp"
                 style={{ zIndex: -1 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 30 }}
               />
             )}
-          </motion.button>
+          </button>
         )
       })}
     </div>

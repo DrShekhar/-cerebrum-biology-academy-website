@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Rocket, BookOpen, Target, Check, Star, Zap } from 'lucide-react'
 
 interface PlanOption {
@@ -137,17 +136,14 @@ export function PlanButtons({
 
   return (
     <div className={`plan-buttons-container ${className}`}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        className="mb-6 text-center"
+      <div
+        className="mb-6 text-center animate-fadeInUp"
       >
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Choose Your Learning Path</h3>
         <p className="text-gray-600">
           Select the plan that best fits your preparation timeline and learning style
         </p>
-      </motion.div>
+      </div>
 
       <div className="grid md:grid-cols-3 gap-6">
         {planOptions.map((plan, index) => {
@@ -157,49 +153,22 @@ export function PlanButtons({
           const isHovered = hoveredPlan === plan.id
 
           return (
-            <motion.div
+            <div
               key={plan.id}
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-                ease: [0.16, 1, 0.3, 1],
-              }}
-              className="relative group"
+              className="relative group animate-fadeInUp"
             >
               {/* Selection indicator */}
-              <AnimatePresence>
-                {isSelected && (
-                  <motion.div
+{isSelected && (
+                  <div
                     layoutId={`plan-selection-${seriesId}`}
-                    className="absolute -inset-1 bg-gradient-to-r from-green-600/20 to-green-600/20 rounded-3xl blur-sm"
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{
-                      type: 'spring',
-                      stiffness: 400,
-                      damping: 30,
-                    }}
+                    className="absolute -inset-1 bg-gradient-to-r from-green-600/20 to-green-600/20 rounded-3xl blur-sm animate-fadeInUp"
                   />
                 )}
-              </AnimatePresence>
-
-              {/* Main plan button */}
-              <motion.button
+{/* Main plan button */}
+              <button
                 onClick={() => onPlanSelect(plan.id)}
                 onHoverStart={() => setHoveredPlan(plan.id)}
                 onHoverEnd={() => setHoveredPlan(null)}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                  transition: { duration: 0.3 },
-                }}
-                whileTap={{
-                  scale: 0.98,
-                  transition: { duration: 0.1 },
-                }}
                 className={`relative w-full p-6 rounded-3xl transition-all duration-500 group ${
                   isSelected
                     ? `bg-gradient-to-br ${plan.cardGradient} border-2 border-blue-300/50 shadow-2xl`
@@ -209,50 +178,34 @@ export function PlanButtons({
                 {/* Badge */}
                 {plan.badge && (
                   <div className="absolute -top-3 -right-3 z-10">
-                    <motion.div
-                      initial={{ scale: 0, rotate: -180 }}
-                      animate={{ scale: 1, rotate: 0 }}
-                      transition={{
-                        delay: 0.3 + index * 0.1,
-                        duration: 0.5,
-                        type: 'spring',
-                        stiffness: 200,
-                      }}
+                    <div
                       className={`bg-gradient-to-r ${plan.badge.gradient} text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 shadow-lg`}
                     >
                       <BadgeIcon className="w-3 h-3" />
                       <span>{plan.badge.text}</span>
-                    </motion.div>
+                    </div>
                   </div>
                 )}
 
                 {/* Recommended ribbon */}
                 {plan.recommended && (
                   <div className="absolute -top-2 left-6 right-6">
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      animate={{ scaleX: 1 }}
-                      transition={{ delay: 0.5 + index * 0.1, duration: 0.4 }}
-                      className="h-1 bg-gold-500 rounded-full"
+                    <div
+                      className="h-1 bg-gold-500 rounded-full animate-fadeInUp"
                     />
                   </div>
                 )}
 
                 {/* Plan icon */}
-                <motion.div
-                  animate={{
-                    scale: isSelected ? 1.1 : 1,
-                    rotate: isHovered ? (plan.id === 'A' ? 5 : plan.id === 'B' ? -5 : 0) : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                  className="text-center mb-4"
+                <div
+                  className="text-center mb-4 animate-fadeInUp"
                 >
                   <div
                     className={`w-16 h-16 mx-auto mb-3 bg-gradient-to-br ${plan.gradient} rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
                   >
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                </motion.div>
+                </div>
 
                 {/* Plan details */}
                 <div className="text-center mb-4">
@@ -284,81 +237,56 @@ export function PlanButtons({
                 {/* Features list */}
                 <div className="space-y-2 mb-6">
                   {plan.features.map((feature, featureIndex) => (
-                    <motion.div
+                    <div
                       key={feature}
-                      initial={{ opacity: 0, x: -10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{
-                        delay: 0.4 + index * 0.1 + featureIndex * 0.05,
-                        duration: 0.3,
-                      }}
-                      className="flex items-center space-x-2 text-sm"
+                      className="flex items-center space-x-2 text-sm animate-fadeInUp"
                     >
                       <div
                         className={`w-1.5 h-1.5 bg-gradient-to-r ${plan.gradient} rounded-full`}
                       />
                       <span className="text-gray-700">{feature}</span>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
                 {/* Selection indicator */}
-                <AnimatePresence>
-                  {isSelected && (
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.8 }}
-                      className="absolute bottom-4 right-4"
+{isSelected && (
+                    <div
+                      className="absolute bottom-4 right-4 animate-fadeInUp"
                     >
                       <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center">
                         <Check className="w-3 h-3 text-white" />
                       </div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-
-                {/* Hover glow effect */}
-                <AnimatePresence>
-                  {isHovered && !isSelected && (
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
+{/* Hover glow effect */}
+{isHovered && !isSelected && (
+                    <div
                       className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} opacity-5 rounded-3xl`}
                     />
                   )}
-                </AnimatePresence>
-              </motion.button>
-            </motion.div>
+</button>
+            </div>
           )
         })}
       </div>
 
       {/* Action section */}
-      <AnimatePresence>
-        {selectedPlan && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 text-center"
+{selectedPlan && (
+          <div
+            className="mt-8 text-center animate-fadeInUp"
           >
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <button
               className={`px-8 py-4 bg-gradient-to-r ${planOptions.find((p) => p.id === selectedPlan)?.gradient} text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300`}
             >
               Continue with Plan {selectedPlan}
-            </motion.button>
+            </button>
 
             <p className="text-sm text-gray-500 mt-3">
               30-day money-back guarantee • Cancel anytime
             </p>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

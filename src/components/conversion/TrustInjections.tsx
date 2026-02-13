@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle2,
   Users,
@@ -53,31 +52,22 @@ function TrustNearPrice() {
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.2 }}
-      className="trust-near-price mt-4 space-y-2"
+    <div
+      className="trust-near-price mt-4 space-y-2 animate-fadeInUp"
     >
       {trustPoints.map((point, index) => (
-        <motion.div
+        <div
           key={index}
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
-          className="flex items-center space-x-2 text-sm"
+          className="flex items-center space-x-2 text-sm animate-fadeInUp"
         >
           <point.icon className={`w-4 h-4 ${point.color}`} />
           <span className="text-slate-700 font-medium">{point.text}</span>
-        </motion.div>
+        </div>
       ))}
 
       {/* Payment Security */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.3, delay: 0.6 }}
-        className="flex items-center space-x-2 pt-2 border-t border-slate-100"
+      <div
+        className="flex items-center space-x-2 pt-2 border-t border-slate-100 animate-fadeInUp"
       >
         <div className="flex space-x-1">
           <Image
@@ -91,8 +81,8 @@ function TrustNearPrice() {
           <Image src="/icons/upi.svg" alt="UPI" width={48} height={16} className="h-4 w-auto" />
         </div>
         <span className="text-xs text-slate-500">Secure payment via Razorpay</span>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 
@@ -110,24 +100,18 @@ function SocialProofNearCTA() {
   }, [])
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.4 }}
-      className="social-proof bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-3 mb-4"
+    <div
+      className="social-proof bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-lg p-3 mb-4 animate-fadeInUp"
     >
       <div className="flex items-center space-x-3">
         {/* Avatar Stack */}
         <div className="flex -space-x-2">
           {[1, 2, 3, 4].map((i) => (
-            <motion.img
+            <img
               key={i}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.3, delay: i * 0.1 }}
               src={`/avatars/student-${i}.jpg`}
               alt="Student"
-              className="w-8 h-8 rounded-full border-2 border-white shadow-sm"
+              className="w-8 h-8 rounded-full border-2 border-white shadow-sm animate-fadeInUp"
             />
           ))}
           <div className="w-8 h-8 rounded-full bg-green-600 border-2 border-white flex items-center justify-center text-white text-xs font-semibold shadow-sm">
@@ -137,14 +121,12 @@ function SocialProofNearCTA() {
 
         {/* Text */}
         <div className="flex-1">
-          <motion.p
+          <p
             key={enrollmentCount}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-sm font-semibold text-slate-800"
+            className="text-sm font-semibold text-slate-800 animate-fadeInUp"
           >
             <span className="text-green-600">{enrollmentCount}</span> students enrolled this week
-          </motion.p>
+          </p>
           <p className="text-xs text-slate-600">Join thousands of successful NEET aspirants</p>
         </div>
 
@@ -154,7 +136,7 @@ function SocialProofNearCTA() {
           <span className="text-sm font-semibold text-slate-700">4.9</span>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -197,18 +179,11 @@ function ExitIntentOffer() {
   if (!isVisible) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        exit={{ opacity: 0, scale: 0.9 }}
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+<div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeInUp"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 20 }}
-          className="exit-offer bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative"
+        <div
+          className="exit-offer bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 relative animate-fadeInUp"
         >
           {/* Close Button */}
           <button
@@ -281,10 +256,9 @@ function ExitIntentOffer() {
 
             <p className="text-xs text-slate-500 mt-2">*Valid for first-time users only</p>
           </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
+        </div>
+      </div>
+)
 }
 
 // Security badges for trust
@@ -301,16 +275,13 @@ function SecurityBadges() {
       {badges.map((badge, index) => {
         const Icon = badge.icon
         return (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3, delay: index * 0.1 }}
-            className="flex items-center gap-1 text-slate-400 hover:text-green-600 transition-colors"
+            className="flex items-center gap-1 text-slate-400 hover:text-green-600 transition-colors animate-fadeInUp"
           >
             <Icon className="h-4 w-4" />
             <span className="text-xs font-medium hidden sm:inline">{badge.label}</span>
-          </motion.div>
+          </div>
         )
       })}
     </div>
@@ -364,15 +335,10 @@ function RecentActivityFeed() {
       </h4>
 
       <div className="space-y-2">
-        <AnimatePresence>
-          {activities.map((activity, index) => (
-            <motion.div
+{activities.map((activity, index) => (
+            <div
               key={`${activity.name}-${activity.time}-${index}`}
-              initial={{ opacity: 0, x: -20, height: 0 }}
-              animate={{ opacity: 1, x: 0, height: 'auto' }}
-              exit={{ opacity: 0, x: 20, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="flex items-center space-x-2 text-xs"
+              className="flex items-center space-x-2 text-xs animate-fadeInUp"
             >
               <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
                 <Users className="w-3 h-3 text-green-600" />
@@ -384,10 +350,9 @@ function RecentActivityFeed() {
                   {activity.time} • {activity.location}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
-        </AnimatePresence>
-      </div>
+</div>
     </div>
   )
 }
@@ -395,11 +360,8 @@ function RecentActivityFeed() {
 // Guarantee banner
 function GuaranteeBanner() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-lg p-4 mb-4"
+    <div
+      className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-lg p-4 mb-4 animate-fadeInUp"
     >
       <div className="flex items-center space-x-3">
         <ShieldCheck className="w-8 h-8 flex-shrink-0" />
@@ -410,7 +372,7 @@ function GuaranteeBanner() {
           </p>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

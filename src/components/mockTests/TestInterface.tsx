@@ -20,7 +20,6 @@ import {
   AlertCircle,
   TrendingUp,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 interface TestInterfaceProps {
@@ -164,11 +163,8 @@ export function TestInterface({ test }: TestInterfaceProps) {
       {/* Hero Section */}
       <section className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="max-w-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <div className="flex items-center space-x-3 mb-4">
               <span
@@ -222,7 +218,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
                 <div className="text-blue-100 text-sm">Difficulty</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -233,11 +229,8 @@ export function TestInterface({ test }: TestInterfaceProps) {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               {/* Topics Covered */}
-              <motion.div
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+              <div
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Topics Covered</h2>
                 <div className="flex flex-wrap gap-3">
@@ -250,14 +243,11 @@ export function TestInterface({ test }: TestInterfaceProps) {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
 
               {/* Instructions */}
-              <motion.div
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+              <div
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Test Instructions</h2>
                 <ul className="space-y-4">
@@ -268,15 +258,12 @@ export function TestInterface({ test }: TestInterfaceProps) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
 
               {/* Class-specific Information */}
               {selectedClass && (
-                <motion.div
-                  className="bg-blue-50 rounded-3xl p-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                <div
+                  className="bg-blue-50 rounded-3xl p-8 animate-fadeInUp"
                 >
                   <h2 className="text-2xl font-bold text-blue-900 mb-6">
                     Personalized for{' '}
@@ -302,18 +289,15 @@ export function TestInterface({ test }: TestInterfaceProps) {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               )}
             </div>
 
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Start Test Card */}
-              <motion.div
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5 }}
+              <div
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Ready to Begin?</h3>
 
@@ -369,14 +353,11 @@ export function TestInterface({ test }: TestInterfaceProps) {
                     Change Class
                   </Button>
                 )}
-              </motion.div>
+              </div>
 
               {/* Test Stats */}
-              <motion.div
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.1 }}
+              <div
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Test Statistics</h3>
                 <div className="space-y-4">
@@ -404,14 +385,11 @@ export function TestInterface({ test }: TestInterfaceProps) {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Similar Tests */}
-              <motion.div
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
+              <div
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-6">Related Tests</h3>
                 <div className="space-y-4">
@@ -430,7 +408,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>

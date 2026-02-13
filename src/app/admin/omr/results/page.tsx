@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { Search, Download, TrendingUp, Users, Award, BarChart3 } from 'lucide-react'
 import { AdminLayout } from '@/components/admin/AdminLayout'
 import { Button } from '@/components/ui/Button'
@@ -132,10 +131,8 @@ export default function OMRResultsPage() {
 
         {stats && (
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4 mb-6">
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="bg-white p-4 rounded-lg shadow-sm border"
+            <div
+              className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-blue-100 rounded-lg">
@@ -146,13 +143,10 @@ export default function OMRResultsPage() {
                   <p className="text-xl font-bold">{stats.totalSubmissions}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="bg-white p-4 rounded-lg shadow-sm border"
+            <div
+              className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-green-100 rounded-lg">
@@ -163,13 +157,10 @@ export default function OMRResultsPage() {
                   <p className="text-xl font-bold">{stats.avgPercentage}%</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="bg-white p-4 rounded-lg shadow-sm border"
+            <div
+              className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-purple-100 rounded-lg">
@@ -180,13 +171,10 @@ export default function OMRResultsPage() {
                   <p className="text-xl font-bold">{stats.avgMarks}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="bg-white p-4 rounded-lg shadow-sm border"
+            <div
+              className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-yellow-100 rounded-lg">
@@ -197,13 +185,10 @@ export default function OMRResultsPage() {
                   <p className="text-xl font-bold">{stats.highestPercentage || 0}%</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-white p-4 rounded-lg shadow-sm border"
+            <div
+              className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
             >
               <div className="flex items-center gap-3">
                 <div className="p-2 bg-red-100 rounded-lg">
@@ -214,7 +199,7 @@ export default function OMRResultsPage() {
                   <p className="text-xl font-bold">{stats.lowestPercentage || 0}%</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         )}
 

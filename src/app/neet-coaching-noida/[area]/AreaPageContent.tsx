@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -96,11 +95,8 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="max-w-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <div className="flex items-center gap-3 mb-4">
               <span className={`px-3 py-1 rounded-full text-xs font-medium ${metroLineColors[area.metroLine]} text-white`}>
@@ -143,7 +139,7 @@ export function AreaPageContent({ area, slug, nearbyAreaSlugs, aiCitationFacts }
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

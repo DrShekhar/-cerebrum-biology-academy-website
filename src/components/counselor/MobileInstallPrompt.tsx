@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { X, Download, Smartphone } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
@@ -80,24 +78,17 @@ export function MobileInstallPrompt() {
   if (isInstalled || !showPrompt) return null
 
   return (
-    <AnimatePresence>
-      {showPrompt && (
+{showPrompt && (
         <>
           {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 z-50"
+          <div
+            className="fixed inset-0 bg-black/50 z-50 animate-fadeInUp"
             onClick={handleDismiss}
           />
 
           {/* Prompt Card */}
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: 100, opacity: 0 }}
-            className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-2xl"
+          <div
+            className="fixed bottom-0 left-0 right-0 z-50 bg-white rounded-t-2xl shadow-2xl animate-fadeInUp"
           >
             <div className="p-6">
               {/* Close button */}
@@ -168,9 +159,8 @@ export function MobileInstallPrompt() {
                 This app will use ~5MB of storage on your device
               </p>
             </div>
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
-  )
+)
 }

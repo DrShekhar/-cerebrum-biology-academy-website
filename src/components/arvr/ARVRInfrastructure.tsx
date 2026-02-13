@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Glasses,
   Smartphone,
@@ -477,10 +476,8 @@ const ARVRInfrastructure: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center space-y-4"
+      <div
+        className="text-center space-y-4 animate-fadeInUp"
       >
         <div className="flex items-center justify-center gap-3">
           <div className="p-3 bg-indigo-500 rounded-xl">
@@ -494,7 +491,7 @@ const ARVRInfrastructure: React.FC = () => {
           Experience biology like never before with immersive AR/VR technologies. Explore cells,
           anatomy, and molecular structures in 3D space.
         </p>
-      </motion.div>
+      </div>
 
       {/* Device Compatibility Status */}
       {deviceCapabilities && (
@@ -589,25 +586,19 @@ const ARVRInfrastructure: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Experiences Tab */}
+{/* Experiences Tab */}
         {activeTab === 'experiences' && (
-          <motion.div
+          <div
             key="experiences"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4">Available AR/VR Experiences</h3>
               <div className="grid gap-6">
                 {experiences.map((experience) => (
-                  <motion.div
+                  <div
                     key={experience.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="border rounded-lg p-6 hover:shadow-md transition-all"
+                    className="border rounded-lg p-6 hover:shadow-md transition-all animate-fadeInUp"
                   >
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -709,21 +700,18 @@ const ARVRInfrastructure: React.FC = () => {
                           )}
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Capabilities Tab */}
         {activeTab === 'capabilities' && (
-          <motion.div
+          <div
             key="capabilities"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -867,17 +855,14 @@ const ARVRInfrastructure: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Setup Guide Tab */}
         {activeTab === 'setup' && (
-          <motion.div
+          <div
             key="setup"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -965,21 +950,15 @@ const ARVRInfrastructure: React.FC = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Hidden canvas for XR rendering */}
+{/* Hidden canvas for XR rendering */}
       <canvas ref={canvasRef} className="hidden" />
 
       {/* Error Display */}
-      <AnimatePresence>
-        {error && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3"
+{error && (
+          <div
+            className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-center gap-3 animate-fadeInUp"
           >
             <AlertCircle className="w-5 h-5 text-red-500" />
             <span className="text-red-700">{error}</span>
@@ -989,10 +968,9 @@ const ARVRInfrastructure: React.FC = () => {
             >
               ×
             </button>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

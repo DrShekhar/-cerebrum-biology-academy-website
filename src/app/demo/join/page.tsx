@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import { trackAndOpenWhatsApp, WHATSAPP_MESSAGES } from '@/lib/whatsapp/tracking'
 
 function JoinDemoContent() {
@@ -110,10 +109,8 @@ function JoinDemoContent() {
   if (sdkConfigured === false) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="max-w-md rounded-2xl bg-white p-8 text-center shadow-xl"
+        <div
+          className="max-w-md rounded-2xl bg-white p-8 text-center shadow-xl animate-fadeInUp"
         >
           <div className="mb-4 text-6xl">🎥</div>
           <h1 className="mb-4 text-2xl font-bold text-gray-900">Meeting Room Coming Soon</h1>
@@ -141,17 +138,15 @@ function JoinDemoContent() {
               Book a Demo Class
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     )
   }
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl"
+      <div
+        className="w-full max-w-md rounded-2xl bg-white p-8 shadow-xl animate-fadeInUp"
       >
         {/* Header */}
         <div className="mb-6 text-center">
@@ -264,7 +259,7 @@ function JoinDemoContent() {
             <span>📱</span> WhatsApp: +91 88264 44334
           </button>
         </div>
-      </motion.div>
+      </div>
 
       {/* Hidden container for Zoom SDK */}
       <div id="meetingSDKElement" className="hidden"></div>

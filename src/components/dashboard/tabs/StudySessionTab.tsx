@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Play, Pause, RotateCcw } from 'lucide-react'
 
 interface WeakArea {
@@ -34,12 +33,9 @@ export function StudySessionTab({
   formatTime,
 }: StudySessionTabProps) {
   return (
-    <motion.div
+    <div
       key="study"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -20 }}
-      className="space-y-4 sm:space-y-8"
+      className="space-y-4 sm:space-y-8 animate-fadeInUp"
     >
       {/* Study Timer - Mobile Optimized */}
       <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg">
@@ -123,6 +119,6 @@ export function StudySessionTab({
           </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }

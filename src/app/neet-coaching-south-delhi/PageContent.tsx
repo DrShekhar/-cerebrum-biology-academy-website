@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -203,11 +202,8 @@ export default function PageContent() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
@@ -270,19 +266,16 @@ export default function PageContent() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 animate-fadeInUp"
                 >
                   <div className="text-xl md:text-2xl font-bold text-yellow-300">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -296,12 +289,8 @@ export default function PageContent() {
       {/* Areas Grid */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Across South Delhi
@@ -309,17 +298,13 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Serving students from posh localities, coaching hubs, and residential areas
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {southDelhiAreas.map((area, index) => (
-              <motion.div
+              <div
                 key={area.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link href={`/neet-coaching-south-delhi/${area.slug}`}>
                   <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 h-full group">
                     <div className="flex items-start justify-between mb-4">
@@ -355,7 +340,7 @@ export default function PageContent() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -364,11 +349,8 @@ export default function PageContent() {
       {/* Premium Localities Spotlight */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Building2 className="w-4 h-4 mr-2" />
@@ -381,16 +363,12 @@ export default function PageContent() {
               Deep presence in Greater Kailash, Defence Colony, and Vasant Vihar with tailored
               support for top school students
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Greater Kailash */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl transition-all duration-300"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border border-purple-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">Greater Kailash</h3>
@@ -447,15 +425,11 @@ export default function PageContent() {
                   complementary NEET preparation that doesn't compromise school performance.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Defence Colony */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl transition-all duration-300"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border border-blue-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">Defence Colony</h3>
@@ -512,15 +486,11 @@ export default function PageContent() {
                   trust us for their children's medical career preparation.
                 </p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Vasant Vihar */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl transition-all duration-300"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border border-green-100 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">Vasant Vihar</h3>
@@ -579,14 +549,11 @@ export default function PageContent() {
                   understands the holistic development focus of Vasant Valley and Modern School.
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
+          <div
+            className="text-center mt-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white rounded-full shadow-lg px-8 py-4 border border-gray-200">
               <Users className="w-6 h-6 text-purple-600 mr-3" />
@@ -595,19 +562,15 @@ export default function PageContent() {
                 localities alone have joined Cerebrum in the last 3 years
               </span>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Schools Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Top South Delhi Schools
@@ -615,17 +578,13 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We coach students from the most prestigious schools in South Delhi
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {nearbySchools.map((school, index) => (
-              <motion.div
+              <div
                 key={school.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-100"
+                className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border border-purple-100 animate-fadeInUp"
               >
                 <div className="flex items-center mb-3">
                   <GraduationCap className="w-8 h-8 text-purple-600 mr-3" />
@@ -637,7 +596,7 @@ export default function PageContent() {
                 <div className="text-sm text-purple-600 font-medium">
                   {school.students} students enrolled
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -646,11 +605,8 @@ export default function PageContent() {
       {/* Video Testimonials Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Play className="w-4 h-4 mr-2" />
@@ -663,7 +619,7 @@ export default function PageContent() {
               Hear directly from NEET achievers who started their journey from homes in Greater
               Kailash, Defence Colony, and Vasant Vihar
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {[
@@ -689,13 +645,9 @@ export default function PageContent() {
                 percentile: 'Quick Success Story',
               },
             ].map((video, index) => (
-              <motion.div
+              <div
                 key={video.youtubeId}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 group hover:shadow-2xl transition-all duration-300"
+                className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 group hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="relative aspect-video bg-gray-100">
                   <iframe
@@ -715,15 +667,12 @@ export default function PageContent() {
                   <p className="text-gray-600 text-sm mb-1">{video.achievement}</p>
                   <p className="text-purple-600 text-xs font-medium">{video.percentile}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center"
+          <div
+            className="text-center animate-fadeInUp"
           >
             <a
               href="https://www.youtube.com/@cerebrumbiologyacademy"
@@ -735,22 +684,18 @@ export default function PageContent() {
               Watch More Success Stories on YouTube
               <ExternalLink className="w-5 h-5" />
             </a>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why South Delhi */}
       <section className="py-16 md:py-20 bg-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us for South Delhi?</h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -763,17 +708,13 @@ export default function PageContent() {
               'Regular parent-teacher meetings',
               'Scholarship for deserving students',
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-yellow-300 mr-3 flex-shrink-0" />
                 <span>{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -782,11 +723,8 @@ export default function PageContent() {
       {/* Enhanced Success Stories Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
@@ -799,7 +737,7 @@ export default function PageContent() {
               Read detailed transformation stories of students from DPS, Modern School, and Vasant
               Valley who cracked NEET with us
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {[
@@ -843,13 +781,9 @@ export default function PageContent() {
                   "I'm from Vasant Valley School in Vasant Kunj, and initially, I was scoring only 495 in mock tests. My parents were worried if I could even qualify NEET. But joining Cerebrum Biology Academy changed everything. The faculty identified my weak areas - Plant Physiology and Human Physiology - and gave me targeted practice. The small batch size meant every student's progress was tracked individually. Dr. Shekhar Sir's real-life examples and clinical correlations made complex concepts memorable. The regular parent-teacher meetings kept my family updated on my progress. I improved by 195 marks to score 690/720 and got AIR 420, securing a seat at AIIMS Delhi - something I never thought possible!",
               },
             ].map((story, index) => (
-              <motion.div
+              <div
                 key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 border border-gray-200 hover:shadow-2xl transition-all duration-300"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 border border-gray-200 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -903,32 +837,26 @@ export default function PageContent() {
                     &quot;{story.quote}&quot;
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
+          <div
+            className="text-center mt-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-yellow-100 text-yellow-800 px-6 py-3 rounded-full text-sm font-semibold">
               <Award className="w-5 h-5 mr-2" />
               Average improvement: 150+ marks | students from South Delhi qualified NEET
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Google Business Profile & Reviews Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by South Delhi Families
@@ -937,16 +865,13 @@ export default function PageContent() {
               See what students and parents from Greater Kailash, Defence Colony, and Vasant Vihar
               are saying about us
             </p>
-          </motion.div>
+          </div>
 
           {/* Google Rating & Reviews Grid */}
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Google Rating Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100"
+            <div
+              className="bg-gradient-to-br from-blue-50 to-white rounded-2xl shadow-xl p-8 border border-blue-100 animate-fadeInUp"
             >
               <div className="flex items-center justify-center mb-6">
                 <img
@@ -988,14 +913,11 @@ export default function PageContent() {
                   Write a Review
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Recent Reviews Highlights */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 border border-purple-100"
+            <div
+              className="bg-gradient-to-br from-purple-50 to-white rounded-2xl shadow-xl p-8 border border-purple-100 animate-fadeInUp"
             >
               <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-purple-600" />
@@ -1043,15 +965,12 @@ export default function PageContent() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Google Maps & Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100"
+          <div
+            className="bg-gradient-to-br from-green-50 to-white rounded-2xl shadow-xl overflow-hidden border border-green-100 animate-fadeInUp"
           >
             <div className="grid lg:grid-cols-2">
               {/* Map */}
@@ -1148,38 +1067,30 @@ export default function PageContent() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching South Delhi - FAQs
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1227,20 +1138,16 @@ export default function PageContent() {
                 color: 'text-red-600',
               },
             ].map((badge, index) => (
-              <motion.div
+              <div
                 key={badge.label}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="text-center bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300"
+                className="text-center bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 animate-fadeInUp"
               >
                 <badge.icon className={`w-10 h-10 md:w-12 md:h-12 mx-auto mb-3 ${badge.color}`} />
                 <div className="font-bold text-gray-900 text-sm md:text-base mb-1">
                   {badge.label}
                 </div>
                 <div className="text-xs text-gray-600">{badge.sublabel}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1249,12 +1156,8 @@ export default function PageContent() {
       {/* CTA */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Join South Delhi's Top NEET Coaching
             </h2>
@@ -1286,19 +1189,16 @@ export default function PageContent() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Floating WhatsApp Button */}
-      <motion.a
+      <a
         href="https://wa.me/918826444334?text=Hi%2C%20I%27m%20interested%20in%20NEET%20Biology%20coaching%20in%20South%20Delhi.%20I%27d%20like%20to%20know%20more%20about%20your%20courses%20and%20book%20a%20free%20demo%20class."
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 group hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 group hover:scale-110 animate-fadeInUp"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="w-8 h-8" />
@@ -1308,7 +1208,7 @@ export default function PageContent() {
         <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           Chat with us on WhatsApp
         </span>
-      </motion.a>
+      </a>
 
       {/* Schema */}
       <script

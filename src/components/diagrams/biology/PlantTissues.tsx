@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { DiagramContainer } from '../shared/DiagramContainer'
 import { DiagramLabel } from '../shared/DiagramLabel'
 import { biologyColors } from '../hooks/useDiagram'
@@ -64,9 +63,6 @@ export function PlantTissues({
         {/* Collenchyma Cell */}
         <motion.g
           className="collenchyma"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
         >
           <text
             x={startX + cellWidth / 2}
@@ -111,9 +107,6 @@ export function PlantTissues({
               height={30}
               fill={biologyColors.corners}
               rx={i < 2 ? 8 : 0}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.3 + i * 0.1 }}
             />
           ))}
 
@@ -126,9 +119,6 @@ export function PlantTissues({
             fill={biologyColors.vacuole}
             stroke="#ccc"
             strokeWidth={1}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.5 }}
           />
 
           {/* Nucleus */}
@@ -137,9 +127,6 @@ export function PlantTissues({
             cy={startY + 60}
             r={25}
             fill={biologyColors.nucleus}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.6, type: 'spring' }}
           />
           <circle cx={startX + cellWidth / 2 - 35} cy={startY + 55} r={8} fill="#2a4a8a" />
 
@@ -191,9 +178,6 @@ export function PlantTissues({
         {/* Sclerenchyma Fiber */}
         <motion.g
           className="sclerenchyma-fiber"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <text
             x={startX + cellWidth + gap + cellWidth / 2}
@@ -231,9 +215,6 @@ export function PlantTissues({
             height={cellHeight - 40}
             fill={biologyColors.lumen}
             rx={4}
-            initial={{ scaleY: 0 }}
-            animate={{ scaleY: 1 }}
-            transition={{ delay: 0.5, duration: 0.4 }}
             style={{ transformOrigin: 'center top' }}
           />
 
@@ -289,9 +270,6 @@ export function PlantTissues({
         {/* Sclerenchyma Sclereid (Stone Cell) */}
         <motion.g
           className="sclerenchyma-sclereid"
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <text
             x={startX + (cellWidth + gap) * 2 + cellWidth / 2}
@@ -327,9 +305,6 @@ export function PlantTissues({
             cy={startY + 30 + cellWidth / 2}
             r={25}
             fill={biologyColors.lumen}
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.7, type: 'spring' }}
           />
 
           {/* Multiple branched pits radiating from lumen */}
@@ -349,9 +324,6 @@ export function PlantTissues({
                 y2={cy + Math.sin(angle) * outerR}
                 stroke={biologyColors.pits}
                 strokeWidth={2}
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{ delay: 0.8 + i * 0.05 }}
               />
             )
           })}
@@ -368,9 +340,6 @@ export function PlantTissues({
               strokeWidth={1}
               strokeDasharray="4,4"
               opacity={0.5}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 0.6 + i * 0.1 }}
             />
           ))}
 
@@ -417,10 +386,8 @@ export function PlantTissues({
 
       {/* Info Panel */}
       {selectedTissue && TISSUE_INFO[selectedTissue as keyof typeof TISSUE_INFO] && (
-        <motion.div
-          className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div
+          className="mt-4 p-4 bg-amber-50 rounded-lg border border-amber-200 animate-fadeInUp"
         >
           <h4 className="font-bold text-amber-800 mb-2">
             {TISSUE_INFO[selectedTissue as keyof typeof TISSUE_INFO].name}
@@ -433,7 +400,7 @@ export function PlantTissues({
               <li key={i}>{f}</li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       )}
     </DiagramContainer>
   )

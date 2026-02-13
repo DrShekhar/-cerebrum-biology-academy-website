@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useMemo } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   FileText,
   Search,
@@ -665,13 +664,9 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
         </div>
 
         {/* Advanced Filters */}
-        <AnimatePresence>
-          {showFilters && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: 'auto', opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
-              className="overflow-hidden border-b"
+{showFilters && (
+            <div
+              className="overflow-hidden border-b animate-fadeInUp"
             >
               <div className="p-4 space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -824,11 +819,9 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Results Summary */}
+{/* Results Summary */}
         <div className="p-4 bg-gray-50 text-sm text-gray-600">
           Showing {filteredAndSortedTemplates.length} of {templates.length} templates
           {filters.showFavoritesOnly && ' (favorites only)'}
@@ -840,13 +833,9 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredAndSortedTemplates.map((template) => (
-              <motion.div
+              <div
                 key={template.id}
-                layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                className="bg-white rounded-xl border hover:shadow-lg transition-all cursor-pointer group"
+                className="bg-white rounded-xl border hover:shadow-lg transition-all cursor-pointer group animate-fadeInUp"
                 onClick={() => handleTemplateSelect(template)}
               >
                 <div className="p-6">
@@ -963,7 +952,7 @@ const EnhancedTemplateManager: React.FC<EnhancedTemplateManagerProps> = ({
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         ) : (

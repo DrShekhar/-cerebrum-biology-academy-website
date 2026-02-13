@@ -6,8 +6,6 @@
  */
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface SystemHealth {
   status: 'healthy' | 'degraded' | 'unhealthy'
   score: number
@@ -216,14 +214,10 @@ export default function MonitoringDashboard() {
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 py-8">
-        <AnimatePresence mode="wait">
-          {activeTab === 'overview' && (
-            <motion.div
+{activeTab === 'overview' && (
+            <div
               key="overview"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-8"
+              className="space-y-8 animate-fadeInUp"
             >
               {/* KPI Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -354,46 +348,36 @@ export default function MonitoringDashboard() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'system' && (
-            <motion.div
+            <div
               key="system"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <SystemHealthView health={data.health} />
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'performance' && (
-            <motion.div
+            <div
               key="performance"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <PerformanceView performance={data.performance} />
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'business' && (
-            <motion.div
+            <div
               key="business"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <BusinessIntelligenceView business={data.business} />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </div>
   )
 }
@@ -423,9 +407,8 @@ function MetricCard({
   }
 
   return (
-    <motion.div
+    <div
       className={`bg-white rounded-lg shadow p-6 border-l-4 ${colorClasses[color as keyof typeof colorClasses] || colorClasses.blue}`}
-      whileHover={{ scale: 1.02 }}
     >
       <div className="flex items-center justify-between">
         <div>
@@ -439,7 +422,7 @@ function MetricCard({
           {trend === 'up' ? '↗️' : '↘️'} {change}
         </span>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

@@ -15,7 +15,6 @@ import {
   GraduationCap,
   Quote,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 
 interface Props {
@@ -70,11 +69,8 @@ export default async function FacultyProfilePage({ params }: Props) {
       <section className="bg-indigo-500 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 text-center lg:text-left">
                 <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center mx-auto lg:mx-0 mb-6">
                   <GraduationCap className="w-16 h-16 text-white" />
@@ -115,13 +111,10 @@ export default async function FacultyProfilePage({ params }: Props) {
                   </Link>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <div className="flex items-center mb-4">
@@ -150,7 +143,7 @@ export default async function FacultyProfilePage({ params }: Props) {
                 </div>
                 <p className="text-blue-100">{faculty.teachingStyle}</p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,23 +155,17 @@ export default async function FacultyProfilePage({ params }: Props) {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-12">
               {/* Biography */}
-              <motion.section
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+              <section
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">About {faculty.name}</h2>
                 <p className="text-lg text-gray-700 leading-relaxed">{faculty.bio}</p>
-              </motion.section>
+              </section>
 
               {/* Achievements */}
               {faculty.achievements && (
-                <motion.section
-                  className="bg-white rounded-3xl shadow-lg p-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 }}
+                <section
+                  className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
                 >
                   <h2 className="text-3xl font-bold text-gray-900 mb-6">
                     Achievements & Qualifications
@@ -191,16 +178,13 @@ export default async function FacultyProfilePage({ params }: Props) {
                       </div>
                     ))}
                   </div>
-                </motion.section>
+                </section>
               )}
 
               {/* Student Testimonial */}
               {faculty.studentTestimonial && (
-                <motion.section
-                  className="bg-blue-50 rounded-3xl p-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                <section
+                  className="bg-blue-50 rounded-3xl p-8 animate-fadeInUp"
                 >
                   <div className="flex items-center mb-6">
                     <Quote className="w-8 h-8 text-blue-600 mr-3" />
@@ -215,15 +199,12 @@ export default async function FacultyProfilePage({ params }: Props) {
                     ))}
                     <span className="ml-3 text-gray-600">- Anonymous Student</span>
                   </div>
-                </motion.section>
+                </section>
               )}
 
               {/* Subject Expertise */}
-              <motion.section
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+              <section
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Subject Expertise</h2>
                 <div className="grid md:grid-cols-2 gap-6">
@@ -235,17 +216,14 @@ export default async function FacultyProfilePage({ params }: Props) {
                     </div>
                   ))}
                 </div>
-              </motion.section>
+              </section>
             </div>
 
             {/* Sidebar */}
             <div className="space-y-8">
               {/* Quick Contact */}
-              <motion.div
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+              <div
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
                 <div className="space-y-4">
@@ -268,14 +246,11 @@ export default async function FacultyProfilePage({ params }: Props) {
                     </Button>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Faculty Stats */}
-              <motion.div
-                className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-3xl p-8"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+              <div
+                className="bg-gradient-to-r from-green-600 to-blue-500 text-white rounded-3xl p-8 animate-fadeInUp"
               >
                 <h3 className="text-2xl font-bold mb-6">Faculty Stats</h3>
                 <div className="space-y-6">
@@ -294,14 +269,11 @@ export default async function FacultyProfilePage({ params }: Props) {
                     <div className="text-green-100">Subject Areas</div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Related Faculty */}
-              <motion.div
-                className="bg-white rounded-3xl shadow-lg p-8"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+              <div
+                className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-6">Other Faculty</h3>
                 <div className="space-y-4">
@@ -328,7 +300,7 @@ export default async function FacultyProfilePage({ params }: Props) {
                     </Button>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </div>

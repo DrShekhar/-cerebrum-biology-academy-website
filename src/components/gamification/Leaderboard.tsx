@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Trophy,
   Medal,
@@ -110,10 +109,7 @@ function LeaderboardRow({ entry, index }: { entry: LeaderboardEntry; index: numb
   const rankChange = getRankChange(entry.rank, entry.previousRank)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: index * 0.05 }}
+    <div
       className={`flex items-center p-4 ${
         entry.isCurrentUser
           ? 'bg-gradient-to-r from-purple-50 to-indigo-50 border-l-4 border-purple-500'
@@ -197,7 +193,7 @@ function LeaderboardRow({ entry, index }: { entry: LeaderboardEntry; index: numb
         </div>
         <div className="text-xs text-gray-500">XP</div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -246,14 +242,9 @@ export function Leaderboard({
                 <span>{TYPE_CONFIG[type].label}</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-
-              <AnimatePresence>
-                {showTypeDropdown && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10"
+{showTypeDropdown && (
+                  <div
+                    className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 animate-fadeInUp"
                   >
                     {Object.entries(TYPE_CONFIG).map(([key, config]) => {
                       const Icon = config.icon
@@ -273,10 +264,9 @@ export function Leaderboard({
                         </button>
                       )
                     })}
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
 
             {/* Scope Filter */}
             <div className="relative">
@@ -291,14 +281,9 @@ export function Leaderboard({
                 <span>{SCOPE_LABELS[scope]}</span>
                 <ChevronDown className="w-4 h-4" />
               </button>
-
-              <AnimatePresence>
-                {showScopeDropdown && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10"
+{showScopeDropdown && (
+                  <div
+                    className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 animate-fadeInUp"
                   >
                     {Object.entries(SCOPE_LABELS).map(([key, label]) => (
                       <button
@@ -314,10 +299,9 @@ export function Leaderboard({
                         {label}
                       </button>
                     ))}
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </div>
+</div>
           </div>
         </div>
       </div>
@@ -345,11 +329,8 @@ export function Leaderboard({
                 <div className="flex items-end justify-center space-x-2 sm:space-x-4">
                   {/* 2nd Place */}
                   {entries[1] && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                      className="text-center"
+                    <div
+                      className="text-center animate-fadeInUp"
                     >
                       <div className="relative">
                         {entries[1].userAvatar ? (
@@ -376,16 +357,13 @@ export function Leaderboard({
                         {entries[1].xp.toLocaleString()} XP
                       </div>
                       <div className="h-12 w-12 sm:h-16 sm:w-16 bg-gray-300 rounded-t-lg mt-2 mx-auto" />
-                    </motion.div>
+                    </div>
                   )}
 
                   {/* 1st Place */}
                   {entries[0] && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.1 }}
-                      className="text-center"
+                    <div
+                      className="text-center animate-fadeInUp"
                     >
                       <div className="relative">
                         <Crown className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-500 absolute -top-5 sm:-top-6 left-1/2 -translate-x-1/2" />
@@ -413,16 +391,13 @@ export function Leaderboard({
                         {entries[0].xp.toLocaleString()} XP
                       </div>
                       <div className="h-16 w-14 sm:h-24 sm:w-20 bg-yellow-400 rounded-t-lg mt-2 mx-auto" />
-                    </motion.div>
+                    </div>
                   )}
 
                   {/* 3rd Place */}
                   {entries[2] && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 }}
-                      className="text-center"
+                    <div
+                      className="text-center animate-fadeInUp"
                     >
                       <div className="relative">
                         {entries[2].userAvatar ? (
@@ -449,7 +424,7 @@ export function Leaderboard({
                         {entries[2].xp.toLocaleString()} XP
                       </div>
                       <div className="h-8 w-10 sm:h-12 sm:w-14 bg-amber-600 rounded-t-lg mt-2 mx-auto" />
-                    </motion.div>
+                    </div>
                   )}
                 </div>
               </div>

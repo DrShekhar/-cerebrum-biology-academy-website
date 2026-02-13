@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { User, MapPin, BookOpen, Trophy, Clock } from 'lucide-react'
 
 interface ProofNotification {
@@ -140,14 +139,9 @@ export function RealTimeProof() {
 
   return (
     <div className="fixed bottom-6 left-6 z-30 max-w-sm">
-      <AnimatePresence mode="wait">
-        <motion.div
+<div
           key={currentNotification.id}
-          initial={{ opacity: 0, x: -100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: -100, scale: 0.8 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-gray-200 p-4 hover:shadow-xl transition-all duration-300"
+          className="bg-white/95 backdrop-blur-md rounded-xl shadow-lg border border-gray-200 p-4 hover:shadow-xl transition-all duration-300 animate-fadeInUp"
         >
           <div className="flex items-start space-x-3">
             {/* Avatar/Icon */}
@@ -187,29 +181,21 @@ export function RealTimeProof() {
           </div>
 
           {/* Progress bar */}
-          <motion.div
-            className="mt-3 h-1 bg-gray-200 rounded-full overflow-hidden"
-            initial={{ width: '100%' }}
+          <div
+            className="mt-3 h-1 bg-gray-200 rounded-full overflow-hidden animate-fadeInUp"
           >
-            <motion.div
-              className="h-full bg-blue-500 rounded-full"
-              initial={{ width: '100%' }}
-              animate={{ width: '0%' }}
-              transition={{ duration: 6, ease: 'linear' }}
+            <div
+              className="h-full bg-blue-500 rounded-full animate-fadeInUp"
             />
-          </motion.div>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Notification count indicator */}
+          </div>
+        </div>
+{/* Notification count indicator */}
       {notifications.length > 1 && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
+        <div
+          className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold animate-fadeInUp"
         >
           {notifications.length}
-        </motion.div>
+        </div>
       )}
     </div>
   )

@@ -15,7 +15,6 @@ import {
   Target,
   Lightbulb,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FacultyListSchema } from '@/components/seo/PersonSchema'
@@ -86,38 +85,26 @@ export default function FacultyPage() {
       <section className="relative py-12 sm:py-16 md:py-20 lg:py-28 bg-[#e8ede8] overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center">
-            <motion.div
-              className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div
+              className="inline-block bg-[#3d4d3d] text-white font-semibold text-sm uppercase tracking-[0.2em] px-4 py-2 rounded-full mb-6 animate-fadeInUp"
             >
               Expert Educators
-            </motion.div>
-            <motion.h1
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#3d4d3d] mb-4 sm:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+            </div>
+            <h1
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#3d4d3d] mb-4 sm:mb-6 animate-fadeInUp"
             >
               World-Class Faculty
-            </motion.h1>
-            <motion.p
-              className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 sm:mb-10"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            </h1>
+            <p
+              className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8 sm:mb-10 animate-fadeInUp"
             >
               Learn from the best minds in biology education. Our faculty comprises PhD holders,
               MBBS graduates from AIIMS, and industry experts with decades of NEET coaching
               experience.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+            <div
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fadeInUp"
             >
               <Link href="/demo-booking" className="w-full sm:w-auto">
                 <Button
@@ -139,7 +126,7 @@ export default function FacultyPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -161,12 +148,9 @@ export default function FacultyPage() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {facultyStats.map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-lg transition-all duration-300 group"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 text-center border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-lg transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#3d4d3d] mb-1 sm:mb-2">
                   {stat.number}
@@ -177,7 +161,7 @@ export default function FacultyPage() {
                 <div className="text-xs sm:text-sm md:text-base text-gray-600">
                   {stat.description}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -200,12 +184,9 @@ export default function FacultyPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {specializations.map((spec, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white rounded-3xl p-8 border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-xl transition-all duration-300 group relative overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-3xl p-8 border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-xl transition-all duration-300 group relative overflow-hidden animate-fadeInUp"
               >
                 <div className="absolute inset-0 bg-[#e8ede8]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10">
@@ -231,7 +212,7 @@ export default function FacultyPage() {
                     </Button>
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -254,12 +235,9 @@ export default function FacultyPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {facultyMembers.map((faculty, index) => (
-              <motion.div
+              <div
                 key={faculty.id}
-                className="bg-white rounded-3xl overflow-hidden border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-xl transition-all duration-300 group"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-3xl overflow-hidden border border-[#3d4d3d]/10 hover:border-[#3d4d3d]/30 hover:shadow-xl transition-all duration-300 group animate-fadeInUp"
               >
                 <div className="relative h-48 bg-gradient-to-br from-[#3d4d3d] via-[#4a5d4a] to-[#5a6d5a]">
                   {faculty.image && !faculty.image.includes('ui-avatars.com') ? (
@@ -326,7 +304,7 @@ export default function FacultyPage() {
                     </Link>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -363,12 +341,9 @@ export default function FacultyPage() {
 
               <div className="space-y-6">
                 {teachingApproach.map((approach, index) => (
-                  <motion.div
+                  <div
                     key={index}
-                    className="flex items-start"
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="flex items-start animate-fadeInUp"
                   >
                     <div className="w-12 h-12 bg-[#3d4d3d] rounded-xl flex items-center justify-center mr-4">
                       <approach.icon className="w-6 h-6 text-white" />
@@ -377,16 +352,13 @@ export default function FacultyPage() {
                       <h3 className="text-lg font-bold text-gray-900 mb-2">{approach.title}</h3>
                       <p className="text-gray-600">{approach.description}</p>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
 
-            <motion.div
-              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-[#3d4d3d]/10"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+            <div
+              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 border border-[#3d4d3d]/10 animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold text-[#3d4d3d] mb-6">Faculty Highlights</h3>
               <div className="space-y-4">
@@ -412,7 +384,7 @@ export default function FacultyPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

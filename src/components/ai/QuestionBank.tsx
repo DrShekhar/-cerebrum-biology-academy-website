@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Search,
   Filter,
@@ -352,10 +351,8 @@ const QuestionBank: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
             <BookOpen className="w-8 h-8 text-white" />
@@ -363,7 +360,7 @@ const QuestionBank: React.FC = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             Question Bank
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Comprehensive question management system with advanced search, filtering, performance
           tracking, and community features
@@ -399,15 +396,11 @@ const QuestionBank: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Search Tab */}
+{/* Search Tab */}
         {activeTab === 'search' && (
-          <motion.div
+          <div
             key="search"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Search Bar */}
             <div className="bg-white rounded-xl p-6 border">
@@ -461,11 +454,9 @@ const QuestionBank: React.FC = () => {
             {/* Question List */}
             <div className="space-y-4">
               {filteredQuestions.map((question) => (
-                <motion.div
+                <div
                   key={question.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="bg-white rounded-xl p-6 border hover:shadow-md transition-all"
+                  className="bg-white rounded-xl p-6 border hover:shadow-md transition-all animate-fadeInUp"
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
@@ -543,13 +534,9 @@ const QuestionBank: React.FC = () => {
                   </div>
 
                   {/* Expanded Content */}
-                  <AnimatePresence>
-                    {expandedQuestion === question.id && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="mt-4 pt-4 border-t"
+{expandedQuestion === question.id && (
+                      <div
+                        className="mt-4 pt-4 border-t animate-fadeInUp"
                       >
                         {question.options && (
                           <div className="space-y-2 mb-4">
@@ -620,23 +607,19 @@ const QuestionBank: React.FC = () => {
                             Delete
                           </button>
                         </div>
-                      </motion.div>
+                      </div>
                     )}
-                  </AnimatePresence>
-                </motion.div>
+</div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Filter Tab */}
         {activeTab === 'filter' && (
-          <motion.div
+          <div
             key="filter"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Basic Filters */}
             <div className="bg-white rounded-xl p-6 border">
@@ -890,17 +873,14 @@ const QuestionBank: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Favorites Tab */}
         {activeTab === 'favorites' && (
-          <motion.div
+          <div
             key="favorites"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -951,17 +931,14 @@ const QuestionBank: React.FC = () => {
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* History Tab */}
         {activeTab === 'history' && (
-          <motion.div
+          <div
             key="history"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1018,17 +995,14 @@ const QuestionBank: React.FC = () => {
                   ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Statistics Tab */}
         {activeTab === 'stats' && (
-          <motion.div
+          <div
             key="stats"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Performance Statistics */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1143,17 +1117,14 @@ const QuestionBank: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Community Tab */}
         {activeTab === 'community' && (
-          <motion.div
+          <div
             key="community"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1238,17 +1209,14 @@ const QuestionBank: React.FC = () => {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Rating Tab */}
         {activeTab === 'rating' && (
-          <motion.div
+          <div
             key="rating"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -1319,10 +1287,9 @@ const QuestionBank: React.FC = () => {
                   ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

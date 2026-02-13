@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ChevronRight, Sparkles, GraduationCap } from 'lucide-react'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
@@ -161,9 +160,7 @@ export function ProgressiveDisclosureQuiz({
     const result = calculateResult()
 
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
         className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}
       >
         <div className="text-center space-y-4">
@@ -220,16 +217,14 @@ export function ProgressiveDisclosureQuiz({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
   const currentStepData = quizSteps[currentStep]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`bg-slate-800 rounded-2xl p-6 max-w-xl ${className}`}
     >
       {/* Quiz Header */}
@@ -248,41 +243,31 @@ export function ProgressiveDisclosureQuiz({
       </div>
 
       {/* Current Question */}
-      <AnimatePresence mode="wait">
-        <motion.div
+<div
           key={currentStep}
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -20 }}
-          transition={{ duration: 0.3 }}
-        >
+         className="animate-fadeInUp">
           <p className="text-white mb-4 font-medium">{currentStepData.question}</p>
 
           <div className="grid grid-cols-2 gap-2">
             {currentStepData.options.map((option, index) => (
-              <motion.button
+              <button
                 key={option.value}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 onClick={() => handleAnswer(currentStepData.id, option.value)}
-                className="quiz-option bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-green-500"
+                className="quiz-option bg-slate-700 hover:bg-slate-600 text-white p-3 rounded-lg transition-all duration-200 text-left group hover:ring-2 hover:ring-green-500 animate-fadeInUp"
               >
                 <div className="font-medium">{option.label}</div>
                 {option.description && (
                   <div className="text-xs text-gray-400 mt-1">{option.description}</div>
                 )}
-              </motion.button>
+              </button>
             ))}
           </div>
-        </motion.div>
-      </AnimatePresence>
-
-      {/* Progress Indicator */}
+        </div>
+{/* Progress Indicator */}
       <div className="mt-4 text-center text-xs text-gray-400">
         Step {currentStep + 1} of {quizSteps.length}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -312,10 +297,8 @@ export function LiveTrustIndicators({ className = '' }: { className?: string }) 
 
   return (
     <div className={`hero-trust-indicators fixed bottom-6 right-6 z-40 space-y-3 ${className}`}>
-      <motion.div
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        className="live-students bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg"
+      <div
+        className="live-students bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-fadeInUp"
       >
         <div className="flex items-center gap-2 text-sm font-medium">
           <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
@@ -323,17 +306,14 @@ export function LiveTrustIndicators({ className = '' }: { className?: string }) 
             <AnimatedCounter value={liveStats.studentsOnline} /> students online
           </span>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         key={liveStats.recentEnrollment}
-        initial={{ opacity: 0, x: 100 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: 100 }}
-        className="recent-enrollment bg-green-600/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg"
+        className="recent-enrollment bg-green-600/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-fadeInUp"
       >
         <div className="text-white text-sm font-medium">✅ {liveStats.recentEnrollment}</div>
-      </motion.div>
+      </div>
     </div>
   )
 }

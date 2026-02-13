@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Users } from 'lucide-react'
 import type { DisplayMode } from '@/lib/study-with-me/types'
 import { MOCK_STUDENT_COUNT } from '@/lib/study-with-me/constants'
@@ -99,10 +98,8 @@ export function LiveStudentCount({
       <div
         className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-100 ${className}`}
       >
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [1, 0.7, 1] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-2 h-2 rounded-full bg-green-500"
+        <div
+          className="w-2 h-2 rounded-full bg-green-500 animate-fadeInUp"
         />
         <Users className="w-3.5 h-3.5 text-green-600" />
         <span className="text-sm font-semibold text-green-700">{displayCount}</span>
@@ -114,10 +111,8 @@ export function LiveStudentCount({
   if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`flex items-center space-x-3 ${className}`}>
-        <motion.div
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="w-3 h-3 rounded-full bg-green-500"
+        <div
+          className="w-3 h-3 rounded-full bg-green-500 animate-fadeInUp"
         />
         <span className="text-2xl font-bold text-white">{displayCount}</span>
         <span className="text-lg text-gray-400">students studying</span>
@@ -126,46 +121,34 @@ export function LiveStudentCount({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.3 }}
+    <div
       className={`bg-white rounded-xl shadow-xl p-5 ${className}`}
     >
       <div className="flex items-center space-x-4">
         {/* Animated Icon */}
         <div className="relative">
-          <motion.div
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center"
+          <div
+            className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center animate-fadeInUp"
           >
             <Users className="w-6 h-6 text-green-600" />
-          </motion.div>
+          </div>
 
           {/* Live indicator */}
-          <motion.span
-            animate={{ scale: [1, 1.3, 1], opacity: [1, 0.7, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-500 border-2 border-white"
+          <span
+            className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-500 border-2 border-white animate-fadeInUp"
           />
         </div>
 
         {/* Count and Text */}
         <div>
           <div className="flex items-baseline space-x-2">
-            <AnimatePresence mode="wait">
-              <motion.span
+<span
                 key={displayCount}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 10 }}
-                className="text-3xl font-bold text-[#3d4d3d]"
+                className="text-3xl font-bold text-[#3d4d3d] animate-fadeInUp"
               >
                 {displayCount}
-              </motion.span>
-            </AnimatePresence>
-            <span className="text-gray-600">students</span>
+              </span>
+<span className="text-gray-600">students</span>
           </div>
           <p className="text-sm text-gray-500">studying with you right now</p>
         </div>
@@ -173,18 +156,10 @@ export function LiveStudentCount({
 
       {/* Subtle activity bar */}
       <div className="mt-4 h-1 bg-gray-100 rounded-full overflow-hidden">
-        <motion.div
-          animate={{
-            width: ['20%', '60%', '40%', '80%', '30%'],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-          className="h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full"
+        <div
+          className="h-full bg-gradient-to-r from-green-400 to-green-500 rounded-full animate-fadeInUp"
         />
       </div>
-    </motion.div>
+    </div>
   )
 }

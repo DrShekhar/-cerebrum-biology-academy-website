@@ -19,7 +19,6 @@ import {
   Phone,
   Mail,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
 
 interface ProgressData {
@@ -97,12 +96,9 @@ export function MyEnrollments() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <motion.a
+          <a
             href="/courses"
-            className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group animate-fadeInUp"
           >
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
@@ -119,14 +115,11 @@ export function MyEnrollments() {
               Find the perfect course for Class 11, 12, or Dropper batches with flexible learning
               options.
             </p>
-          </motion.a>
+          </a>
 
-          <motion.a
+          <a
             href="/enrollment"
-            className="bg-indigo-500 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group text-white"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            className="bg-indigo-500 rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow group text-white animate-fadeInUp"
           >
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">
@@ -142,7 +135,7 @@ export function MyEnrollments() {
             <p className="text-blue-100 text-sm">
               Complete your enrollment in minutes with multiple payment options available.
             </p>
-          </motion.a>
+          </a>
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-6 text-center">
@@ -187,12 +180,9 @@ export function MyEnrollments() {
 
       <div className="space-y-6">
         {userEnrollments.map((enrollment, index) => (
-          <motion.div
+          <div
             key={enrollment.id}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="bg-white rounded-2xl shadow-lg overflow-hidden animate-fadeInUp"
           >
             {/* Status Header */}
             <div
@@ -473,7 +463,7 @@ export function MyEnrollments() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 

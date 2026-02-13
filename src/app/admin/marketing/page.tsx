@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   MessageSquare,
   Send,
@@ -103,10 +102,8 @@ export default function MarketingPage() {
         {!loading && !error && overview && (
           <>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500"
+              <div
+                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-500 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -117,13 +114,10 @@ export default function MarketingPage() {
                   </div>
                   <MessageSquare className="w-10 h-10 text-blue-500" />
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600"
+              <div
+                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -134,13 +128,10 @@ export default function MarketingPage() {
                   </div>
                   <Target className="w-10 h-10 text-green-600" />
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500"
+              <div
+                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-purple-500 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -151,13 +142,10 @@ export default function MarketingPage() {
                   </div>
                   <Users className="w-10 h-10 text-purple-500" />
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-orange-500"
+              <div
+                className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-orange-500 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -168,7 +156,7 @@ export default function MarketingPage() {
                   </div>
                   <TrendingUp className="w-10 h-10 text-orange-500" />
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Weekly Performance */}

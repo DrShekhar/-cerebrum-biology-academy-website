@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { CheckCircle, Circle, Target } from 'lucide-react'
 
 interface Milestone {
@@ -84,10 +83,7 @@ export function MilestoneIndicator({
 
       <div className="relative">
         <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: `${progressPercentage}%` }}
-            transition={{ duration: 1, ease: 'easeOut' }}
+          <div
             className={`h-full bg-gradient-to-r ${selectedColor.gradient} rounded-full`}
           />
         </div>
@@ -100,12 +96,9 @@ export function MilestoneIndicator({
             const position = (milestone.value / maxValue) * 100
 
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex flex-col items-center"
+                className="flex flex-col items-center animate-fadeInUp"
                 style={{
                   position: 'absolute',
                   left: `${position}%`,
@@ -114,23 +107,18 @@ export function MilestoneIndicator({
               >
                 <div className="relative -top-[34px]">
                   {isAchieved ? (
-                    <motion.div
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ delay: 0.5 + index * 0.1, type: 'spring' }}
-                    >
+                    <div
+                     className="animate-fadeInUp">
                       <CheckCircle
                         className={`w-6 h-6 ${selectedColor.text} ${selectedColor.bg} rounded-full`}
                         fill="white"
                       />
-                    </motion.div>
+                    </div>
                   ) : isCurrent ? (
-                    <motion.div
-                      animate={{ scale: [1, 1.2, 1] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
+                    <div
+                     className="animate-fadeInUp">
                       <Target className={`w-6 h-6 ${selectedColor.text}`} />
-                    </motion.div>
+                    </div>
                   ) : (
                     <Circle className="w-6 h-6 text-gray-300" />
                   )}
@@ -152,7 +140,7 @@ export function MilestoneIndicator({
                     {milestone.label}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>

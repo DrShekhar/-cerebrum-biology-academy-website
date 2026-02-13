@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 import {
@@ -25,8 +24,8 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
   const [exportFormat, setExportFormat] = useState<'svg' | 'png' | 'pdf'>('svg')
 
   const logoVariants: { value: LogoVariant; label: string; description: string }[] = [
-    { value: 'primary', label: 'Primary Logo', description: 'Main horizontal layout for headers' },
-    { value: 'stacked', label: 'Stacked Logo', description: 'Vertical layout for profiles' },
+    { value: 'primary', label: 'Primary Logo', description: 'Main horizontal for headers' },
+    { value: 'stacked', label: 'Stacked Logo', description: 'Vertical for profiles' },
     { value: 'icon-only', label: 'Icon Only', description: 'Symbol only for favicons' },
     { value: 'academic', label: 'Academic', description: 'Formal institutional style' },
     { value: 'monochrome', label: 'Monochrome', description: 'Single color version' },
@@ -116,14 +115,9 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
       </div>
 
       {/* Logo Generator Tab */}
-      <AnimatePresence mode="wait">
-        {activeTab === 'logos' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="grid lg:grid-cols-3 gap-8"
+{activeTab === 'logos' && (
+          <div
+            className="grid lg:grid-cols-3 gap-8 animate-fadeInUp"
           >
             {/* Logo Controls */}
             <div className="bg-white rounded-3xl shadow-xl p-6">
@@ -302,17 +296,13 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Icon Library Tab */}
         {activeTab === 'icons' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="grid lg:grid-cols-4 gap-8"
+          <div
+            className="grid lg:grid-cols-4 gap-8 animate-fadeInUp"
           >
             {/* Icon Categories */}
             <div className="bg-white rounded-3xl shadow-xl p-6">
@@ -375,17 +365,13 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Brand Guidelines Tab */}
         {activeTab === 'guidelines' && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="bg-white rounded-3xl shadow-xl p-8"
+          <div
+            className="bg-white rounded-3xl shadow-xl p-8 animate-fadeInUp"
           >
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Brand Guidelines</h3>
 
@@ -541,10 +527,9 @@ export const BrandIdentityGenerator: React.FC<BrandIdentityGeneratorProps> = ({ 
                 Download Brand Package (25MB)
               </Button>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

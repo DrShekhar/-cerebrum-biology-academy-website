@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import type { ClockFormat, DisplayMode } from '@/lib/study-with-me/types'
 
 interface RealTimeClockProps {
@@ -87,7 +86,7 @@ export function RealTimeClock({
 
   const { hours, minutes, seconds, period } = formatTime()
 
-  // OBS and Focus mode use larger fonts and simpler layout (dark theme)
+  // OBS and Focus mode use larger fonts and simpler (dark theme)
   if (mode === 'obs' || mode === 'focus') {
     return (
       <div className={`text-center ${className}`}>
@@ -101,10 +100,7 @@ export function RealTimeClock({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}
+    <div
       className={`bg-white rounded-xl shadow-xl p-6 ${className}`}
     >
       {/* Header with format toggle */}
@@ -126,23 +122,19 @@ export function RealTimeClock({
           <span className="text-5xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {hours}
           </span>
-          <motion.span
-            animate={{ opacity: [1, 0.3, 1] }}
-            transition={{ duration: 1, repeat: Infinity }}
-            className="text-5xl font-mono font-bold text-[#3d4d3d]"
+          <span
+            className="text-5xl font-mono font-bold text-[#3d4d3d] animate-fadeInUp"
           >
             :
-          </motion.span>
+          </span>
           <span className="text-5xl font-mono font-bold text-[#3d4d3d] tracking-tight">
             {minutes}
           </span>
-          <motion.span
-            animate={{ opacity: [1, 0.3, 1] }}
-            transition={{ duration: 1, repeat: Infinity }}
-            className="text-5xl font-mono font-bold text-[#3d4d3d]"
+          <span
+            className="text-5xl font-mono font-bold text-[#3d4d3d] animate-fadeInUp"
           >
             :
-          </motion.span>
+          </span>
           <span className="text-5xl font-mono font-bold text-gray-400 tracking-tight">
             {seconds}
           </span>
@@ -152,6 +144,6 @@ export function RealTimeClock({
         {/* Date */}
         <p className="text-gray-500 mt-3 text-sm">{formatDate()}</p>
       </div>
-    </motion.div>
+    </div>
   )
 }

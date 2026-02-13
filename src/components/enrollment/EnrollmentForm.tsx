@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { User, Mail, Phone, CreditCard, IndianRupee, CheckCircle, AlertCircle } from 'lucide-react'
 import { razorpayService } from '@/lib/payments/razorpay'
 import { useAnalytics } from '@/hooks/useAnalytics'
@@ -192,10 +191,8 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
 
   if (success) {
     return (
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="p-8 bg-green-50 rounded-xl border border-green-200"
+      <div
+        className="p-8 bg-green-50 rounded-xl border border-green-200 animate-fadeInUp"
       >
         <div className="text-center mb-6">
           <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
@@ -261,18 +258,16 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
             Chat on WhatsApp
           </a>
         </div>
-      </motion.div>
+      </div>
     )
   }
 
   const installmentInfo = getInstallmentInfo()
 
   return (
-    <motion.form
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+    <form
       onSubmit={handleSubmit}
-      className="space-y-6 bg-white p-6 rounded-xl border border-gray-200 shadow-lg"
+      className="space-y-6 bg-white p-6 rounded-xl border border-gray-200 shadow-lg animate-fadeInUp"
     >
       <div className="text-center mb-6">
         <h3 className="text-2xl font-bold text-gray-900 mb-2">Enroll in {course.name}</h3>
@@ -392,6 +387,6 @@ export function EnrollmentForm({ course, onSuccess }: EnrollmentFormProps) {
       <p className="text-center text-sm text-gray-600">
         🔒 Secure payment powered by Razorpay • 100% money-back guarantee
       </p>
-    </motion.form>
+    </form>
   )
 }

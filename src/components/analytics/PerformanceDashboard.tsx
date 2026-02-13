@@ -24,8 +24,6 @@ import {
   AlertTriangle,
   Activity,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 interface PerformanceDashboardProps {
   userHistory: UserTestHistory
   testAnalytics: TestAnalytics[]
@@ -270,12 +268,9 @@ export function PerformanceDashboard({
           {/* Key Metrics */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {metricCards.map((metric, index) => (
-              <motion.div
+              <div
                 key={metric.title}
-                className="bg-white rounded-2xl shadow-lg p-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg p-6 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div
@@ -306,16 +301,13 @@ export function PerformanceDashboard({
                 </div>
                 <div className="text-2xl font-bold text-gray-900 mb-1">{metric.value}</div>
                 <div className="text-sm text-gray-600">{metric.title}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Performance Insights */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Performance Insights</h2>
             <div className="space-y-4">
@@ -351,14 +343,11 @@ export function PerformanceDashboard({
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Recent Test Performance */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Recent Test Performance</h2>
             <div className="overflow-x-auto">
@@ -414,7 +403,7 @@ export function PerformanceDashboard({
                 </tbody>
               </table>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
 
@@ -422,11 +411,8 @@ export function PerformanceDashboard({
       {activeTab === 'performance' && (
         <div className="space-y-8">
           {/* Subject-wise Performance */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Subject-wise Performance</h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -447,11 +433,8 @@ export function PerformanceDashboard({
                         <span>{subject.averageScore}%</span>
                       </div>
                       <div className="w-full bg-white/50 rounded-full h-2">
-                        <motion.div
+                        <div
                           className={`h-2 rounded-full ${subject.color.replace('text-', 'bg-')}`}
-                          initial={{ width: 0 }}
-                          animate={{ width: `${subject.averageScore}%` }}
-                          transition={{ duration: 1, delay: index * 0.2 }}
                         />
                       </div>
                     </div>
@@ -462,14 +445,11 @@ export function PerformanceDashboard({
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Performance Distribution */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Score Distribution</h2>
             <div className="grid md:grid-cols-4 gap-6">
@@ -516,7 +496,7 @@ export function PerformanceDashboard({
                 <div className="text-sm text-gray-700">Needs Work (below 40%)</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
 
@@ -524,11 +504,8 @@ export function PerformanceDashboard({
       {activeTab === 'progress' && (
         <div className="space-y-8">
           {/* Progress Chart */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Score Progression</h2>
             <div className="h-80 flex items-end justify-between space-x-2 bg-gray-50 rounded-2xl p-6">
@@ -544,14 +521,11 @@ export function PerformanceDashboard({
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Achievements */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">Achievements</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -575,7 +549,7 @@ export function PerformanceDashboard({
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
 
@@ -583,11 +557,8 @@ export function PerformanceDashboard({
       {activeTab === 'insights' && (
         <div className="space-y-8">
           {/* AI-Powered Insights */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">AI-Powered Insights</h2>
             <div className="space-y-6">
@@ -636,14 +607,11 @@ export function PerformanceDashboard({
                 </Button>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Peer Comparison */}
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Peer Comparison (
@@ -683,7 +651,7 @@ export function PerformanceDashboard({
                 <div className="text-gray-600">To Top 10%</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       )}
     </div>

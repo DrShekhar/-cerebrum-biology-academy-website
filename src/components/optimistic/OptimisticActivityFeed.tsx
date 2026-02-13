@@ -1,6 +1,5 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
 import { UserCheck, Trophy, Users, Play, Loader2 } from 'lucide-react'
 import { useOptimisticList } from '@/hooks/useOptimisticList'
 import { useToast } from '@/components/ui/Toast'
@@ -91,16 +90,11 @@ export function OptimisticActivityFeed({ initialActivities }: OptimisticActivity
       </div>
 
       <div className="space-y-3 max-h-96 overflow-y-auto">
-        <AnimatePresence initial={false}>
-          {rawItems.map((item, index) => {
+{rawItems.map((item, index) => {
             const Icon = getIcon(item.data.type)
             return (
-              <motion.div
+              <div
                 key={item.id}
-                initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -100, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
                 className={`flex items-start space-x-3 p-4 rounded-xl transition-all ${
                   item.isOptimistic
                     ? 'bg-blue-50 border-2 border-blue-200'
@@ -135,11 +129,10 @@ export function OptimisticActivityFeed({ initialActivities }: OptimisticActivity
                     </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             )
           })}
-        </AnimatePresence>
-      </div>
+</div>
 
       <div className="mt-6 grid grid-cols-3 gap-4">
         <div className="text-center bg-green-50 rounded-xl p-3 shadow-sm">

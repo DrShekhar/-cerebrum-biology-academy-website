@@ -23,7 +23,6 @@ import {
   Receipt,
   FileText,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 import type { PaymentSummary, PaymentStats } from '@/types/payment'
@@ -299,11 +298,8 @@ function StatCard({
   trendValue?: string
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div
+     className="animate-fadeInUp">
       <Card className="hover:shadow-lg transition-shadow">
         <CardContent className="p-6">
           <div className="flex items-start justify-between">
@@ -333,7 +329,7 @@ function StatCard({
           </div>
         </CardContent>
       </Card>
-    </motion.div>
+    </div>
   )
 }
 

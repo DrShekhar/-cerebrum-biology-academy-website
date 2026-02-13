@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   PremiumButton,
   PremiumCard,
@@ -96,25 +95,11 @@ export function SophisticatedHero({
       {/* Dynamic Background Effects */}
       <div className="absolute inset-0">
         {/* Animated Gradient Orbs */}
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"
-          animate={{
-            x: mousePosition.x * 0.1,
-            y: mousePosition.y * 0.1,
-            scale: [1, 1.1, 1],
-            rotate: [0, 180, 360],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
+        <div
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl animate-fadeInUp"
         />
-        <motion.div
-          className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-full blur-3xl"
-          animate={{
-            x: -mousePosition.x * 0.05,
-            y: -mousePosition.y * 0.05,
-            scale: [1, 1.2, 1],
-            rotate: [360, 180, 0],
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+        <div
+          className="absolute top-3/4 right-1/4 w-80 h-80 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-full blur-3xl animate-fadeInUp"
         />
 
         {/* DNA Helix Pattern */}
@@ -125,9 +110,6 @@ export function SophisticatedHero({
               stroke="url(#dnaGradient)"
               strokeWidth="0.5"
               fill="none"
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 3, repeat: Infinity }}
             />
             <defs>
               <linearGradient id="dnaGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -145,24 +127,18 @@ export function SophisticatedHero({
           {/* Left Column - Content */}
           <div className="space-y-8">
             {/* Premium Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2"
+            <div
+              className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2 animate-fadeInUp"
             >
               <Sparkles className="h-5 w-5 text-blue-600" />
               <span className="text-sm font-semibold text-blue-800">
                 Harvard-Caliber Biology Education • Silicon Valley Innovation
               </span>
-            </motion.div>
+            </div>
 
             {/* Main Headline */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-4"
+            <div
+              className="space-y-4 animate-fadeInUp"
             >
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
                 <span className="text-navy-900">Master Biology</span>
@@ -179,14 +155,11 @@ export function SophisticatedHero({
                 <span className="font-semibold text-green-700">1.5 lakh+ students</span> guided to
                 success.
               </p>
-            </motion.div>
+            </div>
 
             {/* Achievement Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.4 }}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+            <div
+              className="grid grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
             >
               {achievements.map((achievement, index) => (
                 <PremiumCard key={index} variant="premium" size="sm" className="text-center">
@@ -200,14 +173,11 @@ export function SophisticatedHero({
                   />
                 </PremiumCard>
               ))}
-            </motion.div>
+            </div>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4"
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-fadeInUp"
             >
               <PremiumButton
                 variant="medical"
@@ -229,14 +199,11 @@ export function SophisticatedHero({
                 <Phone className="h-6 w-6" />
                 Speak with Dr. Shekhar
               </PremiumButton>
-            </motion.div>
+            </div>
 
             {/* Trust Indicators */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-              className="flex flex-wrap items-center gap-6 text-sm text-gray-600"
+            <div
+              className="flex flex-wrap items-center gap-6 text-sm text-gray-600 animate-fadeInUp"
             >
               <div className="flex items-center gap-2">
                 <div className="flex">
@@ -254,28 +221,19 @@ export function SophisticatedHero({
                 <Trophy className="h-5 w-5 text-blue-600" />
                 <span>67+ AIIMS Success Stories</span>
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Right Column - Interactive Testimonials */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="space-y-8"
+          <div
+            className="space-y-8 animate-fadeInUp"
           >
             {/* Featured Success Story */}
             <PremiumCard variant="luxury" size="lg" className="relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full blur-2xl" />
-
-              <AnimatePresence mode="wait">
-                <motion.div
+<div
                   key={currentTestimonial}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.5 }}
-                  className="relative space-y-6"
+                  className="relative space-y-6 animate-fadeInUp"
                 >
                   <div className="flex items-center gap-4">
                     <Image
@@ -315,10 +273,8 @@ export function SophisticatedHero({
                     </div>
                     <div className="text-sm text-gray-500">NEET 2024 Success</div>
                   </div>
-                </motion.div>
-              </AnimatePresence>
-
-              {/* Testimonial Navigation */}
+                </div>
+{/* Testimonial Navigation */}
               <div className="flex justify-center gap-2 mt-6">
                 {testimonials.map((_, index) => (
                   <button
@@ -346,20 +302,18 @@ export function SophisticatedHero({
               </p>
               <p className="text-sm text-gray-500 mt-2">Admitted to AIIMS Bhopal • 2 minutes ago</p>
             </PremiumCard>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
+      <div
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-fadeInUp"
       >
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2" />
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

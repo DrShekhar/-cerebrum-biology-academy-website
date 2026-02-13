@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Mic, Play, Pause, Square, RotateCcw, Volume2 } from 'lucide-react'
 
 interface VoiceMemosUIProps {
@@ -61,20 +60,11 @@ const WaveformVisualizer: React.FC<WaveformProps> = ({
   return (
     <div className="flex items-center justify-center h-20 px-4 space-x-1">
       {waveformData.map((level, index) => (
-        <motion.div
+        <div
           key={index}
           className={`w-1 rounded-full ${
             isRecording ? 'bg-red-500' : isPlaying ? 'bg-blue-500' : 'bg-gray-300'
           }`}
-          initial={{ height: 4 }}
-          animate={{
-            height: isRecording || isPlaying ? Math.max(4, level * 60) : 4,
-            opacity: isRecording || isPlaying ? 1 : 0.5,
-          }}
-          transition={{
-            duration: 0.1,
-            ease: 'easeOut',
-          }}
         />
       ))}
     </div>
@@ -90,79 +80,46 @@ const RecordButton: React.FC<{
   return (
     <div className="relative flex items-center justify-center">
       {/* Outer pulsing ring when recording */}
-      <AnimatePresence>
-        {isRecording && (
-          <motion.div
-            className="absolute w-20 h-20 border-2 border-red-500 rounded-full"
-            initial={{ scale: 1, opacity: 0.8 }}
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.8, 0.3, 0.8],
-            }}
-            exit={{ scale: 1, opacity: 0 }}
-            transition={{
-              duration: 1,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
+{isRecording && (
+          <div
+            className="absolute w-20 h-20 border-2 border-red-500 rounded-full animate-fadeInUp"
           />
         )}
-      </AnimatePresence>
-
-      {/* Main record button */}
-      <motion.button
+{/* Main record button */}
+      <button
         className={`relative w-16 h-16 rounded-full flex items-center justify-center shadow-lg ${
           isRecording ? 'bg-red-500 text-white' : 'bg-white text-red-500 border-2 border-red-500'
         }`}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
         onClick={isRecording ? onStop : onStart}
-        animate={{
-          backgroundColor: isRecording
-            ? `rgb(239, 68, 68, ${0.8 + audioLevel * 0.4})`
-            : 'rgb(255, 255, 255)',
-        }}
       >
-        <AnimatePresence mode="wait">
-          {isRecording ? (
-            <motion.div
+{isRecording ? (
+            <div
               key="recording"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0 }}
-              className="w-6 h-6 bg-white rounded-sm"
+              className="w-6 h-6 bg-white rounded-sm animate-fadeInUp"
             />
           ) : (
-            <motion.div key="mic" initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}>
+            <div key="mic" className="animate-fadeInUp">
               <Mic size={24} />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </motion.button>
+</button>
 
       {/* Audio level indicator */}
       {isRecording && (
-        <motion.div
-          className="absolute -bottom-3 left-1/2 transform -translate-x-1/2"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 10 }}
+        <div
+          className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 animate-fadeInUp"
         >
           <div className="flex space-x-1">
             {[...Array(5)].map((_, i) => (
-              <motion.div
+              <div
                 key={i}
                 className={`w-1 h-2 rounded-full ${
                   audioLevel * 5 > i ? 'bg-red-500' : 'bg-gray-300'
                 }`}
-                animate={{
-                  scale: audioLevel * 5 > i ? [1, 1.2, 1] : 1,
-                }}
-                transition={{ duration: 0.2 }}
               />
             ))}
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   )
@@ -182,73 +139,53 @@ const PlaybackControls: React.FC<{
   }
 
   return (
-    <motion.div
-      className="flex items-center justify-center space-x-6 py-4"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 }}
+    <div
+      className="flex items-center justify-center space-x-6 py-4 animate-fadeInUp"
     >
       {/* Rewind */}
-      <motion.button
-        className="p-3 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+      <button
+        className="p-3 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 animate-fadeInUp"
         onClick={onRewind}
       >
         <RotateCcw size={20} />
-      </motion.button>
+      </button>
 
       {/* Play/Pause */}
-      <motion.button
-        className="p-4 rounded-full bg-blue-500 text-white shadow-lg hover:bg-blue-600"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+      <button
+        className="p-4 rounded-full bg-blue-500 text-white shadow-lg hover:bg-blue-600 animate-fadeInUp"
         onClick={onPlayPause}
       >
-        <AnimatePresence mode="wait">
-          {isPlaying ? (
-            <motion.div
+{isPlaying ? (
+            <div
               key="pause"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0 }}
-            >
+             className="animate-fadeInUp">
               <Pause size={24} />
-            </motion.div>
+            </div>
           ) : (
-            <motion.div
+            <div
               key="play"
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0 }}
-            >
+             className="animate-fadeInUp">
               <Play size={24} />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </motion.button>
+</button>
 
       {/* Stop */}
-      <motion.button
-        className="p-3 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+      <button
+        className="p-3 rounded-full bg-gray-100 text-gray-600 hover:bg-gray-200 animate-fadeInUp"
         onClick={onStop}
       >
         <Square size={20} />
-      </motion.button>
+      </button>
 
       {/* Duration */}
-      <motion.div
-        className="text-lg font-mono text-gray-600 min-w-[60px] text-center"
+      <div
+        className="text-lg font-mono text-gray-600 min-w-[60px] text-center animate-fadeInUp"
         key={duration}
-        initial={{ scale: 0.9 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 0.1 }}
       >
         {formatTime(duration)}
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 
@@ -258,14 +195,9 @@ const TranscriptDisplay: React.FC<{
   isRecording: boolean
 }> = ({ transcript, confidence, isRecording }) => {
   return (
-    <AnimatePresence>
-      {transcript && (
-        <motion.div
-          className="mx-4 p-4 bg-gray-50 rounded-lg border"
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: 'auto' }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.3 }}
+{transcript && (
+        <div
+          className="mx-4 p-4 bg-gray-50 rounded-lg border animate-fadeInUp"
         >
           <div className="flex items-center justify-between mb-2">
             <span className="text-sm font-medium text-gray-700">Transcript</span>
@@ -274,26 +206,21 @@ const TranscriptDisplay: React.FC<{
                 Confidence: {Math.round(confidence * 100)}%
               </span>
               {isRecording && (
-                <motion.div
-                  className="w-2 h-2 bg-red-500 rounded-full"
-                  animate={{ opacity: [1, 0.3, 1] }}
-                  transition={{ duration: 1, repeat: Infinity }}
+                <div
+                  className="w-2 h-2 bg-red-500 rounded-full animate-fadeInUp"
                 />
               )}
             </div>
           </div>
-          <motion.p
-            className="text-gray-800 leading-relaxed"
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: 1 }}
+          <p
+            className="text-gray-800 leading-relaxed animate-fadeInUp"
             key={transcript}
           >
             {transcript}
-          </motion.p>
-        </motion.div>
+          </p>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }
 
 export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
@@ -321,29 +248,23 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
   return (
     <div className={`bg-white rounded-2xl shadow-lg overflow-hidden ${className}`}>
       {/* Header */}
-      <motion.div
-        className="px-6 py-4 bg-gray-50 border-b"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
+        className="px-6 py-4 bg-gray-50 border-b animate-fadeInUp"
       >
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800">Voice Learning</h3>
           <div className="flex items-center space-x-2">
-            <motion.div
+            <div
               className={`w-3 h-3 rounded-full ${
                 isRecording ? 'bg-red-500' : hasRecording ? 'bg-green-600' : 'bg-gray-300'
               }`}
-              animate={{
-                scale: isRecording ? [1, 1.2, 1] : 1,
-              }}
-              transition={{ duration: 1, repeat: isRecording ? Infinity : 0 }}
             />
             <span className="text-sm text-gray-600">
               {isRecording ? 'Recording...' : hasRecording ? 'Ready to play' : 'Ready to record'}
             </span>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Waveform Visualizer */}
       <WaveformVisualizer
@@ -365,8 +286,7 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
           />
 
           {/* Playback Controls */}
-          <AnimatePresence>
-            {hasRecording && !isRecording && (
+{hasRecording && !isRecording && (
               <PlaybackControls
                 isPlaying={isPlaying}
                 duration={duration}
@@ -375,8 +295,7 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
                 onRewind={onRewind}
               />
             )}
-          </AnimatePresence>
-        </div>
+</div>
       </div>
 
       {/* Transcript */}
@@ -387,22 +306,17 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
       />
 
       {/* Bottom Action Bar */}
-      <motion.div
-        className="px-6 py-4 bg-gray-50 border-t"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
+      <div
+        className="px-6 py-4 bg-gray-50 border-t animate-fadeInUp"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <motion.button
-              className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white border hover:bg-gray-50"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
+            <button
+              className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-white border hover:bg-gray-50 animate-fadeInUp"
             >
               <Volume2 size={16} />
               <span className="text-sm">Biology Mode</span>
-            </motion.button>
+            </button>
           </div>
 
           <div className="flex items-center space-x-2 text-xs text-gray-500">
@@ -411,7 +325,7 @@ export const VoiceMemosUI: React.FC<VoiceMemosUIProps> = ({
             <span>AI Enhanced</span>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

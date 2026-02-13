@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { getDisplayPhone } from '@/lib/constants/contactInfo'
 import {
   Phone,
@@ -273,11 +272,8 @@ export function ComprehensiveContactPage({
       {/* Hero Section */}
       <div className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">We're Here to Help You Succeed</h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
               24/7 Support • Multiple Centers • Expert Guidance • Instant Response
@@ -317,17 +313,14 @@ export function ComprehensiveContactPage({
                 Book Counseling
               </PremiumButton>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Center Locations Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Center Locations</h2>
@@ -354,14 +347,9 @@ export function ComprehensiveContactPage({
           </div>
 
           {/* Selected Center Details */}
-          <AnimatePresence mode="wait">
-            <motion.div
+<div
               key={selectedCenter}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-            >
+             className="animate-fadeInUp">
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Center Information */}
                 <PremiumCard variant="luxury" size="lg">
@@ -501,16 +489,12 @@ export function ComprehensiveContactPage({
                   </div>
                 </PremiumCard>
               </div>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+</div>
 
         {/* Support Options Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">How Can We Help You?</h2>
@@ -522,13 +506,10 @@ export function ComprehensiveContactPage({
           {/* Support Type Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {supportOptions.map((option, index) => (
-              <motion.div
+              <div
                 key={option.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 onClick={() => setSelectedSupport(option.id)}
-                className="cursor-pointer"
+                className="cursor-pointer animate-fadeInUp"
               >
                 <PremiumCard
                   variant={selectedSupport === option.id ? 'premium' : 'hover'}
@@ -550,19 +531,14 @@ export function ComprehensiveContactPage({
                     </div>
                   </div>
                 </PremiumCard>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Selected Support Details */}
-          <AnimatePresence mode="wait">
-            <motion.div
+<div
               key={selectedSupport}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-            >
+             className="animate-fadeInUp">
               <PremiumCard variant="luxury" size="lg">
                 <div className="grid lg:grid-cols-2 gap-8">
                   {/* Support Details */}
@@ -721,16 +697,12 @@ export function ComprehensiveContactPage({
                   </div>
                 </div>
               </PremiumCard>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+            </div>
+</div>
 
         {/* Response Time Commitment */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-16"
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <PremiumCard
             variant="premium"
@@ -777,14 +749,11 @@ export function ComprehensiveContactPage({
               ))}
             </div>
           </PremiumCard>
-        </motion.div>
+        </div>
 
         {/* Emergency Support */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div
+         className="animate-fadeInUp">
           <PremiumCard variant="default" className="bg-red-50 border-red-200">
             <div className="text-center mb-6">
               <AlertTriangle className="w-12 h-12 text-red-500 mx-auto mb-4" />
@@ -815,17 +784,13 @@ export function ComprehensiveContactPage({
               </div>
             </div>
           </PremiumCard>
-        </motion.div>
+        </div>
       </div>
 
       {/* Live Chat Widget */}
-      <AnimatePresence>
-        {showChatWidget && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0, x: 20, y: 20 }}
-            animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-            exit={{ opacity: 0, scale: 0, x: 20, y: 20 }}
-            className="fixed bottom-6 right-6 z-50"
+{showChatWidget && (
+          <div
+            className="fixed bottom-6 right-6 z-50 animate-fadeInUp"
           >
             <div className="bg-white rounded-2xl shadow-2xl p-4 max-w-sm">
               <div className="flex items-center space-x-3 mb-3">
@@ -863,9 +828,8 @@ export function ComprehensiveContactPage({
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

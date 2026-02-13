@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Save, History, RefreshCw } from 'lucide-react'
 import type { DraftSettings } from '../types'
 
@@ -14,12 +13,9 @@ interface DraftTabProps {
 
 export function DraftTab({ draftSettings, setDraftSettings, saving, saveAsDraft }: DraftTabProps) {
   return (
-    <motion.div
+    <div
       key="draft"
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 20 }}
-      className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
     >
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -135,6 +131,6 @@ export function DraftTab({ draftSettings, setDraftSettings, saving, saveAsDraft 
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

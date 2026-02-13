@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
   CheckCircle2,
@@ -286,12 +285,8 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
     <section className={`py-20 bg-gradient-to-br from-slate-50 to-blue-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center space-y-6 mb-16"
+        <div
+          className="text-center space-y-6 mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-navy-100 border border-green-400 rounded-full px-4 py-2">
             <Trophy className="h-5 w-5 text-blue-600" />
@@ -316,11 +311,8 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
           </p>
 
           {/* Early Bird Discount Banner */}
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            className="bg-red-600 text-white rounded-xl p-4 max-w-md mx-auto"
+          <div
+            className="bg-red-600 text-white rounded-xl p-4 max-w-md mx-auto animate-fadeInUp"
           >
             <div className="flex items-center justify-center gap-3 mb-2">
               <Gift className="h-6 w-6" />
@@ -342,8 +334,8 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
                 ))}
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* View Toggle */}
         <div className="flex justify-center mb-8">
@@ -372,14 +364,10 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
         </div>
 
         {/* Course Packages Display */}
-        <AnimatePresence mode="wait">
-          {selectedView === 'cards' && (
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
+{selectedView === 'cards' && (
+            <div
               key="cards"
-              className="space-y-8"
+              className="space-y-8 animate-fadeInUp"
             >
               {/* Mobile: Swipeable Cards */}
               <div className="md:hidden">
@@ -434,12 +422,8 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
               {/* Tablet & Desktop: Grid Layout */}
               <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 md:gap-5 lg:gap-6">
                 {coursePackages.map((pkg, index) => (
-                  <motion.div
+                  <div
                     key={pkg.id}
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     className={`relative ${pkg.popular ? 'lg:col-span-1 xl:col-span-2 lg:row-span-1' : ''}`}
                   >
                     <PremiumCard
@@ -454,31 +438,22 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
                         compact={!pkg.popular}
                       />
                     </PremiumCard>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
 
           {selectedView === 'table' && (
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
+            <div
               key="table"
-            >
+             className="animate-fadeInUp">
               <ComparisonTable packages={coursePackages} onBookDemo={handleBookDemo} />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Interactive Features */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+{/* Interactive Features */}
+        <div
+          className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6 animate-fadeInUp"
         >
           {/* EMI Calculator */}
           <PremiumCard variant="premium" size="md" className="text-center">
@@ -524,15 +499,11 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
               Start Referring
             </PremiumButton>
           </PremiumCard>
-        </motion.div>
+        </div>
 
         {/* Success Guarantee Banner */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-16 bg-green-600 rounded-2xl p-8 text-white text-center"
+        <div
+          className="mt-16 bg-green-600 rounded-2xl p-8 text-white text-center animate-fadeInUp"
         >
           <div className="max-w-3xl mx-auto space-y-6">
             <Trophy className="h-16 w-16 mx-auto text-yellow-300" />
@@ -563,7 +534,7 @@ export function CoursePackagesSection({ onBookDemo, className = '' }: CoursePack
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* EMI Calculator Modal would go here */}
@@ -730,10 +701,6 @@ function ComparisonTable({
           {packages.map((pkg, index) => (
             <motion.tr
               key={pkg.id}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`hover:bg-gray-50 ${pkg.popular ? 'bg-blue-50' : ''}`}
             >
               <td className="px-6 py-4">
@@ -795,18 +762,12 @@ function EMICalculatorModal({
   const [selectedTenure, setSelectedTenure] = useState(12)
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+    <div
+      className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 animate-fadeInUp"
       onClick={onClose}
     >
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        className="bg-white rounded-xl p-6 max-w-md w-full"
+      <div
+        className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="space-y-6">
@@ -868,8 +829,8 @@ function EMICalculatorModal({
             </PremiumButton>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 

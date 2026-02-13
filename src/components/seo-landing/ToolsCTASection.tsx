@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   ArrowRight,
@@ -44,12 +43,8 @@ export function ToolsCTASection({ toolsCTA }: ToolsCTASectionProps) {
   return (
     <section className="bg-gradient-to-br from-gray-50 to-white py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+        <div
+          className="text-center animate-fadeInUp"
         >
           <span className="inline-block rounded-full bg-blue-100 px-4 py-1.5 text-sm font-semibold text-blue-700">
             Free Tools
@@ -58,7 +53,7 @@ export function ToolsCTASection({ toolsCTA }: ToolsCTASectionProps) {
           <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600">
             Boost your NEET preparation with our free interactive tools
           </p>
-        </motion.div>
+        </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {toolsCTA.tools.map((tool, index) => {
@@ -67,13 +62,9 @@ export function ToolsCTASection({ toolsCTA }: ToolsCTASectionProps) {
             const bgColor = bgColorMap[tool.icon]
 
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
+               className="animate-fadeInUp">
                 <Link
                   href={tool.link}
                   className={`group flex flex-col items-center rounded-2xl border border-gray-100 ${bgColor} p-8 text-center shadow-sm transition-all hover:shadow-lg`}
@@ -90,7 +81,7 @@ export function ToolsCTASection({ toolsCTA }: ToolsCTASectionProps) {
                     <ArrowRight className="h-4 w-4" />
                   </span>
                 </Link>
-              </motion.div>
+              </div>
             )
           })}
         </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Target,
@@ -313,10 +312,8 @@ export function PersonalizedLearningPath() {
 
         {/* Active Study Session */}
         {activeSession && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white mb-8"
+          <div
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 text-white mb-8 animate-fadeInUp"
           >
             <div className="text-center">
               <h2 className="text-2xl font-bold mb-4">
@@ -352,7 +349,7 @@ export function PersonalizedLearningPath() {
                 </button>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Daily Schedule */}
@@ -381,11 +378,8 @@ export function PersonalizedLearningPath() {
                   </div>
                 ) : (
                   dailySchedule.map((session, index) => (
-                    <motion.div
+                    <div
                       key={session.id}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
                       className={`p-4 border-2 rounded-lg transition-all hover:shadow-md ${
                         completedSessions.includes(session.id)
                           ? 'bg-green-50 border-green-200'
@@ -438,7 +432,7 @@ export function PersonalizedLearningPath() {
                           </div>
                         ))}
                       </div>
-                    </motion.div>
+                    </div>
                   ))
                 )}
               </div>

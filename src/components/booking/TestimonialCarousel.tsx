@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Star, ChevronLeft, ChevronRight, BadgeCheck } from 'lucide-react'
 
 interface Testimonial {
@@ -132,19 +131,13 @@ export function TestimonialCarousel() {
       </div>
 
       <div className="relative overflow-hidden min-h-[200px]">
-        <AnimatePresence initial={false} custom={direction}>
-          <motion.div
+<div
             key={currentIndex}
             custom={direction}
-            variants={slideVariants}
             initial="enter"
             animate="center"
             exit="exit"
-            transition={{
-              x: { type: 'spring', stiffness: 300, damping: 30 },
-              opacity: { duration: 0.2 },
-            }}
-            className="absolute w-full"
+            className="absolute w-full animate-fadeInUp"
           >
             <div className="bg-white rounded-lg p-6 shadow-lg">
               <div className="flex items-start gap-4">
@@ -185,9 +178,8 @@ export function TestimonialCarousel() {
                 </div>
               </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
-      </div>
+          </div>
+</div>
 
       <div className="flex justify-center gap-2 mt-6">
         {testimonials.map((_, index) => (

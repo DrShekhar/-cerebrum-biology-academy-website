@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { BIOLOGY_TOPICS, BIOLOGY_CHAPTERS, PYQ_YEARS, type BiologyTopic } from '@/lib/mcq/types'
 import type { DifficultyLevel } from '@/generated/prisma'
 
@@ -90,23 +89,15 @@ export function TopicFilter({
             </span>
           )}
         </div>
-        <motion.span
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-          className="text-gray-400"
+        <span
+          className="text-gray-400 animate-fadeInUp"
         >
           ▼
-        </motion.span>
+        </span>
       </button>
-
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="border-t"
+{isExpanded && (
+          <div
+            className="border-t animate-fadeInUp"
           >
             <div className="p-4 space-y-6">
               {/* Topic Selection */}
@@ -140,14 +131,9 @@ export function TopicFilter({
               </div>
 
               {/* Chapter Selection (only shown when topic is selected) */}
-              <AnimatePresence>
-                {selectedTopic && availableChapters.length > 0 && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                  >
+{selectedTopic && availableChapters.length > 0 && (
+                  <div
+                   className="animate-fadeInUp">
                     <label className="block text-sm font-medium text-gray-700 mb-2">Chapter</label>
                     <div className="flex flex-wrap gap-2">
                       <button
@@ -174,11 +160,9 @@ export function TopicFilter({
                         </button>
                       ))}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-
-              {/* Difficulty Selection */}
+{/* Difficulty Selection */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">Difficulty</label>
                 <div className="flex flex-wrap gap-2">
@@ -239,13 +223,9 @@ export function TopicFilter({
                 </div>
 
                 {/* PYQ Year Selection */}
-                <AnimatePresence>
-                  {isPYQOnly && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="mt-3"
+{isPYQOnly && (
+                    <div
+                      className="mt-3 animate-fadeInUp"
                     >
                       <label className="block text-sm font-medium text-gray-500 mb-2">
                         Select Year
@@ -275,10 +255,9 @@ export function TopicFilter({
                           </button>
                         ))}
                       </div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </div>
+</div>
 
               {/* Number of Questions Selection */}
               <div>
@@ -326,11 +305,9 @@ export function TopicFilter({
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Active Filters Summary (when collapsed) */}
+{/* Active Filters Summary (when collapsed) */}
       {!isExpanded && activeFiltersCount > 0 && (
         <div className="px-4 pb-4 flex flex-wrap gap-2">
           {selectedTopic && (

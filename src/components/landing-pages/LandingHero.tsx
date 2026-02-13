@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ArrowRight, Phone, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
@@ -50,43 +49,31 @@ export function LandingHero({
         <div className="text-center">
           {/* Highlighted Badge */}
           {highlightedBadge && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
+            <div
+              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm animate-fadeInUp"
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
               <span className="text-sm font-medium text-white/90">{highlightedBadge}</span>
-            </motion.div>
+            </div>
           )}
 
           {/* H1 Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl"
+          <h1
+            className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl animate-fadeInUp"
           >
             {h1}
-          </motion.h1>
+          </h1>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-3xl text-lg text-white/80 md:text-xl"
+          <p
+            className="mx-auto mt-6 max-w-3xl text-lg text-white/80 md:text-xl animate-fadeInUp"
           >
             {subheadline}
-          </motion.p>
+          </p>
 
           {/* Trust Badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-6 flex flex-wrap items-center justify-center gap-4"
+          <div
+            className="mt-6 flex flex-wrap items-center justify-center gap-4 animate-fadeInUp"
           >
             {trustBadges.map((badge, index) => (
               <div
@@ -97,14 +84,11 @@ export function LandingHero({
                 <span className="text-sm font-medium text-white/90">{badge}</span>
               </div>
             ))}
-          </motion.div>
+          </div>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          <div
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp"
           >
             <Link
               href="#demo-form"
@@ -124,21 +108,18 @@ export function LandingHero({
               <Phone className="h-5 w-5" />
               {ctaSecondary}
             </a>
-          </motion.div>
+          </div>
 
           {/* Quick Contact */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-8 flex flex-col items-center justify-center gap-2 text-white/70 sm:flex-row"
+          <div
+            className="mt-8 flex flex-col items-center justify-center gap-2 text-white/70 sm:flex-row animate-fadeInUp"
           >
             <Phone className="h-4 w-4" />
             <span className="text-sm">Questions? Call us:</span>
             <a href={`tel:${phoneNumber}`} className="font-semibold text-white hover:underline">
               {displayPhone}
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

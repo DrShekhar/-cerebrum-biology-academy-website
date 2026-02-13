@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Quote,
   Star,
@@ -84,12 +83,8 @@ export function ParentTestimonialsSection({
     <section className="py-20 bg-navy-50 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center bg-green-100 text-green-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Heart className="w-5 h-5 mr-2" />
@@ -133,13 +128,9 @@ export function ParentTestimonialsSection({
                 color: 'text-yellow-600',
               },
             ].map((metric, index) => (
-              <motion.div
+              <div
                 key={metric.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="text-center animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 ${metric.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
@@ -148,28 +139,19 @@ export function ParentTestimonialsSection({
                 </div>
                 <div className="text-xl font-bold text-gray-900">{metric.label}</div>
                 <div className="text-sm text-gray-600">{metric.sublabel}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Main Testimonial Showcase */}
-        <motion.div
-          className="mb-16 overflow-hidden"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-16 overflow-hidden animate-fadeInUp"
         >
           <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
-            <AnimatePresence mode="wait">
-              <motion.div
+<div
                 key={currentTestimonial}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="p-4 sm:p-6 md:p-12"
+                className="p-4 sm:p-6 md:p-12 animate-fadeInUp"
               >
                 <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 items-center">
                   {/* Parent Info */}
@@ -272,10 +254,8 @@ export function ParentTestimonialsSection({
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Navigation Controls */}
+              </div>
+{/* Navigation Controls */}
             <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
               <button
                 onClick={prevTestimonial}
@@ -318,28 +298,20 @@ export function ParentTestimonialsSection({
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Additional Testimonials Grid */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">More Parent Stories</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {parentTestimonials
               .slice(maxTestimonials, maxTestimonials + 6)
               .map((testimonial, index) => (
-                <motion.div
+                <div
                   key={testimonial.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white rounded-xl shadow-lg p-6 border border-navy-200"
+                  className="bg-white rounded-xl shadow-lg p-6 border border-navy-200 animate-fadeInUp"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-navy-900 rounded-full flex items-center justify-center text-white text-sm font-bold border-2 border-green-600">
@@ -373,18 +345,14 @@ export function ParentTestimonialsSection({
                         `+${testimonial.afterScore - testimonial.beforeScore} marks`}
                     </span>
                   </div>
-                </motion.div>
+                </div>
               ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          className="text-center bg-navy-900 rounded-3xl p-4 sm:p-8 md:p-12 text-white overflow-hidden"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center bg-navy-900 rounded-3xl p-4 sm:p-8 md:p-12 text-white overflow-hidden animate-fadeInUp"
         >
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
             Join the Cerebrum Family of Successful Parents
@@ -434,7 +402,7 @@ export function ParentTestimonialsSection({
               <span className="whitespace-nowrap">96.2% Recommend</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

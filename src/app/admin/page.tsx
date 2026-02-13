@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   Users,
   Calendar,
@@ -115,10 +114,8 @@ function MetricCard({ title, value, change, changeLabel, icon: Icon, color }: Me
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+    <div
+      className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
       style={{ boxShadow: 'var(--shadow-soft)' }}
     >
       <div className="flex items-center justify-between">
@@ -146,7 +143,7 @@ function MetricCard({ title, value, change, changeLabel, icon: Icon, color }: Me
           <Icon className="w-8 h-8" />
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -355,10 +352,8 @@ export default function AdminDashboard() {
 
         {/* Demo Booking Quick Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <div
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Pending Demos</h3>
@@ -373,13 +368,10 @@ export default function AdminDashboard() {
             <button className="mt-4 text-orange-600 hover:text-orange-700 font-medium text-sm">
               View Details →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <div
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Completed Today</h3>
@@ -394,13 +386,10 @@ export default function AdminDashboard() {
             <button className="mt-4 text-green-600 hover:text-green-700 font-medium text-sm">
               View Feedback →
             </button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <div
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-900">Demo → Enrollment</h3>
@@ -415,16 +404,14 @@ export default function AdminDashboard() {
             <button className="mt-4 text-blue-600 hover:text-blue-700 font-medium text-sm">
               Improve Rate →
             </button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Recent Activity & Popular Courses */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
           {/* Recent Activity */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <div
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
           >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">Recent Activity</h3>
@@ -451,14 +438,11 @@ export default function AdminDashboard() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Popular Courses */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+          <div
+            className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
           >
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-lg font-semibold text-gray-900">Popular Courses</h3>
@@ -496,14 +480,12 @@ export default function AdminDashboard() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Quick Actions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6"
+        <div
+          className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 animate-fadeInUp"
         >
           <h3 className="text-lg font-semibold text-gray-900 mb-6">Quick Actions</h3>
 
@@ -536,7 +518,7 @@ export default function AdminDashboard() {
               </span>
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </AdminLayout>
   )

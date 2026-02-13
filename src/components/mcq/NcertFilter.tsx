@@ -1,8 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface NcertChapter {
   ncertClass: number
   ncertChapter: number
@@ -117,15 +115,9 @@ export function NcertFilter({
           />
         </button>
       </div>
-
-      <AnimatePresence>
-        {isNcertOnly && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="space-y-4"
+{isNcertOnly && (
+          <div
+            className="space-y-4 animate-fadeInUp"
           >
             {/* Class Selection */}
             <div>
@@ -179,14 +171,9 @@ export function NcertFilter({
             </div>
 
             {/* Chapter Selection */}
-            <AnimatePresence>
-              {selectedClass && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
+{selectedClass && (
+                <div
+                 className="animate-fadeInUp">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
                     Select Chapter
                   </label>
@@ -232,11 +219,9 @@ export function NcertFilter({
                       No NCERT questions available for Class {selectedClass} yet.
                     </p>
                   )}
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-
-            {/* NEET Weightage Filter */}
+{/* NEET Weightage Filter */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">NEET Weightage</label>
               <div className="flex flex-wrap gap-2">
@@ -313,9 +298,8 @@ export function NcertFilter({
                 and covering the syllabus systematically.
               </p>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

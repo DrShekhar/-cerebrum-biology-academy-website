@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { CheckCircle, Clock, BookOpen, Video, Award, Target, Sparkles } from 'lucide-react'
 
 interface PremiumDemoCardProps {
@@ -19,10 +18,8 @@ export function PremiumDemoCard({
 
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-8">
-      <motion.button
+      <button
         onClick={() => onSelect('FREE')}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
         className={`relative p-6 rounded-2xl border-2 transition-all text-left ${
           selected === 'FREE'
             ? 'border-blue-500 bg-blue-50 shadow-lg'
@@ -62,12 +59,10 @@ export function PremiumDemoCard({
         <div className="mt-6 pt-4 border-t border-gray-200">
           <p className="text-sm text-gray-600">Perfect for first-time users</p>
         </div>
-      </motion.button>
+      </button>
 
-      <motion.button
+      <button
         onClick={() => onSelect('PREMIUM')}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
         className={`relative p-6 rounded-2xl border-2 transition-all text-left overflow-hidden ${
           selected === 'PREMIUM'
             ? 'border-purple-500 bg-gradient-to-br from-purple-50 to-pink-50 shadow-xl'
@@ -139,7 +134,7 @@ export function PremiumDemoCard({
             Best value - Most comprehensive demo experience!
           </p>
         </div>
-      </motion.button>
+      </button>
     </div>
   )
 }

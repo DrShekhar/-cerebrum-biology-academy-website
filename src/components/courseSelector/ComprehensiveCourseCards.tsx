@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Check, Star, Award, Target, Zap, Crown, TrendingUp } from 'lucide-react'
 
 interface CourseCard {
@@ -445,10 +444,8 @@ const PlanCard = ({
   const [showAllFeatures, setShowAllFeatures] = useState(false)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-all duration-300"
+    <div
+      className="bg-white rounded-xl border border-gray-200 p-4 hover:shadow-md transition-all duration-300 animate-fadeInUp"
     >
       {/* Plan Header */}
       <div className="flex justify-between items-start mb-3">
@@ -522,7 +519,7 @@ const PlanCard = ({
           View Details
         </button>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -531,9 +528,7 @@ const CourseCard = ({ course }: { course: CourseCard }) => {
   const seriesInfo = SeriesInfo[course.series]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
+    <div
       className={`${course.bgColor} rounded-2xl p-6 border border-gray-200 relative overflow-hidden`}
     >
       {/* Badges */}
@@ -628,7 +623,7 @@ const CourseCard = ({ course }: { course: CourseCard }) => {
           50% Biology weightage in NEET • Expert faculty • Proven track record
         </p>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

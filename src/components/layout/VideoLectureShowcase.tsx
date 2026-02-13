@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { VideoShowcase } from '@/components/ui/VideoShowcase'
 import { VideoSkeleton } from '@/components/ui/LoadingStates'
 import {
@@ -189,12 +188,8 @@ export function VideoLectureShowcase() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header Section */}
-        <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center bg-indigo-100 text-indigo-600 px-6 py-3 rounded-full text-sm font-medium mb-6">
             <Play className="w-5 h-5 mr-2" />
@@ -218,13 +213,9 @@ export function VideoLectureShowcase() {
               { icon: Users, label: '50K+', sublabel: 'Views', color: 'text-green-600' },
               { icon: Award, label: '98%', sublabel: 'Success Rate', color: 'text-yellow-600' },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={stat.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="text-center animate-fadeInUp"
               >
                 <div
                   className={`w-12 h-12 ${stat.color} mx-auto mb-3 rounded-xl flex items-center justify-center bg-white shadow-lg`}
@@ -233,18 +224,14 @@ export function VideoLectureShowcase() {
                 </div>
                 <div className="text-xl font-bold text-gray-900">{stat.label}</div>
                 <div className="text-sm text-gray-600">{stat.sublabel}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Featured Videos Section */}
-        <motion.div
-          className="mb-16"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-16 animate-fadeInUp"
         >
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-2">Featured Lectures</h3>
@@ -266,15 +253,11 @@ export function VideoLectureShowcase() {
               />
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Filters Section */}
-        <motion.div
-          className="mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
+        <div
+          className="mb-12 animate-fadeInUp"
         >
           {/* Search Bar */}
           <div className="relative max-w-md mx-auto mb-8">
@@ -329,35 +312,25 @@ export function VideoLectureShowcase() {
               Showing {filteredVideos.length} lecture{filteredVideos.length !== 1 ? 's' : ''}
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Video Grid */}
-        <AnimatePresence>
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+<div
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 animate-fadeInUp"
           >
             {isLoading
               ? // Loading skeleton for videos
                 Array.from({ length: 6 }).map((_, index) => (
-                  <motion.div
+                  <div
                     key={`skeleton-${index}`}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
+                   className="animate-fadeInUp">
                     <VideoSkeleton />
-                  </motion.div>
+                  </div>
                 ))
               : filteredVideos.map((video, index) => (
-                  <motion.div
+                  <div
                     key={video.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="relative"
+                    className="relative animate-fadeInUp"
                   >
                     {/* Class Badge */}
                     <div
@@ -394,18 +367,12 @@ export function VideoLectureShowcase() {
                         {video.duration}
                       </span>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center bg-green-600 rounded-3xl p-12 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          </div>
+{/* Bottom CTA */}
+        <div
+          className="text-center bg-green-600 rounded-3xl p-12 text-white animate-fadeInUp"
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Access Complete Video Library?</h3>
           <p className="text-xl mb-8 text-indigo-100">
@@ -454,7 +421,7 @@ export function VideoLectureShowcase() {
               <span>HD Quality</span>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

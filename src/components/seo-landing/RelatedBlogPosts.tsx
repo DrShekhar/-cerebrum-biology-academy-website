@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, BookOpen } from 'lucide-react'
 import { SEOLandingContent } from '@/data/seo-landing/types'
@@ -13,12 +12,8 @@ export function RelatedBlogPosts({ posts }: RelatedBlogPostsProps) {
   return (
     <section className="bg-white py-16 lg:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+        <div
+          className="text-center animate-fadeInUp"
         >
           <span className="inline-block rounded-full bg-green-100 px-4 py-1.5 text-sm font-semibold text-green-700">
             From Our Blog
@@ -26,17 +21,13 @@ export function RelatedBlogPosts({ posts }: RelatedBlogPostsProps) {
           <h2 className="mt-4 text-2xl font-bold text-gray-900 sm:text-3xl">
             Related Articles & Study Guides
           </h2>
-        </motion.div>
+        </div>
 
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post, index) => (
-            <motion.article
+            <article
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-blue-200 hover:shadow-md"
+              className="group rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all hover:border-blue-200 hover:shadow-md animate-fadeInUp"
             >
               <div className="flex items-start gap-4">
                 <div className="flex-shrink-0 rounded-lg bg-blue-50 p-3">
@@ -56,7 +47,7 @@ export function RelatedBlogPosts({ posts }: RelatedBlogPostsProps) {
                   </Link>
                 </div>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
 

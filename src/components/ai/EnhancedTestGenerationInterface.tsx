@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Eye,
   Save,
@@ -537,14 +536,10 @@ const EnhancedTestGenerationInterface: React.FC = () => {
           >
             {/* Primary Content Area */}
             <div className="space-y-6 overflow-y-auto">
-              <AnimatePresence mode="wait">
-                {activeTab === 'configure' && (
-                  <motion.div
+{activeTab === 'configure' && (
+                  <div
                     key="configure"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                  >
+                   className="animate-fadeInUp">
                     <div className="bg-white rounded-xl p-6 border">
                       <h3 className="text-lg font-semibold mb-4">Test Configuration</h3>
                       {/* Basic configuration form would go here */}
@@ -552,31 +547,25 @@ const EnhancedTestGenerationInterface: React.FC = () => {
                         Configure your test settings, duration, and basic parameters.
                       </p>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {activeTab === 'templates' && (
-                  <motion.div
+                  <div
                     key="templates"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                  >
+                   className="animate-fadeInUp">
                     <EnhancedTemplateManager
                       onTemplateSelect={handleTemplateSelect}
                       onTemplateCreate={() => setActiveTab('configure')}
                       currentTemplate={null}
                     />
-                  </motion.div>
+                  </div>
                 )}
 
                 {activeTab === 'bank' && (
-                  <motion.div
+                  <div
                     key="bank"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                  >
+                   className="animate-fadeInUp">
                     <BatchOperationsPanel
                       questions={questions}
                       onQuestionsUpdate={(updatedQuestions: Question[]) =>
@@ -585,12 +574,11 @@ const EnhancedTestGenerationInterface: React.FC = () => {
                       onBulkGenerate={handleBulkGenerate}
                       isGenerating={isGenerating}
                     />
-                  </motion.div>
+                  </div>
                 )}
 
                 {/* Add other tab content here */}
-              </AnimatePresence>
-            </div>
+</div>
 
             {/* Preview Panel */}
             {uiSettings.showPreview && (
@@ -623,20 +611,13 @@ const EnhancedTestGenerationInterface: React.FC = () => {
       </div>
 
       {/* Notifications Panel */}
-      <AnimatePresence>
-        {notifications.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
-            className="fixed top-4 right-4 space-y-2 z-50"
+{notifications.length > 0 && (
+          <div
+            className="fixed top-4 right-4 space-y-2 z-50 animate-fadeInUp"
           >
             {notifications.slice(0, 3).map((notification) => (
-              <motion.div
+              <div
                 key={notification.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
                 className={`max-w-sm bg-white border rounded-lg p-4 shadow-lg ${
                   notification.type === 'error'
                     ? 'border-red-200'
@@ -691,12 +672,11 @@ const EnhancedTestGenerationInterface: React.FC = () => {
                     <X className="w-4 h-4" />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

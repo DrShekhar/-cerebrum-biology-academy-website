@@ -37,7 +37,6 @@ import {
   BadgeCheck,
   Sparkles,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
 
 interface LocalLandingPageProps {
@@ -86,12 +85,8 @@ function FAQSection({ areaName }: { areaName: string }) {
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4">
-        <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="text-center mb-12 animate-fadeInUp"
         >
           <span className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
             FAQ
@@ -102,17 +97,13 @@ function FAQSection({ areaName }: { areaName: string }) {
           <p className="text-xl text-gray-600">
             Everything you need to know about NEET Biology coaching in {areaName}
           </p>
-        </motion.div>
+        </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <motion.div
+            <div
               key={index}
-              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              viewport={{ once: true }}
+              className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden animate-fadeInUp"
             >
               <button
                 onClick={() => toggleFAQ(index)}
@@ -125,32 +116,22 @@ function FAQSection({ areaName }: { areaName: string }) {
                   <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0" />
                 )}
               </button>
-              <AnimatePresence>
-                {openFAQ === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
+{openFAQ === index && (
+                  <div
+                    className="overflow-hidden animate-fadeInUp"
                   >
                     <div className="px-6 pb-5 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
                       {faq.answer}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </motion.div>
+</div>
           ))}
         </div>
 
         {/* Still have questions CTA */}
-        <motion.div
-          className="mt-12 text-center bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] rounded-2xl p-8 text-white"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+        <div
+          className="mt-12 text-center bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] rounded-2xl p-8 text-white animate-fadeInUp"
         >
           <h3 className="text-2xl font-bold mb-3">Still have questions?</h3>
           <p className="text-white/80 mb-6">
@@ -178,7 +159,7 @@ function FAQSection({ areaName }: { areaName: string }) {
               WhatsApp Us
             </button>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
@@ -221,11 +202,8 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div
+             className="animate-fadeInUp">
               {/* Local Breadcrumb */}
               <div className="flex items-center text-slate-300 mb-6">
                 <MapPin className="w-4 h-4 mr-2 text-[#4a5d4a]" />
@@ -292,14 +270,11 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   Get Free Study Material
                 </Button>
               </div>
-            </motion.div>
+            </div>
 
             {/* Hero Image/Stats */}
-            <motion.div
-              className="relative"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <div
+              className="relative animate-fadeInUp"
             >
               {/* Success Stats Card */}
               <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 mb-6 border border-white/10">
@@ -326,7 +301,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   <span className="text-slate-300">Near {area.transportLinks[0]}</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -334,12 +309,8 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Free Tools Section - NEW */}
       <section className="py-20 bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <span className="inline-block bg-yellow-500 text-slate-900 px-4 py-1 rounded-full text-sm font-bold mb-4">
               FREE TOOLS
@@ -351,16 +322,12 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               Plan your NEET journey with our intelligent tools - used by 1,50,000+ students across{' '}
               {area.name}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* NEET College Predictor Tool */}
-            <motion.div
-              className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center mr-4">
@@ -400,15 +367,11 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
             {/* NEET Readiness Quiz */}
-            <motion.div
-              className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+            <div
+              className="bg-white rounded-2xl p-8 text-gray-900 shadow-xl hover:shadow-2xl transition-shadow animate-fadeInUp"
             >
               <div className="flex items-center mb-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-xl flex items-center justify-center mr-4">
@@ -448,7 +411,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -456,12 +419,8 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Lead Magnet Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               FREE Resources for {area.name} Students
@@ -470,17 +429,13 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               Download our exclusive study materials used by 1,50,000+ successful students from{' '}
               {area.name}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {leadMagnets.slice(0, 6).map((magnet, index) => (
-              <motion.div
+              <div
                 key={magnet.id}
-                className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="bg-white rounded-3xl shadow-lg hover:shadow-xl transition-shadow p-8 border border-gray-100 animate-fadeInUp"
               >
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#4a5d4a] to-[#3d4d3d] rounded-2xl flex items-center justify-center mb-4">
@@ -524,7 +479,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                     {magnet.socialProof.replace('[AREA]', area.displayName)}
                   </p>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -533,27 +488,19 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Why Choose Us for [Area] */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why {area.name} Students Choose Cerebrum Biology Academy?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {area.uniqueSellingPoints.map((usp, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="flex items-start p-6 bg-gray-50 rounded-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="flex items-start p-6 bg-gray-50 rounded-2xl animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-[#4a5d4a] rounded-full flex items-center justify-center mr-4 flex-shrink-0">
                   <CheckCircle className="w-6 h-6 text-white" />
@@ -561,7 +508,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                 <div>
                   <p className="text-gray-700 leading-relaxed">{usp}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -570,12 +517,8 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {/* Enrollment Journey / How to Join Section - NEW */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <span className="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-bold mb-4">
               ENROLLMENT GUIDE
@@ -586,7 +529,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Simple 4-step process to start your NEET journey with us
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {[
@@ -621,13 +564,9 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                 color: 'bg-orange-500',
               },
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="relative"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="relative animate-fadeInUp"
               >
                 <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center h-full">
                   <div
@@ -646,17 +585,13 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                     <ArrowRight className="w-6 h-6 text-gray-300" />
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
 
           {/* Course Options Preview */}
-          <motion.div
-            className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 lg:p-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 lg:p-12 animate-fadeInUp"
           >
             <div className="text-center mb-8">
               <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
@@ -729,7 +664,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -737,12 +672,8 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       {localTestimonials.length > 0 && (
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-16 animate-fadeInUp"
             >
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
                 Success Stories from {area.name} Students
@@ -750,17 +681,13 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               <p className="text-xl text-gray-600">
                 Real students, real results from our {area.name} center
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {localTestimonials.slice(0, 3).map((testimonial, index) => (
-                <motion.div
+                <div
                   key={testimonial.id}
-                  className="bg-gray-50 rounded-3xl p-8 relative"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  className="bg-gray-50 rounded-3xl p-8 relative animate-fadeInUp"
                 >
                   {/* Success Badge */}
                   <div className="absolute -top-3 left-6 bg-green-600 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -818,7 +745,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                       <li>⭐ {testimonial.localDetails.favoriteFeature}</li>
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -836,12 +763,8 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h3 className="text-3xl font-bold text-gray-900 mb-8">
                 Convenient Location in {area.name}
               </h3>
@@ -886,14 +809,10 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="bg-white rounded-3xl shadow-lg p-8"
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+            <div
+              className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 Contact Our {area.name} Center
@@ -936,7 +855,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                   Get Free Study Material
                 </Button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -954,20 +873,16 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
               { icon: Users, label: '10,000+', sublabel: 'Students Trained' },
               { icon: BadgeCheck, label: '98%', sublabel: 'Success Rate' },
             ].map((badge, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="text-center animate-fadeInUp"
               >
                 <div className="w-12 h-12 mx-auto bg-[#4a5d4a]/10 rounded-full flex items-center justify-center mb-3">
                   <badge.icon className="w-6 h-6 text-[#4a5d4a]" />
                 </div>
                 <div className="font-bold text-gray-900">{badge.label}</div>
                 <div className="text-sm text-gray-500">{badge.sublabel}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -982,12 +897,8 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
         </div>
 
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             {/* Urgency Badge */}
             <div className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6">
               <Clock className="w-4 h-4 mr-2" />
@@ -1038,7 +949,7 @@ export function LocalLandingPage({ area }: LocalLandingPageProps) {
                 <span>98% Success Rate</span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

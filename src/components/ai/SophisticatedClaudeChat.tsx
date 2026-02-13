@@ -4,7 +4,6 @@ import React, { useState, useRef, useEffect } from 'react'
 
 // Prevent memory leaks in long chat sessions
 const MAX_MESSAGES = 100
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Mic,
   Image,
@@ -176,20 +175,14 @@ export function SophisticatedClaudeChat({
   return (
     <div className={cn('fixed inset-0 z-50 flex items-center justify-center p-4', className)}>
       {/* Backdrop */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+      <div
+        className="absolute inset-0 bg-black/50 backdrop-blur-sm animate-fadeInUp"
         onClick={onClose}
       />
 
       {/* Chat Interface */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.9, y: 20 }}
-        className="relative w-full max-w-4xl h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden"
+      <div
+        className="relative w-full max-w-4xl h-[80vh] bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp"
       >
         {/* Header */}
         <div className="bg-blue-600 p-6 text-white">
@@ -224,7 +217,7 @@ export function SophisticatedClaudeChat({
         <div className="p-4 bg-gray-50 border-b">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             {quickPrompts.map((prompt) => (
-              <motion.button
+              <button
                 key={prompt.id}
                 onClick={() => handleQuickPrompt(prompt.prompt)}
                 className={cn(
@@ -233,26 +226,20 @@ export function SophisticatedClaudeChat({
                     ? 'bg-blue-50 border-blue-200 text-blue-800'
                     : 'bg-white border-gray-200 hover:border-gray-300'
                 )}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
               >
                 <prompt.icon className="h-5 w-5 mb-2 text-blue-600" />
                 <div className="text-sm font-medium">{prompt.title}</div>
                 <div className="text-xs text-gray-500 mt-1">{prompt.category}</div>
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
 
         {/* Messages */}
         <div className="flex-1 overflow-y-auto p-6 space-y-6">
-          <AnimatePresence>
-            {messages.map((message) => (
-              <motion.div
+{messages.map((message) => (
+              <div
                 key={message.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
                 className={cn(
                   'flex gap-4',
                   message.type === 'user' ? 'justify-end' : 'justify-start'
@@ -292,16 +279,12 @@ export function SophisticatedClaudeChat({
                     U
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-
-          {/* Typing Indicator */}
+{/* Typing Indicator */}
           {isTyping && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="flex gap-4"
+            <div
+              className="flex gap-4 animate-fadeInUp"
             >
               <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center text-white">
                 <Sparkles className="h-5 w-5" />
@@ -309,20 +292,14 @@ export function SophisticatedClaudeChat({
               <div className="bg-gray-50 rounded-2xl p-4">
                 <div className="flex gap-1">
                   {[0, 1, 2].map((i) => (
-                    <motion.div
+                    <div
                       key={i}
-                      className="w-2 h-2 bg-gray-400 rounded-full"
-                      animate={{ opacity: [1, 0.5, 1] }}
-                      transition={{
-                        duration: 1.5,
-                        repeat: Infinity,
-                        delay: i * 0.2,
-                      }}
+                      className="w-2 h-2 bg-gray-400 rounded-full animate-fadeInUp"
                     />
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           <div ref={messagesEndRef} />
@@ -332,7 +309,7 @@ export function SophisticatedClaudeChat({
         <div className="p-4 bg-white border-t">
           <div className="flex gap-3">
             {/* Voice Recording */}
-            <motion.button
+            <button
               onClick={handleVoiceRecording}
               className={cn(
                 'w-12 h-12 rounded-xl flex items-center justify-center transition-colors',
@@ -340,19 +317,17 @@ export function SophisticatedClaudeChat({
                   ? 'bg-red-500 text-white'
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
               )}
-              whileTap={{ scale: 0.95 }}
             >
               {isRecording ? <Square className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
-            </motion.button>
+            </button>
 
             {/* Image Upload */}
-            <motion.button
+            <button
               onClick={handleImageUpload}
-              className="w-12 h-12 bg-gray-100 text-gray-600 hover:bg-gray-200 rounded-xl flex items-center justify-center transition-colors"
-              whileTap={{ scale: 0.95 }}
+              className="w-12 h-12 bg-gray-100 text-gray-600 hover:bg-gray-200 rounded-xl flex items-center justify-center transition-colors animate-fadeInUp"
             >
               <Image className="h-5 w-5" />
-            </motion.button>
+            </button>
 
             {/* Text Input */}
             <div className="flex-1 relative">
@@ -369,7 +344,7 @@ export function SophisticatedClaudeChat({
             </div>
 
             {/* Send Button */}
-            <motion.button
+            <button
               onClick={handleSendMessage}
               disabled={!inputValue.trim()}
               className={cn(
@@ -378,10 +353,9 @@ export function SophisticatedClaudeChat({
                   ? 'bg-blue-600 text-white hover:bg-blue-700'
                   : 'bg-gray-100 text-gray-400 cursor-not-allowed'
               )}
-              whileTap={{ scale: 0.95 }}
             >
               <Send className="h-5 w-5" />
-            </motion.button>
+            </button>
           </div>
 
           {/* Hidden File Input */}
@@ -396,7 +370,7 @@ export function SophisticatedClaudeChat({
             }}
           />
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown, Globe, Check } from 'lucide-react'
 import { useTranslations, type Language } from '@/lib/i18n/translations'
 
@@ -93,10 +92,9 @@ export function LanguageSwitcher({
   // Mobile variant (default)
   return (
     <div className="relative">
-      <motion.button
-        whileTap={{ scale: 0.98 }}
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-4 py-3 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow mobile-touch-target"
+        className="flex items-center space-x-2 px-4 py-3 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow mobile-touch-target animate-fadeInUp"
         aria-label="Select Language"
       >
         {showFlag && (
@@ -110,25 +108,17 @@ export function LanguageSwitcher({
         <ChevronDown
           className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
-      </motion.button>
-
-      <AnimatePresence>
-        {isOpen && (
+      </button>
+{isOpen && (
           <>
             {/* Backdrop for mobile */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+            <div
+              className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden animate-fadeInUp"
               onClick={() => setIsOpen(false)}
             />
 
             {/* Language options */}
-            <motion.div
-              initial={{ opacity: 0, y: -10, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -10, scale: 0.95 }}
+            <div
               className={`
                 absolute top-full left-0 right-0 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg z-50
                 md:left-auto md:right-0 md:w-48
@@ -140,10 +130,8 @@ export function LanguageSwitcher({
                   const isSelected = lang === language
 
                   return (
-                    <motion.button
+                    <button
                       key={lang}
-                      whileHover={{ backgroundColor: '#f3f4f6' }}
-                      whileTap={{ scale: 0.98 }}
                       onClick={() => handleLanguageChange(lang as Language)}
                       className={`
                         w-full flex items-center justify-between px-4 py-3 text-left hover:bg-gray-50 transition-colors
@@ -166,7 +154,7 @@ export function LanguageSwitcher({
                         </div>
                       </div>
                       {isSelected && <Check className="w-4 h-4 text-blue-600" />}
-                    </motion.button>
+                    </button>
                   )
                 })}
               </div>
@@ -180,11 +168,10 @@ export function LanguageSwitcher({
                   {language === 'en' && 'Tap to change language'}
                 </p>
               </div>
-            </motion.div>
+            </div>
           </>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -205,33 +192,24 @@ function FloatingLanguageSwitcher({
 
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
-      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="relative">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+      <div className="relative animate-fadeInUp">
+        <button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-12 h-12 bg-white border border-gray-200 rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow"
+          className="w-12 h-12 bg-white border border-gray-200 rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow animate-fadeInUp"
         >
           <Globe className="w-5 h-5 text-gray-600" />
-        </motion.button>
-
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 10 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 10 }}
-              className="absolute bottom-14 right-0 bg-white border border-gray-200 rounded-xl shadow-xl p-2 min-w-[160px]"
+        </button>
+{isOpen && (
+            <div
+              className="absolute bottom-14 right-0 bg-white border border-gray-200 rounded-xl shadow-xl p-2 min-w-[160px] animate-fadeInUp"
             >
               {availableLanguages.map((lang: Language) => {
                 const langInfo = languageInfo[lang]
                 const isSelected = lang === language
 
                 return (
-                  <motion.button
+                  <button
                     key={lang}
-                    whileHover={{ backgroundColor: '#f3f4f6' }}
-                    whileTap={{ scale: 0.98 }}
                     onClick={() => {
                       onLanguageChange(lang)
                       setIsOpen(false)
@@ -243,13 +221,12 @@ function FloatingLanguageSwitcher({
                   >
                     <span className="text-sm">{langInfo.flag}</span>
                     <span className="text-sm font-medium">{langInfo.code}</span>
-                  </motion.button>
+                  </button>
                 )
               })}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </motion.div>
+</div>
     </div>
   )
 }
@@ -266,26 +243,19 @@ function DesktopLanguageSwitcher({
 }: any) {
   return (
     <div className="relative">
-      <motion.button
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+      <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-2 px-3 py-2 text-sm bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+        className="flex items-center space-x-2 px-3 py-2 text-sm bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow animate-fadeInUp"
       >
         {showFlag && <span className="text-sm">{currentLang.flag}</span>}
         <span className="font-medium">{compact ? currentLang.code : currentLang.nativeName}</span>
         <ChevronDown
           className={`w-3 h-3 text-gray-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
         />
-      </motion.button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            className="absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-50 min-w-[140px]"
+      </button>
+{isOpen && (
+          <div
+            className="absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg py-1 z-50 min-w-[140px] animate-fadeInUp"
           >
             {availableLanguages.map((lang: Language) => {
               const langInfo = languageInfo[lang]
@@ -309,10 +279,9 @@ function DesktopLanguageSwitcher({
                 </button>
               )
             })}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -330,14 +299,13 @@ export function QuickLanguageToggle() {
   const currentLang = languageInfo[language]
 
   return (
-    <motion.button
-      whileTap={{ scale: 0.9 }}
+    <button
       onClick={toggleLanguage}
-      className="flex items-center space-x-1 px-2 py-1 bg-gray-100 rounded-full text-xs font-medium"
+      className="flex items-center space-x-1 px-2 py-1 bg-gray-100 rounded-full text-xs font-medium animate-fadeInUp"
       title="Toggle Language"
     >
       <span>{currentLang.flag}</span>
       <span>{currentLang.code}</span>
-    </motion.button>
+    </button>
   )
 }

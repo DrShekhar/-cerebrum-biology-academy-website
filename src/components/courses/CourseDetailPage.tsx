@@ -20,7 +20,6 @@ import {
   ChevronDown,
   ChevronRight,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { DemoBookingModal } from '@/components/booking/DemoBookingModal'
@@ -80,11 +79,8 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-12 items-center">
             <div className="lg:col-span-2">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
+              <div
+               className="animate-fadeInUp">
                 {course.isPopular && (
                   <div className="inline-flex items-center bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-medium mb-4">
                     <TrendingUp className="w-4 h-4 mr-1" />
@@ -133,15 +129,12 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
                     Book Free Demo
                   </Button>
                 </div>
-              </motion.div>
+              </div>
             </div>
 
             {/* Pricing Card */}
-            <motion.div
-              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 animate-fadeInUp"
             >
               <div className="text-center mb-6">
                 <div className="text-3xl font-bold mb-2">
@@ -186,7 +179,7 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
               >
                 Secure Your Seat Now
               </Button>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -197,17 +190,13 @@ export function CourseDetailPage({ course }: CourseDetailPageProps) {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Course Highlights</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {course.highlights.map((highlight, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="flex items-start p-4 bg-blue-50 rounded-2xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                className="flex items-start p-4 bg-blue-50 rounded-2xl animate-fadeInUp"
               >
                 <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
                 <span className="text-gray-700">{highlight}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

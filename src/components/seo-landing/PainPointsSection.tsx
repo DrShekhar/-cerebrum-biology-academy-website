@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   GitBranch,
@@ -61,28 +60,20 @@ export function PainPointsSection({ painPoints }: PainPointsSectionProps) {
   return (
     <section className="bg-gray-50 py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
+        <div
+          className="text-center animate-fadeInUp"
         >
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">{painPoints.title}</h2>
-        </motion.div>
+        </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {painPoints.points.map((point, index) => {
             const Icon = iconMap[point.icon] || HelpCircle
 
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg"
+                className="group rounded-2xl bg-white p-6 shadow-sm transition-all hover:shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600 transition-colors group-hover:bg-green-100 group-hover:text-green-600">
@@ -98,7 +89,7 @@ export function PainPointsSection({ painPoints }: PainPointsSectionProps) {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>

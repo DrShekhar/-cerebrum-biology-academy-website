@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   Star,
   TrendingUp,
@@ -55,10 +54,8 @@ export function PersonalizedContent({
 
 function PersonalizedHero({ data }: { data: any }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="text-center mb-8"
+    <div
+      className="text-center mb-8 animate-fadeInUp"
     >
       <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
         <Heart className="w-4 h-4 mr-2" />
@@ -76,7 +73,7 @@ function PersonalizedHero({ data }: { data: any }) {
           ))}
         </div>
       )}
-    </motion.div>
+    </div>
   )
 }
 
@@ -84,12 +81,9 @@ function PersonalizedCourses({ data }: { data: any }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {data.courses.map((course: any, index: number) => (
-        <motion.div
+        <div
           key={course.id}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
-        >
+         className="animate-fadeInUp">
           <Card
             className={`h-full ${course.recommended ? 'border-2 border-primary/30 bg-primary/5' : ''}`}
           >
@@ -136,7 +130,7 @@ function PersonalizedCourses({ data }: { data: any }) {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
       ))}
     </div>
   )
@@ -216,12 +210,9 @@ function PersonalizedTestimonials({ data }: { data: any }) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.testimonials.map((testimonial: any, index: number) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
+           className="animate-fadeInUp">
             <Card className="h-full">
               <CardHeader>
                 <div className="flex items-center space-x-3 mb-2">
@@ -246,7 +237,7 @@ function PersonalizedTestimonials({ data }: { data: any }) {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>
@@ -255,9 +246,7 @@ function PersonalizedTestimonials({ data }: { data: any }) {
 
 function PersonalizedUrgency({ data }: { data: any }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
+    <div
       className={`p-6 rounded-lg ${
         data.urgencyLevel === 'high'
           ? 'bg-red-50 border-2 border-red-200'
@@ -344,7 +333,7 @@ function PersonalizedUrgency({ data }: { data: any }) {
           {data.ctaText}
         </Button>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

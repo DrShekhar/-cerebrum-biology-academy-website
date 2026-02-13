@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   XCircle,
@@ -237,10 +236,8 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl"
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
@@ -284,39 +281,32 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                   Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <MessageCircle className="w-5 h-5" />
                 Ask Our Counselor
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Quick Summary Cards */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">At a Glance</h2>
             <p className="text-xl text-slate-600">Key differences that matter for your NEET prep</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Cerebrum Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 border-2 border-teal-200 shadow-lg"
+            <div
+              className="bg-gradient-to-br from-teal-50 to-white rounded-2xl p-8 border-2 border-teal-200 shadow-lg animate-fadeInUp"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
@@ -352,14 +342,11 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               <p className="mt-6 text-sm text-teal-700 font-medium">
                 Best for: Students who want focused Biology preparation with personal mentorship
               </p>
-            </motion.div>
+            </div>
 
             {/* Aakash Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-lg"
+            <div
+              className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 border border-slate-200 shadow-lg animate-fadeInUp"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-12 h-12 bg-slate-100 rounded-xl flex items-center justify-center">
@@ -405,7 +392,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
               <p className="mt-6 text-sm text-slate-600 font-medium">
                 Best for: Students wanting all subjects (PCB) under one roof with brand recognition
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -413,11 +400,8 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Detailed Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Detailed Comparison: Cerebrum vs Aakash
@@ -425,7 +409,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-slate-600">
               Feature-by-feature analysis to help you decide
             </p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -478,11 +462,8 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Why Cerebrum Offers Better Value */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-teal-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Cerebrum Offers Better Value for Biology
@@ -490,17 +471,13 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-slate-600">
               For serious NEET aspirants who understand Biology importance
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {whyCerebrumAdvantages.map((advantage, index) => (
-              <motion.div
+              <div
                 key={advantage.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-8 shadow-lg"
+                className="bg-white rounded-2xl p-8 shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -515,7 +492,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -524,27 +501,20 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Students Who Made the Right Choice
             </h2>
             <p className="text-xl text-slate-600">Real results from students who chose Cerebrum</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
-              <motion.div
+              <div
                 key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 shadow-lg border border-slate-100"
+                className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 shadow-lg border border-slate-100 animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-14 h-14 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-bold text-xl">
@@ -568,7 +538,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                 <p className="text-slate-600 italic mb-4">&quot;{story.quote}&quot;</p>
 
                 <p className="text-xs text-slate-400 font-medium">{story.year}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -577,42 +547,32 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       {/* Decision Guide */}
       <section className="py-16 bg-gradient-to-br from-slate-900 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               When Should You Choose Cerebrum?
             </h2>
             <p className="text-xl text-slate-300">Cerebrum is the right choice if...</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valueProposition.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-teal-500/20 rounded-xl flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-teal-400" />
                 </div>
                 <h3 className="text-lg font-bold mb-2">{item.title}</h3>
                 <p className="text-slate-300 text-sm">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-12 text-center"
+          <div
+            className="mt-12 text-center animate-fadeInUp"
           >
             <p className="text-slate-300 mb-6">
               Not sure which is right for you? Talk to our counselor for unbiased guidance.
@@ -628,16 +588,15 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                   Try a Free Demo Class
                 </Button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <MessageCircle className="w-5 h-5" />
                 Chat with Counselor
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -645,11 +604,8 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Best of Both Worlds?
                 <br />
@@ -684,13 +640,10 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold mb-6">Flexible Batch Options</h3>
               <div className="space-y-4">
@@ -722,7 +675,7 @@ export default function CerebrumVsAakashContent({ faqs }: { faqs: FAQ[] }) {
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

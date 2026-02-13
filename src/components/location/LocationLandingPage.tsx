@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   MapPin,
   Users,
@@ -82,11 +81,9 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
   const competitionBadge = getCompetitionBadge(locationData.competitionLevel)
 
   return (
-    <motion.div
+    <div
       className={`min-h-screen bg-gradient-to-b from-slate-50 to-white ${className}`}
-      variants={containerVariants}
       initial="hidden"
-      animate={isVisible ? 'visible' : 'hidden'}
     >
       {/* Hero Section */}
       <section
@@ -94,7 +91,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
       >
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto text-center text-white">
-          <motion.div variants={itemVariants} className="mb-6">
+          <div className="mb-6 animate-fadeInUp">
             <Badge className="mb-4 bg-white/20 backdrop-blur-sm text-white border-white/30">
               <MapPin className="w-4 h-4 mr-2" />
               {locationData.city}, {locationData.state}
@@ -103,23 +100,21 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
               <Target className="w-4 h-4 mr-2" />
               {competitionBadge.text}
             </Badge>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            variants={itemVariants}
-            className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+          <h1
+            className="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fadeInUp"
           >
             {locationData.contentVariants.heroTitle}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90"
+          <p
+            className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 animate-fadeInUp"
           >
             {locationData.contentVariants.heroSubtitle}
-          </motion.p>
+          </p>
 
-          <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-6 mb-10">
+          <div className="flex flex-wrap justify-center gap-6 mb-10 animate-fadeInUp">
             <div className="text-center">
               <div className="text-3xl font-bold">
                 {locationData.neetAspirants.toLocaleString()}+
@@ -134,9 +129,9 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
               <div className="text-3xl font-bold">{locationData.localContext.successRate}%</div>
               <div className="text-sm opacity-80">Local Success Rate</div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div variants={itemVariants}>
+          <div className="animate-fadeInUp">
             <Button
               size="lg"
               className="bg-white text-gray-900 hover:bg-gray-100 text-lg px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300"
@@ -144,27 +139,18 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
               {locationData.contentVariants.ctaText}
               <ChevronRight className="ml-2 w-5 h-5" />
             </Button>
-          </motion.div>
+          </div>
         </div>
 
         {/* Floating particles effect */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {[...Array(20)].map((_, i) => (
-            <motion.div
+            <div
               key={i}
-              className="absolute w-2 h-2 bg-white/20 rounded-full"
+              className="absolute w-2 h-2 bg-white/20 rounded-full animate-fadeInUp"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-              }}
-              animate={{
-                y: [0, -20, 0],
-                opacity: [0.2, 0.8, 0.2],
-              }}
-              transition={{
-                duration: 3 + Math.random() * 2,
-                repeat: Infinity,
-                delay: Math.random() * 2,
               }}
             />
           ))}
@@ -174,17 +160,17 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
       {/* Value Proposition Section */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.div variants={itemVariants} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               Why {locationData.city} Students Choose Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               {locationData.contentVariants.valueProposition}
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div variants={itemVariants}>
+            <div className="animate-fadeInUp">
               <Card className="h-full border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -209,9 +195,9 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                   </ul>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div className="animate-fadeInUp">
               <Card className="h-full border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
@@ -240,9 +226,9 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div variants={itemVariants}>
+            <div className="animate-fadeInUp">
               <Card className="h-full border-2 hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
                 <CardHeader className="text-center pb-4">
                   <div className="mx-auto w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
@@ -265,7 +251,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                   </ul>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -273,18 +259,18 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
       {/* Local Challenges & Solutions */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <motion.div variants={itemVariants} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               Solving {locationData.city}'s NEET Challenges
             </h2>
             <p className="text-xl text-gray-600">
               We understand the unique challenges faced by {locationData.city} students
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {locationData.localContext.localChallenges.map((challenge, index) => (
-              <motion.div key={index} variants={itemVariants}>
+              <div key={index} className="animate-fadeInUp">
                 <Card className="p-6 border-l-4 border-l-red-500 bg-white">
                   <div className="flex items-start space-x-4">
                     <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
@@ -299,7 +285,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                     </div>
                   </div>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -308,7 +294,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
       {/* Competition Analysis */}
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <motion.div variants={itemVariants} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               Why We're Better Than {locationData.city} Alternatives
             </h2>
@@ -317,11 +303,11 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
               {locationData.neetAspirants.toLocaleString()}+ students competing in{' '}
               {locationData.city}
             </Badge>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {locationData.localContext.majorCompetitors.map((competitor, index) => (
-              <motion.div key={index} variants={itemVariants}>
+              <div key={index} className="animate-fadeInUp">
                 <Card className="p-6 text-center border-2 border-gray-200">
                   <h3 className="font-semibold text-gray-700 mb-4">{competitor}</h3>
                   <div className="space-y-2 text-sm text-gray-600">
@@ -339,11 +325,11 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                     </div>
                   </div>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div variants={itemVariants} className="mt-8">
+          <div className="mt-8 animate-fadeInUp">
             <Card className="p-6 border-4 border-green-600 bg-green-50">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-green-800 mb-4">Cerebrum Biology Academy</h3>
@@ -363,14 +349,14 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                 </div>
               </div>
             </Card>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Urgency Section */}
       <section className={`py-16 px-4 bg-gradient-to-r ${getTierColor(locationData.tier)}`}>
         <div className="max-w-4xl mx-auto text-center text-white">
-          <motion.div variants={itemVariants}>
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               {locationData.contentVariants.urgencyMessage}
             </h2>
@@ -384,25 +370,25 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
               <Clock className="mr-2 w-5 h-5" />
               Secure Your Seat Now
             </Button>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Local Medical Colleges */}
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <motion.div variants={itemVariants} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               Target Medical Colleges in {locationData.state}
             </h2>
             <p className="text-xl text-gray-600">
               Our students are getting admitted to these prestigious institutions
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {locationData.localContext.topMedicalColleges.map((college, index) => (
-              <motion.div key={index} variants={itemVariants}>
+              <div key={index} className="animate-fadeInUp">
                 <Card className="p-6 text-center hover:shadow-lg transition-all duration-300">
                   <div className="w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Trophy className="w-8 h-8 text-gold-600" />
@@ -410,7 +396,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                   <h3 className="font-semibold text-gray-900 mb-2">{college}</h3>
                   <Badge className="bg-blue-100 text-blue-800">Target Institution</Badge>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -419,7 +405,7 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
       {/* Final CTA */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div variants={itemVariants}>
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
               Ready to Join {locationData.city}'s Success Story?
             </h2>
@@ -436,9 +422,9 @@ export function LocationLandingPage({ locationData, className = '' }: LocationLa
                 Talk to {locationData.city} Students
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
-    </motion.div>
+    </div>
   )
 }

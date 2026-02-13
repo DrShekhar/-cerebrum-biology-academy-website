@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function MolecularBiologyIllustration({
@@ -34,8 +33,6 @@ export function MolecularBiologyIllustration({
 
       {/* DNA Double Helix */}
       <motion.g
-        animate={animate ? { rotate: [0, 5, 0, -5, 0] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
         style={{ transformOrigin: '120px 160px' }}
       >
         {/* Left strand */}
@@ -96,8 +93,6 @@ export function MolecularBiologyIllustration({
       </text>
 
       <motion.g
-        animate={animate ? { x: [0, 5, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <rect x="215" y="95" width="40" height="20" rx="4" fill="#3B82F6" />
         <text x="235" y="109" fontSize="7" fill="#FFFFFF" textAnchor="middle">
@@ -110,16 +105,12 @@ export function MolecularBiologyIllustration({
         stroke="#7C3AED"
         strokeWidth="2"
         markerEnd="url(#arrow)"
-        animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
       />
       <text x="270" y="100" fontSize="5" fill="#7C3AED" textAnchor="middle">
         Transcription
       </text>
 
       <motion.g
-        animate={animate ? { x: [0, 5, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
       >
         <rect x="285" y="95" width="40" height="20" rx="4" fill="#EC4899" />
         <text x="305" y="109" fontSize="7" fill="#FFFFFF" textAnchor="middle">
@@ -131,16 +122,12 @@ export function MolecularBiologyIllustration({
         d="M330 105 L350 105"
         stroke="#7C3AED"
         strokeWidth="2"
-        animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-        transition={{ duration: 1, repeat: Infinity, delay: 0.3 }}
       />
       <text x="340" y="100" fontSize="5" fill="#7C3AED" textAnchor="middle">
         Translation
       </text>
 
       <motion.g
-        animate={animate ? { x: [0, 5, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 1 }}
       >
         <rect x="340" y="95" width="35" height="20" rx="4" fill="#22C55E" />
         <text x="357" y="109" fontSize="6" fill="#FFFFFF" textAnchor="middle">
@@ -180,8 +167,6 @@ export function MolecularBiologyIllustration({
 
       {/* Questions badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="360" cy="260" r="18" fill="#8B5CF6" />
         <text x="360" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">

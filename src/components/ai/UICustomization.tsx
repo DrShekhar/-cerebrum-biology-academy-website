@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Palette,
   Type,
@@ -504,10 +503,8 @@ const UICustomization: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
             <Palette className="w-8 h-8 text-white" />
@@ -515,7 +512,7 @@ const UICustomization: React.FC = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
             UI Customization
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Comprehensive interface customization with themes, fonts, colors, branding, and
           personalized user experience settings
@@ -621,15 +618,11 @@ const UICustomization: React.FC = () => {
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
         {/* Customization Panel */}
         <div className="xl:col-span-2">
-          <AnimatePresence mode="wait">
-            {/* Theme Selection */}
+{/* Theme Selection */}
             {activeTab === 'themes' && (
-              <motion.div
+              <div
                 key="themes"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="bg-white rounded-xl p-6 border"
+                className="bg-white rounded-xl p-6 border animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Palette className="w-5 h-5 text-indigo-600" />
@@ -721,17 +714,14 @@ const UICustomization: React.FC = () => {
                     Create Custom Theme
                   </button>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Font Settings */}
             {activeTab === 'fonts' && (
-              <motion.div
+              <div
                 key="fonts"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="bg-white rounded-xl p-6 border"
+                className="bg-white rounded-xl p-6 border animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Type className="w-5 h-5 text-blue-600" />
@@ -871,17 +861,14 @@ const UICustomization: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Difficulty Colors */}
             {activeTab === 'colors' && (
-              <motion.div
+              <div
                 key="colors"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="bg-white rounded-xl p-6 border"
+                className="bg-white rounded-xl p-6 border animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Eye className="w-5 h-5 text-green-600" />
@@ -1022,17 +1009,14 @@ const UICustomization: React.FC = () => {
                     </ul>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Custom Instructions */}
             {activeTab === 'instructions' && (
-              <motion.div
+              <div
                 key="instructions"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="bg-white rounded-xl p-6 border"
+                className="bg-white rounded-xl p-6 border animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-lg font-semibold flex items-center gap-2">
@@ -1141,17 +1125,14 @@ const UICustomization: React.FC = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Branding Settings */}
             {activeTab === 'branding' && (
-              <motion.div
+              <div
                 key="branding"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="bg-white rounded-xl p-6 border"
+                className="bg-white rounded-xl p-6 border animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Image className="w-5 h-5 text-indigo-600" />
@@ -1360,17 +1341,14 @@ const UICustomization: React.FC = () => {
                     />
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Status Messages */}
             {activeTab === 'messages' && (
-              <motion.div
+              <div
                 key="messages"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="bg-white rounded-xl p-6 border"
+                className="bg-white rounded-xl p-6 border animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <MessageSquare className="w-5 h-5 text-orange-600" />
@@ -1473,17 +1451,14 @@ const UICustomization: React.FC = () => {
                     )
                   )}
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Progress Bar Settings */}
             {activeTab === 'progress' && (
-              <motion.div
+              <div
                 key="progress"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="bg-white rounded-xl p-6 border"
+                className="bg-white rounded-xl p-6 border animate-fadeInUp"
               >
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <BarChart3 className="w-5 h-5 text-green-600" />
@@ -1661,10 +1636,9 @@ const UICustomization: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-        </div>
+</div>
 
         {/* Live Preview Panel */}
         {showPreview && (

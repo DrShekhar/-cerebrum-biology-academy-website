@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   CheckCircle,
   Star,
@@ -351,49 +350,25 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
 
   return (
     <div className={getPositionClasses()}>
-      <AnimatePresence>
-        {visibleEvents.map((event, index) => {
+{visibleEvents.map((event, index) => {
           const colors = getEventColor(event.type, event.credibility)
 
           return (
-            <motion.div
+            <div
               key={event.id}
-              initial={{
-                opacity: 0,
-                x: position.includes('right') ? 100 : -100,
-                y: position.includes('top') ? -20 : 20,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                y: 0,
-              }}
-              exit={{
-                opacity: 0,
-                x: position.includes('right') ? 100 : -100,
-                scale: 0.8,
-              }}
-              transition={{
-                type: 'spring',
-                stiffness: 300,
-                damping: 30,
-                delay: index * 0.1,
-              }}
               className={`
                 mb-3 p-4 rounded-xl border-2 shadow-lg backdrop-blur-sm
                 ${colors.bg} ${colors.border}
                 hover:shadow-xl transition-shadow duration-300
               `}
               style={{ marginBottom: index === 0 ? 0 : 12 }}
-              whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-start gap-3">
-                <motion.div
+                <div
                   className={`p-2 rounded-lg bg-white ${colors.icon} flex-shrink-0`}
-                  whileHover={{ rotate: 5 }}
                 >
                   {getEventIcon(event.type)}
-                </motion.div>
+                </div>
 
                 <div className="flex-1 min-w-0">
                   <div className={`text-sm font-medium ${colors.text} leading-relaxed`}>
@@ -422,10 +397,8 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
                     )}
 
                     {event.credibility === 'high' && (
-                      <motion.div
+                      <div
                         className={`w-2 h-2 rounded-full ${colors.accent}`}
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
                       />
                     )}
                   </div>
@@ -442,31 +415,21 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
 
               {/* Progress bar for credibility */}
               {event.credibility === 'high' && (
-                <motion.div
-                  className="mt-3 h-1 bg-white rounded-full overflow-hidden"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.5 }}
+                <div
+                  className="mt-3 h-1 bg-white rounded-full overflow-hidden animate-fadeInUp"
                 >
-                  <motion.div
+                  <div
                     className={`h-full ${colors.accent}`}
-                    initial={{ width: 0 }}
-                    animate={{ width: '100%' }}
-                    transition={{ duration: hideDelay / 1000, ease: 'linear' }}
                   />
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
           )
         })}
-      </AnimatePresence>
-
-      {/* Overall stats overlay */}
+{/* Overall stats overlay */}
       {visibleEvents.length === 0 && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="p-3 bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-xl shadow-lg"
+        <div
+          className="p-3 bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 rounded-xl shadow-lg animate-fadeInUp"
         >
           <div className="flex items-center gap-2 text-green-700">
             <Users className="w-4 h-4" />
@@ -477,7 +440,7 @@ const SocialProofNotifications: React.FC<SocialProofNotificationsProps> = ({
           <div className="text-xs text-green-600 mt-1">
             98% qualification rate • Join them today!
           </div>
-        </motion.div>
+        </div>
       )}
     </div>
   )

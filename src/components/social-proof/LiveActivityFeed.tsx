@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, UserCheck, BookOpen, Trophy, TrendingUp, Users, Play } from 'lucide-react'
 
 interface Activity {
@@ -138,12 +137,8 @@ export function LiveActivityFeed({
 
   if (variant === 'floating') {
     return (
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, x: -100, y: 0 }}
-            animate={{ opacity: 1, x: 0, y: 0 }}
-            exit={{ opacity: 0, x: -100 }}
+{isVisible && (
+          <div
             className={`fixed bottom-6 left-6 z-40 ${className}`}
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
@@ -201,10 +196,9 @@ export function LiveActivityFeed({
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    )
+)
   }
 
   if (variant === 'sidebar') {
@@ -222,12 +216,9 @@ export function LiveActivityFeed({
 
         <div className="space-y-3 max-h-96 overflow-y-auto">
           {activities.slice(0, 6).map((activity, index) => (
-            <motion.div
+            <div
               key={activity.id}
-              className="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              className="flex items-start space-x-3 p-3 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors animate-fadeInUp"
             >
               <div
                 className={`w-8 h-8 bg-gradient-to-br ${activity.color} rounded-full flex items-center justify-center flex-shrink-0`}
@@ -242,7 +233,7 @@ export function LiveActivityFeed({
                   <span className="text-xs text-gray-500">{activity.time}</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
@@ -265,12 +256,9 @@ export function LiveActivityFeed({
 
       <div className="grid md:grid-cols-2 gap-4">
         {activities.slice(0, 4).map((activity, index) => (
-          <motion.div
+          <div
             key={activity.id}
-            className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
+            className="bg-white rounded-xl p-4 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
           >
             <div className="flex items-start space-x-3">
               <div
@@ -289,7 +277,7 @@ export function LiveActivityFeed({
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 

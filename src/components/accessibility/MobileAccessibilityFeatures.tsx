@@ -15,8 +15,6 @@ import {
   ZoomOut,
   Hand,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface AccessibilitySettings {
   fontSize: number
   highContrast: boolean
@@ -266,36 +264,26 @@ export function MobileAccessibilityFeatures({
   return (
     <>
       {/* Accessibility Floating Button */}
-      <motion.button
+      <button
         className={`fixed bottom-20 right-4 z-40 w-14 h-14 bg-blue-600 text-white rounded-full shadow-lg md:bottom-6 ${className}`}
         onClick={() => setShowPanel(true)}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
         aria-label="Open accessibility options"
         title="Accessibility Options (Alt + A)"
       >
         <Accessibility className="w-6 h-6 mx-auto" />
-      </motion.button>
+      </button>
 
       {/* Accessibility Panel */}
-      <AnimatePresence>
-        {showPanel && (
-          <motion.div
-            className="fixed inset-0 z-50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+{showPanel && (
+          <div
+            className="fixed inset-0 z-50 animate-fadeInUp"
           >
             <div
               className="absolute inset-0 bg-black bg-opacity-50"
               onClick={() => setShowPanel(false)}
             />
-            <motion.div
-              className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-[80vh] overflow-y-auto"
-              initial={{ y: 400 }}
-              animate={{ y: 0 }}
-              exit={{ y: 400 }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+            <div
+              className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl max-h-[80vh] overflow-y-auto animate-fadeInUp"
             >
               <div className="p-6">
                 {/* Header */}
@@ -503,12 +491,10 @@ export function MobileAccessibilityFeatures({
                   </div>
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Skip Links */}
+{/* Skip Links */}
       <div className="sr-only focus:not-sr-only">
         <a
           href="#main-content"

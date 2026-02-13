@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Clock,
   LogIn,
@@ -226,8 +225,7 @@ export function SelfCheckIn() {
         </div>
       </CardHeader>
       <CardContent>
-        <AnimatePresence mode="wait">
-          {sessions.length > 0 ? (
+{sessions.length > 0 ? (
             <div className="space-y-3">
               {sessions.map((session, index) => {
                 const isOngoing = isSessionOngoing(session)
@@ -235,12 +233,8 @@ export function SelfCheckIn() {
                 const hasCheckedOut = !!session.attendance?.checkOutTime
 
                 return (
-                  <motion.div
+                  <div
                     key={session.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    transition={{ delay: index * 0.05 }}
                     className={cn(
                       'p-4 rounded-lg border transition-all',
                       isOngoing ? 'border-green-200 bg-green-50' : 'border-gray-200 bg-white',
@@ -346,25 +340,22 @@ export function SelfCheckIn() {
                         )}
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )
               })}
             </div>
           ) : (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-8"
+            <div
+              className="text-center py-8 animate-fadeInUp"
             >
               <Clock className="w-12 h-12 text-gray-300 mx-auto mb-3" />
               <p className="text-gray-500 font-medium">No active sessions</p>
               <p className="text-sm text-gray-400 mt-1">
                 Sessions will appear here when they&apos;re about to start
               </p>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </CardContent>
+</CardContent>
     </Card>
   )
 }

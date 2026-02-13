@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronRight, User, Target, BookOpen, Brain, Clock, Gift } from 'lucide-react'
 import { UserProfileService } from '@/lib/profiling/userProfileService'
 import { Button } from '@/components/ui/Button'
@@ -221,29 +220,20 @@ export function ProgressiveProfilingWidget({
   }
 
   return (
-    <AnimatePresence>
-      {isVisible && currentQuestion && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.8, y: 20 }}
+{isVisible && currentQuestion && (
+        <div
           className={`fixed ${getPositionClasses()} z-50 max-w-sm ${className}`}
         >
           <Card className="border-2 border-primary/20 shadow-xl bg-white">
             {showReward ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="p-6 text-center"
+              <div
+                className="p-6 text-center animate-fadeInUp"
               >
-                <motion.div
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ type: 'spring', delay: 0.2 }}
-                  className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4"
+                <div
+                  className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 animate-fadeInUp"
                 >
                   <Gift className="w-8 h-8 text-green-600" />
-                </motion.div>
+                </div>
                 <h3 className="text-lg font-semibold text-green-800 mb-2">Thank You!</h3>
                 <p className="text-sm text-green-600">
                   {getRewardMessage(currentQuestion.category)}
@@ -252,7 +242,7 @@ export function ProgressiveProfilingWidget({
                   <Gift className="w-3 h-3 mr-1" />
                   Unlocked Personalized Content
                 </Badge>
-              </motion.div>
+              </div>
             ) : (
               <>
                 <CardHeader className="pb-4">
@@ -286,12 +276,9 @@ export function ProgressiveProfilingWidget({
 
                   <div className="space-y-2">
                     {currentQuestion.options.map((option: string, index: number) => (
-                      <motion.div
+                      <div
                         key={option}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                      >
+                       className="animate-fadeInUp">
                         <Button
                           variant="outline"
                           className="w-full justify-between hover:border-primary/50 hover:bg-primary/5 text-left"
@@ -301,7 +288,7 @@ export function ProgressiveProfilingWidget({
                           <span className="text-sm">{option}</span>
                           <ChevronRight className="w-4 h-4 text-gray-400" />
                         </Button>
-                      </motion.div>
+                      </div>
                     ))}
                   </div>
 
@@ -314,10 +301,9 @@ export function ProgressiveProfilingWidget({
               </>
             )}
           </Card>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }
 
 // Hook for accessing user profile in components

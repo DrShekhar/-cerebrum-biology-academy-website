@@ -2,7 +2,6 @@
 
 import { useState, useEffect, use } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   ArrowLeft,
   Upload,
@@ -297,10 +296,8 @@ export default function AnswerKeysPage({ params }: { params: Promise<{ id: strin
         </div>
 
         {csvMode ? (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-lg shadow-sm border p-6"
+          <div
+            className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp"
           >
             <h3 className="text-lg font-semibold mb-4">Upload Answer Keys via CSV</h3>
             <p className="text-sm text-gray-600 mb-4">
@@ -337,12 +334,10 @@ export default function AnswerKeysPage({ params }: { params: Promise<{ id: strin
                 )}
               </Button>
             </div>
-          </motion.div>
+          </div>
         ) : (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-lg shadow-sm border p-6"
+          <div
+            className="bg-white rounded-lg shadow-sm border p-6 animate-fadeInUp"
           >
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-lg font-semibold">Manual Answer Entry</h3>
@@ -391,7 +386,7 @@ export default function AnswerKeysPage({ params }: { params: Promise<{ id: strin
                 )
               })}
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </AdminLayout>

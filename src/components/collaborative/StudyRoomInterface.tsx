@@ -6,8 +6,6 @@
  */
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface StudyRoom {
   id: string
   name: string
@@ -316,10 +314,9 @@ export default function StudyRoomInterface({ student }: StudyRoomInterfaceProps)
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {studyMatches.slice(0, 3).map((match) => (
-                  <motion.div
+                  <div
                     key={match.student2.id}
-                    className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-200"
-                    whileHover={{ scale: 1.02 }}
+                    className="bg-white rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-200 animate-fadeInUp"
                   >
                     <div className="flex items-center justify-between mb-2">
                       <h3 className="font-semibold text-gray-900">{match.student2.name}</h3>
@@ -340,7 +337,7 @@ export default function StudyRoomInterface({ student }: StudyRoomInterfaceProps)
                     >
                       Study Together
                     </button>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -360,10 +357,9 @@ export default function StudyRoomInterface({ student }: StudyRoomInterfaceProps)
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {activeRooms.map((room) => (
-                <motion.div
+                <div
                   key={room.id}
-                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200"
-                  whileHover={{ scale: 1.02 }}
+                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-200 animate-fadeInUp"
                 >
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-lg font-semibold text-gray-900">
@@ -404,18 +400,16 @@ export default function StudyRoomInterface({ student }: StudyRoomInterfaceProps)
                   >
                     {room.currentParticipants >= room.maxParticipants ? 'Room Full' : 'Join Room'}
                   </button>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
 
           {/* Create Room Modal */}
-          <AnimatePresence>
-            {showCreateRoom && (
+{showCreateRoom && (
               <CreateRoomModal onClose={() => setShowCreateRoom(false)} onCreate={createRoom} />
             )}
-          </AnimatePresence>
-        </div>
+</div>
       </div>
     )
   }
@@ -459,11 +453,9 @@ export default function StudyRoomInterface({ student }: StudyRoomInterfaceProps)
           {/* Messages */}
           <div ref={chatRef} className="flex-1 overflow-y-auto p-4 space-y-3">
             {chatMessages.map((message) => (
-              <motion.div
+              <div
                 key={message.id}
                 className={`flex ${message.author === student.name ? 'justify-end' : 'justify-start'}`}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
               >
                 <div
                   className={`max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${
@@ -484,7 +476,7 @@ export default function StudyRoomInterface({ student }: StudyRoomInterfaceProps)
                     {new Date(message.timestamp).toLocaleTimeString()}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -571,17 +563,11 @@ function CreateRoomModal({
   }
 
   return (
-    <motion.div
-      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+    <div
+      className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 animate-fadeInUp"
     >
-      <motion.div
-        className="bg-white rounded-lg p-6 w-full max-w-md mx-4"
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
+      <div
+        className="bg-white rounded-lg p-6 w-full max-w-md mx-4 animate-fadeInUp"
       >
         <div className="flex justify-between items-center mb-4">
           <h2 className="text-xl font-semibold text-gray-900">Create Study Room</h2>
@@ -687,7 +673,7 @@ function CreateRoomModal({
             </button>
           </div>
         </form>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }

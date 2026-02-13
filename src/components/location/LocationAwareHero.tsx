@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { MapPin, Users, Target, Award, ChevronRight } from 'lucide-react'
 import { useUserLocation } from '@/components/location/LocationDetector'
 import { Button } from '@/components/ui/Button'
@@ -73,11 +72,9 @@ export function LocationAwareHero({
   }
 
   return (
-    <motion.section
+    <section
       className={`relative py-20 px-4 bg-blue-600 overflow-hidden ${className}`}
-      variants={containerVariants}
       initial="hidden"
-      animate={isVisible ? 'visible' : 'hidden'}
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-black/20" />
@@ -86,22 +83,12 @@ export function LocationAwareHero({
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(15)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
-            className="absolute w-1 h-1 bg-white/30 rounded-full"
+            className="absolute w-1 h-1 bg-white/30 rounded-full animate-fadeInUp"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.7, 0.3],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
             }}
           />
         ))}
@@ -110,7 +97,7 @@ export function LocationAwareHero({
       <div className="relative max-w-7xl mx-auto text-center text-white">
         {/* Location Badge */}
         {content.locationBadge && (
-          <motion.div variants={itemVariants} className="mb-6">
+          <div className="mb-6 animate-fadeInUp">
             <Badge className="bg-white/20 backdrop-blur-sm text-white border-white/30 text-sm px-4 py-2">
               <MapPin className="w-4 h-4 mr-2" />
               Personalized for {content.locationBadge}
@@ -121,27 +108,25 @@ export function LocationAwareHero({
                 {content.aspirants?.toLocaleString()}+ aspirants in your area
               </Badge>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Main Title */}
-        <motion.h1
-          variants={itemVariants}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
+        <h1
+          className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight animate-fadeInUp"
         >
           {content.title}
-        </motion.h1>
+        </h1>
 
         {/* Subtitle */}
-        <motion.p
-          variants={itemVariants}
-          className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 leading-relaxed"
+        <p
+          className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-90 leading-relaxed animate-fadeInUp"
         >
           {content.subtitle}
-        </motion.p>
+        </p>
 
         {/* Stats Section */}
-        <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-8 mb-10">
+        <div className="flex flex-wrap justify-center gap-8 mb-10 animate-fadeInUp">
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold">98%</div>
             <div className="text-sm md:text-base opacity-80">Success Rate</div>
@@ -162,20 +147,19 @@ export function LocationAwareHero({
               <div className="text-sm md:text-base opacity-80">Med Colleges Nearby</div>
             </div>
           )}
-        </motion.div>
+        </div>
 
         {/* Urgency Message */}
-        <motion.div variants={itemVariants} className="mb-8">
+        <div className="mb-8 animate-fadeInUp">
           <Badge className="bg-red-500/20 backdrop-blur-sm text-white border-red-400/30 text-sm px-4 py-2">
             <Target className="w-4 h-4 mr-2" />
             {content.urgencyMessage}
           </Badge>
-        </motion.div>
+        </div>
 
         {/* CTA Buttons */}
-        <motion.div
-          variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fadeInUp"
         >
           <Button
             size="lg"
@@ -193,20 +177,20 @@ export function LocationAwareHero({
             <Award className="mr-2 w-5 h-5" />
             View Success Stories
           </Button>
-        </motion.div>
+        </div>
 
         {/* Location-specific value proposition */}
         {preferredLocation && (
-          <motion.div variants={itemVariants} className="max-w-3xl mx-auto">
+          <div className="max-w-3xl mx-auto animate-fadeInUp">
             <p className="text-lg opacity-90 bg-white/10 backdrop-blur-sm rounded-lg px-6 py-4 border border-white/20">
               {preferredLocation.contentVariants.valueProposition}
             </p>
-          </motion.div>
+          </div>
         )}
       </div>
 
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent" />
-    </motion.section>
+    </section>
   )
 }

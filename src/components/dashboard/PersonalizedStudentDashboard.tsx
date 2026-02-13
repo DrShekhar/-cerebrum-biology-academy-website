@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { AnimatePresence } from 'framer-motion'
 import { BookOpen, TrendingUp, Target, AlertTriangle, Calendar, BarChart3, Wrench, RefreshCw, XCircle } from 'lucide-react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useSwipeGesture, usePullToRefresh } from '@/hooks/useSwipeGesture'
@@ -431,8 +430,7 @@ export function PersonalizedStudentDashboard() {
 
       {/* Main Content */}
       <div role="tabpanel" aria-label={tabs.find(t => t.id === activeTab)?.label} className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
-        <AnimatePresence mode="wait">
-          {activeTab === 'overview' && (
+{activeTab === 'overview' && (
             <OverviewTab
               neetProgress={neetProgress}
               recentSessions={recentSessions}
@@ -488,8 +486,7 @@ export function PersonalizedStudentDashboard() {
               studyStreak={gamificationData?.gamification?.studyStreak}
             />
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       <FloatingActionButton actions={defaultActions} />
 

@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, XCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Users, Target, Award, Clock, BookOpen, Zap, Star, ArrowRight, AlertTriangle,
@@ -72,7 +71,7 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               400+ Students Switched from Aakash
@@ -109,33 +108,33 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Compare with Aakash Expert
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Switch */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Students Switch from Aakash</h2>
             <p className="text-xl text-slate-600">Common pain points that bring students to Cerebrum</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {reasons.map((reason, index) => (
-              <motion.div key={reason.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={reason.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                   <reason.icon className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{reason.title}</h3>
                 <p className="text-slate-600 text-sm">{reason.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -144,10 +143,10 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
       {/* Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Cerebrum vs Aakash: Head-to-Head</h2>
             <p className="text-xl text-slate-600">See why focused coaching beats corporate chains</p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -186,7 +185,7 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Don't Want to Leave Aakash?<br />Complement Your Coaching!</h2>
               <p className="text-xl text-indigo-100 mb-6">
                 Many students continue at Aakash for Physics & Chemistry while joining Cerebrum specifically for Biology.
@@ -203,9 +202,9 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
                   Learn About Complementary Coaching <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+            </div>
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp">
               <h3 className="text-2xl font-bold mb-6">Success Stories: Aakash + Cerebrum</h3>
               {testimonials.slice(1, 2).map((t) => (
                 <div key={t.name} className="mb-6">
@@ -219,7 +218,7 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
                   </div>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -227,15 +226,15 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
       {/* Testimonials from Aakash Switchers */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">From Aakash Students Who Switched</h2>
             <p className="text-xl text-slate-600">Real results from students who made the change</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, index) => (
-              <motion.div key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={t.name}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-purple-700 font-bold text-lg">{t.name[0]}</div>
                   <div>
@@ -245,7 +244,7 @@ export default function AakashAlternativeContent({ faqs }: { faqs: FAQ[] }) {
                   <div className="ml-auto bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-bold">{t.score}</div>
                 </div>
                 <p className="text-slate-600 italic">"{t.quote}"</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   Search,
   ExternalLink,
@@ -101,10 +100,8 @@ const NavigationDashboard: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto p-6 space-y-8">
       {/* Header */}
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+      <div
+        className="text-center animate-fadeInUp"
       >
         <h1 className="text-4xl font-bold text-gray-800 mb-4">🚀 Platform Navigation Dashboard</h1>
         <p className="text-lg text-gray-600 mb-2">
@@ -117,13 +114,11 @@ const NavigationDashboard: React.FC = () => {
           <span>•</span>
           <span>📚 Multi-modal Learning</span>
         </div>
-      </motion.div>
+      </div>
 
       {/* Search and Filters */}
-      <motion.div
-        className="bg-white rounded-xl shadow-lg p-6"
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+      <div
+        className="bg-white rounded-xl shadow-lg p-6 animate-fadeInUp"
       >
         <div className="flex flex-col md:flex-row gap-4 items-center">
           {/* Search */}
@@ -187,62 +182,46 @@ const NavigationDashboard: React.FC = () => {
             </button>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Quick Access Cards */}
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-4"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 }}
+      <div
+        className="grid grid-cols-1 md:grid-cols-3 gap-4 animate-fadeInUp"
       >
-        <motion.div
-          className="bg-indigo-500 text-white p-6 rounded-xl cursor-pointer"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+        <div
+          className="bg-indigo-500 text-white p-6 rounded-xl cursor-pointer animate-fadeInUp"
           onClick={() => openUrl('/test-voice')}
         >
           <h3 className="text-xl font-semibold mb-2">🎵 Voice Test Studio</h3>
           <p className="text-blue-100">Test Shekhar Sir's voice synthesis</p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="bg-[#4a5d4a] text-white p-6 rounded-xl cursor-pointer"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+        <div
+          className="bg-[#4a5d4a] text-white p-6 rounded-xl cursor-pointer animate-fadeInUp"
           onClick={() => openUrl('/voice-training')}
         >
           <h3 className="text-xl font-semibold mb-2">🎯 Voice Training</h3>
           <p className="text-green-100">Advanced voice customization</p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white p-6 rounded-xl cursor-pointer"
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
+        <div
+          className="bg-gradient-to-br from-purple-500 to-indigo-600 text-white p-6 rounded-xl cursor-pointer animate-fadeInUp"
           onClick={() => openUrl('/claudechat')}
         >
           <h3 className="text-xl font-semibold mb-2">🤖 ClaudeChat</h3>
           <p className="text-purple-100">AI-powered learning board</p>
-        </motion.div>
-      </motion.div>
+        </div>
+      </div>
 
       {/* Routes Grid/List */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2 }}
-      >
+      <div
+       className="animate-fadeInUp">
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredRoutes.map((route, index) => (
-              <motion.div
+              <div
                 key={route.href}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -2 }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-4">
@@ -276,52 +255,42 @@ const NavigationDashboard: React.FC = () => {
                     </span>
 
                     <div className="flex items-center space-x-2">
-                      <motion.button
-                        className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                      <button
+                        className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors animate-fadeInUp"
                         onClick={() => copyUrl(route.href)}
                         title="Copy URL"
                       >
                         <Copy className="w-4 h-4 text-gray-600" />
-                      </motion.button>
+                      </button>
 
-                      <motion.button
-                        className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                      <button
+                        className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors animate-fadeInUp"
                         onClick={() => openUrl(route.href)}
                         title="Open in new tab"
                       >
                         <ExternalLink className="w-4 h-4" />
-                      </motion.button>
+                      </button>
                     </div>
                   </div>
 
                   {copiedUrl === route.href && (
-                    <motion.div
-                      className="mt-2 text-green-600 text-xs"
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -5 }}
+                    <div
+                      className="mt-2 text-green-600 text-xs animate-fadeInUp"
                     >
                       ✓ URL copied to clipboard!
-                    </motion.div>
+                    </div>
                   )}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         ) : (
           <div className="bg-white rounded-xl shadow-lg overflow-hidden">
             <div className="divide-y divide-gray-200">
               {filteredRoutes.map((route, index) => (
-                <motion.div
+                <div
                   key={route.href}
-                  className="p-4 hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
+                  className="p-4 hover:bg-gray-50 transition-colors animate-fadeInUp"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-4">
@@ -352,52 +321,45 @@ const NavigationDashboard: React.FC = () => {
                     </div>
 
                     <div className="flex items-center space-x-2">
-                      <motion.button
-                        className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                      <button
+                        className="p-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors animate-fadeInUp"
                         onClick={() => copyUrl(route.href)}
                         title="Copy URL"
                       >
                         <Copy className="w-4 h-4 text-gray-600" />
-                      </motion.button>
+                      </button>
 
-                      <motion.button
-                        className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
+                      <button
+                        className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors animate-fadeInUp"
                         onClick={() => openUrl(route.href)}
                         title="Open in new tab"
                       >
                         <ExternalLink className="w-4 h-4" />
-                      </motion.button>
+                      </button>
                     </div>
                   </div>
 
                   {copiedUrl === route.href && (
-                    <motion.div
-                      className="mt-2 text-green-600 text-xs"
-                      initial={{ opacity: 0, y: -5 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -5 }}
+                    <div
+                      className="mt-2 text-green-600 text-xs animate-fadeInUp"
                     >
                       ✓ URL copied to clipboard!
-                    </motion.div>
+                    </div>
                   )}
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         )}
-      </motion.div>
+      </div>
 
       {/* No Results */}
       {filteredRoutes.length === 0 && (
-        <motion.div className="text-center py-12" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        <div className="text-center py-12 animate-fadeInUp">
           <AlertCircle className="w-12 h-12 text-gray-400 mx-auto mb-4" />
           <h3 className="text-lg font-semibold text-gray-700 mb-2">No routes found</h3>
           <p className="text-gray-500">Try adjusting your search criteria or filters.</p>
-        </motion.div>
+        </div>
       )}
     </div>
   )

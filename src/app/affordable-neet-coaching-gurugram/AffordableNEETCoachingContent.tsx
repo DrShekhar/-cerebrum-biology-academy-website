@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home,
   Users, Award, Clock, Star, CreditCard, Percent, Gift,
@@ -100,7 +99,7 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Percent className="w-4 h-4" />
               30-40% Lower Than Big Institutes
@@ -137,12 +136,12 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                   <Play className="w-5 h-5 mr-2" />Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />Get Fee Details
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -151,11 +150,11 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {valueProps.map((item, index) => (
-              <motion.div key={item.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="text-center">
+              <div key={item.label}
+                className="text-center animate-fadeInUp">
                 <p className="text-3xl md:text-4xl font-bold text-green-600">{item.stat}</p>
                 <p className="text-sm text-slate-600 mt-1">{item.label}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -164,14 +163,14 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
       {/* Pricing Tiers */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Choose Your Tier</h2>
             <p className="text-xl text-slate-600">Same quality teaching, different batch sizes and features</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index) => (
-              <motion.div key={tier.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
+              <div key={tier.name}
                 className={`relative bg-white rounded-2xl p-6 shadow-lg ${tier.popular ? 'ring-2 ring-blue-500' : ''}`}>
                 {tier.popular && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -193,11 +192,11 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                   ))}
                 </ul>
                 <p className="text-xs text-slate-500 italic mb-4">{tier.ideal}</p>
-                <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
+                <button onClick={handleWhatsApp}
                   className={`w-full py-3 rounded-xl font-semibold ${tier.popular ? 'bg-blue-600 text-white' : 'bg-gray-100 text-slate-700 hover:bg-gray-200'}`}>
                   Get Details
-                </motion.button>
-              </motion.div>
+                </button>
+              </div>
             ))}
           </div>
         </div>
@@ -206,10 +205,10 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
       {/* Fee Comparison */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Fee Comparison</h2>
             <p className="text-xl text-slate-600">See how we compare with big institutes</p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -239,30 +238,30 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
       {/* Scholarships */}
       <section className="py-16 bg-gradient-to-br from-green-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Scholarships & Discounts</h2>
             <p className="text-xl text-green-100">Multiple ways to reduce your fees</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-4 gap-6">
             {scholarships.map((scholarship, index) => (
-              <motion.div key={scholarship.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+              <div key={scholarship.name}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <scholarship.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-lg font-bold mb-1">{scholarship.name}</h3>
                 <p className="text-2xl font-bold text-yellow-400 mb-2">{scholarship.discount}</p>
                 <p className="text-sm text-green-100">{scholarship.criteria}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 
           <div className="text-center mt-8">
-            <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-              className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-xl font-semibold">
+            <button onClick={handleWhatsApp}
+              className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-xl font-semibold animate-fadeInUp">
               <Phone className="w-5 h-5" />Check Your Eligibility
-            </motion.button>
+            </button>
           </div>
         </div>
       </section>
@@ -271,7 +270,7 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <div className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Flexible Payment Options</h2>
               <p className="text-xl text-slate-600 mb-6">
                 Don't let fees be a barrier to quality education. We offer multiple payment options to make it easier.
@@ -294,9 +293,9 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                   <div><strong>Monthly payment</strong> - Small convenience fee, maximum flexibility</div>
                 </li>
               </ul>
-            </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg">
+            </div>
+            <div
+              className="bg-white rounded-2xl p-8 shadow-lg animate-fadeInUp">
               <h3 className="text-xl font-bold text-slate-900 mb-6">Sample EMI Calculation</h3>
               <div className="space-y-4">
                 <div className="bg-green-50 rounded-xl p-4">
@@ -310,11 +309,11 @@ export default function AffordableNEETCoachingContent({ faqs }: { faqs: FAQ[] })
                   <p className="text-xs text-slate-500">12 months, 0% interest for 3 months</p>
                 </div>
               </div>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold">
+              <button onClick={handleWhatsApp}
+                className="w-full mt-6 bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-semibold animate-fadeInUp">
                 Get Your EMI Plan
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
           </div>
         </div>
       </section>

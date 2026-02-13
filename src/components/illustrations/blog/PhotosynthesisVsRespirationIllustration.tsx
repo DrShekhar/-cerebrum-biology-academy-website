@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function PhotosynthesisVsRespirationIllustration({
@@ -155,8 +154,6 @@ export function PhotosynthesisVsRespirationIllustration({
       {/* Sun with glow */}
       <g filter="url(#sunGlowPvr)">
         <motion.g
-          animate={animate ? { rotate: [0, 360] } : undefined}
-          transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
           style={{ transformOrigin: '80px 160px' }}
         >
           <circle cx="80" cy="160" r="28" fill="url(#sunGradPvr)" />
@@ -198,8 +195,6 @@ export function PhotosynthesisVsRespirationIllustration({
       {/* Chloroplast/Leaf */}
       <motion.g
         filter="url(#pvrCardShadow)"
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         style={{ transformOrigin: '175px 165px' }}
       >
         <ellipse cx="175" cy="165" rx="38" ry="55" fill="url(#leafGradPvr)" />
@@ -291,8 +286,6 @@ export function PhotosynthesisVsRespirationIllustration({
 
       {/* O2 bubbles */}
       <motion.g
-        animate={animate ? { y: [0, -20, 0], opacity: [0.4, 1, 0.4] } : undefined}
-        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="55" cy="345" r="8" fill="#93C5FD" fillOpacity="0.8" />
         <circle cx="80" cy="360" r="6" fill="#93C5FD" fillOpacity="0.7" />
@@ -326,8 +319,6 @@ export function PhotosynthesisVsRespirationIllustration({
       {/* Mitochondria */}
       <motion.g
         filter="url(#pvrCardShadow)"
-        animate={animate ? { scale: [1, 1.06, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         style={{ transformOrigin: '387px 165px' }}
       >
         <ellipse cx="387" cy="165" rx="55" ry="35" fill="url(#mitoGradPvr)" />
@@ -403,8 +394,6 @@ export function PhotosynthesisVsRespirationIllustration({
       {/* ATP Energy badge */}
       <motion.g
         filter="url(#pvrGlow)"
-        animate={animate ? { scale: [1, 1.15, 1], opacity: [0.8, 1, 0.8] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="440" cy="355" r="28" fill="url(#atpGradPvr)" />
         <circle
@@ -484,8 +473,6 @@ export function PhotosynthesisVsRespirationIllustration({
         fill="none"
         strokeDasharray="8 4"
         strokeLinecap="round"
-        animate={animate ? { strokeDashoffset: [0, 12] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
       />
       <motion.path
         d="M320 360 Q260 390 200 360"
@@ -494,8 +481,6 @@ export function PhotosynthesisVsRespirationIllustration({
         fill="none"
         strokeDasharray="8 4"
         strokeLinecap="round"
-        animate={animate ? { strokeDashoffset: [12, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'linear' }}
       />
 
       {/* Arrow labels */}

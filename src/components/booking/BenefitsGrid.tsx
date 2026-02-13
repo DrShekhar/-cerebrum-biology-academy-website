@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { Video, BookOpen, Target, Award } from 'lucide-react'
 
 interface Benefit {
@@ -45,13 +44,9 @@ export function BenefitsGrid() {
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {benefits.map((benefit, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            whileHover={{ scale: 1.05, y: -5 }}
-            className="bg-white rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100"
+            className="bg-white rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 animate-fadeInUp"
           >
             <div
               className={`w-12 h-12 rounded-lg bg-gradient-to-br ${benefit.color} flex items-center justify-center text-white mb-3`}
@@ -60,7 +55,7 @@ export function BenefitsGrid() {
             </div>
             <h4 className="font-semibold text-gray-900 mb-1">{benefit.title}</h4>
             <p className="text-sm text-gray-600">{benefit.description}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

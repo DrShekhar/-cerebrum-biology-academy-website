@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   FileText,
   Clock,
@@ -202,20 +201,16 @@ export default function ContentDraftsPage() {
           </div>
         ) : (
           <div className="space-y-4">
-            <AnimatePresence>
-              {filteredDrafts.map((draft) => {
+{filteredDrafts.map((draft) => {
                 const config = statusConfig[draft.status]
                 const StatusIcon = config.icon
                 const isExpanded = expandedDraft === draft.id
                 const isActionLoading = actionLoading === draft.id
 
                 return (
-                  <motion.div
+                  <div
                     key={draft.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm"
+                    className="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm animate-fadeInUp"
                   >
                     {/* Main Row */}
                     <div className="p-4 md:p-6">
@@ -269,13 +264,9 @@ export default function ContentDraftsPage() {
                     </div>
 
                     {/* Expanded Details */}
-                    <AnimatePresence>
-                      {isExpanded && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="border-t border-gray-100 bg-gray-50"
+{isExpanded && (
+                        <div
+                          className="border-t border-gray-100 bg-gray-50 animate-fadeInUp"
                         >
                           <div className="p-4 md:p-6">
                             {draft.excerpt && <p className="text-gray-600 mb-4">{draft.excerpt}</p>}
@@ -348,14 +339,12 @@ export default function ContentDraftsPage() {
                               </span>
                             </div>
                           </div>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
-                  </motion.div>
+</div>
                 )
               })}
-            </AnimatePresence>
-          </div>
+</div>
         )}
 
         {/* CLI Commands */}

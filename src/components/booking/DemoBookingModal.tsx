@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/Button'
 import { useAuth } from '@/contexts/AuthContext'
 import { useDemoBooking } from '@/hooks/useDemoBooking'
 import { X, Calendar, Clock, User, Phone, Mail, MessageCircle } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import FocusTrap from 'focus-trap-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
@@ -118,20 +117,13 @@ export function DemoBookingModal({
 
   return (
     <>
-      <AnimatePresence>
-        <motion.div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-40"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+<div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-40 animate-fadeInUp"
           onClick={handleClose}
         >
           <FocusTrap>
-            <motion.div
-              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto relative"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
+            <div
+              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 max-w-md w-full max-h-[90vh] overflow-y-auto relative animate-fadeInUp"
               onClick={(e) => e.stopPropagation()}
               role="dialog"
               aria-modal="true"
@@ -315,10 +307,9 @@ export function DemoBookingModal({
                   </Button>
                 </div>
               )}
-            </motion.div>
+            </div>
           </FocusTrap>
-        </motion.div>
-      </AnimatePresence>
-    </>
+        </div>
+</>
   )
 }

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { biologyColors } from '../hooks/useDiagram'
 
 interface CellProps {
@@ -74,9 +73,6 @@ export function Cell({
       className="cell"
       onClick={onClick}
       style={{ cursor: onClick ? 'pointer' : 'default' }}
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.4 }}
     >
       <rect
         x={x}
@@ -151,9 +147,6 @@ export function TissueLayer({
       className="tissue-layer"
       onClick={onClick}
       style={{ cursor: onClick ? 'pointer' : 'default' }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay, duration: 0.5 }}
     >
       <rect
         x={x}
@@ -206,9 +199,6 @@ export function VascularBundle({
   return (
     <motion.g
       className="vascular-bundle"
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay, duration: 0.5 }}
     >
       <circle
         cx={cx}
@@ -287,9 +277,6 @@ export function MeristemZone({
   return (
     <motion.g
       className="meristem-zone"
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay, duration: 0.4 }}
     >
       <rect
         x={x}

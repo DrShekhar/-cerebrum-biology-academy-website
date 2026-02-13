@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function DPSStudentIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -26,8 +25,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
 
       {/* DPS Logo/Badge */}
       <motion.g
-        animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
         style={{ transformOrigin: '100px 80px' }}
       >
         <circle cx="100" cy="80" r="45" fill="#1E40AF" />
@@ -43,8 +40,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
 
       {/* Plus sign */}
       <motion.g
-        animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <text x="175" y="90" fontSize="40" fill="#14B8A6" fontWeight="bold">
           +
@@ -53,8 +48,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
 
       {/* NEET Badge */}
       <motion.g
-        animate={animate ? { rotate: [5, -5, 5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
         style={{ transformOrigin: '280px 80px' }}
       >
         <circle cx="280" cy="80" r="45" fill="#14B8A6" />
@@ -74,8 +67,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         stroke="#10B981"
         strokeWidth="4"
         fill="none"
-        animate={animate ? { strokeDashoffset: [20, 0] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
         strokeDasharray="20"
       />
 
@@ -92,8 +83,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
 
         {/* Books in hand */}
         <motion.g
-          animate={animate ? { rotate: [-5, 5, -5] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
           style={{ transformOrigin: '120px 90px' }}
         >
           <rect x="110" y="70" width="40" height="8" rx="2" fill="#14B8A6" />
@@ -104,8 +93,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
 
       {/* Result badge */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect x="280" y="200" width="90" height="40" rx="8" fill="#10B981" />
         <text x="325" y="218" fontSize="8" fill="#FFFFFF" textAnchor="middle">
@@ -121,8 +108,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         x="50"
         y="180"
         fontSize="20"
-        animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         ⭐
       </motion.text>
@@ -130,8 +115,6 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         x="350"
         y="150"
         fontSize="16"
-        animate={animate ? { opacity: [1, 0.5, 1] } : undefined}
-        transition={{ duration: 2.5, repeat: Infinity }}
       >
         ⭐
       </motion.text>

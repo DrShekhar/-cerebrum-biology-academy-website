@@ -3,8 +3,6 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import { Play, Pause, Volume2, VolumeX, Maximize, X, Star } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface VideoTestimonialProps {
   id: string
   studentName: string
@@ -55,11 +53,8 @@ export function VideoTestimonial({
   return (
     <>
       {/* Main Video Card */}
-      <motion.div
-        className="bg-white rounded-3xl shadow-lg overflow-hidden"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+      <div
+        className="bg-white rounded-3xl shadow-lg overflow-hidden animate-fadeInUp"
       >
         {/* Video Container */}
         <div
@@ -88,33 +83,21 @@ export function VideoTestimonial({
           )}
 
           {/* Play Overlay */}
-          <AnimatePresence>
-            {!isPlaying && (
-              <motion.div
-                className="absolute inset-0 bg-black/40 flex items-center justify-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+{!isPlaying && (
+              <div
+                className="absolute inset-0 bg-black/40 flex items-center justify-center animate-fadeInUp"
               >
-                <motion.div
-                  className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                <div
+                  className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg animate-fadeInUp"
                 >
                   <Play className="w-8 h-8 text-blue-600 ml-1" />
-                </motion.div>
-              </motion.div>
+                </div>
+              </div>
             )}
-          </AnimatePresence>
-
-          {/* Video Controls */}
-          <AnimatePresence>
-            {isPlaying && showControls && (
-              <motion.div
-                className="absolute bottom-4 left-4 right-4 flex items-center justify-between"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
+{/* Video Controls */}
+{isPlaying && showControls && (
+              <div
+                className="absolute bottom-4 left-4 right-4 flex items-center justify-between animate-fadeInUp"
               >
                 <div className="flex items-center space-x-3">
                   <button
@@ -156,11 +139,9 @@ export function VideoTestimonial({
                     <Maximize className="w-5 h-5" />
                   </button>
                 </div>
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
-          {/* Achievement Badge */}
+{/* Achievement Badge */}
           <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
             {achievement}
           </div>
@@ -203,16 +184,12 @@ export function VideoTestimonial({
             <span className="text-sm text-gray-600">5.0 • Verified Student</span>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Fullscreen Modal */}
-      <AnimatePresence>
-        {isFullscreen && (
-          <motion.div
-            className="fixed inset-0 bg-black z-50 flex items-center justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+{isFullscreen && (
+          <div
+            className="fixed inset-0 bg-black z-50 flex items-center justify-center animate-fadeInUp"
           >
             <button
               onClick={toggleFullscreen}
@@ -243,9 +220,8 @@ export function VideoTestimonial({
                 NEET Score: {neetScore} (+{improvement} improvement)
               </p>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </>
+</>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import {
   Bell,
   Mail,
@@ -159,14 +158,12 @@ export default function NotificationsSettingsPage() {
 
         {/* Success Alert */}
         {showSuccess && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center"
+          <div
+            className="mb-6 bg-green-50 border border-green-200 rounded-lg p-4 flex items-center animate-fadeInUp"
           >
             <CheckCircle className="w-5 h-5 text-green-600 mr-3" />
             <p className="text-green-800 font-medium">Notification settings saved successfully!</p>
-          </motion.div>
+          </div>
         )}
 
         {/* Notification Channels */}

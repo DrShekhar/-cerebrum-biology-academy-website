@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { WifiOff, Send, Clock, AlertCircle, Trash2, RefreshCw } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
@@ -194,30 +193,20 @@ export function OfflineFormHandler({ children }: OfflineFormHandlerProps) {
       {children}
 
       {/* Offline Indicator */}
-      <AnimatePresence>
-        {showOfflineIndicator && (
-          <motion.div
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -50 }}
-            className="fixed top-0 left-0 right-0 z-50 bg-orange-600 text-white py-2 px-4"
+{showOfflineIndicator && (
+          <div
+            className="fixed top-0 left-0 right-0 z-50 bg-orange-600 text-white py-2 px-4 animate-fadeInUp"
           >
             <div className="flex items-center justify-center space-x-2 text-sm">
               <WifiOff className="w-4 h-4" />
               <span>You're offline. Forms will be saved and sent when you reconnect.</span>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Pending Forms Manager */}
-      <AnimatePresence>
-        {pendingForms.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 300 }}
-            className="fixed bottom-6 right-6 z-40 max-w-sm"
+{/* Pending Forms Manager */}
+{pendingForms.length > 0 && (
+          <div
+            className="fixed bottom-6 right-6 z-40 max-w-sm animate-fadeInUp"
           >
             <Card className="border-2 border-orange-200 shadow-lg bg-white">
               <CardHeader className="pb-3">
@@ -234,11 +223,9 @@ export function OfflineFormHandler({ children }: OfflineFormHandlerProps) {
 
               <CardContent className="space-y-3 max-h-64 overflow-y-auto">
                 {pendingForms.map((form) => (
-                  <motion.div
+                  <div
                     key={form.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="p-3 bg-gray-50 rounded-lg border"
+                    className="p-3 bg-gray-50 rounded-lg border animate-fadeInUp"
                   >
                     <div className="flex items-start justify-between mb-2">
                       <div>
@@ -282,7 +269,7 @@ export function OfflineFormHandler({ children }: OfflineFormHandlerProps) {
                         Delete
                       </Button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
 
                 {/* Sync All Button */}
@@ -307,10 +294,9 @@ export function OfflineFormHandler({ children }: OfflineFormHandlerProps) {
                 )}
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

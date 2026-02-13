@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   Brain,
   Activity,
@@ -231,11 +230,9 @@ export default function AIDashboard() {
         <CardContent>
           <div className="space-y-4">
             {providers.map((provider) => (
-              <motion.div
+              <div
                 key={provider.name}
-                className="flex items-center justify-between p-4 bg-gray-50 rounded-lg"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center justify-between p-4 bg-gray-50 rounded-lg animate-fadeInUp"
               >
                 <div className="flex items-center space-x-3">
                   <div
@@ -258,7 +255,7 @@ export default function AIDashboard() {
                   <p className="text-sm font-medium">${provider.cost.toFixed(2)}</p>
                   <p className="text-xs text-gray-600">{provider.successRate}% success</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </CardContent>

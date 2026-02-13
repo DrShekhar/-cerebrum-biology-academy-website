@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function HumanDigestionIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -128,18 +127,12 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
         fill="#1E293B"
         fontSize="18"
         fontWeight="700"
-        initial={animate ? { opacity: 0, y: -10 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         Human Digestive System
       </motion.text>
 
       {/* MAIN DIGESTIVE TRACT - Left side */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         {/* Mouth/Buccal Cavity */}
         <g transform="translate(50, 55)">
@@ -166,8 +159,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             cy="30"
             r="7"
             fill="url(#enzymeBlue)"
-            animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <text x="55" y="72" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
             Mouth
@@ -179,8 +170,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
 
         {/* Esophagus */}
         <motion.g
-          animate={animate ? { y: [0, 2, 0] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
         >
           <path
             d="M105 145 Q105 170 112 195 Q118 220 112 245"
@@ -196,8 +185,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             cy="175"
             r="5"
             fill="#FBBF24"
-            animate={animate ? { cy: [165, 225, 165] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
         </motion.g>
         <text x="145" y="195" fill="#64748B" fontSize="8" fontWeight="500">
@@ -220,8 +207,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
           />
           {/* Gastric glands */}
           <motion.g
-            animate={animate ? { opacity: [0.6, 1, 0.6] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <circle cx="56" cy="56" r="4" fill="#DC2626" />
             <circle cx="75" cy="68" r="4" fill="#DC2626" />
@@ -245,8 +230,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             fill="none"
             strokeLinecap="round"
             filter="url(#organShadow)"
-            animate={animate ? { pathLength: [0.95, 1, 0.95] } : undefined}
-            transition={{ duration: 3, repeat: Infinity }}
           />
           <text x="75" y="122" textAnchor="middle" fill="#64748B" fontSize="8" fontWeight="600">
             Small Intestine
@@ -274,9 +257,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
 
       {/* ASSOCIATED GLANDS - Right side */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         {/* Liver */}
         <g transform="translate(360, 60)">
@@ -307,8 +287,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             d="M143 90 L143 105"
             stroke="#84CC16"
             strokeWidth="3.5"
-            animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-            transition={{ duration: 1.5, repeat: Infinity }}
           />
           <text x="195" y="35" fill="#78350F" fontSize="12" fontWeight="700">
             Liver
@@ -349,8 +327,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             stroke="#F59E0B"
             strokeWidth="2.5"
             strokeDasharray="4"
-            animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-            transition={{ duration: 1.5, repeat: Infinity }}
           />
           <text x="185" y="28" fill="#92400E" fontSize="12" fontWeight="700">
             Pancreas
@@ -390,24 +366,18 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
           <g transform="translate(20, 32)">
             {/* Villus 1 */}
             <motion.g
-              animate={animate ? { y: [0, -2, 0] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0 }}
             >
               <path d="M18 62 Q18 25 25 12 Q31 0 37 12 Q43 25 43 62 Z" fill="url(#villiGrad)" />
               <line x1="31" y1="18" x2="31" y2="56" stroke="#DC2626" strokeWidth="2" />
             </motion.g>
             {/* Villus 2 */}
             <motion.g
-              animate={animate ? { y: [0, -2, 0] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
             >
               <path d="M56 62 Q56 25 62 12 Q68 0 75 12 Q81 25 81 62 Z" fill="url(#villiGrad)" />
               <line x1="68" y1="18" x2="68" y2="56" stroke="#DC2626" strokeWidth="2" />
             </motion.g>
             {/* Villus 3 */}
             <motion.g
-              animate={animate ? { y: [0, -2, 0] } : undefined}
-              transition={{ duration: 2, repeat: Infinity, delay: 0.6 }}
             >
               <path
                 d="M93 62 Q93 25 100 12 Q106 0 112 12 Q118 25 118 62 Z"
@@ -488,9 +458,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
 
       {/* Flow arrows connecting organs */}
       <motion.g
-        initial={animate ? { opacity: 0 } : undefined}
-        animate={animate ? { opacity: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.5 }}
       >
         {/* Food flow indicator */}
         <motion.circle
@@ -499,8 +466,6 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
           r="6"
           fill="#FBBF24"
           filter="url(#softGlow)"
-          animate={animate ? { cy: [100, 400, 100], opacity: [1, 0.8, 1] } : undefined}
-          transition={{ duration: 6, repeat: Infinity }}
         />
       </motion.g>
 

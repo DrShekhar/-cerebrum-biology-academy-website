@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function SmallVsLargeBatchIllustration({
@@ -29,9 +28,6 @@ export function SmallVsLargeBatchIllustration({
 
       {/* Left side - Small Batch */}
       <motion.g
-        initial={animate ? { x: -30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.2, duration: 0.5 }}
       >
         <rect
           x="20"
@@ -65,18 +61,12 @@ export function SmallVsLargeBatchIllustration({
               cy={150 + row * 30}
               r="10"
               fill="#86EFAC"
-              initial={animate ? { scale: 0 } : undefined}
-              animate={animate ? { scale: 1 } : undefined}
-              transition={{ delay: 0.4 + (row * 3 + col) * 0.1 }}
             />
           ))
         )}
 
         {/* Personal attention arrows */}
         <motion.g
-          initial={animate ? { opacity: 0 } : undefined}
-          animate={animate ? { opacity: 1 } : undefined}
-          transition={{ delay: 1.2, duration: 0.5 }}
         >
           <path
             d="M85 120 L65 140"
@@ -92,9 +82,6 @@ export function SmallVsLargeBatchIllustration({
 
       {/* Right side - Large Batch */}
       <motion.g
-        initial={animate ? { x: 30, opacity: 0 } : undefined}
-        animate={animate ? { x: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.3, duration: 0.5 }}
       >
         <rect
           x="220"
@@ -128,9 +115,6 @@ export function SmallVsLargeBatchIllustration({
               cy={140 + row * 22}
               r="8"
               fill="#FECACA"
-              initial={animate ? { scale: 0 } : undefined}
-              animate={animate ? { scale: 1 } : undefined}
-              transition={{ delay: 0.5 + (row * 5 + col) * 0.03 }}
             />
           ))
         )}
@@ -138,9 +122,6 @@ export function SmallVsLargeBatchIllustration({
 
       {/* VS divider */}
       <motion.g
-        initial={animate ? { scale: 0 } : undefined}
-        animate={animate ? { scale: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.3 }}
       >
         <circle cx="200" cy="140" r="20" fill="#1F2937" />
         <text x="200" y="145" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="700">
@@ -150,9 +131,6 @@ export function SmallVsLargeBatchIllustration({
 
       {/* Comparison checkmarks */}
       <motion.g
-        initial={animate ? { y: 20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 1.4, duration: 0.4 }}
       >
         <rect x="20" y="250" width="160" height="40" rx="4" fill="#22C55E" />
         <text x="100" y="275" textAnchor="middle" fill="#FFF" fontSize="10" fontWeight="600">
@@ -173,9 +151,6 @@ export function SmallVsLargeBatchIllustration({
         fill="#1F2937"
         fontSize="14"
         fontWeight="700"
-        initial={animate ? { opacity: 0 } : undefined}
-        animate={animate ? { opacity: 1 } : undefined}
-        transition={{ delay: 0.1 }}
       >
         Batch Size Comparison
       </motion.text>

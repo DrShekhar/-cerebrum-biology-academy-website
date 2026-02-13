@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   CheckCircle,
   XCircle,
@@ -154,10 +153,8 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-4xl"
+          <div
+            className="max-w-4xl animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
@@ -200,16 +197,15 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                   Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-4 rounded-xl font-semibold"
+                className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-4 rounded-xl font-semibold animate-fadeInUp"
               >
                 <MessageCircle className="w-5 h-5" />
                 Ask Questions on WhatsApp
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -240,11 +236,8 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Why Students Switch */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Students Switch from Allen to Cerebrum
@@ -252,24 +245,20 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-slate-600">
               Common challenges that bring students to focused Biology coaching
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {reasonsToSwitch.map((reason, index) => (
-              <motion.div
+              <div
                 key={reason.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                   <reason.icon className="w-6 h-6 text-teal-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{reason.title}</h3>
                 <p className="text-slate-600 text-sm">{reason.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -278,11 +267,8 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Detailed Comparison Table */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Cerebrum vs Allen: Detailed Comparison
@@ -290,7 +276,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-slate-600">
               Side-by-side comparison of key factors for NEET Biology preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-2xl shadow-xl overflow-hidden">
@@ -344,11 +330,8 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* Success Stories */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 to-slate-800 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Award className="w-4 h-4" />
@@ -360,17 +343,13 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-slate-300">
               Real success stories from students who chose focused Biology coaching
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {successStories.map((story, index) => (
-              <motion.div
+              <div
                 key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6"
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -390,7 +369,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                 <div className="bg-yellow-500/20 text-yellow-400 px-3 py-2 rounded-lg text-sm font-medium">
                   {story.improvement}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -400,11 +379,8 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
+            <div
+             className="animate-fadeInUp">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 Don't Want to Leave Allen?
                 <br />
@@ -427,13 +403,10 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                   Book a Free Trial Class <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold mb-6">The Winning Combination</h3>
               <div className="space-y-4">
@@ -462,7 +435,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                   <p className="text-sm text-green-200">Cover all bases effectively</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -476,27 +449,20 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
       {/* FAQs */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
             <p className="text-slate-600">
               Common questions about Cerebrum vs Allen for NEET Biology
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-white rounded-xl overflow-hidden shadow-sm"
+                className="bg-white rounded-xl overflow-hidden shadow-sm animate-fadeInUp"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -514,7 +480,7 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                     <p className="text-slate-600">{faq.answer}</p>
                   </div>
                 )}
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -577,14 +543,13 @@ export default function CerebrumVsAllenContent({ faqs }: { faqs: FAQ[] }) {
                 Book Free Demo Class
               </Button>
             </Link>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
+            <button
               onClick={handleWhatsApp}
-              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-4 rounded-xl font-semibold"
+              className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-500 text-white px-6 py-4 rounded-xl font-semibold animate-fadeInUp"
             >
               <MessageCircle className="w-5 h-5" />
               Chat on WhatsApp
-            </motion.button>
+            </button>
             <a href={`tel:${CONTACT_INFO.phone.primary}`}>
               <Button
                 variant="outline"

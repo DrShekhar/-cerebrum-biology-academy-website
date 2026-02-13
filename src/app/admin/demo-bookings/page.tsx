@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   Calendar,
   Clock,
@@ -257,10 +256,8 @@ export default function DemoBookingsPage() {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-500 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -269,13 +266,10 @@ export default function DemoBookingsPage() {
               </div>
               <BookOpen className="w-10 h-10 text-blue-500" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-500"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-yellow-500 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -284,13 +278,10 @@ export default function DemoBookingsPage() {
               </div>
               <Clock className="w-10 h-10 text-yellow-500" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -299,13 +290,10 @@ export default function DemoBookingsPage() {
               </div>
               <CheckCircle className="w-10 h-10 text-blue-600" />
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-600"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+          <div
+            className="bg-white rounded-xl shadow-lg p-6 border-l-4 border-green-600 animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <div>
@@ -314,7 +302,7 @@ export default function DemoBookingsPage() {
               </div>
               <CheckCircle className="w-10 h-10 text-green-600" />
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Filters and Actions */}

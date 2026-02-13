@@ -2,7 +2,6 @@
 
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { RefreshCw, Home, CreditCard, Phone, Mail, ShoppingCart } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { logError } from '@/lib/errors'
@@ -50,7 +49,7 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 to-pink-50 flex items-center justify-center px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <div className="animate-fadeInUp">
           <div className="w-24 h-24 md:w-32 md:h-32 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-8">
             <CreditCard className="w-12 h-12 md:w-16 md:h-16 text-red-500" />
           </div>
@@ -89,13 +88,10 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
               </details>
             </div>
           )}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp"
         >
           <Button size="lg" onClick={handleReset}>
             <RefreshCw className="w-5 h-5 mr-2" />
@@ -113,13 +109,10 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
               Go Home
             </Button>
           </Link>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12"
+        <div
+          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
         >
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">What You Can Do</h2>
           <div className="grid grid-cols-1 gap-4 text-left">
@@ -154,13 +147,10 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 max-w-2xl mx-auto mb-12"
+        <div
+          className="bg-yellow-50 border border-yellow-200 rounded-2xl p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
         >
           <h3 className="text-xl font-semibold text-gray-900 mb-4">
             <span className="text-2xl mr-2">⚠️</span>
@@ -177,13 +167,10 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
             </a>{' '}
             and we'll resolve this for you.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto"
+        <div
+          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp"
         >
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Get Immediate Help</h3>
           <p className="text-gray-600 mb-6">
@@ -212,14 +199,11 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
           <div className="mt-6 text-sm text-gray-500">
             Average response time: Less than 5 minutes
           </div>
-        </motion.div>
+        </div>
 
         {error.digest && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.0 }}
-            className="mt-8 text-center"
+          <div
+            className="mt-8 text-center animate-fadeInUp"
           >
             <div className="text-sm text-gray-500">
               Payment Error ID:{' '}
@@ -230,7 +214,7 @@ export default function PurchaseError({ error, reset }: ErrorProps) {
             <div className="text-xs text-gray-400 mt-1">
               Please share this ID when contacting support
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

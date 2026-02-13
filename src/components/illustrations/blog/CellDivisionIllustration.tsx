@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function CellDivisionIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -129,18 +128,12 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         fill="#1E293B"
         fontSize="18"
         fontWeight="700"
-        initial={animate ? { opacity: 0, y: -10 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         Cell Division: Mitosis vs Meiosis
       </motion.text>
 
       {/* MITOSIS SECTION (Left) */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         {/* Mitosis label card */}
         <rect
@@ -191,8 +184,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           stroke="#94A3B8"
           strokeWidth="2.5"
           markerEnd="url(#arrowhead)"
-          animate={animate ? { opacity: [0.5, 1, 0.5] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         />
         <defs>
           <marker id="arrowhead" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
@@ -214,8 +205,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           />
           {/* Chromosomes condensing */}
           <motion.g
-            animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-            transition={{ duration: 3, repeat: Infinity }}
           >
             <path
               d="M45 42 L45 68"
@@ -269,8 +258,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           <line x1="100" y1="95" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes at metaphase plate */}
           <motion.g
-            animate={animate ? { y: [0, -2, 0, 2, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <path
               d="M44 50 L44 60"
@@ -330,8 +317,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           <line x1="85" y1="55" x2="110" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes separating */}
           <motion.g
-            animate={animate ? { x: [-2, -6, -2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <path
               d="M32 45 L32 65"
@@ -347,8 +332,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             />
           </motion.g>
           <motion.g
-            animate={animate ? { x: [2, 6, 2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <path
               d="M78 45 L78 65"
@@ -372,8 +355,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         <g transform="translate(50, 370)">
           {/* First daughter cell */}
           <motion.g
-            animate={animate ? { x: [-3, 0, -3] } : undefined}
-            transition={{ duration: 3, repeat: Infinity }}
           >
             <ellipse
               cx="55"
@@ -401,8 +382,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           </motion.g>
           {/* Second daughter cell */}
           <motion.g
-            animate={animate ? { x: [3, 0, 3] } : undefined}
-            transition={{ duration: 3, repeat: Infinity }}
           >
             <ellipse
               cx="165"
@@ -452,9 +431,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
 
       {/* MEIOSIS SECTION (Right) */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 20 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         {/* Meiosis label card */}
         <rect
@@ -487,8 +463,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           />
           {/* Bivalents with crossing over */}
           <motion.g
-            animate={animate ? { rotate: [0, 5, 0, -5, 0] } : undefined}
-            transition={{ duration: 4, repeat: Infinity }}
             style={{ transformOrigin: '55px 52px' }}
           >
             {/* Homologous pair 1 with chiasma */}
@@ -544,8 +518,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           />
           {/* Bivalents aligned */}
           <motion.g
-            animate={animate ? { y: [0, -1, 0, 1, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <path
               d="M35 46 L35 58"
@@ -600,8 +572,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             filter="url(#cellShadow)"
           />
           <motion.g
-            animate={animate ? { x: [-2, -5, -2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <path
               d="M25 40 L25 56"
@@ -617,8 +587,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             />
           </motion.g>
           <motion.g
-            animate={animate ? { x: [2, 5, 2] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             <path
               d="M75 40 L75 56"
@@ -649,8 +617,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             stroke="url(#cellMembraneGrad)"
             strokeWidth="2.5"
             filter="url(#cellShadow)"
-            animate={animate ? { x: [-1, 0, -1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <motion.ellipse
             cx="85"
@@ -661,8 +627,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             stroke="url(#cellMembraneGrad)"
             strokeWidth="2.5"
             filter="url(#cellShadow)"
-            animate={animate ? { x: [1, 0, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           />
           <circle cx="30" cy="48" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
           <circle cx="85" cy="48" r="10" fill="url(#nucleusGrad)" opacity="0.7" />
@@ -704,8 +668,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         <g transform="translate(375, 370)">
           {/* Cell 1 */}
           <motion.g
-            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0 }}
           >
             <ellipse
               cx="35"
@@ -727,8 +689,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           </motion.g>
           {/* Cell 2 */}
           <motion.g
-            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
           >
             <ellipse
               cx="100"
@@ -750,8 +710,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           </motion.g>
           {/* Cell 3 */}
           <motion.g
-            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 1.0 }}
           >
             <ellipse
               cx="165"
@@ -773,8 +731,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           </motion.g>
           {/* Cell 4 */}
           <motion.g
-            animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
           >
             <ellipse
               cx="230"
@@ -805,9 +761,6 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
 
       {/* Key differences box at bottom */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.5 }}
       >
         <rect
           x="20"

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function Last6MonthsStrategyIllustration({
@@ -104,9 +103,6 @@ export function Last6MonthsStrategyIllustration({
 
       {/* Title Section with Countdown */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <rect x="150" y="15" width="400" height="55" rx="27" fill="url(#urgencyGrad)" />
         <text x="350" y="40" fontSize="22" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -118,8 +114,6 @@ export function Last6MonthsStrategyIllustration({
           fontSize="12"
           fill="#FEE2E2"
           textAnchor="middle"
-          animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
         >
           180 Days to Transform Your NEET Score
         </motion.text>
@@ -127,9 +121,6 @@ export function Last6MonthsStrategyIllustration({
 
       {/* === LEFT SECTION: Phase Breakdown === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g filter="url(#last6CardShadow)">
           <rect x="20" y="85" width="220" height="320" rx="16" fill="#FFFFFF" />
@@ -145,9 +136,6 @@ export function Last6MonthsStrategyIllustration({
             <motion.g
               key={i}
               transform={`translate(0, ${i * 100})`}
-              initial={animate ? { opacity: 0, x: -20 } : undefined}
-              animate={animate ? { opacity: 1, x: 0 } : undefined}
-              transition={{ delay: 0.4 + i * 0.15, duration: 0.5 }}
             >
               {/* Phase card */}
               <rect
@@ -206,9 +194,6 @@ export function Last6MonthsStrategyIllustration({
                 height="4"
                 rx="2"
                 fill={phase.color}
-                initial={animate ? { width: 0 } : undefined}
-                animate={animate ? { width: (phase.progress / 100) * 130 } : undefined}
-                transition={{ delay: 0.6 + i * 0.2, duration: 0.8 }}
               />
             </motion.g>
           ))}
@@ -217,9 +202,6 @@ export function Last6MonthsStrategyIllustration({
 
       {/* === CENTER SECTION: Weekly Schedule & Milestones === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         {/* Weekly Schedule */}
         <g filter="url(#last6CardShadow)">
@@ -241,9 +223,6 @@ export function Last6MonthsStrategyIllustration({
                 height={day.hours * 10}
                 rx="4"
                 fill={day.day === 'Sat' ? '#8B5CF6' : day.day === 'Sun' ? '#F59E0B' : '#3B82F6'}
-                initial={animate ? { height: 0, y: 90 } : undefined}
-                animate={animate ? { height: day.hours * 10, y: 90 - day.hours * 10 } : undefined}
-                transition={{ delay: 0.5 + i * 0.1, duration: 0.5 }}
               />
               <text x="14" y="100" fontSize="8" fill="#6B7280" textAnchor="middle">
                 {day.day}
@@ -282,9 +261,6 @@ export function Last6MonthsStrategyIllustration({
             stroke="#E5E7EB"
             strokeWidth="4"
             strokeLinecap="round"
-            initial={animate ? { pathLength: 0 } : undefined}
-            animate={animate ? { pathLength: 1 } : undefined}
-            transition={{ delay: 0.6, duration: 1 }}
           />
 
           {/* Milestone points */}
@@ -292,17 +268,12 @@ export function Last6MonthsStrategyIllustration({
             <motion.g
               key={i}
               transform={`translate(${i * 40}, 0)`}
-              initial={animate ? { opacity: 0, y: -10 } : undefined}
-              animate={animate ? { opacity: 1, y: 0 } : undefined}
-              transition={{ delay: 0.8 + i * 0.1 }}
             >
               <motion.circle
                 cx="20"
                 cy="25"
                 r="12"
                 fill={i < 2 ? '#10B981' : i < 4 ? '#3B82F6' : '#8B5CF6'}
-                animate={animate ? { scale: [1, 1.15, 1] } : undefined}
-                transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
               />
               <text x="20" y="29" fontSize="12" textAnchor="middle">
                 {milestone.icon}
@@ -323,9 +294,6 @@ export function Last6MonthsStrategyIllustration({
 
       {/* === RIGHT SECTION: Daily Hours & Focus === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6 }}
       >
         <g filter="url(#last6CardShadow)">
           <rect x="550" y="85" width="130" height="320" rx="16" fill="#FFFFFF" />
@@ -348,8 +316,6 @@ export function Last6MonthsStrategyIllustration({
             fill="#DC2626"
             textAnchor="middle"
             fontWeight="bold"
-            animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
           >
             8-10
           </motion.text>
@@ -371,8 +337,6 @@ export function Last6MonthsStrategyIllustration({
             fill="#2563EB"
             textAnchor="middle"
             fontWeight="bold"
-            animate={animate ? { scale: [1, 1.08, 1] } : undefined}
-            transition={{ duration: 2.5, repeat: Infinity }}
           >
             200+
           </motion.text>
@@ -394,8 +358,6 @@ export function Last6MonthsStrategyIllustration({
             fill="#7C3AED"
             textAnchor="middle"
             fontWeight="bold"
-            animate={animate ? { scale: [1, 1.08, 1] } : undefined}
-            transition={{ duration: 2.2, repeat: Infinity, delay: 0.3 }}
           >
             3x
           </motion.text>
@@ -418,9 +380,6 @@ export function Last6MonthsStrategyIllustration({
 
       {/* === BOTTOM SECTION: Action Items === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.6, duration: 0.6 }}
       >
         <g filter="url(#last6CardShadow)">
           <rect x="20" y="420" width="665" height="85" rx="16" fill="#FFFFFF" />
@@ -443,9 +402,6 @@ export function Last6MonthsStrategyIllustration({
             <motion.g
               key={i}
               transform={`translate(${i * 105}, 0)`}
-              initial={animate ? { opacity: 0, y: 10 } : undefined}
-              animate={animate ? { opacity: 1, y: 0 } : undefined}
-              transition={{ delay: 0.8 + i * 0.08 }}
             >
               <rect
                 x="0"
@@ -476,8 +432,6 @@ export function Last6MonthsStrategyIllustration({
             y="50"
             fontSize="18"
             opacity="0.4"
-            animate={{ y: [50, 40, 50], opacity: [0.3, 0.6, 0.3] }}
-            transition={{ duration: 2.5, repeat: Infinity }}
           >
             ⏰
           </motion.text>
@@ -486,8 +440,6 @@ export function Last6MonthsStrategyIllustration({
             y="55"
             fontSize="16"
             opacity="0.4"
-            animate={{ y: [55, 45, 55], opacity: [0.3, 0.5, 0.3] }}
-            transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
           >
             🔥
           </motion.text>

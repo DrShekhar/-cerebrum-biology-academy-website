@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -202,11 +201,8 @@ export function BiologyTuitionNearMeClient() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <MapPin className="w-5 h-5 mr-2 text-yellow-300" />
@@ -225,17 +221,14 @@ export function BiologyTuitionNearMeClient() {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mb-10">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 animate-fadeInUp"
                 >
                   <stat.icon className="w-6 h-6 mx-auto mb-2 text-yellow-300" />
                   <div className="text-2xl font-bold">{stat.value}</div>
                   <div className="text-xs opacity-80">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -262,19 +255,15 @@ export function BiologyTuitionNearMeClient() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Location Grid */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Find Biology Tuition in Your Area
@@ -282,17 +271,13 @@ export function BiologyTuitionNearMeClient() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We serve 30+ localities across Delhi NCR. All centers are near metro stations.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {locations.map((location, index) => (
-              <motion.div
+              <div
                 key={location.city}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden"
+                className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
               >
                 <div className={`bg-gradient-to-r ${location.color} text-white p-4`}>
                   <div className="flex items-center justify-between">
@@ -329,7 +314,7 @@ export function BiologyTuitionNearMeClient() {
                     ))}
                   </ul>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -338,34 +323,26 @@ export function BiologyTuitionNearMeClient() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Cerebrum for Biology Tuition?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6 text-center"
+                className="bg-gray-50 rounded-xl p-6 text-center animate-fadeInUp"
               >
                 <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-7 h-7 text-green-600" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600 text-sm">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -374,32 +351,24 @@ export function BiologyTuitionNearMeClient() {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-600">Common questions about biology tuition near you</p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-sm"
+                className="bg-white rounded-xl p-6 shadow-sm animate-fadeInUp"
               >
                 <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -409,12 +378,8 @@ export function BiologyTuitionNearMeClient() {
       {isInDelhiNCR === false && (
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-6xl mx-auto px-4">
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
+              className="text-center mb-12 animate-fadeInUp"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Online Biology Tuition for Your Region
@@ -422,17 +387,13 @@ export function BiologyTuitionNearMeClient() {
               <p className="text-xl text-gray-600">
                 We serve students across India with our live online classes
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {onlineRegions.map((region, index) => (
-                <motion.div
+                <div
                   key={region.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100"
+                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-100 animate-fadeInUp"
                 >
                   <div className="flex items-center mb-4">
                     <Wifi className="w-8 h-8 text-green-600 mr-3" />
@@ -445,7 +406,7 @@ export function BiologyTuitionNearMeClient() {
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </Link>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -464,12 +425,8 @@ export function BiologyTuitionNearMeClient() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Find the Best Biology Tuition Near You?
             </h2>
@@ -501,7 +458,7 @@ export function BiologyTuitionNearMeClient() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

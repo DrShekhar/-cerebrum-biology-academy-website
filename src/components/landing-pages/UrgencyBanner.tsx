@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { Clock, Users, AlertCircle } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface UrgencyBannerProps {
   batchStartDate?: string // e.g., "Feb 5, 2026"
   seatsTotal?: number
@@ -47,37 +45,28 @@ export function UrgencyBanner({
   return (
     <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
       {/* Seats Remaining */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="flex items-center justify-center gap-2 rounded-full border-2 border-red-500 bg-red-50 px-4 py-2 sm:px-6 sm:py-3"
+      <div
+        className="flex items-center justify-center gap-2 rounded-full border-2 border-red-500 bg-red-50 px-4 py-2 sm:px-6 sm:py-3 animate-fadeInUp"
       >
         <AlertCircle className="h-5 w-5 text-red-600" />
         <span className="text-sm font-bold text-red-700 sm:text-base">
           Only {seatsRemaining} seats left!
         </span>
-      </motion.div>
+      </div>
 
       {/* Batch Starting */}
       {showCountdown && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-white sm:px-6 sm:py-3"
+        <div
+          className="flex items-center justify-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-white sm:px-6 sm:py-3 animate-fadeInUp"
         >
           <Clock className="h-5 w-5" />
           <span className="text-sm font-semibold sm:text-base">Batch starts: {batchStartDate}</span>
-        </motion.div>
+        </div>
       )}
 
       {/* Seats Filled Progress */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex items-center justify-center gap-2 rounded-full bg-yellow-100 px-4 py-2 sm:px-6 sm:py-3"
+      <div
+        className="flex items-center justify-center gap-2 rounded-full bg-yellow-100 px-4 py-2 sm:px-6 sm:py-3 animate-fadeInUp"
       >
         <Users className="h-5 w-5 text-yellow-800" />
         <span className="text-sm font-semibold text-slate-900 sm:text-base">
@@ -86,7 +75,7 @@ export function UrgencyBanner({
           </span>{' '}
           seats filled
         </span>
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -146,15 +135,10 @@ export function SocialProofNotifications() {
   }, [])
 
   return (
-    <AnimatePresence mode="wait">
-      {currentActivity && (
-        <motion.div
+{currentActivity && (
+        <div
           key={currentActivity.id}
-          initial={{ opacity: 0, y: 50, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: -20, scale: 0.9 }}
-          transition={{ duration: 0.4 }}
-          className="fixed bottom-24 left-4 z-50 max-w-sm rounded-xl border border-slate-200 bg-white p-4 shadow-2xl sm:bottom-8 sm:left-8"
+          className="fixed bottom-24 left-4 z-50 max-w-sm rounded-xl border border-slate-200 bg-white p-4 shadow-2xl sm:bottom-8 sm:left-8 animate-fadeInUp"
           onClick={() => setCurrentActivity(null)}
         >
           <div className="flex items-start gap-3">
@@ -179,8 +163,7 @@ export function SocialProofNotifications() {
               ✕
             </button>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }

@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
-
 const shimmerAnimation = {
   backgroundPosition: ['200% 0', '-200% 0'],
   transition: {
@@ -22,57 +20,51 @@ export function MetricCardSkeleton() {
       aria-label="Loading metric card"
     >
       <div className="flex items-center justify-between mb-4">
-        <motion.div
-          className="w-10 h-10 rounded-lg"
+        <div
+          className="w-10 h-10 rounded-lg animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
         <div className="flex items-center space-x-1">
-          <motion.div
-            className="w-3 h-3 rounded"
+          <div
+            className="w-3 h-3 rounded animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
-          <motion.div
-            className="h-4 rounded w-12"
+          <div
+            className="h-4 rounded w-12 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         </div>
       </div>
 
-      <motion.div
-        className="h-4 rounded w-32 mb-1"
+      <div
+        className="h-4 rounded w-32 mb-1 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
-      <motion.div
-        className="h-8 rounded w-24 mb-1"
+      <div
+        className="h-8 rounded w-24 mb-1 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
-      <motion.div
-        className="h-3 rounded w-28"
+      <div
+        className="h-3 rounded w-28 animate-fadeInUp"
         style={{
           background: shimmerGradient,
           backgroundSize: '200% 100%',
         }}
-        animate={shimmerAnimation}
       />
       <span className="sr-only">Loading...</span>
     </div>
@@ -87,61 +79,55 @@ export function SystemHealthSkeleton() {
       aria-label="Loading system health"
     >
       <div className="flex items-center mb-4">
-        <motion.div
-          className="w-5 h-5 rounded mr-2"
+        <div
+          className="w-5 h-5 rounded mr-2 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
-        <motion.div
-          className="h-6 rounded w-32"
+        <div
+          className="h-6 rounded w-32 animate-fadeInUp"
           style={{
             background: shimmerGradient,
             backgroundSize: '200% 100%',
           }}
-          animate={shimmerAnimation}
         />
       </div>
       <div className="space-y-3">
         {[1, 2, 3, 4, 5, 6].map((i) => (
           <div key={i} className="flex items-center justify-between">
             <div className="flex-1">
-              <motion.div
-                className="h-4 rounded w-32 mb-1"
+              <div
+                className="h-4 rounded w-32 mb-1 animate-fadeInUp"
                 style={{
                   background: shimmerGradient,
                   backgroundSize: '200% 100%',
                 }}
-                animate={shimmerAnimation}
               />
               <div className="flex items-center space-x-2 mt-1">
-                <motion.div
-                  className="w-24 h-2 rounded-full"
+                <div
+                  className="w-24 h-2 rounded-full animate-fadeInUp"
                   style={{
                     background: shimmerGradient,
                     backgroundSize: '200% 100%',
                   }}
-                  animate={shimmerAnimation}
                 />
-                <motion.div
-                  className="h-3 rounded w-12"
+                <div
+                  className="h-3 rounded w-12 animate-fadeInUp"
                   style={{
                     background: shimmerGradient,
                     backgroundSize: '200% 100%',
                   }}
-                  animate={shimmerAnimation}
                 />
               </div>
             </div>
-            <motion.div
-              className="w-2 h-2 rounded-full"
+            <div
+              className="w-2 h-2 rounded-full animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
           </div>
         ))}
@@ -156,39 +142,35 @@ export function RealTimeMetricsSkeleton() {
     <div className="space-y-6" role="status" aria-label="Loading real-time metrics">
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <motion.div
-            className="h-5 rounded w-24"
+          <div
+            className="h-5 rounded w-24 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
-          <motion.div
-            className="h-4 rounded w-32"
+          <div
+            className="h-4 rounded w-32 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         </div>
         <div className="flex items-center space-x-3">
-          <motion.div
-            className="h-10 rounded-lg w-32"
+          <div
+            className="h-10 rounded-lg w-32 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
-          <motion.div
-            className="h-10 rounded-lg w-40"
+          <div
+            className="h-10 rounded-lg w-40 animate-fadeInUp"
             style={{
               background: shimmerGradient,
               backgroundSize: '200% 100%',
             }}
-            animate={shimmerAnimation}
           />
         </div>
       </div>
@@ -203,41 +185,37 @@ export function RealTimeMetricsSkeleton() {
         <SystemHealthSkeleton />
         <div className="lg:col-span-2">
           <div className="bg-white rounded-xl p-6 border border-gray-200 shadow-sm">
-            <motion.div
-              className="h-6 rounded w-40 mb-4"
+            <div
+              className="h-6 rounded w-40 mb-4 animate-fadeInUp"
               style={{
                 background: shimmerGradient,
                 backgroundSize: '200% 100%',
               }}
-              animate={shimmerAnimation}
             />
             <div className="space-y-3">
               {[1, 2, 3, 4, 5].map((i) => (
                 <div key={i} className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg">
-                  <motion.div
-                    className="w-4 h-4 rounded flex-shrink-0 mt-0.5"
+                  <div
+                    className="w-4 h-4 rounded flex-shrink-0 mt-0.5 animate-fadeInUp"
                     style={{
                       background: shimmerGradient,
                       backgroundSize: '200% 100%',
                     }}
-                    animate={shimmerAnimation}
                   />
                   <div className="flex-1 min-w-0 space-y-2">
-                    <motion.div
-                      className="h-4 rounded w-24"
+                    <div
+                      className="h-4 rounded w-24 animate-fadeInUp"
                       style={{
                         background: shimmerGradient,
                         backgroundSize: '200% 100%',
                       }}
-                      animate={shimmerAnimation}
                     />
-                    <motion.div
-                      className="h-3 rounded w-full"
+                    <div
+                      className="h-3 rounded w-full animate-fadeInUp"
                       style={{
                         background: shimmerGradient,
                         backgroundSize: '200% 100%',
                       }}
-                      animate={shimmerAnimation}
                     />
                   </div>
                 </div>

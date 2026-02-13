@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   Clock,
   FileText,
@@ -221,11 +220,8 @@ export default function StudentTestsPage() {
         {/* Stats Cards */}
         {stats && (
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -239,13 +235,10 @@ export default function StudentTestsPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -259,13 +252,10 @@ export default function StudentTestsPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -279,13 +269,10 @@ export default function StudentTestsPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -299,13 +286,10 @@ export default function StudentTestsPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <Card className="hover:shadow-md transition-shadow">
                 <CardContent className="p-4">
                   <div className="flex items-center space-x-3">
@@ -319,7 +303,7 @@ export default function StudentTestsPage() {
                   </div>
                 </CardContent>
               </Card>
-            </motion.div>
+            </div>
           </div>
         )}
 
@@ -371,12 +355,9 @@ export default function StudentTestsPage() {
         ) : (
           <div className="space-y-4">
             {tests.map((test, index) => (
-              <motion.div
+              <div
                 key={test.submissionId}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-              >
+               className="animate-fadeInUp">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
@@ -474,7 +455,7 @@ export default function StudentTestsPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             ))}
           </div>
         )}

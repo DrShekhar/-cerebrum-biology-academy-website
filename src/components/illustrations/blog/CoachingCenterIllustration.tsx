@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function CoachingCenterIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -26,8 +25,6 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
 
       {/* Top 10 badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <circle cx="200" cy="45" r="30" fill="#F97316" />
         <text x="200" y="42" fontSize="10" fill="#FFFFFF" textAnchor="middle">
@@ -40,8 +37,6 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
 
       {/* Building 1 - Gold (1st place) */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect x="60" y="90" width="60" height="80" rx="6" fill="#F59E0B" />
         <rect x="70" y="100" width="15" height="15" rx="2" fill="#FEF3C7" />
@@ -56,8 +51,6 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
 
       {/* Building 2 - Silver */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
       >
         <rect x="140" y="100" width="55" height="70" rx="6" fill="#9CA3AF" />
         <rect x="150" y="110" width="12" height="12" rx="2" fill="#F3F4F6" />
@@ -72,8 +65,6 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
 
       {/* Building 3 - Bronze */}
       <motion.g
-        animate={animate ? { y: [-2, 2, -2] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
       >
         <rect x="215" y="105" width="50" height="65" rx="6" fill="#B45309" />
         <rect x="223" y="115" width="12" height="12" rx="2" fill="#FEF3C7" />
@@ -97,15 +88,11 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
           rx="3"
           fill="#6366F1"
           opacity={0.7 - i * 0.15}
-          animate={animate ? { y: [-1, 1, -1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, delay: 0.5 + i * 0.1 }}
         />
       ))}
 
       {/* Cerebrum highlighted */}
       <motion.g
-        animate={animate ? { scale: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <rect x="40" y="190" width="140" height="60" rx="8" fill="#14B8A6" />
         <text x="110" y="215" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -121,8 +108,6 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
 
       {/* Location pin */}
       <motion.g
-        animate={animate ? { y: [-3, 3, -3] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <path
           d="M300 200 C300 185 285 180 285 195 C285 205 300 215 300 215 C300 215 315 205 315 195 C315 180 300 185 300 200"
@@ -141,8 +126,6 @@ export function CoachingCenterIllustration({ className = '', animate = true }: I
         r="6"
         fill="#F97316"
         opacity="0.5"
-        animate={animate ? { scale: [1, 1.3, 1] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       />
     </Wrapper>
   )

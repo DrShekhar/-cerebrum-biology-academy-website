@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-
 interface Message {
   id: string
   content: string
@@ -121,12 +119,9 @@ export default function ClaudeChatStandalone() {
       }}
     >
       {/* Header */}
-      <motion.div
-        className="p-6 text-center"
+      <div
+        className="p-6 text-center animate-fadeInUp"
         style={neomorphStyles.shadowNeomorphSoft}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
       >
         <div className="flex items-center justify-center space-x-4 mb-4">
           <div
@@ -159,7 +154,7 @@ export default function ClaudeChatStandalone() {
             </button>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* Chat Container */}
       <div className="max-w-4xl mx-auto p-6">
@@ -170,15 +165,10 @@ export default function ClaudeChatStandalone() {
             ...neomorphStyles.shadowNeomorphInset,
           }}
         >
-          <AnimatePresence>
-            {messages.map((message) => (
-              <motion.div
+{messages.map((message) => (
+              <div
                 key={message.id}
                 className={`mb-4 flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
               >
                 <div
                   className={`max-w-xs lg:max-w-md px-4 py-3 rounded-2xl ${
@@ -209,15 +199,11 @@ export default function ClaudeChatStandalone() {
                     )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </AnimatePresence>
-
-          {isThinking && (
-            <motion.div
-              className="mb-4 flex justify-start"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+{isThinking && (
+            <div
+              className="mb-4 flex justify-start animate-fadeInUp"
             >
               <div
                 className="px-4 py-3 rounded-2xl text-gray-800"
@@ -238,7 +224,7 @@ export default function ClaudeChatStandalone() {
                   ></div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           <div ref={messagesEndRef} />
@@ -302,20 +288,18 @@ export default function ClaudeChatStandalone() {
             { title: 'Shekhar Sir Voice', desc: 'AI voice synthesis technology', icon: '🗣️' },
             { title: 'Image Analysis', desc: 'Upload biology diagrams', icon: '📷' },
           ].map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              className="p-6 rounded-xl text-center"
+              className="p-6 rounded-xl text-center animate-fadeInUp"
               style={{
                 background: 'linear-gradient(145deg, #ffffff, #f0f0f3)',
                 ...neomorphStyles.shadowNeomorphSoft,
               }}
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: 'spring', stiffness: 300 }}
             >
               <div className="text-3xl mb-3">{feature.icon}</div>
               <h3 className="font-semibold text-gray-800 mb-2">{feature.title}</h3>
               <p className="text-sm text-gray-600">{feature.desc}</p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

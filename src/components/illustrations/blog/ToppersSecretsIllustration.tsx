@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function ToppersSecretsIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -111,17 +110,12 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             cy={20 + (i % 3) * 10}
             r={4 + (i % 2) * 2}
             fill="#F59E0B"
-            animate={animate ? { opacity: [0.3, 0.8, 0.3], scale: [0.8, 1.2, 0.8] } : undefined}
-            transition={{ duration: 2 + i * 0.2, repeat: Infinity, delay: i * 0.15 }}
           />
         ))}
       </g>
 
       {/* Title Section */}
       <motion.g
-        initial={animate ? { opacity: 0, y: -20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.2, duration: 0.6 }}
       >
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
         <text x="350" y="45" fontSize="24" fill="#92400E" textAnchor="middle" fontWeight="bold">
@@ -134,9 +128,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
 
       {/* === LEFT SECTION: Trophy & Achievements === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: -30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.3, duration: 0.6 }}
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="20" y="85" width="200" height="280" rx="16" fill="#FFFFFF" />
@@ -148,8 +139,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
 
         {/* Trophy illustration */}
         <motion.g
-          animate={animate ? { y: [-3, 3, -3] } : undefined}
-          transition={{ duration: 3, repeat: Infinity }}
         >
           {/* Trophy cup */}
           <path d="M90 130 L100 185 L140 185 L150 130 Z" fill="url(#trophyGrad)" />
@@ -175,8 +164,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             fill="#FFFFFF"
             textAnchor="middle"
             fontWeight="bold"
-            animate={animate ? { opacity: [0.8, 1, 0.8] } : undefined}
-            transition={{ duration: 1.5, repeat: Infinity }}
           >
             1
           </motion.text>
@@ -191,9 +178,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             <motion.g
               key={i}
               transform={`translate(0, ${18 + i * 35})`}
-              initial={animate ? { opacity: 0, x: -10 } : undefined}
-              animate={animate ? { opacity: 1, x: 0 } : undefined}
-              transition={{ delay: 0.5 + i * 0.15 }}
             >
               <rect x="0" y="0" width="170" height="30" rx="8" fill="#FEF3C7" />
               <text x="10" y="13" fontSize="8" fill="#92400E" fontWeight="bold">
@@ -213,8 +197,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
                 cy="15"
                 r="8"
                 fill="#FCD34D"
-                animate={animate ? { scale: [1, 1.15, 1] } : undefined}
-                transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.3 }}
               />
               <text x="155" y="18" fontSize="10" textAnchor="middle">
                 🥇
@@ -226,9 +208,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
 
       {/* === CENTER SECTION: 6 Secrets Grid === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 20 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.4, duration: 0.6 }}
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="235" y="85" width="310" height="280" rx="16" fill="#FFFFFF" />
@@ -244,9 +223,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             <motion.g
               key={i}
               transform={`translate(${(i % 2) * 145}, ${Math.floor(i / 2) * 80})`}
-              initial={animate ? { opacity: 0, scale: 0.9 } : undefined}
-              animate={animate ? { opacity: 1, scale: 1 } : undefined}
-              transition={{ delay: 0.5 + i * 0.1, duration: 0.4 }}
             >
               {/* Secret card */}
               <rect
@@ -295,8 +271,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
                 rx="10"
                 fill={secret.color}
                 opacity="0"
-                animate={animate ? { opacity: [0, 0.1, 0] } : undefined}
-                transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
               />
             </motion.g>
           ))}
@@ -305,9 +279,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
 
       {/* === RIGHT SECTION: Success Metrics === */}
       <motion.g
-        initial={animate ? { opacity: 0, x: 30 } : undefined}
-        animate={animate ? { opacity: 1, x: 0 } : undefined}
-        transition={{ delay: 0.5, duration: 0.6 }}
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="560" y="85" width="125" height="280" rx="16" fill="#FFFFFF" />
@@ -323,9 +294,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             <motion.g
               key={i}
               transform={`translate(0, ${i * 85})`}
-              initial={animate ? { opacity: 0, y: 10 } : undefined}
-              animate={animate ? { opacity: 1, y: 0 } : undefined}
-              transition={{ delay: 0.6 + i * 0.15 }}
             >
               <rect x="0" y="0" width="105" height="75" rx="10" fill={`${metric.color}15`} />
 
@@ -347,8 +315,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
                 fill={metric.color}
                 textAnchor="middle"
                 fontWeight="bold"
-                animate={animate ? { scale: [1, 1.05, 1] } : undefined}
-                transition={{ duration: 2, repeat: Infinity, delay: i * 0.3 }}
               >
                 {metric.value}
               </motion.text>
@@ -363,9 +329,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
 
       {/* === BOTTOM SECTION: Daily Routine Timeline === */}
       <motion.g
-        initial={animate ? { opacity: 0, y: 30 } : undefined}
-        animate={animate ? { opacity: 1, y: 0 } : undefined}
-        transition={{ delay: 0.6, duration: 0.6 }}
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="20" y="380" width="665" height="125" rx="16" fill="#FFFFFF" />
@@ -386,9 +349,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             stroke="#E5E7EB"
             strokeWidth="4"
             strokeLinecap="round"
-            initial={animate ? { pathLength: 0 } : undefined}
-            animate={animate ? { pathLength: 1 } : undefined}
-            transition={{ delay: 0.8, duration: 1 }}
           />
 
           {/* Timeline points */}
@@ -404,17 +364,12 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             <motion.g
               key={i}
               transform={`translate(${point.x}, 0)`}
-              initial={animate ? { opacity: 0, y: -10 } : undefined}
-              animate={animate ? { opacity: 1, y: 0 } : undefined}
-              transition={{ delay: 0.9 + i * 0.1 }}
             >
               <motion.circle
                 cx="20"
                 cy="30"
                 r="12"
                 fill="#F59E0B"
-                animate={animate ? { scale: [1, 1.15, 1] } : undefined}
-                transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
               />
               <text x="20" y="34" fontSize="12" textAnchor="middle">
                 {point.icon}
@@ -440,8 +395,6 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               y={50 + (i % 2) * 430}
               fontSize="16"
               opacity="0.4"
-              animate={{ y: [0, -10, 0], opacity: [0.3, 0.6, 0.3], rotate: [0, 15, 0] }}
-              transition={{ duration: 3 + i * 0.5, repeat: Infinity, delay: i * 0.3 }}
             >
               ⭐
             </motion.text>

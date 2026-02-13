@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import {
   Users,
   MessageSquare,
@@ -372,11 +371,9 @@ export function StudentCommunity() {
                 </div>
               ) : (
                 filteredPosts.map((post) => (
-                  <motion.div
+                  <div
                     key={post.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="bg-white rounded-lg shadow-sm border p-4 hover:shadow-md transition-shadow"
+                    className="bg-white rounded-lg shadow-sm border p-4 hover:shadow-md transition-shadow animate-fadeInUp"
                   >
                     {/* Post Header */}
                     <div className="flex items-start justify-between mb-3">
@@ -471,7 +468,7 @@ export function StudentCommunity() {
                         />
                       </button>
                     </div>
-                  </motion.div>
+                  </div>
                 ))
               )}
             </div>
@@ -568,11 +565,8 @@ export function StudentCommunity() {
               </div>
             ) : (
               leaderboard.map((student) => (
-                <motion.div
+                <div
                   key={student.rank}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: student.rank * 0.1 }}
                   className={`flex items-center justify-between p-4 rounded-lg border-2 transition-all ${
                     student.rank <= 3
                       ? 'bg-gold-50 border-gold-200'
@@ -621,7 +615,7 @@ export function StudentCommunity() {
                     <div className="text-2xl font-bold text-blue-600">{student.points}</div>
                     <div className="text-sm text-gray-500">points</div>
                   </div>
-                </motion.div>
+                </div>
               ))
             )}
           </div>

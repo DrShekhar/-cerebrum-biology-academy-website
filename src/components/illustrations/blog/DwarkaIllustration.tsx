@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function DwarkaIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -34,9 +33,6 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
 
       {/* Airplane in sky */}
       <motion.g
-        initial={animate ? { x: -100, y: 50 } : undefined}
-        animate={animate ? { x: 450, y: -20 } : undefined}
-        transition={{ delay: 1, duration: 8, repeat: Infinity, repeatDelay: 3 }}
       >
         <path d="M0 25 L30 20 L35 10 L40 20 L60 25 L40 27 L35 35 L30 27 Z" fill="#9CA3AF" />
         <circle cx="35" cy="22" r="3" fill="#E5E7EB" />
@@ -45,9 +41,6 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
       {/* Dwarka Sector buildings */}
       {/* Sector 10 */}
       <motion.g
-        initial={animate ? { y: 30, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.3, duration: 0.5 }}
       >
         <rect x="30" y="100" width="55" height="130" rx="4" fill="#F59E0B" />
         <rect x="35" y="105" width="45" height="18" fill="#FEF3C7" />
@@ -65,9 +58,6 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
 
       {/* Main Coaching Center - Sector 12 */}
       <motion.g
-        initial={animate ? { y: 30, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.4, duration: 0.5 }}
       >
         <rect x="110" y="70" width="90" height="160" rx="4" fill="#8B5CF6" />
         <rect x="115" y="75" width="80" height="35" fill="#F3E8FF" />
@@ -93,9 +83,6 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
 
       {/* Sector 21 */}
       <motion.g
-        initial={animate ? { y: 30, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.5, duration: 0.5 }}
       >
         <rect x="220" y="110" width="60" height="120" rx="4" fill="#EC4899" />
         <rect x="225" y="115" width="50" height="18" fill="#FCE7F3" />
@@ -113,9 +100,6 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
 
       {/* Dwarka Mor Metro */}
       <motion.g
-        initial={animate ? { y: 30, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.6, duration: 0.5 }}
       >
         <rect x="300" y="130" width="70" height="100" rx="4" fill="#3B82F6" />
         <rect x="305" y="135" width="60" height="25" fill="#DBEAFE" />
@@ -131,9 +115,6 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
 
       {/* Metro line */}
       <motion.g
-        initial={animate ? { opacity: 0 } : undefined}
-        animate={animate ? { opacity: 1 } : undefined}
-        transition={{ delay: 0.7, duration: 0.5 }}
       >
         <rect x="0" y="235" width="400" height="8" fill="#3B82F6" />
         <text x="200" y="260" textAnchor="middle" fill="#374151" fontSize="9">
@@ -143,17 +124,12 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
 
       {/* Location pin */}
       <motion.g
-        initial={animate ? { y: -20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.8, duration: 0.5, type: 'spring' }}
       >
         <motion.circle
           cx="155"
           cy="45"
           r="18"
           fill="#EF4444"
-          animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-          transition={{ duration: 2, repeat: Infinity }}
         />
         <path d="M155 27 L155 10" stroke="#EF4444" strokeWidth="3" />
         <circle cx="155" cy="45" r="7" fill="#FFF" />
@@ -161,9 +137,6 @@ export function DwarkaIllustration({ className = '', animate = true }: Illustrat
 
       {/* Title */}
       <motion.g
-        initial={animate ? { y: -20, opacity: 0 } : undefined}
-        animate={animate ? { y: 0, opacity: 1 } : undefined}
-        transition={{ delay: 0.1, duration: 0.4 }}
       >
         <rect x="90" y="270" width="220" height="25" rx="6" fill="#1F2937" />
         <text x="200" y="287" textAnchor="middle" fill="#FFF" fontSize="11" fontWeight="600">

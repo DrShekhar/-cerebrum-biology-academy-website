@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Settings, BookOpen, Clock, Coffee, Moon } from 'lucide-react'
 import type { DisplayMode } from '@/lib/study-with-me/types'
 
@@ -65,10 +64,7 @@ export function SessionSettings({
   if (mode === 'obs') return null
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.3 }}
+    <div
       className={`bg-white rounded-xl shadow-xl overflow-hidden ${className}`}
     >
       <button
@@ -81,19 +77,13 @@ export function SessionSettings({
             Session Settings
           </h3>
         </div>
-        <motion.span animate={{ rotate: isExpanded ? 180 : 0 }} className="text-gray-400">
+        <span className="text-gray-400 animate-fadeInUp">
           ▼
-        </motion.span>
+        </span>
       </button>
 
-      <motion.div
-        initial={false}
-        animate={{
-          height: isExpanded ? 'auto' : 0,
-          opacity: isExpanded ? 1 : 0,
-        }}
-        transition={{ duration: 0.3 }}
-        className="overflow-hidden"
+      <div
+        className="overflow-hidden animate-fadeInUp"
       >
         <div className="p-4 pt-0 space-y-4">
           {/* Topic Name */}
@@ -182,7 +172,7 @@ export function SessionSettings({
             Changes apply to the next Pomodoro cycle
           </p>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }

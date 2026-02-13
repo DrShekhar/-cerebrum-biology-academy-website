@@ -8,7 +8,6 @@ import { Card, CardContent } from '@/components/ui/Card'
 import { PaymentStatusBadge } from './PaymentStatusBadge'
 import { InvoiceDownloadButton } from './InvoiceDownloadButton'
 import { Calendar, CreditCard, FileText, Hash, Building2 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import type { StudentPayment, FeePayment } from '@/types/payment'
 
 interface PaymentHistoryCardProps {
@@ -87,11 +86,8 @@ export function PaymentHistoryCard({ payment, index = 0 }: PaymentHistoryCardPro
   const isCompleted = payment.status === 'COMPLETED' || payment.status === 'PAID'
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.05 }}
-    >
+    <div
+     className="animate-fadeInUp">
       <Card className="hover:shadow-lg transition-shadow">
         <CardContent className="p-6">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -169,6 +165,6 @@ export function PaymentHistoryCard({ payment, index = 0 }: PaymentHistoryCardPro
           )}
         </CardContent>
       </Card>
-    </motion.div>
+    </div>
   )
 }

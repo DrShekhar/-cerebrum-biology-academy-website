@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Menu,
   X,
@@ -337,13 +336,9 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
         </div>
 
         {/* Quick Actions Dropdown */}
-        <AnimatePresence>
-          {showQuickActions && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className="absolute right-4 top-16 bg-white border rounded-lg shadow-lg z-50 w-48"
+{showQuickActions && (
+            <div
+              className="absolute right-4 top-16 bg-white border rounded-lg shadow-lg z-50 w-48 animate-fadeInUp"
             >
               <div className="py-2">
                 <button
@@ -370,19 +365,14 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                   Import Configuration
                 </button>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       <div className="flex flex-1 overflow-hidden">
         {/* Mobile Navigation Sidebar */}
-        <AnimatePresence>
-          {(showMobileMenu || !isMobile) && (
-            <motion.div
-              initial={isMobile ? { x: -280 } : { x: 0 }}
-              animate={{ x: 0 }}
-              exit={isMobile ? { x: -280 } : { x: 0 }}
+{(showMobileMenu || !isMobile) && (
+            <div
               className={`${isMobile ? 'fixed inset-y-0 left-0 z-30' : 'relative'} w-70 bg-white border-r overflow-y-auto`}
             >
               <div className="p-4 space-y-4">
@@ -406,14 +396,9 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                         <ChevronDown className="w-4 h-4" />
                       )}
                     </button>
-
-                    <AnimatePresence>
-                      {group.isExpanded && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden ml-4 space-y-1"
+{group.isExpanded && (
+                        <div
+                          className="overflow-hidden ml-4 space-y-1 animate-fadeInUp"
                         >
                           {group.tabs.map((tab) => (
                             <button
@@ -438,35 +423,26 @@ const MobileOptimizedTestCreator: React.FC<MobileOptimizedTestCreatorProps> = ({
                               </div>
                             </button>
                           ))}
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
-                  </div>
+</div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Main Content Area */}
+{/* Main Content Area */}
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Tab Content */}
           <div className="flex-1 overflow-y-auto">
             <div
               className={`p-4 ${viewMode === 'mobile' ? 'max-w-sm mx-auto' : viewMode === 'tablet' ? 'max-w-3xl mx-auto' : ''}`}
             >
-              <AnimatePresence mode="wait">
-                <motion.div
+<div
                   key={activeTab}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.2 }}
-                >
+                 className="animate-fadeInUp">
                   {getCurrentTab().content}
-                </motion.div>
-              </AnimatePresence>
-            </div>
+                </div>
+</div>
           </div>
 
           {/* Mobile Navigation Footer */}

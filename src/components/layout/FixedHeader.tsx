@@ -3,7 +3,6 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, Menu, X } from 'lucide-react'
 import { getPhoneLink } from '@/lib/constants/contactInfo'
 import { handlePhoneClickTracking } from '@/components/ui/TrackedPhoneLink'
@@ -85,14 +84,9 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
         </div>
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {mobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.2 }}
-              className="md:hidden overflow-hidden"
+{mobileMenuOpen && (
+            <div
+              className="md:hidden overflow-hidden animate-fadeInUp"
             >
               <div className="py-4 space-y-4 border-t border-slate-700 mt-4">
                 {navLinks.map((link) => (
@@ -127,10 +121,9 @@ export function FixedHeader({ className = '' }: FixedHeaderProps) {
                   </button>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </nav>
+</nav>
     </header>
   )
 }

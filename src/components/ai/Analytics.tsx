@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   BarChart3,
   TrendingUp,
@@ -457,10 +456,8 @@ const Analytics: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-blue-600 rounded-xl">
             <BarChart3 className="w-8 h-8 text-white" />
@@ -468,7 +465,7 @@ const Analytics: React.FC = () => {
           <h1 className="text-3xl font-bold bg-blue-600 bg-clip-text text-transparent">
             Test Analytics
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Comprehensive analytics dashboard with score predictions, difficulty analysis, time
           estimations, and learning outcome insights
@@ -593,17 +590,13 @@ const Analytics: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {analyticsData && (
+{analyticsData && (
           <>
             {/* Expected Score Distribution */}
             {activeTab === 'scores' && (
-              <motion.div
+              <div
                 key="scores"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
               >
                 {/* Score Distribution Chart */}
                 <div className="bg-white rounded-xl p-6 border">
@@ -699,17 +692,14 @@ const Analytics: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Difficulty Analysis */}
             {activeTab === 'difficulty' && (
-              <motion.div
+              <div
                 key="difficulty"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Difficulty Overview */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -864,17 +854,14 @@ const Analytics: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Time Required Estimation */}
             {activeTab === 'time' && (
-              <motion.div
+              <div
                 key="time"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+                className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
               >
                 {/* Time Distribution */}
                 <div className="bg-white rounded-xl p-6 border">
@@ -1003,17 +990,14 @@ const Analytics: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Topic Balance Report */}
             {activeTab === 'topics' && (
-              <motion.div
+              <div
                 key="topics"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Topic Balance Overview */}
                 <div className="bg-white rounded-xl p-6 border">
@@ -1203,17 +1187,14 @@ const Analytics: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Learning Outcome Mapping */}
             {activeTab === 'outcomes' && (
-              <motion.div
+              <div
                 key="outcomes"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Learning Outcomes Overview */}
                 <div className="bg-white rounded-xl p-6 border">
@@ -1407,17 +1388,14 @@ const Analytics: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
 
             {/* Historical Performance Comparison */}
             {activeTab === 'history' && (
-              <motion.div
+              <div
                 key="history"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: 20 }}
-                className="space-y-6"
+                className="space-y-6 animate-fadeInUp"
               >
                 {/* Historical Trends */}
                 <div className="bg-white rounded-xl p-6 border">
@@ -1588,12 +1566,11 @@ const Analytics: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )}
           </>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 

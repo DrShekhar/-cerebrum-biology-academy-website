@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -205,11 +204,8 @@ export default function PageContent() {
         <div className="absolute inset-0 bg-[url('/patterns/grid.svg')] opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <GraduationCap className="w-5 h-5 mr-2 text-yellow-300" />
@@ -273,19 +269,16 @@ export default function PageContent() {
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
               {stats.map((stat, index) => (
-                <motion.div
+                <div
                   key={stat.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-4 animate-fadeInUp"
                 >
                   <div className="text-xl md:text-2xl font-bold text-yellow-300">{stat.value}</div>
                   <div className="text-xs md:text-sm opacity-80">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -330,11 +323,8 @@ export default function PageContent() {
       {/* Target Audience Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Users className="w-4 h-4 mr-2" />
@@ -346,16 +336,12 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Whether you're a current BSc student, a NEET repeater, or preparing for your first attempt
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* BSc Biology Students */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-colors"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-purple-200 hover:border-purple-400 transition-colors animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="bg-purple-100 p-4 rounded-xl">
@@ -388,15 +374,11 @@ export default function PageContent() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
             {/* NEET Repeaters */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-orange-200 hover:border-orange-400 transition-colors"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-orange-200 hover:border-orange-400 transition-colors animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="bg-orange-100 p-4 rounded-xl">
@@ -429,15 +411,11 @@ export default function PageContent() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
             {/* Career Changers */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-colors"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border-2 border-blue-200 hover:border-blue-400 transition-colors animate-fadeInUp"
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="bg-blue-100 p-4 rounded-xl">
@@ -470,7 +448,7 @@ export default function PageContent() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -478,12 +456,8 @@ export default function PageContent() {
       {/* DU Colleges Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Students from Top DU North Campus Colleges
@@ -491,17 +465,13 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We coach BSc Biology students from all major Delhi University colleges
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {duColleges.map((college, index) => (
-              <motion.div
+              <div
                 key={college.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300"
+                className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 border border-indigo-100 hover:shadow-lg transition-all duration-300 animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center">
@@ -531,32 +501,26 @@ export default function PageContent() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mt-10"
+          <div
+            className="text-center mt-10 animate-fadeInUp"
           >
             <p className="text-gray-600 text-lg">
               Students from <strong>St. Stephen's, Daulat Ram, Gargi, Dyal Singh</strong> and
               other DU colleges also join us for NEET preparation
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Batch Timings Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Clock className="w-4 h-4 mr-2" />
@@ -568,16 +532,12 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Choose a batch that fits your college schedule - we have options for everyone
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {batchOptions.map((batch, index) => (
-              <motion.div
+              <div
                 key={batch.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`bg-white rounded-xl shadow-lg p-6 border-t-4 hover:shadow-xl transition-all duration-300 ${
                   batch.color === 'purple' ? 'border-purple-500' :
                   batch.color === 'blue' ? 'border-blue-500' :
@@ -615,7 +575,7 @@ export default function PageContent() {
                   <p className="text-xs text-gray-500">Ideal for:</p>
                   <p className="text-sm font-medium text-gray-900">{batch.ideal}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -624,11 +584,8 @@ export default function PageContent() {
       {/* Free NEET Tools Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-green-50 to-emerald-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <BookOpen className="w-4 h-4 mr-2" />
@@ -640,17 +597,13 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Start your NEET preparation with our free resources - no registration required
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {freeTools.map((tool, index) => (
-              <motion.div
+              <div
                 key={tool.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
+               className="animate-fadeInUp">
                 <Link href={tool.link}>
                   <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-green-100 group h-full">
                     <div className="bg-green-100 p-3 rounded-xl inline-flex mb-4 group-hover:bg-green-200 transition-colors">
@@ -666,7 +619,7 @@ export default function PageContent() {
                     </div>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -675,12 +628,8 @@ export default function PageContent() {
       {/* Why Choose Us */}
       <section className="py-16 md:py-20 bg-indigo-600 text-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Why DU Students Choose Cerebrum?
@@ -688,7 +637,7 @@ export default function PageContent() {
             <p className="text-lg opacity-90">
               Specialized features designed for Delhi University students
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-4">
             {[
@@ -705,17 +654,13 @@ export default function PageContent() {
               'Personalized mentoring & doubt sessions',
               'Comprehensive NCERT-focused material',
             ].map((item, index) => (
-              <motion.div
+              <div
                 key={item}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4"
+                className="flex items-center bg-white/10 backdrop-blur-sm rounded-lg p-4 animate-fadeInUp"
               >
                 <CheckCircle className="w-6 h-6 text-yellow-300 mr-3 flex-shrink-0" />
                 <span>{item}</span>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -724,11 +669,8 @@ export default function PageContent() {
       {/* Success Stories */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               <Trophy className="w-4 h-4 mr-2" />
@@ -740,7 +682,7 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Real transformation stories of BSc students and repeaters who achieved their MBBS dream
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
             {[
@@ -781,13 +723,9 @@ export default function PageContent() {
                 quote: "I was skeptical about preparing for NEET during BSc, but the weekend batch made it possible. Saturday-Sunday classes covered the entire syllabus without affecting my Hindu College studies. The study material was concise and NCERT-focused. My BSc Botany knowledge actually helped in NEET. Scored 655 and got MAMC!",
               },
             ].map((story, index) => (
-              <motion.div
+              <div
                 key={story.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 border border-gray-200 hover:shadow-2xl transition-all duration-300"
+                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 border border-gray-200 hover:shadow-2xl transition-all duration-300 animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-6">
                   <div>
@@ -837,7 +775,7 @@ export default function PageContent() {
                     &quot;{story.quote}&quot;
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -846,11 +784,8 @@ export default function PageContent() {
       {/* Google Reviews & Map Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Trusted by DU Students & Parents
@@ -858,15 +793,12 @@ export default function PageContent() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               See what students from Hansraj, Hindu, Miranda House say about us
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
             {/* Google Rating Card */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp"
             >
               <div className="flex items-center justify-center mb-6">
                 <img
@@ -898,14 +830,11 @@ export default function PageContent() {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-            </motion.div>
+            </div>
 
             {/* Recent Reviews */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200"
+            <div
+              className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 animate-fadeInUp"
             >
               <h3 className="font-bold text-gray-900 text-xl mb-6 flex items-center gap-2">
                 <MessageCircle className="w-6 h-6 text-purple-600" />
@@ -947,15 +876,12 @@ export default function PageContent() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Map & Contact */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
+          <div
+            className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 animate-fadeInUp"
           >
             <div className="grid lg:grid-cols-2">
               <div className="relative h-96 lg:h-auto bg-gray-100">
@@ -1045,19 +971,15 @@ export default function PageContent() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQs */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching for DU Students - FAQs
@@ -1065,21 +987,17 @@ export default function PageContent() {
             <p className="text-lg text-gray-600">
               Common questions from BSc students and NEET repeaters
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{faq.question}</h3>
                 <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1088,12 +1006,8 @@ export default function PageContent() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-br from-indigo-600 via-purple-600 to-indigo-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Start Your NEET Journey?
             </h2>
@@ -1140,19 +1054,16 @@ export default function PageContent() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Floating WhatsApp Button */}
-      <motion.a
+      <a
         href={`https://wa.me/91${CEREBRUM_METRICS.phone.replace(/[^0-9]/g, '')}?text=Hi%2C%20I%27m%20a%20DU%20student%20interested%20in%20NEET%20Biology%20coaching.%20Please%20share%20details%20about%20evening%20and%20weekend%20batches.`}
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 group hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-2xl hover:shadow-3xl transition-all duration-300 group hover:scale-110 animate-fadeInUp"
         aria-label="Chat on WhatsApp"
       >
         <MessageCircle className="w-8 h-8" />
@@ -1162,7 +1073,7 @@ export default function PageContent() {
         <span className="absolute right-full mr-3 top-1/2 -translate-y-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           Chat with us on WhatsApp
         </span>
-      </motion.a>
+      </a>
 
       {/* Educational Organization Schema */}
       <script

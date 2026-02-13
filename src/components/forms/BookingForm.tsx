@@ -15,7 +15,6 @@ import {
   Clock,
   PhoneCall,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
 import toast from 'react-hot-toast'
 import { getTrackingDataForAPI } from '@/lib/tracking/utm'
@@ -222,12 +221,8 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
   }
 
   return (
-    <motion.div
-      className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
+    <div
+      className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto animate-fadeInUp"
     >
       {/* Form Header */}
       <div className="text-center mb-8">
@@ -470,6 +465,6 @@ export function BookingForm({ type = 'demo', onSubmit }: BookingFormProps) {
           </div>
         </div>
       </form>
-    </motion.div>
+    </div>
   )
 }

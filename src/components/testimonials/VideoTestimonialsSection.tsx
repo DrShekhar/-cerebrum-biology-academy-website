@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Star, ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import Link from 'next/link'
@@ -134,11 +133,8 @@ export function VideoTestimonialsSection() {
       />
       <div className="container mx-auto px-4">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12"
+        <div
+          className="text-center mb-12 animate-fadeInUp"
         >
           <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
             Success Stories
@@ -150,17 +146,14 @@ export function VideoTestimonialsSection() {
             Real students, real results. Watch how Cerebrum Biology Academy transformed their NEET
             preparation journey.
           </p>
-        </motion.div>
+        </div>
 
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Video Player - Using LazyYouTubeEmbed for LCP optimization */}
-            <motion.div
+            <div
               key={activeIndex}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.3 }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl"
+              className="relative rounded-2xl overflow-hidden shadow-2xl animate-fadeInUp"
             >
               <LazyYouTubeEmbed
                 videoId={activeTestimonial.videoId}
@@ -173,22 +166,20 @@ export function VideoTestimonialsSection() {
                 }}
                 playButtonSize="lg"
               />
-            </motion.div>
+            </div>
 
             {/* Testimonial Details */}
             <div className="space-y-6">
               {/* Quote */}
-              <motion.div
+              <div
                 key={`quote-${activeIndex}`}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="relative"
+                className="relative animate-fadeInUp"
               >
                 <Quote className="absolute -top-2 -left-2 w-10 h-10 text-blue-200" />
                 <p className="text-xl md:text-2xl text-gray-700 italic pl-8 leading-relaxed">
                   &ldquo;{activeTestimonial.quote}&rdquo;
                 </p>
-              </motion.div>
+              </div>
 
               {/* Student Info */}
               <div className="flex items-center gap-4">
@@ -269,12 +260,8 @@ export function VideoTestimonialsSection() {
         </div>
 
         {/* Quick Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto"
+        <div
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto animate-fadeInUp"
         >
           {[
             { label: 'Students Placed', value: '500+', color: 'text-blue-600' },
@@ -287,7 +274,7 @@ export function VideoTestimonialsSection() {
               <p className="text-gray-600 text-sm mt-1">{stat.label}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
 import { Star, Award, Users, BookOpen } from 'lucide-react'
 
 export interface InstructorProfile {
@@ -68,14 +67,9 @@ export function InstructorCard({ instructorName, isVisible }: InstructorCardProp
   if (!instructor) return null
 
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 10, scale: 0.95 }}
-          transition={{ duration: 0.2 }}
-          className="absolute z-50 mt-2 w-full min-w-[280px] max-w-[320px] bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-h-[400px] overflow-y-auto"
+{isVisible && (
+        <div
+          className="absolute z-50 mt-2 w-full min-w-[280px] max-w-[320px] bg-white rounded-lg shadow-2xl border border-gray-200 p-4 max-h-[400px] overflow-y-auto animate-fadeInUp"
         >
           <div className="flex gap-4">
             <div className="flex-shrink-0">
@@ -122,8 +116,7 @@ export function InstructorCard({ instructorName, isVisible }: InstructorCardProp
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       )}
-    </AnimatePresence>
-  )
+)
 }

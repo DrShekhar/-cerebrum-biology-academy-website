@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, Gift, Mail, Phone, CheckCircle } from 'lucide-react'
 
 interface ExitIntentPopupProps {
@@ -66,24 +65,17 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
   }
 
   return (
-    <AnimatePresence>
-      {isVisible && (
+{isVisible && (
         <>
           {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50"
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 animate-fadeInUp"
             onClick={handleClose}
           />
 
           {/* Popup */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-fadeInUp"
           >
             <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
               {/* Close Button */}
@@ -199,9 +191,8 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         </>
       )}
-    </AnimatePresence>
-  )
+)
 }

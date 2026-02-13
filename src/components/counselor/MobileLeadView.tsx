@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, PanInfo, useMotionValue, useTransform } from 'framer-motion'
 import {
   Phone,
   Mail,
@@ -124,13 +123,13 @@ function SwipeableLeadCard({
       </div>
 
       {/* Swipeable card */}
-      <motion.div
+      <div
         style={{ x, background }}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.2}
         onDragEnd={handleDragEnd}
-        className="relative bg-white rounded-lg shadow-sm border border-gray-200 p-4"
+        className="relative bg-white rounded-lg shadow-sm border border-gray-200 p-4 animate-fadeInUp"
       >
         <div className="flex items-start justify-between gap-3">
           {/* Left: Lead info */}
@@ -190,7 +189,7 @@ function SwipeableLeadCard({
           {/* Right: Chevron */}
           <ChevronRight className="w-5 h-5 text-gray-400 flex-shrink-0 mt-1" />
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

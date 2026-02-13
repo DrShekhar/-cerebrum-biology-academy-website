@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useParams, useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   Trophy,
   Target,
@@ -229,7 +228,7 @@ export default function TestResultsPage() {
         </Link>
 
         {/* Header Card */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <div className="animate-fadeInUp">
           <Card className="mb-6 overflow-hidden">
             <div className={cn('p-6 text-white', isPassed ? 'bg-green-600' : 'bg-red-600')}>
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -300,15 +299,12 @@ export default function TestResultsPage() {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-3 gap-4 mb-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <Card className="border-l-4 border-l-green-500">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
@@ -322,13 +318,10 @@ export default function TestResultsPage() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <Card className="border-l-4 border-l-red-500">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
@@ -340,13 +333,10 @@ export default function TestResultsPage() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <Card className="border-l-4 border-l-gray-400">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
@@ -360,16 +350,13 @@ export default function TestResultsPage() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         </div>
 
         {/* Teacher Feedback */}
         {results.teacherFeedback && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <Card className="mb-6 border-l-4 border-l-blue-500">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-lg">
@@ -381,16 +368,13 @@ export default function TestResultsPage() {
                 <p className="text-gray-700 whitespace-pre-wrap">{results.teacherFeedback}</p>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         )}
 
         {/* Question Review */}
         {testData.showAnswers && questions.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-          >
+          <div
+           className="animate-fadeInUp">
             <Card>
               <CardHeader>
                 <div className="flex items-center justify-between">
@@ -552,7 +536,7 @@ export default function TestResultsPage() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </div>
         )}
 
         {/* Actions */}

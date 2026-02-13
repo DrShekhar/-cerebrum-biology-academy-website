@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { getAllUnits } from '@/data/neet-syllabus'
 import DifficultyBadge from '@/components/ui/DifficultyBadge'
 import WeightageBadge from '@/components/ui/WeightageBadge'
@@ -147,10 +146,8 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
           ).length
 
           return (
-            <motion.div
+            <div
               key={unit.id}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
               className={cn(
                 'border-2 rounded-xl overflow-hidden transition-all',
                 isUnitSelected
@@ -207,15 +204,9 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
                   </button>
                 </div>
               </div>
-
-              <AnimatePresence>
-                {isExpanded && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="border-t border-gray-200"
+{isExpanded && (
+                  <div
+                    className="border-t border-gray-200 animate-fadeInUp"
                   >
                     <div className="p-4 space-y-3 bg-gray-50">
                       {unit.chapters.map((chapter) => {
@@ -271,10 +262,9 @@ const TopicSelector: React.FC<TopicSelectorProps> = ({
                         )
                       })}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </motion.div>
+</div>
           )
         })}
       </div>

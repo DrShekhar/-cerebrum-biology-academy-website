@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { X, AlertCircle, Settings } from 'lucide-react'
 
 interface MaintenanceNoticeProps {
@@ -58,22 +57,13 @@ export function MaintenanceNotice({
   if (!isVisible || isDismissed) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.3 }}
-        className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4"
+<div
+        className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 animate-fadeInUp"
         onClick={handleDismiss}
       >
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0, y: 20 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.9, opacity: 0, y: 20 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
+        <div
           onClick={(e) => e.stopPropagation()}
-          className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden"
+          className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden animate-fadeInUp"
         >
           {/* Animated gradient border effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-400 opacity-20 animate-pulse" />
@@ -95,16 +85,10 @@ export function MaintenanceNotice({
             <div className="flex justify-center mb-4">
               <div className="relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{
-                      duration: 3,
-                      repeat: Infinity,
-                      ease: 'linear',
-                    }}
-                  >
+                  <div
+                   className="animate-fadeInUp">
                     <Settings className="w-8 h-8 text-white" />
-                  </motion.div>
+                  </div>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full blur-md opacity-50 animate-pulse" />
               </div>
@@ -135,15 +119,8 @@ export function MaintenanceNotice({
             {autoHideDuration > 0 && (
               <div className="mt-4">
                 <div className="w-full bg-gray-200 rounded-full h-1 overflow-hidden">
-                  <motion.div
-                    initial={{ width: '100%' }}
-                    animate={{ width: '0%' }}
-                    transition={{
-                      duration: autoHideDuration,
-                      delay: 1,
-                      ease: 'linear',
-                    }}
-                    className="h-1 bg-gradient-to-r from-yellow-400 to-orange-500"
+                  <div
+                    className="h-1 bg-gradient-to-r from-yellow-400 to-orange-500 animate-fadeInUp"
                   />
                 </div>
                 <p className="text-xs text-gray-400 text-center mt-2">
@@ -152,8 +129,7 @@ export function MaintenanceNotice({
               </div>
             )}
           </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
+        </div>
+      </div>
+)
 }

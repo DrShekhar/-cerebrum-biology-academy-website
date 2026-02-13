@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   MapPin,
@@ -164,11 +163,8 @@ export function BestNEETCoachingDelhiNCRClient() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-5xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
+            className="text-center max-w-5xl mx-auto animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-yellow-500 text-black px-6 py-3 rounded-full text-sm font-bold mb-6">
               <Trophy className="w-5 h-5 mr-2" />
@@ -187,17 +183,14 @@ export function BestNEETCoachingDelhiNCRClient() {
             {/* Achievement Cards */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 max-w-5xl mx-auto mb-10">
               {achievements.map((achievement, index) => (
-                <motion.div
+                <div
                   key={achievement.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-3"
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-3 animate-fadeInUp"
                 >
                   <achievement.icon className={`w-5 h-5 mx-auto mb-1 ${achievement.color}`} />
                   <div className="text-lg font-bold">{achievement.value}</div>
                   <div className="text-xs opacity-80">{achievement.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
@@ -224,19 +217,15 @@ export function BestNEETCoachingDelhiNCRClient() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Rankings Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Top 5 NEET Coaching in Delhi NCR (2025)
@@ -244,16 +233,12 @@ export function BestNEETCoachingDelhiNCRClient() {
             <p className="text-lg text-gray-600">
               Based on success rate, faculty quality, and student reviews
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {rankings.map((item, index) => (
-              <motion.div
+              <div
                 key={item.name}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className={`flex items-center justify-between p-4 rounded-xl ${
                   item.highlight
                     ? 'bg-gradient-to-r from-yellow-50 to-green-50 border-2 border-green-600'
@@ -293,7 +278,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                   </div>
                   <div className="text-xs text-gray-500">Success Rate</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -302,34 +287,26 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* Why Best Section */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Cerebrum is the Best NEET Coaching?
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {whyBest.map((item, index) => (
-              <motion.div
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-purple-600" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg mb-2">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -338,27 +315,19 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* City Coverage */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Coaching Across Delhi NCR
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {cityData.map((city, index) => (
-              <motion.div
+              <div
                 key={city.city}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-indigo-50 rounded-xl p-6"
+                className="bg-indigo-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-gray-900">{city.city}</h3>
@@ -378,7 +347,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                     </span>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -387,27 +356,19 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* Testimonials */}
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               NEET Toppers from Delhi NCR
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-md"
+                className="bg-white rounded-xl p-6 shadow-md animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-14 h-14 bg-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
@@ -425,7 +386,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                   </span>
                   <span className="text-green-600 font-medium text-sm">{testimonial.college}</span>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -434,31 +395,23 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* FAQ Section */}
       <section className="py-16 md:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-6"
+                className="bg-gray-50 rounded-xl p-6 animate-fadeInUp"
               >
                 <h3 className="font-bold text-gray-900 mb-2">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -467,12 +420,8 @@ export function BestNEETCoachingDelhiNCRClient() {
       {/* CTA Section */}
       <section className="py-16 md:py-20 bg-gradient-to-r from-purple-600 via-blue-600 to-green-700 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Join the Best NEET Coaching?
             </h2>
@@ -503,7 +452,7 @@ export function BestNEETCoachingDelhiNCRClient() {
                 </Button>
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

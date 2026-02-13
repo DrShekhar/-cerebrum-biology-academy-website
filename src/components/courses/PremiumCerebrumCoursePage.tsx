@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useRef } from 'react'
-import { motion, AnimatePresence, useInView } from 'framer-motion'
 import {
   Star,
   Trophy,
@@ -302,20 +301,9 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* Animated DNA Helix Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-10">
         {[...Array(50)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
-            className="absolute w-2 h-2 bg-green-600 rounded-full"
-            animate={{
-              y: [0, -200, 0],
-              x: [0, Math.sin(i) * 50, 0],
-              opacity: [0, 1, 0],
-              scale: [0, 1.5, 0],
-            }}
-            transition={{
-              duration: Math.random() * 4 + 3,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
+            className="absolute w-2 h-2 bg-green-600 rounded-full animate-fadeInUp"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -327,17 +315,11 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* Hero Section */}
       <section ref={heroRef} className="relative z-10 pt-32 pb-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={heroInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8 }}
-          >
+          <div
+           className="animate-fadeInUp">
             {/* Ultra-Premium Badge */}
-            <motion.div
-              initial={{ scale: 0, rotate: -10 }}
-              animate={heroInView ? { scale: 1, rotate: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl"
+            <div
+              className="inline-flex items-center gap-4 bg-white/10 backdrop-blur-2xl border border-white/30 text-white px-10 py-4 rounded-full text-sm font-bold mb-10 shadow-2xl animate-fadeInUp"
             >
               <div className="w-10 h-10 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
                 <Crown className="w-6 h-6 text-white" />
@@ -349,67 +331,51 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                 ))}
               </div>
               <Sparkles className="w-6 h-6 text-blue-400" />
-            </motion.div>
+            </div>
 
             {/* Hero Headline */}
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-7xl md:text-9xl font-black text-white mb-8 leading-none tracking-tight"
+            <h1
+              className="text-7xl md:text-9xl font-black text-white mb-8 leading-none tracking-tight animate-fadeInUp"
             >
               <span className="block">Master</span>
               <span className="block text-green-500 animate-pulse">NEET Biology</span>
               <span className="block text-6xl md:text-7xl mt-4 text-gold-500">Excellence</span>
-            </motion.h1>
+            </h1>
 
             {/* Subtitle */}
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="text-2xl md:text-3xl text-navy-300 max-w-5xl mx-auto leading-relaxed mb-12 font-light"
+            <p
+              className="text-2xl md:text-3xl text-navy-300 max-w-5xl mx-auto leading-relaxed mb-12 font-light animate-fadeInUp"
             >
               Join India's most{' '}
               <span className="font-bold text-green-500">elite Biology coaching</span> with
               <span className="font-bold text-white"> Harvard-level pedagogy</span> and
               <span className="font-bold text-green-400"> evidence-based innovation</span>
-            </motion.p>
+            </p>
 
             {/* CTA Buttons */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
+            <div
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16 animate-fadeInUp"
             >
-              <motion.button
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-                className="group relative bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-green-600/50 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center overflow-hidden"
+              <button
+                className="group relative bg-green-600 hover:bg-green-700 text-white px-12 py-6 rounded-2xl font-black text-xl shadow-2xl hover:shadow-green-600/50 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center overflow-hidden animate-fadeInUp"
               >
                 <div className="absolute inset-0 bg-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <Play className="h-7 w-7 group-hover:scale-125 transition-transform relative z-10" />
                 <span className="relative z-10">Start Free Demo</span>
                 <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform relative z-10" />
-              </motion.button>
+              </button>
 
-              <motion.button
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-                className="group bg-white/10 backdrop-blur-2xl border-2 border-white/40 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center"
+              <button
+                className="group bg-white/10 backdrop-blur-2xl border-2 border-white/40 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/20 transition-all duration-500 flex items-center gap-4 min-w-[280px] justify-center animate-fadeInUp"
               >
                 <Phone className="h-7 w-7 group-hover:rotate-12 transition-transform" />
                 <span>Call: {getDisplayPhone()}</span>
-              </motion.button>
-            </motion.div>
+              </button>
+            </div>
 
             {/* Success Metrics */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={heroInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: 0.9 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto"
+            <div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto animate-fadeInUp"
             >
               {[
                 {
@@ -431,13 +397,9 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                   color: 'bg-[#4a5d4a]',
                 },
               ].map((stat, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ scale: 0, rotate: -10 }}
-                  animate={heroInView ? { scale: 1, rotate: 0 } : {}}
-                  transition={{ duration: 0.6, delay: 1.2 + idx * 0.1 }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white/10 backdrop-blur-2xl rounded-3xl p-8 border border-white/30 hover:border-white/50 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-2xl rounded-3xl p-8 border border-white/30 hover:border-white/50 transition-all duration-300 animate-fadeInUp"
                 >
                   <div
                     className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}
@@ -446,21 +408,18 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                   </div>
                   <div className="text-4xl font-black text-white mb-2">{stat.number}</div>
                   <div className="text-white/80 text-lg font-medium">{stat.label}</div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Course Cards Section */}
       <section ref={coursesRef} className="relative z-10 py-24 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={coursesInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-20"
+          <div
+            className="text-center mb-20 animate-fadeInUp"
           >
             <h2 className="text-6xl md:text-7xl font-black text-white mb-8">
               Choose Your
@@ -470,17 +429,13 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
               From ultra-premium Pinnacle to value-driven Pursuit - we have the perfect NEET Biology
               program for every ambitious student.
             </p>
-          </motion.div>
+          </div>
 
           {/* Premium Course Cards Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mb-20">
             {CEREBRUM_COURSES.map((course, index) => (
-              <motion.div
+              <div
                 key={course.id}
-                initial={{ opacity: 0, y: 100 }}
-                animate={coursesInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                whileHover={{ y: -15, scale: 1.02 }}
                 className={`group relative bg-white/10 backdrop-blur-2xl rounded-3xl p-8 border border-white/30 hover:border-white/50 transition-all duration-500 overflow-hidden ${
                   course.popular ? 'ring-4 ring-yellow-400/50 shadow-2xl' : ''
                 }`}
@@ -585,35 +540,30 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                     <div className="text-lg font-bold text-white mb-4">Key Highlights:</div>
                     <div className="space-y-3">
                       {course.highlights.map((highlight, idx) => (
-                        <motion.div
+                        <div
                           key={idx}
-                          initial={{ x: -20, opacity: 0 }}
-                          animate={coursesInView ? { x: 0, opacity: 1 } : {}}
-                          transition={{ delay: index * 0.2 + idx * 0.1 }}
-                          className="flex items-center gap-3"
+                          className="flex items-center gap-3 animate-fadeInUp"
                         >
                           <div className="w-6 h-6 bg-gradient-to-r from-green-400 to-green-600 rounded-full flex items-center justify-center flex-shrink-0">
                             <Check className="h-4 w-4 text-white" />
                           </div>
                           <span className="text-white/90">{highlight}</span>
-                        </motion.div>
+                        </div>
                       ))}
                     </div>
                   </div>
 
                   {/* Premium Action Buttons */}
                   <div className="space-y-4">
-                    <motion.button
-                      whileHover={{ scale: 1.02, y: -2 }}
-                      whileTap={{ scale: 0.98 }}
+                    <button
                       onClick={() => handleCourseSelect(course.id)}
-                      className="w-full py-5 rounded-2xl font-bold text-lg text-white shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden relative group"
+                      className="w-full py-5 rounded-2xl font-bold text-lg text-white shadow-2xl transition-all duration-300 flex items-center justify-center gap-3 overflow-hidden relative group animate-fadeInUp"
                       style={{ background: course.color.gradient }}
                     >
                       <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       <span className="relative z-10">Choose {course.series} Series</span>
                       <ArrowRight className="h-6 w-6 group-hover:translate-x-1 transition-transform relative z-10" />
-                    </motion.button>
+                    </button>
 
                     <button className="w-full py-4 border-2 border-white/30 text-white hover:border-white/50 hover:bg-white/10 rounded-2xl font-medium transition-all duration-300 flex items-center justify-center gap-3">
                       <BookOpen className="h-5 w-5" />
@@ -621,7 +571,7 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                     </button>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -630,10 +580,8 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
       {/* Why Biology Fee is Higher Section */}
       <section className="relative z-10 py-20 px-6">
         <div className="max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-navy-800/60 backdrop-blur-2xl rounded-3xl p-10 border border-white/30 text-white"
+          <div
+            className="bg-navy-800/60 backdrop-blur-2xl rounded-3xl p-10 border border-white/30 text-white animate-fadeInUp"
           >
             <div className="text-center mb-10">
               <h3 className="text-4xl font-black mb-4">
@@ -686,18 +634,15 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section ref={faqRef} className="relative z-10 py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={faqInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-5xl font-black text-white mb-6">
               Frequently Asked
@@ -706,16 +651,13 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
             <p className="text-xl text-white/80">
               Everything you need to know about Cerebrum Biology Academy programs
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {FAQ_DATA.map((faq, index) => (
-              <motion.div
+              <div
                 key={faq.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={faqInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/30 overflow-hidden"
+                className="bg-white/10 backdrop-blur-2xl rounded-2xl border border-white/30 overflow-hidden animate-fadeInUp"
               >
                 <button
                   onClick={() => toggleFAQ(faq.id)}
@@ -730,51 +672,34 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                     )}
                   </div>
                 </button>
-
-                <AnimatePresence>
-                  {expandedFAQ === faq.id && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: 'auto', opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="overflow-hidden"
+{expandedFAQ === faq.id && (
+                    <div
+                      className="overflow-hidden animate-fadeInUp"
                     >
                       <div className="px-8 pb-8 text-white/80 leading-relaxed text-lg">
                         {faq.answer}
                       </div>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
-              </motion.div>
+</div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Floating Help Widget */}
-      <AnimatePresence>
-        {!showHelp && (
-          <motion.button
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            exit={{ scale: 0 }}
+{!showHelp && (
+          <button
             onClick={() => setShowHelp(true)}
-            className="fixed bottom-8 right-8 w-16 h-16 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 transition-transform duration-300"
+            className="fixed bottom-8 right-8 w-16 h-16 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-2xl flex items-center justify-center z-50 hover:scale-110 transition-transform duration-300 animate-fadeInUp"
           >
             <HelpCircle className="h-8 w-8" />
-          </motion.button>
+          </button>
         )}
-      </AnimatePresence>
-
-      {/* Premium Help Panel */}
-      <AnimatePresence>
-        {showHelp && (
-          <motion.div
-            initial={{ opacity: 0, y: 100, scale: 0.8 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            className="fixed bottom-8 right-8 w-96 bg-black/80 backdrop-blur-2xl rounded-3xl border border-white/30 z-50 overflow-hidden"
+{/* Premium Help Panel */}
+{showHelp && (
+          <div
+            className="fixed bottom-8 right-8 w-96 bg-black/80 backdrop-blur-2xl rounded-3xl border border-white/30 z-50 overflow-hidden animate-fadeInUp"
           >
             <div className="bg-green-600 text-white p-6 flex items-center justify-between">
               <div className="flex items-center gap-3">
@@ -823,9 +748,8 @@ export function PremiumCerebrumCoursePage({ className = '' }: PremiumCerebrumCou
                 Book Demo Class
               </button>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

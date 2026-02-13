@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   CheckCircle,
@@ -247,7 +246,7 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-violet-500/20 text-violet-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Award className="w-4 h-4" />
               CBSE Board + NEET Dual Preparation
@@ -294,27 +293,23 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                   Book Free Demo Class
                 </Button>
               </Link>
-              <motion.button
-                whileHover={{ scale: 1.02 }}
+              <button
                 onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp"
               >
                 <Phone className="w-5 h-5" />
                 WhatsApp: +91-88264-44334
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Board + NEET Dual Prep */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-indigo-50 to-violet-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Board + NEET Dual Preparation Works
@@ -322,14 +317,11 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Class 12 is the most crucial year - 70% of NEET Biology comes from Class 12 syllabus
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-lg"
+            <div
+              className="bg-white rounded-2xl p-8 shadow-lg animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
                 <div className="w-10 h-10 bg-violet-100 rounded-lg flex items-center justify-center">
@@ -345,13 +337,10 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-indigo-600 to-violet-600 rounded-2xl p-8 text-white"
+            <div
+              className="bg-gradient-to-br from-indigo-600 to-violet-600 rounded-2xl p-8 text-white animate-fadeInUp"
             >
               <h3 className="text-2xl font-bold mb-6">Class 12 to NEET Connection</h3>
               <div className="space-y-4">
@@ -376,7 +365,7 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                   <div className="text-sm text-violet-100">10% NEET weightage - Application-based questions</div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -384,11 +373,8 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
       {/* Features */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Why Choose Our 12th Board + NEET Coaching?
@@ -396,24 +382,20 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-slate-600">
               Comprehensive preparation ensuring excellence in CBSE boards and NEET
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <motion.div
+              <div
                 key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg"
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="w-12 h-12 bg-violet-100 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-violet-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
                 <p className="text-slate-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -422,27 +404,20 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
       {/* Syllabus Coverage */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Complete Class 12 Biology Syllabus Coverage
             </h2>
             <p className="text-xl text-slate-600">All units covered with NEET weightage highlighted</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {syllabusTopics.map((topic, index) => (
-              <motion.div
+              <div
                 key={topic.unit}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl p-6 shadow-lg"
+                className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl p-6 shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -468,7 +443,7 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                     </li>
                   ))}
                 </ul>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -477,11 +452,8 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
       {/* Practical/Lab Coaching Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-violet-600 to-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-4">
               <Beaker className="w-4 h-4" />
@@ -491,14 +463,11 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
             <p className="text-xl text-violet-100 max-w-3xl mx-auto">
               CBSE Class 12 Biology practical exam is worth 30 marks - we ensure you score full marks
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8"
+            <div
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 animate-fadeInUp"
             >
               <h3 className="text-xl font-bold mb-6">Practical Experiments Covered</h3>
               <ul className="space-y-3">
@@ -509,13 +478,10 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="space-y-6"
+            <div
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
                 <h4 className="font-bold text-lg mb-3">Practical File Guidance</h4>
@@ -535,7 +501,7 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                   Practice sessions for specimen spotting and slide identification with real samples
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -543,11 +509,8 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
       {/* FREE NEET Tools */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <div className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
               FREE NEET Tools
@@ -556,17 +519,13 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
               Use Our Free NEET Preparation Tools
             </h2>
             <p className="text-xl text-slate-600">Plan your NEET journey while preparing for boards</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {neetTools.map((tool, index) => (
-              <motion.div
+              <div
                 key={tool.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
+               className="animate-fadeInUp">
                 <Link
                   href={tool.path}
                   className="block bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow h-full"
@@ -580,7 +539,7 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                     Try Free <ChevronRight className="w-4 h-4" />
                   </span>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -589,27 +548,20 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
       {/* Student Results */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Results from Rohini Students
             </h2>
             <p className="text-xl text-slate-600">Our students excel in both Board exams and NEET</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {studentResults.map((student, index) => (
-              <motion.div
+              <div
                 key={student.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl p-6"
+                className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl p-6 animate-fadeInUp"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-violet-200 rounded-full flex items-center justify-center">
@@ -632,7 +584,7 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                 </div>
                 <p className="text-sm text-slate-600 italic">&quot;{student.quote}&quot;</p>
                 <div className="mt-3 text-xs text-slate-500">Batch of {student.year}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -641,15 +593,12 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
       {/* Premium Schools */}
       <section className="py-16 bg-gradient-to-br from-indigo-600 to-violet-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-8"
+          <div
+            className="text-center mb-8 animate-fadeInUp"
           >
             <h2 className="text-3xl font-bold mb-4">Students from Top Rohini Schools</h2>
             <p className="text-violet-100">We teach Class 12 students from all major schools in Rohini</p>
-          </motion.div>
+          </div>
           <div className="flex flex-wrap justify-center gap-4">
             {premiumSchools.map((school) => (
               <span key={school} className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium">
@@ -664,11 +613,8 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl p-8"
+            <div
+              className="bg-gradient-to-br from-indigo-50 to-violet-50 rounded-2xl p-8 animate-fadeInUp"
             >
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Course Details</h2>
               <div className="space-y-4">
@@ -700,13 +646,10 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
               <Link href="/demo-booking" className="block mt-6">
                 <Button className="w-full bg-violet-600 hover:bg-violet-700">Book Free Demo</Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl"
+            <div
+              className="bg-white rounded-2xl p-8 shadow-xl animate-fadeInUp"
             >
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-violet-600 mr-3" />
@@ -744,7 +687,7 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                   </Button>
                 </a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -836,14 +779,13 @@ export default function Board12BiologyRohiniContent({ faqs }: { faqs: FAQ[] }) {
                 Book Free Demo
               </Button>
             </Link>
-            <motion.button
-              whileHover={{ scale: 1.02 }}
+            <button
               onClick={handleWhatsApp}
-              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-violet-600 px-6 py-4 rounded-xl font-semibold transition-colors"
+              className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-violet-600 px-6 py-4 rounded-xl font-semibold transition-colors animate-fadeInUp"
             >
               <Phone className="w-5 h-5" />
               WhatsApp: +91-88264-44334
-            </motion.button>
+            </button>
           </div>
         </div>
       </section>

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence, useDragControls } from 'framer-motion'
 import {
   Smartphone,
   TouchpadIcon as Touch,
@@ -510,10 +509,8 @@ const MobileMultimodalInterface: React.FC = () => {
   return (
     <div ref={containerRef} className={`${getLayoutClasses()} min-h-screen bg-gray-50`}>
       {/* Mobile Header */}
-      <motion.header
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b px-4 py-3"
+      <header
+        className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b px-4 py-3 animate-fadeInUp"
       >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -561,15 +558,13 @@ const MobileMultimodalInterface: React.FC = () => {
             </button>
           </div>
         </div>
-      </motion.header>
+      </header>
 
       {/* Content Area */}
       <main className="flex-1 p-4 space-y-4">
         {/* Device Optimization Info */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white rounded-xl p-4 border"
+        <div
+          className="bg-white rounded-xl p-4 border animate-fadeInUp"
         >
           <h3 className="font-semibold text-gray-800 mb-3">Device Optimization</h3>
           <div className="grid grid-cols-2 gap-3 text-sm">
@@ -590,7 +585,7 @@ const MobileMultimodalInterface: React.FC = () => {
               <span>{adaptiveQuality} quality</span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Gesture Mode Selector */}
         <div className="bg-white rounded-xl p-4 border">
@@ -618,11 +613,8 @@ const MobileMultimodalInterface: React.FC = () => {
         {/* Content Cards */}
         <div className="space-y-4">
           {mobileContent.map((content, index) => (
-            <motion.div
+            <div
               key={content.id}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: index * 0.1 }}
               onClick={() => setCurrentContent(content)}
               className={`bg-white rounded-xl p-4 border-2 transition-all ${
                 currentContent?.id === content.id
@@ -634,7 +626,7 @@ const MobileMultimodalInterface: React.FC = () => {
                 <div>
                   <h4 className="font-semibold text-gray-800">{content.title}</h4>
                   <p className="text-sm text-gray-600">
-                    {content.mobileOptimized.layout} layout • {content.type}
+                    {content.mobileOptimized.layout} • {content.type}
                   </p>
                 </div>
                 <div className="flex items-center gap-1">
@@ -672,16 +664,14 @@ const MobileMultimodalInterface: React.FC = () => {
                   ))}
                 </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Current Gestures Display */}
         {activeGestures.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-xl p-4 border"
+          <div
+            className="bg-white rounded-xl p-4 border animate-fadeInUp"
           >
             <h3 className="font-semibold text-gray-800 mb-3">Recent Gestures</h3>
             <div className="space-y-2">
@@ -698,15 +688,13 @@ const MobileMultimodalInterface: React.FC = () => {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Session Performance */}
         {mobileSession && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white rounded-xl p-4 border"
+          <div
+            className="bg-white rounded-xl p-4 border animate-fadeInUp"
           >
             <h3 className="font-semibold text-gray-800 mb-3">Session Analytics</h3>
             <div className="grid grid-cols-2 gap-4 text-sm">
@@ -723,7 +711,7 @@ const MobileMultimodalInterface: React.FC = () => {
                 <div className="text-green-600">Duration</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Mobile Accessibility Tools */}
@@ -753,32 +741,22 @@ const MobileMultimodalInterface: React.FC = () => {
       </main>
 
       {/* Voice Control Indicator */}
-      <AnimatePresence>
-        {voiceControlActive && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg"
+{voiceControlActive && (
+          <div
+            className="fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg animate-fadeInUp"
           >
             <div className="flex items-center gap-2">
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
+              <div
+               className="animate-fadeInUp">
                 <Mic className="w-4 h-4" />
-              </motion.div>
+              </div>
               <span className="text-sm">Voice Control Active</span>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Bottom Navigation */}
-      <motion.nav
-        initial={{ y: 100 }}
-        animate={{ y: 0 }}
-        className="fixed bottom-0 left-0 right-0 bg-white border-t px-4 py-2"
+{/* Bottom Navigation */}
+      <nav
+        className="fixed bottom-0 left-0 right-0 bg-white border-t px-4 py-2 animate-fadeInUp"
       >
         <div className="flex justify-around items-center">
           {[
@@ -798,7 +776,7 @@ const MobileMultimodalInterface: React.FC = () => {
             </button>
           ))}
         </div>
-      </motion.nav>
+      </nav>
     </div>
   )
 }

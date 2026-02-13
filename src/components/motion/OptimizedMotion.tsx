@@ -1,6 +1,5 @@
 'use client'
 
-import { motion, type HTMLMotionProps, type MotionProps } from 'framer-motion'
 import { type ComponentPropsWithoutRef, type ElementType, useEffect, useState } from 'react'
 
 /**
@@ -27,7 +26,7 @@ export function usePrefersReducedMotion(): boolean {
 
 /**
  * Optimized motion.div that respects prefers-reduced-motion
- * and prevents layout thrashing
+ * and prevents thrashing
  */
 export function OptimizedMotionDiv(
   props: HTMLMotionProps<'div'> & { disableReducedMotion?: boolean }
@@ -38,11 +37,11 @@ export function OptimizedMotionDiv(
   // If user prefers reduced motion, disable animations
   if (prefersReducedMotion && !disableReducedMotion) {
     const { animate, initial, exit, whileHover, whileTap, transition, ...restProps } = motionProps
-    return <motion.div {...restProps} />
+    return <div {...restProps} className="animate-fadeInUp" />
   }
 
-  // Prevent layout recalculation by default (improves INP)
-  return <motion.div layout={false} {...motionProps} />
+  // Prevent recalculation by default (improves INP)
+  return <div layout={false} {...motionProps} className="animate-fadeInUp" />
 }
 
 /**
@@ -62,15 +61,12 @@ export function FadeInUp({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration, delay, ease: 'easeOut' }}
+    <div
       layout={false}
       {...props}
-    >
+     className="animate-fadeInUp">
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -89,15 +85,12 @@ export function ScaleOnHover({
   }
 
   return (
-    <motion.div
-      whileHover={{ scale }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ duration: 0.2, ease: 'easeInOut' }}
+    <div
       layout={false}
       {...props}
-    >
+     className="animate-fadeInUp">
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -116,23 +109,14 @@ export function StaggerContainer({
   }
 
   return (
-    <motion.div
+    <div
       initial="hidden"
       animate="visible"
-      variants={{
-        hidden: { opacity: 0 },
-        visible: {
-          opacity: 1,
-          transition: {
-            staggerChildren: staggerDelay,
-          },
-        },
-      }}
       layout={false}
       {...props}
-    >
+     className="animate-fadeInUp">
       {children}
-    </motion.div>
+    </div>
   )
 }
 

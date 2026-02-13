@@ -8,7 +8,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
 import { PaymentStatusBadge } from './PaymentStatusBadge'
 import { Calendar, AlertCircle, Clock, CreditCard, ChevronRight } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 import type { PaymentInstallment } from '@/types/payment'
@@ -152,11 +151,8 @@ export function UpcomingPaymentsWidget({
             const isOverdue = daysUntil < 0
 
             return (
-              <motion.div
+              <div
                 key={payment.id}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
                 className={cn(
                   'p-4 rounded-lg border transition-all hover:shadow-md',
                   isOverdue
@@ -219,7 +215,7 @@ export function UpcomingPaymentsWidget({
                     </Button>
                   </div>
                 )}
-              </motion.div>
+              </div>
             )
           })}
         </div>

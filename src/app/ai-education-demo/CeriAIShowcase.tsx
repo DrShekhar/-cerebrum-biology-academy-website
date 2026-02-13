@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useRef, useCallback } from 'react'
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import {
@@ -126,11 +125,8 @@ function LiveQuestionCounter() {
   }, [])
 
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once: true }}
-      className="bg-green-600 rounded-3xl p-8 text-white text-center relative overflow-hidden"
+    <div
+      className="bg-green-600 rounded-3xl p-8 text-white text-center relative overflow-hidden animate-fadeInUp"
     >
       <div className="absolute inset-0 bg-[url('/patterns/dots.svg')] opacity-10" />
       <div className="relative z-10">
@@ -138,21 +134,19 @@ function LiveQuestionCounter() {
           <div className="w-3 h-3 bg-white rounded-full animate-pulse mr-2" />
           <span className="text-sm font-medium uppercase tracking-wider">Live Now</span>
         </div>
-        <motion.div
+        <div
           key={todayCount}
-          initial={{ scale: 1.2, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          className="text-5xl sm:text-6xl font-black mb-2"
+          className="text-5xl sm:text-6xl font-black mb-2 animate-fadeInUp"
         >
           {todayCount.toLocaleString()}
-        </motion.div>
+        </div>
         <p className="text-lg text-white/90 mb-4">Questions Answered Today</p>
         <div className="border-t border-white/20 pt-4 mt-4">
           <p className="text-3xl font-bold">{totalCount.toLocaleString()}+</p>
           <p className="text-sm text-white/80">Total Doubts Resolved</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -174,11 +168,8 @@ function StudentSuccessMap() {
   const [hoveredCity, setHoveredCity] = useState<string | null>(null)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-3xl p-8 shadow-xl"
+    <div
+      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
     >
       <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
         Students Across India Trust Ceri AI
@@ -189,39 +180,36 @@ function StudentSuccessMap() {
 
         {/* City dots */}
         {cities.map((city) => (
-          <motion.div
+          <div
             key={city.name}
-            className="absolute cursor-pointer"
+            className="absolute cursor-pointer animate-fadeInUp"
             style={{ top: city.top, left: city.left }}
             onMouseEnter={() => setHoveredCity(city.name)}
             onMouseLeave={() => setHoveredCity(null)}
-            whileHover={{ scale: 1.5 }}
           >
             <div className="relative">
               <div className="w-4 h-4 bg-purple-500 rounded-full animate-pulse" />
               <div className="absolute inset-0 w-4 h-4 bg-purple-500 rounded-full animate-ping opacity-50" />
 
               {hoveredCity === city.name && (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg whitespace-nowrap z-10 shadow-xl"
+                <div
+                  className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-4 py-2 rounded-lg whitespace-nowrap z-10 shadow-xl animate-fadeInUp"
                 >
                   <p className="font-bold">{city.name}</p>
                   <p className="text-sm text-gray-300">{city.students} students</p>
                   <p className="text-xs text-green-400">Best: {city.rank}</p>
                   <div className="absolute top-full left-1/2 -translate-x-1/2 border-8 border-transparent border-t-gray-900" />
-                </motion.div>
+                </div>
               )}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
       <div className="mt-6 text-center">
         <p className="text-gray-600">Hover over cities to see student success</p>
         <p className="text-2xl font-bold text-purple-600 mt-2">3,130+ Students | 28 States</p>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -257,11 +245,8 @@ function SampleQuestions({ onQuestionClick }: { onQuestionClick: (q: string) => 
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-3xl p-8 shadow-xl"
+    <div
+      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
     >
       <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Try Sample Questions</h3>
 
@@ -285,22 +270,19 @@ function SampleQuestions({ onQuestionClick }: { onQuestionClick: (q: string) => 
       {/* Questions */}
       <div className="space-y-3">
         {questions[selectedDifficulty].map((q, idx) => (
-          <motion.button
+          <button
             key={q}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: idx * 0.1 }}
             onClick={() => onQuestionClick(q)}
-            className="w-full text-left p-4 bg-gray-50 hover:bg-purple-50 rounded-xl border-2 border-transparent hover:border-purple-300 transition-all group"
+            className="w-full text-left p-4 bg-gray-50 hover:bg-purple-50 rounded-xl border-2 border-transparent hover:border-purple-300 transition-all group animate-fadeInUp"
           >
             <div className="flex items-center justify-between">
               <span className="text-gray-700 group-hover:text-purple-700">{q}</span>
               <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-purple-500 group-hover:translate-x-1 transition-all" />
             </div>
-          </motion.button>
+          </button>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -316,11 +298,8 @@ function ComparisonSection() {
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-gradient-to-br from-slate-900 to-purple-900 rounded-3xl p-8 text-white"
+    <div
+      className="bg-gradient-to-br from-slate-900 to-purple-900 rounded-3xl p-8 text-white animate-fadeInUp"
     >
       <h3 className="text-2xl font-bold mb-8 text-center">
         See the Difference: Generic Search vs Ceri AI
@@ -373,7 +352,7 @@ function ComparisonSection() {
           </div>
         </div>
       ))}
-    </motion.div>
+    </div>
   )
 }
 
@@ -425,24 +404,17 @@ function SubjectModules({ onTopicClick }: { onTopicClick: (topic: string) => voi
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-3xl p-8 shadow-xl"
+    <div
+      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
     >
       <h3 className="text-2xl font-bold text-gray-900 mb-2 text-center">Master Every NEET Topic</h3>
       <p className="text-gray-600 text-center mb-8">Click on any topic to start learning</p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         {subjects.map((subject, idx) => (
-          <motion.div
+          <div
             key={subject.name}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.1 }}
-            className="bg-gray-50 rounded-2xl p-5 hover:shadow-lg transition-all group cursor-pointer"
+            className="bg-gray-50 rounded-2xl p-5 hover:shadow-lg transition-all group cursor-pointer animate-fadeInUp"
           >
             <div
               className={`w-12 h-12 bg-gradient-to-r ${subject.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
@@ -462,21 +434,18 @@ function SubjectModules({ onTopicClick }: { onTopicClick: (topic: string) => voi
                 </button>
               ))}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
 // Before/After Comparison
 function BeforeAfterComparison() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-white rounded-3xl p-8 shadow-xl"
+    <div
+      className="bg-white rounded-3xl p-8 shadow-xl animate-fadeInUp"
     >
       <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
         Your NEET Journey: Before & After Ceri AI
@@ -560,7 +529,7 @@ function BeforeAfterComparison() {
           </ul>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -581,11 +550,8 @@ function NEETScorePredictor() {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-indigo-500 rounded-3xl p-8 text-white"
+    <div
+      className="bg-indigo-500 rounded-3xl p-8 text-white animate-fadeInUp"
     >
       <div className="flex items-center justify-center mb-6">
         <Calculator className="w-8 h-8 mr-3" />
@@ -641,33 +607,26 @@ function NEETScorePredictor() {
         </button>
 
         {/* Result */}
-        <AnimatePresence>
-          {showResult && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="bg-white/10 rounded-2xl p-6 text-center"
+{showResult && (
+            <div
+              className="bg-white/10 rounded-2xl p-6 text-center animate-fadeInUp"
             >
               <p className="text-sm text-white/80 mb-2">Your Predicted NEET Score</p>
-              <motion.p
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ type: 'spring', bounce: 0.5 }}
-                className="text-5xl font-black"
+              <p
+                className="text-5xl font-black animate-fadeInUp"
               >
                 {predictedScore}/720
-              </motion.p>
+              </p>
               <p className="text-green-300 font-semibold mt-2">
                 +{predictedScore - currentScore} marks improvement!
               </p>
               <p className="text-xs text-white/60 mt-4">
                 *Based on average improvement of Ceri AI users
               </p>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
-    </motion.div>
+</div>
+    </div>
   )
 }
 
@@ -676,11 +635,8 @@ function FreeTrialCounter() {
   const [questionsLeft, setQuestionsLeft] = useState(5)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-orange-600 rounded-3xl p-6 text-white text-center"
+    <div
+      className="bg-orange-600 rounded-3xl p-6 text-white text-center animate-fadeInUp"
     >
       <div className="flex items-center justify-center mb-2">
         <Sparkles className="w-6 h-6 mr-2" />
@@ -689,7 +645,7 @@ function FreeTrialCounter() {
       <div className="text-4xl font-black mb-2">{questionsLeft}/5</div>
       <p className="text-white/90">Free Questions Remaining Today</p>
       <p className="text-sm text-white/70 mt-2">Resets at midnight</p>
-    </motion.div>
+    </div>
   )
 }
 
@@ -735,11 +691,8 @@ function PricingSection() {
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="py-16"
+    <div
+      className="py-16 animate-fadeInUp"
     >
       <h3 className="text-3xl font-black text-gray-900 mb-4 text-center">
         Simple, Transparent Pricing
@@ -748,12 +701,8 @@ function PricingSection() {
 
       <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
         {plans.map((plan, idx) => (
-          <motion.div
+          <div
             key={plan.name}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.1 }}
             className={`relative bg-white rounded-3xl p-8 ${
               plan.popular
                 ? 'border-2 border-purple-500 shadow-2xl scale-105'
@@ -787,10 +736,10 @@ function PricingSection() {
             >
               {plan.cta}
             </button>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -826,11 +775,8 @@ function FAQSection() {
   ]
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="bg-gray-50 rounded-3xl p-8"
+    <div
+      className="bg-gray-50 rounded-3xl p-8 animate-fadeInUp"
     >
       <div className="flex items-center justify-center mb-8">
         <HelpCircle className="w-8 h-8 mr-3 text-purple-600" />
@@ -839,13 +785,9 @@ function FAQSection() {
 
       <div className="max-w-3xl mx-auto space-y-4">
         {faqs.map((faq, idx) => (
-          <motion.div
+          <div
             key={idx}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: idx * 0.05 }}
-            className="bg-white rounded-2xl overflow-hidden shadow-sm"
+            className="bg-white rounded-2xl overflow-hidden shadow-sm animate-fadeInUp"
           >
             <button
               onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
@@ -858,22 +800,17 @@ function FAQSection() {
                 <ChevronDown className="w-5 h-5 text-gray-400" />
               )}
             </button>
-            <AnimatePresence>
-              {openFaq === idx && (
-                <motion.div
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: 'auto', opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  className="overflow-hidden"
+{openFaq === idx && (
+                <div
+                  className="overflow-hidden animate-fadeInUp"
                 >
                   <p className="px-5 pb-5 text-gray-600">{faq.a}</p>
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-          </motion.div>
+</div>
         ))}
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -882,22 +819,9 @@ function FloatingParticles() {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
       {[...Array(20)].map((_, i) => (
-        <motion.div
+        <div
           key={i}
-          className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-30"
-          initial={{
-            x: Math.random() * 100 + '%',
-            y: Math.random() * 100 + '%',
-          }}
-          animate={{
-            y: [null, '-100vh'],
-            opacity: [0.3, 0],
-          }}
-          transition={{
-            duration: Math.random() * 10 + 10,
-            repeat: Infinity,
-            delay: Math.random() * 5,
-          }}
+          className="absolute w-2 h-2 bg-blue-400 rounded-full opacity-30 animate-fadeInUp"
         />
       ))}
     </div>
@@ -919,13 +843,8 @@ function FeatureCard({
   delay: number
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay, duration: 0.5 }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden"
+    <div
+      className="group relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-gray-100 overflow-hidden animate-fadeInUp"
     >
       <div
         className={`absolute inset-0 bg-gradient-to-br ${gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
@@ -937,17 +856,14 @@ function FeatureCard({
       </div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 leading-relaxed">{description}</p>
-    </motion.div>
+    </div>
   )
 }
 
 // Demo conversation bubble
 function DemoBubble({ message, isAI, delay }: { message: string; isAI: boolean; delay: number }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: isAI ? -20 : 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay, duration: 0.4 }}
+    <div
       className={`flex ${isAI ? 'justify-start' : 'justify-end'} mb-4`}
     >
       <div
@@ -957,7 +873,7 @@ function DemoBubble({ message, isAI, delay }: { message: string; isAI: boolean; 
       >
         <p className="text-sm">{message}</p>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -1079,10 +995,10 @@ export default function CeriAIShowcase() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Hero Section */}
-      <motion.section
+      <section
         ref={heroRef}
         style={{ opacity: heroOpacity, scale: heroScale }}
-        className="relative min-h-screen flex items-center justify-center bg-slate-800 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center bg-slate-800 overflow-hidden animate-fadeInUp"
       >
         <FloatingParticles />
 
@@ -1092,46 +1008,34 @@ export default function CeriAIShowcase() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8"
+          <div
+            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-6 py-2 mb-8 animate-fadeInUp"
           >
             <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
             <span className="text-white/90 text-sm font-medium">
               India's #1 AI Biology Tutor for NEET
             </span>
-          </motion.div>
+          </div>
 
           {/* Main Heading */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight"
+          <h1
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-tight animate-fadeInUp"
           >
             Meet <span className="text-blue-400">Ceri AI</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-xl sm:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed"
+          <p
+            className="text-xl sm:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-fadeInUp"
           >
             Your personal AI Biology tutor that resolves doubts{' '}
             <span className="text-white font-semibold">instantly</span>, explains with{' '}
             <span className="text-white font-semibold">diagrams</span>, and helps you score{' '}
             <span className="text-green-400 font-semibold">650+</span> in NEET.
-          </motion.p>
+          </p>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+          <div
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-fadeInUp"
           >
             <button
               onClick={() => setShowChat(true)}
@@ -1147,14 +1051,11 @@ export default function CeriAIShowcase() {
             >
               Book Live Demo
             </Link>
-          </motion.div>
+          </div>
 
           {/* Stats Preview */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+          <div
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto animate-fadeInUp"
           >
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
@@ -1164,25 +1065,20 @@ export default function CeriAIShowcase() {
                 <div className="text-white/60 text-sm font-medium">{stat.label}</div>
               </div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        <div
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fadeInUp"
         >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="text-white/60"
+          <div
+            className="text-white/60 animate-fadeInUp"
           >
             <ChevronDown className="w-8 h-8" />
-          </motion.div>
-        </motion.div>
-      </motion.section>
+          </div>
+        </div>
+      </section>
 
       {/* Live Stats & Map Section */}
       <section className="py-24 bg-gradient-to-b from-gray-50 to-white">
@@ -1197,11 +1093,8 @@ export default function CeriAIShowcase() {
       {/* Interactive Demo Section */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
               See Ceri AI in Action
@@ -1209,18 +1102,14 @@ export default function CeriAIShowcase() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Experience how Ceri AI handles different types of Biology questions
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Demo Tabs */}
             <div className="space-y-4">
               {demos.map((demo, index) => (
-                <motion.button
+                <button
                   key={demo.title}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
                   onClick={() => setActiveDemo(index)}
                   className={`w-full flex items-center p-6 rounded-2xl transition-all duration-300 text-left ${
                     activeDemo === index
@@ -1240,21 +1129,18 @@ export default function CeriAIShowcase() {
                     </p>
                   </div>
                   {activeDemo === index && (
-                    <motion.div
+                    <div
                       layoutId="activeDot"
-                      className="ml-auto w-3 h-3 bg-white rounded-full"
+                      className="ml-auto w-3 h-3 bg-white rounded-full animate-fadeInUp"
                     />
                   )}
-                </motion.button>
+                </button>
               ))}
             </div>
 
             {/* Demo Chat Preview */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100 overflow-hidden"
+            <div
+              className="bg-white rounded-3xl shadow-2xl p-6 border border-gray-100 overflow-hidden animate-fadeInUp"
             >
               <div className="flex items-center mb-6 pb-4 border-b border-gray-100">
                 <div className="w-10 h-10 bg-indigo-500 rounded-xl flex items-center justify-center mr-3">
@@ -1268,22 +1154,15 @@ export default function CeriAIShowcase() {
                   </div>
                 </div>
               </div>
-
-              <AnimatePresence mode="wait">
-                <motion.div
+<div
                   key={activeDemo}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="min-h-[200px]"
+                  className="min-h-[200px] animate-fadeInUp"
                 >
                   {demos[activeDemo].conversation.map((msg, idx) => (
                     <DemoBubble key={idx} message={msg.message} isAI={msg.isAI} delay={idx * 0.3} />
                   ))}
-                </motion.div>
-              </AnimatePresence>
-
-              <div className="mt-6 flex items-center bg-gray-100 rounded-xl p-3">
+                </div>
+<div className="mt-6 flex items-center bg-gray-100 rounded-xl p-3">
                 <input
                   type="text"
                   placeholder="Ask Ceri AI anything..."
@@ -1296,7 +1175,7 @@ export default function CeriAIShowcase() {
                   <Send className="w-5 h-5 cursor-pointer hover:text-purple-500" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -1326,11 +1205,8 @@ export default function CeriAIShowcase() {
       {/* Features Grid */}
       <section className="py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
               Why Students Love Ceri AI
@@ -1338,7 +1214,7 @@ export default function CeriAIShowcase() {
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Built with cutting-edge technology to make Biology learning effortless
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -1351,16 +1227,13 @@ export default function CeriAIShowcase() {
       {/* Testimonials */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-4">
               Loved by NEET Aspirants
             </h2>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
@@ -1383,13 +1256,9 @@ export default function CeriAIShowcase() {
                 rating: 5,
               },
             ].map((testimonial, index) => (
-              <motion.div
+              <div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 rounded-2xl p-8 shadow-lg"
+                className="bg-gray-50 rounded-2xl p-8 shadow-lg animate-fadeInUp"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -1401,7 +1270,7 @@ export default function CeriAIShowcase() {
                   <p className="font-bold text-gray-900">{testimonial.name}</p>
                   <p className="text-purple-600 font-semibold">{testimonial.score}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -1424,11 +1293,8 @@ export default function CeriAIShowcase() {
       {/* Final CTA */}
       <section className="py-24 bg-indigo-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div
+           className="animate-fadeInUp">
             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6">
               Ready to Transform Your NEET Prep?
             </h2>
@@ -1450,25 +1316,18 @@ export default function CeriAIShowcase() {
                 View All Courses
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Chat Modal */}
-      <AnimatePresence>
-        {showChat && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4"
+{showChat && (
+          <div
+            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeInUp"
             onClick={() => setShowChat(false)}
           >
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="w-full max-w-2xl h-[80vh] bg-white rounded-3xl shadow-2xl overflow-hidden"
+            <div
+              className="w-full max-w-2xl h-[80vh] bg-white rounded-3xl shadow-2xl overflow-hidden animate-fadeInUp"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="h-full flex flex-col">
@@ -1493,10 +1352,9 @@ export default function CeriAIShowcase() {
                   <MobileChatInterface />
                 </div>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }

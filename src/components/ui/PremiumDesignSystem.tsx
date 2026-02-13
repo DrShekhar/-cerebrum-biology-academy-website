@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 // Premium Glassmorphism Card Component
@@ -36,18 +35,16 @@ export function PremiumCard({
   }
 
   return (
-    <motion.div
+    <div
       className={cn(
         'rounded-2xl transition-all duration-300',
         sizeClasses[size],
         variantClasses[variant],
         className
       )}
-      whileHover={{ y: -2, scale: 1.01 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 30 }}
     >
       {children}
-    </motion.div>
+    </div>
   )
 }
 
@@ -90,7 +87,7 @@ export function PremiumButton({
   }
 
   return (
-    <motion.button
+    <button
       className={cn(
         'relative overflow-hidden rounded-xl font-semibold transition-all duration-300',
         'focus:outline-none focus:ring-4 focus:ring-opacity-50',
@@ -105,33 +102,20 @@ export function PremiumButton({
       onHoverEnd={() => setIsHovered(false)}
       onTapStart={() => setIsPressed(true)}
       onTap={() => setIsPressed(false)}
-      whileHover={{ scale: 1.02, y: -1 }}
-      whileTap={{ scale: 0.98 }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
       {/* Shimmer Effect */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-        initial={{ x: '-100%' }}
-        animate={isHovered ? { x: '100%' } : { x: '-100%' }}
-        transition={{ duration: 0.6, ease: 'easeInOut' }}
+      <div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-fadeInUp"
       />
 
       {/* Ripple Effect */}
-      <AnimatePresence>
-        {isPressed && (
-          <motion.div
-            className="absolute inset-0 bg-white/20 rounded-xl"
-            initial={{ scale: 0, opacity: 1 }}
-            animate={{ scale: 1.5, opacity: 0 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.4 }}
+{isPressed && (
+          <div
+            className="absolute inset-0 bg-white/20 rounded-xl animate-fadeInUp"
           />
         )}
-      </AnimatePresence>
-
-      <span className="relative z-10">{children}</span>
-    </motion.button>
+<span className="relative z-10">{children}</span>
+    </button>
   )
 }
 
@@ -200,12 +184,9 @@ export function PremiumStat({
   }, [isVisible, value, duration])
 
   return (
-    <motion.div
+    <div
       id={`stat-${label}`}
       className={cn('text-center', className)}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
     >
       <div className="text-4xl font-bold bg-indigo-500 bg-clip-text text-transparent">
         {prefix}
@@ -213,7 +194,7 @@ export function PremiumStat({
         {suffix}
       </div>
       <div className="text-sm text-gray-600 mt-1 font-medium">{label}</div>
-    </motion.div>
+    </div>
   )
 }
 
@@ -235,10 +216,8 @@ export function PremiumSkeleton({ lines = 3, className, variant = 'text' }: Prem
   if (variant !== 'text') {
     return (
       <div className={cn(variants[variant], className)}>
-        <motion.div
-          className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent"
-          animate={{ x: ['-100%', '100%'] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
+        <div
+          className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent animate-fadeInUp"
         />
       </div>
     )
@@ -248,15 +227,8 @@ export function PremiumSkeleton({ lines = 3, className, variant = 'text' }: Prem
     <div className={cn('space-y-3', className)}>
       {Array.from({ length: lines }).map((_, i) => (
         <div key={i} className={cn(variants.text, i === lines - 1 ? 'w-3/4' : 'w-full')}>
-          <motion.div
-            className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent"
-            animate={{ x: ['-100%', '100%'] }}
-            transition={{
-              duration: 1.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.1,
-            }}
+          <div
+            className="w-full h-full bg-gradient-to-r from-transparent via-white/60 to-transparent animate-fadeInUp"
           />
         </div>
       ))}
@@ -294,19 +266,14 @@ export function PremiumTooltip({
       onMouseLeave={() => setIsVisible(false)}
     >
       {children}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
+{isVisible && (
+          <div
             className={cn(
               'absolute z-50 px-3 py-2 text-sm text-white bg-gray-900/90 backdrop-blur-sm rounded-lg shadow-lg',
               'whitespace-nowrap pointer-events-none',
               positionClasses[position],
               className
             )}
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.15 }}
           >
             {content}
             {/* Arrow */}
@@ -319,10 +286,9 @@ export function PremiumTooltip({
                 position === 'right' && 'right-full top-1/2 -translate-y-1/2 -mr-1'
               )}
             />
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -447,9 +413,6 @@ export function PremiumProgress({
             strokeWidth="6"
             fill="transparent"
             strokeLinecap="round"
-            initial={{ strokeDashoffset: circumference }}
-            animate={{ strokeDashoffset }}
-            transition={{ duration: 1.5, ease: 'easeOut' }}
             style={{
               strokeDasharray: circumference,
             }}
@@ -484,11 +447,8 @@ export function PremiumProgress({
         </div>
       )}
       <div className={cn('w-full bg-gray-200 rounded-full overflow-hidden', sizeClasses[size])}>
-        <motion.div
-          className="h-full bg-indigo-500 rounded-full"
-          initial={{ width: 0 }}
-          animate={{ width: `${percentage}%` }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
+        <div
+          className="h-full bg-indigo-500 rounded-full animate-fadeInUp"
         />
       </div>
     </div>

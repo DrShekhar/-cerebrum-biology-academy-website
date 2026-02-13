@@ -18,7 +18,6 @@ import {
   Users,
   ArrowRight,
 } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
 import FocusTrap from 'focus-trap-react'
 import { RazorpayPayment } from '@/components/payment/RazorpayPayment'
 import toast from 'react-hot-toast'
@@ -135,20 +134,13 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
   if (!isOpen) return null
 
   return (
-    <AnimatePresence>
-      <FocusTrap>
-        <motion.div
-          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 overflow-y-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+<FocusTrap>
+        <div
+          className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 overflow-y-auto animate-fadeInUp"
           onClick={handleClose}
         >
-          <motion.div
-            className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+          <div
+            className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative animate-fadeInUp"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
@@ -215,11 +207,8 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
 
             <div className="p-8">
               {currentStep === 'details' && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
+                <div
+                 className="animate-fadeInUp">
                   <h3 className="text-xl font-bold text-gray-900 mb-6">Student Information</h3>
 
                   <form onSubmit={handleSubmitDetails} className="space-y-6">
@@ -395,15 +384,12 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                       Continue to Payment
                     </Button>
                   </form>
-                </motion.div>
+                </div>
               )}
 
               {currentStep === 'payment' && (
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5 }}
-                >
+                <div
+                 className="animate-fadeInUp">
                   <h3 className="text-xl font-bold text-gray-900 mb-6">Payment Options</h3>
 
                   {/* Pricing Options */}
@@ -550,15 +536,12 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                       Back to Student Details
                     </Button>
                   </div>
-                </motion.div>
+                </div>
               )}
 
               {currentStep === 'success' && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  className="text-center py-8"
+                <div
+                  className="text-center py-8 animate-fadeInUp"
                 >
                   <div className="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle className="w-10 h-10 text-green-600" />
@@ -629,12 +612,11 @@ export function EnrollmentModal({ isOpen, onClose, course }: EnrollmentModalProp
                   <Button onClick={handleClose} variant="primary" size="lg" className="mx-auto">
                     Start Learning Journey
                   </Button>
-                </motion.div>
+                </div>
               )}
             </div>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </FocusTrap>
-    </AnimatePresence>
-  )
+)
 }

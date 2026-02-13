@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Download,
   Upload,
@@ -646,10 +645,8 @@ const DataManagement: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl">
             <Database className="w-8 h-8 text-white" />
@@ -657,7 +654,7 @@ const DataManagement: React.FC = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
             Data Management
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Comprehensive data management with export, import, backup, and archival capabilities for
           complete test lifecycle management
@@ -720,15 +717,11 @@ const DataManagement: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Export to PDF/Word/Excel */}
+{/* Export to PDF/Word/Excel */}
         {activeTab === 'export' && (
-          <motion.div
+          <div
             key="export"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Export Formats */}
             <div className="bg-white rounded-xl p-6 border">
@@ -866,17 +859,14 @@ const DataManagement: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Bulk Import Questions */}
         {activeTab === 'import' && (
-          <motion.div
+          <div
             key="import"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Import Options */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1054,17 +1044,14 @@ const DataManagement: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Backup Test Data */}
         {activeTab === 'backup' && (
-          <motion.div
+          <div
             key="backup"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Create Backup */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1306,17 +1293,14 @@ const DataManagement: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Test Duplication */}
         {activeTab === 'duplicate' && (
-          <motion.div
+          <div
             key="duplicate"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Search and Filter */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1462,17 +1446,14 @@ const DataManagement: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Archive Old Tests */}
         {activeTab === 'archive' && (
-          <motion.div
+          <div
             key="archive"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* Archive Rules */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1600,17 +1581,14 @@ const DataManagement: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* QTI Standard Export & Bulk Operations - Additional tabs would go here */}
         {(activeTab === 'bulk' || activeTab === 'qti' || activeTab === 'settings') && (
-          <motion.div
+          <div
             key={activeTab}
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="bg-white rounded-xl p-6 border"
+            className="bg-white rounded-xl p-6 border animate-fadeInUp"
           >
             <div className="text-center py-12 text-gray-500">
               <Settings className="w-12 h-12 mx-auto mb-4 text-gray-300" />
@@ -1623,11 +1601,9 @@ const DataManagement: React.FC = () => {
               </p>
               <p className="text-sm">This feature is coming soon</p>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Quick Actions */}
+{/* Quick Actions */}
       <div className="bg-white rounded-xl p-6 border">
         <div className="flex justify-between items-center">
           <div>

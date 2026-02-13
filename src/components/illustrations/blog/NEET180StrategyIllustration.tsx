@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function NEET180StrategyIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -97,8 +96,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       {/* Target circle - Professional with rings */}
       <g filter="url(#targetGlow)">
         <motion.g
-          animate={animate ? { scale: [1, 1.03, 1] } : undefined}
-          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
         >
           <circle cx="120" cy="190" r="75" fill="white" stroke="#DC2626" strokeWidth="10" />
           <circle cx="120" cy="190" r="60" fill="white" stroke="#F97316" strokeWidth="8" />
@@ -112,8 +109,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
       {/* Arrow hitting target */}
       <motion.g
-        animate={animate ? { x: [-30, 0], opacity: [0, 1] } : undefined}
-        transition={{ duration: 0.8, repeat: Infinity, repeatDelay: 2.5, ease: 'easeOut' as const }}
       >
         <line
           x1="20"
@@ -132,8 +127,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       {/* Score Badge - Glass morphism */}
       <motion.g
         filter="url(#stratShadow)"
-        animate={animate ? { y: [-4, 4, -4] } : undefined}
-        transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
       >
         <rect x="45" y="290" width="150" height="65" rx="16" fill="url(#successGrad)" />
         <rect x="45" y="290" width="150" height="65" rx="16" fill="white" fillOpacity="0.1" />
@@ -190,8 +183,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
         {/* Phase 1 */}
         <motion.g
-          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         >
           <rect x="245" y="135" width="245" height="45" rx="10" fill="#DBEAFE" />
           <circle cx="265" cy="157" r="12" fill="#3B82F6" />
@@ -215,8 +206,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
         {/* Phase 2 */}
         <motion.g
-          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
         >
           <rect x="245" y="185" width="245" height="45" rx="10" fill="#FEF3C7" />
           <circle cx="265" cy="207" r="12" fill="#F59E0B" />
@@ -240,8 +229,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
         {/* Phase 3 */}
         <motion.g
-          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
         >
           <rect x="245" y="235" width="245" height="45" rx="10" fill="#DCFCE7" />
           <circle cx="265" cy="257" r="12" fill="#22C55E" />
@@ -265,8 +252,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
         {/* Phase 4 */}
         <motion.g
-          animate={animate ? { opacity: [0.85, 1, 0.85] } : undefined}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
         >
           <rect x="245" y="285" width="245" height="45" rx="10" fill="#FCE7F3" />
           <circle cx="265" cy="307" r="12" fill="#EC4899" />
@@ -297,8 +282,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           height="8"
           rx="4"
           fill="url(#successGrad)"
-          animate={animate ? { width: [0, 245] } : undefined}
-          transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
         />
         <text
           x="367"
@@ -315,8 +298,6 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       {/* Success checkmark */}
       <motion.g
         filter="url(#stratGlow)"
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
       >
         <circle cx="480" cy="50" r="25" fill="url(#successGrad)" />
         <circle

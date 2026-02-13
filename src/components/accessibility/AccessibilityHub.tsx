@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect, useContext, createContext } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Eye,
   Volume2,
@@ -448,10 +447,8 @@ const AccessibilityHub: React.FC = () => {
     <AccessibilityContext.Provider value={{ settings, updateSettings, applyProfile }}>
       <div className="max-w-7xl mx-auto p-6 space-y-6">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center space-y-4"
+        <div
+          className="text-center space-y-4 animate-fadeInUp"
         >
           <div className="flex items-center justify-center gap-3">
             <div className="p-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl">
@@ -465,7 +462,7 @@ const AccessibilityHub: React.FC = () => {
             Customize your learning experience with comprehensive accessibility features. We support
             diverse learning needs and abilities.
           </p>
-        </motion.div>
+        </div>
 
         {/* Quick Access Toolbar */}
         <div className="bg-white rounded-xl p-4 border">
@@ -539,15 +536,11 @@ const AccessibilityHub: React.FC = () => {
         </div>
 
         {/* Content */}
-        <AnimatePresence mode="wait">
-          {/* Profiles Tab */}
+{/* Profiles Tab */}
           {activeTab === 'profiles' && (
-            <motion.div
+            <div
               key="profiles"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-white rounded-xl p-6 border">
                 <h3 className="text-lg font-semibold mb-4">Accessibility Profiles</h3>
@@ -558,9 +551,8 @@ const AccessibilityHub: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {accessibilityProfiles.map((profile) => (
-                    <motion.div
+                    <div
                       key={profile.id}
-                      whileHover={{ scale: 1.02 }}
                       onClick={() => applyProfile(profile)}
                       className={`p-4 border rounded-lg cursor-pointer transition-all ${
                         activeProfile === profile.id
@@ -590,21 +582,18 @@ const AccessibilityHub: React.FC = () => {
                           </span>
                         ))}
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {/* Settings Tab */}
           {activeTab === 'settings' && (
-            <motion.div
+            <div
               key="settings"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
             >
               {/* Visual Settings */}
               <div className="bg-white rounded-xl p-6 border">
@@ -996,27 +985,22 @@ const AccessibilityHub: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {/* Support Tab */}
           {activeTab === 'support' && (
-            <motion.div
+            <div
               key="support"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-white rounded-xl p-6 border">
                 <h3 className="text-lg font-semibold mb-4">Learning Accommodations</h3>
                 <div className="grid gap-4">
                   {accommodations.map((accommodation) => (
-                    <motion.div
+                    <div
                       key={accommodation.id}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="border rounded-lg p-4"
+                      className="border rounded-lg p-4 animate-fadeInUp"
                     >
                       <div className="flex items-start justify-between mb-3">
                         <div>
@@ -1042,7 +1026,7 @@ const AccessibilityHub: React.FC = () => {
                           </ul>
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -1087,17 +1071,14 @@ const AccessibilityHub: React.FC = () => {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {/* Testing Tab */}
           {activeTab === 'testing' && (
-            <motion.div
+            <div
               key="testing"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               <div className="bg-white rounded-xl p-6 border">
                 <h3 className="text-lg font-semibold mb-4">Accessibility Testing Suite</h3>
@@ -1152,22 +1133,18 @@ const AccessibilityHub: React.FC = () => {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Status Indicator */}
+{/* Status Indicator */}
         {isScreenReaderActive && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg"
+          <div
+            className="fixed bottom-4 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg animate-fadeInUp"
           >
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4" />
               <span className="text-sm">Screen Reader Detected</span>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </AccessibilityContext.Provider>

@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import {
   FileText,
   Plus,
@@ -113,10 +112,8 @@ export default function OMRAdminPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="bg-white p-4 rounded-lg shadow-sm border"
+          <div
+            className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-blue-100 rounded-lg">
@@ -127,13 +124,10 @@ export default function OMRAdminPage() {
                 <p className="text-xl font-bold">{stats.total}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="bg-white p-4 rounded-lg shadow-sm border"
+          <div
+            className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-green-100 rounded-lg">
@@ -144,13 +138,10 @@ export default function OMRAdminPage() {
                 <p className="text-xl font-bold">{stats.active}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="bg-white p-4 rounded-lg shadow-sm border"
+          <div
+            className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-purple-100 rounded-lg">
@@ -161,13 +152,10 @@ export default function OMRAdminPage() {
                 <p className="text-xl font-bold">{stats.withVerifiedKey}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="bg-white p-4 rounded-lg shadow-sm border"
+          <div
+            className="bg-white p-4 rounded-lg shadow-sm border animate-fadeInUp"
           >
             <div className="flex items-center gap-3">
               <div className="p-2 bg-orange-100 rounded-lg">
@@ -178,7 +166,7 @@ export default function OMRAdminPage() {
                 <p className="text-xl font-bold">{stats.totalSubmissions}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <div className="bg-white rounded-lg shadow-sm border">

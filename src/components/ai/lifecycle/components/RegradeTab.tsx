@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { RotateCcw, Users, RefreshCw } from 'lucide-react'
 import type { RegradeOptions } from '../types'
 
@@ -19,12 +18,9 @@ export function RegradeTab({
   initiateRegrade,
 }: RegradeTabProps) {
   return (
-    <motion.div
+    <div
       key="regrade"
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: 20 }}
-      className="space-y-6"
+      className="space-y-6 animate-fadeInUp"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white rounded-xl p-6 border">
@@ -215,6 +211,6 @@ export function RegradeTab({
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

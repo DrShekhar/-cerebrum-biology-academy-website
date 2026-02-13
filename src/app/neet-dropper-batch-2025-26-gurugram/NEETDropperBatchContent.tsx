@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import {
   BookOpen, CheckCircle, ChevronRight, ChevronDown, MapPin, Phone, Play, Home, Users, Target, TrendingUp, Star, RefreshCw, BarChart3,
 } from 'lucide-react'
@@ -66,7 +65,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl">
+          <div className="max-w-4xl animate-fadeInUp">
             <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <RefreshCw className="w-4 h-4" />
               Batch Starting July 2025
@@ -103,33 +102,33 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                   <Play className="w-5 h-5 mr-2" />Book Free Counseling
                 </Button>
               </Link>
-              <motion.button whileHover={{ scale: 1.02 }} onClick={handleWhatsApp}
-                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30">
+              <button onClick={handleWhatsApp}
+                className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-4 rounded-xl font-semibold border border-white/30 animate-fadeInUp">
                 <Phone className="w-5 h-5" />WhatsApp: +91-88264-44334
-              </motion.button>
+              </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Dropper Batch */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 to-orange-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Our Dropper Batch Works</h2>
             <p className="text-xl text-slate-600">Specialized program for NEET repeaters with proven results</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {programHighlights.map((item, index) => (
-              <motion.div key={item.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-2xl p-6 shadow-lg">
+              <div key={item.title}
+                className="bg-white rounded-2xl p-6 shadow-lg animate-fadeInUp">
                 <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
                   <item.icon className="w-6 h-6 text-yellow-600" />
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-slate-600">{item.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -138,15 +137,15 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
       {/* 3-Phase Plan */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Your 1-Year Improvement Plan</h2>
             <p className="text-xl text-slate-600">Structured approach to maximize your second attempt</p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {improvementPlan.map((phase, index) => (
-              <motion.div key={phase.phase} initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-                className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-6 md:p-8 text-white">
+              <div key={phase.phase}
+                className="bg-gradient-to-r from-slate-800 to-slate-700 rounded-2xl p-6 md:p-8 text-white animate-fadeInUp">
                 <div className="flex flex-col md:flex-row md:items-start gap-6">
                   <div className="md:w-1/4">
                     <span className="inline-block bg-yellow-500 text-slate-900 px-4 py-2 rounded-full text-sm font-bold mb-2">{phase.duration}</span>
@@ -163,7 +162,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -172,15 +171,15 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
       {/* Success Stories */}
       <section className="py-16 bg-gradient-to-br from-green-600 to-teal-600 text-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-3xl font-bold mb-4">Dropper Success Stories</h2>
             <p className="text-green-100">Real improvements from our previous dropper batches</p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {successStories.map((story, index) => (
-              <motion.div key={story.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center">
+              <div key={story.name}
+                className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center animate-fadeInUp">
                 <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-slate-900 font-bold text-lg">{story.improvement}</span>
                 </div>
@@ -189,7 +188,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                   <span className="line-through">{story.before}</span> → <span className="text-yellow-300 font-bold">{story.after}</span>
                 </p>
                 <p className="text-sm text-green-200">Admitted to {story.college}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -199,8 +198,8 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8">
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-white rounded-2xl p-8 shadow-xl">
+            <div
+              className="bg-white rounded-2xl p-8 shadow-xl animate-fadeInUp">
               <h2 className="text-2xl font-bold text-slate-900 mb-6">Program Details</h2>
               <div className="space-y-4">
                 <div className="flex justify-between py-3 border-b"><span className="text-slate-600">Course</span><span className="font-semibold">Dropper/Repeater Batch</span></div>
@@ -215,10 +214,10 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
               <Link href="/demo-booking" className="block mt-6">
                 <Button className="w-full bg-yellow-500 text-slate-900 hover:bg-yellow-400">Book Free Counseling</Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
-              className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 text-white">
+            <div
+              className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl p-8 text-white animate-fadeInUp">
               <div className="flex items-center mb-6">
                 <MapPin className="w-8 h-8 text-yellow-400 mr-3" />
                 <h2 className="text-2xl font-bold">Our Gurugram Center</h2>
@@ -230,7 +229,7 @@ export default function NEETDropperBatchContent({ faqs }: { faqs: FAQ[] }) {
                 <a href={`tel:${CONTACT_INFO.phone.primary}`}><Button variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900"><Phone className="w-4 h-4 mr-2" />Call Now</Button></a>
                 <a href={CONTACT_INFO.location.gurugram.mapUrl} target="_blank" rel="noopener"><Button className="bg-yellow-500 text-slate-900 hover:bg-yellow-400"><MapPin className="w-4 h-4 mr-2" />Directions</Button></a>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

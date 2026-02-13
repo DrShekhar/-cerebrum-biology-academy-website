@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ChevronRight, CheckCircle2, Sparkles, Trophy, Clock, GraduationCap } from 'lucide-react'
 
@@ -224,11 +223,8 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
               <span className="text-blue-600 font-semibold">{Math.round(progress)}% Complete</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <motion.div
-                className="bg-blue-500 h-2 rounded-full"
-                initial={{ width: 0 }}
-                animate={{ width: `${progress}%` }}
-                transition={{ duration: 0.5 }}
+              <div
+                className="bg-blue-500 h-2 rounded-full animate-fadeInUp"
               />
             </div>
           </div>
@@ -242,13 +238,10 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
           {/* Options */}
           <div className="space-y-3">
             {question.options.map((option, index) => (
-              <motion.button
+              <button
                 key={option.value}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
                 onClick={() => handleAnswer(question.id, option.value)}
-                className="w-full p-4 text-left border-2 border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group"
+                className="w-full p-4 text-left border-2 border-gray-200 rounded-xl hover:border-blue-300 hover:bg-blue-50 transition-all duration-200 group animate-fadeInUp"
               >
                 <div className="flex items-center justify-between">
                   <span className="font-medium text-gray-900 group-hover:text-blue-700">
@@ -256,7 +249,7 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
                   </span>
                   <ChevronRight className="h-5 w-5 text-gray-400 group-hover:text-blue-500" />
                 </div>
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
@@ -276,22 +269,12 @@ export function QuickQuizFlow({ onComplete, className = '' }: QuickQuizFlowProps
           {showConfetti && (
             <div className="absolute inset-0 pointer-events-none">
               {[...Array(20)].map((_, i) => (
-                <motion.div
+                <div
                   key={i}
-                  className="absolute w-2 h-2 bg-yellow-400 rounded-full"
+                  className="absolute w-2 h-2 bg-yellow-400 rounded-full animate-fadeInUp"
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                  }}
-                  animate={{
-                    y: [0, -50, 0],
-                    rotate: [0, 360],
-                    opacity: [1, 0],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.1,
                   }}
                 />
               ))}

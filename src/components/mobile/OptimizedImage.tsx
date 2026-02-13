@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useCallback } from 'react'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import { ImageIcon, Wifi, WifiOff } from 'lucide-react'
 import { useIndianMobileOptimizations } from '@/lib/mobile/indianMobileOptimizations'
 
@@ -223,14 +222,11 @@ export function OptimizedImage({
   const ProgressiveWrapper = ({ children }: { children: React.ReactNode }) => {
     if (!shouldReduceAnimations) {
       return (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3 }}
-          className="relative"
+        <div
+          className="relative animate-fadeInUp"
         >
           {children}
-        </motion.div>
+        </div>
       )
     }
 

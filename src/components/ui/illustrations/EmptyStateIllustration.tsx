@@ -1,8 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
-
 interface EmptyStateIllustrationProps {
   type: 'test' | 'chat' | 'progress' | 'search' | 'default'
   className?: string
@@ -36,7 +34,7 @@ export function EmptyStateIllustration({
   const illustrations = {
     test: (
       <svg className={className} viewBox="0 0 200 200" fill="none">
-        <motion.g animate={animate ? animations.float : undefined}>
+        <motion.g>
           {/* Paper */}
           <rect x="50" y="30" width="100" height="140" rx="4" fill="#E5E7EB" />
           <rect x="50" y="30" width="100" height="140" rx="4" stroke="#9CA3AF" strokeWidth="2" />
@@ -58,14 +56,11 @@ export function EmptyStateIllustration({
             strokeWidth="2"
             strokeLinecap="round"
             fill="none"
-            initial={{ pathLength: 0 }}
-            animate={animate ? { pathLength: 1 } : undefined}
-            transition={{ duration: 0.5, delay: 0.5 }}
           />
         </motion.g>
 
         {/* Pencil */}
-        <motion.g animate={animate ? animations.pulse : undefined}>
+        <motion.g>
           <rect
             x="130"
             y="150"
@@ -84,9 +79,6 @@ export function EmptyStateIllustration({
       <svg className={className} viewBox="0 0 200 200" fill="none">
         {/* Left bubble (user) */}
         <motion.g
-          initial={animate ? { x: -20, opacity: 0 } : undefined}
-          animate={animate ? { x: 0, opacity: 1 } : undefined}
-          transition={{ duration: 0.5 }}
         >
           <circle cx="60" cy="70" r="30" fill="#DBEAFE" />
           <path d="M 45 95 L 60 85 L 75 95" fill="#DBEAFE" />
@@ -97,9 +89,6 @@ export function EmptyStateIllustration({
 
         {/* Right bubble (bot) */}
         <motion.g
-          initial={animate ? { x: 20, opacity: 0 } : undefined}
-          animate={animate ? { x: 0, opacity: 1 } : undefined}
-          transition={{ duration: 0.5, delay: 0.3 }}
         >
           <circle cx="140" cy="120" r="35" fill="#D1FAE5" />
           <path d="M 120 150 L 140 140 L 160 150" fill="#D1FAE5" />
@@ -110,15 +99,6 @@ export function EmptyStateIllustration({
 
         {/* Sparkles */}
         <motion.g
-          animate={
-            animate
-              ? {
-                  scale: [1, 1.2, 1],
-                  opacity: [0.5, 1, 0.5],
-                }
-              : undefined
-          }
-          transition={{ duration: 2, repeat: Infinity }}
         >
           <circle cx="40" cy="50" r="2" fill="#FCD34D" />
           <circle cx="160" cy="90" r="2" fill="#FCD34D" />
@@ -128,7 +108,7 @@ export function EmptyStateIllustration({
 
     progress: (
       <svg className={className} viewBox="0 0 200 200" fill="none">
-        <motion.g animate={animate ? animations.float : undefined}>
+        <motion.g>
           {/* Bar chart */}
           <rect x="40" y="120" width="20" height="40" rx="2" fill="#DBEAFE" />
           <rect x="70" y="90" width="20" height="70" rx="2" fill="#93C5FD" />
@@ -142,9 +122,6 @@ export function EmptyStateIllustration({
             strokeWidth="3"
             strokeLinecap="round"
             fill="none"
-            initial={animate ? { pathLength: 0 } : undefined}
-            animate={animate ? { pathLength: 1 } : undefined}
-            transition={{ duration: 1.5, delay: 0.5 }}
           />
 
           {/* Arrow */}
@@ -160,14 +137,6 @@ export function EmptyStateIllustration({
       <svg className={className} viewBox="0 0 200 200" fill="none">
         {/* Magnifying glass */}
         <motion.g
-          animate={
-            animate
-              ? {
-                  rotate: [0, 10, -10, 0],
-                }
-              : undefined
-          }
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' as const }}
         >
           <circle
             cx="90"
@@ -192,15 +161,6 @@ export function EmptyStateIllustration({
 
         {/* Question marks */}
         <motion.g
-          animate={
-            animate
-              ? {
-                  y: [0, -5, 0],
-                  opacity: [0.5, 1, 0.5],
-                }
-              : undefined
-          }
-          transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
         >
           <text x="80" y="95" fontSize="24" fontWeight="bold" fill="#9CA3AF">
             ?
@@ -213,23 +173,19 @@ export function EmptyStateIllustration({
           cy="60"
           r="3"
           fill="#FCD34D"
-          animate={animate ? { scale: [1, 1.5, 1] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity }}
         />
         <motion.circle
           cx="140"
           cy="70"
           r="3"
           fill="#FCD34D"
-          animate={animate ? { scale: [1, 1.5, 1] } : undefined}
-          transition={{ duration: 1.5, repeat: Infinity, delay: 0.5 }}
         />
       </svg>
     ),
 
     default: (
       <svg className={className} viewBox="0 0 200 200" fill="none">
-        <motion.g animate={animate ? animations.float : undefined}>
+        <motion.g>
           {/* Document stack */}
           <rect x="50" y="60" width="90" height="110" rx="4" fill="#F3F4F6" />
           <rect x="55" y="55" width="90" height="110" rx="4" fill="#E5E7EB" />
@@ -253,8 +209,6 @@ export function EmptyStateIllustration({
           <motion.path
             d="M 100 120 L 105 130 L 115 130 L 108 137 L 110 147 L 100 140 L 90 147 L 92 137 L 85 130 L 95 130 Z"
             fill="#FCD34D"
-            animate={animate ? { scale: [1, 1.2, 1], rotate: [0, 10, 0] } : undefined}
-            transition={{ duration: 2, repeat: Infinity }}
             style={{ originX: '100px', originY: '133px' }}
           />
         </motion.g>

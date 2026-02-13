@@ -14,8 +14,6 @@ import {
   Microscope,
   GraduationCap,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 export default function DemoPage() {
   const [selectedTimeSlot, setSelectedTimeSlot] = useState('')
   const [selectedCourse, setSelectedCourse] = useState('')
@@ -97,11 +95,8 @@ export default function DemoPage() {
       {/* Hero Section */}
       <section className="bg-blue-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center animate-fadeInUp"
           >
             <div className="inline-flex items-center space-x-2 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-semibold mb-6">
               <Star className="w-5 h-5" />
@@ -129,38 +124,32 @@ export default function DemoPage() {
                 <div className="text-blue-200">Faculty Teaching</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Demo Features */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What You'll Experience</h2>
             <p className="text-xl text-gray-600">
               Get a comprehensive preview of our teaching methodology and course structure
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {demoFeatures.map((feature, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition-shadow duration-300 animate-fadeInUp"
               >
                 <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -169,23 +158,17 @@ export default function DemoPage() {
       {/* Booking Form Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-12 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Book Your Free Demo Class</h2>
             <p className="text-xl text-gray-600">
               Choose your preferred time slot and get started with your NEET preparation journey
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            className="bg-white rounded-3xl shadow-lg p-8"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="bg-white rounded-3xl shadow-lg p-8 animate-fadeInUp"
           >
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Course Selection */}
@@ -312,33 +295,27 @@ export default function DemoPage() {
                 <ArrowRight className="w-5 h-5" />
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Faculty Preview */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Expert Faculty</h2>
             <p className="text-xl text-gray-600">
               Learn from experienced educators who have helped thousands crack NEET
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
             {facultyPreview.map((faculty, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-gray-50 rounded-2xl p-8 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                className="bg-gray-50 rounded-2xl p-8 text-center animate-fadeInUp"
               >
                 <div className="w-24 h-24 bg-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
                   <GraduationCap className="w-12 h-12 text-white" />
@@ -346,7 +323,7 @@ export default function DemoPage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{faculty.name}</h3>
                 <p className="text-blue-600 font-semibold mb-2">{faculty.qualification}</p>
                 <p className="text-gray-600">{faculty.specialization}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

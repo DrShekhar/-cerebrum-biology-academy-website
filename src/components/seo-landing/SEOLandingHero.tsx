@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { ArrowRight, Phone, Play } from 'lucide-react'
 import Link from 'next/link'
 import { SEOLandingContent } from '@/data/seo-landing/types'
@@ -36,43 +35,31 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
         <div className="text-center">
           {/* Highlighted Text Badge */}
           {hero.highlightedText && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm"
+            <div
+              className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 backdrop-blur-sm animate-fadeInUp"
             >
               <span className="h-2 w-2 animate-pulse rounded-full bg-green-400" />
               <span className="text-sm font-medium text-white/90">{hero.highlightedText}</span>
-            </motion.div>
+            </div>
           )}
 
           {/* Main Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
+          <h1
+            className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl animate-fadeInUp"
           >
             {hero.headline}
-          </motion.h1>
+          </h1>
 
           {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-3xl text-lg text-white/80 sm:text-xl"
+          <p
+            className="mx-auto mt-6 max-w-3xl text-lg text-white/80 sm:text-xl animate-fadeInUp"
           >
             {hero.subheadline}
-          </motion.p>
+          </p>
 
           {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+          <div
+            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fadeInUp"
           >
             <Link
               href={hero.ctaLink}
@@ -88,29 +75,23 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
               <Play className="h-5 w-5" />
               Watch Demo
             </Link>
-          </motion.div>
+          </div>
 
           {/* Quick Contact */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-8 flex items-center justify-center gap-2 text-white/70"
+          <div
+            className="mt-8 flex items-center justify-center gap-2 text-white/70 animate-fadeInUp"
           >
             <Phone className="h-4 w-4" />
             <span className="text-sm">Questions? Call Dr. Shekhar:</span>
             <a href={getPhoneLink()} className="font-semibold text-white hover:underline">
               {getDisplayPhone()}
             </a>
-          </motion.div>
+          </div>
         </div>
 
         {/* Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-          className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4"
+        <div
+          className="mt-16 grid grid-cols-2 gap-4 lg:grid-cols-4 animate-fadeInUp"
         >
           {stats.map((stat, index) => (
             <div
@@ -121,7 +102,7 @@ export function SEOLandingHero({ hero, stats }: SEOLandingHeroProps) {
               <div className="mt-1 text-sm text-white/70">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   )

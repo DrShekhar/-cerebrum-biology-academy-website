@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Target, ChevronRight, Crown, Zap, Rocket, Star } from 'lucide-react'
 import Link from 'next/link'
 import { CourseSeriesCard, createCourseSeriesCard, SeriesType } from '@/types/courseSeriesCard'
@@ -134,22 +133,10 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
   const IconComponent = config.icon
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{
-        duration: 0.7,
-        ease: [0.16, 1, 0.3, 1],
-        delay: series.id === 'pinnacle' ? 0 : series.id === 'ascent' ? 0.1 : 0.2,
-      }}
-      whileHover={{
-        y: -8,
-        scale: 1.02,
-        transition: { duration: 0.3, ease: 'easeOut' },
-      }}
+    <div
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="relative group"
+      className="relative group animate-fadeInUp"
     >
       {/* Shimmer effect overlay */}
       <div
@@ -163,30 +150,24 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
         {/* Premium badge for Pinnacle */}
         {series.id === 'pinnacle' && (
           <div className="absolute top-4 right-4 z-10">
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ delay: 0.5, duration: 0.5, type: 'spring' }}
-              className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
+            <div
+              className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 animate-fadeInUp"
             >
               <Crown className="w-3 h-3" />
               <span>ELITE</span>
-            </motion.div>
+            </div>
           </div>
         )}
 
         {/* Popular badge for Ascent */}
         {series.id === 'ascent' && (
           <div className="absolute top-4 right-4 z-10">
-            <motion.div
-              initial={{ scale: 0, rotate: -180 }}
-              animate={{ scale: 1, rotate: 0 }}
-              transition={{ delay: 0.5, duration: 0.5, type: 'spring' }}
-              className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1"
+            <div
+              className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center space-x-1 animate-fadeInUp"
             >
               <Star className="w-3 h-3" />
               <span>POPULAR</span>
-            </motion.div>
+            </div>
           </div>
         )}
 
@@ -197,13 +178,8 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
 
           <div className="relative z-10 text-center">
             {/* Icon with glow effect */}
-            <motion.div
-              whileHover={{
-                scale: 1.1,
-                rotate: series.id === 'pinnacle' ? 5 : series.id === 'ascent' ? -5 : 0,
-              }}
-              transition={{ duration: 0.3 }}
-              className="relative mx-auto mb-6"
+            <div
+              className="relative mx-auto mb-6 animate-fadeInUp"
             >
               <div
                 className={`w-24 h-24 mx-auto bg-gradient-to-br ${config.gradient} rounded-2xl flex items-center justify-center shadow-xl group-hover:shadow-2xl transition-shadow duration-300`}
@@ -215,15 +191,12 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
               <div
                 className={`absolute inset-0 w-24 h-24 mx-auto bg-gradient-to-br ${config.gradient} rounded-2xl opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-300`}
               />
-            </motion.div>
+            </div>
 
             {/* Series branding */}
             <div className="mb-6">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="flex items-center justify-center space-x-3 mb-4"
+              <div
+                className="flex items-center justify-center space-x-3 mb-4 animate-fadeInUp"
               >
                 <span className="bg-white/60 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-full text-sm font-semibold border border-white/30">
                   Class {classLevel}
@@ -233,7 +206,7 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                 >
                   {config.tagline}
                 </span>
-              </motion.div>
+              </div>
 
               <h3 className={`text-3xl font-bold ${config.textColor} mb-3 tracking-tight`}>
                 {config.name}
@@ -246,52 +219,45 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
             {/* Feature highlights */}
             <div className="grid grid-cols-3 gap-3 mb-6">
               {config.features.map((feature, index) => (
-                <motion.div
+                <div
                   key={feature}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.4 + index * 0.1 }}
-                  className="bg-white/50 backdrop-blur-sm rounded-xl p-3 border border-white/30"
+                  className="bg-white/50 backdrop-blur-sm rounded-xl p-3 border border-white/30 animate-fadeInUp"
                 >
                   <div className={`text-sm font-semibold ${config.textColor}`}>{feature}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             {/* Course metrics with enhanced styling */}
             <div className="grid grid-cols-3 gap-4 mb-6">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30"
+              <div
+                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp"
               >
                 <div className="text-2xl font-bold text-gray-900">2Y</div>
                 <div className="text-sm text-gray-600 font-medium">Duration</div>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30"
+              </div>
+              <div
+                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp"
               >
                 <div className="text-2xl font-bold text-gray-900">{series.weeklyHours}h</div>
                 <div className="text-sm text-gray-600 font-medium">Per Week</div>
-              </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30"
+              </div>
+              <div
+                className="bg-white/60 backdrop-blur-sm rounded-xl p-4 border border-white/30 animate-fadeInUp"
               >
                 <div className="text-2xl font-bold text-gray-900">{series.batchSize}</div>
                 <div className="text-sm text-gray-600 font-medium">Batch Size</div>
-              </motion.div>
+              </div>
             </div>
 
             {/* NEET focused badge with enhanced design */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30"
+            <div
+              className="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30 animate-fadeInUp"
             >
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
               <span className="font-semibold text-gray-700">NEET Focused</span>
               <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -303,31 +269,21 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
 
           {/* Enhanced Plan Selection Tabs */}
           <div className="relative bg-white/60 backdrop-blur-sm rounded-2xl p-2 mb-6 border border-white/30">
-            <AnimatePresence mode="wait">
-              {selectedPlan && (
-                <motion.div
+{selectedPlan && (
+                <div
                   layoutId={`plan-selector-${series.id}`}
                   className={`absolute inset-y-2 bg-gradient-to-r ${config.gradient} rounded-xl`}
                   style={{
                     left: `${(series.plans.findIndex((p) => p.id === selectedPlan) * 100) / series.plans.length + 1}%`,
                     width: `${100 / series.plans.length - 2}%`,
                   }}
-                  transition={{
-                    type: 'spring',
-                    stiffness: 300,
-                    damping: 30,
-                  }}
                 />
               )}
-            </AnimatePresence>
-
-            <div className="relative flex">
+<div className="relative flex">
               {series.plans.map((plan) => (
-                <motion.button
+                <button
                   key={plan.id}
                   onClick={() => handlePlanSelect(plan.id)}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
                   className={`flex-1 py-3 px-4 rounded-xl text-sm font-bold transition-all relative z-10 ${
                     selectedPlan === plan.id
                       ? 'text-white'
@@ -336,32 +292,22 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                 >
                   Plan {plan.id}
                   {plan.popular && (
-                    <motion.span
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      className="ml-1 text-xs"
+                    <span
+                      className="ml-1 text-xs animate-fadeInUp"
                     >
                       ⭐
-                    </motion.span>
+                    </span>
                   )}
-                </motion.button>
+                </button>
               ))}
             </div>
           </div>
 
           {/* Selected Plan Details with enhanced animation */}
-          <AnimatePresence mode="wait">
-            {selectedPlan && (
-              <motion.div
+{selectedPlan && (
+              <div
                 key={selectedPlan}
-                initial={{ opacity: 0, y: 20, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                transition={{
-                  duration: 0.4,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-                className="mb-6"
+                className="mb-6 animate-fadeInUp"
               >
                 {(() => {
                   const plan = series.plans.find((p) => p.id === selectedPlan)
@@ -383,13 +329,11 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                           </span>
                         </div>
                         {plan.popular && (
-                          <motion.span
-                            initial={{ scale: 0, rotate: -180 }}
-                            animate={{ scale: 1, rotate: 0 }}
-                            className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold"
+                          <span
+                            className="bg-gold-600 text-white px-3 py-1 rounded-full text-xs font-bold animate-fadeInUp"
                           >
                             Most Popular
-                          </motion.span>
+                          </span>
                         )}
                       </div>
 
@@ -414,15 +358,12 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                         </span>
                         <div className="flex flex-wrap gap-2">
                           {plan.features.slice(0, 3).map((feature, index) => (
-                            <motion.span
+                            <span
                               key={feature}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                              className="bg-white/60 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-semibold border border-white/30"
+                              className="bg-white/60 backdrop-blur-sm text-gray-700 px-3 py-1 rounded-full text-xs font-semibold border border-white/30 animate-fadeInUp"
                             >
                               {feature}
-                            </motion.span>
+                            </span>
                           ))}
                           {plan.features.length > 3 && (
                             <span className="text-gray-500 text-xs font-medium">
@@ -434,13 +375,11 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                     </div>
                   )
                 })()}
-              </motion.div>
+              </div>
             )}
-          </AnimatePresence>
-
-          {/* Enhanced Action Buttons */}
+{/* Enhanced Action Buttons */}
           <div className="space-y-4">
-            <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            <div className="animate-fadeInUp">
               <Link
                 href={
                   selectedPlan
@@ -467,26 +406,21 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                   'Select a Plan First'
                 )}
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.button
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="w-full bg-white/60 backdrop-blur-sm text-gray-800 py-4 rounded-2xl font-bold border border-white/30 hover:bg-white/80 transition-all duration-300"
+            <button
+              className="w-full bg-white/60 backdrop-blur-sm text-gray-800 py-4 rounded-2xl font-bold border border-white/30 hover:bg-white/80 transition-all duration-300 animate-fadeInUp"
             >
               <span className="flex items-center justify-center space-x-2">
                 <span>Book Free Demo Class</span>
                 <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
               </span>
-            </motion.button>
+            </button>
           </div>
 
           {/* Enhanced Quick Features */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="mt-6 text-center"
+          <div
+            className="mt-6 text-center animate-fadeInUp"
           >
             <div className="flex justify-center space-x-6">
               {[
@@ -494,21 +428,18 @@ export function SeriesCard({ series, classLevel, onPlanSelect }: SeriesCardProps
                 { label: 'Mock Tests', color: 'green' },
                 { label: 'Study Material', color: 'purple' },
               ].map((item, index) => (
-                <motion.span
+                <span
                   key={item.label}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 + index * 0.1 }}
-                  className="flex items-center space-x-2 text-sm font-medium text-gray-600"
+                  className="flex items-center space-x-2 text-sm font-medium text-gray-600 animate-fadeInUp"
                 >
                   <div className={`w-2 h-2 bg-${item.color}-500 rounded-full animate-pulse`} />
                   <span>{item.label}</span>
-                </motion.span>
+                </span>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Lock,
   Eye,
@@ -330,10 +329,8 @@ const SecurityFeatures: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-gradient-to-r from-red-600 to-orange-600 rounded-xl">
             <Shield className="w-8 h-8 text-white" />
@@ -341,7 +338,7 @@ const SecurityFeatures: React.FC = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent">
             Security Features
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Advanced security monitoring and proctoring features for test integrity, including browser
           lockdown, copy-paste detection, webcam monitoring, and plagiarism checking
@@ -501,15 +498,11 @@ const SecurityFeatures: React.FC = () => {
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Browser Lockdown */}
+{/* Browser Lockdown */}
         {activeTab === 'browser' && (
-          <motion.div
+          <div
             key="browser"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Browser Lockdown Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -662,17 +655,14 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Copy/Paste Protection */}
         {activeTab === 'copy' && (
-          <motion.div
+          <div
             key="copy"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Copy/Paste Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -840,17 +830,14 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Right Click Protection */}
         {activeTab === 'rightclick' && (
-          <motion.div
+          <div
             key="rightclick"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Right Click Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1017,17 +1004,14 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Tab Switch Detection */}
         {activeTab === 'tabswitch' && (
-          <motion.div
+          <div
             key="tabswitch"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Tab Switch Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1242,17 +1226,14 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Webcam Proctoring */}
         {activeTab === 'webcam' && (
-          <motion.div
+          <div
             key="webcam"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Webcam Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1466,17 +1447,14 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Screen Recording */}
         {activeTab === 'screen' && (
-          <motion.div
+          <div
             key="screen"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Screen Recording Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1748,17 +1726,14 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Plagiarism Check */}
         {activeTab === 'plagiarism' && (
-          <motion.div
+          <div
             key="plagiarism"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Plagiarism Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -2011,17 +1986,14 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Time Tracking */}
         {activeTab === 'tracking' && (
-          <motion.div
+          <div
             key="tracking"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Time Tracking Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -2204,11 +2176,9 @@ const SecurityFeatures: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Security Events Log */}
+{/* Security Events Log */}
       {securityEvents.length > 0 && (
         <div className="bg-white rounded-xl p-6 border">
           <div className="flex justify-between items-center mb-4">

@@ -12,7 +12,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Home,
   BookOpen,
@@ -158,46 +157,30 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
   return (
     <>
       {/* Mobile Menu Toggle Button */}
-      <motion.button
-        whileTap={{ scale: 0.95 }}
+      <button
         onClick={onToggle}
-        className="md:hidden fixed top-4 left-4 z-50 p-3 bg-white border border-gray-200 rounded-xl shadow-lg mobile-touch-target"
+        className="md:hidden fixed top-4 left-4 z-50 p-3 bg-white border border-gray-200 rounded-xl shadow-lg mobile-touch-target animate-fadeInUp"
         aria-label="Toggle Menu"
       >
-        <AnimatePresence mode="wait">
-          {isOpen ? (
-            <motion.div
+{isOpen ? (
+            <div
               key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
-              transition={{ duration: shouldReduceAnimations ? 0 : 0.2 }}
-            >
+             className="animate-fadeInUp">
               <X className="w-6 h-6 text-gray-700" />
-            </motion.div>
+            </div>
           ) : (
-            <motion.div
+            <div
               key="menu"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
-              transition={{ duration: shouldReduceAnimations ? 0 : 0.2 }}
-            >
+             className="animate-fadeInUp">
               <Menu className="w-6 h-6 text-gray-700" />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </motion.button>
+</button>
 
       {/* Full Screen Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: shouldReduceAnimations ? 0 : 0.3 }}
-            className="fixed inset-0 bg-white z-40 md:hidden overflow-y-auto"
+{isOpen && (
+          <div
+            className="fixed inset-0 bg-white z-40 md:hidden overflow-y-auto animate-fadeInUp"
           >
             {/* Header */}
             <div className="pt-20 pb-6 px-6 border-b border-gray-100">
@@ -216,17 +199,14 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
               {/* Quick Stats */}
               <div className="grid grid-cols-2 gap-3">
                 {statsItems.map((stat, index) => (
-                  <motion.div
+                  <div
                     key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: shouldReduceAnimations ? 0 : index * 0.1 }}
-                    className="bg-gray-50 rounded-lg p-3 text-center"
+                    className="bg-gray-50 rounded-lg p-3 text-center animate-fadeInUp"
                   >
                     <stat.icon className={`w-5 h-5 ${stat.color} mx-auto mb-1`} />
                     <div className="text-lg font-bold text-gray-900">{stat.value}</div>
                     <div className="text-xs text-gray-600">{stat.label}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -239,12 +219,9 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
 
               <div className="space-y-3">
                 {mainNavItems.map((item, index) => (
-                  <motion.div
+                  <div
                     key={item.href}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: shouldReduceAnimations ? 0 : index * 0.1 }}
-                  >
+                   className="animate-fadeInUp">
                     <NavItem
                       item={item}
                       currentPath={currentPath}
@@ -252,7 +229,7 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
                       setActiveSubmenu={setActiveSubmenu}
                       onClose={onToggle}
                     />
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -265,25 +242,19 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
 
               <div className="grid grid-cols-3 gap-3">
                 {quickActions.map((action, index) => (
-                  <motion.div
+                  <div
                     key={action.label}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: shouldReduceAnimations ? 0 : index * 0.1 }}
-                  >
+                   className="animate-fadeInUp">
                     <QuickActionButton action={action} onClose={onToggle} />
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
 
             {/* CTA Section */}
             <div className="px-6 py-6 bg-gray-50">
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: shouldReduceAnimations ? 0 : 0.5 }}
-                className="text-center"
+              <div
+                className="text-center animate-fadeInUp"
               >
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   {language === 'hi' ? 'मुफ्त डेमो क्लास बुक करें' : 'Book Free Demo Class'}
@@ -294,14 +265,13 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
                     : 'Experience live classes with AIIMS faculty'}
                 </p>
                 <Link href="/demo-booking" onClick={onToggle}>
-                  <motion.button
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-indigo-500 text-white py-4 rounded-xl font-semibold mobile-cta"
+                  <button
+                    className="w-full bg-indigo-500 text-white py-4 rounded-xl font-semibold mobile-cta animate-fadeInUp"
                   >
                     {language === 'hi' ? 'अभी बुक करें' : 'Book Now'}
-                  </motion.button>
+                  </button>
                 </Link>
-              </motion.div>
+              </div>
             </div>
 
             {/* Footer */}
@@ -315,10 +285,9 @@ export function MobileNavigation({ isOpen, onToggle, currentPath = '/' }: Mobile
                 <p>{language === 'hi' ? 'सभी अधिकार सुरक्षित हैं' : 'All rights reserved'}</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </>
+</>
   )
 }
 
@@ -340,8 +309,7 @@ function NavItem({ item, currentPath, activeSubmenu, setActiveSubmenu, onClose }
     <div>
       {/* Main Nav Item */}
       {hasSubmenu ? (
-        <motion.button
-          whileTap={{ scale: 0.98 }}
+        <button
           onClick={handleClick}
           className={`w-full flex items-center justify-between p-4 rounded-xl transition-colors mobile-touch-target ${
             isActive ? `${item.bgColor} ${item.color}` : 'hover:bg-gray-50'
@@ -360,11 +328,10 @@ function NavItem({ item, currentPath, activeSubmenu, setActiveSubmenu, onClose }
               isSubmenuOpen ? 'rotate-90' : ''
             }`}
           />
-        </motion.button>
+        </button>
       ) : (
         <Link href={item.href} onClick={onClose}>
-          <motion.div
-            whileTap={{ scale: 0.98 }}
+          <div
             className={`flex items-center space-x-3 p-4 rounded-xl transition-colors mobile-touch-target ${
               isActive ? `${item.bgColor} ${item.color}` : 'hover:bg-gray-50'
             }`}
@@ -375,39 +342,30 @@ function NavItem({ item, currentPath, activeSubmenu, setActiveSubmenu, onClose }
             <span className={`font-medium ${isActive ? item.color : 'text-gray-900'}`}>
               {item.label}
             </span>
-          </motion.div>
+          </div>
         </Link>
       )}
 
       {/* Submenu */}
-      <AnimatePresence>
-        {hasSubmenu && isSubmenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: shouldReduceAnimations ? 0 : 0.3 }}
-            className="ml-4 mt-2 space-y-2 overflow-hidden"
+{hasSubmenu && isSubmenuOpen && (
+          <div
+            className="ml-4 mt-2 space-y-2 overflow-hidden animate-fadeInUp"
           >
             {item.submenu.map((subItem: any, index: number) => (
-              <motion.div
+              <div
                 key={subItem.href}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: shouldReduceAnimations ? 0 : index * 0.05 }}
-              >
+               className="animate-fadeInUp">
                 <Link href={subItem.href} onClick={onClose}>
                   <div className="flex items-center p-3 rounded-lg hover:bg-gray-50 transition-colors mobile-secondary-btn">
                     <div className="w-2 h-2 bg-gray-300 rounded-full mr-3" />
                     <span className="text-gray-700 font-medium">{subItem.label}</span>
                   </div>
                 </Link>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -422,8 +380,7 @@ function QuickActionButton({ action, onClose }: any) {
   }
 
   const ButtonContent = () => (
-    <motion.div
-      whileTap={{ scale: 0.95 }}
+    <div
       className={`p-4 rounded-xl text-center transition-colors mobile-touch-target ${action.bgColor} hover:opacity-80`}
       onClick={handleClick}
     >
@@ -431,7 +388,7 @@ function QuickActionButton({ action, onClose }: any) {
         <action.icon className={`w-5 h-5 ${action.color}`} />
       </div>
       <div className={`text-sm font-medium ${action.color}`}>{action.label}</div>
-    </motion.div>
+    </div>
   )
 
   if (action.href) {
@@ -472,8 +429,7 @@ export function BottomNavigation({ currentPath = '/' }: { currentPath?: string }
       <div className="flex justify-around">
         {navItems.map((item) => (
           <Link key={item.href} href={item.href} className="flex-1">
-            <motion.div
-              whileTap={{ scale: 0.95 }}
+            <div
               className={`flex flex-col items-center py-2 px-1 transition-colors ${
                 item.active ? 'text-blue-600' : 'text-gray-600'
               }`}
@@ -486,7 +442,7 @@ export function BottomNavigation({ currentPath = '/' }: { currentPath?: string }
               >
                 {item.label}
               </span>
-            </motion.div>
+            </div>
           </Link>
         ))}
       </div>

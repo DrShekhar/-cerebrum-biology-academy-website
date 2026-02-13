@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function Class12BoardBalanceIllustration({
@@ -35,8 +34,6 @@ export function Class12BoardBalanceIllustration({
       {/* Balance scale */}
       <line x1="200" y1="70" x2="200" y2="120" stroke="#92400E" strokeWidth="4" />
       <motion.g
-        animate={animate ? { rotate: [-3, 3, -3] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
         style={{ transformOrigin: '200px 120px' }}
       >
         <line x1="100" y1="120" x2="300" y2="120" stroke="#92400E" strokeWidth="4" />
@@ -85,8 +82,6 @@ export function Class12BoardBalanceIllustration({
       <line x1="60" y1="250" x2="340" y2="250" stroke="#D1D5DB" strokeWidth="2" />
 
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="80" cy="250" r="8" fill="#3B82F6" />
         <text x="80" y="242" fontSize="6" fill="#1D4ED8" textAnchor="middle">
@@ -98,8 +93,6 @@ export function Class12BoardBalanceIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
       >
         <circle cx="140" cy="250" r="8" fill="#8B5CF6" />
         <text x="140" y="242" fontSize="6" fill="#7C3AED" textAnchor="middle">
@@ -111,8 +104,6 @@ export function Class12BoardBalanceIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
       >
         <circle cx="200" cy="250" r="8" fill="#EC4899" />
         <text x="200" y="242" fontSize="6" fill="#DB2777" textAnchor="middle">
@@ -124,8 +115,6 @@ export function Class12BoardBalanceIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity, delay: 0.9 }}
       >
         <circle cx="260" cy="250" r="8" fill="#F59E0B" />
         <text x="260" y="242" fontSize="6" fill="#B45309" textAnchor="middle">
@@ -137,8 +126,6 @@ export function Class12BoardBalanceIllustration({
       </motion.g>
 
       <motion.g
-        animate={animate ? { scale: [1, 1.2, 1] } : undefined}
-        transition={{ duration: 1, repeat: Infinity }}
       >
         <circle cx="320" cy="250" r="10" fill="#22C55E" />
         <text x="320" y="242" fontSize="6" fill="#16A34A" textAnchor="middle" fontWeight="bold">

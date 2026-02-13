@@ -2,7 +2,6 @@
 
 import React, { useEffect } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { RefreshCw, Home, LayoutDashboard, Phone, Mail, User } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { logError } from '@/lib/errors'
@@ -50,7 +49,7 @@ export default function DashboardError({ error, reset }: ErrorProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-blue-50 flex items-center justify-center px-4">
       <div className="max-w-4xl mx-auto text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+        <div className="animate-fadeInUp">
           <div className="w-24 h-24 md:w-32 md:h-32 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-8">
             <LayoutDashboard className="w-12 h-12 md:w-16 md:h-16 text-indigo-500" />
           </div>
@@ -88,13 +87,10 @@ export default function DashboardError({ error, reset }: ErrorProps) {
               </details>
             </div>
           )}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+        <div
+          className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fadeInUp"
         >
           <Button size="lg" onClick={handleReset}>
             <RefreshCw className="w-5 h-5 mr-2" />
@@ -106,13 +102,10 @@ export default function DashboardError({ error, reset }: ErrorProps) {
               Go Home
             </Button>
           </Link>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12"
+        <div
+          className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto mb-12 animate-fadeInUp"
         >
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">Quick Access</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -168,13 +161,10 @@ export default function DashboardError({ error, reset }: ErrorProps) {
               </div>
             </Link>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto"
+        <div
+          className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto animate-fadeInUp"
         >
           <h3 className="text-xl font-semibold text-gray-900 mb-4">Need Assistance?</h3>
           <p className="text-gray-600 mb-6">
@@ -199,14 +189,11 @@ export default function DashboardError({ error, reset }: ErrorProps) {
               <span className="font-medium">Email Support</span>
             </Link>
           </div>
-        </motion.div>
+        </div>
 
         {error.digest && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8 }}
-            className="mt-8 text-center"
+          <div
+            className="mt-8 text-center animate-fadeInUp"
           >
             <div className="text-sm text-gray-500">
               Error ID:{' '}
@@ -214,7 +201,7 @@ export default function DashboardError({ error, reset }: ErrorProps) {
                 {error.digest}
               </code>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </div>

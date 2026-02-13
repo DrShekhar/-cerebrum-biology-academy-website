@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import type { IllustrationProps } from './shared'
 
 export function EcologyIllustration({ className = '', animate = true }: IllustrationProps) {
@@ -33,8 +32,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Sun with rays */}
       <motion.g
-        animate={animate ? { rotate: [0, 360] } : undefined}
-        transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
         style={{ transformOrigin: '350px 70px' }}
       >
         <circle cx="350" cy="70" r="25" fill="#FCD34D" />
@@ -53,8 +50,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Clouds */}
       <motion.g
-        animate={animate ? { x: [-10, 10, -10] } : undefined}
-        transition={{ duration: 8, repeat: Infinity }}
       >
         <ellipse cx="80" cy="60" rx="25" ry="15" fill="#FFFFFF" />
         <ellipse cx="100" cy="55" rx="20" ry="12" fill="#FFFFFF" />
@@ -64,8 +59,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
       {/* Trees */}
       {/* Tree 1 */}
       <motion.g
-        animate={animate ? { scaleY: [1, 1.02, 1] } : undefined}
-        transition={{ duration: 3, repeat: Infinity }}
         style={{ transformOrigin: '70px 180px' }}
       >
         <rect x="65" y="140" width="10" height="50" fill="#92400E" />
@@ -75,8 +68,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Tree 2 */}
       <motion.g
-        animate={animate ? { scaleY: [1, 1.03, 1] } : undefined}
-        transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
         style={{ transformOrigin: '140px 180px' }}
       >
         <rect x="135" y="130" width="10" height="60" fill="#92400E" />
@@ -91,8 +82,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
         rx="60"
         ry="25"
         fill="#60A5FA"
-        animate={animate ? { rx: [60, 62, 60], ry: [25, 26, 25] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       />
       <text x="280" y="235" fontSize="8" fill="#1E40AF" textAnchor="middle">
         Pond
@@ -100,8 +89,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Food Chain arrow */}
       <motion.g
-        animate={animate ? { opacity: [0.7, 1, 0.7] } : undefined}
-        transition={{ duration: 2, repeat: Infinity }}
       >
         <rect
           x="30"
@@ -128,8 +115,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Deer */}
       <motion.g
-        animate={animate ? { x: [-5, 5, -5] } : undefined}
-        transition={{ duration: 4, repeat: Infinity }}
       >
         <ellipse cx="200" cy="195" rx="20" ry="12" fill="#D97706" />
         <circle cx="215" cy="185" r="8" fill="#D97706" />
@@ -139,8 +124,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Bird */}
       <motion.g
-        animate={animate ? { y: [-10, 10, -10], x: [0, 20, 0] } : undefined}
-        transition={{ duration: 5, repeat: Infinity }}
       >
         <path d="M250 100 Q260 90 270 100 Q260 95 250 100" fill="#1E293B" />
       </motion.g>
@@ -169,8 +152,6 @@ export function EcologyIllustration({ className = '', animate = true }: Illustra
 
       {/* Questions badge */}
       <motion.g
-        animate={animate ? { scale: [1, 1.1, 1] } : undefined}
-        transition={{ duration: 1.5, repeat: Infinity }}
       >
         <circle cx="370" cy="270" r="18" fill="#10B981" />
         <text x="370" y="267" fontSize="8" fill="#FFFFFF" textAnchor="middle">

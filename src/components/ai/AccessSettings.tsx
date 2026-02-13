@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Clock,
   Users,
@@ -352,10 +351,8 @@ const AccessSettings: React.FC = () => {
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-gradient-to-r from-green-600 to-blue-600 rounded-xl">
             <Shield className="w-8 h-8 text-white" />
@@ -363,7 +360,7 @@ const AccessSettings: React.FC = () => {
           <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
             Access Settings
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Configure comprehensive access controls including scheduling, security, student
           management, and advanced authentication options for your tests
@@ -401,10 +398,8 @@ const AccessSettings: React.FC = () => {
 
       {/* Validation Errors */}
       {validationErrors.length > 0 && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-red-50 border border-red-200 rounded-lg p-4"
+        <div
+          className="bg-red-50 border border-red-200 rounded-lg p-4 animate-fadeInUp"
         >
           <div className="flex items-center gap-2 mb-3">
             <AlertCircle className="w-5 h-5 text-red-600" />
@@ -418,19 +413,15 @@ const AccessSettings: React.FC = () => {
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
       )}
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Schedule Settings */}
+{/* Schedule Settings */}
         {activeTab === 'schedule' && (
-          <motion.div
+          <div
             key="schedule"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Basic Schedule */}
             <div className="bg-white rounded-xl p-6 border">
@@ -595,17 +586,14 @@ const AccessSettings: React.FC = () => {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Student Groups */}
         {activeTab === 'groups' && (
-          <motion.div
+          <div
             key="groups"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <div className="flex justify-between items-center mb-6">
@@ -662,17 +650,14 @@ const AccessSettings: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Individual Assignments */}
         {activeTab === 'individual' && (
-          <motion.div
+          <div
             key="individual"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <div className="flex justify-between items-center mb-6">
@@ -744,17 +729,14 @@ const AccessSettings: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Password Protection */}
         {activeTab === 'password' && (
-          <motion.div
+          <div
             key="password"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Password Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -931,17 +913,14 @@ const AccessSettings: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* IP Restrictions */}
         {activeTab === 'ip' && (
-          <motion.div
+          <div
             key="ip"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             <div className="bg-white rounded-xl p-6 border">
               <div className="flex justify-between items-center mb-6">
@@ -1019,17 +998,14 @@ const AccessSettings: React.FC = () => {
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Device Limitations */}
         {activeTab === 'device' && (
-          <motion.div
+          <div
             key="device"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Device Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1296,17 +1272,14 @@ const AccessSettings: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Attempt Limits */}
         {activeTab === 'attempts' && (
-          <motion.div
+          <div
             key="attempts"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Attempt Configuration */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1529,17 +1502,14 @@ const AccessSettings: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
 
         {/* Grace Period */}
         {activeTab === 'grace' && (
-          <motion.div
+          <div
             key="grace"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Grace Period Settings */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1809,11 +1779,9 @@ const AccessSettings: React.FC = () => {
                 </div>
               </div>
             )}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Action Buttons */}
+{/* Action Buttons */}
       <div className="flex justify-between items-center bg-white rounded-xl p-6 border">
         <div className="flex gap-3">
           <button

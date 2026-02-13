@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import type { Leaderboard as LeaderboardType, LeaderboardEntry } from '@/lib/mcq/types'
 import type { LeaderboardPeriod } from '@/generated/prisma'
 
@@ -227,8 +226,7 @@ export function Leaderboard({ freeUserId, compact = false, onRequireLogin }: Lea
             </p>
           </div>
         ) : (
-          <AnimatePresence>
-            <div className="space-y-3">
+<div className="space-y-3">
               {leaderboard?.entries.map((entry, index) => (
                 <LeaderboardRow
                   key={entry.rank}
@@ -239,8 +237,7 @@ export function Leaderboard({ freeUserId, compact = false, onRequireLogin }: Lea
                 />
               ))}
             </div>
-          </AnimatePresence>
-        )}
+)}
 
         {!freeUserId && (
           <div className="mt-6 p-4 bg-blue-50 rounded-xl text-center">
@@ -270,10 +267,7 @@ function LeaderboardRow({
   getRankColor: (rank: number) => string
 }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: index * 0.05 }}
+    <div
       className={`flex items-center gap-4 p-4 rounded-xl border ${
         entry.isCurrentUser
           ? 'bg-blue-50 border-blue-300 ring-2 ring-blue-200'
@@ -314,7 +308,7 @@ function LeaderboardRow({
         <p className="font-bold text-blue-600">{entry.xp.toLocaleString()} XP</p>
         <p className="text-xs text-gray-500">{entry.accuracy}% accuracy</p>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

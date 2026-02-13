@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react'
 import { useIndianMobileOptimizations } from '@/lib/mobile/indianMobileOptimizations'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Phone, BookOpen, Play, MessageCircle, Clock } from 'lucide-react'
 
 interface TouchAction {
@@ -142,7 +141,7 @@ export function EnhancedTouchInterface({
           {touchActions
             .filter((action) => action.priority === 'high')
             .map((action) => (
-              <motion.button
+              <button
                 key={action.id}
                 onTouchStart={() => handleTouchStart(action.id)}
                 onTouchEnd={handleTouchEnd}
@@ -162,8 +161,6 @@ export function EnhancedTouchInterface({
                 focus:outline-none focus:ring-4 focus:ring-opacity-50
                 ${action.id === 'demo' ? 'focus:ring-green-300' : 'focus:ring-blue-300'}
               `}
-                whileTap={shouldReduceAnimations ? {} : { scale: 0.95 }}
-                transition={animationConfig}
               >
                 <action.icon className="h-6 w-6 flex-shrink-0" />
                 <div className="text-center">
@@ -176,24 +173,19 @@ export function EnhancedTouchInterface({
                     </div>
                   )}
                 </div>
-              </motion.button>
+              </button>
             ))}
         </div>
 
         {/* Secondary Actions - Collapsible */}
-        <AnimatePresence>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: 'auto', opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={animationConfig}
-            className="border-t border-gray-100"
+<div
+            className="border-t border-gray-100 animate-fadeInUp"
           >
             <div className="grid grid-cols-2 gap-2 p-3">
               {touchActions
                 .filter((action) => action.priority === 'medium')
                 .map((action) => (
-                  <motion.button
+                  <button
                     key={action.id}
                     onTouchStart={() => handleTouchStart(action.id)}
                     onTouchEnd={handleTouchEnd}
@@ -208,28 +200,20 @@ export function EnhancedTouchInterface({
                     min-h-[48px] touch-manipulation
                     text-sm
                   `}
-                    whileTap={shouldReduceAnimations ? {} : { scale: 0.95 }}
-                    transition={animationConfig}
                   >
                     <action.icon className="h-4 w-4" />
                     <span>{showHindi && action.hindi ? action.hindi : action.label}</span>
-                  </motion.button>
+                  </button>
                 ))}
             </div>
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Safe area padding for newer iPhones */}
+          </div>
+{/* Safe area padding for newer iPhones */}
         <div className="h-2" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} />
       </div>
 
       {/* Floating Success Stories Ticker for Trust Building */}
-      <AnimatePresence>
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 2, ...animationConfig }}
-          className="absolute bottom-full left-4 right-4 mb-2"
+<div
+          className="absolute bottom-full left-4 right-4 mb-2 animate-fadeInUp"
         >
           <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-yellow-900 px-4 py-2 rounded-lg shadow-lg">
             <div className="text-xs font-medium text-center">
@@ -238,9 +222,8 @@ export function EnhancedTouchInterface({
                 : '🎉 Rahul Sharma scored 355/360 in NEET - Admitted to AIIMS Delhi!'}
             </div>
           </div>
-        </motion.div>
-      </AnimatePresence>
-    </div>
+        </div>
+</div>
   )
 }
 

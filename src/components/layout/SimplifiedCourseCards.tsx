@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronRight, Star, CheckCircle2 } from 'lucide-react'
 
 interface Course {
@@ -95,11 +94,8 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
         {/* Only 3 Main Options */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {courses.map((course, index) => (
-            <motion.div
+            <div
               key={course.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`course-card relative bg-white rounded-xl border-2 cursor-pointer transition-all duration-300 hover:shadow-lg hover:border-blue-300 ${
                 course.popular ? 'popular border-blue-500 shadow-md' : 'border-gray-200'
               } ${expandedCourse === course.id ? 'ring-2 ring-blue-400' : ''}`}
@@ -137,19 +133,14 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                   <ChevronRight className="h-4 w-4" />
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Expandable Details */}
-        <AnimatePresence>
-          {expandedCourse && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="course-details bg-gray-50 rounded-xl p-6 overflow-hidden"
+{expandedCourse && (
+            <div
+              className="course-details bg-gray-50 rounded-xl p-6 overflow-hidden animate-fadeInUp"
             >
               {(() => {
                 const course = courses.find((c) => c.id === expandedCourse)
@@ -214,10 +205,9 @@ export function SimplifiedCourseCards({ className = '' }: SimplifiedCourseCardsP
                   </div>
                 )
               })()}
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
     </section>
   )
 }

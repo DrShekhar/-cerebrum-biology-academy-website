@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Play, Pause, RotateCcw, Flag } from 'lucide-react'
 import type { DisplayMode, StopwatchState } from '@/lib/study-with-me/types'
 import { STORAGE_KEYS, MAX_LAP_TIMES } from '@/lib/study-with-me/constants'
@@ -155,10 +154,7 @@ export function StudyStopwatch({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: 0.1 }}
+    <div
       className={`bg-white rounded-xl shadow-xl p-6 ${className}`}
     >
       {/* Header */}
@@ -167,14 +163,12 @@ export function StudyStopwatch({
           Study Session
         </h3>
         {isRunning && (
-          <motion.span
-            animate={{ opacity: [1, 0.5, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-            className="flex items-center text-xs text-green-600"
+          <span
+            className="flex items-center text-xs text-green-600 animate-fadeInUp"
           >
             <span className="w-2 h-2 rounded-full bg-green-500 mr-2" />
             Recording
-          </motion.span>
+          </span>
         )}
       </div>
 
@@ -232,36 +226,29 @@ export function StudyStopwatch({
       </div>
 
       {/* Lap Times */}
-      <AnimatePresence>
-        {lapTimes.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="mt-6 border-t border-gray-100 pt-4"
+{lapTimes.length > 0 && (
+          <div
+            className="mt-6 border-t border-gray-100 pt-4 animate-fadeInUp"
           >
             <h4 className="text-xs font-medium text-gray-400 uppercase mb-2">Lap Times</h4>
             <div className="space-y-1 max-h-32 overflow-y-auto">
               {lapTimes.map((lap, index) => {
                 const { hours: h, minutes: m, seconds: s } = formatTime(lap)
                 return (
-                  <motion.div
+                  <div
                     key={`${lap}-${index}`}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    className="flex items-center justify-between text-sm py-1"
+                    className="flex items-center justify-between text-sm py-1 animate-fadeInUp"
                   >
                     <span className="text-gray-400">Lap {lapTimes.length - index}</span>
                     <span className="font-mono text-gray-700">
                       {h}:{m}:{s}
                     </span>
-                  </motion.div>
+                  </div>
                 )
               })}
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </motion.div>
+</div>
   )
 }

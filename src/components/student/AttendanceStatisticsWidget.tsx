@@ -16,7 +16,6 @@ import {
   Clock,
   Flame,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
 import { showToast } from '@/lib/toast'
 import { cn } from '@/lib/utils'
 import Link from 'next/link'
@@ -246,15 +245,14 @@ function StatCard({
   color: string
 }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className="p-3 bg-white rounded-lg border hover:shadow-md transition-shadow"
+    <div
+      className="p-3 bg-white rounded-lg border hover:shadow-md transition-shadow animate-fadeInUp"
     >
       <div className="flex items-center gap-2 mb-1">
         <div className={cn('p-1.5 rounded', color)}>{icon}</div>
       </div>
       <div className="text-xl font-bold text-gray-900">{value}</div>
       <div className="text-xs text-gray-600">{label}</div>
-    </motion.div>
+    </div>
   )
 }

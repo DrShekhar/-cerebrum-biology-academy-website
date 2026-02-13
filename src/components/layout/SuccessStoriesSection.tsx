@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, PremiumCard, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import {
   PlayCircle,
@@ -412,12 +411,8 @@ export function SuccessStoriesSection({
     <section className={`py-20 bg-navy-50 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center space-y-8 mb-16"
+        <div
+          className="text-center space-y-8 mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-100 to-green-100 border border-green-200 rounded-full px-4 py-2">
             <Smile className="h-5 w-5 text-green-600" />
@@ -441,7 +436,7 @@ export function SuccessStoriesSection({
           </div>
 
           {/* Video Compilation Placeholder */}
-          <motion.div whileHover={{ scale: 1.02 }} className="relative max-w-4xl mx-auto">
+          <div className="relative max-w-4xl mx-auto animate-fadeInUp">
             <PremiumCard variant="luxury" size="lg" className="relative overflow-hidden">
               <div className="aspect-video bg-gradient-to-br from-green-600 to-navy-600 rounded-lg flex items-center justify-center relative">
                 <div className="absolute inset-0 bg-black/30" />
@@ -452,7 +447,7 @@ export function SuccessStoriesSection({
                 </div>
               </div>
             </PremiumCard>
-          </motion.div>
+          </div>
 
           {/* Quick Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -462,13 +457,9 @@ export function SuccessStoriesSection({
               { value: 3, suffix: 'x', label: 'Failed Before Success', icon: Heart },
               { value: 100, suffix: '%', label: 'Biology Perfect Scores', icon: BarChart2 },
             ].map((stat, index) => (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center animate-fadeInUp"
               >
                 <div className="bg-white rounded-lg p-4 shadow-lg">
                   <stat.icon className="h-8 w-8 text-blue-600 mx-auto mb-2" />
@@ -477,18 +468,14 @@ export function SuccessStoriesSection({
                   </div>
                   <div className="text-sm text-gray-600">{stat.label}</div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Category Filters */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
+        <div
+          className="mb-12 animate-fadeInUp"
         >
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
@@ -558,43 +545,32 @@ export function SuccessStoriesSection({
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Success Stories Display */}
-        <AnimatePresence mode="wait">
-          {viewMode === 'grid' && (
-            <motion.div
+{viewMode === 'grid' && (
+            <div
               key="grid"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -20 }}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeInUp"
             >
               {filteredStories.map((story, index) => (
-                <motion.div
+                <div
                   key={story.id}
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
+                 className="animate-fadeInUp">
                   <SuccessStoryCard
                     story={story}
                     onContactStudent={onContactStudent}
                     onVideoPlay={onVideoPlay}
                   />
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           )}
 
           {viewMode === 'stories' && (
-            <motion.div
+            <div
               key="stories"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
-              className="max-w-4xl mx-auto"
+              className="max-w-4xl mx-auto animate-fadeInUp"
             >
               <InstagramStyleStories
                 stories={filteredStories}
@@ -602,28 +578,18 @@ export function SuccessStoriesSection({
                 onStoryChange={setCurrentStory}
                 onContactStudent={onContactStudent}
               />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-
-        {/* Success Probability Calculator */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-20"
+{/* Success Probability Calculator */}
+        <div
+          className="mt-20 animate-fadeInUp"
         >
           <SuccessProbabilityCalculator stories={successStories} />
-        </motion.div>
+        </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="mt-16 text-center bg-navy-900 rounded-2xl p-8 text-white"
+        <div
+          className="mt-16 text-center bg-navy-900 rounded-2xl p-8 text-white animate-fadeInUp"
         >
           <h3 className="text-3xl font-bold mb-4">Ready to Write Your Success Story?</h3>
           <p className="text-xl mb-6 text-blue-100">
@@ -647,7 +613,7 @@ export function SuccessStoriesSection({
               Download Success Guide PDF
             </PremiumButton>
           </div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Find Students Like Me Quiz Modal */}
@@ -709,12 +675,8 @@ function SuccessStoryCard({
             <div className="flex-1 mx-4">
               <div className="relative">
                 <div className="h-2 bg-gray-200 rounded-full">
-                  <motion.div
-                    className="h-2 bg-gradient-to-r from-red-500 to-green-600 rounded-full"
-                    initial={{ width: 0 }}
-                    whileInView={{ width: '100%' }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1.5, delay: 0.5 }}
+                  <div
+                    className="h-2 bg-gradient-to-r from-red-500 to-green-600 rounded-full animate-fadeInUp"
                   />
                 </div>
                 <ArrowRight className="h-5 w-5 text-blue-600 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-1" />
@@ -1023,18 +985,12 @@ function SuccessProbabilityCalculator({ stories }: { stories: SuccessStory[] }) 
 // Find Students Like Me Quiz Modal
 function FindStudentsQuiz({ onClose, stories }: { onClose: () => void; stories: SuccessStory[] }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50"
+    <div
+      className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 animate-fadeInUp"
       onClick={onClose}
     >
-      <motion.div
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        exit={{ scale: 0.9, opacity: 0 }}
-        className="bg-white rounded-xl p-6 max-w-md w-full"
+      <div
+        className="bg-white rounded-xl p-6 max-w-md w-full animate-fadeInUp"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="space-y-6">
@@ -1093,7 +1049,7 @@ function FindStudentsQuiz({ onClose, stories }: { onClose: () => void; stories: 
             </PremiumButton>
           </div>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }

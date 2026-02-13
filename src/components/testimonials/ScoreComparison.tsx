@@ -2,8 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { TrendingUp, TrendingDown, Award, Target, ArrowRight } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 interface ScoreData {
   biology: number
   chemistry: number
@@ -146,14 +144,11 @@ export function ScoreComparison({
 
             {/* Arrow & Improvement */}
             <div className="text-center">
-              <motion.div
-                className="flex items-center justify-center mb-4"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : -20 }}
-                transition={{ duration: 1, delay: 1 }}
+              <div
+                className="flex items-center justify-center mb-4 animate-fadeInUp"
               >
                 <ArrowRight className="w-8 h-8 text-green-600" />
-              </motion.div>
+              </div>
               <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold inline-block">
                 +<AnimatedNumber value={improvements.total} /> marks
               </div>
@@ -220,12 +215,9 @@ export function ScoreComparison({
             const afterPercent = (afterScore[subject.key] / subject.maxScore) * 100
 
             return (
-              <motion.div
+              <div
                 key={subject.key}
                 className={`${colors.bg} rounded-2xl p-6`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
                 <div className="flex items-center justify-between mb-4">
                   <h4 className={`text-lg font-bold ${colors.text}`}>{subject.name}</h4>
@@ -254,11 +246,8 @@ export function ScoreComparison({
                       <span>{beforePercent.toFixed(1)}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <motion.div
-                        className="bg-gray-400 h-2 rounded-full"
-                        initial={{ width: 0 }}
-                        animate={{ width: isVisible ? `${beforePercent}%` : 0 }}
-                        transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
+                      <div
+                        className="bg-gray-400 h-2 rounded-full animate-fadeInUp"
                       />
                     </div>
                   </div>
@@ -269,11 +258,8 @@ export function ScoreComparison({
                       <span>{afterPercent.toFixed(1)}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
-                      <motion.div
+                      <div
                         className={`${colors.bar} h-2 rounded-full`}
-                        initial={{ width: 0 }}
-                        animate={{ width: isVisible ? `${afterPercent}%` : 0 }}
-                        transition={{ duration: 1, delay: 1 + index * 0.2 }}
                       />
                     </div>
                   </div>
@@ -302,7 +288,7 @@ export function ScoreComparison({
                     </span>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>

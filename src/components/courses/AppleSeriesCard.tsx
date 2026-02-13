@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { Crown, Zap, Rocket, ChevronRight, Users, Clock, CheckCircle } from 'lucide-react'
 import Link from 'next/link'
 
@@ -108,22 +107,10 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 32, scale: 0.96 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{
-        duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
-        delay: series.id === 'pinnacle' ? 0 : series.id === 'ascent' ? 0.15 : 0.3,
-      }}
-      whileHover={{
-        y: -8,
-        scale: 1.02,
-        transition: springConfig,
-      }}
+    <div
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="group cursor-pointer"
+      className="group cursor-pointer animate-fadeInUp"
       style={{ height: '480px' }} // Optimized height
     >
       {/* Apple-style card with glassmorphism */}
@@ -140,10 +127,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
       >
         {/* Premium badge */}
         <div className="absolute top-6 right-6 z-10">
-          <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: 0.6, ...springConfig }}
+          <div
             className={`
               ${config.badge.bg} ${config.badge.text}
               px-3 py-1.5 rounded-full text-xs font-semibold
@@ -151,7 +135,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
             `}
           >
             {config.badge.label}
-          </motion.div>
+          </div>
         </div>
 
         {/* Content container with perfect spacing */}
@@ -160,10 +144,8 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
           <div className="pt-8 pb-6 px-8 flex-shrink-0">
             {/* Icon with subtle glow */}
             <div className="text-center mb-6">
-              <motion.div
-                whileHover={{ scale: 1.05, rotate: series.id === 'pinnacle' ? 3 : -3 }}
-                transition={springConfig}
-                className="relative inline-block"
+              <div
+                className="relative inline-block animate-fadeInUp"
               >
                 <div
                   className={`
@@ -186,7 +168,7 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                   blur-xl transition-opacity duration-300
                 `}
                 />
-              </motion.div>
+              </div>
             </div>
 
             {/* Class level and series info */}
@@ -219,22 +201,18 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                 { label: 'Per Week', value: `${series.weeklyHours}h`, icon: Users },
                 { label: 'Batch', value: series.batchSize, icon: CheckCircle },
               ].map((metric, index) => (
-                <motion.div
+                <div
                   key={metric.label}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1, ...springConfig }}
-                  whileHover={{ scale: 1.02 }}
                   className="
                     bg-slate-50/60 backdrop-blur-sm
                     rounded-xl p-3 text-center
                     border border-slate-200/40
                     hover:bg-slate-100/60 transition-colors duration-200
-                  "
+                   animate-fadeInUp"
                 >
                   <div className="text-lg font-semibold text-slate-900">{metric.value}</div>
                   <div className="text-xs text-slate-500 font-medium">{metric.label}</div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -249,9 +227,8 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
 
               {/* Apple-style segmented control */}
               <div className="relative bg-slate-100 rounded-xl p-1">
-                <AnimatePresence mode="wait">
-                  {selectedPlan && (
-                    <motion.div
+{selectedPlan && (
+                    <div
                       layoutId={`plan-indicator-${series.id}`}
                       className={`
                         absolute inset-y-1
@@ -262,18 +239,13 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                         left: `${(series.plans.findIndex((p) => p.id === selectedPlan) * 100) / series.plans.length + 0.5}%`,
                         width: `${100 / series.plans.length - 1}%`,
                       }}
-                      transition={springConfig}
                     />
                   )}
-                </AnimatePresence>
-
-                <div className="relative flex">
+<div className="relative flex">
                   {series.plans.map((plan) => (
-                    <motion.button
+                    <button
                       key={plan.id}
                       onClick={() => handlePlanSelect(plan.id)}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
                       className={`
                         flex-1 py-2.5 px-3 rounded-lg
                         text-sm font-semibold transition-colors duration-200
@@ -286,30 +258,23 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                     >
                       Plan {plan.id}
                       {plan.popular && (
-                        <motion.span
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          className="ml-1 text-xs"
+                        <span
+                          className="ml-1 text-xs animate-fadeInUp"
                         >
                           ⭐
-                        </motion.span>
+                        </span>
                       )}
-                    </motion.button>
+                    </button>
                   ))}
                 </div>
               </div>
             </div>
 
             {/* Selected plan details */}
-            <AnimatePresence mode="wait">
-              {selectedPlan && (
-                <motion.div
+{selectedPlan && (
+                <div
                   key={selectedPlan}
-                  initial={{ opacity: 0, y: 16, scale: 0.96 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -16, scale: 0.96 }}
-                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  className="mb-6"
+                  className="mb-6 animate-fadeInUp"
                 >
                   {(() => {
                     const plan = series.plans.find((p) => p.id === selectedPlan)
@@ -378,17 +343,12 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                       </div>
                     )
                   })()}
-                </motion.div>
+                </div>
               )}
-            </AnimatePresence>
-
-            {/* Action buttons - Apple style */}
+{/* Action buttons - Apple style */}
             <div className="space-y-3">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                transition={springConfig}
-              >
+              <div
+               className="animate-fadeInUp">
                 <Link
                   href={
                     selectedPlan
@@ -419,27 +379,24 @@ export function AppleSeriesCard({ series, classLevel, onPlanSelect }: AppleSerie
                     'Select a Plan First'
                   )}
                 </Link>
-              </motion.div>
+              </div>
 
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                transition={springConfig}
+              <button
                 className="
                   w-full bg-white/60 backdrop-blur-sm text-slate-800
                   py-3.5 rounded-2xl font-semibold border border-slate-200/60
                   hover:bg-white/80 transition-all duration-300 text-sm
-                "
+                 animate-fadeInUp"
               >
                 <span className="flex items-center justify-center gap-2">
                   <span>Book Demo Class</span>
                   <div className="w-2 h-2 bg-green-600 rounded-full animate-pulse" />
                 </span>
-              </motion.button>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }

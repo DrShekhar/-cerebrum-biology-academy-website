@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Plus,
   X,
@@ -253,10 +252,7 @@ function TeachingHoursGraph({ courses }: { courses: CourseData[] }) {
                 <span className="font-semibold text-gray-900">{course.totalHours}h</span>
               </div>
               <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${percentage}%` }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                <div
                   className={`h-full bg-gradient-to-r ${theme.gradient}`}
                 />
               </div>
@@ -536,14 +532,9 @@ function CourseSelector({
           <span className="text-sm font-medium">Add Course to Compare</span>
         </div>
       </button>
-
-      <AnimatePresence>
-        {showSelector && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            className="absolute top-full left-0 right-0 z-10 bg-white border border-gray-200 rounded-lg shadow-lg mt-2 max-h-64 overflow-y-auto"
+{showSelector && (
+          <div
+            className="absolute top-full left-0 right-0 z-10 bg-white border border-gray-200 rounded-lg shadow-lg mt-2 max-h-64 overflow-y-auto animate-fadeInUp"
           >
             {availableCourses
               .filter((course) => !selectedCourses.find((sc) => sc.id === course.id))
@@ -574,10 +565,9 @@ function CourseSelector({
                   </button>
                 )
               })}
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-    </div>
+</div>
   )
 }
 
@@ -660,12 +650,9 @@ export default function InteractiveComparisonMatrix({
             const IconComponent = theme.icon
 
             return (
-              <motion.div
+              <div
                 key={course.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white border-2 border-gray-100 rounded-xl overflow-hidden"
+                className="bg-white border-2 border-gray-100 rounded-xl overflow-hidden animate-fadeInUp"
               >
                 {/* Course Header */}
                 <div className={`bg-gradient-to-r ${theme.gradient} text-white p-4 relative`}>
@@ -718,43 +705,36 @@ export default function InteractiveComparisonMatrix({
                     Select This Course
                   </button>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
 
           {/* Add Course Card */}
           {canAddMore && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: selectedCourses.length * 0.1 }}
-            >
+            <div
+             className="animate-fadeInUp">
               <CourseSelector
                 availableCourses={availableCourses}
                 selectedCourses={selectedCourses}
                 onCourseSelect={handleAddCourse}
               />
-            </motion.div>
+            </div>
           )}
         </div>
 
         {/* Teaching Hours Comparison (when multiple courses selected) */}
         {selectedCourses.length > 1 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mt-8"
+          <div
+            className="mt-8 animate-fadeInUp"
           >
             <TeachingHoursGraph courses={selectedCourses} />
-          </motion.div>
+          </div>
         )}
 
         {/* Summary Statistics */}
         {selectedCourses.length > 1 && (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="mt-8 bg-gray-50 rounded-xl p-6"
+          <div
+            className="mt-8 bg-gray-50 rounded-xl p-6 animate-fadeInUp"
           >
             <h3 className="text-lg font-bold text-gray-900 mb-4 text-center">
               Quick Comparison Summary
@@ -805,7 +785,7 @@ export default function InteractiveComparisonMatrix({
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Call to Action */}

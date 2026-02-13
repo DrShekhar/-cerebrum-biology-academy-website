@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Link,
   QrCode,
@@ -401,10 +400,8 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
     <div className="max-w-7xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-4">
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="flex items-center justify-center gap-3"
+        <div
+          className="flex items-center justify-center gap-3 animate-fadeInUp"
         >
           <div className="p-3 bg-green-600 rounded-xl">
             <Share2 className="w-8 h-8 text-white" />
@@ -412,7 +409,7 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
           <h1 className="text-3xl font-bold bg-green-600 bg-clip-text text-transparent">
             Test Distribution
           </h1>
-        </motion.div>
+        </div>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Comprehensive test distribution system with multiple delivery methods, analytics tracking,
           and integration capabilities
@@ -449,15 +446,11 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
       </div>
 
       {/* Content */}
-      <AnimatePresence mode="wait">
-        {/* Online Test Link Generation */}
+{/* Online Test Link Generation */}
         {activeTab === 'online' && (
-          <motion.div
+          <div
             key="online"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Link Generation */}
             <div className="bg-white rounded-xl p-6 border">
@@ -594,17 +587,14 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* QR Code Generation */}
         {activeTab === 'qr' && (
-          <motion.div
+          <div
             key="qr"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* QR Code Generator */}
             <div className="bg-white rounded-xl p-6 border">
@@ -743,17 +733,14 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Email Invitations */}
         {activeTab === 'email' && (
-          <motion.div
+          <div
             key="email"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Email Composer */}
             <div className="bg-white rounded-xl p-6 border">
@@ -898,17 +885,14 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* SMS Notifications */}
         {activeTab === 'sms' && (
-          <motion.div
+          <div
             key="sms"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* SMS Composer */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1052,17 +1036,14 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                   ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* LMS Integration */}
         {activeTab === 'lms' && (
-          <motion.div
+          <div
             key="lms"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="space-y-6"
+            className="space-y-6 animate-fadeInUp"
           >
             {/* LMS Connections */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -1190,17 +1171,14 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Embed in Website */}
         {activeTab === 'embed' && (
-          <motion.div
+          <div
             key="embed"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Embed Options */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1374,17 +1352,14 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </div>
               )}
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Offline Test Package */}
         {activeTab === 'offline' && (
-          <motion.div
+          <div
             key="offline"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Offline Package Creator */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1549,17 +1524,14 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
 
         {/* Print-Friendly Version */}
         {activeTab === 'print' && (
-          <motion.div
+          <div
             key="print"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 20 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-6"
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 animate-fadeInUp"
           >
             {/* Print Configuration */}
             <div className="bg-white rounded-xl p-6 border">
@@ -1767,11 +1739,9 @@ ${embedOptions.customCSS ? `<style>\n${embedOptions.customCSS}\n</style>` : ''}`
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
-
-      {/* Distribution Analytics Overview */}
+{/* Distribution Analytics Overview */}
       <div className="bg-white rounded-xl p-6 border">
         <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
           <BarChart3 className="w-5 h-5 text-blue-600" />

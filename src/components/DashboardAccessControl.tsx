@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
 import { Lock, AlertCircle, ArrowRight, CheckCircle } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/Button'
@@ -96,10 +95,8 @@ export function DashboardAccessControl({
 
       {/* Access Denied Screen */}
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden"
+        <div
+          className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden animate-fadeInUp"
         >
           {/* Header */}
           <div className="relative bg-blue-600 p-8 text-white">
@@ -245,7 +242,7 @@ export function DashboardAccessControl({
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </>
   )

@@ -16,8 +16,6 @@ import {
   Brain,
   Activity,
 } from 'lucide-react'
-import { motion } from 'framer-motion'
-
 export default function AnalyticsPage() {
   const [userClass, setUserClass] = useState<'class-11' | 'class-12' | 'dropper'>('class-12')
 
@@ -201,11 +199,8 @@ export default function AnalyticsPage() {
       {/* Hero Section */}
       <section className="bg-indigo-500 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
+            className="text-center animate-fadeInUp"
           >
             <h1 className="text-4xl font-bold mb-4">Your Performance Analytics</h1>
             <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
@@ -258,7 +253,7 @@ export default function AnalyticsPage() {
                 <div className="text-purple-100 text-sm">Achievements</div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 

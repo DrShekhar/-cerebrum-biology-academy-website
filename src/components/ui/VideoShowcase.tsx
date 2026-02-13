@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { ExternalLink, BookOpen } from 'lucide-react'
 import { Button } from './Button'
 import { LazyYouTubeEmbed } from '@/components/performance/LazyYouTubeEmbed'
@@ -95,12 +94,8 @@ export function VideoShowcase({
 
   return (
     <div className={`video-showcase ${className}`}>
-      <motion.div
-        className="relative bg-white rounded-2xl shadow-lg overflow-hidden group"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+      <div
+        className="relative bg-white rounded-2xl shadow-lg overflow-hidden group animate-fadeInUp"
       >
         {/* Video Container - Using LazyYouTubeEmbed for LCP optimization */}
         <LazyYouTubeEmbed
@@ -161,7 +156,7 @@ export function VideoShowcase({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

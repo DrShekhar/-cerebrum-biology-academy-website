@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   X,
   Calendar,
@@ -133,19 +132,12 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
   if (!isOpen) return null
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+<div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fadeInUp"
         onClick={onClose}
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: 20 }}
-          className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden"
+        <div
+          className="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden animate-fadeInUp"
           onClick={(e) => e.stopPropagation()}
           style={{ boxShadow: 'var(--shadow-premium)' }}
         >
@@ -192,10 +184,8 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
           {/* Content */}
           <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
             {isSuccess ? (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="text-center py-8"
+              <div
+                className="text-center py-8 animate-fadeInUp"
               >
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-8 h-8 text-green-600" />
@@ -209,16 +199,12 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                     📱 You'll receive a WhatsApp confirmation shortly
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ) : (
-              <AnimatePresence mode="wait">
-                {step === 1 && (
-                  <motion.div
+{step === 1 && (
+                  <div
                     key="step1"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    className="space-y-6"
+                    className="space-y-6 animate-fadeInUp"
                   >
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">
                       Personal Information
@@ -313,16 +299,13 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {step === 2 && (
-                  <motion.div
+                  <div
                     key="step2"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    className="space-y-6"
+                    className="space-y-6 animate-fadeInUp"
                   >
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">Schedule Your Demo</h3>
 
@@ -363,16 +346,13 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                         </div>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
 
                 {step === 3 && (
-                  <motion.div
+                  <div
                     key="step3"
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    className="space-y-6"
+                    className="space-y-6 animate-fadeInUp"
                   >
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">
                       Additional Information
@@ -425,10 +405,9 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                         </p>
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            )}
+)}
           </div>
 
           {/* Footer */}
@@ -465,8 +444,7 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
               </div>
             </div>
           )}
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
+        </div>
+      </div>
+)
 }

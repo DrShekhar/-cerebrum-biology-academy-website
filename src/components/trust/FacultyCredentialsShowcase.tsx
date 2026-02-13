@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   GraduationCap,
   Award,
@@ -393,10 +392,8 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden"
+    <div
+      className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-fadeInUp"
     >
       {/* Header */}
       <div className="bg-indigo-500 text-white p-6 relative">
@@ -482,14 +479,10 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
 
       {/* Tab Content */}
       <div className="p-6">
-        <AnimatePresence mode="wait">
-          {activeTab === 'overview' && (
-            <motion.div
+{activeTab === 'overview' && (
+            <div
               key="overview"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-4"
+              className="space-y-4 animate-fadeInUp"
             >
               {/* Bio */}
               <div>
@@ -561,16 +554,13 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'credentials' && (
-            <motion.div
+            <div
               key="credentials"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-6"
+              className="space-y-6 animate-fadeInUp"
             >
               {/* Education */}
               <div>
@@ -673,16 +663,13 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
                   </a>
                 )}
               </div>
-            </motion.div>
+            </div>
           )}
 
           {activeTab === 'testimonials' && (
-            <motion.div
+            <div
               key="testimonials"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="space-y-4"
+              className="space-y-4 animate-fadeInUp"
             >
               {faculty.testimonials.map((testimonial, index) => (
                 <div key={index} className="bg-gray-50 rounded-lg p-4">
@@ -713,10 +700,9 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
                   Based on {faculty.achievements.studentsGuided}+ students guided
                 </div>
               </div>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </div>
+</div>
 
       {/* Footer */}
       <div className="bg-gray-50 px-6 py-4 border-t border-gray-200">
@@ -737,7 +723,7 @@ function FacultyCard({ faculty }: { faculty: FacultyMember }) {
           </button>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

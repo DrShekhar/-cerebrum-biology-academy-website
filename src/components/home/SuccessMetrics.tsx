@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
-import { motion, useInView } from 'framer-motion'
 import { Trophy, Target, Users, Star, TrendingUp, Award, Heart } from 'lucide-react'
 import { successStats } from '@/data/studentSuccessData'
 
@@ -156,19 +155,7 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 60, scale: 0.8 }}
-      animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.15,
-        ease: 'easeOut',
-      }}
-      whileHover={{
-        y: -8,
-        scale: 1.02,
-        transition: { duration: 0.3, ease: 'easeOut' },
-      }}
+    <div
       className={`group relative bg-white/70 backdrop-blur-xl rounded-3xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 ${metric.color.glowColor} hover:shadow-2xl overflow-hidden`}
     >
       {/* Background Pattern */}
@@ -179,20 +166,9 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
       {/* Floating Particles Effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(3)].map((_, i) => (
-          <motion.div
+          <div
             key={i}
-            className="absolute w-1 h-1 rounded-full opacity-20"
-            animate={{
-              y: [-20, -100],
-              opacity: [0, 0.6, 0],
-              scale: [0, 1, 0],
-            }}
-            transition={{
-              duration: 3,
-              delay: i * 0.8 + index * 0.2,
-              repeat: Infinity,
-              repeatDelay: 2,
-            }}
+            className="absolute w-1 h-1 rounded-full opacity-20 animate-fadeInUp"
             style={
               {
                 background: metric.color.primary,
@@ -206,21 +182,14 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
 
       {/* Icon Container */}
       <div className="relative z-10 mb-6">
-        <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={isInView ? { scale: 1, rotate: 0 } : {}}
-          transition={{
-            duration: 0.6,
-            delay: index * 0.15 + 0.3,
-            ease: 'easeOut',
-          }}
+        <div
           className={`w-16 h-16 ${metric.color.iconBg} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
           style={{
             boxShadow: `0 8px 32px ${metric.color.primary}20`,
           }}
         >
           <div style={{ color: metric.color.primary }}>{metric.icon}</div>
-        </motion.div>
+        </div>
       </div>
 
       {/* Metric Value */}
@@ -231,7 +200,7 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
               {metric.prefix}
             </span>
           )}
-          <motion.span
+          <span
             className={`text-5xl font-bold ${metric.color.textColor} leading-none`}
             style={{
               background: metric.color.gradient,
@@ -241,7 +210,7 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
             }}
           >
             {formatValue(animatedValue)}
-          </motion.span>
+          </span>
           <span className={`text-2xl font-bold ${metric.color.textColor} opacity-80`}>
             {metric.suffix}
           </span>
@@ -251,24 +220,8 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
         {(metric.suffix === '%' || metric.id === 'student-rating') && (
           <div className="mt-3">
             <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={
-                  isInView
-                    ? {
-                        width:
-                          metric.id === 'student-rating'
-                            ? `${(animatedValue / 5) * 100}%`
-                            : `${animatedValue}%`,
-                      }
-                    : {}
-                }
-                transition={{
-                  duration: 2,
-                  delay: index * 0.15 + 0.5,
-                  ease: 'easeOut',
-                }}
-                className="h-2 rounded-full"
+              <div
+                className="h-2 rounded-full animate-fadeInUp"
                 style={{ background: metric.color.gradient }}
               />
             </div>
@@ -296,19 +249,13 @@ function MetricCardComponent({ metric, index, isInView }: MetricCardComponentPro
 
       {/* Success Indicator */}
       {(metric.value >= 90 || metric.id === 'student-rating') && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{
-            duration: 0.4,
-            delay: index * 0.15 + 1,
-          }}
-          className="absolute top-4 right-4 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center"
+        <div
+          className="absolute top-4 right-4 w-8 h-8 bg-green-600 rounded-full flex items-center justify-center animate-fadeInUp"
         >
           <Award className="h-4 w-4 text-white" />
-        </motion.div>
+        </div>
       )}
-    </motion.div>
+    </div>
   )
 }
 
@@ -333,11 +280,8 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+        <div
+          className="text-center mb-16 animate-fadeInUp"
         >
           <div className="inline-flex items-center gap-2 bg-indigo-100 text-blue-800 px-6 py-2 rounded-full text-sm font-semibold mb-6">
             <TrendingUp className="w-4 h-4" />
@@ -357,7 +301,7 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
             innovation. Every number represents countless hours of personalized attention and proven
             teaching methodologies.
           </p>
-        </motion.div>
+        </div>
 
         {/* Metrics Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -372,11 +316,8 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
         </div>
 
         {/* Additional Context */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 bg-blue-600 rounded-3xl p-8 text-center text-white"
+        <div
+          className="mt-16 bg-blue-600 rounded-3xl p-8 text-center text-white animate-fadeInUp"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
             <Heart className="h-6 w-6 text-red-300" />
@@ -410,7 +351,7 @@ export function SuccessMetrics({ className = '' }: SuccessMetricsProps) {
             "These aren't just numbers – they're dreams fulfilled, futures secured, and lives
             transformed through quality education."
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   )

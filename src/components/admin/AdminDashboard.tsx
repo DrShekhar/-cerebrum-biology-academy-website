@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   BarChart3,
   Users,
@@ -216,56 +215,38 @@ export function AdminDashboard({ isAdmin = false }: AdminDashboardProps) {
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <AnimatePresence mode="wait">
-          {selectedTab === 'overview' && (
-            <motion.div
+{selectedTab === 'overview' && (
+            <div
               key="overview"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
+             className="animate-fadeInUp">
               <OverviewTab metrics={metrics} trends={trends} isLoading={isLoading} />
-            </motion.div>
+            </div>
           )}
 
           {selectedTab === 'students' && (
-            <motion.div
+            <div
               key="students"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
+             className="animate-fadeInUp">
               <StudentsTab />
-            </motion.div>
+            </div>
           )}
 
           {selectedTab === 'demos' && (
-            <motion.div
+            <div
               key="demos"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
+             className="animate-fadeInUp">
               <DemoBookingsTab />
-            </motion.div>
+            </div>
           )}
 
           {selectedTab === 'marketing' && (
-            <motion.div
+            <div
               key="marketing"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-            >
+             className="animate-fadeInUp">
               <MarketingTab />
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
-      </main>
+</main>
     </div>
   )
 }
@@ -370,12 +351,9 @@ function OverviewTab({
         {keyMetrics.map((metric, index) => {
           const Icon = metric.icon
           return (
-            <motion.div
+            <div
               key={metric.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+              className="bg-white p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 animate-fadeInUp"
             >
               <div className="flex items-center justify-between">
                 <div className="flex-1">
@@ -402,7 +380,7 @@ function OverviewTab({
                   <Icon className={`w-6 h-6 text-${metric.color}-600`} />
                 </div>
               </div>
-            </motion.div>
+            </div>
           )
         })}
       </div>

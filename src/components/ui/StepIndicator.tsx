@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Check, Loader2, AlertCircle } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -165,39 +164,31 @@ export function StepIndicator({
         </div>
 
         <div className={cn('flex-1', orientation === 'vertical' ? '' : 'text-center')}>
-          <motion.p
+          <p
             className={cn('font-medium', sizes.text, {
               [colors.text]: status === 'in-progress',
               'text-green-600': status === 'completed',
               'text-slate-500': status === 'pending',
               'text-red-600': status === 'error',
             })}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 + 0.1 }}
           >
             {step.label}
-          </motion.p>
+          </p>
 
           {step.description && (
-            <motion.p
+            <p
               className={cn('text-slate-500 mt-1', size === 'sm' ? 'text-xs' : 'text-xs')}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: index * 0.1 + 0.2 }}
             >
               {step.description}
-            </motion.p>
+            </p>
           )}
 
           {step.error && status === 'error' && (
-            <motion.p
+            <p
               className={cn('text-red-500 mt-1', size === 'sm' ? 'text-xs' : 'text-xs')}
-              initial={{ opacity: 0, y: -5 }}
-              animate={{ opacity: 1, y: 0 }}
             >
               {step.error}
-            </motion.p>
+            </p>
           )}
         </div>
       </div>
@@ -214,11 +205,8 @@ export function StepIndicator({
       return (
         <div className={cn('flex-1 mx-2 relative', size === 'sm' ? 'min-w-8' : 'min-w-12')}>
           <div className={cn('bg-slate-200 rounded-full', sizes.connector)}>
-            <motion.div
+            <div
               className={cn('rounded-full', colors.connector, sizes.connector)}
-              initial={{ width: '0%' }}
-              animate={{ width: isCompleted ? '100%' : '0%' }}
-              transition={{ duration: 0.5, delay: 0.2 }}
             />
           </div>
         </div>
@@ -230,11 +218,8 @@ export function StepIndicator({
         className={cn('ml-4 my-1 relative', size === 'sm' ? 'h-6' : size === 'md' ? 'h-8' : 'h-10')}
       >
         <div className={cn('bg-slate-200 rounded-full h-full', sizes.connector)}>
-          <motion.div
+          <div
             className={cn('rounded-full', colors.connector, sizes.connector)}
-            initial={{ height: '0%' }}
-            animate={{ height: isCompleted ? '100%' : '0%' }}
-            transition={{ duration: 0.5, delay: 0.2 }}
           />
         </div>
       </div>

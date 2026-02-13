@@ -4,7 +4,6 @@ import { useAuth } from '@/contexts/AuthContext'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState, Component, ReactNode } from 'react'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 import { BookOpen, LogIn, UserPlus, RefreshCw, AlertCircle, Brain } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { CONTACT_INFO } from '@/lib/constants/contactInfo'
@@ -56,10 +55,8 @@ class DashboardErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundary
 function AuthRequiredMessage() {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center"
+      <div
+        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
       >
         <div className="w-20 h-20 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
           <BookOpen className="w-10 h-10 text-white" />
@@ -96,7 +93,7 @@ function AuthRequiredMessage() {
             </Link>
           </p>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }
@@ -118,10 +115,8 @@ function LoadingState() {
 function ErrorFallback({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center"
+      <div
+        className="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center animate-fadeInUp"
       >
         <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
           <AlertCircle className="w-10 h-10 text-red-500" />
@@ -145,7 +140,7 @@ function ErrorFallback({ error, reset }: { error: Error; reset: () => void }) {
             Reload Page
           </Button>
         </div>
-      </motion.div>
+      </div>
     </div>
   )
 }

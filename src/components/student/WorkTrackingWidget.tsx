@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { motion } from 'framer-motion'
 import {
   FileText,
   ClipboardCheck,
@@ -291,10 +290,7 @@ function ProgressRow({
         </span>
       </div>
       <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: `${rate}%` }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
+        <div
           className={cn('h-full rounded-full', getBarColor(rate))}
         />
       </div>

@@ -8,7 +8,6 @@
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Button } from '@/components/ui/Button'
-import { motion } from 'framer-motion'
 import {
   FileText,
   ClipboardCheck,
@@ -342,9 +341,6 @@ export default function ReportsPage() {
                         {data.dailyData.map((record, index) => (
                           <motion.tr
                             key={record.date}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.03 }}
                             className="border-b hover:bg-gray-50"
                           >
                             <td className="py-3 px-4 font-medium">{formatDate(record.date)}</td>
@@ -416,9 +412,8 @@ function SummaryCard({
   color: string
 }) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className="bg-white rounded-xl shadow-lg overflow-hidden"
+    <div
+      className="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp"
     >
       <div className={cn('p-4 text-white', color)}>
         <div className="flex items-center justify-between">
@@ -431,7 +426,7 @@ function SummaryCard({
         </div>
       </div>
       {subtext && <div className="px-4 py-2 bg-gray-50 text-xs text-gray-600">{subtext}</div>}
-    </motion.div>
+    </div>
   )
 }
 
@@ -475,10 +470,7 @@ function CategoryProgress({
         </span>
       </div>
       <div className="h-3 bg-gray-100 rounded-full overflow-hidden mb-2">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={{ width: `${rate}%` }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+        <div
           className={cn('h-full rounded-full', getBarColor(rate))}
         />
       </div>

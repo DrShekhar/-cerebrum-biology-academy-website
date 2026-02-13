@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Award, Download, Share2, Eye, CheckCircle2, Calendar, Trophy } from 'lucide-react'
 import Link from 'next/link'
 
@@ -77,11 +76,8 @@ export default function CertificateCard({
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden group"
+    <div
+      className="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden group animate-fadeInUp"
     >
       <div className="p-6">
         <div className="flex items-start justify-between mb-4">
@@ -161,6 +157,6 @@ export default function CertificateCard({
       <div className="px-6 py-3 bg-gray-50 border-t border-gray-100">
         <p className="text-xs text-gray-500">Issued on {formatDate(certificate.issueDate)}</p>
       </div>
-    </motion.div>
+    </div>
   )
 }

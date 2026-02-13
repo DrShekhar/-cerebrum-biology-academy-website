@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
 import {
   Gift,
   Clock,
@@ -481,20 +480,12 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
   }
 
   return (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
+<div
         className={`fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-50 flex ${getPositionClasses()} p-4`}
         onClick={handleClose}
       >
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0, y: 50 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          exit={{ scale: 0.8, opacity: 0, y: 50 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-          className="relative max-w-lg w-full mx-4 sm:mx-0 bg-white rounded-2xl shadow-2xl overflow-hidden"
+        <div
+          className="relative max-w-lg w-full mx-4 sm:mx-0 bg-white rounded-2xl shadow-2xl overflow-hidden animate-fadeInUp"
           onClick={(e) => e.stopPropagation()}
         >
           {/* Close button */}
@@ -603,16 +594,14 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
 
             {/* Action buttons */}
             <div className="space-y-3">
-              <motion.button
+              <button
                 onClick={handlePrimaryAction}
-                className="w-full py-4 px-6 bg-gray-900 hover:bg-gray-300 text-white hover:text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+                className="w-full py-4 px-6 bg-gray-900 hover:bg-gray-300 text-white hover:text-gray-900 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 animate-fadeInUp"
               >
                 {selectedOffer.visual.icon}
                 {selectedOffer.cta.primary}
                 <ArrowRight className="w-5 h-5" />
-              </motion.button>
+              </button>
 
               {selectedOffer.cta.secondary && (
                 <button
@@ -632,10 +621,9 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
               </div>
             </div>
           </div>
-        </motion.div>
-      </motion.div>
-    </AnimatePresence>
-  )
+        </div>
+      </div>
+)
 }
 
 export default ExitIntentPopup

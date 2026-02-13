@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
 import {
   Users,
   Search,
@@ -324,10 +323,8 @@ export default function StudentsPage() {
             </div>
 
             {/* Leads Table */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+            <div
+              className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
             >
               {leadsLoading ? (
                 <div className="text-center py-12 text-gray-500">Loading leads...</div>
@@ -438,19 +435,16 @@ export default function StudentsPage() {
                   )}
                 </>
               )}
-            </motion.div>
+            </div>
           </>
         ) : (
         <>
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {statsData.map((stat, index) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl border border-gray-200"
+              className="bg-white p-6 rounded-xl border border-gray-200 animate-fadeInUp"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -464,7 +458,7 @@ export default function StudentsPage() {
                   <stat.icon className="h-6 w-6" />
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
@@ -512,10 +506,8 @@ export default function StudentsPage() {
         </div>
 
         {/* Students Table */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="bg-white rounded-xl border border-gray-200 overflow-hidden"
+        <div
+          className="bg-white rounded-xl border border-gray-200 overflow-hidden animate-fadeInUp"
         >
           <div className="overflow-x-auto">
             <table className="min-w-full divide-y divide-gray-200">
@@ -656,7 +648,7 @@ export default function StudentsPage() {
               <p className="mt-1 text-sm text-gray-500">No students match your current filters.</p>
             </div>
           )}
-        </motion.div>
+        </div>
         </>
         )}
       </div>
