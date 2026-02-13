@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { CountryContent } from '@/lib/international/countryContentService'
 import { CurrencySelector, InternationalPricingCard } from './CurrencySelector'
 import { TimezoneSchedule } from './TimezoneSchedule'
@@ -23,6 +24,7 @@ interface CountryLandingPageProps {
 }
 
 export function CountryLandingPage({ countryContent, countryCode }: CountryLandingPageProps) {
+  const router = useRouter()
   const { updatePreferences, trackBehavior } = usePersonalization()
   const [selectedCurrency, setSelectedCurrency] = useState(countryContent.currency as any)
   const [showScheduling, setShowScheduling] = useState(false)
@@ -51,8 +53,7 @@ export function CountryLandingPage({ countryContent, countryCode }: CountryLandi
       currency: selectedCurrency,
     })
 
-    // Redirect to enrollment with country context
-    window.location.href = `/enroll?country=${countryCode}&course=${courseType}&currency=${selectedCurrency}`
+    router.push(`/enroll?country=${countryCode}&course=${courseType}&currency=${selectedCurrency}`)
   }
 
   const handleContactClick = (method: string) => {

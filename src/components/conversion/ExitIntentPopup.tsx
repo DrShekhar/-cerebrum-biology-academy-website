@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   Gift,
@@ -67,6 +68,7 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
   position = 'center',
   variant = 'standard',
 }) => {
+  const router = useRouter()
   const [isVisible, setIsVisible] = useState(false)
   const [hasShown, setHasShown] = useState(false)
   const [showCount, setShowCount] = useState(0)
@@ -404,11 +406,9 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
     // Handle different offer types
     switch (selectedOffer.type) {
       case 'discount':
-        // Redirect to enrollment with discount code
-        window.location.href = '/enroll?discount=EXIT25'
+        router.push('/enroll?discount=EXIT25')
         break
       case 'consultation':
-        // Open WhatsApp or booking form
         await trackAndOpenWhatsApp({
           source: 'exit-intent-popup',
           message: 'Hi! I saw your exit intent offer and would like to book a free consultation.',
@@ -416,12 +416,10 @@ const ExitIntentPopup: React.FC<ExitIntentPopupProps> = ({
         })
         break
       case 'trial':
-        // Redirect to trial signup
-        window.location.href = '/trial-signup'
+        router.push('/trial-signup')
         break
       case 'urgency':
-        // Redirect to enrollment
-        window.location.href = '/enroll?urgency=true'
+        router.push('/enroll?urgency=true')
         break
     }
 

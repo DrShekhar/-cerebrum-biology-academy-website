@@ -32,12 +32,16 @@ export async function GET(request: NextRequest) {
     // Find linked children via parent_child_relationships table
     const childRelationships = await prisma.parent_child_relationships.findMany({
       where: { parentId: parent.id },
+      take: 10,
       include: {
         child: {
           include: {
             enrollments: {
+              take: 5,
               include: {
-                courses: true,
+                courses: {
+                  select: { id: true, name: true, type: true },
+                },
                 payments: {
                   orderBy: { createdAt: 'desc' },
                   take: 5,
@@ -50,7 +54,7 @@ export async function GET(request: NextRequest) {
             },
             student_attendance: {
               orderBy: { createdAt: 'desc' },
-              take: 30,
+              take: 10,
               include: {
                 session: {
                   select: { title: true, scheduledDate: true },

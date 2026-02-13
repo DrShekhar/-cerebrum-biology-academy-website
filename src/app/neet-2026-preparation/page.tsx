@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   BookOpen,
@@ -25,6 +26,7 @@ import { ParentTestimonialsSection } from '@/components/layout/ParentTestimonial
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 
 export default function NEET2026PreparationPage() {
+  const router = useRouter()
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -42,7 +44,7 @@ export default function NEET2026PreparationPage() {
         value: 1,
       })
     }
-    window.location.href = '/demo-booking'
+    router.push('/demo-booking')
   }
 
   const handleLeadSubmit = async (e: React.FormEvent) => {
@@ -62,7 +64,7 @@ export default function NEET2026PreparationPage() {
     setIsSubmitting(false)
 
     setTimeout(() => {
-      window.location.href = '/demo-booking'
+      router.push('/demo-booking')
     }, 2000)
   }
 

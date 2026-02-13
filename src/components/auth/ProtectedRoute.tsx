@@ -72,9 +72,9 @@ export default function ProtectedRoute({
     return loadingComponent || <LoadingSpinner />
   }
 
-  // If auth is required but user is not authenticated
+  // If auth is required but user is not authenticated, show spinner while redirecting
   if (requireAuth && !isAuthenticated) {
-    return null // Will redirect in useEffect
+    return loadingComponent || <LoadingSpinner />
   }
 
   // If roles are specified and user doesn't have required role

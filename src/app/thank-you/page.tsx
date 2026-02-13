@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { CheckCircle2, Phone, MessageSquare, Clock, FileText, CalendarDays } from 'lucide-react'
 import { PremiumCard, PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
@@ -15,6 +15,7 @@ import {
 } from '@/lib/analytics/googleAdsConversions'
 
 function ThankYouContent() {
+  const router = useRouter()
   const searchParams = useSearchParams()
   const form = searchParams?.get('form') || 'general'
   const [countdown, setCountdown] = useState(120) // 2 minutes countdown
@@ -113,7 +114,7 @@ function ThankYouContent() {
   const handleBookCounseling = () => {
     ConversionTracker.trackDemoBooking()
     trackDemoBookingConversion('thank-you-page')
-    window.location.href = '/enrollment?source=thank-you'
+    router.push('/enrollment?source=thank-you')
   }
 
   const formatTime = (seconds: number) => {

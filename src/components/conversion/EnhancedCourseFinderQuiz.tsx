@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton } from '@/components/ui/PremiumDesignSystem'
 import { ParentFlow } from '@/components/conversion/ParentFlow'
@@ -45,6 +46,7 @@ export function EnhancedCourseFinderQuiz({
   onComplete,
   className = '',
 }: EnhancedCourseFinderQuizProps) {
+  const router = useRouter()
   const [currentStep, setCurrentStep] = useState<
     'userType' | 'step1' | 'step2' | 'step3' | 'recommendation'
   >('userType')
@@ -493,31 +495,29 @@ export function EnhancedCourseFinderQuiz({
   }
 
   const handleParentFlowAction = (action: string) => {
-    console.log('Parent flow action:', action)
-    // Handle different parent flow actions
     switch (action) {
       case 'schedule-parent-meeting':
-        window.location.href = '/demo?type=parent-meeting'
+        router.push('/demo?type=parent-meeting')
         break
       case 'schedule-parent-call':
-        window.location.href = '/contact?type=parent-call'
+        router.push('/contact?type=parent-call')
         break
       case 'schedule-center-visit':
-        window.location.href = '/locations?action=visit'
+        router.push('/locations?action=visit')
         break
       default:
-        console.log('Unknown parent action:', action)
+        break
     }
   }
 
   const handleEnrollNow = () => {
     if (recommendation) {
-      window.location.href = `/enrollment?course=${encodeURIComponent(recommendation.primary.name)}&price=${recommendation.primary.price}`
+      router.push(`/enrollment?course=${encodeURIComponent(recommendation.primary.name)}&price=${recommendation.primary.price}`)
     }
   }
 
   const handleBookCounseling = () => {
-    window.location.href = '/demo'
+    router.push('/demo')
   }
 
   const handleDownloadDetails = () => {

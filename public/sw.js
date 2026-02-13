@@ -2,7 +2,7 @@
 // Optimized for Indian mobile networks and offline learning
 // Enhanced with counselor CRM offline support
 
-const CACHE_NAME = 'cerebrum-biology-v2'
+const CACHE_NAME = 'cerebrum-biology-v3'
 const OFFLINE_URL = '/offline'
 
 // Critical resources to cache immediately
@@ -44,9 +44,9 @@ const CACHE_STRATEGIES = {
 
 // Network-aware caching durations (in milliseconds)
 const CACHE_DURATIONS = {
-  FAST_NETWORK: 24 * 60 * 60 * 1000, // 24 hours
-  SLOW_NETWORK: 7 * 24 * 60 * 60 * 1000, // 7 days
-  OFFLINE_FALLBACK: 30 * 24 * 60 * 60 * 1000, // 30 days
+  FAST_NETWORK: 1 * 60 * 60 * 1000, // 1 hour
+  SLOW_NETWORK: 24 * 60 * 60 * 1000, // 24 hours
+  OFFLINE_FALLBACK: 7 * 24 * 60 * 60 * 1000, // 7 days
 }
 
 // Detect network quality

@@ -226,8 +226,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
     }, timeUntilRefresh)
   }, [user])
 
-  // PERFORMANCE: Defer auth initialization to avoid blocking initial render
-  // Only check auth immediately on protected routes, defer on public pages
+  // PERFORMANCE: Initialize auth immediately on protected routes,
+  // defer to next idle frame on public pages (no artificial delay)
   useEffect(() => {
     const isProtectedRoute =
       typeof window !== 'undefined' &&
@@ -240,13 +240,12 @@ export function AuthProvider({ children }: AuthProviderProps) {
         window.location.pathname.startsWith('/test/'))
 
     if (isProtectedRoute) {
-      // Protected route: check auth immediately
       initializeAuth()
+    } else if ('requestIdleCallback' in window) {
+      const idleId = requestIdleCallback(() => initializeAuth(), { timeout: 200 })
+      return () => cancelIdleCallback(idleId)
     } else {
-      // Public page: defer auth check by 1 second to prioritize rendering
-      const timer = setTimeout(() => {
-        initializeAuth()
-      }, 1000)
+      const timer = setTimeout(() => initializeAuth(), 50)
       return () => clearTimeout(timer)
     }
   }, [])

@@ -1,10 +1,12 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { useRouter } from 'next/navigation'
 import { TrialStatus } from './trialManager'
 import { trackTrialEvent, TrialEvents } from './analytics'
 
 export function useTrialIntegration(isAuthenticated: boolean) {
+  const router = useRouter()
   const [freeUserId, setFreeUserId] = useState<string | null>(null)
   const [trialStatus, setTrialStatus] = useState<TrialStatus | null>(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -121,8 +123,8 @@ export function useTrialIntegration(isAuthenticated: boolean) {
         properties: { source: 'modal' },
       })
     }
-    window.location.href = '/pricing'
-  }, [freeUserId])
+    router.push('/pricing')
+  }, [freeUserId, router])
 
   const handleModalClose = useCallback(() => {
     setShowTrialExpiredModal(false)

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { MockTest, TestResponse, UserProfile } from '@/types/mockTest'
 import { TestEngine } from './TestEngine'
 import { TestResults } from './TestResults'
@@ -29,6 +30,7 @@ interface TestInterfaceProps {
 type TestState = 'preview' | 'class-selection' | 'taking' | 'completed'
 
 export function TestInterface({ test }: TestInterfaceProps) {
+  const router = useRouter()
   const [testState, setTestState] = useState<TestState>('preview')
   const [selectedClass, setSelectedClass] = useState<'class-11' | 'class-12' | 'dropper' | null>(
     null
@@ -82,7 +84,7 @@ export function TestInterface({ test }: TestInterfaceProps) {
   }
 
   const handleBackToTests = () => {
-    window.location.href = '/mock-tests'
+    router.push('/mock-tests')
   }
 
   // Get test difficulty based on selected class

@@ -1,5 +1,6 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
   BookOpen,
@@ -35,6 +36,8 @@ import {
 import { Button } from '@/components/ui/Button'
 
 export default function BiologyMajorCoursesPage() {
+  const router = useRouter()
+
   const handleDemoBooking = () => {
     if (typeof window !== 'undefined' && (window as any).gtag) {
       ;(window as any).gtag('event', 'demo_booking_biology_major', {
@@ -43,7 +46,7 @@ export default function BiologyMajorCoursesPage() {
         value: 1,
       })
     }
-    window.location.href = '/demo-booking'
+    router.push('/demo-booking')
   }
 
   const handleWhatsAppClick = () => {

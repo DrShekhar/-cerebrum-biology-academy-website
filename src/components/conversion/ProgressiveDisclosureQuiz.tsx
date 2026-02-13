@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { PremiumButton, AnimatedCounter } from '@/components/ui/PremiumDesignSystem'
 import { ChevronRight, Sparkles, GraduationCap } from 'lucide-react'
@@ -33,6 +34,7 @@ export function ProgressiveDisclosureQuiz({
   onComplete,
   className = '',
 }: ProgressiveDisclosureQuizProps) {
+  const router = useRouter()
   const [currentStep, setCurrentStep] = useState(0)
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [showResult, setShowResult] = useState(false)
@@ -152,8 +154,7 @@ export function ProgressiveDisclosureQuiz({
 
   const handleEnrollNow = () => {
     const result = calculateResult()
-    // Navigate to enrollment with pre-filled data
-    window.location.href = `/enrollment?course=${encodeURIComponent(result.recommendedCourse)}&price=${result.pricing}`
+    router.push(`/enrollment?course=${encodeURIComponent(result.recommendedCourse)}&price=${result.pricing}`)
   }
 
   if (showResult) {
