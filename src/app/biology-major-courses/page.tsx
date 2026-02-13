@@ -1,7 +1,6 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   BookOpen,
   Users,
@@ -345,11 +344,7 @@ export default function BiologyMajorCoursesPage() {
 
         <div className="relative max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-            >
+            <div className="animate-fadeInUp">
               <div className="inline-flex items-center bg-white/10 backdrop-blur-md px-6 py-3 rounded-full text-sm font-medium mb-6 border border-white/20">
                 <GraduationCap className="w-5 h-5 mr-2" />
                 College & University Biology Support
@@ -392,37 +387,23 @@ export default function BiologyMajorCoursesPage() {
               {/* Quick Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {heroStats.map((stat, index) => (
-                  <motion.div
-                    key={stat.label}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
-                  >
+                  <div key={stat.label} className="text-center bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp">
                     <stat.icon className="w-6 h-6 mx-auto mb-2 text-pink-100" />
                     <div className="text-2xl font-bold">{stat.label}</div>
                     <div className="text-xs opacity-90">{stat.sublabel}</div>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
+            <div className="relative animate-fadeInUp"
             >
               {/* Glassmorphism Card */}
               <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
                 <h3 className="text-2xl font-bold mb-6 text-center">Why Choose Us?</h3>
 
                 <div className="space-y-4">
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
+                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <GraduationCap className="w-6 h-6 text-white" />
@@ -433,13 +414,9 @@ export default function BiologyMajorCoursesPage() {
                         Learn from graduate students and professors with research experience
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 }}
-                    className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
+                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp"
                   >
                     <div className="w-12 h-12 bg-[#4a5d4a] rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <Clock className="w-6 h-6 text-white" />
@@ -450,13 +427,9 @@ export default function BiologyMajorCoursesPage() {
                         Book sessions that fit your college schedule and time zone
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
 
-                  <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 }}
-                    className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20"
+                  <div className="flex items-start bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20 animate-fadeInUp"
                   >
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mr-4 flex-shrink-0 shadow-lg">
                       <Target className="w-6 h-6 text-white" />
@@ -467,14 +440,14 @@ export default function BiologyMajorCoursesPage() {
                         Focus on exactly what you need - assignments, exams, or research
                       </div>
                     </div>
-                  </motion.div>
+                  </div>
                 </div>
 
                 <div className="text-center mt-6">
                   <p className="text-sm opacity-90">Trusted by 200+ college students worldwide</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -482,12 +455,7 @@ export default function BiologyMajorCoursesPage() {
       {/* Courses We Support */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Biology Major Courses We Support
@@ -496,18 +464,11 @@ export default function BiologyMajorCoursesPage() {
               Comprehensive tutoring for all undergraduate biology courses with expert guidance from
               PhD-level tutors.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coursesSupported.map((course, index) => (
-              <motion.div
-                key={course.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100"
-              >
+              <div key={course.name} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 animate-fadeInUp">
                 <div
                   className={`w-14 h-14 bg-gradient-to-br ${course.color} rounded-xl flex items-center justify-center mb-4 shadow-lg`}
                 >
@@ -522,7 +483,7 @@ export default function BiologyMajorCoursesPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -531,30 +492,18 @@ export default function BiologyMajorCoursesPage() {
       {/* Target Audience Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Who We Help Excel</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Specialized tutoring designed for different academic paths and career goals in
               biology.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {targetAudience.map((audience, index) => (
-              <motion.div
-                key={audience.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="relative group"
-              >
+              <div key={audience.title} className="relative group animate-fadeInUp">
                 <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full">
                   <div
                     className={`w-16 h-16 bg-gradient-to-br ${audience.color} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}
@@ -574,7 +523,7 @@ export default function BiologyMajorCoursesPage() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -583,12 +532,7 @@ export default function BiologyMajorCoursesPage() {
       {/* University Support */}
       <section className="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Supporting Students from Top Universities Worldwide
@@ -597,18 +541,11 @@ export default function BiologyMajorCoursesPage() {
               From Ivy League to online programs, we help students excel in their biology courses
               regardless of their institution.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {universitiesSupported.map((uni, index) => (
-              <motion.div
-                key={uni.region}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow"
-              >
+              <div key={uni.region} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow animate-fadeInUp">
                 <div className="w-12 h-12 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-md">
                   <uni.icon className="w-6 h-6 text-white" />
                 </div>
@@ -621,7 +558,7 @@ export default function BiologyMajorCoursesPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -630,12 +567,7 @@ export default function BiologyMajorCoursesPage() {
       {/* Services Grid */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Comprehensive Biology Support Services
@@ -644,18 +576,11 @@ export default function BiologyMajorCoursesPage() {
               From concept clarification to thesis support, we provide end-to-end academic
               assistance.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {servicesOffered.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100"
-              >
+              <div key={service.title} className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 border border-gray-100 animate-fadeInUp">
                 <div className="w-14 h-14 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
@@ -671,7 +596,7 @@ export default function BiologyMajorCoursesPage() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -680,12 +605,7 @@ export default function BiologyMajorCoursesPage() {
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               What Makes Us Different
@@ -694,24 +614,17 @@ export default function BiologyMajorCoursesPage() {
               College-level biology tutoring designed by experts who understand your academic
               challenges.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {learningFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center"
-              >
+              <div key={feature.title} className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-shadow text-center animate-fadeInUp">
                 <div className="w-16 h-16 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -720,12 +633,7 @@ export default function BiologyMajorCoursesPage() {
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
@@ -733,18 +641,11 @@ export default function BiologyMajorCoursesPage() {
             <p className="text-xl text-gray-600">
               Everything you need to know about our college biology tutoring services
             </p>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqSchema.mainEntity.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-6 border border-gray-100"
-              >
+              <div key={index} className="bg-gradient-to-br from-white to-rose-50 rounded-2xl shadow-lg p-6 border border-gray-100 animate-fadeInUp">
                 <h3 className="text-lg font-bold text-gray-900 mb-3 flex items-start">
                   <div className="w-8 h-8 bg-gradient-to-br from-rose-500 to-indigo-600 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
                     <span className="text-white font-bold text-sm">Q</span>
@@ -752,7 +653,7 @@ export default function BiologyMajorCoursesPage() {
                   {faq.name}
                 </h3>
                 <p className="text-gray-600 ml-11 leading-relaxed">{faq.acceptedAnswer.text}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -764,12 +665,7 @@ export default function BiologyMajorCoursesPage() {
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6bTAtNHYyaDJ2LTJoLTJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
 
         <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
               Ready to Excel in Your Biology Major Courses?
             </h2>
@@ -828,7 +724,7 @@ export default function BiologyMajorCoursesPage() {
                 </a>
               </p>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>

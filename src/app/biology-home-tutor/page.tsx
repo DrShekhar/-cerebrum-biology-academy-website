@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion } from 'framer-motion'
 import {
   Home,
   AlertTriangle,
@@ -190,12 +189,7 @@ export default function BiologyHomeTutorPage() {
       <section className="relative bg-gradient-to-br from-orange-900 via-red-800 to-rose-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/20" />
         <div className="relative max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center max-w-4xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div className="text-center max-w-4xl mx-auto animate-fadeInUp">
             <div className="inline-flex items-center bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-medium mb-6">
               <Home className="w-5 h-5 mr-2 text-yellow-300" />
               Looking for a Biology Home Tutor?
@@ -235,19 +229,14 @@ export default function BiologyHomeTutorPage() {
                 Talk to Counselor
               </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Why Home Tutors Fail */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-red-100 px-4 py-2 rounded-full text-red-700 font-medium mb-4">
               <AlertTriangle className="w-5 h-5 mr-2" />
@@ -261,24 +250,17 @@ export default function BiologyHomeTutorPage() {
               For board exams, a home tutor might work. But NEET is a different game - you compete
               with 20 lakh students.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {homeTutorProblems.map((problem, index) => (
-              <motion.div
-                key={problem.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500"
-              >
+              <div key={problem.title} className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500 animate-fadeInUp">
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
                   <problem.icon className="w-6 h-6 text-red-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{problem.title}</h3>
                 <p className="text-gray-600">{problem.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -287,12 +269,7 @@ export default function BiologyHomeTutorPage() {
       {/* The Cerebrum Solution */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <div className="inline-flex items-center bg-green-100 px-4 py-2 rounded-full text-green-700 font-medium mb-4">
               <Lightbulb className="w-5 h-5 mr-2" />
@@ -305,20 +282,13 @@ export default function BiologyHomeTutorPage() {
               You want personalized attention? Our 10-15 student batches give you that - plus the
               peer learning that home tutors can never provide.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {cerebrumAdvantages.map((advantage, index) => (
-              <motion.div
-                key={advantage.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`rounded-xl p-8 shadow-lg ${
+              <div key={advantage.title} className={`rounded-xl p-8 shadow-lg ${
                   advantage.highlight ? 'bg-green-50 border-2 border-green-200' : 'bg-gray-50'
-                }`}
-              >
+                }` + " animate-fadeInUp"}>
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${
                     advantage.highlight ? 'bg-green-200' : 'bg-gray-200'
@@ -330,7 +300,7 @@ export default function BiologyHomeTutorPage() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{advantage.title}</h3>
                 <p className="text-gray-600">{advantage.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -339,17 +309,12 @@ export default function BiologyHomeTutorPage() {
       {/* Comparison Table */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Home Tutor vs Cerebrum - The Truth
             </h2>
-          </motion.div>
+          </div>
 
           <div className="bg-white rounded-2xl overflow-hidden shadow-lg">
             <div className="grid grid-cols-3 bg-gray-800 text-white font-bold">
@@ -380,12 +345,7 @@ export default function BiologyHomeTutorPage() {
       {/* The Key Insight */}
       <section className="py-20 bg-[#4a5d4a] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <Medal className="w-16 h-16 mx-auto mb-6 text-yellow-300" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               &quot;When you study with students better than you, your standards rise
@@ -399,41 +359,29 @@ export default function BiologyHomeTutorPage() {
             <p className="text-lg opacity-80">
               - Dr. Shekhar Singh, AIIMS Trained, Founder of Cerebrum Biology Academy
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div className="text-center mb-16 animate-fadeInUp"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
               Frequently Asked Questions
             </h2>
-          </motion.div>
+          </div>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={faq.question}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-50 rounded-xl p-8"
-              >
+              <div key={faq.question} className="bg-gray-50 rounded-xl p-8 animate-fadeInUp">
                 <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start">
                   <MessageCircle className="w-6 h-6 mr-3 text-orange-600 flex-shrink-0 mt-1" />
                   {faq.question}
                 </h3>
                 <p className="text-gray-700 leading-relaxed ml-9">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -442,12 +390,7 @@ export default function BiologyHomeTutorPage() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-600 via-red-600 to-rose-600 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl md:text-5xl font-bold mb-6">Ready to See the Difference?</h2>
             <p className="text-xl md:text-2xl mb-8 opacity-90">
               Book a free demo class and experience why small batch coaching beats home tuition.
@@ -487,17 +430,14 @@ export default function BiologyHomeTutorPage() {
               </button>{' '}
               - we&apos;ll help you make the right choice.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Enquiry Form Modal */}
       {showEnquiryForm && (
         <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto"
+          <div className="bg-white rounded-2xl p-8 max-w-lg w-full shadow-2xl max-h-[90vh] overflow-y-auto animate-fadeInUp"
           >
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">Talk to Our Counselor</h2>
@@ -584,7 +524,7 @@ export default function BiologyHomeTutorPage() {
                 Request Callback
               </Button>
             </form>
-          </motion.div>
+          </div>
         </div>
       )}
 

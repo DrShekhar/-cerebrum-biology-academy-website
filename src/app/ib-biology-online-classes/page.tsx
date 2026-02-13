@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import {
   GraduationCap,
@@ -379,11 +378,8 @@ interface PricingTier {
 
 function PricingCard({ tier, currency }: { tier: PricingTier; currency: string }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className={`relative rounded-2xl bg-white p-6 shadow-lg ${
+    <div
+      className={`relative rounded-2xl bg-white p-6 shadow-lg animate-fadeInUp ${
         tier.popular
           ? 'border-2 border-purple-500 ring-2 ring-purple-200'
           : 'border border-gray-200'
@@ -428,7 +424,7 @@ function PricingCard({ tier, currency }: { tier: PricingTier; currency: string }
       >
         Get Started
       </button>
-    </motion.div>
+    </div>
   )
 }
 
@@ -457,11 +453,7 @@ export default function IBBiologyPage() {
       <section className="relative bg-gradient-to-br from-slate-900 to-slate-800 py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
+            <div className="animate-fadeInUp">
               <span className="mb-4 inline-block rounded-full bg-purple-500/20 px-4 py-2 text-sm font-medium text-purple-300">
                 IB Diploma Programme
               </span>
@@ -474,15 +466,13 @@ export default function IBBiologyPage() {
                 Internal Assessment, and achieve Grade 7 with personalized coaching.
               </p>
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                <button
                   onClick={handleHeroCTA}
-                  className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-green-600"
+                  className="inline-flex items-center gap-2 rounded-lg bg-green-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition hover:bg-green-600 hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <MessageCircle className="h-6 w-6" />
                   Start IB Biology Prep
-                </motion.button>
+                </button>
                 <Link
                   href="/campbell-biology/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/30 px-8 py-4 text-lg font-semibold text-white transition hover:bg-white/10"
@@ -491,7 +481,7 @@ export default function IBBiologyPage() {
                   View Campbell Biology
                 </Link>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -504,16 +494,10 @@ export default function IBBiologyPage() {
               { value: '85%', label: 'Score 6+' },
               { value: '40+', label: 'Countries' },
             ].map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 + index * 0.1 }}
-                className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm"
-              >
+              <div key={index} className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm animate-fadeInUp">
                 <div className="text-2xl font-bold text-purple-400 md:text-3xl">{stat.value}</div>
                 <div className="text-sm text-gray-300">{stat.label}</div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -522,11 +506,7 @@ export default function IBBiologyPage() {
       {/* Features Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Why Choose Our IB Biology Tutoring?
@@ -534,22 +514,16 @@ export default function IBBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Specialized coaching designed for IB Diploma success
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition hover:shadow-xl"
+              <div key={index} className="rounded-xl border border-gray-200 bg-white p-6 shadow-lg transition hover:shadow-xl animate-fadeInUp"
               >
                 <feature.icon className="mb-4 h-10 w-10 text-purple-600" />
                 <h3 className="mb-2 text-lg font-bold text-gray-900">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -558,11 +532,7 @@ export default function IBBiologyPage() {
       {/* Core Topics Section */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               IB Biology Core Topics (SL & HL)
@@ -570,17 +540,11 @@ export default function IBBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Comprehensive coverage of all core topics with Campbell Biology alignment
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {ibBiologyTopics.map((topic, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="rounded-xl bg-white p-5 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-5 shadow-lg animate-fadeInUp"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <span className="rounded-full bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700">
@@ -602,7 +566,7 @@ export default function IBBiologyPage() {
                   )}
                 </div>
                 <p className="text-sm text-gray-500">Campbell Ch: {topic.campbellChapters}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -611,11 +575,7 @@ export default function IBBiologyPage() {
       {/* AHL Topics Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Additional Higher Level (AHL) Topics
@@ -623,17 +583,11 @@ export default function IBBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Advanced topics exclusively for HL students - 60 additional teaching hours
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {ahlTopics.map((topic, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="rounded-xl border-2 border-purple-200 bg-purple-50 p-5"
+              <div key={index} className="rounded-xl border-2 border-purple-200 bg-purple-50 p-5 animate-fadeInUp"
               >
                 <div className="mb-3 flex items-center justify-between">
                   <span className="rounded-full bg-purple-600 px-3 py-1 text-sm font-medium text-white">
@@ -650,7 +604,7 @@ export default function IBBiologyPage() {
                   ))}
                 </div>
                 <p className="text-sm text-gray-500">Campbell Ch: {topic.campbellChapters}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -660,11 +614,7 @@ export default function IBBiologyPage() {
       <section className="bg-gradient-to-br from-purple-600 to-purple-800 py-16">
         <div className="container mx-auto px-4">
           <div className="mx-auto max-w-4xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-center"
+            <div className="text-center animate-fadeInUp"
             >
               <FileText className="mx-auto mb-4 h-12 w-12 text-purple-200" />
               <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
@@ -674,7 +624,7 @@ export default function IBBiologyPage() {
                 The IA is worth 20% of your final grade. Our expert tutors guide you through every
                 step to maximize your score.
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
               {[
@@ -683,31 +633,23 @@ export default function IBBiologyPage() {
                 { title: 'Data Analysis', desc: 'Statistical tests and uncertainty calculations' },
                 { title: 'Report Writing', desc: 'Structure and criterion-based feedback' },
               ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm"
+                <div key={index} className="rounded-xl bg-white/10 p-4 text-center backdrop-blur-sm animate-fadeInUp"
                 >
                   <div className="mb-2 text-2xl font-bold text-white">{index + 1}</div>
                   <h3 className="mb-1 font-semibold text-white">{item.title}</h3>
                   <p className="text-sm text-purple-200">{item.desc}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
 
             <div className="mt-8 text-center">
-              <motion.button
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <button
                 onClick={handleIACTA}
-                className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 text-lg font-semibold text-purple-700 shadow-lg transition hover:bg-gray-100"
+                className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 text-lg font-semibold text-purple-700 shadow-lg transition hover:bg-gray-100 hover:scale-[1.02] active:scale-[0.98]"
               >
                 <MessageCircle className="h-6 w-6" />
                 Get IA Help Now
-              </motion.button>
+              </button>
             </div>
           </div>
         </div>
@@ -716,11 +658,7 @@ export default function IBBiologyPage() {
       {/* Pricing Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               IB Biology Tutoring Packages
@@ -728,7 +666,7 @@ export default function IBBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Flexible pricing options for students worldwide
             </p>
-          </motion.div>
+          </div>
 
           {/* Senior Faculty */}
           <div className="mb-12">
@@ -779,11 +717,7 @@ export default function IBBiologyPage() {
       {/* FAQs */}
       <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
+          <div className="mb-12 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
               Frequently Asked Questions
@@ -791,21 +725,15 @@ export default function IBBiologyPage() {
             <p className="mx-auto max-w-2xl text-gray-600">
               Common questions about IB Biology preparation
             </p>
-          </motion.div>
+          </div>
 
           <div className="mx-auto max-w-3xl space-y-6">
             {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="rounded-xl bg-white p-6 shadow-lg"
+              <div key={index} className="rounded-xl bg-white p-6 shadow-lg animate-fadeInUp"
               >
                 <h3 className="mb-3 text-lg font-bold text-gray-900">{faq.question}</h3>
                 <p className="text-gray-600">{faq.answer}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -833,14 +761,10 @@ export default function IBBiologyPage() {
       {/* Related Pages */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-8 text-center"
+          <div className="mb-8 text-center animate-fadeInUp"
           >
             <h2 className="mb-4 text-2xl font-bold text-gray-900">Related Programs</h2>
-          </motion.div>
+          </div>
 
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             <Link
@@ -882,11 +806,7 @@ export default function IBBiologyPage() {
       {/* Final CTA */}
       <section className="bg-gradient-to-br from-slate-900 to-slate-800 py-16">
         <div className="container mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
+          <div className="animate-fadeInUp">
             <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">
               Ready to Achieve Grade 7 in IB Biology?
             </h2>
@@ -901,7 +821,7 @@ export default function IBBiologyPage() {
               <MessageCircle className="h-6 w-6" />
               Start IB Biology Prep Today
             </button>
-          </motion.div>
+          </div>
         </div>
       </section>
 

@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useState } from 'react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
@@ -218,11 +217,7 @@ export default function IGCSEBiologyTutorPage() {
           </div>
 
           <div className="container relative mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mx-auto max-w-4xl text-center"
+            <div className="mx-auto max-w-4xl text-center animate-fadeInUp"
             >
               <span className="mb-4 inline-block rounded-full bg-white/20 px-6 py-2 text-sm font-medium backdrop-blur-sm">
                 Cambridge, Edexcel, AQA, OCR Specialist
@@ -272,18 +267,14 @@ export default function IGCSEBiologyTutorPage() {
                   WhatsApp: +91 88264 44334
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Exam Boards Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 All IGCSE & GCSE Exam Boards Covered
@@ -291,18 +282,11 @@ export default function IGCSEBiologyTutorPage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Expert tutoring for all major international and UK exam boards
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {examBoards.map((board, index) => (
-                <motion.div
-                  key={board.code}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className={`rounded-2xl bg-gradient-to-br ${board.gradient} p-6 text-white shadow-xl`}
-                >
+                <div key={board.code} className={`rounded-2xl bg-gradient-to-br ${board.gradient} p-6 text-white shadow-xl` + " animate-fadeInUp"}>
                   <div className="mb-4 text-5xl">{board.icon}</div>
                   <h3 className="mb-2 text-xl font-bold">{board.name}</h3>
                   <p className="mb-4 text-sm opacity-90">Code: {board.code}</p>
@@ -314,7 +298,7 @@ export default function IGCSEBiologyTutorPage() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -323,11 +307,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Syllabus Topics Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Complete IGCSE Biology Syllabus Coverage
@@ -335,17 +315,11 @@ export default function IGCSEBiologyTutorPage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Master every topic with our comprehensive curriculum
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {syllabusTopics.map((topic, index) => (
-                <motion.div
-                  key={topic.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-2xl border border-cyan-100 bg-white/80 p-6 backdrop-blur-sm shadow-lg transition hover:shadow-xl"
+                <div key={topic.title} className="rounded-2xl border border-cyan-100 bg-white/80 p-6 backdrop-blur-sm shadow-lg transition hover:shadow-xl animate-fadeInUp"
                 >
                   <div className="mb-4 text-4xl">{topic.icon}</div>
                   <h3 className="mb-4 text-xl font-bold text-gray-900">{topic.title}</h3>
@@ -357,7 +331,7 @@ export default function IGCSEBiologyTutorPage() {
                       </li>
                     ))}
                   </ul>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -366,11 +340,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Grade Boundaries Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 IGCSE Biology Grade Boundaries
@@ -378,17 +348,11 @@ export default function IGCSEBiologyTutorPage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Understand what it takes to achieve your target grade
               </p>
-            </motion.div>
+            </div>
 
             <div className="mx-auto max-w-4xl space-y-4">
               {gradeBoundaries.map((grade, index) => (
-                <motion.div
-                  key={grade.grade}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="overflow-hidden rounded-xl shadow-lg"
+                <div key={grade.grade} className="overflow-hidden rounded-xl shadow-lg animate-fadeInUp"
                 >
                   <div className={`bg-gradient-to-r ${grade.color} p-6 text-white`}>
                     <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
@@ -401,15 +365,11 @@ export default function IGCSEBiologyTutorPage() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-10 rounded-2xl bg-gradient-to-r from-cyan-100 to-green-100 p-8"
+            <div className="mt-10 rounded-2xl bg-gradient-to-r from-cyan-100 to-green-100 p-8 animate-fadeInUp"
             >
               <h3 className="mb-4 text-2xl font-bold text-gray-900">
                 Tips for Achieving Top Grades
@@ -439,18 +399,14 @@ export default function IGCSEBiologyTutorPage() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
 
         {/* Features Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Why Choose Our IGCSE Biology Tutoring?
@@ -458,22 +414,16 @@ export default function IGCSEBiologyTutorPage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Comprehensive support designed for international students
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {features.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-2xl bg-white p-6 shadow-lg transition hover:shadow-xl"
+                <div key={feature.title} className="rounded-2xl bg-white p-6 shadow-lg transition hover:shadow-xl animate-fadeInUp"
                 >
                   <div className="mb-4 text-5xl">{feature.icon}</div>
                   <h3 className="mb-3 text-xl font-bold text-gray-900">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -482,11 +432,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* FAQ Section */}
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Frequently Asked Questions
@@ -494,17 +440,11 @@ export default function IGCSEBiologyTutorPage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Common questions about IGCSE Biology tutoring
               </p>
-            </motion.div>
+            </div>
 
             <div className="mx-auto max-w-3xl space-y-4">
               {faqSchema.mainEntity.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="rounded-xl border border-gray-200 bg-white shadow-md"
+                <div key={index} className="rounded-xl border border-gray-200 bg-white shadow-md animate-fadeInUp"
                 >
                   <button
                     onClick={() => setOpenFaq(openFaq === index ? null : index)}
@@ -530,7 +470,7 @@ export default function IGCSEBiologyTutorPage() {
                       <p className="text-gray-600">{faq.acceptedAnswer.text}</p>
                     </div>
                   )}
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -539,11 +479,7 @@ export default function IGCSEBiologyTutorPage() {
         {/* Internal Links Section */}
         <section className="bg-gradient-to-b from-blue-50 to-white py-16">
           <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-12 text-center"
+            <div className="mb-12 text-center animate-fadeInUp"
             >
               <h2 className="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
                 Explore Other Programs
@@ -551,7 +487,7 @@ export default function IGCSEBiologyTutorPage() {
               <p className="mx-auto max-w-3xl text-lg text-gray-600">
                 Comprehensive biology tutoring for all international curricula
               </p>
-            </motion.div>
+            </div>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {[
@@ -603,11 +539,7 @@ export default function IGCSEBiologyTutorPage() {
           </div>
 
           <div className="container relative mx-auto px-4 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-            >
+            <div className="animate-fadeInUp">
               <h2 className="mb-4 text-3xl font-bold md:text-4xl">
                 Ready to Ace Your IGCSE Biology Exams?
               </h2>
@@ -635,7 +567,7 @@ export default function IGCSEBiologyTutorPage() {
                   WhatsApp: +91 88264 44334
                 </button>
               </div>
-            </motion.div>
+            </div>
           </div>
         </section>
       </div>
