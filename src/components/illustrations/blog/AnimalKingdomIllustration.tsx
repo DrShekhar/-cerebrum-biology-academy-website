@@ -44,17 +44,17 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Jellyfish */}
-      <motion.g
+      <g
       >
         <ellipse cx="55" cy="100" rx="15" ry="10" fill="#E879F9" />
         <path d="M45 110 Q55 120 65 110" stroke="#D946EF" strokeWidth="2" fill="none" />
         <text x="55" y="135" fontSize="6" fill="#A21CAF" textAnchor="middle">
           Cnidaria
         </text>
-      </motion.g>
+      </g>
 
       {/* Earthworm */}
-      <motion.g
+      <g
         style={{ transformOrigin: '107px 100px' }}
       >
         <path
@@ -67,10 +67,10 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
         <text x="107" y="125" fontSize="6" fill="#92400E" textAnchor="middle">
           Annelida
         </text>
-      </motion.g>
+      </g>
 
       {/* Insect */}
-      <motion.g
+      <g
         style={{ transformOrigin: '160px 100px' }}
       >
         <ellipse cx="160" cy="100" rx="12" ry="8" fill="#84CC16" />
@@ -80,7 +80,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
         <text x="160" y="125" fontSize="6" fill="#4D7C0F" textAnchor="middle">
           Arthropoda
         </text>
-      </motion.g>
+      </g>
 
       {/* More invertebrate labels */}
       <text x="55" y="155" fontSize="5" fill="#6B7280" textAnchor="middle">
@@ -106,7 +106,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Fish */}
-      <motion.g
+      <g
       >
         <ellipse cx="235" cy="95" rx="15" ry="8" fill="#60A5FA" />
         <polygon points="250,95 260,88 260,102" fill="#3B82F6" />
@@ -114,10 +114,10 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
         <text x="235" y="115" fontSize="5" fill="#1D4ED8" textAnchor="middle">
           Pisces
         </text>
-      </motion.g>
+      </g>
 
       {/* Frog */}
-      <motion.g
+      <g
       >
         <ellipse cx="275" cy="95" rx="12" ry="10" fill="#4ADE80" />
         <circle cx="270" cy="88" r="3" fill="#FFFFFF" stroke="#166534" strokeWidth="1" />
@@ -125,10 +125,10 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
         <text x="275" y="115" fontSize="5" fill="#166534" textAnchor="middle">
           Amphibia
         </text>
-      </motion.g>
+      </g>
 
       {/* Bird */}
-      <motion.g
+      <g
       >
         <ellipse cx="315" cy="95" rx="10" ry="8" fill="#F472B6" />
         <polygon points="325,95 335,95 325,90" fill="#EC4899" />
@@ -136,17 +136,17 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
         <text x="315" y="115" fontSize="5" fill="#DB2777" textAnchor="middle">
           Aves
         </text>
-      </motion.g>
+      </g>
 
       {/* Mammal */}
-      <motion.g
+      <g
       >
         <ellipse cx="355" cy="95" rx="12" ry="10" fill="#FBBF24" />
         <circle cx="362" cy="90" r="5" fill="#F59E0B" />
         <text x="355" y="115" fontSize="5" fill="#B45309" textAnchor="middle">
           Mammalia
         </text>
-      </motion.g>
+      </g>
 
       <text x="292" y="155" fontSize="5" fill="#6B7280" textAnchor="middle">
         Reptilia (Snakes, Lizards)
@@ -180,7 +180,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Questions badge */}
-      <motion.g
+      <g
       >
         <circle cx="360" cy="200" r="18" fill="#F59E0B" />
         <text x="360" y="197" fontSize="8" fill="#FFFFFF" textAnchor="middle">
@@ -189,7 +189,7 @@ export function AnimalKingdomIllustration({ className = '', animate = true }: Il
         <text x="360" y="208" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Qs
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

@@ -32,7 +32,7 @@ export function Class11FoundationIllustration({
       </text>
 
       {/* Building blocks pyramid */}
-      <motion.g
+      <g
       >
         <rect
           x="145"
@@ -47,9 +47,9 @@ export function Class11FoundationIllustration({
         <text x="200" y="82" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           NEET SUCCESS
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="115"
@@ -77,9 +77,9 @@ export function Class11FoundationIllustration({
         <text x="245" y="122" fontSize="7" fill="#166534" textAnchor="middle" fontWeight="bold">
           Practice
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="85"
@@ -120,9 +120,9 @@ export function Class11FoundationIllustration({
         <text x="277" y="162" fontSize="6" fill="#166534" textAnchor="middle" fontWeight="bold">
           Plant Phys.
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="55"
@@ -137,7 +137,7 @@ export function Class11FoundationIllustration({
         <text x="200" y="202" fontSize="9" fill="#166534" textAnchor="middle" fontWeight="bold">
           CLASS 11 FOUNDATION - 60% NEET Weightage
         </text>
-      </motion.g>
+      </g>
 
       {/* Key stats */}
       <rect
@@ -151,7 +151,7 @@ export function Class11FoundationIllustration({
         strokeWidth="2"
       />
 
-      <motion.g
+      <g
       >
         <circle cx="80" cy="252" r="18" fill="#22C55E" />
         <text x="80" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -160,9 +160,9 @@ export function Class11FoundationIllustration({
         <text x="80" y="260" fontSize="5" fill="#FFFFFF" textAnchor="middle">
           Weightage
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="155" cy="252" r="18" fill="#3B82F6" />
         <text x="155" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -171,9 +171,9 @@ export function Class11FoundationIllustration({
         <text x="155" y="260" fontSize="5" fill="#FFFFFF" textAnchor="middle">
           Chapters
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="230" cy="252" r="18" fill="#F59E0B" />
         <text x="230" y="249" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -182,7 +182,7 @@ export function Class11FoundationIllustration({
         <text x="230" y="260" fontSize="5" fill="#FFFFFF" textAnchor="middle">
           Questions
         </text>
-      </motion.g>
+      </g>
 
       <text x="310" y="245" fontSize="7" fill="#374151" textAnchor="middle">
         Start early,

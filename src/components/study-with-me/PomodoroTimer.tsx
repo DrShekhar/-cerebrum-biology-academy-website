@@ -346,7 +346,7 @@ export function PomodoroTimer({
           {/* SVG Circle */}
           <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="45" fill="none" stroke="#e5e7eb" strokeWidth="8" />
-            <motion.circle
+            <circle
               cx="50"
               cy="50"
               r="45"

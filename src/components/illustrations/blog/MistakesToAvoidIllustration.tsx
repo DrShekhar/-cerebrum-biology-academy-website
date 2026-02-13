@@ -64,7 +64,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
       <circle cx="550" cy="400" r="100" fill="#F59E0B" opacity="0.05" />
 
       {/* Title */}
-      <motion.g
+      <g
       >
         <rect
           x="150"
@@ -78,10 +78,10 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
         <text x="300" y="42" fontSize="16" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           ⚠️ Top 10 NEET Mistakes to Avoid
         </text>
-      </motion.g>
+      </g>
 
       {/* LEFT COLUMN - DON'T DO */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -99,7 +99,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
         {/* Mistake 1 */}
         <g transform="translate(35, 115)">
-          <motion.circle
+          <circle
             cx="18"
             cy="18"
             r="18"
@@ -211,10 +211,10 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
             MED ⚡
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* RIGHT COLUMN - DO THIS INSTEAD */}
-      <motion.g
+      <g
       >
         <rect
           x="310"
@@ -232,7 +232,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
 
         {/* Correct 1 */}
         <g transform="translate(325, 115)">
-          <motion.circle
+          <circle
             cx="18"
             cy="18"
             r="18"
@@ -306,10 +306,10 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
             No chapter is unimportant
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* STATISTICS BOX */}
-      <motion.g
+      <g
       >
         <rect
           x="310"
@@ -323,7 +323,7 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
         <text x="445" y="385" fontSize="10" fill="#94A3B8" textAnchor="middle">
           Students who avoid these mistakes
         </text>
-        <motion.text
+        <text
           x="445"
           y="415"
           fontSize="28"
@@ -332,16 +332,16 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
           fontWeight="bold"
         >
           3x More Likely
-        </motion.text>
+        </text>
         <text x="445" y="430" fontSize="9" fill="#94A3B8" textAnchor="middle">
           to score 600+ in NEET
         </text>
-      </motion.g>
+      </g>
 
       {/* WARNING TRIANGLE */}
-      <motion.g
+      <g
       >
-        <motion.g
+        <g
           style={{ transformOrigin: '155px 440px' }}
         >
           <path
@@ -354,8 +354,8 @@ export function MistakesToAvoidIllustration({ className = '', animate = true }: 
           <text x="155" y="430" fontSize="24" textAnchor="middle" fill="#78350F" fontWeight="bold">
             !
           </text>
-        </motion.g>
-      </motion.g>
+        </g>
+      </g>
     </Wrapper>
   )
 }

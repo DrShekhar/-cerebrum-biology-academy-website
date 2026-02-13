@@ -2474,7 +2474,6 @@ export default function ChapterNotesContent({
   ],
 }
 
-
   const morphologyContent = {
   topics: [
     {
@@ -3726,7 +3725,6 @@ export default function ChapterNotesContent({
   ],
 }
 
-
   const plantPhysiologyContent = {
   topics: [
     {
@@ -4145,15 +4143,13 @@ export default function ChapterNotesContent({
   const content = getContentForChapter()
 
   return (
-    <motion.div
+    <div
       initial="hidden"
       animate="visible"
-      variants={containerVariants}
       className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"
     >
       {/* Breadcrumb Navigation */}
-      <motion.nav
-        variants={itemVariants}
+      <nav
         className="bg-white border-b border-gray-200 sticky top-0 z-40"
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -4170,11 +4166,10 @@ export default function ChapterNotesContent({
             <span className="text-gray-600 font-medium whitespace-nowrap">{chapter.name}</span>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Header Section */}
-      <motion.div
-        variants={itemVariants}
+      <div
         className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-12 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-6xl mx-auto">
@@ -4203,11 +4198,10 @@ export default function ChapterNotesContent({
             </div>
           </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Main Content */}
-      <motion.div
-        variants={itemVariants}
+      <div
         className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
       >
         {/* Topics Navigation */}
@@ -4215,10 +4209,8 @@ export default function ChapterNotesContent({
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Topics Covered</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {content.topics.map((topic, idx) => (
-              <motion.button
+              <button
                 key={idx}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
                 onClick={() => setActiveSection(topic.title)}
                 className={`text-left p-4 rounded-lg border-2 transition-all ${
                   activeSection === topic.title
@@ -4237,7 +4229,7 @@ export default function ChapterNotesContent({
                     <CheckCircle size={20} className="text-blue-600 flex-shrink-0 mt-1" />
                   )}
                 </div>
-              </motion.button>
+              </button>
             ))}
           </div>
         </div>
@@ -4245,11 +4237,8 @@ export default function ChapterNotesContent({
         {/* Detailed Content */}
         <div className="space-y-8">
           {content.topics.map((topic, idx) => (
-            <motion.div
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              animate={activeSection === null || activeSection === topic.title ? { opacity: 1, y: 0 } : { opacity: 0.3, y: 0 }}
-              transition={{ duration: 0.3 }}
               className={`bg-white rounded-lg border-2 overflow-hidden ${
                 activeSection === null || activeSection === topic.title ? "border-blue-200" : "border-gray-200"
               }`}
@@ -4276,24 +4265,19 @@ export default function ChapterNotesContent({
               </button>
 
               {expandedTopic === idx && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.3 }}
+                <div
                   className="border-t border-gray-200 px-6 py-6 bg-gradient-to-b from-white to-slate-50"
                 >
                   {topic.content}
-                </motion.div>
+                </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       {/* CTA Section */}
-      <motion.div
-        variants={itemVariants}
+      <div
         className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-12 px-4 sm:px-6 lg:px-8 mt-12"
       >
         <div className="max-w-4xl mx-auto">
@@ -4305,19 +4289,15 @@ export default function ChapterNotesContent({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <a
               href={`tel:${CONTACT_INFO.phone.primary}`}
               className="bg-white text-indigo-600 font-bold py-4 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-indigo-50 transition-colors"
             >
               <Phone size={20} />
               Call {CONTACT_INFO.phone.display.primary}
-            </motion.a>
+            </a>
 
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <a
               href={CONTACT_INFO.whatsapp.linkWithMessage(
                 `Hi! I'm interested in NEET Biology coaching. Can you help me with ${chapter.name}?`
               )}
@@ -4327,18 +4307,17 @@ export default function ChapterNotesContent({
             >
               <MessageCircle size={20} />
               WhatsApp Us
-            </motion.a>
+            </a>
           </div>
 
           <p className="text-center text-indigo-100 text-sm mt-6">
             Available Monday-Saturday: 7 AM - 9 PM | Sunday: 9 AM - 6 PM
           </p>
         </div>
-      </motion.div>
+      </div>
 
       {/* Footer Note */}
-      <motion.div
-        variants={itemVariants}
+      <div
         className="bg-white border-t border-gray-200 py-8 px-4 sm:px-6 lg:px-8"
       >
         <div className="max-w-6xl mx-auto">
@@ -4348,7 +4327,7 @@ export default function ChapterNotesContent({
             Regular updates are made to ensure accuracy and relevance for current examination standards.
           </p>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }

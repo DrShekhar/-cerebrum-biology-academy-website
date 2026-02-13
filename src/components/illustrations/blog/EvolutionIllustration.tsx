@@ -29,7 +29,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
       </text>
 
       {/* Tree of Life */}
-      <motion.g
+      <g
       >
         {/* Main trunk */}
         <rect x="95" y="220" width="10" height="60" fill="#8B4513" />
@@ -61,13 +61,13 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
         <text x="160" y="100" fontSize="6" fill="#0891B2" textAnchor="middle">
           Mammals
         </text>
-      </motion.g>
+      </g>
       <text x="100" y="290" fontSize="8" fill="#A855F7" textAnchor="middle" fontWeight="bold">
         Phylogenetic Tree
       </text>
 
       {/* Darwin portrait placeholder */}
-      <motion.g
+      <g
       >
         <circle cx="280" cy="90" r="35" fill="#E9D5FF" stroke="#A855F7" strokeWidth="2" />
         <circle cx="280" cy="80" r="15" fill="#FED7AA" />
@@ -78,7 +78,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
         <text x="280" y="145" fontSize="6" fill="#9CA3AF" textAnchor="middle">
           1859
         </text>
-      </motion.g>
+      </g>
 
       {/* Key concepts */}
       <rect
@@ -95,7 +95,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
         Key Concepts
       </text>
 
-      <motion.g
+      <g
       >
         <text x="295" y="200" fontSize="7" fill="#374151" textAnchor="middle">
           • Natural Selection
@@ -112,10 +112,10 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
         <text x="295" y="260" fontSize="7" fill="#374151" textAnchor="middle">
           • Human Evolution
         </text>
-      </motion.g>
+      </g>
 
       {/* Human evolution silhouettes */}
-      <motion.g
+      <g
       >
         <rect
           x="25"
@@ -137,10 +137,10 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
         <ellipse cx="105" cy="196" rx="6" ry="10" fill="#4B5563" />
         <ellipse cx="135" cy="194" rx="6" ry="11" fill="#374151" />
         <ellipse cx="165" cy="192" rx="6" ry="12" fill="#1F2937" />
-      </motion.g>
+      </g>
 
       {/* Questions badge */}
-      <motion.g
+      <g
       >
         <circle cx="360" cy="260" r="18" fill="#A855F7" />
         <text x="360" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">
@@ -149,7 +149,7 @@ export function EvolutionIllustration({ className = '', animate = true }: Illust
         <text x="360" y="268" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Qs
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

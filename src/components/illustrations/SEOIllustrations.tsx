@@ -71,12 +71,12 @@ export function StudentStudyingIllustration({ className = '', animate = true }: 
       <rect x="302" y="156" width="48" height="12" rx="2" fill="#F97316" />
 
       {/* Floating elements */}
-      <motion.g
+      <g
       >
         <circle cx="50" cy="80" r="8" fill="#14B8A6" opacity="0.6" />
         <circle cx="350" cy="150" r="6" fill="#8B5CF6" opacity="0.6" />
         <circle cx="70" cy="200" r="5" fill="#F97316" opacity="0.5" />
-      </motion.g>
+      </g>
 
       <defs>
         <linearGradient id="screenGradient" x1="138" y1="168" x2="262" y2="242">
@@ -180,11 +180,11 @@ export function TeacherIllustration({ className = '', animate = true }: Illustra
       <ellipse cx="200" cy="270" rx="160" ry="15" fill="#E8F4FC" />
 
       {/* Floating elements */}
-      <motion.g
+      <g
       >
         <path d="M60 60 L70 50 L80 60 L70 70 Z" fill="#14B8A6" opacity="0.5" />
-      </motion.g>
-      <motion.circle
+      </g>
+      <circle
         cx="350"
         cy="40"
         r="8"
@@ -218,63 +218,63 @@ export function BookStackIllustration({ className = '', animate = true }: Illust
       <ellipse cx="150" cy="230" rx="100" ry="15" fill="#E8F4FC" />
 
       {/* Book 1 - Bottom (NCERT Green) */}
-      <motion.g
+      <g
       >
         <rect x="60" y="170" width="180" height="30" rx="4" fill="#14B8A6" />
         <rect x="65" y="175" width="5" height="20" fill="#0D9488" />
         <text x="90" y="190" fontSize="10" fill="#FFFFFF" fontWeight="bold">
           NCERT Biology
         </text>
-      </motion.g>
+      </g>
 
       {/* Book 2 - Blue */}
-      <motion.g
+      <g
       >
         <rect x="70" y="140" width="170" height="28" rx="4" fill="#3B82F6" />
         <rect x="75" y="145" width="5" height="18" fill="#2563EB" />
         <text x="95" y="158" fontSize="9" fill="#FFFFFF" fontWeight="bold">
           Class 11 Biology
         </text>
-      </motion.g>
+      </g>
 
       {/* Book 3 - Purple */}
-      <motion.g
+      <g
       >
         <rect x="65" y="112" width="175" height="26" rx="4" fill="#8B5CF6" />
         <rect x="70" y="117" width="5" height="16" fill="#7C3AED" />
         <text x="90" y="129" fontSize="9" fill="#FFFFFF" fontWeight="bold">
           Class 12 Biology
         </text>
-      </motion.g>
+      </g>
 
       {/* Book 4 - Orange (Fingertips) */}
-      <motion.g
+      <g
       >
         <rect x="75" y="86" width="165" height="24" rx="4" fill="#F97316" />
         <rect x="80" y="90" width="5" height="16" fill="#EA580C" />
         <text x="100" y="102" fontSize="8" fill="#FFFFFF" fontWeight="bold">
           NCERT Fingertips
         </text>
-      </motion.g>
+      </g>
 
       {/* Book 5 - Top (Red) */}
-      <motion.g
+      <g
       >
         <rect x="80" y="62" width="155" height="22" rx="4" fill="#EF4444" />
         <rect x="85" y="66" width="5" height="14" fill="#DC2626" />
         <text x="105" y="77" fontSize="8" fill="#FFFFFF" fontWeight="bold">
           Trueman Biology
         </text>
-      </motion.g>
+      </g>
 
       {/* Decorative elements */}
-      <motion.circle
+      <circle
         cx="250"
         cy="100"
         r="20"
         fill="#F0FDFA"
       />
-      <motion.circle
+      <circle
         cx="50"
         cy="130"
         r="15"
@@ -375,44 +375,44 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
       </text>
 
       {/* Location pins */}
-      <motion.g
+      <g
       >
         <path
           d="M90 55 C90 40 75 35 75 50 C75 60 90 70 90 70 C90 70 105 60 105 50 C105 35 90 40 90 55"
           fill="#14B8A6"
         />
         <circle cx="90" cy="50" r="5" fill="#FFFFFF" />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <path
           d="M260 55 C260 40 245 35 245 50 C245 60 260 70 260 70 C260 70 275 60 275 50 C275 35 260 40 260 55"
           fill="#8B5CF6"
         />
         <circle cx="260" cy="50" r="5" fill="#FFFFFF" />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <path
           d="M90 140 C90 125 75 120 75 135 C75 145 90 155 90 155 C90 155 105 145 105 135 C105 120 90 125 90 140"
           fill="#F97316"
         />
         <circle cx="90" cy="135" r="5" fill="#FFFFFF" />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <path
           d="M260 140 C260 125 245 120 245 135 C245 145 260 155 260 155 C260 155 275 145 275 135 C275 120 260 125 260 140"
           fill="#3B82F6"
         />
         <circle cx="260" cy="135" r="5" fill="#FFFFFF" />
-      </motion.g>
+      </g>
 
       {/* Central marker - main location */}
-      <motion.g
+      <g
       >
         <circle cx="175" cy="130" r="25" fill="#EF4444" opacity="0.2" />
         <circle cx="175" cy="130" r="15" fill="#EF4444" opacity="0.4" />
@@ -420,7 +420,7 @@ export function LocationIllustration({ className = '', animate = true }: Illustr
         <text x="162" y="134" fontSize="6" fill="#FFFFFF" fontWeight="bold">
           YOU
         </text>
-      </motion.g>
+      </g>
 
       {/* Compass */}
       <g transform="translate(300, 230)">
@@ -494,7 +494,7 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
       <path d="M96 136 Q100 140 104 136" stroke="#1E293B" strokeWidth="1.5" fill="none" />
 
       {/* Speech bubble from teacher */}
-      <motion.g
+      <g
       >
         <rect x="130" y="80" width="50" height="30" rx="8" fill="#FFFFFF" />
         <polygon points="135,110 145,110 140,120" fill="#FFFFFF" />
@@ -504,7 +504,7 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
         <text x="140" y="102" fontSize="6" fill="#6366F1" textAnchor="middle">
           is...
         </text>
-      </motion.g>
+      </g>
 
       {/* Person at computer */}
       <ellipse cx="100" cy="200" rx="25" ry="30" fill="#8B5CF6" />
@@ -527,7 +527,7 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
       <rect x="334" y="185" width="32" height="45" rx="3" fill="#3B82F6" />
 
       {/* Speech bubble from student */}
-      <motion.g
+      <g
       >
         <ellipse cx="250" cy="100" rx="30" ry="20" fill="#FFFFFF" />
         <polygon points="265,118 275,118 270,128" fill="#FFFFFF" />
@@ -535,10 +535,10 @@ export function OnlineClassIllustration({ className = '', animate = true }: Illu
           Got it!
         </text>
         <text x="250" y="108" fontSize="10" textAnchor="middle"></text>
-      </motion.g>
+      </g>
 
       {/* Connection line */}
-      <motion.path
+      <path
         d="M160 140 Q200 120 240 140"
         stroke="#F97316"
         strokeWidth="2"

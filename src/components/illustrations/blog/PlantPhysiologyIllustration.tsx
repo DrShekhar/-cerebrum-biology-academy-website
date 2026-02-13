@@ -298,7 +298,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
 
         {/* Z-Scheme Diagram */}
         {/* PS II */}
-        <motion.g
+        <g
         >
           <rect x="330" y="260" width="50" height="50" rx="8" fill="#3B82F6" />
           <text
@@ -322,10 +322,10 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
           >
             P680
           </text>
-        </motion.g>
+        </g>
 
         {/* PS I */}
-        <motion.g
+        <g
         >
           <rect x="520" y="260" width="50" height="50" rx="8" fill="#8B5CF6" />
           <text
@@ -349,10 +349,10 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
           >
             P700
           </text>
-        </motion.g>
+        </g>
 
         {/* Electron flow path (Z shape) */}
-        <motion.path
+        <path
           d="M355 260 L355 195 L425 220 L425 195 L495 220 L495 195 L545 195 L545 260"
           stroke="#22C55E"
           strokeWidth="2"
@@ -386,7 +386,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
           >
             H₂O
           </text>
-          <motion.path
+          <path
             d="M350 315 L355 300"
             stroke="#3B82F6"
             strokeWidth="1.5"
@@ -603,7 +603,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         <circle cx="155" cy="445" r="60" fill="none" stroke="#BFDBFE" strokeWidth="3" />
 
         {/* Animated cycle arrow */}
-        <motion.circle
+        <circle
           cx="155"
           cy="385"
           r="6"
@@ -1317,7 +1317,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* NEET Questions Badge */}
-      <motion.g
+      <g
         filter="url(#photoGlow)"
       >
         <circle cx="850" cy="50" r="35" fill="#15803D" />
@@ -1342,7 +1342,7 @@ export function PlantPhysiologyIllustration({ className = '', animate = true }: 
         >
           Questions
         </text>
-      </motion.g>
+      </g>
 
       {/* NEET Tip */}
       <g filter="url(#photoCardShadow)">

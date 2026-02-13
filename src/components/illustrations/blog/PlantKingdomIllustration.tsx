@@ -153,7 +153,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Three types of Algae */}
         <g>
           {/* Chlorophyta */}
-          <motion.g
+          <g
           >
             <rect
               x="30"
@@ -212,10 +212,10 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               Spirogyra
             </text>
-          </motion.g>
+          </g>
 
           {/* Phaeophyta */}
-          <motion.g
+          <g
           >
             <rect
               x="115"
@@ -261,10 +261,10 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               Laminaria
             </text>
-          </motion.g>
+          </g>
 
           {/* Rhodophyta */}
-          <motion.g
+          <g
           >
             <rect
               x="200"
@@ -310,7 +310,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               Porphyra
             </text>
-          </motion.g>
+          </g>
         </g>
 
         {/* Key facts */}
@@ -387,7 +387,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Liverworts and Mosses */}
         <g>
           {/* Liverwort (Marchantia) */}
-          <motion.g
+          <g
           >
             <rect
               x="325"
@@ -434,10 +434,10 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               Marchantia (Gemmae)
             </text>
-          </motion.g>
+          </g>
 
           {/* Mosses */}
-          <motion.g
+          <g
           >
             <rect
               x="455"
@@ -484,7 +484,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               Funaria (Sporophyte)
             </text>
-          </motion.g>
+          </g>
         </g>
 
         {/* Key facts */}
@@ -549,7 +549,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Fern diagram */}
-        <motion.g
+        <g
           style={{ transformOrigin: '745px 210px' }}
         >
           {/* Fern fronds with circinate vernation */}
@@ -573,7 +573,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             strokeWidth="2"
             fill="none"
           />
-        </motion.g>
+        </g>
 
         {/* Prothallus label */}
         <g>
@@ -673,7 +673,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Cycas and Pinus */}
         <g>
           {/* Cycas */}
-          <motion.g
+          <g
           >
             <rect
               x="30"
@@ -712,10 +712,10 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               Coralloid roots
             </text>
-          </motion.g>
+          </g>
 
           {/* Pinus */}
-          <motion.g
+          <g
           >
             <rect
               x="155"
@@ -755,7 +755,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               Male & Female cones
             </text>
-          </motion.g>
+          </g>
         </g>
 
         {/* Key facts */}
@@ -822,7 +822,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         {/* Dicot vs Monocot comparison */}
         <g>
           {/* Dicot */}
-          <motion.g
+          <g
           >
             <rect
               x="325"
@@ -861,10 +861,10 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               2 cotyledons, Tap root
             </text>
-          </motion.g>
+          </g>
 
           {/* Monocot */}
-          <motion.g
+          <g
           >
             <rect
               x="450"
@@ -903,7 +903,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
             >
               1 cotyledon, Fibrous root
             </text>
-          </motion.g>
+          </g>
         </g>
 
         {/* Double fertilization */}
@@ -1289,7 +1289,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
       </g>
 
       {/* NEET Questions Badge */}
-      <motion.g
+      <g
         filter="url(#pkGlow)"
       >
         <circle cx="850" cy="50" r="35" fill="#15803D" />
@@ -1314,7 +1314,7 @@ export function PlantKingdomIllustration({ className = '', animate = true }: Ill
         >
           Questions
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

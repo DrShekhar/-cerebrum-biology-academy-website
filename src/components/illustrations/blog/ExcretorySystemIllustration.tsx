@@ -114,7 +114,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
       <circle cx="350" cy="260" r="225" fill="#DC2626" opacity="0.03" />
 
       {/* Title */}
-      <motion.text
+      <text
         x="350"
         y="30"
         textAnchor="middle"
@@ -124,10 +124,10 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
         fontFamily="system-ui, sans-serif"
       >
         Excretory System - Kidney & Nephron
-      </motion.text>
+      </text>
 
       {/* KIDNEY CROSS-SECTION - Left side */}
-      <motion.g
+      <g
       >
         <g transform="translate(25, 50)">
           {/* Kidney outline - bean shape */}
@@ -160,7 +160,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           <ellipse cx="50" cy="130" rx="15" ry="30" fill="#78350F" />
 
           {/* Renal artery */}
-          <motion.path
+          <path
             d="M10 115 Q30 115 45 120"
             stroke="#DC2626"
             strokeWidth="8"
@@ -173,7 +173,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Renal vein */}
-          <motion.path
+          <path
             d="M45 140 Q30 140 10 145"
             stroke="#3B82F6"
             strokeWidth="8"
@@ -185,7 +185,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Ureter */}
-          <motion.path
+          <path
             d="M100 185 Q100 210 95 240"
             stroke="url(#urineGrad)"
             strokeWidth="10"
@@ -219,10 +219,10 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             Kidney Cross-Section
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* NEPHRON DIAGRAM - Center */}
-      <motion.g
+      <g
       >
         <g transform="translate(240, 50)">
           {/* Nephron background card */}
@@ -240,7 +240,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Afferent arteriole */}
-          <motion.path
+          <path
             d="M25 55 Q35 50 45 55"
             stroke="#DC2626"
             strokeWidth="4"
@@ -253,7 +253,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Glomerulus */}
-          <motion.g
+          <g
           >
             <circle cx="60" cy="55" r="15" fill="url(#glomerulusGrad)" filter="url(#nephronGlow)" />
             {/* Capillary loops inside */}
@@ -269,7 +269,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
               strokeWidth="2"
               fill="none"
             />
-          </motion.g>
+          </g>
 
           {/* Bowman's capsule */}
           <path
@@ -283,7 +283,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Efferent arteriole */}
-          <motion.path
+          <path
             d="M75 55 Q85 50 95 55"
             stroke="#B91C1C"
             strokeWidth="3"
@@ -296,7 +296,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* PCT */}
-          <motion.path
+          <path
             d="M65 80 Q90 85 100 100 Q110 115 100 130"
             stroke="url(#pctGrad)"
             strokeWidth="6"
@@ -308,7 +308,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Loop of Henle - Descending */}
-          <motion.path
+          <path
             d="M100 130 Q95 150 90 180 Q85 210 90 225"
             stroke="url(#lohDescGrad)"
             strokeWidth="5"
@@ -330,7 +330,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           />
 
           {/* Loop of Henle - Ascending */}
-          <motion.path
+          <path
             d="M110 225 Q115 210 120 180 Q125 150 130 130"
             stroke="url(#lohAscGrad)"
             strokeWidth="5"
@@ -343,7 +343,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* DCT */}
-          <motion.path
+          <path
             d="M130 130 Q140 115 150 105 Q160 95 155 80 Q150 65 135 60"
             stroke="url(#dctGrad)"
             strokeWidth="5"
@@ -355,7 +355,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Collecting Duct */}
-          <motion.path
+          <path
             d="M135 60 Q145 70 150 90 Q155 120 155 160 Q155 200 155 240"
             stroke="url(#collectingDuctGrad)"
             strokeWidth="7"
@@ -371,7 +371,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Urine droplet at bottom */}
-          <motion.ellipse
+          <ellipse
             cx="155"
             cy="248"
             rx="5"
@@ -379,10 +379,10 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             fill="url(#urineGrad)"
           />
         </g>
-      </motion.g>
+      </g>
 
       {/* URINE FORMATION PROCESS - Right Top */}
-      <motion.g
+      <g
       >
         <g transform="translate(470, 50)">
           <rect
@@ -399,13 +399,13 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Step 1: Filtration */}
-          <motion.g
+          <g
           >
             <circle cx="30" cy="50" r="15" fill="#FEE2E2" stroke="#EF4444" strokeWidth="2" />
             <text x="30" y="55" textAnchor="middle" fill="#DC2626" fontSize="10" fontWeight="bold">
               1
             </text>
-          </motion.g>
+          </g>
           <text x="55" y="47" fill="#1E293B" fontSize="9" fontWeight="600">
             Glomerular
           </text>
@@ -414,13 +414,13 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Step 2: Reabsorption */}
-          <motion.g
+          <g
           >
             <circle cx="30" cy="90" r="15" fill="#EDE9FE" stroke="#8B5CF6" strokeWidth="2" />
             <text x="30" y="95" textAnchor="middle" fill="#7C3AED" fontSize="10" fontWeight="bold">
               2
             </text>
-          </motion.g>
+          </g>
           <text x="55" y="87" fill="#1E293B" fontSize="9" fontWeight="600">
             Tubular
           </text>
@@ -429,13 +429,13 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
           </text>
 
           {/* Step 3: Secretion */}
-          <motion.g
+          <g
           >
             <circle cx="30" cy="130" r="15" fill="#D1FAE5" stroke="#10B981" strokeWidth="2" />
             <text x="30" y="135" textAnchor="middle" fill="#059669" fontSize="10" fontWeight="bold">
               3
             </text>
-          </motion.g>
+          </g>
           <text x="55" y="127" fill="#1E293B" fontSize="9" fontWeight="600">
             Tubular
           </text>
@@ -467,10 +467,10 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             </marker>
           </defs>
         </g>
-      </motion.g>
+      </g>
 
       {/* GFR & KEY STATS - Right Middle */}
-      <motion.g
+      <g
       >
         <g transform="translate(470, 225)">
           <rect
@@ -492,7 +492,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             <text x="12" y="17" fill="#1D4ED8" fontSize="9" fontWeight="600">
               GFR:
             </text>
-            <motion.text
+            <text
               x="100"
               y="17"
               fill="#1E40AF"
@@ -500,7 +500,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
               fontWeight="bold"
             >
               125 mL/min
-            </motion.text>
+            </text>
           </g>
 
           {/* Daily Filtrate */}
@@ -525,10 +525,10 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* HORMONAL REGULATION - Bottom Left */}
-      <motion.g
+      <g
       >
         <g transform="translate(25, 375)">
           <rect
@@ -546,7 +546,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* ADH */}
           <g transform="translate(15, 35)">
-            <motion.circle
+            <circle
               cx="18"
               cy="16"
               r="14"
@@ -565,7 +565,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* Aldosterone */}
           <g transform="translate(15, 68)">
-            <motion.circle
+            <circle
               cx="18"
               cy="16"
               r="14"
@@ -584,7 +584,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
 
           {/* ANP */}
           <g transform="translate(15, 101)">
-            <motion.circle
+            <circle
               cx="18"
               cy="16"
               r="14"
@@ -601,10 +601,10 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* TYPES OF ANIMALS - Bottom Center */}
-      <motion.g
+      <g
       >
         <g transform="translate(250, 375)">
           <rect
@@ -680,10 +680,10 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* COUNTERCURRENT INFO - Bottom Right */}
-      <motion.g
+      <g
       >
         <g transform="translate(470, 375)">
           <rect
@@ -731,7 +731,7 @@ export function ExcretorySystemIllustration({ className = '', animate = true }: 
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

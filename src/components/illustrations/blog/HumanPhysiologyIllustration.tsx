@@ -79,7 +79,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <ellipse cx="250" cy="238" rx="32" ry="10" fill="#F59E0B" opacity="0.3" />
       </g>
 
-      <motion.g
+      <g
         filter="url(#glowPulse)"
       >
         <ellipse cx="250" cy="95" rx="22" ry="18" fill="url(#brainGrad)" />
@@ -100,9 +100,9 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <text x="250" y="78" fontSize="9" fill="#831843" textAnchor="middle" fontWeight="600">
           Brain
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <path
           d="M250 155 L238 143 Q220 130 220 148 Q220 168 250 195 Q280 168 280 148 Q280 130 262 143 Z"
@@ -112,9 +112,9 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <text x="250" y="175" fontSize="8" fill="white" textAnchor="middle" fontWeight="600">
           Heart
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
         style={{ transformOrigin: '250px 165px' }}
       >
         <ellipse
@@ -133,9 +133,9 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           fill="url(#lungGrad)"
           filter="url(#softShadow)"
         />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="30"
@@ -170,9 +170,9 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           fill="none"
           strokeLinecap="round"
         />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="370"
@@ -200,15 +200,15 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <text x="420" y="143" fontSize="11" fill="#991B1B" textAnchor="middle" fontWeight="700">
           System
         </text>
-        <motion.circle
+        <circle
           cx="420"
           cy="160"
           r="10"
           fill="#EF4444"
         />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="30"
@@ -236,16 +236,16 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <text x="80" y="238" fontSize="11" fill="#1E40AF" textAnchor="middle" fontWeight="700">
           System
         </text>
-        <motion.ellipse
+        <ellipse
           cx="80"
           cy="256"
           rx="14"
           ry="9"
           fill="#60A5FA"
         />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="370"
@@ -280,9 +280,9 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           fill="#6EE7B7"
           strokeLinecap="round"
         />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="145"
@@ -317,9 +317,9 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           fill="none"
           strokeLinecap="round"
         />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="260"
@@ -348,9 +348,9 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
           System
         </text>
         <circle cx="307" cy="332" r="6" fill="#F472B6" />
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="160"
@@ -374,7 +374,7 @@ export function HumanPhysiologyIllustration({ className = '', animate = true }: 
         <text x="250" y="374" fontSize="13" fill="#DC2626" textAnchor="middle" fontWeight="700">
           18-20 Questions in NEET
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

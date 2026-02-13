@@ -118,7 +118,7 @@ export function ProgressIndicator({
               cx="50"
               cy="50"
             />
-            <motion.circle
+            <circle
               className={colors.text}
               strokeWidth="8"
               strokeDasharray={264}
@@ -206,7 +206,7 @@ export function ProgressIndicator({
                 cx="16"
                 cy="16"
               />
-              <motion.circle
+              <circle
                 className={colors.text}
                 strokeWidth="3"
                 strokeDasharray={88}

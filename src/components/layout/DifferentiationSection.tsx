@@ -282,7 +282,7 @@ export function DifferentiationSection({
                 </thead>
                 <tbody>
                   {comparisonData.map((row, index) => (
-                    <motion.tr
+                    <tr
                       key={row.feature}
                       className={`border-b border-white/5 hover:bg-white/5 transition-colors ${
                         row.highlight ? 'bg-green-600/5' : ''
@@ -312,7 +312,7 @@ export function DifferentiationSection({
                       <td className="py-4 px-6 text-center">
                         <span className="text-gray-400">{row.jpt}</span>
                       </td>
-                    </motion.tr>
+                    </tr>
                   ))}
                 </tbody>
               </table>

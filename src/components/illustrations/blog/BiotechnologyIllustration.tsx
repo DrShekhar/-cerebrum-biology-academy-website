@@ -29,7 +29,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* DNA strand being cut */}
-      <motion.g
+      <g
       >
         {/* DNA helix segment */}
         <path
@@ -48,16 +48,16 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
         <line x1="40" y1="110" x2="80" y2="110" stroke="#10B981" strokeWidth="2" />
         <line x1="40" y1="130" x2="80" y2="130" stroke="#F59E0B" strokeWidth="2" />
         <line x1="40" y1="150" x2="80" y2="150" stroke="#3B82F6" strokeWidth="2" />
-      </motion.g>
+      </g>
 
       {/* Scissors (restriction enzyme) */}
-      <motion.g
+      <g
         style={{ transformOrigin: '120px 120px' }}
       >
         <path d="M100 100 L120 120 L100 140" stroke="#EF4444" strokeWidth="3" fill="none" />
         <path d="M140 100 L120 120 L140 140" stroke="#EF4444" strokeWidth="3" fill="none" />
         <circle cx="120" cy="120" r="5" fill="#EF4444" />
-      </motion.g>
+      </g>
       <text x="120" y="165" fontSize="7" fill="#DC2626" textAnchor="middle">
         Restriction
       </text>
@@ -66,7 +66,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Plasmid vector */}
-      <motion.g
+      <g
         style={{ transformOrigin: '200px 120px' }}
       >
         <circle cx="200" cy="120" r="40" fill="none" stroke="#3B82F6" strokeWidth="4" />
@@ -74,13 +74,13 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
         <text x="200" y="70" fontSize="6" fill="#DC2626" textAnchor="middle">
           ori
         </text>
-      </motion.g>
+      </g>
       <text x="200" y="175" fontSize="8" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
         Plasmid Vector
       </text>
 
       {/* Arrow showing insertion */}
-      <motion.path
+      <path
         d="M145 120 L155 120 M152 115 L158 120 L152 125"
         stroke="#059669"
         strokeWidth="2"
@@ -88,13 +88,13 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       />
 
       {/* Recombinant DNA */}
-      <motion.g
+      <g
       >
         <circle cx="300" cy="120" r="45" fill="none" stroke="#10B981" strokeWidth="4" />
         <line x1="280" y1="100" x2="320" y2="100" stroke="#EC4899" strokeWidth="3" />
         <line x1="280" y1="140" x2="320" y2="140" stroke="#F59E0B" strokeWidth="3" />
         <circle cx="300" cy="75" r="5" fill="#EF4444" />
-      </motion.g>
+      </g>
       <text x="300" y="180" fontSize="8" fill="#059669" textAnchor="middle" fontWeight="bold">
         Recombinant DNA
       </text>
@@ -154,7 +154,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* Questions badge */}
-      <motion.g
+      <g
       >
         <circle cx="360" cy="70" r="18" fill="#10B981" />
         <text x="360" y="67" fontSize="8" fill="#FFFFFF" textAnchor="middle">
@@ -163,7 +163,7 @@ export function BiotechnologyIllustration({ className = '', animate = true }: Il
         <text x="360" y="78" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Qs
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

@@ -106,7 +106,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
       </text>
 
       {/* NEET Badge */}
-      <motion.g
+      <g
         filter="url(#cellGlow)"
       >
         <circle cx="820" cy="40" r="28" fill="#FBBF24" />
@@ -131,7 +131,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         >
           Qs
         </text>
-      </motion.g>
+      </g>
 
       {/* ============ SECTION 1: Cell Theory (Top Left) ============ */}
       <g filter="url(#cellShadow)">
@@ -160,7 +160,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           { year: '1839', name: 'Schwann', desc: 'Animal cells', y: 190 },
           { year: '1855', name: 'Virchow', desc: 'Cells from cells', y: 220 },
         ].map((item, i) => (
-          <motion.g
+          <g
             key={`ct-${i}`}
           >
             <circle cx="55" cy={item.y} r="6" fill="#14B8A6" />
@@ -173,7 +173,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             <text x="150" y={item.y + 2} fontSize="7" fill="#6B7280">
               {item.desc}
             </text>
-          </motion.g>
+          </g>
         ))}
       </g>
 
@@ -299,7 +299,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           ))}
 
           {/* Integral protein */}
-          <motion.rect
+          <rect
             x="720"
             y="130"
             width="20"
@@ -312,7 +312,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Cholesterol */}
-          <motion.ellipse
+          <ellipse
             cx="780"
             cy="165"
             rx="8"
@@ -356,7 +356,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         </text>
 
         {/* Cell membrane */}
-        <motion.ellipse
+        <ellipse
           cx="240"
           cy="465"
           rx="180"
@@ -371,7 +371,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         <ellipse cx="240" cy="465" rx="170" ry="130" fill="url(#cytoplasmGrad)" />
 
         {/* Nucleus */}
-        <motion.g
+        <g
           filter="url(#organelleShadow)"
           style={{ transformOrigin: '240px 465px' }}
         >
@@ -400,13 +400,13 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           <circle cx="270" cy="450" r="3" fill="#EDE9FE" />
           <circle cx="210" cy="480" r="3" fill="#EDE9FE" />
           <circle cx="270" cy="480" r="3" fill="#EDE9FE" />
-        </motion.g>
+        </g>
         <text x="240" y="520" fontSize="9" fill="#5B21B6" textAnchor="middle" fontWeight="600">
           Nucleus
         </text>
 
         {/* Mitochondria */}
-        <motion.g
+        <g
           filter="url(#organelleShadow)"
           style={{ transformOrigin: '110px 410px' }}
         >
@@ -427,7 +427,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             strokeWidth="2"
             fill="none"
           />
-        </motion.g>
+        </g>
         <text x="110" y="438" fontSize="8" fill="#DC2626" textAnchor="middle" fontWeight="500">
           Mitochondria
         </text>
@@ -436,8 +436,8 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         </text>
 
         {/* Rough ER */}
-        <motion.g filter="url(#organelleShadow)">
-          <motion.path
+        <g filter="url(#organelleShadow)">
+          <path
             d="M310 380 Q330 395 320 415 Q310 435 330 450"
             stroke="#3B82F6"
             strokeWidth="5"
@@ -446,7 +446,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           />
           {/* Ribosomes on RER */}
           {[385, 415, 445].map((y, i) => (
-            <motion.circle
+            <circle
               key={`rer-${i}`}
               cx={325 - i * 5}
               cy={y}
@@ -454,13 +454,13 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
               fill="#10B981"
             />
           ))}
-        </motion.g>
+        </g>
         <text x="350" y="420" fontSize="8" fill="#1D4ED8" textAnchor="start" fontWeight="500">
           Rough ER
         </text>
 
         {/* Smooth ER */}
-        <motion.path
+        <path
           d="M340 470 Q360 485 350 505"
           stroke="#60A5FA"
           strokeWidth="4"
@@ -472,7 +472,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         </text>
 
         {/* Golgi Apparatus */}
-        <motion.g
+        <g
           filter="url(#organelleShadow)"
         >
           <path
@@ -499,20 +499,20 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           {/* Vesicles */}
           <circle cx="375" cy="520" r="5" fill="#FDE68A" stroke="#F59E0B" strokeWidth="1" />
           <circle cx="380" cy="535" r="4" fill="#FEF3C7" stroke="#FBBF24" strokeWidth="1" />
-        </motion.g>
+        </g>
         <text x="360" y="565" fontSize="8" fill="#B45309" textAnchor="middle" fontWeight="500">
           Golgi Apparatus
         </text>
 
         {/* Lysosomes */}
-        <motion.g
+        <g
         >
           <circle cx="150" cy="530" r="15" fill="#A78BFA" />
           <circle cx="150" cy="530" r="12" fill="#C4B5FD" />
           <text x="150" y="533" fontSize="6" fill="#5B21B6" textAnchor="middle" fontWeight="bold">
             pH~5
           </text>
-        </motion.g>
+        </g>
         <text x="150" y="555" fontSize="8" fill="#7C3AED" textAnchor="middle" fontWeight="500">
           Lysosome
         </text>
@@ -556,7 +556,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           { cx: 185, cy: 580 },
           { cx: 290, cy: 570 },
         ].map((pos, i) => (
-          <motion.circle
+          <circle
             key={`ribo-${i}`}
             cx={pos.cx}
             cy={pos.cy}
@@ -600,7 +600,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         />
 
         {/* Nucleoid */}
-        <motion.path
+        <path
           d="M535 370 Q545 360 555 375 Q565 385 575 370 Q585 360 595 375"
           stroke="#1E40AF"
           strokeWidth="3"
@@ -626,7 +626,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
         </text>
 
         {/* Flagellum */}
-        <motion.path
+        <path
           d="M567 435 Q580 450 565 465 Q550 480 565 490"
           stroke="#F59E0B"
           strokeWidth="2"
@@ -674,7 +674,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           },
           { name: 'ER', func: 'Protein/Lipid synthesis', color: '#2563EB', bg: '#DBEAFE', x: 760 },
         ].map((org, i) => (
-          <motion.g
+          <g
             key={`org-${i}`}
           >
             <rect x={org.x} y="505" width="125" height="50" rx="8" fill={org.bg} />
@@ -691,7 +691,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             <text x={org.x + 62} y="538" fontSize="7" fill="#4B5563" textAnchor="middle">
               {org.func}
             </text>
-          </motion.g>
+          </g>
         ))}
 
         {[
@@ -711,7 +711,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
           },
           { name: 'Ribosome', func: 'Protein synthesis', color: '#059669', bg: '#D1FAE5', x: 760 },
         ].map((org, i) => (
-          <motion.g
+          <g
             key={`org2-${i}`}
           >
             <rect x={org.x} y="565" width="125" height="50" rx="8" fill={org.bg} />
@@ -728,7 +728,7 @@ export function CellBiologyIllustration({ className = '', animate = true }: Illu
             <text x={org.x + 62} y="598" fontSize="7" fill="#4B5563" textAnchor="middle">
               {org.func}
             </text>
-          </motion.g>
+          </g>
         ))}
       </g>
 

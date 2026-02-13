@@ -95,7 +95,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
 
       {/* Target circle - Professional with rings */}
       <g filter="url(#targetGlow)">
-        <motion.g
+        <g
         >
           <circle cx="120" cy="190" r="75" fill="white" stroke="#DC2626" strokeWidth="10" />
           <circle cx="120" cy="190" r="60" fill="white" stroke="#F97316" strokeWidth="8" />
@@ -104,11 +104,11 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           <circle cx="120" cy="190" r="16" fill="url(#successGrad)" />
           {/* Center dot */}
           <circle cx="120" cy="190" r="5" fill="white" />
-        </motion.g>
+        </g>
       </g>
 
       {/* Arrow hitting target */}
-      <motion.g
+      <g
       >
         <line
           x1="20"
@@ -122,10 +122,10 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         <polygon points="104,190 92,183 92,197" fill="#1E293B" />
         {/* Arrow fletching */}
         <path d="M25 185 L15 180 L15 200 L25 195" fill="#64748B" />
-      </motion.g>
+      </g>
 
       {/* Score Badge - Glass morphism */}
-      <motion.g
+      <g
         filter="url(#stratShadow)"
       >
         <rect x="45" y="290" width="150" height="65" rx="16" fill="url(#successGrad)" />
@@ -152,7 +152,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         >
           🎯 Target Score
         </text>
-      </motion.g>
+      </g>
 
       {/* Strategy Card */}
       <g filter="url(#stratCardShadow)">
@@ -182,7 +182,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
         <line x1="250" y1="125" x2="485" y2="125" stroke="#E2E8F0" strokeWidth="2" />
 
         {/* Phase 1 */}
-        <motion.g
+        <g
         >
           <rect x="245" y="135" width="245" height="45" rx="10" fill="#DBEAFE" />
           <circle cx="265" cy="157" r="12" fill="#3B82F6" />
@@ -202,10 +202,10 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           <text x="285" y="168" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
             Complete Class 11 & 12 NCERT thoroughly
           </text>
-        </motion.g>
+        </g>
 
         {/* Phase 2 */}
-        <motion.g
+        <g
         >
           <rect x="245" y="185" width="245" height="45" rx="10" fill="#FEF3C7" />
           <circle cx="265" cy="207" r="12" fill="#F59E0B" />
@@ -225,10 +225,10 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           <text x="285" y="218" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
             5000+ topic-wise questions daily
           </text>
-        </motion.g>
+        </g>
 
         {/* Phase 3 */}
-        <motion.g
+        <g
         >
           <rect x="245" y="235" width="245" height="45" rx="10" fill="#DCFCE7" />
           <circle cx="265" cy="257" r="12" fill="#22C55E" />
@@ -248,10 +248,10 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           <text x="285" y="268" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
             Full syllabus tests every week
           </text>
-        </motion.g>
+        </g>
 
         {/* Phase 4 */}
-        <motion.g
+        <g
         >
           <rect x="245" y="285" width="245" height="45" rx="10" fill="#FCE7F3" />
           <circle cx="265" cy="307" r="12" fill="#EC4899" />
@@ -271,11 +271,11 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           <text x="285" y="318" fontSize="9" fill="#64748B" fontFamily="system-ui, sans-serif">
             Focus only on weak areas
           </text>
-        </motion.g>
+        </g>
 
         {/* Progress bar */}
         <rect x="245" y="340" width="245" height="8" rx="4" fill="#E2E8F0" />
-        <motion.rect
+        <rect
           x="245"
           y="340"
           width="0"
@@ -296,7 +296,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
       </g>
 
       {/* Success checkmark */}
-      <motion.g
+      <g
         filter="url(#stratGlow)"
       >
         <circle cx="480" cy="50" r="25" fill="url(#successGrad)" />
@@ -317,7 +317,7 @@ export function NEET180StrategyIllustration({ className = '', animate = true }: 
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-      </motion.g>
+      </g>
 
       {/* Stats badges */}
       <g filter="url(#stratCardShadow)">

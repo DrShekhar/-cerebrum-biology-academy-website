@@ -231,7 +231,7 @@ export default function BestNeetCoachingIndiaPage() {
                 </thead>
                 <tbody>
                   {comparisonData.map((row, index) => (
-                    <motion.tr
+                    <tr
                       key={row.institute}
                       className={`border-b border-gray-200 ${row.highlight ? 'bg-green-50' : index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
                     >
@@ -260,7 +260,7 @@ export default function BestNeetCoachingIndiaPage() {
                       >
                         {row.fees}
                       </td>
-                    </motion.tr>
+                    </tr>
                   ))}
                 </tbody>
               </table>

@@ -125,7 +125,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
       </text>
 
       {/* NEET Badge */}
-      <motion.g
+      <g
         filter="url(#genGlow)"
       >
         <circle cx="820" cy="40" r="28" fill="#FBBF24" />
@@ -150,7 +150,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         >
           Qs
         </text>
-      </motion.g>
+      </g>
 
       {/* ============ SECTION 1: DNA Double Helix (Left) ============ */}
       <g filter="url(#genCardShadow)">
@@ -170,11 +170,11 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </text>
 
         {/* DNA Double Helix Animation */}
-        <motion.g
+        <g
           style={{ transformOrigin: '120px 230px' }}
         >
           {/* Left strand */}
-          <motion.path
+          <path
             d="M70 130 Q100 155 70 180 Q40 205 70 230 Q100 255 70 280 Q40 305 70 330"
             stroke="url(#dnaStrand1)"
             strokeWidth="5"
@@ -182,7 +182,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
             strokeLinecap="round"
           />
           {/* Right strand */}
-          <motion.path
+          <path
             d="M170 130 Q140 155 170 180 Q200 205 170 230 Q140 255 170 280 Q200 305 170 330"
             stroke="url(#dnaStrand2)"
             strokeWidth="5"
@@ -235,7 +235,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
               </text>
             </g>
           ))}
-        </motion.g>
+        </g>
 
         {/* Legend */}
         <rect x="45" y="340" width="150" height="15" rx="4" fill="#F3E8FF" />
@@ -269,7 +269,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </text>
 
         {/* Law 1: Dominance */}
-        <motion.g
+        <g
         >
           <circle cx="250" cy="130" r="12" fill="#DDD6FE" />
           <text x="250" y="135" fontSize="11" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
@@ -288,10 +288,10 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="270" y="140" fontSize="8" fill="#6B7280" fontFamily="system-ui, sans-serif">
             F1 shows dominant trait only
           </text>
-        </motion.g>
+        </g>
 
         {/* Law 2: Segregation */}
-        <motion.g
+        <g
         >
           <circle cx="250" cy="165" r="12" fill="#C4B5FD" />
           <text x="250" y="170" fontSize="11" fill="#6D28D9" textAnchor="middle" fontWeight="bold">
@@ -310,10 +310,10 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="270" y="175" fontSize="8" fill="#6B7280" fontFamily="system-ui, sans-serif">
             Alleles separate in gametes
           </text>
-        </motion.g>
+        </g>
 
         {/* Law 3: Independent Assortment */}
-        <motion.g
+        <g
         >
           <circle cx="250" cy="200" r="12" fill="#A78BFA" />
           <text x="250" y="205" fontSize="11" fill="white" textAnchor="middle" fontWeight="bold">
@@ -332,7 +332,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="270" y="210" fontSize="8" fill="#6B7280" fontFamily="system-ui, sans-serif">
             Genes assort independently
           </text>
-        </motion.g>
+        </g>
 
         {/* Pea plant traits */}
         <rect x="235" y="225" width="180" height="22" rx="6" fill="#F3E8FF" />
@@ -399,37 +399,37 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </text>
 
         {/* Results with animation */}
-        <motion.g
+        <g
         >
           <rect x="490" y="148" width="40" height="20" rx="4" fill="#059669" />
           <text x="510" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
             TT
           </text>
-        </motion.g>
+        </g>
 
-        <motion.g
+        <g
         >
           <rect x="550" y="148" width="40" height="20" rx="4" fill="#10B981" />
           <text x="570" y="162" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
             Tt
           </text>
-        </motion.g>
+        </g>
 
-        <motion.g
+        <g
         >
           <rect x="490" y="173" width="40" height="20" rx="4" fill="#10B981" />
           <text x="510" y="187" fontSize="10" fill="white" textAnchor="middle" fontWeight="bold">
             Tt
           </text>
-        </motion.g>
+        </g>
 
-        <motion.g
+        <g
         >
           <rect x="550" y="173" width="40" height="20" rx="4" fill="#6EE7B7" />
           <text x="570" y="187" fontSize="10" fill="#065F46" textAnchor="middle" fontWeight="bold">
             tt
           </text>
-        </motion.g>
+        </g>
 
         {/* Ratio */}
         <rect x="460" y="230" width="160" height="18" rx="6" fill="#D1FAE5" />
@@ -464,7 +464,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </text>
 
         {/* Phenotype boxes */}
-        <motion.g
+        <g
         >
           <rect
             x="670"
@@ -482,9 +482,9 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="715" y="148" fontSize="14" fill="#2563EB" textAnchor="middle" fontWeight="bold">
             9
           </text>
-        </motion.g>
+        </g>
 
-        <motion.g
+        <g
         >
           <rect
             x="770"
@@ -502,9 +502,9 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="815" y="148" fontSize="14" fill="#D97706" textAnchor="middle" fontWeight="bold">
             3
           </text>
-        </motion.g>
+        </g>
 
-        <motion.g
+        <g
         >
           <rect
             x="670"
@@ -522,9 +522,9 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="715" y="190" fontSize="14" fill="#DB2777" textAnchor="middle" fontWeight="bold">
             3
           </text>
-        </motion.g>
+        </g>
 
-        <motion.g
+        <g
         >
           <rect
             x="770"
@@ -542,7 +542,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="815" y="190" fontSize="14" fill="#4F46E5" textAnchor="middle" fontWeight="bold">
             1
           </text>
-        </motion.g>
+        </g>
 
         {/* Cross notation */}
         <rect x="675" y="205" width="180" height="18" rx="6" fill="#EFF6FF" />
@@ -590,7 +590,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         {/* Sex chromosomes diagram */}
         <g>
           {/* Female XX */}
-          <motion.g
+          <g
           >
             <text x="85" y="425" fontSize="10" fill="#BE185D" textAnchor="middle" fontWeight="bold">
               Female (XX)
@@ -612,10 +612,10 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
             <text x="85" y="520" fontSize="9" fill="#9D174D" textAnchor="middle">
               44 + XX
             </text>
-          </motion.g>
+          </g>
 
           {/* Male XY */}
-          <motion.g
+          <g
           >
             <text
               x="200"
@@ -650,11 +650,11 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
             <text x="200" y="520" fontSize="9" fill="#1E3A8A" textAnchor="middle">
               44 + XY
             </text>
-          </motion.g>
+          </g>
         </g>
 
         {/* Gametes arrow */}
-        <motion.g
+        <g
         >
           <line
             x1="85"
@@ -673,7 +673,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="200" y="570" fontSize="8" fill="#1E40AF" textAnchor="middle">
             X or Y
           </text>
-        </motion.g>
+        </g>
 
         {/* Key point */}
         <rect x="50" y="590" width="215" height="30" rx="8" fill="#FDF2F8" />
@@ -753,14 +753,14 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           </text>
 
           {/* Arrows */}
-          <motion.path
+          <path
             d="M368 330 L420 370"
             stroke="#EC4899"
             strokeWidth="2"
             strokeDasharray="5,3"
             fill="none"
           />
-          <motion.path
+          <path
             d="M498 330 L450 370"
             stroke="#3B82F6"
             strokeWidth="2"
@@ -850,7 +850,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </text>
 
         {/* Down Syndrome */}
-        <motion.g
+        <g
         >
           <rect
             x="315"
@@ -871,10 +871,10 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="375" y="515" fontSize="7" fill="#991B1B" textAnchor="middle">
             Trisomy 21
           </text>
-        </motion.g>
+        </g>
 
         {/* Turner Syndrome */}
-        <motion.g
+        <g
         >
           <rect
             x="445"
@@ -895,10 +895,10 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="505" y="515" fontSize="7" fill="#9D174D" textAnchor="middle">
             Female, Monosomy X
           </text>
-        </motion.g>
+        </g>
 
         {/* Klinefelter Syndrome */}
-        <motion.g
+        <g
         >
           <rect
             x="315"
@@ -919,10 +919,10 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="375" y="570" fontSize="7" fill="#1D4ED8" textAnchor="middle">
             Male, sterile
           </text>
-        </motion.g>
+        </g>
 
         {/* Super Female */}
-        <motion.g
+        <g
         >
           <rect
             x="445"
@@ -943,7 +943,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
           <text x="505" y="570" fontSize="7" fill="#6D28D9" textAnchor="middle">
             Female, usually normal
           </text>
-        </motion.g>
+        </g>
 
         {/* Cause */}
         <rect x="330" y="585" width="220" height="20" rx="6" fill="#FEE2E2" />
@@ -1080,7 +1080,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
         </text>
 
         {/* Sickle Cell Anemia - detailed */}
-        <motion.g
+        <g
         >
           <rect
             x="610"
@@ -1108,7 +1108,7 @@ export function GeneticsIllustration({ className = '', animate = true }: Illustr
             →
           </text>
           <path d="M675 500 Q680 505 675 510 Q685 505 675 500" fill="#DC2626" />
-        </motion.g>
+        </g>
 
         {/* Other disorders list */}
         <g>

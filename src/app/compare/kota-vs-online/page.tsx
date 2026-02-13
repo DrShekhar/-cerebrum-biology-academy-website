@@ -320,7 +320,7 @@ export default function KotaVsOnlinePage() {
                 </thead>
                 <tbody>
                   {comparisonData.map((row, index) => (
-                    <motion.tr
+                    <tr
                       key={row.factor}
                       className={`border-b border-gray-200 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
                     >
@@ -354,7 +354,7 @@ export default function KotaVsOnlinePage() {
                           </span>
                         </div>
                       </td>
-                    </motion.tr>
+                    </tr>
                   ))}
                 </tbody>
               </table>

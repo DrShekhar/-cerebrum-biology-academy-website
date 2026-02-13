@@ -32,7 +32,7 @@ export function MolecularBiologyIllustration({
       </text>
 
       {/* DNA Double Helix */}
-      <motion.g
+      <g
         style={{ transformOrigin: '120px 160px' }}
       >
         {/* Left strand */}
@@ -72,7 +72,7 @@ export function MolecularBiologyIllustration({
         <text x="120" y="245" fontSize="6" fill="#166534" textAnchor="middle">
           A-T
         </text>
-      </motion.g>
+      </g>
       <text x="120" y="285" fontSize="8" fill="#3B82F6" textAnchor="middle" fontWeight="bold">
         DNA Double Helix
       </text>
@@ -92,15 +92,15 @@ export function MolecularBiologyIllustration({
         Central Dogma
       </text>
 
-      <motion.g
+      <g
       >
         <rect x="215" y="95" width="40" height="20" rx="4" fill="#3B82F6" />
         <text x="235" y="109" fontSize="7" fill="#FFFFFF" textAnchor="middle">
           DNA
         </text>
-      </motion.g>
+      </g>
 
-      <motion.path
+      <path
         d="M260 105 L280 105"
         stroke="#7C3AED"
         strokeWidth="2"
@@ -110,15 +110,15 @@ export function MolecularBiologyIllustration({
         Transcription
       </text>
 
-      <motion.g
+      <g
       >
         <rect x="285" y="95" width="40" height="20" rx="4" fill="#EC4899" />
         <text x="305" y="109" fontSize="7" fill="#FFFFFF" textAnchor="middle">
           RNA
         </text>
-      </motion.g>
+      </g>
 
-      <motion.path
+      <path
         d="M330 105 L350 105"
         stroke="#7C3AED"
         strokeWidth="2"
@@ -127,13 +127,13 @@ export function MolecularBiologyIllustration({
         Translation
       </text>
 
-      <motion.g
+      <g
       >
         <rect x="340" y="95" width="35" height="20" rx="4" fill="#22C55E" />
         <text x="357" y="109" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Protein
         </text>
-      </motion.g>
+      </g>
 
       {/* Key topics */}
       <rect
@@ -166,7 +166,7 @@ export function MolecularBiologyIllustration({
       </text>
 
       {/* Questions badge */}
-      <motion.g
+      <g
       >
         <circle cx="360" cy="260" r="18" fill="#8B5CF6" />
         <text x="360" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">
@@ -175,7 +175,7 @@ export function MolecularBiologyIllustration({
         <text x="360" y="268" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Qs
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

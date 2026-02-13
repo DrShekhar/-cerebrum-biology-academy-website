@@ -339,7 +339,7 @@ export default function ReportsPage() {
                       </thead>
                       <tbody>
                         {data.dailyData.map((record, index) => (
-                          <motion.tr
+                          <tr
                             key={record.date}
                             className="border-b hover:bg-gray-50"
                           >
@@ -371,7 +371,7 @@ export default function ReportsPage() {
                             <td className="py-3 px-4 text-center text-gray-600">
                               {Math.round((record.studyMinutes / 60) * 10) / 10}h
                             </td>
-                          </motion.tr>
+                          </tr>
                         ))}
                       </tbody>
                     </table>

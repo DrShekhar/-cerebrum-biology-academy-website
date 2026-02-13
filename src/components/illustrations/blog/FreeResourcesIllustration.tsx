@@ -29,7 +29,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
       </text>
 
       {/* FREE badge */}
-      <motion.g
+      <g
         style={{ transformOrigin: '55px 65px' }}
       >
         <circle cx="55" cy="65" r="25" fill="#22C55E" />
@@ -39,10 +39,10 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="55" y="75" fontSize="7" fill="#DCFCE7" textAnchor="middle">
           100%
         </text>
-      </motion.g>
+      </g>
 
       {/* Resource cards */}
-      <motion.g
+      <g
       >
         <rect
           x="30"
@@ -64,9 +64,9 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="80" y="170" fontSize="6" fill="#22C55E" textAnchor="middle" fontWeight="bold">
           ncert.nic.in
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="150"
@@ -88,9 +88,9 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="200" y="170" fontSize="6" fill="#22C55E" textAnchor="middle" fontWeight="bold">
           1000+ Hours
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="270"
@@ -112,7 +112,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="320" y="170" fontSize="6" fill="#22C55E" textAnchor="middle" fontWeight="bold">
           10 Years Free
         </text>
-      </motion.g>
+      </g>
 
       {/* More resources */}
       <rect
@@ -129,7 +129,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         More Free Resources
       </text>
 
-      <motion.g
+      <g
       >
         <circle cx="70" cy="245" r="15" fill="#DCFCE7" />
         <text x="70" y="248" fontSize="7" fill="#166534" textAnchor="middle">
@@ -138,9 +138,9 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="70" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Mock Tests
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="140" cy="245" r="15" fill="#DBEAFE" />
         <text x="140" y="248" fontSize="6" fill="#1D4ED8" textAnchor="middle">
@@ -149,9 +149,9 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="140" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Quizzes
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="210" cy="245" r="15" fill="#FEF3C7" />
         <text x="210" y="248" fontSize="6" fill="#B45309" textAnchor="middle">
@@ -160,9 +160,9 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="210" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Toppers
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="280" cy="245" r="15" fill="#FCE7F3" />
         <text x="280" y="248" fontSize="6" fill="#DB2777" textAnchor="middle">
@@ -171,9 +171,9 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="280" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Biology
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="340" cy="245" r="15" fill="#E9D5FF" />
         <text x="340" y="248" fontSize="6" fill="#7C3AED" textAnchor="middle">
@@ -182,7 +182,7 @@ export function FreeResourcesIllustration({ className = '', animate = true }: Il
         <text x="340" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Q&A
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

@@ -120,7 +120,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
       <circle cx="350" cy="260" r="260" fill="#FBBF24" opacity="0.03" />
 
       {/* Title */}
-      <motion.text
+      <text
         x="350"
         y="30"
         textAnchor="middle"
@@ -129,10 +129,10 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
         fontWeight="700"
       >
         Human Digestive System
-      </motion.text>
+      </text>
 
       {/* MAIN DIGESTIVE TRACT - Left side */}
-      <motion.g
+      <g
       >
         {/* Mouth/Buccal Cavity */}
         <g transform="translate(50, 55)">
@@ -154,7 +154,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
           {/* Tongue */}
           <ellipse cx="55" cy="40" rx="25" ry="12" fill="#E11D48" opacity="0.7" />
           {/* Salivary gland indicator */}
-          <motion.circle
+          <circle
             cx="15"
             cy="30"
             r="7"
@@ -169,7 +169,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
         </g>
 
         {/* Esophagus */}
-        <motion.g
+        <g
         >
           <path
             d="M105 145 Q105 170 112 195 Q118 220 112 245"
@@ -180,13 +180,13 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             filter="url(#organShadow)"
           />
           {/* Peristalsis wave indicator */}
-          <motion.circle
+          <circle
             cx="108"
             cy="175"
             r="5"
             fill="#FBBF24"
           />
-        </motion.g>
+        </g>
         <text x="145" y="195" fill="#64748B" fontSize="8" fontWeight="500">
           Esophagus
         </text>
@@ -206,12 +206,12 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             fill="url(#stomachInnerGrad)"
           />
           {/* Gastric glands */}
-          <motion.g
+          <g
           >
             <circle cx="56" cy="56" r="4" fill="#DC2626" />
             <circle cx="75" cy="68" r="4" fill="#DC2626" />
             <circle cx="93" cy="62" r="4" fill="#DC2626" />
-          </motion.g>
+          </g>
           {/* Labels */}
           <text x="75" y="160" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
             Stomach
@@ -223,7 +223,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
 
         {/* Small Intestine - Coiled */}
         <g transform="translate(100, 420)">
-          <motion.path
+          <path
             d="M75 0 Q37 6 31 31 Q25 56 50 62 Q75 68 100 56 Q125 43 118 68 Q112 93 81 100 Q50 106 43 81"
             stroke="url(#smallIntestineGrad)"
             strokeWidth="15"
@@ -253,10 +253,10 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             Large Intestine
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* ASSOCIATED GLANDS - Right side */}
-      <motion.g
+      <g
       >
         {/* Liver */}
         <g transform="translate(360, 60)">
@@ -283,7 +283,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             fill="url(#gallbladderGrad)"
             filter="url(#organShadow)"
           />
-          <motion.path
+          <path
             d="M143 90 L143 105"
             stroke="#84CC16"
             strokeWidth="3.5"
@@ -322,7 +322,7 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             filter="url(#organShadow)"
           />
           {/* Pancreatic duct */}
-          <motion.path
+          <path
             d="M87 62 Q87 81 75 93"
             stroke="#F59E0B"
             strokeWidth="2.5"
@@ -365,26 +365,26 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
           {/* Villi illustration */}
           <g transform="translate(20, 32)">
             {/* Villus 1 */}
-            <motion.g
+            <g
             >
               <path d="M18 62 Q18 25 25 12 Q31 0 37 12 Q43 25 43 62 Z" fill="url(#villiGrad)" />
               <line x1="31" y1="18" x2="31" y2="56" stroke="#DC2626" strokeWidth="2" />
-            </motion.g>
+            </g>
             {/* Villus 2 */}
-            <motion.g
+            <g
             >
               <path d="M56 62 Q56 25 62 12 Q68 0 75 12 Q81 25 81 62 Z" fill="url(#villiGrad)" />
               <line x1="68" y1="18" x2="68" y2="56" stroke="#DC2626" strokeWidth="2" />
-            </motion.g>
+            </g>
             {/* Villus 3 */}
-            <motion.g
+            <g
             >
               <path
                 d="M93 62 Q93 25 100 12 Q106 0 112 12 Q118 25 118 62 Z"
                 fill="url(#villiGrad)"
               />
               <line x1="106" y1="18" x2="106" y2="56" stroke="#DC2626" strokeWidth="2" />
-            </motion.g>
+            </g>
             {/* Base line */}
             <rect x="6" y="62" width="125" height="6" rx="3" fill="#FDBA74" />
           </g>
@@ -454,20 +454,20 @@ export function HumanDigestionIllustration({ className = '', animate = true }: I
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* Flow arrows connecting organs */}
-      <motion.g
+      <g
       >
         {/* Food flow indicator */}
-        <motion.circle
+        <circle
           cx="105"
           cy="100"
           r="6"
           fill="#FBBF24"
           filter="url(#softGlow)"
         />
-      </motion.g>
+      </g>
 
       {/* Bottom summary bar - removed as illustration now uses full height */}
     </Wrapper>

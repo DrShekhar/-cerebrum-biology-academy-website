@@ -699,7 +699,7 @@ function ComparisonTable({
         </thead>
         <tbody className="divide-y divide-gray-200">
           {packages.map((pkg, index) => (
-            <motion.tr
+            <tr
               key={pkg.id}
               className={`hover:bg-gray-50 ${pkg.popular ? 'bg-blue-50' : ''}`}
             >
@@ -742,7 +742,7 @@ function ComparisonTable({
                   Book Demo
                 </PremiumButton>
               </td>
-            </motion.tr>
+            </tr>
           ))}
         </tbody>
       </table>

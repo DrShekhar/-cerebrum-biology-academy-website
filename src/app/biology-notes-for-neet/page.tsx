@@ -1029,7 +1029,7 @@ export default function BiologyNotesForNEETPage() {
             </h2>
             <div className="space-y-4">
               {(faqSchema.mainEntity as Array<{ name: string; acceptedAnswer: { text: string } }>).map((faq, i) => (
-                <motion.details
+                <details
                   key={i}
                   className="group bg-gray-50 rounded-xl border border-gray-200 overflow-hidden"
                 >
@@ -1040,7 +1040,7 @@ export default function BiologyNotesForNEETPage() {
                   <div className="px-5 pb-5 text-sm text-gray-600 leading-relaxed">
                     {faq.acceptedAnswer.text}
                   </div>
-                </motion.details>
+                </details>
               ))}
             </div>
           </div>

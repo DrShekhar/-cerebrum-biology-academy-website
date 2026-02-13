@@ -111,7 +111,7 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
       <circle cx="350" cy="260" r="220" fill="#8B5CF6" opacity="0.03" />
 
       {/* Title */}
-      <motion.text
+      <text
         x="350"
         y="32"
         textAnchor="middle"
@@ -120,10 +120,10 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         fontWeight="700"
       >
         Breathing & Gas Exchange
-      </motion.text>
+      </text>
 
       {/* RESPIRATORY SYSTEM - Left side */}
-      <motion.g
+      <g
       >
         {/* Nose/Nasal Cavity */}
         <g transform="translate(100, 50)">
@@ -197,7 +197,7 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         </g>
 
         {/* Left Lung - Realistic anatomical shape with 2 lobes */}
-        <motion.g
+        <g
           style={{ transformOrigin: '75px 360px' }}
         >
           {/* Left lung outer shape - 2 lobes, cardiac notch */}
@@ -251,10 +251,10 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
           <circle cx="92" cy="475" r="4" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
           <circle cx="112" cy="478" r="3.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
           <circle cx="80" cy="455" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
-        </motion.g>
+        </g>
 
         {/* Right Lung - Realistic anatomical shape with 3 lobes */}
-        <motion.g
+        <g
           style={{ transformOrigin: '210px 360px' }}
         >
           {/* Right lung outer shape - 3 lobes, larger */}
@@ -320,7 +320,7 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
           <circle cx="155" cy="472" r="3.5" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
           <circle cx="212" cy="455" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
           <circle cx="165" cy="462" r="3" fill="#FCE7F3" stroke="#F9A8D4" strokeWidth="0.8" />
-        </motion.g>
+        </g>
 
         {/* Labels */}
         <text x="90" y="500" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="600">
@@ -329,10 +329,10 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
         <text x="195" y="500" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="600">
           Right Lung
         </text>
-      </motion.g>
+      </g>
 
       {/* ALVEOLUS DETAIL - Center/Right */}
-      <motion.g
+      <g
       >
         <g transform="translate(290, 50)">
           <rect
@@ -376,36 +376,36 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
             />
 
             {/* O2 molecules moving in */}
-            <motion.g
+            <g
             >
               <circle cx="55" cy="52" r="7" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
               <text x="55" y="56" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
                 O₂
               </text>
-            </motion.g>
-            <motion.g
+            </g>
+            <g
             >
               <circle cx="70" cy="40" r="7" fill="url(#oxygenGrad)" filter="url(#gasGlow)" />
               <text x="70" y="44" textAnchor="middle" fill="white" fontSize="6" fontWeight="bold">
                 O₂
               </text>
-            </motion.g>
+            </g>
 
             {/* CO2 molecules moving out */}
-            <motion.g
+            <g
             >
               <circle cx="115" cy="100" r="7" fill="url(#co2Grad)" filter="url(#gasGlow)" />
               <text x="115" y="104" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
                 CO₂
               </text>
-            </motion.g>
-            <motion.g
+            </g>
+            <g
             >
               <circle cx="100" cy="115" r="7" fill="url(#co2Grad)" filter="url(#gasGlow)" />
               <text x="100" y="119" textAnchor="middle" fill="white" fontSize="5" fontWeight="bold">
                 CO₂
               </text>
-            </motion.g>
+            </g>
 
             {/* Arrows showing diffusion */}
             <path d="M42 62 L28 70" stroke="#3B82F6" strokeWidth="2" markerEnd="url(#arrowBlue)" />
@@ -471,10 +471,10 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* OXYGEN TRANSPORT - Right side */}
-      <motion.g
+      <g
       >
         <g transform="translate(290, 265)">
           <rect
@@ -504,25 +504,25 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
             <ellipse cx="50" cy="38" rx="16" ry="10" fill="#FCA5A5" />
 
             {/* O2 binding sites */}
-            <motion.circle
+            <circle
               cx="24"
               cy="32"
               r="6"
               fill="url(#oxygenGrad)"
             />
-            <motion.circle
+            <circle
               cx="42"
               cy="22"
               r="6"
               fill="url(#oxygenGrad)"
             />
-            <motion.circle
+            <circle
               cx="62"
               cy="22"
               r="6"
               fill="url(#oxygenGrad)"
             />
-            <motion.circle
+            <circle
               cx="76"
               cy="35"
               r="6"
@@ -561,10 +561,10 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* LUNG VOLUMES - Bottom Right */}
-      <motion.g
+      <g
       >
         <g transform="translate(290, 395)">
           <rect
@@ -634,7 +634,7 @@ export function RespirationIllustration({ className = '', animate = true }: Illu
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

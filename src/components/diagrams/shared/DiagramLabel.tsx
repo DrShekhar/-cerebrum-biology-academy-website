@@ -37,7 +37,7 @@ export function DiagramLabel({
   return (
     <g className="diagram-label" style={{ cursor: onClick ? 'pointer' : 'default' }}>
       {showLeaderLine && anchor && (
-        <motion.line
+        <line
           x1={anchor.x}
           y1={anchor.y}
           x2={position.x}
@@ -49,7 +49,7 @@ export function DiagramLabel({
       )}
 
       {showLeaderLine && anchor && (
-        <motion.circle
+        <circle
           cx={anchor.x}
           cy={anchor.y}
           r={isHighlighted ? 4 : 3}
@@ -57,7 +57,7 @@ export function DiagramLabel({
         />
       )}
 
-      <motion.text
+      <text
         x={labelX}
         y={labelY}
         dy={dy}
@@ -72,7 +72,7 @@ export function DiagramLabel({
         }}
       >
         {text}
-      </motion.text>
+      </text>
     </g>
   )
 }
@@ -97,7 +97,7 @@ export function LeaderLine({
   const pathD = `M ${start.x} ${start.y} L ${midX} ${start.y} L ${midX} ${end.y} L ${end.x} ${end.y}`
 
   return (
-    <motion.path
+    <path
       d={pathD}
       stroke={color}
       strokeWidth={1}

@@ -61,7 +61,7 @@ export function PlantTissues({
         </defs>
 
         {/* Collenchyma Cell */}
-        <motion.g
+        <g
           className="collenchyma"
         >
           <text
@@ -99,7 +99,7 @@ export function PlantTissues({
             { x: startX, y: startY + cellHeight - 30 },
             { x: startX + cellWidth - 30, y: startY + cellHeight - 30 },
           ].map((pos, i) => (
-            <motion.rect
+            <rect
               key={`corner-${i}`}
               x={pos.x}
               y={pos.y}
@@ -111,7 +111,7 @@ export function PlantTissues({
           ))}
 
           {/* Vacuole */}
-          <motion.ellipse
+          <ellipse
             cx={startX + cellWidth / 2}
             cy={startY + cellHeight / 2 + 20}
             rx={70}
@@ -122,7 +122,7 @@ export function PlantTissues({
           />
 
           {/* Nucleus */}
-          <motion.circle
+          <circle
             cx={startX + cellWidth / 2 - 40}
             cy={startY + 60}
             r={25}
@@ -173,10 +173,10 @@ export function PlantTissues({
               />
             </>
           )}
-        </motion.g>
+        </g>
 
         {/* Sclerenchyma Fiber */}
-        <motion.g
+        <g
           className="sclerenchyma-fiber"
         >
           <text
@@ -208,7 +208,7 @@ export function PlantTissues({
           />
 
           {/* Narrow lumen (characteristic of fiber - elongated) */}
-          <motion.rect
+          <rect
             x={startX + cellWidth + gap + 70}
             y={startY + 20}
             width={60}
@@ -220,7 +220,7 @@ export function PlantTissues({
 
           {/* Simple pits */}
           {[40, 100, 160, 220].map((yOffset, i) => (
-            <motion.g key={`pit-fiber-${i}`}>
+            <g key={`pit-fiber-${i}`}>
               <line
                 x1={startX + cellWidth + gap + 55}
                 y1={startY + yOffset}
@@ -237,7 +237,7 @@ export function PlantTissues({
                 stroke={biologyColors.pits}
                 strokeWidth={2}
               />
-            </motion.g>
+            </g>
           ))}
 
           {showLabels && (
@@ -265,10 +265,10 @@ export function PlantTissues({
               />
             </>
           )}
-        </motion.g>
+        </g>
 
         {/* Sclerenchyma Sclereid (Stone Cell) */}
-        <motion.g
+        <g
           className="sclerenchyma-sclereid"
         >
           <text
@@ -300,7 +300,7 @@ export function PlantTissues({
           />
 
           {/* Very small lumen */}
-          <motion.circle
+          <circle
             cx={startX + (cellWidth + gap) * 2 + cellWidth / 2}
             cy={startY + 30 + cellWidth / 2}
             r={25}
@@ -316,7 +316,7 @@ export function PlantTissues({
             const outerR = 85
 
             return (
-              <motion.line
+              <line
                 key={`pit-sclereid-${i}`}
                 x1={cx + Math.cos(angle) * innerR}
                 y1={cy + Math.sin(angle) * innerR}
@@ -330,7 +330,7 @@ export function PlantTissues({
 
           {/* Layered wall indication */}
           {[50, 65, 80].map((r, i) => (
-            <motion.circle
+            <circle
               key={`layer-${i}`}
               cx={startX + (cellWidth + gap) * 2 + cellWidth / 2}
               cy={startY + 30 + cellWidth / 2}
@@ -381,7 +381,7 @@ export function PlantTissues({
               />
             </>
           )}
-        </motion.g>
+        </g>
       </svg>
 
       {/* Info Panel */}

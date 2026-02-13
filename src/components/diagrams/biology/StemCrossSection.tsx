@@ -57,7 +57,7 @@ export function StemCrossSection({
     const vbSize = 25
 
     return (
-      <motion.g
+      <g
         className="dicot-stem"
       >
         {/* Title */}
@@ -151,7 +151,7 @@ export function StemCrossSection({
           const vbY = cy + Math.sin(angle) * vbRadius
 
           return (
-            <motion.g
+            <g
               key={`vb-dicot-${i}`}
             >
               {/* Bundle sheath / Pericycle patch */}
@@ -209,7 +209,7 @@ export function StemCrossSection({
                 r={4}
                 fill={biologyColors.phloem}
               />
-            </motion.g>
+            </g>
           )
         })}
 
@@ -271,7 +271,7 @@ export function StemCrossSection({
             />
           </>
         )}
-      </motion.g>
+      </g>
     )
   }
 
@@ -295,7 +295,7 @@ export function StemCrossSection({
     ]
 
     return (
-      <motion.g
+      <g
         className="monocot-stem"
       >
         {/* Title */}
@@ -361,7 +361,7 @@ export function StemCrossSection({
           const vbY = cy + pos.y * r * 0.75
 
           return (
-            <motion.g
+            <g
               key={`vb-monocot-${i}`}
             >
               {/* Bundle sheath */}
@@ -417,7 +417,7 @@ export function StemCrossSection({
                 r={pos.size * 0.2}
                 fill={biologyColors.phloem}
               />
-            </motion.g>
+            </g>
           )
         })}
 
@@ -479,7 +479,7 @@ export function StemCrossSection({
             />
           </>
         )}
-      </motion.g>
+      </g>
     )
   }
 

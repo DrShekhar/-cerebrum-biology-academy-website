@@ -89,11 +89,11 @@ export function RootMeristem({
           </filter>
         </defs>
 
-        <motion.g
+        <g
           className="root-meristem"
         >
           {/* Main root body - outer layer (Epidermis/Cortex) */}
-          <motion.path
+          <path
             d={`
               M ${cx - 80} ${baseY}
               L ${cx - 80} ${baseY + 300}
@@ -110,7 +110,7 @@ export function RootMeristem({
           />
 
           {/* Central Cylinder */}
-          <motion.path
+          <path
             d={`
               M ${cx - 40} ${baseY}
               L ${cx - 40} ${baseY + 320}
@@ -131,7 +131,7 @@ export function RootMeristem({
           />
 
           {/* Protoderm layer (thin outer line) */}
-          <motion.path
+          <path
             d={`
               M ${cx - 82} ${baseY + 200}
               L ${cx - 82} ${baseY + 300}
@@ -151,7 +151,7 @@ export function RootMeristem({
           />
 
           {/* Quiescent Center */}
-          <motion.ellipse
+          <ellipse
             cx={cx}
             cy={baseY + 400}
             rx={20}
@@ -167,7 +167,7 @@ export function RootMeristem({
           />
 
           {/* Root Cap */}
-          <motion.path
+          <path
             d={`
               M ${cx - 65} ${baseY + 430}
               Q ${cx - 65} ${baseY + 470} ${cx} ${baseY + 500}
@@ -186,7 +186,7 @@ export function RootMeristem({
           />
 
           {/* Ground Meristem zone indicator */}
-          <motion.rect
+          <rect
             x={cx - 78}
             y={baseY + 280}
             width={35}
@@ -199,7 +199,7 @@ export function RootMeristem({
             style={{ cursor: interactive ? 'pointer' : 'default' }}
             rx={2}
           />
-          <motion.rect
+          <rect
             x={cx + 43}
             y={baseY + 280}
             width={35}
@@ -210,7 +210,7 @@ export function RootMeristem({
           />
 
           {/* Procambium zone in central cylinder */}
-          <motion.rect
+          <rect
             x={cx - 35}
             y={baseY + 320}
             width={70}
@@ -311,7 +311,7 @@ export function RootMeristem({
               />
             </g>
           )}
-        </motion.g>
+        </g>
       </svg>
 
       {/* Info Panel */}

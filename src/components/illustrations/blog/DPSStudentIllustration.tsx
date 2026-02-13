@@ -24,7 +24,7 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
       <rect x="20" y="20" width="360" height="260" rx="20" fill="#F0FDFA" opacity="0.5" />
 
       {/* DPS Logo/Badge */}
-      <motion.g
+      <g
         style={{ transformOrigin: '100px 80px' }}
       >
         <circle cx="100" cy="80" r="45" fill="#1E40AF" />
@@ -36,18 +36,18 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         <text x="100" y="90" fontSize="7" fill="#FFFFFF" textAnchor="middle">
           Student
         </text>
-      </motion.g>
+      </g>
 
       {/* Plus sign */}
-      <motion.g
+      <g
       >
         <text x="175" y="90" fontSize="40" fill="#14B8A6" fontWeight="bold">
           +
         </text>
-      </motion.g>
+      </g>
 
       {/* NEET Badge */}
-      <motion.g
+      <g
         style={{ transformOrigin: '280px 80px' }}
       >
         <circle cx="280" cy="80" r="45" fill="#14B8A6" />
@@ -59,10 +59,10 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         <text x="280" y="90" fontSize="7" fill="#FFFFFF" textAnchor="middle">
           2026
         </text>
-      </motion.g>
+      </g>
 
       {/* Success arrow */}
-      <motion.path
+      <path
         d="M190 150 L190 200 L210 180"
         stroke="#10B981"
         strokeWidth="4"
@@ -82,17 +82,17 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         <rect x="55" y="55" width="30" height="5" fill="#FFFFFF" />
 
         {/* Books in hand */}
-        <motion.g
+        <g
           style={{ transformOrigin: '120px 90px' }}
         >
           <rect x="110" y="70" width="40" height="8" rx="2" fill="#14B8A6" />
           <rect x="112" y="62" width="38" height="8" rx="2" fill="#3B82F6" />
           <rect x="114" y="54" width="36" height="8" rx="2" fill="#F97316" />
-        </motion.g>
+        </g>
       </g>
 
       {/* Result badge */}
-      <motion.g
+      <g
       >
         <rect x="280" y="200" width="90" height="40" rx="8" fill="#10B981" />
         <text x="325" y="218" fontSize="8" fill="#FFFFFF" textAnchor="middle">
@@ -101,23 +101,23 @@ export function DPSStudentIllustration({ className = '', animate = true }: Illus
         <text x="325" y="232" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           94%+
         </text>
-      </motion.g>
+      </g>
 
       {/* Decorative stars */}
-      <motion.text
+      <text
         x="50"
         y="180"
         fontSize="20"
       >
         ⭐
-      </motion.text>
-      <motion.text
+      </text>
+      <text
         x="350"
         y="150"
         fontSize="16"
       >
         ⭐
-      </motion.text>
+      </text>
     </Wrapper>
   )
 }

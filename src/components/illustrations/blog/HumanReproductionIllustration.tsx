@@ -32,7 +32,7 @@ export function HumanReproductionIllustration({
       </text>
 
       {/* Male symbol */}
-      <motion.g
+      <g
       >
         <circle cx="100" cy="120" r="30" fill="#BFDBFE" stroke="#3B82F6" strokeWidth="3" />
         <line x1="120" y1="100" x2="145" y2="75" stroke="#3B82F6" strokeWidth="3" />
@@ -41,10 +41,10 @@ export function HumanReproductionIllustration({
         <text x="100" y="165" fontSize="9" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
           Male
         </text>
-      </motion.g>
+      </g>
 
       {/* Female symbol */}
-      <motion.g
+      <g
       >
         <circle cx="300" cy="120" r="30" fill="#FBCFE8" stroke="#EC4899" strokeWidth="3" />
         <line x1="300" y1="150" x2="300" y2="180" stroke="#EC4899" strokeWidth="3" />
@@ -52,10 +52,10 @@ export function HumanReproductionIllustration({
         <text x="300" y="195" fontSize="9" fill="#DB2777" textAnchor="middle" fontWeight="bold">
           Female
         </text>
-      </motion.g>
+      </g>
 
       {/* Connecting heart */}
-      <motion.g
+      <g
       >
         <path
           d="M200 110 L190 100 Q175 90 175 105 Q175 120 200 140 Q225 120 225 105 Q225 90 210 100 Z"
@@ -63,10 +63,10 @@ export function HumanReproductionIllustration({
           stroke="#DB2777"
           strokeWidth="2"
         />
-      </motion.g>
+      </g>
 
       {/* Gametogenesis boxes */}
-      <motion.g
+      <g
       >
         <rect
           x="40"
@@ -87,9 +87,9 @@ export function HumanReproductionIllustration({
         <text x="100" y="225" fontSize="6" fill="#6B7280" textAnchor="middle">
           in testes
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect
           x="240"
@@ -110,10 +110,10 @@ export function HumanReproductionIllustration({
         <text x="300" y="225" fontSize="6" fill="#6B7280" textAnchor="middle">
           in ovaries
         </text>
-      </motion.g>
+      </g>
 
       {/* Fertilization central */}
-      <motion.g
+      <g
       >
         <ellipse
           cx="200"
@@ -130,7 +130,7 @@ export function HumanReproductionIllustration({
         <text x="200" y="220" fontSize="6" fill="#92400E" textAnchor="middle">
           Zygote Formation
         </text>
-      </motion.g>
+      </g>
 
       {/* Development stages */}
       <rect
@@ -184,7 +184,7 @@ export function HumanReproductionIllustration({
       </text>
 
       {/* Questions badge */}
-      <motion.g
+      <g
       >
         <circle cx="40" cy="260" r="18" fill="#EC4899" />
         <text x="40" y="257" fontSize="8" fill="#FFFFFF" textAnchor="middle">
@@ -193,7 +193,7 @@ export function HumanReproductionIllustration({
         <text x="40" y="268" fontSize="6" fill="#FFFFFF" textAnchor="middle">
           Qs
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

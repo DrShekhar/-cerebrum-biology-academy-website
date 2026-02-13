@@ -166,10 +166,7 @@ export default function OnlineNEETBiologyCoachingPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="text-center"
           >
             <div className="inline-block mb-6 px-4 py-2 bg-white/20 text-white rounded-full text-sm font-semibold backdrop-blur">
@@ -203,7 +200,7 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="mt-8 text-blue-100 text-sm">
               First 10 students get 20% discount. Limited-time offer!
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -213,11 +210,7 @@ export default function OnlineNEETBiologyCoachingPage() {
       {/* Why Online with Cerebrum */}
       <section className="py-16 md:py-24 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
             className="mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
@@ -226,21 +219,18 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="text-lg text-slate-600 text-center max-w-2xl mx-auto">
               All benefits of premium coaching, without leaving home
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={containerVariants}
+          <div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {features.map((feature, index) => {
               const IconComponent = feature.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  variants={itemVariants}
                   className="p-8 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 border border-blue-100 hover:shadow-lg transition-shadow"
                 >
                   <div className="p-3 bg-white rounded-lg w-fit mb-4">
@@ -248,21 +238,17 @@ export default function OnlineNEETBiologyCoachingPage() {
                   </div>
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{feature.description}</p>
-                </motion.div>
+                </div>
               )
             })}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* How It Works */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-slate-50 to-white border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
             className="mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
@@ -271,19 +257,16 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="text-lg text-slate-600 text-center max-w-2xl mx-auto">
               A structured approach to help you crack NEET from anywhere
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={containerVariants}
+          <div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
             className="space-y-6"
           >
             {programSteps.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={itemVariants}
                 className="flex gap-8 items-start"
               >
                 <div className="flex-shrink-0">
@@ -295,20 +278,16 @@ export default function OnlineNEETBiologyCoachingPage() {
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{item.description}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Fee Comparison */}
       <section className="py-16 md:py-24 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
             className="mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
@@ -317,14 +296,10 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="text-lg text-slate-600 text-center max-w-2xl mx-auto">
               Same quality as premium centers, at a fraction of the cost
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
             >
               <div className="space-y-6">
                 <div className="p-6 rounded-lg bg-gradient-to-br from-emerald-50 to-white border-2 border-emerald-500">
@@ -358,13 +333,9 @@ export default function OnlineNEETBiologyCoachingPage() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+            <div
               className="space-y-4"
             >
               <div className="p-5 rounded-lg bg-slate-50 border border-slate-200">
@@ -390,7 +361,7 @@ export default function OnlineNEETBiologyCoachingPage() {
                   <span className="font-semibold">Save 60-90%</span> on coaching fees while getting AIIMS-level teaching with live interactive classes.
                 </p>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -398,11 +369,7 @@ export default function OnlineNEETBiologyCoachingPage() {
       {/* Testimonials */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-slate-50 border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
             className="mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
@@ -411,19 +378,16 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="text-lg text-slate-600 text-center max-w-2xl mx-auto">
               Real results from real students studying online from across India
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={containerVariants}
+          <div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
             className="grid md:grid-cols-3 gap-8"
           >
             {testimonials.map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={itemVariants}
                 className="p-8 rounded-xl bg-white border-2 border-slate-200 hover:border-blue-300 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start justify-between mb-4">
@@ -438,20 +402,16 @@ export default function OnlineNEETBiologyCoachingPage() {
                   </div>
                 </div>
                 <p className="text-slate-700 leading-relaxed italic">"{testimonial.review}"</p>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* FAQ Section */}
       <section className="py-16 md:py-24 border-b border-slate-200">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
             className="mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 text-center">
@@ -460,19 +420,16 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="text-lg text-slate-600 text-center">
               Everything you need to know about online coaching
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={containerVariants}
+          <div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
             className="space-y-6"
           >
             {faqs.map((faq, index) => (
-              <motion.details
+              <details
                 key={index}
-                variants={itemVariants}
                 className="group p-6 rounded-lg border border-slate-200 bg-white hover:border-blue-300 hover:shadow-md transition-all cursor-pointer"
               >
                 <summary className="flex items-start justify-between font-semibold text-slate-900 cursor-pointer">
@@ -482,20 +439,16 @@ export default function OnlineNEETBiologyCoachingPage() {
                   </span>
                 </summary>
                 <p className="mt-4 ml-8 text-slate-600 leading-relaxed">{faq.answer}</p>
-              </motion.details>
+              </details>
             ))}
-          </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-4xl mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+          <div
             className="text-center text-white"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -527,7 +480,7 @@ export default function OnlineNEETBiologyCoachingPage() {
             <p className="mt-8 text-blue-100 text-sm">
               Limited spots available. Enroll today and get 20% discount on first 3 months.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
 

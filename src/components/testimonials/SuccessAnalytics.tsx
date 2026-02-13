@@ -323,7 +323,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                 </thead>
                 <tbody>
                   {data.batchAnalysis.map((batch, index) => (
-                    <motion.tr
+                    <tr
                       key={index}
                       className="border-b border-gray-100 hover:bg-gray-50"
                     >
@@ -365,7 +365,7 @@ export function SuccessAnalytics({ data }: SuccessAnalyticsProps) {
                           ))}
                         </div>
                       </td>
-                    </motion.tr>
+                    </tr>
                   ))}
                 </tbody>
               </table>

@@ -27,7 +27,7 @@ export function SmallVsLargeBatchIllustration({
       <rect width="400" height="300" fill="#F8FAFC" />
 
       {/* Left side - Small Batch */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -55,7 +55,7 @@ export function SmallVsLargeBatchIllustration({
         {/* Small group of students - 3x3 */}
         {[0, 1, 2].map((row) =>
           [0, 1, 2].map((col) => (
-            <motion.circle
+            <circle
               key={`small-${row}-${col}`}
               cx={60 + col * 40}
               cy={150 + row * 30}
@@ -66,7 +66,7 @@ export function SmallVsLargeBatchIllustration({
         )}
 
         {/* Personal attention arrows */}
-        <motion.g
+        <g
         >
           <path
             d="M85 120 L65 140"
@@ -77,11 +77,11 @@ export function SmallVsLargeBatchIllustration({
           />
           <path d="M100 125 L100 140" stroke="#166534" strokeWidth="1.5" strokeDasharray="3 2" />
           <path d="M115 120 L135 140" stroke="#166534" strokeWidth="1.5" strokeDasharray="3 2" />
-        </motion.g>
-      </motion.g>
+        </g>
+      </g>
 
       {/* Right side - Large Batch */}
-      <motion.g
+      <g
       >
         <rect
           x="220"
@@ -109,7 +109,7 @@ export function SmallVsLargeBatchIllustration({
         {/* Large group of students - crowded */}
         {[0, 1, 2, 3, 4].map((row) =>
           [0, 1, 2, 3, 4].map((col) => (
-            <motion.circle
+            <circle
               key={`large-${row}-${col}`}
               cx={240 + col * 24}
               cy={140 + row * 22}
@@ -118,19 +118,19 @@ export function SmallVsLargeBatchIllustration({
             />
           ))
         )}
-      </motion.g>
+      </g>
 
       {/* VS divider */}
-      <motion.g
+      <g
       >
         <circle cx="200" cy="140" r="20" fill="#1F2937" />
         <text x="200" y="145" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="700">
           VS
         </text>
-      </motion.g>
+      </g>
 
       {/* Comparison checkmarks */}
-      <motion.g
+      <g
       >
         <rect x="20" y="250" width="160" height="40" rx="4" fill="#22C55E" />
         <text x="100" y="275" textAnchor="middle" fill="#FFF" fontSize="10" fontWeight="600">
@@ -141,10 +141,10 @@ export function SmallVsLargeBatchIllustration({
         <text x="300" y="275" textAnchor="middle" fill="#FFF" fontSize="10" fontWeight="600">
           One-size-fits-all
         </text>
-      </motion.g>
+      </g>
 
       {/* Title */}
-      <motion.text
+      <text
         x="200"
         y="25"
         textAnchor="middle"
@@ -153,7 +153,7 @@ export function SmallVsLargeBatchIllustration({
         fontWeight="700"
       >
         Batch Size Comparison
-      </motion.text>
+      </text>
     </Wrapper>
   )
 }

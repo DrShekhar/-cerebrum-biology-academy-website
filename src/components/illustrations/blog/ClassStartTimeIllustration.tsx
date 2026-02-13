@@ -24,7 +24,7 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
       <rect x="50" y="140" width="300" height="8" rx="4" fill="#E2E8F0" />
 
       {/* Class 9 marker */}
-      <motion.g
+      <g
       >
         <circle cx="100" cy="144" r="25" fill="#8B5CF6" />
         <text x="100" y="140" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -33,10 +33,10 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
         <text x="100" y="152" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           9
         </text>
-      </motion.g>
+      </g>
 
       {/* Class 10 marker */}
-      <motion.g
+      <g
       >
         <circle cx="200" cy="144" r="25" fill="#3B82F6" />
         <text x="200" y="140" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -45,10 +45,10 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
         <text x="200" y="152" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           10
         </text>
-      </motion.g>
+      </g>
 
       {/* Class 11 marker */}
-      <motion.g
+      <g
       >
         <circle cx="300" cy="144" r="25" fill="#14B8A6" />
         <text x="300" y="140" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
@@ -57,10 +57,10 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
         <text x="300" y="152" fontSize="12" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           11
         </text>
-      </motion.g>
+      </g>
 
       {/* Arrow */}
-      <motion.path
+      <path
         d="M330 144 L360 144 L350 134 M360 144 L350 154"
         stroke="#14B8A6"
         strokeWidth="3"
@@ -68,14 +68,14 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
       />
 
       {/* Clock above timeline */}
-      <motion.g
+      <g
         style={{ transformOrigin: '200px 60px' }}
       >
         <circle cx="200" cy="60" r="40" fill="#FEF3C7" stroke="#F97316" strokeWidth="3" />
         <line x1="200" y1="60" x2="200" y2="35" stroke="#1E293B" strokeWidth="3" />
         <line x1="200" y1="60" x2="220" y2="60" stroke="#1E293B" strokeWidth="2" />
         <circle cx="200" cy="60" r="4" fill="#F97316" />
-      </motion.g>
+      </g>
 
       {/* Clock numbers */}
       <text x="200" y="30" fontSize="8" fill="#1E293B" textAnchor="middle">
@@ -120,23 +120,23 @@ export function ClassStartTimeIllustration({ className = '', animate = true }: I
       </g>
 
       {/* Recommendation badge */}
-      <motion.g
+      <g
       >
         <rect x="70" y="100" width="80" height="20" rx="10" fill="#10B981" />
         <text x="110" y="114" fontSize="8" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           ⭐ IDEAL START
         </text>
-      </motion.g>
+      </g>
 
       {/* Decorative elements */}
-      <motion.circle
+      <circle
         cx="40"
         cy="60"
         r="10"
         fill="#8B5CF6"
         opacity="0.3"
       />
-      <motion.circle
+      <circle
         cx="360"
         cy="80"
         r="8"

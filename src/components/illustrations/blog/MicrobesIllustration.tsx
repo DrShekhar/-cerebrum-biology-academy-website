@@ -29,7 +29,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
       </text>
 
       {/* Bacteria */}
-      <motion.g
+      <g
         style={{ transformOrigin: '70px 100px' }}
       >
         <ellipse cx="70" cy="100" rx="30" ry="18" fill="#93C5FD" stroke="#3B82F6" strokeWidth="2" />
@@ -43,10 +43,10 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
         <text x="70" y="142" fontSize="6" fill="#6B7280" textAnchor="middle">
           Lactobacillus
         </text>
-      </motion.g>
+      </g>
 
       {/* Yeast */}
-      <motion.g
+      <g
       >
         <ellipse
           cx="170"
@@ -65,10 +65,10 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
         <text x="170" y="147" fontSize="6" fill="#6B7280" textAnchor="middle">
           Saccharomyces
         </text>
-      </motion.g>
+      </g>
 
       {/* Virus */}
-      <motion.g
+      <g
       >
         <polygon
           points="270,75 250,100 270,125 290,100"
@@ -87,10 +87,10 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
         <text x="270" y="172" fontSize="6" fill="#6B7280" textAnchor="middle">
           Bacteriophage
         </text>
-      </motion.g>
+      </g>
 
       {/* Mushroom */}
-      <motion.g
+      <g
       >
         <ellipse cx="360" cy="95" rx="25" ry="12" fill="#F9A8D4" stroke="#EC4899" strokeWidth="2" />
         <rect
@@ -108,7 +108,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
         <text x="360" y="147" fontSize="6" fill="#6B7280" textAnchor="middle">
           Penicillium
         </text>
-      </motion.g>
+      </g>
 
       {/* Applications */}
       <rect
@@ -125,7 +125,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
         Applications in Human Welfare
       </text>
 
-      <motion.g
+      <g
       >
         {/* Application boxes */}
         <rect x="45" y="210" width="75" height="55" rx="6" fill="#DBEAFE" />
@@ -171,7 +171,7 @@ export function MicrobesIllustration({ className = '', animate = true }: Illustr
         <text x="330" y="254" fontSize="6" fill="#6B7280" textAnchor="middle">
           Treatment
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

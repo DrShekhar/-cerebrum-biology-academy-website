@@ -97,7 +97,7 @@ export const ProgressRing = memo(function ProgressRing({
           className="text-gray-200"
         />
 
-        <motion.circle
+        <circle
           cx={size / 2}
           cy={size / 2}
           r={radius}

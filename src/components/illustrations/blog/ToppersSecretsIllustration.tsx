@@ -104,7 +104,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
       {/* Decorative sparkles */}
       <g opacity="0.15">
         {[...Array(12)].map((_, i) => (
-          <motion.circle
+          <circle
             key={i}
             cx={40 + i * 55}
             cy={20 + (i % 3) * 10}
@@ -115,7 +115,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
       </g>
 
       {/* Title Section */}
-      <motion.g
+      <g
       >
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
         <text x="350" y="45" fontSize="24" fill="#92400E" textAnchor="middle" fontWeight="bold">
@@ -124,10 +124,10 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         <text x="350" y="62" fontSize="11" fill="#B45309" textAnchor="middle">
           Proven Strategies from AIR 1-100 Rankers
         </text>
-      </motion.g>
+      </g>
 
       {/* === LEFT SECTION: Trophy & Achievements === */}
-      <motion.g
+      <g
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="20" y="85" width="200" height="280" rx="16" fill="#FFFFFF" />
@@ -138,7 +138,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         </text>
 
         {/* Trophy illustration */}
-        <motion.g
+        <g
         >
           {/* Trophy cup */}
           <path d="M90 130 L100 185 L140 185 L150 130 Z" fill="url(#trophyGrad)" />
@@ -157,7 +157,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
           <rect x="85" y="203" width="70" height="12" rx="3" fill="#92400E" />
 
           {/* Number 1 on trophy */}
-          <motion.text
+          <text
             x="120"
             y="168"
             fontSize="28"
@@ -166,8 +166,8 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             fontWeight="bold"
           >
             1
-          </motion.text>
-        </motion.g>
+          </text>
+        </g>
 
         {/* Recent AIR 1 holders */}
         <g transform="translate(25, 225)">
@@ -175,7 +175,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             Recent AIR 1 Holders
           </text>
           {achievements.map((ach, i) => (
-            <motion.g
+            <g
               key={i}
               transform={`translate(0, ${18 + i * 35})`}
             >
@@ -192,7 +192,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               <text x="60" y="24" fontSize="7" fill="#6B7280">
                 NEET {ach.year}
               </text>
-              <motion.circle
+              <circle
                 cx="155"
                 cy="15"
                 r="8"
@@ -201,13 +201,13 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               <text x="155" y="18" fontSize="10" textAnchor="middle">
                 🥇
               </text>
-            </motion.g>
+            </g>
           ))}
         </g>
-      </motion.g>
+      </g>
 
       {/* === CENTER SECTION: 6 Secrets Grid === */}
-      <motion.g
+      <g
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="235" y="85" width="310" height="280" rx="16" fill="#FFFFFF" />
@@ -220,7 +220,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         {/* Secrets grid - 2 columns, 3 rows */}
         <g transform="translate(250, 120)">
           {secrets.map((secret, i) => (
-            <motion.g
+            <g
               key={i}
               transform={`translate(${(i % 2) * 145}, ${Math.floor(i / 2) * 80})`}
             >
@@ -263,7 +263,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               </text>
 
               {/* Animated glow on hover effect */}
-              <motion.rect
+              <rect
                 x="0"
                 y="0"
                 width="135"
@@ -272,13 +272,13 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
                 fill={secret.color}
                 opacity="0"
               />
-            </motion.g>
+            </g>
           ))}
         </g>
-      </motion.g>
+      </g>
 
       {/* === RIGHT SECTION: Success Metrics === */}
-      <motion.g
+      <g
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="560" y="85" width="125" height="280" rx="16" fill="#FFFFFF" />
@@ -291,7 +291,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         {/* Metrics */}
         <g transform="translate(570, 125)">
           {metrics.map((metric, i) => (
-            <motion.g
+            <g
               key={i}
               transform={`translate(0, ${i * 85})`}
             >
@@ -308,7 +308,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
                 {metric.label}
               </text>
 
-              <motion.text
+              <text
                 x="52"
                 y="48"
                 fontSize="24"
@@ -317,18 +317,18 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
                 fontWeight="bold"
               >
                 {metric.value}
-              </motion.text>
+              </text>
 
               <text x="52" y="65" fontSize="8" fill="#6B7280" textAnchor="middle">
                 {metric.sub}
               </text>
-            </motion.g>
+            </g>
           ))}
         </g>
-      </motion.g>
+      </g>
 
       {/* === BOTTOM SECTION: Daily Routine Timeline === */}
-      <motion.g
+      <g
       >
         <g filter="url(#toppersCardShadow)">
           <rect x="20" y="380" width="665" height="125" rx="16" fill="#FFFFFF" />
@@ -341,7 +341,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
         {/* Timeline */}
         <g transform="translate(40, 420)">
           {/* Timeline line */}
-          <motion.line
+          <line
             x1="0"
             y1="30"
             x2="620"
@@ -361,11 +361,11 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
             { time: '9-10 PM', activity: 'Analysis', icon: '🔍', x: 480 },
             { time: '10 PM', activity: 'Sleep', icon: '😴', x: 580 },
           ].map((point, i) => (
-            <motion.g
+            <g
               key={i}
               transform={`translate(${point.x}, 0)`}
             >
-              <motion.circle
+              <circle
                 cx="20"
                 cy="30"
                 r="12"
@@ -380,16 +380,16 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               <text x="20" y="68" fontSize="7" fill="#6B7280" textAnchor="middle">
                 {point.activity}
               </text>
-            </motion.g>
+            </g>
           ))}
         </g>
-      </motion.g>
+      </g>
 
       {/* Floating stars decoration */}
       {animate && (
         <>
           {[...Array(5)].map((_, i) => (
-            <motion.text
+            <text
               key={i}
               x={30 + i * 160}
               y={50 + (i % 2) * 430}
@@ -397,7 +397,7 @@ export function ToppersSecretsIllustration({ className = '', animate = true }: I
               opacity="0.4"
             >
               ⭐
-            </motion.text>
+            </text>
           ))}
         </>
       )}

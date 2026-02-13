@@ -140,7 +140,7 @@ export function ChapterWeightageIllustration({
       </g>
 
       {/* Title Section */}
-      <motion.g
+      <g
       >
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#F59E0B" opacity="0.15" />
         <text x="350" y="42" fontSize="22" fill="#B45309" textAnchor="middle" fontWeight="bold">
@@ -149,31 +149,31 @@ export function ChapterWeightageIllustration({
         <text x="350" y="60" fontSize="11" fill="#D97706" textAnchor="middle">
           Based on Last 5 Years Analysis (2020-2024)
         </text>
-      </motion.g>
+      </g>
 
       {/* === LEFT SECTION: Pie Chart === */}
-      <motion.g
+      <g
       >
         <g filter="url(#weightCardShadow)">
           <rect x="20" y="85" width="250" height="250" rx="16" fill="#FFFFFF" />
         </g>
 
         {/* Pie Chart */}
-        <motion.g
+        <g
           style={{ transformOrigin: '145px 210px' }}
         >
           {pieSegments.map((segment, i) => (
-            <motion.path
+            <path
               key={i}
               d={describeArc(145, 210, 85, segment.start, segment.end)}
               fill={segment.color}
               style={{ transformOrigin: '145px 210px' }}
             />
           ))}
-        </motion.g>
+        </g>
 
         {/* Center circle */}
-        <motion.g
+        <g
         >
           <circle cx="145" cy="210" r="45" fill="#FFFFFF" stroke="#E5E7EB" strokeWidth="2" />
           <text x="145" y="200" fontSize="12" fill="#6B7280" textAnchor="middle">
@@ -185,16 +185,16 @@ export function ChapterWeightageIllustration({
           <text x="145" y="232" fontSize="10" fill="#F59E0B" textAnchor="middle" fontWeight="600">
             Questions
           </text>
-        </motion.g>
+        </g>
 
         {/* Card title */}
         <text x="145" y="108" fontSize="13" fill="#374151" textAnchor="middle" fontWeight="bold">
           Topic-wise Distribution
         </text>
-      </motion.g>
+      </g>
 
       {/* === CENTER SECTION: Bar Chart === */}
-      <motion.g
+      <g
       >
         <g filter="url(#weightCardShadow)">
           <rect x="285" y="85" width="260" height="250" rx="16" fill="#FFFFFF" />
@@ -217,7 +217,7 @@ export function ChapterWeightageIllustration({
               <rect x="90" y="2" width="130" height="16" rx="4" fill="#F3F4F6" />
 
               {/* Animated bar */}
-              <motion.rect
+              <rect
                 x="90"
                 y="2"
                 width={0}
@@ -227,7 +227,7 @@ export function ChapterWeightageIllustration({
               />
 
               {/* Question count */}
-              <motion.text
+              <text
                 x={95 + (chapter.questions / 18) * 130}
                 y="14"
                 fontSize="9"
@@ -235,7 +235,7 @@ export function ChapterWeightageIllustration({
                 fontWeight="600"
               >
                 {chapter.questions}Q
-              </motion.text>
+              </text>
 
               {/* Priority badge */}
               <rect
@@ -284,10 +284,10 @@ export function ChapterWeightageIllustration({
             LOW
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* === RIGHT SECTION: Key Stats === */}
-      <motion.g
+      <g
       >
         <g filter="url(#weightCardShadow)">
           <rect x="560" y="85" width="125" height="250" rx="16" fill="#FFFFFF" />
@@ -303,7 +303,7 @@ export function ChapterWeightageIllustration({
           <text x="47" y="22" fontSize="9" fill="#92400E" textAnchor="middle">
             Total Marks
           </text>
-          <motion.text
+          <text
             x="47"
             y="44"
             fontSize="22"
@@ -312,7 +312,7 @@ export function ChapterWeightageIllustration({
             fontWeight="bold"
           >
             360
-          </motion.text>
+          </text>
         </g>
 
         {/* Class distribution */}
@@ -354,10 +354,10 @@ export function ChapterWeightageIllustration({
             Physiology
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* === BOTTOM SECTION: Year-wise Comparison === */}
-      <motion.g
+      <g
       >
         <g filter="url(#weightCardShadow)">
           <rect x="20" y="350" width="665" height="155" rx="16" fill="#FFFFFF" />
@@ -382,7 +382,7 @@ export function ChapterWeightageIllustration({
                   Botany
                 </text>
                 <rect x="45" y="5" width="100" height="18" rx="4" fill="#DCFCE7" />
-                <motion.rect
+                <rect
                   x="45"
                   y="5"
                   width={0}
@@ -401,7 +401,7 @@ export function ChapterWeightageIllustration({
                   Zoology
                 </text>
                 <rect x="45" y="5" width="100" height="18" rx="4" fill="#FEE2E2" />
-                <motion.rect
+                <rect
                   x="45"
                   y="5"
                   width={0}
@@ -418,26 +418,26 @@ export function ChapterWeightageIllustration({
         </g>
 
         {/* Insight badge */}
-        <motion.g
+        <g
         >
           <rect x="250" y="480" width="200" height="22" rx="11" fill="#F59E0B" />
           <text x="350" y="494" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             💡 Zoology slightly dominates in NEET
           </text>
-        </motion.g>
-      </motion.g>
+        </g>
+      </g>
 
       {/* Floating decorations */}
       {animate && (
         <>
-          <motion.circle
+          <circle
             cx="30"
             cy="50"
             r="6"
             fill="#F59E0B"
             opacity="0.4"
           />
-          <motion.circle
+          <circle
             cx="670"
             cy="40"
             r="5"

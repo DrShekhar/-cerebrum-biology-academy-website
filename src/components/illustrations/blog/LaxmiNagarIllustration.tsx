@@ -31,7 +31,7 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
       <rect width="400" height="300" fill="url(#laxmiSkyGradient)" />
 
       {/* Metro line representation */}
-      <motion.g
+      <g
       >
         {/* Blue Line Metro track */}
         <rect x="0" y="180" width="400" height="6" fill="#3B82F6" />
@@ -42,20 +42,20 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
         <rect x="150" y="188" width="8" height="50" fill="#9CA3AF" />
         <rect x="240" y="188" width="8" height="50" fill="#9CA3AF" />
         <rect x="330" y="188" width="8" height="50" fill="#9CA3AF" />
-      </motion.g>
+      </g>
 
       {/* Metro train */}
-      <motion.g
+      <g
       >
         <rect x="0" y="155" width="80" height="25" rx="4" fill="#3B82F6" />
         <rect x="5" y="160" width="15" height="12" rx="2" fill="#DBEAFE" />
         <rect x="25" y="160" width="15" height="12" rx="2" fill="#DBEAFE" />
         <rect x="45" y="160" width="15" height="12" rx="2" fill="#DBEAFE" />
         <rect x="65" y="160" width="10" height="12" rx="2" fill="#DBEAFE" />
-      </motion.g>
+      </g>
 
       {/* Laxmi Nagar Metro Station */}
-      <motion.g
+      <g
       >
         <rect x="160" y="100" width="80" height="80" rx="4" fill="#EF4444" />
         <rect x="165" y="105" width="70" height="45" fill="#FEE2E2" />
@@ -67,10 +67,10 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
         </text>
         <rect x="185" y="155" width="30" height="25" fill="#7F1D1D" />
         <path d="M185 155 L200 140 L215 155" fill="#DC2626" />
-      </motion.g>
+      </g>
 
       {/* Buildings - East Delhi skyline */}
-      <motion.g
+      <g
       >
         {/* Building 1 */}
         <rect x="40" y="110" width="40" height="70" fill="#F59E0B" />
@@ -98,27 +98,27 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
         <rect x="340" y="125" width="10" height="12" fill="#CCFBF1" />
         <rect x="325" y="145" width="10" height="12" fill="#CCFBF1" />
         <rect x="340" y="145" width="10" height="12" fill="#CCFBF1" />
-      </motion.g>
+      </g>
 
       {/* Location pin on coaching center */}
-      <motion.g
+      <g
       >
         <circle cx="285" cy="70" r="15" fill="#EF4444" />
         <path d="M285 55 L285 40" stroke="#EF4444" strokeWidth="3" />
         <circle cx="285" cy="70" r="6" fill="#FFF" />
-      </motion.g>
+      </g>
 
       {/* Title banner */}
-      <motion.g
+      <g
       >
         <rect x="80" y="250" width="240" height="35" rx="6" fill="#1F2937" />
         <text x="200" y="272" textAnchor="middle" fill="#FFF" fontSize="12" fontWeight="600">
           NEET Coaching Laxmi Nagar
         </text>
-      </motion.g>
+      </g>
 
       {/* Nearby areas markers */}
-      <motion.g
+      <g
       >
         <circle cx="100" cy="200" r="8" fill="#22C55E" />
         <text x="100" y="220" textAnchor="middle" fill="#374151" fontSize="7">
@@ -129,17 +129,17 @@ export function LaxmiNagarIllustration({ className = '', animate = true }: Illus
         <text x="320" y="220" textAnchor="middle" fill="#374151" fontSize="7">
           Nirman Vihar
         </text>
-      </motion.g>
+      </g>
 
       {/* Students walking */}
-      <motion.g
+      <g
       >
         <circle cx="130" y="235" r="6" fill="#F59E0B" />
         <rect x="127" y="241" width="6" height="12" rx="2" fill="#F59E0B" />
 
         <circle cx="145" cy="235" r="6" fill="#3B82F6" />
         <rect x="142" y="241" width="6" height="12" rx="2" fill="#3B82F6" />
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

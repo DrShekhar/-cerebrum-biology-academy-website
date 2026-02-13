@@ -30,7 +30,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
 
       {/* Before vs After comparison */}
       {/* First attempt - faded */}
-      <motion.g
+      <g
       >
         <rect
           x="30"
@@ -52,20 +52,20 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         <text x="105" y="155" fontSize="7" fill="#6B7280" textAnchor="middle">
           Marks Scored
         </text>
-      </motion.g>
+      </g>
 
       {/* Arrow */}
-      <motion.g
+      <g
       >
         <line x1="190" y1="110" x2="220" y2="110" stroke="#8B5CF6" strokeWidth="3" />
         <polygon points="220,110 210,105 210,115" fill="#8B5CF6" />
         <text x="205" y="100" fontSize="6" fill="#8B5CF6" textAnchor="middle">
           1 Year
         </text>
-      </motion.g>
+      </g>
 
       {/* Second attempt - bright */}
-      <motion.g
+      <g
       >
         <rect
           x="230"
@@ -87,7 +87,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         <text x="305" y="155" fontSize="7" fill="#166534" textAnchor="middle">
           Target Score
         </text>
-      </motion.g>
+      </g>
 
       {/* Key changes */}
       <rect
@@ -104,7 +104,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         Dropper Strategy Keys
       </text>
 
-      <motion.g
+      <g
       >
         <rect x="45" y="205" width="100" height="55" rx="6" fill="#DBEAFE" />
         <text x="95" y="223" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
@@ -116,9 +116,9 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         <text x="95" y="250" fontSize="6" fill="#6B7280" textAnchor="middle">
           Analyze last year
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect x="155" y="205" width="100" height="55" rx="6" fill="#FEF3C7" />
         <text x="205" y="223" fontSize="7" fill="#B45309" textAnchor="middle" fontWeight="bold">
@@ -130,9 +130,9 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         <text x="205" y="250" fontSize="6" fill="#6B7280" textAnchor="middle">
           12 hrs/day study
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect x="265" y="205" width="100" height="55" rx="6" fill="#DCFCE7" />
         <text x="315" y="223" fontSize="7" fill="#16A34A" textAnchor="middle" fontWeight="bold">
@@ -144,7 +144,7 @@ export function DropperStrategyIllustration({ className = '', animate = true }: 
         <text x="315" y="250" fontSize="6" fill="#6B7280" textAnchor="middle">
           50+ full tests
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

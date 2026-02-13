@@ -167,7 +167,7 @@ Please help resolve this AI system issue.
           </p>
 
           {this.props.showDebugInfo && this.state.error && (
-            <motion.details
+            <details
               className="w-full mb-4 p-3 bg-red-100 rounded border text-xs"
             >
               <summary className="cursor-pointer font-medium text-red-700">
@@ -192,7 +192,7 @@ Please help resolve this AI system issue.
                   </div>
                 )}
               </div>
-            </motion.details>
+            </details>
           )}
 
           <div className="flex flex-col sm:flex-row gap-3 w-full">

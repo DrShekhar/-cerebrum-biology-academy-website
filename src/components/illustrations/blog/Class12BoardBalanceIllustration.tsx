@@ -33,7 +33,7 @@ export function Class12BoardBalanceIllustration({
 
       {/* Balance scale */}
       <line x1="200" y1="70" x2="200" y2="120" stroke="#92400E" strokeWidth="4" />
-      <motion.g
+      <g
         style={{ transformOrigin: '200px 120px' }}
       >
         <line x1="100" y1="120" x2="300" y2="120" stroke="#92400E" strokeWidth="4" />
@@ -61,7 +61,7 @@ export function Class12BoardBalanceIllustration({
         <text x="290" y="185" fontSize="7" fill="#DCFCE7" textAnchor="middle">
           May 2025
         </text>
-      </motion.g>
+      </g>
 
       {/* Calendar timeline */}
       <rect
@@ -81,7 +81,7 @@ export function Class12BoardBalanceIllustration({
       {/* Timeline dots */}
       <line x1="60" y1="250" x2="340" y2="250" stroke="#D1D5DB" strokeWidth="2" />
 
-      <motion.g
+      <g
       >
         <circle cx="80" cy="250" r="8" fill="#3B82F6" />
         <text x="80" y="242" fontSize="6" fill="#1D4ED8" textAnchor="middle">
@@ -90,9 +90,9 @@ export function Class12BoardBalanceIllustration({
         <text x="80" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Boards+NEET
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="140" cy="250" r="8" fill="#8B5CF6" />
         <text x="140" y="242" fontSize="6" fill="#7C3AED" textAnchor="middle">
@@ -101,9 +101,9 @@ export function Class12BoardBalanceIllustration({
         <text x="140" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Board Focus
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="200" cy="250" r="8" fill="#EC4899" />
         <text x="200" y="242" fontSize="6" fill="#DB2777" textAnchor="middle">
@@ -112,9 +112,9 @@ export function Class12BoardBalanceIllustration({
         <text x="200" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           Boards Done
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="260" cy="250" r="8" fill="#F59E0B" />
         <text x="260" y="242" fontSize="6" fill="#B45309" textAnchor="middle">
@@ -123,9 +123,9 @@ export function Class12BoardBalanceIllustration({
         <text x="260" y="268" fontSize="5" fill="#6B7280" textAnchor="middle">
           NEET Intensive
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <circle cx="320" cy="250" r="10" fill="#22C55E" />
         <text x="320" y="242" fontSize="6" fill="#16A34A" textAnchor="middle" fontWeight="bold">
@@ -134,7 +134,7 @@ export function Class12BoardBalanceIllustration({
         <text x="320" y="268" fontSize="5" fill="#166534" textAnchor="middle" fontWeight="bold">
           NEET Day!
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

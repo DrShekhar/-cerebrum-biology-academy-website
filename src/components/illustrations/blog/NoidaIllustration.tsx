@@ -31,15 +31,15 @@ export function NoidaIllustration({ className = '', animate = true }: Illustrati
       <rect width="400" height="300" fill="url(#noidaSkyGradient)" />
 
       {/* Road/expressway */}
-      <motion.g
+      <g
       >
         <rect x="0" y="230" width="400" height="40" fill="#374151" />
         <rect x="0" y="248" width="400" height="4" fill="#FCD34D" strokeDasharray="20 10" />
-      </motion.g>
+      </g>
 
       {/* Sector buildings with labels */}
       {/* Sector 62 */}
-      <motion.g
+      <g
       >
         <rect x="30" y="100" width="60" height="130" rx="4" fill="#3B82F6" />
         <rect x="35" y="105" width="50" height="20" fill="#DBEAFE" />
@@ -53,10 +53,10 @@ export function NoidaIllustration({ className = '', animate = true }: Illustrati
             <rect x="72" y={130 + row * 25} width="12" height="18" fill="#BFDBFE" />
           </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Sector 18 - Mall area */}
-      <motion.g
+      <g
       >
         <rect x="110" y="120" width="70" height="110" rx="4" fill="#EC4899" />
         <rect x="115" y="125" width="60" height="25" fill="#FCE7F3" />
@@ -69,10 +69,10 @@ export function NoidaIllustration({ className = '', animate = true }: Illustrati
         </text>
         <rect x="115" y="190" width="25" height="35" fill="#F9A8D4" />
         <rect x="145" y="190" width="25" height="35" fill="#F9A8D4" />
-      </motion.g>
+      </g>
 
       {/* Sector 15/16 - Coaching Hub */}
-      <motion.g
+      <g
       >
         <rect x="200" y="80" width="80" height="150" rx="4" fill="#8B5CF6" />
         <rect x="205" y="85" width="70" height="30" fill="#F3E8FF" />
@@ -91,10 +91,10 @@ export function NoidaIllustration({ className = '', animate = true }: Illustrati
             <rect x="260" y={120 + row * 28} width="18" height="20" fill="#DDD6FE" />
           </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Sector 50 */}
-      <motion.g
+      <g
       >
         <rect x="300" y="110" width="70" height="120" rx="4" fill="#14B8A6" />
         <rect x="305" y="115" width="60" height="20" fill="#CCFBF1" />
@@ -108,12 +108,12 @@ export function NoidaIllustration({ className = '', animate = true }: Illustrati
             <rect x="350" y={140 + row * 28} width="15" height="20" fill="#99F6E4" />
           </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Location pin on coaching center */}
-      <motion.g
+      <g
       >
-        <motion.circle
+        <circle
           cx="240"
           cy="55"
           r="18"
@@ -121,25 +121,25 @@ export function NoidaIllustration({ className = '', animate = true }: Illustrati
         />
         <path d="M240 37 L240 20" stroke="#EF4444" strokeWidth="3" />
         <circle cx="240" cy="55" r="7" fill="#FFF" />
-      </motion.g>
+      </g>
 
       {/* Metro connection */}
-      <motion.g
+      <g
       >
         <rect x="0" y="265" width="400" height="8" fill="#60A5FA" />
         <text x="200" y="290" textAnchor="middle" fill="#374151" fontSize="9">
           Aqua Line Metro
         </text>
-      </motion.g>
+      </g>
 
       {/* Title */}
-      <motion.g
+      <g
       >
         <rect x="120" y="15" width="160" height="30" rx="6" fill="#1F2937" />
         <text x="200" y="35" textAnchor="middle" fill="#FFF" fontSize="11" fontWeight="600">
           NEET Coaching Noida
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

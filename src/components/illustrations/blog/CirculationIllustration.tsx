@@ -119,7 +119,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
       <circle cx="350" cy="260" r="220" fill="#EC4899" opacity="0.02" />
 
       {/* Title */}
-      <motion.text
+      <text
         x="350"
         y="32"
         textAnchor="middle"
@@ -129,10 +129,10 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
         fontFamily="system-ui, sans-serif"
       >
         Human Heart & Circulatory System
-      </motion.text>
+      </text>
 
       {/* HEART DIAGRAM - Left side */}
-      <motion.g
+      <g
       >
         <g transform="translate(30, 55)">
           {/* Heart outline */}
@@ -182,7 +182,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Superior Vena Cava */}
-          <motion.path
+          <path
             d="M50 45 Q50 20 65 10 L75 10 Q75 20 75 35"
             stroke="url(#veinGrad)"
             strokeWidth="10"
@@ -194,7 +194,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Inferior Vena Cava */}
-          <motion.path
+          <path
             d="M55 85 Q40 100 35 130 L35 155"
             stroke="url(#veinGrad)"
             strokeWidth="8"
@@ -206,7 +206,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Pulmonary Artery */}
-          <motion.path
+          <path
             d="M65 82 Q55 70 45 50 Q35 30 25 25"
             stroke="url(#pulmonaryArteryGrad)"
             strokeWidth="9"
@@ -219,7 +219,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Pulmonary Veins */}
-          <motion.path
+          <path
             d="M135 48 Q145 30 160 20 L175 20"
             stroke="url(#pulmonaryVeinGrad)"
             strokeWidth="7"
@@ -231,7 +231,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Aorta */}
-          <motion.path
+          <path
             d="M135 82 Q155 60 165 40 Q175 25 190 20"
             stroke="url(#arteryGradCirc)"
             strokeWidth="11"
@@ -244,7 +244,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </text>
 
           {/* Heartbeat animation - pulsing */}
-          <motion.circle
+          <circle
             cx="100"
             cy="120"
             r="8"
@@ -269,10 +269,10 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             Bicuspid
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* DOUBLE CIRCULATION DIAGRAM */}
-      <motion.g
+      <g
       >
         <g transform="translate(25, 370)">
           <rect
@@ -346,7 +346,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           </g>
 
           {/* Connection arrows */}
-          <motion.path
+          <path
             d="M125 75 L140 75"
             stroke="#DC2626"
             strokeWidth="2.5"
@@ -365,10 +365,10 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </marker>
           </defs>
         </g>
-      </motion.g>
+      </g>
 
       {/* BLOOD COMPOSITION - Right Top */}
-      <motion.g
+      <g
       >
         <g transform="translate(315, 52)">
           <rect
@@ -427,7 +427,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
 
             {/* RBC */}
-            <motion.ellipse
+            <ellipse
               cx="32"
               cy="42"
               rx="15"
@@ -439,7 +439,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
 
             {/* WBC */}
-            <motion.circle
+            <circle
               cx="77"
               cy="42"
               r="10"
@@ -452,21 +452,21 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
 
             {/* Platelets */}
-            <motion.g
+            <g
             >
               <circle cx="118" cy="38" r="4" fill="#A78BFA" />
               <circle cx="126" cy="42" r="4" fill="#A78BFA" />
               <circle cx="122" cy="48" r="4" fill="#A78BFA" />
-            </motion.g>
+            </g>
             <text x="122" y="60" textAnchor="middle" fill="#6D28D9" fontSize="7">
               Platelets
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* CARDIAC CYCLE - Right Middle */}
-      <motion.g
+      <g
       >
         <g transform="translate(315, 185)">
           <rect
@@ -487,7 +487,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             <rect x="0" y="0" width="330" height="16" rx="8" fill="#E2E8F0" />
 
             {/* Atrial Systole */}
-            <motion.rect
+            <rect
               x="0"
               y="0"
               width="42"
@@ -500,7 +500,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
 
             {/* Ventricular Systole */}
-            <motion.rect
+            <rect
               x="42"
               y="0"
               width="124"
@@ -513,7 +513,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
 
             {/* Joint Diastole */}
-            <motion.rect
+            <rect
               x="166"
               y="0"
               width="164"
@@ -560,10 +560,10 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* ECG - Right Bottom */}
-      <motion.g
+      <g
       >
         <g transform="translate(315, 310)">
           <rect
@@ -583,7 +583,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
           <rect x="18" y="32" width="330" height="55" rx="6" fill="#ECFDF5" stroke="#D1FAE5" />
 
           {/* ECG Wave */}
-          <motion.path
+          <path
             d="M30 62 L55 62 Q62 62 65 53 L70 62 L78 62 L85 28 L92 78 L98 50 L105 62 L135 62 Q142 62 145 55 L150 62 L180 62 Q187 62 190 53 L195 62 L203 62 L210 28 L217 78 L223 50 L230 62 L260 62 Q267 62 270 55 L275 62 L305 62 Q312 62 315 53 L320 62 L328 62 L335 28 L342 78 L348 50 L355 62"
             stroke="url(#ecgGrad)"
             strokeWidth="2.5"
@@ -614,10 +614,10 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             T: Ventricular repol.
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* BLOOD GROUPS & KEY FACTS - Bottom Right */}
-      <motion.g
+      <g
       >
         <g transform="translate(315, 430)">
           <rect
@@ -635,7 +635,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
 
           {/* Blood group circles */}
           <g transform="translate(18, 30)">
-            <motion.circle
+            <circle
               cx="25"
               cy="22"
               r="18"
@@ -647,7 +647,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               A
             </text>
 
-            <motion.circle
+            <circle
               cx="75"
               cy="22"
               r="18"
@@ -659,7 +659,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               B
             </text>
 
-            <motion.circle
+            <circle
               cx="125"
               cy="22"
               r="18"
@@ -671,7 +671,7 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
               AB
             </text>
 
-            <motion.circle
+            <circle
               cx="175"
               cy="22"
               r="18"
@@ -697,25 +697,25 @@ export function CirculationIllustration({ className = '', animate = true }: Illu
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* SA Node indicator on heart */}
-      <motion.g
+      <g
       >
         <circle cx="115" cy="108" r="7" fill="#22C55E" filter="url(#vesselGlow)" />
         <text x="128" y="105" fill="#166534" fontSize="6" fontWeight="bold">
           SA
         </text>
-      </motion.g>
+      </g>
 
       {/* AV Node indicator */}
-      <motion.g
+      <g
       >
         <circle cx="128" cy="135" r="6" fill="#FBBF24" />
         <text x="140" y="133" fill="#92400E" fontSize="6" fontWeight="bold">
           AV
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

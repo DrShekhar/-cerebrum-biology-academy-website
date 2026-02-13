@@ -57,7 +57,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
       <rect width="700" height="520" fill="#F8FAFC" rx="16" />
 
       {/* Title Section */}
-      <motion.g
+      <g
       >
         <rect
           x="175"
@@ -74,10 +74,10 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         <text x="350" y="45" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           🏛️ Kota vs 💻 Online Coaching Comparison
         </text>
-      </motion.g>
+      </g>
 
       {/* Left Section - Kota Coaching */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -94,7 +94,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Kota Building Illustration */}
-        <motion.g
+        <g
         >
           {/* Building */}
           <rect x="60" y="115" width="120" height="80" rx="6" fill="#EA580C" />
@@ -111,22 +111,22 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
           <text x="120" y="113" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             KOTA
           </text>
-        </motion.g>
+        </g>
 
         {/* Walking students */}
-        <motion.g
+        <g
         >
           <circle cx="50" cy="210" r="8" fill="#FBBF24" />
           <rect x="46" y="220" width="8" height="12" rx="2" fill="#3B82F6" />
-        </motion.g>
-        <motion.g
+        </g>
+        <g
         >
           <circle cx="75" cy="215" r="8" fill="#FBBF24" />
           <rect x="71" y="225" width="8" height="12" rx="2" fill="#8B5CF6" />
-        </motion.g>
+        </g>
 
         {/* Auto/Taxi */}
-        <motion.g
+        <g
         >
           <rect x="140" y="205" width="35" height="18" rx="4" fill="#FCD34D" />
           <circle cx="148" cy="223" r="5" fill="#1E293B" />
@@ -134,7 +134,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
           <text x="157" y="217" fontSize="6" fill="#78350F" textAnchor="middle" fontWeight="bold">
             AUTO
           </text>
-        </motion.g>
+        </g>
 
         {/* Kota Pros List */}
         <rect x="35" y="245" width="190" height="95" rx="8" fill="#FFFFFF" opacity="0.8" />
@@ -149,10 +149,10 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
             </text>
           </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Center Section - Comparison Chart */}
-      <motion.g
+      <g
       >
         <rect
           x="250"
@@ -170,7 +170,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
         {/* Comparison rows */}
         {comparisonData.map((item, index) => (
-          <motion.g
+          <g
             key={item.factor}
           >
             {/* Row background */}
@@ -225,20 +225,20 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
 
             {/* Winner indicator */}
             {item.winner === 'online' && (
-              <motion.text
+              <text
                 x="440"
                 y={144 + index * 48}
                 fontSize="10"
               >
                 ✓
-              </motion.text>
+              </text>
             )}
-          </motion.g>
+          </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Right Section - Online Coaching */}
-      <motion.g
+      <g
       >
         <rect
           x="460"
@@ -255,7 +255,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* Laptop with Live Class */}
-        <motion.g
+        <g
         >
           <rect x="495" y="115" width="150" height="90" rx="8" fill="#1E293B" />
           <rect x="503" y="123" width="134" height="74" rx="4" fill="#3B82F6" />
@@ -276,7 +276,7 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
           </text>
 
           {/* Live indicator */}
-          <motion.circle
+          <circle
             cx="625"
             cy="130"
             r="6"
@@ -287,25 +287,25 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
           </text>
 
           {/* Chat bubbles */}
-          <motion.g
+          <g
           >
             <rect x="595" y="165" width="35" height="10" rx="3" fill="#FFFFFF" />
             <rect x="600" y="178" width="28" height="8" rx="3" fill="#10B981" />
-          </motion.g>
+          </g>
 
           {/* Laptop base */}
           <rect x="485" y="205" width="170" height="10" rx="5" fill="#334155" />
-        </motion.g>
+        </g>
 
         {/* Student at home */}
-        <motion.g
+        <g
         >
           <ellipse cx="570" cy="250" rx="25" ry="20" fill="#0D9488" />
           <circle cx="570" cy="228" r="15" fill="#FBBF24" />
           <circle cx="566" cy="225" r="2" fill="#1E293B" />
           <circle cx="574" cy="225" r="2" fill="#1E293B" />
           <path d="M567 232 Q570 235 573 232" stroke="#1E293B" strokeWidth="1.5" fill="none" />
-        </motion.g>
+        </g>
 
         {/* Home comfort icon */}
         <path d="M620 230 L635 218 L650 230 L650 255 L620 255 Z" fill="#8B5CF6" opacity="0.3" />
@@ -334,19 +334,19 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
             </text>
           </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* VS Badge */}
-      <motion.g
+      <g
       >
         <circle cx="350" cy="360" r="25" fill="#EF4444" />
         <text x="350" y="365" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           VS
         </text>
-      </motion.g>
+      </g>
 
       {/* Bottom Section - Final Verdict */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -444,24 +444,24 @@ export function KotaVsOnlineIllustration({ className = '', animate = true }: Ill
         <text x="585" y="482" fontSize="7" fill="#15803D" textAnchor="middle">
           & Personalized Learning
         </text>
-      </motion.g>
+      </g>
 
       {/* Floating decorative elements */}
-      <motion.circle
+      <circle
         cx="15"
         cy="55"
         r="8"
         fill="#F97316"
         opacity="0.3"
       />
-      <motion.circle
+      <circle
         cx="685"
         cy="45"
         r="6"
         fill="#14B8A6"
         opacity="0.3"
       />
-      <motion.rect
+      <rect
         x="660"
         y="380"
         width="15"

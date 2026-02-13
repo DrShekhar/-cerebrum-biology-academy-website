@@ -153,7 +153,7 @@ export function PhotosynthesisVsRespirationIllustration({
 
       {/* Sun with glow */}
       <g filter="url(#sunGlowPvr)">
-        <motion.g
+        <g
           style={{ transformOrigin: '80px 160px' }}
         >
           <circle cx="80" cy="160" r="28" fill="url(#sunGradPvr)" />
@@ -178,7 +178,7 @@ export function PhotosynthesisVsRespirationIllustration({
               strokeLinecap="round"
             />
           ))}
-        </motion.g>
+        </g>
       </g>
       <text
         x="80"
@@ -193,7 +193,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </text>
 
       {/* Chloroplast/Leaf */}
-      <motion.g
+      <g
         filter="url(#pvrCardShadow)"
         style={{ transformOrigin: '175px 165px' }}
       >
@@ -235,7 +235,7 @@ export function PhotosynthesisVsRespirationIllustration({
           strokeWidth="2"
           strokeOpacity="0.7"
         />
-      </motion.g>
+      </g>
 
       {/* Photosynthesis equation card */}
       <g filter="url(#pvrCardShadow)">
@@ -285,12 +285,12 @@ export function PhotosynthesisVsRespirationIllustration({
       </g>
 
       {/* O2 bubbles */}
-      <motion.g
+      <g
       >
         <circle cx="55" cy="345" r="8" fill="#93C5FD" fillOpacity="0.8" />
         <circle cx="80" cy="360" r="6" fill="#93C5FD" fillOpacity="0.7" />
         <circle cx="65" cy="372" r="5" fill="#93C5FD" fillOpacity="0.6" />
-      </motion.g>
+      </g>
       <text
         x="70"
         y="395"
@@ -317,7 +317,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </text>
 
       {/* Mitochondria */}
-      <motion.g
+      <g
         filter="url(#pvrCardShadow)"
         style={{ transformOrigin: '387px 165px' }}
       >
@@ -331,7 +331,7 @@ export function PhotosynthesisVsRespirationIllustration({
           fill="none"
           strokeLinecap="round"
         />
-      </motion.g>
+      </g>
       <text
         x="387"
         y="215"
@@ -392,7 +392,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </g>
 
       {/* ATP Energy badge */}
-      <motion.g
+      <g
         filter="url(#pvrGlow)"
       >
         <circle cx="440" cy="355" r="28" fill="url(#atpGradPvr)" />
@@ -427,7 +427,7 @@ export function PhotosynthesisVsRespirationIllustration({
         >
           Energy
         </text>
-      </motion.g>
+      </g>
       <text
         x="440"
         y="395"
@@ -466,7 +466,7 @@ export function PhotosynthesisVsRespirationIllustration({
       </g>
 
       {/* Cycle arrows */}
-      <motion.path
+      <path
         d="M200 340 Q260 310 320 340"
         stroke="#8B5CF6"
         strokeWidth="3"
@@ -474,7 +474,7 @@ export function PhotosynthesisVsRespirationIllustration({
         strokeDasharray="8 4"
         strokeLinecap="round"
       />
-      <motion.path
+      <path
         d="M320 360 Q260 390 200 360"
         stroke="#8B5CF6"
         strokeWidth="3"

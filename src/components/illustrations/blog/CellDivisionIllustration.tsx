@@ -121,7 +121,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       <circle cx="350" cy="260" r="200" fill="#EC4899" opacity="0.03" />
 
       {/* Title */}
-      <motion.text
+      <text
         x="350"
         y="32"
         textAnchor="middle"
@@ -130,10 +130,10 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         fontWeight="700"
       >
         Cell Division: Mitosis vs Meiosis
-      </motion.text>
+      </text>
 
       {/* MITOSIS SECTION (Left) */}
-      <motion.g
+      <g
       >
         {/* Mitosis label card */}
         <rect
@@ -179,7 +179,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         </g>
 
         {/* Arrow */}
-        <motion.path
+        <path
           d="M155 160 L180 160"
           stroke="#94A3B8"
           strokeWidth="2.5"
@@ -204,7 +204,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             filter="url(#cellShadow)"
           />
           {/* Chromosomes condensing */}
-          <motion.g
+          <g
           >
             <path
               d="M45 42 L45 68"
@@ -230,7 +230,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="5"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           {/* Centrioles */}
           <rect x="28" y="30" width="8" height="15" rx="3" fill="url(#centrioleGrad)" />
           <rect x="85" y="72" width="8" height="15" rx="3" fill="url(#centrioleGrad)" />
@@ -257,7 +257,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           <line x1="20" y1="95" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           <line x1="100" y1="95" x2="60" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes at metaphase plate */}
-          <motion.g
+          <g
           >
             <path
               d="M44 50 L44 60"
@@ -283,7 +283,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="5"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           {/* Metaphase plate line */}
           <line
             x1="35"
@@ -316,7 +316,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           <line x1="10" y1="55" x2="35" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           <line x1="85" y1="55" x2="110" y2="55" stroke="url(#spindleGrad)" strokeWidth="1.5" />
           {/* Chromosomes separating */}
-          <motion.g
+          <g
           >
             <path
               d="M32 45 L32 65"
@@ -330,8 +330,8 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="4"
               strokeLinecap="round"
             />
-          </motion.g>
-          <motion.g
+          </g>
+          <g
           >
             <path
               d="M78 45 L78 65"
@@ -345,7 +345,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="4"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           <text x="60" y="115" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Anaphase
           </text>
@@ -354,7 +354,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         {/* Telophase/Cytokinesis - Two daughter cells */}
         <g transform="translate(50, 370)">
           {/* First daughter cell */}
-          <motion.g
+          <g
           >
             <ellipse
               cx="55"
@@ -379,9 +379,9 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="3"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           {/* Second daughter cell */}
-          <motion.g
+          <g
           >
             <ellipse
               cx="165"
@@ -406,7 +406,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="3"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           <text x="110" y="100" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Telophase & Cytokinesis
           </text>
@@ -416,7 +416,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             2 Diploid Cells
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* Divider line */}
       <line
@@ -430,7 +430,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
       />
 
       {/* MEIOSIS SECTION (Right) */}
-      <motion.g
+      <g
       >
         {/* Meiosis label card */}
         <rect
@@ -462,7 +462,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             filter="url(#cellShadow)"
           />
           {/* Bivalents with crossing over */}
-          <motion.g
+          <g
             style={{ transformOrigin: '55px 52px' }}
           >
             {/* Homologous pair 1 with chiasma */}
@@ -495,7 +495,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeLinecap="round"
               fill="none"
             />
-          </motion.g>
+          </g>
           <text x="55" y="112" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Prophase I
           </text>
@@ -517,7 +517,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             filter="url(#cellShadow)"
           />
           {/* Bivalents aligned */}
-          <motion.g
+          <g
           >
             <path
               d="M35 46 L35 58"
@@ -543,7 +543,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="4"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           <line
             x1="28"
             y1="52"
@@ -571,7 +571,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             strokeWidth="3"
             filter="url(#cellShadow)"
           />
-          <motion.g
+          <g
           >
             <path
               d="M25 40 L25 56"
@@ -585,8 +585,8 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="4"
               strokeLinecap="round"
             />
-          </motion.g>
-          <motion.g
+          </g>
+          <g
           >
             <path
               d="M75 40 L75 56"
@@ -600,7 +600,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="4"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           <text x="55" y="105" textAnchor="middle" fill="#64748B" fontSize="10" fontWeight="500">
             Anaphase I
           </text>
@@ -608,7 +608,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
 
         {/* Telophase I - Two haploid cells */}
         <g transform="translate(510, 235)">
-          <motion.ellipse
+          <ellipse
             cx="30"
             cy="48"
             rx="28"
@@ -618,7 +618,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             strokeWidth="2.5"
             filter="url(#cellShadow)"
           />
-          <motion.ellipse
+          <ellipse
             cx="85"
             cy="48"
             rx="28"
@@ -667,7 +667,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
         {/* Final result - Four haploid cells */}
         <g transform="translate(375, 370)">
           {/* Cell 1 */}
-          <motion.g
+          <g
           >
             <ellipse
               cx="35"
@@ -686,9 +686,9 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="3"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           {/* Cell 2 */}
-          <motion.g
+          <g
           >
             <ellipse
               cx="100"
@@ -707,9 +707,9 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="3"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           {/* Cell 3 */}
-          <motion.g
+          <g
           >
             <ellipse
               cx="165"
@@ -728,9 +728,9 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="3"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
           {/* Cell 4 */}
-          <motion.g
+          <g
           >
             <ellipse
               cx="230"
@@ -749,7 +749,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
               strokeWidth="3"
               strokeLinecap="round"
             />
-          </motion.g>
+          </g>
 
           {/* Result label */}
           <rect x="70" y="85" width="120" height="24" rx="12" fill="#FCE7F3" />
@@ -757,10 +757,10 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
             4 Haploid Cells (n)
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* Key differences box at bottom */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -782,7 +782,7 @@ export function CellDivisionIllustration({ className = '', animate = true }: Ill
           </tspan>{' '}
           Gamete Formation (2n→n) with Genetic Variation
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

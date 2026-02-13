@@ -82,7 +82,7 @@ export function SpecializedVsMassIllustration({
       <rect width="700" height="520" fill="url(#specVsMassBg)" rx="16" />
 
       {/* Title Section */}
-      <motion.g
+      <g
       >
         <rect
           x="150"
@@ -99,10 +99,10 @@ export function SpecializedVsMassIllustration({
         <text x="350" y="45" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           🎯 Specialized vs 🏭 Mass Coaching Comparison
         </text>
-      </motion.g>
+      </g>
 
       {/* Left Section - Specialized Coaching */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -121,12 +121,12 @@ export function SpecializedVsMassIllustration({
         </text>
 
         {/* DNA/Biology Icon */}
-        <motion.g
+        <g
           style={{ transformOrigin: '130px 145px' }}
         >
           <circle cx="130" cy="145" r="30" fill="#86EFAC" opacity="0.5" />
-        </motion.g>
-        <motion.g
+        </g>
+        <g
         >
           {/* DNA Helix */}
           <path
@@ -139,11 +139,11 @@ export function SpecializedVsMassIllustration({
           <circle cx="145" cy="130" r="4" fill="#166534" />
           <circle cx="115" cy="145" r="4" fill="#166534" />
           <circle cx="145" cy="160" r="4" fill="#166534" />
-        </motion.g>
+        </g>
 
         {/* Features list */}
         {specializedFeatures.map((feature, index) => (
-          <motion.g
+          <g
             key={feature.text}
           >
             <rect
@@ -162,21 +162,21 @@ export function SpecializedVsMassIllustration({
             <text x="70" y={205 + index * 40} fontSize="8" fill="#166534" fontWeight="bold">
               {feature.text}
             </text>
-          </motion.g>
+          </g>
         ))}
 
         {/* Success badge */}
-        <motion.g
+        <g
         >
           <rect x="55" y="335" width="150" height="22" rx="11" fill="#22C55E" />
           <text x="130" y="350" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             ✓ 40-50% Success Rate
           </text>
-        </motion.g>
-      </motion.g>
+        </g>
+      </g>
 
       {/* Center Section - Comparison Metrics */}
-      <motion.g
+      <g
       >
         <rect
           x="250"
@@ -194,7 +194,7 @@ export function SpecializedVsMassIllustration({
 
         {/* Comparison rows */}
         {comparisonMetrics.map((item, index) => (
-          <motion.g
+          <g
             key={item.metric}
           >
             {/* Row background */}
@@ -248,20 +248,20 @@ export function SpecializedVsMassIllustration({
             </text>
 
             {/* Winner indicator */}
-            <motion.text
+            <text
               x="340"
               y={151 + index * 60}
               fontSize="10"
               fill="#22C55E"
             >
               ✓
-            </motion.text>
-          </motion.g>
+            </text>
+          </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Right Section - Mass Coaching */}
-      <motion.g
+      <g
       >
         <rect
           x="460"
@@ -280,7 +280,7 @@ export function SpecializedVsMassIllustration({
         </text>
 
         {/* Factory Building Icon */}
-        <motion.g
+        <g
         >
           {/* Factory building */}
           <rect x="530" y="125" width="80" height="50" rx="4" fill="#FECACA" />
@@ -291,25 +291,25 @@ export function SpecializedVsMassIllustration({
           {/* Chimneys with smoke */}
           <rect x="545" y="110" width="12" height="20" fill="#DC2626" />
           <rect x="583" y="110" width="12" height="20" fill="#DC2626" />
-          <motion.circle
+          <circle
             cx="551"
             cy="105"
             r="5"
             fill="#9CA3AF"
             opacity="0.6"
           />
-          <motion.circle
+          <circle
             cx="589"
             cy="105"
             r="5"
             fill="#9CA3AF"
             opacity="0.6"
           />
-        </motion.g>
+        </g>
 
         {/* Drawbacks list */}
         {massDrawbacks.map((drawback, index) => (
-          <motion.g
+          <g
             key={drawback.text}
           >
             <rect
@@ -328,7 +328,7 @@ export function SpecializedVsMassIllustration({
             <text x="510" y={205 + index * 40} fontSize="8" fill="#991B1B" fontWeight="bold">
               {drawback.text}
             </text>
-          </motion.g>
+          </g>
         ))}
 
         {/* Low success badge */}
@@ -336,19 +336,19 @@ export function SpecializedVsMassIllustration({
         <text x="570" y="350" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           ✗ 10-15% Success Rate
         </text>
-      </motion.g>
+      </g>
 
       {/* VS Badge */}
-      <motion.g
+      <g
       >
         <circle cx="350" cy="380" r="28" fill="#1F2937" />
         <text x="350" y="386" fontSize="16" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           VS
         </text>
-      </motion.g>
+      </g>
 
       {/* Bottom Section - Final Verdict */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -423,24 +423,24 @@ export function SpecializedVsMassIllustration({
         <text x="585" y="486" fontSize="8" fill="#DCFCE7" textAnchor="middle">
           Specialized Coaching
         </text>
-      </motion.g>
+      </g>
 
       {/* Floating decorative elements */}
-      <motion.circle
+      <circle
         cx="15"
         cy="55"
         r="8"
         fill="#22C55E"
         opacity="0.3"
       />
-      <motion.circle
+      <circle
         cx="685"
         cy="45"
         r="6"
         fill="#EF4444"
         opacity="0.3"
       />
-      <motion.rect
+      <rect
         x="660"
         y="400"
         width="15"

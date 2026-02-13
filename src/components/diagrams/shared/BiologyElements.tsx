@@ -69,7 +69,7 @@ export function Cell({
   const cy = y + height / 2
 
   return (
-    <motion.g
+    <g
       className="cell"
       onClick={onClick}
       style={{ cursor: onClick ? 'pointer' : 'default' }}
@@ -105,7 +105,7 @@ export function Cell({
           fill={biologyColors.nucleus}
         />
       )}
-    </motion.g>
+    </g>
   )
 }
 
@@ -143,7 +143,7 @@ export function TissueLayer({
   const color = biologyColors[type] || biologyColors.cortex
 
   return (
-    <motion.g
+    <g
       className="tissue-layer"
       onClick={onClick}
       style={{ cursor: onClick ? 'pointer' : 'default' }}
@@ -171,7 +171,7 @@ export function TissueLayer({
           {label}
         </text>
       )}
-    </motion.g>
+    </g>
   )
 }
 
@@ -197,7 +197,7 @@ export function VascularBundle({
   delay = 0,
 }: VascularBundleProps) {
   return (
-    <motion.g
+    <g
       className="vascular-bundle"
     >
       <circle
@@ -247,7 +247,7 @@ export function VascularBundle({
           strokeDasharray="3,2"
         />
       )}
-    </motion.g>
+    </g>
   )
 }
 
@@ -275,7 +275,7 @@ export function MeristemZone({
   const color = biologyColors[zone] || biologyColors.groundMeristem
 
   return (
-    <motion.g
+    <g
       className="meristem-zone"
     >
       <rect
@@ -302,6 +302,6 @@ export function MeristemZone({
           {label}
         </text>
       )}
-    </motion.g>
+    </g>
   )
 }

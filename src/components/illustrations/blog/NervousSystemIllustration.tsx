@@ -113,7 +113,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
       <circle cx="350" cy="260" r="250" fill="#6366F1" opacity="0.03" />
 
       {/* Title */}
-      <motion.text
+      <text
         x="350"
         y="30"
         textAnchor="middle"
@@ -123,10 +123,10 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
         fontFamily="system-ui, sans-serif"
       >
         Neural Control & Coordination
-      </motion.text>
+      </text>
 
       {/* NEURON STRUCTURE - Top Left */}
-      <motion.g
+      <g
       >
         <g transform="translate(20, 50)">
           <rect
@@ -144,21 +144,21 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
 
           {/* Dendrites */}
           <g transform="translate(25, 70)">
-            <motion.path
+            <path
               d="M35 40 Q20 30 10 20"
               stroke="url(#dendriteGrad)"
               strokeWidth="4"
               fill="none"
               strokeLinecap="round"
             />
-            <motion.path
+            <path
               d="M35 40 Q15 40 5 35"
               stroke="url(#dendriteGrad)"
               strokeWidth="4"
               fill="none"
               strokeLinecap="round"
             />
-            <motion.path
+            <path
               d="M35 40 Q20 50 10 60"
               stroke="url(#dendriteGrad)"
               strokeWidth="4"
@@ -170,7 +170,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
 
             {/* Cell body (Soma) */}
-            <motion.ellipse
+            <ellipse
               cx="50"
               cy="40"
               rx="18"
@@ -190,7 +190,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             <line x1="80" y1="40" x2="200" y2="40" stroke="url(#axonGrad)" strokeWidth="4" />
 
             {/* Myelin sheaths */}
-            <motion.rect
+            <rect
               x="85"
               y="33"
               width="25"
@@ -198,7 +198,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               rx="7"
               fill="url(#myelinGrad)"
             />
-            <motion.rect
+            <rect
               x="120"
               y="33"
               width="25"
@@ -206,7 +206,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               rx="7"
               fill="url(#myelinGrad)"
             />
-            <motion.rect
+            <rect
               x="155"
               y="33"
               width="25"
@@ -221,7 +221,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             <circle cx="185" cy="40" r="2" fill="#6D28D9" />
 
             {/* Action potential traveling */}
-            <motion.circle
+            <circle
               cx="90"
               cy="40"
               r="4"
@@ -261,10 +261,10 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* ACTION POTENTIAL GRAPH - Top Right */}
-      <motion.g
+      <g
       >
         <g transform="translate(350, 50)">
           <rect
@@ -339,7 +339,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             />
 
             {/* Action potential curve */}
-            <motion.path
+            <path
               d="M0 95 L36 95 Q48 95 54 72 Q60 24 66 6 Q72 0 78 6 Q90 36 96 72 Q102 108 108 102 Q114 95 120 95 L240 95"
               stroke="url(#apLineGrad)"
               strokeWidth="3"
@@ -376,10 +376,10 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* BRAIN REGIONS - Bottom Left */}
-      <motion.g
+      <g
       >
         <g transform="translate(20, 250)">
           <rect
@@ -398,7 +398,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
           {/* Brain diagram */}
           <g transform="translate(30, 35)">
             {/* Cerebrum */}
-            <motion.path
+            <path
               d="M75 15 Q20 15 15 60 Q10 100 30 120 Q50 135 75 130 Q100 135 120 120 Q140 100 135 60 Q130 15 75 15"
               fill="url(#cerebrumGrad)"
             />
@@ -429,7 +429,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
 
             {/* Cerebellum */}
-            <motion.path
+            <path
               d="M100 125 Q90 140 100 155 Q115 165 130 155 Q145 140 135 125"
               fill="url(#cerebellumGrad)"
             />
@@ -441,7 +441,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
 
             {/* Brain stem */}
-            <motion.path
+            <path
               d="M65 120 Q60 130 55 150 Q50 170 55 185"
               stroke="url(#brainstemGrad)"
               strokeWidth="12"
@@ -473,10 +473,10 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* SYNAPSE - Bottom Center */}
-      <motion.g
+      <g
       >
         <g transform="translate(280, 250)">
           <rect
@@ -505,19 +505,19 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
 
             {/* Synaptic vesicles */}
-            <motion.circle
+            <circle
               cx="30"
               cy="45"
               r="6"
               fill="url(#vesicleGrad)"
             />
-            <motion.circle
+            <circle
               cx="50"
               cy="40"
               r="6"
               fill="url(#vesicleGrad)"
             />
-            <motion.circle
+            <circle
               cx="70"
               cy="45"
               r="6"
@@ -528,7 +528,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
 
             {/* Ca2+ entry */}
-            <motion.text
+            <text
               x="85"
               y="25"
               fill="#22C55E"
@@ -536,22 +536,22 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
               fontWeight="bold"
             >
               Ca²⁺
-            </motion.text>
+            </text>
 
             {/* Neurotransmitter release */}
-            <motion.circle
+            <circle
               cx="35"
               cy="85"
               r="3"
               fill="#06B6D4"
             />
-            <motion.circle
+            <circle
               cx="50"
               cy="85"
               r="3"
               fill="#06B6D4"
             />
-            <motion.circle
+            <circle
               cx="65"
               cy="85"
               r="3"
@@ -588,10 +588,10 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </text>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* NEUROTRANSMITTERS & ANS - Bottom Right */}
-      <motion.g
+      <g
       >
         <g transform="translate(495, 250)">
           <rect
@@ -703,10 +703,10 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             </g>
           </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* Key values badge */}
-      <motion.g
+      <g
       >
         <g transform="translate(565, 175)">
           <rect x="0" y="0" width="115" height="58" rx="10" fill="#1E293B" opacity="0.9" />
@@ -720,7 +720,7 @@ export function NervousSystemIllustration({ className = '', animate = true }: Il
             Action: +30 mV
           </text>
         </g>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

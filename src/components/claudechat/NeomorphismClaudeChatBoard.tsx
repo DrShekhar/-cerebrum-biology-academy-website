@@ -188,7 +188,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
 
           <div className="flex items-center space-x-3">
             {/* Language Selector */}
-            <motion.select
+            <select
               value={selectedLanguage}
               onChange={(e) => setSelectedLanguage(e.target.value as any)}
               className="bg-gray-100 border-none rounded-xl px-3 py-2 text-sm shadow-neomorph-inset focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -198,7 +198,7 @@ const NeomorphismClaudeChatBoard: React.FC = () => {
               <option value="hindi">हिंदी</option>
               <option value="english">English</option>
               <option value="hinglish">Hinglish</option>
-            </motion.select>
+            </select>
 
             {/* Voice Status */}
             <div

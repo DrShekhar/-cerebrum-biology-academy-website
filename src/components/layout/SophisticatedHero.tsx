@@ -105,7 +105,7 @@ export function SophisticatedHero({
         {/* DNA Helix Pattern */}
         <div className="absolute inset-0 opacity-5">
           <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <motion.path
+            <path
               d="M0,50 Q25,30 50,50 T100,50"
               stroke="url(#dnaGradient)"
               strokeWidth="0.5"

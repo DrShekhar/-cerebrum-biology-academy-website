@@ -64,7 +64,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
       <rect width="700" height="520" fill="url(#booksBgGrad)" rx="16" />
 
       {/* Title Section */}
-      <motion.g
+      <g
       >
         <rect
           x="200"
@@ -81,10 +81,10 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         <text x="350" y="48" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           📚 Best Books & Reading Strategy
         </text>
-      </motion.g>
+      </g>
 
       {/* Left Section - Book Stack Visualization */}
-      <motion.g
+      <g
       >
         {/* Bookshelf background */}
         <rect
@@ -102,7 +102,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         </text>
 
         {/* NCERT Books - Essential */}
-        <motion.g
+        <g
         >
           {/* Book 1 - NCERT Class 11 */}
           <rect x="40" y="125" width="180" height="35" rx="4" fill="#14B8A6" />
@@ -131,10 +131,10 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
           <text x="197" y="179" fontSize="6" fill="#78350F" textAnchor="middle" fontWeight="bold">
             ⭐ 5.0
           </text>
-        </motion.g>
+        </g>
 
         {/* Reference Books */}
-        <motion.g
+        <g
         >
           {/* MTG Fingertips */}
           <rect x="50" y="210" width="170" height="30" rx="4" fill="#2DD4BF" />
@@ -165,16 +165,16 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
           <text x="145" y="299" fontSize="6" fill="#115E59" textAnchor="middle">
             Advanced MCQs
           </text>
-        </motion.g>
+        </g>
 
         {/* Bookshelf base */}
         <rect x="30" y="315" width="200" height="8" rx="2" fill="#78716C" />
         <rect x="30" y="323" width="10" height="25" fill="#57534E" />
         <rect x="220" y="323" width="10" height="25" fill="#57534E" />
-      </motion.g>
+      </g>
 
       {/* Center Section - Book Rating Chart */}
-      <motion.g
+      <g
       >
         <rect
           x="250"
@@ -192,7 +192,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
         {/* Rating bars */}
         {biologyBooks.map((book, index) => (
-          <motion.g
+          <g
             key={book.name}
           >
             <text x="260" y={123 + index * 40} fontSize="8" fill="#374151" fontWeight="bold">
@@ -201,7 +201,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
             {/* Rating bar background */}
             <rect x="260" y={128 + index * 40} width="120" height="12" rx="6" fill="#E5E7EB" />
             {/* Rating bar fill */}
-            <motion.rect
+            <rect
               x="260"
               y={128 + index * 40}
               width={120 * (book.rating / 5)}
@@ -241,12 +241,12 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
             >
               {book.priority.slice(0, 3)}
             </text>
-          </motion.g>
+          </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Right Section - Reading Strategy */}
-      <motion.g
+      <g
       >
         <rect
           x="460"
@@ -264,7 +264,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
         {/* Reading phases */}
         {readingPhases.map((phase, index) => (
-          <motion.g
+          <g
             key={phase.phase}
           >
             {/* Phase card */}
@@ -302,7 +302,7 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
 
             {/* Progress indicator */}
             <rect x="515" y={155 + index * 55} width="80" height="6" rx="3" fill="#E5E7EB" />
-            <motion.rect
+            <rect
               x="515"
               y={155 + index * 55}
               width={80 * (phase.progress / 100)}
@@ -321,12 +321,12 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
             <text x="600" y={161 + index * 55} fontSize="6" fill="#6B7280">
               {phase.progress}%
             </text>
-          </motion.g>
+          </g>
         ))}
-      </motion.g>
+      </g>
 
       {/* Bottom Section - Key Statistics */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -438,10 +438,10 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         <text x="585" y="480" fontSize="7" fill="#6B7280" textAnchor="middle">
           Quality over Quantity
         </text>
-      </motion.g>
+      </g>
 
       {/* Animated book floating */}
-      <motion.g
+      <g
       >
         <rect x="255" y="285" width="40" height="55" rx="4" fill="#14B8A6" />
         <rect x="255" y="285" width="8" height="55" fill="#0D9488" />
@@ -454,19 +454,19 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         <text x="280" y="332" fontSize="6" fill="#CCFBF1" textAnchor="middle">
           Class 11
         </text>
-      </motion.g>
+      </g>
 
       {/* Must Read Badge */}
-      <motion.g
+      <g
       >
         <rect x="310" y="280" width="80" height="25" rx="12" fill="#DC2626" />
         <text x="350" y="297" fontSize="9" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
           MUST READ!
         </text>
-      </motion.g>
+      </g>
 
       {/* Pro Tips Section */}
-      <motion.g
+      <g
       >
         <rect
           x="405"
@@ -493,10 +493,10 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         <text x="477" y="348" fontSize="6" fill="#92400E" textAnchor="middle">
           3rd - Memorize diagrams
         </text>
-      </motion.g>
+      </g>
 
       {/* Success Formula */}
-      <motion.g
+      <g
       >
         <rect
           x="560"
@@ -520,24 +520,24 @@ export function BooksForNEETIllustration({ className = '', animate = true }: Ill
         <text x="620" y="345" fontSize="6" fill="#6B7280" textAnchor="middle">
           Followed by NEET Toppers
         </text>
-      </motion.g>
+      </g>
 
       {/* Floating decorative elements */}
-      <motion.circle
+      <circle
         cx="15"
         cy="60"
         r="8"
         fill="#14B8A6"
         opacity="0.3"
       />
-      <motion.circle
+      <circle
         cx="685"
         cy="45"
         r="6"
         fill="#2DD4BF"
         opacity="0.3"
       />
-      <motion.rect
+      <rect
         x="660"
         y="500"
         width="15"

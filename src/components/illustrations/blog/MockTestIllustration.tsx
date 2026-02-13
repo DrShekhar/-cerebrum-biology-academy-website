@@ -79,7 +79,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
       </g>
 
       {/* Title Section */}
-      <motion.g
+      <g
       >
         <rect x="175" y="15" width="350" height="55" rx="27" fill="#6366F1" opacity="0.15" />
         <text x="350" y="45" fontSize="24" fill="#4F46E5" textAnchor="middle" fontWeight="bold">
@@ -88,10 +88,10 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
         <text x="350" y="62" fontSize="11" fill="#7C3AED" textAnchor="middle">
           The Key to NEET Success - Practice Makes Perfect
         </text>
-      </motion.g>
+      </g>
 
       {/* === LEFT SECTION: Test Paper & Timer === */}
-      <motion.g
+      <g
       >
         <g filter="url(#mockCardShadow)">
           <rect x="20" y="85" width="200" height="300" rx="16" fill="#FFFFFF" />
@@ -127,8 +127,8 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
               const col = i % 5
               const status = i < 12 ? '#10B981' : i < 17 ? '#EF4444' : '#F59E0B'
               return (
-                <motion.g key={i}>
-                  <motion.rect
+                <g key={i}>
+                  <rect
                     x={col * 30}
                     y={row * 32}
                     width="25"
@@ -147,7 +147,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
                   >
                     {i + 1}
                   </text>
-                </motion.g>
+                </g>
               )
             })}
           </g>
@@ -171,13 +171,13 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
 
         {/* Timer */}
         <g transform="translate(55, 315)">
-          <motion.g
+          <g
           >
             <rect x="0" y="0" width="130" height="55" rx="10" fill="url(#timerGrad)" />
             <text x="65" y="22" fontSize="10" fill="#FFFFFF" textAnchor="middle">
               Time Remaining
             </text>
-            <motion.text
+            <text
               x="65"
               y="45"
               fontSize="20"
@@ -186,13 +186,13 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
               fontWeight="bold"
             >
               2:45:32
-            </motion.text>
-          </motion.g>
+            </text>
+          </g>
         </g>
-      </motion.g>
+      </g>
 
       {/* === CENTER SECTION: Progress Graph & Schedule === */}
-      <motion.g
+      <g
       >
         {/* Score Progress Graph */}
         <g filter="url(#mockCardShadow)">
@@ -222,7 +222,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
           </text>
 
           {/* Score line */}
-          <motion.path
+          <path
             d="M 10 95 L 55 78 L 100 65 L 145 48 L 190 25"
             fill="none"
             stroke="url(#scoreGrad)"
@@ -232,8 +232,8 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
 
           {/* Data points */}
           {scoreProgress.map((point, i) => (
-            <motion.g key={i} transform={`translate(${10 + i * 45}, 0)`}>
-              <motion.circle
+            <g key={i} transform={`translate(${10 + i * 45}, 0)`}>
+              <circle
                 cy={110 - ((point.score - 400) / 300) * 110}
                 cx="0"
                 r="6"
@@ -252,7 +252,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
               >
                 {point.score}
               </text>
-            </motion.g>
+            </g>
           ))}
 
           {/* Target line */}
@@ -302,7 +302,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
               >
                 {item.week}
               </text>
-              <motion.text
+              <text
                 x="30"
                 y="38"
                 fontSize="18"
@@ -311,17 +311,17 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
                 fontWeight="bold"
               >
                 {item.count}
-              </motion.text>
+              </text>
               <text x="30" y="52" fontSize="6" fill="#6B7280" textAnchor="middle">
                 {item.type}
               </text>
             </g>
           ))}
         </g>
-      </motion.g>
+      </g>
 
       {/* === RIGHT SECTION: Analysis & Tips === */}
-      <motion.g
+      <g
       >
         <g filter="url(#mockCardShadow)">
           <rect x="530" y="85" width="150" height="300" rx="16" fill="#FFFFFF" />
@@ -334,7 +334,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
         {/* Question breakdown */}
         <g transform="translate(545, 125)">
           {questionBreakdown.map((item, i) => (
-            <motion.g
+            <g
               key={i}
               transform={`translate(0, ${i * 55})`}
             >
@@ -356,7 +356,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
               <text x="70" y="32" fontSize="8" fill="#6B7280">
                 Questions
               </text>
-            </motion.g>
+            </g>
           ))}
         </g>
 
@@ -366,7 +366,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
           <text x="60" y="20" fontSize="9" fill="#6366F1" textAnchor="middle" fontWeight="600">
             Accuracy Rate
           </text>
-          <motion.text
+          <text
             x="60"
             y="50"
             fontSize="28"
@@ -375,12 +375,12 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
             fontWeight="bold"
           >
             80.5%
-          </motion.text>
+          </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* === BOTTOM SECTION: Strategy Tips === */}
-      <motion.g
+      <g
       >
         <g filter="url(#mockCardShadow)">
           <rect x="20" y="400" width="665" height="105" rx="16" fill="#FFFFFF" />
@@ -399,7 +399,7 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
             { icon: '📊', tip: 'Track progress', desc: 'Score trends', color: '#10B981' },
             { icon: '🎯', tip: 'Target 650+', desc: 'Consistent practice', color: '#8B5CF6' },
           ].map((item, i) => (
-            <motion.g
+            <g
               key={i}
               transform={`translate(${i * 125}, 0)`}
             >
@@ -422,29 +422,29 @@ export function MockTestIllustration({ className = '', animate = true }: Illustr
               <text x="40" y="32" fontSize="8" fill="#6B7280">
                 {item.desc}
               </text>
-            </motion.g>
+            </g>
           ))}
         </g>
-      </motion.g>
+      </g>
 
       {/* Floating decorations */}
       {animate && (
         <>
-          <motion.circle
+          <circle
             cx="50"
             cy="50"
             r="6"
             fill="#6366F1"
             opacity="0.3"
           />
-          <motion.text
+          <text
             x="650"
             y="60"
             fontSize="16"
             opacity="0.5"
           >
             📝
-          </motion.text>
+          </text>
         </>
       )}
     </Wrapper>

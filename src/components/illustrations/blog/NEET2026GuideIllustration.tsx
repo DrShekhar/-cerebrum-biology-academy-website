@@ -82,7 +82,7 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
       <circle cx="300" cy="225" r="200" fill="#14B8A6" opacity="0.03" />
 
       {/* Title Banner */}
-      <motion.g
+      <g
       >
         <rect
           x="150"
@@ -93,7 +93,7 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           fill="#14B8A6"
           filter="url(#neetShadow)"
         />
-        <motion.g
+        <g
         >
           <text x="300" y="35" fontSize="14" fill="#FFFFFF" textAnchor="middle" fontWeight="500">
             COMPLETE GUIDE
@@ -101,11 +101,11 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           <text x="300" y="55" fontSize="20" fill="#FFFFFF" textAnchor="middle" fontWeight="bold">
             NEET 2026
           </text>
-        </motion.g>
-      </motion.g>
+        </g>
+      </g>
 
       {/* EXAM PATTERN CARD - Left */}
-      <motion.g
+      <g
       >
         <rect
           x="20"
@@ -177,10 +177,10 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
         <text x="35" y="312" fontSize="9" fill="#64748B">
           Duration: 3 hrs 20 min
         </text>
-      </motion.g>
+      </g>
 
       {/* MARKING SCHEME CARD - Center */}
-      <motion.g
+      <g
       >
         <rect
           x="210"
@@ -237,10 +237,10 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
             0 marks
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* IMPORTANT DATES CARD */}
-      <motion.g
+      <g
       >
         <rect
           x="400"
@@ -278,7 +278,7 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
         </text>
 
         {/* Exam Date */}
-        <motion.circle
+        <circle
           cx="425"
           cy="210"
           r="8"
@@ -290,10 +290,10 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
         <text x="440" y="220" fontSize="10" fill="#EF4444" fontWeight="bold">
           May 2026
         </text>
-      </motion.g>
+      </g>
 
       {/* SUBJECT DISTRIBUTION PIE CHART */}
-      <motion.g
+      <g
       >
         <rect
           x="210"
@@ -311,17 +311,17 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
         {/* Pie chart */}
         <g transform="translate(300, 355)">
           {/* Physics - 25% */}
-          <motion.path
+          <path
             d="M0,-45 A45,45 0 0,1 39,22.5 L0,0 Z"
             fill="#3B82F6"
           />
           {/* Chemistry - 25% */}
-          <motion.path
+          <path
             d="M39,22.5 A45,45 0 0,1 -39,22.5 L0,0 Z"
             fill="#8B5CF6"
           />
           {/* Biology - 50% */}
-          <motion.path
+          <path
             d="M-39,22.5 A45,45 0 0,1 0,-45 L0,0 Z"
             fill="#10B981"
           />
@@ -346,10 +346,10 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
             Bio 50%
           </text>
         </g>
-      </motion.g>
+      </g>
 
       {/* QUALIFYING CUTOFF CARD */}
-      <motion.g
+      <g
       >
         <rect
           x="400"
@@ -385,12 +385,12 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
         <text x="565" y="339" fontSize="9" fill="#1E293B" fontWeight="bold" textAnchor="end">
           45th %ile
         </text>
-      </motion.g>
+      </g>
 
       {/* SUCCESS MEDAL */}
-      <motion.g
+      <g
       >
-        <motion.g
+        <g
           style={{ transformOrigin: '110px 370px' }}
         >
           {/* Ribbon */}
@@ -413,11 +413,11 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           <text x="110" y="395" fontSize="8" fill="#92400E" textAnchor="middle">
             MARKS
           </text>
-        </motion.g>
-      </motion.g>
+        </g>
+      </g>
 
       {/* BOTTOM CTA */}
-      <motion.g
+      <g
       >
         <rect
           x="400"
@@ -428,7 +428,7 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           fill="#14B8A6"
           filter="url(#neetShadow)"
         />
-        <motion.g
+        <g
         >
           <text x="490" y="390" fontSize="10" fill="#FFFFFF" textAnchor="middle" fontWeight="500">
             Start Your Journey
@@ -439,8 +439,8 @@ export function NEET2026GuideIllustration({ className = '', animate = true }: Il
           <text x="490" y="428" fontSize="8" fill="#A7F3D0" textAnchor="middle">
             Complete Guide Inside →
           </text>
-        </motion.g>
-      </motion.g>
+        </g>
+      </g>
     </Wrapper>
   )
 }

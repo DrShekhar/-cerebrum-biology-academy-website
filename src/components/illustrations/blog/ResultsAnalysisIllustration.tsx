@@ -44,7 +44,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
       </text>
 
       {/* Bars */}
-      <motion.rect
+      <rect
         x="50"
         y="130"
         width="25"
@@ -56,7 +56,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         0-200
       </text>
 
-      <motion.rect
+      <rect
         x="85"
         y="110"
         width="25"
@@ -68,7 +68,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         200-400
       </text>
 
-      <motion.rect
+      <rect
         x="120"
         y="100"
         width="25"
@@ -80,7 +80,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         400-600
       </text>
 
-      <motion.rect
+      <rect
         x="155"
         y="120"
         width="25"
@@ -107,37 +107,37 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         Key Statistics
       </text>
 
-      <motion.g
+      <g
       >
         <rect x="245" y="85" width="120" height="22" rx="4" fill="#DCFCE7" />
         <text x="305" y="100" fontSize="7" fill="#166534" textAnchor="middle">
           24 Lakh+ Appeared
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect x="245" y="112" width="120" height="22" rx="4" fill="#DBEAFE" />
         <text x="305" y="127" fontSize="7" fill="#1D4ED8" textAnchor="middle">
           720/720 Top Score
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect x="245" y="139" width="120" height="22" rx="4" fill="#FEF3C7" />
         <text x="305" y="154" fontSize="7" fill="#B45309" textAnchor="middle">
           137 Cutoff General
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect x="245" y="166" width="120" height="15" rx="4" fill="#FCE7F3" />
         <text x="305" y="177" fontSize="6" fill="#DB2777" textAnchor="middle">
           67% Success Rate
         </text>
-      </motion.g>
+      </g>
 
       {/* Trends for 2025 */}
       <rect
@@ -154,7 +154,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         Trends for NEET 2025
       </text>
 
-      <motion.g
+      <g
       >
         <rect x="45" y="225" width="90" height="40" rx="6" fill="#DCFCE7" />
         <text x="90" y="243" fontSize="7" fill="#166534" textAnchor="middle" fontWeight="bold">
@@ -163,9 +163,9 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         <text x="90" y="258" fontSize="6" fill="#6B7280" textAnchor="middle">
           More Assertion
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect x="155" y="225" width="90" height="40" rx="6" fill="#DBEAFE" />
         <text x="200" y="243" fontSize="7" fill="#1D4ED8" textAnchor="middle" fontWeight="bold">
@@ -174,9 +174,9 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         <text x="200" y="258" fontSize="6" fill="#6B7280" textAnchor="middle">
           95% Questions
         </text>
-      </motion.g>
+      </g>
 
-      <motion.g
+      <g
       >
         <rect x="265" y="225" width="90" height="40" rx="6" fill="#FEF3C7" />
         <text x="310" y="243" fontSize="7" fill="#B45309" textAnchor="middle" fontWeight="bold">
@@ -185,7 +185,7 @@ export function ResultsAnalysisIllustration({ className = '', animate = true }: 
         <text x="310" y="258" fontSize="6" fill="#6B7280" textAnchor="middle">
           25 Lakh Expected
         </text>
-      </motion.g>
+      </g>
     </Wrapper>
   )
 }

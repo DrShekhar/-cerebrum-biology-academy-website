@@ -405,7 +405,7 @@ export function PremiumProgress({
             fill="transparent"
             className="text-gray-200"
           />
-          <motion.circle
+          <circle
             cx="50%"
             cy="50%"
             r="45%"

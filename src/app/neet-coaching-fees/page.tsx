@@ -487,7 +487,7 @@ export default function FeesPage() {
             className="space-y-6 animate-fadeInUp"
           >
             {faqs.map((faq, index) => (
-              <motion.details
+              <details
                 key={index}
                 className="group p-6 rounded-lg border border-slate-200 bg-white hover:border-emerald-300 hover:shadow-md transition-all cursor-pointer"
               >
@@ -498,7 +498,7 @@ export default function FeesPage() {
                   </span>
                 </summary>
                 <p className="mt-4 ml-8 text-slate-600 leading-relaxed">{faq.answer}</p>
-              </motion.details>
+              </details>
             ))}
           </div>
         </div>

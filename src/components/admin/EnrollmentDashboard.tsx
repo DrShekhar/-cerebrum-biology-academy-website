@@ -206,7 +206,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
             </thead>
             <tbody className="divide-y divide-gray-200">
               {filteredEnrollments.map((enrollment) => (
-                <motion.tr
+                <tr
                   key={enrollment.id}
                   className="hover:bg-gray-50 transition-colors"
                 >
@@ -286,7 +286,7 @@ export function EnrollmentDashboard({ isAdmin = false }: EnrollmentDashboardProp
                       </button>
                     </div>
                   </td>
-                </motion.tr>
+                </tr>
               ))}
             </tbody>
           </table>

@@ -108,7 +108,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       <circle cx="470" cy="350" r="90" fill="#8B5CF6" opacity="0.05" />
 
       {/* Center hexagon representing cell/biomolecule hub */}
-      <motion.g
+      <g
       >
         <circle cx="260" cy="200" r="55" fill="url(#centerGlow)" filter="url(#biomolShadow)" />
         <circle cx="260" cy="200" r="50" fill="#FFFFFF" stroke="#E2E8F0" strokeWidth="2" />
@@ -121,10 +121,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         <text x="260" y="222" textAnchor="middle" fill="#64748B" fontSize="9">
           of Life
         </text>
-      </motion.g>
+      </g>
 
       {/* Carbohydrates - Top Left */}
-      <motion.g
+      <g
       >
         {/* Card */}
         <rect
@@ -172,10 +172,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         <text x="155" y="59" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">
           C
         </text>
-      </motion.g>
+      </g>
 
       {/* Connection line to center */}
-      <motion.line
+      <line
         x1="170"
         y1="105"
         x2="210"
@@ -187,7 +187,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Proteins - Top Right */}
-      <motion.g
+      <g
       >
         {/* Card */}
         <rect
@@ -259,10 +259,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         <text x="475" y="59" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">
           P
         </text>
-      </motion.g>
+      </g>
 
       {/* Connection line to center */}
-      <motion.line
+      <line
         x1="350"
         y1="105"
         x2="310"
@@ -274,7 +274,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Lipids - Bottom Left */}
-      <motion.g
+      <g
       >
         {/* Card */}
         <rect
@@ -339,10 +339,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         <text x="155" y="249" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">
           L
         </text>
-      </motion.g>
+      </g>
 
       {/* Connection line to center */}
-      <motion.line
+      <line
         x1="170"
         y1="295"
         x2="210"
@@ -354,7 +354,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Nucleic Acids - Bottom Right */}
-      <motion.g
+      <g
       >
         {/* Card */}
         <rect
@@ -445,10 +445,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         <text x="475" y="249" textAnchor="middle" fill="white" fontSize="8" fontWeight="bold">
           N
         </text>
-      </motion.g>
+      </g>
 
       {/* Connection line to center */}
-      <motion.line
+      <line
         x1="350"
         y1="295"
         x2="310"
@@ -460,7 +460,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
       />
 
       {/* Bottom info bar */}
-      <motion.g
+      <g
       >
         <rect
           x="180"
@@ -474,10 +474,10 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         <text x="260" y="383" textAnchor="middle" fill="#64748B" fontSize="9" fontWeight="600">
           C • H • O • N • P • S
         </text>
-      </motion.g>
+      </g>
 
       {/* Title */}
-      <motion.text
+      <text
         x="260"
         y="22"
         textAnchor="middle"
@@ -486,7 +486,7 @@ export function BiomoleculesIllustration({ className = '', animate = true }: Ill
         fontWeight="700"
       >
         The 4 Major Biomolecules
-      </motion.text>
+      </text>
     </Wrapper>
   )
 }

@@ -175,7 +175,7 @@ export const AcademicQuote: React.FC<AcademicQuoteProps> = ({
   )
 
   return (
-    <motion.blockquote
+    <blockquote
       className={quoteClasses}
     >
       {variant !== 'research' && <div className="text-4xl text-blue-300 mb-4 font-serif">"</div>}
@@ -196,7 +196,7 @@ export const AcademicQuote: React.FC<AcademicQuoteProps> = ({
           {source && <span className="text-gray-600 text-sm">{source}</span>}
         </footer>
       )}
-    </motion.blockquote>
+    </blockquote>
   )
 }
 
