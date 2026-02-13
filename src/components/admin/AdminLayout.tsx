@@ -3,7 +3,7 @@
 import { useState, ReactNode } from 'react'
 import { useAuth } from '@/contexts/AuthContext'
 import { useOwnerAccess } from '@/hooks/useOwnerAccess'
-import { signOut } from '@/lib/firebase/phone-auth'
+const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
 import { motion, AnimatePresence } from 'framer-motion'
 import {
   LayoutDashboard,
@@ -90,7 +90,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
 
   const handleLogout = async () => {
     try {
-      await signOut()
+      const firebaseSignOut = await getFirebaseSignOut()
+      await firebaseSignOut()
       // Force hard refresh to clear all client-side state
       window.location.href = '/select-role'
     } catch (error) {

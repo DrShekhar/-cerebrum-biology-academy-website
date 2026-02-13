@@ -223,6 +223,7 @@ const nextConfig = {
     'pino',
     'pino-pretty',
     'thread-stream',
+    'firebase-admin',
   ],
 
   // FIX: Set expireTime to 14 days (in seconds) to avoid potential future issues

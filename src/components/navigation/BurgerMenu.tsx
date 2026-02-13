@@ -28,7 +28,7 @@ import { useRouter } from 'next/navigation'
 import { navigationConfig } from '@/data/navigationConfig'
 import { useAuth } from '@/contexts/AuthContext'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
-import { signOut } from '@/lib/firebase/phone-auth'
+const getFirebaseSignOut = () => import('@/lib/firebase/phone-auth').then((mod) => mod.signOut)
 
 interface BurgerMenuProps {
   isOpen: boolean
@@ -142,9 +142,9 @@ export function BurgerMenu({ isOpen, onToggle, onClose }: BurgerMenuProps) {
       // Step 3: Clear localStorage items related to auth
       localStorage.removeItem('freeUserId')
 
-      // Step 4: Sign out from Firebase client
-      await signOut()
-      console.log('[BurgerMenu] Firebase sign out complete')
+      // Step 4: Sign out from Firebase client (lazy-loaded)
+      const firebaseSignOut = await getFirebaseSignOut()
+      await firebaseSignOut()
     } catch (error) {
       console.error('[BurgerMenu] Sign out error:', error)
     }
