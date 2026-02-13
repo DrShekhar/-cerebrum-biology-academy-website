@@ -37,5 +37,3 @@ export function getResponsiveClasses(size: 'sm' | 'md' | 'lg' | 'xl' | 'full' = 
   return sizeClasses[size]
 }
 
-// Re-export motion for use in illustration components
-export { motion }
