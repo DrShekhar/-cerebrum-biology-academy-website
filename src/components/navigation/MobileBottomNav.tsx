@@ -198,6 +198,7 @@ export function MobileNavigation({ className = '' }: MobileNavigationProps) {
               <Link
                 key={item.label}
                 href={item.href}
+                prefetch={!item.requiresAuth}
                 className={`flex flex-col items-center gap-1 transition-colors min-w-[44px] min-h-[44px] justify-center ${
                   active ? 'text-blue-600' : 'text-gray-500 hover:text-gray-900'
                 }`}

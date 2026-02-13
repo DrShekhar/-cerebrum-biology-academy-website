@@ -39,6 +39,7 @@ export function FirebaseAuthButtons() {
       <div className="hidden lg:flex items-center gap-3">
         <Link
           href="/dashboard"
+          prefetch={false}
           className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition-colors"
         >
           Dashboard
