@@ -15,6 +15,7 @@ import {
   PlayCircle,
   Flame,
 } from 'lucide-react'
+import { useInView } from '@/hooks/useInView'
 
 interface DifferentiationSectionProps {
   onBookTrial?: () => void

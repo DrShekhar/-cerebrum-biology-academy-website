@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import { Check, Clock, Target, Trophy, Brain, Zap, Star } from 'lucide-react'
+import { useInView } from '@/hooks/useInView'
 
 interface TimelinePhase {
   id: number

@@ -22,6 +22,7 @@ import {
 } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { getPhoneLink, getDisplayPhone } from '@/lib/constants/contactInfo'
+import { useInView } from '@/hooks/useInView'
 
 interface CourseCard {
   id: string

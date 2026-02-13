@@ -2,6 +2,7 @@
 
 import React, { useRef } from 'react'
 import { Brain, Target, Zap, Trophy } from 'lucide-react'
+import { useInView } from '@/hooks/useInView'
 
 interface FeatureCard {
   icon: React.ReactNode

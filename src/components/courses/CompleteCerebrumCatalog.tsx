@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react'
 import { Check, ArrowRight, MessageCircle, Phone, Crown, Sparkles, Search } from 'lucide-react'
 import { trackAndOpenWhatsApp } from '@/lib/whatsapp/tracking'
 import { CONTACT_INFO, getPhoneLink } from '@/lib/constants/contactInfo'
+import { useInView } from '@/hooks/useInView'
 
 // Complete Course Catalog from Screenshots
 const COMPLETE_COURSE_CATALOG = {

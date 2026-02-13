@@ -14,6 +14,7 @@ import {
   Pause,
   RotateCcw,
 } from 'lucide-react'
+import { useInView } from '@/hooks/useInView'
 
 // DNA Double Helix Animation Component
 export const DNAHelixAnimation: React.FC<{ className?: string }> = ({ className }) => {
