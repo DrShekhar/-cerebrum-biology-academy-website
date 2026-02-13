@@ -101,6 +101,7 @@ export function ErrorReportModal({
   }
 
   return (
+<>
 {isOpen && (
         <>
           {/* Backdrop */}
@@ -278,5 +279,6 @@ export function ErrorReportModal({
           </div>
         </>
       )}
+</>
 )
 }

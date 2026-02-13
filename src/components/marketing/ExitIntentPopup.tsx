@@ -65,6 +65,7 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
   }
 
   return (
+<>
 {isVisible && (
         <>
           {/* Backdrop */}
@@ -194,5 +195,6 @@ export function ExitIntentPopup({ onClose, onCapture }: ExitIntentPopupProps) {
           </div>
         </>
       )}
+</>
 )
 }

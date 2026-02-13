@@ -109,6 +109,7 @@ export function CoachingTrialBanner({
   // User hasn't started trial yet - show start trial banner
   if (!trialStatus.trialStartDate && !trialStatus.isTrialActive) {
     return (
+<>
 {showAnimation && (
           <div
             className="relative bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white overflow-hidden animate-fadeInUp"
@@ -169,6 +170,7 @@ export function CoachingTrialBanner({
             </div>
           </div>
         )}
+</>
 )
   }
 
@@ -228,6 +230,7 @@ export function CoachingTrialBanner({
   const Icon = config.icon
 
   return (
+<>
 {showAnimation && (
         <div
           className={`relative bg-gradient-to-r ${config.bgGradient} text-white overflow-hidden`}
@@ -312,6 +315,7 @@ export function CoachingTrialBanner({
           </div>
         </div>
       )}
+</>
 )
 }
 

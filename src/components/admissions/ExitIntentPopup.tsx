@@ -108,6 +108,7 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
   if (!isVisible) return null
 
   return (
+<>
 {isVisible && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fadeInUp"
@@ -225,5 +226,6 @@ export function ExitIntentPopup({ onClose }: ExitIntentPopupProps) {
           </div>
         </div>
       )}
+</>
 )
 }

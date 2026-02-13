@@ -135,6 +135,7 @@ export function SocialProofNotifications() {
   }, [])
 
   return (
+<>
 {currentActivity && (
         <div
           key={currentActivity.id}
@@ -165,5 +166,6 @@ export function SocialProofNotifications() {
           </div>
         </div>
       )}
+</>
 )
 }

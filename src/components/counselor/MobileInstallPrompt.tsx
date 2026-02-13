@@ -78,6 +78,7 @@ export function MobileInstallPrompt() {
   if (isInstalled || !showPrompt) return null
 
   return (
+<>
 {showPrompt && (
         <>
           {/* Backdrop */}
@@ -162,5 +163,6 @@ export function MobileInstallPrompt() {
           </div>
         </>
       )}
+</>
 )
 }

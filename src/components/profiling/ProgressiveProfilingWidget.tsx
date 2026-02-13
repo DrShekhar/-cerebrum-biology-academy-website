@@ -219,11 +219,12 @@ export function ProgressiveProfilingWidget({
     }
   }
 
+  if (!isVisible || !currentQuestion) return null
+
   return (
-{isVisible && currentQuestion && (
-        <div
-          className={`fixed ${getPositionClasses()} z-50 max-w-sm ${className}`}
-        >
+    <div
+      className={`fixed ${getPositionClasses()} z-50 max-w-sm ${className}`}
+    >
           <Card className="border-2 border-primary/20 shadow-xl bg-white">
             {showReward ? (
               <div
@@ -301,9 +302,8 @@ export function ProgressiveProfilingWidget({
               </>
             )}
           </Card>
-        </div>
-      )}
-)
+    </div>
+  )
 }
 
 // Hook for accessing user profile in components

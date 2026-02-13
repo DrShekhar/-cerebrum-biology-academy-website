@@ -137,6 +137,7 @@ export function LiveActivityFeed({
 
   if (variant === 'floating') {
     return (
+<>
 {isVisible && (
           <div
             className={`fixed bottom-6 left-6 z-40 ${className}`}
@@ -198,6 +199,7 @@ export function LiveActivityFeed({
             </div>
           </div>
         )}
+</>
 )
   }
 

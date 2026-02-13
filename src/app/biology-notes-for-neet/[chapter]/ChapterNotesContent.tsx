@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import {
   BookOpen,
   CheckCircle,
@@ -4144,8 +4143,6 @@ export default function ChapterNotesContent({
 
   return (
     <div
-      initial="hidden"
-      animate="visible"
       className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100"
     >
       {/* Breadcrumb Navigation */}

@@ -351,8 +351,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           </Link>
         )}
 
-        {hasChildren && (
-{isOpen && (
+        {hasChildren && isOpen && (
               <div
                 className="overflow-hidden animate-fadeInUp"
               >
@@ -379,7 +378,6 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                 </div>
               </div>
             )}
-)}
       </div>
     )
   }

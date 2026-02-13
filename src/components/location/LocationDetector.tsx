@@ -226,6 +226,7 @@ export function LocationDetector({
   }
 
   return (
+<>
 {showLocationBanner && (
         <div
           className={`fixed top-0 left-0 right-0 z-50 ${className}`}
@@ -300,6 +301,7 @@ export function LocationDetector({
           </Card>
         </div>
       )}
+</>
 )
 }
 

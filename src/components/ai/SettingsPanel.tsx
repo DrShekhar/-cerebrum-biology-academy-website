@@ -197,6 +197,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
   ]
 
   return (
+<>
 {isOpen && (
         <>
           <div
@@ -720,6 +721,7 @@ export function SettingsPanel({ isOpen, onClose }: SettingsPanelProps) {
           </div>
         </>
       )}
+</>
 )
 }
 

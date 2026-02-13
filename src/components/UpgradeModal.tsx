@@ -77,6 +77,7 @@ export function UpgradeModal({
   ]
 
   return (
+<>
 {isOpen && (
         <>
           {/* Backdrop */}
@@ -206,6 +207,7 @@ export function UpgradeModal({
           </div>
         </>
       )}
+</>
 )
 }
 

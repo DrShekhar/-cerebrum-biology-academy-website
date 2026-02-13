@@ -118,6 +118,7 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
   const Icon = config.icon
 
   return (
+<>
 {showAnimation && (
         <div
           className={`relative bg-gradient-to-r ${config.bgGradient} text-white overflow-hidden`}
@@ -204,6 +205,7 @@ export function TrialBanner({ trialStatus, onUpgradeClick, onDismiss }: TrialBan
           </div>
         </div>
       )}
+</>
 )
 }
 

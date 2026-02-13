@@ -882,12 +882,6 @@ export default function CeriAIShowcase() {
   const [chatQuestion, setChatQuestion] = useState('')
   const [activeDemo, setActiveDemo] = useState(0)
   const heroRef = useRef<HTMLDivElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ['start start', 'end start'],
-  })
-  const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0])
-  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 0.95])
 
   const handleQuestionClick = useCallback((question: string) => {
     setChatQuestion(question)
@@ -997,7 +991,6 @@ export default function CeriAIShowcase() {
       {/* Hero Section */}
       <section
         ref={heroRef}
-        style={{ opacity: heroOpacity, scale: heroScale }}
         className="relative min-h-screen flex items-center justify-center bg-slate-800 overflow-hidden animate-fadeInUp"
       >
         <FloatingParticles />
@@ -1130,7 +1123,6 @@ export default function CeriAIShowcase() {
                   </div>
                   {activeDemo === index && (
                     <div
-                      layoutId="activeDot"
                       className="ml-auto w-3 h-3 bg-white rounded-full animate-fadeInUp"
                     />
                   )}

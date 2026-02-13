@@ -663,7 +663,7 @@ export default function IBBiologyPage() {
                   </div>
                 )}
 
-                <motion.a
+                <a
                   href={`https://wa.me/918826444334?text=${encodeURIComponent(`Hi! I'm interested in the ${plan.name} for IB Biology coaching.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -759,7 +759,7 @@ export default function IBBiologyPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <motion.a
+              <a
                 href={`https://wa.me/918826444334?text=${encodeURIComponent('Hi! I want to book a free consultation for IB Biology coaching.')}`}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -195,6 +195,7 @@ const TranscriptDisplay: React.FC<{
   isRecording: boolean
 }> = ({ transcript, confidence, isRecording }) => {
   return (
+<>
 {transcript && (
         <div
           className="mx-4 p-4 bg-gray-50 rounded-lg border animate-fadeInUp"
@@ -220,6 +221,7 @@ const TranscriptDisplay: React.FC<{
           </p>
         </div>
       )}
+</>
 )
 }
 

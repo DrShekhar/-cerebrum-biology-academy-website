@@ -296,15 +296,15 @@ export function NotificationPopover({
                   </p>
                 </div>
               ) : (
-{notifications.map((notification) => (
-                    <NotificationItem
-                      key={notification.id}
-                      notification={notification}
-                      onMarkAsRead={onMarkAsRead}
-                      onDismiss={onDismiss}
-                    />
-                  ))}
-)}
+                notifications.map((notification) => (
+                  <NotificationItem
+                    key={notification.id}
+                    notification={notification}
+                    onMarkAsRead={onMarkAsRead}
+                    onDismiss={onDismiss}
+                  />
+                ))
+              )}
 
               {/* Load More */}
               {hasMore && (

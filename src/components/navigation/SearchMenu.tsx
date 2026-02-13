@@ -559,11 +559,9 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
 
   // Modal content for portal
   const modalContent = (
+<>
 {isOpen && (
         <div
-          initial="closed"
-          animate="open"
-          exit="closed"
           className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[9999] flex ${isMobile ? 'items-end' : 'items-start justify-center pt-20'} px-0 md:px-4 overflow-hidden`}
           onClick={handleClose}
         >
@@ -572,9 +570,6 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
             role="dialog"
             aria-modal="true"
             aria-label="Search dialog"
-            initial="closed"
-            animate="open"
-            exit="closed"
             className={`bg-white ${isMobile ? 'rounded-t-3xl w-full' : 'rounded-2xl w-full max-w-2xl'} shadow-2xl overflow-hidden flex flex-col`}
             style={{ maxHeight: isMobile ? viewportHeight : '80vh' }}
             onClick={(e) => e.stopPropagation()}
@@ -949,6 +944,7 @@ export function SearchMenu({ isOpen, onToggle, onClose }: SearchMenuProps) {
           </div>
         </div>
       )}
+</>
 )
 
   return (

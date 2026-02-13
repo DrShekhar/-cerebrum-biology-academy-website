@@ -201,7 +201,8 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                 </div>
               </div>
             ) : (
-{step === 1 && (
+              <>
+                {step === 1 && (
                   <div
                     key="step1"
                     className="space-y-6 animate-fadeInUp"
@@ -407,7 +408,8 @@ export function DemoBookingModal({ isOpen, onClose, onSubmit }: DemoBookingModal
                     </div>
                   </div>
                 )}
-)}
+              </>
+            )}
           </div>
 
           {/* Footer */}
